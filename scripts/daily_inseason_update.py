@@ -407,7 +407,9 @@ def step_history(out_dir: Path) -> None:
     """名單頁 OVR 折線（2026-10-31）：資料截到每個比賽日重算 OVR → ovr-history.json（同版號、同資料的日子走快取）。
     失敗不擋發布，名單頁就不畫折線。"""
     try:
-        r = run([py_exe(), '-I', '-X', 'utf8', str(HISTORY), str(out_dir)], ROOT, TIMEOUTS['history'])
+        # 2026-11-08：要重算 ≥2 天（改版）時一部分分到 5090；連不上就全本機。HIST_REMOTE= 空字串可關掉
+        r = run([py_exe(), '-I', '-X', 'utf8', str(HISTORY), str(out_dir)], ROOT, TIMEOUTS['history'],
+                env={'HIST_REMOTE': os.environ.get('HIST_REMOTE', 'kojiek@100.97.181.15')})
     except subprocess.TimeoutExpired:
         log.warning('ovr_history 逾時；這次不畫 OVR 折線')
         return
