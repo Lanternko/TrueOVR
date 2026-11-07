@@ -3,10 +3,10 @@
 只記「目前狀態」，每次收工整份覆寫，不往下追加日期段。每條最多兩行，細節寫進 findings／experiments／rulings 或報告檔，這裡只放 ID 與路徑。UI 小改不進本檔（看 git log）。舊版全文在 `archive/`（最近一份 `handoff-2026-11-05-full.md`，含 11-05 前所有條目原文）。
 **多個 session 同時改本檔與工作樹**：覆寫前先重讀一次，只改自己負責的條目。
 
-- **更新**：2026-11-08 0.2.13 稽核 4/5（`reports/audit-0.2.13/`）；2026-11-07 card／inseason 0.2.13 加擋拆 pnr（R-173）；2026-11-05 球隊評分 T 的 21 欄追蹤統計改本季混合（R-169、E-246）；3PT／FT 顯示欄換量準混合（R-168，未 commit）；球員卡加追蹤量格子並發布（R-166）；11-04 E-239 追蹤全套、inseason 0.2.12e（R-161～R-165）；11-03 球隊評分換 Transformer（R-160）、近期加成 b3h20（R-150）。
+- **更新**：2026-11-08 card／inseason 0.2.13a 修 pnr 窗口外季回合（R-173、L-132）；0.2.13 稽核 4/5（`reports/audit-0.2.13/`）；2026-11-07 card／inseason 0.2.13 加擋拆 pnr（R-173）；2026-11-05 球隊評分 T 的 21 欄追蹤統計改本季混合（R-169、E-246）；3PT／FT 顯示欄換量準混合（R-168，未 commit）；球員卡加追蹤量格子並發布（R-166）；11-04 E-239 追蹤全套、inseason 0.2.12e（R-161～R-165）；11-03 球隊評分換 Transformer（R-160）、近期加成 b3h20（R-150）。
 
 ## 目前基準（線上）
-- **card／inseason 0.2.13**（11-07，R-173，E-258）：加能力值擋拆持球 pnr（Synergy 四季窗口含本季，量率各半、率只在 ≥50 回合者裡排）；卡片全部係數重擬合，正式卡 `reports/card-0.2.13/`；前 20 名不換人。回退 `PNR=0`（＝0.2.12e）。11-08 role-audit 4/5、G5 過；副作用 Alexander-Walker 卡片 66→78 名。未修：7 人 1e-12 窗口權重漏（下個字母版修）。
+- **card／inseason 0.2.13a**（11-08，R-173、L-132）：加擋拆持球 pnr（E-258，全部係數重擬合，role-audit 4/5、G5 過）；0.2.13a 修窗口外季回合。正式卡 `reports/card-0.2.13a/`；回退 `PNR_FIX=0`＝0.2.13、`PNR=0`＝0.2.12e。
 - **inseason 0.2.12e**（11-04，已 commit）：復出老將補卡（R-161）＋新秀起點加季前賽位移（R-162）＋防守 D 個人場次軸（R-163）＋復出老將補進用人層 hi（R-164）。未修：復出老將 gravity＝70 佔位（L-127）。回退 `DEF_AXIS=calendar`、`RV_USAGE=0`、`RETURNING_VETS=0`、`PS_START=0`。
 - **3PT／FT 顯示欄**（R-168，11-05，只改顯示、OVR 不動、未 commit／未發布）：3PT＝60% 量＋40% 率、FT＝只看命中率，PR99 以上每 SD +10 分；`scripts/blend_display.py`，兩頁已重建。
 - **追蹤量格子**（R-166，11-05）：DRV／INS／CRT／PASS／3PT 提示卡加量類追蹤列，不進分數。`scripts/tracking_cells.py`；2026-27 資料是手動快照，重抓 `node scripts/fetch_tracking_cells.mjs <季> data/tracking-cells/<季>` 後重建頁面。

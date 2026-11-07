@@ -14,6 +14,7 @@ import csv
 import hashlib
 import json
 import math
+import os
 import sys
 from collections import Counter
 from pathlib import Path
@@ -27,7 +28,9 @@ sys.path.insert(0, str(ROOT / 'reports/E175-sliding-window-card'))
 sys.path.insert(0, str(ROOT / 'reports/ovr-v61-shrink-history-2025-26'))
 import e175_lib as L  # noqa: E402
 
-FROZEN = HERE / 'pnr-pool-card0213.json'
+PNR_FIX = os.environ.get('PNR_FIX', '1') != '0'   # 0.2.13a（2026-11-08 稽核）：窗口外的季（win_len 的 1e-12 佔位權重）擋拆回合／得分算 0；PNR_FIX=0 重現 0.2.13
+FROZEN = HERE / ('pnr-pool-card0213a.json' if PNR_FIX else 'pnr-pool-card0213.json')
+W_OUT = 1e-9   # 權重 < W_OUT＝窗口外（win_len 把「有資料的季權重全 0」改成 1e-12 防除以 0）
 SYN = ROOT / 'reports/E239-tracking-full/data'
 PAST = ('2022-23', '2023-24', '2024-25', '2025-26')
 PG = {s: ROOT / f'data/defense-seventh/{s}/player-games.json' for s in PAST[:-1]}
@@ -124,6 +127,8 @@ def window(c, past, cur=None):
             if m <= 0:
                 continue
             x = acc.setdefault(p, [0.0, 0.0, 0.0, 0.0, 0.0])
+            if PNR_FIX and w < W_OUT:
+                a = b = 0.0   # 0.2.13a：窗口外的季只留分鐘（防除以 0），不帶回合（原本 7 人 vol≈1e-11 排在真 0 回合者之上，pnr≈51 而非 43）
             x[0] += w * a; x[1] += w * b; x[2] += w * m; x[3] += u; x[4] = max(x[4], w)
     return {p: (x[0] / max(x[3], x[4]), x[1] / max(x[3], x[4]), x[2] / max(x[3], x[4])) for p, x in acc.items()}, ww
 

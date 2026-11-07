@@ -12,8 +12,9 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 V5 = HERE.parent / 'v5/data'
 PNR = __import__('os').environ.get('PNR', '1') != '0'   # 0.2.13：底換 prior-2025-26-card0213.json，pnr＝pnr_live 的窗口值（c=0，跳過沒打的季）；PNR=0 重現 0.2.12c 的 rv 檔
-BASE = HERE / ('prior-2025-26-card0213.json' if PNR else '_retired/prior-2025-26-card0212c.json')
-OUT = HERE / ('prior-2025-26-card0213-rv.json' if PNR else '_retired/prior-2025-26-card0212c-rv.json')
+_A = 'a' if PNR and __import__('os').environ.get('PNR_FIX', '1') != '0' else ''   # 0.2.13a：底換 prior-2025-26-card0213a.json；PNR_FIX=0 重現 0.2.13
+BASE = HERE / (('prior-2025-26-card0213a.json' if _A else '_retired/prior-2025-26-card0213.json') if PNR else '_retired/prior-2025-26-card0212c.json')
+OUT = HERE / (('prior-2025-26-card0213a-rv.json' if _A else '_retired/prior-2025-26-card0213-rv.json') if PNR else '_retired/prior-2025-26-card0212c-rv.json')
 NOPRIOR = HERE / '2026-11-02/no-prior.csv'     # 凍結候選名單（2026-11-02 的 no-prior.csv）
 SEASONS = ('2024-25', '2023-24')
 MIN_V5_MIN = 800        # 樣本太小（Beekman 473 分鐘）窗口只剩雜訊，不補；只是樣本量門檻，不看結果

@@ -121,7 +121,9 @@ PATCH_NOTES = [
     # 0.2.12b（使用者 2026-11-02「Adopt W246」，R-140，E-204）：窗口 328→246 格，係數不重擬合，併入 0.2.12 格（R-064）
     # 0.2.12c（使用者 2026-11-02「採用上線」，R-144，E-207）：tovSkill 失誤率分母由持球分鐘改觸球次數，併入 0.2.12 格（R-064）
     # 版號 0.2.13（E-258，R-173，使用者 2026-11-07「做進卡片」）：加能力值 pnr＝PATCH；照 R-109 前 20 名進出 0 人、前 100 名移動 >=10 名卡片頁 3 人／新賽季頁 2 人
+    # 0.2.13a（2026-11-08 role-audit 後使用者「現在修 0.2.13a」）：pnr 窗口外的季不帶回合，併入 0.2.13 格（R-064）；R-109 兩頁前 20 名進出 0、前 100 名移動 >=10 名 0
     (('card', 'inseason'), '0.2.13', '2026-11-07', [
+        '修擋拆持球：只有三季前以前打過擋拆的人，不再被當成有擋拆數據（Porziņģis、Carter Jr. 擋拆 51 → 44）。｜Porziņģis/38 → 38/88.4 → 88.3；Kennedy Chandler/277 → 282/63.8 → 63.4；McDermott/576 → 576/40.6 → 40.4',
         '加擋拆持球能力值：擋拆持球次數多、每回合得分又高的人加分（Knueppel 81 → 71 名），擋拆多但得分效率低的人略降（Alexander-Walker 66 → 78 名）。｜Knueppel/81 → 71/80.7 → 81.3；McDaniels/89 → 79/80.2 → 80.9；Ajay Mitchell/69 → 64/81.9 → 82.6；Zion/47 → 45/85.3 → 85.9；Trae Young/114 → 110/77.5 → 77.7；Brunson/34 → 33/89.2 → 89.1；Jaquez Jr./176 → 189/72.1 → 71.0；Alexander-Walker/66 → 78/82.4 → 80.9']),
     (('card',), '0.2.12', '2026-11-02', [
         '新賽季反應加快：能力值窗口由四季改為約三季，本季比賽權重加大、舊資料更快淡出。｜Jokić/2 → 2/103.2 → 102.6；Paul George/20 → 24/92.0 → 90.3；Jimmy Butler III/21 → 20/92.0 → 92.0；Tyrese Maxey/35 → 31/88.4 → 89.4；Immanuel Quickley/57 → 87/82.9 → 79.5；Josh Hart/82 → 66/79.7 → 81.5',
@@ -866,7 +868,7 @@ def apply_common(s):
 # 籃板、身高兩邊都不算（約佔 OVR 差異一成三）。OVR 還有用人層（分鐘、出賽率），所以兩分相加不等於 OVR。
 # 進攻再混進影響力（使用者 2026-11-01，同 OVR align 的比例）：T6（DARKO＋BPM）pooledPoss ≥ 5000 的人
 # 進攻＝0.75×能力值進攻＋0.25×（0.75×pooledO 減同一群 MIN ≥ 500 的平均）；不夠回合的人只用能力值。
-OD_CARD = Path(__file__).resolve().parents[1] / 'reports/card-0.2.13/ranking.csv'  # 0.2.13：加 pnr（擋拆持球），全部係數重擬合；0.2.12c：tovSkill 失誤率分母改觸球次數，全部係數重擬合；0.2.12b：窗口 328→246 格；0.2.12：tovSkill 改看持球時間，全部係數重擬合；0.2.10j：加 gravity（無球外線引力），全部係數重擬合；0.2.10i：drive→drive_D、creation→creationJ（OFF 提示貢獻欄跟著換）
+OD_CARD = Path(__file__).resolve().parents[1] / 'reports/card-0.2.13a/ranking.csv'  # 0.2.13：加 pnr（擋拆持球），全部係數重擬合；0.2.12c：tovSkill 失誤率分母改觸球次數，全部係數重擬合；0.2.12b：窗口 328→246 格；0.2.12：tovSkill 改看持球時間，全部係數重擬合；0.2.10j：加 gravity（無球外線引力），全部係數重擬合；0.2.10i：drive→drive_D、creation→creationJ（OFF 提示貢獻欄跟著換）
 OD_OFF = ['long', 'mid', 'short', 'ft', 'drive', 'gravity', 'pnr', 'foulDraw', 'tovSkill', 'pass', 'creation']   # pnr：0.2.13（E-258）；gravity：0.2.10j（每 10 點約 +0.19 per36）
 OD_DEF = ['onBall', 'help', 'pressure']
 OD_ALL = OD_OFF + OD_DEF + ['rebound', 'heightInches']

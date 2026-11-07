@@ -9,13 +9,17 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 SRC = HERE / '_retired/prior-2025-26-card0212c.json'
 TR = ROOT / 'reports/card-0.2.13-w246/gravity-pnr-attr.csv'
-OUT = HERE / 'prior-2025-26-card0213.json'
+PNR_FIX = __import__('os').environ.get('PNR_FIX', '1') != '0'   # 0.2.13a：pnr 改取 pnr_live 凍結池（pnr-pool-card0213a.json，窗口外的季不帶回合）的卡片值；PNR_FIX=0 重現 0.2.13
+OUT = HERE / ('prior-2025-26-card0213a.json' if PNR_FIX else '_retired/prior-2025-26-card0213.json')
 sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
 
 def main():
     d = json.loads(SRC.read_text(encoding='utf-8'))
     g = {int(r['playerId']): r for r in csv.DictReader(TR.open(encoding='utf-8'))}
+    if PNR_FIX:
+        sys.path.insert(0, str(HERE)); import pnr_live as PL
+        g = {p: {'pnr': v['pnr']} for p, v in PL.frozen()['card'].items()}
     n = miss = 0
     for p in d['players']:
         t = g.get(int(p['playerId']))
@@ -26,6 +30,9 @@ def main():
         n += 1
     d['note'] = 'card 0.2.13 先驗：' + d['note'] + ' ／ 加 pnr（擋拆持球，card-0.2.13-w246/gravity-pnr-attr.csv）。'
     d['sources']['card0213pnr'] = {'file': 'reports/card-0.2.13-w246/gravity-pnr-attr.csv', 'sha256': sha(TR)}
+    if PNR_FIX:
+        d['note'] += ' ／ 0.2.13a：pnr 改取 live/pnr-pool-card0213a.json 卡片值（窗口外的季不帶回合）。'
+        d['sources']['card0213pnr'] = {'file': 'reports/ovr-inseason-2026-27/live/pnr-pool-card0213a.json', 'sha256': sha(PL.FROZEN)}
     d['sources']['basePrior0212c'] = {'file': 'reports/ovr-inseason-2026-27/live/_retired/prior-2025-26-card0212c.json', 'sha256': sha(SRC)}
     OUT.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding='utf-8')
     print(json.dumps({'out': str(OUT), 'replaced': n, 'missing': miss}, ensure_ascii=False))

@@ -15,7 +15,8 @@ ROOT = Path(__file__).resolve().parents[2]
 SRC = ROOT / 'reports/card-0.2.12b'          # 欄位順序、同分排序、summary 範本
 FIT = ROOT / 'reports/card-0.2.13-w246'      # 係數／RAPM／三值／引力檔（W246 底，加 pnr 重擬合）
 PREV = ROOT / 'reports/card-0.2.12c'         # 上一版正式卡（R-109 對照）
-FROZEN = ROOT / 'reports/ovr-inseason-2026-27/live/pnr-pool-card0213.json'
+PNR_FIX = __import__('os').environ.get('PNR_FIX', '1') != '0'   # 0.2.13a（2026-11-08）：凍結池換 pnr-pool-card0213a.json（窗口外的季不帶回合）；PNR_FIX=0 重現 card 0.2.13
+FROZEN = ROOT / ('reports/ovr-inseason-2026-27/live/pnr-pool-card0213a.json' if PNR_FIX else 'reports/ovr-inseason-2026-27/live/pnr-pool-card0213.json')
 src_dir, out, ver = Path(sys.argv[1]), Path(sys.argv[2]), sys.argv[3]
 hdr = list(csv.DictReader(open(SRC / 'ranking.csv', encoding='utf-8')).fieldnames)
 rt = list(csv.DictReader(open(src_dir / 'ranking.csv', encoding='utf-8')))
@@ -64,6 +65,8 @@ with open(out / 'def-L-primary.csv', 'w', encoding='utf-8', newline='') as fh:
 summ = json.loads((PREV / 'summary.json').read_text(encoding='utf-8'))
 sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
 fs = json.loads((FIT / 'summary.json').read_text(encoding='utf-8'))
+if PNR_FIX:
+    summ['change_0213a'] = '0.2.13a（2026-11-08 role-audit）：pnr 窗口外的季（win_len 1e-12 佔位權重）不帶擋拆回合，7 人 pnr≈51→43.5，其他人 ≤0.5；凍結池 live/pnr-pool-card0213a.json；係數與錨點沿用 card-0.2.13-w246，不重擬合。'
 summ.update({'version': f'card {ver}', 'base': 'reports/card-0.2.12c（card 0.2.12c，W246）', 'players': len(rows),
              'change': 'E-258：加能力值 pnr（擋拆持球）＝Synergy PRBallHandler 每 36 分鐘回合（量）與每回合得分（率，經驗貝氏收縮，只在 ≥50 回合的人裡排）各半，四季滑動窗口；0–99 映射凍結於 live/pnr-pool-card0213.json；全部係數與 OVR 錨點在 W246 窗口重擬合（card-0.2.13-w246）。',
              'win_len': 246, 'ranking_csv_sha256': sha(out / 'ranking.csv'), 'three_value_csv_sha256': sha(out / 'three-value.csv'),
