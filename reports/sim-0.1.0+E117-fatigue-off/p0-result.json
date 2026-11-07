@@ -1,0 +1,24 @@
+{
+ "player": "Nikola Jokić",
+ "seed": 20261028,
+ "on": {
+  "fatigue": true,
+  "scoreA": 114,
+  "scoreB": 127,
+  "gameSeconds": 2880,
+  "complete": true,
+  "applyStaminaCalls": 8640,
+  "maxFatigueArg": 0.32596027795063265
+ },
+ "off": {
+  "fatigue": false,
+  "scoreA": 108,
+  "scoreB": 122,
+  "gameSeconds": 2880,
+  "complete": true,
+  "applyStaminaCalls": 0,
+  "maxFatigueArg": 0
+ },
+ "outputsDiffer": true,
+ "pass": true
+}

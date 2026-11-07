@@ -1,0 +1,23 @@
+{
+ "experiment": "E-140",
+ "prereg_sha256": "d3fd8e240c1704b433d5a69a567b619db5ef4d099fe6ac4f7f14088256e0877b",
+ "amendment_a1_sha256": "d441ab905709e95d39bf7e5b4d32f9d07af54dede174b219f4f4015887376796",
+ "k0": {"a_identical_games_vs_HEAD": {"seeds": [20261028, 20261029], "games_per_seed": 435, "identical": true}, "b_npm_test": {"passed": 52, "log": "npm-test.log"}, "pass": true},
+ "calibration": {"seeds": "20261100-20261115", "c": -0.03125, "pace_multiplier": 0.99875, "rounds": 1, "file": "calibration.json"},
+ "k1": {"seeds": "20261028-20261059",
+  "on": {"foulPer100": 10.7438, "possPerTeamGame": 100.5017, "ptsPerTeamGame": 118.9837},
+  "off_new": {"foulPer100": 10.7419, "possPerTeamGame": 100.5467, "ptsPerTeamGame": 119.0402},
+  "foulRelGap": 0.000185, "foulLimit": 0.01, "possGap": -0.0450, "possLimit": 0.15, "ptsGap": -0.0565, "ptsLimit": 0.3,
+  "passAll": true, "off2_ref": {"foulPer100": 10.7856, "possPerTeamGame": 100.5082, "ptsPerTeamGame": 119.0620}},
+ "report_items": {
+  "T1_pace_net_margin_MAE": {"on": 3.2220, "off": 3.3217, "off2": 3.1787, "noise_N": 0.1430, "delta": -0.0997, "bootstrap90_CI": [-0.4399, 0.2285], "RMSE": {"on": 3.889, "off": 4.111, "off2": 4.113},
+   "regression_starters_beta_sum5": {"slope": -8.157, "corr": -0.812, "r2": 0.660, "sdChange": 0.836, "sdBeta5": 0.083, "maeOff_plus_systematic": 3.4696, "maeOff_plus_residual": 3.0962}},
+  "ledger_FT_vs_RAPM_ftRate_def_x0.68": {"r": 0.5933, "CI90": [0.528, 0.653], "n": 304, "ftC_variant_r": 0.5934},
+  "winimp_rank_off_to_on": {"Jokic": [1,1], "Wembanyama": [2,2], "Gobert": [7,8], "Adebayo": [106,104], "Daniels": [82,55], "Caruso": [152,186], "Smart": [255,317], "Dort": [370,334], "Holiday": [54,102], "D_White": [96,88], "Herbert_Jones": [322,288]},
+  "winimp_rank_spearman_off_vs_on": {"winsPer82": 0.883, "winsPer82_pos": 0.859},
+  "winsPer82_off_to_on": {"Jokic": [17.13,16.61], "Wembanyama": [15.76,14.22], "Gobert": [10.25,9.23], "Adebayo": [3.67,3.03], "Daniels": [4.40,4.91], "Caruso": [2.31,0.98], "Smart": [-0.26,-1.92], "Dort": [-3.93,-2.35], "Holiday": [5.64,3.08], "D_White": [3.89,3.42], "Herbert_Jones": [-1.49,-0.90]},
+  "mean_winsPer82_change_by_position": {"C": -0.77, "PG": -1.77, "SG": 0.42, "SF": 0.33, "PF": -0.57},
+  "E067_S_AB_BA": {"baseline_main": [81.8,95.2], "baseline_position": [37.5,50.1], "off_main": [79.7,92.8], "off_position": [-37.0,-22.5], "on_main": [79.1,93.4], "on_position": [-24.5,-11.3], "baseline_reproduction": "OK", "details": "bias.json"}
+ },
+ "verdict_for_adoption_gate": "k0 and k1 pass; adoption decision is lead's"
+}

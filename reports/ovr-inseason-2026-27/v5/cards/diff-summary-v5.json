@@ -1,0 +1,986 @@
+{
+  "spec": "preregistration-v5 §R.3",
+  "minCut": 500,
+  "seasons": {
+    "2023-24": {
+      "start": "D1",
+      "all": {
+        "n": 572,
+        "pearson": 0.9596,
+        "spearman": 0.9555,
+        "meanDOvr": 0.053,
+        "medianDOvr": 0.0,
+        "meanAbsDOvr": 1.935,
+        "maxAbsDOvr": 16.105,
+        "nAbsDOvrGt3": 131,
+        "medianOvr_v4": 67.846,
+        "medianOvr_v5": 68.332,
+        "meanAbsDRank": 28.91
+      },
+      "MIN>=500": {
+        "n": 360,
+        "pearson": 0.9447,
+        "spearman": 0.937,
+        "meanDOvr": 0.052,
+        "medianDOvr": 0.0,
+        "meanAbsDOvr": 2.769,
+        "maxAbsDOvr": 16.105,
+        "nAbsDOvrGt3": 121,
+        "medianOvr_v4": 71.639,
+        "medianOvr_v5": 71.349,
+        "meanAbsDRank": 38.16
+      },
+      "top10AbsDOvr_all": [
+        {
+          "name": "Gary Payton II",
+          "pos": "PG",
+          "MIN_season": "685.0",
+          "ovr_v4": 70.9139,
+          "ovr_v5": 87.0187,
+          "dOvr": 16.1048,
+          "rank_v4": 235,
+          "rank_v5": 44
+        },
+        {
+          "name": "Toumani Camara",
+          "pos": "SF",
+          "MIN_season": "1741.0",
+          "ovr_v4": 64.0709,
+          "ovr_v5": 79.4902,
+          "dOvr": 15.4193,
+          "rank_v4": 365,
+          "rank_v5": 103
+        },
+        {
+          "name": "Marcus Smart",
+          "pos": "PG",
+          "MIN_season": "603.0",
+          "ovr_v4": 72.3208,
+          "ovr_v5": 84.5101,
+          "dOvr": 12.1893,
+          "rank_v4": 199,
+          "rank_v5": 55
+        },
+        {
+          "name": "Sam Hauser",
+          "pos": "SF",
+          "MIN_season": "1743.0",
+          "ovr_v4": 71.4392,
+          "ovr_v5": 83.0207,
+          "dOvr": 11.5815,
+          "rank_v4": 224,
+          "rank_v5": 65
+        },
+        {
+          "name": "James Wiseman",
+          "pos": "C",
+          "MIN_season": "1089.0",
+          "ovr_v4": 66.4182,
+          "ovr_v5": 54.951,
+          "dOvr": -11.4672,
+          "rank_v4": 316,
+          "rank_v5": 510
+        },
+        {
+          "name": "Kris Murray",
+          "pos": "SF",
+          "MIN_season": "1347.0",
+          "ovr_v4": 56.9601,
+          "ovr_v5": 68.3434,
+          "dOvr": 11.3833,
+          "rank_v4": 502,
+          "rank_v5": 286
+        },
+        {
+          "name": "Svi Mykhailiuk",
+          "pos": "SF",
+          "MIN_season": "414.0",
+          "ovr_v4": 63.4761,
+          "ovr_v5": 74.6988,
+          "dOvr": 11.2227,
+          "rank_v4": 373,
+          "rank_v5": 159
+        },
+        {
+          "name": "Dean Wade",
+          "pos": "PF",
+          "MIN_season": "1113.0",
+          "ovr_v4": 71.6192,
+          "ovr_v5": 82.5238,
+          "dOvr": 10.9046,
+          "rank_v4": 222,
+          "rank_v5": 74
+        },
+        {
+          "name": "Miles Bridges",
+          "pos": "SF",
+          "MIN_season": "2586.0",
+          "ovr_v4": 89.6643,
+          "ovr_v5": 78.9469,
+          "dOvr": -10.7174,
+          "rank_v4": 32,
+          "rank_v5": 111
+        },
+        {
+          "name": "Andrew Wiggins",
+          "pos": "SF",
+          "MIN_season": "1922.0",
+          "ovr_v4": 79.0422,
+          "ovr_v5": 68.6358,
+          "dOvr": -10.4064,
+          "rank_v4": 98,
+          "rank_v5": 278
+        }
+      ],
+      "top10AbsDOvr_MIN>=500": [
+        {
+          "name": "Gary Payton II",
+          "pos": "PG",
+          "MIN_season": "685.0",
+          "ovr_v4": 70.9139,
+          "ovr_v5": 87.0187,
+          "dOvr": 16.1048,
+          "rank_v4": 235,
+          "rank_v5": 44
+        },
+        {
+          "name": "Toumani Camara",
+          "pos": "SF",
+          "MIN_season": "1741.0",
+          "ovr_v4": 64.0709,
+          "ovr_v5": 79.4902,
+          "dOvr": 15.4193,
+          "rank_v4": 365,
+          "rank_v5": 103
+        },
+        {
+          "name": "Marcus Smart",
+          "pos": "PG",
+          "MIN_season": "603.0",
+          "ovr_v4": 72.3208,
+          "ovr_v5": 84.5101,
+          "dOvr": 12.1893,
+          "rank_v4": 199,
+          "rank_v5": 55
+        },
+        {
+          "name": "Sam Hauser",
+          "pos": "SF",
+          "MIN_season": "1743.0",
+          "ovr_v4": 71.4392,
+          "ovr_v5": 83.0207,
+          "dOvr": 11.5815,
+          "rank_v4": 224,
+          "rank_v5": 65
+        },
+        {
+          "name": "James Wiseman",
+          "pos": "C",
+          "MIN_season": "1089.0",
+          "ovr_v4": 66.4182,
+          "ovr_v5": 54.951,
+          "dOvr": -11.4672,
+          "rank_v4": 316,
+          "rank_v5": 510
+        },
+        {
+          "name": "Kris Murray",
+          "pos": "SF",
+          "MIN_season": "1347.0",
+          "ovr_v4": 56.9601,
+          "ovr_v5": 68.3434,
+          "dOvr": 11.3833,
+          "rank_v4": 502,
+          "rank_v5": 286
+        },
+        {
+          "name": "Dean Wade",
+          "pos": "PF",
+          "MIN_season": "1113.0",
+          "ovr_v4": 71.6192,
+          "ovr_v5": 82.5238,
+          "dOvr": 10.9046,
+          "rank_v4": 222,
+          "rank_v5": 74
+        },
+        {
+          "name": "Miles Bridges",
+          "pos": "SF",
+          "MIN_season": "2586.0",
+          "ovr_v4": 89.6643,
+          "ovr_v5": 78.9469,
+          "dOvr": -10.7174,
+          "rank_v4": 32,
+          "rank_v5": 111
+        },
+        {
+          "name": "Andrew Wiggins",
+          "pos": "SF",
+          "MIN_season": "1922.0",
+          "ovr_v4": 79.0422,
+          "ovr_v5": 68.6358,
+          "dOvr": -10.4064,
+          "rank_v4": 98,
+          "rank_v5": 278
+        },
+        {
+          "name": "Ausar Thompson",
+          "pos": "SG",
+          "MIN_season": "1585.0",
+          "ovr_v4": 62.7683,
+          "ovr_v5": 72.7247,
+          "dOvr": 9.9564,
+          "rank_v4": 390,
+          "rank_v5": 200
+        }
+      ],
+      "vs2k": {
+        "v4": {
+          "all": {
+            "2K27": {
+              "ref": "2K27",
+              "n": 377,
+              "rankRho": 0.5321,
+              "medianCardOvr": 70.98,
+              "median2k": 76.0,
+              "medianCardMinus2k": -5.778
+            },
+            "2K24": {
+              "ref": "2K24",
+              "n": 376,
+              "rankRho": 0.5427,
+              "medianCardOvr": 70.956,
+              "median2k": 76.0,
+              "medianCardMinus2k": -5.267
+            }
+          },
+          "MIN>=500": {
+            "2K27": {
+              "ref": "2K27",
+              "n": 299,
+              "rankRho": 0.5276,
+              "medianCardOvr": 72.298,
+              "median2k": 77.0,
+              "medianCardMinus2k": -5.561
+            },
+            "2K24": {
+              "ref": "2K24",
+              "n": 299,
+              "rankRho": 0.573,
+              "medianCardOvr": 72.298,
+              "median2k": 77.0,
+              "medianCardMinus2k": -5.341
+            }
+          }
+        },
+        "v5": {
+          "all": {
+            "2K27": {
+              "ref": "2K27",
+              "n": 377,
+              "rankRho": 0.5496,
+              "medianCardOvr": 71.022,
+              "median2k": 76.0,
+              "medianCardMinus2k": -5.696
+            },
+            "2K24": {
+              "ref": "2K24",
+              "n": 376,
+              "rankRho": 0.5216,
+              "medianCardOvr": 70.995,
+              "median2k": 76.0,
+              "medianCardMinus2k": -5.141
+            }
+          },
+          "MIN>=500": {
+            "2K27": {
+              "ref": "2K27",
+              "n": 299,
+              "rankRho": 0.5442,
+              "medianCardOvr": 72.725,
+              "median2k": 77.0,
+              "medianCardMinus2k": -5.657
+            },
+            "2K24": {
+              "ref": "2K24",
+              "n": 299,
+              "rankRho": 0.5309,
+              "medianCardOvr": 72.725,
+              "median2k": 77.0,
+              "medianCardMinus2k": -5.501
+            }
+          }
+        }
+      },
+      "v5Card": "reports/ovr-inseason-2026-27/v5/cards/2023-24-v5.csv",
+      "v5Sha256": "866f6ecb7f1e001e593109869e1f26f84881a03265d7f357fd3cf5c3b867f0d1",
+      "v4Card": "reports/ovr-inseason-2026-27/v4/cards/2023-24.csv",
+      "rapmV4": "reports/ovr-inseason-2026-27/v3/data/rapm-2021-22_2022-23.csv",
+      "rapmV5": "reports\\ovr-inseason-2026-27\\v3\\data\\rapm-2021-22_2023-24.csv",
+      "rapmV5Sha256": "b8c9f273f4d01c7a03be923b98f82a06812a551da158fabcb679801474e6e1d2",
+      "rapmSeasonsV4": [
+        "2021-22",
+        "2022-23"
+      ],
+      "rapmSeasonsV5": [
+        "2021-22",
+        "2022-23",
+        "2023-24"
+      ],
+      "buildChecksPass": true,
+      "reproducesV4WithV4Rapm": true,
+      "vs4season": {
+        "start": "D1",
+        "all": {
+          "n": 572,
+          "pearson": 0.98,
+          "spearman": 0.9768,
+          "meanDOvr": 0.036,
+          "medianDOvr": 0.0,
+          "meanAbsDOvr": 1.216,
+          "maxAbsDOvr": 14.637,
+          "nAbsDOvrGt3": 66,
+          "medianOvr_3season": 68.332,
+          "medianOvr_4season": 68.18,
+          "meanAbsDRank": 18.06
+        },
+        "MIN>=500": {
+          "n": 360,
+          "pearson": 0.9832,
+          "spearman": 0.9831,
+          "meanDOvr": -0.055,
+          "medianDOvr": 0.0,
+          "meanAbsDOvr": 1.379,
+          "maxAbsDOvr": 14.637,
+          "nAbsDOvrGt3": 41,
+          "medianOvr_3season": 71.349,
+          "medianOvr_4season": 71.521,
+          "meanAbsDRank": 19.12
+        },
+        "top10AbsDOvr_all": [
+          {
+            "name": "Anthony Edwards",
+            "pos": "SG",
+            "MIN_season": "2775.0",
+            "ovr_3season": 93.1172,
+            "ovr_4season": 78.4803,
+            "dOvr": -14.6369,
+            "rank_3season": 23,
+            "rank_4season": 113
+          },
+          {
+            "name": "Frank Ntilikina",
+            "pos": "SG",
+            "MIN_season": "43.0",
+            "ovr_3season": 63.7731,
+            "ovr_4season": 77.8172,
+            "dOvr": 14.0441,
+            "rank_3season": 366,
+            "rank_4season": 125
+          },
+          {
+            "name": "Patty Mills",
+            "pos": "PG",
+            "MIN_season": "418.0",
+            "ovr_3season": 49.9062,
+            "ovr_4season": 61.4019,
+            "dOvr": 11.4957,
+            "rank_3season": 555,
+            "rank_4season": 415
+          },
+          {
+            "name": "Devonte' Graham",
+            "pos": "PG",
+            "MIN_season": "314.0",
+            "ovr_3season": 62.3664,
+            "ovr_4season": 72.9768,
+            "dOvr": 10.6104,
+            "rank_3season": 392,
+            "rank_4season": 191
+          },
+          {
+            "name": "Evan Fournier",
+            "pos": "SG",
+            "MIN_season": "584.0",
+            "ovr_3season": 66.8394,
+            "ovr_4season": 56.3779,
+            "dOvr": -10.4615,
+            "rank_3season": 321,
+            "rank_4season": 495
+          },
+          {
+            "name": "P.J. Tucker",
+            "pos": "SG",
+            "MIN_season": "487.0",
+            "ovr_3season": 74.6602,
+            "ovr_4season": 64.2755,
+            "dOvr": -10.3847,
+            "rank_3season": 160,
+            "rank_4season": 363
+          },
+          {
+            "name": "Svi Mykhailiuk",
+            "pos": "SF",
+            "MIN_season": "414.0",
+            "ovr_3season": 74.6988,
+            "ovr_4season": 64.5419,
+            "dOvr": -10.1569,
+            "rank_3season": 159,
+            "rank_4season": 357
+          },
+          {
+            "name": "Reggie Bullock Jr.",
+            "pos": "SG",
+            "MIN_season": "418.0",
+            "ovr_3season": 60.6185,
+            "ovr_4season": 70.6019,
+            "dOvr": 9.9834,
+            "rank_3season": 429,
+            "rank_4season": 235
+          },
+          {
+            "name": "Derrick Rose",
+            "pos": "PG",
+            "MIN_season": "399.0",
+            "ovr_3season": 65.8698,
+            "ovr_4season": 75.8373,
+            "dOvr": 9.9675,
+            "rank_3season": 333,
+            "rank_4season": 149
+          },
+          {
+            "name": "Juan Toscano-Anderson",
+            "pos": "SG",
+            "MIN_season": "52.0",
+            "ovr_3season": 60.3206,
+            "ovr_4season": 70.2481,
+            "dOvr": 9.9275,
+            "rank_3season": 434,
+            "rank_4season": 247
+          }
+        ],
+        "top10AbsDOvr_MIN>=500": [
+          {
+            "name": "Anthony Edwards",
+            "pos": "SG",
+            "MIN_season": "2775.0",
+            "ovr_3season": 93.1172,
+            "ovr_4season": 78.4803,
+            "dOvr": -14.6369,
+            "rank_3season": 23,
+            "rank_4season": 113
+          },
+          {
+            "name": "Evan Fournier",
+            "pos": "SG",
+            "MIN_season": "584.0",
+            "ovr_3season": 66.8394,
+            "ovr_4season": 56.3779,
+            "dOvr": -10.4615,
+            "rank_3season": 321,
+            "rank_4season": 495
+          },
+          {
+            "name": "Clint Capela",
+            "pos": "PF",
+            "MIN_season": "1882.0",
+            "ovr_3season": 74.519,
+            "ovr_4season": 83.0793,
+            "dOvr": 8.5603,
+            "rank_3season": 162,
+            "rank_4season": 60
+          },
+          {
+            "name": "Jimmy Butler III",
+            "pos": "SF",
+            "MIN_season": "2042.0",
+            "ovr_3season": 87.7376,
+            "ovr_4season": 95.6372,
+            "dOvr": 7.8996,
+            "rank_3season": 37,
+            "rank_4season": 13
+          },
+          {
+            "name": "Danuel House Jr.",
+            "pos": "SG",
+            "MIN_season": "507.0",
+            "ovr_3season": 62.1062,
+            "ovr_4season": 54.3845,
+            "dOvr": -7.7217,
+            "rank_3season": 397,
+            "rank_4season": 515
+          },
+          {
+            "name": "Jusuf Nurkić",
+            "pos": "C",
+            "MIN_season": "2078.0",
+            "ovr_3season": 70.1957,
+            "ovr_4season": 77.8264,
+            "dOvr": 7.6307,
+            "rank_3season": 246,
+            "rank_4season": 123
+          },
+          {
+            "name": "De'Anthony Melton",
+            "pos": "PG",
+            "MIN_season": "1022.0",
+            "ovr_3season": 72.9164,
+            "ovr_4season": 79.8194,
+            "dOvr": 6.903,
+            "rank_3season": 194,
+            "rank_4season": 95
+          },
+          {
+            "name": "Dean Wade",
+            "pos": "PF",
+            "MIN_season": "1113.0",
+            "ovr_3season": 82.5238,
+            "ovr_4season": 76.2672,
+            "dOvr": -6.2566,
+            "rank_3season": 74,
+            "rank_4season": 145
+          },
+          {
+            "name": "Reggie Jackson",
+            "pos": "PG",
+            "MIN_season": "1819.0",
+            "ovr_3season": 58.2914,
+            "ovr_4season": 64.3574,
+            "dOvr": 6.066,
+            "rank_3season": 468,
+            "rank_4season": 361
+          },
+          {
+            "name": "Mike Muscala",
+            "pos": "PF",
+            "MIN_season": "597.0",
+            "ovr_3season": 53.6737,
+            "ovr_4season": 59.7334,
+            "dOvr": 6.0597,
+            "rank_3season": 524,
+            "rank_4season": 445
+          }
+        ],
+        "vs2k": {
+          "3season": {
+            "all": {
+              "2K27": {
+                "ref": "2K27",
+                "n": 377,
+                "rankRho": 0.5496,
+                "medianCardOvr": 71.022,
+                "median2k": 76.0,
+                "medianCardMinus2k": -5.696
+              },
+              "2K24": {
+                "ref": "2K24",
+                "n": 376,
+                "rankRho": 0.5216,
+                "medianCardOvr": 70.995,
+                "median2k": 76.0,
+                "medianCardMinus2k": -5.141
+              }
+            },
+            "MIN>=500": {
+              "2K27": {
+                "ref": "2K27",
+                "n": 299,
+                "rankRho": 0.5442,
+                "medianCardOvr": 72.725,
+                "median2k": 77.0,
+                "medianCardMinus2k": -5.657
+              },
+              "2K24": {
+                "ref": "2K24",
+                "n": 299,
+                "rankRho": 0.5309,
+                "medianCardOvr": 72.725,
+                "median2k": 77.0,
+                "medianCardMinus2k": -5.501
+              }
+            }
+          },
+          "4season": {
+            "all": {
+              "2K27": {
+                "ref": "2K27",
+                "n": 377,
+                "rankRho": 0.5319,
+                "medianCardOvr": 71.166,
+                "median2k": 76.0,
+                "medianCardMinus2k": -5.828
+              },
+              "2K24": {
+                "ref": "2K24",
+                "n": 376,
+                "rankRho": 0.5188,
+                "medianCardOvr": 71.094,
+                "median2k": 76.0,
+                "medianCardMinus2k": -5.309
+              }
+            },
+            "MIN>=500": {
+              "2K27": {
+                "ref": "2K27",
+                "n": 299,
+                "rankRho": 0.5233,
+                "medianCardOvr": 72.562,
+                "median2k": 77.0,
+                "medianCardMinus2k": -5.854
+              },
+              "2K24": {
+                "ref": "2K24",
+                "n": 299,
+                "rankRho": 0.533,
+                "medianCardOvr": 72.562,
+                "median2k": 77.0,
+                "medianCardMinus2k": -5.598
+              }
+            }
+          }
+        },
+        "altCard": "reports/ovr-inseason-2026-27/v5/cards/2023-24-v5-4season.csv",
+        "altSha256": "7f021058a094c7ced523aa66ad34ca5ee810cb4fc3514621e9cc8e54ef897435",
+        "altRapm": "reports\\ovr-inseason-2026-27\\v5\\data\\rapm-2020-21_2023-24.csv",
+        "altRapmSeasons": [
+          "2020-21",
+          "2021-22",
+          "2022-23",
+          "2023-24"
+        ],
+        "altBuildChecksPass": true
+      }
+    },
+    "2024-25": {
+      "start": "D2",
+      "all": {
+        "n": 569,
+        "pearson": 0.9715,
+        "spearman": 0.9661,
+        "meanDOvr": 0.525,
+        "medianDOvr": 0.0,
+        "meanAbsDOvr": 1.608,
+        "maxAbsDOvr": 21.188,
+        "nAbsDOvrGt3": 112,
+        "medianOvr_v4": 65.889,
+        "medianOvr_v5": 66.535,
+        "meanAbsDRank": 23.9
+      },
+      "MIN>=500": {
+        "n": 375,
+        "pearson": 0.9647,
+        "spearman": 0.9576,
+        "meanDOvr": 0.803,
+        "medianDOvr": 0.171,
+        "meanAbsDOvr": 2.143,
+        "maxAbsDOvr": 21.188,
+        "nAbsDOvrGt3": 98,
+        "medianOvr_v4": 68.568,
+        "medianOvr_v5": 70.125,
+        "meanAbsDRank": 28.71
+      },
+      "top10AbsDOvr_all": [
+        {
+          "name": "Lonzo Ball",
+          "pos": "SG",
+          "MIN_season": "775.0",
+          "ovr_v4": 57.0637,
+          "ovr_v5": 78.2519,
+          "dOvr": 21.1882,
+          "rank_v4": 471,
+          "rank_v5": 100
+        },
+        {
+          "name": "AJ Green",
+          "pos": "SG",
+          "MIN_season": "1661.0",
+          "ovr_v4": 65.1228,
+          "ovr_v5": 81.0001,
+          "dOvr": 15.8773,
+          "rank_v4": 300,
+          "rank_v5": 74
+        },
+        {
+          "name": "Dorian Finney-Smith",
+          "pos": "SF",
+          "MIN_season": "1819.0",
+          "ovr_v4": 64.9633,
+          "ovr_v5": 78.7003,
+          "dOvr": 13.737,
+          "rank_v4": 302,
+          "rank_v5": 96
+        },
+        {
+          "name": "Keon Ellis",
+          "pos": "SG",
+          "MIN_season": "1948.0",
+          "ovr_v4": 66.1249,
+          "ovr_v5": 77.9851,
+          "dOvr": 11.8602,
+          "rank_v4": 283,
+          "rank_v5": 104
+        },
+        {
+          "name": "Kris Dunn",
+          "pos": "PG",
+          "MIN_season": "1785.0",
+          "ovr_v4": 64.782,
+          "ovr_v5": 76.2845,
+          "dOvr": 11.5025,
+          "rank_v4": 306,
+          "rank_v5": 132
+        },
+        {
+          "name": "Dante Exum",
+          "pos": "SG",
+          "MIN_season": "372.0",
+          "ovr_v4": 56.5451,
+          "ovr_v5": 66.7413,
+          "dOvr": 10.1962,
+          "rank_v4": 480,
+          "rank_v5": 281
+        },
+        {
+          "name": "Andrew Nembhard",
+          "pos": "SG",
+          "MIN_season": "1883.0",
+          "ovr_v4": 61.6887,
+          "ovr_v5": 71.614,
+          "dOvr": 9.9253,
+          "rank_v4": 380,
+          "rank_v5": 198
+        },
+        {
+          "name": "OG Anunoby",
+          "pos": "SF",
+          "MIN_season": "2706.0",
+          "ovr_v4": 90.5331,
+          "ovr_v5": 81.0001,
+          "dOvr": -9.533,
+          "rank_v4": 22,
+          "rank_v5": 73
+        },
+        {
+          "name": "Anthony Black",
+          "pos": "SF",
+          "MIN_season": "1882.0",
+          "ovr_v4": 54.5065,
+          "ovr_v5": 63.9378,
+          "dOvr": 9.4313,
+          "rank_v4": 500,
+          "rank_v5": 333
+        },
+        {
+          "name": "Day'Ron Sharpe",
+          "pos": "PF",
+          "MIN_season": "906.0",
+          "ovr_v4": 69.0472,
+          "ovr_v5": 78.4243,
+          "dOvr": 9.3771,
+          "rank_v4": 225,
+          "rank_v5": 99
+        }
+      ],
+      "top10AbsDOvr_MIN>=500": [
+        {
+          "name": "Lonzo Ball",
+          "pos": "SG",
+          "MIN_season": "775.0",
+          "ovr_v4": 57.0637,
+          "ovr_v5": 78.2519,
+          "dOvr": 21.1882,
+          "rank_v4": 471,
+          "rank_v5": 100
+        },
+        {
+          "name": "AJ Green",
+          "pos": "SG",
+          "MIN_season": "1661.0",
+          "ovr_v4": 65.1228,
+          "ovr_v5": 81.0001,
+          "dOvr": 15.8773,
+          "rank_v4": 300,
+          "rank_v5": 74
+        },
+        {
+          "name": "Dorian Finney-Smith",
+          "pos": "SF",
+          "MIN_season": "1819.0",
+          "ovr_v4": 64.9633,
+          "ovr_v5": 78.7003,
+          "dOvr": 13.737,
+          "rank_v4": 302,
+          "rank_v5": 96
+        },
+        {
+          "name": "Keon Ellis",
+          "pos": "SG",
+          "MIN_season": "1948.0",
+          "ovr_v4": 66.1249,
+          "ovr_v5": 77.9851,
+          "dOvr": 11.8602,
+          "rank_v4": 283,
+          "rank_v5": 104
+        },
+        {
+          "name": "Kris Dunn",
+          "pos": "PG",
+          "MIN_season": "1785.0",
+          "ovr_v4": 64.782,
+          "ovr_v5": 76.2845,
+          "dOvr": 11.5025,
+          "rank_v4": 306,
+          "rank_v5": 132
+        },
+        {
+          "name": "Andrew Nembhard",
+          "pos": "SG",
+          "MIN_season": "1883.0",
+          "ovr_v4": 61.6887,
+          "ovr_v5": 71.614,
+          "dOvr": 9.9253,
+          "rank_v4": 380,
+          "rank_v5": 198
+        },
+        {
+          "name": "OG Anunoby",
+          "pos": "SF",
+          "MIN_season": "2706.0",
+          "ovr_v4": 90.5331,
+          "ovr_v5": 81.0001,
+          "dOvr": -9.533,
+          "rank_v4": 22,
+          "rank_v5": 73
+        },
+        {
+          "name": "Anthony Black",
+          "pos": "SF",
+          "MIN_season": "1882.0",
+          "ovr_v4": 54.5065,
+          "ovr_v5": 63.9378,
+          "dOvr": 9.4313,
+          "rank_v4": 500,
+          "rank_v5": 333
+        },
+        {
+          "name": "Day'Ron Sharpe",
+          "pos": "PF",
+          "MIN_season": "906.0",
+          "ovr_v4": 69.0472,
+          "ovr_v5": 78.4243,
+          "dOvr": 9.3771,
+          "rank_v4": 225,
+          "rank_v5": 99
+        },
+        {
+          "name": "Kevin Porter Jr.",
+          "pos": "SG",
+          "MIN_season": "1482.0",
+          "ovr_v4": 61.2,
+          "ovr_v5": 70.1279,
+          "dOvr": 8.9279,
+          "rank_v4": 397,
+          "rank_v5": 222
+        }
+      ],
+      "vs2k": {
+        "v4": {
+          "all": {
+            "2K27": {
+              "ref": "2K27",
+              "n": 457,
+              "rankRho": 0.5336,
+              "medianCardOvr": 67.088,
+              "median2k": 75.0,
+              "medianCardMinus2k": -8.461
+            },
+            "2K25": {
+              "ref": "2K25",
+              "n": 456,
+              "rankRho": 0.5265,
+              "medianCardOvr": 67.088,
+              "median2k": 75.0,
+              "medianCardMinus2k": -7.483
+            }
+          },
+          "MIN>=500": {
+            "2K27": {
+              "ref": "2K27",
+              "n": 343,
+              "rankRho": 0.568,
+              "medianCardOvr": 69.072,
+              "median2k": 77.0,
+              "medianCardMinus2k": -8.661
+            },
+            "2K25": {
+              "ref": "2K25",
+              "n": 342,
+              "rankRho": 0.596,
+              "medianCardOvr": 69.059,
+              "median2k": 77.0,
+              "medianCardMinus2k": -7.591
+            }
+          }
+        },
+        "v5": {
+          "all": {
+            "2K27": {
+              "ref": "2K27",
+              "n": 457,
+              "rankRho": 0.5477,
+              "medianCardOvr": 68.162,
+              "median2k": 75.0,
+              "medianCardMinus2k": -7.197
+            },
+            "2K25": {
+              "ref": "2K25",
+              "n": 456,
+              "rankRho": 0.5447,
+              "medianCardOvr": 68.11,
+              "median2k": 75.0,
+              "medianCardMinus2k": -6.803
+            }
+          },
+          "MIN>=500": {
+            "2K27": {
+              "ref": "2K27",
+              "n": 343,
+              "rankRho": 0.5606,
+              "medianCardOvr": 70.297,
+              "median2k": 77.0,
+              "medianCardMinus2k": -7.058
+            },
+            "2K25": {
+              "ref": "2K25",
+              "n": 342,
+              "rankRho": 0.5913,
+              "medianCardOvr": 70.288,
+              "median2k": 77.0,
+              "medianCardMinus2k": -6.752
+            }
+          }
+        }
+      },
+      "v5Card": "reports/ovr-inseason-2026-27/v5/cards/2024-25-v5.csv",
+      "v5Sha256": "df7aa68c6a2f749833c23e29e74cefdb878e6738a624bc6bd9926ccac434d9f8",
+      "v4Card": "reports/ovr-inseason-2026-27/v4/cards/2024-25.csv",
+      "rapmV4": "reports/ovr-inseason-2026-27/v3/data/rapm-2021-22_2023-24.csv",
+      "rapmV5": "reports\\ovr-inseason-2026-27\\v4\\data\\rapm-2021-22_2024-25.csv",
+      "rapmV5Sha256": "681b9c11d66ab3471ca38ab1e4a27bab3b88b1f97cced6133fae049ae9a50615",
+      "rapmSeasonsV4": [
+        "2021-22",
+        "2022-23",
+        "2023-24"
+      ],
+      "rapmSeasonsV5": [
+        "2021-22",
+        "2022-23",
+        "2023-24",
+        "2024-25"
+      ],
+      "buildChecksPass": true,
+      "reproducesV4WithV4Rapm": true
+    }
+  },
+  "pass": true
+}

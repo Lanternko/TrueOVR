@@ -1,0 +1,1184 @@
+{
+ "F118_S_stats": {
+  "S_F_creation": {
+   "KAU": -0.3384521305460853,
+   "KP": -0.3692729674170063,
+   "KJ": -0.3465191904253317,
+   "ci90_KP_minus_KAU": [
+    -0.0649472714685716,
+    0.0012486522900427186
+   ],
+   "ci90_KJ_minus_KAU": [
+    -0.05119891731280628,
+    0.032162211828646765
+   ]
+  },
+  "S_G_creation": {
+   "KAU": -0.2151415932871268,
+   "KP": -0.2335939633950442,
+   "KJ": -0.23153084307490415,
+   "ci90_KP_minus_KAU": [
+    -0.03808559397192542,
+    0.0006493665860707084
+   ],
+   "ci90_KJ_minus_KAU": [
+    -0.05249777234814951,
+    0.019613750345217527
+   ]
+  },
+  "S_C_creation": {
+   "KAU": -0.23828072311341225,
+   "KP": -0.1924271866690855,
+   "KJ": -0.29458665424476044,
+   "ci90_KP_minus_KAU": [
+    -0.04241979545198194,
+    0.1414573494993284
+   ],
+   "ci90_KJ_minus_KAU": [
+    -0.14937657130960016,
+    0.042900359286941005
+   ]
+  },
+  "S_all_creation": {
+   "KAU": -0.27008138014021565,
+   "KP": -0.2852686852958718,
+   "KJ": -0.29089567473415784,
+   "ci90_KP_minus_KAU": [
+    -0.033849734459655195,
+    0.002325765040992518
+   ],
+   "ci90_KJ_minus_KAU": [
+    -0.0468018760137719,
+    0.0037373759016906477
+   ]
+  },
+  "S_F_pass": {
+   "KAU": -0.3094624850587887,
+   "KP": -0.3030304019789774,
+   "KJ": -0.30132076439397354,
+   "ci90_KP_minus_KAU": [
+    -0.0018436322347039902,
+    0.010927971344251068
+   ],
+   "ci90_KJ_minus_KAU": [
+    -0.0013787509567316336,
+    0.016189800798407917
+   ]
+  },
+  "S_G_pass": {
+   "KAU": -0.3139117559449859,
+   "KP": -0.3134569498788098,
+   "KJ": -0.31060974057222573,
+   "ci90_KP_minus_KAU": [
+    -0.003671295196022642,
+    0.005626084612506015
+   ],
+   "ci90_KJ_minus_KAU": [
+    -0.0032496363791024913,
+    0.009222913657925548
+   ]
+  },
+  "S_C_pass": {
+   "KAU": -0.20244087431502222,
+   "KP": -0.18544088660229333,
+   "KJ": -0.18738665572891539,
+   "ci90_KP_minus_KAU": [
+    -0.0028018353504846386,
+    0.03151827482010476
+   ],
+   "ci90_KJ_minus_KAU": [
+    -0.010653861063685311,
+    0.02530819469728458
+   ]
+  },
+  "S_all_pass": {
+   "KAU": -0.31508062411361315,
+   "KP": -0.3111794987733073,
+   "KJ": -0.3093643125218424,
+   "ci90_KP_minus_KAU": [
+    0.0007068934654713532,
+    0.006068205721462253
+   ],
+   "ci90_KJ_minus_KAU": [
+    0.001030680986148766,
+    0.00832189919814679
+   ]
+  }
+ },
+ "JW": {
+  "KAU": {
+   "rank_MIN900": 10.5,
+   "n900": 303,
+   "top25_vs_T6": {
+    "n_fit": 300,
+    "n_top25_with_target": 25,
+    "JW_resid": 0.12058392189656875,
+    "top25_mean_resid": 1.3416707148605804,
+    "JW_minus_top25_mean": -1.2210867929640117,
+    "JW_in_top25": true,
+    "JW_resid_rank_in_top25_lowest_first": 5,
+    "resid_sd_all": 1.2929648932324587
+   }
+  },
+  "KP": {
+   "rank_MIN900": 9.0,
+   "n900": 303,
+   "top25_vs_T6": {
+    "n_fit": 300,
+    "n_top25_with_target": 25,
+    "JW_resid": -0.025404598940904854,
+    "top25_mean_resid": 1.2049175193028572,
+    "JW_minus_top25_mean": -1.230322118243762,
+    "JW_in_top25": true,
+    "JW_resid_rank_in_top25_lowest_first": 5,
+    "resid_sd_all": 1.2630490105948835
+   }
+  },
+  "KJ": {
+   "rank_MIN900": 9.0,
+   "n900": 303,
+   "top25_vs_T6": {
+    "n_fit": 300,
+    "n_top25_with_target": 25,
+    "JW_resid": 0.02452996706754984,
+    "top25_mean_resid": 1.266084012103046,
+    "JW_minus_top25_mean": -1.2415540450354963,
+    "JW_in_top25": true,
+    "JW_resid_rank_in_top25_lowest_first": 5,
+    "resid_sd_all": 1.2756322112498606
+   }
+  }
+ },
+ "coef_per10": {
+  "KAU": {
+   "2022-23": {
+    "drive": {
+     "per36": 0.023091521034523176,
+     "bootstrapSE": 0.12055410712062549
+    },
+    "creation": {
+     "per36": 0.04516313922308221,
+     "bootstrapSE": 0.12000134377432846
+    },
+    "pass": {
+     "per36": 0.3628918877587737,
+     "bootstrapSE": 0.08045822389081884
+    },
+    "short": {
+     "per36": 0.3081225952901996,
+     "bootstrapSE": 0.2567130565905361
+    }
+   },
+   "2023-24": {
+    "drive": {
+     "per36": 0.04521363577644843,
+     "bootstrapSE": 0.11332412476861256
+    },
+    "creation": {
+     "per36": 0.0177848977356707,
+     "bootstrapSE": 0.11163234369059374
+    },
+    "pass": {
+     "per36": 0.44230335006182775,
+     "bootstrapSE": 0.06739226853409659
+    },
+    "short": {
+     "per36": 0.3642454520478151,
+     "bootstrapSE": 0.22281434441240286
+    }
+   },
+   "2024-25": {
+    "drive": {
+     "per36": -0.002742299477796125,
+     "bootstrapSE": 0.09219457663861289
+    },
+    "creation": {
+     "per36": 0.10279655147277426,
+     "bootstrapSE": 0.09557230047891685
+    },
+    "pass": {
+     "per36": 0.3830032353545352,
+     "bootstrapSE": 0.062209114381551675
+    },
+    "short": {
+     "per36": 0.5008751447281975,
+     "bootstrapSE": 0.19615585159312965
+    }
+   },
+   "2025-26": {
+    "drive": {
+     "per36": -0.1703112552033092,
+     "bootstrapSE": 0.0775151689057845
+    },
+    "creation": {
+     "per36": 0.3063598812870291,
+     "bootstrapSE": 0.07037404320647607
+    },
+    "pass": {
+     "per36": 0.4652692722341003,
+     "bootstrapSE": 0.053839070237356845
+    },
+    "short": {
+     "per36": 0.4987560363411141,
+     "bootstrapSE": 0.12121254326013887
+    }
+   }
+  },
+  "KP": {
+   "2022-23": {
+    "drive": {
+     "per36": 0.02804084573004188,
+     "bootstrapSE": 0.10823273161651595
+    },
+    "creation": {
+     "per36": 0.040475946939817424,
+     "bootstrapSE": 0.09772560117964223
+    },
+    "pass": {
+     "per36": 0.36061582739394404,
+     "bootstrapSE": 0.08155878825298905
+    },
+    "short": {
+     "per36": 0.3089308557164296,
+     "bootstrapSE": 0.2566652008170898
+    }
+   },
+   "2023-24": {
+    "drive": {
+     "per36": 0.018956180574721163,
+     "bootstrapSE": 0.10174783200392817
+    },
+    "creation": {
+     "per36": 0.06960528785562264,
+     "bootstrapSE": 0.08582796587865141
+    },
+    "pass": {
+     "per36": 0.43108484311316425,
+     "bootstrapSE": 0.06751605939334403
+    },
+    "short": {
+     "per36": 0.3792316658985294,
+     "bootstrapSE": 0.2222187539721311
+    }
+   },
+   "2024-25": {
+    "drive": {
+     "per36": -0.03651958069744096,
+     "bootstrapSE": 0.08343228999332394
+    },
+    "creation": {
+     "per36": 0.17503410308065293,
+     "bootstrapSE": 0.07571397579049532
+    },
+    "pass": {
+     "per36": 0.36151376747521397,
+     "bootstrapSE": 0.06280199951909428
+    },
+    "short": {
+     "per36": 0.5364082317876886,
+     "bootstrapSE": 0.19611549708448617
+    }
+   },
+   "2025-26": {
+    "drive": {
+     "per36": -0.10722763704499588,
+     "bootstrapSE": 0.065931190330443
+    },
+    "creation": {
+     "per36": 0.1987950339437739,
+     "bootstrapSE": 0.04680925608947775
+    },
+    "pass": {
+     "per36": 0.4625425153343624,
+     "bootstrapSE": 0.054370027982069906
+    },
+    "short": {
+     "per36": 0.4721260232974883,
+     "bootstrapSE": 0.11920607645927997
+    }
+   }
+  },
+  "KJ": {
+   "2022-23": {
+    "drive": {
+     "per36": 0.03658951151368684,
+     "bootstrapSE": 0.10617570455990247
+    },
+    "creation": {
+     "per36": 0.060154408717945904,
+     "bootstrapSE": 0.09358553635260639
+    },
+    "pass": {
+     "per36": 0.3470615512206782,
+     "bootstrapSE": 0.08360219833011787
+    },
+    "short": {
+     "per36": 0.307628612929973,
+     "bootstrapSE": 0.2558975917354924
+    }
+   },
+   "2023-24": {
+    "drive": {
+     "per36": -0.0054561326224162945,
+     "bootstrapSE": 0.0933705564154162
+    },
+    "creation": {
+     "per36": 0.09863763198897019,
+     "bootstrapSE": 0.07700332281048128
+    },
+    "pass": {
+     "per36": 0.4306879697101062,
+     "bootstrapSE": 0.0700777086978804
+    },
+    "short": {
+     "per36": 0.3757205397320907,
+     "bootstrapSE": 0.2197432947687602
+    }
+   },
+   "2024-25": {
+    "drive": {
+     "per36": -0.018424455326261944,
+     "bootstrapSE": 0.08013607564858875
+    },
+    "creation": {
+     "per36": 0.20887672306518912,
+     "bootstrapSE": 0.06653668315351516
+    },
+    "pass": {
+     "per36": 0.3376854066418674,
+     "bootstrapSE": 0.06271133714028213
+    },
+    "short": {
+     "per36": 0.5154937936425619,
+     "bootstrapSE": 0.194985556129808
+    }
+   },
+   "2025-26": {
+    "drive": {
+     "per36": -0.028881393426597565,
+     "bootstrapSE": 0.06136173773706905
+    },
+    "creation": {
+     "per36": 0.16867936865707078,
+     "bootstrapSE": 0.04514304491847047
+    },
+    "pass": {
+     "per36": 0.4394186195866493,
+     "bootstrapSE": 0.054588423670700756
+    },
+    "short": {
+     "per36": 0.4508991606322083,
+     "bootstrapSE": 0.11861942587855226
+    }
+   }
+  }
+ },
+ "errata1_sha256_ok": true,
+ "seed": 20261101,
+ "draws": 2000,
+ "a1": {
+  "KAU": {
+   "n": 379,
+   "prereg_13tail_help_height": {
+    "VIF_drive": 6.184800559337434,
+    "R2_drive": 0.8383132988031019,
+    "VIF_creation": 5.8847013176527785
+   },
+   "fit_cols_info": {
+    "VIF_drive": 6.144255749214205,
+    "R2_drive": 0.8372463580918013,
+    "VIF_creation": 5.7426159620740425
+   },
+   "r_drive_creation": 0.8744587055733066,
+   "VIF_drive": 6.184800559337434
+  },
+  "KP": {
+   "n": 379,
+   "prereg_13tail_help_height": {
+    "VIF_drive": 5.106812914764255,
+    "R2_drive": 0.8041831536242673,
+    "VIF_creation": 4.418149598505001
+   },
+   "fit_cols_info": {
+    "VIF_drive": 5.0799055489244145,
+    "R2_drive": 0.8031459462446633,
+    "VIF_creation": 4.29161130382369
+   },
+   "r_drive_creation": 0.8215176447480932,
+   "VIF_drive": 5.106812914764255
+  },
+  "KJ": {
+   "n": 379,
+   "prereg_13tail_help_height": {
+    "VIF_drive": 4.17035540743207,
+    "R2_drive": 0.7602122835339451,
+    "VIF_creation": 3.110531401661324
+   },
+   "fit_cols_info": {
+    "VIF_drive": 4.167555321390127,
+    "R2_drive": 0.7600511755974866,
+    "VIF_creation": 3.0281788636405333
+   },
+   "r_drive_creation": 0.7206420267700409,
+   "VIF_drive": 4.17035540743207
+  },
+  "pass": false
+ },
+ "a2": {
+  "S_drive": {
+   "KAU": -0.25731585134488555,
+   "KP": -0.25408890433722864,
+   "KJ": -0.24350521095722782
+  },
+  "S_drive_per_season": {
+   "KAU": {
+    "2022-23": -0.18981350667969213,
+    "2023-24": -0.34188429792438396,
+    "2024-25": -0.23693666194220261
+   },
+   "KP": {
+    "2022-23": -0.18881793171597624,
+    "2023-24": -0.3400885850668682,
+    "2024-25": -0.23059387655695038
+   },
+   "KJ": {
+    "2022-23": -0.18137798367060295,
+    "2023-24": -0.3303364187394786,
+    "2024-25": -0.21668266588942842
+   }
+  },
+  "S_creation_info": {
+   "KAU": -0.27008138014021565,
+   "KP": -0.2852686852958718,
+   "KJ": -0.29089567473415784
+  },
+  "n_eval": {
+   "2022-23": 262,
+   "2023-24": 286,
+   "2024-25": 319
+  },
+  "diff_KJ_minus_KP": 0.010583693380000814,
+  "ci90_KJ_minus_KP_info": [
+   -0.0024838505704216723,
+   0.023907054703396782
+  ],
+  "threshold": 0.05,
+  "diff_KP_minus_KAU_info": 0.0032269470076569107,
+  "ci90_KP_minus_KAU_info": [
+   -0.0003093734421356936,
+   0.005298685567768864
+  ],
+  "diff_KJ_minus_KAU_info": 0.013810640387657724,
+  "pass": false
+ },
+ "b": {
+  "C_diff_KJ_minus_KAU": 0.0009843974655938028,
+  "floor_C": -0.089,
+  "C_pass": true,
+  "C_ci90_info": [
+   -0.0018722996693416982,
+   0.004043332795116666
+  ],
+  "R_diff_KJ_minus_KAU": -0.0009746223384583354,
+  "h_R": 0.05987711632895934,
+  "floor_R": -0.11975423265791868,
+  "R_pass": true,
+  "R_ci90_info": [
+   -0.004527424944672673,
+   0.002349407476469636
+  ],
+  "npm_test": "logs/npm_test.log",
+  "c0": "KAU 逐位元、舊 drive U 0.0／V 2.8e-14"
+ },
+ "C_per_season": {
+  "2022-23": {
+   "KAU": {
+    "n": 271,
+    "C": 0.7237188331922949,
+    "n_sal": 180,
+    "sal": 0.7097002030123549,
+    "n_twok": 269,
+    "twok": 0.7225481025662517,
+    "n_rapm": 262,
+    "rapm": 0.4394336462927005
+   },
+   "KP": {
+    "n": 271,
+    "C": 0.7241004127054572,
+    "n_sal": 180,
+    "sal": 0.7101010641948672,
+    "n_twok": 269,
+    "twok": 0.7225256908546519,
+    "n_rapm": 262,
+    "rapm": 0.44034536333726104
+   },
+   "KJ": {
+    "n": 271,
+    "C": 0.7232918871074239,
+    "n_sal": 180,
+    "sal": 0.7102583120892776,
+    "n_twok": 269,
+    "twok": 0.7217887214652372,
+    "n_rapm": 262,
+    "rapm": 0.4411166924192245
+   }
+  },
+  "2023-24": {
+   "KAU": {
+    "n": 303,
+    "C": 0.6790686373784158,
+    "n_sal": 205,
+    "sal": 0.6318153854731804,
+    "n_twok": 303,
+    "twok": 0.6833978441144539,
+    "n_rapm": 286,
+    "rapm": 0.3250869009385075
+   },
+   "KP": {
+    "n": 303,
+    "C": 0.6813406393289898,
+    "n_sal": 205,
+    "sal": 0.634032541899286,
+    "n_twok": 303,
+    "twok": 0.6858122393656106,
+    "n_rapm": 286,
+    "rapm": 0.3241493863200547
+   },
+   "KJ": {
+    "n": 303,
+    "C": 0.6785590456041136,
+    "n_sal": 205,
+    "sal": 0.6272175884633732,
+    "n_twok": 303,
+    "twok": 0.6831272731531965,
+    "n_rapm": 286,
+    "rapm": 0.32670927845247033
+   }
+  },
+  "2024-25": {
+   "KAU": {
+    "n": 346,
+    "C": 0.7123683253934192,
+    "n_sal": 240,
+    "sal": 0.6692358684164432,
+    "n_twok": 345,
+    "twok": 0.7094202653677972,
+    "n_rapm": 319,
+    "rapm": 0.42206239758926856
+   },
+   "KP": {
+    "n": 346,
+    "C": 0.7165059100856709,
+    "n_sal": 240,
+    "sal": 0.674445952601313,
+    "n_twok": 345,
+    "twok": 0.7130593784525868,
+    "n_rapm": 319,
+    "rapm": 0.4204345315216854
+   },
+   "KJ": {
+    "n": 346,
+    "C": 0.7157664593961935,
+    "n_sal": 240,
+    "sal": 0.6741995275911623,
+    "n_twok": 345,
+    "twok": 0.7143045923236966,
+    "n_rapm": 319,
+    "rapm": 0.4165766432896258
+   }
+  },
+  "2025-26": {
+   "KAU": {
+    "n": 379,
+    "C": 0.7191538743405868,
+    "n_sal": 262,
+    "sal": 0.6035034145641984,
+    "n_twok": 376,
+    "twok": 0.7686158862677471,
+    "n_rapm": 0,
+    "rapm": null
+   },
+   "KP": {
+    "n": 379,
+    "C": 0.7155149041922431,
+    "n_sal": 262,
+    "sal": 0.6018903736109313,
+    "n_twok": 376,
+    "twok": 0.7657717547293909,
+    "n_rapm": 0,
+    "rapm": null
+   },
+   "KJ": {
+    "n": 379,
+    "C": 0.7159428727610543,
+    "n_sal": 262,
+    "sal": 0.6037435971296466,
+    "n_twok": 376,
+    "twok": 0.7657155126077175,
+    "n_rapm": 0,
+    "rapm": null
+   }
+  }
+ },
+ "pooled_diff_vs_KAU": {
+  "KP": {
+   "C": 0.002416770589793456,
+   "sal": 0.0028433476553161824,
+   "twok": 0.0021603348145393182,
+   "rapm": -0.0006326973365186406
+  },
+  "KJ": {
+   "C": 0.0009843974655938028,
+   "sal": 0.0005587031180290847,
+   "twok": 0.0015254485085620473,
+   "rapm": -0.0009746223384583354
+  }
+ },
+ "key_players_2025_26_MIN500": {
+  "Jordan Miller": {
+   "KAU": {
+    "rank": 164.0,
+    "ovr": 71.4,
+    "drive": 90.3,
+    "creation": 73.3
+   },
+   "KP": {
+    "rank": 164.5,
+    "ovr": 71.1,
+    "drive": 90.3,
+    "creation": 70.1
+   },
+   "KJ": {
+    "rank": 167.0,
+    "ovr": 71.1,
+    "drive": 87.5,
+    "creation": 59.2
+   }
+  },
+  "Trendon Watford": {
+   "KAU": {
+    "rank": 291.5,
+    "ovr": 57.4,
+    "drive": 93.8,
+    "creation": 72.6
+   },
+   "KP": {
+    "rank": 289.0,
+    "ovr": 57.7,
+    "drive": 93.8,
+    "creation": 70.2
+   },
+   "KJ": {
+    "rank": 293.0,
+    "ovr": 57.3,
+    "drive": 93.2,
+    "creation": 53.0
+   }
+  },
+  "Aaron Holiday": {
+   "KAU": {
+    "rank": 256.0,
+    "ovr": 61.6,
+    "drive": 85.3,
+    "creation": 67.9
+   },
+   "KP": {
+    "rank": 261.0,
+    "ovr": 60.8,
+    "drive": 85.3,
+    "creation": 57.1
+   },
+   "KJ": {
+    "rank": 257.0,
+    "ovr": 61.4,
+    "drive": 85.6,
+    "creation": 60.8
+   }
+  },
+  "Michael Porter Jr.": {
+   "KAU": {
+    "rank": 34.0,
+    "ovr": 82.1,
+    "drive": 43.7,
+    "creation": 75.4
+   },
+   "KP": {
+    "rank": 36.0,
+    "ovr": 82.3,
+    "drive": 43.7,
+    "creation": 80.2
+   },
+   "KJ": {
+    "rank": 38.5,
+    "ovr": 81.8,
+    "drive": 44.6,
+    "creation": 85.1
+   }
+  },
+  "Lauri Markkanen": {
+   "KAU": {
+    "rank": 50.5,
+    "ovr": 79.5,
+    "drive": 46.4,
+    "creation": 69.1
+   },
+   "KP": {
+    "rank": 52.5,
+    "ovr": 79.4,
+    "drive": 46.4,
+    "creation": 75.8
+   },
+   "KJ": {
+    "rank": 52.5,
+    "ovr": 79.4,
+    "drive": 42.6,
+    "creation": 76.0
+   }
+  },
+  "Kristaps Porziņģis": {
+   "KAU": {
+    "rank": 39.0,
+    "ovr": 81.7,
+    "drive": 56.1,
+    "creation": 77.1
+   },
+   "KP": {
+    "rank": 41.0,
+    "ovr": 81.4,
+    "drive": 56.1,
+    "creation": 77.9
+   },
+   "KJ": {
+    "rank": 36.0,
+    "ovr": 82.0,
+    "drive": 42.0,
+    "creation": 84.7
+   }
+  },
+  "Stephen Curry": {
+   "KAU": {
+    "rank": 13.0,
+    "ovr": 86.7,
+    "drive": 85.3,
+    "creation": 89.5
+   },
+   "KP": {
+    "rank": 11.5,
+    "ovr": 87.5,
+    "drive": 85.3,
+    "creation": 91.5
+   },
+   "KJ": {
+    "rank": 14.0,
+    "ovr": 86.7,
+    "drive": 90.0,
+    "creation": 93.4
+   }
+  },
+  "Shai Gilgeous-Alexander": {
+   "KAU": {
+    "rank": 1.0,
+    "ovr": 106.6,
+    "drive": 103.2,
+    "creation": 108.7
+   },
+   "KP": {
+    "rank": 1.0,
+    "ovr": 108.6,
+    "drive": 103.2,
+    "creation": 99.0
+   },
+   "KJ": {
+    "rank": 1.0,
+    "ovr": 108.5,
+    "drive": 100.2,
+    "creation": 99.0
+   }
+  },
+  "Giannis Antetokounmpo": {
+   "KAU": {
+    "rank": 4.0,
+    "ovr": 99.3,
+    "drive": 98.8,
+    "creation": 92.4
+   },
+   "KP": {
+    "rank": 4.0,
+    "ovr": 100.5,
+    "drive": 98.8,
+    "creation": 96.9
+   },
+   "KJ": {
+    "rank": 4.0,
+    "ovr": 100.6,
+    "drive": 98.5,
+    "creation": 90.3
+   }
+  },
+  "Ja Morant": {
+   "KAU": {
+    "rank": 62.0,
+    "ovr": 78.2,
+    "drive": 99.0,
+    "creation": 97.7
+   },
+   "KP": {
+    "rank": 63.5,
+    "ovr": 78.2,
+    "drive": 99.0,
+    "creation": 98.9
+   },
+   "KJ": {
+    "rank": 60.0,
+    "ovr": 78.4,
+    "drive": 99.1,
+    "creation": 96.1
+   }
+  },
+  "Zion Williamson": {
+   "KAU": {
+    "rank": 43.0,
+    "ovr": 80.8,
+    "drive": 98.7,
+    "creation": 84.2
+   },
+   "KP": {
+    "rank": 40.0,
+    "ovr": 81.6,
+    "drive": 98.7,
+    "creation": 91.7
+   },
+   "KJ": {
+    "rank": 47.0,
+    "ovr": 80.1,
+    "drive": 98.7,
+    "creation": 58.9
+   }
+  },
+  "Jalen Williams": {
+   "KAU": {
+    "rank": 11.5,
+    "ovr": 87.0,
+    "drive": 94.0,
+    "creation": 92.5
+   },
+   "KP": {
+    "rank": 10.0,
+    "ovr": 87.9,
+    "drive": 94.0,
+    "creation": 94.8
+   },
+   "KJ": {
+    "rank": 10.0,
+    "ovr": 87.7,
+    "drive": 93.1,
+    "creation": 91.5
+   }
+  },
+  "LeBron James": {
+   "KAU": {
+    "rank": 31.0,
+    "ovr": 82.6,
+    "drive": 93.5,
+    "creation": 86.1
+   },
+   "KP": {
+    "rank": 30.5,
+    "ovr": 83.1,
+    "drive": 93.5,
+    "creation": 88.9
+   },
+   "KJ": {
+    "rank": 28.5,
+    "ovr": 83.2,
+    "drive": 93.6,
+    "creation": 92.4
+   }
+  },
+  "Nikola Jokić": {
+   "KAU": {
+    "rank": 2.0,
+    "ovr": 103.7,
+    "drive": 91.3,
+    "creation": 81.8
+   },
+   "KP": {
+    "rank": 2.0,
+    "ovr": 105.7,
+    "drive": 91.3,
+    "creation": 86.8
+   },
+   "KJ": {
+    "rank": 2.0,
+    "ovr": 105.5,
+    "drive": 85.0,
+    "creation": 79.7
+   }
+  },
+  "Anthony Edwards": {
+   "KAU": {
+    "rank": 10.0,
+    "ovr": 87.6,
+    "drive": 96.3,
+    "creation": 97.8
+   },
+   "KP": {
+    "rank": 11.5,
+    "ovr": 87.5,
+    "drive": 96.3,
+    "creation": 98.8
+   },
+   "KJ": {
+    "rank": 11.0,
+    "ovr": 87.6,
+    "drive": 96.7,
+    "creation": 98.3
+   }
+  },
+  "Rudy Gobert": {
+   "KAU": {
+    "rank": 59.0,
+    "ovr": 78.6,
+    "drive": 41.6,
+    "creation": 40.9
+   },
+   "KP": {
+    "rank": 55.0,
+    "ovr": 79.0,
+    "drive": 41.6,
+    "creation": 55.3
+   },
+   "KJ": {
+    "rank": 58.0,
+    "ovr": 78.8,
+    "drive": 42.0,
+    "creation": 40.0
+   }
+  },
+  "Joel Embiid": {
+   "KAU": {
+    "rank": 19.0,
+    "ovr": 84.8,
+    "drive": 77.7,
+    "creation": 85.0
+   },
+   "KP": {
+    "rank": 20.0,
+    "ovr": 85.5,
+    "drive": 77.7,
+    "creation": 89.4
+   },
+   "KJ": {
+    "rank": 17.5,
+    "ovr": 85.6,
+    "drive": 75.5,
+    "creation": 91.3
+   }
+  },
+  "Alperen Sengun": {
+   "KAU": {
+    "rank": 91.0,
+    "ovr": 75.5,
+    "drive": 97.0,
+    "creation": 90.4
+   },
+   "KP": {
+    "rank": 88.5,
+    "ovr": 75.5,
+    "drive": 97.0,
+    "creation": 93.8
+   },
+   "KJ": {
+    "rank": 78.0,
+    "ovr": 76.3,
+    "drive": 91.7,
+    "creation": 88.0
+   }
+  },
+  "Mitchell Robinson": {
+   "KAU": {
+    "rank": 193.0,
+    "ovr": 69.7,
+    "drive": 57.8,
+    "creation": 42.2
+   },
+   "KP": {
+    "rank": 184.0,
+    "ovr": 70.3,
+    "drive": 57.8,
+    "creation": 59.8
+   },
+   "KJ": {
+    "rank": 176.5,
+    "ovr": 70.8,
+    "drive": 57.0,
+    "creation": 40.0
+   }
+  }
+ },
+ "moved10_top100_vs_KAU": {
+  "KP": 1,
+  "KJ": 3
+ },
+ "top20": {
+  "KAU": [
+   "Shai Gilgeous-Alexander",
+   "Nikola Jokić",
+   "Victor Wembanyama",
+   "Giannis Antetokounmpo",
+   "Luka Dončić",
+   "Kawhi Leonard",
+   "Donovan Mitchell",
+   "Jayson Tatum",
+   "Jimmy Butler III",
+   "Anthony Edwards",
+   "Cade Cunningham",
+   "Jalen Williams",
+   "Stephen Curry",
+   "Chet Holmgren",
+   "Jamal Murray",
+   "Evan Mobley",
+   "Kevin Durant",
+   "Tyrese Maxey",
+   "Joel Embiid",
+   "Austin Reaves"
+  ],
+  "KP": [
+   "Shai Gilgeous-Alexander",
+   "Nikola Jokić",
+   "Victor Wembanyama",
+   "Giannis Antetokounmpo",
+   "Luka Dončić",
+   "Kawhi Leonard",
+   "Donovan Mitchell",
+   "Jayson Tatum",
+   "Jimmy Butler III",
+   "Jalen Williams",
+   "Anthony Edwards",
+   "Stephen Curry",
+   "Cade Cunningham",
+   "Chet Holmgren",
+   "Jamal Murray",
+   "Evan Mobley",
+   "Kevin Durant",
+   "Franz Wagner",
+   "Tyrese Maxey",
+   "Joel Embiid"
+  ],
+  "KJ": [
+   "Shai Gilgeous-Alexander",
+   "Nikola Jokić",
+   "Victor Wembanyama",
+   "Giannis Antetokounmpo",
+   "Luka Dončić",
+   "Kawhi Leonard",
+   "Donovan Mitchell",
+   "Jayson Tatum",
+   "Jimmy Butler III",
+   "Jalen Williams",
+   "Anthony Edwards",
+   "Cade Cunningham",
+   "Chet Holmgren",
+   "Stephen Curry",
+   "Jamal Murray",
+   "Kevin Durant",
+   "Evan Mobley",
+   "Joel Embiid",
+   "Tyrese Maxey",
+   "Franz Wagner"
+  ]
+ },
+ "ranking_sha256": {
+  "KAU": {
+   "2022-23": "1ea566ec64f005018ef6233cf9b5e1883828adc94c8d005e48170fcdcaa9dde8",
+   "2023-24": "479d0670d9887c79451418ae48c6ca3e2cfb8ae101888733b14460d0a5a90154",
+   "2024-25": "259a98557092e71f843439169fe2b3ef3f338f7afa7be6dc3b24c111950c7dca",
+   "2025-26": "e46315bded816662b842460903104794f369d371e14f22df459d35eddc23158b"
+  },
+  "KP": {
+   "2022-23": "0cc1867ba1db1c17e5c2a78492aeff5dadb224ce8cb0cedca1e559a0c7031ee8",
+   "2023-24": "2e9b474c8598b13fc8c37b21d58b7e270759af1132132d3d03af56863f7c06e0",
+   "2024-25": "cb23499a7312a3ba7e425c06ff56db7e558892b9311eb13988558f97fb6bf327",
+   "2025-26": "2eba243fcf6414fd5a7b83f9fc682c1b4818ecc4bff8e5a6249114448408144e"
+  },
+  "KJ": {
+   "2022-23": "873bc5731cf16405b9e5318954b3dfc31ac3a41d83144ce052d47b8d77496520",
+   "2023-24": "1d31a2466b0ca4a0a490fde1de149aa719f22fbd51d9877175be7af277e1df6d",
+   "2024-25": "f7ec8ed30a067f035f33ea5ecc4c24a7223ffb8f62a5df21211030078792cb3f",
+   "2025-26": "a5edb31ba6687452f7af59f93d4143694d79e98a7250b09b61c7a842e3209f36"
+  }
+ },
+ "status": "DONE_errata1",
+ "verdict": {
+  "a1": false,
+  "a2": false,
+  "b": true,
+  "npm_test": "52 passed 0 failed; py 4 OK",
+  "conclusion": "not_fixed（a1、a2 都不過；b 沒弄壞）"
+ },
+ "phase0": {
+  "arm": "KAU（2025-26＝work/KAU-2025-26、歷史＝work/KA-<季>）",
+  "seed": 20261101,
+  "draws": 2000,
+  "rapm_rho_KAU_pooled": 0.3953222304822115,
+  "rapm_rho_KAU_per_season": {
+   "2022-23": 0.4394336462927005,
+   "2023-24": 0.3250869009385075,
+   "2024-25": 0.42206239758926856
+  },
+  "n_rapm": {
+   "2022-23": 262,
+   "2023-24": 286,
+   "2024-25": 319
+  },
+  "h_R": 0.05987711632895934,
+  "floor_R_minus_2hR": -0.11975423265791868,
+  "ci90_rapm_rho": [
+   0.33298144597632706,
+   0.45273567863424574
+  ],
+  "C_KAU_pooled_info": 0.7047446103335815,
+  "h_C_info_recomputed": 0.04487602924291295,
+  "h_C_prereg": 0.045,
+  "floor_C_prereg": -0.089,
+  "n_eval_C": {
+   "2022-23": 271,
+   "2023-24": 303,
+   "2024-25": 346
+  },
+  "S_drive_KAU_pooled": -0.25731585134488555,
+  "S_drive_KAU_ci90": [
+   -0.30419638772483576,
+   -0.20589706651260883
+  ],
+  "S_drive_KAU_per_season": {
+   "2022-23": -0.18981350667969213,
+   "2023-24": -0.34188429792438396,
+   "2024-25": -0.23693666194220261
+  },
+  "S_creation_KAU_pooled_info": -0.27008138014021565,
+  "n_eval_S": {
+   "2022-23": 262,
+   "2023-24": 286,
+   "2024-25": 319
+  },
+  "ranking_sha256": {
+   "2022-23": "1ea566ec64f005018ef6233cf9b5e1883828adc94c8d005e48170fcdcaa9dde8",
+   "2023-24": "479d0670d9887c79451418ae48c6ca3e2cfb8ae101888733b14460d0a5a90154",
+   "2024-25": "259a98557092e71f843439169fe2b3ef3f338f7afa7be6dc3b24c111950c7dca",
+   "2025-26": "e46315bded816662b842460903104794f369d371e14f22df459d35eddc23158b"
+  }
+ },
+ "c0": {
+  "KAU_bitwise": true,
+  "old_drive_U_max_abs": 0.0,
+  "old_drive_V_max_abs": 2.84e-14,
+  "drive_c0": "work/drive-c0.json"
+ },
+ "disclosures": [
+  "歷史原點 KJ 的 drive_D 用 V 臂（tail-e123a 同族單季算法）；2025-26 用 U 臂（四季窗）",
+  "past_pool 凍結池值與收縮參數未重算",
+  "creation 兩臂都是 2025-26 單季值，四原點共用（L-091）",
+  "KAU 的 VIF(drive) 本次重算 6.18（預註冊 §0 寫 5.92；r 0.874 對得上 0.875），差在本次用 ranking.csv 0.1 位捨入值＋help／heightInches 取自卡"
+ ]
+}

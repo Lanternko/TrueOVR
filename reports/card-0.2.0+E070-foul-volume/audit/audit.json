@@ -1,0 +1,273 @@
+{
+ "verdict": "E-070 result holds",
+ "prereg_sha256_ok": true,
+ "fd_recompute": {
+  "fit": {
+   "trainN": 3424,
+   "trainSeasons": [
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21",
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25"
+   ],
+   "myBest": {
+    "key": [
+     "position",
+     0.35,
+     4.0,
+     8.0
+    ],
+    "mae": 0.7025685493481544
+   },
+   "producer": {
+    "key": [
+     "position",
+     0.35,
+     4.0,
+     8.0
+    ],
+    "mae": 0.7025685493481544,
+    "jsonMae": 0.7025685493481544
+   },
+   "producerIsArgmin": true,
+   "top5": [
+    [
+     [
+      "position",
+      0.35,
+      4.0,
+      8.0
+     ],
+     0.7025685493481544
+    ],
+    [
+     [
+      "position",
+      0.5,
+      4.0,
+      8.0
+     ],
+     0.7027055461851058
+    ],
+    [
+     [
+      "position",
+      0.2,
+      4.0,
+      8.0
+     ],
+     0.7028055014274041
+    ],
+    [
+     [
+      "position",
+      0.65,
+      4.0,
+      8.0
+     ],
+     0.7031998572274992
+    ],
+    [
+     [
+      "position",
+      0.5,
+      8.0,
+      8.0
+     ],
+     0.7032062600454
+    ]
+   ],
+   "trainA_raw": 0.8215782520100489
+  },
+  "shrinkCheck": {
+   "n": 372,
+   "shrunk": 0.7506604123732841,
+   "k0": 0.8286267634782708,
+   "firstHalf": 0.8409639281492102
+  },
+  "cards": 582,
+  "poolInCards": 252,
+  "poolSizeBase": 252,
+  "volMaxAbsDiff": 4.991907598395073e-07,
+  "fdMaxAbsDiff_vs_attributes": 4.982183412494123e-07,
+  "fdMismatch_vs_attributes_gt1e-5": 0,
+  "fdMaxAbsDiff_vs_rankingCsv": 0.04988662131519561,
+  "fdMismatch_vs_ranking_gt0.051": 0
+ },
+ "chain_rerun_byte_identical": true,
+ "c0": "pass",
+ "c1": {
+  "passed": 57,
+  "failed": 0
+ },
+ "c2": {
+  "n": {
+   "A": 389,
+   "B": 388
+  },
+  "unionN": 395,
+  "repl": {
+   "delta": 0.0006721457380586271,
+   "byDir": {
+    "A": 0.00046602749276802857,
+    "B": 0.0008782639833492256
+   },
+   "ci90": [
+    -0.0008938931603084538,
+    0.0022496501759991126
+   ],
+   "pass": true
+  },
+  "game": {
+   "delta": 0.001430155114457099,
+   "byDir": {
+    "A": 0.0033465911291687966,
+    "B": -0.0004862809002545987
+   },
+   "ci90": [
+    -0.00033297576385741265,
+    0.003131948721913225
+   ],
+   "pass": true
+  },
+  "ovr36": {
+   "delta": 0.0005615066006653957,
+   "byDir": {
+    "A": 0.0019523820202270725,
+    "B": -0.0008293688188962811
+   },
+   "ci90": [
+    -0.0012380074577479667,
+    0.002426182073338626
+   ],
+   "pass": true
+  }
+ },
+ "c3": {
+  "card-0.2.0": "18/19",
+  "E070": "18/19"
+ },
+ "g5": {
+  "Shai Gilgeous-Alexander": {
+   "name": "Shai Gilgeous-Alexander",
+   "fd_old": 96.4,
+   "fd_new": 98.5,
+   "fdRank_old": 21,
+   "fdRank_new": 5,
+   "ovr_old": 112.8,
+   "ovr_new": 112.6,
+   "rank_old": 1,
+   "rank_new": 1,
+   "mpg": "33.22"
+  },
+  "Luka Dončić": {
+   "name": "Luka Dončić",
+   "fd_old": 95.2,
+   "fd_new": 98.8,
+   "fdRank_old": 30,
+   "fdRank_new": 4,
+   "ovr_old": 103.0,
+   "ovr_new": 103.1,
+   "rank_old": 3,
+   "rank_new": 3,
+   "mpg": "35.76"
+  },
+  "Joel Embiid": {
+   "name": "Joel Embiid",
+   "fd_old": 97.6,
+   "fd_new": 99.0,
+   "fdRank_old": 13,
+   "fdRank_new": 1,
+   "ovr_old": 90.2,
+   "ovr_new": 90.1,
+   "rank_old": 16,
+   "rank_new": 17,
+   "mpg": "31.60"
+  },
+  "Rudy Gobert": {
+   "name": "Rudy Gobert",
+   "fd_old": 99.0,
+   "fd_new": 91.3,
+   "fdRank_old": 1,
+   "fdRank_new": 40,
+   "ovr_old": 86.6,
+   "ovr_new": 86.7,
+   "rank_old": 27,
+   "rank_new": 27,
+   "mpg": "31.32"
+  },
+  "Steven Adams": {
+   "name": "Steven Adams",
+   "fd_old": 98.3,
+   "fd_new": 88.4,
+   "fdRank_old": 8,
+   "fdRank_new": 62,
+   "ovr_old": 67.3,
+   "ovr_new": 67.5,
+   "rank_old": 237,
+   "rank_new": 234,
+   "mpg": "22.82"
+  },
+  "Alex Antetokounmpo": {
+   "name": "Alex Antetokounmpo",
+   "fd_old": 84.3,
+   "fd_new": 85.3,
+   "fdRank_old": 116,
+   "fdRank_new": 81,
+   "ovr_old": 53.3,
+   "ovr_new": 53.3,
+   "rank_old": 473,
+   "rank_new": 473,
+   "mpg": "3.44"
+  }
+ },
+ "changedColumns": {
+  "rank": 461,
+  "ovr": 457,
+  "predictedPer36": 579,
+  "defenseBonus": 8,
+  "align": 399,
+  "pred0": 580,
+  "pr": 501,
+  "foulDraw": 568,
+  "gRepl": 581,
+  "ovr36": 509
+ },
+ "abilityColumnsChanged": {
+  "long": 0,
+  "mid": 0,
+  "short": 0,
+  "ft": 0,
+  "drive": 0,
+  "tovSkill": 0,
+  "pass": 0,
+  "rebound": 0,
+  "physique": 0,
+  "onBall": 0,
+  "help": 0,
+  "stamina": 0,
+  "heightInches": 0,
+  "creation": 0,
+  "pressure": 0
+ },
+ "top20_out": [
+  "OG Anunoby"
+ ],
+ "top20_in": [
+  "Stephen Curry"
+ ],
+ "problems": [
+  "preregistration untracked in git (mtime/sha only)",
+  "z ddof=0 unspecified",
+  "kh at lower grid edge",
+  "defenseBonus/align derived changes",
+  "npm test on dirty tree",
+  "delta tiny, noninferiority only; possScale1.0 not rerun"
+ ]
+}

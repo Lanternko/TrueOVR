@@ -1,0 +1,395 @@
+diff --git a/reports/card-0.2.3+E084-current-target/e084.py b/reports/card-0.2.4+E089-minutes-saturation/e089.py
+index aa3e181..bb1974d 100644
+--- a/reports/card-0.2.3+E084-current-target/e084.py
++++ b/reports/card-0.2.4+E089-minutes-saturation/e089.py
+@@ -1,11 +1,10 @@
+-"""E-084：用人回歸的訓練目標改成 2025-26 單季 RAPM（預註冊 preregistration.md，凍結，sha256 見 preregistration.sha256）。
+-由 reports/card-0.2.2+E073-usage-evidence/e075.py 複製，加開關 --target {pooled,season}（預設 pooled，必須與 E-075 完全相同），
+-再加 season 模式的評估（照 reports/card-0.2.3+E081-age-residual/e081.py 的定義）。差異見 diff-e075.txt、diff-e081.txt。
+-用法（repo 根目錄；先跑 pooled 做 (c0)，過了才跑 season）：
+-  PYTHONDONTWRITEBYTECODE=1 PYTHONIOENCODING=utf-8 python reports/card-0.2.3+E084-current-target/e084.py --target pooled
+-  PYTHONDONTWRITEBYTECODE=1 PYTHONIOENCODING=utf-8 python reports/card-0.2.3+E084-current-target/e084.py --target season
+-輸出：pooled → work/pooled/（c0.json、ranking.csv 為 card 0.2.3 格式）；season → ranking.csv（候選，card 0.2.3 格式）、results.json、work/season/。
+-(c1) 讀 npm-test.exit、(c3) 讀 evaluation.json；這兩個檔不存在時 results.json 標 pending，補齊後再跑一次本腳本即可（決定性，ranking.csv 不變）。
++"""E-089：卡片分鐘權重改成飽和曲線（預註冊 preregistration.md，凍結，sha256 見 preregistration.sha256；R-043、R-047）。
++由 reports/card-0.2.3+E084-current-target/e084.py 複製（目標固定 season = card 0.2.4），加開關 MINUTES {linear,sat15}：
++只把半季評估的 g_c 與卡片 card_from() 的 g 從 mp / 36 換成 wmin(mp)。原 run_c0／run_season 換成 run_e089。差異見 diff-e084.txt。
++用法（repo 根目錄）：
++  PYTHONDONTWRITEBYTECODE=1 PYTHONIOENCODING=utf-8 python reports/card-0.2.4+E089-minutes-saturation/e089.py
++流程：(u) 單元檢查 → (c0) linear 重現 card 0.2.4（work/linear/）→ 都過才跑 sat15（ranking.csv、results.json）。
++(c1) 讀 npm-test.exit、evaluate 19 閘讀 evaluation.json（只報告）；不存在時標 pending，補齊後重跑本腳本即可（決定性）。
+ 全部決定性；bootstrap seed 1。"""
+ import argparse
+ import csv
+@@ -55,6 +54,17 @@ TEAM5 = ['UTA', 'WAS', 'BKN', 'SAC', 'DAL']
+ 
+ BASE_OPTS = {'inactive_noreason_to_coach': False, 'suspected': True, 'age_terms': True}
+ 
++MINUTES = 'linear'   # E-089 §2：--minutes 開關；run_minutes() 改寫
++
++
++def w_sat(m):
++    """R-047：W(m) = (1 - e^(-m/15)) / (1 - e^(-36/15))，W(36) = 1。"""
++    return (1 - np.exp(-np.asarray(m, dtype=float) / 15)) / (1 - np.exp(-36 / 15))
++
++
++def wmin(mp):
++    return mp / 36 if MINUTES == 'linear' else w_sat(mp)
++
+ 
+ def sha(p):
+     return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+@@ -403,7 +413,7 @@ def pipeline(o, pools, target='pooled', full_report=False):
+         rr_base = D['fitsum'][fit]['rRepl_PR10_of_pred']
+         assert abs(qf(sf['p'], pool, 10) - rr_base) < 1e-9, 'fitX 的 PR10 與 E064 summary 不同'
+         rr = qf(pn, pool, 10)
+-        g_c = (pn - rr) * sf['mp'] / 36
++        g_c = (pn - rr) * wmin(sf['mp'])
+         g_b = (sf['p'] - rr_base) * sf['mpg0'] / 36
+         names_d = pools[dn]
+         sel = np.array([sf['idx'][nm2pid[n]] for n in names_d])
+@@ -454,7 +464,7 @@ def pipeline(o, pools, target='pooled', full_report=False):
+ 
+     def card_from(pr, mp):
+         r = qf(pr, pool, 10)
+-        g = (pr - r) * mp / 36
++        g = (pr - r) * wmin(mp)
+         p1, p50, p99 = qf(g, pool, 1), qf(g, pool, 50), qf(g, pool, 99)
+         return {'r': r, 'g': g, 'mpg': mp, 'anchors': {'PR1': p1, 'PR50': p50, 'PR99': p99}, 'ovr': two_segment(g, p1, p50, p99)}
+     off = card_from(sf['p'], mpg_card)
+@@ -674,58 +684,110 @@ def rank_equal(pa, pb, tol=1e-9):
+     return True, md
+ 
+ 
+-def run_c0(pools):
+-    res = pipeline(BASE_OPTS, pools, 'pooled')
+-    e075 = jload(E075D / 'results.json')
+-    ok_val, md = True, 0.0
+-    for tag in ('c2', 'c4'):
+-        a = dict(leaves(res[tag]['value']))
+-        b = dict(leaves(e075['checks'][tag]['value']))
+-        if set(a) != set(b):
+-            ok_val = False
+-            continue
+-        md = max(md, max(abs(a[k_] - b[k_]) for k_ in a))
+-    ok_val = bool(ok_val and md < 1e-9)
+-    aux = res['_aux']
+-    pth = W / 'pooled/ranking.csv'
+-    write_rank(pth, aux['cols23'], aux['rows23'])
+-    sha_eq = bool(sha(pth) == sha(C023))
+-    cols_ok, md_r = (True, 0.0) if sha_eq else rank_equal(pth, C023)
+-    coef_ok = bool(all(abs(res['coef'][dn][k_] - e075['coefficients'][dn][k_]) < 1e-9 for dn in ('AB', 'BA', 'card') for k_ in COEF_NAMES))
+-    passed = bool(ok_val and (sha_eq or cols_ok))
+-    c0 = {'pass': passed, 'c2_c4_equal_E075': ok_val, 'ranking_sha256_equal_card023': sha_eq, 'ranking_shared_cols_equal': bool(cols_ok),
+-          'coefficients_equal_E075': coef_ok, 'ranking_sha256': sha(pth), 'card023_sha256': sha(C023)}
+-    if passed:   # 只在通過時記數字（預註冊 §4：不過就停，不看誤差數字）
+-        c0['max_diff_c2_c4'] = md
+-        c0['max_diff_ranking_numeric'] = md_r
+-    (W / 'pooled').mkdir(parents=True, exist_ok=True)
+-    (W / 'pooled/c0.json').write_text(json.dumps(c0, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+-    print(json.dumps({k_: v for k_, v in c0.items() if isinstance(v, bool)}, ensure_ascii=False))
+-    return 0 if passed else 1
++# ================================================================ E-089（預註冊 §2–§5）
++C024 = ROOT / 'reports/card-0.2.4/ranking.csv'
++C024_SHA = 'af37ce25169c64b5e747afe066b42747c187b5d2ef20ffb3cc454e3ba95b7203'
++NAMED89 = ['Alex Caruso', 'Dyson Daniels']
++MPG_BINS = [('<10', 0, 10), ('10-15', 10, 15), ('15-20', 15, 20), ('20-25', 20, 25), ('25-30', 25, 30), ('>=30', 30, 1e9)]
++
++
++def unit_checks():
++    want = [(0, 0.0, 1e-12), (36, 1.0, 1e-12), (5, 0.31175, 1e-5), (20, 0.80987, 1e-5)]
++    out = {f'W({m})': {'value': float(w_sat(m)), 'want': v, 'tol': t, 'pass': bool(abs(w_sat(m) - v) <= t)} for m, v, t in want}
++    return {'pass': bool(all(x['pass'] for x in out.values())), 'values': out}
++
+ 
++def run_minutes(pools, mode):
++    global MINUTES
++    MINUTES = mode
++    try:
++        return pipeline(BASE_OPTS, pools, 'season')
++    finally:
++        MINUTES = 'linear'
+ 
+-# ================================================================ season 模式
+-def strip_aux(o):
+-    return {k_: v for k_, v in o.items() if k_ != '_aux'}
+ 
++def e089_eval(cdirs, bdirs):
++    """候選對基準（card 0.2.4 = --minutes linear）。四個答案（另一半）：
++    N_W = rapm1 net × W(mpg_ev)、Q_W = pooledNet × W(mpg_ev)、N_lin = rapm1 net × mpg_ev、Q_lin = pooledNet × mpg_ev。
++    N 系列限有 rapm1 的人，Q 系列用全 pools[dn]（同 E-084 season_eval）。bootstrap：master = pools 聯集，default_rng(1)，兩方向與候選／基準共用 ix。"""
++    E = {}
++    for dn in DNS:
++        c, b = cdirs[dn], bdirs[dn]
++        assert c['names'] == b['names'] and np.array_equal(c['pid'], b['pid']) and np.array_equal(c['pn'], b['pn']), '候選與基準人群或 pred 不一致'
++        hasN = ~np.isnan(c['netN'])
++        wev = w_sat(c['mpg_ev'])
++        E[dn] = {'names': c['names'], 'hasN': hasN, 'gc': c['cand'], 'gb': b['cand'],
++                 'ans': {'N_W': c['netN'] * wev, 'Q_W': c['net'] * wev, 'N_lin': c['netN'] * c['mpg_ev'], 'Q_lin': c['ans']}}
++    KEYS = ('N_W', 'Q_W', 'N_lin', 'Q_lin')
++
++    def stats(sel):
++        r = defaultdict(list)
++        for dn in DNS:
++            e, s = E[dn], sel[dn]
++            sn = s[e['hasN'][s]]
++            for ak in KEYS:
++                ss = sn if ak.startswith('N') else s
++                for tag in ('c', 'b'):
++                    r[f'{ak}_{tag}'].append(rho(e['g' + tag][ss], e['ans'][ak][ss]))
++        return r
+ 
+-def gates_of(res, ev, c1=None, c3=None):
+-    """res = pipeline 輸出（R2–R4）；ev = season_eval 輸出。c1、c3 為 None 表示尚未取得。"""
+-    return {'c1': c1, 'b': ev['checks']['b']['pass'], 'c2N': ev['checks']['c2N']['pass'], 'c2Q': ev['checks']['c2Q']['pass'], 'c3': c3,
+-            'c4': ev['checks']['c4']['pass'], 'R2': res['R2']['pass'], 'R3': res['R3']['pass'], 'R4': res['R4']['pass']}
++    raw = stats({dn: np.arange(len(E[dn]['names'])) for dn in DNS})
++    pt = {k_: float(np.mean(v)) for k_, v in raw.items()}
++    master = sorted(set(E['AB']['names']) | set(E['BA']['names']))
++    NN = len(master)
++    mp_ = {dn: np.array([{n: i for i, n in enumerate(E[dn]['names'])}.get(n, -1) for n in master]) for dn in DNS}
++    rng = np.random.default_rng(1)
++    boots = defaultdict(list)
++    for _ in range(NBOOT):
++        ix = rng.integers(0, NN, NN)
++        sel = {}
++        for dn in DNS:
++            s = mp_[dn][ix]
++            sel[dn] = s[s >= 0]
++        for k_, v in stats(sel).items():
++            boots[k_].append(float(np.mean(v)))
++    res = {'master_size': NN, 'n_boot': NBOOT, 'seed': 1,
++           'n': {dn: {'pool': len(E[dn]['names']), 'with_rapm1': int(E[dn]['hasN'].sum())} for dn in DNS}}
++    for ak in KEYS:
++        d = np.array(boots[ak + '_c']) - np.array(boots[ak + '_b'])
++        res['dRho_' + ak] = {'point': pt[ak + '_c'] - pt[ak + '_b'], 'ci90': [float(np.percentile(d, 5)), float(np.percentile(d, 95))],
++                             'rho_cand': pt[ak + '_c'], 'rho_base': pt[ak + '_b'],
++                             'per_direction': {dn: {'cand': raw[ak + '_c'][i], 'base': raw[ak + '_b'][i]} for i, dn in enumerate(DNS)}}
++    res['checks'] = {
++        'm1': {'value': res['dRho_N_W'], 'threshold': 'Δρ_{N_W} 下界 > -0.02', 'pass': bool(res['dRho_N_W']['ci90'][0] > -0.02)},
++        'm2': {'value': res['dRho_N_lin'], 'threshold': 'Δρ_{N_lin} 下界 > -0.05', 'pass': bool(res['dRho_N_lin']['ci90'][0] > -0.05)},
++        'm3': {'value': res['dRho_Q_W'], 'threshold': 'Δρ_{Q_W} 下界 > -0.05', 'pass': bool(res['dRho_Q_W']['ci90'][0] > -0.05)}}
++    return res
+ 
+ 
+-def decide(c0_pass, g, ev):
+-    allg = {'c0': c0_pass, **g}
+-    fails = [k_ for k_, v in allg.items() if v is False]
+-    pend = [k_ for k_, v in allg.items() if v is None]
+-    if fails:
+-        if g['b'] and (g['c2N'] is False or g['c2Q'] is False):
+-            return '偏差有修、準度有損（不採用，交使用者）', fails
+-        return '不通過（不採用）', fails
+-    if pend:
+-        return '待 ' + '、'.join(pend), fails
+-    return ('通過（MINOR）' if ev['checks']['c2N']['value']['ci90'][0] > 0 else '通過（PATCH）'), fails
++def report_only(mA, bA):
++    names = mA['names']
++    rn, rb = mA['rows23'], bA['rows23']
++    old = {r['name']: r for r in rb}
++    new = {r['name']: r for r in rn}
++    named = {n: {'mpg': float(new[n]['mpg']), 'ovr_new': float(new[n]['ovr']), 'rank_new': int(new[n]['rank']),
++                 'ovr_card024': float(old[n]['ovr']), 'rank_card024': int(old[n]['rank'])} for n in NAMED89}
++    top20 = [{'rank': int(r['rank']), 'name': r['name'], 'mpg': float(r['mpg']), 'ovr': float(r['ovr']),
++              'rank_card024': int(old[r['name']]['rank']), 'ovr_card024': float(old[r['name']]['ovr'])} for r in rn[:20]]
++    chg = [{'name': r['name'], 'mpg': float(r['mpg']), 'MIN': float(r['MIN']), 'ovr_new': float(r['ovr']), 'ovr_card024': float(old[r['name']]['ovr']),
++            'delta': round(float(r['ovr']) - float(old[r['name']]['ovr']), 1), 'rank_new': int(r['rank']), 'rank_card024': int(old[r['name']]['rank'])} for r in rn]
++    up = sorted(chg, key=lambda x: (-x['delta'], x['name']))[:20]
++    down = sorted(chg, key=lambda x: (x['delta'], x['name']))[:20]
++    bins = {}
++    for lab, a, b in MPG_BINS:
++        ii = [x for x in chg if a <= x['mpg'] < b]
++        bins[lab] = {'n': len(ii), 'median_ovr_new': float(np.median([x['ovr_new'] for x in ii])) if ii else None,
++                     'median_ovr_card024': float(np.median([x['ovr_card024'] for x in ii])) if ii else None}
++    lt10 = {'new': sum(1 for x in chg if x['mpg'] < 10 and x['rank_new'] <= 150),
++            'card024': sum(1 for x in chg if x['mpg'] < 10 and x['rank_card024'] <= 150)}
++    big = [x for x in chg if x['MIN'] >= 1000]
++    pred = {n: float(mA['pred_new'][i]) for i, n in enumerate(names)}
++    rhos = {'n': len(big)}
++    for tag, key in (('new', 'ovr_new'), ('card024', 'ovr_card024')):
++        rhos[f'rho_mpg_ovr_{tag}'] = spearman([x['mpg'] for x in big], [x[key] for x in big])
++        rhos[f'rho_pred_ovr_{tag}'] = spearman([pred[x['name']] for x in big], [x[key] for x in big])
++    return {'named_players': named, 'top20': top20, 'largest_up20': up, 'largest_down20': down, 'mpg_bins': bins,
++            'mpg_lt10_in_top150': lt10, 'MIN1000_spearman': rhos}
+ 
+ 
+ def read_c1():
+@@ -733,126 +795,75 @@ def read_c1():
+     return None if not p.exists() else bool(p.read_text(encoding='utf-8').strip() == '0')
+ 
+ 
+-def read_c3():
++def read_gates():
+     p = HERE / 'evaluation.json'
+     if not p.exists():
+-        return None, None
++        return None
+     ev = jload(p)
+-    cand = {c['label']: c for c in ev['candidates']}
+-    if 'E084' not in cand or 'card-0.2.3' not in cand:
+-        return None, None
+-    a, b = cand['E084']['gates'], cand['card-0.2.3']['gates']
+-    info = {'E084': {'pass': a['pass'], 'of': a['of']}, 'card-0.2.3': {'pass': b['pass'], 'of': b['of']}}
+-    return bool(a['pass'] >= b['pass'] and a['of'] == b['of']), info
+-
+-
+-def run_season(pools):
+-    c0 = jload(W / 'pooled/c0.json')
+-    assert c0.get('pass') is True, '(c0) 未通過：不得跑 season'
+-    base = pipeline(BASE_OPTS, pools, 'pooled')
+-    main_ = pipeline(BASE_OPTS, pools, 'season')
+-    bA, mA = base['_aux'], main_['_aux']
+-    ev = season_eval(mA['dirs'], bA['dirs'])
+-    # 理智檢查：基準（card 0.2.3 的半季值）在這裡算出的 S_N 應等於 E-081 results.json
+-    r81 = jload(E081D / 'results.json')
+-    san = {'S_N_point_equal_E081': bool(abs(ev['S_N_card023']['point'] - r81['S_N']['point']) < 1e-9),
+-           'S_Q_point_equal_E081': bool(abs(ev['S_Q_card023']['point'] - r81['S_Q']['point']) < 1e-9)}
+-    c1 = read_c1()
+-    c3, c3info = read_c3()
+-    g = gates_of(main_, ev, c1, c3)
+-    verdict, fails = decide(True, g, ev)
++    out = {}
++    for c in ev['candidates']:
++        g = c['gates']
++        out[c['label']] = {'pass': g['pass'], 'of': g['of'], 'failed': [k_ for k_ in g['hardKeys'] if g[k_] is False]}
++    return out
++
++
++def run_e089(pools):
++    uc = unit_checks()
++    print('(u)', json.dumps(uc, ensure_ascii=False))
++    base = run_minutes(pools, 'linear')
++    bA = base['_aux']
++    pth = W / 'linear/ranking.csv'
++    write_rank(pth, bA['cols23'], bA['rows23'])
++    sha_eq = bool(sha(pth) == C024_SHA and sha(C024) == C024_SHA)
++    cols_ok, md_r = (True, 0.0) if sha_eq else rank_equal(pth, C024)
++    c0 = {'pass': bool(sha_eq or cols_ok), 'ranking_sha256_equal_card024': sha_eq, 'ranking_shared_cols_equal': bool(cols_ok),
++          'ranking_sha256': sha(pth), 'card024_sha256': sha(C024)}
++    if c0['pass']:
++        c0['max_diff_ranking_numeric'] = md_r
++    (W / 'linear/c0.json').write_text(json.dumps(c0, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
++    print('(c0)', json.dumps(c0, ensure_ascii=False))
++    if not (c0['pass'] and uc['pass']):   # 預註冊 §4：不過就停，不看任何誤差數字
++        return 1
++    main_ = run_minutes(pools, 'sat15')
++    mA = main_['_aux']
+     write_rank(HERE / 'ranking.csv', mA['cols23'], mA['rows23'])
+-    sens = {}
+-    for tag, upd in (('s1', {'inactive_noreason_to_coach': True}), ('s2', {'suspected': False}), ('s3', {'age_terms': False})):
+-        o = dict(BASE_OPTS)
+-        o.update(upd)
+-        sr = pipeline(o, pools, 'season')
+-        se = season_eval(sr['_aux']['dirs'], bA['dirs'])
+-        s_ = strip_aux(sr)
+-        s_['season_eval'] = {k_: se[k_] for k_ in ('S_N_cand', 'S_Q_cand', 'dS_N', 'dS_Q', 'dRho_N', 'dRho_Q', 'c4', 'checks')}
+-        s_['gates'] = gates_of(sr, se)
+-        sens[tag] = s_
+-    names, MIN, age = mA['names'], mA['MIN'], mA['age']
+-    rows23 = mA['rows23']
+-    old = D['card023']
+-    nm_idx = {n: i for i, n in enumerate(names)}
+-    named = {}
+-    for nm in NAMED:
+-        r_, o_ = next(x for x in rows23 if x['name'] == nm), old[nm]
+-        named[nm] = {'age': age[nm_idx[nm]], 'ovr_new': float(r_['ovr']), 'rank_new': int(r_['rank']), 'ovr_card023': float(o_['ovr']),
+-                     'rank_card023': int(o_['rank']), 'MIN': float(MIN[nm_idx[nm]])}
+-    top20 = [{'rank': int(r_['rank']), 'name': r_['name'], 'ovr': float(r_['ovr']), 'rank_card023': int(old[r_['name']]['rank']),
+-              'ovr_card023': float(old[r_['name']]['ovr'])} for r_ in rows23[:20]]
+-    chg = []
+-    for r_ in rows23:
+-        o_ = old[r_['name']]
+-        chg.append({'name': r_['name'], 'age': age[nm_idx[r_['name']]], 'MIN': float(MIN[nm_idx[r_['name']]]), 'ovr_new': float(r_['ovr']),
+-                    'ovr_card023': float(o_['ovr']), 'delta': float(r_['ovr']) - float(o_['ovr']), 'rank_new': int(r_['rank']),
+-                    'rank_card023': int(o_['rank'])})
+-    chg20 = sorted(chg, key=lambda x: (-abs(x['delta']), x['name']))[:20]
+-    big = [i for i in range(len(names)) if MIN[i] >= 1000]
+-    ovr_new = {x['name']: float(x['ovr']) for x in rows23}
+-    agegrp = {}
+-    for gname, f in AGE_GROUPS:
+-        ii = [i for i in big if age[i] is not None and f(age[i])]
+-        agegrp[gname] = {'n': len(ii), 'median_ovr_new': float(np.median([ovr_new[names[i]] for i in ii])) if ii else None,
+-                         'median_ovr_card023': float(np.median([float(old[names[i]]['ovr']) for i in ii])) if ii else None}
+-    agegrp['no_age_n'] = int(sum(1 for i in big if age[i] is None))
+-    pstd = {'MIN>=1000_n': len(big), 'pred_new_std_new': float(np.std(mA['pred_new'][big])), 'pred_new_std_card023': float(np.std(bA['pred_new'][big])),
+-            'ddof': 0, 'pred_new_mean_new': float(np.mean(mA['pred_new'][big])), 'pred_new_mean_card023': float(np.mean(bA['pred_new'][big]))}
+-    e075 = jload(E075D / 'results.json')
+-    coef_ci = {}
+-    for dn in ('AB', 'BA', 'card'):
+-        if dn == 'card':
+-            bc = boot_coefs(mA['Xc'], mA['yc'], mA['wc'], mA['gc'])
+-        else:
+-            t = mA['train'][dn]
+-            bc = boot_coefs(t['X'], t['y'], t['w'], t['pid'])
+-        coef_ci[dn] = {nm: {'coef': float(mA['coef_raw'][dn][j]), 'ci90': [float(np.percentile(bc[:, j], 5)), float(np.percentile(bc[:, j], 95))]}
+-                       for j, nm in enumerate(COEF_NAMES[:len(mA['coef_raw'][dn])])}
+-    e082 = jload(E082D / 'results.json')
+-    e082_pass = bool(str(e082.get('verdict', '')).startswith('通過'))
+-    sec5 = {'baseline': 'card 0.2.3（不等 E-082）', 'e082_verdict_read_only': e082.get('verdict'), 'e082_passed': e082_pass,
+-            'merged_version': ('E-082 與 E-084 皆通過，須另跑合併版（未跑）' if e082_pass and verdict.startswith('通過')
+-                               else '合併版待 E-082' if not e082_pass else '本版未全過，不跑合併版')}
++    ev = e089_eval(mA['dirs'], bA['dirs'])
++    # 理智檢查：基準的線性量尺點估計應等於 E-084 results.json 的候選值
++    r84 = jload(ROOT / 'reports/card-0.2.3+E084-current-target/results.json')['season_eval']
++    san = {'rho_N_lin_base_equal_E084': bool(abs(ev['dRho_N_lin']['rho_base'] - r84['rho_N_cand']['point']) < 1e-9),
++           'rho_Q_lin_base_equal_E084': bool(abs(ev['dRho_Q_lin']['rho_base'] - r84['rho_Q_cand']['point']) < 1e-9)}
++    c1 = read_c1()
++    checks = {'c0': c0, 'c1': {'value': c1, 'threshold': 'npm test exit 0', 'pass': c1}, 'u': uc, **ev['checks']}
++    fails = [k_ for k_, v in checks.items() if v['pass'] is False]
++    pend = [k_ for k_, v in checks.items() if v['pass'] is None]
++    hard = [k_ for k_ in fails if k_ in ('c0', 'c1', 'u')]
++    verdict = ('停下修程式' if hard else ('待 ' + '、'.join(pend)) if pend else
++               ('照 R-042 權衡，交使用者（' + '、'.join(fails) + ' 沒過）') if fails else '通過')
+     inputs = {}
+-    for p in (E081D / 'rapm1-A.csv', E081D / 'rapm1-B.csv', E081D / 'results.json', E082D / 'results.json', C023, C022_PUB, E075D / 'results.json',
+-              E075D / 'e075.py', E081D / 'e081.py', HERE / 'preregistration.md', HERE / 'e084.py', HERE / 'evaluate.mjs'):
++    for p in (C024, ROOT / 'reports/card-0.2.3+E084-current-target/e084.py', ROOT / 'reports/card-0.2.3+E084-current-target/results.json',
++              E081D / 'rapm1-A.csv', E081D / 'rapm1-B.csv', HERE / 'preregistration.md', HERE / 'e089.py'):
+         inputs[p.relative_to(ROOT).as_posix()] = sha(p)
+     results = {
+-        'experiment': 'E-084', 'version': 'card 0.2.3+E084', 'baseline': 'card 0.2.3（reports/card-0.2.3/ranking.csv）',
+-        'target': 'season（fit 半季只用 2025-26 比賽的 rapm1 net／poss）', 'verdict': verdict, 'failed_checks': fails,
+-        'verdict_rule': '預註冊 §4：全過=通過（c2N 下界>0 為 MINOR，否則 PATCH）；(b) 過但 c2N／c2Q 沒過=偏差有修、準度有損（不採用）；其他沒過=不採用',
+-        'checks': {'c0': c0, 'c1': {'value': c1, 'threshold': 'npm test exit 0', 'pass': c1},
+-                   'b': ev['checks']['b'], 'c2N': ev['checks']['c2N'], 'c2Q': ev['checks']['c2Q'],
+-                   'c3': {'value': c3info, 'threshold': 'E084 閘數 >= card 0.2.3（18/19）', 'pass': c3},
+-                   'c4': ev['checks']['c4'],
+-                   'R1_reportOnly': main_['R1'], 'R2': main_['R2'], 'R3': main_['R3'], 'R4': main_['R4']},
+-        'season_eval': ev, 'sanity_vs_E081': san,
+-        'legacy_e075_style': {'c2': main_['c2'], 'c4': main_['c4'],
+-                              'note': '只報告：E-075 原式（c4 的 net 仍是 pooledNet），不是 E-084 判準'},
+-        'coefficients': main_['coef'], 'coefficients_E075': e075['coefficients'], 'coefficient_ci': coef_ci, 'coefficient_ci_E075': e075.get('coefficient_ci'),
+-        'training': main_['train_info'], 'population': main_['population'],
+-        'named_players': named, 'top20': top20, 'largest_ovr_changes': chg20, 'age_group_median_ovr_MIN1000': agegrp, 'pred_new_dispersion': pstd,
+-        'card': main_['card'], 'sensitivities': sens, 'section5': sec5,
++        'experiment': 'E-089', 'version': 'card 0.2.4+E089', 'baseline': 'card 0.2.4（reports/card-0.2.4/ranking.csv）',
++        'minutes_curve': 'W(m) = (1 - exp(-m/15)) / (1 - exp(-36/15))（R-047）', 'verdict': verdict, 'failed_checks': fails,
++        'verdict_rule': '預註冊 §4：c0、c1、u 沒過=停下修程式；m1–m3 沒過=照 R-042 權衡交使用者；全過=通過，交 role-audit 與 G5',
++        'checks': checks, 'eval': ev, 'sanity_vs_E084': san,
++        'report_only': {**report_only(mA, bA), 'dRho_Q_lin': ev['dRho_Q_lin'], 'evaluate_gates': read_gates(),
++                        'card': {'new': main_['card'], 'card024': base['card']}},
+         'ranking_csv_sha256': sha(HERE / 'ranking.csv'), 'preregistration_sha256': sha(HERE / 'preregistration.md'), 'inputs_sha256': inputs,
+-        'generator': 'reports/card-0.2.3+E084-current-target/e084.py --target season'}
++        'generator': 'reports/card-0.2.4+E089-minutes-saturation/e089.py'}
+     (HERE / 'results.json').write_text(json.dumps(results, ensure_ascii=False, indent=1, default=float) + '\n', encoding='utf-8')
+-    print(json.dumps({'verdict': verdict, 'failed': fails, 'gates': g, 'sanity': san,
+-                      'S_N_cand': ev['S_N_cand']['point'], 'S_N_card023': ev['S_N_card023']['point'], 'dS_N': ev['dS_N'],
+-                      'dRho_N': ev['dRho_N'], 'dRho_Q': ev['dRho_Q'], 'c4': ev['c4']['ci90']}, ensure_ascii=False, indent=1, default=float))
++    print(json.dumps({'verdict': verdict, 'failed': fails, 'sanity': san, 'm1': ev['dRho_N_W'], 'm2': ev['dRho_N_lin'], 'm3': ev['dRho_Q_W'],
++                      'Q_lin': ev['dRho_Q_lin']}, ensure_ascii=False, indent=1, default=float))
+     return 0
+ 
+ 
+ def main():
+-    ap = argparse.ArgumentParser()
+-    ap.add_argument('--target', choices=['pooled', 'season'], default='pooled')
+-    a = ap.parse_args()
+     exp = (HERE / 'preregistration.sha256').read_text(encoding='utf-8').split()[0]
+     assert sha(HERE / 'preregistration.md') == exp, '預註冊 sha256 與凍結值不同'
+     load_data()
+     pools = build_pools()
+-    return run_c0(pools) if a.target == 'pooled' else run_season(pools)
++    return run_e089(pools)
+ 
+ 
+ if __name__ == '__main__':

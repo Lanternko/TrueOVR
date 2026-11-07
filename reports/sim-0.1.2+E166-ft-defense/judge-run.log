@@ -1,0 +1,31 @@
+k=2 c=-0.05625 pace=0.998125
+{"k":1,"c":-0.03125,"pace":0.99875,"remaining":32}
+done
+{"k":2,"c":-0.05625,"pace":0.998125,"remaining":32}
+done
+{"k":2,"c":-0.05625,"pace":0.998125,"population":379,"remaining":379,"workers":20,"checkpoint":"reports/E166/checkpoint-k.jsonl"}
+{"finished":20,"remaining":359,"etaMinutes":79}
+{"finished":40,"remaining":339,"etaMinutes":74}
+{"finished":60,"remaining":319,"etaMinutes":69}
+{"finished":80,"remaining":299,"etaMinutes":64}
+{"finished":100,"remaining":279,"etaMinutes":60}
+{"finished":120,"remaining":259,"etaMinutes":56}
+{"finished":140,"remaining":239,"etaMinutes":51}
+{"finished":160,"remaining":219,"etaMinutes":47}
+{"finished":180,"remaining":199,"etaMinutes":43}
+{"finished":200,"remaining":179,"etaMinutes":39}
+{"finished":220,"remaining":159,"etaMinutes":34}
+{"finished":240,"remaining":139,"etaMinutes":30}
+{"finished":260,"remaining":119,"etaMinutes":26}
+{"finished":280,"remaining":99,"etaMinutes":21}
+{"finished":300,"remaining":79,"etaMinutes":17}
+{"finished":320,"remaining":59,"etaMinutes":13}
+{"finished":340,"remaining":39,"etaMinutes":8}
+{"finished":360,"remaining":19,"etaMinutes":4}
+{"finished":379,"remaining":0,"etaMinutes":0}
+done
+done {"fg":77404,"mismatch":0,"subs":36960,"games":435,"k":1,"seed":20261029}
+done {"fg":76963,"mismatch":0,"subs":36990,"games":435,"k":2,"seed":20261028}
+done {"fg":76731,"mismatch":0,"subs":36990,"games":435,"k":1,"seed":20261028}
+done {"fg":77653,"mismatch":0,"subs":36960,"games":435,"k":2,"seed":20261029}
+ALLDONE

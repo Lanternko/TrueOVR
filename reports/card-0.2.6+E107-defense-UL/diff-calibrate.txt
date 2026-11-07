@@ -1,0 +1,120 @@
+=== diff vs E-106 calibrate-wing.py ===
+1c1,3
+< """E-106（preregistration.md 凍結）：由 reports/card-0.2.5+E104-defense-pergame-decay/calibrate-wing.py 複製，--bonusShape 加 none：
+---
+> """E-107（preregistration.md 凍結）：由 reports/card-0.2.5+E106-defense-bonus-monotone/calibrate-wing.py 複製，
+>   從 reports/card-0.2.5+E101-crossera/calibrate-wing.py 原樣搬入 E-090 的 --tailSource（TAIL_SOURCE、TAIL_ATTRS、attach_tail、load() 呼叫、argv 解析）。不帶時與 E-106 逐位元相同。
+> E-106（preregistration.md 凍結）：由 reports/card-0.2.5+E104-defense-pergame-decay/calibrate-wing.py 複製，--bonusShape 加 none：
+47a50,51
+> TAIL_SOURCE = None   # E-090
+> TAIL_ATTRS = ['long', 'mid', 'short', 'ft', 'drive', 'foulDraw', 'tovSkill', 'pass', 'rebound', 'physique', 'onBall', 'creation', 'pressure']
+77a82,83
+>     if TAIL_SOURCE is not None:
+>         attach_tail(cards)
+87a94,101
+> def attach_tail(cards):
+>     """E-090：用 --tailSource 的值覆蓋 13 個屬性（每個卡片球員都要有一列）。"""
+>     src = {int(r['playerId']): r for r in csv.DictReader(open(TAIL_SOURCE, encoding='utf-8'))}
+>     for c in cards.values():
+>         r = src[int(c['card']['playerId'])]
+>         c['card'] = {**c['card'], **{a: float(r[a]) for a in TAIL_ATTRS}}
+> 
+> 
+412c426
+<     global ATTRS, DRIVE_COLUMN, DRIVE_MODE, ATTR_SOURCE, DEF_SOURCE, RAPM, BLEND_POSS, BONUS_MIN_POSS, PRESSURE_MODE, PRESSURE_SOURCE, FOULDISC
+---
+>     global ATTRS, DRIVE_COLUMN, DRIVE_MODE, ATTR_SOURCE, DEF_SOURCE, RAPM, BLEND_POSS, BONUS_MIN_POSS, PRESSURE_MODE, PRESSURE_SOURCE, FOULDISC, TAIL_SOURCE
+434a449,450
+>     if '--tailSource' in argv:
+>         TAIL_SOURCE = Path(argv[argv.index('--tailSource') + 1]).resolve()
+
+=== diff vs E-101 calibrate-wing.py ===
+1,2c1,10
+< """E-090 複本：E-071 calibrate-wing.py 只加 --tailSource <csv>（playerId + 13 屬性），在 load() 最後（attach_def 之後）覆蓋 13 個屬性；不帶時與原檔完全相同。
+< 以下為 E-071 說明：
+---
+> """E-107（preregistration.md 凍結）：由 reports/card-0.2.5+E106-defense-bonus-monotone/calibrate-wing.py 複製，
+>   從 reports/card-0.2.5+E101-crossera/calibrate-wing.py 原樣搬入 E-090 的 --tailSource（TAIL_SOURCE、TAIL_ATTRS、attach_tail、load() 呼叫、argv 解析）。不帶時與 E-106 逐位元相同。
+> E-106（preregistration.md 凍結）：由 reports/card-0.2.5+E104-defense-pergame-decay/calibrate-wing.py 複製，--bonusShape 加 none：
+>   bonus = raw_bonus（回合門檻內 max(0, centeredD)），不乘 taper、不套 T96；RAPM 名次封頂（H1）照舊。不帶 none 時逐位元不變。
+> E-104（preregistration.md 凍結）：由 reports/card-0.2.5+E094-defense-ceiling/calibrate-wing.py 複製，只加 --defPossFactor X
+>   （--defWindow season 時回合門檻 BLEND_POSS、BONUS_MIN_POSS 改乘 X；預設 0.25 = E-094 原式）。其餘一字不改。
+> E-094（preregistration.md 凍結）：由 reports/card-0.2.0+E071-pressure/calibrate-wing.py 複製，加兩個開關，預設逐位元不變：
+>   --bonusShape taper|ceiling   ceiling：bonus = min(max(0, centeredD), max(0, T96 − pred0))，T96 = 縮放池 pred0 中 PR ≥ 96 的最小值
+>   --defWindow pooled|season --defRapm CSV   season：defenseBonus 的 centeredD／posMeanD 改讀單季 D（rapm.csv 的 lastSeasonD／lastSeasonPoss，
+>                                或 rapm1-A/B 的 D／poss），回合門檻 BONUS_MIN_POSS、BLEND_POSS 乘 1/4；align、封頂、回歸目標仍讀 --rapm
+312a321,342
+> def attach_def_window(rows, path):
+>     """E-094 season：單季 D 另存 r['Dw']／r['possW']，不動 r['D']／r['poss']（回歸目標、align、封頂仍用合併值）。"""
+>     src = {int(x['playerId']): x for x in csv.DictReader(open(path, encoding='utf-8'))}
+>     for r in rows:
+>         x = src.get(int(r['card']['playerId']))
+>         if x is None:
+>             r['Dw'], r['possW'] = np.nan, 0.0
+>         elif 'lastSeasonD' in x:
+>             r['Dw'], r['possW'] = float(x['lastSeasonD']), float(x['lastSeasonPoss'])
+>         else:
+>             r['Dw'], r['possW'] = float(x['D']), float(x['poss'])
+> 
+> 
+> def pos_mean_d_window(rows, blend_poss):
+>     """同 pos_mean_d，但讀 r['Dw']／r['possW']，池門檻 blend_poss。"""
+>     out = {}
+>     for pos in {r['pos'] for r in rows}:
+>         pool = [r for r in rows if r['pos'] == pos and r['possW'] >= blend_poss]
+>         out[pos] = sum(r['MIN'] * BLEND_PER36 * r['Dw'] for r in pool) / sum(r['MIN'] for r in pool)
+>     return out
+> 
+> 
+425a456,461
+>     bonus_shape = argv[argv.index('--bonusShape') + 1] if '--bonusShape' in argv else 'taper'
+>     def_window = argv[argv.index('--defWindow') + 1] if '--defWindow' in argv else 'pooled'
+>     assert bonus_shape in ('taper', 'ceiling', 'none') and def_window in ('pooled', 'season')
+>     def_rapm = Path(argv[argv.index('--defRapm') + 1]).resolve() if '--defRapm' in argv else None
+>     def_poss_factor = float(argv[argv.index('--defPossFactor') + 1]) if '--defPossFactor' in argv else 0.25   # E-104
+>     assert (def_window == 'season') == (def_rapm is not None), '--defWindow season 需要 --defRapm'
+463,464c499,506
+<     posMeanD = pos_mean_d(rows)
+<     centeredD = np.array([BLEND_PER36 * r['D'] - posMeanD[r['pos']] if r['poss'] >= BLEND_POSS else np.nan for r in rows])
+---
+>     if def_window == 'season':
+>         attach_def_window(rows, def_rapm)
+>         blend_w, bonus_min_w = BLEND_POSS * def_poss_factor, BONUS_MIN_POSS * def_poss_factor   # E-104：E-094 S 是 1/4，逐場加權改平均權重
+>         posMeanD = pos_mean_d_window(rows, blend_w)
+>         centeredD = np.array([BLEND_PER36 * r['Dw'] - posMeanD[r['pos']] if r['possW'] >= blend_w else np.nan for r in rows])
+>     else:
+>         posMeanD = pos_mean_d(rows)
+>         centeredD = np.array([BLEND_PER36 * r['D'] - posMeanD[r['pos']] if r['poss'] >= BLEND_POSS else np.nan for r in rows])
+471a514,516
+>     if def_window == 'season':
+>         eligible = np.array([r['possW'] >= bonus_min_w for r in rows])
+>     t96 = min(v for v in pr_pool if percentile_rank(v, pr_pool) >= PR_HI)
+495,496c540,546
+<         wgt = np.array([taper_w(p) for p in pr])
+<         bonus = raw_bonus * wgt
+---
+>         if bonus_shape == 'ceiling':
+>             bonus = np.minimum(raw_bonus, np.maximum(0.0, t96 - pred0))
+>         elif bonus_shape == 'none':   # E-106
+>             bonus = raw_bonus.copy()
+>         else:
+>             wgt = np.array([taper_w(p) for p in pr])
+>             bonus = raw_bonus * wgt
+503a554
+>     bonus_pre_cap = bonus.copy()
+545a597,611
+>         **({} if (bonus_shape, def_window) == ('taper', 'pooled') else {'e094': {
+>             'bonusShape': bonus_shape, 'defWindow': def_window, 'defRapm': None if def_rapm is None else def_rapm.relative_to(ROOT).as_posix(),
+>             'T96': float(t96), 'bonusPositive': int((bonus_pre_cap > 1e-12).sum()),
+>             'bonusMedianPositive': float(np.median(bonus_pre_cap[bonus_pre_cap > 1e-12])) if (bonus_pre_cap > 1e-12).any() else 0.0,
+>             'bonusMax': float(bonus_pre_cap.max()),
+>             'f1_violations': [rows[i]['name'] for i in range(len(rows)) if pred0[i] < t96 and pred0[i] + bonus_pre_cap[i] > t96 + 1e-9],
+>             'f1_pr96_nonzero': [rows[i]['name'] for i in range(len(rows)) if pr[i] >= PR_HI and bonus_pre_cap[i] > 0],
+>             'f2_sample': [{'name': rows[i]['name'], 'centeredD': float(centeredD[i]),
+>                            'Dw': float(rows[i].get('Dw', rows[i]['D'])), 'pos': rows[i]['pos'], 'posMeanD': float(posMeanD[rows[i]['pos']])}
+>                           for i in [j for j in range(len(rows)) if not np.isnan(centeredD[j])][::37][:10]],
+>             **({'u1_sample': [{'name': rows[i]['name'], 'eligible': bool(eligible[i]), 'centeredD': None if np.isnan(centeredD[i]) else float(centeredD[i]),
+>                                'bonusPreCap': float(bonus_pre_cap[i])} for i in range(0, len(rows), max(1, len(rows) // 10))[:10]],
+>                 'pr96_bonus': [{'name': rows[i]['name'], 'pr': float(pr[i]), 'bonusPreCap': float(bonus_pre_cap[i])}
+>                                for i in range(len(rows)) if pr[i] >= PR_HI and bonus_pre_cap[i] > 1e-12]} if bonus_shape == 'none' else {}),
+>         }}),

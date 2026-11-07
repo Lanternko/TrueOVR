@@ -1,0 +1,16 @@
+[
+  {
+    "file": "reports/card-0.2.7+E123-tail-3pt-rim-pres/data/2022-23-base.json",
+    "season": "2022-23",
+    "kind": "base",
+    "rows": 539,
+    "sha256": "51049d02bf5f128a855a15fc8d155fbebc995159d4b4828be39b033fb802ac72"
+  },
+  {
+    "file": "reports/card-0.2.7+E123-tail-3pt-rim-pres/data/2023-24-base.json",
+    "season": "2023-24",
+    "kind": "base",
+    "rows": 572,
+    "sha256": "75505bb6f1ecf77256de30ba3c7920e8ece55b35fcf836271081a5a565c3a8fa"
+  }
+]

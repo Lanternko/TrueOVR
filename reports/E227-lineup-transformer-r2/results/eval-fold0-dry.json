@@ -1,0 +1,920 @@
+{
+ "target": "fold0",
+ "mde": {
+  "R2-stats": 15.36,
+  "R2-stats-rapm": 14.208
+ },
+ "guardThresholds": {
+  "R2-stats": {
+   "ptsSide": 0.0005,
+   "tovLL": 0.00024,
+   "orbLL": 0.00066
+  },
+  "R2-stats-rapm": {
+   "ptsSide": 0.00048,
+   "tovLL": 0.00024,
+   "orbLL": 0.00064
+  }
+ },
+ "b1Lambda": {
+  "R2-abil": {
+   "pts": 10000.0,
+   "tov": 0.001,
+   "orb": 0.001
+  },
+  "R2-stats": {
+   "pts": 10000.0,
+   "tov": 0.001,
+   "orb": 0.001
+  },
+  "R2-stats-rapm": {
+   "pts": 10000.0,
+   "tov": 0.001,
+   "orb": 0.001
+  }
+ },
+ "fold0": {
+  "label": "fold0 (weights early-stopped on fold 0)",
+  "games": 904,
+  "stints": 27533,
+  "poss": 181696,
+  "mse": {
+   "B1-abil": 10172.81,
+   "B1-stats": 10147.59,
+   "B1-stats-rapm": 10146.43,
+   "R2-abil": 10146.93,
+   "R2-stats": 10130.02,
+   "R2-stats-rapm": 10128.44,
+   "B0": 10249.08
+  },
+  "seedMSE": {
+   "R2-abil": [
+    10147.74,
+    10151.24,
+    10165.45,
+    10151.96,
+    10143.52
+   ],
+   "R2-stats": [
+    10127.34,
+    10138.02,
+    10129.75,
+    10120.05,
+    10151.94
+   ],
+   "R2-stats-rapm": [
+    10125.45,
+    10119.94,
+    10137.47,
+    10147.69,
+    10124.58
+   ]
+  },
+  "side": {
+   "B1-abil": {
+    "ptsSide": 0.43877,
+    "tovLL": 0.40216,
+    "orbLL": 0.59891
+   },
+   "B1-stats": {
+    "ptsSide": 0.43781,
+    "tovLL": 0.40157,
+    "orbLL": 0.59636
+   },
+   "B1-stats-rapm": {
+    "ptsSide": 0.43775,
+    "tovLL": 0.40158,
+    "orbLL": 0.59635
+   },
+   "R2-abil": {
+    "ptsSide": 0.4381,
+    "tovLL": 0.40217,
+    "orbLL": 0.59793
+   },
+   "R2-stats": {
+    "ptsSide": 0.43732,
+    "tovLL": 0.40162,
+    "orbLL": 0.59643
+   },
+   "R2-stats-rapm": {
+    "ptsSide": 0.43729,
+    "tovLL": 0.40162,
+    "orbLL": 0.59645
+   },
+   "B0": {
+    "ptsSide": 0.44211,
+    "tovLL": 0.40387,
+    "orbLL": 0.60157
+   }
+  },
+  "paired": {
+   "R2-abil−B1-abil": {
+    "point": -25.88251,
+    "ci90": [
+     -31.72487,
+     -19.78908
+    ],
+    "halfWidth90": 5.9679
+   },
+   "B1-abil−B0": {
+    "point": -76.27543,
+    "ci90": [
+     -93.6349,
+     -59.73019
+    ],
+    "halfWidth90": 16.95235
+   },
+   "R2-abil−B0": {
+    "point": -102.15794,
+    "ci90": [
+     -119.25045,
+     -85.76646
+    ],
+    "halfWidth90": 16.74199
+   },
+   "R2-stats−B1-stats": {
+    "point": -17.57023,
+    "ci90": [
+     -23.59686,
+     -11.40181
+    ],
+    "halfWidth90": 6.09753,
+    "guard": {
+     "ptsSide": {
+      "point": -0.0005,
+      "ci90": [
+       -0.00072,
+       -0.00028
+      ],
+      "halfWidth90": 0.00022
+     },
+     "tovLL": {
+      "point": 5e-05,
+      "ci90": [
+       -2e-05,
+       0.00012
+      ],
+      "halfWidth90": 7e-05
+     },
+     "orbLL": {
+      "point": 7e-05,
+      "ci90": [
+       -0.00011,
+       0.00027
+      ],
+      "halfWidth90": 0.00019
+     }
+    }
+   },
+   "B1-stats−B0": {
+    "point": -101.48942,
+    "ci90": [
+     -118.65558,
+     -84.36412
+    ],
+    "halfWidth90": 17.14573
+   },
+   "R2-stats−B0": {
+    "point": -119.05964,
+    "ci90": [
+     -136.80522,
+     -101.26545
+    ],
+    "halfWidth90": 17.76988
+   },
+   "R2-stats−R2-abil": {
+    "point": -16.90171,
+    "ci90": [
+     -24.5329,
+     -9.33684
+    ],
+    "halfWidth90": 7.59803,
+    "guard": {
+     "ptsSide": {
+      "point": -0.00079,
+      "ci90": [
+       -0.00105,
+       -0.00054
+      ],
+      "halfWidth90": 0.00025
+     },
+     "tovLL": {
+      "point": -0.00055,
+      "ci90": [
+       -0.00067,
+       -0.00043
+      ],
+      "halfWidth90": 0.00012
+     },
+     "orbLL": {
+      "point": -0.0015,
+      "ci90": [
+       -0.00183,
+       -0.00118
+      ],
+      "halfWidth90": 0.00033
+     }
+    }
+   },
+   "R2-stats-rapm−B1-stats-rapm": {
+    "point": -17.99531,
+    "ci90": [
+     -23.01135,
+     -12.73832
+    ],
+    "halfWidth90": 5.13651,
+    "guard": {
+     "ptsSide": {
+      "point": -0.00046,
+      "ci90": [
+       -0.00068,
+       -0.00025
+      ],
+      "halfWidth90": 0.00021
+     },
+     "tovLL": {
+      "point": 4e-05,
+      "ci90": [
+       -3e-05,
+       0.0001
+      ],
+      "halfWidth90": 7e-05
+     },
+     "orbLL": {
+      "point": 0.00011,
+      "ci90": [
+       -9e-05,
+       0.00031
+      ],
+      "halfWidth90": 0.0002
+     }
+    }
+   },
+   "B1-stats-rapm−B0": {
+    "point": -102.64941,
+    "ci90": [
+     -119.56826,
+     -85.52904
+    ],
+    "halfWidth90": 17.01961
+   },
+   "R2-stats-rapm−B0": {
+    "point": -120.64472,
+    "ci90": [
+     -137.76886,
+     -103.18862
+    ],
+    "halfWidth90": 17.29012
+   },
+   "R2-stats-rapm−R2-abil": {
+    "point": -18.48678,
+    "ci90": [
+     -25.67006,
+     -11.36387
+    ],
+    "halfWidth90": 7.15309,
+    "guard": {
+     "ptsSide": {
+      "point": -0.00081,
+      "ci90": [
+       -0.00106,
+       -0.00058
+      ],
+      "halfWidth90": 0.00024
+     },
+     "tovLL": {
+      "point": -0.00055,
+      "ci90": [
+       -0.00067,
+       -0.00043
+      ],
+      "halfWidth90": 0.00012
+     },
+     "orbLL": {
+      "point": -0.00147,
+      "ci90": [
+       -0.0018,
+       -0.00114
+      ],
+      "halfWidth90": 0.00033
+     }
+    }
+   },
+   "R2-stats-rapm−R2-stats": {
+    "point": -1.58507,
+    "ci90": [
+     -4.05976,
+     0.85271
+    ],
+    "halfWidth90": 2.45623
+   }
+  },
+  "game": {
+   "B1-abil": {
+    "marginMSE": 196.69,
+    "brier": 0.21205,
+    "k": 0.11159
+   },
+   "B1-stats": {
+    "marginMSE": 190.07,
+    "brier": 0.20416,
+    "k": 0.11686
+   },
+   "B1-stats-rapm": {
+    "marginMSE": 190.18,
+    "brier": 0.20416,
+    "k": 0.11686
+   },
+   "R2-abil": {
+    "marginMSE": 190.39,
+    "brier": 0.20586,
+    "k": 0.12238
+   },
+   "R2-stats": {
+    "marginMSE": 186.66,
+    "brier": 0.2004,
+    "k": 0.11419
+   },
+   "R2-stats-rapm": {
+    "marginMSE": 185.23,
+    "brier": 0.19944,
+    "k": 0.12238
+   },
+   "B0": {
+    "marginMSE": 243.46,
+    "brier": 0.25,
+    "k": null
+   }
+  },
+  "verdict": {
+   "R2-stats": {
+    "judge1": {
+     "point": -16.90171,
+     "ci90": [
+      -24.5329,
+      -9.33684
+     ],
+     "needAtMost": -15.36,
+     "pass": true
+    },
+    "judge2": {
+     "ptsSide": {
+      "point": -0.00079,
+      "threshold": 0.0005,
+      "ok": true
+     },
+     "tovLL": {
+      "point": -0.00055,
+      "threshold": 0.00024,
+      "ok": true
+     },
+     "orbLL": {
+      "point": -0.0015,
+      "threshold": 0.00066,
+      "ok": true
+     }
+    },
+    "judge2pass": true
+   },
+   "R2-stats-rapm": {
+    "judge1": {
+     "point": -18.48678,
+     "ci90": [
+      -25.67006,
+      -11.36387
+     ],
+     "needAtMost": -14.208,
+     "pass": true
+    },
+    "judge2": {
+     "ptsSide": {
+      "point": -0.00081,
+      "threshold": 0.00048,
+      "ok": true
+     },
+     "tovLL": {
+      "point": -0.00055,
+      "threshold": 0.00024,
+      "ok": true
+     },
+     "orbLL": {
+      "point": -0.00147,
+      "threshold": 0.00064,
+      "ok": true
+     }
+    },
+    "judge2pass": true
+   }
+  }
+ },
+ "dry": {
+  "label": "dry (fold0 2024-25)",
+  "games": 172,
+  "stints": 5139,
+  "poss": 34643,
+  "mse": {
+   "B1-abil": 10178.85,
+   "B1-stats": 10153.79,
+   "B1-stats-rapm": 10152.98,
+   "R2-abil": 10159.13,
+   "R2-stats": 10148.39,
+   "R2-stats-rapm": 10143.48,
+   "B0": 10271.14
+  },
+  "seedMSE": {
+   "R2-abil": [
+    10160.07,
+    10156.0,
+    10172.48,
+    10169.75,
+    10162.73
+   ],
+   "R2-stats": [
+    10145.95,
+    10152.35,
+    10144.97,
+    10143.93,
+    10172.1
+   ],
+   "R2-stats-rapm": [
+    10138.4,
+    10141.05,
+    10156.26,
+    10158.42,
+    10136.79
+   ]
+  },
+  "side": {
+   "B1-abil": {
+    "ptsSide": 0.43437,
+    "tovLL": 0.39998,
+    "orbLL": 0.6015
+   },
+   "B1-stats": {
+    "ptsSide": 0.43349,
+    "tovLL": 0.39939,
+    "orbLL": 0.59932
+   },
+   "B1-stats-rapm": {
+    "ptsSide": 0.43339,
+    "tovLL": 0.39941,
+    "orbLL": 0.59937
+   },
+   "R2-abil": {
+    "ptsSide": 0.43392,
+    "tovLL": 0.39997,
+    "orbLL": 0.60048
+   },
+   "R2-stats": {
+    "ptsSide": 0.4331,
+    "tovLL": 0.39939,
+    "orbLL": 0.59919
+   },
+   "R2-stats-rapm": {
+    "ptsSide": 0.433,
+    "tovLL": 0.39937,
+    "orbLL": 0.59932
+   },
+   "B0": {
+    "ptsSide": 0.43843,
+    "tovLL": 0.40194,
+    "orbLL": 0.60401
+   }
+  },
+  "paired": {
+   "R2-abil−B1-abil": {
+    "point": -19.71493,
+    "ci90": [
+     -34.64453,
+     -4.56562
+    ],
+    "halfWidth90": 15.03945
+   },
+   "B1-abil−B0": {
+    "point": -92.29682,
+    "ci90": [
+     -133.14825,
+     -50.35403
+    ],
+    "halfWidth90": 41.39711
+   },
+   "R2-abil−B0": {
+    "point": -112.01175,
+    "ci90": [
+     -152.83161,
+     -68.89322
+    ],
+    "halfWidth90": 41.9692
+   },
+   "R2-stats−B1-stats": {
+    "point": -5.40069,
+    "ci90": [
+     -19.60569,
+     9.00498
+    ],
+    "halfWidth90": 14.30534,
+    "guard": {
+     "ptsSide": {
+      "point": -0.00039,
+      "ci90": [
+       -0.00091,
+       0.00016
+      ],
+      "halfWidth90": 0.00054
+     },
+     "tovLL": {
+      "point": -1e-05,
+      "ci90": [
+       -0.00015,
+       0.00014
+      ],
+      "halfWidth90": 0.00015
+     },
+     "orbLL": {
+      "point": -0.00013,
+      "ci90": [
+       -0.00046,
+       0.00021
+      ],
+      "halfWidth90": 0.00033
+     }
+    }
+   },
+   "B1-stats−B0": {
+    "point": -117.34894,
+    "ci90": [
+     -159.02466,
+     -73.61153
+    ],
+    "halfWidth90": 42.70657
+   },
+   "R2-stats−B0": {
+    "point": -122.74963,
+    "ci90": [
+     -167.3558,
+     -77.02376
+    ],
+    "halfWidth90": 45.16602
+   },
+   "R2-stats−R2-abil": {
+    "point": -10.73788,
+    "ci90": [
+     -26.90025,
+     6.26711
+    ],
+    "halfWidth90": 16.58368,
+    "guard": {
+     "ptsSide": {
+      "point": -0.00082,
+      "ci90": [
+       -0.00141,
+       -0.00022
+      ],
+      "halfWidth90": 0.0006
+     },
+     "tovLL": {
+      "point": -0.00058,
+      "ci90": [
+       -0.00085,
+       -0.00032
+      ],
+      "halfWidth90": 0.00027
+     },
+     "orbLL": {
+      "point": -0.00129,
+      "ci90": [
+       -0.00207,
+       -0.00045
+      ],
+      "halfWidth90": 0.00081
+     }
+    }
+   },
+   "R2-stats-rapm−B1-stats-rapm": {
+    "point": -9.50287,
+    "ci90": [
+     -22.06496,
+     3.40849
+    ],
+    "halfWidth90": 12.73673,
+    "guard": {
+     "ptsSide": {
+      "point": -0.00039,
+      "ci90": [
+       -0.00086,
+       0.0001
+      ],
+      "halfWidth90": 0.00048
+     },
+     "tovLL": {
+      "point": -3e-05,
+      "ci90": [
+       -0.0002,
+       0.00014
+      ],
+      "halfWidth90": 0.00017
+     },
+     "orbLL": {
+      "point": -5e-05,
+      "ci90": [
+       -0.00043,
+       0.00029
+      ],
+      "halfWidth90": 0.00036
+     }
+    }
+   },
+   "B1-stats-rapm−B0": {
+    "point": -118.15797,
+    "ci90": [
+     -159.24757,
+     -74.76941
+    ],
+    "halfWidth90": 42.23908
+   },
+   "R2-stats-rapm−B0": {
+    "point": -127.66084,
+    "ci90": [
+     -170.42623,
+     -82.99912
+    ],
+    "halfWidth90": 43.71355
+   },
+   "R2-stats-rapm−R2-abil": {
+    "point": -15.64909,
+    "ci90": [
+     -31.07825,
+     1.08547
+    ],
+    "halfWidth90": 16.08186,
+    "guard": {
+     "ptsSide": {
+      "point": -0.00093,
+      "ci90": [
+       -0.00149,
+       -0.00036
+      ],
+      "halfWidth90": 0.00057
+     },
+     "tovLL": {
+      "point": -0.00059,
+      "ci90": [
+       -0.00088,
+       -0.00032
+      ],
+      "halfWidth90": 0.00028
+     },
+     "orbLL": {
+      "point": -0.00116,
+      "ci90": [
+       -0.00191,
+       -0.00037
+      ],
+      "halfWidth90": 0.00077
+     }
+    }
+   },
+   "R2-stats-rapm−R2-stats": {
+    "point": -4.91121,
+    "ci90": [
+     -11.02873,
+     0.99791
+    ],
+    "halfWidth90": 6.01332
+   }
+  },
+  "game": {
+   "B1-abil": {
+    "marginMSE": 185.11,
+    "brier": 0.208,
+    "k": 0.11159
+   },
+   "B1-stats": {
+    "marginMSE": 176.58,
+    "brier": 0.19887,
+    "k": 0.11686
+   },
+   "B1-stats-rapm": {
+    "marginMSE": 177.92,
+    "brier": 0.19976,
+    "k": 0.11686
+   },
+   "R2-abil": {
+    "marginMSE": 178.61,
+    "brier": 0.20249,
+    "k": 0.12238
+   },
+   "R2-stats": {
+    "marginMSE": 178.24,
+    "brier": 0.19685,
+    "k": 0.11419
+   },
+   "R2-stats-rapm": {
+    "marginMSE": 176.44,
+    "brier": 0.19527,
+    "k": 0.12238
+   },
+   "B0": {
+    "marginMSE": 244.55,
+    "brier": 0.25,
+    "k": null
+   }
+  },
+  "verdict": {
+   "R2-stats": {
+    "judge1": {
+     "point": -10.73788,
+     "ci90": [
+      -26.90025,
+      6.26711
+     ],
+     "needAtMost": -15.36,
+     "pass": false
+    },
+    "judge2": {
+     "ptsSide": {
+      "point": -0.00082,
+      "threshold": 0.0005,
+      "ok": true
+     },
+     "tovLL": {
+      "point": -0.00058,
+      "threshold": 0.00024,
+      "ok": true
+     },
+     "orbLL": {
+      "point": -0.00129,
+      "threshold": 0.00066,
+      "ok": true
+     }
+    },
+    "judge2pass": true
+   },
+   "R2-stats-rapm": {
+    "judge1": {
+     "point": -15.64909,
+     "ci90": [
+      -31.07825,
+      1.08547
+     ],
+     "needAtMost": -14.208,
+     "pass": false
+    },
+    "judge2": {
+     "ptsSide": {
+      "point": -0.00093,
+      "threshold": 0.00048,
+      "ok": true
+     },
+     "tovLL": {
+      "point": -0.00059,
+      "threshold": 0.00024,
+      "ok": true
+     },
+     "orbLL": {
+      "point": -0.00116,
+      "threshold": 0.00064,
+      "ok": true
+     }
+    },
+    "judge2pass": true
+   }
+  }
+ },
+ "importance": {
+  "R2-abil": {
+   "baseMSE": 10159.13,
+   "groups": {
+    "abil": 186.271
+   },
+   "features": {
+    "stamina": 35.932,
+    "rebound": 30.993,
+    "pressure": 17.873,
+    "onBall": 17.824,
+    "tovSkill": 10.599,
+    "pass": 8.545,
+    "heightInches": 6.975,
+    "ft": 5.712,
+    "help": 5.044,
+    "short": 4.885,
+    "physique": 2.604,
+    "long": 0.359,
+    "creation": -1.836,
+    "drive": -2.181,
+    "mid": -2.329
+   }
+  },
+  "R2-stats": {
+   "baseMSE": 10148.39,
+   "groups": {
+    "abil": 100.227,
+    "stat:matchup": 18.318,
+    "stat:rimthree": 15.153,
+    "stat:box": 10.494,
+    "stat:adv": -1.438,
+    "stat:hustle": -2.922
+   },
+   "features": {
+    "stamina": 34.312,
+    "oppFGpct": 18.176,
+    "stl36": 13.327,
+    "screenAst36": 8.383,
+    "ft": 8.254,
+    "rimFGA36": 8.109,
+    "rebound": 6.387,
+    "threeFGA36": 6.08,
+    "pressure": 5.596,
+    "pass": 4.049,
+    "astPct": 3.903,
+    "drebPct": 2.432,
+    "looseD36": 1.602,
+    "cont3pt36": 1.383,
+    "onBall": 1.364,
+    "drive": 1.092,
+    "threeDiff": 0.769,
+    "dreb36": 0.753,
+    "ts": 0.694,
+    "charges36": 0.453,
+    "short": -0.039,
+    "heightInches": -0.076,
+    "rimDiff": -0.316,
+    "oppPtsPerPoss": -0.361,
+    "pf36": -0.509,
+    "tovSkill": -0.648,
+    "boxoutO36": -0.671,
+    "tovPct": -0.704,
+    "physique": -0.989,
+    "looseO36": -1.123,
+    "help": -1.485,
+    "deflections36": -1.814,
+    "orebPct": -1.914,
+    "creation": -2.016,
+    "mid": -2.167,
+    "cont2pt36": -3.067,
+    "long": -3.448,
+    "blk36": -3.512,
+    "oreb36": -4.539,
+    "boxoutD36": -5.218,
+    "usg": -5.809
+   }
+  },
+  "R2-stats-rapm": {
+   "baseMSE": 10143.48,
+   "groups": {
+    "abil": 87.249,
+    "stat:matchup": 17.889,
+    "stat:rimthree": 11.31,
+    "stat:box": 8.17,
+    "rapm": -0.938,
+    "stat:hustle": -3.521,
+    "stat:adv": -4.771
+   },
+   "features": {
+    "stamina": 29.741,
+    "oppFGpct": 14.031,
+    "stl36": 10.664,
+    "ft": 7.691,
+    "screenAst36": 6.597,
+    "rimFGA36": 6.17,
+    "pressure": 5.02,
+    "rebound": 4.765,
+    "pass": 4.649,
+    "threeFGA36": 4.411,
+    "oppPtsPerPoss": 3.358,
+    "drive": 2.133,
+    "drebPct": 2.103,
+    "ts": 1.428,
+    "cont3pt36": 1.201,
+    "onBall": 1.045,
+    "threeDiff": 0.885,
+    "charges36": 0.607,
+    "tovSkill": 0.562,
+    "looseD36": 0.498,
+    "pf36": 0.209,
+    "heightInches": -0.033,
+    "looseO36": -0.083,
+    "short": -0.138,
+    "rapmDef": -0.188,
+    "rimDiff": -0.262,
+    "tovPct": -0.323,
+    "astPct": -0.537,
+    "physique": -0.757,
+    "rapmOff": -0.815,
+    "dreb36": -0.896,
+    "deflections36": -0.962,
+    "help": -1.24,
+    "mid": -1.873,
+    "boxoutO36": -1.9,
+    "creation": -2.12,
+    "orebPct": -2.266,
+    "cont2pt36": -2.584,
+    "blk36": -3.44,
+    "long": -4.094,
+    "oreb36": -4.164,
+    "usg": -4.465,
+    "boxoutD36": -4.694
+   }
+  }
+ }
+}

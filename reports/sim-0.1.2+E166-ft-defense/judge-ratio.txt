@@ -1,0 +1,2 @@
+k=1 players=150 nonC fta 0.63 ftm 0.61 pts 0.77 | wing fta 0.65 ftm 0.64 pts 0.78 | C fta 0.15 ftm 0.09 pts 0.56
+k=2 players=150 nonC fta 1.12 ftm 1.11 pts 0.89 | wing fta 1.15 ftm 1.09 pts 0.85 | C fta 0.50 ftm 0.51 pts 0.55

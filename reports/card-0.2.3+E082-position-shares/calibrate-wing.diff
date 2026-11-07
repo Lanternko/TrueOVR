@@ -1,0 +1,58 @@
+47a48
+> POS_SHARES = None   # E-082：--posShares CSV → {name: np.array(5)}；None = 原本的單一標籤（輸出與原檔完全相同）
+55a57,77
+> def load_shares(path, rows):
+>     """E-082：share = s_ip / sum_p s_ip；lowConfidence（starts<5）或總秒數 0 → 原標籤 one-hot。"""
+>     import csv as _csv
+>     byname = {r['name']: r for r in _csv.DictReader(open(path, encoding='utf-8'))}
+>     for r in rows:
+>         x = byname[r['name']]
+>         s = np.array([float(x['s_' + p]) for p in POS])
+>         if x['lowConfidence'] == '1' or s.sum() <= 0:
+>             pi = np.array([1.0 if r['pos'] == p else 0.0 for p in POS])
+>         else:
+>             pi = s / s.sum()
+>         r['pi'] = pi
+> 
+> 
+> def pos_center(r, mus):
+>     """r 的位置平均：原模式 = mus[pos]；E-082 = sum_p pi_p * mu_p。"""
+>     if POS_SHARES is None:
+>         return mus[r['pos']]
+>     return float(sum(r['pi'][k] * mus[p] for k, p in enumerate(POS)))
+> 
+> 
+142a165,170
+>     if POS_SHARES is not None:
+>         pool = [r for r in rows if r['poss'] >= BLEND_POSS]
+>         mus = {p: sum(r['MIN'] * r['pi'][k] * BLEND_PER36 * r['N'] for r in pool) / sum(r['MIN'] * r['pi'][k] for r in pool) for k, p in enumerate(POS)}
+>         for r in rows:
+>             r['r'] = BLEND_PER36 * r['N'] - pos_center(r, mus) if r['poss'] >= BLEND_POSS else np.nan
+>         return
+248c276,279
+<             d = np.array([[1.0 if r['pos'] == p else 0.0] for r in rows])
+---
+>             if POS_SHARES is None:
+>                 d = np.array([[1.0 if r['pos'] == p else 0.0] for r in rows])
+>             else:
+>                 d = np.array([[r['pi'][POS.index(p)]] for r in rows])
+303a335,339
+>     if POS_SHARES is not None:
+>         pool = [r for r in rows if r['poss'] >= BLEND_POSS]
+>         for k, p in enumerate(POS):
+>             out[p] = sum(r['MIN'] * r['pi'][k] * BLEND_PER36 * r['D'] for r in pool) / sum(r['MIN'] * r['pi'][k] for r in pool)
+>         return out
+382c418
+<     global ATTRS, DRIVE_COLUMN, DRIVE_MODE, ATTR_SOURCE, DEF_SOURCE, RAPM, BLEND_POSS, BONUS_MIN_POSS, PRESSURE_MODE, PRESSURE_SOURCE, FOULDISC
+---
+>     global POS_SHARES, ATTRS, DRIVE_COLUMN, DRIVE_MODE, ATTR_SOURCE, DEF_SOURCE, RAPM, BLEND_POSS, BONUS_MIN_POSS, PRESSURE_MODE, PRESSURE_SOURCE, FOULDISC
+387a424,425
+>     shares_path = Path(argv[argv.index('--posShares') + 1]).resolve() if '--posShares' in argv else None
+>     POS_SHARES = shares_path
+425a464,465
+>     if shares_path is not None:
+>         load_shares(shares_path, rows)
+448c488
+<     centeredD = np.array([BLEND_PER36 * r['D'] - posMeanD[r['pos']] if r['poss'] >= BLEND_POSS else np.nan for r in rows])
+---
+>     centeredD = np.array([BLEND_PER36 * r['D'] - pos_center(r, posMeanD) if r['poss'] >= BLEND_POSS else np.nan for r in rows])

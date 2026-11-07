@@ -1,0 +1,30 @@
+{
+  "version": "card 0.2.1",
+  "baseVersion": "card 0.2.0",
+  "change": "pressure 來源 tovNonSteal_defense → 事件式 force（E-071 P1，含勘誤 1）；新增顯示欄 foulDisc、presDisplay（不進 OVR）",
+  "ruling": "R-019（沒有變準，升 PATCH）；使用者 2026-10-29 裁定採用 P1",
+  "rRepl_PR10_of_pred": -1.7544930126084384,
+  "anchors": {
+    "PR1": -0.7590291728367976,
+    "PR50": 1.0604761849654347,
+    "PR99": 4.774797638114121
+  },
+  "poolSize": 378,
+  "players": 582,
+  "newColumns": [
+    "foulDisc",
+    "presDisplay"
+  ],
+  "newColumnsMissing": [],
+  "sources_sha256": {
+    "reports/card-0.2.0+E071-pressure/cards/P1/card/ranking.csv": "65a5c14277b6d313cc07a73eae941b3fe443febc11abcc2477832fc9158274ec",
+    "reports/card-0.2.0+E071-pressure/cards/P1/card/summary.json": "063d92c84e5fa3507c12019cc1a0a7439ed02162fb5e79f66b87ff029f610d2f",
+    "reports/card-0.2.0+E071-pressure/force-2025-26.csv": "83d0d37ac08eace3f5450f0e324656923b831e9d9f7ae2339213dcf866bee516",
+    "reports/card-0.2.0+E071-pressure/preregistration.md": "ce64cd8ad67265aec20ef1653b05e588bf279c0f1f732c3c33235773ff604dde",
+    "reports/card-0.2.0+E071-pressure/errata.md": "05dcd7412c746cad645300cf32ba92fdb4002bfaddc4b9b9bb80c170df40e249",
+    "reports/card-0.2.0+E071-pressure/verdict.json": "a64aa8b58ffb42d8a1ffb6e19c2d687bd3ebcb1775e2ae455ce3e65f35c138a7",
+    "reports/card-0.2.0+E071-pressure/report.md": "be7f69a55748fe05c620af6475c1a74bb1b96e63bdaf72f450e0715a4beb6170"
+  },
+  "generator": "reports/card-0.2.1/build_card_021.py",
+  "ranking_csv_sha256": "64c42201e3115a0c52c73c4c9922aafcf42cd59a9358e389c5965abe2ee4646e"
+}

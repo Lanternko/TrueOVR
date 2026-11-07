@@ -1,0 +1,38 @@
+{
+  "version": "card 0.2.2",
+  "baseVersion": "card 0.2.0",
+  "change": "foulDraw 以量為主（E-070 w075）+ pressure 來源 tovNonSteal_defense → 事件式 force（E-071 P1，含勘誤 1）；新增顯示欄 foulDisc、presDisplay（不進 OVR）",
+  "components": {
+    "E-070": "foulDraw w075（reports/card-0.2.0+E070-foul-volume/attributes-w075）",
+    "E-071": "P1 pressure=force（含勘誤 1）"
+  },
+  "rRepl_PR10_of_pred": -1.759308786877863,
+  "anchors": {
+    "PR1": -0.756425915699913,
+    "PR50": 1.0495269738777855,
+    "PR99": 4.743953075880887
+  },
+  "poolSize": 378,
+  "players": 582,
+  "newColumns": [
+    "foulDisc",
+    "presDisplay"
+  ],
+  "newColumnsMissing": [],
+  "sources_sha256": {
+    "reports/card-0.2.2/cards/P1/card/ranking.csv": "9f5700c266e14d445f18a691849dd4ab11dac3b3149eb5a9630bbaba8db58802",
+    "reports/card-0.2.2/cards/P1/card/summary.json": "74d71f61af791475063b05019ba7012288ced88a947c40b786b8fb993eae27cd",
+    "reports/card-0.2.0+E071-pressure/force-2025-26.csv": "83d0d37ac08eace3f5450f0e324656923b831e9d9f7ae2339213dcf866bee516",
+    "reports/card-0.2.0+E071-pressure/force-pressure-source.csv": "2e98d0118b46ec54f71fee2b2906d2b7cf581a7d6d37818beb0cd06566f3d885",
+    "reports/card-0.2.0+E071-pressure/calibrate-wing.py": "ee1ea2cd22690c3a2757111c449fcd98dbf18d0c0b44b6e3e35f1c3a6d2de1e3",
+    "reports/card-0.2.0+E071-pressure/preregistration.md": "ce64cd8ad67265aec20ef1653b05e588bf279c0f1f732c3c33235773ff604dde",
+    "reports/card-0.2.0+E071-pressure/errata.md": "05dcd7412c746cad645300cf32ba92fdb4002bfaddc4b9b9bb80c170df40e249",
+    "reports/card-0.2.0+E070-foul-volume/attributes-w075/attributes-new.csv": "8b36f5ad6c5c7b041af674fb747a29f93165ac1f2677a3c44d06d5071cf80b23",
+    "reports/card-0.2.0+E070-foul-volume/preregistration.md": "c3fe3cd7a049a6a33fb9cb892e1ccf77e77eb6bafb1033e7e539e6f5cc04c817",
+    "reports/card-0.2.2/run_cards.py": "4961d6e810876e53e590ec4053e64fb722a4f98f05dbc242428acebd7a1b7db2",
+    "reports/card-0.2.2/cards/base/primary/ranking.csv": "7e71d7b50fe106ea9c3acc1c395e4e984ff9d56cbde718d2ff3e0fecc2ac882a",
+    "reports/card-0.2.2/cards/P1/primary/ranking.csv": "8305175ea1ff24d6a79399f7e743f37490c75e326130f6d7b3a1870266a825ba"
+  },
+  "generator": "reports/card-0.2.2/build_card_022.py",
+  "ranking_csv_sha256": "2102b2f6463405a3711827372cb0774af0d6b4f769d65d0403b938de1369059e"
+}

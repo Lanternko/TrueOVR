@@ -1,0 +1,312 @@
+{
+  "note": "T1 失敗診斷：k=50·nRef、f=0 時屬性差與 OVR 差；屬性完全不變的球員 OVR 也會動 → 管線的名次耦合（2K 名次封頂／pr bonus）",
+  "rows": [
+    {
+      "start": "Y1",
+      "N": 3,
+      "maxAttrDiff": 0.0,
+      "unchangedPlayers": 476,
+      "maxOvrDiffAmongUnchanged": 0.0,
+      "over0.5": []
+    },
+    {
+      "start": "Y1",
+      "N": 5,
+      "maxAttrDiff": 0.0,
+      "unchangedPlayers": 476,
+      "maxOvrDiffAmongUnchanged": 0.0,
+      "over0.5": []
+    },
+    {
+      "start": "Y1",
+      "N": 10,
+      "maxAttrDiff": 0.0,
+      "unchangedPlayers": 476,
+      "maxOvrDiffAmongUnchanged": 0.0,
+      "over0.5": []
+    },
+    {
+      "start": "Y1",
+      "N": 20,
+      "maxAttrDiff": 0.0,
+      "unchangedPlayers": 476,
+      "maxOvrDiffAmongUnchanged": 0.0,
+      "over0.5": []
+    },
+    {
+      "start": "Y2",
+      "N": 3,
+      "maxAttrDiff": 0.0932,
+      "unchangedPlayers": 362,
+      "maxOvrDiffAmongUnchanged": 0.0427,
+      "over0.5": []
+    },
+    {
+      "start": "Y2",
+      "N": 5,
+      "maxAttrDiff": 0.1304,
+      "unchangedPlayers": 267,
+      "maxOvrDiffAmongUnchanged": 0.0601,
+      "over0.5": []
+    },
+    {
+      "start": "Y2",
+      "N": 10,
+      "maxAttrDiff": 0.2568,
+      "unchangedPlayers": 211,
+      "maxOvrDiffAmongUnchanged": 0.0956,
+      "over0.5": []
+    },
+    {
+      "start": "Y2",
+      "N": 20,
+      "maxAttrDiff": 0.3349,
+      "unchangedPlayers": 173,
+      "maxOvrDiffAmongUnchanged": 0.1304,
+      "over0.5": []
+    },
+    {
+      "start": "Y3",
+      "N": 3,
+      "maxAttrDiff": 0.1038,
+      "unchangedPlayers": 398,
+      "maxOvrDiffAmongUnchanged": 0.0916,
+      "over0.5": [
+        [
+          "Khris Middleton",
+          -0.541
+        ]
+      ]
+    },
+    {
+      "start": "Y3",
+      "N": 5,
+      "maxAttrDiff": 0.2119,
+      "unchangedPlayers": 311,
+      "maxOvrDiffAmongUnchanged": 0.1039,
+      "over0.5": [
+        [
+          "Khris Middleton",
+          -0.543
+        ]
+      ]
+    },
+    {
+      "start": "Y3",
+      "N": 10,
+      "maxAttrDiff": 0.3512,
+      "unchangedPlayers": 252,
+      "maxOvrDiffAmongUnchanged": 0.0529,
+      "over0.5": []
+    },
+    {
+      "start": "Y3",
+      "N": 20,
+      "maxAttrDiff": 0.4517,
+      "unchangedPlayers": 211,
+      "maxOvrDiffAmongUnchanged": 0.0856,
+      "over0.5": []
+    },
+    {
+      "start": "Y4",
+      "N": 3,
+      "maxAttrDiff": 0.0872,
+      "unchangedPlayers": 402,
+      "maxOvrDiffAmongUnchanged": 0.2957,
+      "over0.5": []
+    },
+    {
+      "start": "Y4",
+      "N": 5,
+      "maxAttrDiff": 0.1355,
+      "unchangedPlayers": 297,
+      "maxOvrDiffAmongUnchanged": 0.6042,
+      "over0.5": [
+        [
+          "Paul George",
+          0.604
+        ],
+        [
+          "Nikola Jokic",
+          0.604
+        ]
+      ]
+    },
+    {
+      "start": "Y4",
+      "N": 10,
+      "maxAttrDiff": 0.2683,
+      "unchangedPlayers": 247,
+      "maxOvrDiffAmongUnchanged": 0.0343,
+      "over0.5": []
+    },
+    {
+      "start": "Y4",
+      "N": 20,
+      "maxAttrDiff": 0.3771,
+      "unchangedPlayers": 204,
+      "maxOvrDiffAmongUnchanged": 0.0722,
+      "over0.5": []
+    },
+    {
+      "start": "Y5",
+      "N": 3,
+      "maxAttrDiff": 0.0957,
+      "unchangedPlayers": 401,
+      "maxOvrDiffAmongUnchanged": 0.0203,
+      "over0.5": []
+    },
+    {
+      "start": "Y5",
+      "N": 5,
+      "maxAttrDiff": 0.1025,
+      "unchangedPlayers": 302,
+      "maxOvrDiffAmongUnchanged": 0.0309,
+      "over0.5": []
+    },
+    {
+      "start": "Y5",
+      "N": 10,
+      "maxAttrDiff": 0.2197,
+      "unchangedPlayers": 244,
+      "maxOvrDiffAmongUnchanged": 0.0643,
+      "over0.5": []
+    },
+    {
+      "start": "Y5",
+      "N": 20,
+      "maxAttrDiff": 0.3856,
+      "unchangedPlayers": 194,
+      "maxOvrDiffAmongUnchanged": 0.0901,
+      "over0.5": []
+    },
+    {
+      "start": "Y6",
+      "N": 3,
+      "maxAttrDiff": 0.0925,
+      "unchangedPlayers": 414,
+      "maxOvrDiffAmongUnchanged": 0.0209,
+      "over0.5": []
+    },
+    {
+      "start": "Y6",
+      "N": 5,
+      "maxAttrDiff": 0.1936,
+      "unchangedPlayers": 310,
+      "maxOvrDiffAmongUnchanged": 0.0252,
+      "over0.5": []
+    },
+    {
+      "start": "Y6",
+      "N": 10,
+      "maxAttrDiff": 0.2779,
+      "unchangedPlayers": 243,
+      "maxOvrDiffAmongUnchanged": 0.079,
+      "over0.5": []
+    },
+    {
+      "start": "Y6",
+      "N": 20,
+      "maxAttrDiff": 0.4655,
+      "unchangedPlayers": 195,
+      "maxOvrDiffAmongUnchanged": 0.0983,
+      "over0.5": []
+    },
+    {
+      "start": "D1",
+      "N": 3,
+      "maxAttrDiff": 0.0854,
+      "unchangedPlayers": 417,
+      "maxOvrDiffAmongUnchanged": 0.0058,
+      "over0.5": []
+    },
+    {
+      "start": "D1",
+      "N": 5,
+      "maxAttrDiff": 0.1331,
+      "unchangedPlayers": 315,
+      "maxOvrDiffAmongUnchanged": 0.0155,
+      "over0.5": []
+    },
+    {
+      "start": "D1",
+      "N": 10,
+      "maxAttrDiff": 0.2248,
+      "unchangedPlayers": 257,
+      "maxOvrDiffAmongUnchanged": 0.0045,
+      "over0.5": []
+    },
+    {
+      "start": "D1",
+      "N": 20,
+      "maxAttrDiff": 0.4166,
+      "unchangedPlayers": 203,
+      "maxOvrDiffAmongUnchanged": 0.0094,
+      "over0.5": []
+    },
+    {
+      "start": "D2",
+      "N": 3,
+      "maxAttrDiff": 0.0909,
+      "unchangedPlayers": 442,
+      "maxOvrDiffAmongUnchanged": 0.0171,
+      "over0.5": []
+    },
+    {
+      "start": "D2",
+      "N": 5,
+      "maxAttrDiff": 0.148,
+      "unchangedPlayers": 350,
+      "maxOvrDiffAmongUnchanged": 0.0222,
+      "over0.5": []
+    },
+    {
+      "start": "D2",
+      "N": 10,
+      "maxAttrDiff": 0.2793,
+      "unchangedPlayers": 297,
+      "maxOvrDiffAmongUnchanged": 0.066,
+      "over0.5": []
+    },
+    {
+      "start": "D2",
+      "N": 20,
+      "maxAttrDiff": 0.4599,
+      "unchangedPlayers": 241,
+      "maxOvrDiffAmongUnchanged": 0.0887,
+      "over0.5": []
+    },
+    {
+      "start": "D3",
+      "N": 3,
+      "maxAttrDiff": 0.1084,
+      "unchangedPlayers": 433,
+      "maxOvrDiffAmongUnchanged": 0.0185,
+      "over0.5": []
+    },
+    {
+      "start": "D3",
+      "N": 5,
+      "maxAttrDiff": 0.1456,
+      "unchangedPlayers": 343,
+      "maxOvrDiffAmongUnchanged": 0.0299,
+      "over0.5": []
+    },
+    {
+      "start": "D3",
+      "N": 10,
+      "maxAttrDiff": 0.1879,
+      "unchangedPlayers": 278,
+      "maxOvrDiffAmongUnchanged": 0.0605,
+      "over0.5": []
+    },
+    {
+      "start": "D3",
+      "N": 20,
+      "maxAttrDiff": 0.3469,
+      "unchangedPlayers": 224,
+      "maxOvrDiffAmongUnchanged": 0.0467,
+      "over0.5": []
+    }
+  ]
+}

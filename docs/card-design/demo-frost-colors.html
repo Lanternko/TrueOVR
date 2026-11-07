@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>霧鑽 六種顏色</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@1,600;1,700&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0d12; --ink:#e9eaf0; --mute:#8b8fa3;
+  --num:'Bebas Neue','Impact','Arial Narrow',sans-serif;
+  --sport:'Barlow Condensed','Oswald','Arial Narrow',sans-serif;
+  --tc:'Noto Sans TC','Microsoft JhengHei',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+body{background:radial-gradient(1200px 700px at 50% -10%,#1b1d2b,var(--bg));color:var(--ink);font-family:var(--tc);min-height:100vh;padding:32px 16px 64px}
+h1{font-size:20px;font-weight:700;text-align:center;letter-spacing:.08em}
+.lead{color:var(--mute);font-size:13px;text-align:center;margin:6px 0 28px}
+.ladder-h{max-width:1400px;margin:0 auto 14px;display:flex;align-items:center;gap:12px;color:var(--mute);font-size:12px;letter-spacing:.12em}
+.ladder-h::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,#ffffff33,transparent)}
+.row{display:flex;flex-wrap:wrap;gap:28px 24px;justify-content:center;max-width:1400px;margin:0 auto 44px}
+.slot{display:flex;flex-direction:column;align-items:center;gap:12px;width:300px}
+.cap{text-align:center}
+.cap b{display:block;font-size:15px;letter-spacing:.06em}
+.cap span{font-size:12px;color:var(--mute);line-height:1.5}
+.stage{perspective:900px}
+footer{max-width:760px;margin:0 auto;color:var(--mute);font-size:12px;line-height:1.9;text-align:center}
+footer b{color:var(--ink)}
+
+/* ===== 共用骨架 ===== */
+.card{
+  --mx:50%;--my:30%;--rx:0deg;--ry:0deg;
+  position:relative;width:300px;height:430px;border-radius:18px;overflow:hidden;isolation:isolate;
+  transform:rotateX(var(--rx)) rotateY(var(--ry));
+  transition:transform .15s ease-out, box-shadow .3s;
+  font-family:var(--tc);user-select:none;
+}
+.card.live{transition:transform .04s linear}
+.card>*{position:absolute}
+.card .bg,.card .fx,.card .fx2{inset:0;pointer-events:none}
+.portrait{left:0;right:0;top:0;height:300px;overflow:hidden;z-index:2}
+.portrait img{position:absolute;left:50%;transform:translateX(-50%);bottom:-8px;height:274px;width:auto;max-width:none;filter:drop-shadow(0 8px 14px rgba(0,0,0,.45))}
+.portrait svg{position:absolute;left:50%;transform:translateX(-50%);bottom:0;height:80%;opacity:.0}
+.noimg .portrait img{display:none}
+.noimg .portrait svg{opacity:.55}
+.ovr{left:16px;top:8px;z-index:4;line-height:.8}
+.ovr b{display:block;font:400 112px/0.86 var(--num);letter-spacing:-.01em}
+.ovr small{display:block;font:700 12px/1 var(--tc);letter-spacing:.32em;margin:4px 0 0 4px}
+.plate{left:0;right:0;top:282px;z-index:5;height:50px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1px}
+.plate .name{font:400 30px/1 var(--num);letter-spacing:.09em}
+.plate .zh{font:500 11px/1 var(--tc);letter-spacing:.3em;opacity:.8}
+@keyframes sweep{0%{transform:translateX(-120%) skewX(-18deg)}60%,100%{transform:translateX(220%) skewX(-18deg)}}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.3) rotate(0)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+@keyframes shoot{0%,66%{transform:translate(0,0) rotate(-30deg);opacity:0}69%{opacity:1}82%,100%{transform:translate(430px,-250px) rotate(-30deg);opacity:0}}
+.sp{position:absolute;background:#fff;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:twinkle 3s ease-in-out infinite;filter:drop-shadow(0 0 4px #fff)}
+
+
+/* ===== 霧鑽：低飽和、切面淡、整體像磨砂玻璃；顏色全靠變數 ===== */
+.mist{
+  --fs:46px; --fa:.12; --hue:0;
+  color:#fff;
+  box-shadow:0 18px 48px -14px var(--glow),0 0 40px -8px var(--glow);
+}
+/* 邊框改畫在最上層的覆蓋層：不會被內容蓋住，也不會在 3D 傾斜時出現鋸齒 */
+.mist::after{content:"";position:absolute;inset:0;border-radius:inherit;z-index:7;pointer-events:none;box-shadow:0 0 0 1px rgba(255,255,255,.85) inset,0 0 0 5px rgba(255,255,255,.14) inset,0 0 0 6px var(--rim) inset}
+.mist .bg{background:
+  repeating-linear-gradient(0deg,rgba(255,255,255,0) 0 calc(var(--fs) + 8px),rgba(255,255,255,calc(var(--fa) * .55)) calc(var(--fs) + 8px) calc(var(--fs) + 9px)),
+  repeating-linear-gradient(60deg,rgba(255,255,255,0) 0 var(--fs),rgba(255,255,255,var(--fa)) var(--fs) calc(var(--fs) + 1px)),
+  repeating-linear-gradient(-60deg,rgba(255,255,255,0) 0 var(--fs),rgba(255,255,255,calc(var(--fa) * .7)) var(--fs) calc(var(--fs) + 1px)),
+  conic-gradient(from 200deg at 62% 34%,var(--k0) 0deg,var(--k1) 40deg,var(--k2) 95deg,var(--k3) 150deg,var(--k4) 200deg,var(--k5) 255deg,var(--k6) 310deg,var(--k0) 360deg)}
+/* 霧面：整張罩一層白霧，再用滑鼠位置帶一道很淡的光 */
+.mist .bg::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(120% 70% at var(--mx) var(--my),rgba(255,255,255,.38),rgba(255,255,255,0) 60%),
+  linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 40%)}
+.mist .fx{z-index:3;background:conic-gradient(from calc(var(--mx) * 1.2) at var(--mx) var(--my),rgba(255,255,255,0),rgba(255,255,255,.55) 7%,rgba(255,255,255,0) 17%,rgba(255,255,255,.3) 55%,rgba(255,255,255,0) 66%);mix-blend-mode:soft-light}
+.mist .portrait img{filter:drop-shadow(0 0 1px #fff) drop-shadow(0 0 12px var(--glow)) drop-shadow(0 8px 12px rgba(20,20,30,.4))}
+.mist .ovr b{background:linear-gradient(180deg,#fff 5%,#fff 40%,var(--num1) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 0 #fff) drop-shadow(0 3px 0 var(--num2)) drop-shadow(0 7px 10px var(--glow))}
+.mist .ovr small{color:#fff;text-shadow:0 0 3px var(--num2),0 1px 6px var(--stdk)}
+/* 底部：不是框，是一層從卡面往下漸深的同色調，名牌與數值都落在上面 */
+.fade{left:0;right:0;bottom:0;top:262px;z-index:4;background:linear-gradient(180deg,transparent 0,var(--plate) 22%,var(--plate2) 100%);pointer-events:none}
+.mist .plate .name{text-shadow:0 2px 8px var(--stdk)}
+
+/* ===== 數值：沒有外框，只有字。數字大、標籤小，欄與欄之間一條細線 ===== */
+.stats{left:16px;right:16px;bottom:15px;z-index:5;display:grid;grid-template-columns:repeat(4,1fr)}
+.st{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px}
+.st+.st::before{content:"";position:absolute;left:0;top:10%;bottom:6%;width:1px;background:rgba(255,255,255,.26)}
+.st b{font:400 38px/.9 var(--num);letter-spacing:.02em;text-shadow:0 1px 6px var(--stdk)}
+.st em{font:italic 700 11px/1 var(--sport);letter-spacing:.16em;text-transform:uppercase;text-shadow:0 1px 4px var(--stdk)}
+.st.free b,.st.free em{opacity:.58}
+.mist .portrait{height:310px;-webkit-mask-image:linear-gradient(180deg,#000 74%,transparent 96%);mask-image:linear-gradient(180deg,#000 74%,transparent 96%)}
+.mist .portrait img{bottom:-22px;height:302px}
+/* 2×2：標籤在左、數字在右，列與列之間一條細線 */
+.stats.m-grid{grid-template-columns:1fr 1fr;column-gap:26px;row-gap:0;left:22px;right:22px;bottom:14px}
+.m-grid .st{flex-direction:row-reverse;justify-content:space-between;align-items:center;height:34px;border-bottom:1px solid rgba(255,255,255,.22)}
+.m-grid .st:nth-last-child(-n+2){border-bottom:0}
+.m-grid .st::before{display:none}
+.m-grid .st b{font-size:30px}
+.m-grid .st em{font-size:12px}
+.ovr small.tm{font:300 11px/1 var(--tc);letter-spacing:.34em;margin:5px 0 0 5px}
+
+/* ===== 霧鑽 6 色 ===== */
+.c-pink{--k0:#f8f3f6;--k1:#efd9e6;--k2:#e3c0d4;--k3:#f4e6ee;--k4:#fffafd;--k5:#ebd0df;--k6:#d4a9c2;
+  --glow:#ffb8dc88;--rim:rgba(255,255,255,.45);--plate:rgba(122,66,102,.5);--plate2:rgba(98,44,80,.88);--stdk:#5e2f4c;--num1:#f0cfe1;--num2:#b07a98}
+.c-ice{--k0:#f1f6fb;--k1:#d6e6f4;--k2:#b8d2ea;--k3:#e6f0f9;--k4:#fafdff;--k5:#c4dcf0;--k6:#94b9d9;
+  --glow:#8fc8ff88;--rim:rgba(255,255,255,.45);--plate:rgba(52,96,140,.5);--plate2:rgba(24,60,104,.88);--stdk:#1c426f;--num1:#cfe4f6;--num2:#5f8fba}
+.c-mint{--k0:#f2faf6;--k1:#d3ede1;--k2:#b0dcc8;--k3:#e4f5ec;--k4:#fafffc;--k5:#bfe5d3;--k6:#86bfa3;
+  --glow:#7fe3b788;--rim:rgba(255,255,255,.45);--plate:rgba(44,110,86,.5);--plate2:rgba(18,76,56,.88);--stdk:#164c39;--num1:#cdeedd;--num2:#5a9c82}
+.c-gold{--k0:#fbf6ec;--k1:#f1e2c2;--k2:#e3cc9c;--k3:#f6ecd4;--k4:#fffdf6;--k5:#ead7ab;--k6:#c7a768;
+  --glow:#ffd57a88;--rim:rgba(255,246,214,.7);--plate:rgba(122,90,30,.5);--plate2:rgba(92,64,14,.88);--stdk:#5c4010;--num1:#f3e2b8;--num2:#a98438}
+.c-violet{--k0:#f6f2fb;--k1:#e2d6f2;--k2:#cbb8e6;--k3:#eee6f8;--k4:#fcfaff;--k5:#d6c6ec;--k6:#a68cce;
+  --glow:#b99aff88;--rim:rgba(255,255,255,.45);--plate:rgba(84,54,128,.5);--plate2:rgba(52,28,92,.88);--stdk:#3a2060;--num1:#e0d3f4;--num2:#8a6bb8}
+.c-steel{--k0:#f3f4f6;--k1:#dcdfe4;--k2:#c3c8d0;--k3:#e8eaee;--k4:#fbfbfc;--k5:#ced2d9;--k6:#9aa1ac;
+  --glow:#b4bccb88;--rim:rgba(255,255,255,.5);--plate:rgba(56,64,80,.5);--plate2:rgba(28,34,46,.9);--stdk:#202633;--num1:#dfe2e7;--num2:#7a828f}
+
+.ladder-h{max-width:1700px}
+.ctl{display:flex;gap:10px 28px;justify-content:center;margin:0 auto 26px;flex-wrap:wrap}
+.grp{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:var(--mute);letter-spacing:.1em}
+.grp span{display:flex;gap:6px}
+.grp button{font:500 12px var(--tc);color:var(--ink);background:#ffffff12;border:1px solid #ffffff30;border-radius:99px;padding:6px 13px;cursor:pointer}
+.grp button.on{background:#fff;color:#111;border-color:#fff}
+.row{max-width:1700px}
+@media (max-width:1680px) and (min-width:1100px){.stage{zoom:.88}}
+</style>
+</head>
+<body>
+<h1>霧鑽 六種顏色</h1>
+<p class="lead">滑鼠移到卡片上有 3D 傾斜與反光　·　數值改成無框的運動字體　·　球員與數字為示意</p>
+<div class="ctl"><div class="grp">數值排列<span id="g-mode"></span></div></div>
+<div id="rows"></div>
+<footer>
+  <p>霧鑽的做法：低飽和的色塊＋很淡的切面線＋整層白霧，沒有彩虹色散，所以換成任何顏色都還是「霧面鑽」。</p>
+  <p>數值：不要外框和底色，數字用 Bebas Neue、標籤用 Barlow Condensed 斜體大寫；底部的深色是整張卡往下漸深的同色調，不是框。</p>
+</footer>
+<script>
+const SIL = '<svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="78" r="42" fill="#fff"/><path d="M20 260c0-62 32-100 80-100s80 38 80 100z" fill="#fff"/></svg>';
+const COLORS=[['pink','霧粉','原本那款'],['ice','霧藍','冰藍，最乾淨'],['mint','霧薄荷','偏青綠'],['gold','霧金','香檳色'],['violet','霧紫','淡紫'],['steel','霧銀','石墨灰銀']];
+const PLAYERS=[
+ {id:201939,name:'STEPHEN CURRY',zh:'史蒂芬・柯瑞',team:'WARRIORS',ovr:95,s:[['OFF',97],['DEF',55],['GRAVITY',99],['3PT',98]]},
+ {id:1641705,name:'VICTOR WEMBANYAMA',zh:'維克多・文班亞馬',team:'SPURS',ovr:91,s:[['OFF',84],['DEF',99],['RIM',99],['REB',95]]},
+];
+let mode='row';
+const MODES=[['row','一排四欄'],['grid','2×2']];
+function card(p,c){
+  const st=p.s.map(([k,v],i)=>`<div class="st ${i<2?'core':'free'}"><b>${v}</b><em>${k}</em></div>`).join('');
+  return `<div class="slot"><div class="stage"><div class="card mist c-${c[0]}">
+    <div class="bg"></div><div class="fx"></div>
+    <div class="portrait">${SIL}<img src="https://cdn.nba.com/headshots/nba/latest/1040x760/${p.id}.png" alt="" onerror="this.closest('.card').classList.add('noimg')"></div>
+    <div class="ovr"><b>${p.ovr}</b></div>
+    <div class="fade"></div>
+    <div class="plate"><div class="name">${p.name}</div><div class="zh">${p.zh}</div></div>
+    <div class="stats m-${mode}">${st}</div>
+  </div></div><div class="cap"><b>${c[1]}</b><span>${c[2]}</span></div></div>`;
+}
+const rows=document.getElementById('rows');
+function render(){
+  rows.innerHTML=PLAYERS.map(p=>`<div class="row">${COLORS.map(c=>card(p,c)).join('')}</div>`).join('');
+}
+const gm=document.getElementById('g-mode');
+gm.innerHTML=MODES.map(([k,l])=>`<button data-k="${k}" class="${mode===k?'on':''}">${l}</button>`).join('');
+gm.onclick=e=>{const k=e.target.dataset.k;if(!k)return;mode=k;gm.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.k===k));render();};
+render();
+rows.addEventListener('pointermove',e=>{
+  const c=e.target.closest('.card'); if(!c) return;
+  const r=c.getBoundingClientRect(), x=(e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;
+  c.classList.add('live');
+  c.style.setProperty('--mx',(x*100)+'%'); c.style.setProperty('--my',(y*100)+'%');
+  c.style.setProperty('--ry',((x-.5)*14)+'deg'); c.style.setProperty('--rx',((.5-y)*12)+'deg');
+});
+rows.addEventListener('pointerout',e=>{
+  const c=e.target.closest('.card'); if(!c||c.contains(e.relatedTarget)) return;
+  c.classList.remove('live');
+  ['--mx','--my','--rx','--ry'].forEach(k=>c.style.removeProperty(k));
+});
+</script>
+</body>
+</html>

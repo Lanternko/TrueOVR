@@ -1,0 +1,553 @@
+{
+ "experiment": "E-129 phase 0",
+ "preregistrationSha256": "d61d881918890c03795f3e30656eb3f6d4f1bb42ded7f71adc033f910fee13ac",
+ "checks": {
+  "c0y": {
+   "pass": true,
+   "detail": {
+    "Y1": {
+     "P_s(N)": {
+      "3": 267,
+      "5": 274,
+      "10": 281,
+      "20": 286,
+      "82": 291
+     },
+     "n095": {
+      "3": 267,
+      "5": 274,
+      "10": 281,
+      "20": 286,
+      "82": 291
+     },
+     "sameAsE095": true,
+     "ge200": true
+    },
+    "Y2": {
+     "P_s(N)": {
+      "3": 255,
+      "5": 260,
+      "10": 267,
+      "20": 271,
+      "82": 277
+     },
+     "n095": {
+      "3": 255,
+      "5": 260,
+      "10": 267,
+      "20": 271,
+      "82": 277
+     },
+     "sameAsE095": true,
+     "ge200": true
+    }
+   },
+   "note": "先驗卡、答案卡（OVRPipeline）、PW.for_start 都建得出來"
+  },
+  "c0r": {
+   "cells": [
+    {
+     "start": "Y3",
+     "N": 3,
+     "n": 251,
+     "n095": 251,
+     "MAE_mine": 5.486865,
+     "MAE_orig_recompute": 5.486865,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 5.486865,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 5.625553,
+     "MAE_A_mine": 5.625553,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y3",
+     "N": 5,
+     "n": 265,
+     "n095": 265,
+     "MAE_mine": 5.501746,
+     "MAE_orig_recompute": 5.501746,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 5.501746,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 5.641203,
+     "MAE_A_mine": 5.641203,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y3",
+     "N": 10,
+     "n": 270,
+     "n095": 270,
+     "MAE_mine": 5.121426,
+     "MAE_orig_recompute": 5.121426,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 5.121426,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 5.641008,
+     "MAE_A_mine": 5.641008,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y3",
+     "N": 20,
+     "n": 274,
+     "n095": 274,
+     "MAE_mine": 4.850442,
+     "MAE_orig_recompute": 4.850442,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 4.850442,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 5.661409,
+     "MAE_A_mine": 5.661409,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y3",
+     "N": 82,
+     "n": 281,
+     "n095": 281,
+     "MAE_mine": 4.017782,
+     "MAE_orig_recompute": 4.017782,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 4.017782,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 5.782067,
+     "MAE_A_mine": 5.782067,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y5",
+     "N": 3,
+     "n": 260,
+     "n095": 260,
+     "MAE_mine": 6.15859,
+     "MAE_orig_recompute": 6.15859,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 6.15859,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 6.304047,
+     "MAE_A_mine": 6.304047,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y5",
+     "N": 5,
+     "n": 267,
+     "n095": 267,
+     "MAE_mine": 6.115287,
+     "MAE_orig_recompute": 6.115287,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 6.115287,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 6.271065,
+     "MAE_A_mine": 6.271065,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y5",
+     "N": 10,
+     "n": 276,
+     "n095": 276,
+     "MAE_mine": 5.984165,
+     "MAE_orig_recompute": 5.984165,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 5.984165,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 6.277314,
+     "MAE_A_mine": 6.277314,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y5",
+     "N": 20,
+     "n": 279,
+     "n095": 279,
+     "MAE_mine": 5.451902,
+     "MAE_orig_recompute": 5.451902,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 5.451902,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 6.251021,
+     "MAE_A_mine": 6.251021,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y5",
+     "N": 82,
+     "n": 281,
+     "n095": 281,
+     "MAE_mine": 3.994223,
+     "MAE_orig_recompute": 3.994223,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 3.994223,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 6.226546,
+     "MAE_A_mine": 6.226546,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y6",
+     "N": 3,
+     "n": 278,
+     "n095": 278,
+     "MAE_mine": 5.144387,
+     "MAE_orig_recompute": 5.144387,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 5.144387,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 5.477933,
+     "MAE_A_mine": 5.477933,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y6",
+     "N": 5,
+     "n": 284,
+     "n095": 284,
+     "MAE_mine": 4.970593,
+     "MAE_orig_recompute": 4.970593,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 4.970593,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 5.440931,
+     "MAE_A_mine": 5.440931,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y6",
+     "N": 10,
+     "n": 292,
+     "n095": 292,
+     "MAE_mine": 4.827135,
+     "MAE_orig_recompute": 4.827135,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 4.827135,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 5.507151,
+     "MAE_A_mine": 5.507151,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y6",
+     "N": 20,
+     "n": 298,
+     "n095": 298,
+     "MAE_mine": 4.405296,
+     "MAE_orig_recompute": 4.405296,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 4.405296,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 5.469638,
+     "MAE_A_mine": 5.469638,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y6",
+     "N": 82,
+     "n": 307,
+     "n095": 307,
+     "MAE_mine": 3.419938,
+     "MAE_orig_recompute": 3.419938,
+     "maxAbsErrDiff": 0.0,
+     "MAEdiff_vs_recompute": 0.0,
+     "MAE_results_json": 3.419938,
+     "absDiff_vs_results_json": 0.0,
+     "MAE_A_results_json": 5.457751,
+     "MAE_A_mine": 5.457751,
+     "A_absDiff": 0.0,
+     "pass": true
+    }
+   ],
+   "notes": [
+    "e111 results.json 的浮點數存到小數 6 位（E95.tojson），所以 1e-9 門檻用在「同 process 未四捨五入的原版重算」，對 results.json 則比較「本程式 MAE 四捨五入到 6 位」是否完全相等。"
+   ],
+   "pass": true,
+   "gateBaselineReproduces": true,
+   "gateBaseline": {
+    "pass": true,
+    "U_pool": {
+     "3": -0.155474,
+     "5": -0.268853
+    }
+   }
+  },
+  "c0a": {
+   "perStart": {
+    "Y1": {
+     "n": 286,
+     "covered": 286,
+     "coverage": 1.0,
+     "bioRows": 486,
+     "missing": []
+    },
+    "Y2": {
+     "n": 271,
+     "covered": 271,
+     "coverage": 1.0,
+     "bioRows": 540,
+     "missing": []
+    },
+    "Y3": {
+     "n": 274,
+     "covered": 274,
+     "coverage": 1.0,
+     "bioRows": 530,
+     "missing": []
+    },
+    "Y4": {
+     "n": 270,
+     "covered": 270,
+     "coverage": 1.0,
+     "bioRows": 529,
+     "missing": []
+    },
+    "Y5": {
+     "n": 279,
+     "covered": 279,
+     "coverage": 1.0,
+     "bioRows": 540,
+     "missing": []
+    },
+    "Y6": {
+     "n": 298,
+     "covered": 298,
+     "coverage": 1.0,
+     "bioRows": 605,
+     "missing": []
+    }
+   },
+   "pass": true,
+   "ageSemantics": {
+    "AGE(target)-AGE(prior) 連續兩季都在 bio 的球員": {
+     "Y1": {
+      "n": 386,
+      "median": 1.0,
+      "share1": 1.0
+     },
+     "Y2": {
+      "n": 392,
+      "median": 1.0,
+      "share1": 1.0
+     },
+     "Y3": {
+      "n": 412,
+      "median": 1.0,
+      "share1": 0.997573
+     },
+     "Y5": {
+      "n": 435,
+      "median": 1.0,
+      "share1": 1.0
+     },
+     "Y6": {
+      "n": 450,
+      "median": 1.0,
+      "share1": 1.0
+     }
+    }
+   }
+  },
+  "c0t": {
+   "n": 1408,
+   "maxAbsDiff_b05": 0.0,
+   "maxAbsDiff_rho0": 0.0,
+   "rho0Used": 0.0,
+   "pass": true
+  },
+  "c0k": {
+   "perStart": {
+    "Y1": {
+     "n": 286,
+     "Ki_dist": {
+      "0": 0,
+      "1": 27,
+      "2": 34,
+      "3": 225
+     },
+     "earliestSeasonNeeded": "2013-14",
+     "earliestInBoxRange": true,
+     "G_used": {
+      "2015-16": 82.0,
+      "2014-15": 82.0,
+      "2013-14": 82.0
+     }
+    },
+    "Y2": {
+     "n": 271,
+     "Ki_dist": {
+      "0": 0,
+      "1": 29,
+      "2": 33,
+      "3": 209
+     },
+     "earliestSeasonNeeded": "2014-15",
+     "earliestInBoxRange": true,
+     "G_used": {
+      "2016-17": 82.0,
+      "2015-16": 82.0,
+      "2014-15": 82.0
+     }
+    },
+    "Y3": {
+     "n": 274,
+     "Ki_dist": {
+      "0": 0,
+      "1": 37,
+      "2": 29,
+      "3": 208
+     },
+     "earliestSeasonNeeded": "2015-16",
+     "earliestInBoxRange": true,
+     "G_used": {
+      "2017-18": 82.0,
+      "2016-17": 82.0,
+      "2015-16": 82.0
+     }
+    },
+    "Y5": {
+     "n": 279,
+     "Ki_dist": {
+      "0": 0,
+      "1": 30,
+      "2": 38,
+      "3": 211
+     },
+     "earliestSeasonNeeded": "2017-18",
+     "earliestInBoxRange": true,
+     "G_used": {
+      "2019-20": "per-team",
+      "2018-19": 82.0,
+      "2017-18": 82.0
+     }
+    },
+    "Y6": {
+     "n": 298,
+     "Ki_dist": {
+      "0": 0,
+      "1": 31,
+      "2": 45,
+      "3": 222
+     },
+     "earliestSeasonNeeded": "2018-19",
+     "earliestInBoxRange": true,
+     "G_used": {
+      "2020-21": 72.0,
+      "2019-20": "per-team",
+      "2018-19": 82.0
+     }
+    }
+   }
+  }
+ },
+ "cards": {
+  "2015-16": {
+   "file": "reports/ovr-inseason-2026-27/e129-tl-season-step/cards/prior-2015-16-027.json",
+   "sha256": "c7050868e933b9d8cb97624bebc3a7e00ef25d35ff585e59eb1bccc1a96eceb6",
+   "inWindow": 476,
+   "sampleMismatch": 0
+  },
+  "2016-17": {
+   "file": "reports/ovr-inseason-2026-27/e129-tl-season-step/cards/prior-2016-17-027.json",
+   "sha256": "07055425291ce3149da90fb6dca2a5e05e9f983fc5551d88f422ac602f8b8e46",
+   "inWindow": 486,
+   "sampleMismatch": 0
+  },
+  "2017-18": {
+   "file": "reports/ovr-inseason-2026-27/e129-tl-season-step/cards/prior-2017-18-027.json",
+   "sha256": "2e844edf4df34e23726b806a9ed5931bbafde54d6d74d6fde0fdfd192ea5c7a3",
+   "inWindow": 540,
+   "sampleMismatch": 0
+  },
+  "2018-19": {
+   "file": "reports/ovr-inseason-2026-27/e129-tl-season-step/cards/prior-2018-19-027.json",
+   "sha256": "3b32db530fbd23e570d3f2fe681967c837b2dbec958754200ebb25e5161c1d79",
+   "inWindow": 530,
+   "sampleMismatch": 0
+  },
+  "2019-20": {
+   "file": "reports/ovr-inseason-2026-27/e129-tl-season-step/cards/prior-2019-20-027.json",
+   "sha256": "4cecd432f108b1eeceb9aa04c03bd6ed1abbfd5f92ad253f2a74bb6e8617bbfe",
+   "inWindow": 529,
+   "sampleMismatch": 0
+  },
+  "2020-21": {
+   "file": "reports/ovr-inseason-2026-27/e129-tl-season-step/cards/prior-2020-21-027.json",
+   "sha256": "65c30011f42bb710d294c4226f41888da34e5ba7c64444792cc088c1a7bd44c2",
+   "inWindow": 540,
+   "sampleMismatch": 0
+  },
+  "2021-22": {
+   "file": "reports/ovr-inseason-2026-27/e129-tl-season-step/cards/prior-2021-22-027.json",
+   "sha256": "fd02292d025654a3c7e26d893ffb34143ec6fac7c6711f78ca83934976e514f0",
+   "inWindow": 605,
+   "sampleMismatch": 0
+  }
+ },
+ "defL": {
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2014-15_2015-16.csv": {
+   "file": "reports/ovr-inseason-2026-27/e129-tl-season-step/defL/def-L-2014-15_2015-16.csv",
+   "sha256": "605b3c2d7f13ee4717ad7ee4476386a9044ad892b7f8fdc496e48cfc8987d18d"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2014-15_2016-17.csv": {
+   "file": "reports/ovr-inseason-2026-27/e129-tl-season-step/defL/def-L-2014-15_2016-17.csv",
+   "sha256": "93ce27404f5459d105d8d313c3d840fd06db94ec51d4eb52b1a833d730caf835"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2014-15_2017-18.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2014-15_2017-18.csv",
+   "sha256": "4b985b69f32570759364bf7feb3aaf77a0625683a7f981e9049c88dac9c15340"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2015-16_2018-19.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2015-16_2018-19.csv",
+   "sha256": "273773c9b0060dfcbe72d4e4c119fea020f39c7e9be8e653f94bc2d689d30481"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2016-17_2019-20.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2016-17_2019-20.csv",
+   "sha256": "5c7bb4f6d6b19929497a2b3cc52845926f21c655dee506ed191e1e1d950b7feb"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2017-18_2020-21.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2017-18_2020-21.csv",
+   "sha256": "29304a9580e96f7aeab6f51774bb48677e285c558d67afaabc6b88969d372343"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2018-19_2021-22.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2018-19_2021-22.csv",
+   "sha256": "9f7ffe505f79f2b0e556dbe36bc6321dad689c252504427ade77cd9847170083"
+  }
+ },
+ "hardConditions": {
+  "c0r": true,
+  "c0y": true,
+  "c0a": true,
+  "c0t": true
+ },
+ "pass": true,
+ "elapsedSec": 39.0
+}

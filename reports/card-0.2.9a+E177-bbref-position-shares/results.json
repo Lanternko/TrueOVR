@@ -1,0 +1,1495 @@
+{
+ "seed": 20261101,
+ "draws": 2000,
+ "c0": {
+  "2025-26": {
+   "S0_sha": "b7972182261683b9b7b75ad99eafeb9211f96825bab4b00783344c3bab7580ef",
+   "ref_sha": "b7972182261683b9b7b75ad99eafeb9211f96825bab4b00783344c3bab7580ef",
+   "ref": "reports/card-0.2.9a/ranking.csv",
+   "same": true
+  }
+ },
+ "c0h": {
+  "2022-23": {
+   "S0_sha": "1513ca6589694899ecaa81b9d7272fabef283b919274b443fa70e8a0a6cc09d5",
+   "ref_sha": "1513ca6589694899ecaa81b9d7272fabef283b919274b443fa70e8a0a6cc09d5",
+   "ref": "reports/card-0.2.9+E164-no-stamina/ranking-S-2022-23.csv",
+   "same": true
+  },
+  "2023-24": {
+   "S0_sha": "de2a79d8cb86efaad5c20e3fc1f5123bf0a4fbc7fd835aea071600adb4e5f255",
+   "ref_sha": "de2a79d8cb86efaad5c20e3fc1f5123bf0a4fbc7fd835aea071600adb4e5f255",
+   "ref": "reports/card-0.2.9+E164-no-stamina/ranking-S-2023-24.csv",
+   "same": true
+  },
+  "2024-25": {
+   "S0_sha": "a28c3792c644b8c36ab05c02f5d519f77852729bcf17f61bf49bbf4f0f2df9fa",
+   "ref_sha": "a28c3792c644b8c36ab05c02f5d519f77852729bcf17f61bf49bbf4f0f2df9fa",
+   "ref": "reports/card-0.2.9+E164-no-stamina/ranking-S-2024-25.csv",
+   "same": true
+  }
+ },
+ "c0_pass": true,
+ "c0h_pass": true,
+ "s0": {
+  "2025-26": {
+   "card_MIN500": 379,
+   "found": 378,
+   "found_pct": 0.9973614775725593,
+   "usable": 378,
+   "usable_pct": 0.9973614775725593
+  },
+  "pass": true
+ },
+ "s1": {
+  "2022-23": {
+   "card_MIN500": 271,
+   "usable": 271,
+   "argmax_differs_from_label": 140,
+   "argmax_differs_pct_of_usable": 0.5166051660516605
+  },
+  "2023-24": {
+   "card_MIN500": 303,
+   "usable": 303,
+   "argmax_differs_from_label": 157,
+   "argmax_differs_pct_of_usable": 0.5181518151815182
+  },
+  "2024-25": {
+   "card_MIN500": 347,
+   "usable": 346,
+   "argmax_differs_from_label": 166,
+   "argmax_differs_pct_of_usable": 0.4797687861271676
+  },
+  "2025-26": {
+   "card_MIN500": 379,
+   "usable": 378,
+   "argmax_differs_from_label": 107,
+   "argmax_differs_pct_of_usable": 0.2830687830687831
+  }
+ },
+ "selfcheck_JW_2025-26": [
+  0,
+  18,
+  51,
+  31,
+  0
+ ],
+ "n_eval": {
+  "2022-23": 271,
+  "2023-24": 303,
+  "2024-25": 346,
+  "2025-26": 379
+ },
+ "per_season": {
+  "2022-23": {
+   "K0": {
+    "n": 271,
+    "C": 0.7290510120695289,
+    "n_sal": 180,
+    "sal": 0.7194236204369535,
+    "n_twok": 269,
+    "twok": 0.7281015421054066,
+    "n_rapm": 262,
+    "rapm": 0.4379397203505799,
+    "n_epm": 262,
+    "epm": 0.7013808819442164
+   },
+   "P": {
+    "n": 271,
+    "C": 0.727268643730834,
+    "n_sal": 180,
+    "sal": 0.7093184659371546,
+    "n_twok": 269,
+    "twok": 0.7352051840878152,
+    "n_rapm": 262,
+    "rapm": 0.4339635956038407,
+    "n_epm": 262,
+    "epm": 0.6986720440023934
+   }
+  },
+  "2023-24": {
+   "K0": {
+    "n": 303,
+    "C": 0.680664613720407,
+    "n_sal": 205,
+    "sal": 0.6264554063743332,
+    "n_twok": 303,
+    "twok": 0.6847177959079467,
+    "n_rapm": 286,
+    "rapm": 0.3342896034134208,
+    "n_epm": 286,
+    "epm": 0.6764769627952135
+   },
+   "P": {
+    "n": 303,
+    "C": 0.6792572153770612,
+    "n_sal": 205,
+    "sal": 0.6258191004043016,
+    "n_twok": 303,
+    "twok": 0.6975156629697506,
+    "n_rapm": 286,
+    "rapm": 0.306149024236984,
+    "n_epm": 286,
+    "epm": 0.6643829047073051
+   }
+  },
+  "2024-25": {
+   "K0": {
+    "n": 346,
+    "C": 0.7129024775238179,
+    "n_sal": 240,
+    "sal": 0.6669637126143296,
+    "n_twok": 345,
+    "twok": 0.7100858735767072,
+    "n_rapm": 319,
+    "rapm": 0.4244229596389045,
+    "n_epm": 319,
+    "epm": 0.7253655453093409
+   },
+   "P": {
+    "n": 346,
+    "C": 0.7188082181576861,
+    "n_sal": 240,
+    "sal": 0.6755265497375671,
+    "n_twok": 345,
+    "twok": 0.7173424794462324,
+    "n_rapm": 319,
+    "rapm": 0.41809389772177474,
+    "n_epm": 319,
+    "epm": 0.7299810514654725
+   }
+  },
+  "2025-26": {
+   "K0": {
+    "n": 379,
+    "C": 0.710165096131338,
+    "n_sal": 262,
+    "sal": 0.5900211036895453,
+    "n_twok": 376,
+    "twok": 0.7656899652715956,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "P": {
+    "n": 379,
+    "C": 0.7111728198270294,
+    "n_sal": 262,
+    "sal": 0.589583966044254,
+    "n_twok": 376,
+    "twok": 0.7651071249504797,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   }
+  }
+ },
+ "boot": {
+  "C": {
+   "lower90": -0.008535199043748774,
+   "upper90": 0.011582728298865743,
+   "mean": 0.0013519121312620293
+  },
+  "rapm": {
+   "lower90": -0.024980021576478835,
+   "upper90": -0.0013120323057317063,
+   "mean": -0.012916960882429255
+  },
+  "draws": 2000,
+  "seed": 20261101
+ },
+ "boot_check_vs_V.boot": {
+  "lower90_same": true,
+  "upper90_same": true
+ },
+ "pooled_diff": {
+  "C": 0.0012325247190199133,
+  "rapm": -0.012813057762019584,
+  "sal": 0.00016913660121074158,
+  "twok": 0.009042707129749993
+ },
+ "pooled_level": {
+  "K0": {
+   "C": 0.7070418037514854,
+   "sal": 0.6687854416205264,
+   "twok": 0.7069884769579348,
+   "rapm": 0.39877503740819004
+  },
+  "P": {
+   "C": 0.7082743284705054,
+   "sal": 0.6689545782217372,
+   "twok": 0.7160311840876848,
+   "rapm": 0.3859619796461705
+  }
+ },
+ "t3": {
+  "K0": 0.6447478991596638,
+  "P": 0.65270065607161,
+  "n_teams": 30,
+  "diff": 0.00795275691194619
+ },
+ "judge": {
+  "1_C_lower90_gt_-0.01": true,
+  "2_rapm_lower90_gt_-0.02": false,
+  "3_teamMedian_not_below_0.02": true
+ },
+ "verdict": "不採用",
+ "s0_pass_all": true,
+ "boundary": {
+  "n": 165,
+  "n_pop": 379,
+  "top20_by_abs_rank_move": [
+   {
+    "name": "Reed Sheppard",
+    "label": "PG",
+    "label_share": 0.287,
+    "pi": [
+     0.287,
+     0.634,
+     0.079,
+     0.0,
+     0.0
+    ],
+    "K0": [
+     64.2,
+     241
+    ],
+    "P": [
+     70.4,
+     184
+    ],
+    "dOVR": 6.2,
+    "dRank": 57
+   },
+   {
+    "name": "Naji Marshall",
+    "label": "PG",
+    "label_share": 0.0,
+    "pi": [
+     0.0,
+     0.222,
+     0.576,
+     0.202,
+     0.0
+    ],
+    "K0": [
+     72.7,
+     139
+    ],
+    "P": [
+     76.0,
+     86
+    ],
+    "dOVR": 3.3,
+    "dRank": 53
+   },
+   {
+    "name": "Tim Hardaway Jr.",
+    "label": "SG",
+    "label_share": 0.54,
+    "pi": [
+     0.04,
+     0.54,
+     0.4,
+     0.02,
+     0.0
+    ],
+    "K0": [
+     65.9,
+     221
+    ],
+    "P": [
+     61.0,
+     266
+    ],
+    "dOVR": -4.9,
+    "dRank": -45
+   },
+   {
+    "name": "Julian Champagnie",
+    "label": "SF",
+    "label_share": 0.515,
+    "pi": [
+     0.0,
+     0.05,
+     0.515,
+     0.426,
+     0.01
+    ],
+    "K0": [
+     72.7,
+     142
+    ],
+    "P": [
+     70.1,
+     186
+    ],
+    "dOVR": -2.6,
+    "dRank": -44
+   },
+   {
+    "name": "Anfernee Simons",
+    "label": "PG",
+    "label_share": 0.49,
+    "pi": [
+     0.49,
+     0.48,
+     0.03,
+     0.0,
+     0.0
+    ],
+    "K0": [
+     63.7,
+     248
+    ],
+    "P": [
+     68.5,
+     204
+    ],
+    "dOVR": 4.8,
+    "dRank": 44
+   },
+   {
+    "name": "Zach LaVine",
+    "label": "SG",
+    "label_share": 0.37,
+    "pi": [
+     0.33,
+     0.37,
+     0.25,
+     0.05,
+     0.0
+    ],
+    "K0": [
+     69.7,
+     193
+    ],
+    "P": [
+     64.5,
+     234
+    ],
+    "dOVR": -5.2,
+    "dRank": -41
+   },
+   {
+    "name": "Malik Monk",
+    "label": "PG",
+    "label_share": 0.35,
+    "pi": [
+     0.35,
+     0.57,
+     0.08,
+     0.0,
+     0.0
+    ],
+    "K0": [
+     60.2,
+     277
+    ],
+    "P": [
+     64.3,
+     237
+    ],
+    "dOVR": 4.1,
+    "dRank": 40
+   },
+   {
+    "name": "Luke Kennard",
+    "label": "PG",
+    "label_share": 0.1,
+    "pi": [
+     0.1,
+     0.5,
+     0.39,
+     0.01,
+     0.0
+    ],
+    "K0": [
+     70.7,
+     180
+    ],
+    "P": [
+     73.1,
+     141
+    ],
+    "dOVR": 2.4,
+    "dRank": 39
+   },
+   {
+    "name": "Shaedon Sharpe",
+    "label": "SG",
+    "label_share": 0.53,
+    "pi": [
+     0.41,
+     0.53,
+     0.06,
+     0.0,
+     0.0
+    ],
+    "K0": [
+     69.7,
+     192
+    ],
+    "P": [
+     64.9,
+     231
+    ],
+    "dOVR": -4.8,
+    "dRank": -39
+   },
+   {
+    "name": "Royce O'Neale",
+    "label": "PF",
+    "label_share": 0.232,
+    "pi": [
+     0.0,
+     0.071,
+     0.697,
+     0.232,
+     0.0
+    ],
+    "K0": [
+     52.3,
+     335
+    ],
+    "P": [
+     55.6,
+     296
+    ],
+    "dOVR": 3.3,
+    "dRank": 39
+   },
+   {
+    "name": "Tari Eason",
+    "label": "SG",
+    "label_share": 0.01,
+    "pi": [
+     0.0,
+     0.01,
+     0.58,
+     0.39,
+     0.02
+    ],
+    "K0": [
+     74.5,
+     109
+    ],
+    "P": [
+     72.7,
+     147
+    ],
+    "dOVR": -1.8,
+    "dRank": -38
+   },
+   {
+    "name": "Hugo González",
+    "label": "SG",
+    "label_share": 0.208,
+    "pi": [
+     0.02,
+     0.208,
+     0.663,
+     0.109,
+     0.0
+    ],
+    "K0": [
+     67.0,
+     209
+    ],
+    "P": [
+     63.4,
+     246
+    ],
+    "dOVR": -3.6,
+    "dRank": -37
+   },
+   {
+    "name": "Jake LaRavia",
+    "label": "PF",
+    "label_share": 0.386,
+    "pi": [
+     0.0,
+     0.05,
+     0.554,
+     0.386,
+     0.01
+    ],
+    "K0": [
+     55.0,
+     316
+    ],
+    "P": [
+     58.8,
+     280
+    ],
+    "dOVR": 3.8,
+    "dRank": 36
+   },
+   {
+    "name": "Keldon Johnson",
+    "label": "SG",
+    "label_share": 0.22,
+    "pi": [
+     0.0,
+     0.22,
+     0.62,
+     0.16,
+     0.0
+    ],
+    "K0": [
+     72.9,
+     138
+    ],
+    "P": [
+     71.3,
+     169
+    ],
+    "dOVR": -1.6,
+    "dRank": -31
+   },
+   {
+    "name": "Peyton Watson",
+    "label": "PF",
+    "label_share": 0.32,
+    "pi": [
+     0.0,
+     0.16,
+     0.52,
+     0.32,
+     0.0
+    ],
+    "K0": [
+     64.2,
+     242
+    ],
+    "P": [
+     67.7,
+     211
+    ],
+    "dOVR": 3.5,
+    "dRank": 31
+   },
+   {
+    "name": "Anthony Black",
+    "label": "SG",
+    "label_share": 0.5,
+    "pi": [
+     0.49,
+     0.5,
+     0.01,
+     0.0,
+     0.0
+    ],
+    "K0": [
+     71.2,
+     167
+    ],
+    "P": [
+     69.2,
+     197
+    ],
+    "dOVR": -2.0,
+    "dRank": -30
+   },
+   {
+    "name": "Spencer Jones",
+    "label": "SF",
+    "label_share": 0.386,
+    "pi": [
+     0.0,
+     0.0,
+     0.386,
+     0.574,
+     0.04
+    ],
+    "K0": [
+     66.6,
+     212
+    ],
+    "P": [
+     63.6,
+     242
+    ],
+    "dOVR": -3.0,
+    "dRank": -30
+   },
+   {
+    "name": "Cameron Johnson",
+    "label": "SF",
+    "label_share": 0.36,
+    "pi": [
+     0.0,
+     0.0,
+     0.36,
+     0.62,
+     0.02
+    ],
+    "K0": [
+     76.8,
+     69
+    ],
+    "P": [
+     75.4,
+     97
+    ],
+    "dOVR": -1.4,
+    "dRank": -28
+   },
+   {
+    "name": "Vít Krejčí",
+    "label": "SF",
+    "label_share": 0.03,
+    "pi": [
+     0.55,
+     0.42,
+     0.03,
+     0.0,
+     0.0
+    ],
+    "K0": [
+     66.3,
+     217
+    ],
+    "P": [
+     63.5,
+     244
+    ],
+    "dOVR": -2.8,
+    "dRank": -27
+   },
+   {
+    "name": "Kyle Anderson",
+    "label": "C",
+    "label_share": 0.079,
+    "pi": [
+     0.0,
+     0.05,
+     0.366,
+     0.505,
+     0.079
+    ],
+    "K0": [
+     61.6,
+     266
+    ],
+    "P": [
+     64.0,
+     239
+    ],
+    "dOVR": 2.4,
+    "dRank": 27
+   }
+  ],
+  "top20_by_abs_ovr_move": [
+   {
+    "name": "Drake Powell",
+    "label": "SG",
+    "label_share": 0.43,
+    "pi": [
+     0.45,
+     0.43,
+     0.12,
+     0.0,
+     0.0
+    ],
+    "K0": [
+     47.6,
+     361
+    ],
+    "P": [
+     38.2,
+     377
+    ],
+    "dOVR": -9.4,
+    "dRank": -16
+   },
+   {
+    "name": "Reed Sheppard",
+    "label": "PG",
+    "label_share": 0.287,
+    "pi": [
+     0.287,
+     0.634,
+     0.079,
+     0.0,
+     0.0
+    ],
+    "K0": [
+     64.2,
+     241
+    ],
+    "P": [
+     70.4,
+     184
+    ],
+    "dOVR": 6.2,
+    "dRank": 57
+   },
+   {
+    "name": "Patrick Williams",
+    "label": "SF",
+    "label_share": 0.294,
+    "pi": [
+     0.0,
+     0.01,
+     0.294,
+     0.637,
+     0.059
+    ],
+    "K0": [
+     50.5,
+     347
+    ],
+    "P": [
+     44.3,
+     363
+    ],
+    "dOVR": -6.2,
+    "dRank": -16
+   },
+   {
+    "name": "Jordan Poole",
+    "label": "SG",
+    "label_share": 0.584,
+    "pi": [
+     0.406,
+     0.584,
+     0.01,
+     0.0,
+     0.0
+    ],
+    "K0": [
+     49.3,
+     354
+    ],
+    "P": [
+     43.7,
+     367
+    ],
+    "dOVR": -5.6,
+    "dRank": -13
+   },
+   {
+    "name": "Zach LaVine",
+    "label": "SG",
+    "label_share": 0.37,
+    "pi": [
+     0.33,
+     0.37,
+     0.25,
+     0.05,
+     0.0
+    ],
+    "K0": [
+     69.7,
+     193
+    ],
+    "P": [
+     64.5,
+     234
+    ],
+    "dOVR": -5.2,
+    "dRank": -41
+   },
+   {
+    "name": "Jordan Clarkson",
+    "label": "PG",
+    "label_share": 0.01,
+    "pi": [
+     0.01,
+     0.65,
+     0.34,
+     0.0,
+     0.0
+    ],
+    "K0": [
+     41.3,
+     372
+    ],
+    "P": [
+     46.5,
+     358
+    ],
+    "dOVR": 5.2,
+    "dRank": 14
+   },
+   {
+    "name": "Jalen Wilson",
+    "label": "SG",
+    "label_share": 0.01,
+    "pi": [
+     0.0,
+     0.01,
+     0.28,
+     0.62,
+     0.09
+    ],
+    "K0": [
+     51.5,
+     340
+    ],
+    "P": [
+     46.4,
+     359
+    ],
+    "dOVR": -5.1,
+    "dRank": -19
+   },
+   {
+    "name": "Tim Hardaway Jr.",
+    "label": "SG",
+    "label_share": 0.54,
+    "pi": [
+     0.04,
+     0.54,
+     0.4,
+     0.02,
+     0.0
+    ],
+    "K0": [
+     65.9,
+     221
+    ],
+    "P": [
+     61.0,
+     266
+    ],
+    "dOVR": -4.9,
+    "dRank": -45
+   },
+   {
+    "name": "Shaedon Sharpe",
+    "label": "SG",
+    "label_share": 0.53,
+    "pi": [
+     0.41,
+     0.53,
+     0.06,
+     0.0,
+     0.0
+    ],
+    "K0": [
+     69.7,
+     192
+    ],
+    "P": [
+     64.9,
+     231
+    ],
+    "dOVR": -4.8,
+    "dRank": -39
+   },
+   {
+    "name": "Anfernee Simons",
+    "label": "PG",
+    "label_share": 0.49,
+    "pi": [
+     0.49,
+     0.48,
+     0.03,
+     0.0,
+     0.0
+    ],
+    "K0": [
+     63.7,
+     248
+    ],
+    "P": [
+     68.5,
+     204
+    ],
+    "dOVR": 4.8,
+    "dRank": 44
+   },
+   {
+    "name": "Ace Bailey",
+    "label": "SG",
+    "label_share": 0.04,
+    "pi": [
+     0.0,
+     0.04,
+     0.505,
+     0.406,
+     0.05
+    ],
+    "K0": [
+     59.9,
+     280
+    ],
+    "P": [
+     55.3,
+     300
+    ],
+    "dOVR": -4.6,
+    "dRank": -20
+   },
+   {
+    "name": "Cody Williams",
+    "label": "SF",
+    "label_share": 0.426,
+    "pi": [
+     0.03,
+     0.455,
+     0.426,
+     0.089,
+     0.0
+    ],
+    "K0": [
+     38.5,
+     376
+    ],
+    "P": [
+     33.9,
+     378
+    ],
+    "dOVR": -4.6,
+    "dRank": -2
+   },
+   {
+    "name": "Jamison Battle",
+    "label": "SG",
+    "label_share": 0.0,
+    "pi": [
+     0.0,
+     0.0,
+     0.56,
+     0.43,
+     0.01
+    ],
+    "K0": [
+     54.7,
+     319
+    ],
+    "P": [
+     50.4,
+     341
+    ],
+    "dOVR": -4.3,
+    "dRank": -22
+   },
+   {
+    "name": "Malik Monk",
+    "label": "PG",
+    "label_share": 0.35,
+    "pi": [
+     0.35,
+     0.57,
+     0.08,
+     0.0,
+     0.0
+    ],
+    "K0": [
+     60.2,
+     277
+    ],
+    "P": [
+     64.3,
+     237
+    ],
+    "dOVR": 4.1,
+    "dRank": 40
+   },
+   {
+    "name": "Johnny Furphy",
+    "label": "SF",
+    "label_share": 0.46,
+    "pi": [
+     0.0,
+     0.49,
+     0.46,
+     0.05,
+     0.0
+    ],
+    "K0": [
+     57.4,
+     296
+    ],
+    "P": [
+     53.4,
+     318
+    ],
+    "dOVR": -4.0,
+    "dRank": -22
+   },
+   {
+    "name": "Sidy Cissoko",
+    "label": "SF",
+    "label_share": 0.364,
+    "pi": [
+     0.131,
+     0.384,
+     0.364,
+     0.121,
+     0.0
+    ],
+    "K0": [
+     57.2,
+     298
+    ],
+    "P": [
+     53.4,
+     317
+    ],
+    "dOVR": -3.8,
+    "dRank": -19
+   },
+   {
+    "name": "Jake LaRavia",
+    "label": "PF",
+    "label_share": 0.386,
+    "pi": [
+     0.0,
+     0.05,
+     0.554,
+     0.386,
+     0.01
+    ],
+    "K0": [
+     55.0,
+     316
+    ],
+    "P": [
+     58.8,
+     280
+    ],
+    "dOVR": 3.8,
+    "dRank": 36
+   },
+   {
+    "name": "Hugo González",
+    "label": "SG",
+    "label_share": 0.208,
+    "pi": [
+     0.02,
+     0.208,
+     0.663,
+     0.109,
+     0.0
+    ],
+    "K0": [
+     67.0,
+     209
+    ],
+    "P": [
+     63.4,
+     246
+    ],
+    "dOVR": -3.6,
+    "dRank": -37
+   },
+   {
+    "name": "Peyton Watson",
+    "label": "PF",
+    "label_share": 0.32,
+    "pi": [
+     0.0,
+     0.16,
+     0.52,
+     0.32,
+     0.0
+    ],
+    "K0": [
+     64.2,
+     242
+    ],
+    "P": [
+     67.7,
+     211
+    ],
+    "dOVR": 3.5,
+    "dRank": 31
+   },
+   {
+    "name": "Royce O'Neale",
+    "label": "PF",
+    "label_share": 0.232,
+    "pi": [
+     0.0,
+     0.071,
+     0.697,
+     0.232,
+     0.0
+    ],
+    "K0": [
+     52.3,
+     335
+    ],
+    "P": [
+     55.6,
+     296
+    ],
+    "dOVR": 3.3,
+    "dRank": 39
+   }
+  ]
+ },
+ "moves_all": {
+  "median_abs_dOVR": 0.7999999999999972,
+  "max_abs_dOVR": 9.399999999999999,
+  "moved10_top300": 95,
+  "moved10_top100": 11
+ },
+ "top20": {
+  "K0": [
+   "Shai Gilgeous-Alexander",
+   "Victor Wembanyama",
+   "Kawhi Leonard",
+   "Giannis Antetokounmpo",
+   "Luka Dončić",
+   "Donovan Mitchell",
+   "Nikola Jokić",
+   "Jayson Tatum",
+   "Cade Cunningham",
+   "Jalen Williams",
+   "Chet Holmgren",
+   "Jimmy Butler III",
+   "Jamal Murray",
+   "Anthony Edwards",
+   "Evan Mobley",
+   "Stephen Curry",
+   "Kevin Durant",
+   "Tyrese Maxey",
+   "Scottie Barnes",
+   "Michael Porter Jr."
+  ],
+  "P": [
+   "Shai Gilgeous-Alexander",
+   "Victor Wembanyama",
+   "Kawhi Leonard",
+   "Giannis Antetokounmpo",
+   "Luka Dončić",
+   "Donovan Mitchell",
+   "Nikola Jokić",
+   "Jayson Tatum",
+   "Jimmy Butler III",
+   "Anthony Edwards",
+   "Jalen Williams",
+   "Jamal Murray",
+   "Cade Cunningham",
+   "Chet Holmgren",
+   "Evan Mobley",
+   "Stephen Curry",
+   "Tyrese Maxey",
+   "Jaylen Brown",
+   "Kevin Durant",
+   "Franz Wagner"
+  ],
+  "in": [
+   "Jaylen Brown",
+   "Franz Wagner"
+  ],
+  "out": [
+   "Scottie Barnes",
+   "Michael Porter Jr."
+  ]
+ },
+ "offdef_fit": {
+  "K0_unmatched_players": 0,
+  "P_max_abs_resid_pred0": 0.007157680085658258
+ },
+ "examples": {
+  "Jalen Williams": {
+   "name": "Jalen Williams",
+   "label": "PF",
+   "label_share": 0.31,
+   "pi": [
+    0.0,
+    0.18,
+    0.51,
+    0.31,
+    0.0
+   ],
+   "K0": [
+    88.2,
+    10
+   ],
+   "P": [
+    88.0,
+    11
+   ],
+   "dOVR": -0.2,
+   "dRank": -1,
+   "OFF_DEF_K0": [
+    2.3,
+    0.76
+   ],
+   "OFF_DEF_P": [
+    2.19,
+    0.99
+   ]
+  },
+  "Jalen Johnson": {
+   "name": "Jalen Johnson",
+   "label": "PF",
+   "label_share": 0.92,
+   "pi": [
+    0.0,
+    0.0,
+    0.08,
+    0.92,
+    0.0
+   ],
+   "K0": [
+    82.6,
+    28
+   ],
+   "P": [
+    83.1,
+    26
+   ],
+   "dOVR": 0.5,
+   "dRank": 2,
+   "OFF_DEF_K0": [
+    1.76,
+    -0.21
+   ],
+   "OFF_DEF_P": [
+    1.38,
+    -0.01
+   ]
+  },
+  "Paolo Banchero": {
+   "name": "Paolo Banchero",
+   "label": "PF",
+   "label_share": 0.95,
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.95,
+    0.05
+   ],
+   "K0": [
+    72.7,
+    140
+   ],
+   "P": [
+    72.3,
+    152
+   ],
+   "dOVR": -0.4,
+   "dRank": -12,
+   "OFF_DEF_K0": [
+    0.31,
+    -0.9
+   ],
+   "OFF_DEF_P": [
+    0.12,
+    -0.9
+   ]
+  },
+  "Scottie Barnes": {
+   "name": "Scottie Barnes",
+   "label": "PF",
+   "label_share": 0.67,
+   "pi": [
+    0.0,
+    0.0,
+    0.02,
+    0.67,
+    0.31
+   ],
+   "K0": [
+    85.2,
+    19
+   ],
+   "P": [
+    83.0,
+    27
+   ],
+   "dOVR": -2.2,
+   "dRank": -8,
+   "OFF_DEF_K0": [
+    0.86,
+    1.63
+   ],
+   "OFF_DEF_P": [
+    0.62,
+    1.48
+   ]
+  },
+  "Franz Wagner": {
+   "name": "Franz Wagner",
+   "label": "SF",
+   "label_share": 0.49,
+   "pi": [
+    0.0,
+    0.0,
+    0.49,
+    0.5,
+    0.01
+   ],
+   "K0": [
+    84.0,
+    24
+   ],
+   "P": [
+    84.6,
+    20
+   ],
+   "dOVR": 0.6,
+   "dRank": 4,
+   "OFF_DEF_K0": [
+    1.66,
+    2.06
+   ],
+   "OFF_DEF_P": [
+    1.79,
+    1.83
+   ]
+  },
+  "Mikal Bridges": {
+   "name": "Mikal Bridges",
+   "label": "SG",
+   "label_share": 0.08,
+   "pi": [
+    0.0,
+    0.08,
+    0.65,
+    0.27,
+    0.0
+   ],
+   "K0": [
+    79.9,
+    46
+   ],
+   "P": [
+    81.2,
+    40
+   ],
+   "dOVR": 1.3,
+   "dRank": 6,
+   "OFF_DEF_K0": [
+    1.48,
+    0.6
+   ],
+   "OFF_DEF_P": [
+    1.67,
+    0.79
+   ]
+  },
+  "Josh Hart": {
+   "name": "Josh Hart",
+   "label": "PF",
+   "label_share": 0.089,
+   "pi": [
+    0.0,
+    0.406,
+    0.505,
+    0.089,
+    0.0
+   ],
+   "K0": [
+    76.8,
+    70
+   ],
+   "P": [
+    77.7,
+    65
+   ],
+   "dOVR": 0.9,
+   "dRank": 5,
+   "OFF_DEF_K0": [
+    0.79,
+    -0.25
+   ],
+   "OFF_DEF_P": [
+    0.43,
+    0.3
+   ]
+  },
+  "Draymond Green": {
+   "name": "Draymond Green",
+   "label": "PF",
+   "label_share": 0.515,
+   "pi": [
+    0.0,
+    0.0,
+    0.059,
+    0.515,
+    0.426
+   ],
+   "K0": [
+    73.1,
+    131
+   ],
+   "P": [
+    73.3,
+    134
+   ],
+   "dOVR": 0.2,
+   "dRank": -3,
+   "OFF_DEF_K0": [
+    -1.0,
+    1.47
+   ],
+   "OFF_DEF_P": [
+    -1.29,
+    1.32
+   ]
+  }
+ },
+ "e176_resid": {
+  "K0": {
+   "n": 299,
+   "rho_OFF_ext": 0.7941633357515171,
+   "pass_vs_resid": {
+    "SF": {
+     "rho": -0.38825037786630473,
+     "n": 64
+    },
+    "PF": {
+     "rho": -0.5762236551600098,
+     "n": 47
+    }
+   },
+   "pass_vs_resid_all": -0.29100864252038156
+  },
+  "P": {
+   "n": 299,
+   "rho_OFF_ext": 0.7954617692601194,
+   "pass_vs_resid": {
+    "SF": {
+     "rho": -0.3655257208902319,
+     "n": 61
+    },
+    "PF": {
+     "rho": -0.40728104517169716,
+     "n": 54
+    }
+   },
+   "pass_vs_resid_all": -0.2904450761116034
+  }
+ },
+ "c1": {
+  "npm_test_exit": 0,
+  "log": "logs/npm-test.log",
+  "pass": true
+ },
+ "prereg_sha256": "243341d1283b958f815e5c53b5d076ab1c5fcec26f82c9b80c640b4906c3284b",
+ "prereg_sha256_ok": true,
+ "thresholds": {
+  "1_C_lower90": "> -0.01",
+  "2_rapm_lower90": "> -0.02",
+  "3_team_median_diff": ">= -0.02"
+ },
+ "all_preconditions_pass": true,
+ "sha256": {
+  "K0-2022-23": "1513ca6589694899ecaa81b9d7272fabef283b919274b443fa70e8a0a6cc09d5",
+  "K0-2023-24": "de2a79d8cb86efaad5c20e3fc1f5123bf0a4fbc7fd835aea071600adb4e5f255",
+  "K0-2024-25": "a28c3792c644b8c36ab05c02f5d519f77852729bcf17f61bf49bbf4f0f2df9fa",
+  "K0-2025-26": "b7972182261683b9b7b75ad99eafeb9211f96825bab4b00783344c3bab7580ef",
+  "P-2022-23": "2dbc3ca640fc9d26a570e2bc388d40f04e6a463336be2e70ef6f5e676ac2ae32",
+  "P-2023-24": "22f2e6cb38e0e7463f7be23f73f365d0c5af53fc150eac7c689fdb8da40f748c",
+  "P-2024-25": "deafac436ebbe2a497a591651bce462849eac8e0f31106c805f0828f24dcd815",
+  "P-2025-26": "e88d7ed1e6a1fa702159dae662c156b6b67254dbd1fbb361fb342d86479abec3"
+ },
+ "pos_shares_sha256": {
+  "2022-23": "fbf12b35c67100ddc61567cc067dafbc86438e024075528d6b08ca5c4590a29d",
+  "2023-24": "da2f01d6a77088a78efc9e4e4d15893fe12846631c8d56ca22ead6c8b9458e1c",
+  "2024-25": "19f50f1150726fe688e4b554f64eaec0341f5b78bcc3439e00744b64fa238505",
+  "2025-26": "a66249392b93fbc6039726c5f6b37416590b164f7c2473f585ab79cca6604772"
+ }
+}

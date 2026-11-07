@@ -1,0 +1,18 @@
+{
+ "experiment": "E-107（新賽季對齊 card 0.2.6；inseason 0.2.5a+E107）",
+ "preregistration_sha256": "cb5b293d…f173（preregistration.sha256）",
+ "stoppedAt": "前置條件：(z)(L1)(s) 不過 → 依 §4 停下，未寫／未跑 backtest_e107.py，未看 (1)(2)",
+ "deviations": [
+  {"id": "D1", "kind": "預註冊筆誤", "what": "§2.1 寫 ranking_csv_sha256 結尾 …6f91；reports/card-0.2.6/summary.json 實際是 a0a81ecb…6c91。build_prior_026.py 核對的是 summary.json 的值（照字面意思：與 summary 相同）。"},
+  {"id": "D2", "kind": "編號衝突", "what": "memory/experiments.md 有兩條 ### E-107：第 1118 行是 card-0.2.6+E107-defense-UL（防守 UL），第 1131 行才是本實驗。本條只更新第二條。"},
+  {"id": "D3", "kind": "預註冊未寫明，照最接近的規則補", "what": "stamina 不在 E-101（h1-results 沒有它），build_e101.passed() 回傳 False → 頂端、底端尾巴都關（top=F, bot=F），映射夾 [40,99]。"},
+  {"id": "D4", "kind": "實作方式", "what": "build_e101.py 在 import 時就建卡，無法 import；pct、anchors('max')、attr_of、top_tail、bot_tail、inverse_open、曲線尾巴照抄成 run_c4_live.py 內 E-107 區塊的 m26_* 函式。(u) 用 ast 從 build_e101.py 取出原始 top_tail 比對，差 0。"},
+  {"id": "D5", "kind": "實作方式", "what": "foulDraw 合成值在四季池都用 2025-26 凍結的 z 常數（prior-2025-26-card026.json foulDrawFreeze），不是 E-101 卡片端的逐季 z；預註冊 §2.3 只寫『foulDraw 的 E-070 公式』。build_prior_026 的凍結重算檢查改對 0.2.6 量尺（池＝E-101 卡片端合併池），最大差 0.0500。"},
+  {"id": "D6", "kind": "實作方式", "what": "v4_common.clip 是唯讀檔；026 模式在 setup() 以 monkeypatch 把 C.clip 換成 [0,150]（x̂ 是 x0 與 y_adj 的凸組合，兩者都已在照開關的範圍內），另在 meta.e107.rangeCheck 照開關核對範圍：0 個越界。其他模式不換。"},
+  {"id": "D7", "kind": "實作方式", "what": "命中率型的收縮先驗：pool-026 每季用該季聯盟命中率；賽中視窗沿用 IC 的 mapping['priors']（2025-26 聯盟命中率，026 分區下重算）。"},
+  {"id": "D8", "kind": "與 E-101 的資料差異（只報告）", "what": "pool-026 的命中率型池 1482 筆（E-101 1481；2025-26 多 1 人），百分位型 957 筆（E-101 961）；ft 的 r99 0.8730（E-101 卡片端 0.8985）。這是預註冊 §2.3 預期的『賽中原始值定義和卡片端不一定相同』。"},
+  {"id": "D9", "kind": "(L1) 比對方式", "what": "E-095 的 L1 是比四捨五入後的 lastOVR 與 formalOVR（只限 ranking.csv 368 人）；本次兩種都算：未四捨五入全卡 582 人 max 0.161、E-095 式 368 人 max 0.2，兩種都不過。"},
+  {"id": "D10", "kind": "(s) 定義細節（預註冊未寫明）", "what": "y＝整季視窗映射值（window_cards 輸出，用人調整前）；池＝2025-26 整季 GP≥30 且 MPG≥20、兩模式都在池內的 252 人；樣本未達 SEASON_MIN_SAMPLE 的不計；『x0 前 5%』＝各模式依自己的 x0 取前 ceil(5%)。stamina 不過與這些選擇無關（全部組 0.00 vs −3.43）。"},
+  {"id": "D11", "kind": "未做", "what": "前置不過 → backtest_e107.py、predictions-026.csv、(1)(2)、§5 的回測類項目（8 格合併 MAE 差、消融、MPG0 三分位、Y3／D1–D3）都沒有產出。§5 只做了線上 026 對 025（live-compare.json），它不含答案。"}
+ ]
+}

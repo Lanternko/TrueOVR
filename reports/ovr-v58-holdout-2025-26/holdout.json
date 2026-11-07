@@ -1,0 +1,716 @@
+{
+ "generatedAt": "2026-10-21T03:05:12+00:00",
+ "split": "rapm-split.py：4 季合併比賽依 int(gameId) 奇偶切 A/B 各擬合一次（見 split-summary.json）",
+ "poolDefinition": "卡片共同球員 575 人 ∩ 2K27 有 overall2k ∩ 評估半 pooledPoss ≥ 門檻；主要門檻 2500（約為全量 5000 的一半）",
+ "thresholdMain": 2500,
+ "thresholdAlt": [
+  1500,
+  5000
+ ],
+ "commonPlayers": 575,
+ "cards": {
+  "v53": {
+   "label": "v53",
+   "rho2k": 0.4491775018575659,
+   "inSampleFull5000": {
+    "n": 409,
+    "net": 0.5042658397363542,
+    "def": 0.28651549906471135
+   },
+   "frozenOnB": {
+    "n": 408,
+    "net": 0.4693591361084843,
+    "def": 0.2621686671750808
+   },
+   "frozenOnA": {
+    "n": 408,
+    "net": 0.4294626894641971,
+    "def": 0.24944053812020242
+   },
+   "frozenAvgAB": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.4494109127863407,
+    "def": 0.2558046026476416
+   }
+  },
+  "E2": {
+   "label": "E2",
+   "rho2k": 0.4778212899225707,
+   "inSampleFull5000": {
+    "n": 409,
+    "net": 0.5360431720059371,
+    "def": 0.29598323882972316
+   },
+   "frozenOnB": {
+    "n": 408,
+    "net": 0.5005064123634343,
+    "def": 0.2770877659441122
+   },
+   "frozenOnA": {
+    "n": 408,
+    "net": 0.45499658949511146,
+    "def": 0.24917329494649387
+   },
+   "frozenAvgAB": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.4777515009292729,
+    "def": 0.26313053044530305
+   },
+   "holdout_scale0.5": {
+    "fitA_evalB": {
+     "n": 408,
+     "net": 0.4811966683448855,
+     "def": 0.26013963312617255
+    },
+    "fitB_evalA": {
+     "n": 408,
+     "net": 0.4329461323290284,
+     "def": 0.22899366134298946
+    },
+    "avg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.4570714003369569,
+     "def": 0.244566647234581
+    },
+    "sameHalfInSampleAvg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.4730266831630224,
+     "def": 0.25962184076408246
+    },
+    "sensitivityThreshold": {
+     "1500": {
+      "n": [
+       444,
+       442
+      ],
+      "net": 0.44666789451775835,
+      "def": 0.23348243793574044
+     },
+     "5000": {
+      "n": [
+       317,
+       314
+      ],
+      "net": 0.44507900800150835,
+      "def": 0.23703395388279458
+     }
+    },
+    "rho2k": 0.4666314120217882
+   },
+   "holdout_scale1.0": {
+    "fitA_evalB": {
+     "n": 408,
+     "net": 0.4785750034090411,
+     "def": 0.26019548699486145
+    },
+    "fitB_evalA": {
+     "n": 408,
+     "net": 0.4335200271496633,
+     "def": 0.2288546076537557
+    },
+    "avg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.45604751527935217,
+     "def": 0.24452504732430858
+    },
+    "sameHalfInSampleAvg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.47218378194108995,
+     "def": 0.2599587472731847
+    },
+    "sensitivityThreshold": {
+     "1500": {
+      "n": [
+       444,
+       442
+      ],
+      "net": 0.44571891991024193,
+      "def": 0.2333182545412033
+     },
+     "5000": {
+      "n": [
+       317,
+       314
+      ],
+      "net": 0.4440415433836957,
+      "def": 0.2370059204275719
+     }
+    },
+    "rho2k": 0.4620370746053704
+   }
+  },
+  "F2": {
+   "label": "F2",
+   "rho2k": 0.4878294867659036,
+   "inSampleFull5000": {
+    "n": 409,
+    "net": 0.5776888968258199,
+    "def": 0.3622158703789861
+   },
+   "frozenOnB": {
+    "n": 408,
+    "net": 0.5325416667241526,
+    "def": 0.3277978582640709
+   },
+   "frozenOnA": {
+    "n": 408,
+    "net": 0.48921156915615166,
+    "def": 0.3055617311045795
+   },
+   "frozenAvgAB": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.5108766179401522,
+    "def": 0.31667979468432517
+   },
+   "holdout_scale0.5": {
+    "fitA_evalB": {
+     "n": 408,
+     "net": 0.4971032013064817,
+     "def": 0.2865777728214747
+    },
+    "fitB_evalA": {
+     "n": 408,
+     "net": 0.4502634126705027,
+     "def": 0.2588998097742447
+    },
+    "avg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.4736833069884922,
+     "def": 0.2727387912978597
+    },
+    "sameHalfInSampleAvg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.5100300239435063,
+     "def": 0.32242856161673217
+    },
+    "sensitivityThreshold": {
+     "1500": {
+      "n": [
+       444,
+       442
+      ],
+      "net": 0.46271061175365324,
+      "def": 0.25936508190153895
+     },
+     "5000": {
+      "n": [
+       317,
+       314
+      ],
+      "net": 0.4635591431736469,
+      "def": 0.2741108500699511
+     }
+    },
+    "rho2k": 0.4757720370636632
+   },
+   "holdout_scale1.0": {
+    "fitA_evalB": {
+     "n": 408,
+     "net": 0.4967045697901409,
+     "def": 0.28830640533166496
+    },
+    "fitB_evalA": {
+     "n": 408,
+     "net": 0.4475158055690541,
+     "def": 0.25338194352963495
+    },
+    "avg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.4721101876795975,
+     "def": 0.27084417443064995
+    },
+    "sameHalfInSampleAvg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.504950433320307,
+     "def": 0.31130579101079076
+    },
+    "sensitivityThreshold": {
+     "1500": {
+      "n": [
+       444,
+       442
+      ],
+      "net": 0.46094401115728106,
+      "def": 0.2570761332173881
+     },
+     "5000": {
+      "n": [
+       317,
+       314
+      ],
+      "net": 0.4622696226798043,
+      "def": 0.27146128185946516
+     }
+    },
+    "rho2k": 0.4712822860880068
+   }
+  },
+  "G3": {
+   "label": "G3",
+   "rho2k": 0.5299133822204477,
+   "inSampleFull5000": {
+    "n": 409,
+    "net": 0.8474351319256271,
+    "def": 0.6992165425187395
+   },
+   "frozenOnB": {
+    "n": 408,
+    "net": 0.7436327083935558,
+    "def": 0.6140643847337478
+   },
+   "frozenOnA": {
+    "n": 408,
+    "net": 0.7273153212972092,
+    "def": 0.5928677293700235
+   },
+   "frozenAvgAB": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.7354740148453824,
+    "def": 0.6034660570518857
+   },
+   "holdout_scale0.5": {
+    "fitA_evalB": {
+     "n": 408,
+     "net": 0.5623072324189411,
+     "def": 0.4077554094756696
+    },
+    "fitB_evalA": {
+     "n": 408,
+     "net": 0.5469342827908606,
+     "def": 0.3933269740328482
+    },
+    "avg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.5546207576049009,
+     "def": 0.4005411917542589
+    },
+    "sameHalfInSampleAvg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.8141882070721962,
+     "def": 0.687559777183962
+    },
+    "sensitivityThreshold": {
+     "1500": {
+      "n": [
+       444,
+       442
+      ],
+      "net": 0.5407607067661265,
+      "def": 0.3773050239566279
+     },
+     "5000": {
+      "n": [
+       317,
+       314
+      ],
+      "net": 0.5487463137588052,
+      "def": 0.4202111199394233
+     }
+    },
+    "rho2k": 0.5201461548385495
+   },
+   "holdout_scale1.0": {
+    "fitA_evalB": {
+     "n": 408,
+     "net": 0.5583845111064119,
+     "def": 0.3889535273710933
+    },
+    "fitB_evalA": {
+     "n": 408,
+     "net": 0.5346461279856517,
+     "def": 0.37617293165433624
+    },
+    "avg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.5465153195460317,
+     "def": 0.38256322951271476
+    },
+    "sameHalfInSampleAvg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.7514761821443958,
+     "def": 0.5973225647395868
+    },
+    "sensitivityThreshold": {
+     "1500": {
+      "n": [
+       444,
+       442
+      ],
+      "net": 0.5325449050421418,
+      "def": 0.36010178981145924
+     },
+     "5000": {
+      "n": [
+       317,
+       314
+      ],
+      "net": 0.545190966883307,
+      "def": 0.41257176436039145
+     }
+    },
+    "rho2k": 0.5084961800337796
+   }
+  },
+  "H1": {
+   "label": "H1",
+   "rho2k": 0.5368902800736428,
+   "inSampleFull5000": {
+    "n": 409,
+    "net": 0.857189669943781,
+    "def": 0.6623263789693362
+   },
+   "frozenOnB": {
+    "n": 408,
+    "net": 0.7519745227948101,
+    "def": 0.5830821008457898
+   },
+   "frozenOnA": {
+    "n": 408,
+    "net": 0.73912477512475,
+    "def": 0.5645497432470182
+   },
+   "frozenAvgAB": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.7455496489597802,
+    "def": 0.5738159220464041
+   },
+   "holdout_scale0.5": {
+    "fitA_evalB": {
+     "n": 408,
+     "net": 0.5599554582603898,
+     "def": 0.3926997291923284
+    },
+    "fitB_evalA": {
+     "n": 408,
+     "net": 0.5653744993268365,
+     "def": 0.3891204975659106
+    },
+    "avg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.5626649787936131,
+     "def": 0.3909101133791195
+    },
+    "sameHalfInSampleAvg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.8257932678600377,
+     "def": 0.6479796892035629
+    },
+    "sensitivityThreshold": {
+     "1500": {
+      "n": [
+       444,
+       442
+      ],
+      "net": 0.5476436122279554,
+      "def": 0.36886184688144746
+     },
+     "5000": {
+      "n": [
+       317,
+       314
+      ],
+      "net": 0.5590421440704751,
+      "def": 0.406220783280664
+     }
+    },
+    "rho2k": 0.5233611558844902
+   },
+   "holdout_scale1.0": {
+    "fitA_evalB": {
+     "n": 408,
+     "net": 0.5549011224441642,
+     "def": 0.37389365876468206
+    },
+    "fitB_evalA": {
+     "n": 408,
+     "net": 0.5453980329350002,
+     "def": 0.37369047562205054
+    },
+    "avg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.5501495776895822,
+     "def": 0.37379206719336633
+    },
+    "sameHalfInSampleAvg": {
+     "n": [
+      408,
+      408
+     ],
+     "net": 0.7569882367705374,
+     "def": 0.5732185200646753
+    },
+    "sensitivityThreshold": {
+     "1500": {
+      "n": [
+       444,
+       442
+      ],
+      "net": 0.535061822178732,
+      "def": 0.35195664781083635
+     },
+     "5000": {
+      "n": [
+       317,
+       314
+      ],
+      "net": 0.5534423773216515,
+      "def": 0.4007112676603556
+     }
+    },
+    "rho2k": 0.5097170546625336
+   }
+  }
+ },
+ "bootstrapH1minusE2_scale0.5": {
+  "fitA_evalB_net": {
+   "delta": 0.07875878991550433,
+   "ci95": [
+    0.02787351704285852,
+    0.1297174279569172
+   ]
+  },
+  "fitA_evalB_def": {
+   "delta": 0.13256009606615582,
+   "ci95": [
+    0.07693599193482087,
+    0.18573949896872385
+   ]
+  },
+  "fitB_evalA_net": {
+   "delta": 0.13242836699780808,
+   "ci95": [
+    0.08348075085258486,
+    0.18453465658336063
+   ]
+  },
+  "fitB_evalA_def": {
+   "delta": 0.16012683622292115,
+   "ci95": [
+    0.10923431301250203,
+    0.21193018559736165
+   ]
+  }
+ },
+ "splitHalfReliability": {
+  "n": 401,
+  "net": 0.5297670173095297,
+  "def": 0.47854844595159546
+ },
+ "top10H1": {
+  "frozenH1": {
+   "names": [
+    "Shai Gilgeous-Alexander",
+    "Nikola Jokić",
+    "Victor Wembanyama",
+    "Luka Dončić",
+    "Chet Holmgren",
+    "Derrick White",
+    "Franz Wagner",
+    "Giannis Antetokounmpo",
+    "Alex Caruso",
+    "Kawhi Leonard"
+   ],
+   "fourStillIn": {
+    "Victor Wembanyama": true,
+    "Giannis Antetokounmpo": true,
+    "Nikola Jokić": true,
+    "Chet Holmgren": true
+   },
+   "overlapWithFrozen": 10
+  },
+  "fitA-s0.5": {
+   "names": [
+    "Shai Gilgeous-Alexander",
+    "Nikola Jokić",
+    "Alex Caruso",
+    "Victor Wembanyama",
+    "Luka Dončić",
+    "Kawhi Leonard",
+    "Derrick White",
+    "Chet Holmgren",
+    "Dean Wade",
+    "Evan Mobley"
+   ],
+   "fourStillIn": {
+    "Victor Wembanyama": true,
+    "Giannis Antetokounmpo": false,
+    "Nikola Jokić": true,
+    "Chet Holmgren": true
+   },
+   "overlapWithFrozen": 8
+  },
+  "fitA-s1.0": {
+   "names": [
+    "Shai Gilgeous-Alexander",
+    "Nikola Jokić",
+    "Alex Caruso",
+    "Victor Wembanyama",
+    "Luka Dončić",
+    "Kawhi Leonard",
+    "Derrick White",
+    "Chet Holmgren",
+    "Dean Wade",
+    "Giannis Antetokounmpo"
+   ],
+   "fourStillIn": {
+    "Victor Wembanyama": true,
+    "Giannis Antetokounmpo": true,
+    "Nikola Jokić": true,
+    "Chet Holmgren": true
+   },
+   "overlapWithFrozen": 9
+  },
+  "fitB-s0.5": {
+   "names": [
+    "Franz Wagner",
+    "Shai Gilgeous-Alexander",
+    "Nikola Jokić",
+    "Victor Wembanyama",
+    "Chet Holmgren",
+    "Giannis Antetokounmpo",
+    "Derrick White",
+    "Evan Mobley",
+    "Luka Dončić",
+    "Jrue Holiday"
+   ],
+   "fourStillIn": {
+    "Victor Wembanyama": true,
+    "Giannis Antetokounmpo": true,
+    "Nikola Jokić": true,
+    "Chet Holmgren": true
+   },
+   "overlapWithFrozen": 8
+  },
+  "fitB-s1.0": {
+   "names": [
+    "Franz Wagner",
+    "Shai Gilgeous-Alexander",
+    "Nikola Jokić",
+    "Victor Wembanyama",
+    "Chet Holmgren",
+    "Giannis Antetokounmpo",
+    "Derrick White",
+    "Luka Dončić",
+    "Evan Mobley",
+    "Jrue Holiday"
+   ],
+   "fourStillIn": {
+    "Victor Wembanyama": true,
+    "Giannis Antetokounmpo": true,
+    "Nikola Jokić": true,
+    "Chet Holmgren": true
+   },
+   "overlapWithFrozen": 8
+  }
+ },
+ "top10Others": {
+  "E2-fitA-s0.5": [
+   "Shai Gilgeous-Alexander",
+   "Victor Wembanyama",
+   "Nikola Jokić",
+   "Luka Dončić",
+   "Chet Holmgren",
+   "Evan Mobley",
+   "Giannis Antetokounmpo",
+   "Jamal Murray",
+   "Kawhi Leonard",
+   "Kevin Durant"
+  ],
+  "F2-fitA-s0.5": [
+   "Victor Wembanyama",
+   "Shai Gilgeous-Alexander",
+   "Evan Mobley",
+   "Nikola Jokić",
+   "Chet Holmgren",
+   "Luka Dončić",
+   "Giannis Antetokounmpo",
+   "Aaron Gordon",
+   "Joel Embiid",
+   "Lauri Markkanen"
+  ],
+  "G3-fitA-s0.5": [
+   "Derrick White",
+   "Shai Gilgeous-Alexander",
+   "Alex Caruso",
+   "Nikola Jokić",
+   "Dean Wade",
+   "Victor Wembanyama",
+   "Luka Dončić",
+   "OG Anunoby",
+   "Ronald Holland II",
+   "Dillon Brooks"
+  ],
+  "H1-fitA-s0.5": [
+   "Shai Gilgeous-Alexander",
+   "Nikola Jokić",
+   "Alex Caruso",
+   "Victor Wembanyama",
+   "Luka Dončić",
+   "Kawhi Leonard",
+   "Derrick White",
+   "Chet Holmgren",
+   "Dean Wade",
+   "Evan Mobley"
+  ]
+ }
+}

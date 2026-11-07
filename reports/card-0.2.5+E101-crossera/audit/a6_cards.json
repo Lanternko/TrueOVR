@@ -1,0 +1,461 @@
+{
+ "anchors": [
+  -0.8131,
+  1.2431,
+  3.511
+ ],
+ "ovrRankMismatches": [],
+ "nMismatch": 0,
+ "players": [
+  {
+   "name": "Julian Phillips",
+   "card025": [
+    332,
+    58.6
+   ],
+   "e096": [
+    325,
+    58.6
+   ],
+   "e101_file": [
+    332,
+    58.3
+   ],
+   "e101_mine": [
+    332,
+    58.3
+   ],
+   "reportData": []
+  },
+  {
+   "name": "Andrew Wiggins",
+   "card025": [
+    158,
+    73.8
+   ],
+   "e096": [
+    154,
+    73.6
+   ],
+   "e101_file": [
+    155,
+    73.5
+   ],
+   "e101_mine": [
+    155,
+    73.5
+   ],
+   "reportData": []
+  },
+  {
+   "name": "Jamison Battle",
+   "card025": [
+    407,
+    54.1
+   ],
+   "e096": [
+    408,
+    53.8
+   ],
+   "e101_file": [
+    405,
+    53.9
+   ],
+   "e101_mine": [
+    405,
+    53.9
+   ],
+   "reportData": []
+  },
+  {
+   "name": "Paul George",
+   "card025": [
+    50,
+    84.5
+   ],
+   "e096": [
+    46,
+    84.2
+   ],
+   "e101_file": [
+    50,
+    83.6
+   ],
+   "e101_mine": [
+    50,
+    83.6
+   ],
+   "reportData": []
+  },
+  {
+   "name": "Cason Wallace",
+   "card025": [
+    74,
+    82.2
+   ],
+   "e096": [
+    71,
+    81.9
+   ],
+   "e101_file": [
+    75,
+    81.5
+   ],
+   "e101_mine": [
+    75,
+    81.5
+   ],
+   "reportData": []
+  },
+  {
+   "name": "Stephen Curry",
+   "card025": [
+    23,
+    89.6
+   ],
+   "e096": [
+    24,
+    88.6
+   ],
+   "e101_file": [
+    32,
+    86.3
+   ],
+   "e101_mine": [
+    32,
+    86.3
+   ],
+   "reportData": [
+    [
+     "/top2025/ft/E096/>99[0]",
+     [
+      "Stephen Curry",
+      112.88
+     ]
+    ],
+    [
+     "/top2025/ft/e101/>99[0]",
+     [
+      "Stephen Curry",
+      112.76
+     ]
+    ],
+    [
+     "/top2025/ft/e101z/>99[0]",
+     [
+      "Stephen Curry",
+      112.88
+     ]
+    ],
+    [
+     "/top2025/ft/e101g/>99[0]",
+     [
+      "Stephen Curry",
+      115.2
+     ]
+    ]
+   ]
+  },
+  {
+   "name": "Jalen Brunson",
+   "card025": [
+    51,
+    84.5
+   ],
+   "e096": [
+    45,
+    84.2
+   ],
+   "e101_file": [
+    58,
+    83.2
+   ],
+   "e101_mine": [
+    58,
+    83.2
+   ],
+   "reportData": []
+  },
+  {
+   "name": "Jalen Duren",
+   "card025": [
+    53,
+    84.3
+   ],
+   "e096": [
+    54,
+    83.6
+   ],
+   "e101_file": [
+    37,
+    85.5
+   ],
+   "e101_mine": [
+    37,
+    85.5
+   ],
+   "reportData": [
+    [
+     "/top2025/shortValue/E096/>99[1]",
+     [
+      "Jalen Duren",
+      115.09
+     ]
+    ],
+    [
+     "/top2025/shortValue/e101/>99[1]",
+     [
+      "Jalen Duren",
+      110.17
+     ]
+    ],
+    [
+     "/top2025/shortValue/e101z/>99[1]",
+     [
+      "Jalen Duren",
+      115.1
+     ]
+    ],
+    [
+     "/top2025/shortValue/e101g/>99[1]",
+     [
+      "Jalen Duren",
+      110.17
+     ]
+    ]
+   ]
+  },
+  {
+   "name": "Giannis Antetokounmpo",
+   "card025": [
+    11,
+    95.2
+   ],
+   "e096": [
+    6,
+    98.4
+   ],
+   "e101_file": [
+    5,
+    99.0
+   ],
+   "e101_mine": [
+    5,
+    99.0
+   ],
+   "reportData": [
+    [
+     "/top2025/short/E096/>99[1]",
+     [
+      "Giannis Antetokounmpo",
+      115.25
+     ]
+    ],
+    [
+     "/top2025/short/e101/>99[0]",
+     [
+      "Giannis Antetokounmpo",
+      113.05
+     ]
+    ],
+    [
+     "/top2025/short/e101z/>99[0]",
+     [
+      "Giannis Antetokounmpo",
+      115.58
+     ]
+    ],
+    [
+     "/top2025/short/e101g/>99[0]",
+     [
+      "Giannis Antetokounmpo",
+      113.05
+     ]
+    ]
+   ]
+  },
+  {
+   "name": "Walker Kessler",
+   "card025": [
+    58,
+    83.9
+   ],
+   "e096": [
+    50,
+    83.9
+   ],
+   "e101_file": [
+    51,
+    83.6
+   ],
+   "e101_mine": [
+    51,
+    83.6
+   ],
+   "reportData": []
+  }
+ ],
+ "valuePer10": {
+  "e096/fitA": {
+   "mid": [
+    0.168,
+    0.062
+   ],
+   "long": [
+    0.426,
+    0.17
+   ],
+   "short": [
+    0.41,
+    0.138
+   ]
+  },
+  "e096/fitB": {
+   "mid": [
+    0.199,
+    0.062
+   ],
+   "long": [
+    0.42,
+    0.157
+   ],
+   "short": [
+    0.362,
+    0.143
+   ]
+  },
+  "e096/primary": {
+   "mid": [
+    0.206,
+    0.065
+   ],
+   "long": [
+    0.436,
+    0.172
+   ],
+   "short": [
+    0.389,
+    0.145
+   ]
+  },
+  "e101/fitA": {
+   "mid": [
+    0.102,
+    0.07
+   ],
+   "long": [
+    0.376,
+    0.168
+   ],
+   "short": [
+    0.534,
+    0.149
+   ]
+  },
+  "e101/fitB": {
+   "mid": [
+    0.137,
+    0.066
+   ],
+   "long": [
+    0.38,
+    0.159
+   ],
+   "short": [
+    0.489,
+    0.147
+   ]
+  },
+  "e101/primary": {
+   "mid": [
+    0.137,
+    0.072
+   ],
+   "long": [
+    0.382,
+    0.171
+   ],
+   "short": [
+    0.531,
+    0.155
+   ]
+  },
+  "cur/fitA": {
+   "mid": [
+    0.176,
+    0.061
+   ],
+   "long": [
+    0.417,
+    0.174
+   ],
+   "short": [
+    0.461,
+    0.167
+   ]
+  },
+  "cur/fitB": {
+   "mid": [
+    0.21,
+    0.061
+   ],
+   "long": [
+    0.417,
+    0.159
+   ],
+   "short": [
+    0.4,
+    0.172
+   ]
+  },
+  "cur/primary": {
+   "mid": [
+    0.215,
+    0.064
+   ],
+   "long": [
+    0.429,
+    0.177
+   ],
+   "short": [
+    0.438,
+    0.176
+   ]
+  }
+ },
+ "moves": {
+  "vs025_ge5": 303,
+  "vs025_ge10": 133,
+  "vs096_ge5": 277,
+  "ovr_up": 146,
+  "ovr_down": 378,
+  "ovr_same": 58,
+  "median_dOVR": -0.29999999999999716,
+  "n": 582
+ },
+ "top10_e101": [
+  "Shai Gilgeous-Alexander",
+  "Nikola Jokić",
+  "Victor Wembanyama",
+  "Luka Dončić",
+  "Giannis Antetokounmpo",
+  "Kawhi Leonard",
+  "Franz Wagner",
+  "Derrick White",
+  "Chet Holmgren",
+  "Lauri Markkanen"
+ ],
+ "top10_overlap_with_025": 9,
+ "top10_025": [
+  "Shai Gilgeous-Alexander",
+  "Nikola Jokić",
+  "Luka Dončić",
+  "Victor Wembanyama",
+  "Franz Wagner",
+  "Chet Holmgren",
+  "Derrick White",
+  "Kawhi Leonard",
+  "Lauri Markkanen",
+  "Amen Thompson"
+ ]
+}

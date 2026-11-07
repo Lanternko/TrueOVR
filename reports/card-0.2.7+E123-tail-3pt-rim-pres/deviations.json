@@ -1,0 +1,68 @@
+{
+ "deviations": [
+  {
+   "id": "D1",
+   "topic": "Part H (help/RIM) tail handling, per coordinator R-072",
+   "original_text": "Preregistration §2.2 / §1: help gets a four-season merged pool and a tail on the ends that pass h1; the text does not state whether help is a curve type or a percentile type, nor the exact tail formula for a non-percentile attribute.",
+   "what_was_done": "Help is treated as a CURVE type (like E-101 rate-type mid/short), not a percentile attr(). x = -(shrunk rim FG% diff) so higher is better; mirrored curve [(-y,x) for x,y in CURVE_DEF_RIM]; a99 = value of x at curve 99 (0.095). Below a99: curve inverse (lower bound 0 if the bottom end passes h1, else 40). Above a99 (only if the top passes h1): 99 + 51*(1-exp(-(x-a99)/(1.96*S))), literal preregistered form, unnormalized, capped at 150. S = max((r99-r90)/1.044, SD_pool) on the four-season merged pool of x (MIN>=500, one entry per player-season). Raw quantity and shrinkage unchanged from E-058 method (a): d*n/(n+200) with d the FGA_LT_06-weighted PLUSMINUS. NO position term: no position shrinkage, position mean, or same-position comparison (R-072, E-080 not used). n=0 keeps 70.",
+   "reason": "R-072: rim protection value is the actual rim impact with no position component; current help is an inverse of CURVE['short']-type curve (not a percentile), so keeping the same type keeps a0H and the c0 chain consistent and avoids re-ranking by percentile. Decided and logged BEFORE any historical-season (2022-23..2024-25) value, cross-season percentile, or slope was viewed; will not be changed after seeing results (L-026).",
+   "logged_before_viewing_historical_values": true
+  },
+  {
+   "id": "D2",
+   "topic": "Part P (pressure / presDisplay) pool interpretation",
+   "original_text": "Preregistration §1/§2.3 specifies a four-season merged pool for pressure and presDisplay; E-101 left pressure unmerged (single-season E-096 formula, regular-player pool GP>=30 & MPG>=20 for current pressure).",
+   "what_was_done": "Follow the preregistration literally: pressure (force) and presDisplay (force - 0.25*z(PF)) each use the four-season merged pool, one entry per player-season, z computed within each season's pool as in E-071; MIN>=500 pool for the merged set; S = max((r99-r90)/1.044, SD_pool); tails open only on ends passing h1. presDisplay follows pressure's h1 result on each end. F-046 (pressure's distribution is non-stationary across seasons) is stated in the report as a caveat.",
+   "reason": "Ambiguity between the literal §1/§2.3 text and E-101's single-season treatment of pressure (L-069). Literal reading chosen and logged before any data value or slope was viewed; not to be changed after results.",
+   "logged_before_viewing_historical_values": true
+  },
+  {
+   "id": "D3",
+   "topic": "Part P pool filter (amends D2)",
+   "original_text": "D2 says 'MIN>=500 pool for the merged set' for pressure/presDisplay. Preregistration §2.3 does not mention a MIN>=500 filter for P; §4 only requires MIN>=500 in both seasons for h1 pair eligibility.",
+   "what_was_done": "The merged-pool entries for pressure (force) and presDisplay are the per-season regular-player pools GP>=30 and MPG (MIN/GP)>=20, which is the current card pressure pool (E-058 calibrate-wing to_attribute: GP>=30 and MIN/GP>=20; 252 people in 2025-26) and the E-101 percentile-type convention. z of the force components is computed within each season's pool as in E-071. 2025-26 uses the card's own pool; 2022-23 and 2023-24 GP/MIN come from the refetched base files in data/; 2024-25 from E-071 data/2024-25-base.json. h1 pair eligibility stays MIN>=500 in both seasons (§4) for all three parts. D2's 'MIN>=500' wording is superseded by this entry; D2 is not edited.",
+   "reason": "D2 mis-stated the pool; current pressure pool and E-101 convention are GP>=30 & MPG>=20, and the c0 / a0P gates (force vs E-071 csv, pressure vs card 0.2.7) only hold with that pool. Logged before any historical-season value, cross-season percentile or slope was computed.",
+   "logged_before_viewing_historical_values": true
+  },
+  {
+   "id": "D4",
+   "topic": "Part T pool MIN source",
+   "original_text": "Preregistration §2.1: pool is MIN>=500 per season; it does not name which MIN column.",
+   "what_was_done": "MIN = season-total minutes from the leaguedashplayerstats Base Totals files (2022-23 and 2023-24: refetched data/<season>-base.json; 2024-25 and 2025-26: v62 raw/<season>-base.json, which is what the v61/v62 ranking.csv MIN is built from), summed over team rows per player id. 2025-26 pool therefore reproduces the E-057 pool (ranking.csv MIN>=500) exactly; the a0T gate checks this. The shot-type file MIN (CS file) is not used for the pool.",
+   "reason": "Matches E-057 make_three_value.py (MIN from ranking.csv = season totals), so a0T can pass at 0.05 and the pools in different seasons use one definition. Logged before computing any historical value.",
+   "logged_before_viewing_historical_values": true
+  },
+  {
+   "id": "D5",
+   "topic": "Data refetch (L-072) and T 2022-23",
+   "original_text": "Preregistration §2: 2022-23 T inputs and 2022-23/2023-24 STL/PF/MIN 'refetched' if absent; fallback to a three-season T pool if the refetch fails.",
+   "what_was_done": "Grep of reports/ (L-072) found no existing 2022-23/2023-24 leaguedashplayerstats Base file and no 2022-23 full shot-type files; all were refetched into data/ with the v62 / E-071 recipes (work/fetch_base.mjs, work/fetch_t2223.py; sha256 in data/sha256-base.json and data/manifest-t2223.json). The 2022-23 T refetch succeeded, so the three-season fallback is NOT used: T uses four seasons.",
+   "reason": "Record of what was refetched and why the fallback branch was not taken.",
+   "logged_before_viewing_historical_values": true
+  },
+  {
+   "id": "D6",
+   "topic": "f-eng result: second branch of the gate (engine does NOT clamp help at 99)",
+   "original_text": "§3 f-eng: confirm the engine clamps card help > 99 to 99, OR that the live WinImp chain does not read card help; if neither, exclude H and stop.",
+   "what_was_done": "Engine inspection: src/probability_model.js interpolate() soft-caps at ATTR_SOFT_CAP=150 (src/constants.js:12), not 99; help enters at probability_model.js:204 (helpDefense), :282/:289 (helpEff -> interpolate(helpEff, CURVE_DEF_RIM) with anchors out to 150), :352 (denyShort); rebound_block_model.js:91 and measured_block_events.js:5-11 clamp to [0,150]; simulation_engine.js:87 calls M.helpDefense. So branch 1 (clamp at 99) is FALSE. Branch 2 checked: the live WinImp chain (reports/card-0.1.2+E065-inout-wins/winimp-core.mjs -> ovr-v53 input -> v47 -> v41 -> ... 86 files traced by import graph) reads only data/season-league.json (scripts/defense_io.js:10), whose help is built by scripts/build_season_league.js:121 directly from data defense-rim (defense('defense-rim', CURVE_DEF_RIM)). No file under src/, test/, scripts/ (except the two display viewers build_card_viewer.py and build_inseason_viewer.py), or the traced chain reads card ranking.csv help. Therefore the engine never receives card help, and the gate passes through branch 2. H is not excluded. src/ not edited.",
+   "reason": "The preregistered gate is an OR; recording which branch held and the evidence (the engine itself would read help up to 150 if it were fed a card, so this passes only because no code path does). Decided before any historical value was computed.",
+   "logged_before_viewing_historical_values": true
+  },
+  {
+   "id": "D7",
+   "topic": "Correction to D4 (source path of 2024-25 / 2025-26 season-total MIN) and candidate help rounding",
+   "original_text": "D4 said 2024-25 and 2025-26 season-total MIN come from 'v62 raw/<season>-base.json'. No such file exists under reports/ovr-v62-3pt-difficulty-2025-26/raw/ (it holds only shot-type/defense files and gamelogs).",
+   "what_was_done": "2024-25 and 2025-26 season-total MIN (and GP) come from reports/card-0.2.0+E071-pressure/data/<season>-base.json (leaguedashplayerstats Base Totals, same recipe as the refetched 2022-23 / 2023-24 files). D4's definition (season-total MIN summed per player id from Base Totals) is unchanged; only the path is corrected. a0T checks that the 2025-26 pool reproduces the E-057 pool. Separately: the candidate defSource new_help values are rounded to 1 decimal, matching the current defense-attributes-e060.csv format (the card's own help column is stored at 1 decimal); tail values above 99 are therefore also 1-decimal.",
+   "reason": "Path error in D4 found when building the loaders; rounding fixed before any historical-season or tail value was computed (tail values are not rounded in attributes/tail-summary, only in the card defSource column).",
+   "logged_before_viewing_historical_values": true
+  },
+  {
+   "id": "D8",
+   "topic": "Part T: acc for players with zero 3PA (N=0) in the season",
+   "original_text": "Preregistration §2.1 gives acc = v62 method (c) with k=294.667 and says only \"same as E-057\". It does not state what acc is for a player who has a tracking row but N=0 three-point attempts.",
+   "what_was_done": "E-057 takes acc from new-long.json abilityC, which for N=0 players is the card league prior (priors.long = 0.35964603715510607 = 2025-26 league FG3M/FG3A summed over Base Totals). First literal recompute (acc = mu_tracking + 0/(0+k)) differed from three-value.csv by up to 0.31 (all N=0 big men; tracking mu 0.359775 vs prior 0.359646), failing a0T before this fix. For N=0 players acc is now the season league FG3M/FG3A from that season's Base Totals file (identical to priors.long for 2025-26; same definition applied to 2022-23..2024-25). Players with N>0 are unchanged.",
+   "reason": "Reproduces the E-057 definition exactly for 2025-26 and gives the same definition to the other seasons. The difference was found at a0T only; no historical-season T values, slopes or tails had been viewed at the time of this entry.",
+   "affects": "T value only (a0T, h1 T pairs, T merged pool)."
+  }
+ ]
+}

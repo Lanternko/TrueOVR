@@ -1,0 +1,302 @@
+[
+ {
+  "layer": "模擬板 v53（原始）",
+  "description": "8 種子期望分差，位置置中每 36 分鐘",
+  "players": 414,
+  "rhoNet": 0.362,
+  "rhoDefense": 0.256,
+  "holdoutRho": "0.328 / 0.232",
+  "rho2k": 0.302,
+  "note": "不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）"
+ },
+ {
+  "layer": "模擬板 v53（收縮修正版）",
+  "description": "先發不收縮、替補收縮（已採用）",
+  "players": 414,
+  "rhoNet": 0.398,
+  "rhoDefense": 0.276,
+  "holdoutRho": "0.356 / 0.246",
+  "rho2k": 0.433,
+  "note": "不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）"
+ },
+ {
+  "layer": "模擬板 v54（原始）",
+  "description": "三分／禁區命中率改用可靠度加權收縮",
+  "players": 414,
+  "rhoNet": 0.389,
+  "rhoDefense": 0.289,
+  "holdoutRho": "0.351 / 0.257",
+  "rho2k": 0.318,
+  "note": "不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）"
+ },
+ {
+  "layer": "模擬板 v54（收縮修正版）",
+  "description": "同 v53 收縮規則",
+  "players": 414,
+  "rhoNet": 0.424,
+  "rhoDefense": 0.303,
+  "holdoutRho": "0.379 / 0.267",
+  "rho2k": 0.457,
+  "note": "已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準；不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）"
+ },
+ {
+  "layer": "卡片 OVR（正式卡片板，card 0.2.10g）",
+  "description": "0.2.10g：用人層（L 上場強度、a 出賽率）改四季滑動窗口（E-192；前 20 名不變）；0.2.10f：3PT 欄對照池改近三季窗口值＋本季（E-191b P1m；OVR 與名次同 0.2.10e）；0.2.10e：OVR 映射頂端加 PR90→88、PR95→92 兩錨（名次不變，E-188）；0.2.10d：long／creation／threeValue／MPG 四季窗口；0.2.10c：傳球共用斜率；0.2.10a：2025-26 T6 補回 L-102 BPM 解析漏掉的聯盟第一（Jokić 7→3 名）；其餘同 0.2.10：card 0.2.9a 係數與錨全凍結，8 項屬性（drive、foulDraw、ft、mid、pass、rebound、short、tovSkill）改 E-175 四季滑動窗口（R-111／R-114，2026-11-01）；0.2.9 起拿掉年輕×爛隊×時間（y·d·L）折扣（E-158 Y0，R-104）（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.728,
+  "rhoDefense": 0.441,
+  "holdoutRho": "未量測",
+  "rho2k": "未量測",
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.10g = 0.2.10f + 用人層 L、a 四季窗口（E-192，係數同 0.2.10d，r_repl、錨點重取）；card 0.2.10f = 0.2.10e + 3PT 欄新對照池（E-191b P1m，OVR 不變）；card 0.2.10e = 0.2.10d + OVR 頂端加 PR90／PR95 錨（E-188 S3，名次不變）；card 0.2.10d = 0.2.10c + long／creation／threeValue／MPG 四季窗口（E-185）；card 0.2.10c = E-175 滑動窗口屬性 + 修正後 T6（L-102）重擬合 + 傳球共用斜率（E-187）；0.2.9 的 E-158 預註冊判定通過（年輕子群 C +0.106、下界 +0.035；全體 +0.001）；此列 ρ vs RAPM 照舊用 RAPM 算；對 2K27 ρ 尚無 0.2.10 的 evaluation.json，不填；來源 card-0.2.10g（0.2.10f 的 ranking.csv 同 card-0.2.10e）"
+ },
+ {
+  "layer": "卡片 OVRcard 0.2.8（前正式版）",
+  "description": "card 0.2.7d 的 OVR 迴歸目標整個換成 T6（DARKO 與 BPM 攻守季內 z 平均）；2025-26 原點 alpha=1，usage 層 rapm1 不換（E-153 K6，2026-11-01 使用者裁定 R-102；同日由 card 0.2.9 取代）（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.699,
+  "rhoDefense": 0.434,
+  "holdoutRho": "未量測",
+  "rho2k": "未量測",
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.8 = card 0.2.7d + 目標換 T6；E-153 預註冊四項檢查全過（bootstrap 90% 下界 +0.0033，邊際小）；npm test 52 過；此列 ρ vs RAPM 照舊用 RAPM 算（目標已不是 RAPM，樣本內意義不同）；對 2K27 ρ 尚無 0.2.8 的 evaluation.json，不填；來源 card-0.2.8"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.7d（前正式版）",
+  "description": "card 0.2.7c + E-147：usage 層 d 改連續 d＝clip((0.40−s)/0.10,0,1)；2026-10-30 起正式，2026-11-01 由 card 0.2.8 取代（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.779,
+  "rhoDefense": 0.526,
+  "holdoutRho": "未量測",
+  "rho2k": "未量測",
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.7d = card 0.2.7c + E-147；對 2K27 ρ 未接 evaluation.json；來源 card-0.2.7d"
+ },
+ {
+  "layer": "卡片 OVR（前正式版，card 0.2.7c）",
+  "description": "card 0.2.7b + E-131：OVR 迴歸拿掉 physique（身高＋體重），身高 heightInches 保留，能力值不動（2026-10-30 使用者裁定 R-084）（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.728,
+  "rhoDefense": 0.441,
+  "holdoutRho": "未量測",
+  "rho2k": 0.733,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.7c = card 0.2.7b + E-131；對 card 0.2.7b 的 Δρ_{N_W} +0.0015 [-0.0014, +0.0044]、Δρ_{Q_W} -0.0014 [-0.0040, +0.0011]、線性量尺 +0.0013 [-0.0016, +0.0042]（預註冊 E-131，看過係數才選，不算盲測，只證明不變差；前 300 名 36 人移動 ≥ 10 名，使用者裁定字母小版本）；evaluate 18/19；對 2K27 ρ 取 card-0.2.7b+E131-no-physique/evaluation.json 的 K1 每場值；2026-10-30 起正式，由 card 0.2.7d 取代；來源 card-0.2.7c"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.7b（前正式版）",
+  "description": "card 0.2.7a + E-123：threeValue、help（只看護框實績，不看位置）、pressure／presDisplay 照 E-101 四季池開 99 以上的頂端，底端 h1 沒過的維持 40（2026-10-30 使用者裁定 R-072、R-078）；2026-10-30 由 card 0.2.7c 取代（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.779,
+  "rhoDefense": 0.532,
+  "holdoutRho": "未量測",
+  "rho2k": 0.738,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.7b = card 0.2.7a + E-123；對 card 0.2.7a 的 Δρ_{N_W} -0.0008 [-0.0025, +0.0007]、Δρ_{Q_W} +0.0001 [-0.0011, +0.0012]、線性量尺 -0.0007 [-0.0024, +0.0008]（預註冊 E-123，只證明不變差，字母小版本）；evaluate 18/19；對 2K27 ρ 取 card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/evaluation.json 的 e123a 每場值；來源 card-0.2.7b"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.7a（前正式版）",
+  "description": "card 0.2.7 + E-125：傳球 pass 改成量率各半 0.5·z(AST/36)＋0.5·z(AST%)，四季池與錨點照 E-101 重算（2026-10-30 使用者裁定 R-074、R-077）；2026-10-30 由 card 0.2.7b 取代（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.779,
+  "rhoDefense": 0.532,
+  "holdoutRho": "未量測",
+  "rho2k": 0.737,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.7a = card 0.2.7 + E-125；對 card 0.2.7 的 Δρ_{N_W} +0.0004 [-0.0004, +0.0013]、Δρ_{Q_W} +0.0007 [-0.0002, +0.0017]、線性量尺 +0.0004 [-0.0005, +0.0013]（看過 Giannis 才選，不算盲測，只證明不變差，字母小版本）；evaluate 18/19；對 2K27 ρ 取 card-0.2.7+E125-pass-volume/evaluation.json 的 E125-P50 每場值；來源 card-0.2.7a"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.7（前正式版）",
+  "description": "card 0.2.6 + E-107 防守 UL：防守加成不打折 max(0, centeredD)，防守 D 改用逐場線性遞減、回合門檻 × 1/2（2026-10-30 使用者裁定 R-061、R-065）；2026-10-30 由 card 0.2.7a 取代（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.779,
+  "rhoDefense": 0.532,
+  "holdoutRho": "未量測",
+  "rho2k": 0.736,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.7 = card 0.2.6 + E-107；對 card 0.2.6 的 Δρ_{N_W} +0.0059 [+0.0009, +0.0111]、Δρ_{Q_W} +0.0016 [-0.0026, +0.0059]、線性量尺 +0.0063 [+0.0011, +0.0116]（看過 E-106 才選，不算盲測，PATCH）；evaluate 18/19；對 2K27 ρ 取 card-0.2.6+E107-defense-UL/evaluation.json 的 E107-UL6 每場值；來源 card-0.2.7"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.6（前正式版）",
+  "description": "card 0.2.5 + E-101：PBP 補籃、補扣改歸近距離，能力值百分位與 99 錨點改對 2022-23～2025-26 四季合併池，頂端差距尺只壓縮不放大（2026-10-30 使用者裁定 R-055、R-056，G5 通過）；2026-10-30 由 card 0.2.7 取代（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.78,
+  "rhoDefense": 0.537,
+  "holdoutRho": "未量測",
+  "rho2k": 0.737,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.6 = card 0.2.5 + E-101；對 card 0.2.5 的樣本外 Δρ_N -0.0027 [-0.0069, +0.0015]、Δρ_Q -0.0032 [-0.0067, +0.0004]（只證明不變差，PATCH）；對 2K27 ρ 取 card-0.2.5+E101-crossera/evaluation.json 的 E101 每場值；來源 card-0.2.6"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.5（前正式版）",
+  "description": "card 0.2.4 + E-089：卡片 g 的分鐘權重由 mpg/36 改成飽和 W(m)=(1−e^(−m/15))/(1−e^(−36/15))，上場少但效率高的人不再被埋沒（2026-10-29 使用者裁定 R-047、R-048）；2026-10-30 由 card 0.2.6 取代（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.779,
+  "rhoDefense": 0.538,
+  "holdoutRho": "未量測",
+  "rho2k": 0.738,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.5 = card 0.2.4 + E-089；對 card 0.2.4 的 Δρ_{N_W} +0.0096 [+0.0020, +0.0176]、線性量尺 +0.0087 [+0.0011, +0.0168]、四季量尺 +0.0066 [-0.0005, +0.0141]（樣本外只證明不變差）；對 2K27 ρ 取 card-0.2.4+E089-minutes-saturation/evaluation.json 的 E089 每場值；來源 card-0.2.5"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.4（前正式版）",
+  "description": "card 0.2.3 + E-084：用人回歸的訓練目標由四季合併 RAPM 改成 2025-26 單季 RAPM，修正年輕被低估、老將被高估（2026-10-29 使用者裁定 R-042、R-044）；2026-10-29 由 card 0.2.5 取代（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.746,
+  "rhoDefense": 0.488,
+  "holdoutRho": "未量測",
+  "rho2k": 0.748,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.4 = card 0.2.3 + E-084；當季量尺（另一半 2025-26 單季 RAPM × MPG）ρ 對 card 0.2.3 差 +0.025 [+0.009, +0.039]；四季量尺差 -0.017 [-0.030, -0.004]；年齡偏差 S -0.202 → -0.075；對 2K27 ρ 取 card-0.2.3+E084-current-target/evaluation.json 的 E084 每場值；來源 card-0.2.4"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.3（前正式版）",
+  "description": "card 0.2.2 + E-075：教練用人當能力證據（分鐘、出賽率、年齡、練兵隊；DNP 與輪休分開）進入 OVR 的能力估計（2026-10-29 使用者裁定 R-040）；2026-10-29 由 card 0.2.4 取代（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.775,
+  "rhoDefense": 0.49,
+  "holdoutRho": "未量測",
+  "rho2k": 0.74,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.3 = card 0.2.2 + E-075；A/B 半 RAPM 每場 ρ 對 card 0.2.2 差 -0.0005 [-0.0186, +0.0159]（不變差，不是變準）；c4 只報告（+0.0160 [-0.0002, +0.0321]）；對 2K27 ρ 取 card-0.2.2+E073-usage-evidence/evaluation.json 的 E075 每場值；來源 card-0.2.3"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.2（前正式版）",
+  "description": "card 0.2.0 + E-070：foulDraw 改為池內百分位(0.75·z(FTA/36)+0.25·z(FTA/FGA)) + E-071 P1：pressure 改為事件式逼失誤 force（抄截、干擾傳球、對位失誤、製造進攻犯規）（2026-10-29 使用者裁定 R-034、R-037、R-039）；2026-10-29 由 card 0.2.3 取代（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.829,
+  "rhoDefense": 0.567,
+  "holdoutRho": "未量測",
+  "rho2k": 0.681,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；A/B 半 RAPM 每場 ρ 對 card 0.2.0 差 +0.0031 [-0.0061, +0.0127]；對 2K27 ρ 取 card-0.2.2/gates.json 每場值；來源 card-0.2.2"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.1（前正式版，實際內容為 E-071 P1）",
+  "description": "標成 card 0.2.0 + E-070，但發佈的檔案其實是 card 0.2.0 + E-071 P1（pressure 改逼失誤，沒有 E-070）；2026-10-29 由 card 0.2.2 取代（L-040）（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.828,
+  "rhoDefense": 0.567,
+  "holdoutRho": "未量測",
+  "rho2k": 0.678,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；對 2K27 ρ 取 card-0.2.2/gates.json 的 E071P1 每場值；來源 card-0.2.1"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.0（前正式版）",
+  "description": "card 0.1.2 的能力值不變，OVR 改為每場（含上場時間：g=(預測−替補水準)·MPG/36，替補水準＝PR10），兩段映射錨點取 MIN≥500 池 PR1/PR50/PR99（2026-10-29 使用者裁定 R-028，E-064 副版）（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.814,
+  "rhoDefense": 0.557,
+  "holdoutRho": "未量測",
+  "rho2k": 0.695,
+  "note": "2026-10-29 由 card 0.2.1 取代（實際只換 pressure），再由 card 0.2.2 取代；ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR 含上場時間，與每 36 分鐘版不可直接比；E-064 預註冊樣本外 ρ（A/B 半場對調平均，目標＝每場淨值）0.603，與其他卡片的樣本外目標不同、不併入下表樣本外欄；對 2K27 ρ 取 E-064 verdict.json 的 repl 值（2K27 評分本身含上場時間，故高於每 36 分鐘版）；來源 card-0.2.0"
+ },
+ {
+  "layer": "卡片 OVR card 0.1.2（前正式版，每 36 分鐘）",
+  "description": "card 0.1.1（v61 收縮歷史，E-054+E-055）+ E-060 onBall 對位目標（2026-10-28 發版，2026-10-29 由 card 0.2.0 取代 OVR 單位）",
+  "players": 414,
+  "rhoNet": 0.867,
+  "rhoDefense": 0.667,
+  "holdoutRho": "未量測",
+  "rho2k": 0.518,
+  "note": "2026-10-29 由 card 0.2.0 取代（能力值相同，只換 OVR 單位）；ρRAPM 樣本內（align/封頂用 RAPM）；樣本外 ρ（A/B 半 RAPM）尚未量測；對 2K27 ρ 取 evaluation.json 的 E060 值；來源 card-0.1.1+E060-onball-targeting/primary"
+ },
+ {
+  "layer": "卡片 OVR card 0.1.1（v61 收縮歷史）",
+  "description": "v58 H1-m0 之後的 E-054+E-055（收縮歷史）卡片；未曾正式發版，直接併入 0.1.2（現 0.2.0）",
+  "players": 414,
+  "rhoNet": 0.868,
+  "rhoDefense": 0.667,
+  "holdoutRho": "未量測",
+  "rho2k": 0.509,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；未曾正式發版（2026-10-28 與 E-060 一併發為 card 0.1.2，10-29 起為 card 0.2.0 的能力值來源）；樣本外 ρ 未量測；對 2K27 ρ 取 evaluation.json 的 v61-shrink 值"
+ },
+ {
+  "layer": "卡片 OVR v58 H1-m0（前正式版）",
+  "description": "v57 G3（γ=1.0、δ=0.25：防守加分 + 往 RAPM align）再加上限：單人總 lift 不得超過其 RAPM 名次（margin=0）",
+  "players": 414,
+  "rhoNet": 0.852,
+  "rhoDefense": 0.66,
+  "holdoutRho": "0.563 / 0.391",
+  "rho2k": 0.537,
+  "note": "2026-10-28 由 card 0.1.2 取代（10-29 起為 card 0.2.0）；ρRAPM 樣本內（align/封頂用 RAPM）；樣本外 ρ 為 A/B 半場對調平均（ovr-v58-holdout-2025-26/report.md）；19/19 硬門檻全過；對 2K27 ρ .537；前十長人僅 Wemby/Giannis/Jokić/Chet（皆為 v58 當時數字）"
+ },
+ {
+  "layer": "卡片 OVR v57 G3（γ=1.0、δ=0.25）",
+  "description": "E2 之上加防守加分（γ=1.0，全位置、PR 90–96 漸減）+ 往 RAPM align δ=0.25，無封頂（v58 的前身）",
+  "players": 414,
+  "rhoNet": 0.843,
+  "rhoDefense": 0.697,
+  "holdoutRho": "0.555 / 0.401",
+  "rho2k": 0.53,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；v58 加封頂後樣本外 ρ 幾乎不變；v58 已於 2026-10-28 由 card 0.1.2 取代（10-29 起 card 0.2.0）"
+ },
+ {
+  "layer": "卡片 OVR v56 F2（PF/C 防守加分 γ=0.5）",
+  "description": "E2 之上只對 PF/C 加防守加分，無 align、無封頂",
+  "players": 414,
+  "rhoNet": 0.57,
+  "rhoDefense": 0.362,
+  "holdoutRho": "0.474 / 0.273",
+  "rho2k": 0.488,
+  "note": "ρRAPM 部分樣本內（防守加分用 RAPM pooledD，另有 RAPM 混合目標）"
+ },
+ {
+  "layer": "卡片 OVR v55 E2（前正式版）",
+  "description": "吃餅折扣 λ=0.4（PF/C 自創 ≥65 豁免）後重校，目標同 v53：模擬與 RAPM 混合 α=0.5",
+  "players": 414,
+  "rhoNet": 0.529,
+  "rhoDefense": 0.297,
+  "holdoutRho": "0.457 / 0.245",
+  "rho2k": 0.478,
+  "note": "2026-10-21 由 v58 H1-m0 取代（v58 於 10-28 由 card 0.1.2 取代，10-29 起 card 0.2.0）；RAPM 混合目標（α=0.5）→ ρRAPM 部分樣本內"
+ },
+ {
+  "layer": "卡片 OVR v53（前正式版）",
+  "description": "能力值公式校準到模擬與 RAPM 混合目標，α=0.5，見 ovr-blended-2025-26/dataflow.md",
+  "players": 414,
+  "rhoNet": 0.5,
+  "rhoDefense": 0.288,
+  "holdoutRho": "0.425 / 0.237",
+  "rho2k": 0.449,
+  "note": "2026-10-20 由 E2 取代（E2 再於 10-21 由 v58 H1-m0 取代，v58 於 10-28 由 card 0.1.2 取代，10-29 起 card 0.2.0）；RAPM 混合目標（α=0.5）→ ρRAPM 部分樣本內；樣本外為 backfill 以 A/B 半 RAPM 重擬合（calibrate.py 複本加 --rapm，全量重現 OVR 最大差 0.0）"
+ },
+ {
+  "layer": "卡片 OVR（舊版，sim-only）",
+  "description": "能力值公式校準到 v53 模擬，α=0（已被正式卡片板取代）",
+  "players": 414,
+  "rhoNet": 0.374,
+  "rhoDefense": 0.205,
+  "holdoutRho": "0.338 / 0.183",
+  "rho2k": 0.337,
+  "note": "目標不含 RAPM，ρRAPM 為純樣本外（全量 RAPM）；不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）"
+ },
+ {
+  "layer": "卡片 OVR（混合 α=0.5）",
+  "description": "校準目標 = 模擬與 RAPM 各半（與正式卡片板同一組數字，來源腳本不同）",
+  "players": 414,
+  "rhoNet": 0.5,
+  "rhoDefense": 0.288,
+  "holdoutRho": "0.425 / 0.237",
+  "rho2k": 0.449,
+  "note": "目標含 RAPM，樣本內 ρ 偏高；blend.py 與 calibrate.py --alpha 0.5 輸出逐名相同，樣本外沿用 v53 的 A/B 半重擬合（backfill）"
+ },
+ {
+  "layer": "卡片 OVR 實驗 B12（未採用）",
+  "description": "方向 B：吃餅長人禁區出手來源修正（模擬層）後重校卡片",
+  "players": 414,
+  "rhoNet": 0.53,
+  "rhoDefense": 0.297,
+  "holdoutRho": "0.455 / 0.243",
+  "rho2k": 0.483,
+  "note": "Karlo 未過，不採用；RAPM 混合目標（α=0.5）→ ρRAPM 部分樣本內；樣本外為 backfill 以 A/B 半 RAPM 重擬合"
+ },
+ {
+  "layer": "卡片 OVR 實驗 C1（未採用）",
+  "description": "方向 1：自創禁區比例 s̃ 映成第 16 屬性 originShare 加進卡片回歸",
+  "players": 414,
+  "rhoNet": 0.531,
+  "rhoDefense": 0.298,
+  "holdoutRho": "0.455 / 0.244",
+  "rho2k": 0.483,
+  "note": "Karlo 未過，不採用；RAPM 混合目標（α=0.5）→ ρRAPM 部分樣本內；樣本外為 backfill 以 A/B 半 RAPM 重擬合"
+ },
+ {
+  "layer": "卡片 OVR 實驗 D1（未採用）",
+  "description": "方向 2：屬性建構層 long 去膨脹（--attr-deflate）後重校卡片",
+  "players": 414,
+  "rhoNet": 0.531,
+  "rhoDefense": 0.299,
+  "holdoutRho": "0.458 / 0.247",
+  "rho2k": 0.485,
+  "note": "Karlo 未過，不採用；RAPM 混合目標（α=0.5）→ ρRAPM 部分樣本內；樣本外為 backfill 以 A/B 半 RAPM 重擬合"
+ }
+]

@@ -1,0 +1,230 @@
+{
+ "unit_W": {
+  "0": {
+   "W": 0.0,
+   "want": 0.0,
+   "pass": true
+  },
+  "36": {
+   "W": 1.0,
+   "want": 1.0,
+   "pass": true
+  },
+  "5": {
+   "W": 0.31175001249797585,
+   "want": 0.31175,
+   "pass": true
+  },
+  "20": {
+   "W": 0.8098728711825767,
+   "want": 0.80987,
+   "pass": true
+  }
+ },
+ "checks_inputs": {
+  "AB": {
+   "n_pool": 389,
+   "n_with_rapm1": 389,
+   "g_lin_vs_producer_linear_cand_maxabs": 4.440892098500626e-16,
+   "netN_equal_producer": true,
+   "net_equal_producer": true,
+   "mpg_ev_equal_producer": true
+  },
+  "BA": {
+   "n_pool": 388,
+   "n_with_rapm1": 388,
+   "g_lin_vs_producer_linear_cand_maxabs": 4.440892098500626e-16,
+   "netN_equal_producer": true,
+   "net_equal_producer": true,
+   "mpg_ev_equal_producer": true
+  }
+ },
+ "master_size": 395,
+ "pool_sizes": {
+  "AB": 389,
+  "BA": 388
+ },
+ "delta_rho": {
+  "N_W": {
+   "delta": 0.009560377950455279,
+   "ci90": [
+    0.0020041644634981232,
+    0.01764147023107742
+   ],
+   "rho_cand": 0.49517309117363106,
+   "rho_base": 0.4856127132231758
+  },
+  "Q_W": {
+   "delta": 0.006648851063985828,
+   "ci90": [
+    -0.0004831285174189236,
+    0.014109793803020536
+   ],
+   "rho_cand": 0.5924842616911554,
+   "rho_base": 0.5858354106271696
+  },
+  "N_lin": {
+   "delta": 0.00871386579788147,
+   "ci90": [
+    0.0010602829724806252,
+    0.01681832940444288
+   ],
+   "rho_cand": 0.4934302701302965,
+   "rho_base": 0.48471640433241503
+  },
+  "Q_lin": {
+   "delta": 0.005141340765145386,
+   "ci90": [
+    -0.0022496210142239183,
+    0.01302747903341904
+   ],
+   "rho_cand": 0.5936396817667545,
+   "rho_base": 0.5884983410016091
+  }
+ },
+ "gates": {
+  "m1": true,
+  "m2": true,
+  "m3": true
+ },
+ "card_check": {
+  "r_repl": -1.2724493885788943,
+  "anchors": {
+   "PR1": -0.8153080565013056,
+   "PR50": 1.2506410339373022,
+   "PR99": 3.4429279429490607
+  },
+  "anchors_linear": {
+   "PR1": -0.5415035599769742,
+   "PR50": 0.8848688008103984,
+   "PR99": 3.1777640824827587
+  },
+  "n_players": 582,
+  "n_pool_MIN_ge_500": 378,
+  "all_players": {
+   "max_abs_ovr_diff": 0.0,
+   "n_ovr_diff_gt_0.05": 0,
+   "max_abs_gRepl_diff": 4.9906349351758195e-05,
+   "n_rank_mismatch_ignoring_ties": 0,
+   "n_rank_mismatch_raw": 0
+  },
+  "linear_replay_vs_card024": {
+   "max_abs_ovr_diff": 0.0
+  },
+  "sample": [
+   {
+    "name": "Alex Caruso",
+    "mpg_csv": 17.9,
+    "mp_exact": 17.900818713450292,
+    "g_mine": 2.4512470426234314,
+    "g_csv": 2.4512,
+    "ovr_mine": 85.9,
+    "ovr_csv": 85.9,
+    "rank_mine": 39,
+    "rank_csv": 39,
+    "ovr_card024": 78.9,
+    "rank_card024": 103,
+    "g_card024": 1.5905
+   },
+   {
+    "name": "Dyson Daniels",
+    "mpg_csv": 33.15,
+    "mp_exact": 33.15184210526316,
+    "g_mine": 2.822473597454296,
+    "g_csv": 2.8225,
+    "ovr_mine": 90.8,
+    "ovr_csv": 90.8,
+    "rank_mine": 18,
+    "rank_csv": 18,
+    "ovr_card024": 92.4,
+    "rank_card024": 17,
+    "g_card024": 2.6546
+   },
+   {
+    "name": "Julian Phillips",
+    "mpg_csv": 5.62,
+    "mp_exact": 5.618640350877193,
+    "g_mine": 0.4688959925977755,
+    "g_csv": 0.4689,
+    "ovr_mine": 58.6,
+    "ovr_csv": 58.6,
+    "rank_mine": 332,
+    "rank_csv": 332,
+    "ovr_card024": 55.9,
+    "rank_card024": 345,
+    "g_card024": 0.213
+   },
+   {
+    "name": "Devin Vassell",
+    "mpg_csv": 30.51,
+    "mp_exact": 30.510920398009947,
+    "g_mine": 1.541700664627794,
+    "g_csv": 1.5417,
+    "ovr_mine": 73.9,
+    "ovr_csv": 73.9,
+    "rank_mine": 155,
+    "rank_csv": 155,
+    "ovr_card024": 76.1,
+    "rank_card024": 134,
+    "g_card024": 1.3669
+   },
+   {
+    "name": "Mason Plumlee",
+    "mpg_csv": 3.57,
+    "mp_exact": 3.5726736111111115,
+    "g_mine": 0.16864421828893222,
+    "g_csv": 0.1686,
+    "ovr_mine": 54.3,
+    "ovr_csv": 54.3,
+    "rank_mine": 405,
+    "rank_csv": 405,
+    "ovr_card024": 52.9,
+    "rank_card024": 410,
+    "g_card024": 0.0718
+   },
+   {
+    "name": "Paul George",
+    "mpg_csv": 30.68,
+    "mp_exact": 30.676531531531534,
+    "g_mine": 2.3488041233588133,
+    "g_csv": 2.3488,
+    "ovr_mine": 84.5,
+    "ovr_csv": 84.5,
+    "rank_mine": 50,
+    "rank_csv": 50,
+    "ovr_card024": 85.2,
+    "rank_card024": 54,
+    "g_card024": 2.0903
+   },
+   {
+    "name": "Moussa Diabaté",
+    "mpg_csv": 26.01,
+    "mp_exact": 26.013105022831052,
+    "g_mine": 2.1528679498578316,
+    "g_csv": 2.1529,
+    "ovr_mine": 81.9,
+    "ovr_csv": 81.9,
+    "rank_mine": 75,
+    "rank_csv": 75,
+    "ovr_card024": 80.5,
+    "rank_card024": 88,
+    "g_card024": 1.7178
+   }
+  ],
+  "csv_only_check": {
+   "Alex Caruso": {
+    "pred_minus_r_from_card024": 3.1987709497206707,
+    "g_W_from_csv_only": 2.451247328784049
+   },
+   "Dyson Daniels": {
+    "pred_minus_r_from_card024": 2.8828235294117643,
+    "g_W_from_csv_only": 2.822640046577787
+   }
+  }
+ },
+ "sha256": {
+  "ranking.csv": "73b1d6353142dd86327a022a19e939833c42a0aa0c69f3377201ffe411c0050a",
+  "results.json": "7e36f0d64aec6a7706b6a4e68af976de77b3a4078dc764374451c0ff90ecd371",
+  "preregistration.md": "0fa1b15c0ce11096993b224851456abdb77eb17417ecaa55dd74257207a12fbe"
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "label": "cdn+ff",
+ "data": "D:\\Projects\\temp\\nba-old-seasons\\equiv-cdn\\2021-22",
+ "ff": "D:\\Projects\\temp\\nba-old-seasons\\equiv\\ff-cdn\\four-factors.csv",
+ "players": 605,
+ "priorPlayers": 605,
+ "common": 605,
+ "poolPlayers": 246,
+ "attrs": {
+  "long": {
+   "n": 605,
+   "r": 1.0,
+   "maxAbsDiff": 0.0,
+   "medianAbsDiff": 0.0,
+   "nDiffGt0.01": 0,
+   "nDiffGt1": 0
+  },
+  "mid": {
+   "n": 605,
+   "r": 1.0,
+   "maxAbsDiff": 0.0,
+   "medianAbsDiff": 0.0,
+   "nDiffGt0.01": 0,
+   "nDiffGt1": 0
+  },
+  "short": {
+   "n": 605,
+   "r": 1.0,
+   "maxAbsDiff": 0.0,
+   "medianAbsDiff": 0.0,
+   "nDiffGt0.01": 0,
+   "nDiffGt1": 0
+  },
+  "ft": {
+   "n": 605,
+   "r": 1.0,
+   "maxAbsDiff": 0.0,
+   "medianAbsDiff": 0.0,
+   "nDiffGt0.01": 0,
+   "nDiffGt1": 0
+  },
+  "drive": {
+   "n": 605,
+   "r": 1.0,
+   "maxAbsDiff": 0.0,
+   "medianAbsDiff": 0.0,
+   "nDiffGt0.01": 0,
+   "nDiffGt1": 0
+  },
+  "tovSkill": {
+   "n": 605,
+   "r": 1.0,
+   "maxAbsDiff": 0.0,
+   "medianAbsDiff": 0.0,
+   "nDiffGt0.01": 0,
+   "nDiffGt1": 0
+  },
+  "pass": {
+   "n": 605,
+   "r": 0.999997,
+   "maxAbsDiff": 0.2489,
+   "medianAbsDiff": 0.0,
+   "nDiffGt0.01": 22,
+   "nDiffGt1": 0
+  },
+  "rebound": {
+   "n": 605,
+   "r": 0.999998,
+   "maxAbsDiff": 0.4978,
+   "medianAbsDiff": 0.0,
+   "nDiffGt0.01": 11,
+   "nDiffGt1": 0
+  },
+  "physique": {
+   "n": 605,
+   "r": 1.0,
+   "maxAbsDiff": 0.0,
+   "medianAbsDiff": 0.0,
+   "nDiffGt0.01": 0,
+   "nDiffGt1": 0
+  },
+  "onBall": {
+   "n": 605,
+   "r": null,
+   "maxAbsDiff": 0.0,
+   "medianAbsDiff": 0.0,
+   "nDiffGt0.01": 0,
+   "nDiffGt1": 0
+  },
+  "help": {
+   "n": 605,
+   "r": null,
+   "maxAbsDiff": 0.0,
+   "medianAbsDiff": 0.0,
+   "nDiffGt0.01": 0,
+   "nDiffGt1": 0
+  },
+  "stamina": {
+   "n": 605,
+   "r": 0.999998,
+   "maxAbsDiff": 0.2489,
+   "medianAbsDiff": 0.0,
+   "nDiffGt0.01": 19,
+   "nDiffGt1": 0
+  },
+  "heightInches": {
+   "n": 605,
+   "r": 1.0,
+   "maxAbsDiff": 0.0,
+   "medianAbsDiff": 0.0,
+   "nDiffGt0.01": 0,
+   "nDiffGt1": 0
+  },
+  "creation": {
+   "n": 605,
+   "r": 0.999993,
+   "maxAbsDiff": 0.7218,
+   "medianAbsDiff": 0.0,
+   "nDiffGt0.01": 25,
+   "nDiffGt1": 0
+  },
+  "pressure": {
+   "n": 605,
+   "r": 0.967203,
+   "maxAbsDiff": 17.5253,
+   "medianAbsDiff": 1.7422,
+   "nDiffGt0.01": 582,
+   "nDiffGt1": 394
+  }
+ }
+}

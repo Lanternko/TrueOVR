@@ -1,0 +1,86 @@
+{
+ "g0pass": true,
+ "n": 10,
+ "rows": [
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "jsonIdentical": true,
+   "winsPer82_head_on": 15.50312,
+   "winsPer82_e065_ckpt": 15.50312,
+   "winsPer82_e065_csv": 15.50312,
+   "csvEqual": true
+  },
+  {
+   "name": "Mark Williams",
+   "jsonIdentical": true,
+   "winsPer82_head_on": 8.54167,
+   "winsPer82_e065_ckpt": 8.54167,
+   "winsPer82_e065_csv": 8.54167,
+   "csvEqual": true
+  },
+  {
+   "name": "Derrick White",
+   "jsonIdentical": true,
+   "winsPer82_head_on": 6.57708,
+   "winsPer82_e065_ckpt": 6.57708,
+   "winsPer82_e065_csv": 6.57708,
+   "csvEqual": true
+  },
+  {
+   "name": "Luguentz Dort",
+   "jsonIdentical": true,
+   "winsPer82_head_on": -2.98958,
+   "winsPer82_e065_ckpt": -2.98958,
+   "winsPer82_e065_csv": -2.98958,
+   "csvEqual": true
+  },
+  {
+   "name": "Marcus Smart",
+   "jsonIdentical": true,
+   "winsPer82_head_on": -3.50208,
+   "winsPer82_e065_ckpt": -3.50208,
+   "winsPer82_e065_csv": -3.50208,
+   "csvEqual": true
+  },
+  {
+   "name": "Victor Wembanyama",
+   "jsonIdentical": true,
+   "winsPer82_head_on": 15.11875,
+   "winsPer82_e065_ckpt": 15.11875,
+   "winsPer82_e065_csv": 15.11875,
+   "csvEqual": true
+  },
+  {
+   "name": "Jalen Duren",
+   "jsonIdentical": true,
+   "winsPer82_head_on": 9.90833,
+   "winsPer82_e065_ckpt": 9.90833,
+   "winsPer82_e065_csv": 9.90833,
+   "csvEqual": true
+  },
+  {
+   "name": "Herbert Jones",
+   "jsonIdentical": true,
+   "winsPer82_head_on": -1.45208,
+   "winsPer82_e065_ckpt": -1.45208,
+   "winsPer82_e065_csv": -1.45208,
+   "csvEqual": true
+  },
+  {
+   "name": "Nikola Jokić",
+   "jsonIdentical": true,
+   "winsPer82_head_on": 16.57083,
+   "winsPer82_e065_ckpt": 16.57083,
+   "winsPer82_e065_csv": 16.57083,
+   "csvEqual": true
+  },
+  {
+   "name": "Nic Claxton",
+   "jsonIdentical": true,
+   "winsPer82_head_on": 5.08229,
+   "winsPer82_e065_ckpt": 5.08229,
+   "winsPer82_e065_csv": 5.08229,
+   "csvEqual": true
+  }
+ ]
+}

@@ -1,0 +1,266 @@
+{
+ "rule": "actionType=='2pt' 且 isFieldGoal==1 且 area=='Mid-Range' 且 (shotDistance or 0) < 8 → short",
+ "seasons": {
+  "2022-23": {
+   "games": 1230,
+   "unfixed": {
+    "rows": 22957,
+    "totals": {
+     "midA": 29039,
+     "midM": 13058,
+     "shortA": 104011,
+     "shortM": 59842
+    },
+    "sha256": "e395eee21ceae3595bea462db199b582ac4c196482fbdb71c7e8a90733133a18"
+   },
+   "v61": {
+    "rows": 22957,
+    "totals": {
+     "midA": 29039,
+     "midM": 13058,
+     "shortA": 104011,
+     "shortM": 59842
+    },
+    "sha256": "e395eee21ceae3595bea462db199b582ac4c196482fbdb71c7e8a90733133a18"
+   },
+   "unfixedReproducesV61": {
+    "rows": true,
+    "totals": true,
+    "sha256Identical": true
+   },
+   "fixed": {
+    "rows": 22957,
+    "totals": {
+     "midA": 25742,
+     "midM": 10831,
+     "shortA": 107308,
+     "shortM": 62069
+    },
+    "sha256": "8d8d568f63167f89d0dcaa39ec16b6b974f5376624a518fda9e3955cd03474cd",
+    "file": "history/pbp-zones-2022-23.csv.gz"
+   },
+   "moved": {
+    "att": 3297,
+    "made": 2227
+   },
+   "areaCountLt8": {
+    "made": 2227,
+    "att": 3297
+   },
+   "movedMatchesAreaCount": true,
+   "shotDistanceMissingAmongMidRange": 0,
+   "conservation": {
+    "midA": true,
+    "shortA": true,
+    "midM": true,
+    "shortM": true
+   },
+   "leagueRates": {
+    "unfixed": {
+     "mid": 0.44967113192603053,
+     "short": 0.5753429925680937
+    },
+    "fixed": {
+     "mid": 0.4207520783155932,
+     "short": 0.5784191299809893
+    }
+   }
+  },
+  "2023-24": {
+   "games": 1230,
+   "unfixed": {
+    "rows": 23024,
+    "totals": {
+     "midA": 27578,
+     "midM": 12371,
+     "shortA": 104756,
+     "shortM": 59786
+    },
+    "sha256": "96e6e5108f6f1fd2eab8823918408143066304d9b12132a994fda517f24c2308"
+   },
+   "v61": {
+    "rows": 23024,
+    "totals": {
+     "midA": 27578,
+     "midM": 12371,
+     "shortA": 104756,
+     "shortM": 59786
+    },
+    "sha256": "96e6e5108f6f1fd2eab8823918408143066304d9b12132a994fda517f24c2308"
+   },
+   "unfixedReproducesV61": {
+    "rows": true,
+    "totals": true,
+    "sha256Identical": true
+   },
+   "fixed": {
+    "rows": 23024,
+    "totals": {
+     "midA": 24700,
+     "midM": 10347,
+     "shortA": 107634,
+     "shortM": 61810
+    },
+    "sha256": "bd80fd41e6faa0afd1c9e1187844dd292c2e0485a8d0e8ec284f3648f3ff07dd",
+    "file": "history/pbp-zones-2023-24.csv.gz"
+   },
+   "moved": {
+    "att": 2878,
+    "made": 2024
+   },
+   "areaCountLt8": {
+    "made": 2024,
+    "att": 2878
+   },
+   "movedMatchesAreaCount": true,
+   "shotDistanceMissingAmongMidRange": 0,
+   "conservation": {
+    "midA": true,
+    "shortA": true,
+    "midM": true,
+    "shortM": true
+   },
+   "leagueRates": {
+    "unfixed": {
+     "mid": 0.4485822032054536,
+     "short": 0.5707167131238307
+    },
+    "fixed": {
+     "mid": 0.4189068825910931,
+     "short": 0.5742609212702307
+    }
+   }
+  },
+  "2024-25": {
+   "games": 1229,
+   "unfixed": {
+    "rows": 22956,
+    "totals": {
+     "midA": 23728,
+     "midM": 10511,
+     "shortA": 103242,
+     "shortM": 58695
+    },
+    "sha256": "54c2a54e396d548fd02f07751ba993a45f9a6bf9c805fb8ae9cf859a2df14004"
+   },
+   "v61": {
+    "rows": 22956,
+    "totals": {
+     "midA": 23728,
+     "midM": 10511,
+     "shortA": 103242,
+     "shortM": 58695
+    },
+    "sha256": "54c2a54e396d548fd02f07751ba993a45f9a6bf9c805fb8ae9cf859a2df14004"
+   },
+   "unfixedReproducesV61": {
+    "rows": true,
+    "totals": true,
+    "sha256Identical": true
+   },
+   "fixed": {
+    "rows": 22956,
+    "totals": {
+     "midA": 21518,
+     "midM": 8978,
+     "shortA": 105452,
+     "shortM": 60228
+    },
+    "sha256": "d15e313d0cf2bd9509c78315c17dfe4e8740375eba2112cdfde9a77255780a5c",
+    "file": "history/pbp-zones-2024-25.csv.gz"
+   },
+   "moved": {
+    "att": 2210,
+    "made": 1533
+   },
+   "areaCountLt8": {
+    "made": 1533,
+    "att": 2210
+   },
+   "movedMatchesAreaCount": true,
+   "shotDistanceMissingAmongMidRange": 0,
+   "conservation": {
+    "midA": true,
+    "shortA": true,
+    "midM": true,
+    "shortM": true
+   },
+   "leagueRates": {
+    "unfixed": {
+     "mid": 0.44297875927174646,
+     "short": 0.5685186261405242
+    },
+    "fixed": {
+     "mid": 0.41723208476624224,
+     "short": 0.5711413723779539
+    }
+   }
+  },
+  "2025-26": {
+   "games": 1227,
+   "unfixed": {
+    "rows": 23306,
+    "totals": {
+     "midA": 24503,
+     "midM": 10937,
+     "shortA": 103349,
+     "shortM": 59386
+    },
+    "sha256": "3a2aff097bb4133301790387d38072b2a29e390aed385058d0efa5c41a11f0cb"
+   },
+   "v61": {
+    "rows": 23306,
+    "totals": {
+     "midA": 24503,
+     "midM": 10937,
+     "shortA": 103349,
+     "shortM": 59386
+    },
+    "sha256": "3a2aff097bb4133301790387d38072b2a29e390aed385058d0efa5c41a11f0cb"
+   },
+   "unfixedReproducesV61": {
+    "rows": true,
+    "totals": true,
+    "sha256Identical": true
+   },
+   "fixed": {
+    "rows": 23306,
+    "totals": {
+     "midA": 22089,
+     "midM": 9210,
+     "shortA": 105763,
+     "shortM": 61113
+    },
+    "sha256": "f244b875902395cf92e043235b7507800ab1e2342b756a570638eafdc0c6966c",
+    "file": "history/pbp-zones-2025-26.csv.gz"
+   },
+   "moved": {
+    "att": 2414,
+    "made": 1727
+   },
+   "areaCountLt8": {
+    "made": 1727,
+    "att": 2414
+   },
+   "movedMatchesAreaCount": true,
+   "shotDistanceMissingAmongMidRange": 0,
+   "conservation": {
+    "midA": true,
+    "shortA": true,
+    "midM": true,
+    "shortM": true
+   },
+   "leagueRates": {
+    "unfixed": {
+     "mid": 0.4463535077337469,
+     "short": 0.5746161065902912
+    },
+    "fixed": {
+     "mid": 0.41694961292951244,
+     "short": 0.5778296757845371
+    }
+   }
+  }
+ },
+ "pass": true
+}

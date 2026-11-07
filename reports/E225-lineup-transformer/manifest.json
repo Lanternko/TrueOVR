@@ -1,0 +1,187 @@
+{
+ "inputs": {
+  "stints-2014-15": {
+   "file": "reports/defense-seventh/2014-15/stints-ff/stints.jsonl",
+   "sha256": "8770c3d37f7096a2326baecedc36ecab2d873715b950186940622f2d912e81dc"
+  },
+  "stints-2015-16": {
+   "file": "reports/defense-seventh/2015-16/stints-ff/stints.jsonl",
+   "sha256": "89cf24bb513f5406975bc8daf8a28f945124d6247c95e6c1cf49098d84792506"
+  },
+  "stints-2016-17": {
+   "file": "reports/defense-seventh/2016-17/stints-ff/stints.jsonl",
+   "sha256": "c68dcd92ef64e2b69e657a7e26840824d71874ead41c5263561d2397f6b4c1c0"
+  },
+  "stints-2017-18": {
+   "file": "reports/defense-seventh/2017-18/stints-ff/stints.jsonl",
+   "sha256": "0d604fef5273c877e54fa8590cf342eb9c64585968fcba7804e28372a0a64ae7"
+  },
+  "players-2017-18": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2017-18-027.json",
+   "sha256": "2e844edf4df34e23726b806a9ed5931bbafde54d6d74d6fde0fdfd192ea5c7a3"
+  },
+  "stints-2018-19": {
+   "file": "reports/defense-seventh/2018-19/stints-ff/stints.jsonl",
+   "sha256": "f59d05c17ccae4be5e5d45668f49dbb185dc7a2bb48edc17ca9f45f81a641836"
+  },
+  "players-2018-19": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2018-19-027.json",
+   "sha256": "3b32db530fbd23e570d3f2fe681967c837b2dbec958754200ebb25e5161c1d79"
+  },
+  "stints-2019-20": {
+   "file": "reports/defense-seventh/2019-20/stints-ff/stints.jsonl",
+   "sha256": "d338bf9a8e418ada2f624d00d178daa9f7313c11615bf422794ba209d79b8a13"
+  },
+  "players-2019-20": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2019-20-027.json",
+   "sha256": "4cecd432f108b1eeceb9aa04c03bd6ed1abbfd5f92ad253f2a74bb6e8617bbfe"
+  },
+  "stints-2020-21": {
+   "file": "reports/defense-seventh/2020-21/stints-ff/stints.jsonl",
+   "sha256": "4bbeab066cd5332505b9537120091bc426ef09d32ffb0358d73d4c4ca0f40099"
+  },
+  "players-2020-21": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2020-21-027.json",
+   "sha256": "65c30011f42bb710d294c4226f41888da34e5ba7c64444792cc088c1a7bd44c2"
+  },
+  "stints-2021-22": {
+   "file": "reports/ovr-inseason-2026-27/v5/pathA/ff-2021-22/stints-ff/stints.jsonl",
+   "sha256": "f4ae7b419249f38bf7c255e5b87971699c34ff38fcfca9d23c6daf5557375fc7"
+  },
+  "players-2021-22": {
+   "file": "reports/ovr-inseason-2026-27/v4/cards/2021-22.csv",
+   "sha256": "ee67beedfdac13a51e5bd9b2aa7adf45648c2dc3966304b108ad715e035466ff"
+  },
+  "stints-2022-23": {
+   "file": "reports/defense-seventh/2022-23/stints/stints.jsonl",
+   "sha256": "5936e16bbfcce88da4743cb72b828be2d602bdb67e470e549c68bd2d7c3eaec6"
+  },
+  "players-2022-23": {
+   "file": "reports/ovr-inseason-2026-27/v4/cards/2022-23.csv",
+   "sha256": "2fed78d1631ba81f7e6a88c634d2bc817b9efbd5eb8466e7c9620ef0b3f360c4"
+  },
+  "stints-2023-24": {
+   "file": "reports/defense-seventh/2023-24/stints/stints.jsonl",
+   "sha256": "a83b1c42ba735810f2fd8dccd8355d2f41e4fd164389ee82fb4318b4a3d0adb6"
+  },
+  "players-2023-24": {
+   "file": "reports/ovr-inseason-2026-27/v4/cards/2023-24.csv",
+   "sha256": "73050d7679f4350e10ec27b17ac8db58d821531ffd8bf07913dfc0bb88a9515b"
+  },
+  "stints-2024-25": {
+   "file": "reports/defense-seventh/2024-25/stints/stints.jsonl",
+   "sha256": "8790976ac74edf2054470427c50984d35d8c8ab0abf72fd92b5105489cf74ac0"
+  },
+  "players-2024-25": {
+   "file": "reports/ovr-inseason-2026-27/v4/cards/2024-25.csv",
+   "sha256": "b71a8fd0911eb6c4c09206bfab95fbf01ce885f3a9ce77c0ea4a8f8ae5f99dec"
+  },
+  "stints-2025-26": {
+   "file": "reports/defense-b1/stints.jsonl",
+   "sha256": "5eff6aa81f37d0f3baef97be2fdc7346a05ffce5ccfa1f6e4456be229a296179"
+  },
+  "players-2025-26": {
+   "file": "reports/ovr-inseason-2026-27/v4/cards/2025-26.csv",
+   "sha256": "8e89c5f4b515043a7a8ebb63a3ac7b7f52dc41bdab7cf5caa394d88a089f11c8"
+  },
+  "stints-2026-27": {
+   "file": "reports/defense-seventh/2026-27/stints/stints.jsonl",
+   "sha256": "7234efabfbef3ed91a5a2a548ee4d6ee01b4a1450285f1473b4c62d3698c6cc7"
+  },
+  "players-2026-27": {
+   "file": "reports/ovr-inseason-2026-27/live/2026-11-02/ranking.csv",
+   "sha256": "4db1d2ab1342738812e470a4f618b78d72052f745906441a8684aa33d49b7fff"
+  }
+ },
+ "outputs": {
+  "stints-2014-15.csv.gz": "76b9fb4efcfd8833acc22d6272c20f081466500cb7c06754534fbb1427a83394",
+  "stints-2015-16.csv.gz": "85b6fd551804b24e03802f7a4821ac64670c7d0dccf57ac4b9723ad5ce816343",
+  "stints-2016-17.csv.gz": "2b49feed0d984936d9f6ebe995464907808258c58286913d631851d10ece0536",
+  "stints-2017-18.csv.gz": "765c834ed8bd5202e0d861bd03a00cf11af019a6dbf1d9a6fc29242527898b9b",
+  "players-2017-18.csv": "1052479a7a04fa08e3872e9e64eb7a362781e826da2177c1782da89b1d97c9ed",
+  "stints-2018-19.csv.gz": "6cf34e01103f54f6dbbbb9789c9ffd99daedbd04e6290835108adc3d2f87e330",
+  "players-2018-19.csv": "18debbbc5d577ab20fe2b0e2165eef7a8afffc0397d1bddef393a1f82c4cd2e7",
+  "stints-2019-20.csv.gz": "470b3dcf1776bdbf5fe4473af59ac0625977038bcf499fa287ce5fe6c5fb1e28",
+  "players-2019-20.csv": "52f56f4f8ef656f9189049905303432fa57724ba125efe14e282f4f7a6784e56",
+  "stints-2020-21.csv.gz": "ec92b94eb40cbdc11afdf5a8c54beb547a116b5329199ec7d45727eb245cab4d",
+  "players-2020-21.csv": "7b0406dbae6f8bfdc6eba8aea35be45e2accd50318796ef222845fb7806a6d18",
+  "stints-2021-22.csv.gz": "7bd95f02b4c404457bdb041643d93e49d6af0f21f7094b718038af54eb1a4e49",
+  "players-2021-22.csv": "a04ce4dbdfc836e2072e032d576410319e91a90c8cee5adce5572c1b85419350",
+  "stints-2022-23.csv.gz": "fc9ef208f6cc7e3b1e73f7ea2dfa0c306e01b6fa74f39c89672e098672e3b7f1",
+  "players-2022-23.csv": "4cd3b34414eb06dbeae2832d1762d6f5944d6e82794f161420dfc921262fce52",
+  "stints-2023-24.csv.gz": "20409aabb57ff721215d5901b576a032c00fb5fde444f8d5b79a710e9cc43228",
+  "players-2023-24.csv": "579390b2442eea4de737379d61f3c827a9ded7a557c3e625beb4209fc4d784ce",
+  "stints-2024-25.csv.gz": "055abc7c714946901401cc74e8e0ce3e143da2c7ea7c0a54d2e874f5ab5689f1",
+  "players-2024-25.csv": "1677e23e18dfc9fc0a41358900f83118e243bf7d2479a498eebeef9fc7796b03",
+  "stints-2025-26.csv.gz": "30686dc744b1c426187ec7fcfe11afa1683b1e587209214851a5bf30d6fe3926",
+  "players-2025-26.csv": "b2601b92ece54a363d2fd3d99e54544c2c404b29916120b228171123daac2e81",
+  "stints-2026-27.csv.gz": "aa3894062ff6b8f1e679886c8b532d1e975a14eeba388724be99cb9f1660826a",
+  "players-2026-27.csv": "396925dd05830e742d11a90f50b7c0ac586e06f8fff429c934598e2241ea19fc"
+ },
+ "splitRule": "test: sha256('E225|test|'+gid)[:8] mod 100 < 20; fold: sha256('E225|fold|'+gid)[:8] mod 5; forward seasons 2025-26, 2026-27",
+ "frozen2026-11-03": {
+  "evalScript": "reports/E225-lineup-transformer/e225_eval.py",
+  "evalCommand": "python -I -X utf8 e225_eval.py --target test",
+  "files": {
+   "build_dataset.py": "67f8bc7e0ebf269614e9a2c562f59f421eb9691ebfa60d0906dcb194d81aa25e",
+   "e225_b1.py": "e7b4ecd768411157aecf009898c1041310007ddcff5848fb1e66a1d3e84eedfa",
+   "e225_common.py": "d48c1ec9b73c8e1a6beaa77fe46383497c82ac9391f6f1e27a80149d8099bdcf",
+   "e225_eval.py": "8ec6cfb124da98daa0b31d8c511dcf125beebd45ab0dcf6ffab4b46645e0f773",
+   "e225_model.py": "04ed32bc296148d8589a19a012fef188d3503eeddedff616ea105b05e3cd91ae",
+   "e225_train_save.py": "eb3cf6c209480e989bb243afd5faa5f5bba6bd121f6bf63561d49125a82aa685",
+   "e225_tune.py": "d557baf69fdb6905ba41c9904caea75e179fe4754fd3a64834a61fdd2c783c05",
+   "mde_noise.py": "ca8a70b358157da372077aadf6110a1dc9f720d277101e89cd079d2b48b63959",
+   "pos_crosstab.py": "5ae66018be9acfa91d550928003c3f4e8db6b92e4006ed54f3d4f0140ed00001",
+   "smoke_test.py": "7cdef81a9e848c391f357e5c21ac8b36590cc21b804afbb1d6ef61b780da7c7f",
+   "tuning.json": "f23a5cf4e62c4f729402c12223123db6603a20ef459eab600d2893343321f6bb",
+   "mde-noise.json": "bd19997b7802c21d299ac73396b13364e448b97f24db6669d09133b908deba89",
+   "design.md": "ec5e8416de0a71a8d800d51d28cef335091d9ced8ebb86dda9713e1f2607ffa7",
+   "preregistration.md": "8556cece40c7d1b85eacdd99b8a460a1f40f18f36916084e98c0cc62dc27696c",
+   "data\\players-2017-18.csv": "1052479a7a04fa08e3872e9e64eb7a362781e826da2177c1782da89b1d97c9ed",
+   "data\\players-2018-19.csv": "18debbbc5d577ab20fe2b0e2165eef7a8afffc0397d1bddef393a1f82c4cd2e7",
+   "data\\players-2019-20.csv": "52f56f4f8ef656f9189049905303432fa57724ba125efe14e282f4f7a6784e56",
+   "data\\players-2020-21.csv": "7b0406dbae6f8bfdc6eba8aea35be45e2accd50318796ef222845fb7806a6d18",
+   "data\\players-2021-22.csv": "a04ce4dbdfc836e2072e032d576410319e91a90c8cee5adce5572c1b85419350",
+   "data\\players-2022-23.csv": "4cd3b34414eb06dbeae2832d1762d6f5944d6e82794f161420dfc921262fce52",
+   "data\\players-2023-24.csv": "579390b2442eea4de737379d61f3c827a9ded7a557c3e625beb4209fc4d784ce",
+   "data\\players-2024-25.csv": "1677e23e18dfc9fc0a41358900f83118e243bf7d2479a498eebeef9fc7796b03",
+   "data\\players-2025-26.csv": "b2601b92ece54a363d2fd3d99e54544c2c404b29916120b228171123daac2e81",
+   "data\\players-2026-27.csv": "396925dd05830e742d11a90f50b7c0ac586e06f8fff429c934598e2241ea19fc",
+   "data\\stints-2014-15.csv.gz": "76b9fb4efcfd8833acc22d6272c20f081466500cb7c06754534fbb1427a83394",
+   "data\\stints-2015-16.csv.gz": "85b6fd551804b24e03802f7a4821ac64670c7d0dccf57ac4b9723ad5ce816343",
+   "data\\stints-2016-17.csv.gz": "2b49feed0d984936d9f6ebe995464907808258c58286913d631851d10ece0536",
+   "data\\stints-2017-18.csv.gz": "765c834ed8bd5202e0d861bd03a00cf11af019a6dbf1d9a6fc29242527898b9b",
+   "data\\stints-2018-19.csv.gz": "6cf34e01103f54f6dbbbb9789c9ffd99daedbd04e6290835108adc3d2f87e330",
+   "data\\stints-2019-20.csv.gz": "470b3dcf1776bdbf5fe4473af59ac0625977038bcf499fa287ce5fe6c5fb1e28",
+   "data\\stints-2020-21.csv.gz": "ec92b94eb40cbdc11afdf5a8c54beb547a116b5329199ec7d45727eb245cab4d",
+   "data\\stints-2021-22.csv.gz": "7bd95f02b4c404457bdb041643d93e49d6af0f21f7094b718038af54eb1a4e49",
+   "data\\stints-2022-23.csv.gz": "fc9ef208f6cc7e3b1e73f7ea2dfa0c306e01b6fa74f39c89672e098672e3b7f1",
+   "data\\stints-2023-24.csv.gz": "20409aabb57ff721215d5901b576a032c00fb5fde444f8d5b79a710e9cc43228",
+   "data\\stints-2024-25.csv.gz": "055abc7c714946901401cc74e8e0ce3e143da2c7ea7c0a54d2e874f5ab5689f1",
+   "data\\stints-2025-26.csv.gz": "30686dc744b1c426187ec7fcfe11afa1683b1e587209214851a5bf30d6fe3926",
+   "data\\stints-2026-27.csv.gz": "aa3894062ff6b8f1e679886c8b532d1e975a14eeba388724be99cb9f1660826a",
+   "results\\final-T-min-0.json": "05809d7d53ec5457f949ce12c2ae2a5a85f5295a4ffb1677325b8d84eedc328a",
+   "results\\final-T-min-1.json": "dae6ed01d893f41121475c92380997571ff8b51da4319645e0f1fd035ab7499f",
+   "results\\final-T-min-2.json": "47b707806c5fc82b2ac0f875f61d482a6b94b0e374ba89095cf4098179c59eff",
+   "results\\final-T-min-3.json": "c840f16f56bc564668525622c9c22bbcf8fc141303438532b23d8024991448c9",
+   "results\\final-T-min-4.json": "1c1aae3769b7ab60e850e7f9af3a45684f28e6021a03bf11e8513d8cd193596b",
+   "results\\final-T-nomin-0.json": "f44185652947123e1c310090fc4559e29b1726decb948a18115b76c75dca88d2",
+   "results\\final-T-nomin-1.json": "d494927ab9640aa93d6cef6624daef150846b5ed75b211b4f6258e875e3c9e9b",
+   "results\\final-T-nomin-2.json": "2fa66d033b8dd8198f2f4bfbda05b1d2d0201d4733574f3c461593c10031c7c0",
+   "results\\final-T-nomin-3.json": "687db7c4c65ddafdde878baa069074cff5b715ca1601f3a931817ce2c3afa7da",
+   "results\\final-T-nomin-4.json": "2909d9570287e143cfcaa0b73472d17b6fff6f3d216f677c8a797e73f5886a45",
+   "results/weights\\T-min-0.pt": "5273f6d20674a991fc032a0159db63979f6631f59d1e6ead70f33e1c68ac4e67",
+   "results/weights\\T-min-1.pt": "8de26e33ee5c0e2393f6f9309bf7c07dd4ce327ed0966f48cb80a756c0859cb9",
+   "results/weights\\T-min-2.pt": "aa3759db34384479e9925cc92b3df3882092fda98b480844b85a493553be70e6",
+   "results/weights\\T-min-3.pt": "94a4171a440f974302e71f05ba4c98e720fe243690f79551c33d536136286a8a",
+   "results/weights\\T-min-4.pt": "02b564282c5100f5725894a40f42dca794eea01da4f7d4f4ef8b83f087083d0d",
+   "results/weights\\T-nomin-0.pt": "5e9834b4c72a26ddfa120d3cb0975cf17950b64d8445e39f59996849aa5b70d0",
+   "results/weights\\T-nomin-1.pt": "668d9f3b158bdf40fc6e9b389eaf744cac8a8adb27e42d8ed2ef06c4d24223f9",
+   "results/weights\\T-nomin-2.pt": "238ab2e39a50ce054531c840b690e63c2b96e0068a15aae35536121f9c22af9d",
+   "results/weights\\T-nomin-3.pt": "e260d2b91ed683377d041fd567ed662f65d650c6c8b843538efaf425e73bbf7e",
+   "results/weights\\T-nomin-4.pt": "618509e836ef40636d6331dfb2242d822cb5f785def0f92a441d02706948c121",
+   "results/weights\\retrain-T-min.json": "c38e46a93d3aa75f6de137e8a59250ebac7e6a166e65e69a6ff88505b55efef9",
+   "results/weights\\retrain-T-nomin.json": "5f9e827614c06aee84e3df2f4cd06a4c3c3fc17678573a39ce66eee99c8b538d"
+  }
+ }
+}

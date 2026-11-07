@@ -1,0 +1,5 @@
+{
+ "version": "card 0.2.10c",
+ "ranking_csv_sha256": "e46315bded816662b842460903104794f369d371e14f22df459d35eddc23158b",
+ "note": "自我檢查用：card 0.2.10c 沒有自己的 summary.json，這裡只記 ranking.csv sha256"
+}

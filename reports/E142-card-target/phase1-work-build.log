@@ -1,0 +1,57 @@
+T1 2022-23 539
+T4 2022-23 499
+T5 2022-23 538
+T6 2022-23 491
+T1 2023-24 571
+T4 2023-24 526
+T5 2023-24 569
+T6 2023-24 509
+T1 2024-25 569
+T4 2024-25 524
+T5 2024-25 565
+T6 2024-25 511
+T1 2025-26 582
+T4 2025-26 522
+T5 2025-26 577
+T6 2025-26 504
+T0 2022-23 rc 0 stage1_ranking_sha256": "3e7d08ec4878bfb2135775559bb826585751d244bcd8e89903dc0dbddce2b67a", "equals_stage1": true, "part_equals_stage1": {"primary": true, "fitA": true, "fitB": true}, "seconds": 9.6}
+ 
+T0 2023-24 rc 0 tage1_ranking_sha256": "5c03c2e1ef4af8fb85eb0e3927514e64fc402af950c9a3bcbf2da80f39f2f479", "equals_stage1": true, "part_equals_stage1": {"primary": true, "fitA": true, "fitB": true}, "seconds": 10.1}
+ 
+T0 2024-25 rc 0 tage1_ranking_sha256": "4940c59d43d07cdaf93198dd0bcc2b108ccbc0ea0dc7a7fecb23f734041fcc85", "equals_stage1": true, "part_equals_stage1": {"primary": true, "fitA": true, "fitB": true}, "seconds": 10.4}
+ 
+T0 2025-26 rc 0 true}, "ranking_sha256": "99466f369d53316a260f2b6d91ee056e2da8048e65d8283a68cec1322fef1655", "want": "99466f369d53316a260f2b6d91ee056e2da8048e65d8283a68cec1322fef1655", "pass": true, "seconds": 10.6}
+ 
+T1 2022-23 rc 0 e1_ranking_sha256": "3e7d08ec4878bfb2135775559bb826585751d244bcd8e89903dc0dbddce2b67a", "equals_stage1": false, "part_equals_stage1": {"primary": false, "fitA": false, "fitB": false}, "seconds": 8.2}
+ 
+T1 2023-24 rc 0 e1_ranking_sha256": "5c03c2e1ef4af8fb85eb0e3927514e64fc402af950c9a3bcbf2da80f39f2f479", "equals_stage1": false, "part_equals_stage1": {"primary": false, "fitA": false, "fitB": false}, "seconds": 8.3}
+ 
+T1 2024-25 rc 0 e1_ranking_sha256": "4940c59d43d07cdaf93198dd0bcc2b108ccbc0ea0dc7a7fecb23f734041fcc85", "equals_stage1": false, "part_equals_stage1": {"primary": false, "fitA": false, "fitB": false}, "seconds": 8.5}
+ 
+T1 2025-26 rc 1 alse}, "ranking_sha256": "b72bae649080bd33e4426b78f9e09f193f33d540cbec2f70eb7a198741228211", "want": "99466f369d53316a260f2b6d91ee056e2da8048e65d8283a68cec1322fef1655", "pass": false, "seconds": 9.0}
+ 
+T4 2022-23 rc 0 e1_ranking_sha256": "3e7d08ec4878bfb2135775559bb826585751d244bcd8e89903dc0dbddce2b67a", "equals_stage1": false, "part_equals_stage1": {"primary": false, "fitA": false, "fitB": false}, "seconds": 8.7}
+ 
+T4 2023-24 rc 0 e1_ranking_sha256": "5c03c2e1ef4af8fb85eb0e3927514e64fc402af950c9a3bcbf2da80f39f2f479", "equals_stage1": false, "part_equals_stage1": {"primary": false, "fitA": false, "fitB": false}, "seconds": 9.2}
+ 
+T4 2024-25 rc 0 e1_ranking_sha256": "4940c59d43d07cdaf93198dd0bcc2b108ccbc0ea0dc7a7fecb23f734041fcc85", "equals_stage1": false, "part_equals_stage1": {"primary": false, "fitA": false, "fitB": false}, "seconds": 9.3}
+ 
+T4 2025-26 rc 1 alse}, "ranking_sha256": "76ce77830795bddfd9d6626ef55172fa60c4a0788e2d0c13064c49672bdd15b2", "want": "99466f369d53316a260f2b6d91ee056e2da8048e65d8283a68cec1322fef1655", "pass": false, "seconds": 9.4}
+ 
+T5 2022-23 rc 0 e1_ranking_sha256": "3e7d08ec4878bfb2135775559bb826585751d244bcd8e89903dc0dbddce2b67a", "equals_stage1": false, "part_equals_stage1": {"primary": false, "fitA": false, "fitB": false}, "seconds": 7.2}
+ 
+T5 2023-24 rc 0 e1_ranking_sha256": "5c03c2e1ef4af8fb85eb0e3927514e64fc402af950c9a3bcbf2da80f39f2f479", "equals_stage1": false, "part_equals_stage1": {"primary": false, "fitA": false, "fitB": false}, "seconds": 7.7}
+ 
+T5 2024-25 rc 0 e1_ranking_sha256": "4940c59d43d07cdaf93198dd0bcc2b108ccbc0ea0dc7a7fecb23f734041fcc85", "equals_stage1": false, "part_equals_stage1": {"primary": false, "fitA": false, "fitB": false}, "seconds": 8.1}
+ 
+T5 2025-26 rc 1 alse}, "ranking_sha256": "427c88ee60e51b7607b15c2d459ea352534df2e58cd84bd27ce4d09b8acb7d2e", "want": "99466f369d53316a260f2b6d91ee056e2da8048e65d8283a68cec1322fef1655", "pass": false, "seconds": 8.3}
+ 
+T6 2022-23 rc 0 e1_ranking_sha256": "3e7d08ec4878bfb2135775559bb826585751d244bcd8e89903dc0dbddce2b67a", "equals_stage1": false, "part_equals_stage1": {"primary": false, "fitA": false, "fitB": false}, "seconds": 8.5}
+ 
+T6 2023-24 rc 0 e1_ranking_sha256": "5c03c2e1ef4af8fb85eb0e3927514e64fc402af950c9a3bcbf2da80f39f2f479", "equals_stage1": false, "part_equals_stage1": {"primary": false, "fitA": false, "fitB": false}, "seconds": 8.4}
+ 
+T6 2024-25 rc 0 e1_ranking_sha256": "4940c59d43d07cdaf93198dd0bcc2b108ccbc0ea0dc7a7fecb23f734041fcc85", "equals_stage1": false, "part_equals_stage1": {"primary": false, "fitA": false, "fitB": false}, "seconds": 8.8}
+ 
+T6 2025-26 rc 1 alse}, "ranking_sha256": "efda3469f552e715a59ec0a58bd000578b4fcd06fafb45cc3e689adb0506ed69", "want": "99466f369d53316a260f2b6d91ee056e2da8048e65d8283a68cec1322fef1655", "pass": false, "seconds": 8.9}
+ 
+done

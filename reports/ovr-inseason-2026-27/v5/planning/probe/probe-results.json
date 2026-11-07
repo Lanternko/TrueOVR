@@ -1,0 +1,33 @@
+{
+  "probeDate": "2026-10-27",
+  "scope": "極少量端點探測；只確認 HTTP 狀態與欄位，不下載賽季資料；未讀任何 2026-27 資料",
+  "hosts": {
+    "local": "D:\\Projects\\CODING\\basketball-autochess (Windows)",
+    "remote": "kojiek@140.122.184.29 (ntnumaplab2, 5090)"
+  },
+  "requests": [
+    {"host": "local", "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0021500001.json", "http": 403, "bytes": 445},
+    {"host": "local", "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0021600001.json", "http": 403, "bytes": 443},
+    {"host": "local", "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0021700001.json", "http": 403, "bytes": 443},
+    {"host": "local", "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0021800001.json", "http": 403, "bytes": 443},
+    {"host": "local", "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0021900001.json", "http": 403, "bytes": 443},
+    {"host": "local", "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022000001.json", "http": 403, "bytes": 443},
+    {"host": "local", "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022100001.json", "http": 403, "bytes": 445},
+    {"host": "local", "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022300001.json", "http": 403, "bytes": 445},
+    {"host": "local", "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022500001.json", "http": 403, "bytes": 443},
+    {"host": "local", "url": "https://cdn.nba.com/static/json/liveData/boxscore/boxscore_0021700001.json", "http": 403, "bytes": 441},
+    {"host": "local", "url": "https://cdn.nba.com/static/json/staticData/scheduleLeagueV2.json", "http": 403, "bytes": 423},
+    {"host": "local", "url": "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json", "http": 403, "bytes": 441},
+    {"host": "local", "url": "https://stats.nba.com/stats/leaguedashplayerstats?Season=2017-18", "http": 0, "note": "curl exit/timeout after 20s; no bytes"},
+    {"host": "local", "url": "https://stats.nba.com/stats/leaguedashplayerstats?Season=2015-16", "http": 0, "note": "timeout after 20s"},
+    {"host": "local", "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0021700001", "http": 0, "note": "timeout"},
+    {"host": "local", "url": "https://data.nba.net/data/10s/prod/v1/20171025/0021700001_pbp_1.json", "http": 0, "note": "timeout"},
+    {"host": "remote", "url": "https://stats.nba.com/stats/leaguedashplayerstats?Season=2017-18", "http": 0, "note": "timeout after 15s"},
+    {"host": "remote", "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0021700001.json", "http": 403, "bytes": null}
+  ],
+  "interpretation": {
+    "cdn": "所有 cdn.nba.com 路徑（含 staticData 與當季 liveData）都回 403，兩台主機一致；不是單一賽季或單一檔案的問題。",
+    "stats": "stats.nba.com 在本機與 5090 都連線逾時（HTTP 000），無法確認 2015-16..2020-21 的端點內容。",
+    "conclusion": "目前（2026-10-27）無法從這兩個網路位置抓取任何新賽季資料；既有 2021-22..2024-25 檔是先前抓取留存。v5 的擴充起點需要先恢復連線或由使用者提供封存檔。"
+  }
+}

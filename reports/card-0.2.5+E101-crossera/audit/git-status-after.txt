@@ -1,0 +1,9 @@
+ M memory/experiments.md
+ M memory/findings.md
+ M memory/handoff.md
+ M memory/lessons.md
+ M memory/references.md
+ M memory/rulings.md
+ M scripts/enrich_roster_viewer.py
+?? .claude/settings.local.json
+?? scripts/fit_game_contribution.py

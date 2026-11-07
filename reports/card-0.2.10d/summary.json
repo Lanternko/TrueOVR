@@ -1,0 +1,165 @@
+{
+ "version": "card 0.2.10d",
+ "baseVersion": "card 0.2.10c",
+ "players": 582,
+ "change": "E-185：long、creation（進 OVR）、threeValue（3PT 欄，只顯示）、MPG（g 的 MPG_hat）改 E-175 四季滑動窗口；建在官方 card 0.2.10c 上（E-187 KAU：修正後 T6、全部係數在這組新屬性上重擬合、傳球全位置共用斜率）。MPG 窗口只換 g 與錨用的預測 MPG（L、設計矩陣不動），窗口長度 L=1 季（card-0.2.12/mpg-L-selection.json）。",
+ "version_rule": "R-109 字母版：前 20 名進出 1 人、前 100 名移動 ≥10 名 13 人。",
+ "moved10_top300": 124,
+ "moved10_top100": 13,
+ "refit": {
+  "wls_card": {
+   "b0": -0.6202952476207433,
+   "b1_p": 0.6203628892321188,
+   "b2_L": -0.22089554750761187,
+   "b3_a": 1.679941016983222,
+   "b4_y": -0.0621268622414371,
+   "b5_v": 0.5032958866679208,
+   "b6_yL": 0.007892909511868273,
+   "b7_vL": -0.24158093261284064,
+   "b8_ydL": 0.0
+  },
+  "r_repl": -0.9939541784830259,
+  "anchors": {
+   "PR1": -0.7275046304744958,
+   "PR50": 1.003892691790382,
+   "PR99": 3.8691953866128266
+  }
+ },
+ "self_check": "輸入換回 0.2.10a 的 tail-U.csv、不覆寫 MPG，同一條鏈重建的 ranking.csv ＝ card-0.2.10c/ranking.csv 逐位元相同（work-selfcheck）",
+ "key_players_2025_26": {
+  "Jayson Tatum": {
+   "0.2.10c": [
+    90.6,
+    8
+   ],
+   "0.2.10d": [
+    93.2,
+    8
+   ]
+  },
+  "Jalen Williams": {
+   "0.2.10c": [
+    87.0,
+    12
+   ],
+   "0.2.10d": [
+    90.7,
+    9
+   ]
+  },
+  "Cooper Flagg": {
+   "0.2.10c": [
+    77.6,
+    68
+   ],
+   "0.2.10d": [
+    78.5,
+    64
+   ]
+  },
+  "Anthony Edwards": {
+   "0.2.10c": [
+    87.6,
+    10
+   ],
+   "0.2.10d": [
+    89.1,
+    10
+   ]
+  },
+  "Paolo Banchero": {
+   "0.2.10c": [
+    71.9,
+    155
+   ],
+   "0.2.10d": [
+    72.8,
+    143
+   ]
+  },
+  "Nikola Jokić": {
+   "0.2.10c": [
+    103.7,
+    2
+   ],
+   "0.2.10d": [
+    107.0,
+    2
+   ]
+  },
+  "Stephen Curry": {
+   "0.2.10c": [
+    86.7,
+    13
+   ],
+   "0.2.10d": [
+    88.0,
+    13
+   ]
+  },
+  "Joel Embiid": {
+   "0.2.10c": [
+    84.8,
+    19
+   ],
+   "0.2.10d": [
+    87.5,
+    15
+   ]
+  },
+  "Franz Wagner": {
+   "0.2.10c": [
+    84.1,
+    21
+   ],
+   "0.2.10d": [
+    81.3,
+    42
+   ]
+  },
+  "Alperen Sengun": {
+   "0.2.10c": [
+    75.5,
+    91
+   ],
+   "0.2.10d": [
+    75.5,
+    96
+   ]
+  }
+ },
+ "top20": {
+  "out": [
+   "Austin Reaves"
+  ],
+  "in": [
+   "Desmond Bane"
+  ]
+ },
+ "part_card_sha256": {
+  "primary": "78a9d3f008cce59c07ebfc15caa68f2c5c844e1f15d7b97ae131fe79bd8dc124",
+  "fitA": "8f5060d7de0a849e474c473a2c45a7f524b2e63f894dce07e6a692f83efe3b2d",
+  "fitB": "c8ee8801a4ec324c12100296ce73af3bc26fbfe3e949934a759cff73ec1b5a36"
+ },
+ "part_card_pred_csv_sha256": {
+  "primary": "8f2e269ae44253d92aad50c18c1333d35bf7b9d66c97dc6257ad80f60b064564",
+  "fitA": "d4dc04d04d656441d382f8d906f6534e2cfd8ce95348cbb93460550fb87483d8",
+  "fitB": "a6fdf1aa6212977628597809cfbbbd09f305ffe7cc5a3818ad79b630c918d2d1"
+ },
+ "sources_sha256": {
+  "reports/card-0.2.12/tail-U.csv": "166c808965b292482232c64c83bc870d7c4fdaf795a6702a62978589b86ad1a7",
+  "reports/card-0.2.12/mpg-c82.csv": "f13d6c703559962ddbadc346d759cda8a2bd6042a2bc657f159342fd34db7a1a",
+  "reports/card-0.2.12/three-value.csv": "70392d30c92bcb9f427c34c4647877920e2a2b626656fd707219201c2a446b4a",
+  "reports/card-0.2.12/mpg-L-selection.json": "bf54ce9cae24ebe3037f0337a8bd3ae2221f6663b59d16f00561e8ff0cee1354",
+  "reports/card-0.2.10c/rapm-T6.csv": "514ba5e0a14fee5f5e700032bea613486fac68eed6d2073a0b12e21296bc6bb8",
+  "reports/card-0.2.10c/ranking.csv": "e46315bded816662b842460903104794f369d371e14f22df459d35eddc23158b",
+  "reports/card-0.2.10a/tail-U.csv": "ff959cd0eee276d2817ba10db3c5fc14ca640e302a8c3810590c071730301dba",
+  "reports/card-0.2.10d/build.py": "6f4c2665a8feb85bf7e94bb2bb1479579e182547fd18e2c12e1acb55a908e2a2",
+  "reports/card-0.2.10d/e162_build.py": "5093cd521a91ededdd6e02d6d69a4816a1f02f2e79424128169f26a8140c2aa6",
+  "reports/card-0.2.10d/run_all.py": "3716627178ccc2db0ea96385eaa9b542a91888e1e3e66cff9ec8e666feacf4f1",
+  "reports/E142-card-target/phase1-work/cands/T6-2025-26.pkl": "13cb929439bf8ff6affcbcba1b8932ef1cce62afe8c56d527d4153b637c2a786"
+ },
+ "build_command": "python -I -B -X utf8 reports/card-0.2.10d/run_all.py selfcheck; ... run_all.py real; python -I -X utf8 reports/card-0.2.10d/finalize.py",
+ "generator": "reports/card-0.2.10d/finalize.py",
+ "ranking_csv_sha256": "7b47982fb1ff499ab937cbadec1a6678fafc471189b4ad6e2970a7a935c7f91b"
+}

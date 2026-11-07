@@ -1,0 +1,146 @@
+{
+ "fetchDate": "2026-10-31",
+ "coverage": {
+  "T4_DARKO": {
+   "2018-19": {
+    "population_min500": 361,
+    "matched": 356,
+    "coverage": 0.9861,
+    "unmatched_names": [
+     "Bruno Caboclo",
+     "Chasson Randle",
+     "Danuel House Jr.",
+     "Joakim Noah",
+     "Shaquille Harrison"
+    ]
+   },
+   "2019-20": {
+    "population_min500": 339,
+    "matched": 338,
+    "coverage": 0.9971,
+    "unmatched_names": [
+     "Carmelo Anthony"
+    ]
+   },
+   "2020-21": {
+    "population_min500": 364,
+    "matched": 359,
+    "coverage": 0.9863,
+    "unmatched_names": [
+     "Armoni Brooks",
+     "Chasson Randle",
+     "Frank Jackson",
+     "Oshae Brissett",
+     "Taj Gibson"
+    ]
+   },
+   "2022-23": {
+    "population_min500": 367,
+    "matched": 365,
+    "coverage": 0.9946,
+    "unmatched_names": [
+     "Charles Bassey",
+     "Kris Dunn"
+    ]
+   },
+   "2023-24": {
+    "population_min500": 360,
+    "matched": 355,
+    "coverage": 0.9861,
+    "unmatched_names": [
+     "Bismack Biyombo",
+     "Kevin Knox II",
+     "Scotty Pippen Jr.",
+     "Trey Jemison III",
+     "Vít Krejčí"
+    ]
+   },
+   "2024-25": {
+    "population_min500": 375,
+    "matched": 370,
+    "coverage": 0.9867,
+    "unmatched_names": [
+     "Bismack Biyombo",
+     "Elfrid Payton",
+     "Jordan Goodwin",
+     "Landry Shamet",
+     "Tosan Evbuomwan"
+    ]
+   },
+   "2025-26": {
+    "population_min500": 380,
+    "matched": 375,
+    "coverage": 0.9868,
+    "unmatched_names": [
+     "Ethan Thompson",
+     "Jahmai Mashack",
+     "Jamaree Bouyea",
+     "Micah Potter",
+     "Precious Achiuwa"
+    ]
+   }
+  },
+  "T5_BPM": {
+   "2018-19": {
+    "population_min500": 361,
+    "matched": 359,
+    "coverage": 0.9945,
+    "unmatched_names": [
+     "James Harden",
+     "Nene Hilario"
+    ]
+   },
+   "2019-20": {
+    "population_min500": 339,
+    "matched": 338,
+    "coverage": 0.9971,
+    "unmatched_names": [
+     "Giannis Antetokounmpo"
+    ]
+   },
+   "2020-21": {
+    "population_min500": 364,
+    "matched": 362,
+    "coverage": 0.9945,
+    "unmatched_names": [
+     "Kenyon Martin Jr.",
+     "Nikola Jokic"
+    ]
+   },
+   "2022-23": {
+    "population_min500": 367,
+    "matched": 366,
+    "coverage": 0.9973,
+    "unmatched_names": [
+     "Nikola Jokić"
+    ]
+   },
+   "2023-24": {
+    "population_min500": 360,
+    "matched": 359,
+    "coverage": 0.9972,
+    "unmatched_names": [
+     "Nikola Jokić"
+    ]
+   },
+   "2024-25": {
+    "population_min500": 375,
+    "matched": 373,
+    "coverage": 0.9947,
+    "unmatched_names": [
+     "Nikola Jokić",
+     "Ronald Holland II"
+    ]
+   },
+   "2025-26": {
+    "population_min500": 380,
+    "matched": 378,
+    "coverage": 0.9947,
+    "unmatched_names": [
+     "Nikola Jokić",
+     "Ronald Holland II"
+    ]
+   }
+  }
+ }
+}

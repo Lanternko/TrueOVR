@@ -1,0 +1,337 @@
+{
+ "T6_sha256": "13cb929439bf8ff6affcbcba1b8932ef1cce62afe8c56d527d4153b637c2a786",
+ "ranking_sha256": {
+  "0.2.10a": "a868f7b91924d58a73c06083e8a50bbd8bfabb149348518e2691fcdda8405763",
+  "K6U": "279289c0f3a903e7159a6bb0e7853437a02a1b9b9d9796a0fcfbade6e249f695",
+  "KAU": "e46315bded816662b842460903104794f369d371e14f22df459d35eddc23158b",
+  "KRU": "155d209ca3f7e3b389951898df16ef35f1d96cfd2a7a4eb19701f38df7ed763b",
+  "KJU": "2589d0b16842fee12642ba830e1530b5186689b2ee04f47389b59fed6ed33fc6"
+ },
+ "arms": {
+  "0.2.10a": {
+   "n900": 303,
+   "JW_rank": 8.5,
+   "JW_ovr": 87.3,
+   "seg_resid_vs_T6fixed": -1.5005937044423552,
+   "moved10_top100_vs_0210a": 0,
+   "key": {
+    "Jalen Williams": [
+     8.5,
+     87.3
+    ],
+    "Shai Gilgeous-Alexander": [
+     1.0,
+     103.8
+    ],
+    "Nikola Jokić": [
+     3.0,
+     100.6
+    ],
+    "Victor Wembanyama": [
+     2.0,
+     100.9
+    ],
+    "Anthony Edwards": [
+     11.0,
+     86.8
+    ],
+    "Jalen Johnson": [
+     26.0,
+     82.0
+    ],
+    "Scottie Barnes": [
+     15.5,
+     85.2
+    ],
+    "Franz Wagner": [
+     20.0,
+     84.5
+    ],
+    "Paolo Banchero": [
+     124.5,
+     73.1
+    ],
+    "Kevin Durant": [
+     17.0,
+     85.1
+    ],
+    "Herbert Jones": [
+     116.5,
+     73.6
+    ],
+    "Kon Knueppel": [
+     83.5,
+     75.5
+    ],
+    "Cooper Flagg": [
+     63.0,
+     77.0
+    ],
+    "LeBron James": [
+     24.5,
+     82.1
+    ]
+   }
+  },
+  "K6U": {
+   "n900": 303,
+   "JW_rank": 8.0,
+   "JW_ovr": 87.2,
+   "seg_resid_vs_T6fixed": -1.4506844842725517,
+   "moved10_top100_vs_0210a": 10,
+   "key": {
+    "Jalen Williams": [
+     8.0,
+     87.2
+    ],
+    "Shai Gilgeous-Alexander": [
+     1.0,
+     109.2
+    ],
+    "Nikola Jokić": [
+     2.0,
+     106.2
+    ],
+    "Victor Wembanyama": [
+     3.0,
+     102.1
+    ],
+    "Anthony Edwards": [
+     11.0,
+     85.9
+    ],
+    "Jalen Johnson": [
+     26.5,
+     82.3
+    ],
+    "Scottie Barnes": [
+     18.5,
+     84.4
+    ],
+    "Franz Wagner": [
+     22.0,
+     82.8
+    ],
+    "Paolo Banchero": [
+     139.5,
+     72.5
+    ],
+    "Kevin Durant": [
+     15.0,
+     85.0
+    ],
+    "Herbert Jones": [
+     113.5,
+     73.5
+    ],
+    "Kon Knueppel": [
+     80.0,
+     75.6
+    ],
+    "Cooper Flagg": [
+     73.0,
+     76.3
+    ],
+    "LeBron James": [
+     26.5,
+     82.3
+    ]
+   }
+  },
+  "KAU": {
+   "n900": 303,
+   "JW_rank": 10.5,
+   "JW_ovr": 87.0,
+   "seg_resid_vs_T6fixed": -1.2210867929640117,
+   "moved10_top100_vs_0210a": 22,
+   "key": {
+    "Jalen Williams": [
+     10.5,
+     87.0
+    ],
+    "Shai Gilgeous-Alexander": [
+     1.0,
+     106.6
+    ],
+    "Nikola Jokić": [
+     2.0,
+     103.7
+    ],
+    "Victor Wembanyama": [
+     3.0,
+     101.5
+    ],
+    "Anthony Edwards": [
+     9.0,
+     87.6
+    ],
+    "Jalen Johnson": [
+     27.5,
+     82.7
+    ],
+    "Scottie Barnes": [
+     23.0,
+     83.5
+    ],
+    "Franz Wagner": [
+     20.0,
+     84.1
+    ],
+    "Paolo Banchero": [
+     148.0,
+     71.9
+    ],
+    "Kevin Durant": [
+     16.0,
+     85.1
+    ],
+    "Herbert Jones": [
+     115.0,
+     73.6
+    ],
+    "Kon Knueppel": [
+     78.0,
+     76.0
+    ],
+    "Cooper Flagg": [
+     64.0,
+     77.6
+    ],
+    "LeBron James": [
+     29.0,
+     82.6
+    ]
+   }
+  },
+  "KRU": {
+   "n900": 303,
+   "JW_rank": 10.0,
+   "JW_ovr": 88.1,
+   "seg_resid_vs_T6fixed": -0.9939414831028826,
+   "moved10_top100_vs_0210a": 47,
+   "key": {
+    "Jalen Williams": [
+     10.0,
+     88.1
+    ],
+    "Shai Gilgeous-Alexander": [
+     1.0,
+     113.3
+    ],
+    "Nikola Jokić": [
+     2.0,
+     109.4
+    ],
+    "Victor Wembanyama": [
+     6.0,
+     97.5
+    ],
+    "Anthony Edwards": [
+     25.5,
+     83.5
+    ],
+    "Jalen Johnson": [
+     53.0,
+     78.5
+    ],
+    "Scottie Barnes": [
+     25.5,
+     83.5
+    ],
+    "Franz Wagner": [
+     11.0,
+     88.0
+    ],
+    "Paolo Banchero": [
+     189.0,
+     68.6
+    ],
+    "Kevin Durant": [
+     14.0,
+     86.5
+    ],
+    "Herbert Jones": [
+     55.5,
+     78.4
+    ],
+    "Kon Knueppel": [
+     50.5,
+     78.7
+    ],
+    "Cooper Flagg": [
+     67.0,
+     77.4
+    ],
+    "LeBron James": [
+     38.0,
+     81.1
+    ]
+   }
+  },
+  "KJU": {
+   "n900": 303,
+   "JW_rank": 10.0,
+   "JW_ovr": 89.0,
+   "seg_resid_vs_T6fixed": -1.1463891608330623,
+   "moved10_top100_vs_0210a": 53,
+   "key": {
+    "Jalen Williams": [
+     10.0,
+     89.0
+    ],
+    "Shai Gilgeous-Alexander": [
+     1.0,
+     112.2
+    ],
+    "Nikola Jokić": [
+     2.0,
+     108.4
+    ],
+    "Victor Wembanyama": [
+     6.0,
+     97.8
+    ],
+    "Anthony Edwards": [
+     20.5,
+     85.4
+    ],
+    "Jalen Johnson": [
+     51.5,
+     79.4
+    ],
+    "Scottie Barnes": [
+     30.0,
+     83.6
+    ],
+    "Franz Wagner": [
+     12.0,
+     88.2
+    ],
+    "Paolo Banchero": [
+     195.0,
+     67.7
+    ],
+    "Kevin Durant": [
+     13.5,
+     88.1
+    ],
+    "Herbert Jones": [
+     55.0,
+     79.1
+    ],
+    "Kon Knueppel": [
+     46.0,
+     79.7
+    ],
+    "Cooper Flagg": [
+     56.0,
+     78.9
+    ],
+    "LeBron James": [
+     42.0,
+     81.2
+    ]
+   }
+  }
+ }
+}

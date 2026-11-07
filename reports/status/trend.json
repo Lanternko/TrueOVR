@@ -1,0 +1,227 @@
+[
+ {
+  "version": "舊版 sim-only",
+  "order": 1,
+  "adopted": true,
+  "rhoNetIn": 0.374,
+  "rhoNetOut": 0.338,
+  "rhoDefOut": 0.183,
+  "rho2k": 0.337
+ },
+ {
+  "version": "v53",
+  "order": 2,
+  "adopted": true,
+  "rhoNetIn": 0.5,
+  "rhoNetOut": 0.425,
+  "rhoDefOut": 0.237,
+  "rho2k": 0.449
+ },
+ {
+  "version": "E2 (v55)",
+  "order": 3,
+  "adopted": true,
+  "rhoNetIn": 0.529,
+  "rhoNetOut": 0.457,
+  "rhoDefOut": 0.245,
+  "rho2k": 0.478
+ },
+ {
+  "version": "F2 (v56)",
+  "order": 4,
+  "adopted": true,
+  "rhoNetIn": 0.57,
+  "rhoNetOut": 0.474,
+  "rhoDefOut": 0.273,
+  "rho2k": 0.488
+ },
+ {
+  "version": "G3 (v57)",
+  "order": 5,
+  "adopted": true,
+  "rhoNetIn": 0.843,
+  "rhoNetOut": 0.555,
+  "rhoDefOut": 0.401,
+  "rho2k": 0.53
+ },
+ {
+  "version": "H1 (v58)",
+  "order": 6,
+  "adopted": true,
+  "rhoNetIn": 0.852,
+  "rhoNetOut": 0.563,
+  "rhoDefOut": 0.391,
+  "rho2k": 0.537
+ },
+ {
+  "version": "card 0.1.1",
+  "order": 7,
+  "adopted": false,
+  "rhoNetIn": 0.868,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.509
+ },
+ {
+  "version": "card 0.1.2",
+  "order": 8,
+  "adopted": true,
+  "rhoNetIn": 0.867,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.518
+ },
+ {
+  "version": "card 0.2.0",
+  "order": 9,
+  "adopted": true,
+  "rhoNetIn": 0.814,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.695
+ },
+ {
+  "version": "card 0.2.1",
+  "order": 10,
+  "adopted": true,
+  "rhoNetIn": 0.828,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.678
+ },
+ {
+  "version": "card 0.2.2",
+  "order": 11,
+  "adopted": true,
+  "rhoNetIn": 0.829,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.681
+ },
+ {
+  "version": "card 0.2.3",
+  "order": 12,
+  "adopted": true,
+  "rhoNetIn": 0.775,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.74
+ },
+ {
+  "version": "card 0.2.4",
+  "order": 13,
+  "adopted": true,
+  "rhoNetIn": 0.746,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.748
+ },
+ {
+  "version": "card 0.2.5",
+  "order": 14,
+  "adopted": true,
+  "rhoNetIn": 0.779,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.738
+ },
+ {
+  "version": "card 0.2.6",
+  "order": 15,
+  "adopted": true,
+  "rhoNetIn": 0.78,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.737
+ },
+ {
+  "version": "card 0.2.7",
+  "order": 16,
+  "adopted": true,
+  "rhoNetIn": 0.779,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.736
+ },
+ {
+  "version": "card 0.2.7a",
+  "order": 17,
+  "adopted": true,
+  "rhoNetIn": 0.779,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.737
+ },
+ {
+  "version": "card 0.2.7b",
+  "order": 18,
+  "adopted": true,
+  "rhoNetIn": 0.779,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.738
+ },
+ {
+  "version": "card 0.2.7c",
+  "order": 19,
+  "adopted": true,
+  "rhoNetIn": 0.728,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.733
+ },
+ {
+  "version": "card 0.2.7d",
+  "order": 20,
+  "adopted": true,
+  "rhoNetIn": 0.779,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": null
+ },
+ {
+  "version": "card 0.2.8",
+  "order": 21,
+  "adopted": true,
+  "rhoNetIn": null,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": null
+ },
+ {
+  "version": "card 0.2.9",
+  "order": 22,
+  "adopted": true,
+  "rhoNetIn": null,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": null
+ },
+ {
+  "version": "B12",
+  "order": 23,
+  "adopted": false,
+  "rhoNetIn": 0.53,
+  "rhoNetOut": 0.455,
+  "rhoDefOut": 0.243,
+  "rho2k": 0.483
+ },
+ {
+  "version": "C1",
+  "order": 24,
+  "adopted": false,
+  "rhoNetIn": 0.531,
+  "rhoNetOut": 0.455,
+  "rhoDefOut": 0.244,
+  "rho2k": 0.483
+ },
+ {
+  "version": "D1",
+  "order": 25,
+  "adopted": false,
+  "rhoNetIn": 0.531,
+  "rhoNetOut": 0.458,
+  "rhoDefOut": 0.247,
+  "rho2k": 0.485
+ }
+]

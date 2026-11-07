@@ -1,0 +1,43 @@
+{
+ "card-0.2.7": {
+  "strict": true,
+  "same": true,
+  "nPre": 4,
+  "nPost": 4,
+  "changedFiles": []
+ },
+ "e111-card027": {
+  "strict": true,
+  "same": true,
+  "nPre": 90,
+  "nPost": 90,
+  "changedFiles": []
+ },
+ "e129-tl-season-step": {
+  "strict": true,
+  "same": true,
+  "nPre": 28,
+  "nPost": 28,
+  "changedFiles": []
+ },
+ "live": {
+  "strict": false,
+  "same": false,
+  "nPre": 69,
+  "nPost": 69,
+  "changedFiles": [
+   "2026-10-29/roster-viewer.html",
+   "logs/daily.log",
+   "publish_state.json",
+   "run_c4_live.py"
+  ]
+ },
+ "v5": {
+  "strict": true,
+  "same": true,
+  "nPre": 463,
+  "nPost": 463,
+  "changedFiles": []
+ },
+ "violation": false
+}

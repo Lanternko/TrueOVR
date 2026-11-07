@@ -1,0 +1,21 @@
+{
+ "a": 1.0,
+ "k": 2,
+ "c": -0.05625,
+ "pace": 0.998125,
+ "rule": "slope of sim FTA/FGA on input FTA/FGA (FGA-weighted, real 2025-26 FGA>=300) closest to 1.00, tie -> larger a",
+ "slopes": {
+  "1": 1.0626430923968258,
+  "0.85": 0.9325568798904065,
+  "0.7": 0.7703612896970711,
+  "0.55": 0.6320133554408045,
+  "0.4": 0.4965324779483624
+ },
+ "players": 150,
+ "seeds": [
+  20261120,
+  20261121
+ ],
+ "cp": "a=1 is B2 itself (engine-e184 a=1 identical to E-166 harness, 435/435 games), so c/pace stay E-166 cal-cp-k2 values; no re-solve run",
+ "written": "2026-11-01, no judging seed (20261200-231) run"
+}

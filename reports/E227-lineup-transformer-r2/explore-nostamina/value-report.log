@@ -1,0 +1,114 @@
+n 276 with card 276
+{'R2-abil~R2-stats': 0.901, 'R2-abil~R2-stats-nost': 0.883, 'R2-stats~R2-stats-nost': 0.974}
+2025-26 卡 OVR {'R2-abil': (0.786, 0.805), 'R2-stats': (0.802, 0.822), 'R2-stats-nost': (0.776, 0.808)} n 276
+v4 卡 OVR（E-225 資料檔，輔助） {'R2-abil': (0.772, 0.785), 'R2-stats': (0.754, 0.77), 'R2-stats-nost': (0.701, 0.736)} n 276
+網站 OVR（2026-11-02） {'R2-abil': (0.777, 0.796), 'R2-stats': (0.78, 0.807), 'R2-stats-nost': (0.75, 0.788)} n 270
+2K26 overall {'R2-abil': (0.617, 0.656), 'R2-stats': (0.528, 0.581), 'R2-stats-nost': (0.493, 0.587)} n 276
+薪水 2025-26（取 log 算 Pearson） {'R2-abil': (0.585, 0.548), 'R2-stats': (0.49, 0.477), 'R2-stats-nost': (0.49, 0.489)} n 204
+BPM 2025-26 {'R2-abil': (0.789, 0.795), 'R2-stats': (0.807, 0.807), 'R2-stats-nost': (0.825, 0.839)} n 275
+RAPM 進攻 2025-26 {'R2-abil': (0.707, 0.723), 'R2-stats': (0.626, 0.652), 'R2-stats-nost': (0.656, 0.704)} n 272
+RAPM 防守 2025-26 {'R2-abil': (0.282, 0.315), 'R2-stats': (0.402, 0.433), 'R2-stats-nost': (0.351, 0.386)} n 272
+TOP20 R2-stats
+  Victor Wembanyama        min   1845 card 101.3 #  4 | abil:  1( 8.88) stats:  1( 8.01) stats-nost:  2( 8.52)
+  Giannis Antetokounmpo    min   1039 card  99.0 #  5 | abil:  3( 6.75) stats:  2( 7.14) stats-nost:  1( 9.47)
+  Luka Dončić              min   2289 card 101.8 #  3 | abil:  2( 7.99) stats:  3( 6.98) stats-nost:  5( 7.25)
+  Shai Gilgeous-Alexander  min   2222 card 108.5 #  1 | abil:  5( 5.96) stats:  4( 6.64) stats-nost:  4( 7.39)
+  Nikola Jokić             min   2265 card 104.4 #  2 | abil: 14( 4.65) stats:  5( 6.59) stats-nost:  6( 6.83)
+  Kawhi Leonard            min   2049 card  98.4 #  6 | abil:  6( 5.86) stats:  6( 6.34) stats-nost:  3( 7.62)
+  Scottie Barnes           min   2681 card  89.4 # 29 | abil: 11( 5.05) stats:  7( 5.62) stats-nost: 15( 4.71)
+  Jarrett Allen            min   1493 card  85.5 # 41 | abil: 13( 4.73) stats:  8( 5.41) stats-nost: 12( 4.86)
+  Donovan Mitchell         min   2316 card  96.7 #  7 | abil:  8( 5.57) stats:  9( 5.39) stats-nost:  8( 5.74)
+  Jalen Duren              min   1976 card  81.5 # 61 | abil: 19( 4.17) stats: 10( 5.31) stats-nost: 11( 5.08)
+  Isaiah Hartenstein       min   1117 card  84.7 # 48 | abil: 45( 2.55) stats: 11( 5.07) stats-nost: 13( 4.81)
+  Stephen Curry            min   1300 card  94.2 # 10 | abil: 16( 4.41) stats: 12( 4.97) stats-nost:  9( 5.57)
+  Jimmy Butler III         min   1150 card  92.2 # 17 | abil: 17( 4.25) stats: 13( 4.81) stats-nost:  7( 5.83)
+  Anthony Edwards          min   2137 card  95.0 #  8 | abil: 12( 5.01) stats: 14( 4.63) stats-nost: 10( 5.12)
+  Karl-Anthony Towns       min   2285 card  89.7 # 26 | abil: 44( 2.55) stats: 15( 4.53) stats-nost: 19( 4.26)
+  Tyrese Maxey             min   2618 card  90.4 # 21 | abil: 24( 3.64) stats: 16( 4.43) stats-nost: 17( 4.31)
+  Kevin Porter Jr.         min   1261 card  92.9 # 14 | abil: 86( 1.19) stats: 17( 4.38) stats-nost: 29( 3.48)
+  Cade Cunningham          min   2172 card  93.8 # 12 | abil: 10( 5.10) stats: 18( 4.28) stats-nost: 18( 4.29)
+  Mitchell Robinson        min   1157 card  75.8 #115 | abil: 64( 1.74) stats: 19( 4.23) stats-nost: 21( 4.09)
+  Chet Holmgren            min   1967 card  93.4 # 13 | abil: 21( 3.86) stats: 20( 4.20) stats-nost: 20( 4.11)
+OVER
+  Paolo Banchero           min   2381 card  76.8 #102 | abil:113( 0.65) stats:230(-2.69) stats-nost:235(-2.79)
+  Myles Turner             min   1891 card  76.1 #111 | abil:225(-2.30) stats:225(-2.47) stats-nost:244(-3.12)
+  Landry Shamet            min   1171 card  75.6 #119 | abil:212(-1.77) stats:224(-2.45) stats-nost:228(-2.49)
+  De'Anthony Melton        min   1102 card  76.7 #104 | abil:248(-3.30) stats:206(-1.77) stats-nost:185(-1.32)
+  Darius Garland           min   1277 card  81.1 # 65 | abil:134( 0.17) stats:164(-0.64) stats-nost:167(-0.84)
+  Aaron Wiggins            min   1402 card  71.2 #159 | abil:265(-5.03) stats:253(-4.38) stats-nost:250(-3.51)
+  Jaylin Williams          min   1266 card  85.0 # 45 | abil:187(-1.03) stats:139( 0.04) stats-nost:117( 0.39)
+  Santi Aldama             min   1162 card  77.1 #101 | abil:164(-0.56) stats:194(-1.45) stats-nost:204(-1.77)
+  De'Andre Hunter          min   1154 card  72.8 #146 | abil:222(-2.16) stats:238(-3.29) stats-nost:245(-3.28)
+  Danny Wolf               min   1131 card  69.9 #172 | abil:252(-3.67) stats:261(-4.81) stats-nost:261(-4.20)
+  De'Aaron Fox             min   2194 card  90.4 # 21 | abil: 96( 1.01) stats:107( 0.93) stats-nost:106( 0.56)
+  Zach LaVine              min   1224 card  75.5 #120 | abil:168(-0.64) stats:205(-1.77) stats-nost:214(-1.94)
+  Caris LeVert             min   1154 card  70.1 #165 | abil:257(-4.19) stats:249(-3.75) stats-nost:229(-2.52)
+  Jaren Jackson Jr.        min   1418 card  84.7 # 48 | abil:154(-0.40) stats:131( 0.20) stats-nost:163(-0.71)
+  Herbert Jones            min   1588 card  75.0 #128 | abil:224(-2.25) stats:210(-1.87) stats-nost:243(-3.00)
+UNDER
+  Kel'el Ware              min   1704 card  63.5 #208 | abil:100( 0.93) stats: 66( 2.08) stats-nost: 52( 2.53)
+  Keldon Johnson           min   1898 card  68.3 #181 | abil: 53( 2.16) stats: 40( 2.93) stats-nost: 35( 3.19)
+  Luka Garza               min   1097 card  66.5 #196 | abil:144(-0.28) stats: 59( 2.33) stats-nost: 60( 2.12)
+  Spencer Jones            min   1417 card  59.8 #235 | abil:159(-0.47) stats:105( 0.97) stats-nost:128( 0.19)
+  Collin Murray-Boyles     min   1246 card  70.4 #163 | abil: 25( 3.59) stats: 38( 3.04) stats-nost: 48( 2.76)
+  Ryan Kalkbrenner         min   1479 card  64.3 #204 | abil:165(-0.60) stats: 84( 1.37) stats-nost: 80( 1.26)
+  Donovan Clingan          min   2094 card  67.0 #193 | abil: 41( 2.67) stats: 74( 1.76) stats-nost: 97( 0.82)
+  Marcus Smart             min   1769 card  68.1 #182 | abil:175(-0.75) stats: 65( 2.10) stats-nost:108( 0.53)
+  Gradey Dick              min   1067 card  55.8 #250 | abil:190(-1.09) stats:134( 0.12) stats-nost:129( 0.12)
+  Dru Smith                min   1141 card  74.7 #133 | abil:119( 0.47) stats: 22( 3.95) stats-nost: 31( 3.35)
+  Julius Randle            min   2610 card  71.6 #156 | abil: 36( 2.82) stats: 47( 2.70) stats-nost: 53( 2.46)
+  Jarred Vanderbilt        min   1128 card  60.2 #233 | abil:103( 0.87) stats:126( 0.27) stats-nost:105( 0.59)
+  Jordan Walsh             min   1197 card  62.3 #218 | abil:105( 0.83) stats:112( 0.76) stats-nost: 99( 0.73)
+  Keyonte George           min   1786 card  67.2 #190 | abil: 57( 2.07) stats: 86( 1.34) stats-nost: 85( 1.12)
+  Jerami Grant             min   1695 card  54.2 #257 | abil:149(-0.34) stats:153(-0.42) stats-nost:147(-0.42)
+WINGS
+  Dean Wade                min   1318 card  76.8 #102 | abil:216(-2.09) stats:168(-0.81) stats-nost:176(-1.00)
+  Tari Eason               min   1549 card  74.9 #130 | abil:229(-2.42) stats:182(-1.14) stats-nost:188(-1.41)
+  Luguentz Dort            min   1827 card  64.1 #205 | abil:129( 0.24) stats:178(-1.04) stats-nost:201(-1.72)
+  Herbert Jones            min   1588 card  75.0 #128 | abil:224(-2.25) stats:210(-1.87) stats-nost:243(-3.00)
+   Alex Caruso 不在母體（2025-26 上場 <1000 分鐘或無卡 OVR）
+  Derrick White            min   2625 card  89.8 # 25 | abil: 47( 2.40) stats: 62( 2.15) stats-nost: 65( 1.93)
+  OG Anunoby               min   2184 card  89.1 # 32 | abil: 61( 1.93) stats: 23( 3.93) stats-nost: 38( 3.06)
+  Dillon Brooks            min   1702 card  71.7 #154 | abil:223(-2.18) stats:202(-1.69) stats-nost:218(-2.03)
+  Draymond Green           min   1844 card  75.0 #128 | abil: 75( 1.40) stats:197(-1.52) stats-nost:242(-2.98)
+  Jalen Suggs              min   1510 card  87.7 # 37 | abil: 89( 1.08) stats: 31( 3.43) stats-nost: 45( 2.82)
+NOST TOP20
+   Giannis Antetokounmpo 203507 1 2
+   Victor Wembanyama 1641705 2 1
+   Kawhi Leonard 202695 3 6
+   Shai Gilgeous-Alexander 1628983 4 4
+   Luka Dončić 1629029 5 3
+   Nikola Jokić 203999 6 5
+   Jimmy Butler III 202710 7 13
+   Donovan Mitchell 1628378 8 9
+   Stephen Curry 201939 9 12
+   Anthony Edwards 1630162 10 14
+   Jalen Duren 1631105 11 10
+   Jarrett Allen 1628386 12 8
+   Isaiah Hartenstein 1628392 13 11
+   Kevin Durant 201142 14 25
+   Scottie Barnes 1630567 15 7
+   Day'Ron Sharpe 1630549 16 26
+   Tyrese Maxey 1630178 17 16
+   Cade Cunningham 1630595 18 18
+   Karl-Anthony Towns 1626157 19 15
+   Chet Holmgren 1631096 20 20
+RISERS(nost better)
+   Marvin Bagley III 1628963 117 -> 70
+   Jordan Miller 1641757 173 -> 130
+   Simone Fontecchio 1631323 201 -> 161
+   Daniss Jenkins 1642450 227 -> 187
+   Brandon Williams 1630314 228 -> 191
+   Corey Kispert 1630557 221 -> 184
+   Brice Sensabaugh 1641729 223 -> 186
+   Malik Monk 1628370 229 -> 193
+FALLERS
+   Toumani Camara 1641739 113 -> 175
+   Jabari Smith Jr. 1631095 165 -> 221
+   Onyeka Okongwu 1630168 150 -> 202
+   Kris Dunn 1627739 121 -> 166
+   Dyson Daniels 1630700 77 -> 122
+   Draymond Green 203110 197 -> 242
+   Marcus Smart 203935 65 -> 108
+   Jaden McDaniels 1630183 94 -> 136
+spearman nost~stats {'R2-abil~R2-stats': 0.901, 'R2-abil~R2-stats-nost': 0.883, 'R2-stats~R2-stats-nost': 0.974}

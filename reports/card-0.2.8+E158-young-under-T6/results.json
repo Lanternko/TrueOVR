@@ -1,0 +1,1269 @@
+{
+ "c0": {
+  "2022-23": {
+   "K_sha": "1e2bd557bab0f51067171672a8d705c5a6b6aa2b9b15b25fb9c759bf6a2bfa55",
+   "K6_sha": "1e2bd557bab0f51067171672a8d705c5a6b6aa2b9b15b25fb9c759bf6a2bfa55",
+   "same": true
+  },
+  "2023-24": {
+   "K_sha": "e7f860c22bd75df9af7441f1065f0c78d52e56a28601796ed3bddde5dea59d66",
+   "K6_sha": "e7f860c22bd75df9af7441f1065f0c78d52e56a28601796ed3bddde5dea59d66",
+   "same": true
+  },
+  "2024-25": {
+   "K_sha": "18cbda15ee82e7288c82225bc7a2d239f3a0d7c60e4fd89eda5ba7983cd1edf2",
+   "K6_sha": "18cbda15ee82e7288c82225bc7a2d239f3a0d7c60e4fd89eda5ba7983cd1edf2",
+   "same": true
+  },
+  "2025-26": {
+   "K_sha": "e920a840e55d7d32cb378100b2ea47b8d87a1d27587d934ea1cc8b8ec981278e",
+   "K6_sha": "e920a840e55d7d32cb378100b2ea47b8d87a1d27587d934ea1cc8b8ec981278e",
+   "same": true,
+   "card028_sha": "e920a840e55d7d32cb378100b2ea47b8d87a1d27587d934ea1cc8b8ec981278e",
+   "same_card028": true
+  }
+ },
+ "c0_pass": true,
+ "seed": 20261102,
+ "draws": 2000,
+ "n_eval": {
+  "2022-23": 271,
+  "2023-24": 303,
+  "2024-25": 346,
+  "2025-26": 379
+ },
+ "n_young": {
+  "2022-23": 83,
+  "2023-24": 92,
+  "2024-25": 97,
+  "2025-26": 102
+ },
+ "per_season_all": {
+  "2022-23": {
+   "K": {
+    "n": 271,
+    "C": 0.7608622446641983,
+    "n_sal": 180,
+    "sal": 0.7593898692815327,
+    "n_twok": 269,
+    "twok": 0.7437215850758118,
+    "n_rapm": 262,
+    "rapm": 0.390424932537596,
+    "n_epm": 262,
+    "epm": 0.6601107580974224
+   },
+   "Y1": {
+    "n": 271,
+    "C": 0.7715254669904519,
+    "n_sal": 180,
+    "sal": 0.7749533263095698,
+    "n_twok": 269,
+    "twok": 0.7356095425959719,
+    "n_rapm": 262,
+    "rapm": 0.4028078784987223,
+    "n_epm": 262,
+    "epm": 0.6892040042011104
+   },
+   "Y0": {
+    "n": 271,
+    "C": 0.7595358741374719,
+    "n_sal": 180,
+    "sal": 0.7515600836082986,
+    "n_twok": 269,
+    "twok": 0.7431824471703152,
+    "n_rapm": 262,
+    "rapm": 0.3920500760859127,
+    "n_epm": 262,
+    "epm": 0.6729804408908706
+   }
+  },
+  "2023-24": {
+   "K": {
+    "n": 303,
+    "C": 0.725046096225935,
+    "n_sal": 205,
+    "sal": 0.6691503868578662,
+    "n_twok": 303,
+    "twok": 0.6715987817012967,
+    "n_rapm": 286,
+    "rapm": 0.3480331166201705,
+    "n_epm": 286,
+    "epm": 0.6624761820592416
+   },
+   "Y1": {
+    "n": 303,
+    "C": 0.7554442631895666,
+    "n_sal": 205,
+    "sal": 0.7139966788348208,
+    "n_twok": 303,
+    "twok": 0.7116793086033465,
+    "n_rapm": 286,
+    "rapm": 0.336186624165175,
+    "n_epm": 286,
+    "epm": 0.6676451650565679
+   },
+   "Y0": {
+    "n": 303,
+    "C": 0.7171079331782634,
+    "n_sal": 205,
+    "sal": 0.6507899894769024,
+    "n_twok": 303,
+    "twok": 0.673778234434839,
+    "n_rapm": 286,
+    "rapm": 0.33433705511183054,
+    "n_epm": 286,
+    "epm": 0.6670279724017866
+   }
+  },
+  "2024-25": {
+   "K": {
+    "n": 346,
+    "C": 0.7554690689724584,
+    "n_sal": 240,
+    "sal": 0.6685334236025828,
+    "n_twok": 345,
+    "twok": 0.7087057385916333,
+    "n_rapm": 319,
+    "rapm": 0.4313417681195163,
+    "n_epm": 319,
+    "epm": 0.6975791669451714
+   },
+   "Y1": {
+    "n": 346,
+    "C": 0.7981557806044245,
+    "n_sal": 240,
+    "sal": 0.7077720397645334,
+    "n_twok": 345,
+    "twok": 0.7483175297362631,
+    "n_rapm": 319,
+    "rapm": 0.4470152475829913,
+    "n_epm": 319,
+    "epm": 0.7309673447431151
+   },
+   "Y0": {
+    "n": 346,
+    "C": 0.7669237763509201,
+    "n_sal": 240,
+    "sal": 0.6784079640634368,
+    "n_twok": 345,
+    "twok": 0.708984185187726,
+    "n_rapm": 319,
+    "rapm": 0.4351613480780051,
+    "n_epm": 319,
+    "epm": 0.7294729110721682
+   }
+  },
+  "2025-26": {
+   "K": {
+    "n": 379,
+    "C": 0.6923600728520721,
+    "n_sal": 262,
+    "sal": 0.5963213183760325,
+    "n_twok": 376,
+    "twok": 0.7417942967308295,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "Y1": {
+    "n": 379,
+    "C": 0.7016393478686893,
+    "n_sal": 262,
+    "sal": 0.6356858175662262,
+    "n_twok": 376,
+    "twok": 0.7441792189357227,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "Y0": {
+    "n": 379,
+    "C": 0.7142304544213195,
+    "n_sal": 262,
+    "sal": 0.5919078466615914,
+    "n_twok": 376,
+    "twok": 0.7684950977336678,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   }
+  }
+ },
+ "per_season_young": {
+  "2022-23": {
+   "K": {
+    "n": 83,
+    "C": 0.5383941270620006,
+    "n_sal": 16,
+    "sal": 0.2670728971096712,
+    "n_twok": 82,
+    "twok": 0.4805896661412551,
+    "n_rapm": 80,
+    "rapm": 0.31559577120183435,
+    "n_epm": 80,
+    "epm": 0.5430155420043744
+   },
+   "Y1": {
+    "n": 83,
+    "C": 0.5653321587739494,
+    "n_sal": 16,
+    "sal": 0.2581704672060155,
+    "n_twok": 82,
+    "twok": 0.5054435237115548,
+    "n_rapm": 80,
+    "rapm": 0.2932326867295222,
+    "n_epm": 80,
+    "epm": 0.6102362448140218
+   },
+   "Y0": {
+    "n": 83,
+    "C": 0.6582350247814662,
+    "n_sal": 16,
+    "sal": 0.2659805947583712,
+    "n_twok": 82,
+    "twok": 0.6331389751005385,
+    "n_rapm": 80,
+    "rapm": 0.2776748886927293,
+    "n_epm": 80,
+    "epm": 0.6302278722383082
+   }
+  },
+  "2023-24": {
+   "K": {
+    "n": 92,
+    "C": 0.6649506589357032,
+    "n_sal": 14,
+    "sal": 0.43454463431804485,
+    "n_twok": 92,
+    "twok": 0.5951273636538404,
+    "n_rapm": 85,
+    "rapm": 0.46582530885330753,
+    "n_epm": 85,
+    "epm": 0.6048693264676083
+   },
+   "Y1": {
+    "n": 92,
+    "C": 0.7288206782105168,
+    "n_sal": 14,
+    "sal": 0.642353124640728,
+    "n_twok": 92,
+    "twok": 0.6579602970339357,
+    "n_rapm": 85,
+    "rapm": 0.48935619284701687,
+    "n_epm": 85,
+    "epm": 0.6850732636058758
+   },
+   "Y0": {
+    "n": 92,
+    "C": 0.7623218343125796,
+    "n_sal": 14,
+    "sal": 0.7198083990780209,
+    "n_twok": 92,
+    "twok": 0.715075937286277,
+    "n_rapm": 85,
+    "rapm": 0.4602140035785816,
+    "n_epm": 85,
+    "epm": 0.6701910400338339
+   }
+  },
+  "2024-25": {
+   "K": {
+    "n": 97,
+    "C": 0.5398592296199402,
+    "n_sal": 20,
+    "sal": -0.08236368749135525,
+    "n_twok": 96,
+    "twok": 0.40955903472465893,
+    "n_rapm": 92,
+    "rapm": 0.5002157798958013,
+    "n_epm": 92,
+    "epm": 0.6138545956277258
+   },
+   "Y1": {
+    "n": 97,
+    "C": 0.708443740729741,
+    "n_sal": 20,
+    "sal": 0.07844486194661517,
+    "n_twok": 96,
+    "twok": 0.6099985454959027,
+    "n_rapm": 92,
+    "rapm": 0.5553119431749154,
+    "n_epm": 92,
+    "epm": 0.7145835188663261
+   },
+   "Y0": {
+    "n": 97,
+    "C": 0.6415618491536534,
+    "n_sal": 20,
+    "sal": 0.0977144824246418,
+    "n_twok": 96,
+    "twok": 0.5170913312472696,
+    "n_rapm": 92,
+    "rapm": 0.5431586904113138,
+    "n_epm": 92,
+    "epm": 0.7332025795364983
+   }
+  },
+  "2025-26": {
+   "K": {
+    "n": 102,
+    "C": 0.44361619588481105,
+    "n_sal": 26,
+    "sal": 0.24535188305110694,
+    "n_twok": 102,
+    "twok": 0.45006958264204544,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "Y1": {
+    "n": 102,
+    "C": 0.5681459359358157,
+    "n_sal": 26,
+    "sal": 0.44947334398350236,
+    "n_twok": 102,
+    "twok": 0.562456017860601,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "Y0": {
+    "n": 102,
+    "C": 0.6624224287906432,
+    "n_sal": 26,
+    "sal": 0.4666070938539968,
+    "n_twok": 102,
+    "twok": 0.6666654826223711,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   }
+  }
+ },
+ "cand": {
+  "Y1": {
+   "young_diff": {
+    "C": 0.0899433675846518,
+    "sal": 0.11966101949636963,
+    "twok": 0.10022533046582495,
+    "rapm": 0.02054445682240783,
+    "epm": 0.08350992925866055
+   },
+   "all_diff": {
+    "C": 0.02920650007071238,
+    "sal": 0.03425948799870479,
+    "twok": 0.025766988188812893,
+    "rapm": 0.0056010091678603165,
+    "epm": 0.02278153210374349
+   },
+   "young_boot": {
+    "lower90": 0.02359842090971548,
+    "upper90": 0.1522012404605022,
+    "draws": 2000,
+    "seed": 20261102
+   },
+   "a": true,
+   "a_diff_ge_0.01": true,
+   "a_lower_gt_-0.02": true,
+   "b": true,
+   "c": {
+    "sal": true,
+    "twok": true,
+    "rapm": true,
+    "epm": true
+   },
+   "pass": true
+  },
+  "Y0": {
+   "young_diff": {
+    "C": 0.10577241448587671,
+    "sal": 0.1515555853467761,
+    "twok": 0.12543486138894827,
+    "rapm": 0.0017125144682764279,
+    "epm": 0.09147605677607373
+   },
+   "all_diff": {
+    "C": 0.0013028466703917832,
+    "sal": -0.004485365077879626,
+    "twok": 0.0006667504442057838,
+    "rapm": -0.0026214993944271444,
+    "epm": 0.017125459407570074
+   },
+   "young_boot": {
+    "lower90": 0.03481465643639426,
+    "upper90": 0.17644837836322136,
+    "draws": 2000,
+    "seed": 20261102
+   },
+   "a": true,
+   "a_diff_ge_0.01": true,
+   "a_lower_gt_-0.02": true,
+   "b": true,
+   "c": {
+    "sal": true,
+    "twok": true,
+    "rapm": true,
+    "epm": true
+   },
+   "pass": true
+  }
+ },
+ "verdict": "Y0",
+ "y2526": {
+  "K": {
+   "all": {
+    "n": 379,
+    "C": 0.6923600728520721,
+    "n_sal": 262,
+    "sal": 0.5963213183760325,
+    "n_twok": 376,
+    "twok": 0.7417942967308295,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "young": {
+    "n": 102,
+    "C": 0.44361619588481105,
+    "n_sal": 26,
+    "sal": 0.24535188305110694,
+    "n_twok": 102,
+    "twok": 0.45006958264204544,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   }
+  },
+  "Y1": {
+   "all": {
+    "n": 379,
+    "C": 0.7016393478686893,
+    "n_sal": 262,
+    "sal": 0.6356858175662262,
+    "n_twok": 376,
+    "twok": 0.7441792189357227,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "young": {
+    "n": 102,
+    "C": 0.5681459359358157,
+    "n_sal": 26,
+    "sal": 0.44947334398350236,
+    "n_twok": 102,
+    "twok": 0.562456017860601,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   }
+  },
+  "Y0": {
+   "all": {
+    "n": 379,
+    "C": 0.7142304544213195,
+    "n_sal": 262,
+    "sal": 0.5919078466615914,
+    "n_twok": 376,
+    "twok": 0.7684950977336678,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "young": {
+    "n": 102,
+    "C": 0.6624224287906432,
+    "n_sal": 26,
+    "sal": 0.4666070938539968,
+    "n_twok": 102,
+    "twok": 0.6666654826223711,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   }
+  }
+ },
+ "coef_ydL_K": -0.5852281237383024,
+ "top5_ydL_discount": [
+  {
+   "name": "Keyonte George",
+   "raw_discount": -2.065033428720828
+  },
+  {
+   "name": "Kyshawn George",
+   "raw_discount": -1.9900549003475276
+  },
+  {
+   "name": "Bub Carrington",
+   "raw_discount": -1.9643640699178855
+  },
+  {
+   "name": "Ace Bailey",
+   "raw_discount": -1.962633904126825
+  },
+  {
+   "name": "Alex Sarr",
+   "raw_discount": -1.9538593071942334
+  }
+ ],
+ "key_players": {
+  "Cooper Flagg": {
+   "K": {
+    "rank": 180,
+    "ovr": 70.6
+   },
+   "Y1": {
+    "rank": 93,
+    "ovr": 76.0
+   },
+   "Y0": {
+    "rank": 75,
+    "ovr": 77.6
+   }
+  },
+  "Kon Knueppel": {
+   "K": {
+    "rank": 32,
+    "ovr": 83.5
+   },
+   "Y1": {
+    "rank": 86,
+    "ovr": 76.9
+   },
+   "Y0": {
+    "rank": 82,
+    "ovr": 77.0
+   }
+  },
+  "Paolo Banchero": {
+   "K": {
+    "rank": 63,
+    "ovr": 79.8
+   },
+   "Y1": {
+    "rank": 139,
+    "ovr": 73.1
+   },
+   "Y0": {
+    "rank": 141,
+    "ovr": 72.7
+   }
+  },
+  "Dylan Harper": {
+   "K": {
+    "rank": 83,
+    "ovr": 77.3
+   },
+   "Y1": {
+    "rank": 168,
+    "ovr": 71.7
+   },
+   "Y0": {
+    "rank": 147,
+    "ovr": 72.5
+   }
+  },
+  "Stephon Castle": {
+   "K": {
+    "rank": 67,
+    "ovr": 79.1
+   },
+   "Y1": {
+    "rank": 146,
+    "ovr": 72.7
+   },
+   "Y0": {
+    "rank": 140,
+    "ovr": 72.7
+   }
+  },
+  "Jaylen Wells": {
+   "K": {
+    "rank": 342,
+    "ovr": 54.3
+   },
+   "Y1": {
+    "rank": 295,
+    "ovr": 58.1
+   },
+   "Y0": {
+    "rank": 249,
+    "ovr": 63.2
+   }
+  },
+  "Anthony Edwards": {
+   "K": {
+    "rank": 10,
+    "ovr": 89.0
+   },
+   "Y1": {
+    "rank": 12,
+    "ovr": 89.0
+   },
+   "Y0": {
+    "rank": 9,
+    "ovr": 88.7
+   }
+  },
+  "Brandin Podziemski": {
+   "K": {
+    "rank": 24,
+    "ovr": 85.0
+   },
+   "Y1": {
+    "rank": 64,
+    "ovr": 78.7
+   },
+   "Y0": {
+    "rank": 59,
+    "ovr": 79.2
+   }
+  },
+  "Victor Wembanyama": {
+   "K": {
+    "rank": 2,
+    "ovr": 111.5
+   },
+   "Y1": {
+    "rank": 2,
+    "ovr": 105.1
+   },
+   "Y0": {
+    "rank": 2,
+    "ovr": 106.4
+   }
+  },
+  "Shai Gilgeous-Alexander": {
+   "K": {
+    "rank": 1,
+    "ovr": 118.5
+   },
+   "Y1": {
+    "rank": 1,
+    "ovr": 118.4
+   },
+   "Y0": {
+    "rank": 1,
+    "ovr": 119.4
+   }
+  },
+  "Nikola Jokić": {
+   "K": {
+    "rank": 7,
+    "ovr": 94.8
+   },
+   "Y1": {
+    "rank": 6,
+    "ovr": 98.9
+   },
+   "Y0": {
+    "rank": 6,
+    "ovr": 95.2
+   }
+  },
+  "Keyonte George": {
+   "K": {
+    "rank": 365,
+    "ovr": 45.8
+   },
+   "Y1": {
+    "rank": 312,
+    "ovr": 56.9
+   },
+   "Y0": {
+    "rank": 254,
+    "ovr": 62.5
+   }
+  },
+  "Kyshawn George": {
+   "K": {
+    "rank": 337,
+    "ovr": 55.0
+   },
+   "Y1": {
+    "rank": 189,
+    "ovr": 70.1
+   },
+   "Y0": {
+    "rank": 145,
+    "ovr": 72.7
+   }
+  },
+  "Bub Carrington": {
+   "K": {
+    "rank": 378,
+    "ovr": 34.9
+   },
+   "Y1": {
+    "rank": 378,
+    "ovr": 34.8
+   },
+   "Y0": {
+    "rank": 371,
+    "ovr": 42.0
+   }
+  },
+  "Ace Bailey": {
+   "K": {
+    "rank": 364,
+    "ovr": 48.0
+   },
+   "Y1": {
+    "rank": 310,
+    "ovr": 57.2
+   },
+   "Y0": {
+    "rank": 248,
+    "ovr": 63.3
+   }
+  },
+  "Alex Sarr": {
+   "K": {
+    "rank": 351,
+    "ovr": 51.9
+   },
+   "Y1": {
+    "rank": 250,
+    "ovr": 63.6
+   },
+   "Y0": {
+    "rank": 198,
+    "ovr": 69.5
+   }
+  }
+ },
+ "usage_coef_last": {
+  "K": [
+   -0.6096406250310862,
+   0.5388656980146018,
+   -0.29414505169463356,
+   1.8854386460000578,
+   0.583392819442194,
+   0.5852314819063065,
+   -0.03296291336478935,
+   -0.25859368142372086,
+   -0.5852281237383024
+  ],
+  "Y1": [
+   1.0368597008409182,
+   1.4657840007702883,
+   -0.30300302795105694,
+   0.7419275390204829,
+   0.7530734135430365,
+   -0.36867748712676,
+   -0.3374581171240194,
+   0.13937983154231726,
+   -0.19401650782245716
+  ],
+  "Y0": [
+   -0.14005389326417778,
+   0.6232894215985046,
+   -0.575818595249783,
+   2.2951934658397626,
+   0.15296390294652107,
+   0.5515720757532341,
+   -0.0828239931141059,
+   -0.2511292655316102
+  ]
+ },
+ "top20": {
+  "K": [
+   "Shai Gilgeous-Alexander",
+   "Victor Wembanyama",
+   "Kawhi Leonard",
+   "Giannis Antetokounmpo",
+   "Luka Dončić",
+   "Donovan Mitchell",
+   "Nikola Jokić",
+   "Jayson Tatum",
+   "Amen Thompson",
+   "Anthony Edwards",
+   "Jamal Murray",
+   "Cade Cunningham",
+   "Scottie Barnes",
+   "Jimmy Butler III",
+   "Evan Mobley",
+   "Tyrese Maxey",
+   "Stephen Curry",
+   "Chet Holmgren",
+   "Michael Porter Jr.",
+   "Jalen Williams"
+  ],
+  "Y1": [
+   "Shai Gilgeous-Alexander",
+   "Victor Wembanyama",
+   "Kawhi Leonard",
+   "Giannis Antetokounmpo",
+   "Luka Dončić",
+   "Nikola Jokić",
+   "Donovan Mitchell",
+   "Jayson Tatum",
+   "Jimmy Butler III",
+   "Stephen Curry",
+   "Kevin Durant",
+   "Anthony Edwards",
+   "LeBron James",
+   "Jamal Murray",
+   "Cade Cunningham",
+   "Anthony Davis",
+   "Scottie Barnes",
+   "Joel Embiid",
+   "Tyrese Maxey",
+   "Evan Mobley"
+  ],
+  "Y0": [
+   "Shai Gilgeous-Alexander",
+   "Victor Wembanyama",
+   "Kawhi Leonard",
+   "Giannis Antetokounmpo",
+   "Luka Dončić",
+   "Nikola Jokić",
+   "Donovan Mitchell",
+   "Jayson Tatum",
+   "Anthony Edwards",
+   "Jimmy Butler III",
+   "Cade Cunningham",
+   "Scottie Barnes",
+   "Jamal Murray",
+   "Stephen Curry",
+   "Evan Mobley",
+   "Chet Holmgren",
+   "Jalen Williams",
+   "Tyrese Maxey",
+   "Michael Porter Jr.",
+   "Kevin Durant"
+  ]
+ },
+ "top20_changes": {
+  "Y1": {
+   "in": [
+    "Kevin Durant",
+    "LeBron James",
+    "Anthony Davis",
+    "Joel Embiid"
+   ],
+   "out": [
+    "Amen Thompson",
+    "Chet Holmgren",
+    "Michael Porter Jr.",
+    "Jalen Williams"
+   ]
+  },
+  "Y0": {
+   "in": [
+    "Kevin Durant"
+   ],
+   "out": [
+    "Amen Thompson"
+   ]
+  }
+ },
+ "moved10_top300": {
+  "Y1": 148,
+  "Y0": 160
+ },
+ "young_top30": {
+  "K": [
+   "Victor Wembanyama",
+   "Amen Thompson",
+   "Alperen Sengun",
+   "Brandin Podziemski",
+   "Ausar Thompson",
+   "Jalen Duren",
+   "Kon Knueppel",
+   "Cason Wallace",
+   "VJ Edgecombe",
+   "Dyson Daniels",
+   "Paolo Banchero",
+   "Brandon Miller",
+   "Jabari Smith Jr.",
+   "Stephon Castle",
+   "Ronald Holland II",
+   "Dylan Harper",
+   "Shaedon Sharpe",
+   "Oso Ighodaro",
+   "Anthony Black",
+   "Collin Murray-Boyles",
+   "Donovan Clingan",
+   "Kel'el Ware",
+   "Ryan Rollins",
+   "Reed Sheppard",
+   "Jaylon Tyson",
+   "Ja'Kobe Walter",
+   "Peyton Watson",
+   "Mouhamed Gueye",
+   "Dominick Barlow",
+   "Sion James"
+  ],
+  "Y1": [
+   "Victor Wembanyama",
+   "Amen Thompson",
+   "Ausar Thompson",
+   "Ryan Rollins",
+   "Brandin Podziemski",
+   "Alperen Sengun",
+   "Jalen Duren",
+   "Kon Knueppel",
+   "Cason Wallace",
+   "Cooper Flagg",
+   "VJ Edgecombe",
+   "Dyson Daniels",
+   "Javon Small",
+   "Josh Giddey",
+   "Brandon Miller",
+   "Paolo Banchero",
+   "Ronald Holland II",
+   "Stephon Castle",
+   "Jabari Smith Jr.",
+   "Dylan Harper",
+   "Oso Ighodaro",
+   "Collin Murray-Boyles",
+   "Shaedon Sharpe",
+   "Anthony Black",
+   "Mouhamed Gueye",
+   "Kyshawn George",
+   "Josh Minott",
+   "Kel'el Ware",
+   "Donovan Clingan",
+   "Ja'Kobe Walter"
+  ],
+  "Y0": [
+   "Victor Wembanyama",
+   "Amen Thompson",
+   "Ryan Rollins",
+   "Ausar Thompson",
+   "Brandin Podziemski",
+   "Alperen Sengun",
+   "Jalen Duren",
+   "Cooper Flagg",
+   "Cason Wallace",
+   "Kon Knueppel",
+   "VJ Edgecombe",
+   "Dyson Daniels",
+   "Josh Giddey",
+   "Ronald Holland II",
+   "Brandon Miller",
+   "Stephon Castle",
+   "Paolo Banchero",
+   "Kyshawn George",
+   "Dylan Harper",
+   "Oso Ighodaro",
+   "Javon Small",
+   "Collin Murray-Boyles",
+   "Jabari Smith Jr.",
+   "Shaedon Sharpe",
+   "Mouhamed Gueye",
+   "Cedric Coward",
+   "Anthony Black",
+   "Kel'el Ware",
+   "Ja'Kobe Walter",
+   "Donovan Clingan"
+  ]
+ },
+ "young_top30_changes": {
+  "Y1": {
+   "in": [
+    "Cooper Flagg",
+    "Javon Small",
+    "Josh Giddey",
+    "Kyshawn George",
+    "Josh Minott"
+   ],
+   "out": [
+    "Reed Sheppard",
+    "Jaylon Tyson",
+    "Peyton Watson",
+    "Dominick Barlow",
+    "Sion James"
+   ]
+  },
+  "Y0": {
+   "in": [
+    "Cooper Flagg",
+    "Josh Giddey",
+    "Kyshawn George",
+    "Javon Small",
+    "Cedric Coward"
+   ],
+   "out": [
+    "Reed Sheppard",
+    "Jaylon Tyson",
+    "Peyton Watson",
+    "Dominick Barlow",
+    "Sion James"
+   ]
+  }
+ },
+ "young_top30_rank_move": {
+  "Y1": {
+   "Victor Wembanyama": [
+    2,
+    2
+   ],
+   "Amen Thompson": [
+    9,
+    34
+   ],
+   "Alperen Sengun": [
+    23,
+    69
+   ],
+   "Brandin Podziemski": [
+    24,
+    64
+   ],
+   "Ausar Thompson": [
+    25,
+    62
+   ],
+   "Jalen Duren": [
+    27,
+    75
+   ],
+   "Kon Knueppel": [
+    32,
+    86
+   ],
+   "Cason Wallace": [
+    37,
+    89
+   ],
+   "VJ Edgecombe": [
+    41,
+    102
+   ],
+   "Dyson Daniels": [
+    48,
+    117
+   ],
+   "Paolo Banchero": [
+    63,
+    139
+   ],
+   "Brandon Miller": [
+    64,
+    136
+   ],
+   "Jabari Smith Jr.": [
+    65,
+    152
+   ],
+   "Stephon Castle": [
+    67,
+    146
+   ],
+   "Ronald Holland II": [
+    78,
+    145
+   ],
+   "Dylan Harper": [
+    83,
+    168
+   ],
+   "Shaedon Sharpe": [
+    85,
+    182
+   ],
+   "Oso Ighodaro": [
+    86,
+    169
+   ],
+   "Anthony Black": [
+    87,
+    184
+   ],
+   "Collin Murray-Boyles": [
+    91,
+    172
+   ],
+   "Donovan Clingan": [
+    101,
+    199
+   ],
+   "Kel'el Ware": [
+    109,
+    198
+   ],
+   "Ryan Rollins": [
+    117,
+    63
+   ],
+   "Reed Sheppard": [
+    119,
+    224
+   ],
+   "Jaylon Tyson": [
+    121,
+    225
+   ],
+   "Ja'Kobe Walter": [
+    126,
+    203
+   ],
+   "Peyton Watson": [
+    134,
+    249
+   ],
+   "Mouhamed Gueye": [
+    136,
+    188
+   ],
+   "Dominick Barlow": [
+    141,
+    244
+   ],
+   "Sion James": [
+    142,
+    242
+   ]
+  },
+  "Y0": {
+   "Victor Wembanyama": [
+    2,
+    2
+   ],
+   "Amen Thompson": [
+    9,
+    32
+   ],
+   "Alperen Sengun": [
+    23,
+    64
+   ],
+   "Brandin Podziemski": [
+    24,
+    59
+   ],
+   "Ausar Thompson": [
+    25,
+    57
+   ],
+   "Jalen Duren": [
+    27,
+    67
+   ],
+   "Kon Knueppel": [
+    32,
+    82
+   ],
+   "Cason Wallace": [
+    37,
+    81
+   ],
+   "VJ Edgecombe": [
+    41,
+    101
+   ],
+   "Dyson Daniels": [
+    48,
+    116
+   ],
+   "Paolo Banchero": [
+    63,
+    141
+   ],
+   "Brandon Miller": [
+    64,
+    130
+   ],
+   "Jabari Smith Jr.": [
+    65,
+    153
+   ],
+   "Stephon Castle": [
+    67,
+    140
+   ],
+   "Ronald Holland II": [
+    78,
+    124
+   ],
+   "Dylan Harper": [
+    83,
+    147
+   ],
+   "Shaedon Sharpe": [
+    85,
+    175
+   ],
+   "Oso Ighodaro": [
+    86,
+    148
+   ],
+   "Anthony Black": [
+    87,
+    180
+   ],
+   "Collin Murray-Boyles": [
+    91,
+    151
+   ],
+   "Donovan Clingan": [
+    101,
+    195
+   ],
+   "Kel'el Ware": [
+    109,
+    183
+   ],
+   "Ryan Rollins": [
+    117,
+    48
+   ],
+   "Reed Sheppard": [
+    119,
+    210
+   ],
+   "Jaylon Tyson": [
+    121,
+    216
+   ],
+   "Ja'Kobe Walter": [
+    126,
+    190
+   ],
+   "Peyton Watson": [
+    134,
+    241
+   ],
+   "Mouhamed Gueye": [
+    136,
+    176
+   ],
+   "Dominick Barlow": [
+    141,
+    226
+   ],
+   "Sion James": [
+    142,
+    224
+   ]
+  }
+ },
+ "sha256": {
+  "K-2022-23": "1e2bd557bab0f51067171672a8d705c5a6b6aa2b9b15b25fb9c759bf6a2bfa55",
+  "K-2023-24": "e7f860c22bd75df9af7441f1065f0c78d52e56a28601796ed3bddde5dea59d66",
+  "K-2024-25": "18cbda15ee82e7288c82225bc7a2d239f3a0d7c60e4fd89eda5ba7983cd1edf2",
+  "K-2025-26": "e920a840e55d7d32cb378100b2ea47b8d87a1d27587d934ea1cc8b8ec981278e",
+  "Y1-2022-23": "a9ba32311ead3c518f862a2fdc0fcb66d84134a256fcbf8ba114280d1cf8e981",
+  "Y1-2023-24": "bb3b9bce1a9b1ec8cbc45938a28143fe0b73086808771e96d452aa21d62cae12",
+  "Y1-2024-25": "db89d0abe4d1ec1e9ed26c2331af5c194404d998174348eab2ef90bce59226d1",
+  "Y1-2025-26": "d9745d65d5a62503cec2da18f081556055a74816779fb03ccab6b8ce69414e49",
+  "Y0-2022-23": "dc85fc894d9d56c4fde0e6f621950ebf6ef2fa8261478997908b64b11de2ad62",
+  "Y0-2023-24": "f9fff76eceb1ab65f481caf14a30b32176185041beeee2e77df1d137e96f4a6a",
+  "Y0-2024-25": "70070e7af08ea306d2ed754d269db238d7753518b7a2e5a77c3f4cf7aa1e983f",
+  "Y0-2025-26": "032889088a08064bf045d479f8bad442d9f288f690bc7f851f6651f66c334eae"
+ }
+}

@@ -1,0 +1,77 @@
+{
+  "season": "2024-25",
+  "file": "reports/ovr-inseason-2026-27/v5/cards/2024-25-v5.csv",
+  "rows": 569,
+  "playersPass500": true,
+  "ovrRange": {
+    "min": 26.0303,
+    "max": 110.0839
+  },
+  "ovrRangeNote": "只記錄，不判定（v4 §6 移除 OVR 40–99 門檻）",
+  "attrsIn40to99": true,
+  "noRapm": false,
+  "rapm": {
+    "file": "reports\\ovr-inseason-2026-27\\v4\\data\\rapm-2021-22_2024-25.csv",
+    "sha256": "681b9c11d66ab3471ca38ab1e4a27bab3b88b1f97cced6133fae049ae9a50615",
+    "note": "preregistration-v5 §R.3：含目標季、最多四季（4 季，含目標季）",
+    "seasons": [
+      "2021-22",
+      "2022-23",
+      "2023-24",
+      "2024-25"
+    ]
+  },
+  "prior": {
+    "file": "reports\\ovr-inseason-2026-27\\v3\\data\\prior-2024-25.json",
+    "sha256": "6bc0d647c4f3ef15af658b7c5277fb32311d39364c2ba64f3d2e65a50bba62c9"
+  },
+  "pipelineSummary": {
+    "file": "reports\\ovr-v58-card-2025-26\\card-H1-m0\\summary.json",
+    "sha256": "948dbaa45e96b050e6d0bbd4abcaaa56677964bb5f9c925e9d166259fc1dc90d"
+  },
+  "reference": "season-cards-2024-25 attrs through same pipeline",
+  "sameSource": false,
+  "rhoAttrVsReference": {
+    "long": 1.0,
+    "mid": 1.0,
+    "short": 1.0,
+    "ft": 1.0,
+    "drive": 1.0,
+    "tovSkill": 1.0,
+    "pass": 0.990442,
+    "rebound": 0.988269,
+    "physique": 1.0,
+    "onBall": 1.0,
+    "help": 1.0,
+    "stamina": 1.0,
+    "heightInches": 1.0,
+    "creation": 1.0,
+    "pressure": 0.638651
+  },
+  "rhoAttrMin": 0.988269,
+  "rhoAttrJudgedMin": 0.988269,
+  "constantAttrs": [],
+  "rhoOvrVsReference": 0.978295,
+  "medianOvrDiff": -0.007207,
+  "medianOvrAbsDiff": 0.007207,
+  "checks": {
+    "rows>=500": true,
+    "rhoOvr>=0.90": true,
+    "absMedianDiff<=1.0": true,
+    "rhoAttrJudged>=0.90": true
+  },
+  "pass": true,
+  "replaces": {
+    "file": "reports/ovr-inseason-2026-27/v4/cards/2024-25.csv",
+    "sha256": "b71a8fd0911eb6c4c09206bfab95fbf01ce885f3a9ce77c0ea4a8f8ae5f99dec",
+    "rapmFile": "reports/ovr-inseason-2026-27/v3/data/rapm-2021-22_2023-24.csv",
+    "rapmSeasons": [
+      "2021-22",
+      "2022-23",
+      "2023-24"
+    ]
+  },
+  "reproducesV4WithV4Rapm": true,
+  "crossTeamMinutes": "照 v4，不跨隊加總（§R.7 第 1 條未定案）",
+  "sha256": "df7aa68c6a2f749833c23e29e74cefdb878e6738a624bc6bd9926ccac434d9f8"
+}

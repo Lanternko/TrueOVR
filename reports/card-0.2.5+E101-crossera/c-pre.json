@@ -1,0 +1,74 @@
+{
+ "rule": "|PBP 修正後聯盟命中率 − shots.json 聯盟命中率| <= 0.010，mid 與 short 都要",
+ "shotsJson": {
+  "league": {
+   "mid": 0.4167536889897843,
+   "short": 0.5777357033185445
+  },
+  "attempts": {
+   "mid": 22025,
+   "short": 106161
+  }
+ },
+ "pbpFixed": {
+  "league": {
+   "mid": 0.41694961292951244,
+   "short": 0.5778296757845371
+  },
+  "totals": {
+   "midA": 22089,
+   "midM": 9210,
+   "shortA": 105763,
+   "shortM": 61113
+  }
+ },
+ "diff": {
+  "mid": 0.0001959239397281154,
+  "short": 9.39724659926311e-05
+ },
+ "pass": true,
+ "reportOnly": {
+  "pbpUnfixed": {
+   "league": {
+    "mid": 0.4463535077337469,
+    "short": 0.5746161065902912
+   },
+   "totals": {
+    "midA": 24503,
+    "midM": 10937,
+    "shortA": 103349,
+    "shortM": 59386
+   },
+   "diffVsShotsJson": {
+    "mid": 0.029599818743962558,
+    "short": -0.0031195967282533488
+   }
+  },
+  "cardPlayersOnly": {
+   "shotsJson": {
+    "mid": 0.4167536889897843,
+    "short": 0.5777357033185445
+   },
+   "pbpFixed": {
+    "mid": 0.41694961292951244,
+    "short": 0.5778296757845371
+   },
+   "pbpUnfixed": {
+    "mid": 0.4463535077337469,
+    "short": 0.5746161065902912
+   },
+   "diffFixed": {
+    "mid": 0.0001959239397281154,
+    "short": 9.39724659926311e-05
+   },
+   "diffUnfixed": {
+    "mid": 0.029599818743962558,
+    "short": -0.0031195967282533488
+   }
+  }
+ },
+ "inputs_sha256": {
+  "history/pbp-zones-2025-26.csv.gz": "f244b875902395cf92e043235b7507800ab1e2342b756a570638eafdc0c6966c",
+  "data/benchmark-source/shots.json": "860134b915ef78473a7aa548b59efde690cbc775eb001c172b5ea2853bb9ad40"
+ }
+}

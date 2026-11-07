@@ -1,0 +1,32 @@
+{
+ "host": "kojiek@100.97.181.15 (5090, ntnumaplab2)",
+ "dir": "/home/kojiek/side_projects/basketball-defspeed-20261102",
+ "prereg_commit": "f679143",
+ "workers": 18,
+ "node": "/home/kojiek/.nvm/versions/node/v22.13.1/bin/node",
+ "seeds": 200,
+ "runs": [
+  "work/remote_run.sh arms-2024-25.json 2024-25",
+  "work/remote_run.sh arms-2025-26.json 2025-26",
+  "work/remote_desc.sh (6 shards x 3 arms)"
+ ],
+ "sha256": {
+  "work/out/arms-2024-25.json": "c671528a210d84fb83de6bbd436d19b2543cd199ee0ce8fc692bd51983ce6ec1",
+  "work/out/arms-2025-26.json": "d4343f216968f14562345698c8301de9b19b5a2c9e35172aebd12a40b4707b7d",
+  "work/out/desc-in-A0.json": "5d11849ea20a1ae680670717a2363cff238524af710e938757b6a237c1dc65c5",
+  "work/out/desc-in-A1.json": "e7f19dee47f8c6f081d5c21a4db691e3ee118d480cde2c4bad9e5d35cb196368",
+  "work/out/desc-in-A2.json": "8a6ea5e0c0efc6cdb14cc1aa690a1ba030c6580ebaf0777694cca700b923e2a8",
+  "work/run_arms.mjs": "823826a27dbb72c16e7c58bbb3212b1783c3170005957d8ea70f6db1ea321bcd",
+  "work/remote_run.sh": "564ec40727efef0ac2968aed5e296bb693b578acfa06c7b9c5831752dcfb7021",
+  "work/remote_desc.sh": "19c0fc95116c58a7fe13f47348e9fae1bc231ffb5113025ff2ec74b10928642f",
+  "work/analyze.py": "2a3ad46787c7e38f02bdad8bd3b92acd717fbec4107ee2e2159607058386a94b",
+  "analysis.json": "d613ecd6daf622437e78d0e0903e304b473a984b21e32a92b44aa97c5342e669"
+ },
+ "engine_sha256": {
+  "reports/E208-team-rating/lib.mjs": "fa32baf19a306d4e56fc6c7f7a8573a8e538235a77adb97388a17579843023c0",
+  "reports/E208-team-rating/lib2425.mjs": "b42f7edff1a322a92efc70488e0edde63517541805636ff10548d68faf29497a",
+  "reports/E208-team-rating/pprime-day0-2425.json": "6c540e6d0d45a101161d35a42462e0d02c742fefa5a0915550eeb44a22fc6a09",
+  "scripts/team_ratings_sim.mjs": "461fb3ff905111bb403e58c1d4a99ad98a577f1d9f5b7519af2d3d334d08dfdf"
+ },
+ "note": "analyze.py 跑後修正剩餘分鐘＝MIN×GP（report §2）；remote 檔與本機 sha 相同（lib/pprime/team_ratings_sim 已比對）"
+}

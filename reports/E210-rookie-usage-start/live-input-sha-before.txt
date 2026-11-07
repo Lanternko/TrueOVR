@@ -1,0 +1,2 @@
+efec99a2f1a66836fa30a7ab91f5d4b09a53240f6f2857fd3f00de0e9dfd1eb8 *D:/Projects/CODING/basketball-autochess/data/defense-seventh/2026-27/player-games.json
+c8c8208dc629d0b1069a660e6d510e59f9b4c8884a1ac208b34a19bc8fac3249 *D:/Projects/CODING/basketball-autochess/data/_inseason_build/def-L-live.csv

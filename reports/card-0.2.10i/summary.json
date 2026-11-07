@@ -1,0 +1,46 @@
+{
+ "version": "card 0.2.10i",
+ "base": "reports/card-0.2.10g",
+ "players": 582,
+ "change": "R-130／R-132：drive 改 drive_D（只算帶球切入的自主兩分，E-190 errata-1 D 類；量與效率各半）、creation 改 creationJ（自己創造的跳投與低位出手，不含切入上籃、補籃、空切；per36），都是四季滑動窗口（E-175 U 臂權重）；其餘 13 項、用人層特徵、3PT 欄同 0.2.10g；部件卡全部係數重擬合（card-0.2.10d/build.py KAU 同旗標），用人層、r_repl、錨點、OVR 重算；E-188 OVR 映射照舊。",
+ "anchors": {
+  "PR1": -0.7332,
+  "PR50": 0.9265,
+  "PR90": 2.1396,
+  "PR95": 2.4983,
+  "PR99": 3.8823
+ },
+ "anchor_source": "reports/card-0.2.10i/work/pre-real/ranking.csv gRepl, MIN>=500, qf（gRepl 4 位小數）",
+ "ovr_map": {
+  "function": "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py:ovr_map",
+  "A_PR90": 88.0,
+  "B_PR95": 92.0
+ },
+ "ovr_changed": 200,
+ "pool_90_99": 26,
+ "pool_ge99": 5,
+ "sources_sha256": {
+  "reports/card-0.2.10i/work/pre-real/ranking.csv": "00585c3a5840e802158231922a80543c010de22ece51c90a2988c02c522218a4",
+  "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py": "7c9bc8ccd63c0b637c42ac715a30d7716ee1899f8fec6722f927a3ae118b90de",
+  "reports/card-0.2.10a+E188-ovr-top-scale/preregistration.md": "8cf866fe753a587696b2d803f64fcf0b98fa21f22818da352a9193497296b0ca",
+  "reports/card-0.2.10g/three-value.csv": "873bc130ebfe63ae7de784bdcd1f750ea0b0f3353c8b6721bb6ea7b552ceb463"
+ },
+ "build_command": "make_tail_0210i.py real → card-0.2.10d/build.py cards|run KAU 2025-26（E185_TAIL_U, E185_WORK=work/A-real）→ run_i.py real → build_0210i.py real",
+ "ranking_csv_sha256": "8b3e99d682ad6d7e4b5c5068f3d0d88e484ef0754af4fe789aae323e9a1c6c34",
+ "tail_U": {
+  "path": "reports/card-0.2.10i/tail-U.csv",
+  "sha256": "bc5fa6e1ce70e1c9c251985743fb32c0184423f2f5629364286834bcfdc08a63",
+  "builder": "reports/card-0.2.10i/make_tail_0210i.py real"
+ },
+ "pool_drive_D_sha256": "c89a34f529b7e5bd4a032dd0b1cc2b2e4e6a0c48c93372b778b0c12a9932757a",
+ "pre_ranking_sha256": "00585c3a5840e802158231922a80543c010de22ece51c90a2988c02c522218a4",
+ "three_value_csv_sha256": "873bc130ebfe63ae7de784bdcd1f750ea0b0f3353c8b6721bb6ea7b552ceb463",
+ "three_value_source": "reports/card-0.2.10g/three-value.csv",
+ "c0": {
+  "ranking.csv": true,
+  "three-value.csv": true,
+  "rapm-T6.csv": true,
+  "anchors": true,
+  "ranking_sha256": "766608d9b513c7ea3034eb49e98be2eb9c7a25611b7ea78e49c13f6eb254bf61"
+ }
+}

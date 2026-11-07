@@ -1,0 +1,317 @@
+{
+ "preregSha256": "01ff0b679cde0c6fc935f79ab4f11f64697f4b1876bebc5495d99c65eaa68b5e",
+ "directions": {
+  "AB": {
+   "n": 345,
+   "rhoWinImp": 0.41395302872098166,
+   "rhoOVR": 0.7592776641224104,
+   "diff": -0.3453246354014287,
+   "diffCI90": [
+    -0.42094207311889725,
+    -0.26776634632559754
+   ],
+   "V2": {
+    "nTop60InPool": 57,
+    "nHighBonus": 25,
+    "meanResidHigh": 27.0,
+    "ciHigh": [
+     14.377,
+     39.843
+    ],
+    "nLowBonus": 32,
+    "meanResidLow": 15.6875,
+    "ciLow": [
+     5.7640625,
+     24.956249999999997
+    ],
+    "highBonus": [
+     [
+      "Alex Caruso",
+      9,
+      107.5
+     ],
+     [
+      "Clint Capela",
+      60,
+      105.5
+     ],
+     [
+      "Dean Wade",
+      18,
+      91.0
+     ],
+     [
+      "Jusuf Nurkić",
+      48,
+      79.5
+     ],
+     [
+      "Kenrich Williams",
+      45,
+      69.5
+     ],
+     [
+      "Herbert Jones",
+      14,
+      55.5
+     ],
+     [
+      "Neemias Queta",
+      13,
+      44.5
+     ],
+     [
+      "Dylan Harper",
+      33,
+      43.5
+     ],
+     [
+      "Anthony Davis",
+      32,
+      39.5
+     ],
+     [
+      "Dyson Daniels",
+      44,
+      39.5
+     ],
+     [
+      "Lauri Markkanen",
+      11,
+      33.0
+     ],
+     [
+      "Ausar Thompson",
+      28,
+      26.5
+     ],
+     [
+      "Dillon Brooks",
+      56,
+      26.5
+     ],
+     [
+      "Toumani Camara",
+      51,
+      3.5
+     ],
+     [
+      "Marcus Smart",
+      30,
+      -0.5
+     ],
+     [
+      "Derrick White",
+      6,
+      -2.0
+     ],
+     [
+      "Franz Wagner",
+      7,
+      -3.0
+     ],
+     [
+      "Moussa Diabaté",
+      20,
+      -3.5
+     ],
+     [
+      "Amen Thompson",
+      36,
+      -3.5
+     ],
+     [
+      "Isaiah Hartenstein",
+      38,
+      -5.0
+     ],
+     [
+      "Immanuel Quickley",
+      55,
+      -8.5
+     ],
+     [
+      "Tobias Harris",
+      26,
+      -9.5
+     ],
+     [
+      "Rudy Gobert",
+      29,
+      -14.5
+     ],
+     [
+      "Jrue Holiday",
+      27,
+      -16.5
+     ],
+     [
+      "Draymond Green",
+      46,
+      -23.5
+     ]
+    ]
+   }
+  },
+  "BA": {
+   "n": 344,
+   "rhoWinImp": 0.3508761483659666,
+   "rhoOVR": 0.7652991417433966,
+   "diff": -0.41442299337743005,
+   "diffCI90": [
+    -0.4876400453253723,
+    -0.3351564896190334
+   ],
+   "V2": {
+    "nTop60InPool": 57,
+    "nHighBonus": 25,
+    "meanResidHigh": 19.04,
+    "ciHigh": [
+     10.0,
+     28.540999999999997
+    ],
+    "nLowBonus": 32,
+    "meanResidLow": 16.03125,
+    "ciLow": [
+     3.890625,
+     29.46953125
+    ],
+    "highBonus": [
+     [
+      "Draymond Green",
+      46,
+      69.5
+     ],
+     [
+      "Kenrich Williams",
+      45,
+      66.5
+     ],
+     [
+      "Franz Wagner",
+      7,
+      62.0
+     ],
+     [
+      "Dylan Harper",
+      33,
+      59.5
+     ],
+     [
+      "Clint Capela",
+      60,
+      53.5
+     ],
+     [
+      "Isaiah Hartenstein",
+      38,
+      45.0
+     ],
+     [
+      "Marcus Smart",
+      30,
+      37.5
+     ],
+     [
+      "Moussa Diabaté",
+      20,
+      36.5
+     ],
+     [
+      "Immanuel Quickley",
+      55,
+      27.5
+     ],
+     [
+      "Jrue Holiday",
+      27,
+      22.5
+     ],
+     [
+      "Rudy Gobert",
+      29,
+      21.5
+     ],
+     [
+      "Tobias Harris",
+      26,
+      17.5
+     ],
+     [
+      "Neemias Queta",
+      13,
+      12.5
+     ],
+     [
+      "Ausar Thompson",
+      28,
+      10.5
+     ],
+     [
+      "Alex Caruso",
+      9,
+      6.5
+     ],
+     [
+      "Dean Wade",
+      18,
+      4.0
+     ],
+     [
+      "Anthony Davis",
+      32,
+      0.5
+     ],
+     [
+      "Derrick White",
+      6,
+      0.0
+     ],
+     [
+      "Toumani Camara",
+      51,
+      -2.5
+     ],
+     [
+      "Lauri Markkanen",
+      11,
+      -4.0
+     ],
+     [
+      "Herbert Jones",
+      14,
+      -4.5
+     ],
+     [
+      "Jusuf Nurkić",
+      48,
+      -5.5
+     ],
+     [
+      "Dyson Daniels",
+      44,
+      -18.5
+     ],
+     [
+      "Dillon Brooks",
+      56,
+      -18.5
+     ],
+     [
+      "Amen Thompson",
+      36,
+      -23.5
+     ]
+    ]
+   }
+  }
+ },
+ "V1": {
+  "pass_notWorse": false,
+  "pass_better": false,
+  "minLower": -0.4876400453253723
+ },
+ "V2": {
+  "pass_overrated": true
+ }
+}

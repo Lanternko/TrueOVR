@@ -1,0 +1,346 @@
+{
+ "h1": {
+  "mid": {
+   "top": {
+    "b": 0.4055991285612746,
+    "lo90": -1.6668924319018952,
+    "hi90": 1.5283653384572917,
+    "nObs": 5,
+    "nPlayers": 2,
+    "nanDraws": 0,
+    "pass": false
+   },
+   "bot": {
+    "b": 0.07055297885434282,
+    "lo90": -0.3358634565273768,
+    "hi90": 0.6745474626071797,
+    "nObs": 5,
+    "nPlayers": 3,
+    "nanDraws": 132,
+    "pass": false
+   },
+   "allSlope": 0.9218234655286861,
+   "nObsAll": 47
+  },
+  "short": {
+   "top": {
+    "b": 0.9609064669680554,
+    "lo90": 0.6776062137787416,
+    "hi90": 1.2489786181482174,
+    "nObs": 49,
+    "nPlayers": 30,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 0.23903637771474898,
+    "lo90": -0.10271372774711574,
+    "hi90": 0.6402259305099908,
+    "nObs": 49,
+    "nPlayers": 31,
+    "nanDraws": 0,
+    "pass": false
+   },
+   "allSlope": 0.9028202473093005,
+   "nObsAll": 497
+  }
+ },
+ "E090_h1": {
+  "mid": {
+   "top": {
+    "b": 0.37203063111554774,
+    "lo90": -1.6957362936290166,
+    "hi90": 150.2368753666269,
+    "nObs": 6,
+    "nPlayers": 4,
+    "nanDraws": 26,
+    "pass": false
+   },
+   "bot": {
+    "b": 0.8433211565552606,
+    "lo90": 0.13520493236577025,
+    "hi90": 2.124201175809031,
+    "nObs": 6,
+    "nPlayers": 4,
+    "nanDraws": 27,
+    "pass": true
+   },
+   "allSlope": 0.8819975338519374,
+   "nObsAll": 54
+  },
+  "short": {
+   "top": {
+    "b": 0.8962004779879496,
+    "lo90": 0.5863675032649726,
+    "hi90": 1.1583835469952468,
+    "nObs": 49,
+    "nPlayers": 31,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 0.46411219363142836,
+    "lo90": 0.046543620829971995,
+    "hi90": 0.9484186616720203,
+    "nObs": 49,
+    "nPlayers": 33,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "allSlope": 0.8658900384866801,
+   "nObsAll": 489
+  }
+ },
+ "otherAttrsReproduceE090": {
+  "long": true,
+  "ft": false,
+  "drive": false,
+  "foulDraw": false,
+  "tovSkill": false,
+  "pass": false,
+  "rebound": false,
+  "physique": false,
+  "onBall": false,
+  "creation": false,
+  "pressure": true
+ },
+ "otherAttrsSwitchSameAsE090UnderShiftedRng": {
+  "long": true,
+  "ft": true,
+  "drive": true,
+  "foulDraw": true,
+  "tovSkill": true,
+  "pass": true,
+  "rebound": true,
+  "physique": true,
+  "onBall": true,
+  "creation": true,
+  "pressure": true
+ },
+ "otherAttrsRerunReportOnly": {
+  "long": {
+   "top": {
+    "b": 0.647679377212698,
+    "lo90": 0.16403307830232472,
+    "hi90": 0.9599770841448972,
+    "nObs": 65,
+    "nPlayers": 55,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 1.1140249001832665,
+    "lo90": 0.7264655562045336,
+    "hi90": 1.4998993665833014,
+    "nObs": 65,
+    "nPlayers": 58,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "allSlope": 0.38819434246278295,
+   "nObsAll": 642
+  },
+  "ft": {
+   "top": {
+    "b": 0.9542712354382389,
+    "lo90": 0.25545179969766263,
+    "hi90": 1.2848872290567566,
+    "nObs": 31,
+    "nPlayers": 20,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 1.0137705333389704,
+    "lo90": 0.7930083615194599,
+    "hi90": 1.2885211346464316,
+    "nObs": 31,
+    "nPlayers": 19,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "allSlope": 0.9301025999448967,
+   "nObsAll": 314
+  },
+  "drive": {
+   "top": {
+    "b": 0.8329226647387684,
+    "lo90": 0.6710912349241202,
+    "hi90": 0.9883511675350514,
+    "nObs": 86,
+    "nPlayers": 48,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 0.9903880172626766,
+    "lo90": 0.7298812347215933,
+    "hi90": 1.2005870484260275,
+    "nObs": 86,
+    "nPlayers": 55,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "allSlope": 0.9538440673214647,
+   "nObsAll": 860
+  },
+  "foulDraw": {
+   "top": {
+    "b": 0.946897050520159,
+    "lo90": 0.8649860609398371,
+    "hi90": 1.007767235586632,
+    "nObs": 87,
+    "nPlayers": 44,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 0.9562046275715103,
+    "lo90": 0.6437438102742469,
+    "hi90": 1.197201263202826,
+    "nObs": 87,
+    "nPlayers": 52,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "allSlope": 0.9430494811960455,
+   "nObsAll": 870
+  },
+  "tovSkill": {
+   "top": {
+    "b": 0.8893422361756945,
+    "lo90": 0.7259870478108474,
+    "hi90": 1.0567630061262088,
+    "nObs": 87,
+    "nPlayers": 51,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 0.9290351701171039,
+    "lo90": 0.7101071917802431,
+    "hi90": 1.1407950257002444,
+    "nObs": 87,
+    "nPlayers": 46,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "allSlope": 0.9363904445155858,
+   "nObsAll": 870
+  },
+  "pass": {
+   "top": {
+    "b": 1.0556798881124014,
+    "lo90": 0.9074517510127104,
+    "hi90": 1.1953369209881974,
+    "nObs": 87,
+    "nPlayers": 50,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 0.8432015350294959,
+    "lo90": 0.4790399689941948,
+    "hi90": 1.2237063732490483,
+    "nObs": 87,
+    "nPlayers": 60,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "allSlope": 0.9214814225823509,
+   "nObsAll": 870
+  },
+  "rebound": {
+   "top": {
+    "b": 0.8239665138425681,
+    "lo90": 0.7244327299427699,
+    "hi90": 0.9445134712025374,
+    "nObs": 87,
+    "nPlayers": 41,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 0.854866470112388,
+    "lo90": 0.5747939958414701,
+    "hi90": 1.0870542849042788,
+    "nObs": 87,
+    "nPlayers": 49,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "allSlope": 0.9707737802149504,
+   "nObsAll": 870
+  },
+  "physique": {
+   "top": {
+    "b": 0.9811875118899153,
+    "lo90": 0.9414615111136165,
+    "hi90": 1.0220415539694419,
+    "nObs": 88,
+    "nPlayers": 43,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 0.983191659230733,
+    "lo90": 0.9351368899291492,
+    "hi90": 1.0240611147951189,
+    "nObs": 85,
+    "nPlayers": 46,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "allSlope": 0.991667000150859,
+   "nObsAll": 869
+  },
+  "onBall": {
+   "top": {
+    "b": 0.8905185665052497,
+    "lo90": 0.6277558369230839,
+    "hi90": 1.1130035460367322,
+    "nObs": 87,
+    "nPlayers": 53,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 0.7568547794106653,
+    "lo90": 0.5308268490603888,
+    "hi90": 0.9960982542183121,
+    "nObs": 87,
+    "nPlayers": 55,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "allSlope": 0.7923297273552279,
+   "nObsAll": 870
+  },
+  "creation": {
+   "top": {
+    "b": 1.044732075893644,
+    "lo90": 0.8897964027287263,
+    "hi90": 1.1999306349339953,
+    "nObs": 87,
+    "nPlayers": 48,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 0.6803960813973631,
+    "lo90": 0.23123380259323834,
+    "hi90": 1.0562415509031722,
+    "nObs": 87,
+    "nPlayers": 55,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "allSlope": 0.8843945730420605,
+   "nObsAll": 870
+  },
+  "pressure": {
+   "excluded": "force 只有 2024-25、2025-26（相鄰季 1 組 < 2）；hustle／matchups 只有全季表、沒有逐場，兩半季做不到。依 §5.1 第 3 條排除，維持 40–99。"
+  }
+ },
+ "h1PairsE101Sha256": "fa29da4537a6231a65d37163b81232f7c7aa35f74af37ca311985ca41ad1709f"
+}

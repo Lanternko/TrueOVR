@@ -1,0 +1,302 @@
+{
+ "inputs": {},
+ "attrs": {
+  "drive": {
+   "nVsRanking": 582,
+   "within0.1": 582.0,
+   "share": 1.0,
+   "maxDiffRanking": 0.04992958848380624,
+   "nFull": 582,
+   "maxDiffFull(tail-e123a)": 2.842170943040401e-14,
+   "meanDiffFull": 8.54604665003557e-17,
+   "maxDiffP50": 2.842170943040401e-14,
+   "worst5": [
+    [
+     "Javonte Green",
+     0.0499
+    ],
+    [
+     "Ryan Nembhard",
+     0.0496
+    ],
+    [
+     "KJ Simpson",
+     0.0496
+    ],
+    [
+     "Devin Booker",
+     0.0495
+    ],
+    [
+     "Jaden McDaniels",
+     0.0494
+    ]
+   ]
+  },
+  "foulDraw": {
+   "nVsRanking": 582,
+   "within0.1": 582.0,
+   "share": 1.0,
+   "maxDiffRanking": 0.04996708360762625,
+   "nFull": 582,
+   "maxDiffFull(tail-e123a)": 1.595421950639775e-05,
+   "meanDiffFull": 1.4958894265931642e-07,
+   "maxDiffP50": 1.595421950639775e-05,
+   "worst5": [
+    [
+     "Jarace Walker",
+     0.05
+    ],
+    [
+     "Julius Randle",
+     0.0499
+    ],
+    [
+     "Lonzo Ball",
+     0.0498
+    ],
+    [
+     "Chris Youngblood",
+     0.0497
+    ],
+    [
+     "Day'Ron Sharpe",
+     0.0497
+    ]
+   ]
+  },
+  "ft": {
+   "nVsRanking": 582,
+   "within0.1": 582.0,
+   "share": 1.0,
+   "maxDiffRanking": 0.04984564388560386,
+   "nFull": 582,
+   "maxDiffFull(tail-e123a)": 0.0,
+   "meanDiffFull": 0.0,
+   "maxDiffP50": 0.0,
+   "worst5": [
+    [
+     "Javon Small",
+     0.0498
+    ],
+    [
+     "Jarrett Allen",
+     0.0498
+    ],
+    [
+     "Craig Porter Jr.",
+     0.0497
+    ],
+    [
+     "Taj Gibson",
+     0.0497
+    ],
+    [
+     "Jerami Grant",
+     0.0496
+    ]
+   ]
+  },
+  "mid": {
+   "nVsRanking": 582,
+   "within0.1": 582.0,
+   "share": 1.0,
+   "maxDiffRanking": 0.04994252545914435,
+   "nFull": 582,
+   "maxDiffFull(tail-e123a)": 0.0,
+   "meanDiffFull": 0.0,
+   "maxDiffP50": 0.0,
+   "worst5": [
+    [
+     "LJ Cryer",
+     0.0499
+    ],
+    [
+     "Leaky Black",
+     0.0497
+    ],
+    [
+     "Jalen Pickett",
+     0.0494
+    ],
+    [
+     "Svi Mykhailiuk",
+     0.0493
+    ],
+    [
+     "Scottie Barnes",
+     0.0491
+    ]
+   ]
+  },
+  "pass": {
+   "nVsRanking": 582,
+   "within0.1": 582.0,
+   "share": 1.0,
+   "maxDiffRanking": 0.049941599949036686,
+   "nFull": 582,
+   "maxDiffFull(tail-e123a)": 2.842170943040401e-14,
+   "meanDiffFull": 1.8312957107219076e-16,
+   "maxDiffP50": 2.842170943040401e-14,
+   "worst5": [
+    [
+     "Jamal Murray",
+     0.0499
+    ],
+    [
+     "Karlo Matković",
+     0.0498
+    ],
+    [
+     "Tim Hardaway Jr.",
+     0.0498
+    ],
+    [
+     "Rob Dillingham",
+     0.0497
+    ],
+    [
+     "Kadary Richmond",
+     0.0497
+    ]
+   ]
+  },
+  "rebound": {
+   "nVsRanking": 582,
+   "within0.1": 582.0,
+   "share": 1.0,
+   "maxDiffRanking": 0.049941599949036686,
+   "nFull": 582,
+   "maxDiffFull(tail-e123a)": 0.0,
+   "meanDiffFull": 0.0,
+   "maxDiffP50": 0.0,
+   "worst5": [
+    [
+     "Neemias Queta",
+     0.0499
+    ],
+    [
+     "Immanuel Quickley",
+     0.0499
+    ],
+    [
+     "Chaz Lanier",
+     0.0498
+    ],
+    [
+     "Keaton Wallace",
+     0.0498
+    ],
+    [
+     "Jordan Clarkson",
+     0.0498
+    ]
+   ]
+  },
+  "short": {
+   "nVsRanking": 582,
+   "within0.1": 582.0,
+   "share": 1.0,
+   "maxDiffRanking": 0.049894179805392014,
+   "nFull": 582,
+   "maxDiffFull(tail-e123a)": 0.0,
+   "meanDiffFull": 0.0,
+   "maxDiffP50": 0.0,
+   "worst5": [
+    [
+     "Brandin Podziemski",
+     0.0499
+    ],
+    [
+     "Norman Powell",
+     0.0499
+    ],
+    [
+     "Riley Minix",
+     0.0498
+    ],
+    [
+     "Kawhi Leonard",
+     0.0498
+    ],
+    [
+     "Grant Williams",
+     0.0496
+    ]
+   ]
+  },
+  "tovSkill": {
+   "nVsRanking": 582,
+   "within0.1": 582.0,
+   "share": 1.0,
+   "maxDiffRanking": 0.04983541803817815,
+   "nFull": 582,
+   "maxDiffFull(tail-e123a)": 4.263256414560601e-14,
+   "meanDiffFull": 2.6859003757254644e-16,
+   "maxDiffP50": 4.263256414560601e-14,
+   "worst5": [
+    [
+     "Kyle Kuzma",
+     0.0498
+    ],
+    [
+     "Derik Queen",
+     0.0498
+    ],
+    [
+     "Corey Kispert",
+     0.0497
+    ],
+    [
+     "Duncan Robinson",
+     0.0494
+    ],
+    [
+     "Bub Carrington",
+     0.0494
+    ]
+   ]
+  }
+ },
+ "pooled": {
+  "attrValuesWithin0.1": 4656.0,
+  "attrValuesN": 4656,
+  "share": 1.0,
+  "playersAll8Within0.1": 582,
+  "playersN": 582,
+  "playerShare": 1.0,
+  "cardPlayers": 582,
+  "matchedByUniqueName": 582
+ },
+ "rateLevelMaxDiffVsE090a0raw": {
+  "tovSkill": 1.1102230246251565e-16,
+  "rebound": 5.551115123125783e-17,
+  "ft": 0.0,
+  "mid": 0.21356155554139838,
+  "short": 0.04588140099000082,
+  "note": "mid／short 的 a0-raw 是 V61 位置先驗＋V61 分區，0.2.9a 改用 E-101 分區＋聯盟先驗，所以這兩項預期不為 0；ft、tovSkill、rebound 應為 0"
+ },
+ "info": {
+  "midShift": {
+   "leagueShots": 0.4167536889897843,
+   "leaguePbp": 0.41694961292951244,
+   "shift": -0.0001959239397281154
+  },
+  "shortShift": {
+   "leagueShots": 0.5777357033185445,
+   "leaguePbp": 0.5778296757845371,
+   "shift": -9.39724659926311e-05
+  },
+  "driveZ": {
+   "mv": 1.8429154359452313,
+   "sv": 1.2204007541631987,
+   "me": 0.9955148728110664,
+   "se": 0.18229447666444143,
+   "poolN": 231
+  }
+ },
+ "inpool": {
+  "percentileN": 252,
+  "min500N": 379
+ }
+}

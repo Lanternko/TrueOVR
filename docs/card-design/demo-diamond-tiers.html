@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>鑽石卡 五個層級</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0d12; --ink:#e9eaf0; --mute:#8b8fa3;
+  --num:'Bebas Neue','Impact','Arial Narrow',sans-serif;
+  --tc:'Noto Sans TC','Microsoft JhengHei',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+body{background:radial-gradient(1200px 700px at 50% -10%,#1b1d2b,var(--bg));color:var(--ink);font-family:var(--tc);min-height:100vh;padding:32px 16px 64px}
+h1{font-size:20px;font-weight:700;text-align:center;letter-spacing:.08em}
+.lead{color:var(--mute);font-size:13px;text-align:center;margin:6px 0 28px}
+.ladder-h{max-width:1400px;margin:0 auto 14px;display:flex;align-items:center;gap:12px;color:var(--mute);font-size:12px;letter-spacing:.12em}
+.ladder-h::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,#ffffff33,transparent)}
+.row{display:flex;flex-wrap:wrap;gap:28px 24px;justify-content:center;max-width:1400px;margin:0 auto 44px}
+.slot{display:flex;flex-direction:column;align-items:center;gap:12px;width:300px}
+.cap{text-align:center}
+.cap b{display:block;font-size:15px;letter-spacing:.06em}
+.cap span{font-size:12px;color:var(--mute);line-height:1.5}
+.stage{perspective:900px}
+footer{max-width:760px;margin:0 auto;color:var(--mute);font-size:12px;line-height:1.9;text-align:center}
+footer b{color:var(--ink)}
+
+/* ===== 共用骨架 ===== */
+.card{
+  --mx:50%;--my:30%;--rx:0deg;--ry:0deg;
+  position:relative;width:300px;height:430px;border-radius:18px;overflow:hidden;isolation:isolate;
+  transform:rotateX(var(--rx)) rotateY(var(--ry));transform-style:preserve-3d;
+  transition:transform .15s ease-out, box-shadow .3s;
+  font-family:var(--tc);user-select:none;
+}
+.card.live{transition:transform .04s linear}
+.card>*{position:absolute}
+.card .bg,.card .fx,.card .fx2{inset:0;pointer-events:none}
+.portrait{left:0;right:0;top:0;height:300px;overflow:hidden;z-index:2}
+.portrait img{position:absolute;left:50%;transform:translateX(-50%);bottom:-8px;height:274px;width:auto;max-width:none;filter:drop-shadow(0 8px 14px rgba(0,0,0,.45))}
+.portrait svg{position:absolute;left:50%;transform:translateX(-50%);bottom:0;height:80%;opacity:.0}
+.noimg .portrait img{display:none}
+.noimg .portrait svg{opacity:.55}
+.ovr{left:16px;top:8px;z-index:4;line-height:.8}
+.ovr b{display:block;font:400 112px/0.86 var(--num);letter-spacing:-.01em}
+.ovr small{display:block;font:700 12px/1 var(--tc);letter-spacing:.32em;margin:4px 0 0 4px}
+.plate{left:0;right:0;top:282px;z-index:5;height:50px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1px}
+.plate .name{font:400 30px/1 var(--num);letter-spacing:.09em}
+.plate .zh{font:500 11px/1 var(--tc);letter-spacing:.3em;opacity:.8}
+@keyframes sweep{0%{transform:translateX(-120%) skewX(-18deg)}60%,100%{transform:translateX(220%) skewX(-18deg)}}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.3) rotate(0)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+@keyframes shoot{0%,66%{transform:translate(0,0) rotate(-30deg);opacity:0}69%{opacity:1}82%,100%{transform:translate(430px,-250px) rotate(-30deg);opacity:0}}
+.sp{position:absolute;background:#fff;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:twinkle 3s ease-in-out infinite;filter:drop-shadow(0 0 4px #fff)}
+
+
+/* ===== 鑽石卡：同一套材質，用變數拉出 5 個層級 ===== */
+.dia{
+  --fs:30px; --fa:.22; --rb:.6; --hue:0;
+  --k0:#ffe9f6; --k1:#ff8fcd; --k2:#d92c91; --k3:#ff9fd6; --k4:#fff0f8; --k5:#f063b4; --k6:#a3166f;
+  --glow:#ff3fa4aa; --rim:rgba(255,120,200,.55); --plate:rgba(110,8,74,.62); --stbg:rgba(130,12,88,.72); --stdk:#7b0c55; --num1:#ff9fd2; --num2:#a3166f;
+  color:#fff;
+  box-shadow:0 0 0 1px #ffe3f3 inset,0 0 0 5px rgba(255,255,255,.16) inset,0 0 0 6px var(--rim) inset,0 18px 50px -12px var(--glow),0 0 44px -6px var(--glow);
+}
+.dia .bg{background:
+  repeating-linear-gradient(0deg,rgba(255,255,255,0) 0 calc(var(--fs) + 8px),rgba(255,255,255,calc(var(--fa) * .55)) calc(var(--fs) + 8px) calc(var(--fs) + 9px)),
+  repeating-linear-gradient(60deg,rgba(255,255,255,0) 0 var(--fs),rgba(255,255,255,var(--fa)) var(--fs) calc(var(--fs) + 1px)),
+  repeating-linear-gradient(-60deg,rgba(255,255,255,0) 0 var(--fs),rgba(255,255,255,calc(var(--fa) * .7)) var(--fs) calc(var(--fs) + 1px)),
+  conic-gradient(from 200deg at 62% 34%,var(--k0) 0deg,var(--k1) 40deg,var(--k2) 95deg,var(--k3) 150deg,var(--k4) 200deg,var(--k5) 255deg,var(--k6) 310deg,var(--k0) 360deg)}
+.dia .bg::after{content:"";position:absolute;inset:0;opacity:var(--rb);background:linear-gradient(112deg,transparent 30%,rgba(120,255,235,.45) 41%,rgba(255,240,150,.45) 49%,rgba(255,130,210,.5) 57%,transparent 68%);background-size:280% 280%;background-position:var(--mx) var(--my);mix-blend-mode:overlay;filter:hue-rotate(calc(var(--hue) * 1deg))}
+.dia .fx{z-index:3;background:conic-gradient(from calc(var(--mx) * 1.2) at var(--mx) var(--my),rgba(255,255,255,0),rgba(255,255,255,.7) 7%,rgba(255,255,255,0) 17%,rgba(255,235,250,.45) 55%,rgba(255,255,255,0) 66%);mix-blend-mode:soft-light}
+.dia .fx2{z-index:6;overflow:hidden}
+.dia .portrait img{filter:drop-shadow(0 0 1px #fff) drop-shadow(0 0 14px var(--glow)) drop-shadow(0 8px 12px rgba(80,0,50,.5))}
+.dia .ovr b{background:linear-gradient(180deg,#fff 5%,#ffe6f4 45%,var(--num1) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 0 #fff) drop-shadow(0 3px 0 var(--num2)) drop-shadow(0 7px 12px var(--glow))}
+.dia .ovr small{color:#fff;text-shadow:0 1px 4px var(--num2)}
+.dia .plate{background:linear-gradient(90deg,transparent,var(--plate) 14%,var(--plate) 86%,transparent);backdrop-filter:blur(3px)}
+.dia .plate .name{text-shadow:0 2px 8px var(--stdk)}
+.dia .st{background:linear-gradient(180deg,rgba(255,255,255,.2),var(--stbg) 60%);border:1px solid rgba(255,255,255,.85);box-shadow:inset 0 1px 0 #fff,0 6px 14px -6px var(--stdk);backdrop-filter:blur(4px)}
+.dia .st b,.dia .st em{text-shadow:0 1px 5px var(--stdk)}
+.dia .sp{background:#fff;filter:drop-shadow(0 0 5px #fff)}
+
+/* 層級標記：右上角的鑽石數 */
+.gems{right:14px;top:14px;z-index:7;display:flex;gap:3px}
+.gems i{display:block;width:10px;height:12px;background:linear-gradient(135deg,#fff,var(--k1));clip-path:polygon(50% 0,100% 35%,50% 100%,0 35%);filter:drop-shadow(0 1px 2px var(--stdk))}
+
+/* T1 霧鑽：近乎白，切面稀疏，沒有閃光 */
+.t1{--fs:46px;--fa:.10;--rb:0;
+  --k0:#f8f3f6;--k1:#efd9e6;--k2:#e3c0d4;--k3:#f4e6ee;--k4:#fffafd;--k5:#ebd0df;--k6:#d4a9c2;
+  --glow:#ffc9e666;--rim:rgba(255,255,255,.4);--plate:rgba(110,60,92,.58);--stbg:rgba(120,64,98,.66);--stdk:#6b3a58;--num1:#f0cfe1;--num2:#b07a98}
+/* T2 淡粉鑽 */
+.t2{--fs:38px;--fa:.16;--rb:.3;
+  --k0:#fff0f8;--k1:#ffc9e4;--k2:#f48cc4;--k3:#ffd9ed;--k4:#fff6fb;--k5:#fbaed8;--k6:#e06aac;
+  --glow:#ff8fcd88;--rim:rgba(255,160,215,.5);--plate:rgba(125,20,90,.6)}
+/* T3 粉鑽（上一輪定稿，不改） */
+.t3{--fs:30px;--fa:.22;--rb:.6}
+/* T4 玫瑰鑽：更深更濃、切面變密、金邊、白光掃過 */
+.t4{--fs:24px;--fa:.28;--rb:.8;
+  --k0:#ffd0eb;--k1:#ff68b6;--k2:#c4147a;--k3:#ff80c6;--k4:#ffe0f2;--k5:#e63d98;--k6:#6e0847;
+  --glow:#ff2a9acc;--rim:rgba(255,214,120,.9);--plate:rgba(78,4,52,.7);--stbg:rgba(96,6,64,.78);--stdk:#4f0636;--num1:#ff7cc6;--num2:#7d0a52}
+.t4{box-shadow:0 0 0 1px #fff3c4 inset,0 0 0 4px rgba(255,214,120,.55) inset,0 0 0 6px rgba(255,255,255,.35) inset,0 20px 56px -12px var(--glow),0 0 54px -4px var(--glow)}
+.t4 .fx2::before{content:"";position:absolute;top:0;bottom:0;width:34%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);animation:sweep 5s ease-in-out infinite}
+/* T5 虹彩鑽：切面最密、色散拉滿、七彩邊框、流星 */
+@keyframes spin{to{filter:hue-rotate(360deg)}}
+.t5{--fs:17px;--fa:.34;--rb:1;
+  --k0:#ffe3f6;--k1:#7de8ff;--k2:#ff4fb0;--k3:#ffe98a;--k4:#fff0fb;--k5:#b79bff;--k6:#ff5aa8;
+  --glow:#ff7ad9cc;--rim:rgba(255,255,255,.9);--plate:rgba(70,10,80,.68);--stbg:rgba(80,12,92,.76);--stdk:#4a0a5a;--num1:#9fe7ff;--num2:#7a1c9a}
+.t5{box-shadow:0 0 0 1px #fff inset,0 20px 60px -10px #ff5fcf,0 0 60px -2px #7de8ff99}
+.t5 .bg{animation:spin 7s linear infinite}
+.t5 .fx2::before{content:"";position:absolute;top:0;bottom:0;width:38%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.65),transparent);animation:sweep 3.6s ease-in-out infinite}
+.t5 .fx2::after{content:"";position:absolute;inset:0;border-radius:18px;padding:3px;background:conic-gradient(from calc(var(--mx) * 3),#ff6ad5,#ffe66d,#6dffd0,#6db8ff,#b36dff,#ff6ad5);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.t5 .shoot{position:absolute;left:6%;top:76%;width:90px;height:2px;background:linear-gradient(90deg,transparent,#fff);border-radius:2px;animation:shoot 5s ease-in infinite;filter:drop-shadow(0 0 4px #fff)}
+
+/* ===== 數值格（2×2，只寫英文） ===== */
+.stats{left:14px;right:14px;bottom:14px;z-index:5;display:grid;gap:6px;grid-template-columns:1fr 1fr}
+.st{position:relative;border-radius:9px;display:flex;align-items:center;justify-content:space-between;height:34px;padding:0 12px}
+.st em{font:700 11px/1 var(--tc);font-style:normal;letter-spacing:.16em}
+.st.free em{opacity:.85}
+.st b{font:400 27px/.9 var(--num);letter-spacing:.02em}
+.ovr small.tm{font:300 11px/1 var(--tc);letter-spacing:.34em;margin:5px 0 0 5px}
+.name-tier{font-size:12px;letter-spacing:.14em;color:var(--mute)}
+.grp{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:var(--mute);margin:0 auto 22px}
+.grp button{font:500 12px var(--tc);color:var(--ink);background:#ffffff12;border:1px solid #ffffff30;border-radius:99px;padding:6px 13px;cursor:pointer}
+.grp button.on{background:#fff;color:#111;border-color:#fff}
+.row{max-width:1700px}
+@media (max-width:1680px) and (min-width:1100px){.stage{zoom:.88}}
+</style>
+</head>
+<body>
+<h1>鑽石卡 五個層級</h1>
+<p class="lead">同一套鑽石材質，從 1 費到 5 費靠「切面密度、顏色濃度、色散、邊框、閃光」逐級拉開　·　數字為示意</p>
+<div id="rows"></div>
+<footer>
+  <p>層級對照：<b>T1 霧鑽</b>（無色散、無閃光）→ <b>T2 淡粉鑽</b>（微色散）→ <b>T3 粉鑽</b>（上一輪定稿）→ <b>T4 玫瑰鑽</b>（金邊＋白光掃過）→ <b>T5 虹彩鑽</b>（七彩邊框＋變色色散＋流星）。</p>
+  <p>右上角的鑽石數 = 費用。球員 / OVR / 能力值都是示意，不是正式卡表。</p>
+</footer>
+<script>
+const SIL = '<svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="78" r="42" fill="#fff"/><path d="M20 260c0-62 32-100 80-100s80 38 80 100z" fill="#fff"/></svg>';
+const P = [
+ {tier:1,tn:'霧鑽',desc:'無色散、切面稀疏、沒有閃光',id:1627936,name:'ALEX CARUSO',zh:'艾力克斯・卡魯索',team:'BULLS',ovr:78,s:[['OFF',62],['DEF',88],['STL',91],['HUSTLE',85]],sp:0},
+ {tier:2,tn:'淡粉鑽',desc:'淺粉、微色散、1 顆閃光',id:202681,name:'KYRIE IRVING',zh:'凱里・厄文',team:'MAVERICKS',ovr:84,s:[['OFF',90],['DEF',58],['HANDLE',97],['FINISH',93]],sp:1},
+ {tier:3,tn:'粉鑽',desc:'上一輪定稿的樣子',id:1628973,name:'JALEN BRUNSON',zh:'傑倫・布朗森',team:'KNICKS',ovr:87,s:[['OFF',88],['DEF',52],['MID',93],['CLUTCH',90]],sp:3},
+ {tier:4,tn:'玫瑰鑽',desc:'深色濃、切面密、金邊、白光掃過',id:1641705,name:'VICTOR WEMBANYAMA',zh:'維克多・文班亞馬',team:'SPURS',ovr:91,s:[['OFF',84],['DEF',99],['RIM',99],['REB',95]],sp:5},
+ {tier:5,tn:'虹彩鑽',desc:'七彩邊框、色散變色、流星',id:201939,name:'STEPHEN CURRY',zh:'史蒂芬・柯瑞',team:'WARRIORS',ovr:95,s:[['OFF',97],['DEF',55],['GRAVITY',99],['3PT',98]],sp:8},
+];
+const SPOTS=[[12,18,0],[78,11,1.1],[88,52,.5],[30,60,1.8],[60,34,2.3],[20,38,.8],[70,70,1.4],[45,14,2.7]];
+function card(p){
+  const st=p.s.map(([k,v],i)=>`<div class="st ${i<2?'core':'free'}"><em>${k}</em><b>${v}</b></div>`).join('');
+  const sp=SPOTS.slice(0,p.sp).map(([x,y,d])=>`<span class="sp" style="left:${x}%;top:${y}%;animation-delay:${d}s;width:${9+d*3}px;height:${9+d*3}px"></span>`).join('');
+  const gems='<i></i>'.repeat(p.tier);
+  return `<div class="slot"><div class="stage"><div class="card dia t${p.tier}">
+    <div class="bg"></div><div class="fx"></div>
+    <div class="portrait">${SIL}<img src="https://cdn.nba.com/headshots/nba/latest/1040x760/${p.id}.png" alt="" onerror="this.closest('.card').classList.add('noimg')"></div>
+    <div class="ovr"><b>${p.ovr}</b><small class="tm">${p.team}</small></div>
+    <div class="gems">${gems}</div>
+    <div class="plate"><div class="name">${p.name}</div><div class="zh">${p.zh}</div></div>
+    <div class="stats">${st}</div>
+    <div class="fx2">${sp}${p.tier===5?'<span class="shoot"></span>':''}</div>
+  </div></div><div class="cap"><b>T${p.tier} ${p.tn}（${p.tier} 費）</b><span>${p.desc}</span></div></div>`;
+}
+const rows=document.getElementById('rows');
+function render(){
+  rows.innerHTML = `<div class="row">${P.map(card).join('')}</div>`;
+}
+render();
+rows.addEventListener('pointermove',e=>{
+  const c=e.target.closest('.card'); if(!c) return;
+  const r=c.getBoundingClientRect(), x=(e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;
+  c.classList.add('live');
+  c.style.setProperty('--mx',(x*100)+'%'); c.style.setProperty('--my',(y*100)+'%');
+  c.style.setProperty('--ry',((x-.5)*14)+'deg'); c.style.setProperty('--rx',((.5-y)*12)+'deg');
+});
+rows.addEventListener('pointerout',e=>{
+  const c=e.target.closest('.card'); if(!c||c.contains(e.relatedTarget)) return;
+  c.classList.remove('live');
+  ['--mx','--my','--rx','--ry'].forEach(k=>c.style.removeProperty(k));
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+{
+ "experiment": "E-070",
+ "preregistrationSha256": "c3fe3cd7a049a6a33fb9cb892e1ccf77e77eb6bafb1033e7e539e6f5cc04c817",
+ "c0": {
+  "pass": true,
+  "detail": "w_vol=0 重建的 ranking.csv 與 reports/card-0.2.0/ranking.csv 逐位元相同（cmp）"
+ },
+ "c1": {
+  "pass": true,
+  "detail": "npm test exit 0；57 passed, 0 failed"
+ },
+ "c2": {
+  "pass": true,
+  "metric": "repl（card 0.2.0 每場 OVR）",
+  "delta": 0.0006721457380586271,
+  "ci90": [
+   -0.0008938931603084538,
+   0.0022496501759991126
+  ],
+  "threshold": "下界 > -0.02",
+  "n": {
+   "AB": 389,
+   "BA": 388
+  },
+  "unionN": 395,
+  "byDirection": {
+   "AB": 0.00046602749276802857,
+   "BA": 0.0008782639833492256
+  },
+  "game": {
+   "delta": 0.001430155114457099,
+   "ci90": [
+    -0.00033297576385741265,
+    0.003131948721913225
+   ]
+  },
+  "ovr36": {
+   "delta": 0.0005615066006653957,
+   "ci90": [
+    -0.0012380074577479667,
+    0.002426182073338626
+   ]
+  },
+  "sensitivityPossScale1.0_repl": {
+   "delta": -0.00010357272731403855,
+   "ci90": [
+    -0.0017469297350403978,
+    0.0015493758020461927
+   ],
+   "pass": true
+  }
+ },
+ "c3": {
+  "pass": true,
+  "detail": "evaluate.mjs 通過數 card 0.2.0 18/19，E070 18/19（>=）；未過者同為 allFourStayTop10、strictFourBigsTop10",
+  "card020": "18/19",
+  "E070": "18/19"
+ },
+ "reportOnly": {
+  "foulDrawCoefPer10": {
+   "card0.2.0": {
+    "per36": 0.10831787117443384,
+    "bootstrapSE": 0.0454557503566239
+   },
+   "E070": {
+    "per36": 0.11469199075730674,
+    "bootstrapSE": 0.050031884516163944
+   }
+  },
+  "rho2k": {
+   "n": 575,
+   "card0.2.0": {
+    "perGame": 0.6953224301281907,
+    "per36": 0.5181466323268944
+   },
+   "E070": {
+    "perGame": 0.6987005526899609,
+    "per36": 0.5202543170543715
+   }
+  },
+  "ovrChange": {
+   "meanAbs": 0.18024054982817855,
+   "max": 1.2000000000000028,
+   "n_gt1": 2,
+   "n_gt3": 0,
+   "spearmanOldNewOvr": 0.9996558411998248
+  }
+ },
+ "shrinkageCheck2025_26": {
+  "n": 372,
+  "shrunk": 0.7506604123732841,
+  "k0": 0.8286267634782708,
+  "firstHalfOnly": 0.8409639281492102
+ },
+ "cardSide": "通過（c0-c3 全過），交使用者決定採用；本 session 未改 memory、未 commit",
+ "allPass": true
+}

@@ -1,0 +1,52 @@
+{
+ "cand_old_rows": 504,
+ "cand_new_rows": 506,
+ "added": [
+  203999,
+  1641705
+ ],
+ "files": {
+  "repro/primary": {
+   "rows": {
+    "in": 877,
+    "out": 504
+   },
+   "sha256": "a35ebcacceefc85e1fefbc46afc8e118e87f36b1cd0b326e46e040b7be0dad33"
+  },
+  "repro/fitA": {
+   "rows": {
+    "in": 864,
+    "out": 503
+   },
+   "sha256": "e5932b649aa65d78b73628e12cc9b2fd4814fac7883a17f8e17a4bf1192c1936"
+  },
+  "repro/fitB": {
+   "rows": {
+    "in": 863,
+    "out": 504
+   },
+   "sha256": "2908af9fc86af385cacfcbbe88bfab47404984a0470b1d1ceb9b7967dfa3a90a"
+  },
+  "fixed/primary": {
+   "rows": {
+    "in": 877,
+    "out": 506
+   },
+   "sha256": "514ba5e0a14fee5f5e700032bea613486fac68eed6d2073a0b12e21296bc6bb8"
+  },
+  "fixed/fitA": {
+   "rows": {
+    "in": 864,
+    "out": 505
+   },
+   "sha256": "b468cba3e8d608b1178565c87862ca918005e14a1e2f5749e6ab7533d1400fa8"
+  },
+  "fixed/fitB": {
+   "rows": {
+    "in": 863,
+    "out": 506
+   },
+   "sha256": "a5def5e9d4aa7f09a44947cf2dcad3c22b07eb0be6a22459943bc432ecf91c20"
+  }
+ }
+}

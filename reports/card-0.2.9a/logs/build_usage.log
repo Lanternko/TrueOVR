@@ -1,0 +1,16 @@
+{
+ "out": "D:\\Projects\\CODING\\basketball-autochess\\reports\\ovr-inseason-2026-27\\live\\usage-2025-26-card0210.json",
+ "check": {
+  "rReplRecomputeDiff": 0.0,
+  "anchorsRecomputeDiff": 0.0,
+  "predNewVsPipeline": 0.0,
+  "mismatchOvr1dp": 0,
+  "mismatchMpg2dp": 0,
+  "mismatchGRepl4dp": 0,
+  "maxAbsOvrUnroundedVsCsv": 0.04992809584214797,
+  "n": 582,
+  "hasFalse": 0
+ },
+ "payloadSha256": "3fe77218dac39321b8079a68ad3bf5f67ed335513c75d17ea0d49cb4e636e3d7",
+ "pass": true
+}

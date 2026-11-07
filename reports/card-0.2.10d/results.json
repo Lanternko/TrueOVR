@@ -1,0 +1,26 @@
+{
+ "selfcheck_ranking_sha256": "e46315bded816662b842460903104794f369d371e14f22df459d35eddc23158b",
+ "card_0.2.10c_ranking_sha256": "e46315bded816662b842460903104794f369d371e14f22df459d35eddc23158b",
+ "ranking_sha256": "7b47982fb1ff499ab937cbadec1a6678fafc471189b4ad6e2970a7a935c7f91b",
+ "three_value_sha256": "70392d30c92bcb9f427c34c4647877920e2a2b626656fd707219201c2a446b4a",
+ "rapm_T6_sha256": "514ba5e0a14fee5f5e700032bea613486fac68eed6d2073a0b12e21296bc6bb8",
+ "usage_features_sha256": "f47a5602a74591ccbd72c6038092afeb49ea2b2ed26afb087e3cd0c9ecd2782b",
+ "usage_check": {
+  "players": 582,
+  "mismatch": 0,
+  "predNewVsPipeline": 0.0
+ },
+ "sources_sha256": {
+  "reports/card-0.2.12/tail-U.csv": "166c808965b292482232c64c83bc870d7c4fdaf795a6702a62978589b86ad1a7",
+  "reports/card-0.2.12/mpg-c82.csv": "f13d6c703559962ddbadc346d759cda8a2bd6042a2bc657f159342fd34db7a1a",
+  "reports/card-0.2.12/three-value.csv": "70392d30c92bcb9f427c34c4647877920e2a2b626656fd707219201c2a446b4a",
+  "reports/card-0.2.12/mpg-L-selection.json": "bf54ce9cae24ebe3037f0337a8bd3ae2221f6663b59d16f00561e8ff0cee1354",
+  "reports/card-0.2.10c/rapm-T6.csv": "514ba5e0a14fee5f5e700032bea613486fac68eed6d2073a0b12e21296bc6bb8",
+  "reports/card-0.2.10c/ranking.csv": "e46315bded816662b842460903104794f369d371e14f22df459d35eddc23158b",
+  "reports/card-0.2.10a/tail-U.csv": "ff959cd0eee276d2817ba10db3c5fc14ca640e302a8c3810590c071730301dba",
+  "reports/card-0.2.10d/build.py": "6f4c2665a8feb85bf7e94bb2bb1479579e182547fd18e2c12e1acb55a908e2a2",
+  "reports/card-0.2.10d/e162_build.py": "5093cd521a91ededdd6e02d6d69a4816a1f02f2e79424128169f26a8140c2aa6",
+  "reports/card-0.2.10d/run_all.py": "3716627178ccc2db0ea96385eaa9b542a91888e1e3e66cff9ec8e666feacf4f1",
+  "reports/E142-card-target/phase1-work/cands/T6-2025-26.pkl": "13cb929439bf8ff6affcbcba1b8932ef1cce62afe8c56d527d4153b637c2a786"
+ }
+}

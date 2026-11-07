@@ -1,0 +1,17 @@
+synthetic normal ratio 1.0483
+== e101
+  long       top=True  bot=True  ratio=0.997 ins=True N=1481 {'>99': 1, '>120': 0, '>140': 0} top3=[['Luke Kennard', 107.99]]
+  mid        top=False bot=False ratio=1.814 ins=False N=1481 {'>99': 0, '>120': 0, '>140': 0} top3=[]
+  short      top=True  bot=False ratio=1.332 ins=False N=1481 {'>99': 2, '>120': 0, '>140': 0} top3=[['Giannis Antetokounmpo', 113.05], ['Obi Toppin', 112.46]]
+  ft         top=True  bot=True  ratio=0.595 ins=True N=1481 {'>99': 2, '>120': 0, '>140': 0} top3=[['Stephen Curry', 112.76], ['Cam Spencer', 100.28]]
+  drive      top=True  bot=True  ratio=1.266 ins=False N=913 {'>99': 1, '>120': 0, '>140': 0} top3=[['Zion Williamson', 103.92]]
+  foulDraw   top=True  bot=True  ratio=1.650 ins=False N=961 {'>99': 2, '>120': 0, '>140': 0} top3=[['Giannis Antetokounmpo', 112.62], ['Joel Embiid', 99.81]]
+  tovSkill   top=True  bot=True  ratio=0.875 ins=True N=961 {'>99': 2, '>120': 0, '>140': 0} top3=[['Tim Hardaway Jr.', 107.89], ['Sam Hauser', 106.16]]
+  pass       top=True  bot=True  ratio=1.126 ins=False N=961 {'>99': 5, '>120': 0, '>140': 0} top3=[['Trae Young', 117.9], ['Cade Cunningham', 109.61], ['Ja Morant', 107.72]]
+  rebound    top=True  bot=True  ratio=1.088 ins=False N=961 {'>99': 4, '>120': 0, '>140': 0} top3=[['Mitchell Robinson', 110.62], ['Andre Drummond', 109.87], ['Donovan Clingan', 105.58]]
+  physique   top=True  bot=True  ratio=0.946 ins=True N=959 {'>99': 3, '>120': 0, '>140': 0} top3=[['Zach Edey', 117.59], ['Donovan Clingan', 103.89], ['Brook Lopez', 100.02]]
+  onBall     top=True  bot=True  ratio=1.163 ins=False N=961 {'>99': 2, '>120': 0, '>140': 0} top3=[['Luguentz Dort', 113.46], ['Dyson Daniels', 105.38]]
+  creation   top=True  bot=True  ratio=1.333 ins=False N=961 {'>99': 2, '>120': 0, '>140': 0} top3=[['Shai Gilgeous-Alexander', 108.74], ['Luka Dončić', 106.97]]
+  pressure   top=False bot=False ratio=nan ins=None N=252 {'>99': 0, '>120': 0, '>140': 0} top3=[]
+  midValue   top=True  bot=False ratio=3.742 ins=False N=1481 {'>99': 4, '>120': 0, '>140': 0} top3=[['Shai Gilgeous-Alexander', 117.74], ['DeMar DeRozan', 108.66], ['T.J. McConnell', 108.03]]
+  shortValue top=True  bot=True  ratio=1.695 ins=False N=1481 {'>99': 2, '>120': 1, '>140': 0} top3=[['Giannis Antetokounmpo', 129.04], ['Jalen Duren', 110.17]]

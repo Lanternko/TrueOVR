@@ -1,0 +1,378 @@
+{
+ "doc": "E-127 phase 0",
+ "prereg_sha256": "dbafa0fe5aa764a7e706b58814630b4f69ab9ad3c71e889a35263203ed75e3e2",
+ "seasons": {
+  "2022-23": {
+   "nGamesDnp": 1108,
+   "nPlayers": 539,
+   "winrate": {
+    "HOU": 0.2683,
+    "LAC": 0.5366,
+    "LAL": 0.5244,
+    "MIA": 0.5366,
+    "MIL": 0.7073,
+    "MIN": 0.5122,
+    "BKN": 0.5488,
+    "NYK": 0.5732,
+    "ORL": 0.4146,
+    "IND": 0.4268,
+    "PHI": 0.6585,
+    "ATL": 0.5,
+    "BOS": 0.6951,
+    "CLE": 0.622,
+    "NOP": 0.5122,
+    "CHI": 0.4878,
+    "DAL": 0.4634,
+    "DEN": 0.6463,
+    "GSW": 0.5366,
+    "PHX": 0.5488,
+    "POR": 0.4024,
+    "SAC": 0.5854,
+    "SAS": 0.2683,
+    "OKC": 0.4878,
+    "TOR": 0.5,
+    "UTA": 0.4512,
+    "MEM": 0.622,
+    "WAS": 0.4268,
+    "DET": 0.2073,
+    "CHA": 0.3293
+   },
+   "tankTeams": [
+    "CHA",
+    "DET",
+    "HOU",
+    "SAS"
+   ],
+   "rapmFileSha256": "3737a8e5d748e6564c581ac1be9390091e884bb2c02d54bfa7ea0b3659c2efdb"
+  },
+  "2023-24": {
+   "nGamesDnp": 1093,
+   "nPlayers": 571,
+   "winrate": {
+    "HOU": 0.5,
+    "LAC": 0.622,
+    "LAL": 0.5732,
+    "MIA": 0.561,
+    "MIL": 0.5976,
+    "MIN": 0.6829,
+    "BKN": 0.3902,
+    "NYK": 0.6098,
+    "ORL": 0.5732,
+    "IND": 0.5732,
+    "PHI": 0.5732,
+    "ATL": 0.439,
+    "BOS": 0.7805,
+    "CLE": 0.5854,
+    "NOP": 0.5976,
+    "CHI": 0.4756,
+    "DAL": 0.6098,
+    "DEN": 0.6951,
+    "GSW": 0.561,
+    "PHX": 0.5976,
+    "POR": 0.2561,
+    "SAC": 0.561,
+    "SAS": 0.2683,
+    "OKC": 0.6951,
+    "TOR": 0.3049,
+    "UTA": 0.378,
+    "MEM": 0.3293,
+    "WAS": 0.1829,
+    "DET": 0.1707,
+    "CHA": 0.2561
+   },
+   "tankTeams": [
+    "CHA",
+    "DET",
+    "MEM",
+    "POR",
+    "SAS",
+    "TOR",
+    "WAS"
+   ],
+   "rapmFileSha256": "12210d19a3e0bdddd77926426fe75aa5bc25fe355e9ab03ad468b79d4d2e97e7"
+  },
+  "2024-25": {
+   "nGamesDnp": 1104,
+   "nPlayers": 569,
+   "winrate": {
+    "LAC": 0.6098,
+    "LAL": 0.6098,
+    "MIA": 0.4512,
+    "MIL": 0.5854,
+    "MIN": 0.5976,
+    "BKN": 0.3171,
+    "NYK": 0.622,
+    "ORL": 0.5,
+    "IND": 0.6098,
+    "PHI": 0.2927,
+    "PHX": 0.439,
+    "ATL": 0.4878,
+    "BOS": 0.7439,
+    "CLE": 0.7805,
+    "NOP": 0.2561,
+    "CHI": 0.4756,
+    "DAL": 0.4756,
+    "DEN": 0.6098,
+    "GSW": 0.5854,
+    "HOU": 0.6341,
+    "POR": 0.439,
+    "SAC": 0.4878,
+    "SAS": 0.4146,
+    "OKC": 0.8293,
+    "TOR": 0.3659,
+    "UTA": 0.2073,
+    "MEM": 0.5854,
+    "WAS": 0.2195,
+    "DET": 0.5366,
+    "CHA": 0.2317
+   },
+   "tankTeams": [
+    "BKN",
+    "CHA",
+    "NOP",
+    "PHI",
+    "UTA",
+    "WAS"
+   ],
+   "rapmFileSha256": "cb42dd45912ed741cff7b7c54d44e6583c05680037c8c7958418baaa2789e898"
+  },
+  "2025-26": {
+   "nGamesDnp": 1230,
+   "nPlayers": 582,
+   "winrate": {
+    "HOU": 0.6341,
+    "LAC": 0.5122,
+    "LAL": 0.6463,
+    "MIA": 0.5244,
+    "MIL": 0.3902,
+    "MIN": 0.5976,
+    "BKN": 0.2439,
+    "NYK": 0.6463,
+    "ORL": 0.5488,
+    "IND": 0.2317,
+    "PHI": 0.5488,
+    "ATL": 0.561,
+    "BOS": 0.6829,
+    "CLE": 0.6341,
+    "NOP": 0.3171,
+    "CHI": 0.378,
+    "DAL": 0.3171,
+    "DEN": 0.6585,
+    "GSW": 0.4512,
+    "PHX": 0.5488,
+    "POR": 0.5122,
+    "SAC": 0.2683,
+    "SAS": 0.7561,
+    "OKC": 0.7805,
+    "TOR": 0.561,
+    "UTA": 0.2683,
+    "MEM": 0.3049,
+    "WAS": 0.2073,
+    "DET": 0.7317,
+    "CHA": 0.5366
+   },
+   "tankTeams": [
+    "BKN",
+    "DAL",
+    "IND",
+    "MEM",
+    "NOP",
+    "SAC",
+    "UTA",
+    "WAS"
+   ],
+   "rapmFileSha256": "7b75724173a9ce476cc24ef595f11d7cc4f31011a9bf6d97b2f482fe72fc81b6"
+  }
+ },
+ "c0f": {
+  "nRef": 582,
+  "missingInMine": 0,
+  "yMismatch": 0,
+  "dMismatch": 0,
+  "maxAbsDiffL": 0.039087388708046844,
+  "nLdiffGE0.01": 26,
+  "LdiffList": [
+   [
+    202687,
+    "Bismack Biyombo",
+    0.0118
+   ],
+   [
+    203967,
+    "Dario Saric",
+    0.0138
+   ],
+   [
+    1627746,
+    "Skal Labissiere",
+    0.0105
+   ],
+   [
+    1628365,
+    "Markelle Fultz",
+    0.0185
+   ],
+   [
+    1629634,
+    "Brandon Clarke",
+    0.0247
+   ],
+   [
+    1630649,
+    "Stanley Umude",
+    0.0161
+   ],
+   [
+    1631102,
+    "TyTy Washington Jr.",
+    0.0154
+   ],
+   [
+    1631205,
+    "Buddy Boeheim",
+    0.0391
+   ],
+   [
+    1631211,
+    "Trevor Keels",
+    0.0234
+   ],
+   [
+    1631247,
+    "Luke Travers",
+    0.0124
+   ],
+   [
+    1631338,
+    "Mouhamadou Gueye",
+    0.0117
+   ],
+   [
+    1641732,
+    "Colby Jones",
+    0.0142
+   ],
+   [
+    1641752,
+    "Bobi Klintman",
+    0.0187
+   ],
+   [
+    1641807,
+    "Norchad Omier",
+    0.0132
+   ],
+   [
+    1642280,
+    "Trentyn Flowers",
+    0.0182
+   ],
+   [
+    1642282,
+    "Hunter Sallis",
+    0.0139
+   ],
+   [
+    1642357,
+    "David Jones Garcia",
+    0.014
+   ],
+   [
+    1642359,
+    "Pacôme Dadiet",
+    0.0103
+   ],
+   [
+    1642368,
+    "N'Faly Dante",
+    0.0151
+   ],
+   [
+    1642384,
+    "Isaiah Crawford",
+    0.0117
+   ]
+  ],
+  "pass": false
+ },
+ "c0s": {
+  "2022-23": {
+   "nTeams": 4,
+   "teams": [
+    "CHA",
+    "DET",
+    "HOU",
+    "SAS"
+   ]
+  },
+  "2023-24": {
+   "nTeams": 7,
+   "teams": [
+    "CHA",
+    "DET",
+    "MEM",
+    "POR",
+    "SAS",
+    "TOR",
+    "WAS"
+   ]
+  },
+  "2024-25": {
+   "nTeams": 6,
+   "teams": [
+    "BKN",
+    "CHA",
+    "NOP",
+    "PHI",
+    "UTA",
+    "WAS"
+   ]
+  },
+  "2025-26": {
+   "nTeams": 8,
+   "teams": [
+    "BKN",
+    "DAL",
+    "IND",
+    "MEM",
+    "NOP",
+    "SAC",
+    "UTA",
+    "WAS"
+   ]
+  },
+  "pass": true
+ },
+ "c0n": {
+  "perPair": {
+   "2022-23->2023-24": {
+    "eligible": 322,
+    "y1d1": 23,
+    "y1d0": 69,
+    "y0d1": 25,
+    "y0d0": 205,
+    "lost": 68
+   },
+   "2023-24->2024-25": {
+    "eligible": 308,
+    "y1d1": 34,
+    "y1d0": 55,
+    "y0d1": 40,
+    "y0d0": 179,
+    "lost": 81
+   },
+   "2024-25->2025-26": {
+    "eligible": 324,
+    "y1d1": 26,
+    "y1d0": 69,
+    "y0d1": 39,
+    "y0d0": 190,
+    "lost": 81
+   }
+  },
+  "totalY1D1": 83,
+  "threshold": 30,
+  "pass": true
+ },
+ "allPass": false
+}

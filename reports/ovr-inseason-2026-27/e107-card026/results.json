@@ -1,0 +1,296 @@
+{
+ "experiment": "E-107（inseason 0.2.5a+E107，新賽季對齊 card 0.2.6）",
+ "preregistration_sha256": "cb5b293de991173ee49e2fc82414f7f6fa3d89ca69f24d8d3f6cae67a7f8f173",
+ "verdict": "停在前置條件：(z)(L1)(s) 不過，依 §4 停下；未寫回測、未看 (1)(2)",
+ "allPrereqPass": false,
+ "failedPrereq": [
+  "z",
+  "L1",
+  "s"
+ ],
+ "rows": {
+  "c0": {
+   "pass": true,
+   "value": {
+    "files": {
+     "ranking.csv": {
+      "after": "314fcdc979da9867c51322caacfeb4d989bd3894b0d14f548c57590350ce209d",
+      "beforePatch": "314fcdc979da9867c51322caacfeb4d989bd3894b0d14f548c57590350ce209d",
+      "published": "314fcdc979da9867c51322caacfeb4d989bd3894b0d14f548c57590350ce209d"
+     },
+     "no-prior.csv": {
+      "after": "e061bff3438e61c02b67b41a12fbec8d7032644536f2261f08d37793bb862137",
+      "beforePatch": "e061bff3438e61c02b67b41a12fbec8d7032644536f2261f08d37793bb862137",
+      "published": "e061bff3438e61c02b67b41a12fbec8d7032644536f2261f08d37793bb862137"
+     }
+    },
+    "inputsSameAsPublished": true,
+    "dataCutoff": "2026-10-28"
+   }
+  },
+  "c1": {
+   "pass": true,
+   "value": "===== 57 passed, 0 failed =====",
+   "exit": "0"
+  },
+  "u": {
+   "pass": true,
+   "value": {
+    "tailMaxAbsDiff": 0.0,
+    "nPoints": 70,
+    "W": {
+     "0.0": 0.0,
+     "36.0": 1.0,
+     "5.0": 0.31175001249797585,
+     "20.0": 0.8098728711825767
+    },
+    "Wtarget": {
+     "0": 0,
+     "36": 1,
+     "5": 0.31175,
+     "20": 0.80987
+    }
+   }
+  },
+  "z": {
+   "pass": false,
+   "value": {
+    "nPlayers2025_26": 582,
+    "nMismatch2025_26": 1,
+    "mismatch": [
+     {
+      "playerId": "1642450",
+      "midA026": 100,
+      "midA_E101": 100,
+      "shortA026": 273,
+      "shortA_E101": 272
+     }
+    ],
+    "totals026": {
+     "midA": 22089,
+     "midM": 9210,
+     "shortA": 105764,
+     "shortM": 61113
+    },
+    "totalsE101": {
+     "midA": 22089,
+     "midM": 9210,
+     "shortA": 105763,
+     "shortM": 61113
+    },
+    "season2026_27": {
+     "pbpFiles": 67,
+     "twoPtFGA": 6918,
+     "withArea": 0,
+     "noShotDistance": 0,
+     "shotDistLt8": 4764,
+     "shotDistLt8JudgedMid": 0
+    },
+    "cause": "1642450（Daniss Jenkins）在 0022501051 第 3 節剩 2.3 秒的上籃 Missed：area 缺值（None）、areaDetail 0-8 Center、shotDistance 4.29。賽中 zone_of 走座標規則判 short；E-101 的 PBP 抽取只數 area 為 Restricted Area／In The Paint (Non-RA)／Mid-Range 的出手，略過這球。"
+   }
+  },
+  "L1": {
+   "pass": false,
+   "value": {
+    "unrounded_582_maxAbs": 0.16106448807884988,
+    "unrounded_nGt0.1": 5,
+    "unrounded_worst": [
+     [
+      "Ausar Thompson",
+      0.16106448807884988
+     ],
+     [
+      "Jrue Holiday",
+      0.15527734922133618
+     ],
+     [
+      "De'Aaron Fox",
+      0.14575214701214634
+     ],
+     [
+      "Marcus Smart",
+      0.11801176383139023
+     ],
+     [
+      "OG Anunoby",
+      0.11003242202268382
+     ]
+    ],
+    "E095style_368_maxAbs": 0.20000000000000284,
+    "E095style_nGt0.1": 2,
+    "E095style_top5": [
+     [
+      0.20000000000000284,
+      "Ausar Thompson",
+      "89.0",
+      "88.8"
+     ],
+     [
+      0.19999999999998863,
+      "Jrue Holiday",
+      "83.6",
+      "83.4"
+     ],
+     [
+      0.10000000000000853,
+      "Zaccharie Risacher",
+      "67.1",
+      "67.2"
+     ],
+     [
+      0.10000000000000853,
+      "Rudy Gobert",
+      "84.2",
+      "84.1"
+     ],
+     [
+      0.10000000000000853,
+      "Paul Reed",
+      "68.9",
+      "68.8"
+     ]
+    ],
+    "anchorsMaxAbsDiff": 0.0,
+    "rReplDiff": 0.0,
+    "diagnosis_reportOnly": {
+     "x0_from_rankingCsv_maxAbs": 0.16106448807884988,
+     "x0_from_attributes_e101_unrounded_maxAbs": 0.05432831366343294,
+     "x0_from_attributes_e101_unrounded_nGt0.1": 0,
+     "cause": "card 0.2.6 ranking.csv 能力值四捨五入到 0.1，使 pointwise_pipeline 的封頂門檻 T[a] 從 1.90278 移到 1.92149，被封頂的 5 人 OVR 跟著移 0.11–0.16；改用未四捨五入的 attributes-e101.csv 時最大差 0.054。"
+    }
+   }
+  },
+  "s": {
+   "pass": false,
+   "value": {
+    "nCommonPool": 252,
+    "rule": "|med(y026−x0_026)| ≤ |med(y025−x0_022)| + 2.0",
+    "attrs": {
+     "long": {
+      "med025All": -0.0014680691200581464,
+      "med026All": -0.0032775400139613,
+      "passAll": true,
+      "med025Top5": -0.01007768709704493,
+      "med026Top5": -0.013913326717769792,
+      "passTop5": true
+     },
+     "mid": {
+      "med025All": 9.910914492695653,
+      "med026All": 0.2857053371039875,
+      "passAll": true,
+      "med025Top5": -3.9293552132430776,
+      "med026Top5": -3.146023953815771,
+      "passTop5": true
+     },
+     "short": {
+      "med025All": 0.01289968662305796,
+      "med026All": 0.6300923069184563,
+      "passAll": true,
+      "med025Top5": -2.7106587687269155,
+      "med026Top5": -1.5468234214186225,
+      "passTop5": true
+     },
+     "ft": {
+      "med025All": -0.9888115190793059,
+      "med026All": -0.9888115190793059,
+      "passAll": true,
+      "med025Top5": -5.62620737823859,
+      "med026Top5": -5.62620737823859,
+      "passTop5": true
+     },
+     "tovSkill": {
+      "med025All": -0.19266277939747312,
+      "med026All": 0.029719787601564462,
+      "passAll": true,
+      "med025Top5": -0.46501457725948114,
+      "med026Top5": -0.9693877551020478,
+      "passTop5": true
+     },
+     "pass": {
+      "med025All": 0.025024295432459098,
+      "med026All": 0.0581323438466228,
+      "passAll": true,
+      "med025Top5": 0.0,
+      "med026Top5": 0.04248608534322784,
+      "passTop5": true
+     },
+     "rebound": {
+      "med025All": 0.0,
+      "med026All": -0.007187639946263147,
+      "passAll": true,
+      "med025Top5": -0.004437965662447141,
+      "med026Top5": 0.08324056895484944,
+      "passTop5": true
+     },
+     "stamina": {
+      "med025All": 0.0010528020732074594,
+      "med026All": -3.4272055530676226,
+      "passAll": false,
+      "med025Top5": 0.0,
+      "med026Top5": -2.44965986394557,
+      "passTop5": false
+     },
+     "creation": {
+      "med025All": 0.20006478781989046,
+      "med026All": 0.3839442987226249,
+      "passAll": true,
+      "med025Top5": 0.0,
+      "med026Top5": -0.047000618429194674,
+      "passTop5": true
+     },
+     "foulDraw": {
+      "med025All": 0.34073534175575304,
+      "med026All": 2.1389610389610354,
+      "passAll": true,
+      "med025Top5": 0.3129899578879076,
+      "med026Top5": 0.27668521954235814,
+      "passTop5": true
+     }
+    },
+    "failed": [
+     "stamina（全部）",
+     "stamina（x0 前 5%）"
+    ],
+    "cause": "預註冊 §2.3 把 stamina 也改對四季合併池映射，但 card 0.2.6 的 stamina 沿用 card 0.2.5 單季量尺（E-101 沒改 stamina），兩邊量尺不一致。"
+   }
+  },
+  "1": {
+   "pass": null,
+   "value": "未算：前置不過，依 §4 不看"
+  },
+  "2": {
+   "pass": null,
+   "value": "未算：前置不過，依 §4 不看"
+  }
+ },
+ "files": {
+  "prereq.json": {
+   "path": "prereq.json",
+   "sha256": "370bdfdd2c28588b9996f758611a16253f80d61d93ac883cb07c3b8be9b3b81d"
+  },
+  "live-compare.json": {
+   "path": "live-compare.json",
+   "sha256": "ca463f803d1abe354b394c8676526f9dc406386c70d49f0def2061103ee9afbc"
+  },
+  "deviations.json": {
+   "path": "deviations.json",
+   "sha256": "ee8eb474cb728eee381806bcc2417dffe0b51c533937d51a7a8ed0ea520c691f"
+  }
+ },
+ "reportOnly_liveCompare_vs_0.2.5a": {
+  "nCommon": 368,
+  "absDeltaOVR": {
+   "median": 0.6000000000000014,
+   "max": 3.799999999999997,
+   "nGt10": 0,
+   "nGt5": 0
+  },
+  "top20_in": [
+   "De'Aaron Fox"
+  ],
+  "top20_out": [
+   "Dean Wade"
+  ],
+  "note": "同 2026-10-28 資料的線上 026 對 inseason 0.2.5a，不含答案、不是判定"
+ }
+}

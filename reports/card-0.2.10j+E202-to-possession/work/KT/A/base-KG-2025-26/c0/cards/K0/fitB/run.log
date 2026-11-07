@@ -1,0 +1,17 @@
+D:\Projects\CODING\basketball-autochess\reports\card-0.2.10j+E202-to-possession\calibrate_wing_t.py --direction H1 --capMargin 0 --attrSource reports/card-0.2.0+E070-foul-volume/attributes-w075/attributes-new.csv --defSource reports/card-0.2.7+E123-tail-3pt-rim-pres/work/def-new.csv --perGame --pressure force --pressureSource reports/card-0.2.0+E071-pressure/force-pressure-source.csv --tailSource D:\Projects\CODING\basketball-autochess\reports\card-0.2.10j+E202-to-possession\tail-KT.csv --rapm D:\Projects\CODING\basketball-autochess\reports\card-0.2.10j+E202-to-possession\work\KT\A\base-KG-2025-26\c0\split\rapm-B.csv --possScale 0.5 --mpgSource D:\Projects\CODING\basketball-autochess\reports\card-0.2.7c+E134-rolling-prior\stage1\work\c0p\mpg\mpg-B.csv --bonusShape none --defWindow season --defRapm D:\Projects\CODING\basketball-autochess\reports\card-0.2.10j+E202-to-possession\work\KT\A\base-KG-2025-26\c0\def-L-fitB.csv --defPossFactor 0.5 --dropAttr physique --dropAttr stamina --dropInteract pass --offBallSource D:\Projects\CODING\basketball-autochess\reports\card-0.2.10j+E202-to-possession\gravity-attr.csv --offBallCols gravity --out D:\Projects\CODING\basketball-autochess\reports\card-0.2.10j+E202-to-possession\work\KT\A\base-KG-2025-26\c0\cards\K0\fitB
+{
+ "direction": "H1",
+ "gamma": null,
+ "delta": null,
+ "capMargin": 0.0,
+ "phi": null,
+ "capIterations": 10,
+ "cappedPlayers": 111,
+ "restrictPos": null,
+ "chosen": {
+  "form": "position-interactions",
+  "ridge": 1.0
+ },
+ "noiseCeilingR2": null
+}
+

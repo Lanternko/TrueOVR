@@ -1,0 +1,748 @@
+{
+  "preregistration": "preregistration.md",
+  "alpha": 0.5,
+  "form": "position-interactions",
+  "ridge": 1.0,
+  "players": 582,
+  "lowMinThreshold": 1000,
+  "highMinThreshold": 2000,
+  "priorPoolMin": 500,
+  "kappa": 500.0,
+  "kappaSource": "fallback",
+  "kappaClippedToBound": true,
+  "kappaTau2": 1.772714377294958,
+  "kappaSigma2": -35.651768580860214,
+  "kappaFitPlayers": 535,
+  "kappaGridTransparencyOnly": {
+    "250": {
+      "gates": {
+        "g1": true,
+        "g2": false,
+        "g3": true
+      },
+      "g4": {
+        "g4aPass": true,
+        "g4bPass": true,
+        "g4cPass": true
+      },
+      "adopt": false
+    },
+    "500": {
+      "gates": {
+        "g1": false,
+        "g2": false,
+        "g3": true
+      },
+      "g4": {
+        "g4aPass": true,
+        "g4bPass": true,
+        "g4cPass": true
+      },
+      "adopt": false
+    },
+    "1000": {
+      "gates": {
+        "g1": false,
+        "g2": false,
+        "g3": true
+      },
+      "g4": {
+        "g4aPass": true,
+        "g4bPass": true,
+        "g4cPass": true
+      },
+      "adopt": false
+    },
+    "2000": {
+      "gates": {
+        "g1": false,
+        "g2": false,
+        "g3": true
+      },
+      "g4": {
+        "g4aPass": true,
+        "g4bPass": true,
+        "g4cPass": true
+      },
+      "adopt": false
+    }
+  },
+  "gates": {
+    "G1": {
+      "rhoNetBaseline": 0.45452326201320703,
+      "rhoNetShrunk": 0.4430367178789905,
+      "rhoDefenseBaseline": 0.2533636049620104,
+      "rhoDefenseShrunk": 0.26618918668674063,
+      "passNet": false,
+      "passDefense": true,
+      "pass": false,
+      "bootstrapRhoDiff95": {
+        "net": [
+          -0.03886044652343451,
+          0.01266281253025579
+        ],
+        "defense": [
+          -0.015483236240043876,
+          0.039881035881604174
+        ]
+      }
+    },
+    "G2": {
+      "benchPlayers": 234,
+      "meanLBaseline": 2.5712264160159184,
+      "meanLShrunk": 2.4515078227505236,
+      "meanGain": 0.11971859326539479,
+      "gainBootstrapCI95": [
+        -0.22718493227233552,
+        0.43748516024959766
+      ],
+      "pass": false
+    },
+    "G3": {
+      "baselineTop20LowMin": 3,
+      "shrunkTop20LowMin": 1,
+      "baselineTop50LowMin1000": 10,
+      "baselineTop50LowMin500": 6,
+      "pass": true
+    },
+    "G4": {
+      "starters": 77,
+      "g4aSpearmanAmongStarters": 1.0,
+      "g4aPass": true,
+      "g4bDroppedFromTop50": [],
+      "g4bPass": true,
+      "baselineTop20Starters": 10,
+      "shrunkTop20Starters": 13,
+      "g4cPass": true
+    }
+  },
+  "adopt": false,
+  "simR2HeldOut": {
+    "baseline": 0.4154479434369899,
+    "shrunk": 0.32163615575032145
+  },
+  "medianShrinkFactorByMinuteBand": {
+    "0-250": 0.1298654379646253,
+    "250-500": 0.42831438781890674,
+    "500-1000": 0.6095981593854555,
+    "1000-2000": 0.8571241606363025,
+    "2000-inf": 1.0
+  },
+  "scaleAnchorsPer36": {
+    "baseline": {
+      "PR1": -3.6072855662093213,
+      "PR50": -0.31764328872968917,
+      "PR99": 3.1320615505017857
+    },
+    "shrunk": {
+      "PR1": -2.8065182493584175,
+      "PR50": -0.2510234933632803,
+      "PR99": 3.1320615505017857
+    }
+  },
+  "belowPriorOvrUp5Risk": {
+    "count": 81,
+    "players": [
+      {
+        "name": "Hunter Dickinson",
+        "MIN": 42,
+        "ovrBaseline": 48.8,
+        "ovrShrunk": 72.6
+      },
+      {
+        "name": "Mo Bamba",
+        "MIN": 43,
+        "ovrBaseline": 50.0,
+        "ovrShrunk": 72.6
+      },
+      {
+        "name": "James Wiseman",
+        "MIN": 58,
+        "ovrBaseline": 54.1,
+        "ovrShrunk": 72.4
+      },
+      {
+        "name": "Bismack Biyombo",
+        "MIN": 141,
+        "ovrBaseline": 52.3,
+        "ovrShrunk": 69.6
+      },
+      {
+        "name": "Mac McClung",
+        "MIN": 135,
+        "ovrBaseline": 46.0,
+        "ovrShrunk": 62.9
+      },
+      {
+        "name": "Trevor Keels",
+        "MIN": 14,
+        "ovrBaseline": 52.1,
+        "ovrShrunk": 68.9
+      },
+      {
+        "name": "Dalano Banton",
+        "MIN": 61,
+        "ovrBaseline": 49.5,
+        "ovrShrunk": 66.2
+      },
+      {
+        "name": "Yang Hansen",
+        "MIN": 299,
+        "ovrBaseline": 44.8,
+        "ovrShrunk": 61.4
+      },
+      {
+        "name": "Eric Gordon",
+        "MIN": 73,
+        "ovrBaseline": 49.9,
+        "ovrShrunk": 66.2
+      },
+      {
+        "name": "Chaz Lanier",
+        "MIN": 262,
+        "ovrBaseline": 40.8,
+        "ovrShrunk": 56.5
+      },
+      {
+        "name": "Markelle Fultz",
+        "MIN": 35,
+        "ovrBaseline": 53.1,
+        "ovrShrunk": 68.7
+      },
+      {
+        "name": "Bradley Beal",
+        "MIN": 120,
+        "ovrBaseline": 49.4,
+        "ovrShrunk": 64.9
+      },
+      {
+        "name": "N'Faly Dante",
+        "MIN": 15,
+        "ovrBaseline": 58.9,
+        "ovrShrunk": 74.0
+      },
+      {
+        "name": "Trey Jemison III",
+        "MIN": 81,
+        "ovrBaseline": 57.5,
+        "ovrShrunk": 71.7
+      },
+      {
+        "name": "Jahmyl Telfort",
+        "MIN": 32,
+        "ovrBaseline": 53.8,
+        "ovrShrunk": 67.8
+      },
+      {
+        "name": "CJ Huntley",
+        "MIN": 40,
+        "ovrBaseline": 59.6,
+        "ovrShrunk": 73.4
+      },
+      {
+        "name": "Jeremiah Robinson-Earl",
+        "MIN": 360,
+        "ovrBaseline": 46.4,
+        "ovrShrunk": 60.1
+      },
+      {
+        "name": "Omer Yurtseven",
+        "MIN": 103,
+        "ovrBaseline": 58.3,
+        "ovrShrunk": 71.7
+      },
+      {
+        "name": "Kyle Lowry",
+        "MIN": 118,
+        "ovrBaseline": 52.1,
+        "ovrShrunk": 65.1
+      },
+      {
+        "name": "Kevon Looney",
+        "MIN": 307,
+        "ovrBaseline": 52.3,
+        "ovrShrunk": 64.8
+      },
+      {
+        "name": "Noa Essengue",
+        "MIN": 6,
+        "ovrBaseline": 57.3,
+        "ovrShrunk": 68.8
+      },
+      {
+        "name": "Kobe Bufkin",
+        "MIN": 119,
+        "ovrBaseline": 54.0,
+        "ovrShrunk": 65.5
+      },
+      {
+        "name": "Xavier Tillman",
+        "MIN": 183,
+        "ovrBaseline": 59.0,
+        "ovrShrunk": 70.4
+      },
+      {
+        "name": "RayJ Dennis",
+        "MIN": 206,
+        "ovrBaseline": 51.9,
+        "ovrShrunk": 62.7
+      },
+      {
+        "name": "Lawson Lovering",
+        "MIN": 49,
+        "ovrBaseline": 63.0,
+        "ovrShrunk": 73.5
+      },
+      {
+        "name": "Dario Saric",
+        "MIN": 41,
+        "ovrBaseline": 62.6,
+        "ovrShrunk": 73.1
+      },
+      {
+        "name": "Maxi Kleber",
+        "MIN": 461,
+        "ovrBaseline": 50.2,
+        "ovrShrunk": 60.6
+      },
+      {
+        "name": "Alijah Martin",
+        "MIN": 145,
+        "ovrBaseline": 54.8,
+        "ovrShrunk": 65.0
+      },
+      {
+        "name": "Christian Koloko",
+        "MIN": 356,
+        "ovrBaseline": 55.4,
+        "ovrShrunk": 65.5
+      },
+      {
+        "name": "Keshon Gilbert",
+        "MIN": 73,
+        "ovrBaseline": 58.0,
+        "ovrShrunk": 68.1
+      },
+      {
+        "name": "Chucky Hepburn",
+        "MIN": 13,
+        "ovrBaseline": 59.3,
+        "ovrShrunk": 69.2
+      },
+      {
+        "name": "Johni Broome",
+        "MIN": 54,
+        "ovrBaseline": 63.2,
+        "ovrShrunk": 72.9
+      },
+      {
+        "name": "Jahmir Young",
+        "MIN": 58,
+        "ovrBaseline": 58.7,
+        "ovrShrunk": 68.0
+      },
+      {
+        "name": "Rocco Zikarsky",
+        "MIN": 36,
+        "ovrBaseline": 65.0,
+        "ovrShrunk": 73.8
+      },
+      {
+        "name": "Toby Okani",
+        "MIN": 217,
+        "ovrBaseline": 54.3,
+        "ovrShrunk": 63.0
+      },
+      {
+        "name": "Bronny James",
+        "MIN": 375,
+        "ovrBaseline": 48.6,
+        "ovrShrunk": 57.3
+      },
+      {
+        "name": "Hunter Sallis",
+        "MIN": 25,
+        "ovrBaseline": 60.9,
+        "ovrShrunk": 69.6
+      },
+      {
+        "name": "Hayden Gray",
+        "MIN": 24,
+        "ovrBaseline": 61.0,
+        "ovrShrunk": 69.6
+      },
+      {
+        "name": "Bobi Klintman",
+        "MIN": 71,
+        "ovrBaseline": 64.5,
+        "ovrShrunk": 72.8
+      },
+      {
+        "name": "AJ Johnson",
+        "MIN": 453,
+        "ovrBaseline": 48.4,
+        "ovrShrunk": 56.5
+      },
+      {
+        "name": "Pacôme Dadiet",
+        "MIN": 135,
+        "ovrBaseline": 63.9,
+        "ovrShrunk": 71.8
+      },
+      {
+        "name": "Curtis Jones",
+        "MIN": 87,
+        "ovrBaseline": 60.2,
+        "ovrShrunk": 67.6
+      },
+      {
+        "name": "Colin Castleton",
+        "MIN": 21,
+        "ovrBaseline": 66.5,
+        "ovrShrunk": 73.7
+      },
+      {
+        "name": "Nigel Hayes-Davis",
+        "MIN": 195,
+        "ovrBaseline": 57.3,
+        "ovrShrunk": 64.5
+      },
+      {
+        "name": "Nate Williams",
+        "MIN": 239,
+        "ovrBaseline": 63.3,
+        "ovrShrunk": 70.5
+      },
+      {
+        "name": "Moritz Wagner",
+        "MIN": 426,
+        "ovrBaseline": 59.5,
+        "ovrShrunk": 66.7
+      },
+      {
+        "name": "Javonte Cooke",
+        "MIN": 93,
+        "ovrBaseline": 61.0,
+        "ovrShrunk": 68.2
+      },
+      {
+        "name": "Taelon Peter",
+        "MIN": 492,
+        "ovrBaseline": 48.2,
+        "ovrShrunk": 55.4
+      },
+      {
+        "name": "KJ Simpson",
+        "MIN": 257,
+        "ovrBaseline": 56.2,
+        "ovrShrunk": 63.4
+      },
+      {
+        "name": "DeAndre Jordan",
+        "MIN": 198,
+        "ovrBaseline": 64.4,
+        "ovrShrunk": 71.6
+      },
+      {
+        "name": "Vladislav Goldin",
+        "MIN": 23,
+        "ovrBaseline": 67.1,
+        "ovrShrunk": 74.2
+      },
+      {
+        "name": "Trevon Scott",
+        "MIN": 182,
+        "ovrBaseline": 65.1,
+        "ovrShrunk": 71.9
+      },
+      {
+        "name": "Joe Ingles",
+        "MIN": 152,
+        "ovrBaseline": 65.0,
+        "ovrShrunk": 71.8
+      },
+      {
+        "name": "Stanley Umude",
+        "MIN": 6,
+        "ovrBaseline": 63.3,
+        "ovrShrunk": 70.1
+      },
+      {
+        "name": "Killian Hayes",
+        "MIN": 405,
+        "ovrBaseline": 52.6,
+        "ovrShrunk": 59.4
+      },
+      {
+        "name": "Malevy Leons",
+        "MIN": 276,
+        "ovrBaseline": 63.5,
+        "ovrShrunk": 70.2
+      },
+      {
+        "name": "Oscar Tshiebwe",
+        "MIN": 448,
+        "ovrBaseline": 60.2,
+        "ovrShrunk": 66.9
+      },
+      {
+        "name": "Jacob Toppin",
+        "MIN": 16,
+        "ovrBaseline": 67.1,
+        "ovrShrunk": 73.8
+      },
+      {
+        "name": "Chris Paul",
+        "MIN": 227,
+        "ovrBaseline": 58.0,
+        "ovrShrunk": 64.6
+      },
+      {
+        "name": "Harrison Ingram",
+        "MIN": 26,
+        "ovrBaseline": 63.3,
+        "ovrShrunk": 69.8
+      },
+      {
+        "name": "Tyler Smith",
+        "MIN": 165,
+        "ovrBaseline": 65.3,
+        "ovrShrunk": 71.8
+      },
+      {
+        "name": "Julian Reese",
+        "MIN": 401,
+        "ovrBaseline": 62.2,
+        "ovrShrunk": 68.6
+      },
+      {
+        "name": "Mason Plumlee",
+        "MIN": 171,
+        "ovrBaseline": 66.0,
+        "ovrShrunk": 72.3
+      },
+      {
+        "name": "Doug McDermott",
+        "MIN": 439,
+        "ovrBaseline": 52.2,
+        "ovrShrunk": 58.4
+      },
+      {
+        "name": "Amari Williams",
+        "MIN": 145,
+        "ovrBaseline": 66.5,
+        "ovrShrunk": 72.6
+      },
+      {
+        "name": "Lachlan Olbrich",
+        "MIN": 344,
+        "ovrBaseline": 64.2,
+        "ovrShrunk": 70.2
+      },
+      {
+        "name": "Kelly Olynyk",
+        "MIN": 360,
+        "ovrBaseline": 64.4,
+        "ovrShrunk": 70.2
+      },
+      {
+        "name": "Monte Morris",
+        "MIN": 64,
+        "ovrBaseline": 62.9,
+        "ovrShrunk": 68.5
+      },
+      {
+        "name": "Wendell Moore Jr.",
+        "MIN": 59,
+        "ovrBaseline": 63.7,
+        "ovrShrunk": 69.3
+      },
+      {
+        "name": "Patrick Baldwin Jr.",
+        "MIN": 102,
+        "ovrBaseline": 67.2,
+        "ovrShrunk": 72.8
+      },
+      {
+        "name": "Mouhamadou Gueye",
+        "MIN": 45,
+        "ovrBaseline": 67.9,
+        "ovrShrunk": 73.5
+      },
+      {
+        "name": "Trey Alexander",
+        "MIN": 110,
+        "ovrBaseline": 62.9,
+        "ovrShrunk": 68.4
+      },
+      {
+        "name": "Kevin McCullar Jr.",
+        "MIN": 154,
+        "ovrBaseline": 62.1,
+        "ovrShrunk": 67.6
+      },
+      {
+        "name": "Isaiah Livers",
+        "MIN": 347,
+        "ovrBaseline": 58.2,
+        "ovrShrunk": 63.6
+      },
+      {
+        "name": "Adama Bal",
+        "MIN": 241,
+        "ovrBaseline": 65.9,
+        "ovrShrunk": 71.3
+      },
+      {
+        "name": "PJ Hall",
+        "MIN": 213,
+        "ovrBaseline": 66.7,
+        "ovrShrunk": 72.1
+      },
+      {
+        "name": "Julian Phillips",
+        "MIN": 427,
+        "ovrBaseline": 54.9,
+        "ovrShrunk": 60.2
+      },
+      {
+        "name": "Branden Carlson",
+        "MIN": 488,
+        "ovrBaseline": 62.9,
+        "ovrShrunk": 68.2
+      },
+      {
+        "name": "TyTy Washington Jr.",
+        "MIN": 88,
+        "ovrBaseline": 62.8,
+        "ovrShrunk": 68.1
+      },
+      {
+        "name": "Nick Smith Jr.",
+        "MIN": 374,
+        "ovrBaseline": 57.0,
+        "ovrShrunk": 62.2
+      },
+      {
+        "name": "Nikola Topić",
+        "MIN": 160,
+        "ovrBaseline": 61.9,
+        "ovrShrunk": 66.9
+      }
+    ]
+  },
+  "focusPlayers": {
+    "Alex Caruso": {
+      "MIN": 1020,
+      "rankBaseline": 350,
+      "rankShrunk": 409,
+      "ovrBaseline": 65.8,
+      "ovrShrunk": 65.9,
+      "shrinkFactor": 0.678
+    },
+    "Derrick White": {
+      "MIN": 2624,
+      "rankBaseline": 97,
+      "rankShrunk": 68,
+      "ovrBaseline": 78.9,
+      "ovrShrunk": 78.5,
+      "shrinkFactor": 1.0
+    },
+    "Dyson Daniels": {
+      "MIN": 2519,
+      "rankBaseline": 296,
+      "rankShrunk": 392,
+      "ovrBaseline": 68.2,
+      "ovrShrunk": 67.0,
+      "shrinkFactor": 1.0
+    },
+    "Herbert Jones": {
+      "MIN": 1588,
+      "rankBaseline": 451,
+      "rankShrunk": 518,
+      "ovrBaseline": 61.1,
+      "ovrShrunk": 59.0,
+      "shrinkFactor": 0.901
+    },
+    "Marcus Smart": {
+      "MIN": 1768,
+      "rankBaseline": 338,
+      "rankShrunk": 434,
+      "ovrBaseline": 66.3,
+      "ovrShrunk": 64.7,
+      "shrinkFactor": 0.949
+    },
+    "Karlo Matković": {
+      "MIN": 911,
+      "rankBaseline": 7,
+      "rankShrunk": 14,
+      "ovrBaseline": 95.4,
+      "ovrShrunk": 87.8,
+      "shrinkFactor": 0.646
+    },
+    "Isaiah Stewart": {
+      "MIN": 1317,
+      "rankBaseline": 32,
+      "rankShrunk": 36,
+      "ovrBaseline": 84.6,
+      "ovrShrunk": 82.4,
+      "shrinkFactor": 0.812
+    },
+    "Norchad Omier": {
+      "MIN": 23,
+      "rankBaseline": 23,
+      "rankShrunk": 280,
+      "ovrBaseline": 86.4,
+      "ovrShrunk": 70.1,
+      "shrinkFactor": 0.045
+    },
+    "Javon Small": {
+      "MIN": 829,
+      "rankBaseline": 14,
+      "rankShrunk": 39,
+      "ovrBaseline": 89.9,
+      "ovrShrunk": 82.2,
+      "shrinkFactor": 0.624
+    },
+    "Ty Jerome": {
+      "MIN": 338,
+      "rankBaseline": 20,
+      "rankShrunk": 98,
+      "ovrBaseline": 87.3,
+      "ovrShrunk": 76.7,
+      "shrinkFactor": 0.404
+    },
+    "Dejounte Murray": {
+      "MIN": 389,
+      "rankBaseline": 27,
+      "rankShrunk": 102,
+      "ovrBaseline": 85.2,
+      "ovrShrunk": 76.4,
+      "shrinkFactor": 0.438
+    },
+    "Walker Kessler": {
+      "MIN": 153,
+      "rankBaseline": 41,
+      "rankShrunk": 100,
+      "ovrBaseline": 83.4,
+      "ovrShrunk": 76.5,
+      "shrinkFactor": 0.235
+    },
+    "Charles Bassey": {
+      "MIN": 152,
+      "rankBaseline": 42,
+      "rankShrunk": 106,
+      "ovrBaseline": 83.4,
+      "ovrShrunk": 76.1,
+      "shrinkFactor": 0.234
+    },
+    "Obi Toppin": {
+      "MIN": 423,
+      "rankBaseline": 39,
+      "rankShrunk": 70,
+      "ovrBaseline": 83.7,
+      "ovrShrunk": 78.3,
+      "shrinkFactor": 0.459
+    }
+  }
+}

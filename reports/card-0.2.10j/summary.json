@@ -1,0 +1,51 @@
+{
+ "version": "card 0.2.10j",
+ "base": "reports/card-0.2.10i",
+ "players": 582,
+ "change": "R-134／R-135：加能力值 gravity（NBA.com 無球外線引力 AVGOFFBALLPERIMETERGRAVITYSCORE；2025-26 沒有值的人用 OLS 補：3PA/36、3P%、USG%、位置），0–99 映射照 creation（池 GP≥30 且 MPG≥20，兩端尾巴開）；其餘 15 項、用人層特徵、3PT 欄同 0.2.10i；部件卡全部係數重擬合（不設下限，E-198 KG），用人層、r_repl、錨點、OVR 重算；E-188 OVR 映射照舊。",
+ "anchors": {
+  "PR1": -0.6554,
+  "PR50": 0.9786,
+  "PR90": 2.2045,
+  "PR95": 2.5723,
+  "PR99": 4.0072
+ },
+ "anchor_source": "reports/card-0.2.10j/work/pre-KG/ranking.csv gRepl, MIN>=500, qf（gRepl 4 位小數）",
+ "ovr_map": {
+  "function": "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py:ovr_map",
+  "A_PR90": 88.0,
+  "B_PR95": 92.0
+ },
+ "ovr_changed": 198,
+ "pool_90_99": 25,
+ "pool_ge99": 5,
+ "sources_sha256": {
+  "reports/card-0.2.10j/work/pre-KG/ranking.csv": "0c7a9e48fda5ae5ad1f775fbf7f0ed497085609b851eea281706bc776db3af31",
+  "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py": "7c9bc8ccd63c0b637c42ac715a30d7716ee1899f8fec6722f927a3ae118b90de",
+  "reports/card-0.2.10a+E188-ovr-top-scale/preregistration.md": "8cf866fe753a587696b2d803f64fcf0b98fa21f22818da352a9193497296b0ca",
+  "reports/card-0.2.10i/three-value.csv": "873bc130ebfe63ae7de784bdcd1f750ea0b0f3353c8b6721bb6ea7b552ceb463"
+ },
+ "build_command": "E-198：gravity_raw.py → build_kg.py cards KG 2025-26（E185_TAIL_U=card-0.2.10i/tail-U.csv, E185_WORK=work/A）→ run_i.py KG → build_0210j.py",
+ "ranking_csv_sha256": "4519d61545f783a245fc0aebd1f0a31e95ab5530117293f8aa76c84f0a64426d",
+ "gravity": {
+  "raw_csv": "reports/card-0.2.10j/gravity-raw.csv",
+  "raw_sha256": "fe77ea544b0fafaa22f2fc46c57a53325952ffb2713f8b12b66fd3090199a22a",
+  "attr_csv": "reports/card-0.2.10j/gravity-attr.csv",
+  "attr_sha256": "bb9e9af954bbe040b304ea036d08b5f83ecbb1c5f7f596017ed1734cb36efdd1",
+  "n_has": 234,
+  "n_imputed": 348,
+  "ols_r2": 0.725266326239674,
+  "pool_n": 252
+ },
+ "pre_ranking_sha256": "0c7a9e48fda5ae5ad1f775fbf7f0ed497085609b851eea281706bc776db3af31",
+ "three_value_csv_sha256": "873bc130ebfe63ae7de784bdcd1f750ea0b0f3353c8b6721bb6ea7b552ceb463",
+ "three_value_source": "reports/card-0.2.10i/three-value.csv",
+ "equals_E198_KG_final": true,
+ "c0": {
+  "ranking.csv": true,
+  "three-value.csv": true,
+  "rapm-T6.csv": true,
+  "anchors": true,
+  "ranking_sha256": "8b3e99d682ad6d7e4b5c5068f3d0d88e484ef0754af4fe789aae323e9a1c6c34"
+ }
+}

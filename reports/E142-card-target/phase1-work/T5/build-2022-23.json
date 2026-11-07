@@ -1,0 +1,32 @@
+{
+ "origin": "2022-23",
+ "swap": "custom",
+ "swapRows": {
+  "primary": {
+   "in": 860,
+   "out": 538
+  },
+  "fitA": {
+   "in": 844,
+   "out": 536
+  },
+  "fitB": {
+   "in": 839,
+   "out": 533
+  }
+ },
+ "part_card_sha256": {
+  "primary": "16d5866e6bd51fccc37a9dae1fabd6933d743ca003f991b11dd390bf57388b87",
+  "fitA": "932ca0bc8acce92a7a67b408abca0ea8ec9d04f9d18fb108ec47f42be615308a",
+  "fitB": "50fa8fbfbfcb35ead01fd95edbe8ab7b27b0f97f648ac5c97fb6611a6e0daf2a"
+ },
+ "ranking_sha256": "bdcb6ef1dc627a3e3721267ac35f23abb96c5331c2fe866855169720e5911e2d",
+ "stage1_ranking_sha256": "3e7d08ec4878bfb2135775559bb826585751d244bcd8e89903dc0dbddce2b67a",
+ "equals_stage1": false,
+ "part_equals_stage1": {
+  "primary": false,
+  "fitA": false,
+  "fitB": false
+ },
+ "seconds": 7.2
+}

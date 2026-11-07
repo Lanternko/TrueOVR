@@ -59,13 +59,13 @@ test('Full counters survive 400-event log cap and preserve game determinism', ()
   assert.deepEqual(g,simulateGame(TEAMS.GSW,BASELINE,opts));
 });
 
-test('Fatigue defaults on; disabled fatigue makes stamina irrelevant', () => {
+test('Fatigue removed in sim 0.1.1: false accepted and ignored, true throws, stamina irrelevant', () => {
   const high={...TEAMS.GSW,roster:TEAMS.GSW.roster.map(p=>({...p,stamina:99}))};
   const low={...TEAMS.GSW,roster:TEAMS.GSW.roster.map(p=>({...p,stamina:1}))};
   const opts={possessions:75,seed:300};
-  assert.deepEqual(simulateGame(high,BASELINE,{...opts,fatigue:false}),simulateGame(low,BASELINE,{...opts,fatigue:false}));
-  assert.deepEqual(simulateGame(high,BASELINE,opts),simulateGame(high,BASELINE,{...opts,fatigue:true}));
-  assert.notDeepEqual(simulateGame(high,BASELINE,opts).log,simulateGame(high,BASELINE,{...opts,fatigue:false}).log);
+  assert.deepEqual(simulateGame(high,BASELINE,opts),simulateGame(low,BASELINE,opts));
+  assert.deepEqual(simulateGame(high,BASELINE,opts),simulateGame(high,BASELINE,{...opts,fatigue:false}));
+  assert.throws(()=>simulateGame(high,BASELINE,{...opts,fatigue:true}),/fatigue removed in sim 0\.1\.1/);
   assert.throws(()=>simulateGame(high,BASELINE,{fatigue:'false'}));
 });
 

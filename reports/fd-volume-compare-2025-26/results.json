@@ -1,0 +1,544 @@
+{
+ "sources": {
+  "data\\season-source\\player-games.json": "11fc5866b2f61b31e27659e14e4071924b5873ef0d2a4118a585c1a54be04357",
+  "reports\\ovr-v61-shrink-history-2025-26\\history\\pergame-2024-25.csv.gz": "5d2e2c03418e5d8b0d51fb48a3ba558eae1b7d78f030a46debed4287f770d907",
+  "reports\\card-0.2.0\\ranking.csv": "22cd49cf03262d0dd0ea7ee3455dd0eab5bb481aefceaaded2f17343504f8494",
+  "reports\\card-0.1.2+E064-pergame\\primary\\pred.csv": "a2cecfad3bf066891afa2212fcfdd7d20175b07181acaa08198b9258d22430b3",
+  "reports\\ovr-v58-holdout-2025-26\\rapm-A.csv": "aa95b4e00357421e1f4cb86f42e6b16f21e6af92fc60524d9d9f391920c439cb",
+  "reports\\ovr-v58-holdout-2025-26\\rapm-B.csv": "9a0497c76c582b6a92dae24bf063601d1f7e44d55629ce0e114a328535a240a5"
+ },
+ "poolN": 252,
+ "note": "探索性、事後，不作採用依據",
+ "top15_rate": [
+  [
+   "Alex Antetokounmpo",
+   99.0,
+   1.875,
+   27.0
+  ],
+  [
+   "Grant Nelson",
+   99.0,
+   1.111,
+   10.3
+  ],
+  [
+   "Dwight Powell",
+   99.0,
+   1.109,
+   4.5
+  ],
+  [
+   "Mason Plumlee",
+   99.0,
+   1.0,
+   2.9
+  ],
+  [
+   "Jahmyl Telfort",
+   99.0,
+   1.0,
+   4.2
+  ],
+  [
+   "Thanasis Antetokounmpo",
+   99.0,
+   0.938,
+   7.3
+  ],
+  [
+   "Tolu Smith",
+   99.0,
+   0.833,
+   7.9
+  ],
+  [
+   "Olivier Sarr",
+   99.0,
+   0.714,
+   4.6
+  ],
+  [
+   "Adou Thiero",
+   99.0,
+   0.71,
+   5.2
+  ],
+  [
+   "Moussa Cisse",
+   99.0,
+   0.704,
+   5.5
+  ],
+  [
+   "Amari Williams",
+   99.0,
+   0.7,
+   3.5
+  ],
+  [
+   "Omer Yurtseven",
+   99.0,
+   0.692,
+   6.2
+  ],
+  [
+   "Hayden Gray",
+   99.0,
+   0.667,
+   2.9
+  ],
+  [
+   "Chris Mañon",
+   99.0,
+   0.667,
+   3.1
+  ],
+  [
+   "Jimmy Butler III",
+   99.0,
+   0.621,
+   8.7
+  ]
+ ],
+ "top15_vol": [
+  [
+   "Alex Antetokounmpo",
+   99.0,
+   1.875,
+   27.0
+  ],
+  [
+   "Giannis Antetokounmpo",
+   99.0,
+   0.597,
+   12.4
+  ],
+  [
+   "Mark Sears",
+   99.0,
+   0.615,
+   11.1
+  ],
+  [
+   "Grant Nelson",
+   99.0,
+   1.111,
+   10.3
+  ],
+  [
+   "Luka Dončić",
+   99.0,
+   0.443,
+   10.1
+  ],
+  [
+   "Joel Embiid",
+   99.0,
+   0.481,
+   10.1
+  ],
+  [
+   "Deni Avdija",
+   98.8,
+   0.573,
+   10.0
+  ],
+  [
+   "Shai Gilgeous-Alexander",
+   98.4,
+   0.465,
+   9.8
+  ],
+  [
+   "Trae Young",
+   98.0,
+   0.548,
+   9.1
+  ],
+  [
+   "Zion Williamson",
+   98.0,
+   0.576,
+   9.1
+  ],
+  [
+   "Tristen Newton",
+   97.6,
+   0.333,
+   9.0
+  ],
+  [
+   "Jimmy Butler III",
+   97.6,
+   0.621,
+   8.7
+  ],
+  [
+   "Devin Booker",
+   97.2,
+   0.434,
+   8.7
+  ],
+  [
+   "Victor Wembanyama",
+   96.8,
+   0.417,
+   8.7
+  ],
+  [
+   "Paolo Banchero",
+   96.4,
+   0.512,
+   8.5
+  ]
+ ],
+ "top15_mix": [
+  [
+   "Alex Antetokounmpo",
+   99.0,
+   1.875,
+   27.0
+  ],
+  [
+   "Grant Nelson",
+   99.0,
+   1.111,
+   10.3
+  ],
+  [
+   "Dwight Powell",
+   99.0,
+   1.109,
+   4.5
+  ],
+  [
+   "Thanasis Antetokounmpo",
+   99.0,
+   0.938,
+   7.3
+  ],
+  [
+   "Giannis Antetokounmpo",
+   99.0,
+   0.597,
+   12.4
+  ],
+  [
+   "Tolu Smith",
+   99.0,
+   0.833,
+   7.9
+  ],
+  [
+   "Jahmyl Telfort",
+   99.0,
+   1.0,
+   4.2
+  ],
+  [
+   "Mark Sears",
+   99.0,
+   0.615,
+   11.1
+  ],
+  [
+   "Mason Plumlee",
+   99.0,
+   1.0,
+   2.9
+  ],
+  [
+   "Deni Avdija",
+   99.0,
+   0.573,
+   10.0
+  ],
+  [
+   "Jimmy Butler III",
+   99.0,
+   0.621,
+   8.7
+  ],
+  [
+   "Zion Williamson",
+   98.8,
+   0.576,
+   9.1
+  ],
+  [
+   "Trae Young",
+   98.4,
+   0.548,
+   9.1
+  ],
+  [
+   "Joel Embiid",
+   98.4,
+   0.481,
+   10.1
+  ],
+  [
+   "Omer Yurtseven",
+   98.0,
+   0.692,
+   6.2
+  ]
+ ],
+ "watch": {
+  "Shai Gilgeous-Alexander": {
+   "rate": {
+    "pct": 93.3,
+    "rank": 55
+   },
+   "vol": {
+    "pct": 98.4,
+    "rank": 8
+   },
+   "mix": {
+    "pct": 98.0,
+    "rank": 17
+   },
+   "FTA/FGA": 0.465,
+   "FTA/36": 9.8,
+   "cardFoulDraw": 96.4
+  },
+  "Giannis Antetokounmpo": {
+   "rate": {
+    "pct": 99.0,
+    "rank": 21
+   },
+   "vol": {
+    "pct": 99.0,
+    "rank": 2
+   },
+   "mix": {
+    "pct": 99.0,
+    "rank": 5
+   },
+   "FTA/FGA": 0.597,
+   "FTA/36": 12.4,
+   "cardFoulDraw": 99.0
+  },
+  "Luka Dončić": {
+   "rate": {
+    "pct": 92.9,
+    "rank": 59
+   },
+   "vol": {
+    "pct": 99.0,
+    "rank": 5
+   },
+   "mix": {
+    "pct": 97.6,
+    "rank": 18
+   },
+   "FTA/FGA": 0.443,
+   "FTA/36": 10.1,
+   "cardFoulDraw": 95.2
+  },
+  "Joel Embiid": {
+   "rate": {
+    "pct": 94.4,
+    "rank": 51
+   },
+   "vol": {
+    "pct": 99.0,
+    "rank": 6
+   },
+   "mix": {
+    "pct": 98.4,
+    "rank": 14
+   },
+   "FTA/FGA": 0.481,
+   "FTA/36": 10.1,
+   "cardFoulDraw": 97.6
+  },
+  "Jalen Brunson": {
+   "rate": {
+    "pct": 61.5,
+    "rank": 209
+   },
+   "vol": {
+    "pct": 84.5,
+    "rank": 53
+   },
+   "mix": {
+    "pct": 75.8,
+    "rank": 119
+   },
+   "FTA/FGA": 0.285,
+   "FTA/36": 5.8,
+   "cardFoulDraw": 78.1
+  },
+  "Rudy Gobert": {
+   "rate": {
+    "pct": 99.0,
+    "rank": 18
+   },
+   "vol": {
+    "pct": 73.0,
+    "rank": 103
+   },
+   "mix": {
+    "pct": 94.0,
+    "rank": 32
+   },
+   "FTA/FGA": 0.615,
+   "FTA/36": 4.6,
+   "cardFoulDraw": 99.0
+  },
+  "Steven Adams": {
+   "rate": {
+    "pct": 98.8,
+    "rank": 24
+   },
+   "vol": {
+    "pct": 63.9,
+    "rank": 148
+   },
+   "mix": {
+    "pct": 91.3,
+    "rank": 46
+   },
+   "FTA/FGA": 0.583,
+   "FTA/36": 4.0,
+   "cardFoulDraw": 98.3
+  },
+  "Dwight Powell": {
+   "rate": {
+    "pct": 99.0,
+    "rank": 3
+   },
+   "vol": {
+    "pct": 70.6,
+    "rank": 112
+   },
+   "mix": {
+    "pct": 99.0,
+    "rank": 3
+   },
+   "FTA/FGA": 1.109,
+   "FTA/36": 4.5,
+   "cardFoulDraw": 99.0
+  },
+  "James Harden": {
+   "rate": {
+    "pct": 93.7,
+    "rank": 54
+   },
+   "vol": {
+    "pct": 95.2,
+    "rank": 19
+   },
+   "mix": {
+    "pct": 94.4,
+    "rank": 29
+   },
+   "FTA/FGA": 0.467,
+   "FTA/36": 7.7,
+   "cardFoulDraw": 96.7
+  },
+  "Trae Young": {
+   "rate": {
+    "pct": 97.6,
+    "rank": 31
+   },
+   "vol": {
+    "pct": 98.0,
+    "rank": 9
+   },
+   "mix": {
+    "pct": 98.4,
+    "rank": 13
+   },
+   "FTA/FGA": 0.548,
+   "FTA/36": 9.1,
+   "cardFoulDraw": 97.2
+  }
+ },
+ "spearmanInPool": {
+  "rate~vol": 0.868,
+  "rate~mix": 0.969,
+  "vol~mix": 0.96
+ },
+ "spearmanCardFoulDraw": {
+  "rate": 0.993,
+  "vol": 0.865,
+  "mix": 0.963
+ },
+ "stability": {
+  "n": 178,
+  "rate": {
+   "pearsonRaw": 0.869,
+   "spearman": 0.832
+  },
+  "vol": {
+   "pearsonRaw": 0.853,
+   "spearman": 0.844
+  },
+  "mix": {
+   "pearsonRaw": 0.866,
+   "spearman": 0.84
+  }
+ },
+ "value": {
+  "FDA->RAPMB": {
+   "n": 242,
+   "r2_noFD": 0.3617,
+   "rate": {
+    "coefPer10": -0.0292,
+    "se": 0.0524,
+    "t": -0.56,
+    "dR2": 0.0009
+   },
+   "vol": {
+    "coefPer10": -0.0636,
+    "se": 0.0648,
+    "t": -0.98,
+    "dR2": 0.0027
+   },
+   "mix": {
+    "coefPer10": -0.0326,
+    "se": 0.0568,
+    "t": -0.57,
+    "dR2": 0.0009
+   },
+   "cardFoulDraw": {
+    "coefPer10": -0.0237,
+    "se": 0.0936,
+    "t": -0.25,
+    "dR2": 0.0002
+   }
+  },
+  "FDB->RAPMA": {
+   "n": 241,
+   "r2_noFD": 0.3881,
+   "rate": {
+    "coefPer10": 0.0285,
+    "se": 0.0555,
+    "t": 0.51,
+    "dR2": 0.0007
+   },
+   "vol": {
+    "coefPer10": 0.0143,
+    "se": 0.0679,
+    "t": 0.21,
+    "dR2": 0.0001
+   },
+   "mix": {
+    "coefPer10": 0.0293,
+    "se": 0.0602,
+    "t": 0.49,
+    "dR2": 0.0006
+   },
+   "cardFoulDraw": {
+    "coefPer10": -0.0074,
+    "se": 0.0932,
+    "t": -0.08,
+    "dR2": 0.0
+   }
+  }
+ },
+ "valueNote": "cardFoulDraw 是全季卡片值（對答案半樣本內），只作參考；rate/vol/mix 只用另一半比賽。"
+}

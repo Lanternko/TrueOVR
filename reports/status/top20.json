@@ -1,0 +1,222 @@
+[
+ {
+  "rank": 1,
+  "name": "Shai Gilgeous-Alexander",
+  "pos": "PG",
+  "ovr": 110.4,
+  "minutes": 2259,
+  "threeValue": 86.7,
+  "simRank": 1,
+  "rapmRank": 2,
+  "flags": "—"
+ },
+ {
+  "rank": 2,
+  "name": "Nikola Jokić",
+  "pos": "C",
+  "ovr": 107.4,
+  "minutes": 2265,
+  "threeValue": 79.5,
+  "simRank": 6,
+  "rapmRank": 1,
+  "flags": "長人"
+ },
+ {
+  "rank": 3,
+  "name": "Victor Wembanyama",
+  "pos": "C",
+  "ovr": 102.4,
+  "minutes": 1866,
+  "threeValue": 75.0,
+  "simRank": 5,
+  "rapmRank": 5,
+  "flags": "長人"
+ },
+ {
+  "rank": 4,
+  "name": "Luka Dončić",
+  "pos": "PG",
+  "ovr": 102.0,
+  "minutes": 2289,
+  "threeValue": 97.9,
+  "simRank": 7,
+  "rapmRank": 16,
+  "flags": "—"
+ },
+ {
+  "rank": 5,
+  "name": "Giannis Antetokounmpo",
+  "pos": "PF",
+  "ovr": 99.0,
+  "minutes": 1039,
+  "threeValue": 56.8,
+  "simRank": 3,
+  "rapmRank": 3,
+  "flags": "長人"
+ },
+ {
+  "rank": 6,
+  "name": "Kawhi Leonard",
+  "pos": "SF",
+  "ovr": 98.4,
+  "minutes": 2085,
+  "threeValue": 95.1,
+  "simRank": 2,
+  "rapmRank": 4,
+  "flags": "—"
+ },
+ {
+  "rank": 7,
+  "name": "Donovan Mitchell",
+  "pos": "SG",
+  "ovr": 96.2,
+  "minutes": 2342,
+  "threeValue": 94.3,
+  "simRank": 70,
+  "rapmRank": 17,
+  "flags": "—"
+ },
+ {
+  "rank": 8,
+  "name": "Jayson Tatum",
+  "pos": "PF",
+  "ovr": 96.0,
+  "minutes": 522,
+  "threeValue": 82.7,
+  "simRank": 298,
+  "rapmRank": 40,
+  "flags": "低分鐘、長人"
+ },
+ {
+  "rank": 9,
+  "name": "Jalen Williams",
+  "pos": "PF",
+  "ovr": 94.7,
+  "minutes": 936,
+  "threeValue": 57.1,
+  "simRank": 267,
+  "rapmRank": 198,
+  "flags": "低分鐘、RAPM 差距大、長人"
+ },
+ {
+  "rank": 10,
+  "name": "Anthony Edwards",
+  "pos": "SG",
+  "ovr": 93.9,
+  "minutes": 2137,
+  "threeValue": 98.9,
+  "simRank": 49,
+  "rapmRank": 61,
+  "flags": "—"
+ },
+ {
+  "rank": 11,
+  "name": "Jimmy Butler III",
+  "pos": "SF",
+  "ovr": 93.5,
+  "minutes": 1182,
+  "threeValue": 64.8,
+  "simRank": 23,
+  "rapmRank": 12,
+  "flags": "—"
+ },
+ {
+  "rank": 12,
+  "name": "Cade Cunningham",
+  "pos": "PG",
+  "ovr": 93.5,
+  "minutes": 2172,
+  "threeValue": 75.4,
+  "simRank": 78,
+  "rapmRank": 54,
+  "flags": "—"
+ },
+ {
+  "rank": 13,
+  "name": "Ty Jerome",
+  "pos": "PG",
+  "ovr": 93.4,
+  "minutes": 339,
+  "threeValue": 96.6,
+  "simRank": 4,
+  "rapmRank": 136,
+  "flags": "低分鐘、RAPM 差距大"
+ },
+ {
+  "rank": 14,
+  "name": "Stephen Curry",
+  "pos": "PG",
+  "ovr": 93.2,
+  "minutes": 1329,
+  "threeValue": 105.0,
+  "simRank": 115,
+  "rapmRank": 24,
+  "flags": "—"
+ },
+ {
+  "rank": 15,
+  "name": "Chet Holmgren",
+  "pos": "PF",
+  "ovr": 93.2,
+  "minutes": 1997,
+  "threeValue": 67.6,
+  "simRank": 21,
+  "rapmRank": 8,
+  "flags": "長人"
+ },
+ {
+  "rank": 16,
+  "name": "Kevin Durant",
+  "pos": "SF",
+  "ovr": 93.0,
+  "minutes": 2840,
+  "threeValue": 93.3,
+  "simRank": 56,
+  "rapmRank": 35,
+  "flags": "—"
+ },
+ {
+  "rank": 17,
+  "name": "Joel Embiid",
+  "pos": "C",
+  "ovr": 93.0,
+  "minutes": 1201,
+  "threeValue": 63.5,
+  "simRank": 254,
+  "rapmRank": 10,
+  "flags": "長人"
+ },
+ {
+  "rank": 18,
+  "name": "Jamal Murray",
+  "pos": "PG",
+  "ovr": 92.7,
+  "minutes": 2652,
+  "threeValue": 104.4,
+  "simRank": 130,
+  "rapmRank": 211,
+  "flags": "RAPM 差距大"
+ },
+ {
+  "rank": 19,
+  "name": "Evan Mobley",
+  "pos": "PF",
+  "ovr": 92.5,
+  "minutes": 2074,
+  "threeValue": 43.9,
+  "simRank": 11,
+  "rapmRank": 47,
+  "flags": "長人"
+ },
+ {
+  "rank": 20,
+  "name": "Desmond Bane",
+  "pos": "SG",
+  "ovr": 92.1,
+  "minutes": 2756,
+  "threeValue": 89.3,
+  "simRank": 89,
+  "rapmRank": 39,
+  "flags": "—"
+ }
+]

@@ -92,5 +92,5 @@ for(const opts of [{pace:0},{quarterSeconds:NaN},{maxOvertimes:-1},{fatigue:'yes
 assert.throws(()=>simulateGame({roster:[]},team,{mode:'timed'}));
 assert.throws(()=>monteCarlo(team,team,1,{mode:'timed'}));
 const legacyHash=createHash('sha256').update(JSON.stringify([1,42,20260909].map(seed=>simulateGame(TEAMS.GSW,TEAMS.CLE,{seed,replay:true})))).digest('hex');
-assert.equal(legacyHash,'6380263034d284ba889692ac414c23931ed486b4e0870209753bb72635ca11b4');
+assert.equal(legacyHash,'edec43423b3ef919c839a27fd9feb49f32ee6f79ab15dfb235db6304d6b771e3'); // sim 0.1.1：拿掉體力＋doubleThreat 體格項（R-089）；等於舊引擎 fatigue:false＋E-086 ch1 hook
 console.log(`Timed game: 60 full games; accounting, rotation, clock, FT, assists, overtime, replay and legacy parity passed. ${rotations} substitutions, ${andOnes} and-ones, ${ftRebounds} FT rebounds.`);

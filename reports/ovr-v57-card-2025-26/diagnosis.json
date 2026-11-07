@@ -1,0 +1,2739 @@
+{
+  "inputs": {
+    "e2": "reports/ovr-v55-card-E-2025-26/card-E2-lam0.4",
+    "f2": "reports/ovr-v56-card-defense-2025-26/card-F2-gamma0.5",
+    "evalPoss": 5000,
+    "posMeanD": {
+      "C": 0.5741919953387093,
+      "PF": 0.4257842879620458,
+      "SF": -0.14437253326631624,
+      "PG": -0.2204166305383188,
+      "SG": 0.12216937449814484
+    }
+  },
+  "pooledDTop30": [
+    {
+      "pooledDRank": 1,
+      "name": "Victor Wembanyama",
+      "pos": "C",
+      "group": "BIG",
+      "pooledD": 6.196,
+      "pooledNet": 7.57,
+      "centeredD": 4.073,
+      "rank2k": 2.0,
+      "rapmNetRank": 5,
+      "e2Rank": 2,
+      "f2Rank": 1,
+      "gateRef": 5,
+      "e2Violation": -3,
+      "f2Violation": -4,
+      "f2Bonus": 2.036,
+      "predF2": 6.008,
+      "help": 99.0,
+      "onBall": 82.1,
+      "creation": 79.7
+    },
+    {
+      "pooledDRank": 2,
+      "name": "Alex Caruso",
+      "pos": "SG",
+      "group": "GUARD",
+      "pooledD": 5.31,
+      "pooledNet": 5.907,
+      "centeredD": 3.86,
+      "rank2k": 94.0,
+      "rapmNetRank": 9,
+      "e2Rank": 311,
+      "f2Rank": 315,
+      "gateRef": 94.0,
+      "e2Violation": 217.0,
+      "f2Violation": 221.0,
+      "f2Bonus": 0.0,
+      "predF2": -0.684,
+      "help": 66.9,
+      "onBall": 68.6,
+      "creation": 55.9
+    },
+    {
+      "pooledDRank": 3,
+      "name": "Rudy Gobert",
+      "pos": "C",
+      "group": "BIG",
+      "pooledD": 4.999,
+      "pooledNet": 4.315,
+      "centeredD": 3.175,
+      "rank2k": 60.5,
+      "rapmNetRank": 29,
+      "e2Rank": 91,
+      "f2Rank": 13,
+      "gateRef": 60.5,
+      "e2Violation": 30.5,
+      "f2Violation": -47.5,
+      "f2Bonus": 1.588,
+      "predF2": 2.235,
+      "help": 94.3,
+      "onBall": 70.6,
+      "creation": 40.5
+    },
+    {
+      "pooledDRank": 4,
+      "name": "Derrick White",
+      "pos": "PG",
+      "group": "GUARD",
+      "pooledD": 4.284,
+      "pooledNet": 6.817,
+      "centeredD": 3.433,
+      "rank2k": 70.5,
+      "rapmNetRank": 6,
+      "e2Rank": 42,
+      "f2Rank": 51,
+      "gateRef": 70.5,
+      "e2Violation": -28.5,
+      "f2Violation": -19.5,
+      "f2Bonus": 0.0,
+      "predF2": 1.282,
+      "help": 85.8,
+      "onBall": 76.0,
+      "creation": 82.1
+    },
+    {
+      "pooledDRank": 5,
+      "name": "Franz Wagner",
+      "pos": "SF",
+      "group": "WING",
+      "pooledD": 3.861,
+      "pooledNet": 6.406,
+      "centeredD": 3.04,
+      "rank2k": 47.5,
+      "rapmNetRank": 7,
+      "e2Rank": 56,
+      "f2Rank": 71,
+      "gateRef": 47.5,
+      "e2Violation": 8.5,
+      "f2Violation": 23.5,
+      "f2Bonus": 0.0,
+      "predF2": 0.972,
+      "help": 72.2,
+      "onBall": 61.4,
+      "creation": 88.2
+    },
+    {
+      "pooledDRank": 6,
+      "name": "Herbert Jones",
+      "pos": "SG",
+      "group": "GUARD",
+      "pooledD": 3.721,
+      "pooledNet": 5.3,
+      "centeredD": 2.669,
+      "rank2k": 142.0,
+      "rapmNetRank": 14,
+      "e2Rank": 433,
+      "f2Rank": 435,
+      "gateRef": 142.0,
+      "e2Violation": 291.0,
+      "f2Violation": 293.0,
+      "f2Bonus": 0.0,
+      "predF2": -1.228,
+      "help": 59.9,
+      "onBall": 74.0,
+      "creation": 62.6
+    },
+    {
+      "pooledDRank": 7,
+      "name": "Draymond Green",
+      "pos": "PF",
+      "group": "BIG",
+      "pooledD": 3.709,
+      "pooledNet": 3.598,
+      "centeredD": 2.356,
+      "rank2k": 142.0,
+      "rapmNetRank": 46,
+      "e2Rank": 72,
+      "f2Rank": 17,
+      "gateRef": 142.0,
+      "e2Violation": -70.0,
+      "f2Violation": -125.0,
+      "f2Bonus": 1.178,
+      "predF2": 2.005,
+      "help": 80.8,
+      "onBall": 76.6,
+      "creation": 40.7
+    },
+    {
+      "pooledDRank": 8,
+      "name": "Dean Wade",
+      "pos": "PF",
+      "group": "BIG",
+      "pooledD": 3.486,
+      "pooledNet": 4.922,
+      "centeredD": 2.189,
+      "rank2k": 220.0,
+      "rapmNetRank": 18,
+      "e2Rank": 193,
+      "f2Rank": 63,
+      "gateRef": 220.0,
+      "e2Violation": -27.0,
+      "f2Violation": -157.0,
+      "f2Bonus": 1.094,
+      "predF2": 1.08,
+      "help": 68.9,
+      "onBall": 80.5,
+      "creation": 40.2
+    },
+    {
+      "pooledDRank": 9,
+      "name": "Chet Holmgren",
+      "pos": "PF",
+      "group": "BIG",
+      "pooledD": 3.387,
+      "pooledNet": 6.242,
+      "centeredD": 2.114,
+      "rank2k": 38.0,
+      "rapmNetRank": 8,
+      "e2Rank": 5,
+      "f2Rank": 3,
+      "gateRef": 38.0,
+      "e2Violation": -33.0,
+      "f2Violation": -35.0,
+      "f2Bonus": 1.057,
+      "predF2": 4.403,
+      "help": 99.0,
+      "onBall": 75.9,
+      "creation": 65.0
+    },
+    {
+      "pooledDRank": 10,
+      "name": "Joel Embiid",
+      "pos": "C",
+      "group": "BIG",
+      "pooledD": 3.183,
+      "pooledNet": 5.795,
+      "centeredD": 1.813,
+      "rank2k": 17.5,
+      "rapmNetRank": 10,
+      "e2Rank": 11,
+      "f2Rank": 8,
+      "gateRef": 17.5,
+      "e2Violation": -6.5,
+      "f2Violation": -9.5,
+      "f2Bonus": 0.907,
+      "predF2": 3.098,
+      "help": 82.3,
+      "onBall": 71.7,
+      "creation": 86.1
+    },
+    {
+      "pooledDRank": 11,
+      "name": "Jaren Jackson Jr.",
+      "pos": "PF",
+      "group": "BIG",
+      "pooledD": 3.155,
+      "pooledNet": 3.097,
+      "centeredD": 1.94,
+      "rank2k": 38.0,
+      "rapmNetRank": 62,
+      "e2Rank": 191,
+      "f2Rank": 72,
+      "gateRef": 62,
+      "e2Violation": 129,
+      "f2Violation": 10,
+      "f2Bonus": 0.97,
+      "predF2": 0.959,
+      "help": 87.1,
+      "onBall": 71.1,
+      "creation": 78.3
+    },
+    {
+      "pooledDRank": 12,
+      "name": "Brook Lopez",
+      "pos": "C",
+      "group": "BIG",
+      "pooledD": 3.147,
+      "pooledNet": 2.516,
+      "centeredD": 1.786,
+      "rank2k": 194.5,
+      "rapmNetRank": 83,
+      "e2Rank": 315,
+      "f2Rank": 168,
+      "gateRef": 194.5,
+      "e2Violation": 120.5,
+      "f2Violation": -26.5,
+      "f2Bonus": 0.893,
+      "predF2": 0.183,
+      "help": 98.3,
+      "onBall": 73.2,
+      "creation": 54.3
+    },
+    {
+      "pooledDRank": 13,
+      "name": "Ausar Thompson",
+      "pos": "SF",
+      "group": "WING",
+      "pooledD": 3.106,
+      "pooledNet": 4.399,
+      "centeredD": 2.474,
+      "rank2k": 47.5,
+      "rapmNetRank": 28,
+      "e2Rank": 176,
+      "f2Rank": 190,
+      "gateRef": 47.5,
+      "e2Violation": 128.5,
+      "f2Violation": 142.5,
+      "f2Bonus": 0.0,
+      "predF2": 0.07,
+      "help": 83.3,
+      "onBall": 70.6,
+      "creation": 67.0
+    },
+    {
+      "pooledDRank": 14,
+      "name": "Jonathan Isaac",
+      "pos": "PF",
+      "group": "BIG",
+      "pooledD": 3.091,
+      "pooledNet": 2.147,
+      "centeredD": 1.892,
+      "rank2k": 380.0,
+      "rapmNetRank": 105,
+      "e2Rank": 254,
+      "f2Rank": 124,
+      "gateRef": 380.0,
+      "e2Violation": -126.0,
+      "f2Violation": -256.0,
+      "f2Bonus": 0.946,
+      "predF2": 0.534,
+      "help": 85.6,
+      "onBall": 71.2,
+      "creation": 48.6
+    },
+    {
+      "pooledDRank": 15,
+      "name": "Marcus Smart",
+      "pos": "SG",
+      "group": "GUARD",
+      "pooledD": 3.075,
+      "pooledNet": 4.201,
+      "centeredD": 2.184,
+      "rank2k": 142.0,
+      "rapmNetRank": 30,
+      "e2Rank": 323,
+      "f2Rank": 325,
+      "gateRef": 142.0,
+      "e2Violation": 181.0,
+      "f2Violation": 183.0,
+      "f2Bonus": 0.0,
+      "predF2": -0.743,
+      "help": 67.0,
+      "onBall": 74.1,
+      "creation": 58.7
+    },
+    {
+      "pooledDRank": 16,
+      "name": "Aaron Gordon",
+      "pos": "PF",
+      "group": "BIG",
+      "pooledD": 3.055,
+      "pooledNet": 4.852,
+      "centeredD": 1.865,
+      "rank2k": 70.5,
+      "rapmNetRank": 21,
+      "e2Rank": 18,
+      "f2Rank": 9,
+      "gateRef": 70.5,
+      "e2Violation": -52.5,
+      "f2Violation": -61.5,
+      "f2Bonus": 0.933,
+      "predF2": 2.723,
+      "help": 65.7,
+      "onBall": 92.3,
+      "creation": 68.9
+    },
+    {
+      "pooledDRank": 17,
+      "name": "Jalen Suggs",
+      "pos": "PG",
+      "group": "GUARD",
+      "pooledD": 2.964,
+      "pooledNet": 2.467,
+      "centeredD": 2.443,
+      "rank2k": 110.5,
+      "rapmNetRank": 85,
+      "e2Rank": 75,
+      "f2Rank": 87,
+      "gateRef": 110.5,
+      "e2Violation": -35.5,
+      "f2Violation": -23.5,
+      "f2Bonus": 0.0,
+      "predF2": 0.803,
+      "help": 64.9,
+      "onBall": 73.9,
+      "creation": 82.8
+    },
+    {
+      "pooledDRank": 18,
+      "name": "Jrue Holiday",
+      "pos": "PG",
+      "group": "GUARD",
+      "pooledD": 2.957,
+      "pooledNet": 4.444,
+      "centeredD": 2.438,
+      "rank2k": 81.0,
+      "rapmNetRank": 27,
+      "e2Rank": 55,
+      "f2Rank": 70,
+      "gateRef": 81.0,
+      "e2Violation": -26.0,
+      "f2Violation": -11.0,
+      "f2Bonus": 0.0,
+      "predF2": 0.986,
+      "help": 56.1,
+      "onBall": 73.5,
+      "creation": 92.9
+    },
+    {
+      "pooledDRank": 19,
+      "name": "Matisse Thybulle",
+      "pos": "SG",
+      "group": "GUARD",
+      "pooledD": 2.89,
+      "pooledNet": 1.701,
+      "centeredD": 2.045,
+      "rank2k": 294.5,
+      "rapmNetRank": 132,
+      "e2Rank": 388,
+      "f2Rank": 388,
+      "gateRef": 294.5,
+      "e2Violation": 93.5,
+      "f2Violation": 93.5,
+      "f2Bonus": 0.0,
+      "predF2": -0.978,
+      "help": 63.3,
+      "onBall": 81.4,
+      "creation": 56.9
+    },
+    {
+      "pooledDRank": 20,
+      "name": "Toumani Camara",
+      "pos": "PF",
+      "group": "BIG",
+      "pooledD": 2.853,
+      "pooledNet": 3.501,
+      "centeredD": 1.714,
+      "rank2k": 110.5,
+      "rapmNetRank": 51,
+      "e2Rank": 198,
+      "f2Rank": 86,
+      "gateRef": 110.5,
+      "e2Violation": 87.5,
+      "f2Violation": -24.5,
+      "f2Bonus": 0.857,
+      "predF2": 0.804,
+      "help": 53.4,
+      "onBall": 78.7,
+      "creation": 54.8
+    },
+    {
+      "pooledDRank": 21,
+      "name": "Wendell Carter Jr.",
+      "pos": "C",
+      "group": "BIG",
+      "pooledD": 2.738,
+      "pooledNet": 2.045,
+      "centeredD": 1.479,
+      "rank2k": 142.0,
+      "rapmNetRank": 113,
+      "e2Rank": 64,
+      "f2Rank": 26,
+      "gateRef": 142.0,
+      "e2Violation": -78.0,
+      "f2Violation": -116.0,
+      "f2Bonus": 0.74,
+      "predF2": 1.649,
+      "help": 83.7,
+      "onBall": 76.1,
+      "creation": 43.2
+    },
+    {
+      "pooledDRank": 22,
+      "name": "Shai Gilgeous-Alexander",
+      "pos": "PG",
+      "group": "GUARD",
+      "pooledD": 2.73,
+      "pooledNet": 8.512,
+      "centeredD": 2.268,
+      "rank2k": 2.0,
+      "rapmNetRank": 2,
+      "e2Rank": 1,
+      "f2Rank": 2,
+      "gateRef": 2.0,
+      "e2Violation": -1.0,
+      "f2Violation": 0.0,
+      "f2Bonus": 0.0,
+      "predF2": 4.593,
+      "help": 81.5,
+      "onBall": 76.7,
+      "creation": 99.0
+    },
+    {
+      "pooledDRank": 23,
+      "name": "Ajay Mitchell",
+      "pos": "SG",
+      "group": "GUARD",
+      "pooledD": 2.725,
+      "pooledNet": 2.748,
+      "centeredD": 1.922,
+      "rank2k": 81.0,
+      "rapmNetRank": 77,
+      "e2Rank": 167,
+      "f2Rank": 181,
+      "gateRef": 81.0,
+      "e2Violation": 86.0,
+      "f2Violation": 100.0,
+      "f2Bonus": 0.0,
+      "predF2": 0.118,
+      "help": 70.6,
+      "onBall": 66.4,
+      "creation": 89.1
+    },
+    {
+      "pooledDRank": 24,
+      "name": "Christian Koloko",
+      "pos": "C",
+      "group": "BIG",
+      "pooledD": 2.725,
+      "pooledNet": 1.691,
+      "centeredD": 1.47,
+      "rank2k": 428.0,
+      "rapmNetRank": 134,
+      "e2Rank": 519,
+      "f2Rank": 428,
+      "gateRef": 428.0,
+      "e2Violation": 91.0,
+      "f2Violation": 0.0,
+      "f2Bonus": 0.735,
+      "predF2": -1.173,
+      "help": 83.5,
+      "onBall": 73.9,
+      "creation": 49.6
+    },
+    {
+      "pooledDRank": 25,
+      "name": "Anthony Davis",
+      "pos": "C",
+      "group": "BIG",
+      "pooledD": 2.72,
+      "pooledNet": 4.024,
+      "centeredD": 1.466,
+      "rank2k": 20.0,
+      "rapmNetRank": 32,
+      "e2Rank": 108,
+      "f2Rank": 53,
+      "gateRef": 32,
+      "e2Violation": 76,
+      "f2Violation": 21,
+      "f2Bonus": 0.733,
+      "predF2": 1.269,
+      "help": 81.6,
+      "onBall": 64.3,
+      "creation": 83.4
+    },
+    {
+      "pooledDRank": 26,
+      "name": "Jusuf Nurkić",
+      "pos": "C",
+      "group": "BIG",
+      "pooledD": 2.707,
+      "pooledNet": 3.559,
+      "centeredD": 1.456,
+      "rank2k": 220.0,
+      "rapmNetRank": 48,
+      "e2Rank": 212,
+      "f2Rank": 111,
+      "gateRef": 220.0,
+      "e2Violation": -8.0,
+      "f2Violation": -109.0,
+      "f2Bonus": 0.728,
+      "predF2": 0.595,
+      "help": 79.8,
+      "onBall": 73.9,
+      "creation": 51.7
+    },
+    {
+      "pooledDRank": 27,
+      "name": "Dillon Brooks",
+      "pos": "SF",
+      "group": "WING",
+      "pooledD": 2.698,
+      "pooledNet": 3.266,
+      "centeredD": 2.168,
+      "rank2k": 81.0,
+      "rapmNetRank": 56,
+      "e2Rank": 222,
+      "f2Rank": 231,
+      "gateRef": 81.0,
+      "e2Violation": 141.0,
+      "f2Violation": 150.0,
+      "f2Bonus": 0.0,
+      "predF2": -0.207,
+      "help": 61.7,
+      "onBall": 72.0,
+      "creation": 96.4
+    },
+    {
+      "pooledDRank": 28,
+      "name": "Ronald Holland II",
+      "pos": "SF",
+      "group": "WING",
+      "pooledD": 2.647,
+      "pooledNet": 1.56,
+      "centeredD": 2.13,
+      "rank2k": 255.5,
+      "rapmNetRank": 142,
+      "e2Rank": 422,
+      "f2Rank": 423,
+      "gateRef": 255.5,
+      "e2Violation": 166.5,
+      "f2Violation": 167.5,
+      "f2Bonus": 0.0,
+      "predF2": -1.152,
+      "help": 66.2,
+      "onBall": 73.5,
+      "creation": 65.6
+    },
+    {
+      "pooledDRank": 29,
+      "name": "OG Anunoby",
+      "pos": "SF",
+      "group": "WING",
+      "pooledD": 2.635,
+      "pooledNet": 4.177,
+      "centeredD": 2.121,
+      "rank2k": 23.5,
+      "rapmNetRank": 31,
+      "e2Rank": 31,
+      "f2Rank": 38,
+      "gateRef": 31,
+      "e2Violation": 0,
+      "f2Violation": 7,
+      "f2Bonus": 0.0,
+      "predF2": 1.385,
+      "help": 71.9,
+      "onBall": 77.0,
+      "creation": 57.2
+    },
+    {
+      "pooledDRank": 30,
+      "name": "Tobias Harris",
+      "pos": "PF",
+      "group": "BIG",
+      "pooledD": 2.56,
+      "pooledNet": 4.558,
+      "centeredD": 1.494,
+      "rank2k": 94.0,
+      "rapmNetRank": 26,
+      "e2Rank": 126,
+      "f2Rank": 56,
+      "gateRef": 94.0,
+      "e2Violation": 32.0,
+      "f2Violation": -38.0,
+      "f2Bonus": 0.747,
+      "predF2": 1.159,
+      "help": 68.1,
+      "onBall": 80.5,
+      "creation": 74.6
+    }
+  ],
+  "byGroup": {
+    "BIG": {
+      "n": 16,
+      "failGateE2": 7,
+      "failGateF2": 2,
+      "medianViolationE2": -4.75,
+      "medianViolationF2": -36.5,
+      "maxViolationF2": 21,
+      "worstF2": "Anthony Davis",
+      "meanBonusF2": 1.009
+    },
+    "WING": {
+      "n": 5,
+      "failGateE2": 4,
+      "failGateF2": 5,
+      "medianViolationE2": 128.5,
+      "medianViolationF2": 142.5,
+      "maxViolationF2": 167.5,
+      "worstF2": "Ronald Holland II",
+      "meanBonusF2": 0.0
+    },
+    "GUARD": {
+      "n": 9,
+      "failGateE2": 5,
+      "failGateF2": 5,
+      "medianViolationE2": 86.0,
+      "medianViolationF2": 93.5,
+      "maxViolationF2": 293.0,
+      "worstF2": "Herbert Jones",
+      "meanBonusF2": 0.0
+    }
+  },
+  "top12E2": [
+    {
+      "rank": 1,
+      "name": "Shai Gilgeous-Alexander",
+      "pos": "PG",
+      "ovr": 108.8,
+      "isBig": false,
+      "pred": 4.593,
+      "bonus": 0.0,
+      "off": 4.093,
+      "def": 0.85,
+      "phys": 0.154,
+      "intercept": -0.508,
+      "predRecomputeErr": -0.003297,
+      "topAttrs": [
+        [
+          "pass",
+          1.19
+        ],
+        [
+          "stamina",
+          0.761
+        ],
+        [
+          "short",
+          0.698
+        ],
+        [
+          "long",
+          0.5
+        ]
+      ],
+      "rank2k": 2.0,
+      "rapmNetRank": 2,
+      "pooledDRank": 22,
+      "gateRef": 2.0,
+      "centeredD": 2.268
+    },
+    {
+      "rank": 2,
+      "name": "Victor Wembanyama",
+      "pos": "C",
+      "ovr": 103.9,
+      "isBig": true,
+      "pred": 3.972,
+      "bonus": 0.0,
+      "off": 2.189,
+      "def": 1.879,
+      "phys": 0.414,
+      "intercept": -0.508,
+      "predRecomputeErr": 0.001969,
+      "topAttrs": [
+        [
+          "help",
+          1.391
+        ],
+        [
+          "short",
+          1.347
+        ],
+        [
+          "stamina",
+          0.464
+        ],
+        [
+          "rebound",
+          0.419
+        ]
+      ],
+      "rank2k": 2.0,
+      "rapmNetRank": 5,
+      "pooledDRank": 1,
+      "gateRef": 5,
+      "centeredD": 4.073
+    },
+    {
+      "rank": 3,
+      "name": "Nikola Jokić",
+      "pos": "C",
+      "ovr": 101.1,
+      "isBig": true,
+      "pred": 3.617,
+      "bonus": 0.0,
+      "off": 3.793,
+      "def": -0.738,
+      "phys": 1.07,
+      "intercept": -0.508,
+      "predRecomputeErr": 6.7e-05,
+      "topAttrs": [
+        [
+          "pass",
+          1.333
+        ],
+        [
+          "short",
+          1.324
+        ],
+        [
+          "stamina",
+          0.845
+        ],
+        [
+          "rebound",
+          0.414
+        ]
+      ],
+      "rank2k": 2.0,
+      "rapmNetRank": 1,
+      "pooledDRank": 72,
+      "gateRef": 2.0,
+      "centeredD": 0.678
+    },
+    {
+      "rank": 4,
+      "name": "Luka Dončić",
+      "pos": "PG",
+      "ovr": 99.2,
+      "isBig": false,
+      "pred": 3.377,
+      "bonus": 0.0,
+      "off": 2.767,
+      "def": -0.497,
+      "phys": 1.619,
+      "intercept": -0.508,
+      "predRecomputeErr": 0.004456,
+      "topAttrs": [
+        [
+          "pass",
+          1.265
+        ],
+        [
+          "stamina",
+          0.883
+        ],
+        [
+          "rebound",
+          0.789
+        ],
+        [
+          "short",
+          0.768
+        ]
+      ],
+      "rank2k": 5.0,
+      "rapmNetRank": 16,
+      "pooledDRank": 222,
+      "gateRef": 16,
+      "centeredD": 0.173
+    },
+    {
+      "rank": 5,
+      "name": "Chet Holmgren",
+      "pos": "PF",
+      "ovr": 99.0,
+      "isBig": true,
+      "pred": 3.346,
+      "bonus": 0.0,
+      "off": 2.073,
+      "def": 1.01,
+      "phys": 0.768,
+      "intercept": -0.508,
+      "predRecomputeErr": -0.003221,
+      "topAttrs": [
+        [
+          "short",
+          1.806
+        ],
+        [
+          "help",
+          1.427
+        ],
+        [
+          "rebound",
+          0.648
+        ],
+        [
+          "stamina",
+          0.44
+        ]
+      ],
+      "rank2k": 38.0,
+      "rapmNetRank": 8,
+      "pooledDRank": 9,
+      "gateRef": 38.0,
+      "centeredD": 2.114
+    },
+    {
+      "rank": 6,
+      "name": "Evan Mobley",
+      "pos": "PF",
+      "ovr": 98.6,
+      "isBig": true,
+      "pred": 3.298,
+      "bonus": 0.0,
+      "off": 0.923,
+      "def": 1.822,
+      "phys": 1.058,
+      "intercept": -0.508,
+      "predRecomputeErr": -0.003998,
+      "topAttrs": [
+        [
+          "short",
+          1.419
+        ],
+        [
+          "help",
+          1.408
+        ],
+        [
+          "stamina",
+          0.689
+        ],
+        [
+          "rebound",
+          0.582
+        ]
+      ],
+      "rank2k": 30.5,
+      "rapmNetRank": 47,
+      "pooledDRank": 35,
+      "gateRef": 47,
+      "centeredD": 1.407
+    },
+    {
+      "rank": 7,
+      "name": "Giannis Antetokounmpo",
+      "pos": "PF",
+      "ovr": 93.9,
+      "isBig": true,
+      "pred": 2.69,
+      "bonus": 0.0,
+      "off": 2.166,
+      "def": 0.104,
+      "phys": 0.931,
+      "intercept": -0.508,
+      "predRecomputeErr": 0.002074,
+      "topAttrs": [
+        [
+          "short",
+          2.152
+        ],
+        [
+          "help",
+          0.761
+        ],
+        [
+          "rebound",
+          0.696
+        ],
+        [
+          "pass",
+          0.475
+        ]
+      ],
+      "rank2k": 5.0,
+      "rapmNetRank": 3,
+      "pooledDRank": 48,
+      "gateRef": 5.0,
+      "centeredD": 1.206
+    },
+    {
+      "rank": 8,
+      "name": "Jamal Murray",
+      "pos": "PG",
+      "ovr": 91.6,
+      "isBig": false,
+      "pred": 2.402,
+      "bonus": 0.0,
+      "off": 3.357,
+      "def": -0.908,
+      "phys": 0.461,
+      "intercept": -0.508,
+      "predRecomputeErr": -0.000721,
+      "topAttrs": [
+        [
+          "long",
+          1.374
+        ],
+        [
+          "pass",
+          1.115
+        ],
+        [
+          "stamina",
+          0.873
+        ],
+        [
+          "ft",
+          0.422
+        ]
+      ],
+      "rank2k": 21.0,
+      "rapmNetRank": 211,
+      "pooledDRank": 404,
+      "gateRef": 211,
+      "centeredD": -2.009
+    },
+    {
+      "rank": 9,
+      "name": "Kevin Durant",
+      "pos": "SF",
+      "ovr": 91.1,
+      "isBig": false,
+      "pred": 2.338,
+      "bonus": 0.0,
+      "off": 2.529,
+      "def": -0.239,
+      "phys": 0.554,
+      "intercept": -0.508,
+      "predRecomputeErr": -0.002468,
+      "topAttrs": [
+        [
+          "short",
+          1.104
+        ],
+        [
+          "stamina",
+          0.887
+        ],
+        [
+          "long",
+          0.456
+        ],
+        [
+          "ft",
+          0.375
+        ]
+      ],
+      "rank2k": 11.5,
+      "rapmNetRank": 35,
+      "pooledDRank": 163,
+      "gateRef": 35,
+      "centeredD": 0.574
+    },
+    {
+      "rank": 10,
+      "name": "Kawhi Leonard",
+      "pos": "SF",
+      "ovr": 90.8,
+      "isBig": false,
+      "pred": 2.296,
+      "bonus": 0.0,
+      "off": 2.428,
+      "def": -0.921,
+      "phys": 1.3,
+      "intercept": -0.508,
+      "predRecomputeErr": 0.002439,
+      "topAttrs": [
+        [
+          "stamina",
+          0.699
+        ],
+        [
+          "short",
+          0.656
+        ],
+        [
+          "rebound",
+          0.559
+        ],
+        [
+          "ft",
+          0.45
+        ]
+      ],
+      "rank2k": 11.5,
+      "rapmNetRank": 4,
+      "pooledDRank": 55,
+      "gateRef": 11.5,
+      "centeredD": 1.673
+    },
+    {
+      "rank": 11,
+      "name": "Joel Embiid",
+      "pos": "C",
+      "ovr": 90.0,
+      "isBig": true,
+      "pred": 2.192,
+      "bonus": 0.0,
+      "off": 1.573,
+      "def": 0.421,
+      "phys": 0.706,
+      "intercept": -0.508,
+      "predRecomputeErr": 0.000252,
+      "topAttrs": [
+        [
+          "pass",
+          0.748
+        ],
+        [
+          "stamina",
+          0.671
+        ],
+        [
+          "help",
+          0.594
+        ],
+        [
+          "rebound",
+          0.281
+        ]
+      ],
+      "rank2k": 17.5,
+      "rapmNetRank": 10,
+      "pooledDRank": 10,
+      "gateRef": 17.5,
+      "centeredD": 1.813
+    },
+    {
+      "rank": 12,
+      "name": "Donovan Mitchell",
+      "pos": "SG",
+      "ovr": 88.5,
+      "isBig": false,
+      "pred": 2.009,
+      "bonus": 0.0,
+      "off": 1.609,
+      "def": 0.145,
+      "phys": 0.761,
+      "intercept": -0.508,
+      "predRecomputeErr": -0.001096,
+      "topAttrs": [
+        [
+          "stamina",
+          0.783
+        ],
+        [
+          "pressure",
+          0.336
+        ],
+        [
+          "ft",
+          0.331
+        ],
+        [
+          "mid",
+          0.265
+        ]
+      ],
+      "rank2k": 11.5,
+      "rapmNetRank": 17,
+      "pooledDRank": 97,
+      "gateRef": 17,
+      "centeredD": 0.851
+    }
+  ],
+  "top12F2": [
+    {
+      "rank": 1,
+      "name": "Victor Wembanyama",
+      "pos": "C",
+      "ovr": 113.0,
+      "isBig": true,
+      "pred": 6.008,
+      "bonus": 2.036,
+      "off": 2.189,
+      "def": 1.879,
+      "phys": 0.414,
+      "intercept": -0.508,
+      "predRecomputeErr": 0.002044,
+      "topAttrs": [
+        [
+          "help",
+          1.391
+        ],
+        [
+          "short",
+          1.347
+        ],
+        [
+          "stamina",
+          0.464
+        ],
+        [
+          "rebound",
+          0.419
+        ]
+      ],
+      "rank2k": 2.0,
+      "rapmNetRank": 5,
+      "pooledDRank": 1,
+      "gateRef": 5,
+      "centeredD": 4.073
+    },
+    {
+      "rank": 2,
+      "name": "Shai Gilgeous-Alexander",
+      "pos": "PG",
+      "ovr": 103.3,
+      "isBig": false,
+      "pred": 4.593,
+      "bonus": 0.0,
+      "off": 4.093,
+      "def": 0.85,
+      "phys": 0.154,
+      "intercept": -0.508,
+      "predRecomputeErr": -0.00342,
+      "topAttrs": [
+        [
+          "pass",
+          1.19
+        ],
+        [
+          "stamina",
+          0.761
+        ],
+        [
+          "short",
+          0.698
+        ],
+        [
+          "long",
+          0.5
+        ]
+      ],
+      "rank2k": 2.0,
+      "rapmNetRank": 2,
+      "pooledDRank": 22,
+      "gateRef": 2.0,
+      "centeredD": 2.268
+    },
+    {
+      "rank": 3,
+      "name": "Chet Holmgren",
+      "pos": "PF",
+      "ovr": 102.0,
+      "isBig": true,
+      "pred": 4.403,
+      "bonus": 1.057,
+      "off": 2.073,
+      "def": 1.009,
+      "phys": 0.768,
+      "intercept": -0.508,
+      "predRecomputeErr": -0.003235,
+      "topAttrs": [
+        [
+          "short",
+          1.806
+        ],
+        [
+          "help",
+          1.427
+        ],
+        [
+          "rebound",
+          0.648
+        ],
+        [
+          "stamina",
+          0.44
+        ]
+      ],
+      "rank2k": 38.0,
+      "rapmNetRank": 8,
+      "pooledDRank": 9,
+      "gateRef": 38.0,
+      "centeredD": 2.114
+    },
+    {
+      "rank": 4,
+      "name": "Evan Mobley",
+      "pos": "PF",
+      "ovr": 99.3,
+      "isBig": true,
+      "pred": 4.002,
+      "bonus": 0.704,
+      "off": 0.923,
+      "def": 1.822,
+      "phys": 1.058,
+      "intercept": -0.508,
+      "predRecomputeErr": -0.003997,
+      "topAttrs": [
+        [
+          "short",
+          1.419
+        ],
+        [
+          "help",
+          1.408
+        ],
+        [
+          "stamina",
+          0.689
+        ],
+        [
+          "rebound",
+          0.582
+        ]
+      ],
+      "rank2k": 30.5,
+      "rapmNetRank": 47,
+      "pooledDRank": 35,
+      "gateRef": 47,
+      "centeredD": 1.407
+    },
+    {
+      "rank": 5,
+      "name": "Nikola Jokić",
+      "pos": "C",
+      "ovr": 99.0,
+      "isBig": true,
+      "pred": 3.956,
+      "bonus": 0.339,
+      "off": 3.793,
+      "def": -0.738,
+      "phys": 1.07,
+      "intercept": -0.508,
+      "predRecomputeErr": 0.000124,
+      "topAttrs": [
+        [
+          "pass",
+          1.333
+        ],
+        [
+          "short",
+          1.324
+        ],
+        [
+          "stamina",
+          0.845
+        ],
+        [
+          "rebound",
+          0.414
+        ]
+      ],
+      "rank2k": 2.0,
+      "rapmNetRank": 1,
+      "pooledDRank": 72,
+      "gateRef": 2.0,
+      "centeredD": 0.678
+    },
+    {
+      "rank": 6,
+      "name": "Luka Dončić",
+      "pos": "PG",
+      "ovr": 95.1,
+      "isBig": false,
+      "pred": 3.377,
+      "bonus": 0.0,
+      "off": 2.767,
+      "def": -0.497,
+      "phys": 1.619,
+      "intercept": -0.508,
+      "predRecomputeErr": 0.004475,
+      "topAttrs": [
+        [
+          "pass",
+          1.265
+        ],
+        [
+          "stamina",
+          0.883
+        ],
+        [
+          "rebound",
+          0.789
+        ],
+        [
+          "short",
+          0.768
+        ]
+      ],
+      "rank2k": 5.0,
+      "rapmNetRank": 16,
+      "pooledDRank": 222,
+      "gateRef": 16,
+      "centeredD": 0.173
+    },
+    {
+      "rank": 7,
+      "name": "Giannis Antetokounmpo",
+      "pos": "PF",
+      "ovr": 94.5,
+      "isBig": true,
+      "pred": 3.293,
+      "bonus": 0.603,
+      "off": 2.166,
+      "def": 0.104,
+      "phys": 0.931,
+      "intercept": -0.508,
+      "predRecomputeErr": 0.002105,
+      "topAttrs": [
+        [
+          "short",
+          2.152
+        ],
+        [
+          "help",
+          0.761
+        ],
+        [
+          "rebound",
+          0.696
+        ],
+        [
+          "pass",
+          0.475
+        ]
+      ],
+      "rank2k": 5.0,
+      "rapmNetRank": 3,
+      "pooledDRank": 48,
+      "gateRef": 5.0,
+      "centeredD": 1.206
+    },
+    {
+      "rank": 8,
+      "name": "Joel Embiid",
+      "pos": "C",
+      "ovr": 93.1,
+      "isBig": true,
+      "pred": 3.098,
+      "bonus": 0.907,
+      "off": 1.573,
+      "def": 0.421,
+      "phys": 0.706,
+      "intercept": -0.508,
+      "predRecomputeErr": 0.001264,
+      "topAttrs": [
+        [
+          "pass",
+          0.748
+        ],
+        [
+          "stamina",
+          0.671
+        ],
+        [
+          "help",
+          0.594
+        ],
+        [
+          "rebound",
+          0.281
+        ]
+      ],
+      "rank2k": 17.5,
+      "rapmNetRank": 10,
+      "pooledDRank": 10,
+      "gateRef": 17.5,
+      "centeredD": 1.813
+    },
+    {
+      "rank": 9,
+      "name": "Aaron Gordon",
+      "pos": "PF",
+      "ovr": 90.6,
+      "isBig": true,
+      "pred": 2.723,
+      "bonus": 0.933,
+      "off": 1.453,
+      "def": 0.156,
+      "phys": 0.695,
+      "intercept": -0.508,
+      "predRecomputeErr": 0.006559,
+      "topAttrs": [
+        [
+          "short",
+          0.524
+        ],
+        [
+          "onBall",
+          0.45
+        ],
+        [
+          "tovSkill",
+          0.4
+        ],
+        [
+          "rebound",
+          0.375
+        ]
+      ],
+      "rank2k": 70.5,
+      "rapmNetRank": 21,
+      "pooledDRank": 16,
+      "gateRef": 70.5,
+      "centeredD": 1.865
+    },
+    {
+      "rank": 10,
+      "name": "Jamal Murray",
+      "pos": "PG",
+      "ovr": 88.4,
+      "isBig": false,
+      "pred": 2.402,
+      "bonus": 0.0,
+      "off": 3.357,
+      "def": -0.908,
+      "phys": 0.461,
+      "intercept": -0.508,
+      "predRecomputeErr": -0.000727,
+      "topAttrs": [
+        [
+          "long",
+          1.374
+        ],
+        [
+          "pass",
+          1.115
+        ],
+        [
+          "stamina",
+          0.873
+        ],
+        [
+          "ft",
+          0.422
+        ]
+      ],
+      "rank2k": 21.0,
+      "rapmNetRank": 211,
+      "pooledDRank": 404,
+      "gateRef": 211,
+      "centeredD": -2.009
+    },
+    {
+      "rank": 11,
+      "name": "Kevin Durant",
+      "pos": "SF",
+      "ovr": 88.0,
+      "isBig": false,
+      "pred": 2.338,
+      "bonus": 0.0,
+      "off": 2.529,
+      "def": -0.239,
+      "phys": 0.554,
+      "intercept": -0.508,
+      "predRecomputeErr": -0.002535,
+      "topAttrs": [
+        [
+          "short",
+          1.104
+        ],
+        [
+          "stamina",
+          0.887
+        ],
+        [
+          "long",
+          0.456
+        ],
+        [
+          "ft",
+          0.375
+        ]
+      ],
+      "rank2k": 11.5,
+      "rapmNetRank": 35,
+      "pooledDRank": 163,
+      "gateRef": 35,
+      "centeredD": 0.574
+    },
+    {
+      "rank": 12,
+      "name": "Kawhi Leonard",
+      "pos": "SF",
+      "ovr": 87.7,
+      "isBig": false,
+      "pred": 2.296,
+      "bonus": 0.0,
+      "off": 2.428,
+      "def": -0.921,
+      "phys": 1.3,
+      "intercept": -0.508,
+      "predRecomputeErr": 0.00242,
+      "topAttrs": [
+        [
+          "stamina",
+          0.699
+        ],
+        [
+          "short",
+          0.656
+        ],
+        [
+          "rebound",
+          0.559
+        ],
+        [
+          "ft",
+          0.45
+        ]
+      ],
+      "rank2k": 11.5,
+      "rapmNetRank": 4,
+      "pooledDRank": 55,
+      "gateRef": 11.5,
+      "centeredD": 1.673
+    }
+  ],
+  "bigCount": {
+    "E2": {
+      "top10": 5,
+      "top15": 8,
+      "top20": 9
+    },
+    "F2": {
+      "top10": 7,
+      "top15": 10,
+      "top20": 13
+    }
+  },
+  "allowedBigs": [
+    "Chet Holmgren",
+    "Giannis Antetokounmpo",
+    "Nikola Jokić",
+    "Victor Wembanyama"
+  ],
+  "extraBigsTop10": {
+    "E2": [
+      "Evan Mobley"
+    ],
+    "F2": [
+      "Evan Mobley",
+      "Joel Embiid",
+      "Aaron Gordon"
+    ]
+  },
+  "predAtRankF2": {
+    "1": 6.008,
+    "2": 4.593,
+    "3": 4.403,
+    "4": 4.002,
+    "5": 3.956,
+    "6": 3.377,
+    "7": 3.293,
+    "8": 3.098,
+    "9": 2.723,
+    "10": 2.402,
+    "11": 2.338,
+    "12": 2.296,
+    "13": 2.235,
+    "15": 2.195,
+    "20": 1.916,
+    "25": 1.696,
+    "30": 1.509,
+    "40": 1.354,
+    "60": 1.093,
+    "100": 0.682,
+    "150": 0.309,
+    "200": 0.023
+  },
+  "gammaNeededF2Failures": [
+    {
+      "name": "Herbert Jones",
+      "pos": "SG",
+      "group": "GUARD",
+      "f2Rank": 435,
+      "gateRef": 142.0,
+      "f2Violation": 293.0,
+      "predF2": -1.228,
+      "predNeeded": 0.382,
+      "deltaPredNeeded": 1.61,
+      "centeredD": 2.669,
+      "impliedGamma": 0.6
+    },
+    {
+      "name": "Alex Caruso",
+      "pos": "SG",
+      "group": "GUARD",
+      "f2Rank": 315,
+      "gateRef": 94.0,
+      "f2Violation": 221.0,
+      "predF2": -0.684,
+      "predNeeded": 0.753,
+      "deltaPredNeeded": 1.437,
+      "centeredD": 3.86,
+      "impliedGamma": 0.37
+    },
+    {
+      "name": "Ausar Thompson",
+      "pos": "SF",
+      "group": "WING",
+      "f2Rank": 190,
+      "gateRef": 47.5,
+      "f2Violation": 142.5,
+      "predF2": 0.07,
+      "predNeeded": 1.305,
+      "deltaPredNeeded": 1.235,
+      "centeredD": 2.474,
+      "impliedGamma": 0.5
+    },
+    {
+      "name": "Marcus Smart",
+      "pos": "SG",
+      "group": "GUARD",
+      "f2Rank": 325,
+      "gateRef": 142.0,
+      "f2Violation": 183.0,
+      "predF2": -0.743,
+      "predNeeded": 0.382,
+      "deltaPredNeeded": 1.125,
+      "centeredD": 2.184,
+      "impliedGamma": 0.52
+    },
+    {
+      "name": "Dillon Brooks",
+      "pos": "SF",
+      "group": "WING",
+      "f2Rank": 231,
+      "gateRef": 81.0,
+      "f2Violation": 150.0,
+      "predF2": -0.207,
+      "predNeeded": 0.844,
+      "deltaPredNeeded": 1.051,
+      "centeredD": 2.168,
+      "impliedGamma": 0.48
+    },
+    {
+      "name": "Ronald Holland II",
+      "pos": "SF",
+      "group": "WING",
+      "f2Rank": 423,
+      "gateRef": 255.5,
+      "f2Violation": 167.5,
+      "predF2": -1.152,
+      "predNeeded": -0.365,
+      "deltaPredNeeded": 0.787,
+      "centeredD": 2.13,
+      "impliedGamma": 0.37
+    },
+    {
+      "name": "Ajay Mitchell",
+      "pos": "SG",
+      "group": "GUARD",
+      "f2Rank": 181,
+      "gateRef": 81.0,
+      "f2Violation": 100.0,
+      "predF2": 0.118,
+      "predNeeded": 0.844,
+      "deltaPredNeeded": 0.726,
+      "centeredD": 1.922,
+      "impliedGamma": 0.38
+    },
+    {
+      "name": "Matisse Thybulle",
+      "pos": "SG",
+      "group": "GUARD",
+      "f2Rank": 388,
+      "gateRef": 294.5,
+      "f2Violation": 93.5,
+      "predF2": -0.978,
+      "predNeeded": -0.557,
+      "deltaPredNeeded": 0.421,
+      "centeredD": 2.045,
+      "impliedGamma": 0.21
+    },
+    {
+      "name": "Franz Wagner",
+      "pos": "SF",
+      "group": "WING",
+      "f2Rank": 71,
+      "gateRef": 47.5,
+      "f2Violation": 23.5,
+      "predF2": 0.972,
+      "predNeeded": 1.305,
+      "deltaPredNeeded": 0.333,
+      "centeredD": 3.04,
+      "impliedGamma": 0.11
+    },
+    {
+      "name": "Anthony Davis",
+      "pos": "C",
+      "group": "BIG",
+      "f2Rank": 53,
+      "gateRef": 32,
+      "f2Violation": 21,
+      "predF2": 1.269,
+      "predNeeded": 1.489,
+      "deltaPredNeeded": 0.22,
+      "centeredD": 1.466,
+      "impliedGamma": 0.15
+    },
+    {
+      "name": "Jaren Jackson Jr.",
+      "pos": "PF",
+      "group": "BIG",
+      "f2Rank": 72,
+      "gateRef": 62,
+      "f2Violation": 10,
+      "predF2": 0.959,
+      "predNeeded": 1.084,
+      "deltaPredNeeded": 0.125,
+      "centeredD": 1.94,
+      "impliedGamma": 0.06
+    },
+    {
+      "name": "OG Anunoby",
+      "pos": "SF",
+      "group": "WING",
+      "f2Rank": 38,
+      "gateRef": 31,
+      "f2Violation": 7,
+      "predF2": 1.385,
+      "predNeeded": 1.493,
+      "deltaPredNeeded": 0.108,
+      "centeredD": 2.121,
+      "impliedGamma": 0.05
+    }
+  ],
+  "dispersionByPos": {
+    "PG": {
+      "nCard": 114,
+      "nPool": 78,
+      "sdPooledD": 1.602,
+      "sdCenteredD": 1.201,
+      "maxCenteredD": 3.433,
+      "p90CenteredD": 1.502,
+      "sdHelp": 7.09,
+      "sdOnBall": 5.88,
+      "sdCreation": 13.53
+    },
+    "SG": {
+      "nCard": 145,
+      "nPool": 97,
+      "sdPooledD": 1.531,
+      "sdCenteredD": 1.148,
+      "maxCenteredD": 3.86,
+      "p90CenteredD": 1.289,
+      "sdHelp": 5.86,
+      "sdOnBall": 5.46,
+      "sdCreation": 14.12
+    },
+    "SF": {
+      "nCard": 110,
+      "nPool": 81,
+      "sdPooledD": 1.594,
+      "sdCenteredD": 1.196,
+      "maxCenteredD": 3.04,
+      "p90CenteredD": 1.358,
+      "sdHelp": 6.14,
+      "sdOnBall": 5.6,
+      "sdCreation": 13.6
+    },
+    "PF": {
+      "nCard": 96,
+      "nPool": 68,
+      "sdPooledD": 1.541,
+      "sdCenteredD": 1.156,
+      "maxCenteredD": 2.356,
+      "p90CenteredD": 1.494,
+      "sdHelp": 8.51,
+      "sdOnBall": 5.41,
+      "sdCreation": 13.88
+    },
+    "C": {
+      "nCard": 117,
+      "nPool": 90,
+      "sdPooledD": 1.626,
+      "sdCenteredD": 1.219,
+      "maxCenteredD": 4.073,
+      "p90CenteredD": 1.307,
+      "sdHelp": 9.96,
+      "sdOnBall": 6.52,
+      "sdCreation": 11.18
+    }
+  },
+  "sevenPlayer": [
+    {
+      "name": "Karlo Matković",
+      "v53": 7,
+      "e2": 21,
+      "f2": 19,
+      "rank2k": 294.5,
+      "rapmNetRank": 212,
+      "gateRef": 294.5,
+      "f2Bonus": 0.315,
+      "centeredD": 0.631
+    },
+    {
+      "name": "John Collins",
+      "v53": 29,
+      "e2": 49,
+      "f2": 61,
+      "rank2k": 142.0,
+      "rapmNetRank": 240,
+      "gateRef": 240,
+      "f2Bonus": 0.0,
+      "centeredD": -0.598
+    },
+    {
+      "name": "Isaiah Stewart",
+      "v53": 32,
+      "e2": 81,
+      "f2": 82,
+      "rank2k": 194.5,
+      "rapmNetRank": 261,
+      "gateRef": 261,
+      "f2Bonus": 0.087,
+      "centeredD": 0.173
+    },
+    {
+      "name": "Luka Garza",
+      "v53": 33,
+      "e2": 73,
+      "f2": 84,
+      "rank2k": 255.5,
+      "rapmNetRank": 174,
+      "gateRef": 255.5,
+      "f2Bonus": 0.0,
+      "centeredD": -1.546
+    },
+    {
+      "name": "Neemias Queta",
+      "v53": 51,
+      "e2": 59,
+      "f2": 28,
+      "rank2k": 110.5,
+      "rapmNetRank": 13,
+      "gateRef": 110.5,
+      "f2Bonus": 0.643,
+      "centeredD": 1.287
+    },
+    {
+      "name": "Rudy Gobert",
+      "v53": 68,
+      "e2": 91,
+      "f2": 13,
+      "rank2k": 60.5,
+      "rapmNetRank": 29,
+      "gateRef": 60.5,
+      "f2Bonus": 1.588,
+      "centeredD": 3.175
+    },
+    {
+      "name": "Jalen Smith",
+      "v53": 104,
+      "e2": 141,
+      "f2": 152,
+      "rank2k": 220.0,
+      "rapmNetRank": 65,
+      "gateRef": 220.0,
+      "f2Bonus": 0.014,
+      "centeredD": 0.027
+    }
+  ],
+  "externalTop12": {
+    "2k27": [
+      {
+        "rank": 2.0,
+        "name": "Victor Wembanyama",
+        "pos": "C",
+        "isBig": true
+      },
+      {
+        "rank": 2.0,
+        "name": "Shai Gilgeous-Alexander",
+        "pos": "PG",
+        "isBig": false
+      },
+      {
+        "rank": 2.0,
+        "name": "Nikola Jokić",
+        "pos": "C",
+        "isBig": true
+      },
+      {
+        "rank": 5.0,
+        "name": "Luka Dončić",
+        "pos": "PG",
+        "isBig": false
+      },
+      {
+        "rank": 5.0,
+        "name": "Giannis Antetokounmpo",
+        "pos": "PF",
+        "isBig": true
+      },
+      {
+        "rank": 5.0,
+        "name": "Jalen Brunson",
+        "pos": "PG",
+        "isBig": false
+      },
+      {
+        "rank": 7.0,
+        "name": "Anthony Edwards",
+        "pos": "SG",
+        "isBig": false
+      },
+      {
+        "rank": 8.0,
+        "name": "Cade Cunningham",
+        "pos": "PG",
+        "isBig": false
+      },
+      {
+        "rank": 11.5,
+        "name": "Kevin Durant",
+        "pos": "SF",
+        "isBig": false
+      },
+      {
+        "rank": 11.5,
+        "name": "Kawhi Leonard",
+        "pos": "SF",
+        "isBig": false
+      },
+      {
+        "rank": 11.5,
+        "name": "Donovan Mitchell",
+        "pos": "SG",
+        "isBig": false
+      },
+      {
+        "rank": 11.5,
+        "name": "Stephen Curry",
+        "pos": "PG",
+        "isBig": false
+      }
+    ],
+    "rapmNet": [
+      {
+        "rank": 1,
+        "name": "Nikola Jokić",
+        "pos": "C",
+        "isBig": true
+      },
+      {
+        "rank": 2,
+        "name": "Shai Gilgeous-Alexander",
+        "pos": "PG",
+        "isBig": false
+      },
+      {
+        "rank": 3,
+        "name": "Giannis Antetokounmpo",
+        "pos": "PF",
+        "isBig": true
+      },
+      {
+        "rank": 4,
+        "name": "Kawhi Leonard",
+        "pos": "SF",
+        "isBig": false
+      },
+      {
+        "rank": 5,
+        "name": "Victor Wembanyama",
+        "pos": "C",
+        "isBig": true
+      },
+      {
+        "rank": 6,
+        "name": "Derrick White",
+        "pos": "PG",
+        "isBig": false
+      },
+      {
+        "rank": 7,
+        "name": "Franz Wagner",
+        "pos": "SF",
+        "isBig": false
+      },
+      {
+        "rank": 8,
+        "name": "Chet Holmgren",
+        "pos": "PF",
+        "isBig": true
+      },
+      {
+        "rank": 9,
+        "name": "Alex Caruso",
+        "pos": "SG",
+        "isBig": false
+      },
+      {
+        "rank": 10,
+        "name": "Joel Embiid",
+        "pos": "C",
+        "isBig": true
+      },
+      {
+        "rank": 11,
+        "name": "Lauri Markkanen",
+        "pos": "PF",
+        "isBig": true
+      },
+      {
+        "rank": 12,
+        "name": "Jimmy Butler III",
+        "pos": "SF",
+        "isBig": false
+      }
+    ]
+  },
+  "externalBigsTop10": {
+    "2k27": [
+      "Victor Wembanyama",
+      "Nikola Jokić",
+      "Giannis Antetokounmpo"
+    ],
+    "rapmNet": [
+      "Nikola Jokić",
+      "Giannis Antetokounmpo",
+      "Victor Wembanyama",
+      "Chet Holmgren",
+      "Joel Embiid"
+    ]
+  },
+  "overRatingF2Top25": [
+    {
+      "name": "Karlo Matković",
+      "pos": "PF",
+      "isBig": true,
+      "f2Rank": 19,
+      "rank2k": 294.5,
+      "rapmNetRank": 212,
+      "bestRef": 212,
+      "overRating": 193,
+      "bonus": 0.315
+    },
+    {
+      "name": "Paul Reed",
+      "pos": "C",
+      "isBig": true,
+      "f2Rank": 23,
+      "rank2k": 194.5,
+      "rapmNetRank": 114,
+      "bestRef": 114,
+      "overRating": 91,
+      "bonus": 0.195
+    },
+    {
+      "name": "Ryan Rollins",
+      "pos": "PG",
+      "isBig": false,
+      "f2Rank": 20,
+      "rank2k": 110.5,
+      "rapmNetRank": 155,
+      "bestRef": 110.5,
+      "overRating": 90.5,
+      "bonus": 0.0
+    },
+    {
+      "name": "Jalen Duren",
+      "pos": "C",
+      "isBig": true,
+      "f2Rank": 18,
+      "rank2k": 47.5,
+      "rapmNetRank": 180,
+      "bestRef": 47.5,
+      "overRating": 29.5,
+      "bonus": 0.0
+    },
+    {
+      "name": "Draymond Green",
+      "pos": "PF",
+      "isBig": true,
+      "f2Rank": 17,
+      "rank2k": 142.0,
+      "rapmNetRank": 46,
+      "bestRef": 46,
+      "overRating": 29,
+      "bonus": 1.178
+    },
+    {
+      "name": "Evan Mobley",
+      "pos": "PF",
+      "isBig": true,
+      "f2Rank": 4,
+      "rank2k": 30.5,
+      "rapmNetRank": 47,
+      "bestRef": 30.5,
+      "overRating": 26.5,
+      "bonus": 0.704
+    },
+    {
+      "name": "Rudy Gobert",
+      "pos": "C",
+      "isBig": true,
+      "f2Rank": 13,
+      "rank2k": 60.5,
+      "rapmNetRank": 29,
+      "bestRef": 29,
+      "overRating": 16,
+      "bonus": 1.588
+    },
+    {
+      "name": "Aaron Gordon",
+      "pos": "PF",
+      "isBig": true,
+      "f2Rank": 9,
+      "rank2k": 70.5,
+      "rapmNetRank": 21,
+      "bestRef": 21,
+      "overRating": 12,
+      "bonus": 0.933
+    },
+    {
+      "name": "Jamal Murray",
+      "pos": "PG",
+      "isBig": false,
+      "f2Rank": 10,
+      "rank2k": 21.0,
+      "rapmNetRank": 211,
+      "bestRef": 21.0,
+      "overRating": 11.0,
+      "bonus": 0.0
+    },
+    {
+      "name": "Scottie Barnes",
+      "pos": "PF",
+      "isBig": true,
+      "f2Rank": 15,
+      "rank2k": 23.5,
+      "rapmNetRank": 101,
+      "bestRef": 23.5,
+      "overRating": 8.5,
+      "bonus": 0.281
+    },
+    {
+      "name": "Chet Holmgren",
+      "pos": "PF",
+      "isBig": true,
+      "f2Rank": 3,
+      "rank2k": 38.0,
+      "rapmNetRank": 8,
+      "bestRef": 8,
+      "overRating": 5,
+      "bonus": 1.057
+    },
+    {
+      "name": "Joel Embiid",
+      "pos": "C",
+      "isBig": true,
+      "f2Rank": 8,
+      "rank2k": 17.5,
+      "rapmNetRank": 10,
+      "bestRef": 10,
+      "overRating": 2,
+      "bonus": 0.907
+    },
+    {
+      "name": "Victor Wembanyama",
+      "pos": "C",
+      "isBig": true,
+      "f2Rank": 1,
+      "rank2k": 2.0,
+      "rapmNetRank": 5,
+      "bestRef": 2.0,
+      "overRating": 1.0,
+      "bonus": 2.036
+    },
+    {
+      "name": "Kevin Durant",
+      "pos": "SF",
+      "isBig": false,
+      "f2Rank": 11,
+      "rank2k": 11.5,
+      "rapmNetRank": 35,
+      "bestRef": 11.5,
+      "overRating": 0.5,
+      "bonus": 0.0
+    },
+    {
+      "name": "Shai Gilgeous-Alexander",
+      "pos": "PG",
+      "isBig": false,
+      "f2Rank": 2,
+      "rank2k": 2.0,
+      "rapmNetRank": 2,
+      "bestRef": 2.0,
+      "overRating": 0.0,
+      "bonus": 0.0
+    },
+    {
+      "name": "Luka Dončić",
+      "pos": "PG",
+      "isBig": false,
+      "f2Rank": 6,
+      "rank2k": 5.0,
+      "rapmNetRank": 16,
+      "bestRef": 5.0,
+      "overRating": -1.0,
+      "bonus": 0.0
+    },
+    {
+      "name": "Lauri Markkanen",
+      "pos": "PF",
+      "isBig": true,
+      "f2Rank": 14,
+      "rank2k": 38.0,
+      "rapmNetRank": 11,
+      "bestRef": 11,
+      "overRating": -3,
+      "bonus": 0.63
+    },
+    {
+      "name": "Nikola Jokić",
+      "pos": "C",
+      "isBig": true,
+      "f2Rank": 5,
+      "rank2k": 2.0,
+      "rapmNetRank": 1,
+      "bestRef": 1,
+      "overRating": -4,
+      "bonus": 0.339
+    },
+    {
+      "name": "Giannis Antetokounmpo",
+      "pos": "PF",
+      "isBig": true,
+      "f2Rank": 7,
+      "rank2k": 5.0,
+      "rapmNetRank": 3,
+      "bestRef": 3,
+      "overRating": -4,
+      "bonus": 0.603
+    },
+    {
+      "name": "Donovan Mitchell",
+      "pos": "SG",
+      "isBig": false,
+      "f2Rank": 16,
+      "rank2k": 11.5,
+      "rapmNetRank": 17,
+      "bestRef": 11.5,
+      "overRating": -4.5,
+      "bonus": 0.0
+    },
+    {
+      "name": "LeBron James",
+      "pos": "SF",
+      "isBig": false,
+      "f2Rank": 25,
+      "rank2k": 17.5,
+      "rapmNetRank": 49,
+      "bestRef": 17.5,
+      "overRating": -7.5,
+      "bonus": 0.0
+    },
+    {
+      "name": "Kawhi Leonard",
+      "pos": "SF",
+      "isBig": false,
+      "f2Rank": 12,
+      "rank2k": 11.5,
+      "rapmNetRank": 4,
+      "bestRef": 4,
+      "overRating": -8,
+      "bonus": 0.0
+    },
+    {
+      "name": "Stephen Curry",
+      "pos": "PG",
+      "isBig": false,
+      "f2Rank": 21,
+      "rank2k": 11.5,
+      "rapmNetRank": 24,
+      "bestRef": 11.5,
+      "overRating": -9.5,
+      "bonus": 0.0
+    },
+    {
+      "name": "Jimmy Butler III",
+      "pos": "SF",
+      "isBig": false,
+      "f2Rank": 24,
+      "rank2k": 47.5,
+      "rapmNetRank": 12,
+      "bestRef": 12,
+      "overRating": -12,
+      "bonus": 0.0
+    },
+    {
+      "name": "Cade Cunningham",
+      "pos": "PG",
+      "isBig": false,
+      "f2Rank": 22,
+      "rank2k": 8.0,
+      "rapmNetRank": 54,
+      "bestRef": 8.0,
+      "overRating": -14.0,
+      "bonus": 0.0
+    }
+  ],
+  "e2PredPercentiles": {
+    "nRefPool": 379,
+    "predAtPR": {
+      "50": -0.346,
+      "70": 0.309,
+      "80": 0.673,
+      "85": 0.909,
+      "90": 1.255,
+      "92": 1.327,
+      "95": 1.696,
+      "97": 2.009,
+      "98": 2.338,
+      "99": 3.346
+    }
+  },
+  "watchlist": [
+    {
+      "name": "Evan Mobley",
+      "pos": "PF",
+      "e2Rank": 6,
+      "e2Pred": 3.298,
+      "e2PredPR": 98.68,
+      "f2Rank": 4,
+      "centeredD": 1.407,
+      "rank2k": 30.5,
+      "rapmNetRank": 47,
+      "gateRef": 47,
+      "rTarget": 1.778,
+      "rMinusE2Pred": -1.52
+    },
+    {
+      "name": "Joel Embiid",
+      "pos": "C",
+      "e2Rank": 11,
+      "e2Pred": 2.192,
+      "e2PredPR": 97.35,
+      "f2Rank": 8,
+      "centeredD": 1.813,
+      "rank2k": 17.5,
+      "rapmNetRank": 10,
+      "gateRef": 17.5,
+      "rTarget": 3.279,
+      "rMinusE2Pred": 1.087
+    },
+    {
+      "name": "Aaron Gordon",
+      "pos": "PF",
+      "e2Rank": 18,
+      "e2Pred": 1.791,
+      "e2PredPR": 95.5,
+      "f2Rank": 9,
+      "centeredD": 1.865,
+      "rank2k": 70.5,
+      "rapmNetRank": 21,
+      "gateRef": 70.5,
+      "rTarget": 2.726,
+      "rMinusE2Pred": 0.935
+    },
+    {
+      "name": "Victor Wembanyama",
+      "pos": "C",
+      "e2Rank": 2,
+      "e2Pred": 3.972,
+      "e2PredPR": 99.74,
+      "f2Rank": 1,
+      "centeredD": 4.073,
+      "rank2k": 2.0,
+      "rapmNetRank": 5,
+      "gateRef": 5,
+      "rTarget": 4.611,
+      "rMinusE2Pred": 0.639
+    },
+    {
+      "name": "Chet Holmgren",
+      "pos": "PF",
+      "e2Rank": 5,
+      "e2Pred": 3.346,
+      "e2PredPR": 98.94,
+      "f2Rank": 3,
+      "centeredD": 2.114,
+      "rank2k": 38.0,
+      "rapmNetRank": 8,
+      "gateRef": 38.0,
+      "rTarget": 3.768,
+      "rMinusE2Pred": 0.422
+    },
+    {
+      "name": "Nikola Jokić",
+      "pos": "C",
+      "e2Rank": 3,
+      "e2Pred": 3.617,
+      "e2PredPR": 99.47,
+      "f2Rank": 5,
+      "centeredD": 0.678,
+      "rank2k": 2.0,
+      "rapmNetRank": 1,
+      "gateRef": 2.0,
+      "rTarget": 6.674,
+      "rMinusE2Pred": 3.057
+    },
+    {
+      "name": "Giannis Antetokounmpo",
+      "pos": "PF",
+      "e2Rank": 7,
+      "e2Pred": 2.69,
+      "e2PredPR": 98.41,
+      "f2Rank": 7,
+      "centeredD": 1.206,
+      "rank2k": 5.0,
+      "rapmNetRank": 3,
+      "gateRef": 5.0,
+      "rTarget": 4.946,
+      "rMinusE2Pred": 2.256
+    },
+    {
+      "name": "Rudy Gobert",
+      "pos": "C",
+      "e2Rank": 91,
+      "e2Pred": 0.647,
+      "e2PredPR": 79.1,
+      "f2Rank": 13,
+      "centeredD": 3.175,
+      "rank2k": 60.5,
+      "rapmNetRank": 29,
+      "gateRef": 60.5,
+      "rTarget": 2.169,
+      "rMinusE2Pred": 1.522
+    },
+    {
+      "name": "Neemias Queta",
+      "pos": "C",
+      "e2Rank": 59,
+      "e2Pred": 0.946,
+      "e2PredPR": 86.24,
+      "f2Rank": 28,
+      "centeredD": 1.287,
+      "rank2k": 110.5,
+      "rapmNetRank": 13,
+      "gateRef": 110.5,
+      "rTarget": 2.988,
+      "rMinusE2Pred": 2.042
+    },
+    {
+      "name": "Karlo Matković",
+      "pos": "PF",
+      "e2Rank": 21,
+      "e2Pred": 1.671,
+      "e2PredPR": 94.71,
+      "f2Rank": 19,
+      "centeredD": 0.631,
+      "rank2k": 294.5,
+      "rapmNetRank": 212,
+      "gateRef": 294.5,
+      "rTarget": -0.601,
+      "rMinusE2Pred": -2.272
+    },
+    {
+      "name": "Isaiah Stewart",
+      "pos": "PF",
+      "e2Rank": 81,
+      "e2Pred": 0.746,
+      "e2PredPR": 81.22,
+      "f2Rank": 82,
+      "centeredD": 0.173,
+      "rank2k": 194.5,
+      "rapmNetRank": 261,
+      "gateRef": 261,
+      "rTarget": -1.11,
+      "rMinusE2Pred": -1.856
+    },
+    {
+      "name": "Jalen Smith",
+      "pos": "PF",
+      "e2Rank": 141,
+      "e2Pred": 0.292,
+      "e2PredPR": 69.84,
+      "f2Rank": 152,
+      "centeredD": 0.027,
+      "rank2k": 220.0,
+      "rapmNetRank": 65,
+      "gateRef": 220.0,
+      "rTarget": 1.328,
+      "rMinusE2Pred": 1.036
+    },
+    {
+      "name": "Herbert Jones",
+      "pos": "SG",
+      "e2Rank": 433,
+      "e2Pred": -1.228,
+      "e2PredPR": 23.28,
+      "f2Rank": 435,
+      "centeredD": 2.669,
+      "rank2k": 142.0,
+      "rapmNetRank": 14,
+      "gateRef": 142.0,
+      "rTarget": 3.326,
+      "rMinusE2Pred": 4.554
+    },
+    {
+      "name": "Alex Caruso",
+      "pos": "SG",
+      "e2Rank": 311,
+      "e2Pred": -0.684,
+      "e2PredPR": 40.48,
+      "f2Rank": 315,
+      "centeredD": 3.86,
+      "rank2k": 94.0,
+      "rapmNetRank": 9,
+      "gateRef": 94.0,
+      "rTarget": 3.781,
+      "rMinusE2Pred": 4.465
+    },
+    {
+      "name": "Marcus Smart",
+      "pos": "SG",
+      "e2Rank": 323,
+      "e2Pred": -0.743,
+      "e2PredPR": 37.83,
+      "f2Rank": 325,
+      "centeredD": 2.184,
+      "rank2k": 142.0,
+      "rapmNetRank": 30,
+      "gateRef": 142.0,
+      "rTarget": 2.502,
+      "rMinusE2Pred": 3.245
+    },
+    {
+      "name": "Ausar Thompson",
+      "pos": "SF",
+      "e2Rank": 176,
+      "e2Pred": 0.07,
+      "e2PredPR": 61.9,
+      "f2Rank": 190,
+      "centeredD": 2.474,
+      "rank2k": 47.5,
+      "rapmNetRank": 28,
+      "gateRef": 47.5,
+      "rTarget": 3.01,
+      "rMinusE2Pred": 2.94
+    },
+    {
+      "name": "Dillon Brooks",
+      "pos": "SF",
+      "e2Rank": 222,
+      "e2Pred": -0.207,
+      "e2PredPR": 53.44,
+      "f2Rank": 231,
+      "centeredD": 2.168,
+      "rank2k": 81.0,
+      "rapmNetRank": 56,
+      "gateRef": 81.0,
+      "rTarget": 2.16,
+      "rMinusE2Pred": 2.367
+    },
+    {
+      "name": "Matisse Thybulle",
+      "pos": "SG",
+      "e2Rank": 388,
+      "e2Pred": -0.978,
+      "e2PredPR": 28.31,
+      "f2Rank": 388,
+      "centeredD": 2.045,
+      "rank2k": 294.5,
+      "rapmNetRank": 132,
+      "gateRef": 294.5,
+      "rTarget": 0.627,
+      "rMinusE2Pred": 1.605
+    },
+    {
+      "name": "Ajay Mitchell",
+      "pos": "SG",
+      "e2Rank": 167,
+      "e2Pred": 0.118,
+      "e2PredPR": 63.76,
+      "f2Rank": 181,
+      "centeredD": 1.922,
+      "rank2k": 81.0,
+      "rapmNetRank": 77,
+      "gateRef": 81.0,
+      "rTarget": 1.412,
+      "rMinusE2Pred": 1.294
+    },
+    {
+      "name": "Ronald Holland II",
+      "pos": "SF",
+      "e2Rank": 422,
+      "e2Pred": -1.152,
+      "e2PredPR": 25.13,
+      "f2Rank": 423,
+      "centeredD": 2.13,
+      "rank2k": 255.5,
+      "rapmNetRank": 142,
+      "gateRef": 255.5,
+      "rTarget": 0.88,
+      "rMinusE2Pred": 2.032
+    },
+    {
+      "name": "Franz Wagner",
+      "pos": "SF",
+      "e2Rank": 56,
+      "e2Pred": 0.972,
+      "e2PredPR": 87.04,
+      "f2Rank": 71,
+      "centeredD": 3.04,
+      "rank2k": 47.5,
+      "rapmNetRank": 7,
+      "gateRef": 47.5,
+      "rTarget": 4.515,
+      "rMinusE2Pred": 3.543
+    },
+    {
+      "name": "Anthony Davis",
+      "pos": "C",
+      "e2Rank": 108,
+      "e2Pred": 0.536,
+      "e2PredPR": 75.93,
+      "f2Rank": 53,
+      "centeredD": 1.466,
+      "rank2k": 20.0,
+      "rapmNetRank": 32,
+      "gateRef": 32,
+      "rTarget": 1.951,
+      "rMinusE2Pred": 1.415
+    },
+    {
+      "name": "Jaren Jackson Jr.",
+      "pos": "PF",
+      "e2Rank": 191,
+      "e2Pred": -0.012,
+      "e2PredPR": 59.52,
+      "f2Rank": 72,
+      "centeredD": 1.94,
+      "rank2k": 38.0,
+      "rapmNetRank": 62,
+      "gateRef": 62,
+      "rTarget": 1.409,
+      "rMinusE2Pred": 1.421
+    },
+    {
+      "name": "OG Anunoby",
+      "pos": "SF",
+      "e2Rank": 31,
+      "e2Pred": 1.385,
+      "e2PredPR": 93.12,
+      "f2Rank": 38,
+      "centeredD": 2.121,
+      "rank2k": 23.5,
+      "rapmNetRank": 31,
+      "gateRef": 31,
+      "rTarget": 2.843,
+      "rMinusE2Pred": 1.458
+    },
+    {
+      "name": "Draymond Green",
+      "pos": "PF",
+      "e2Rank": 72,
+      "e2Pred": 0.827,
+      "e2PredPR": 82.8,
+      "f2Rank": 17,
+      "centeredD": 2.356,
+      "rank2k": 142.0,
+      "rapmNetRank": 46,
+      "gateRef": 142.0,
+      "rTarget": 1.785,
+      "rMinusE2Pred": 0.958
+    },
+    {
+      "name": "Dean Wade",
+      "pos": "PF",
+      "e2Rank": 193,
+      "e2Pred": -0.015,
+      "e2PredPR": 58.99,
+      "f2Rank": 63,
+      "centeredD": 2.189,
+      "rank2k": 220.0,
+      "rapmNetRank": 18,
+      "gateRef": 220.0,
+      "rTarget": 2.778,
+      "rMinusE2Pred": 2.793
+    }
+  ],
+  "rTargetMuNote": "r = 0.75*pooledNet - MIN 加權位置均值（池 pooledPoss>=1000），同 calibrate.py::attach_rapm"
+}

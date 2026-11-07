@@ -1,0 +1,1042 @@
+{
+ "jobs": [
+  {
+   "name": "player-impact-v54-team",
+   "description": "4 季 x 3 種子，球隊層模擬",
+   "command": "node reports/player-impact-v54-team/run.mjs 2022-23 2023-24 2024-25 2025-26 --workers=12 --variant=v54",
+   "workers": 12
+  },
+  {
+   "name": "ovr-v54-2025-26",
+   "description": "582 名球員，variant both，samples 8，球員層模擬板",
+   "command": "node reports/ovr-v54-2025-26/run.mjs --variant both --samples 8 --workers 18",
+   "workers": 18
+  }
+ ],
+ "files": [
+  {
+   "path": "data/defense-a-source/manifest.json",
+   "sha256": "0bb849fc0a3301cd8bff4c3733f0623c24e1328b5c43342dbfb848ce5dd3efed"
+  },
+  {
+   "path": "data/season-league-v54.json",
+   "sha256": "d0960365bbce124ddbb7276d76a41a61a6fd099c60dd853a5586de155d15d4ae"
+  },
+  {
+   "path": "reports/defense-fifth/v3-frozen.json",
+   "sha256": "828c728470f686821a0ad245a76d7fd0f88968bd0be4aeffd3e646c5b774f718"
+  },
+  {
+   "path": "reports/defense-fourth/normalization-pre41.json",
+   "sha256": "f715f277eb3f2c7139f099c7a66a6e2a902f5edd2f1f74907514752b6b6bf993"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-allocation/model.mjs",
+   "sha256": "75556915f6792ada3992b4a069ccee89f9c3318882566f3601da01fa45c6e428"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-oreb/2022-23/calibration-oreb.json",
+   "sha256": "7ade2db4abd572457b2acb465468b68709c332a0843686c44c877d0886a9052e"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-oreb/2022-23/cards.json",
+   "sha256": "9b2e5e554adcc512ee24fa20651fda8390487b9c103ebcc8eef1367fc4d204c0"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-oreb/2023-24/calibration-oreb.json",
+   "sha256": "2a0673bc04429927fa1dffb3ba575cb1b39989c94279834a14d2605806dc0295"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-oreb/2023-24/cards.json",
+   "sha256": "38d5d986505926a6888002b003a3c336a46ddfef372bc5766dff4a3b0f01ac87"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-oreb/2024-25/calibration-oreb.json",
+   "sha256": "581e67c1d78936e744dab569da7def0cc9861f3e35c194a2f1977c290f03cf15"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-oreb/2024-25/cards.json",
+   "sha256": "71f7f92e53cd21d3954d9f4f74587579fc4df5e340db7e61825cf9f2eb9f0596"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-oreb/2025-26/calibration-oreb.json",
+   "sha256": "d8e67526ffc3aad24bb48e4fee41d68b26489f383fe036813fa38792a3f24b2e"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-oreb/2025-26/cards.json",
+   "sha256": "1f292f0bf39c7c8a0a174b938728de65b0ce53a663f6f0a36f4101416b3cff7d"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-oreb/model.mjs",
+   "sha256": "4cba6619f5f2e75fdfaa5c74cd49616e23dd0989b4c8b06b3db85b9b20106cf2"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-putback-time/putback-cdf.json",
+   "sha256": "bcdbc4cceaba613266e22bcafa67e8a14a3e7a7fc07643f720666379df218ee4"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-putback-time/timing.mjs",
+   "sha256": "e3a2963ef7e8c589a1ed593a223fe7b1c928087b8bddedee69ee648e0038e209"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-turnover-time/2022-23/calibration.json",
+   "sha256": "72b780e024edc0838277fe836b5dc9e4ed36a22ac3d4ce5051dcc27ea18777d7"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-turnover-time/2022-23/turnover-cdf.json",
+   "sha256": "9e29270e165743d54cb51ac60d418b690e190d061a498e0b277fee9ef0413d52"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-turnover-time/2023-24/calibration.json",
+   "sha256": "41152aaf5751c9496d320beea3628c8cc06b0a4d70fde8f5300926c0a38e2dd1"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-turnover-time/2023-24/turnover-cdf.json",
+   "sha256": "e15bf4d119ccecd64c9dd585a1730723b727b1d36fc7e00faeaa816f597a1c26"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-turnover-time/2024-25/calibration.json",
+   "sha256": "52b80e4cc9140a08e141cd9fcac212a135a10370033d694db62ee6221a900bd3"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-turnover-time/2024-25/turnover-cdf.json",
+   "sha256": "1e292ad71628068ac93f52aff1ea2c9147f2d55fb127ca2de96bd3135a892d39"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-turnover-time/2025-26/calibration.json",
+   "sha256": "7b941465078969e457c6b7194f3e032b0befec333b868cf92d5fcd82b70f1c52"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-turnover-time/2025-26/turnover-cdf.json",
+   "sha256": "e799d5a04157e72386c50fb8d3c1506b8993ec215368d0edf9b88e2788fc67ca"
+  },
+  {
+   "path": "reports/defense-tenth/step4-rebounds-turnover-time/adapter.mjs",
+   "sha256": "f79c352899be469dd04e71be6b711bf81e83056d4f0981fa35fd94af6e71d1bc"
+  },
+  {
+   "path": "reports/defense-tenth/step4-t0/2022-23/bundle.json",
+   "sha256": "b311dcfce6c80b98720784c28a4879b154a205a2ce0cbed61cb0c5014342c213"
+  },
+  {
+   "path": "reports/defense-tenth/step4-t0/2022-23/calibration-v3.json",
+   "sha256": "5f8cc5179d2dc659c73a4274cc3989ea44a484d94452d4750dc8486f4af8baf6"
+  },
+  {
+   "path": "reports/defense-tenth/step4-t0/2023-24/bundle.json",
+   "sha256": "5e17a95310e7cea844b81005fbe214e9ecafe62b54a1ba45aad6aaa839baf971"
+  },
+  {
+   "path": "reports/defense-tenth/step4-t0/2023-24/calibration-v3.json",
+   "sha256": "853f1df493e5d6be7c444d904ed39ed8e95a60d8b257457e8afd09c7ac484f51"
+  },
+  {
+   "path": "reports/defense-tenth/step4-t0/2024-25/bundle.json",
+   "sha256": "001cf3d44b29542c3d202cd375f2378e7c09b712ca958637c28d6538566215f8"
+  },
+  {
+   "path": "reports/defense-tenth/step4-t0/2024-25/calibration-v3.json",
+   "sha256": "0b9188c7fba1243d5dfc2c181b74a863bc6d1f515c702b1ebe9275d41b7c8a72"
+  },
+  {
+   "path": "reports/defense-tenth/step4-t0/2025-26/bundle.json",
+   "sha256": "43b5a5141fa667a492a67dfc6aa95eec058aabbe39e9d787b0a92b870d7db051"
+  },
+  {
+   "path": "reports/impact-rapm/four-factors.csv",
+   "sha256": "e8f773d51fbd4c782f1dab22e08aacc75458a9bce74d1e86ed4be6bdf05393f9"
+  },
+  {
+   "path": "reports/ovr-2025-26-latest/runtime.mjs",
+   "sha256": "b9c2046eaf827d8e41c7af942ed9e4712bb8270263b3a302144b8c6c5250fa5a"
+  },
+  {
+   "path": "reports/ovr-2025-26-positional/protocol.mjs",
+   "sha256": "326c5519078bc81a7fe5e6c6294cd20e68d799e6f7382c657f71c97848b47c43"
+  },
+  {
+   "path": "reports/ovr-v47-2025-26/input.mjs",
+   "sha256": "de464a47e1844105dc168042e57b6d211c62453d06aadb8067056853f46f2a1a"
+  },
+  {
+   "path": "reports/ovr-v53-2025-26/input.mjs",
+   "sha256": "968c376937290e3ea65a4031a10031801fdd0bb4c0c87b8db00d34a53dc98584"
+  },
+  {
+   "path": "reports/ovr-v54-2025-26/input.mjs",
+   "sha256": "96dd9479d2681e146689f876c47d0f5ab2ce296d9373891c0fb5377ddfddbdee"
+  },
+  {
+   "path": "reports/ovr-v54-2025-26/run.mjs",
+   "sha256": "c8128a2186dcc6fc0eb0f53465d78224979db5dcd54e9a8422acf78795a4df39"
+  },
+  {
+   "path": "reports/ovr-v54-2025-26/shooting-eb.mjs",
+   "sha256": "12a3e9e1866e167209e87f575768ed0e3d5175c2eff6a965a9f2457e1df8c21b"
+  },
+  {
+   "path": "reports/ovr-v54-2025-26/worker.mjs",
+   "sha256": "7d4db88bf8bd7b3434c923d1b8767ecd324c3ef29ce3a66eb21b5b906d4a9cf5"
+  },
+  {
+   "path": "reports/player-impact-team-clock/season-source.mjs",
+   "sha256": "6e189e8908114ba2ae573caa57179eecf5951b3ce2396285eda4f0f6dd390a56"
+  },
+  {
+   "path": "reports/player-impact-v1/2022-23-cards.json",
+   "sha256": "bd491b82990abf2e1fe673a0f3ee2bb1898a85811b846da9d39153663c22009e"
+  },
+  {
+   "path": "reports/player-impact-v1/2023-24-cards.json",
+   "sha256": "47700e859b47221d17dc473802c420cbb11d3c7ce7b365e8d41b67fc2888ace5"
+  },
+  {
+   "path": "reports/player-impact-v1/2024-25-cards.json",
+   "sha256": "0130560536777281065fb0d8b8ae088bb0007aeb24c38e88a415b1479ee9c788"
+  },
+  {
+   "path": "reports/player-impact-v1/2025-26-cards.json",
+   "sha256": "a52d62d63520a969d58d6494ef967385140ad138f09059a5d3ca4d69bb036624"
+  },
+  {
+   "path": "reports/player-impact-v1/input.mjs",
+   "sha256": "81884844d893739e7a6f6b0938ac27a6efd3a8be5050bc9af17cfb3120b75e7c"
+  },
+  {
+   "path": "reports/player-impact-v11/model.mjs",
+   "sha256": "f42b78f4fbc8cf5865d52b57a306644be0ac96bd11d315fccc6bc989d62fe5ad"
+  },
+  {
+   "path": "reports/player-impact-v14/model.mjs",
+   "sha256": "8f176fe6806790a1f084cf9a6e348b22bf12b43d779d04d97e6e57f3e5869994"
+  },
+  {
+   "path": "reports/player-impact-v17/2022-23-creation-audit.json",
+   "sha256": "da02fc20af9956bc3385639ec371b3fc33cc5fddd4a3efd468236680f3f07365"
+  },
+  {
+   "path": "reports/player-impact-v17/2023-24-creation-audit.json",
+   "sha256": "d93617c363cea31563cb7b3540dd229d4419a54dc0b49dd0a44911fe135cd74c"
+  },
+  {
+   "path": "reports/player-impact-v17/2024-25-creation-audit.json",
+   "sha256": "2314a8266c7049276cdd13435c89bf5fc36fdd87cf9eb26c763f162fc0bb89ad"
+  },
+  {
+   "path": "reports/player-impact-v17/2025-26-creation-audit.json",
+   "sha256": "07d4ae7eb2eac4025597339afb5ba556eb0208f70f8e885a20d49c4795747332"
+  },
+  {
+   "path": "reports/player-impact-v18/creation-reference.mjs",
+   "sha256": "8542411450ba612ac293c7cd859c67eea1811cdef8b94c839be2e7cbc05d37af"
+  },
+  {
+   "path": "reports/player-impact-v18/role-input.mjs",
+   "sha256": "16d79f8085c893cac5a9e218422c3df94b87da40abb83842657c337ea269fd03"
+  },
+  {
+   "path": "reports/player-impact-v19/2022-23-foul-contact-audit.json",
+   "sha256": "1fdc31724d260e9ffac8439ac7032f98105bc242be946499a10741422cf8c2b6"
+  },
+  {
+   "path": "reports/player-impact-v19/2023-24-foul-contact-audit.json",
+   "sha256": "0ac1e7737a453b3247b8cef0966a952e526954cf25df27706f4e45f34b100857"
+  },
+  {
+   "path": "reports/player-impact-v19/2024-25-foul-contact-audit.json",
+   "sha256": "430e8fee5e94f54298f05d3bf496e30066366bb7316777243d580df05c177d44"
+  },
+  {
+   "path": "reports/player-impact-v19/2025-26-foul-contact-audit.json",
+   "sha256": "cbcacc46a2e587b36eaf4b5f8cc4e0a7d11ad664d7a3767b123126c4f6896b72"
+  },
+  {
+   "path": "reports/player-impact-v19/ftr-prior.json",
+   "sha256": "a8ef3d1257a30bc4b5a2fff0f8b9d31f5296e15199aa7926e64844aa564d4c34"
+  },
+  {
+   "path": "reports/player-impact-v19/role-input.mjs",
+   "sha256": "1f27e7213e2ed00211492a42b8457cbb12457c59df031a05fbe2e4df07c4a621"
+  },
+  {
+   "path": "reports/player-impact-v2/2022-23-risk.json",
+   "sha256": "0289bce7fa6e8922272c291fde6439f0004067515265b2e7168cd128faca7073"
+  },
+  {
+   "path": "reports/player-impact-v2/2023-24-risk.json",
+   "sha256": "0e0b119a5de02561e0d1fc296cd544bd6b8ce4aeba721ddccabcb523ebbe316d"
+  },
+  {
+   "path": "reports/player-impact-v2/2024-25-risk.json",
+   "sha256": "826bde481f0d418eb0f3546a3a7f3c2993bdf48555a97173a67d7e8630547a47"
+  },
+  {
+   "path": "reports/player-impact-v2/2025-26-risk.json",
+   "sha256": "76001616125a17778b409149994e6d45e9f944520885564ee8867b467be491d9"
+  },
+  {
+   "path": "reports/player-impact-v2/input.mjs",
+   "sha256": "ed81ab761d3b2a5156af4bde993d3f31c8870eee1e65f50cca136c2f108e0e11"
+  },
+  {
+   "path": "reports/player-impact-v20/2022-23-contexts.json",
+   "sha256": "0d012f89f42814303204b686c19e8c23b9c29ee915ade421914ca9a97bc2006b"
+  },
+  {
+   "path": "reports/player-impact-v20/2022-23-defense-exposure.json",
+   "sha256": "8a51352954a0591fa16b7dd26bc213bfecd886af1159e7db0807bb5aead99f2f"
+  },
+  {
+   "path": "reports/player-impact-v20/2023-24-contexts.json",
+   "sha256": "29a8c5222e03d69820cec6c2b657e48b93280042de601148355de568f6b7e904"
+  },
+  {
+   "path": "reports/player-impact-v20/2023-24-defense-exposure.json",
+   "sha256": "e592d5acb3de25b9356d8473d62d44cc4aded1832a9a41aec92c29f3826d8261"
+  },
+  {
+   "path": "reports/player-impact-v20/2024-25-contexts.json",
+   "sha256": "4767d28b80e7d25cc60992037db16ee2e4e68dd035682ed4c7ce84cb8d161869"
+  },
+  {
+   "path": "reports/player-impact-v20/2024-25-defense-exposure.json",
+   "sha256": "95dfcc9017d8e276cc1e1e9b22f99002b2f58fffcd118430d212d245d7f00a5e"
+  },
+  {
+   "path": "reports/player-impact-v20/2025-26-contexts.json",
+   "sha256": "3807f0d8b3d4c59626b6cd3b74f660682d36d8ddd1031c4da398834b1458bd9d"
+  },
+  {
+   "path": "reports/player-impact-v20/2025-26-defense-exposure.json",
+   "sha256": "61c650f3cab2c1e760494e7590861e07ac293d5f14793f2d28d776528229983c"
+  },
+  {
+   "path": "reports/player-impact-v20/2025-26-synthetic-center.json",
+   "sha256": "677ea27c98c5e8a8159fbd0ccb1dfcd949a5b638d5ae7b4e930722c68ea4211c"
+  },
+  {
+   "path": "reports/player-impact-v20/input.mjs",
+   "sha256": "1deef5762702139004129b7dcbd8b1e739375bc2f1695e693edd20dcf6d6fa77"
+  },
+  {
+   "path": "reports/player-impact-v20/model.mjs",
+   "sha256": "d31e69904144b4a38bb1bf0e3f87b9fd08750bb81b0863dd892eb88b66f29fa3"
+  },
+  {
+   "path": "reports/player-impact-v20/ovr-input.mjs",
+   "sha256": "21de30cd8c4f9003765da17ae507fcf72d0f6f84babb8b1db53aaaa7ff355318"
+  },
+  {
+   "path": "reports/player-impact-v20/role-input.mjs",
+   "sha256": "5cd00083c39eccb360714aa5067fc37ea42e16220fec4b6f34ffc92da8bec53f"
+  },
+  {
+   "path": "reports/player-impact-v21/2022-23-terminal-risk.json",
+   "sha256": "dfd282b9c9c4e2f40eac57ef46eecf48ae38c01edaae631d12265059d0758df9"
+  },
+  {
+   "path": "reports/player-impact-v21/2023-24-terminal-risk.json",
+   "sha256": "8fba368a03759ded05c2e39682a31cb6d58f4fe90fea01a0cf1df61294e0a980"
+  },
+  {
+   "path": "reports/player-impact-v21/2024-25-terminal-risk.json",
+   "sha256": "9c27eeb05a4854d5e1b4c3ef0a10af8298cc5053e84b8c4d15e56e8618f43f01"
+  },
+  {
+   "path": "reports/player-impact-v21/2025-26-terminal-risk.json",
+   "sha256": "ed6013c94a6991b09fe712b549084b13458ecf2857cd3648968d2bd5e9f8a4a8"
+  },
+  {
+   "path": "reports/player-impact-v21/input.mjs",
+   "sha256": "bd1382ba7b317f98930156af86a6472ad16da16a58be3ac27d8ee6842a5e3bac"
+  },
+  {
+   "path": "reports/player-impact-v21/model.mjs",
+   "sha256": "d27e3e3023b207c65476c7eb11cfc8e8597d16818b16b8c6f05f219206c31ee5"
+  },
+  {
+   "path": "reports/player-impact-v21/ovr-input-isolated.mjs",
+   "sha256": "a529103100275cf4417beed39beab067f44ca8c08c5dc75b5fb2ed14298951d3"
+  },
+  {
+   "path": "reports/player-impact-v22/2022-23-putback-contexts.json",
+   "sha256": "f6599415b731d165b051c73a874224787f982856889bc98c5ba011c69e3df2f4"
+  },
+  {
+   "path": "reports/player-impact-v22/2022-23-putback-rates.json",
+   "sha256": "8da083d721e76633ec8a043301c18b8d3c1551ea675b1e8ba5c988d4575c888c"
+  },
+  {
+   "path": "reports/player-impact-v22/2023-24-putback-contexts.json",
+   "sha256": "e75d2fe4da052a30d523524d76eba95c12791850091a35b76db4fbd47cd93b3d"
+  },
+  {
+   "path": "reports/player-impact-v22/2023-24-putback-rates.json",
+   "sha256": "c50a94720dfab2f88ca14393fec50b573b021ec0e47a4bf93eb720de5406b675"
+  },
+  {
+   "path": "reports/player-impact-v22/2024-25-putback-contexts.json",
+   "sha256": "a705016bd78d7ae38f92a576b6b71e5b4481e9ebbca0514f324cbe9c93b5b3fb"
+  },
+  {
+   "path": "reports/player-impact-v22/2024-25-putback-rates.json",
+   "sha256": "da5a621842a27c18f71d354dc823409ad81459a182883538012f9166269db3fe"
+  },
+  {
+   "path": "reports/player-impact-v22/2025-26-putback-contexts.json",
+   "sha256": "11940c1d575b4b3bec0fb913ea72ab5164bf2169396cefdde4e534e495286985"
+  },
+  {
+   "path": "reports/player-impact-v22/2025-26-putback-rates.json",
+   "sha256": "9c41aec24ebc8e1c90e565839134c99c3fba3c63b6f9d902afcf401fb1eb57af"
+  },
+  {
+   "path": "reports/player-impact-v22/input.mjs",
+   "sha256": "832035203246ab8bcebb1f942bbcc990642c3085f15543874f3b31225d23120c"
+  },
+  {
+   "path": "reports/player-impact-v22/model.mjs",
+   "sha256": "a5b686a01b30c9853b3fddb90347eb100921bbca9df48f8fe5b31fb7a40e476f"
+  },
+  {
+   "path": "reports/player-impact-v22/ovr-input.mjs",
+   "sha256": "424d7d338fef701b4ee0ed3ada15ac503771e5438689c14658fda68d49e07c18"
+  },
+  {
+   "path": "reports/player-impact-v23/2022-23-choice-rates.json",
+   "sha256": "baaa66ec5ac10da12363ec04df0224d14ead39ebff335aec518630c6d622cc5a"
+  },
+  {
+   "path": "reports/player-impact-v23/2023-24-choice-rates.json",
+   "sha256": "bd523d73de341c84eef09866a030c476162c6203a259c5d80c79058dbe112935"
+  },
+  {
+   "path": "reports/player-impact-v23/2024-25-choice-rates.json",
+   "sha256": "7f598f6ea1ec1e7212356f27fc6be0b93c0b2ad1f62b385a44b1fb79845c7095"
+  },
+  {
+   "path": "reports/player-impact-v23/2025-26-choice-rates.json",
+   "sha256": "b4caeb0b17a50e359b904f83f08e22cad235c4819b1b882a59cecd5d0b723d4f"
+  },
+  {
+   "path": "reports/player-impact-v23/2025-26-choice-survival.json",
+   "sha256": "38e0f05a0225fda3d4300809cbb2bd40baa4f45146e429297dea1950f27478f2"
+  },
+  {
+   "path": "reports/player-impact-v23/input.mjs",
+   "sha256": "39c112dd8a9d49db84c6aa9edf7f7eae0eee7b266415d24cbee2f6e02c3be5e9"
+  },
+  {
+   "path": "reports/player-impact-v23/model.mjs",
+   "sha256": "7115b86792e0405124a23ece9675de0fe272c4ae62784f9649d54abb412c7059"
+  },
+  {
+   "path": "reports/player-impact-v23/ovr-input.mjs",
+   "sha256": "64e563d19b717a43ad6c377537a589aa93c565799ea92dc8b8be495528d63fff"
+  },
+  {
+   "path": "reports/player-impact-v24/2022-23-dreb-rates.json",
+   "sha256": "c2ae08fbb5055c22b29d2a92b74783fb3a7927f7ce34308a61ac19ad57dd0db5"
+  },
+  {
+   "path": "reports/player-impact-v24/2023-24-dreb-rates.json",
+   "sha256": "62a6e185d7823ab0709a1bcfa58accb38f0cfe4ac574183126df798ba502c5df"
+  },
+  {
+   "path": "reports/player-impact-v24/2024-25-dreb-rates.json",
+   "sha256": "6548b1d82b36f5973d0947157d52a0cc705c4215df656e8e66d5d18ffa374040"
+  },
+  {
+   "path": "reports/player-impact-v24/2025-26-dreb-rates.json",
+   "sha256": "6bb68a82a8e16db4db177aaccd72fb2c44c74136a687399c0ab3ce13b021b29a"
+  },
+  {
+   "path": "reports/player-impact-v24/input.mjs",
+   "sha256": "945b3db8cbea9dd03ccce17608e2b55c3bc4520c9ac91eb677688c8836871622"
+  },
+  {
+   "path": "reports/player-impact-v24/model.mjs",
+   "sha256": "a12fc6248827bc2bef130bd8a2e89ab64ec66d9b95c8a0471b0363c764f0c323"
+  },
+  {
+   "path": "reports/player-impact-v24/ovr-input.mjs",
+   "sha256": "44529060f8e4ea79728a24f7083a5fa3556c656dbaa457a7d3ce87ed7282be0a"
+  },
+  {
+   "path": "reports/player-impact-v25/2022-23-contact-policy.json",
+   "sha256": "24a7b0fa3ab0b1399418ec0bc8e5ef644c282965219cf5472173dd156dc10918"
+  },
+  {
+   "path": "reports/player-impact-v25/2022-23-contact-recipient.json",
+   "sha256": "86c29caa9e21d825c785a9ce76e36443cf717c80f6b1d533115c266a9358ee3c"
+  },
+  {
+   "path": "reports/player-impact-v25/2023-24-contact-policy.json",
+   "sha256": "fa872b00a7bae5035a53636ca2f9acf7c789304926880b95eaa85a1692a56044"
+  },
+  {
+   "path": "reports/player-impact-v25/2023-24-contact-recipient.json",
+   "sha256": "13cd25bb7df85c85153bc63ec8aad9f851191e076e39263fc5f6b896e584bb3d"
+  },
+  {
+   "path": "reports/player-impact-v25/2024-25-contact-policy.json",
+   "sha256": "4da9ceb3a6437fe0365ce65c4af27fdf0c3ea8ac48a35c31c964eb89a3859f11"
+  },
+  {
+   "path": "reports/player-impact-v25/2024-25-contact-recipient.json",
+   "sha256": "3a0288c7326356307f3d97aafa7a617dd2d4ba918cec1e4d9f9952cadc361b91"
+  },
+  {
+   "path": "reports/player-impact-v25/2025-26-contact-policy.json",
+   "sha256": "b07613c29e7a6ae109c7b2c7c9eb8099546b84dd0c1d57fdd1f95bcbbd867ecd"
+  },
+  {
+   "path": "reports/player-impact-v25/2025-26-contact-recipient.json",
+   "sha256": "dae3ca9d1cdc4b8505d9cec8f74801e09114363e87e4de821b636eeff3262f76"
+  },
+  {
+   "path": "reports/player-impact-v25/input.mjs",
+   "sha256": "e3df77e5522395a6ae2f81b37aca9a94ad877ecc3efa7215035d7ab84bf58573"
+  },
+  {
+   "path": "reports/player-impact-v25/model.mjs",
+   "sha256": "b510969c4fe556659ce0b6ef114b3095cf167546d432a96c0558c1909a60d778"
+  },
+  {
+   "path": "reports/player-impact-v25/ovr-input.mjs",
+   "sha256": "040de5538c8fb67a4b22e8f5efb3736a0925a1ddc48d28eca2b933bc6748c7ff"
+  },
+  {
+   "path": "reports/player-impact-v26/2022-23-contact-rates.json",
+   "sha256": "f393ef0cbf9f891fb2126695e78df783bac3b8f851ffdc0a80aa49bb5fd4190e"
+  },
+  {
+   "path": "reports/player-impact-v26/2023-24-contact-rates.json",
+   "sha256": "561c6674a4763b96ca0339a0b94a2899d0f6e20f7dbf91f669d169d1387d2383"
+  },
+  {
+   "path": "reports/player-impact-v26/2024-25-contact-rates.json",
+   "sha256": "fca185210641725a73c01d4241a564f4d9432dd40442e5eec5537593c927c096"
+  },
+  {
+   "path": "reports/player-impact-v26/2025-26-contact-rates.json",
+   "sha256": "2429037bceddcd70177f3ef8b77cf15ed5a84c6ef00717b2472d0cd5e2355a59"
+  },
+  {
+   "path": "reports/player-impact-v26/input.mjs",
+   "sha256": "764c8aca98fccd7016a6eafc7df5b52ed688b6cb356e5798ef138968a29064da"
+  },
+  {
+   "path": "reports/player-impact-v26/model.mjs",
+   "sha256": "435826e09e8111f7ba87bc2ce4ed8a7de5b3c35a25ddbc2070e3438f6bc4830b"
+  },
+  {
+   "path": "reports/player-impact-v26/ovr-input.mjs",
+   "sha256": "3c2c11546a333900cb045d3f874d356dc6ff43830be6f927cc2ab9336a774f6f"
+  },
+  {
+   "path": "reports/player-impact-v28/2022-23-contexts.json",
+   "sha256": "c3c5289e7c16cd87f6e2818405b296484923ac83537c8e42c9a7faedc80ac36d"
+  },
+  {
+   "path": "reports/player-impact-v28/2023-24-contexts.json",
+   "sha256": "81ab30adbd815120d45626edb357656871c4ebd589e7a71aae2211e04f7cdae2"
+  },
+  {
+   "path": "reports/player-impact-v28/2024-25-contexts.json",
+   "sha256": "7eb3c3c5061afe1c2b04a008bb6ada44c0c266ec5e3fd1ecf37f3864c557f275"
+  },
+  {
+   "path": "reports/player-impact-v28/2025-26-contexts.json",
+   "sha256": "f3bf82610ce2316cd009012b6d65be68747b814622d62c4f844912279245f640"
+  },
+  {
+   "path": "reports/player-impact-v28/defense-input.mjs",
+   "sha256": "9aecfd53f2372e3de117d743664af37c935a0c932ab9ecf4c15c86a4e366a2e9"
+  },
+  {
+   "path": "reports/player-impact-v28/input.mjs",
+   "sha256": "78448020e5cc635608214d805a53f52196755bbf5f17e202ef8d7540bbdb1bac"
+  },
+  {
+   "path": "reports/player-impact-v28/model.mjs",
+   "sha256": "ec8318ad7dd54085c5805ced4b66a6073578ee691d09ed6a29991478c3ae8690"
+  },
+  {
+   "path": "reports/player-impact-v29/benchmark.mjs",
+   "sha256": "7c65faac588d6810c29ee991c7c21fae53108c809aa2633642e6a2e79f64ac5f"
+  },
+  {
+   "path": "reports/player-impact-v29/ovr-input.mjs",
+   "sha256": "afbb6a557473152c3d8af82358fdceef71eb22253524e67c13eda2bf1401475d"
+  },
+  {
+   "path": "reports/player-impact-v29/workload-source.json",
+   "sha256": "cb27c9a16313e047724a025a2735582479cea998ba5e6f90f8c40a6033d66a36"
+  },
+  {
+   "path": "reports/player-impact-v3/model.mjs",
+   "sha256": "73ce8040cbd495045016fd886fb80ffa9b62e27af257cb16b6f6789da7c7405c"
+  },
+  {
+   "path": "reports/player-impact-v30/2022-23-contexts.json",
+   "sha256": "c4d790d63e9d22e7ee4eb634cc5496ecfd2f34c38352fe835076e52cdbc1413b"
+  },
+  {
+   "path": "reports/player-impact-v30/2023-24-contexts.json",
+   "sha256": "f8ec8e9527dacf234f047b9fd32436652b990d0a5a8ebb0eaa89637cfc1917ba"
+  },
+  {
+   "path": "reports/player-impact-v30/2024-25-contexts.json",
+   "sha256": "359f13f90b224f4dd9e61b5a7a3f36d756a71af50812b2ac80f3eca88c34d18e"
+  },
+  {
+   "path": "reports/player-impact-v30/2025-26-contexts.json",
+   "sha256": "42bb1d5827638c629e10c3ddd1f1e20a7c24ad767692aaf87dafc3cac8b5b052"
+  },
+  {
+   "path": "reports/player-impact-v30/input.mjs",
+   "sha256": "ecae08d98a614611368dc0a87b544a8bea8b79acc20138afa2d75d6cb082c9b4"
+  },
+  {
+   "path": "reports/player-impact-v30/ovr-input.mjs",
+   "sha256": "e22fb23985f588eef94c2d427ce075fb15af41b057b6a822c72a10bebf5b5d99"
+  },
+  {
+   "path": "reports/player-impact-v38/input.mjs",
+   "sha256": "68ac365762ef9a3243e12f71ed461ee0031e4f3c56a74951ce320dede6357a16"
+  },
+  {
+   "path": "reports/player-impact-v39/fit.json",
+   "sha256": "8b9689edec8f8beff1f08ec67aff3243165c63e00a1feeacbb74be313f23e433"
+  },
+  {
+   "path": "reports/player-impact-v39/input.mjs",
+   "sha256": "39e267fe8f87a9c350283ca9313ada1edcb4d2ff0e70e691fbb9de5f42ae0e71"
+  },
+  {
+   "path": "reports/player-impact-v39/ovr-input.mjs",
+   "sha256": "fab3f8beec25737b96630532697a3714bd1171268fc006d31dd54c7030431c46"
+  },
+  {
+   "path": "reports/player-impact-v4/model.mjs",
+   "sha256": "4211d4a1953c7c3e7ed8d451540408f3491b1e936bd6aa3038483d47a92bf99c"
+  },
+  {
+   "path": "reports/player-impact-v41/2025-26-contexts.json",
+   "sha256": "a08b28426f99a30432ca376340f450f9734dfccddb61b101dcefc60cf4e0ff64"
+  },
+  {
+   "path": "reports/player-impact-v41/engine.mjs",
+   "sha256": "fe4ecf2ce0aa923151a7dc74d909d19106b7cd8d745c23abd3774c882aa92f90"
+  },
+  {
+   "path": "reports/player-impact-v41/fit.json",
+   "sha256": "b351e8ff42a59899b18ed65328b6a2ddc74d588f7d3e895dc55ef96219a962e6"
+  },
+  {
+   "path": "reports/player-impact-v41/input.mjs",
+   "sha256": "eea3bd74d93c222879a6633e89ad1dc60732b090b4856e1029afb70b85e9227c"
+  },
+  {
+   "path": "reports/player-impact-v41/model.mjs",
+   "sha256": "81fa5ba285fb1f37b558c4d4bdb03f4d9a218dafda60b19214337085913375e6"
+  },
+  {
+   "path": "reports/player-impact-v41/ovr-input.mjs",
+   "sha256": "96a48de27b3215e1f0ac7a4f7e080b774e8bcc1135d593c67bb890092450320e"
+  },
+  {
+   "path": "reports/player-impact-v42/choice-fit.json",
+   "sha256": "a923c50c440be72a7e2e703adeaec74dd50699b0bdc1e6ac5a0c16f7a687bc98"
+  },
+  {
+   "path": "reports/player-impact-v42/choice-model.mjs",
+   "sha256": "3fa69485ba4e49b4f5d696e51c38a77710ec7590de9b9592c89635cce0e8b9ea"
+  },
+  {
+   "path": "reports/player-impact-v42/input.mjs",
+   "sha256": "124c122891038bd46b1b4328b5b3d2b255237643ebebe7d3db25f3784e917760"
+  },
+  {
+   "path": "reports/player-impact-v42/space-model.mjs",
+   "sha256": "9d05f3ac41832584338baca36469ab8606de3f472734120f5e20295af5c139af"
+  },
+  {
+   "path": "reports/player-impact-v44/space-model.mjs",
+   "sha256": "fc570c1db9ee30abb75cbde377389995560ccf643b55a574a6e7b8bde1252052"
+  },
+  {
+   "path": "reports/player-impact-v45/2022-23-contexts.json",
+   "sha256": "494261eabd847e93b9dbe681ff1b1bf7658a73cc3e5ce81668bc6521fa6c5883"
+  },
+  {
+   "path": "reports/player-impact-v45/2023-24-contexts.json",
+   "sha256": "faa3079a09da09a7504bae70d117ea73ae0d19a466b78bb172798a8e1b8c87d4"
+  },
+  {
+   "path": "reports/player-impact-v45/2024-25-contexts.json",
+   "sha256": "5537be783588d894bb2031e34971637b99a38aab5944a77f10e5db4d15f7612d"
+  },
+  {
+   "path": "reports/player-impact-v45/2025-26-contexts.json",
+   "sha256": "0fc706f7653731c35804a89eb1dcb5263bd27dbda4311740edfd124a05fa53d9"
+  },
+  {
+   "path": "reports/player-impact-v45/choice-fit.json",
+   "sha256": "572b1349ffa2146929191853d9e7d663ea25dc659415d7a888edb5771030f364"
+  },
+  {
+   "path": "reports/player-impact-v45/engine.mjs",
+   "sha256": "305aa8fed248b3a04e8c5c0f62fca6ec93496f0ec8aae20881604570dda9c020"
+  },
+  {
+   "path": "reports/player-impact-v45/input.mjs",
+   "sha256": "9f7017a229085b9221d9bf267cc6ea738f21843e3ce848ee210428be7e596325"
+  },
+  {
+   "path": "reports/player-impact-v45/make-fit.json",
+   "sha256": "86b0f39561e22cc502574864acb385873857e0f448c6c4c07c8db58d64d37985"
+  },
+  {
+   "path": "reports/player-impact-v45/model.mjs",
+   "sha256": "83c35dd83ebcf8643be3d7d3083298070333e8844924ea121c6fec1eb2ff42aa"
+  },
+  {
+   "path": "reports/player-impact-v45/space-model.mjs",
+   "sha256": "84e74e21890fc5f782ccdf5739a9e9e3e261fae370519ca990a488064721e5ff"
+  },
+  {
+   "path": "reports/player-impact-v46/input.mjs",
+   "sha256": "3ca94e3390987535fbd3f62da585868ec64209301b8e7b8011be922a26b176e4"
+  },
+  {
+   "path": "reports/player-impact-v46/make-fit.json",
+   "sha256": "ecc912e3fd0d32f9b86cf9b77e148fc3e2f44c125a448695c3dbf9ef0a82dfc7"
+  },
+  {
+   "path": "reports/player-impact-v47/engine.mjs",
+   "sha256": "dd176a6f2cdcfef44f47ef47ee7dcdd82e32b38795ed240685252a4dd1bf7ddd"
+  },
+  {
+   "path": "reports/player-impact-v47/ft-fit.json",
+   "sha256": "d33b1acf20f28676ab71fc1b4ed00423f5e4864b55be4e81f51da28102e4f10f"
+  },
+  {
+   "path": "reports/player-impact-v47/ft-model.mjs",
+   "sha256": "9108abaa04d152d353f8bb937be86ac485ea27e9c760426b6447ddfde60e44ee"
+  },
+  {
+   "path": "reports/player-impact-v47/input.mjs",
+   "sha256": "175045fa390fb95ce741f467a734fb53318be9514daf80454a597ac1dc90ccd2"
+  },
+  {
+   "path": "reports/player-impact-v47/model.mjs",
+   "sha256": "c5a74321d47a5ac9960772c023ef2bc12ca0d18f0150062e8331e7237190c110"
+  },
+  {
+   "path": "reports/player-impact-v47/protocol.json",
+   "sha256": "7570c60de84780834f3dfaaac26a2ef2bff08c4830c8428e3179d327daac7836"
+  },
+  {
+   "path": "reports/player-impact-v5/model.mjs",
+   "sha256": "eb3de4566d46b54d374b916703e863f573460d5f598edb5b1ed7680ea3338ba4"
+  },
+  {
+   "path": "reports/player-impact-v53/engine.mjs",
+   "sha256": "ab4b9c8082b90e176b4e47e31398fe22726cadf074acb4e8c65e0a9d015471ab"
+  },
+  {
+   "path": "reports/player-impact-v53/model.mjs",
+   "sha256": "5f1cd8421866df0d23bc5f04d0bbf0dd227889fc0d3201b850271984946ff2e9"
+  },
+  {
+   "path": "reports/player-impact-v53/pressure.mjs",
+   "sha256": "488167ec0e2b8ebbe4dcbf13231b3313979303c9d66e0ac21b4fda06934abde9"
+  },
+  {
+   "path": "reports/player-impact-v53/spread.json",
+   "sha256": "49ae60a2ed8ac1d2a5747adfeb109a608536694b0fcb4b223e98438059d5adb3"
+  },
+  {
+   "path": "reports/player-impact-v54-team/run.mjs",
+   "sha256": "4dfc8bf66ca814689c3a6b95b563cf952357115f79a219665ae33e2b60420b7d"
+  },
+  {
+   "path": "reports/player-impact-v54-team/worker.mjs",
+   "sha256": "6213ea28c39e2f513af0465638d40026881603580b7dc5863348925611df0747"
+  },
+  {
+   "path": "reports/player-impact-v6/2022-23-cards.json",
+   "sha256": "303b89d728f2ca074369f0ec28f8de411c3577345bda9881b92afebd1efd22bd"
+  },
+  {
+   "path": "reports/player-impact-v6/2023-24-cards.json",
+   "sha256": "cff03efb44401336866b7a73d29d96d8d0c375ef6fd8f06c03a27f0bac4e974b"
+  },
+  {
+   "path": "reports/player-impact-v6/2024-25-cards.json",
+   "sha256": "aa388eb0c1c5bff1ae4ca59e62f60a2309539a55b0c8d08cabfde7feef381b57"
+  },
+  {
+   "path": "reports/player-impact-v6/2025-26-cards.json",
+   "sha256": "cb1516bea2fd3249259b65e61a3fc8acc8bcf9a0d967f240460af011ed808441"
+  },
+  {
+   "path": "reports/player-impact-v6/input.mjs",
+   "sha256": "e3a7ba2567d42c674ae72063f72c4e844f9b67b5fa43e8e443b95930431b105d"
+  },
+  {
+   "path": "reports/player-impact-v6/model.mjs",
+   "sha256": "968737c50f3ca29d81238d94e8b328d229033305a049e04f2133643ed36f04b9"
+  },
+  {
+   "path": "reports/player-impact-v6/ovr-input.mjs",
+   "sha256": "88511ecb6dacd237eda6d8727beb4a8b99eaffbcb85d4ed3903432624f71ef6c"
+  },
+  {
+   "path": "reports/player-impact-v7/2022-23-center.json",
+   "sha256": "fe8ea0ee2edaae765ceaa845225ecbad0b9ccea8876a0b175db28321efe5df90"
+  },
+  {
+   "path": "reports/player-impact-v7/2023-24-center.json",
+   "sha256": "6ac48399899da2741d45ddfe653b690892cb161d9453750db1e5236ae5ead861"
+  },
+  {
+   "path": "reports/player-impact-v7/2024-25-center.json",
+   "sha256": "a670e6ad084e1b7b16aac75cadda437cd368847c30600ad9508fe5967cdfaebd"
+  },
+  {
+   "path": "reports/player-impact-v7/2025-26-center.json",
+   "sha256": "9c5bffa5a52d8c4cef43011b3796e0f69333d9a3f2f3665e5059205312595a1d"
+  },
+  {
+   "path": "reports/player-impact-v7/model.mjs",
+   "sha256": "3f9ce63d1b61748df0303d10d0abe0e583288bf03312b1b3c43cc9ac10e200df"
+  },
+  {
+   "path": "reports/player-impact-v8/assist-fit.json",
+   "sha256": "c62007be8fc2e45aac89690122cf215c191691589d7a8d48cf6c4e5528750b01"
+  },
+  {
+   "path": "reports/player-impact-v8/model.mjs",
+   "sha256": "78324c51f82631de80190d04df67cbc9630eb084976d7da588d788b03ccbb372"
+  },
+  {
+   "path": "reports/player-impact-v8/usage-fit.json",
+   "sha256": "4ce55df2f01ac960dabfd4ef5afe8d87596c86f9d908bd24ceae05bc03ef9d1e"
+  },
+  {
+   "path": "reports/player-impact-v9/input.mjs",
+   "sha256": "6f165335c865d57b2c9521f7e2305a4fd52605d9368f11f734d882308244805c"
+  },
+  {
+   "path": "reports/player-impact-validation/fast-model.mjs",
+   "sha256": "4730648d105136cc360909f2e0be8459bf1dddf6384d8e685f61792d862505a5"
+  },
+  {
+   "path": "reports/player-impact-validation/positional-input.mjs",
+   "sha256": "6f7b70a1ac69313c57ac16aa6437301a0c567caa24c6058e9faf639054eaa136"
+  },
+  {
+   "path": "scripts/defense_io.js",
+   "sha256": "e6c58bf725bf8ab46c38de4edabe51a77df413b809ccbf50ff664d0b6082e195"
+  },
+  {
+   "path": "scripts/export_defense_sixth_cards.js",
+   "sha256": "eef3d5bb04b598471dcb5a4db76514677274fe70f6382545279a29974a72c49c"
+  },
+  {
+   "path": "src/constants.js",
+   "sha256": "86f968d2a29326d0e4ab8375face0e83f76556464a1caeb8ff00be6797290598"
+  },
+  {
+   "path": "src/defense_a_presets.js",
+   "sha256": "1d214b0dbdeb98d3bb03f03a9fc29fcd02918907846b0c97b45b47a8e276e10e"
+  },
+  {
+   "path": "src/defense_clock_game.js",
+   "sha256": "1cb83cc25f39ac036c845fd9c1204915983441829d58033e910f37ae79cbb6f9"
+  },
+  {
+   "path": "src/defense_clock_jobs.js",
+   "sha256": "df3a4e0f87086d1b364e9af15369b0663b91705acb8e416b520e21553366b9e5"
+  },
+  {
+   "path": "src/defense_clock_season.js",
+   "sha256": "45d0a5813e486379a28ee40bd6ffdc98d7d509bf79f1eb62ccd8390454213c72"
+  },
+  {
+   "path": "src/defense_fifth_diagnostics.js",
+   "sha256": "77d7551100618b6cd8d1538962b547e1d129eede196306fa18db372458288942"
+  },
+  {
+   "path": "src/defense_fifth_game.js",
+   "sha256": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86"
+  },
+  {
+   "path": "src/defense_fifth_jobs.js",
+   "sha256": "2efac6fb3def7965e213a4c4c342a87c5064a15ec21d05a4bb15f3a30caeacb8"
+  },
+  {
+   "path": "src/defense_fifth_presets.js",
+   "sha256": "d3f63c527f8b396e2f8bc2e3bbfa2da47edcf2f21cf23a191371af4871b9f317"
+  },
+  {
+   "path": "src/defense_fifth_season.js",
+   "sha256": "7b5448d359b15c5e1273a14e332a745a9c8db61a6b214e59acf8aa2a188c25d8"
+  },
+  {
+   "path": "src/defense_fourth_effects.js",
+   "sha256": "ce90813d1089a8dd400d6051db2b08022a26914a0b1e3672cd7ddf4924a03ff4"
+  },
+  {
+   "path": "src/defense_fourth_game.js",
+   "sha256": "c3611d0c72f49fdd4b855184d7bc79c3e6cc9780c2c6eb836aa10cbf66ad022a"
+  },
+  {
+   "path": "src/defense_fourth_jobs.js",
+   "sha256": "744aa02d75e54daf588b8c0cf0bd952f1f38d7b6a833fa34ac99d3d43c864b82"
+  },
+  {
+   "path": "src/defense_fourth_season.js",
+   "sha256": "ad8e8f726a48b0afea11454a061aaee2037cb6145c529fbb3a457d10346a0f9a"
+  },
+  {
+   "path": "src/defense_game.js",
+   "sha256": "6fc0410c6821c9d26ae8757fe109ed9633a19fbce047edc752ba6ef546b4c34c"
+  },
+  {
+   "path": "src/defense_pbp_analysis.js",
+   "sha256": "9fa9ecacd1b8a649d708098277e2b579be57a83299e094d730c6b92305cc8e00"
+  },
+  {
+   "path": "src/defense_presets.js",
+   "sha256": "0fef4b11953e0d1d80978ea7c0b34c9ce9f8903a85f91faa1abc936cf86decdc"
+  },
+  {
+   "path": "src/defense_probability.js",
+   "sha256": "e652ede7ebe9753f85105dc657fcb2b39d67f28d1ef92a58df008bddd2de4e48"
+  },
+  {
+   "path": "src/defense_sixth_jobs.js",
+   "sha256": "601e75cc23ecc69a7f4e5290d2d848c4bfaed0465fe85fc2a9cd786020db0d19"
+  },
+  {
+   "path": "src/defense_sixth_season.js",
+   "sha256": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf"
+  },
+  {
+   "path": "src/defense_third_game.js",
+   "sha256": "eadeecdd518179c8559b3bb2afbfee30a636f8b8323cd93ea191721b00bbd3d0"
+  },
+  {
+   "path": "src/defense_third_jobs.js",
+   "sha256": "d15c933121632cf68733ca4e3cd24ed13c11311f23ebc3c29edc06f9e81fa6af"
+  },
+  {
+   "path": "src/defense_third_minutes.js",
+   "sha256": "0894e14a649ad63ce96e57b315e090d22f0ac49590b0dd8a031195b0033de4c6"
+  },
+  {
+   "path": "src/defense_third_season.js",
+   "sha256": "92c10204741647e6a1cbbafbe9f13e22927deb418856860e821dbd4116c0f880"
+  },
+  {
+   "path": "src/defense_validation.js",
+   "sha256": "189130f6ee9fda4f7dede42494bbefed362c39e106456266ddf3269d120a13a1"
+  },
+  {
+   "path": "src/defense_variance_sources.js",
+   "sha256": "c0d90f2c2c17c1005b3c439e3b1a1b8c0a3504c6ca8fbf7292e6ab93f00fb4d4"
+  },
+  {
+   "path": "src/free_throw_profile_prior.js",
+   "sha256": "721f1f4ba4b75fb86336854293d12f75d1cb3abd97c6c34ad8cac4ca37d24149"
+  },
+  {
+   "path": "src/individual_box_allocation.js",
+   "sha256": "4442171ae4f94911d31e250a462955ce98f4377f4f01d6ff65186b9f48568121"
+  },
+  {
+   "path": "src/individual_team_accounting.js",
+   "sha256": "f6ad522ff4712d5e7202b799ef7b7672057654942694f3d500f3e3d7d4054e09"
+  },
+  {
+   "path": "src/measured_block_events.js",
+   "sha256": "421c6e0b644be81861ad85b845c56e2c344d1f17b5443e4682d4f83e44c46b83"
+  },
+  {
+   "path": "src/measured_creation_context.js",
+   "sha256": "ea1b0c93024c7c2a69f8ae737faddac59c410a3173ea8468b0af5c3242e27d7c"
+  },
+  {
+   "path": "src/minute_budget.js",
+   "sha256": "388258e91afe84696612edab0d02ee88699d37f84683b4f68ef180c8d0f3e7dd"
+  },
+  {
+   "path": "src/opportunity_transport.js",
+   "sha256": "4bfea350db5ba749a22053daf4d7363c7e04095e516b68cf098318dd054f5721"
+  },
+  {
+   "path": "src/player_workload.js",
+   "sha256": "ca3f05614c614f28e6acb2bfc769aa5025d47b6c830dfa9f97f32bda3a768164"
+  },
+  {
+   "path": "src/probability_model.js",
+   "sha256": "13b175efac436d3c560fd39389f3486225ab90bfbc996d6802ee76ce461aad87"
+  },
+  {
+   "path": "src/rebound_block_model.js",
+   "sha256": "57459f5bb27147410c9f5ada9ae308809e591e5a6a4dfea24f832ab796fb0a92"
+  },
+  {
+   "path": "src/replay_accounting.js",
+   "sha256": "afa36e2507ae94a4d31460d74e71caa31ed395fd89ed8c0711842ea826620af9"
+  },
+  {
+   "path": "src/rng.js",
+   "sha256": "f549b8e5b37591f83ae2d78995f5526faf9c3d9a376502f984e0c9e730486c31"
+  },
+  {
+   "path": "src/season_simulation.js",
+   "sha256": "a57959fb823c1c9745f96628a92e97fe5c45c5d7a7102001132f370e88c629f2"
+  },
+  {
+   "path": "src/simulation_engine.js",
+   "sha256": "680617059298d25c46c5211abc466f371088c2aa17c16f0e0280b7e6ad30a764"
+  },
+  {
+   "path": "src/source_creation_dependence.js",
+   "sha256": "ca97c2e2fad147e98b8a665cb530e3184e2434833b35ccbe09f3e4a9b1b25067"
+  },
+  {
+   "path": "src/source_creation_roles.js",
+   "sha256": "dbea326d348f6dd9ffa830b94cf7decb097bed89609872ada42e25febc17c654"
+  },
+  {
+   "path": "src/source_fresh_defense.js",
+   "sha256": "4401ac5d6b7884b10f80f935031ae0abaf4204011ed12ca82923f4560abc36c6"
+  },
+  {
+   "path": "src/statistical_summary.js",
+   "sha256": "6481945c99dd2ff950675edbbff562ff16acbd3052a1b34a5d44bc7317dca085"
+  },
+  {
+   "path": "src/strength_benchmark.js",
+   "sha256": "76c7197bd738317d57fa9e0e8a1c048d9e40fcf5e32fabd6afa84471d681bb50"
+  },
+  {
+   "path": "src/teams.js",
+   "sha256": "2ebc706c06353c355c50b4a03ac1ca263ae9042fa3e6f097f169d9c559ebdf89"
+  },
+  {
+   "path": "src/timed_game.js",
+   "sha256": "9634c261d4439cd7ab011f9e42466ceaaaed3c62861f231b3b801e9902130f5e"
+  }
+ ],
+ "node": "/home/kojiek/.nvm/versions/node/v22.13.1/bin/node",
+ "commit": "896e13296aa61fc3d78ba285afdf3a020253b9dc",
+ "remoteDirectory": "/home/kojiek/side_projects/basketball-v54-20261018",
+ "host": "kojiek@140.122.184.29"
+}

@@ -4,7 +4,7 @@
   "description": "Basketball Autochess — possession probability model & OVR calculator",
   "type": "module",
   "scripts": {
-    "test": "node test/run_tests.js && node test/timed_game.js",
+    "test": "node test/run_tests.js && node test/timed_game.js && python -I -X utf8 test/live_current_gate.py && python -I -X utf8 test/rookie_start_gate.py && python -I -X utf8 test/g5_item_gate.py && python -I -X utf8 test/team_ratings_gate.py && python -I -X utf8 test/games_view_gate.py",
     "test:timed": "node test/timed_game.js",
     "benchmark:timed": "node scripts/timed_benchmark.js",
     "calibrate": "node test/calibrate.js",

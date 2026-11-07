@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>球員卡分級 Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0d12; --ink:#e9eaf0; --mute:#8b8fa3;
+  --num:'Bebas Neue','Impact','Arial Narrow',sans-serif;
+  --tc:'Noto Sans TC','Microsoft JhengHei',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+body{background:radial-gradient(1200px 700px at 50% -10%,#1b1d2b,var(--bg));color:var(--ink);font-family:var(--tc);min-height:100vh;padding:32px 16px 64px}
+h1{font-size:20px;font-weight:700;text-align:center;letter-spacing:.08em}
+.lead{color:var(--mute);font-size:13px;text-align:center;margin:6px 0 28px}
+.row{display:flex;flex-wrap:wrap;gap:28px 24px;justify-content:center;max-width:1400px;margin:0 auto 40px}
+.slot{display:flex;flex-direction:column;align-items:center;gap:12px;width:300px}
+.cap{text-align:center}
+.cap b{display:block;font-size:15px;letter-spacing:.06em}
+.cap span{font-size:12px;color:var(--mute);line-height:1.5}
+.stage{perspective:900px}
+
+/* ===== 共用骨架 ===== */
+.card{
+  --mx:50%;--my:30%;--rx:0deg;--ry:0deg;
+  position:relative;width:300px;height:430px;border-radius:18px;overflow:hidden;isolation:isolate;
+  transform:rotateX(var(--rx)) rotateY(var(--ry));transform-style:preserve-3d;
+  transition:transform .15s ease-out, box-shadow .3s;
+  font-family:var(--tc);user-select:none;
+}
+.card.live{transition:transform .04s linear}
+.card>*{position:absolute}
+.card .bg,.card .fx,.card .fx2{inset:0;pointer-events:none}
+.portrait{left:0;right:0;top:0;height:268px;overflow:hidden;z-index:2}
+.portrait img{position:absolute;right:-52px;bottom:0;height:98%;width:auto;max-width:none;filter:drop-shadow(0 8px 14px rgba(0,0,0,.45))}
+.portrait svg{position:absolute;right:10px;bottom:0;height:88%;opacity:.0}
+.noimg .portrait img{display:none}
+.noimg .portrait svg{opacity:.55}
+.ovr{left:16px;top:8px;z-index:4;line-height:.8}
+.ovr b{display:block;font:400 112px/0.86 var(--num);letter-spacing:-.01em}
+.ovr small{display:block;font:700 12px/1 var(--tc);letter-spacing:.32em;margin:4px 0 0 4px}
+.pos{left:18px;top:140px;z-index:4;font:700 13px/1 var(--tc);letter-spacing:.2em;padding:5px 8px;border-radius:5px}
+.team{left:18px;top:172px;z-index:4;font:500 11px/1.5 var(--tc);letter-spacing:.14em;opacity:.85}
+.plate{left:0;right:0;top:246px;z-index:5;height:54px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1px}
+.plate .name{font:400 30px/1 var(--num);letter-spacing:.09em}
+.plate .zh{font:500 11px/1 var(--tc);letter-spacing:.3em;opacity:.8}
+.stats{left:14px;right:14px;bottom:14px;z-index:5;display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.st{position:relative;border-radius:9px;padding:17px 0 7px;text-align:center}
+.st i{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);font:800 9px/1 var(--tc);letter-spacing:.14em;padding:3px 6px 3px 7px;border-radius:99px;white-space:nowrap}
+.st em{display:block;font:500 12px/1 var(--tc);font-style:normal;letter-spacing:.1em;margin-bottom:5px;opacity:.92}
+.st b{display:block;font:400 30px/0.9 var(--num);letter-spacing:.02em}
+.stats .gap{display:none}
+
+/* 閃光掃過（共用） */
+@keyframes sweep{0%{transform:translateX(-120%) skewX(-18deg)}60%,100%{transform:translateX(220%) skewX(-18deg)}}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.3) rotate(0)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+
+/* ===== 1. 粉鑽 ===== */
+.pink{color:#fff;box-shadow:0 0 0 1px #ffd1ea inset,0 0 0 4px rgba(255,255,255,.22) inset,0 18px 50px -12px #ff3fa4aa,0 0 40px -6px #ff7cc588}
+.pink .bg{
+  background:
+    repeating-linear-gradient(60deg,rgba(255,255,255,.0) 0 22px,rgba(255,255,255,.14) 22px 23px),
+    repeating-linear-gradient(-60deg,rgba(255,255,255,.0) 0 22px,rgba(255,255,255,.10) 22px 23px),
+    conic-gradient(from 200deg at 62% 34%,#ffe3f3 0deg,#ff8fcd 40deg,#d92c91 95deg,#ff9fd6 150deg,#fff0f8 200deg,#f063b4 255deg,#a3166f 310deg,#ffe3f3 360deg);
+}
+.pink .fx{background:conic-gradient(from calc(var(--mx) * 1.2) at var(--mx) var(--my),rgba(255,255,255,0),rgba(255,255,255,.55) 8%,rgba(255,255,255,0) 18%,rgba(255,235,250,.4) 55%,rgba(255,255,255,0) 66%);mix-blend-mode:soft-light;z-index:3}
+.pink .fx2{z-index:6;overflow:hidden}
+.pink .fx2::before{content:"";position:absolute;top:0;bottom:0;width:38%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);animation:sweep 5s ease-in-out infinite}
+.pink .sp{position:absolute;width:16px;height:16px;background:#fff;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:twinkle 3s ease-in-out infinite;filter:drop-shadow(0 0 4px #fff)}
+.pink .ovr b{background:linear-gradient(180deg,#fff 10%,#ffd3ec 70%,#ff9bd0);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 0 #9b1769) drop-shadow(0 4px 10px #ff3fa488)}
+.pink .ovr small{color:#fff;text-shadow:0 1px 4px #a3166f}
+.pink .pos{background:rgba(255,255,255,.25);border:1px solid #fff9;text-shadow:0 1px 3px #a3166f}
+.pink .team{text-shadow:0 1px 4px #a3166f}
+.pink .plate{background:linear-gradient(90deg,transparent,rgba(120,10,80,.55) 18%,rgba(120,10,80,.55) 82%,transparent);backdrop-filter:blur(3px)}
+.pink .plate .name{text-shadow:0 2px 8px #7b0c55}
+.pink .st{background:linear-gradient(180deg,rgba(160,20,105,.62),rgba(120,10,80,.5));border:1px solid rgba(255,255,255,.7);box-shadow:0 4px 14px -4px #7b0c55aa,inset 0 1px 0 #fff9;backdrop-filter:blur(4px)}
+.pink .st b{text-shadow:0 2px 6px #8e1260}
+.pink .st em{text-shadow:0 1px 3px #8e1260}
+.pink .st i.off{background:#fff;color:#c21e85}
+.pink .st i.def{background:#5a0b3e;color:#ffd3ec;border:1px solid #ffd3ec99}
+
+/* ===== 2. 光面（鋼琴黑 + 金） ===== */
+.glossy{color:#f6efd8;background:#08080a;box-shadow:0 0 0 1px #6f5a1e,0 0 0 3px #08080a,0 0 0 4px #d9b45a,0 22px 50px -14px #000}
+.glossy .bg{background:
+  radial-gradient(120% 70% at 30% 0%,#2a2a33 0%,#0d0d11 55%,#050507 100%),
+  #08080a}
+.glossy .bg::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.025) 0 2px,transparent 2px 7px)}
+/* 上半部玻璃弧形反光 */
+.glossy .fx{z-index:6;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.05) 40%,rgba(255,255,255,0) 41%);clip-path:ellipse(95% 52% at 50% 0%);}
+/* 跟著游標的高光 */
+.glossy .fx2{z-index:6;background:radial-gradient(260px 200px at var(--mx) var(--my),rgba(255,248,220,.38),rgba(255,248,220,0) 70%);mix-blend-mode:screen}
+.glossy .ovr b{background:linear-gradient(180deg,#fff7d6 0%,#f0cf73 38%,#b8872b 60%,#f3d98a 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 6px #000c)}
+.glossy .ovr small{color:#d9b45a}
+.glossy .pos{color:#d9b45a;border:1px solid #d9b45a88;background:#0009}
+.glossy .team{color:#cbbf9a}
+.glossy .portrait::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(180deg,transparent,#08080a 94%)}
+.glossy .plate{top:238px}
+.glossy .plate .name{background:linear-gradient(180deg,#fff7d6,#e1bd62 60%,#b8872b);-webkit-background-clip:text;background-clip:text;color:transparent}
+.glossy .plate .zh{color:#bda76a}
+.glossy .plate::after{content:"";position:absolute;left:34px;right:34px;bottom:-4px;height:1px;background:linear-gradient(90deg,transparent,#d9b45a,transparent)}
+.glossy .st{background:linear-gradient(180deg,#22222a,#0e0e12);border:1px solid #d9b45a66;box-shadow:inset 0 1px 0 #ffffff26,inset 0 -8px 12px -8px #000,0 6px 14px -6px #000}
+.glossy .st::before{content:"";position:absolute;left:0;right:0;top:0;height:46%;border-radius:9px 9px 50% 50%/9px 9px 14px 14px;background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,0))}
+.glossy .st em{color:#cbbf9a}
+.glossy .st b{color:#fff3c9}
+.glossy .st i.off{background:linear-gradient(180deg,#f3d98a,#b8872b);color:#2a1d00}
+.glossy .st i.def{background:#e8e8ee;color:#16161c}
+
+/* ===== 3. 閃卡（全像 / holo foil） ===== */
+.holo{color:#fff;background:#0b1020;box-shadow:0 0 0 2px #cfd8ff55 inset,0 20px 50px -14px #6b7cff88}
+.holo .bg{background:
+  radial-gradient(90% 60% at 70% 20%,#2c3b8f 0%,#141c47 50%,#0a0f26 100%)}
+.holo .bg::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(circle,rgba(255,255,255,.55) 0 1px,transparent 1.5px) 0 0/17px 17px,
+  radial-gradient(circle,rgba(255,255,255,.35) 0 1px,transparent 1.5px) 8px 9px/23px 23px;opacity:.28;mix-blend-mode:overlay}
+/* 彩虹箔：依游標位置換色 */
+.holo .fx{z-index:1;background:
+  linear-gradient(115deg,#ff2d6f,#ff9a2d,#f6ff3a,#38ff90,#2dd4ff,#6b5bff,#e03aff,#ff2d6f);
+  background-size:260% 260%;background-position:calc(var(--mx) * 1) calc(var(--my) * 1);
+  mix-blend-mode:color-dodge;opacity:.55;
+  -webkit-mask:linear-gradient(#000,#000);}
+.holo .fx2{z-index:6;background:
+  radial-gradient(240px 240px at var(--mx) var(--my),rgba(255,255,255,.55),rgba(255,255,255,0) 60%),
+  repeating-linear-gradient(115deg,rgba(255,255,255,0) 0 14px,rgba(255,255,255,.12) 16px,rgba(255,255,255,0) 18px);
+  mix-blend-mode:overlay}
+.holo .ovr b{color:#fff;filter:drop-shadow(0 0 14px #9fb2ffcc) drop-shadow(0 2px 0 #1b2564)}
+.holo .ovr small{color:#cfd8ff}
+.holo .pos{background:linear-gradient(135deg,#ff2d6f,#6b5bff);box-shadow:0 0 12px #9a6bff99}
+.holo .team{color:#dfe5ff}
+.holo .plate{background:linear-gradient(90deg,transparent,#060a1ccc 15%,#060a1ccc 85%,transparent)}
+.holo .plate .name{text-shadow:0 0 14px #8ea2ff}
+.holo .st{background:rgba(7,11,32,.72);border:1px solid transparent;
+  background-image:linear-gradient(rgba(7,11,32,.82),rgba(7,11,32,.82)),linear-gradient(135deg,#ff2d6f,#ffd23a,#38ff90,#2dd4ff,#a45bff);
+  background-origin:border-box;background-clip:padding-box,border-box;box-shadow:0 0 12px -2px #7a8cff77}
+.holo .st b{background:linear-gradient(180deg,#fff,#bcd0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.holo .st i.off{background:#ff2d6f;color:#fff}
+.holo .st i.def{background:#2dd4ff;color:#04112a}
+
+/* ===== 4. 玻璃（毛玻璃） ===== */
+.glass{color:#fff;background:#0a1220;box-shadow:0 20px 50px -16px #000a,0 0 0 1px rgba(255,255,255,.25) inset}
+.glass .bg{background:
+  radial-gradient(160px 160px at 18% 22%,#22d3ee,transparent 70%),
+  radial-gradient(200px 200px at 88% 28%,#a78bfa,transparent 70%),
+  radial-gradient(220px 220px at 70% 92%,#fb7185,transparent 70%),
+  radial-gradient(180px 180px at 8% 85%,#fbbf24,transparent 70%),
+  #0b1326}
+.glass .fx{z-index:1;inset:9px;border-radius:13px;background:linear-gradient(160deg,rgba(255,255,255,.26),rgba(255,255,255,.06) 40%,rgba(255,255,255,.12));border:1px solid rgba(255,255,255,.42);backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -20px 40px -20px rgba(255,255,255,.18)}
+.glass .fx2{z-index:6;inset:9px;border-radius:13px;background:radial-gradient(220px 180px at var(--mx) var(--my),rgba(255,255,255,.4),rgba(255,255,255,0) 70%);mix-blend-mode:soft-light}
+.glass .portrait{top:9px;left:9px;right:9px;height:262px;border-radius:13px 13px 0 0}
+.glass .portrait img{right:-40px}
+.glass .plate{background:linear-gradient(90deg,transparent,rgba(10,20,60,.5) 15%,rgba(10,20,60,.5) 85%,transparent)}
+.glass .ovr{left:24px;top:18px}
+.glass .ovr b{font-weight:400;color:rgba(255,255,255,.96);text-shadow:0 4px 24px rgba(10,20,60,.55);-webkit-text-stroke:1px rgba(255,255,255,.5)}
+.glass .ovr small{color:#fff;opacity:.9}
+.glass .pos{left:26px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.55);backdrop-filter:blur(6px)}
+.glass .team{left:26px;text-shadow:0 1px 6px #0006}
+.glass .plate{left:9px;right:9px;top:244px;z-index:5}
+.glass .plate .name{text-shadow:0 2px 12px rgba(10,20,60,.7)}
+.glass .stats{left:20px;right:20px;bottom:20px}
+.glass .st{background:linear-gradient(180deg,rgba(255,255,255,.34),rgba(255,255,255,.1));border:1px solid rgba(255,255,255,.55);backdrop-filter:blur(10px);box-shadow:0 6px 16px -6px #0a143c88,inset 0 1px 0 #fffb}
+.glass .st b{text-shadow:0 2px 10px rgba(10,20,60,.5)}
+.glass .st i.off{background:#fff;color:#0e7490}
+.glass .st i.def{background:rgba(10,20,60,.62);color:#fff;border:1px solid rgba(255,255,255,.6)}
+
+footer{max-width:760px;margin:0 auto;color:var(--mute);font-size:13px;line-height:1.8;text-align:center}
+footer b{color:var(--ink)}
+
+/* ===== 分級版追加 ===== */
+.tier{right:16px;top:14px;z-index:7;font:800 10px/1 var(--tc);letter-spacing:.22em;padding:5px 8px 5px 10px;border-radius:99px}
+.glass .tier{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.55);backdrop-filter:blur(6px);color:#fff}
+.glossy .tier{background:#0009;border:1px solid #d9b45a;color:#f0cf73}
+.holo .tier{background:linear-gradient(135deg,#ff2d6f,#ffd23a,#38ff90,#2dd4ff,#a45bff);color:#050a1f}
+.pink .tier{background:#fff;color:#c21e85;box-shadow:0 0 12px #fff8}
+.ladder-h{max-width:1400px;margin:0 auto 14px;display:flex;align-items:center;gap:12px;color:var(--mute);font-size:12px;letter-spacing:.12em}
+.ladder-h::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,#ffffff33,transparent)}
+.rules{max-width:760px;margin:0 auto 36px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.rules div{border:1px solid #ffffff22;border-radius:10px;padding:10px 8px;text-align:center;font-size:12px;color:var(--mute);line-height:1.6}
+.rules b{display:block;color:var(--ink);font-size:15px;letter-spacing:.06em}
+.rules span{font:400 22px/1 var(--num);color:var(--ink);letter-spacing:.06em}
+@media(max-width:640px){.rules{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<h1>球員卡分級 Demo</h1>
+<p class="lead">材質＝稀有度，依 OVR 自動決定　·　滑鼠移到卡片上有 3D 傾斜與反光　·　球員 OVR／能力值為示意，不是正式卡表</p>
+<div class="rules" id="rules"></div>
+<div id="rows"></div>
+<footer>
+  <p><b>卡面規則</b>：大數字＝OVR　·　四個框＝進攻（OFF）最強 2 項＋防守（DEF）最強 2 項　·　右上角小標籤＝等級</p>
+  <p>進攻池：三分、中投、近射、切入、傳球、罰球、無球、擋拆　·　防守池：盯防、護框、籃板、肉體</p>
+  <p>門檻（70／80／90）只是草案，要看實際 OVR 分布再定</p>
+</footer>
+<script>
+const SIL = '<svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="78" r="42" fill="#fff"/><path d="M20 260c0-62 32-100 80-100s80 38 80 100z" fill="#fff"/></svg>';
+const TIERS = [
+  {cls:'glass', label:'玻璃', tag:'GLASS', range:'OVR < 70', min:0, desc:'毛玻璃，靜態、乾淨。基本款。'},
+  {cls:'glossy', label:'光面', tag:'GLOSS', range:'70 – 79', min:70, desc:'鋼琴黑＋金邊，弧形反光與游標高光。'},
+  {cls:'holo', label:'閃卡', tag:'HOLO', range:'80 – 89', min:80, desc:'彩虹全像箔，隨角度換色。'},
+  {cls:'pink', label:'粉鑽', tag:'PINK ◆', range:'90 +', min:90, desc:'粉色切面＋星芒＋定時掃光。最高階。'},
+];
+const tierOf = o => [...TIERS].reverse().find(t=>o>=t.min);
+const P1 = [
+  {id:1627936, name:'ALEX CARUSO', zh:'艾力克斯・卡魯索', pos:'SG', team:'CHI · 2023-24', ovr:66,
+   s:[['OFF','傳球',62],['OFF','無球',58],['DEF','盯防',81],['DEF','肉體',60]]},
+  {id:977, name:'KOBE BRYANT', zh:'柯比・布萊恩', pos:'SG', team:'LAL · 2007-08', ovr:75,
+   s:[['OFF','中投',91],['OFF','切入',88],['DEF','盯防',84],['DEF','肉體',70]]},
+  {id:1631096, name:'CHET HOLMGREN', zh:'切特・霍姆格倫', pos:'PF', team:'OKC · 2023-24', ovr:86,
+   s:[['OFF','近射',84],['OFF','三分',80],['DEF','護框',95],['DEF','籃板',82]]},
+  {id:1641705, name:'VICTOR WEMBANYAMA', zh:'維克多・文班亞馬', pos:'C', team:'SAS · 2024-25', ovr:96,
+   s:[['OFF','近射',94],['OFF','切入',82],['DEF','護框',99],['DEF','籃板',95]]},
+];
+const P2 = [
+  {id:1629652, name:'LUGUENTZ DORT', zh:'盧根茲・多特', pos:'SG', team:'OKC · 2023-24', ovr:61,
+   s:[['OFF','三分',60],['OFF','無球',55],['DEF','盯防',90],['DEF','肉體',85]]},
+  {id:1628369, name:'JAYSON TATUM', zh:'傑森・塔圖姆', pos:'SF', team:'BOS · 2023-24', ovr:79,
+   s:[['OFF','中投',86],['OFF','三分',80],['DEF','盯防',72],['DEF','籃板',68]]},
+  {id:201935, name:'JAMES HARDEN', zh:'詹姆斯・哈登', pos:'SG', team:'HOU · 2017-18', ovr:88,
+   s:[['OFF','罰球',95],['OFF','傳球',92],['DEF','盯防',55],['DEF','籃板',50]]},
+  {id:201939, name:'STEPHEN CURRY', zh:'史蒂芬・柯瑞', pos:'PG', team:'GSW · 2025-26', ovr:93,
+   s:[['OFF','三分',99],['OFF','罰球',98],['DEF','盯防',61],['DEF','肉體',48]]},
+];
+document.getElementById('rules').innerHTML = TIERS.map(t=>`<div><b>${t.label}</b><span>${t.range}</span><br>${t.desc}</div>`).join('');
+const rows = document.getElementById('rows');
+[['由低到高：同一個規則，四個等級',P1],['另一批球員（確認不是只有第一排好看）',P2]].forEach(([title,list])=>{
+  rows.insertAdjacentHTML('beforeend',`<div class="ladder-h">${title}</div>`);
+  const row = document.createElement('div'); row.className='row';
+  list.forEach(p=>{
+    const t = tierOf(p.ovr), cls = t.cls;
+    const st = p.s.map(([k,n,v])=>`<div class="st"><i class="${k.toLowerCase()}">${k}</i><em>${n}</em><b>${v}</b></div>`).join('');
+    const sparks = cls==='pink' ? [[12,18,0],[78,11,1.1],[88,52,.5],[30,60,1.8],[60,34,2.3]].map(([x,y,d])=>`<span class="sp" style="left:${x}%;top:${y}%;animation-delay:${d}s;width:${10+d*3}px;height:${10+d*3}px"></span>`).join('') : '';
+    row.insertAdjacentHTML('beforeend', `
+      <div class="slot">
+        <div class="stage"><div class="card ${cls}">
+          <div class="bg"></div><div class="fx"></div>
+          <div class="portrait">${SIL}<img src="https://cdn.nba.com/headshots/nba/latest/1040x760/${p.id}.png" alt="" onerror="this.closest('.card').classList.add('noimg')"></div>
+          <div class="ovr"><b>${p.ovr}</b><small>OVR</small></div>
+          <div class="tier">${t.tag}</div>
+          <div class="pos">${p.pos}</div><div class="team">${p.team}</div>
+          <div class="plate"><div class="name">${p.name}</div><div class="zh">${p.zh}</div></div>
+          <div class="stats">${st}</div>
+          <div class="fx2">${sparks}</div>
+        </div></div>
+        <div class="cap"><b>${t.label}</b><span>${t.range}</span></div>
+      </div>`);
+  });
+  rows.appendChild(row);
+});
+document.querySelectorAll('.card').forEach(c=>{
+  c.addEventListener('pointermove',e=>{
+    const r=c.getBoundingClientRect(), x=(e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;
+    c.classList.add('live');
+    c.style.setProperty('--mx',(x*100)+'%'); c.style.setProperty('--my',(y*100)+'%');
+    c.style.setProperty('--ry',((x-.5)*14)+'deg'); c.style.setProperty('--rx',((.5-y)*12)+'deg');
+  });
+  c.addEventListener('pointerleave',()=>{
+    c.classList.remove('live');
+    ['--mx','--my','--rx','--ry'].forEach(k=>c.style.removeProperty(k));
+  });
+});
+</script>
+</body>
+</html>

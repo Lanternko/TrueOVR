@@ -1,0 +1,923 @@
+{
+ "experiment": "E-128",
+ "version": "inseason 0.2.7b (candidate)",
+ "inputs": {
+  "preregistration": {
+   "file": "reports/ovr-inseason-2026-27/e128-card027b/preregistration.md",
+   "sha256": "5536050e48ac32e6da9ce432ceca5b9d97e68c17e9ed4a30ab74c3df0012aa47"
+  },
+  "errata-1": {
+   "file": "reports/ovr-inseason-2026-27/e128-card027b/errata-1.md",
+   "sha256": "2a66978feaaa6e0a36f45d4f111bb6a560c1d3030f9ab16f213a86a0e8a16221"
+  },
+  "errata-3": {
+   "file": "reports/ovr-inseason-2026-27/e128-card027b/errata-3.md",
+   "sha256": "71604c32d24500d7aed32d5d7b87e9ec582346eb72906af2c1a3598def3e8f3d"
+  },
+  "errata-4": {
+   "file": "reports/ovr-inseason-2026-27/e128-card027b/errata-4.md",
+   "sha256": "e5164d07057781f5403acc37389151474a3da26cfc1e32b2f38e73d4236ed292"
+  },
+  "passfreeze": {
+   "file": "reports/ovr-inseason-2026-27/e128-card027b/passfreeze.json",
+   "sha256": "1a830392a91122b9928b5153c3341ed2e389a7fb70f8293556f714cb050dcc33"
+  },
+  "run_c4_live.py": {
+   "file": "reports/ovr-inseason-2026-27/live/run_c4_live.py",
+   "sha256": "38f593e09117c1f8e24bbeef7ffd486fb82bde0f204e7883da3f9a34f49dba7e"
+  },
+  "UL6 summary": {
+   "file": "reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/cards/e123a/primary/summary.json",
+   "sha256": "4ce58501c5550366de443ed7e8d088e1a668fd6ff6ae49b0d4affeb56108f7a8"
+  },
+  "card027 ranking": {
+   "file": "reports/card-0.2.7b/ranking.csv",
+   "sha256": "361bcac61075dec1150c3b89b406ecd62dcaf4fdb5d738ccff68a0634de81105"
+  },
+  "pool-027": {
+   "file": "reports/ovr-inseason-2026-27/live/pool-027b.json",
+   "sha256": "d4f6ad4802b5c7164b597f4cbba9f550ab734175e58a09a08f9fe34cc1c3fb21"
+  },
+  "prior-2025-26-card027": {
+   "file": "reports/ovr-inseason-2026-27/live/prior-2025-26-card027b.json",
+   "sha256": "dd5d86fe39a71e9f4e8222e22a85f7a091358d437ce1d084093375b5489faffd"
+  },
+  "usage027": {
+   "file": "reports/ovr-inseason-2026-27/live/usage-2025-26-card027b.json",
+   "sha256": "ea3b8d42135ed67f489d40fc15ca1e240cfd365fad5b46b42dc7263d5b4e8dec"
+  },
+  "E-095 fit.pkl": {
+   "file": "reports/ovr-inseason-2026-27/e095-card025-minutes/cache/fit.pkl",
+   "sha256": "fd1d14c753b25c5313f62ca627aab8830d05019d6c571760eed392cc15592578"
+  },
+  "E-095 predictions-sat15.csv": {
+   "file": "reports/ovr-inseason-2026-27/e095-card025-minutes/predictions-sat15.csv",
+   "sha256": "9bbef99fe79a49eb4411b46ffa3b35b4a561f415d6af6efb0fa6902a9fc31d92"
+  },
+  "defL-summary (E-111)": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL-summary.json",
+   "sha256": "70a504c7d00ef33ef6cadcdb306966cd2c91ba98dfea0e6cc5cc5d7f1263cfea"
+  }
+ },
+ "prereqAllPassFromPrereqJson": true,
+ "defL": {
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2014-15_2017-18.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2014-15_2017-18.csv",
+   "sha256": "4b985b69f32570759364bf7feb3aaf77a0625683a7f981e9049c88dac9c15340"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2015-16_2018-19.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2015-16_2018-19.csv",
+   "sha256": "273773c9b0060dfcbe72d4e4c119fea020f39c7e9be8e653f94bc2d689d30481"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2016-17_2019-20.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2016-17_2019-20.csv",
+   "sha256": "5c7bb4f6d6b19929497a2b3cc52845926f21c655dee506ed191e1e1d950b7feb"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2017-18_2020-21.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2017-18_2020-21.csv",
+   "sha256": "29304a9580e96f7aeab6f51774bb48677e285c558d67afaabc6b88969d372343"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2018-19_2021-22.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2018-19_2021-22.csv",
+   "sha256": "9f7ffe505f79f2b0e556dbe36bc6321dad689c252504427ade77cd9847170083"
+  }
+ },
+ "cards": {
+  "2017-18": {
+   "file": "reports/ovr-inseason-2026-27/e128-card027b/cards/prior-2017-18-027b.json",
+   "sha256": "10b325d55fa0b91fd1f7e14bd9e53d4c2c5c6164b51d9ff03f02a59af4bc3940",
+   "check": {
+    "players": 540,
+    "inWindow": 540,
+    "passFromE125": 540,
+    "notInWindow": [],
+    "sampleMismatch": 0,
+    "staminaMaxAbsDiff": 0.131383,
+    "driveMaxAbsDiff": 0.254007,
+    "shortBaseMaxAbsDiff": 0.0,
+    "n_foulDrawFallback": 3,
+    "n_passNotInRaw": 0
+   },
+   "foulDrawSeasonZ": {
+    "vol": {
+     "mean": 3.332459,
+     "std": 1.718461
+    },
+    "rate": {
+     "mean": 0.24726,
+     "std": 0.106083
+    },
+    "wVol": 0.75,
+    "wRate": 0.25,
+    "poolN": 233
+   }
+  },
+  "2018-19": {
+   "file": "reports/ovr-inseason-2026-27/e128-card027b/cards/prior-2018-19-027b.json",
+   "sha256": "a3da03894e75d2872536eace648c59af8bc9e532c1e42ebdf3ca536a7f1b40f7",
+   "check": {
+    "players": 530,
+    "inWindow": 530,
+    "passFromE125": 530,
+    "notInWindow": [],
+    "sampleMismatch": 0,
+    "staminaMaxAbsDiff": 0.257246,
+    "driveMaxAbsDiff": 0.248671,
+    "shortBaseMaxAbsDiff": 0.0,
+    "n_foulDrawFallback": 4,
+    "n_passNotInRaw": 0
+   },
+   "foulDrawSeasonZ": {
+    "vol": {
+     "mean": 3.495637,
+     "std": 1.914252
+    },
+    "rate": {
+     "mean": 0.251341,
+     "std": 0.107664
+    },
+    "wVol": 0.75,
+    "wRate": 0.25,
+    "poolN": 238
+   }
+  },
+  "2019-20": {
+   "file": "reports/ovr-inseason-2026-27/e128-card027b/cards/prior-2019-20-027b.json",
+   "sha256": "6dcf35bfa2540719988108a4801221107ea746bebe2f07d4f8c5cabcd351bf10",
+   "check": {
+    "players": 529,
+    "inWindow": 529,
+    "passFromE125": 529,
+    "notInWindow": [],
+    "sampleMismatch": 0,
+    "staminaMaxAbsDiff": 0.263039,
+    "driveMaxAbsDiff": 0.272109,
+    "shortBaseMaxAbsDiff": 0.0,
+    "n_foulDrawFallback": 2,
+    "n_passNotInRaw": 0
+   },
+   "foulDrawSeasonZ": {
+    "vol": {
+     "mean": 3.555488,
+     "std": 2.015823
+    },
+    "rate": {
+     "mean": 0.25289,
+     "std": 0.112083
+    },
+    "wVol": 0.75,
+    "wRate": 0.25,
+    "poolN": 225
+   }
+  },
+  "2020-21": {
+   "file": "reports/ovr-inseason-2026-27/e128-card027b/cards/prior-2020-21-027b.json",
+   "sha256": "279efe7c03b9ffd23b65209eaf2fd9c79c8db1b2cced626bcfa78b2621a93543",
+   "check": {
+    "players": 540,
+    "inWindow": 540,
+    "passFromE125": 540,
+    "notInWindow": [],
+    "sampleMismatch": 0,
+    "staminaMaxAbsDiff": 0.127551,
+    "driveMaxAbsDiff": 0.255102,
+    "shortBaseMaxAbsDiff": 0.0,
+    "n_foulDrawFallback": 1,
+    "n_passNotInRaw": 0
+   },
+   "foulDrawSeasonZ": {
+    "vol": {
+     "mean": 3.383355,
+     "std": 1.906152
+    },
+    "rate": {
+     "mean": 0.245996,
+     "std": 0.107398
+    },
+    "wVol": 0.75,
+    "wRate": 0.25,
+    "poolN": 240
+   }
+  },
+  "2021-22": {
+   "file": "reports/ovr-inseason-2026-27/e128-card027b/cards/prior-2021-22-027b.json",
+   "sha256": "76c212027f51e8f3a51ceb21f546eeb967e54afbd9d2ca12b310ddc4f51b7911",
+   "check": {
+    "players": 605,
+    "inWindow": 605,
+    "passFromE125": 605,
+    "notInWindow": [],
+    "sampleMismatch": 0,
+    "staminaMaxAbsDiff": 0.240584,
+    "driveMaxAbsDiff": 0.12444,
+    "shortBaseMaxAbsDiff": 0.0,
+    "n_foulDrawFallback": 9,
+    "n_passNotInRaw": 0
+   },
+   "foulDrawSeasonZ": {
+    "vol": {
+     "mean": 3.313296,
+     "std": 1.868747
+    },
+    "rate": {
+     "mean": 0.244809,
+     "std": 0.116528
+    },
+    "wVol": 0.75,
+    "wRate": 0.25,
+    "poolN": 246
+   }
+  }
+ },
+ "anchors": {
+  "poolN": 378,
+  "unmatchedNames": 0,
+  "sat15": {
+   "main": [
+    -2.472056,
+    -0.061069,
+    4.76219
+   ],
+   "repl": [
+    -1.060964,
+    1.499006,
+    6.462029
+   ],
+   "rRepl": -1.804
+  },
+  "rule": "E-095 anchors_for(sat15)：r_repl＝池 predictedPer36 第 10 百分位；repl 錨點＝W(m)·(pred−r_repl) 的 PR1/50/99",
+  "usage027ForReference": {
+   "anchors": {
+    "PR1": -0.823435,
+    "PR50": 1.275755,
+    "PR99": 4.115011
+   },
+   "rRepl": -1.27282
+  }
+ },
+ "answer": {
+  "Y3": {
+   "rapm": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2015-16_2018-19.csv",
+   "players": 530,
+   "capIterations": 10,
+   "pwCheck": 0.0,
+   "predRapm": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2014-15_2017-18.csv"
+  },
+  "Y5": {
+   "rapm": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2017-18_2020-21.csv",
+   "players": 540,
+   "capIterations": 6,
+   "pwCheck": 0.0,
+   "predRapm": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2016-17_2019-20.csv"
+  },
+  "Y6": {
+   "rapm": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2018-19_2021-22.csv",
+   "players": 605,
+   "capIterations": 6,
+   "pwCheck": 0.0,
+   "predRapm": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2017-18_2020-21.csv"
+  }
+ },
+ "gates": {
+  "main": {
+   "starts": [
+    "Y5",
+    "Y6"
+   ],
+   "V1": {
+    "3": {
+     "U_pool": -0.109623,
+     "T_s": {
+      "Y5": -0.675528,
+      "Y6": -0.529755
+     },
+     "pass": true
+    },
+    "5": {
+     "U_pool": -0.23974,
+     "T_s": {
+      "Y5": -1.045974,
+      "Y6": -0.540756
+     },
+     "pass": true
+    }
+   },
+   "V2": {
+    "10": {
+     "cells": {
+      "Y5": {
+       "dMAE": -0.209162,
+       "gt10C": 50,
+       "gt10A": 49,
+       "ciHi": 0.16616,
+       "pass": false
+      },
+      "Y6": {
+       "dMAE": -0.662379,
+       "gt10C": 37,
+       "gt10A": 47,
+       "ciHi": -0.36245,
+       "pass": true
+      }
+     },
+     "pass": false
+    },
+    "20": {
+     "cells": {
+      "Y5": {
+       "dMAE": -0.685254,
+       "gt10C": 45,
+       "gt10A": 50,
+       "ciHi": -0.271013,
+       "pass": true
+      },
+      "Y6": {
+       "dMAE": -1.030206,
+       "gt10C": 31,
+       "gt10A": 47,
+       "ciHi": -0.695296,
+       "pass": true
+      }
+     },
+     "pass": true
+    }
+   },
+   "cells": [
+    {
+     "start": "Y5",
+     "N": 3,
+     "T": -0.675528,
+     "dMAE": -0.117511,
+     "gt10C": 50,
+     "gt10A": 46,
+     "dMAE_hi": 0.10062,
+     "dMAE_lo": -0.328048,
+     "MAE_C": 6.055335,
+     "MAE_A": 6.172846
+    },
+    {
+     "start": "Y5",
+     "N": 5,
+     "T": -1.045974,
+     "dMAE": -0.093718,
+     "gt10C": 51,
+     "gt10A": 46,
+     "dMAE_hi": 0.191202,
+     "dMAE_lo": -0.365756,
+     "MAE_C": 6.036969,
+     "MAE_A": 6.130687
+    },
+    {
+     "start": "Y5",
+     "N": 10,
+     "T": -1.015295,
+     "dMAE": -0.209162,
+     "gt10C": 50,
+     "gt10A": 49,
+     "dMAE_hi": 0.16616,
+     "dMAE_lo": -0.578212,
+     "MAE_C": 5.935893,
+     "MAE_A": 6.145056
+    },
+    {
+     "start": "Y5",
+     "N": 20,
+     "T": -0.702532,
+     "dMAE": -0.685254,
+     "gt10C": 45,
+     "gt10A": 50,
+     "dMAE_hi": -0.271013,
+     "dMAE_lo": -1.058887,
+     "MAE_C": 5.434596,
+     "MAE_A": 6.11985
+    },
+    {
+     "start": "Y5",
+     "N": 82,
+     "T": 0.290538,
+     "dMAE": -2.076906,
+     "gt10C": 18,
+     "gt10A": 50,
+     "dMAE_hi": -1.583894,
+     "dMAE_lo": -2.566612,
+     "MAE_C": 4.017739,
+     "MAE_A": 6.094644
+    },
+    {
+     "start": "Y6",
+     "N": 3,
+     "T": -0.529755,
+     "dMAE": -0.328185,
+     "gt10C": 40,
+     "gt10A": 45,
+     "dMAE_hi": -0.136506,
+     "dMAE_lo": -0.53263,
+     "MAE_C": 5.138798,
+     "MAE_A": 5.466984
+    },
+    {
+     "start": "Y6",
+     "N": 5,
+     "T": -0.540756,
+     "dMAE": -0.455181,
+     "gt10C": 42,
+     "gt10A": 46,
+     "dMAE_hi": -0.219035,
+     "dMAE_lo": -0.686226,
+     "MAE_C": 4.972649,
+     "MAE_A": 5.42783
+    },
+    {
+     "start": "Y6",
+     "N": 10,
+     "T": -0.40748,
+     "dMAE": -0.662379,
+     "gt10C": 37,
+     "gt10A": 47,
+     "dMAE_hi": -0.36245,
+     "dMAE_lo": -0.955924,
+     "MAE_C": 4.827013,
+     "MAE_A": 5.489392
+    },
+    {
+     "start": "Y6",
+     "N": 20,
+     "T": -0.753998,
+     "dMAE": -1.030206,
+     "gt10C": 31,
+     "gt10A": 47,
+     "dMAE_hi": -0.695296,
+     "dMAE_lo": -1.384093,
+     "MAE_C": 4.420979,
+     "MAE_A": 5.451185
+    },
+    {
+     "start": "Y6",
+     "N": 82,
+     "T": -0.422631,
+     "dMAE": -2.001984,
+     "gt10C": 10,
+     "gt10A": 47,
+     "dMAE_hi": -1.602605,
+     "dMAE_lo": -2.378405,
+     "MAE_C": 3.432213,
+     "MAE_A": 5.434197
+    }
+   ],
+   "pass": false
+  },
+  "Y3": {
+   "starts": [
+    "Y3"
+   ],
+   "V1": {
+    "3": {
+     "U_pool": 0.55438,
+     "T_s": {
+      "Y3": 0.27369
+     },
+     "pass": false
+    },
+    "5": {
+     "U_pool": -0.02245,
+     "T_s": {
+      "Y3": -0.359962
+     },
+     "pass": true
+    }
+   },
+   "V2": {
+    "10": {
+     "cells": {
+      "Y3": {
+       "dMAE": -0.43494,
+       "gt10C": 30,
+       "gt10A": 38,
+       "ciHi": -0.115731,
+       "pass": true
+      }
+     },
+     "pass": true
+    },
+    "20": {
+     "cells": {
+      "Y3": {
+       "dMAE": -0.722174,
+       "gt10C": 29,
+       "gt10A": 39,
+       "ciHi": -0.371393,
+       "pass": true
+      }
+     },
+     "pass": true
+    }
+   },
+   "cells": [
+    {
+     "start": "Y3",
+     "N": 3,
+     "T": 0.27369,
+     "dMAE": -0.158995,
+     "gt10C": 33,
+     "gt10A": 34,
+     "dMAE_hi": 0.073657,
+     "dMAE_lo": -0.383028,
+     "MAE_C": 5.378484,
+     "MAE_A": 5.53748
+    },
+    {
+     "start": "Y3",
+     "N": 5,
+     "T": -0.359962,
+     "dMAE": -0.127258,
+     "gt10C": 35,
+     "gt10A": 37,
+     "dMAE_hi": 0.128854,
+     "dMAE_lo": -0.371242,
+     "MAE_C": 5.412153,
+     "MAE_A": 5.539411
+    },
+    {
+     "start": "Y3",
+     "N": 10,
+     "T": -0.948513,
+     "dMAE": -0.43494,
+     "gt10C": 30,
+     "gt10A": 38,
+     "dMAE_hi": -0.115731,
+     "dMAE_lo": -0.745756,
+     "MAE_C": 5.105578,
+     "MAE_A": 5.540518
+    },
+    {
+     "start": "Y3",
+     "N": 20,
+     "T": -0.808678,
+     "dMAE": -0.722174,
+     "gt10C": 29,
+     "gt10A": 39,
+     "dMAE_hi": -0.371393,
+     "dMAE_lo": -1.108437,
+     "MAE_C": 4.839755,
+     "MAE_A": 5.561929
+    },
+    {
+     "start": "Y3",
+     "N": 82,
+     "T": -0.400637,
+     "dMAE": -1.640114,
+     "gt10C": 15,
+     "gt10A": 42,
+     "dMAE_hi": -1.184162,
+     "dMAE_lo": -2.106131,
+     "MAE_C": 4.021611,
+     "MAE_A": 5.661724
+    }
+   ],
+   "pass": false
+  }
+ },
+ "cmp2": {
+  "main": {
+   "cells": {
+    "Y5/N3": {
+     "n": 260,
+     "MAE_027": 6.055335,
+     "MAE_sat15": 6.484639,
+     "diff": -0.429304,
+     "pass": true,
+     "signed_027": -1.8738,
+     "signed_sat15": -1.96841,
+     "gt10_027": 50,
+     "gt10_sat15": 58
+    },
+    "Y5/N5": {
+     "n": 267,
+     "MAE_027": 6.036969,
+     "MAE_sat15": 6.528275,
+     "diff": -0.491307,
+     "pass": true,
+     "signed_027": -2.041974,
+     "signed_sat15": -2.183578,
+     "gt10_027": 51,
+     "gt10_sat15": 62
+    },
+    "Y5/N10": {
+     "n": 276,
+     "MAE_027": 5.935893,
+     "MAE_sat15": 6.251142,
+     "diff": -0.315249,
+     "pass": true,
+     "signed_027": -2.149556,
+     "signed_sat15": -2.120957,
+     "gt10_027": 50,
+     "gt10_sat15": 59
+    },
+    "Y5/N20": {
+     "n": 279,
+     "MAE_027": 5.434596,
+     "MAE_sat15": 5.707215,
+     "diff": -0.272619,
+     "pass": true,
+     "signed_027": -2.020652,
+     "signed_sat15": -1.862606,
+     "gt10_027": 45,
+     "gt10_sat15": 48
+    },
+    "Y6/N3": {
+     "n": 278,
+     "MAE_027": 5.138798,
+     "MAE_sat15": 5.915168,
+     "diff": -0.77637,
+     "pass": true,
+     "signed_027": -0.200658,
+     "signed_sat15": -0.120773,
+     "gt10_027": 40,
+     "gt10_sat15": 51
+    },
+    "Y6/N5": {
+     "n": 284,
+     "MAE_027": 4.972649,
+     "MAE_sat15": 5.675238,
+     "diff": -0.702589,
+     "pass": true,
+     "signed_027": -0.338515,
+     "signed_sat15": -0.261103,
+     "gt10_027": 42,
+     "gt10_sat15": 47
+    },
+    "Y6/N10": {
+     "n": 292,
+     "MAE_027": 4.827013,
+     "MAE_sat15": 5.453225,
+     "diff": -0.626212,
+     "pass": true,
+     "signed_027": -0.502753,
+     "signed_sat15": -0.387492,
+     "gt10_027": 37,
+     "gt10_sat15": 43
+    },
+    "Y6/N20": {
+     "n": 298,
+     "MAE_027": 4.420979,
+     "MAE_sat15": 5.037928,
+     "diff": -0.616948,
+     "pass": true,
+     "signed_027": -0.760992,
+     "signed_sat15": -0.539237,
+     "gt10_027": 31,
+     "gt10_sat15": 37
+    }
+   },
+   "maxDiff": -0.272619,
+   "pass2": true,
+   "boot90": {
+    "point": -0.528825,
+    "lo5": -0.697813,
+    "hi95": -0.354542,
+    "cells": 8
+   }
+  },
+  "Y3": {
+   "cells": {
+    "Y3/N3": {
+     "n": 251,
+     "MAE_027": 5.378484,
+     "MAE_sat15": 5.950164,
+     "diff": -0.571679,
+     "pass": true,
+     "signed_027": -0.075606,
+     "signed_sat15": 0.106572,
+     "gt10_027": 33,
+     "gt10_sat15": 48
+    },
+    "Y3/N5": {
+     "n": 265,
+     "MAE_027": 5.412153,
+     "MAE_sat15": 5.824007,
+     "diff": -0.411854,
+     "pass": true,
+     "signed_027": -0.422168,
+     "signed_sat15": -0.223574,
+     "gt10_027": 35,
+     "gt10_sat15": 46
+    },
+    "Y3/N10": {
+     "n": 270,
+     "MAE_027": 5.105578,
+     "MAE_sat15": 5.353182,
+     "diff": -0.247604,
+     "pass": true,
+     "signed_027": -0.562236,
+     "signed_sat15": -0.250292,
+     "gt10_027": 30,
+     "gt10_sat15": 39
+    },
+    "Y3/N20": {
+     "n": 274,
+     "MAE_027": 4.839755,
+     "MAE_sat15": 4.958479,
+     "diff": -0.118724,
+     "pass": true,
+     "signed_027": -0.600163,
+     "signed_sat15": -0.125964,
+     "gt10_027": 29,
+     "gt10_sat15": 34
+    }
+   },
+   "maxDiff": -0.118724,
+   "pass2": true,
+   "boot90": {
+    "point": -0.337466,
+    "lo5": -0.569305,
+    "hi95": -0.119431,
+    "cells": 4
+   }
+  }
+ },
+ "verdict": {
+  "1": false,
+  "2": true,
+  "outcome": "(1) 不過",
+  "rule": "E-107 §4：(1)(2) 都過→交 role-audit 與使用者 G5；(1) 過 (2) 不過→交使用者選；(1) 不過→不採用"
+ },
+ "tertile": [
+  {
+   "start": "Y5",
+   "N": 5,
+   "group": "low",
+   "n": 89,
+   "mpg0_lo": 11.362069,
+   "mpg0_hi": 22.439394,
+   "signed_027": -1.244846,
+   "MAE_027": 6.846829,
+   "signed_sat15": -1.292285,
+   "MAE_sat15": 7.315263
+  },
+  {
+   "start": "Y5",
+   "N": 5,
+   "group": "mid",
+   "n": 89,
+   "mpg0_lo": 22.660714,
+   "mpg0_hi": 29.511111,
+   "signed_027": -1.790937,
+   "MAE_027": 5.639576,
+   "signed_sat15": -2.086569,
+   "MAE_sat15": 6.214294
+  },
+  {
+   "start": "Y5",
+   "N": 5,
+   "group": "high",
+   "n": 89,
+   "mpg0_lo": 29.541667,
+   "mpg0_hi": 37.469697,
+   "signed_027": -3.090138,
+   "MAE_027": 5.624501,
+   "signed_sat15": -3.17188,
+   "MAE_sat15": 6.055269
+  },
+  {
+   "start": "Y5",
+   "N": 10,
+   "group": "low",
+   "n": 92,
+   "mpg0_lo": 11.362069,
+   "mpg0_hi": 22.424658,
+   "signed_027": -1.677708,
+   "MAE_027": 6.729622,
+   "signed_sat15": -1.565705,
+   "MAE_sat15": 6.993027
+  },
+  {
+   "start": "Y5",
+   "N": 10,
+   "group": "mid",
+   "n": 92,
+   "mpg0_lo": 22.431034,
+   "mpg0_hi": 29.47619,
+   "signed_027": -1.766227,
+   "MAE_027": 5.640644,
+   "signed_sat15": -1.779453,
+   "MAE_sat15": 5.994516
+  },
+  {
+   "start": "Y5",
+   "N": 10,
+   "group": "high",
+   "n": 92,
+   "mpg0_lo": 29.511111,
+   "mpg0_hi": 37.469697,
+   "signed_027": -3.004733,
+   "MAE_027": 5.437414,
+   "signed_sat15": -3.017712,
+   "MAE_sat15": 5.765884
+  },
+  {
+   "start": "Y6",
+   "N": 5,
+   "group": "low",
+   "n": 95,
+   "mpg0_lo": 11.048387,
+   "mpg0_hi": 22.097561,
+   "signed_027": -0.686624,
+   "MAE_027": 5.529364,
+   "signed_sat15": -1.2618,
+   "MAE_sat15": 6.264238
+  },
+  {
+   "start": "Y6",
+   "N": 5,
+   "group": "mid",
+   "n": 94,
+   "mpg0_lo": 22.333333,
+   "mpg0_hi": 29.196721,
+   "signed_027": -0.044307,
+   "MAE_027": 5.003733,
+   "signed_sat15": -0.081941,
+   "MAE_sat15": 5.506267
+  },
+  {
+   "start": "Y6",
+   "N": 5,
+   "group": "high",
+   "n": 95,
+   "mpg0_lo": 29.23913,
+   "mpg0_hi": 37.549296,
+   "signed_027": -0.281516,
+   "MAE_027": 4.385177,
+   "signed_sat15": 0.562318,
+   "MAE_sat15": 5.253432
+  },
+  {
+   "start": "Y6",
+   "N": 10,
+   "group": "low",
+   "n": 98,
+   "mpg0_lo": 11.048387,
+   "mpg0_hi": 22.043478,
+   "signed_027": -0.833139,
+   "MAE_027": 5.092022,
+   "signed_sat15": -1.278777,
+   "MAE_sat15": 5.658913
+  },
+  {
+   "start": "Y6",
+   "N": 10,
+   "group": "mid",
+   "n": 97,
+   "mpg0_lo": 22.097561,
+   "mpg0_hi": 29.142857,
+   "signed_027": -0.056357,
+   "MAE_027": 5.10279,
+   "signed_sat15": -0.200329,
+   "MAE_sat15": 5.641989
+  },
+  {
+   "start": "Y6",
+   "N": 10,
+   "group": "high",
+   "n": 97,
+   "mpg0_lo": 29.196721,
+   "mpg0_hi": 37.549296,
+   "signed_027": -0.615357,
+   "MAE_027": 4.283494,
+   "signed_sat15": 0.325818,
+   "MAE_sat15": 5.056653
+  }
+ ],
+ "x0Above99": {
+  "Y5/N5": {
+   "n": 20,
+   "meanE_027": -2.289891,
+   "meanE_sat15": -1.74907
+  },
+  "Y5/N10": {
+   "n": 20,
+   "meanE_027": -3.39625,
+   "meanE_sat15": -2.79624
+  },
+  "Y5/N20": {
+   "n": 20,
+   "meanE_027": -4.136677,
+   "meanE_sat15": -3.453135
+  },
+  "Y6/N5": {
+   "n": 20,
+   "meanE_027": 0.05105,
+   "meanE_sat15": -1.098375
+  },
+  "Y6/N10": {
+   "n": 21,
+   "meanE_027": -0.497171,
+   "meanE_sat15": -1.676333
+  },
+  "Y6/N20": {
+   "n": 22,
+   "meanE_027": -1.118452,
+   "meanE_sat15": -1.931259
+  }
+ },
+ "elapsedSec": 21.4
+}

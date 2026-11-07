@@ -1,0 +1,160 @@
+{
+ "note": "凍結預註冊 §2 的資料來源、人數、sha256；先於任何斜率計算寫出。池與偏離見 deviations.json（D1–D8）。",
+ "preregistrationSha256": "bbaace39cb633d73539df16af123b00da377fd10b47bc67d7ed0d966d2222374",
+ "parts": {
+  "T": {
+   "poolRule": "MIN>=500（Base Totals 全季 MIN），且在該季 full 資料索引內；N=0 者 acc 用該季聯盟 FG3M/FG3A（D8）",
+   "perSeason": {
+    "2022-23": {
+     "files": {
+      "reports/card-0.2.7+E123-tail-3pt-rim-pres/data/2022-23-full-*.json": {
+       "2022-23-full-cs.json": "bf733cc9a33cc8c867e307dfcef8c004612e7395d0ac6f59046d229542aaf142",
+       "2022-23-full-def0.json": "b9f6952a87beb8c9d23c764baae5af566d2132b906f5cad22c768a2c7f1e3529",
+       "2022-23-full-def1.json": "aceeba2e53ced3924b914313d0babaf07e0ec10cb848f0648acddaf5fe1c24cb",
+       "2022-23-full-def2.json": "4f4045dd8774f3ff5becec6bac108e2fc6e1292ca746eac5c184e00232cd5449",
+       "2022-23-full-def3.json": "bcb25b092020a819a46db3ac170079ed379dd796a98ea176bb91ed0b1f292f37",
+       "2022-23-full-pu.json": "e052f08eb0440c64378baaa0a4d0ffd338452c7895461c6c077f043de9ae5e89"
+      },
+      "reports/card-0.2.7+E123-tail-3pt-rim-pres/data/2022-23-base.json": "51049d02bf5f128a855a15fc8d155fbebc995159d4b4828be39b033fb802ac72"
+     },
+     "rowsWithValue": 539,
+     "poolN": 367
+    },
+    "2023-24": {
+     "files": {
+      "reports/ovr-v62-3pt-difficulty-2025-26/raw/2023-24-full-*.json": {
+       "2023-24-full-cs.json": "93ced5897f369b05f6da16cc2776b521135296fa721ebac697a5775828685491",
+       "2023-24-full-def0.json": "614927dcdb5b0882c29fb0237e6149811ea617fefc3a91f241403b563213b61e",
+       "2023-24-full-def1.json": "999080447e05c1a03ff5ccd279a59120621f12d85550ea86ec7399f1beebff80",
+       "2023-24-full-def2.json": "6de2d3992691f58225030c7d2146561cb4efdd822a8af64a609ce92325a63cf2",
+       "2023-24-full-def3.json": "47dcd0788e80233b7a1e5e14439b106ff29fe45385d4c909d227b6c3ebaded19",
+       "2023-24-full-pu.json": "91b08115dc15bae4445b8cbcf33e3d7f6479766e7d3e45ea4083c9043cccc0db"
+      },
+      "reports/card-0.2.7+E123-tail-3pt-rim-pres/data/2023-24-base.json": "75505bb6f1ecf77256de30ba3c7920e8ece55b35fcf836271081a5a565c3a8fa"
+     },
+     "rowsWithValue": 572,
+     "poolN": 360
+    },
+    "2024-25": {
+     "files": {
+      "reports/ovr-v62-3pt-difficulty-2025-26/raw/2024-25-full-*.json": {
+       "2024-25-full-cs.json": "693ecea5b3486811296520697fd62075a94a5b72d8d2d6984ffb822eeb7a84bf",
+       "2024-25-full-def0.json": "7ac07c5bb3409530f59c20f03d57184ca9e39a6612b3d2137109e349170f516d",
+       "2024-25-full-def1.json": "bd50a44d29b532c1904979ed5348972446104c248ad4803ddfe0d27a16d9d203",
+       "2024-25-full-def2.json": "fcea35134056e38568039d08e6d95bec7b43fe75c5997dfcf308fbdab25ff8d9",
+       "2024-25-full-def3.json": "d2903c9a98d87d9cc4791ad7cb9cafca6fcd5be8f1588a2bb113e0651eda2813",
+       "2024-25-full-pu.json": "08c6f66939cdc10c7ffc666afe53bf22fca6ac8a16bc6bdaf1da0acfd57d20b0"
+      },
+      "reports/card-0.2.0+E071-pressure/data/2024-25-base.json": "e5eb04f7c2651c67d2577f996c21b3243452ae7f9ccd0ab9043b2ffdb8ab796a"
+     },
+     "rowsWithValue": 569,
+     "poolN": 375
+    },
+    "2025-26": {
+     "files": {
+      "reports/ovr-v62-3pt-difficulty-2025-26/raw/2025-26-full-*.json": {
+       "2025-26-full-cs.json": "99fd053b783166731d8ec8c50468ab6b1bea1a4d6bdec7d33b3e0265a22ba1b3",
+       "2025-26-full-def0.json": "b52a6a36a656c8f60eb91e8172ebb560b8a88ecf256d69e4d4f4c684cdc542cd",
+       "2025-26-full-def1.json": "eb0d724f011d6df8984440035327ed11071288a06b749d625f354d9b4a717bf9",
+       "2025-26-full-def2.json": "762dfc9d078a2939bb4d4fd87d483bee82ce44a73ae8f3275c548bdb8ab61b3b",
+       "2025-26-full-def3.json": "d7a88e6f24eb76246b2657dcef466cbe870624a01941ec5b3bd6bc16d4c28d4d",
+       "2025-26-full-pu.json": "9fcfefc53531fc0a41d341cc3bc880aa628d4b03cdb96d5d248bc53d27958b26"
+      },
+      "reports/card-0.2.0+E071-pressure/data/2025-26-base.json": "f45d865c2c7d3a361992b5b49b73bc52b8c2b706958ad29fb36beb49cc7deb4b"
+     },
+     "rowsWithValue": 582,
+     "poolN": 378
+    }
+   },
+   "pairs": {
+    "2022-23->2023-24": 293,
+    "2023-24->2024-25": 289,
+    "2024-25->2025-26": 290
+   }
+  },
+  "H": {
+   "poolRule": "MIN>=500（Base Totals）且 FGA_LT_06 合計 n>0（D1、D4）；n=0 者卡片給 70",
+   "perSeason": {
+    "2022-23": {
+     "files": {
+      "reports/defense-tenth/step4-t2/raw/2022-23/0-rim.json": "493da838f618eb6cb3dc20d6bdf599b5b0c0abe2c625a5310b20af74db57f201"
+     },
+     "rowsWithValue": 529,
+     "poolN": 367
+    },
+    "2023-24": {
+     "files": {
+      "reports/defense-tenth/step4-t2/raw/2023-24/0-rim.json": "0bafefec8308a996943dc3c9ab5fb59472303d045e26b5c41ee91797dc285f1f"
+     },
+     "rowsWithValue": 562,
+     "poolN": 360
+    },
+    "2024-25": {
+     "files": {
+      "reports/defense-tenth/step4-t2/raw/2024-25/0-rim.json": "f77cf8fa22690cffae5b3a41f8859bc265518d459d2f420fab596928e6198457"
+     },
+     "rowsWithValue": 559,
+     "poolN": 375
+    },
+    "2025-26": {
+     "files": {
+      "data/benchmark-source/defense-rim.json": "a1f515e58a406835406ed2671fa41506e85a3ccf944485b9c0fff2073d8f4820"
+     },
+     "rowsWithValue": 576,
+     "poolN": 378
+    }
+   },
+   "pairs": {
+    "2022-23->2023-24": 293,
+    "2023-24->2024-25": 289,
+    "2024-25->2025-26": 290
+   }
+  },
+  "P": {
+   "poolRule": "該季 GP>=30 且 MPG>=20（D3）；2025-26 用卡片池（252 人）",
+   "perSeason": {
+    "2022-23": {
+     "files": {
+      "reports/card-0.2.7+E123-tail-3pt-rim-pres/data/2022-23-base.json": "51049d02bf5f128a855a15fc8d155fbebc995159d4b4828be39b033fb802ac72",
+      "reports/defense-tenth/step4-t2/raw/2022-23/0-hustle.json": "6f2077f4abf7348c37bcd6e89061cd258f9dc051af4d5666349f6eb56ff9a651",
+      "reports/defense-tenth/step4-t2/raw/2022-23/0-matchups.json": "3132e001c1bcb2b8a19ff9c2948d08fab6423bb8f23462e73ddd43b82cdc6f30"
+     },
+     "rowsWithValue": 539,
+     "poolN": 234
+    },
+    "2023-24": {
+     "files": {
+      "reports/card-0.2.7+E123-tail-3pt-rim-pres/data/2023-24-base.json": "75505bb6f1ecf77256de30ba3c7920e8ece55b35fcf836271081a5a565c3a8fa",
+      "reports/defense-tenth/step4-t2/raw/2023-24/0-hustle.json": "bf6e276af8dd0f153f1beb231f40fdd3a24ed4dba6702a49ba256aa21053bc35",
+      "reports/defense-tenth/step4-t2/raw/2023-24/0-matchups.json": "a88e2182aff47c33681216da1d91da9830dcacf9bbe5707b17c708e135fb33f7"
+     },
+     "rowsWithValue": 572,
+     "poolN": 228
+    },
+    "2024-25": {
+     "files": {
+      "reports/card-0.2.0+E071-pressure/data/2024-25-base.json": "e5eb04f7c2651c67d2577f996c21b3243452ae7f9ccd0ab9043b2ffdb8ab796a",
+      "reports/card-0.2.0+E071-pressure/data/2024-25-hustle.json": "925178854c9550d2e8f150d5be8ca57661463f1fcf2c99dba0e3003e67a0309b",
+      "reports/card-0.2.0+E071-pressure/data/2024-25-matchups.json": "606156ade8a3f3c237ee3dd7496dfbcfb904d23ed77ca9653c844a9a2408ea81"
+     },
+     "rowsWithValue": 569,
+     "poolN": 244
+    },
+    "2025-26": {
+     "files": {
+      "reports/card-0.2.0+E071-pressure/data/2025-26-base.json": "f45d865c2c7d3a361992b5b49b73bc52b8c2b706958ad29fb36beb49cc7deb4b",
+      "reports/card-0.2.0+E071-pressure/data/2025-26-hustle.json": "0013c1a707860e424944f91047c919ed14520fbae8f6f276938d891f99df50b9",
+      "reports/card-0.2.0+E071-pressure/data/2025-26-matchups.json": "1a8ac5670625910f7eabdac87bc429a68d7ac20c59126d53769bd9f0efd7b283"
+     },
+     "rowsWithValue": 582,
+     "poolN": 252
+    }
+   },
+   "pairs": {
+    "2022-23->2023-24": 293,
+    "2023-24->2024-25": 289,
+    "2024-25->2025-26": 290
+   }
+  }
+ }
+}

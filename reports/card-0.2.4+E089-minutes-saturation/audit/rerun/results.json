@@ -1,0 +1,984 @@
+{
+ "experiment": "E-089",
+ "version": "card 0.2.4+E089",
+ "baseline": "card 0.2.4（reports/card-0.2.4/ranking.csv）",
+ "minutes_curve": "W(m) = (1 - exp(-m/15)) / (1 - exp(-36/15))（R-047）",
+ "verdict": "通過",
+ "failed_checks": [],
+ "verdict_rule": "預註冊 §4：c0、c1、u 沒過=停下修程式；m1–m3 沒過=照 R-042 權衡交使用者；全過=通過，交 role-audit 與 G5",
+ "checks": {
+  "c0": {
+   "pass": true,
+   "ranking_sha256_equal_card024": true,
+   "ranking_shared_cols_equal": true,
+   "ranking_sha256": "af37ce25169c64b5e747afe066b42747c187b5d2ef20ffb3cc454e3ba95b7203",
+   "card024_sha256": "af37ce25169c64b5e747afe066b42747c187b5d2ef20ffb3cc454e3ba95b7203",
+   "max_diff_ranking_numeric": 0.0
+  },
+  "c1": {
+   "value": true,
+   "threshold": "npm test exit 0",
+   "pass": true
+  },
+  "u": {
+   "pass": true,
+   "values": {
+    "W(0)": {
+     "value": 0.0,
+     "want": 0.0,
+     "tol": 1e-12,
+     "pass": true
+    },
+    "W(36)": {
+     "value": 1.0,
+     "want": 1.0,
+     "tol": 1e-12,
+     "pass": true
+    },
+    "W(5)": {
+     "value": 0.31175001249797585,
+     "want": 0.31175,
+     "tol": 1e-05,
+     "pass": true
+    },
+    "W(20)": {
+     "value": 0.8098728711825767,
+     "want": 0.80987,
+     "tol": 1e-05,
+     "pass": true
+    }
+   }
+  },
+  "m1": {
+   "value": {
+    "point": 0.00956037795045539,
+    "ci90": [
+     0.0020041644634980677,
+     0.017641470231077424
+    ],
+    "rho_cand": 0.49517309117363106,
+    "rho_base": 0.4856127132231757,
+    "per_direction": {
+     "AB": {
+      "cand": 0.46562710869286017,
+      "base": 0.4561491777244567
+     },
+     "BA": {
+      "cand": 0.524719073654402,
+      "base": 0.5150762487218947
+     }
+    }
+   },
+   "threshold": "Δρ_{N_W} 下界 > -0.02",
+   "pass": true
+  },
+  "m2": {
+   "value": {
+    "point": 0.008713865797881415,
+    "ci90": [
+     0.0010602829724807306,
+     0.016818329404442927
+    ],
+    "rho_cand": 0.4934302701302964,
+    "rho_base": 0.484716404332415,
+    "per_direction": {
+     "AB": {
+      "cand": 0.46455540854873006,
+      "base": 0.45598139967259843
+     },
+     "BA": {
+      "cand": 0.5223051317118628,
+      "base": 0.5134514089922315
+     }
+    }
+   },
+   "threshold": "Δρ_{N_lin} 下界 > -0.05",
+   "pass": true
+  },
+  "m3": {
+   "value": {
+    "point": 0.006648851063985828,
+    "ci90": [
+     -0.0004831285174189236,
+     0.014109793803020536
+    ],
+    "rho_cand": 0.5924842616911554,
+    "rho_base": 0.5858354106271696,
+    "per_direction": {
+     "AB": {
+      "cand": 0.5775890925918753,
+      "base": 0.5752654786974879
+     },
+     "BA": {
+      "cand": 0.6073794307904354,
+      "base": 0.5964053425568513
+     }
+    }
+   },
+   "threshold": "Δρ_{Q_W} 下界 > -0.05",
+   "pass": true
+  }
+ },
+ "eval": {
+  "master_size": 395,
+  "n_boot": 2000,
+  "seed": 1,
+  "n": {
+   "AB": {
+    "pool": 389,
+    "with_rapm1": 389
+   },
+   "BA": {
+    "pool": 388,
+    "with_rapm1": 388
+   }
+  },
+  "dRho_N_W": {
+   "point": 0.00956037795045539,
+   "ci90": [
+    0.0020041644634980677,
+    0.017641470231077424
+   ],
+   "rho_cand": 0.49517309117363106,
+   "rho_base": 0.4856127132231757,
+   "per_direction": {
+    "AB": {
+     "cand": 0.46562710869286017,
+     "base": 0.4561491777244567
+    },
+    "BA": {
+     "cand": 0.524719073654402,
+     "base": 0.5150762487218947
+    }
+   }
+  },
+  "dRho_Q_W": {
+   "point": 0.006648851063985828,
+   "ci90": [
+    -0.0004831285174189236,
+    0.014109793803020536
+   ],
+   "rho_cand": 0.5924842616911554,
+   "rho_base": 0.5858354106271696,
+   "per_direction": {
+    "AB": {
+     "cand": 0.5775890925918753,
+     "base": 0.5752654786974879
+    },
+    "BA": {
+     "cand": 0.6073794307904354,
+     "base": 0.5964053425568513
+    }
+   }
+  },
+  "dRho_N_lin": {
+   "point": 0.008713865797881415,
+   "ci90": [
+    0.0010602829724807306,
+    0.016818329404442927
+   ],
+   "rho_cand": 0.4934302701302964,
+   "rho_base": 0.484716404332415,
+   "per_direction": {
+    "AB": {
+     "cand": 0.46455540854873006,
+     "base": 0.45598139967259843
+    },
+    "BA": {
+     "cand": 0.5223051317118628,
+     "base": 0.5134514089922315
+    }
+   }
+  },
+  "dRho_Q_lin": {
+   "point": 0.005141340765145608,
+   "ci90": [
+    -0.0022496210142239183,
+    0.01302747903341903
+   ],
+   "rho_cand": 0.5936396817667546,
+   "rho_base": 0.588498341001609,
+   "per_direction": {
+    "AB": {
+     "cand": 0.5761806131747563,
+     "base": 0.5757973534694177
+    },
+    "BA": {
+     "cand": 0.6110987503587528,
+     "base": 0.6011993285338003
+    }
+   }
+  },
+  "checks": {
+   "m1": {
+    "value": {
+     "point": 0.00956037795045539,
+     "ci90": [
+      0.0020041644634980677,
+      0.017641470231077424
+     ],
+     "rho_cand": 0.49517309117363106,
+     "rho_base": 0.4856127132231757,
+     "per_direction": {
+      "AB": {
+       "cand": 0.46562710869286017,
+       "base": 0.4561491777244567
+      },
+      "BA": {
+       "cand": 0.524719073654402,
+       "base": 0.5150762487218947
+      }
+     }
+    },
+    "threshold": "Δρ_{N_W} 下界 > -0.02",
+    "pass": true
+   },
+   "m2": {
+    "value": {
+     "point": 0.008713865797881415,
+     "ci90": [
+      0.0010602829724807306,
+      0.016818329404442927
+     ],
+     "rho_cand": 0.4934302701302964,
+     "rho_base": 0.484716404332415,
+     "per_direction": {
+      "AB": {
+       "cand": 0.46455540854873006,
+       "base": 0.45598139967259843
+      },
+      "BA": {
+       "cand": 0.5223051317118628,
+       "base": 0.5134514089922315
+      }
+     }
+    },
+    "threshold": "Δρ_{N_lin} 下界 > -0.05",
+    "pass": true
+   },
+   "m3": {
+    "value": {
+     "point": 0.006648851063985828,
+     "ci90": [
+      -0.0004831285174189236,
+      0.014109793803020536
+     ],
+     "rho_cand": 0.5924842616911554,
+     "rho_base": 0.5858354106271696,
+     "per_direction": {
+      "AB": {
+       "cand": 0.5775890925918753,
+       "base": 0.5752654786974879
+      },
+      "BA": {
+       "cand": 0.6073794307904354,
+       "base": 0.5964053425568513
+      }
+     }
+    },
+    "threshold": "Δρ_{Q_W} 下界 > -0.05",
+    "pass": true
+   }
+  }
+ },
+ "sanity_vs_E084": {
+  "rho_N_lin_base_equal_E084": true,
+  "rho_Q_lin_base_equal_E084": true
+ },
+ "report_only": {
+  "named_players": {
+   "Alex Caruso": {
+    "mpg": 17.9,
+    "ovr_new": 85.9,
+    "rank_new": 39,
+    "ovr_card024": 78.9,
+    "rank_card024": 103
+   },
+   "Dyson Daniels": {
+    "mpg": 33.15,
+    "ovr_new": 90.8,
+    "rank_new": 18,
+    "ovr_card024": 92.4,
+    "rank_card024": 17
+   }
+  },
+  "top20": [
+   {
+    "rank": 1,
+    "name": "Shai Gilgeous-Alexander",
+    "mpg": 33.22,
+    "ovr": 110.3,
+    "rank_card024": 1,
+    "ovr_card024": 110.0
+   },
+   {
+    "rank": 2,
+    "name": "Nikola Jokić",
+    "mpg": 34.84,
+    "ovr": 102.6,
+    "rank_card024": 3,
+    "ovr_card024": 104.7
+   },
+   {
+    "rank": 3,
+    "name": "Luka Dončić",
+    "mpg": 35.76,
+    "ovr": 102.1,
+    "rank_card024": 2,
+    "ovr_card024": 105.1
+   },
+   {
+    "rank": 4,
+    "name": "Victor Wembanyama",
+    "mpg": 29.15,
+    "ovr": 101.2,
+    "rank_card024": 6,
+    "ovr_card024": 98.0
+   },
+   {
+    "rank": 5,
+    "name": "Franz Wagner",
+    "mpg": 29.97,
+    "ovr": 99.0,
+    "rank_card024": 8,
+    "ovr_card024": 96.9
+   },
+   {
+    "rank": 6,
+    "name": "Chet Holmgren",
+    "mpg": 28.95,
+    "ovr": 97.6,
+    "rank_card024": 11,
+    "ovr_card024": 94.9
+   },
+   {
+    "rank": 7,
+    "name": "Derrick White",
+    "mpg": 34.09,
+    "ovr": 97.2,
+    "rank_card024": 5,
+    "ovr_card024": 99.0
+   },
+   {
+    "rank": 8,
+    "name": "Kawhi Leonard",
+    "mpg": 32.07,
+    "ovr": 96.7,
+    "rank_card024": 9,
+    "ovr_card024": 96.8
+   },
+   {
+    "rank": 9,
+    "name": "Lauri Markkanen",
+    "mpg": 34.35,
+    "ovr": 95.7,
+    "rank_card024": 7,
+    "ovr_card024": 97.8
+   },
+   {
+    "rank": 10,
+    "name": "Amen Thompson",
+    "mpg": 37.38,
+    "ovr": 95.2,
+    "rank_card024": 4,
+    "ovr_card024": 99.9
+   },
+   {
+    "rank": 11,
+    "name": "Giannis Antetokounmpo",
+    "mpg": 28.87,
+    "ovr": 95.2,
+    "rank_card024": 16,
+    "ovr_card024": 92.9
+   },
+   {
+    "rank": 12,
+    "name": "Herbert Jones",
+    "mpg": 28.36,
+    "ovr": 91.9,
+    "rank_card024": 26,
+    "ovr_card024": 89.8
+   },
+   {
+    "rank": 13,
+    "name": "Joel Embiid",
+    "mpg": 31.6,
+    "ovr": 91.6,
+    "rank_card024": 18,
+    "ovr_card024": 92.0
+   },
+   {
+    "rank": 14,
+    "name": "Kevin Durant",
+    "mpg": 36.41,
+    "ovr": 91.6,
+    "rank_card024": 10,
+    "ovr_card024": 95.6
+   },
+   {
+    "rank": 15,
+    "name": "Donovan Mitchell",
+    "mpg": 33.46,
+    "ovr": 91.5,
+    "rank_card024": 14,
+    "ovr_card024": 93.3
+   },
+   {
+    "rank": 16,
+    "name": "Kon Knueppel",
+    "mpg": 31.49,
+    "ovr": 91.1,
+    "rank_card024": 19,
+    "ovr_card024": 91.4
+   },
+   {
+    "rank": 17,
+    "name": "Cade Cunningham",
+    "mpg": 33.93,
+    "ovr": 90.9,
+    "rank_card024": 15,
+    "ovr_card024": 93.0
+   },
+   {
+    "rank": 18,
+    "name": "Dyson Daniels",
+    "mpg": 33.15,
+    "ovr": 90.8,
+    "rank_card024": 17,
+    "ovr_card024": 92.4
+   },
+   {
+    "rank": 19,
+    "name": "Jamal Murray",
+    "mpg": 35.36,
+    "ovr": 90.3,
+    "rank_card024": 13,
+    "ovr_card024": 93.6
+   },
+   {
+    "rank": 20,
+    "name": "Ryan Rollins",
+    "mpg": 32.1,
+    "ovr": 90.3,
+    "rank_card024": 21,
+    "ovr_card024": 91.2
+   }
+  ],
+  "largest_up20": [
+   {
+    "name": "Alex Caruso",
+    "mpg": 17.9,
+    "MIN": 1020.0,
+    "ovr_new": 85.9,
+    "ovr_card024": 78.9,
+    "delta": 7.0,
+    "rank_new": 39,
+    "rank_card024": 103
+   },
+   {
+    "name": "Dean Wade",
+    "mpg": 22.33,
+    "MIN": 1318.0,
+    "ovr_new": 87.0,
+    "ovr_card024": 82.1,
+    "delta": 4.9,
+    "rank_new": 33,
+    "rank_card024": 74
+   },
+   {
+    "name": "Dylan Harper",
+    "mpg": 22.58,
+    "MIN": 1558.0,
+    "ovr_new": 86.0,
+    "ovr_card024": 81.6,
+    "delta": 4.4,
+    "rank_new": 38,
+    "rank_card024": 78
+   },
+   {
+    "name": "Paul Reed",
+    "mpg": 11.12,
+    "MIN": 901.0,
+    "ovr_new": 68.9,
+    "ovr_card024": 64.7,
+    "delta": 4.2,
+    "rank_new": 220,
+    "rank_card024": 249
+   },
+   {
+    "name": "Brandon Clarke",
+    "mpg": 10.22,
+    "MIN": 20.0,
+    "ovr_new": 67.0,
+    "ovr_card024": 62.9,
+    "delta": 4.1,
+    "rank_new": 235,
+    "rank_card024": 264
+   },
+   {
+    "name": "Clint Capela",
+    "mpg": 11.43,
+    "MIN": 926.0,
+    "ovr_new": 68.7,
+    "ovr_card024": 64.6,
+    "delta": 4.1,
+    "rank_new": 222,
+    "rank_card024": 251
+   },
+   {
+    "name": "Josh Minott",
+    "mpg": 12.08,
+    "MIN": 834.0,
+    "ovr_new": 69.6,
+    "ovr_card024": 65.6,
+    "delta": 4.0,
+    "rank_new": 208,
+    "rank_card024": 242
+   },
+   {
+    "name": "Aaron Holiday",
+    "mpg": 9.76,
+    "MIN": 781.0,
+    "ovr_new": 65.1,
+    "ovr_card024": 61.3,
+    "delta": 3.8,
+    "rank_new": 255,
+    "rank_card024": 280
+   },
+   {
+    "name": "Goga Bitadze",
+    "mpg": 12.46,
+    "MIN": 972.0,
+    "ovr_new": 68.7,
+    "ovr_card024": 65.0,
+    "delta": 3.7,
+    "rank_new": 223,
+    "rank_card024": 245
+   },
+   {
+    "name": "Jonathan Isaac",
+    "mpg": 8.68,
+    "MIN": 521.0,
+    "ovr_new": 63.7,
+    "ovr_card024": 60.0,
+    "delta": 3.7,
+    "rank_new": 267,
+    "rank_card024": 294
+   },
+   {
+    "name": "Kenrich Williams",
+    "mpg": 13.36,
+    "MIN": 855.0,
+    "ovr_new": 71.2,
+    "ovr_card024": 67.5,
+    "delta": 3.7,
+    "rank_new": 187,
+    "rank_card024": 230
+   },
+   {
+    "name": "Oso Ighodaro",
+    "mpg": 22.05,
+    "MIN": 1808.0,
+    "ovr_new": 83.0,
+    "ovr_card024": 79.3,
+    "delta": 3.7,
+    "rank_new": 66,
+    "rank_card024": 101
+   },
+   {
+    "name": "Ty Jerome",
+    "mpg": 22.58,
+    "MIN": 339.0,
+    "ovr_new": 83.6,
+    "ovr_card024": 79.9,
+    "delta": 3.7,
+    "rank_new": 62,
+    "rank_card024": 96
+   },
+   {
+    "name": "Neemias Queta",
+    "mpg": 25.34,
+    "MIN": 1926.0,
+    "ovr_new": 89.3,
+    "ovr_card024": 85.7,
+    "delta": 3.6,
+    "rank_new": 25,
+    "rank_card024": 46
+   },
+   {
+    "name": "Dwight Powell",
+    "mpg": 11.17,
+    "MIN": 904.0,
+    "ovr_new": 65.6,
+    "ovr_card024": 62.1,
+    "delta": 3.5,
+    "rank_new": 252,
+    "rank_card024": 270
+   },
+   {
+    "name": "Kasparas Jakučionis",
+    "mpg": 12.6,
+    "MIN": 945.0,
+    "ovr_new": 68.0,
+    "ovr_card024": 64.5,
+    "delta": 3.5,
+    "rank_new": 228,
+    "rank_card024": 255
+   },
+   {
+    "name": "Karlo Matković",
+    "mpg": 13.81,
+    "MIN": 912.0,
+    "ovr_new": 70.7,
+    "ovr_card024": 67.3,
+    "delta": 3.4,
+    "rank_new": 193,
+    "rank_card024": 233
+   },
+   {
+    "name": "Ausar Thompson",
+    "mpg": 25.97,
+    "MIN": 1896.0,
+    "ovr_new": 89.8,
+    "ovr_card024": 86.5,
+    "delta": 3.3,
+    "rank_new": 22,
+    "rank_card024": 39
+   },
+   {
+    "name": "Day'Ron Sharpe",
+    "mpg": 18.71,
+    "MIN": 1160.0,
+    "ovr_new": 76.9,
+    "ovr_card024": 73.7,
+    "delta": 3.2,
+    "rank_new": 121,
+    "rank_card024": 160
+   },
+   {
+    "name": "Grant Nelson",
+    "mpg": 7.0,
+    "MIN": 35.0,
+    "ovr_new": 60.4,
+    "ovr_card024": 57.2,
+    "delta": 3.2,
+    "rank_new": 306,
+    "rank_card024": 323
+   }
+  ],
+  "largest_down20": [
+   {
+    "name": "Toby Okani",
+    "mpg": 36.18,
+    "MIN": 217.0,
+    "ovr_new": 66.6,
+    "ovr_card024": 71.8,
+    "delta": -5.2,
+    "rank_new": 242,
+    "rank_card024": 180
+   },
+   {
+    "name": "Tyrese Maxey",
+    "mpg": 38.02,
+    "MIN": 2661.0,
+    "ovr_new": 89.3,
+    "ovr_card024": 94.5,
+    "delta": -5.2,
+    "rank_new": 26,
+    "rank_card024": 12
+   },
+   {
+    "name": "Amen Thompson",
+    "mpg": 37.38,
+    "MIN": 2953.0,
+    "ovr_new": 95.2,
+    "ovr_card024": 99.9,
+    "delta": -4.7,
+    "rank_new": 10,
+    "rank_card024": 4
+   },
+   {
+    "name": "Kevin Durant",
+    "mpg": 36.41,
+    "MIN": 2840.0,
+    "ovr_new": 91.6,
+    "ovr_card024": 95.6,
+    "delta": -4.0,
+    "rank_new": 14,
+    "rank_card024": 10
+   },
+   {
+    "name": "Paolo Banchero",
+    "mpg": 34.75,
+    "MIN": 2502.0,
+    "ovr_new": 72.1,
+    "ovr_card024": 76.1,
+    "delta": -4.0,
+    "rank_new": 173,
+    "rank_card024": 133
+   },
+   {
+    "name": "James Harden",
+    "mpg": 34.84,
+    "MIN": 2438.0,
+    "ovr_new": 76.5,
+    "ovr_card024": 80.3,
+    "delta": -3.8,
+    "rank_new": 124,
+    "rank_card024": 90
+   },
+   {
+    "name": "Trey Murphy III",
+    "mpg": 35.46,
+    "MIN": 2341.0,
+    "ovr_new": 81.7,
+    "ovr_card024": 85.5,
+    "delta": -3.8,
+    "rank_new": 76,
+    "rank_card024": 50
+   },
+   {
+    "name": "Jalen Johnson",
+    "mpg": 35.16,
+    "MIN": 2532.0,
+    "ovr_new": 80.6,
+    "ovr_card024": 84.3,
+    "delta": -3.7,
+    "rank_new": 88,
+    "rank_card024": 62
+   },
+   {
+    "name": "Jabari Smith Jr.",
+    "mpg": 35.13,
+    "MIN": 2705.0,
+    "ovr_new": 82.7,
+    "ovr_card024": 86.3,
+    "delta": -3.6,
+    "rank_new": 69,
+    "rank_card024": 41
+   },
+   {
+    "name": "Andersson Garcia",
+    "mpg": 33.75,
+    "MIN": 169.0,
+    "ovr_new": 74.4,
+    "ovr_card024": 77.9,
+    "delta": -3.5,
+    "rank_new": 152,
+    "rank_card024": 112
+   },
+   {
+    "name": "Jalen Brunson",
+    "mpg": 35.0,
+    "MIN": 2590.0,
+    "ovr_new": 84.5,
+    "ovr_card024": 87.9,
+    "delta": -3.4,
+    "rank_new": 51,
+    "rank_card024": 33
+   },
+   {
+    "name": "Bennedict Mathurin",
+    "mpg": 30.0,
+    "MIN": 1620.0,
+    "ovr_new": 67.4,
+    "ovr_card024": 70.7,
+    "delta": -3.3,
+    "rank_new": 233,
+    "rank_card024": 189
+   },
+   {
+    "name": "Jamal Murray",
+    "mpg": 35.36,
+    "MIN": 2652.0,
+    "ovr_new": 90.3,
+    "ovr_card024": 93.6,
+    "delta": -3.3,
+    "rank_new": 19,
+    "rank_card024": 13
+   },
+   {
+    "name": "Jaylen Brown",
+    "mpg": 34.41,
+    "MIN": 2443.0,
+    "ovr_new": 80.8,
+    "ovr_card024": 84.1,
+    "delta": -3.3,
+    "rank_new": 85,
+    "rank_card024": 64
+   },
+   {
+    "name": "Keegan Murray",
+    "mpg": 34.48,
+    "MIN": 793.0,
+    "ovr_new": 81.4,
+    "ovr_card024": 84.7,
+    "delta": -3.3,
+    "rank_new": 79,
+    "rank_card024": 59
+   },
+   {
+    "name": "Anthony Edwards",
+    "mpg": 35.03,
+    "MIN": 2137.0,
+    "ovr_new": 86.7,
+    "ovr_card024": 89.9,
+    "delta": -3.2,
+    "rank_new": 34,
+    "rank_card024": 25
+   },
+   {
+    "name": "Julius Randle",
+    "mpg": 33.04,
+    "MIN": 2610.0,
+    "ovr_new": 74.7,
+    "ovr_card024": 77.9,
+    "delta": -3.2,
+    "rank_new": 146,
+    "rank_card024": 111
+   },
+   {
+    "name": "VJ Edgecombe",
+    "mpg": 34.98,
+    "MIN": 2623.0,
+    "ovr_new": 85.6,
+    "ovr_card024": 88.8,
+    "delta": -3.2,
+    "rank_new": 41,
+    "rank_card024": 29
+   },
+   {
+    "name": "Brandon Ingram",
+    "mpg": 33.82,
+    "MIN": 2604.0,
+    "ovr_new": 80.0,
+    "ovr_card024": 83.1,
+    "delta": -3.1,
+    "rank_new": 95,
+    "rank_card024": 69
+   },
+   {
+    "name": "Cooper Flagg",
+    "mpg": 33.48,
+    "MIN": 2344.0,
+    "ovr_new": 61.5,
+    "ovr_card024": 64.6,
+    "delta": -3.1,
+    "rank_new": 294,
+    "rank_card024": 250
+   }
+  ],
+  "mpg_bins": {
+   "<10": {
+    "n": 187,
+    "median_ovr_new": 52.5,
+    "median_ovr_card024": 51.8
+   },
+   "10-15": {
+    "n": 72,
+    "median_ovr_new": 59.45,
+    "median_ovr_card024": 57.6
+   },
+   "15-20": {
+    "n": 70,
+    "median_ovr_new": 64.55,
+    "median_ovr_card024": 63.25
+   },
+   "20-25": {
+    "n": 70,
+    "median_ovr_new": 69.35,
+    "median_ovr_card024": 69.94999999999999
+   },
+   "25-30": {
+    "n": 96,
+    "median_ovr_new": 76.1,
+    "median_ovr_card024": 76.9
+   },
+   ">=30": {
+    "n": 87,
+    "median_ovr_new": 83.6,
+    "median_ovr_card024": 85.3
+   }
+  },
+  "mpg_lt10_in_top150": {
+   "new": 0,
+   "card024": 0
+  },
+  "MIN1000_spearman": {
+   "n": 279,
+   "rho_mpg_ovr_new": 0.6568172114546765,
+   "rho_pred_ovr_new": 0.9865006105933724,
+   "rho_mpg_ovr_card024": 0.7487304217599804,
+   "rho_pred_ovr_card024": 0.9502860396543021
+  },
+  "dRho_Q_lin": {
+   "point": 0.005141340765145608,
+   "ci90": [
+    -0.0022496210142239183,
+    0.01302747903341903
+   ],
+   "rho_cand": 0.5936396817667546,
+   "rho_base": 0.588498341001609,
+   "per_direction": {
+    "AB": {
+     "cand": 0.5761806131747563,
+     "base": 0.5757973534694177
+    },
+    "BA": {
+     "cand": 0.6110987503587528,
+     "base": 0.6011993285338003
+    }
+   }
+  },
+  "evaluate_gates": {
+   "card-0.2.4": {
+    "pass": 16,
+    "of": 19,
+    "failed": [
+     "carusoGate",
+     "big14of16",
+     "allFourStayTop10"
+    ]
+   },
+   "E089": {
+    "pass": 18,
+    "of": 19,
+    "failed": [
+     "allFourStayTop10"
+    ]
+   }
+  },
+  "card": {
+   "new": {
+    "r_repl": -1.2724493885788943,
+    "anchors": {
+     "PR1": -0.8153080565013056,
+     "PR50": 1.2506410339373022,
+     "PR99": 3.4429279429490607
+    },
+    "F_n": 109
+   },
+   "card024": {
+    "r_repl": -1.2724493885788943,
+    "anchors": {
+     "PR1": -0.5415035599769742,
+     "PR50": 0.8848688008103984,
+     "PR99": 3.1777640824827587
+    },
+    "F_n": 109
+   }
+  }
+ },
+ "ranking_csv_sha256": "73b1d6353142dd86327a022a19e939833c42a0aa0c69f3377201ffe411c0050a",
+ "preregistration_sha256": "0fa1b15c0ce11096993b224851456abdb77eb17417ecaa55dd74257207a12fbe",
+ "inputs_sha256": {
+  "reports/card-0.2.4/ranking.csv": "af37ce25169c64b5e747afe066b42747c187b5d2ef20ffb3cc454e3ba95b7203",
+  "reports/card-0.2.3+E084-current-target/e084.py": "685e405e04c9e4e02e52b3d9297f74398e8cf0768b8ff84ce5455d9fd8afc744",
+  "reports/card-0.2.3+E084-current-target/results.json": "6df9fd48e704ad3799fcea78b8540161083135708e276d5d08636358f3f9ea16",
+  "reports/card-0.2.3+E081-age-residual/rapm1-A.csv": "c52b1c3f3ab6b16d19d53a14d94b55347d5ec0e7841ec012c1325d0da6bde520",
+  "reports/card-0.2.3+E081-age-residual/rapm1-B.csv": "665217f7e8fef15c62aef19c68138a600783452f0c68d65d7059be900bd0b7fa",
+  "reports/card-0.2.4+E089-minutes-saturation/audit/rerun/preregistration.md": "0fa1b15c0ce11096993b224851456abdb77eb17417ecaa55dd74257207a12fbe",
+  "reports/card-0.2.4+E089-minutes-saturation/audit/rerun/e089.py": "e5ea70e3f100606ded7770c79b1d02779fee9122926e9d9e70450abb9518162b"
+ },
+ "generator": "reports/card-0.2.4+E089-minutes-saturation/e089.py"
+}

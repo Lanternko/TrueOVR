@@ -1,0 +1,265 @@
+{
+ "gates": {
+  "f-eng": {
+   "code": "f-eng",
+   "condition": "engine clamps help>99 to 99, OR live WinImp chain does not read card help",
+   "value": "engine clamp: no (soft cap 150); WinImp chain reads data/season-league.json (own defense-rim help), no card csv read in src/test/scripts chain",
+   "pass": true,
+   "deviation": "D6"
+  },
+  "a0T": {
+   "code": "a0T",
+   "condition": "recompute 2025-26 threeValue (E-057 recipe, k=294.667); max |diff| vs card-0.1.1+E057 three-value.csv tv_main <= 0.05",
+   "value": "max |diff| = 4.99e-07 (582 players, pool 379); first attempt failed at 0.31 -> fixed by D8 (N=0 acc = league prior) before any other-season value was viewed",
+   "pass": true,
+   "deviation": "D8"
+  },
+  "a0P'": {
+   "code": "a0P'",
+   "condition": "2022-23/2023-24 defense-tenth hustle/matchups 與 E-071 自取格式一致（欄名、單位）；2024-25 DEFLECTIONS/CHARGES_DRAWN 逐列相同",
+   "value": "headers equal x4 seasons; DEFL/CHG row diffs 0 (2024-25); only PLAYER_NAME accent diffs (1 row 24-25, 2 rows 25-26)",
+   "pass": true
+  },
+  "a0P": {
+   "code": "a0P",
+   "condition": "2024-25、2025-26 force 重算與 E-071 force csv 差 <=1e-6；pressure/presDisplay 與卡 0.2.7 差 <=0.05",
+   "value": "force maxdiff 0.0 / 0.0; pressure maxdiff 0.04989; presDisplay maxdiff 0.04989 (582 matched)",
+   "pass": true
+  },
+  "h1-T-top": {
+   "code": "h1-T-top",
+   "condition": "threeValue 頂端 h1 下界>0",
+   "value": "b=+0.730 [+0.362,+0.939] n=87",
+   "pass": true
+  },
+  "h1-T-bot": {
+   "code": "h1-T-bot",
+   "condition": "threeValue 底端 h1 下界>0",
+   "value": "b=+0.091 [-0.612,+0.645] n=87",
+   "pass": false
+  },
+  "h1-H-top": {
+   "code": "h1-H-top",
+   "condition": "help 頂端 h1 下界>0",
+   "value": "b=+0.817 [+0.538,+1.070] n=87",
+   "pass": true
+  },
+  "h1-H-bot": {
+   "code": "h1-H-bot",
+   "condition": "help 底端 h1 下界>0",
+   "value": "b=+0.647 [+0.407,+0.955] n=87",
+   "pass": true
+  },
+  "h1-P-top": {
+   "code": "h1-P-top",
+   "condition": "pressure 頂端 h1 下界>0",
+   "value": "b=+0.725 [+0.418,+0.924] n=87",
+   "pass": true
+  },
+  "h1-P-bot": {
+   "code": "h1-P-bot",
+   "condition": "pressure 底端 h1 下界>0",
+   "value": "b=+0.202 [-0.150,+0.546] n=87",
+   "pass": false
+  },
+  "a0H": {
+   "code": "a0H",
+   "condition": "2025-26 help 重算與卡 0.2.7 差 <=0.05",
+   "value": "maxdiff 0.04978 (582 matched; 6 no-data -> 70)",
+   "pass": true
+  },
+  "c0": {
+   "code": "c0",
+   "condition": "現行 tail＋現行 defSource 重建 card 0.2.7，ranking.csv 逐位元相同；三份 per-part 卡（pred/ranking/pergame-*）與 E-107 UL6 逐位元相同",
+   "value": "ranking.csv sha256=aebcadf1c3dfcbe6aaeed8c34fa5183cd35dbda546dd967faa5ebdf6649cc6b6 等於 reports/card-0.2.7/ranking.csv；primary/fitA/fitB 的 5 個檔 sha 全等於 UL6（見 work/c0-result.json）",
+   "pass": true
+  },
+  "c1": {
+   "code": "c1",
+   "condition": "`npm test` 全過",
+   "value": {
+    "exit": 0,
+    "tail": [
+     "===== 57 passed, 0 failed ====="
+    ]
+   },
+   "pass": true
+  },
+  "m1": {
+   "code": "m1",
+   "condition": "Δρ_{N_W} 90% 下界 > −0.02",
+   "value": {
+    "point": -0.00030124494136934965,
+    "ci90": [
+     -0.0019596935628006795,
+     0.001193035096009434
+    ]
+   },
+   "pass": true
+  },
+  "m2": {
+   "code": "m2",
+   "condition": "Δρ_{Q_W} 90% 下界 > −0.05",
+   "value": {
+    "point": 0.0005375402265053175,
+    "ci90": [
+     -0.0007335412096752758,
+     0.0017482340828101962
+    ]
+   },
+   "pass": true
+  },
+  "m3": {
+   "code": "m3",
+   "condition": "Δρ_{N_lin} 90% 下界 > −0.05",
+   "value": {
+    "point": -0.00024417793155778744,
+    "ci90": [
+     -0.0019066609119308743,
+     0.0012788770504005564
+    ]
+   },
+   "pass": true
+  },
+  "c3": {
+   "code": "c3",
+   "condition": "evaluate.mjs 通過數 ≥ card 0.2.7 的 18/19",
+   "value": {
+    "e123": "18/19",
+    "card0.2.7": "18/19"
+   },
+   "pass": true
+  },
+  "c4": {
+   "code": "c4",
+   "condition": "卡片所有球員全部屬性（含 threeValue、presDisplay）> 140 的值 ≤ 2 個",
+   "value": {
+    "n_over140": 0,
+    "list": [],
+    "card0.2.7": 0
+   },
+   "pass": true
+  },
+  "T-c4": {
+   "code": "T-c4",
+   "condition": "T（threeValue）只看 a0T、h1v、c4：threeValue 新值 > 140 的人數（併入 c4 總數）",
+   "value": {
+    "threeValue_over140": [],
+    "max_new_tv": 105.02174987940525
+   },
+   "pass": true
+  },
+  "m1[e123h]": {
+   "code": "m1[e123h]",
+   "condition": "只報告：m1",
+   "value": {
+    "point": -0.00034067002589410755,
+    "ci90": [
+     -0.0018991310968977742,
+     0.0009179203960570644
+    ]
+   },
+   "pass": true
+  },
+  "m2[e123h]": {
+   "code": "m2[e123h]",
+   "condition": "只報告：m2",
+   "value": {
+    "point": 0.00010215201778440708,
+    "ci90": [
+     -0.0010788459121374382,
+     0.0011472898225875494
+    ]
+   },
+   "pass": true
+  },
+  "m3[e123h]": {
+   "code": "m3[e123h]",
+   "condition": "只報告：m3",
+   "value": {
+    "point": -0.000308467803332213,
+    "ci90": [
+     -0.0018356720480429522,
+     0.0009459292571956156
+    ]
+   },
+   "pass": true
+  },
+  "c3[e123h]": {
+   "code": "c3[e123h]",
+   "condition": "只報告：c3",
+   "value": "18/19",
+   "pass": true
+  },
+  "c4[e123h]": {
+   "code": "c4[e123h]",
+   "condition": "只報告：c4",
+   "value": {
+    "n_over140": 0
+   },
+   "pass": true
+  },
+  "m1[e123p]": {
+   "code": "m1[e123p]",
+   "condition": "只報告：m1",
+   "value": {
+    "point": 7.221044592553572e-05,
+    "ci90": [
+     -0.0006979427407938138,
+     0.000804111920644257
+    ]
+   },
+   "pass": true
+  },
+  "m2[e123p]": {
+   "code": "m2[e123p]",
+   "condition": "只報告：m2",
+   "value": {
+    "point": 0.0005348007382189879,
+    "ci90": [
+     -0.00021113479331835716,
+     0.0012946356665056
+    ]
+   },
+   "pass": true
+  },
+  "m3[e123p]": {
+   "code": "m3[e123p]",
+   "condition": "只報告：m3",
+   "value": {
+    "point": 0.000146342563473012,
+    "ci90": [
+     -0.0006143165660938338,
+     0.0008767651735526737
+    ]
+   },
+   "pass": true
+  },
+  "c3[e123p]": {
+   "code": "c3[e123p]",
+   "condition": "只報告：c3",
+   "value": "18/19",
+   "pass": true
+  },
+  "c4[e123p]": {
+   "code": "c4[e123p]",
+   "condition": "只報告：c4",
+   "value": {
+    "n_over140": 0
+   },
+   "pass": true
+  },
+  "r1p": {
+   "code": "r1p",
+   "condition": "只報告：R-061 Wagner 名次數字 > Wembanyama",
+   "value": {
+    "Wagner": 7,
+    "Wembanyama": 2,
+    "pass": true,
+    "Cade": 14,
+    "Tatum": 33
+   },
+   "pass": true
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+  "probeDate": "2026-10-27",
+  "scope": "本輪（第 2 輪）只重探兩個端點，確認 2025-10-27 的 403/timeout 狀態仍在；沒有下載任何賽季資料，沒有讀 2026-27 資料。",
+  "host": "local (Windows, D:\\Projects\\CODING\\basketball-autochess)",
+  "commands": [
+    {
+      "command": "curl -s -o /dev/null -w \"cdn_2017_18 http=%{http_code}\\n\" --max-time 15 -A \"Mozilla/5.0\" \"https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0021700001.json\"",
+      "result": "cdn_2017_18 http=403"
+    },
+    {
+      "command": "curl -s -o /dev/null -w \"stats_2017_18 http=%{http_code}\\n\" --max-time 15 -A \"Mozilla/5.0\" \"https://stats.nba.com/stats/leaguegamelog?Season=2017-18\"",
+      "result": "stats_2017_18 http=000"
+    }
+  ],
+  "priorProbe": "probe/probe-results.json（第 1 輪：2015-16..2023-24 的 cdn playbyplay 全部 403；stats.nba.com 本機與 5090 都 timeout）",
+  "conclusion": "延伸起點鏈的第一個閘門 D0（抓 2015-16..2020-21）目前無法通過；這是網路/端點可及性問題，不是資料格式或程式問題。"
+}

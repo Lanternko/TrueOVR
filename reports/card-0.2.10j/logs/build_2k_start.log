@@ -1,0 +1,17 @@
+inseason 0.2.10j 窗口：本季 88 場（pbp 87 場），8 項 582 人
+{"targetCurve": [73.0, -5.9], "nPlayers": 37, "note": "看過答案的回看（R-007），只報告不判定；判定看 §3.4 前瞻檢查", "mae": {"start": {"E116": 17.63, "E121": 10.62}, "N5": {"E116": 17.39, "E121": 10.64}, "N10": {"E116": 16.87, "E121": 12.68}, "N20": {"E116": 16.51, "E121": 12.87}}}
+{'name': 'AJ Dybantsa', 'pick': 1, 'pos': 'F', 'twoK': 78.6, 'startE121': 73.0, 'startE116': 43.5, 'delta': 9.11}
+{'name': 'Darryn Peterson', 'pick': 2, 'pos': 'F', 'twoK': 76.8, 'startE121': 68.9, 'startE116': 43.2, 'delta': 7.73}
+{'name': 'Cameron Boozer', 'pick': 3, 'pos': 'F', 'twoK': 75.7, 'startE121': 66.5, 'startE116': 44.0, 'delta': 6.79}
+{'name': 'Caleb Wilson', 'pick': 4, 'pos': 'C', 'twoK': 75.0, 'startE121': 64.8, 'startE116': 46.1, 'delta': 4.91}
+{'name': 'Keaton Wagler', 'pick': 5, 'pos': 'F', 'twoK': 74.4, 'startE121': 63.5, 'startE116': 43.8, 'delta': 5.93}
+{'name': 'Mikel Brown Jr.', 'pick': 6, 'pos': 'G', 'twoK': 73.9, 'startE121': 62.4, 'startE116': 42.5, 'delta': 5.72}
+{'name': 'Darius Acuff Jr.', 'pick': 7, 'pos': 'G', 'twoK': 73.5, 'startE121': 61.5, 'startE116': 42.2, 'delta': 5.56}
+{'name': 'Kingston Flemings', 'pick': 8, 'pos': 'G', 'twoK': 73.2, 'startE121': 60.7, 'startE116': 42.5, 'delta': 5.25}
+{'name': 'Morez Johnson Jr.', 'pick': 9, 'pos': 'C', 'twoK': 72.9, 'startE121': 60.0, 'startE116': 47.1, 'delta': 3.41}
+{'name': 'Brayden Burries', 'pick': 10, 'pos': 'G', 'twoK': 72.6, 'startE121': 59.4, 'startE116': 42.8, 'delta': 4.76}
+{'name': 'Yaxel Lendeborg', 'pick': 11, 'pos': 'F', 'twoK': 72.4, 'startE121': 58.9, 'startE116': 45.0, 'delta': 4.17}
+{'name': 'Aday Mara', 'pick': 12, 'pos': 'C', 'twoK': 72.1, 'startE121': 58.3, 'startE116': 48.5, 'delta': 2.58}
+{'name': 'Nate Ament', 'pick': 13, 'pos': 'C', 'twoK': 71.9, 'startE121': 57.9, 'startE116': 47.5, 'delta': 2.73}
+{'name': 'Hannes Steinbach', 'pick': 14, 'pos': 'C', 'twoK': 71.8, 'startE121': 57.4, 'startE116': 47.6, 'delta': 2.59}
+{'name': 'Dailyn Swain', 'pick': 15, 'pos': 'F', 'twoK': 71.6, 'startE121': 57.0, 'startE116': 44.5, 'delta': 3.76}
