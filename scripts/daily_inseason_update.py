@@ -52,7 +52,7 @@ TEAMS_PAGE = ROOT / 'scripts/build_teams_page.py'
 GAMES_DATA = ROOT / 'scripts/build_games_data.py'
 CREATE_NO_WINDOW = getattr(subprocess, 'CREATE_NO_WINDOW', 0)
 
-TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'tracking': 600, 'gravity': 300, 'possessions': 300, 'stints': 1800, 'c4': 3600, 'viewer': 600, 'history': 3600, 'prereg': 900, 'ratings': 1800, 'e229': 900, 'ratings_m0': 1800, 'git': 180}
+TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'tracking': 600, 'gravity': 300, 'pnr': 300, 'possessions': 300, 'stints': 1800, 'c4': 3600, 'viewer': 600, 'history': 3600, 'prereg': 900, 'ratings': 1800, 'e229': 900, 'ratings_m0': 1800, 'git': 180}
 CO_AUTHOR = 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
 
 log = logging.getLogger('daily_inseason')
@@ -204,6 +204,20 @@ def step_fetch_gravity() -> None:
         log.warning('fetch_gravity exit=%s：%s', r.returncode, (r.stderr or r.stdout).strip()[-300:])
     else:
         log.info('fetch_gravity：%s', ((r.stdout or '').strip().splitlines()[-1:] or [''])[0])
+
+
+def step_fetch_pnr() -> None:
+    """inseason 0.2.13（E-258）：本季 Synergy 擋拆持球（NBA.com synergyplaytypes PRBallHandler，季累計）→ data/defense-seventh/2026-27/synergy-pnr.json。
+    失敗不擋發布：fetch_synergy_pnr.mjs 失敗不覆寫，沿用上次抓到的檔（檔不存在時 pnr_live 只用過去季）。"""
+    try:
+        r = run([node_exe(), 'scripts/fetch_synergy_pnr.mjs', SEASON], ROOT, TIMEOUTS['pnr'])
+    except subprocess.TimeoutExpired:
+        log.warning('fetch_synergy_pnr 逾時；擋拆沿用上次的檔')
+        return
+    if r.returncode != 0:
+        log.warning('fetch_synergy_pnr exit=%s：%s', r.returncode, (r.stderr or r.stdout).strip()[-300:])
+    else:
+        log.info('fetch_synergy_pnr：%s', ((r.stdout or '').strip().splitlines()[-1:] or [''])[0])
 
 
 def step_fetch_possessions() -> None:
@@ -562,6 +576,7 @@ def _run(args) -> int:
     step_prereg_e222()
     step_fetch_tracking()
     step_fetch_gravity()
+    step_fetch_pnr()
     step_fetch_possessions()
     data_sha = sha256_file(PLAYER_GAMES)
     pbp_count = len(list(PBP_DIR.glob('*.json'))) if PBP_DIR.exists() else 0

@@ -120,7 +120,10 @@ PATCH_NOTES = [
     # 版號 0.2.12：照 R-109 前 20 名進出 4 人、前 100 名移動 >=10 名 34 人原屬字母版，使用者 2026-11-02「直接採用」E-202 KT 臂（R-139）
     # 0.2.12b（使用者 2026-11-02「Adopt W246」，R-140，E-204）：窗口 328→246 格，係數不重擬合，併入 0.2.12 格（R-064）
     # 0.2.12c（使用者 2026-11-02「採用上線」，R-144，E-207）：tovSkill 失誤率分母由持球分鐘改觸球次數，併入 0.2.12 格（R-064）
-    (('card', 'inseason'), '0.2.12', '2026-11-02', [
+    # 版號 0.2.13（E-258，R-173，使用者 2026-11-07「做進卡片」）：加能力值 pnr＝PATCH；照 R-109 前 20 名進出 0 人、前 100 名移動 >=10 名卡片頁 3 人／新賽季頁 2 人
+    (('card', 'inseason'), '0.2.13', '2026-11-07', [
+        '加擋拆持球能力值：擋拆持球次數多、每回合得分又高的人加分（Knueppel 81 → 71 名），擋拆多但得分效率低的人略降（Alexander-Walker 66 → 78 名）。｜Knueppel/81 → 71/80.7 → 81.3；McDaniels/89 → 79/80.2 → 80.9；Ajay Mitchell/69 → 64/81.9 → 82.6；Zion/47 → 45/85.3 → 85.9；Trae Young/114 → 110/77.5 → 77.7；Brunson/34 → 33/89.2 → 89.1；Jaquez Jr./176 → 189/72.1 → 71.0；Alexander-Walker/66 → 78/82.4 → 80.9']),
+    (('card',), '0.2.12', '2026-11-02', [
         '新賽季反應加快：能力值窗口由四季改為約三季，本季比賽權重加大、舊資料更快淡出。｜Jokić/2 → 2/103.2 → 102.6；Paul George/20 → 24/92.0 → 90.3；Jimmy Butler III/21 → 20/92.0 → 92.0；Tyrese Maxey/35 → 31/88.4 → 89.4；Immanuel Quickley/57 → 87/82.9 → 79.5；Josh Hart/82 → 66/79.7 → 81.5',
         'TO 改成看持球時間與每次觸球的失誤：持球多又少丟球才高分（Reaves 386 → 30 名、Cade 471 → 71 名）；不太拿球的空間射手與長人 TO 大降（Hauser 1 → 54 名、Kornet 23 → 106 名）。｜Reaves/26 → 12/90.8 → 93.8；Cade/11 → 14/93.4 → 93.6；Brunson/27 → 30/90.7 → 89.2；Harden/159 → 143/73.7 → 75.2；Luka/4 → 3/101.7 → 101.8；Jokić/2 → 2/105.7 → 103.1；Hauser/160 → 169/73.6 → 73.1；Hardaway Jr./317 → 314/60.8 → 61.4；Kornet/62 → 71/82.5 → 80.9；Jarrett Allen/44 → 46/86.4 → 85.1',
         '新秀引力不再看幾分鐘的出手：本季沒有引力數據的人，上場越少越參考進攻影響力（Joshua Jefferson 248 → 404 名）。｜Joshua Jefferson/248 → 404/65.4 → 51.4；Ja’Kobi Gillespie/300 → 445/59.9 → 48.8；AJ Dybantsa/52 → 78/83.1 → 79.9；Dejounte Murray/78 → 98/80.0 → 78.3；Javon Small/92 → 123/78.7 → 76.4；Ivica Zubac/95 → 80/78.6 → 79.8']),
@@ -288,7 +291,7 @@ def add_season_nav(html_str, current):
 # 99 以上的尾巴整段 −2（接在 97），PR<50 不動。只改顯示：ranking.csv、OVR、模擬用值不變；off/def 要在換尺前算。
 # mid／short／help／long 不是百分位尺（≥90 只有 1～4%），不換。ft 2026-11-05（R-168）起也是百分位型（只看命中率，blend_display.py），
 # 但在 display_rows 之後才由 build_*_viewer 覆蓋，自己呼叫 display_scale，不在 RESCALE_ATTRS。
-RESCALE_ATTRS = ('threeValue', 'drive', 'foulDraw', 'gravity', 'pass', 'tovSkill', 'creation', 'rebound',
+RESCALE_ATTRS = ('threeValue', 'drive', 'foulDraw', 'gravity', 'pnr', 'pass', 'tovSkill', 'creation', 'rebound',
                  'physique', 'stamina', 'onBall', 'pressure', 'presDisplay')
 _SCALE_KNOTS = ((50, 70), (90, 88), (95, 92), (99, 97))
 
@@ -332,6 +335,8 @@ ATTR_TIPS = {
     'foulDraw': ('製造犯規', 'Foul Drawing', '<b>75%</b> 罰球量 ＋ <b>25%</b> 罰球率',
                  [('罰球量 75%', '罰球數 / 36'), ('罰球率 25%', '罰球數 ÷ 投籃出手')], ''),
     'gravity': ('引力', 'Gravity', '<b>沒拿球</b>時吸引防守貼防的程度', [], None),
+    'pnr': ('擋拆', 'Pick & Roll', '<b>擋拆持球</b>的次數與每回合得分各半',
+            [('次數 50%', '擋拆持球回合 / 36'), ('得分 50%', '每回合得分（不到 50 回合只看次數）')], ''),
     'pass': ('傳球', 'Passing', '<b>50%</b> 助攻量 ＋ <b>50%</b> 助攻率',
              [('助攻量 50%', '助攻 / 36'), ('助攻率 50%', '在場時隊友進球被他助攻的比例')], ''),
     'creation': ('自主創造', 'Shot Creation', '<b>自己創造</b>的跳投與低位出手量', [], ''),
@@ -479,6 +484,25 @@ def gravity_tip(v, raw, src, pool_raw, inpool=True, note=''):
         rows.append(('引力分數' + ('（推估）' if src in GRAVITY_IMPUTED else ''), f'{raw:.1f}', pr, rk if inpool and src not in GRAVITY_IMPUTED else None))
     foot = ([GRAVITY_IMPUTED[src]] if src in GRAVITY_IMPUTED else []) + ([] if inpool else [NO_RANK_FOOT])
     return cell_tip('引力', 'GRV', round(v), rows, d='<b>沒拿球</b>時吸引防守貼防的程度', foot=foot)
+
+
+def pnr_tip(v, poss, vol, rate, pool, inpool=True):
+    """PNR 格子提示卡（0.2.13）：擋拆持球回合／36（PR、名次）、每回合得分（收縮後；≥50 回合才排）。
+    pool＝[(vol, rate, poss)] 名次人群。沒有 Synergy 擋拆紀錄的人只寫說明。"""
+    rows, foot = [], []
+    if poss is None or poss <= 0:
+        foot.append('Synergy 沒有他的擋拆持球紀錄：只看次數（＝0）')
+    else:
+        pr, rk = pr_rank(vol, [x[0] for x in pool])
+        rows.append(('擋拆回合', f'{vol:.1f}/36（{poss:.0f} 次）', pr, rk if inpool else None))
+        if poss >= 50:
+            pr, rk = pr_rank(rate, [x[1] for x in pool if x[2] >= 50])
+            rows.append(('每回合得分', f'{rate:.2f}', pr, rk if inpool else None))
+        else:
+            foot.append('擋拆不到 50 回合：得分不計，只看次數')
+    if not inpool:
+        foot.append(NO_RANK_FOOT)
+    return cell_tip('擋拆', 'PNR', round(v), rows, d='<b>擋拆持球</b>的次數與每回合得分各半', foot=foot)
 
 
 def mpg_pool(mpg):
@@ -842,8 +866,8 @@ def apply_common(s):
 # 籃板、身高兩邊都不算（約佔 OVR 差異一成三）。OVR 還有用人層（分鐘、出賽率），所以兩分相加不等於 OVR。
 # 進攻再混進影響力（使用者 2026-11-01，同 OVR align 的比例）：T6（DARKO＋BPM）pooledPoss ≥ 5000 的人
 # 進攻＝0.75×能力值進攻＋0.25×（0.75×pooledO 減同一群 MIN ≥ 500 的平均）；不夠回合的人只用能力值。
-OD_CARD = Path(__file__).resolve().parents[1] / 'reports/card-0.2.12c/ranking.csv'  # 0.2.12c：tovSkill 失誤率分母改觸球次數，全部係數重擬合；0.2.12b：窗口 328→246 格；0.2.12：tovSkill 改看持球時間，全部係數重擬合；0.2.10j：加 gravity（無球外線引力），全部係數重擬合；0.2.10i：drive→drive_D、creation→creationJ（OFF 提示貢獻欄跟著換）
-OD_OFF = ['long', 'mid', 'short', 'ft', 'drive', 'gravity', 'foulDraw', 'tovSkill', 'pass', 'creation']   # gravity：0.2.10j（每 10 點約 +0.19 per36）
+OD_CARD = Path(__file__).resolve().parents[1] / 'reports/card-0.2.13/ranking.csv'  # 0.2.13：加 pnr（擋拆持球），全部係數重擬合；0.2.12c：tovSkill 失誤率分母改觸球次數，全部係數重擬合；0.2.12b：窗口 328→246 格；0.2.12：tovSkill 改看持球時間，全部係數重擬合；0.2.10j：加 gravity（無球外線引力），全部係數重擬合；0.2.10i：drive→drive_D、creation→creationJ（OFF 提示貢獻欄跟著換）
+OD_OFF = ['long', 'mid', 'short', 'ft', 'drive', 'gravity', 'pnr', 'foulDraw', 'tovSkill', 'pass', 'creation']   # pnr：0.2.13（E-258）；gravity：0.2.10j（每 10 點約 +0.19 per36）
 OD_DEF = ['onBall', 'help', 'pressure']
 OD_ALL = OD_OFF + OD_DEF + ['rebound', 'heightInches']
 OD_IMP_W, OD_IMP_POSS = 0.25, 5000   # 同卡片 align 的權重與門檻
@@ -859,6 +883,11 @@ def off_def(rows, key, card_path=OD_CARD):
         for r in card:
             r['gravity'] = ga[r['name']]
         rows = [dict(r, gravity=ga.get(r['name'], '')) if 'gravity' not in r else r for r in rows]
+    if card and 'pnr' not in card[0]:   # 0.2.13：卡片 ranking.csv 沒有 pnr 欄，從同資料夾 pnr-attr.csv 依姓名補（頁面列沒有 pnr 的同樣補）
+        pa = {g['name']: g['pnr'] for g in csv.DictReader((Path(card_path).parent / 'pnr-attr.csv').open(encoding='utf-8'))}
+        for r in card:
+            r['pnr'] = pa[r['name']]
+        rows = [dict(r, pnr=pa.get(r['name'], '')) if r.get('pnr', '') == '' else r for r in rows]
     coef = {}
     for ps in {r['pos'] for r in card}:
         g = [r for r in card if r['pos'] == ps]
@@ -927,7 +956,7 @@ REGROUP = [
     ("if (k === 'pressure') h += th('dbon', 'DIQ', '防守意識');", "if (k === 'help') h += th('dbon', 'DIQ', '防守意識');"),
     # 切入不放主畫面（使用者 2026-11-02「切入既然是負分 那就不要列在主畫面了」；0.2.10i 係數每 10 點 −0.03）；仍算進 OFF／OVR
     # 0.2.10j（R-134／R-135）：原本切入的位置改放引力（進攻組第一欄、製造犯規前面）
-    ("['drive', 'DRV', '切入'], ['foulDraw', 'FD', '製造犯規']", "['gravity', 'GRV', '引力'], ['foulDraw', 'FD', '製造犯規']"),
+    ("['drive', 'DRV', '切入'], ['foulDraw', 'FD', '製造犯規']", "['gravity', 'GRV', '引力'], ['pnr', 'PNR', '擋拆'], ['foulDraw', 'FD', '製造犯規']"),
 ]
 
 
@@ -935,7 +964,9 @@ def regroup_attrs(s):
     for a, b in REGROUP:
         assert s.count(a) == 1, a
         s = s.replace(a, b)
-    return s   # 0.2.10j：切入換成引力，欄數不變（0.2.10i 拿掉切入時的空列 colspan −1 一起撤掉）
+    s, n = re.subn(r'colspan="(\d+)" class="empty"', lambda m: f'colspan="{int(m.group(1)) + 1}" class="empty"', s)
+    assert n == 1
+    return s   # 0.2.10j：切入換成引力，欄數不變；0.2.13：引力右邊加擋拆，空列 colspan +1
 
 
 # 防守意識是能力值，放表格防守組 PRES 右邊（使用者 2026-10-30），不放卡片資訊列（那列桌機整列藏掉）。

@@ -3,9 +3,10 @@
 只記「目前狀態」，每次收工整份覆寫，不往下追加日期段。每條最多兩行，細節寫進 findings／experiments／rulings 或報告檔，這裡只放 ID 與路徑。UI 小改不進本檔（看 git log）。舊版全文在 `archive/`（最近一份 `handoff-2026-11-05-full.md`，含 11-05 前所有條目原文）。
 **多個 session 同時改本檔與工作樹**：覆寫前先重讀一次，只改自己負責的條目。
 
-- **更新**：2026-11-05 球隊評分 T 的 21 欄追蹤統計改本季混合（R-169、E-246）；3PT／FT 顯示欄換量準混合（R-168，未 commit）；球員卡加追蹤量格子並發布（R-166）；11-04 E-239 追蹤全套、inseason 0.2.12e（R-161～R-165）；11-03 球隊評分換 Transformer（R-160）、近期加成 b3h20（R-150）。
+- **更新**：2026-11-07 card／inseason 0.2.13 加擋拆 pnr（R-173）；2026-11-05 球隊評分 T 的 21 欄追蹤統計改本季混合（R-169、E-246）；3PT／FT 顯示欄換量準混合（R-168，未 commit）；球員卡加追蹤量格子並發布（R-166）；11-04 E-239 追蹤全套、inseason 0.2.12e（R-161～R-165）；11-03 球隊評分換 Transformer（R-160）、近期加成 b3h20（R-150）。
 
 ## 目前基準（線上）
+- **card／inseason 0.2.13**（11-07，R-173，E-258）：加能力值擋拆持球 pnr（Synergy 四季窗口含本季，量率各半、率只在 ≥50 回合者裡排）；卡片全部係數重擬合，正式卡 `reports/card-0.2.13/`；前 20 名不換人。回退 `PNR=0`（＝0.2.12e）。role-audit、G5 未做；副作用 Alexander-Walker 卡片 66→78 名。
 - **inseason 0.2.12e**（11-04，已 commit）：復出老將補卡（R-161）＋新秀起點加季前賽位移（R-162）＋防守 D 個人場次軸（R-163）＋復出老將補進用人層 hi（R-164）。未修：復出老將 gravity＝70 佔位（L-127）。回退 `DEF_AXIS=calendar`、`RV_USAGE=0`、`RETURNING_VETS=0`、`PS_START=0`。
 - **3PT／FT 顯示欄**（R-168，11-05，只改顯示、OVR 不動、未 commit／未發布）：3PT＝60% 量＋40% 率、FT＝只看命中率，PR99 以上每 SD +10 分；`scripts/blend_display.py`，兩頁已重建。
 - **追蹤量格子**（R-166，11-05）：DRV／INS／CRT／PASS／3PT 提示卡加量類追蹤列，不進分數。`scripts/tracking_cells.py`；2026-27 資料是手動快照，重抓 `node scripts/fetch_tracking_cells.mjs <季> data/tracking-cells/<季>` 後重建頁面。
@@ -16,7 +17,7 @@
 
 ## 進行中（未稽核，待派 role-audit）
 - **R-171 戰力排行混入本季實際表現**（11-07，E-253 K10）：殘差 ÷(場數+10) 加回 T 評分，`scripts/actual_blend.py`、回退 `ACTUAL_BLEND=0`；已發布（POR 14→9）。**R-172**：殘差改每天對今天的 T 重算（`today-margins.json`，避免和本季 OVR 更新重複計入，L-129）。K10 是看過前向才選，每隊滿 20 場用凍結 K10 前向複查一次（F-172）。
-- **E-255／E-258 擋拆持球新能力值**（11-07，4/5 建議採用，未稽核）：E-258 修低回合門檻（率只在 ≥50 回合者裡排、量率各半）後下季進攻 RAPM R² +0.018，五道閘全過，每 10 點 ≈ +0.13 勝（30 分鐘）；副作用 Siakam、Alexander-Walker 被低估。待使用者：要不要上卡（要定窗口、過 G2–G5）。`reports/E258-pnr-lowvol-gate/report.md`
+- **E-255／E-258 擋拆 pnr**：已上線 0.2.13（R-173）；待 role-audit 與 G5（前十長人／2K27 抽查）。`reports/E258-pnr-lowvol-gate/report.md`
 - **POR 被低估追查**（11-07）：E-254 出手結構、E-256 殘差分運氣／結構、E-257 籃板率都不採用（1/5）；只有三分命中會回落（L-130），T 沒有系統性缺口，POR 剩下差距是 7 場只採信四成（R-171）。籃板輸入 T 本來就有、POR 今年籃板率與去年一樣（L-131）。`reports/por-offense-diag/`。
 - **E-239 追蹤全套**（3/5）：單一特徵無穩健訊號；量類 42 個可當格子（已做）。待使用者：另開預註冊測定義一致子集（2024-25 起）進 OVR／Transformer；要不要每日抓追蹤（補 registry／audit）。`reports/E239-tracking-full/report.md`、F-160
 - **E-240 三分量與率拆法**（11-05，3/5 不採用）：量＋率分開放對下季進攻 RAPM R² +0.014，未過預註冊門檻（F-161）。使用者指定一次測一項；待決定下一項（建議罰球，其次中距、切入），框架可直接換項。`reports/E240-three-point-volume-rate/report.md`
