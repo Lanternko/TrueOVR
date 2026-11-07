@@ -409,7 +409,8 @@ def step_history(out_dir: Path) -> None:
     try:
         # 2026-11-08：要重算 ≥2 天（改版）時一部分分到 5090；連不上就全本機。HIST_REMOTE= 空字串可關掉
         r = run([py_exe(), '-I', '-X', 'utf8', str(HISTORY), str(out_dir)], ROOT, TIMEOUTS['history'],
-                env={'HIST_REMOTE': os.environ.get('HIST_REMOTE', 'kojiek@100.97.181.15')})
+                env={'HIST_REMOTE': os.environ.get('HIST_REMOTE', 'kojiek@100.97.181.15'),
+                     'NODE_EXE': node_exe()})   # 2026-11-08 去洩漏：補抓截至當天的季累計表（scripts/fetch_asof.mjs）
     except subprocess.TimeoutExpired:
         log.warning('ovr_history 逾時；這次不畫 OVR 折線')
         return

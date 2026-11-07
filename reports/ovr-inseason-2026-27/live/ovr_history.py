@@ -1,8 +1,17 @@
 """名單頁 OVR 折線圖的資料：用現行模型（run_c4_live_rookie）把 2026-27 資料截到每個比賽日，逐日重算 OVR。
 
 每天的 ranking.csv 版本不一（0.2.1b → 0.2.7b）、新秀起點又改過（R-096），直接串會有版本跳動，所以改成同一把尺重算。
-截斷：player-games／team-games 只留 GAME_DATE ≤ d，pbp 只留那些場，本季 stints 只留那些場；防守追蹤表是季累計抓不到逐日，
-沿用最新那份（新秀／老將 onBall、help 的過去點會用到之後的資料，只影響防守兩項）；0.2.10j 的引力（gravity.json，季累計）同樣沿用最新那份。
+截斷（2026-11-08 去洩漏）：單日重算時把 DATA26、本季 stints、season-source-2026-27 的讀取全部導到截斷資料夾（換掉 open／stat／scandir），
+資料夾裡只有 d 那天以前的東西；重算時讀到真正的本季資料夾就直接報錯。內容：
+  逐場：player-games／team-games（兩份）只留 GAME_DATE ≤ d，pbp、boxes、本季 stints 只留那些場；
+  季累計可帶日期：防守追蹤 rim／three／hustle／advanced、持球 possessions、bio 用 NBA.com DateTo＝d 抓（scripts/fetch_asof.mjs，
+    存 data/defense-seventh/2026-27-asof/<d>/，抓一次就留著）；
+  對位 matchups：季表不吃日期，改用 data/matchup-source/2026-27 逐場對位檔加總（只放模型會用的欄）；
+  Synergy 擋拆、引力：NBA.com 不吃日期，只能用「當天存下的快照」：每天 build 把當天的 synergy-pnr.json／gravity.json 存進 asof/<截止日>/，
+    歷史日用 ≤ d 最近的一份；沒有快照的日子（2026-11-08 以前）預設 HIST_UNDATED=scale：拿最新整季那份，回合數 POSS／PTS、引力 FRAMES
+    依每人「截至 d 的分鐘 ÷ 整季分鐘」縮小（量對了，效率／分數仍是整季的＝殘留洩漏，只在這兩項、只在舊日子）；
+    HIST_UNDATED=none＝當作沒有本季檔（模型的「只用過去季」，新秀會掉回先驗，到有快照那天折線會跳）。
+以前（到 2026-11-08）這些全部讀整季最新那份，歷史日的折線用到之後的比賽。
 快取：live/ovr-history-cache.json 記 version、deps、code 與每日 {playerId: ovr}；同版號、同 code、該日截斷資料 sha 相同就不重算。
 最後一天不重算，直接用當天正式 ranking.csv。
 
@@ -41,7 +50,15 @@ DATA26 = ROOT / 'data/defense-seventh' / SEASON
 STINTS = ROOT / f'reports/defense-seventh/{SEASON}/stints/stints.jsonl'
 CACHE = HERE / 'ovr-history-cache.json'
 PAST_PKL = ROOT / 'data/_inseason_build/def-obs-past.pkl'     # defense_bonus 的過去季快取：不存在時第一個單日會寫它，所以先單獨跑一天
-LIVE_DATA = (DATA26, STINTS.parent, ROOT / 'data/season-source-2026-27')   # 本季最新資料：不進快取鍵（見檔頭）
+SEASON_SRC = ROOT / f'data/season-source-{SEASON}'
+LIVE_DATA = (DATA26, STINTS.parent, SEASON_SRC)   # 本季最新資料：單日重算時整個導到截斷資料夾（見檔頭）
+ASOF = ROOT / 'data/defense-seventh' / f'{SEASON}-asof'          # <日期>/ 截至那天的季累計表
+MATCHUP_SRC = ROOT / 'data/matchup-source' / SEASON              # 逐場對位 <gameId>.json
+ASOF_FETCH = ('tracking/rim.json', 'tracking/three.json', 'tracking/hustle.json', 'tracking/advanced.json', 'possessions.json', 'bio.json')
+SNAPSHOTS = ('synergy-pnr.json', 'gravity.json')                 # 不吃日期，只能用每天存下的快照
+UNDATED = os.environ.get('HIST_UNDATED', 'scale')                # 沒快照的日子：scale＝整季檔依分鐘比例縮小；none＝當作沒有
+STATIC = ('birthdates.json',)
+MU_HEADERS = ['SEASON_ID', 'OFF_PLAYER_ID', 'DEF_PLAYER_ID', 'GP', 'PARTIAL_POSS', 'MATCHUP_FGA', 'MATCHUP_TOV']
 ENV_RE = re.compile(r"""(?:environ\.get|getenv)\(\s*['"]([A-Za-z0-9_]+)['"]""")
 CREATE_NO_WINDOW = getattr(subprocess, 'CREATE_NO_WINDOW', 0)
 
@@ -65,14 +82,18 @@ def one(data_dir: Path, out_dir: Path):
         w = any(c in mode for c in 'wax+') if isinstance(mode, str) else bool(isinstance(flags, int) and flags & (os.O_WRONLY | os.O_RDWR))
         (writes if w else reads).add(os.path.abspath(os.fsdecode(args[0])))
     sys.addaudithook(hook)
+    _redirect(data_dir)
     sys.path.insert(0, str(HERE))
     import run_c4_live_rookie as RK
-    RK.DB.CUR_STINTS = data_dir / 'stints.jsonl'
+    RK.DB.CUR_STINTS = data_dir / '_stints' / 'stints.jsonl'
     RK.DEF_L_LIVE = out_dir / 'def-L-live.csv'   # 不蓋掉正式那份（名單頁 DIQ 讀它）
     ns = RK.load_ns()
     ns['DATA26'] = data_dir
     sys.argv = [sys.argv[0], str(out_dir)]
     rc = ns['main']()
+    leak = sorted(f for f in reads if any(_under(Path(f), b) for b in LIVE_DATA))
+    if leak:
+        raise RuntimeError(f'歷史日讀到整季資料（沒導到截斷資料夾）：{leak[:5]}')
     files = reads - writes
     files |= {m.__file__ for m in list(sys.modules.values()) if isinstance(getattr(m, '__file__', None), str)}
     deps, live = set(), set()
@@ -87,6 +108,46 @@ def one(data_dir: Path, out_dir: Path):
     (out_dir / 'deps.json').write_text(json.dumps(sorted(deps), ensure_ascii=False), encoding='utf-8')
     (out_dir / 'live-deps.json').write_text(json.dumps(sorted(live), ensure_ascii=False), encoding='utf-8')   # 遠端同步用（不進快取鍵）
     return rc
+
+
+def _redirect(data_dir: Path):
+    """把 LIVE_DATA 底下的路徑換成截斷資料夾裡的同名路徑（open、stat、scandir、listdir；Windows 不分大小寫）。
+    截斷資料夾沒有的檔＝不存在（Synergy／引力沒快照的日子就是這樣）。"""
+    import builtins
+    import glob
+    import io
+    data_dir = Path(data_dir).resolve()
+    pairs = [(os.path.normcase(str(DATA26)), str(data_dir)), (os.path.normcase(str(STINTS.parent)), str(data_dir / '_stints')),
+             (os.path.normcase(str(SEASON_SRC)), str(data_dir / '_ss'))]
+
+    def remap(p):
+        if isinstance(p, int):
+            return p
+        try:
+            s = os.fspath(p)
+        except TypeError:
+            return p
+        if isinstance(s, bytes):
+            return p
+        a = os.path.abspath(s)
+        n = os.path.normcase(a)
+        for real, mir in pairs:
+            if n == real or n.startswith(real + os.sep):
+                return mir + a[len(real):]
+        return p
+
+    def wrap(f):
+        def g(path, *a, **k):
+            return f(remap(path), *a, **k)
+        return g
+    builtins.open = io.open = wrap(io.open)
+    for name in ('stat', 'lstat', 'scandir', 'listdir'):
+        setattr(os, name, wrap(getattr(os, name)))
+    sg = getattr(glob, '_StringGlobber', None)   # 3.13 Path.glob 在類別建立時就抓了 os.scandir／lexists
+    if sg is not None:
+        for name in ('scandir', 'lexists'):
+            if name in sg.__dict__:
+                setattr(sg, name, staticmethod(wrap(sg.__dict__[name].__func__)))
 
 
 def day_main(day: str, work: Path):
@@ -158,9 +219,13 @@ def remote_sync(files) -> int:
 
 def remote_files(deps, live) -> list:
     """遠端鏡像要有的檔：快取鍵 deps＋本季最新資料（live）＋truncate 的輸入。"""
-    src = [f'{(DATA26 / n).relative_to(ROOT).as_posix()}' for n in ('player-games.json', 'team-games.json', 'bio.json')]
-    src += [p.relative_to(ROOT).as_posix() for p in sorted((DATA26 / 'pbp').glob('*.json'))]
-    src.append(STINTS.relative_to(ROOT).as_posix())
+    rel = lambda p: p.relative_to(ROOT).as_posix()
+    src = [rel(DATA26 / n) for n in ('player-games.json', 'team-games.json') + STATIC] + [rel(SEASON_SRC / 'player-games.json')]
+    for sub in ('pbp', 'boxes'):
+        src += [rel(p) for p in sorted((DATA26 / sub).glob('*.json'))]
+    src += [rel(p) for p in sorted(MATCHUP_SRC.glob('00*.json'))]
+    src += [rel(p) for p in sorted(ASOF.rglob('*.json'))]
+    src.append(rel(STINTS))
     return sorted(set(deps) | set(live) | set(src) | {Path(__file__).resolve().relative_to(ROOT).as_posix()})
 
 
@@ -184,17 +249,48 @@ def _src():
     if not _SRC:
         for name in ('player-games.json', 'team-games.json'):
             _SRC[name] = (DATA26 / name).read_text(encoding='utf-8')
-        _SRC['pbp'] = {p.stem: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((DATA26 / 'pbp').glob('*.json'))}
+        _SRC['ss/player-games.json'] = (SEASON_SRC / 'player-games.json').read_text(encoding='utf-8')
+        for sub in ('pbp', 'boxes'):
+            _SRC[sub] = {p.stem: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((DATA26 / sub).glob('*.json'))}
+        _SRC['mu'] = {}
+        for p in sorted(MATCHUP_SRC.glob('00*.json')):
+            _SRC['mu'][p.stem] = [(m['off'], m['def'], m['partialPossessions'] or 0, m['matchupFieldGoalsAttempted'] or 0, m['matchupTurnovers'] or 0)
+                                  for m in json.loads(p.read_text(encoding='utf-8')).get('matchups') or ()]
         _SRC['stints'] = [(json.loads(line)['id'], line) for line in STINTS.open(encoding='utf-8')]
     return _SRC
 
 
+class NoAsof(Exception):
+    """這天截至當天的季累計表還沒抓到（fetch_asof 失敗）。"""
+
+
+def _file_sha(p: Path) -> str:
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def snapshot_for(day: str, name: str):
+    """≤ day 最近一天存下的 Synergy／引力快照；沒有＝None。"""
+    best = None
+    for d in (sorted(x.name for x in ASOF.iterdir() if x.is_dir()) if ASOF.exists() else ()):
+        if d <= day and (ASOF / d / name).exists():
+            best = ASOF / d / name
+    return best
+
+
+def _link(p: Path, q: Path):
+    q.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        os.link(p, q)
+    except OSError:
+        shutil.copy2(p, q)
+
+
 def truncate(day: str, dst: Path | None = None) -> str:
-    """把 DATA26 截到 GAME_DATE ≤ day，回傳截斷後內容的 sha256（快取鍵）；給 dst 才寫檔（pbp 用硬連結，不能連結才複製）。"""
+    """把本季資料截到 GAME_DATE ≤ day（見檔頭），回傳截斷後內容的 sha256（快取鍵）；給 dst 才寫檔（大檔用硬連結，不能連結才複製）。"""
     src = _src()
     h = hashlib.sha256()
     games, docs = set(), {}
-    for name in ('player-games.json', 'team-games.json'):
+    for name in ('player-games.json', 'team-games.json', 'ss/player-games.json'):
         doc = json.loads(src[name])
         rs = doc['data']['resultSets'][0]
         i, j = rs['headers'].index('GAME_DATE'), rs['headers'].index('GAME_ID')
@@ -202,25 +298,153 @@ def truncate(day: str, dst: Path | None = None) -> str:
         games |= {r[j] for r in rs['rowSet']}
         h.update(json.dumps(rs['rowSet']).encode('utf-8'))   # 只雜湊列（fetchedAt 每次抓都變）
         docs[name] = doc
-    pbp = [g for g in sorted(games) if g in src['pbp']]
-    for g in pbp:
-        h.update(f'{g}:{src["pbp"][g]}\n'.encode('utf-8'))
+    per_game = {}
+    for sub in ('pbp', 'boxes'):
+        per_game[sub] = [g for g in sorted(games) if g in src[sub]]
+        for g in per_game[sub]:
+            h.update(f'{sub}/{g}:{src[sub][g]}\n'.encode('utf-8'))
     lines = [line for gid, line in src['stints'] if gid in games]
     for line in lines:
         h.update(line.encode('utf-8'))
+    pair = {}                                   # 對位：逐場加總 → 季表格式
+    for g in sorted(games):
+        for o, d_, pp, fga, tov in src['mu'].get(g, ()):
+            q = pair.setdefault((o, d_), [0, 0.0, 0.0, 0.0])
+            q[0] += 1
+            q[1] += pp
+            q[2] += fga
+            q[3] += tov
+    sid = '2' + SEASON[:4]
+    mu_rows = [[sid, o, d_, n, round(pp, 6), fga, tov] for (o, d_), (n, pp, fga, tov) in sorted(pair.items())]
+    h.update(json.dumps(mu_rows).encode('utf-8'))
+    asof = []
+    for name in ASOF_FETCH:
+        p = ASOF / day / name
+        if not p.exists():
+            raise NoAsof(f'{day} 缺 {p.relative_to(ROOT).as_posix()}')
+        asof.append((name, p))
+    scaled = {}
+    for name in SNAPSHOTS:
+        p = snapshot_for(day, name)
+        if p is not None:
+            asof.append((name, p))
+        elif UNDATED == 'scale' and (DATA26 / name).exists():
+            scaled[name] = _scale_undated(name, docs['player-games.json'])
+            h.update(f'{name}:scaled:{hashlib.sha256(scaled[name].encode("utf-8")).hexdigest()}\n'.encode('utf-8'))
+    asof += [(name, DATA26 / name) for name in STATIC]
+    for name, p in asof:
+        h.update(f'{name}:{_file_sha(p)}\n'.encode('utf-8'))
     if dst is not None:
-        (dst / 'pbp').mkdir(parents=True, exist_ok=True)
+        dst.mkdir(parents=True, exist_ok=True)
         for name, doc in docs.items():
-            (dst / name).write_text(json.dumps(doc, ensure_ascii=False), encoding='utf-8')
-        shutil.copy2(DATA26 / 'bio.json', dst / 'bio.json')
-        for g in pbp:
-            p, q = DATA26 / 'pbp' / f'{g}.json', dst / 'pbp' / f'{g}.json'
-            try:
-                os.link(p, q)
-            except OSError:
-                shutil.copy2(p, q)
-        (dst / 'stints.jsonl').write_text(''.join(lines), encoding='utf-8')
+            q = dst / name.replace('ss/', '_ss/')
+            q.parent.mkdir(parents=True, exist_ok=True)
+            q.write_text(json.dumps(doc, ensure_ascii=False), encoding='utf-8')
+        for sub, gs in per_game.items():
+            (dst / sub).mkdir(parents=True, exist_ok=True)
+            for g in gs:
+                _link(DATA26 / sub / f'{g}.json', dst / sub / f'{g}.json')
+        (dst / '_stints').mkdir(parents=True, exist_ok=True)
+        (dst / '_stints' / 'stints.jsonl').write_text(''.join(lines), encoding='utf-8')
+        for name, p in asof:
+            _link(p, dst / name)
+        for name, txt in scaled.items():
+            (dst / name).write_text(txt, encoding='utf-8')
+        (dst / 'tracking').mkdir(parents=True, exist_ok=True)
+        (dst / 'tracking' / 'matchups.json').write_text(json.dumps(
+            {'url': None, 'season': SEASON, 'note': f'ovr_history：data/matchup-source 逐場加總到 {day}',
+             'data': {'resultSets': [{'name': 'SeasonMatchups', 'headers': MU_HEADERS, 'rowSet': mu_rows}]}}), encoding='utf-8')
     return h.hexdigest()
+
+
+def _minutes(doc) -> dict:
+    rs = doc['data']['resultSets'][0]
+    i, j = rs['headers'].index('PLAYER_ID'), rs['headers'].index('MIN')
+    out = {}
+    for r in rs['rowSet']:
+        v = r[j]
+        if isinstance(v, str) and ':' in v:
+            a, b = v.split(':')
+            v = int(a) + int(b) / 60.0
+        out[int(r[i])] = out.get(int(r[i]), 0.0) + float(v or 0)
+    return out
+
+
+def _scale_undated(name: str, pg_doc) -> str:
+    """沒快照的日子（HIST_UNDATED=scale）：最新整季 Synergy／引力，量類欄依每人截至 d 的分鐘比例縮小；那天前沒上場的人拿掉。"""
+    full = _src().setdefault('min_full', _minutes(json.loads(_src()['player-games.json'])))
+    part = _minutes(pg_doc)
+    share = {p: min(1.0, part.get(p, 0.0) / m) for p, m in full.items() if m > 0}
+    d = json.loads((DATA26 / name).read_text(encoding='utf-8'))
+    if name == 'gravity.json':
+        rows = []
+        for r in d.get('leaders', []):
+            f = share.get(int(r['PLAYERID']), 0.0)
+            if f > 0:
+                rows.append(dict(r, FRAMES=float(r['FRAMES']) * f))
+        d['leaders'] = rows
+    else:
+        rs = d['resultSets'][0] if isinstance(d['resultSets'], list) else d['resultSets']
+        H = rs['headers']
+        ip, iP, it = H.index('PLAYER_ID'), H.index('POSS'), H.index('PTS')
+        rows = []
+        for r in rs['rowSet']:
+            f = share.get(int(r[ip]), 0.0)
+            if f > 0:
+                r = list(r)
+                r[iP] = float(r[iP]) * f
+                r[it] = float(r[it]) * f
+                rows.append(r)
+        rs['rowSet'] = rows
+    d['ovrHistoryNote'] = 'HIST_UNDATED=scale：整季檔依截至當天分鐘比例縮小'
+    return json.dumps(d, ensure_ascii=False, sort_keys=True)
+
+
+def ensure_asof(days) -> list:
+    """缺截至當天季累計表的日子用 scripts/fetch_asof.mjs 補抓（3 個同時）；回傳抓不到的日子。"""
+    need = [d for d in days if not all((ASOF / d / n).exists() for n in ASOF_FETCH)]
+    if not need:
+        return []
+    node = os.environ.get('NODE_EXE') or shutil.which('node') or r'C:\Program Files\nodejs\node.exe'
+    bad, lock = [], threading.Lock()
+    q = queue.Queue()
+    for d in need:
+        q.put(d)
+
+    def w():
+        while True:
+            try:
+                d = q.get_nowait()
+            except queue.Empty:
+                return
+            try:
+                r = subprocess.run([node, str(ROOT / 'scripts/fetch_asof.mjs'), SEASON, d, str(ASOF / d)], cwd=str(ROOT), capture_output=True,
+                                   text=True, encoding='utf-8', errors='replace', creationflags=CREATE_NO_WINDOW, stdin=subprocess.DEVNULL,
+                                   timeout=600)
+                ok, msg = r.returncode == 0, (r.stdout or r.stderr).strip()[-300:]
+            except (OSError, subprocess.TimeoutExpired) as e:
+                ok, msg = False, str(e)
+            if not ok:
+                with lock:
+                    bad.append(d)
+                print(f'{d} 截至當天的季累計表抓不到：{msg}', file=sys.stderr, flush=True)
+    t = time.time()
+    ths = [threading.Thread(target=w) for _ in range(3)]
+    for th in ths:
+        th.start()
+    for th in ths:
+        th.join()
+    print(f'補抓截至當天季累計表 {len(need) - len(bad)}/{len(need)} 天（{time.time() - t:.0f}s）', file=sys.stderr, flush=True)
+    return bad
+
+
+def archive_snapshots(cutoff: str):
+    """今天的 Synergy 擋拆／引力季累計（不吃日期）存一份到 asof/<截止日>/，之後的歷史日才有當天的版本。"""
+    for name in SNAPSHOTS:
+        p, q = DATA26 / name, ASOF / cutoff / name
+        if p.exists() and not q.exists():
+            q.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(p, q)
 
 
 def read_ovr(path: Path) -> dict:
@@ -270,6 +494,10 @@ def build(today_dir: Path):
     py = Path(sys.executable)
     py = py.with_name('python.exe') if py.name.lower() == 'pythonw.exe' else py
     todo_days = days[:-1] if days[-1] == cutoff else days
+    if cutoff == days[-1]:   # 本季資料夾的快照＝截止日當天的；拿舊的今日輸出夾重跑時不能存（會存到錯的日期）
+        archive_snapshots(cutoff)
+    skipped = set(ensure_asof(todo_days))
+    todo_days = [d for d in todo_days if d not in skipped]   # 抓不到的日子這次不畫（下次再補）
     workers = max(1, int(os.environ.get('HIST_WORKERS') or max(1, (os.cpu_count() or 2) // 2)))
     env = dict(os.environ)
     if workers > 1:   # 每個單日的 BLAS 執行緒數，避免 workers×核心數 互搶
