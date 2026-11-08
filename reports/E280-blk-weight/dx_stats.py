@@ -19,13 +19,14 @@ def _table(s):
 
 
 _PC = {}
+_SRC = {'p_': 'E283-pressure-split/pres-comps.json', 'f_': 'E284-onoff-fouls/foul-comps.json'}   # E-283 壓迫分量、E-284 有球／無球犯規
 
 
-def _pcomps():
-    if not _PC:
+def _pcomps(pre='p_'):
+    if pre not in _PC:
         import json
-        _PC.update(json.loads((Path(__file__).resolve().parents[1] / 'E283-pressure-split' / 'pres-comps.json').read_text(encoding='utf-8'))['vals'])
-    return _PC
+        _PC[pre] = json.loads((Path(__file__).resolve().parents[1] / _SRC[pre]).read_text(encoding='utf-8'))['vals']
+    return _PC[pre]
 
 
 def lookup(names, season, keys, window=False):
@@ -34,8 +35,8 @@ def lookup(names, season, keys, window=False):
     tabs = [_table(s) for s in ss]
     out, miss = {}, {}
     for k in keys:
-        if k.startswith('p_'):   # E-283 壓迫分量：已是四季窗口收縮值，按 nm(名字) 查 pres-comps.json
-            pc = _pcomps()[season]
+        if k[:2] in _SRC:   # 已是四季窗口收縮值，按 nm(名字) 查表
+            pc = _pcomps(k[:2])[season]
             v = np.array([pc[nm(n)][k] if nm(n) in pc else np.nan for n in names], float)
             miss[k] = int(np.isnan(v).sum()); v[np.isnan(v)] = np.nanmean(v); out[k] = v
             continue
