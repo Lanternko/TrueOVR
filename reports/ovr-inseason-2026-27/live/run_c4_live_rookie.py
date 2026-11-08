@@ -446,7 +446,7 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
         ch = chain_rookie(g, pw, anc, r_repl, dict(cur, pid=pid), rk['pos'], gp, dl, coef, tb['d'] if tb else 0.0)
         cur.update(pred=ch['pred'], g=ch['g'], ovr=ch['ovr'])
         row = {k: '' for k in head}
-        row.update({'ovr': g['r1'](cur['ovr']), 'name': rk['name'], 'pos': rk['pos'], 'MIN': 0,
+        row.update({'ovr': g['r1'](cur['ovr']), 'name': rk['name'], 'pos': rk['pos'], 'MINprior': 0,
                     'predictedPer36': round(ch['pred'], 3), 'defenseBonus': round(ch['bonus'], 3), 'align': 0.0,
                     'pred0': round(cur['pred0'], 3), 'playerId': pid, 'N': gp, 'team': team.get(pid, rk['team']),
                     'MIN26': round(mins, 1), 'lastOVR': g['r1'](base['ovr']),

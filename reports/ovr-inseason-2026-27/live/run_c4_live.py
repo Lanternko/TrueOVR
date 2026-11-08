@@ -1190,7 +1190,7 @@ def main():
             continue
         p = res[pid]
         row = {'ovr': r1(p['ovr']), 'name': pc['name'], 'pos': pc['pos'],
-               'MIN': round(float(pc['observed']['MIN'])), 'predictedPer36': round(p.get('predP', p['pred']), 3),
+               'MINprior': round(float(pc['observed']['MIN'])), 'predictedPer36': round(p.get('predP', p['pred']), 3),
                'simulatedPer36': '', 'defenseBonus': round(p['bonus'], 3), 'align': round(p['align'], 3),
                'pred0': round(p['pred0'], 3), 'pr': round(p['pr'], 2)}
         for a in ATTRS:
@@ -1214,7 +1214,7 @@ def main():
     rows.sort(key=lambda r: -r['_ovr'])
     for i, r in enumerate(rows, 1):
         r['rank'] = i
-    head = (['rank', 'ovr', 'name', 'pos', 'MIN', 'predictedPer36', 'simulatedPer36', 'defenseBonus', 'align',
+    head = (['rank', 'ovr', 'name', 'pos', 'MINprior', 'predictedPer36', 'simulatedPer36', 'defenseBonus', 'align',
              'pred0', 'pr'] + list(ATTRS) + ['playerId', 'N', 'team', 'MIN26', 'lastOVR', 'dOVR', 'formalOVR',
              'threeValue', 'fg3a26', 'fg3m26', 'fg3Pct26'])
     head = head + ['MPG0', 'MPGhat', 'g', 'ovrPer36', 'MPGwin', 'wMPG', 'presDisplay', 'foulDisc', 'predNew']

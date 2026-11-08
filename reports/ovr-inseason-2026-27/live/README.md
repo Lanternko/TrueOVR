@@ -14,6 +14,8 @@
 3. `python -I reports/ovr-inseason-2026-27/live/run_c4_live.py [資料夾名]` → `live/<資料截止日>/{ranking.csv,no-prior.csv,meta.json,README.md}`。
 4. `python -I scripts/build_inseason_viewer.py [日期]` → `live/<日期>/roster-viewer.html`。
 
+**ranking.csv 出場欄位（L-136）**：`MINprior`＝先驗卡那季（2025-26）的分鐘（舊日期資料夾的同一欄叫 `MIN`，值相同）；`N`＝本季已打場數；`MIN26`＝本季分鐘（頁面 MPG＝MIN26／N）。正式卡 `reports/card-*/ranking.csv` 的 `MIN` 是卡片季分鐘，名稱不變。
+
 規則：S* 的 δ²、rel 只用嚴格早於 S* 的起點（Y1..Y6、D1..D3；short／creation 不含 Y 起點，同 v5）；每人 f = min(自己的 GP/82, 1)；沒有先驗卡的人不給 OVR；2026-27 結果不回頭調任何參數（L-026）。
 
 ## 降級的資料層（C4 讀不到或讀到不完整的）
