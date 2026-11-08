@@ -420,6 +420,46 @@ def md(snap):
     return '\n'.join(L) + '\n'
 
 
+def team_model():
+    """現行球隊評分（陣容 Transformer T，R-160）對舊模擬引擎 M0：去年整季回測、本季開季回測、本季凍結前向。"""
+    out = []
+    def add(key, period, metric, t, m0, n, src, note=''):
+        out.append({'key': key, 'period': period, 'metric': metric, 'T': None if t is None else round(float(t), 4),
+                    'M0': None if m0 is None else round(float(m0), 4), 'n': n, 'source': src, 'note': note})
+    p = ROOT / 'reports/E228-transformer-team-rating/results/test-2526-same.json'
+    if p.exists():
+        d = json.loads(p.read_text(encoding='utf-8'))
+        note = '兩邊都用 2025-26 同季資訊（E-228 同資訊重比）'
+        add('2526-wins', '2025-26 整季回測', '每隊勝場誤差（場）', d['win_mae']['T'], d['win_mae']['M0'], d['n'], str(p.relative_to(ROOT)), note)
+        add('2526-brier', '2025-26 整季回測', '每場 Brier', d['brier']['T'], d['brier']['M0'], d['n'], str(p.relative_to(ROOT)), note)
+    p = ROOT / 'reports/E229b-backtest-2026-27/work/eval.json'
+    if p.exists():
+        d = json.loads(p.read_text(encoding='utf-8'))['models']
+        n = json.loads(p.read_text(encoding='utf-8'))['n']
+        add('2627bt-brier', '2026-27 開季回測（到 11-03）', '每場 Brier', d['T']['brier']['v'], d['M0']['brier']['v'], n, str(p.relative_to(ROOT)))
+        add('2627bt-acc', '2026-27 開季回測（到 11-03）', '猜中勝隊比例', d['T']['acc']['v'], d['M0']['acc']['v'], n, str(p.relative_to(ROOT)))
+    fdir = ROOT / 'reports/E229-transformer-vs-m0-forward'
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location('e229_eval_forward', fdir / 'eval_forward.py')
+        ef = importlib.util.module_from_spec(spec); spec.loader.exec_module(ef)
+        recs = ef.load_records(str(fdir / 'log'), ef.parse_t((fdir / 'FREEZE.txt').read_text(encoding='utf-8').splitlines()[0].strip()))
+        res = ef.load_results(str(ROOT / 'data/defense-seventh/2026-27/league.json'))
+        ids = sorted(g for g in recs if g in res)
+        if ids:
+            y = [res[g] for g in ids]
+            def br(k): return sum((recs[g][k] - yy) ** 2 for g, yy in zip(ids, y)) / len(ids)
+            def acc(k): return sum((recs[g][k] > 0.5) == (yy == 1.0) for g, yy in zip(ids, y)) / len(ids)
+            last = max(recs[g]['date'] for g in ids)
+            per = f'2026-27 凍結前向（11-04～{last[5:]}）'
+            note = '賽前凍結、完全沒偷看；預註冊滿 400 場才正式比'
+            add('2627fw-brier', per, '每場 Brier', br('pT'), br('pM0'), len(ids), 'reports/E229-transformer-vs-m0-forward/log', note)
+            add('2627fw-acc', per, '猜中勝隊比例', acc('pT'), acc('pM0'), len(ids), 'reports/E229-transformer-vs-m0-forward/log', note)
+    except Exception as e:  # 前向記錄壞掉不擋審查表
+        print(f'team_model：前向記錄略過（{e}）', file=sys.stderr)
+    return out
+
+
 def main():
     rapm = rows('reports/impact-rapm/rapm.csv')
     by_id = {r['playerId']: r for r in rapm}; by_name = {r['name']: r for r in rapm}
@@ -430,8 +470,10 @@ def main():
     tcard, tcard_teams = team_card(backfill)
     snap = {'generatedAt': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'simVersion': LATEST_SIM, 'evalPoss': EVAL_POSS,
             'rapmPool': pool, 'kpi': kpi(holdout, personal_rows), 'teamNote': TEAM_NOTE, 'personal': personal_rows, 'team': team(),
-            'top20': t20, 'v55fix': v55fix(by_name), 'trend': trend(personal_rows, backfill, holdout), 'teamCard': tcard, 'teamCardTeams': tcard_teams}
+            'top20': t20, 'v55fix': v55fix(by_name), 'trend': trend(personal_rows, backfill, holdout), 'teamCard': tcard, 'teamCardTeams': tcard_teams, 'teamModel': team_model()}
     PAYLOAD.mkdir(exist_ok=True)
+    for d in (OUT, PAYLOAD):
+        (d / 'team_model.json').write_text(json.dumps(snap['teamModel'], ensure_ascii=False, indent=1), encoding='utf-8')
     for k in ('personal', 'team', 'top20', 'v55fix', 'trend'):
         for d in (OUT, PAYLOAD):
             (d / f'{k}.json').write_text(json.dumps(snap[k], ensure_ascii=False, indent=1), encoding='utf-8')

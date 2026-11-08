@@ -1,0 +1,62 @@
+[
+ {
+  "key": "2526-wins",
+  "period": "2025-26 整季回測",
+  "metric": "每隊勝場誤差（場）",
+  "T": 2.9336,
+  "M0": 3.8126,
+  "n": 1230,
+  "source": "reports\\E228-transformer-team-rating\\results\\test-2526-same.json",
+  "note": "兩邊都用 2025-26 同季資訊（E-228 同資訊重比）"
+ },
+ {
+  "key": "2526-brier",
+  "period": "2025-26 整季回測",
+  "metric": "每場 Brier",
+  "T": 0.1883,
+  "M0": 0.2024,
+  "n": 1230,
+  "source": "reports\\E228-transformer-team-rating\\results\\test-2526-same.json",
+  "note": "兩邊都用 2025-26 同季資訊（E-228 同資訊重比）"
+ },
+ {
+  "key": "2627bt-brier",
+  "period": "2026-27 開季回測（到 11-03）",
+  "metric": "每場 Brier",
+  "T": 0.1966,
+  "M0": 0.2106,
+  "n": 107,
+  "source": "reports\\E229b-backtest-2026-27\\work\\eval.json",
+  "note": ""
+ },
+ {
+  "key": "2627bt-acc",
+  "period": "2026-27 開季回測（到 11-03）",
+  "metric": "猜中勝隊比例",
+  "T": 0.6822,
+  "M0": 0.7196,
+  "n": 107,
+  "source": "reports\\E229b-backtest-2026-27\\work\\eval.json",
+  "note": ""
+ },
+ {
+  "key": "2627fw-brier",
+  "period": "2026-27 凍結前向（11-04～11-06）",
+  "metric": "每場 Brier",
+  "T": 0.1767,
+  "M0": 0.1857,
+  "n": 25,
+  "source": "reports/E229-transformer-vs-m0-forward/log",
+  "note": "賽前凍結、完全沒偷看；預註冊滿 400 場才正式比"
+ },
+ {
+  "key": "2627fw-acc",
+  "period": "2026-27 凍結前向（11-04～11-06）",
+  "metric": "猜中勝隊比例",
+  "T": 0.68,
+  "M0": 0.72,
+  "n": 25,
+  "source": "reports/E229-transformer-vs-m0-forward/log",
+  "note": "賽前凍結、完全沒偷看；預註冊滿 400 場才正式比"
+ }
+]
