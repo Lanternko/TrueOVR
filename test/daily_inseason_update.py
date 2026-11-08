@@ -182,7 +182,7 @@ class Shell(unittest.TestCase):
     def test_shell_publish(self):
         self.assertEqual(D.main(['--shell']), 0)
         files, msg = self.calls[0]
-        self.assertEqual(sorted(files), ['2025-26.html', '404.html', 'games/index.html', 'index.html', 'rank/index.html',
+        self.assertEqual(sorted(files), ['2025-26.html', '404.html', 'games/index.html', 'index.html', 'og-image.png', 'rank/index.html',
                                          'teams-data.json', 'teams.html'])
         self.assertTrue(msg.startswith('inseason 0.2.0a 頁面更新（數據至 2026-10-27'))
         st = D.load_json(D.STATE_PATH)
@@ -194,7 +194,7 @@ class Shell(unittest.TestCase):
     def test_shell_teams_failure_does_not_block_other_pages(self):
         D.step_team_ratings = lambda *a, **k: None          # 球隊評分失敗：step 回 None，原頁照常發布
         self.assertEqual(D.main(['--shell']), 0)
-        self.assertEqual(sorted(self.calls[0][0]), ['2025-26.html', '404.html', 'games/index.html', 'index.html', 'rank/index.html'])
+        self.assertEqual(sorted(self.calls[0][0]), ['2025-26.html', '404.html', 'games/index.html', 'index.html', 'og-image.png', 'rank/index.html'])
 
     def test_step_team_ratings_swallows_errors(self):
         D.step_team_ratings = self.saved['step_team_ratings']
@@ -214,6 +214,113 @@ class Shell(unittest.TestCase):
         D.save_json(D.STATE_PATH, {})
         self.assertEqual(D.main(['--shell']), 1)
         self.assertEqual(self.calls, [])
+
+
+class GamesOnly(unittest.TestCase):
+    """--games-only 與完整流程的賽程提早發布：只推賽程檔、不跑 OVR 步驟、失敗不擋、鎖被佔就略過。全部 mock，不真的 push。"""
+    NAMES = ['step_fetch_games', 'step_fetch_matchups', 'step_fetch_live', 'step_games_data', 'publish_html', 'step_fetch_inseason', 'step_build_stints',
+             'step_prereg_e151', 'step_prereg_e222', 'step_fetch_tracking', 'step_fetch_gravity', 'step_fetch_pnr', 'step_fetch_possessions',
+             'probe_base_version', 'step_c4', 'step_history', 'step_viewer', 'step_card_viewer', 'step_team_ratings']
+
+    class Stop(Exception):
+        pass
+
+    def setUp(self):
+        self.t = tempfile.TemporaryDirectory()
+        t = Path(self.t.name)
+        self.saved = {k: getattr(D, k) for k in self.NAMES + ['LIVE', 'STATE_PATH', 'BUILD_ROOT', 'LOG_PATH', 'LOCK_PATH', 'PLAYER_GAMES']}
+        D.LIVE, D.STATE_PATH, D.BUILD_ROOT = t / 'live', t / 'live/publish_state.json', t / 'build'
+        D.LOG_PATH, D.LOCK_PATH = t / 'daily.log', t / 'daily.lock'
+        D.PLAYER_GAMES = t / 'pg.json'
+        D.PLAYER_GAMES.write_text('x', encoding='utf-8')
+        self.state = {'base': 'inseason 0.2.0', 'displayVersion': 'inseason 0.2.0', 'dataSha256': 'h1', 'pbpCount': 5, 'dataCutoff': '2026-10-27', 'ghPagesCommit': 'old'}
+        D.save_json(D.STATE_PATH, self.state)
+        self.order, self.pushes = [], []
+        for n in self.NAMES:
+            setattr(D, n, self.rec(n))
+
+        def games_data(out):
+            f = out / 'games-data.json'
+            f.write_text('{}', encoding='utf-8')
+            self.order.append('step_games_data')
+            return {'games-data.json': f}
+        D.step_games_data = games_data
+        D.publish_html = lambda repo, files, msg, **kw: self.order.append('publish_html') or self.pushes.append((sorted(files), msg, kw)) or 'sha1'
+
+        def stop(*a, **k):
+            self.order.append('step_c4')
+            raise self.Stop()
+        D.step_c4 = stop
+        D.probe_base_version = lambda: 'other'
+
+    def rec(self, name):
+        return lambda *a, **k: self.order.append(name)
+
+    def tearDown(self):
+        for h in D.log.handlers[:]:
+            h.close()
+            D.log.removeHandler(h)
+        for k, v in self.saved.items():
+            setattr(D, k, v)
+        self.t.cleanup()
+
+    def test_games_only_pushes_only_games_files(self):
+        self.assertEqual(D.main(['--games-only']), 0)
+        self.assertEqual(self.order, ['step_fetch_games', 'step_fetch_matchups', 'step_fetch_live', 'step_games_data', 'publish_html'])
+        files, msg, _ = self.pushes[0]
+        self.assertEqual(files, ['games-data.json'])
+        self.assertTrue(msg.startswith('games 賽程 更新 20'))
+        self.assertTrue(msg.rstrip().endswith(D.CO_AUTHOR))
+        st = D.load_json(D.STATE_PATH)
+        self.assertIn('lastGamesPublished', st)
+        self.assertEqual({k: v for k, v in st.items() if k != 'lastGamesPublished'}, self.state)    # OVR 欄位不動
+
+    def test_games_only_dry_run_builds_but_does_not_push(self):
+        self.assertEqual(D.main(['--games-only', '--dry-run']), 0)
+        self.assertEqual(self.pushes, [])
+        self.assertEqual(D.load_json(D.STATE_PATH), self.state)
+        kept = list(D.BUILD_ROOT.glob('games-*/games-data.json'))      # dry-run 保留輸出夾
+        self.assertEqual(len(kept), 1)
+
+    def test_games_only_skips_when_lock_busy(self):
+        with D.Lock(D.LOCK_PATH):
+            self.assertEqual(D.main(['--games-only']), 0)
+        self.assertEqual(self.order, [])
+        self.assertIn('--games-only 略過', D.LOG_PATH.read_text(encoding='utf-8'))
+
+    def test_games_only_survives_fetch_games_failure(self):
+        def boom():
+            raise RuntimeError('403')
+        D.step_fetch_games = boom
+        self.assertEqual(D.main(['--games-only']), 0)
+        self.assertEqual(self.order[-1], 'publish_html')
+
+    def test_games_publish_failure_is_only_a_warning(self):
+        def boom(*a, **k):
+            raise RuntimeError('push rejected')
+        D.publish_html = boom
+        self.assertEqual(D.main(['--games-only']), 0)
+
+    def test_full_run_publishes_games_after_fetch_and_before_ovr(self):
+        with self.assertRaises(self.Stop):
+            D._run(D.argparse.Namespace(dry_run=False, force=False, remote='origin', branch='gh-pages', games_only=False, shell=False))
+        o = self.order
+        self.assertLess(o.index('step_fetch_possessions'), o.index('publish_html'))
+        self.assertLess(o.index('publish_html'), o.index('step_c4'))
+        self.assertEqual(o.count('step_fetch_live'), 1)
+        self.assertEqual(self.pushes[0][0], ['games-data.json'])
+
+    def test_full_run_continues_when_early_games_publish_fails(self):
+        def boom(*a, **k):
+            raise RuntimeError('push rejected')
+        D.publish_html = boom
+        with self.assertRaises(self.Stop):                  # 沒被擋住：照樣走到 step_c4
+            D._run(D.argparse.Namespace(dry_run=False, force=False, remote='origin', branch='gh-pages', games_only=False, shell=False))
+
+    def test_full_run_dry_run_does_not_push_early(self):
+        with self.assertRaises(self.Stop):
+            D._run(D.argparse.Namespace(dry_run=True, force=False, remote='origin', branch='gh-pages', games_only=False, shell=False))
+        self.assertEqual(self.pushes, [])
 
 
 if __name__ == '__main__':

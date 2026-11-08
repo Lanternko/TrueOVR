@@ -63,6 +63,8 @@ button:focus-visible,select:focus-visible,.gh:focus-visible,.dc:focus-visible{ou
 .mid{position:relative}
 .mid .ot{font-weight:700;color:var(--fg)}
 .mid .tri+.ot{position:absolute;left:50%;top:calc(50% + 11px);transform:translateX(-50%);font-size:.85rem;line-height:1;letter-spacing:.04em}  /* 延長賽標記：三角形正下方，不佔排版高度，三角才會維持在兩個比分的垂直正中 */
+.mid .lv{display:inline-block;color:var(--g-f);border:1px solid currentColor;border-radius:3px;font:700 .72rem/1 var(--f-body);letter-spacing:.08em;text-indent:.08em;padding:3px 6px;margin-bottom:4px}
+.mid .lt{color:var(--fg);font:700 1.2rem/1.2 var(--f-body)}
 .mid .tbd{color:var(--fg);font-weight:700;font-size:1.5rem;line-height:1.1}
 .mid .tbd+.ot{color:var(--muted);font-weight:500;font-size:.78rem}
 .bh{text-align:center;color:var(--muted);font:500 .74rem var(--f-body);padding:0 0 6px;letter-spacing:.04em}
@@ -72,7 +74,7 @@ button:focus-visible,select:focus-visible,.gh:focus-visible,.dc:focus-visible{ou
 .bt{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:12px 0 8px;padding-bottom:10px;border-bottom:1px solid var(--line)}
 .bt .tn{font:600 1.35rem var(--f-body);color:#7c858f;border-left:3px solid var(--line);padding-left:10px}
 .bt .ts{font:700 2.4rem/1 var(--nf);color:#7c858f;font-variant-numeric:tabular-nums}
-.bt.win .tn,.bt.win .ts{color:var(--fg)}
+.bt.win .tn,.bt.win .ts,.bt.live .tn,.bt.live .ts{color:var(--fg)}   /* 進行中：兩隊都不淡化（還沒有勝方） */
 .bt.win .tn{border-left-color:var(--blue)}
 .tbox{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scroll-padding-left:130px}  /* 捲動停在整欄邊界，不留半截欄位 */
 th:not(.l){scroll-snap-align:start}
@@ -110,6 +112,7 @@ tr.pct td{color:var(--muted);font-size:.78rem;padding-top:0}
   .mid .tri{border-width:8px}.mid .tri.l{border-right-width:12px}.mid .tri.r{border-left-width:12px}
   .mid .tri+.ot{top:calc(50% + 11px);font-size:.8rem}
   .mid{font-size:.85rem}
+  .mid .lv{font-size:.62rem;padding:2px 4px}.mid .lt{font-size:.85rem}
   .bxw{padding:4px 10px 12px}
   th.l{width:92px}.tbox{scroll-padding-left:92px}table{min-width:666px}
   th{font-size:.66rem;width:36px}th:nth-child(6),th:nth-child(7),th:nth-child(8){width:48px}
@@ -164,13 +167,19 @@ function boxHtml(g){
   const x=b.doc.games[g.id];
   if(!x)return '<div class="bxw"><div class="nob">這場沒有 box score 資料（逐人數據還沒抓到）。</div></div>';
   const side=k=>{
-    const a=g[k],t=x.team[k],ps=x[k],cell=(c,o)=>c[1]==='pm'?'<td class="'+(o.pm>0?'pos':o.pm<0?'neg':'')+'">'+sgn(o.pm)+'</td>':c[1]==='rt'?(o.rt==null?'<td>—</td>':'<td'+(o.fb?' title="這場抓不到防守對位資料，只用 box score 算"':'')+'>'+Math.max(0,o.rt).toFixed(1)+'</td>'):'<td>'+o[c[1]]+'</td>';
+    const a=g[k],t=x.team[k],ps=x[k],cell=(c,o)=>c[1]==='pm'?(o.pm==null?'<td>—</td>':'<td class="'+(o.pm>0?'pos':o.pm<0?'neg':'')+'">'+sgn(o.pm)+'</td>'):c[1]==='rt'?(o.rt==null?'<td>—</td>':'<td'+(o.fb?' title="這場抓不到防守對位資料，只用 box score 算"':'')+'>'+Math.max(0,o.rt).toFixed(1)+'</td>'):'<td>'+o[c[1]]+'</td>';
     const rows=ps.map((p,i)=>(i&&!p.st&&ps[i-1].st?'<tr class="dv"><td colspan="'+(COLS.length+1)+'"></td></tr>':'')+'<tr class="pl"><td class="l">'+esc(p.n)+'</td>'+COLS.map(c=>cell(c,p)).join('')+'</tr>').join('');
     const tot='<tr class="tot"><td class="l">TEAM TOTALS</td>'+COLS.map(c=>c[1]==='min'||c[1]==='pm'||c[1]==='rt'?'<td>—</td>':'<td>'+t[c[1]]+'</td>').join('')+'</tr>'
       +'<tr class="pct"><td class="l"></td>'+COLS.map(c=>'<td>'+(c[1]==='fg'?pct(t.fg)+'<br>FG':c[1]==='tp'?pct(t.tp)+'<br>3P':c[1]==='ft'?pct(t.ft)+'<br>FT':'')+'</td>').join('')+'</tr>';
-    return '<div><div class="bt'+(g.winner===a?' win':'')+'"><span class="tn">'+esc(D.teams[a].name)+'</span><span class="ts">'+g.score[k]+'</span></div><div class="tbox"><table><thead><tr><th class="l">PLAYERS</th>'+COLS.map(c=>'<th>'+esc(c[0])+'</th>').join('')+'</tr></thead><tbody>'+rows+tot+'</tbody></table></div></div>';
+    return '<div><div class="bt'+(g.winner===a?' win':g.status==='live'?' live':'')+'"><span class="tn">'+esc(D.teams[a].name)+'</span><span class="ts">'+g.score[k]+'</span></div><div class="tbox"><table><thead><tr><th class="l">PLAYERS</th>'+COLS.map(c=>'<th>'+esc(c[0])+'</th>').join('')+'</tr></thead><tbody>'+rows+tot+'</tbody></table></div></div>';
   };
   return '<div class="bxw">'+side('away')+side('home')+'</div>';
+}
+// 進行中的狀態文字：有節數與計時顯示「第 3 節 5:21」／「延長賽 1 5:21」，沒在計時（中場、節間）用 liveData 的文字
+function liveHtml(g){
+  const l=g.live||{},q=l.p>4?'延長賽'+(l.p>5?' '+(l.p-4):''):'第 '+l.p+' 節';
+  const t=l.clk?q+' '+l.clk:/half/i.test(l.txt)?'中場休息':l.txt||q;
+  return '<span class="lv">進行中</span><div class="lt">'+esc(t)+'</div>';
 }
 function tipHtml(g){
   if(!g.tip)return '<span class="tbd">—</span>';
@@ -178,13 +187,13 @@ function tipHtml(g){
   return '<span class="tbd">'+z(t.getUTCHours())+':'+z(t.getUTCMinutes())+'</span><div class="ot">'+(t.getUTCMonth()+1)+'/'+t.getUTCDate()+' UTC+8</div>';
 }
 function card(g){
-  const pc=pair(g.away,g.home),fin=g.status==='final',w=fin?(g.winner===g.home?'home':'away'):'',op=openId===g.id;
+  const pc=pair(g.away,g.home),fin=g.status==='final',lv=g.status==='live',w=fin?(g.winner===g.home?'home':'away'):'',op=openId===g.id;
   const tm=k=>'<div class="tm '+k+'">'+logo(g[k])+'<div class="tx"><div class="nk">'+esc(g[k])+'</div><div class="rc">'+esc(g.rec?g.rec[k]:'')+'</div></div></div>';
-  const sc=k=>'<div class="sc'+(k==='home'?' h':'')+(fin&&w!==k?' lose':'')+'">'+(fin?g.score[k]:'')+'</div>';
+  const sc=k=>'<div class="sc'+(k==='home'?' h':'')+(fin&&w!==k?' lose':'')+'">'+(fin||lv?g.score[k]:'')+'</div>';
   const mid=fin?'<div class="mid"><span class="tri '+(w==='away'?'l':'r')+'"></span>'+(g.ot?'<div class="ot">'+(g.ot>1?g.ot:'')+'OT</div>':'')+'</div>'
-    :'<div class="mid">'+tipHtml(g)+'</div>';
+    :'<div class="mid">'+(lv?liveHtml(g):tipHtml(g))+'</div>';
   return '<div class="gm'+(op?' open':'')+'" data-id="'+g.id+'" style="--c1:'+pc[0]+';--c2:'+pc[1]+'"><div class="gh" role="button" tabindex="0" aria-expanded="'+op+'">'+tm('away')+sc('away')+mid+sc('home')+tm('home')+'</div>'
-   +(op&&fin?boxHtml(g):'')+'</div>';
+   +(op&&(fin||lv)?boxHtml(g):'')+'</div>';
 }
 function build(){
   built=true;
@@ -203,14 +212,15 @@ function render(smooth){
   root.querySelectorAll('.dc').forEach(b=>{const on=b.dataset.d===date;b.classList.toggle('on',on);b.setAttribute('aria-pressed',String(on));});
   $('#latest').disabled=date===today();
   $('#gl').innerHTML=gs.length?gs.map(card).join(''):'<div class="empty">這天沒有賽事</div>';
-  $('#note').innerHTML='比分與 box score 來自 NBA.com 官方 gamelog；W-L 是該場結束時的戰績（由 gamelog 逐場累計）；已完賽場次的日期以 gamelog 的比賽日（美東）為準，未開打場次取自賽程，開賽時間以 UTC+8 顯示。gamelog 沒有先發名單與 DNP，球員依上場分鐘排序。';
+  $('#note').innerHTML='比分與 box score 來自 NBA.com 官方 gamelog；W-L 是該場結束時的戰績（由 gamelog 逐場累計）；已完賽場次的日期以 gamelog 的比賽日（美東）為準，未開打場次取自賽程，開賽時間以 UTC+8 顯示。gamelog 沒有先發名單與 DNP，球員依上場分鐘排序。'
+    +(gs.some(g=>g.status==='live')?'「進行中」的比分與 box score 是 NBA.com liveData 在最近一次更新（約每 30 分鐘）抓到的即時數據，不是最終結果，沒有評分；比賽結束後以 gamelog 為準。':'');
   center(smooth);
 }
 function go(d){date=d;openId=null;render(true);sync();}
 function apply(){
   const w=want||{};want=null;
   date=w.d&&D.games[w.d]?w.d:today();
-  const g=w.gid&&(D.games[date]||[]).find(x=>x.id===w.gid&&x.status==='final');
+  const g=w.gid&&(D.games[date]||[]).find(x=>x.id===w.gid&&x.status!=='scheduled');
   openId=g?g.id:null;render(built);if(openId)fetchBox(date);
 }
 function fetchBox(d){
@@ -220,10 +230,13 @@ function fetchBox(d){
   fetch('/games-box-'+m+'.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(doc=>({doc}),()=>ERR).then(v=>{boxes[m]=v;if(openId&&date.slice(0,7)===m){const y=scrollY;render(false);scrollTo(0,y);}});
 }
 function toggle(id){
-  openId=openId===id?null:id;render(false);sync();
+  openId=openId===id?null:id;
+  const g=(D.games[date]||[]).find(x=>x.id===openId);
+  if(g&&g.status==='live')delete boxes[date.slice(0,7)];   // 進行中的 box 每次點開重抓，不用這個分頁開著期間的快取
+  render(false);sync();
   if(openId)fetchBox(date);
 }
-$('#gl').addEventListener('click',e=>{const h=e.target.closest('.gh,.bh');if(!h)return;const m=h.closest('.gm'),g=(D.games[date]||[]).find(x=>x.id===m.dataset.id);if(g&&g.status==='final')toggle(g.id);});
+$('#gl').addEventListener('click',e=>{const h=e.target.closest('.gh,.bh');if(!h)return;const m=h.closest('.gm'),g=(D.games[date]||[]).find(x=>x.id===m.dataset.id);if(g&&g.status!=='scheduled')toggle(g.id);});
 $('#gl').addEventListener('keydown',e=>{if(e.key!=='Enter'&&e.key!==' ')return;const h=e.target.closest('.gh');if(!h)return;e.preventDefault();const id=h.parentElement.dataset.id;h.click();root.querySelector('.gm[data-id="'+id+'"] .gh')?.focus();});
 $('#strip').addEventListener('click',e=>{const b=e.target.closest('.dc');if(b&&b.dataset.d!==date)go(b.dataset.d);});
 $('#strip').addEventListener('scroll',arrows,{passive:true});

@@ -141,6 +141,103 @@ class Synthetic(unittest.TestCase):
         self.assertTrue(all(' ' not in B.nick(n) for _, n in B.TEAMS.values() if not n.endswith('Trail Blazers')))
 
 
+def live_side(tid, score, players):
+    return {'teamId': tid, 'tri': B.ABBR[tid], 'score': score, 'players': players, 'team': {'pts': score, 'reb': 20, 'fgm': 30, 'fga': 70}}
+
+
+def live_player(pid, name, starter, mins, pts, played=True):
+    return {'pid': pid, 'name': name, 'starter': starter, 'played': played, 'min': mins, 'pts': pts, 'reb': 3, 'fgm': 4, 'fga': 9, 'tpm': 1, 'tpa': 3}
+
+
+def live_doc(fetched_at, games):
+    return {'fetchedAt': fetched_at, 'source': 'test', 'games': games}
+
+
+class LiveGames(unittest.TestCase):
+    """進行中比賽（live-games.json）併進骨架與 box：gamelog 已有的以 gamelog 為準、過期檔忽略、已完賽／未開打格式不變。"""
+    NOW = B.dt.datetime(2026, 11, 8, 4, 0, tzinfo=B.dt.timezone.utc)
+    G_LIVE, G_DONE, G_NEXT = '0022600010', '0022600001', '0022600011'
+
+    def build(self, live, now=None):
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            write_src(d, [[self.G_DONE, '2026-11-07', LAL, BOS], [self.G_LIVE, '2026-11-07', MIA, LAL], [self.G_NEXT, '2026-11-08', BOS, MIA]],
+                      [team_line(LAL, self.G_DONE, '2026-11-07', 'LAL vs. BOS', 110), team_line(BOS, self.G_DONE, '2026-11-07', 'BOS @ LAL', 100)],
+                      [player_line(1, 'A Guy', LAL, self.G_DONE, '2026-11-07', 30, 110), player_line(2, 'B Guy', BOS, self.G_DONE, '2026-11-07', 30, 100)])
+            if live is not None:
+                (d / 'live-games.json').write_text(json.dumps(live), encoding='utf-8')
+            return B.build(d, now or self.NOW)
+
+    def game(self, gid, home='MIA', away='LAL', **kw):
+        g = {'gameId': gid, 'period': 3, 'gameClock': '5:21', 'status': 'Q3 5:21',
+             'home': live_side(MIA if home == 'MIA' else LAL, 61, [live_player(10, 'Jalen Walker', True, '22:40', 18), live_player(11, 'Bench Guy', False, '9:05', 4),
+                                                                   live_player(12, 'Not Played', False, '0:00', 0, played=False)]),
+             'away': live_side(LAL, 58, [live_player(20, 'Star Player', True, '25:10', 20)])}
+        g.update(kw)
+        return g
+
+    def test_live_game_appears_with_score_status_and_box(self):
+        sk, months = self.build(live_doc('2026-11-08T03:30:00Z', [self.game(self.G_LIVE)]))
+        g = next(x for x in sk['games']['2026-11-07'] if x['id'] == self.G_LIVE)
+        self.assertEqual((g['status'], g['score'], g['live']), ('live', {'home': 61, 'away': 58}, {'p': 3, 'clk': '5:21', 'txt': 'Q3 5:21'}))
+        self.assertNotIn('winner', g)
+        self.assertEqual(g['rec'], {'home': '0-0', 'away': '1-0'})            # 進行中＝開賽前戰績（LAL 已打贏 G_DONE）
+        b = months['2026-11']['games'][self.G_LIVE]
+        self.assertEqual([p['n'] for p in b['home']], ['J. Walker', 'B. Guy'])    # 沒上場的不列；先發在前
+        p = b['home'][0]
+        self.assertEqual((p['min'], p['pts'], p['fg'], p['tp'], p['ft'], p['st']), (23, 18, '4-9', '1-3', '0-0', 1))
+        self.assertNotIn('pm', p)                                              # liveData 沒給的欄位省略，不捏造
+        self.assertNotIn('rt', p)
+        self.assertEqual(set(p) - {'pm', 'st'}, set(B.player_row(dict.fromkeys(PG_H, 0) | {'PLAYER_NAME': 'X Y'}).keys()) - {'pm'})   # 其餘鍵和已完賽一致
+        self.assertEqual(b['team']['home']['pts'], 61)
+        self.assertEqual(sk['games']['2026-11-08'][0]['status'], 'scheduled')    # 未開打的不受影響
+        self.assertEqual(sk['latest'], '2026-11-07')
+
+    def test_gamelog_wins_over_live(self):
+        sk, months = self.build(live_doc('2026-11-08T03:30:00Z', [self.game(self.G_DONE)]))
+        g = next(x for x in sk['games']['2026-11-07'] if x['id'] == self.G_DONE)
+        self.assertEqual((g['status'], g['score'], g['winner']), ('final', {'home': 110, 'away': 100}, 'LAL'))
+        self.assertNotIn('live', g)
+        self.assertEqual([p['n'] for p in months['2026-11']['games'][self.G_DONE]['home']], ['A. Guy'])
+
+    def test_stale_or_missing_live_file_ignored(self):
+        for live in (live_doc('2026-11-08T00:30:00Z', [self.game(self.G_LIVE)]), None, {'games': [self.game(self.G_LIVE)]}):    # 3.5 小時前／沒檔／缺 fetchedAt
+            sk, months = self.build(live)
+            g = next(x for x in sk['games']['2026-11-07'] if x['id'] == self.G_LIVE)
+            self.assertEqual(g['status'], 'scheduled')
+            self.assertNotIn('score', g)
+            self.assertNotIn(self.G_LIVE, months['2026-11']['games'])
+
+    def test_empty_live_list_and_unknown_or_broken_games(self):
+        self.assertEqual(self.build(live_doc('2026-11-08T03:30:00Z', []))[0]['games']['2026-11-07'][1]['status'], 'scheduled')
+        sk, _ = self.build(live_doc('2026-11-08T03:30:00Z', [self.game('0029999999'), {'gameId': self.G_LIVE}]))     # 不在賽程、缺欄位
+        self.assertEqual({g['status'] for gs in sk['games'].values() for g in gs}, {'final', 'scheduled'})
+
+    def test_live_without_players_has_score_but_no_box(self):
+        g = self.game(self.G_LIVE)
+        g['home'].pop('players'); g['away'].pop('players')
+        sk, months = self.build(live_doc('2026-11-08T03:30:00Z', [g]))
+        self.assertEqual(next(x for x in sk['games']['2026-11-07'] if x['id'] == self.G_LIVE)['status'], 'live')
+        self.assertNotIn(self.G_LIVE, months['2026-11']['games'])
+
+    def test_front_end_handles_live(self):
+        js = games_view.JS
+        for needle in ("g.status==='live'", 'liveHtml', '進行中', "status!=='scheduled'"):
+            self.assertIn(needle, js)
+
+
+class MatchupGlitch(unittest.TestCase):
+    def test_both_rows_marked_away_falls_back_to_schedule_home(self):    # gamelog 兩列都寫成「X @ Y」：主客以賽程為準，仍算已完賽
+        with tempfile.TemporaryDirectory() as d:
+            write_src(Path(d), [['0022600001', '2026-11-07', BOS, LAL]],
+                      [team_line(LAL, '0022600001', '2026-11-07', 'LAL @ BOS', 114), team_line(BOS, '0022600001', '2026-11-07', 'BOS @ LAL', 102)],
+                      [player_line(1, 'A Guy', LAL, '0022600001', '2026-11-07', 30, 114), player_line(2, 'B Guy', BOS, '0022600001', '2026-11-07', 30, 102)])
+            sk, months = B.build(Path(d))
+        g = sk['games']['2026-11-07'][0]
+        self.assertEqual((g['status'], g['home'], g['away'], g['winner'], g['score']), ('final', 'BOS', 'LAL', 'LAL', {'home': 102, 'away': 114}))
+        self.assertIn('0022600001', months['2026-11']['games'])
+
+
 class Wiring(unittest.TestCase):
     def test_team_table(self):
         self.assertEqual(len(B.TEAMS), 30)
@@ -200,7 +297,7 @@ class RealData(unittest.TestCase):
         cls.tg, _ = B.rows(SRC / 'team-games.json')
         cls.sched = {g[0]: g for g in json.loads((SRC / 'schedule.json').read_text(encoding='utf-8'))['games']}
         cls.finals = {g['id']: (d, g) for d, gs in cls.sk['games'].items() for g in gs if g['status'] == 'final'}
-        cls.box = {gid: b for m in cls.months.values() for gid, b in m['games'].items()}
+        cls.box = {gid: b for m in cls.months.values() for gid, b in m['games'].items() if gid in cls.finals}   # 進行中的 live box 沒有評分／+-，不在這些核對範圍
 
     def test_all_30_teams_map(self):
         ids = {g[2] for g in self.sched.values()} | {g[3] for g in self.sched.values()}

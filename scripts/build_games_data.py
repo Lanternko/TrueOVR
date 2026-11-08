@@ -4,12 +4,15 @@ team-games.json（leaguegamelog 球隊，每場 2 列）、player-games.json（�
   games-box-<YYYY-MM>.json        box score：球員逐場數據與球隊合計，按比賽日期分月，點開某場才 fetch 該月
 體積決策：已完賽 box 每場約 3 KB，全季 1230 場約 3.5 MB（gzip 前）> 2 MB 上限，所以從一開始就固定按月分檔（不會賽季中途才改格式）；骨架全季約 150 KB。
 日期規則：已完賽場次以 gamelog 的 GAME_DATE 為準（schedule.json 是美東日期，兩邊偶爾差一天）；未開打場次用 schedule.json 的日期。
+進行中場次：live-games.json（fetch_live_games.mjs，NBA.com liveData）裡還沒出現在 gamelog 的場次，骨架 status='live'（帶即時比分與 live{p,clk,txt}），box 帶即時球員數據
+（欄位同已完賽，省略沒有的欄位、不給評分）；gamelog 已有的場次一律以 gamelog 為準，live 丟掉；live 檔不存在或 fetchedAt 超過 3 小時就整份忽略。已完賽／未開打場次的格式不變。
 
 用法：python -I -X utf8 scripts/build_games_data.py <out_dir> [src_dir]
 """
 from __future__ import annotations
 
 import bisect
+import datetime as dt
 import json
 import sys
 from pathlib import Path
@@ -18,6 +21,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / 'data/season-source-2026-27'
 DATA_NAME = 'games-data.json'
 BOX_FMT = 'games-box-{}.json'      # {} = YYYY-MM
+LIVE_NAME = 'live-games.json'
+LIVE_MAX_AGE_S = 3 * 3600          # live 檔超過這麼久沒更新就當作抓取已停擺，整份忽略
 
 TEAMS = {  # NBA team id → (縮寫, 全名)；30 隊固定，未開打的隊也要能對到
     1610612737: ('ATL', 'Atlanta Hawks'), 1610612738: ('BOS', 'Boston Celtics'), 1610612739: ('CLE', 'Cleveland Cavaliers'),
@@ -101,6 +106,55 @@ def team_row(t: dict) -> dict:
             'fg': ma(t['FGM'], t['FGA']), 'tp': ma(t['FG3M'], t['FG3A']), 'ft': ma(t['FTM'], t['FTA'])}
 
 
+def load_live(src: Path, now: dt.datetime | None = None) -> list[dict]:
+    """live-games.json 的進行中場次；檔案不存在、壞掉、fetchedAt 缺或超過 LIVE_MAX_AGE_S 回 []。"""
+    try:
+        doc = json.loads((src / LIVE_NAME).read_text(encoding='utf-8'))
+        at = dt.datetime.fromisoformat(str(doc['fetchedAt']).replace('Z', '+00:00'))
+        games = doc['games']
+    except (OSError, ValueError, KeyError, TypeError):
+        return []
+    if at.tzinfo is None:
+        at = at.replace(tzinfo=dt.timezone.utc)
+    now = now or dt.datetime.now(dt.timezone.utc)
+    if (now - at).total_seconds() > LIVE_MAX_AGE_S or not isinstance(games, list):
+        return []
+    return games
+
+
+def live_player_row(p: dict) -> dict:
+    """即時球員列：鍵同 player_row；liveData 沒給的欄位（pm）省略，不給評分。"""
+    r = {'n': short_name(p['name']), 'pid': p['pid'], 'min': minutes(p.get('min'))}
+    for k in ('pts', 'reb', 'oreb', 'dreb', 'ast', 'stl', 'blk', 'tov', 'pf'):
+        r[k] = p.get(k) or 0
+    r['fg'], r['tp'], r['ft'] = ma(p.get('fgm'), p.get('fga')), ma(p.get('tpm'), p.get('tpa')), ma(p.get('ftm'), p.get('fta'))
+    if p.get('pm') is not None:
+        r['pm'] = p['pm']
+    if p.get('starter'):
+        r['st'] = 1
+    return r
+
+
+def live_team_row(side: dict) -> dict:
+    """球隊合計：優先用 liveData 的球隊統計，缺的欄位用球員加總補。"""
+    t, ps = side.get('team') or {}, side.get('players') or []
+    g = lambda k: t[k] if t.get(k) is not None else sum(p.get(k) or 0 for p in ps)
+    return {'pts': side['score'], 'reb': g('reb'), 'oreb': g('oreb'), 'dreb': g('dreb'), 'ast': g('ast'), 'stl': g('stl'), 'blk': g('blk'), 'tov': g('tov'), 'pf': g('pf'),
+            'fg': ma(g('fgm'), g('fga')), 'tp': ma(g('tpm'), g('tpa')), 'ft': ma(g('ftm'), g('fta'))}
+
+
+def live_game(lg: dict) -> tuple[dict, dict | None]:
+    """一場 live 資料 → (骨架欄位, box 或 None)；資料缺欄位時 raise（呼叫端略過該場）。"""
+    extra = {'status': 'live', 'score': {'home': lg['home']['score'], 'away': lg['away']['score']},
+             'live': {'p': lg['period'], 'clk': lg.get('gameClock') or '', 'txt': lg.get('status') or ''}}
+    if not (lg['home'].get('players') and lg['away'].get('players')):
+        return extra, None     # box 抓不到：只帶比分
+    box = {k: sorted((live_player_row(p) for p in lg[k]['players'] if p.get('played')),
+                     key=lambda r: (not r.get('st'), -r['min'], -r['pts'], r['n'])) for k in ('home', 'away')}
+    box['team'] = {k: live_team_row(lg[k]) for k in ('home', 'away')}
+    return extra, box
+
+
 def starters_of(src: Path, gid: str) -> set[int] | None:
     """先發名單（NBA.com liveData boxscore 的 starter 旗標；gamelog 沒有）。只有預設資料夾讀得到；檔案缺或不是兩隊各五人回 None（前端就不畫分隔線）。"""
     if src.resolve() != SRC.resolve():
@@ -114,8 +168,8 @@ def starters_of(src: Path, gid: str) -> set[int] | None:
     return out['homeTeam'] | out['awayTeam'] if all(len(v) == 5 for v in out.values()) else None
 
 
-def build(src: Path = SRC) -> tuple[dict, dict[str, dict]]:
-    """回傳 (骨架 doc, {YYYY-MM: box doc})。"""
+def build(src: Path = SRC, now: dt.datetime | None = None) -> tuple[dict, dict[str, dict]]:
+    """回傳 (骨架 doc, {YYYY-MM: box doc})。now＝判斷 live 檔是否過期的現在時間（測試用）。"""
     sched = json.loads((src / 'schedule.json').read_text(encoding='utf-8'))
     tg, fetched = rows(src / 'team-games.json')
     pg, _ = rows(src / 'player-games.json')
@@ -139,8 +193,12 @@ def build(src: Path = SRC) -> tuple[dict, dict[str, dict]]:
             continue
         h = next((t for t in ts if ' vs. ' in t['MATCHUP']), None)
         a = next((t for t in ts if ' @ ' in t['MATCHUP']), None)
-        if h is None or a is None:
-            continue
+        if h is None or a is None:     # gamelog 偶爾兩列都寫成「X @ Y」（2026-11-08 DEN／IND 實例）：主客改以賽程為準，賽程也沒有這場才略過
+            hid = next((g[2] for g in sched['games'] if g[0] == gid), None)
+            h = next((t for t in ts if t['TEAM_ID'] == hid), None)
+            a = next((t for t in ts if t is not h), None) if h is not None else None
+            if h is None or a is None:
+                continue
         g = {'id': gid, 'home': ABBR[h['TEAM_ID']], 'away': ABBR[a['TEAM_ID']], 'status': 'final',
              'score': {'home': h['PTS'], 'away': a['PTS']}, 'winner': ABBR[h['TEAM_ID']] if h['PTS'] > a['PTS'] else ABBR[a['TEAM_ID']]}
         ot = round((h['MIN'] - 240) / 25)    # 球隊 MIN：240 + 每節延長賽 25
@@ -158,6 +216,19 @@ def build(src: Path = SRC) -> tuple[dict, dict[str, dict]]:
                             r['st'] = 1
                 return sorted(rs, key=lambda r: (not r.get('st'), -r['min'], -r['pts'], r['n']))    # 先發五人在前，各自按上場分鐘
             box_of[gid] = {'home': side(h['TEAM_ID']), 'away': side(a['TEAM_ID']), 'team': {'home': team_row(h), 'away': team_row(a)}}
+
+    # 進行中：只收 schedule 有、gamelog 一列都還沒有的場次（gamelog 已有的以 gamelog 為準）；單場 live 資料壞掉就略過該場
+    for lg in load_live(src, now):
+        gid = lg.get('gameId') if isinstance(lg, dict) else None
+        if gid not in games or gid in by_game:
+            continue
+        try:
+            extra, box = live_game(lg)
+        except (KeyError, TypeError, ValueError):
+            continue
+        games[gid]['g'].update(extra)
+        if box is not None:
+            box_of[gid] = box
 
     # 戰績：每隊已完賽場次依 (GAME_DATE, GAME_ID) 排序累計勝負；已完賽場次＝該場結束時，未開打＝開賽前（用已完賽的場次數，不用別處的戰績）
     seq: dict[str, list[tuple]] = {}

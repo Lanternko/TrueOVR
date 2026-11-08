@@ -7,8 +7,13 @@
 - 只有比賽資料變、模型沒動：版號不變，只換 meta.json 的 `dataCutoff`（頁面標題列顯示「數據截至」）。
 - 版號照 meta.json 的 `version`（由 run_c4_live.py 產生）原樣顯示；字母後綴是小版本（R-064），由那邊寫進版號。
 
+賽程頁（/games/）另有兩條更快的路（賽程資料只讀原始資料、1 秒建好，不依賴 OVR 輸出）：
+- 完整流程在抓資料步驟全部跑完後、算 OVR 之前，先把賽程檔（games-data.json、games-box-*.json）單獨推一次（commit 訊息「games 賽程 更新 …」）。
+- --games-only：只抓 gamelog＋防守對位＋進行中比賽（fetch_live_games.mjs），建賽程檔並只推賽程檔；排程「Basketball Games Refresh」08:00–14:00 每 30 分鐘跑。
+
 用法（工作目錄不限，會自動切到 repo 根）：
   pythonw scripts/daily_inseason_update.py [--dry-run] [--force]
+  pythonw scripts/daily_inseason_update.py --games-only [--dry-run]   # 只更新賽程頁（含進行中的比賽），不跑 fetch_inseason／OVR／history／球隊評分
   python -I scripts/daily_inseason_update.py --shell   # deploy-shell：只改頁面（UI／顯示），資料與版號不動
 子程序一律 CREATE_NO_WINDOW；排程用 pythonw 啟動。
 """
@@ -52,7 +57,7 @@ TEAMS_PAGE = ROOT / 'scripts/build_teams_page.py'
 GAMES_DATA = ROOT / 'scripts/build_games_data.py'
 CREATE_NO_WINDOW = getattr(subprocess, 'CREATE_NO_WINDOW', 0)
 
-TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'tracking': 600, 'gravity': 300, 'pnr': 300, 'possessions': 300, 'stints': 1800, 'c4': 3600, 'viewer': 600, 'history': 3600, 'prereg': 900, 'ratings': 1800, 'e229': 900, 'ratings_m0': 1800, 'git': 180}
+TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'tracking': 600, 'gravity': 300, 'pnr': 300, 'possessions': 300, 'stints': 1800, 'c4': 3600, 'viewer': 600, 'history': 3600, 'prereg': 900, 'ratings': 1800, 'e229': 900, 'ratings_m0': 1800, 'live': 180, 'git': 180}
 CO_AUTHOR = 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
 
 log = logging.getLogger('daily_inseason')
@@ -335,6 +340,52 @@ def step_games_data(out_dir: Path) -> dict[str, Path]:
         return {}
 
 
+def step_fetch_live() -> None:
+    """進行中的比賽（NBA.com liveData）→ data/season-source-2026-27/live-games.json。失敗不擋發布：fetch_live_games.mjs 失敗不覆寫，
+    舊檔超過 3 小時 build_games_data 就忽略（沒進行中比賽時它會寫空清單）。"""
+    try:
+        r = run([node_exe(), 'scripts/fetch_live_games.mjs', SEASON], ROOT, TIMEOUTS['live'])
+    except subprocess.TimeoutExpired:
+        log.warning('fetch_live_games 逾時；進行中比賽沿用上次的檔（超過 3 小時會被忽略）')
+        return
+    if r.returncode != 0:
+        log.warning('fetch_live_games exit=%s：%s', r.returncode, (r.stderr or r.stdout).strip()[-300:])
+    else:
+        log.info('fetch_live_games：%s', ((r.stdout or '').strip().splitlines()[-1:] or [''])[0])
+
+
+def games_message(now: dt.datetime | None = None) -> str:
+    return f'games 賽程 更新 {(now or dt.datetime.now().astimezone()).isoformat(timespec="seconds")}\n\n{CO_AUTHOR}\n'
+
+
+def publish_games(args, state: dict | None = None) -> None:
+    """抓進行中的比賽、建賽程檔、只把賽程檔推到 gh-pages（完整流程的提早發布與 --games-only 共用）。
+    失敗只記警告、不拋例外（不擋後面的流程）；--dry-run 照建、不 push、不寫 state。內容和上次相同時 publish_html 自己略過。"""
+    work = None
+    try:
+        step_fetch_live()
+        BUILD_ROOT.mkdir(parents=True, exist_ok=True)
+        work = Path(tempfile.mkdtemp(prefix='games-', dir=BUILD_ROOT))
+        files = step_games_data(work)
+        if not files:
+            log.warning('賽程檔沒建出來，略過賽程發布')
+            return
+        if args.dry_run:
+            log.info('dry-run：賽程檔 %s 已建好但不 push。輸出夾 %s（保留）', ','.join(files), work)
+            work = None
+            return
+        sha = publish_html(ROOT, files, games_message(), remote=args.remote, branch=args.branch)
+        log.info('賽程檔已發布，gh-pages commit=%s', sha or '（內容未變）')
+        if state is not None:
+            state['lastGamesPublished'] = dt.datetime.now().astimezone().isoformat(timespec='seconds')
+            save_json(STATE_PATH, state)
+    except Exception as e:  # noqa: BLE001
+        log.warning('賽程發布失敗（不影響後面的流程）：%s', str(e)[-400:])
+    finally:
+        if work is not None:
+            shutil.rmtree(work, ignore_errors=True)
+
+
 def teams_message(cutoff: str) -> str:
     return f'teams 球隊評分 數據至 {cutoff}\n\n{CO_AUTHOR}\n'
 
@@ -553,20 +604,36 @@ def main(argv=None) -> int:
     ap.add_argument('--force', action='store_true', help='資料沒變也發布')
     ap.add_argument('--shell', action='store_true',
                     help='只重建頁面（UI／顯示改動）：沿用最後發布那天的 live 資料，不抓資料、不跑 C4、版號不動')
+    ap.add_argument('--games-only', action='store_true',
+                    help='只更新賽程頁：抓 gamelog＋對位＋進行中比賽，建賽程檔並只推賽程檔；不跑 OVR，不動 publish_state 的 OVR 欄位')
     ap.add_argument('--remote', default='origin')
     ap.add_argument('--branch', default='gh-pages')
     args = ap.parse_args(argv)
     setup_logging()
-    log.info('==== 開始 dry_run=%s force=%s shell=%s ====', args.dry_run, args.force, args.shell)
+    log.info('==== 開始 dry_run=%s force=%s shell=%s games_only=%s ====', args.dry_run, args.force, args.shell, args.games_only)
     try:
         with Lock(LOCK_PATH):
-            return _run_shell(args) if args.shell else _run(args)
+            return _run_shell(args) if args.shell else _run_games(args) if args.games_only else _run(args)
     except LockBusy as e:
-        log.warning('%s', e)
+        log.warning('%s%s', e, '；--games-only 略過這一輪' if args.games_only else '')
         return 0
     except Exception as e:  # noqa: BLE001
         log.error('失敗：%s', e)
         return 1
+
+
+def _run_games(args) -> int:
+    """--games-only：只更新賽程頁。抓 gamelog、防守對位（評分 M2）、進行中比賽，建賽程檔並只推賽程檔；
+    不抓 PBP／boxes／tracking、不算 OVR／history／球隊評分，不動 publish_state 的 OVR 欄位（只記 lastGamesPublished）。
+    新比賽的先發分隔線需要 boxes（fetch_inseason 抓），要等每日 14:30 完整流程才會補上——可接受，先發旗標缺時前端不畫分隔線。
+    抓 gamelog 失敗不擋：沿用舊 gamelog 加最新的 live 資料照樣建。"""
+    try:
+        step_fetch_games()
+    except Exception as e:  # noqa: BLE001
+        log.warning('fetch_games 失敗；賽程沿用上次的 gamelog：%s', str(e)[-300:])
+    step_fetch_matchups()
+    publish_games(args, load_json(STATE_PATH))
+    return 0
 
 
 def _run(args) -> int:
@@ -581,6 +648,7 @@ def _run(args) -> int:
     step_fetch_gravity()
     step_fetch_pnr()
     step_fetch_possessions()
+    publish_games(args, state)          # 賽程檔提早發布（OVR 要再算 30–40 分鐘）；失敗只記警告
     data_sha = sha256_file(PLAYER_GAMES)
     pbp_count = len(list(PBP_DIR.glob('*.json'))) if PBP_DIR.exists() else 0
     log.info('player-games sha256=%s…  pbp=%d', data_sha[:12], pbp_count)
