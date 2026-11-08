@@ -23,6 +23,8 @@ def folders():
 
 
 def folder_for(d, fl):
+    # 注意（E-273 追問揭露）：比賽日 ≤ fl[0]（10-27）的 56 場沒有「比賽日前」的夾，退回 fl[0]（含當天結果）＝輕微偷看；
+    # 評分腳本因此另報「無偷看子集」（比賽日 > fl[0]）。此函式保持原樣，以免和已跑完的 5090 結果不一致。
     c = [f for f in fl if f < d]
     return c[-1] if c else fl[0]
 
@@ -35,7 +37,8 @@ def main():
     games = {}
     for r in tg:
         g = games.setdefault(r['GAME_ID'], dict(gid=r['GAME_ID'], date=r['GAME_DATE']))
-        s = 'home' if 'vs.' in r['MATCHUP'] else 'away'
+        o = obs.get(r['GAME_ID'])      # 主客以 league.json 的 homeId 為準：中立場兩隊 MATCHUP 都是 '@'，用 'vs.' 判斷會漏掉整場
+        s = ('home' if str(r['TEAM_ID']) == str(o['homeId']) else 'away') if o else ('home' if 'vs.' in r['MATCHUP'] else 'away')
         g[s] = str(r['TEAM_ID']); g['pts_' + s] = r['PTS']
     games = {k: v for k, v in games.items() if 'home' in v and 'away' in v and k in obs}
     for k, g in games.items():      # team-games 與 league.json 比分要一致

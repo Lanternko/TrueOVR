@@ -18,6 +18,7 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 TMV = os.path.join(ROOT, 'reports', 'team-model-versions')
 W = os.path.join(TMV, 'work')
 SEEDS = (229, 230, 231, 232, 233)
+CLEAN_AFTER = '2026-10-27'
 H, SIG, K = 2.5, 12.0, 10.0
 NOWIN = getattr(subprocess, 'CREATE_NO_WINDOW', 0)
 
@@ -109,13 +110,15 @@ META = {
     'T1': dict(order=2, date='2026-11-05', ruling='R-169', change='21 欄追蹤統計（hustle／rimthree／matchup／adv）改本季混合 w=min/(min+500)'),
     'T1+K10': dict(order=3, date='2026-11-07', ruling='R-171', change='再把本季實際表現殘差（實際−賽前預期）÷(場數+10) 加回預測，殘差對凍結的賽前預期算'),
     'T1+K10 today': dict(order=4, date='2026-11-07', ruling='R-172', change='殘差改成對「當天的 T」重算過去已完賽場次（避免和本季 OVR 更新重複計入）'),
+    'T0+K10（代用）': dict(order=3, date='2026-11-07', ruling='R-171', change='代用列：2025-26 無法重現 T1，改在 T0 同資訊預測上套 K10 殘差混合（E-253 的 blend）'),
     'T1·tovSkill舊值': dict(order=90, date='（診斷）', ruling='R-139', change='診斷：10-31 起 live 夾的 tovSkill 換回 0.2.9 的值，量 0.2.12 tovSkill 改動對 T 的影響'),
 }
 
 
 def row(version, setname, n, br, acc, wmae, d, note, **extra):
     r = dict(version=version, order=META[version]['order'], date=META[version]['date'], change=META[version]['change'], ruling=META[version]['ruling'],
-             set=setname, n=n, brier=br, acc=acc, winsMAE=wmae, dBrierPrev=None, dBrierLo=None, dBrierHi=None, note=note)
+             set=setname, n=n, brier=br, acc=acc, winsMAE=wmae, dBrierPrev=None, dBrierLo=None, dBrierHi=None,
+             nClean=None, brierClean=None, accClean=None, dBrierPrevClean=None, dBrierLoClean=None, dBrierHiClean=None, note=note)
     if d:
         r['dBrierPrev'], r['dBrierLo'], r['dBrierHi'] = d
     r.update(extra)
@@ -148,6 +151,9 @@ def set_a():
         stats[a] = dict(b=bs, a=as_, w=ws, sd=float(np.std([x.mean() for x in bs], ddof=1)))
     idx = boot_idx(n)
     pg = {a: np.mean(v['b'], axis=0) for a, v in stats.items()}          # 5 種子平均的逐場 Brier
+    # 無偷看子集：prep.folder_for 對比賽日 ≤ 第一個 live 夾（10-27）的場次退回 10-27 夾（含當天結果），故只留比賽日 > CLEAN_AFTER 的場次
+    clean = np.array([x['date'] > CLEAN_AFTER for x in g]); nc = int(clean.sum()); idxc = boot_idx(nc)
+    pa = {a: np.mean(v['a'], axis=0) for a, v in stats.items()}
     prev = {'T0': 'M0', 'T1': 'T0', 'K10': 'T1', 'K10t': 'K10', 'T1tov': 'T1'}
     notes = {
         'M0': 'E-229b 做法：每場實際上場名單×比賽日前自己的平均分鐘，屬性用比賽日前最新 live 夾；無抽樣種子（200 局模擬）。',
@@ -161,11 +167,13 @@ def set_a():
     for a in ('M0', 'T0', 'T1', 'K10', 'K10t', 'T1tov'):
         v = stats[a]; br = float(np.mean([x.mean() for x in v['b']])); ac = float(np.mean([x.mean() for x in v['a']]))
         d = delta(pg[a], pg[prev[a]], idx) if a in prev else None
-        extra = dict(brierSeedSD=v['sd'], nSeeds=len(v['b']) if a != 'M0' else 1)
+        dc = delta(pg[a][clean], pg[prev[a]][clean], idxc) if a in prev else (None, None, None)
+        extra = dict(brierSeedSD=v['sd'], nSeeds=len(v['b']) if a != 'M0' else 1, nClean=nc, brierClean=float(pg[a][clean].mean()), accClean=float(pa[a][clean].mean()),
+                     dBrierPrevClean=dc[0], dBrierLoClean=dc[1], dBrierHiClean=dc[2])
         if a == 'T1tov':
             extra['diagnostic'] = True
         note = notes[a] + ('' if a == 'M0' else f' 5 個抽樣種子平均（Brier 種子 SD {v["sd"]:.4f}）；ΔBrier 對 {names[prev[a]]}，同場次 bootstrap 90%。') + \
-            ' winsMAE＝只含已賽部分的各隊「預測勝場−實際勝場」（非全季）。'
+            ' winsMAE＝只含已賽部分的各隊「預測勝場−實際勝場」（非全季）。'             f' *Clean 欄＝無偷看子集（比賽日 > {CLEAN_AFTER[5:]}，n={nc}）：{n - nc} 場比賽日 ≤ {CLEAN_AFTER[5:]} 的場次用了含當天結果的 {CLEAN_AFTER[5:]} live 夾，主結論以 Clean 欄為準。'
         rows.append(row(names[a], setname, n, br, ac, float(np.mean(v['w'])), d, note, **extra))
     return rows, dict(n=n, last=last, games=gg, arms=arms, per=per)
 
@@ -200,8 +208,8 @@ def set_b():
             '無法量測：需要 T1 的逐日特徵。K10 本身在 2025-26 的效果見下一列（以 T0 代用）與 E-253（季前特徵 T0 0.2175→K10 0.2008）。'),
         row('T1+K10 today', setname, None, None, None, None, None,
             '無法量測：2025-26 同資訊特徵整季固定，「當天的 T」＝賽前 T，R-172 在此與 R-171 定義重合（逐場預測相同），故不另算。'),
-        {**row('T1+K10', setname, n, float(out['K10']['b'].mean()), float(out['K10']['a'].mean()), out['K10']['w'], delta(out['K10']['b'], out['T0']['b'], idx),
-               '代用列（version 與 T1+K10 同名，標 substitute=true，繪圖請用 2026-27 的點）：在 T0 同資訊預測上套 K10（E-253 的 blend），ΔBrier 對 T0。'
+        {**row('T0+K10（代用）', setname, n, float(out['K10']['b'].mean()), float(out['K10']['a'].mean()), out['K10']['w'], delta(out['K10']['b'], out['T0']['b'], idx),
+               '代用列（version 為 T0+K10（代用），標 substitute=true，不與 T1+K10 同 key；繪圖請用 2026-27 的點）：在 T0 同資訊預測上套 K10（E-253 的 blend），ΔBrier 對 T0。'
                'winsMAE＝逐場賽前預測（含季內殘差更新）的全季加總，資訊量比 M0／T0 的季初預測多，不可直接比。'), 'substitute': True},
     ]
     return rows
@@ -216,6 +224,8 @@ def main():
     json.dump(out, open(os.path.join(HERE, 'team_model_versions.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     for r in out:
         print(f"{r['set']:<22}{r['version']:<18}n={r['n']}  brier={r['brier'] if r['brier'] is None else round(r['brier'], 4)}  acc={r['acc'] if r['acc'] is None else round(r['acc'], 3)}  "
+              f"clean n={r['nClean']} b={r['brierClean'] if r['brierClean'] is None else round(r['brierClean'], 4)} acc={r['accClean'] if r['accClean'] is None else round(r['accClean'], 3)} "
+              f"dC={None if r['dBrierPrevClean'] is None else (round(r['dBrierPrevClean'], 4), round(r['dBrierLoClean'], 4), round(r['dBrierHiClean'], 4))}  "
               f"wins={r['winsMAE'] if r['winsMAE'] is None else round(r['winsMAE'], 2)}  d={None if r['dBrierPrev'] is None else (round(r['dBrierPrev'], 4), round(r['dBrierLo'], 4), round(r['dBrierHi'], 4))}")
     return info
 

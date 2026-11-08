@@ -17,7 +17,7 @@ deploy)
 launch)   # 每個種子一個程序（3 執行緒），全部結束後寫 work/DONE
   ssh $HOST "cd ~/$D/tree/reports/team-model-versions && rm -f work/DONE && PY=~/venvs/jev-hearthstone/bin/python && \
     (for s in $SEEDS; do NTHREADS=3 nohup \$PY -I -X utf8 run_t.py \$s > work/seed_\$s.log 2>&1 & done; \
-     nohup bash -c 'while pgrep -f run_t.py >/dev/null; do sleep 10; done; touch work/DONE' >/dev/null 2>&1 &)" ;;
+     nohup bash -c 'while pgrep -f \"[r]un_t.py\" >/dev/null; do sleep 10; done; touch work/DONE' >/dev/null 2>&1 &)" ;;
 wait)
   until ssh $HOST "test -e ~/$D/tree/reports/team-model-versions/work/DONE"; do sleep 60; done ;;
 pull)
