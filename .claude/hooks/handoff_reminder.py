@@ -7,8 +7,9 @@
 「更新 handoff」＝之後有 Edit／Write 寫 memory/handoff.md；或之後有 Bash／PowerShell 指令提到 handoff.md、
 而且 handoff.md 的修改時間晚於最後一筆工作（用 shell／腳本寫入；只看修改時間會把共用 checkout 裡別的 session 寫的也算進來）。
 
-什麼時候檢查：transcript 裡用過 mcp__ccd_turn__wrap_up（App）時，只在本回合有 wrap_up（工作告一段落）才檢查；
-沒用過 wrap_up（CLI）時每回合結束都檢查。同一份未記錄的工作只提醒一次（狀態存在 %TEMP%）。
+什麼時候檢查：App 裡由 PostToolUse（matcher mcp__ccd_turn__wrap_up）觸發，用 additionalContext 在寫收尾訊息前
+提醒，使用者看不到；transcript 裡用過 wrap_up 時 Stop 就不再擋（Stop 的 block 理由和回覆都會顯示給使用者）。
+沒用過 wrap_up（CLI）時每回合 Stop 都檢查。同一份未記錄的工作只提醒一次（狀態存在 %TEMP%）。
 派工子 session（CLAUDE_DISPATCH_CHILD=1）不檢查。任何錯誤都放行。
 """
 import json
@@ -32,6 +33,12 @@ REASON = (
     "如果這段工作已告一段落：照 memory/README.md 收工規則，把新發現、實驗、裁決、教訓寫進對應檔，並更新 handoff.md"
     "（共用 checkout 時只 stage 自己的段落，L-047）。"
     "如果還在進行中（背景任務沒回來、等使用者決定），或這次改動確實不需要記錄，用一句繁體中文說明即可，不要呼叫工具。"
+)
+QUIET_REASON = (
+    "這個 session 做了實際工作（{what}），但之後沒有更新 memory/handoff.md。"
+    "如果這段工作已告一段落：先照 memory/README.md 收工規則，把新發現、實驗、裁決、教訓寫進對應檔並更新 handoff.md"
+    "（共用 checkout 時只 stage 自己的段落，L-047），再寫收尾訊息。"
+    "如果還在進行中或不需要記錄，就照常寫收尾訊息，不要提到這段提醒。"
 )
 
 
@@ -98,7 +105,7 @@ def scan(entries):
     shell_handoff = last_handoff_cmd > last_work and handoff_touched_after(work_ts)
     if shell_handoff:
         last_handoff = max(last_handoff, last_handoff_cmd)
-    return last_work, what, last_handoff, (turn_start in wrap_turns) if used_wrap else True
+    return last_work, what, last_handoff, used_wrap
 
 
 def handoff_touched_after(ts):
@@ -126,13 +133,14 @@ def main():
     payload = json.loads(raw.decode('utf-8') or '{}')
     if payload.get('stop_hook_active'):
         return
+    post_tool = payload.get('hook_event_name') == 'PostToolUse'
     path = payload.get('transcript_path')
     if not path or not os.path.isfile(path):
         return
     with open(path, encoding='utf-8') as f:
         entries = [json.loads(line) for line in f if line.strip()]
-    last_work, what, last_handoff, check_now = scan(entries)
-    if not check_now or last_work < 0 or last_handoff > last_work:
+    last_work, what, last_handoff, used_wrap = scan(entries)
+    if (used_wrap and not post_tool) or last_work < 0 or last_handoff > last_work:
         return
     state = STATE_DIR / (re.sub(r'[^\w.-]', '_', str(payload.get('session_id') or Path(path).stem)) + '.json')
     try:
@@ -143,7 +151,10 @@ def main():
         return
     STATE_DIR.mkdir(parents=True, exist_ok=True)
     state.write_text(json.dumps({'lastWork': last_work}), encoding='utf-8')
-    emit({'decision': 'block', 'reason': REASON.format(what=what)})
+    if post_tool:
+        emit({'hookSpecificOutput': {'hookEventName': 'PostToolUse', 'additionalContext': QUIET_REASON.format(what=what)}})
+    else:
+        emit({'decision': 'block', 'reason': REASON.format(what=what)})
 
 
 if __name__ == '__main__':

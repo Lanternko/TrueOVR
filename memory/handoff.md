@@ -1,9 +1,9 @@
 # 交接（handoff）
 
-只記「目前狀態」，每次收工整份覆寫，不往下追加日期段。每條最多兩行，細節寫進 findings／experiments／rulings 或報告檔，這裡只放 ID 與路徑。UI 小改不進本檔（看 git log）。舊版全文在 `archive/`（最近一份 `handoff-2026-11-05-full.md`，含 11-05 前所有條目原文）。
+只記「目前狀態」，每次收工整份覆寫，不往下追加日期段。每條最多兩行，細節寫進 findings／experiments／rulings 或報告檔，這裡只放 ID 與路徑。UI 小改不進本檔（看 git log）。舊版全文在 `archive/`（最近一份 `handoff-2026-11-09-full.md`）。
 **多個 session 同時改本檔與工作樹**：覆寫前先重讀一次，只改自己負責的條目。
 
-- **更新**：2026-11-08 OVR 折線加速＋去洩漏（L-133／134）；card／inseason 0.2.13a 修 pnr 窗口外季回合（R-173、L-132）；0.2.13 稽核 4/5（`reports/audit-0.2.13/`）；2026-11-05 球隊評分 T 的 21 欄追蹤統計改本季混合（R-169、E-246）；3PT／FT 顯示欄換量準混合（R-168，未 commit）；球員卡加追蹤量格子並發布（R-166）；11-04 E-239、0.2.12e（R-161～165）；11-03 球隊評分 Transformer（R-160）、近期加成（R-150）。
+- **更新**：2026-11-09 R-178／L-137 防守分步修正、分層驗收；E-271 低效中距扣分 adopt_candidate；2026-11-08 OVR 折線加速＋去洩漏（L-133／134）；card／inseason 0.2.13a 修 pnr 窗口外季回合（R-173、L-132）；0.2.13 稽核 4/5（`reports/audit-0.2.13/`）；2026-11-05 球隊評分 T 的 21 欄追蹤統計改本季混合（R-169、E-246）；3PT／FT 顯示欄換量準混合（R-168，未 commit）；球員卡加追蹤量格子並發布（R-166）；11-04 E-239、0.2.12e（R-161～165）；11-03 球隊評分 Transformer（R-160）、近期加成（R-150）。
 
 ## 目前基準（線上）
 - **card／inseason 0.2.13a**（11-08，R-173、L-132）：加擋拆持球 pnr（E-258，全部係數重擬合，role-audit 4/5、G5 過）；0.2.13a 修窗口外季回合。正式卡 `reports/card-0.2.13a/`；回退 `PNR_FIX=0`＝0.2.13、`PNR=0`＝0.2.12e。
@@ -16,16 +16,13 @@
 - **模擬 sim 0.1.3**（R-120）；防守 `nba-defense-v3`（R-010）；賽中 OVR C4（E-033）。
 
 ## 進行中（未稽核，待派 role-audit）
+- **防守三步（R-178、L-137）**：① `help` 位置係數改 PG→C 遞增（現行 U 字形 PG .43／SG .01／SF .03／PF .37／C .29）→ ② 干擾／抄截／蓋帽獨立定係數 → ③ `DEF` 顯示對齊 T／EPM／加權。驗收看結構＋代表球員＋EPM／T 對齊＋OVR 不壞，不拿單季防守 RAPM 單一否決。E-274～E-276、E-269 舊結論（D0 ρ 0.422 最高）依 R-178 不再當否決依據。`reports/E276-def-stl-blk-defl/report.md`
+- **E-271 低效中距＋慘 On/Off 扣分**（11-08，未 commit／未稽核）：`AR` +0.0085、`D` +0.0104 adopt_candidate，`A` 救回 Booker／Harden／Cade；待使用者選臂交 role-card 做 0.2.14。E-272 bog 進 T 不採用。`reports/E271-ineff-midrange-bog-penalty/report.md`
+- **E-273 T 各版本同場次重測**（3/5）：各步區間跨 0，每隊滿 20 場重跑。`reports/team-model-versions/report.md`
+- **E-247～E-251 防守追蹤量**：deflections 只在 stint 層級弱訊號（E-251 4/5），隱藏欄 `deflP`（R-170）；其餘結案。三分／罰球／中距量率系列（E-240～E-245）結案、`long`／`ft`／`mid`／`short` 不動（R-167，E-252）。
 - **R-171 戰力排行混入本季實際表現**（11-07，E-253 K10）：殘差 ÷(場數+10) 加回 T 評分，`scripts/actual_blend.py`、回退 `ACTUAL_BLEND=0`；已發布（POR 14→9）。**R-172**：殘差改每天對今天的 T 重算（`today-margins.json`，避免和本季 OVR 更新重複計入，L-129）。K10 是看過前向才選，每隊滿 20 場用凍結 K10 前向複查一次（F-172）。
 - **POR 被低估追查**（11-07）：E-254 出手結構、E-256 殘差分運氣／結構、E-257 籃板率都不採用（1/5）；只有三分命中會回落（L-130），T 沒有系統性缺口，POR 剩下差距是 7 場只採信四成（R-171）。籃板輸入 T 本來就有、POR 今年籃板率與去年一樣（L-131）。`reports/por-offense-diag/`。
 - **E-239 追蹤全套**（3/5）：單一特徵無穩健訊號；量類 42 個可當格子（已做）。待使用者：另開預註冊測定義一致子集（2024-25 起）進 OVR／Transformer；要不要每日抓追蹤（補 registry／audit）。`reports/E239-tracking-full/report.md`、F-160
-- **E-240 三分量與率拆法**（11-05，3/5 不採用）：量＋率分開放對下季進攻 RAPM R² +0.014，未過預註冊門檻（F-161）。使用者指定一次測一項；待決定下一項（建議罰球，其次中距、切入），框架可直接換項。`reports/E240-three-point-volume-rate/report.md`
-- **E-241 三分量率混合比例掃描（舊表格 TF）**（11-05，2/5 不採用）：570 筆球員表直接訓 Transformer 嚴重過擬合（R² 0–0.06）；已由 E-242 陣容 Transformer 取代（F-162）。`reports/E241-three-point-blend-sweep/report.md`
-- **E-245 中距離 mid 量率比例**（11-05，3/5 不採用）：同框架換 `mid` 欄，w＝0.8 對現行 `mid` R² +0.0071、三折全正，但 90% CI 跨零、測試場次沒更準，`mid` 維持不動；三分／罰球／中距離量率系列到此為止，等使用者裁定（F-165）。`reports/E245-mid-lineup-tf-blend/report.md`
-- **E-244 罰球 ft 量率比例**（11-05，2/5 不採用）：同 E-242 框架換 `ft` 欄，w* 對現行 `ft` 增益 +0.0029 未過門檻、測試場次沒更準，`ft` 維持不動（F-164）。`reports/E244-ft-lineup-tf-blend/report.md`
-- **E-242 陣容 Transformer 三分量率比例量測**（11-05，4/5 停下交使用者裁定；11-05 裁定 `long` 維持不改，R-167）：改用五季 111,499 個 stints 訓練 `LineupNet`，消除過擬合並量出平滑倒 U 曲線——下季進攻 RAPM 最佳在 **w＝0.5–0.6**（0.2328 vs `long` 0.2265，與 ridge 一致），測試場次對戰得分 MSE 最佳在 **w＝0.8**（比純率 −4.92），自學權重 `WL` 收斂至 **w＝0.34±0.025**。因三季 867 人次 CI 跨零，待使用者裁定：三分要不要改採 w＝0.5–0.6，以及下一步要不要用同套 LineupNet 框架測罰球（F-163）。`reports/E242-lineup-tf-three-blend/report.md`
-- **E-246**：完成未稽核。後續想法（未開）：量類進攻追蹤（持球／接球三分、擋拆、handoff，2024-25 起定義一致）當新欄重訓 T，需新預註冊。
-- **E-238 無球追蹤**：補不進 OVR（H3 不過），只當個案顯示。F-158
 - **E-230 新秀起點 SL／PS**：訊號小，PS 位移已套用（R-162）。待使用者決定要不要逐項起點實驗。
 - **陣容 Transformer**：R-160 球隊評分已換 T，舊引擎備援。E-234／E-236／E-237 能力值→OVR Transformer 皆不勝 ridge，名單在 `reports/E234-…`、`E235-…`、`E237-…` 待人工檢查。
 - **E-222 診斷**：30 隊滿 20 場時跑 `reports/E222-recent-boost-diagnostic/e222_eval.py` 一次。
@@ -37,7 +34,7 @@
 
 ## 待辦（非決策）
 - Edwards 卡 #38 但 DARKO #9／2K 95；卡對 RAPM ρ 0.78→0.70，2026-27 季後做樣本外複查；sim 得分偏高 119.1 對 115.5。
-- 等季末：E-083、E-127、E-141（2026-12-31）。
+- 等季末項 E-083、E-127、E-141：R-177 起改歷史季輪流驗證。
 
 ## 工作樹注意
 - 共用 checkout：memory 條目檔與 `season_nav.py`、`build_*_viewer.py` 常混有別的 session 改動，只挑自己的段落。`reports/` 被 gitignore，要 `git add -f`。DeepSeek 餘額不足，auto_review 失效。

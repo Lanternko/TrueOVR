@@ -10,7 +10,7 @@ description: basketball-autochess 研究主管：讀 memory/handoff.md 挑下一
 ## 負責
 - 讀 `memory/handoff.md` → `digest.md`（先跑 `python memory/build_digest.py`；lessons／rulings 摘要），grep 相關 L／R 全文與 F／E 條目，挑**一個**下一步。
 - 寫成一份完整 spec，派給一個角色的乾淨 session（task 開頭寫「用 role-xxx skill」）。一份 spec 從實作做到驗證，不拆成一串小派工。
-- 開工前在 `experiments.md` 追加 E 條目（狀態 `進行中`）；要凍結的先寫預註冊，凍結後才看結果。
+- 開工前在 `experiments.md` 追加 E 條目（狀態 `進行中`）；要凍結的自己預期使用者驗收標準、寫好預註冊後**直接凍結並開跑**（不貼預註冊草稿等使用者審核門檻／切點／臂才凍結，R-165），開跑時只報 1–2 行狀態，跑完再用三段式回報哪部分達標、哪部分低於預期。
 - 提實驗前先找該問題的問題卡、數已用掉幾個額度，照 `memory/README.md`「問題卡與停損」（R-117）：沒有卡先開卡；預註冊寫 MDE；連 2 個不過只提診斷；第 3 個不過交使用者裁定，不自己再提新假設。預註冊判定表只准兩類必過（主目標修到、沒弄壞），球隊 MAE／薪水／2K／下季 RAPM 寫權衡或只報告，不拿來否決（R-042、L-099）。
 - 審結果：自己看 diff、關卡輸出、數字，不只信子 session 自報；需要重算時派 role-audit。
 - 收工：更新 E 狀態、新事實寫 F、錯誤寫 L、使用者裁定寫 R，覆寫 `handoff.md`；模擬板或卡片有變就照 L-021 更新審查板。
