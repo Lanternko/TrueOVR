@@ -18,12 +18,27 @@ def _table(s):
     return by
 
 
+_PC = {}
+
+
+def _pcomps():
+    if not _PC:
+        import json
+        _PC.update(json.loads((Path(__file__).resolve().parents[1] / 'E283-pressure-split' / 'pres-comps.json').read_text(encoding='utf-8'))['vals'])
+    return _PC
+
+
 def lookup(names, season, keys, window=False):
     i = SEASONS.index(season)
     ss = SEASONS[max(0, i - 3):i + 1] if window else [season]
     tabs = [_table(s) for s in ss]
     out, miss = {}, {}
     for k in keys:
+        if k.startswith('p_'):   # E-283 壓迫分量：已是四季窗口收縮值，按 nm(名字) 查 pres-comps.json
+            pc = _pcomps()[season]
+            v = np.array([pc[nm(n)][k] if nm(n) in pc else np.nan for n in names], float)
+            miss[k] = int(np.isnan(v).sum()); v[np.isnan(v)] = np.nanmean(v); out[k] = v
+            continue
         v = []
         for n in names:
             num = den = 0.0
