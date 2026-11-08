@@ -924,6 +924,29 @@ def off_def(rows, key, card_path=OD_CARD):
     return out, bad
 
 
+OD_T_W = 0.5   # E-287 上線（2026-11-09 使用者裁定 OFF 0.5、DEF 0.5）：顯示值＝(1−w)·z(現行)＋w·z(T 換人值)，乘回現行標準差、加回平均
+
+
+def blend_t(od, tswap, w=OD_T_W):
+    """OFF／DEF 混 T 換人值（E-287）。od＝off_def 的 {pid: (o, d)}；tswap＝t_swap_live.py 的 t-swap.json 內容。
+    T 進攻＝ownPts100、T 防守＝−oppPts100；平均與標準差在 tswap['pool'] 人群（名次人群）內算。沒有 T 值的人維持現行。回 (新 od, 混到的人數)。"""
+    import numpy as np
+    tv = ({p: v for p, v in tswap['ownPts100'].items()}, {p: -v for p, v in tswap['oppPts100'].items()})
+    out = {p: list(v) for p, v in od.items()}
+    n = 0
+    for k in (0, 1):
+        q = [p for p in tswap['pool'] if p in od and od[p][k] is not None and p in tv[k]]
+        if len(q) < 30:
+            return od, 0
+        c, t = np.array([od[p][k] for p in q]), np.array([tv[k][p] for p in q])
+        mc, sc, mt, st = c.mean(), c.std(), t.mean(), t.std()
+        for p, v in od.items():
+            if v[k] is not None and p in tv[k]:
+                out[p][k] = round(float(mc + sc * ((1 - w) * (v[k] - mc) / sc + w * (tv[k][p] - mt) / st)), 2)
+                n += k == 0
+    return {p: tuple(v) for p, v in out.items()}, n
+
+
 # 表格 OVR 右邊加 OFF／DEF 兩欄（單位是每 36 分鐘淨分，不換等第，直接顯示 +x.x）
 OD_TD = ("const odc = (p, k) => { const v = p[k]; return `<td class=\"${v == null ? '' : v >= 2 ? 'gA' : v >= 1 ? 'gB' : v >= 0 ? 'gC' : ''}"
          "${st.sort === k ? ' sortcol' : ''}\"${v != null && v >= 0 ? '' : ' style=\"color:var(--muted)\"'}>"

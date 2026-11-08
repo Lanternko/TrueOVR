@@ -221,6 +221,12 @@ def main():
     od, od_bad = sn.off_def(rows, 'playerId')
     if od_bad:
         print(f'進攻／防守分：{od_bad} 人 pred0 用卡片係數算不回來，顯示「—」', file=sys.stderr)
+    tj = live / 't-swap.json'   # E-287 上線：OFF／DEF 各混 0.5 的 T 換人值（scripts/t_swap_live.py 每日寫）；沒有檔就維持現行
+    if tj.exists():
+        od, n_t = sn.blend_t(od, json.loads(tj.read_text(encoding='utf-8')))
+        print(f'OFF／DEF 混 T 換人值：{n_t} 人', file=sys.stderr)
+    else:
+        print('OFF／DEF：沒有 t-swap.json，維持現行（不混 T）', file=sys.stderr)
     data_rows = []
     def tips(r):
         t = {}

@@ -52,12 +52,13 @@ E151_EVAL = ROOT / 'reports/card-0.2.7d+E151-young-curve/e151_eval.py'   # 預�
 E151_RESULT = E151_EVAL.parent / 'results.json'
 E222_EVAL = ROOT / 'reports/E222-recent-boost-diagnostic/e222_eval.py'   # 預註冊診斷：30 隊打滿 20 場後跑一次
 E222_RESULT = E222_EVAL.parent / 'result.json'
+T_SWAP = ROOT / 'scripts/t_swap_live.py'                # E-287：OFF／DEF 混 T 換人值
 TEAM_RATINGS = ROOT / 'scripts/team_ratings_daily.py'      # E-208 第二階段：傷病名單＋球隊評分
 TEAMS_PAGE = ROOT / 'scripts/build_teams_page.py'
 GAMES_DATA = ROOT / 'scripts/build_games_data.py'
 CREATE_NO_WINDOW = getattr(subprocess, 'CREATE_NO_WINDOW', 0)
 
-TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'tracking': 600, 'gravity': 300, 'pnr': 300, 'possessions': 300, 'stints': 1800, 'c4': 3600, 'viewer': 600, 'history': 3600, 'prereg': 900, 'ratings': 1800, 'e229': 900, 'ratings_m0': 1800, 'live': 180, 'git': 180}
+TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'tracking': 600, 'gravity': 300, 'pnr': 300, 'possessions': 300, 'stints': 1800, 'c4': 3600, 'viewer': 600, 'history': 3600, 'prereg': 900, 'ratings': 1800, 'e229': 900, 'ratings_m0': 1800, 'tswap': 1800, 'live': 180, 'git': 180}
 CO_AUTHOR = 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
 
 log = logging.getLogger('daily_inseason')
@@ -469,6 +470,17 @@ def step_history(out_dir: Path) -> None:
         log.warning('ovr_history exit=%s：%s', r.returncode, (r.stderr or r.stdout).strip()[-300:])
 
 
+def step_t_swap(out_dir: Path) -> None:
+    """E-287 上線（2026-11-09）：本季 T 換人值 → out_dir/t-swap.json，名單頁 OFF／DEF 各混 0.5。失敗不擋發布，OFF／DEF 維持現行。"""
+    try:
+        r = run([py_exe(), '-I', '-X', 'utf8', str(T_SWAP), str(out_dir)], ROOT, TIMEOUTS['tswap'])
+    except subprocess.TimeoutExpired:
+        log.warning('t_swap_live 逾時；OFF／DEF 這次不混 T')
+        return
+    if r.returncode != 0:
+        log.warning('t_swap_live exit=%s：%s', r.returncode, (r.stderr or r.stdout).strip()[-300:])
+
+
 def step_viewer(out_dir: Path) -> Path:
     checked([py_exe(), '-I', '-X', 'utf8', str(VIEWER), str(out_dir)], ROOT, TIMEOUTS['viewer'])
     html = out_dir / 'roster-viewer.html'
@@ -674,6 +686,7 @@ def _run(args) -> int:
         meta['dataSha256'] = data_sha
         save_json(work / 'meta.json', meta)
         step_history(work)
+        step_t_swap(work)
         html = step_viewer(work)
         card_html = step_card_viewer(work)
         cutoff = meta['dataCutoff']
