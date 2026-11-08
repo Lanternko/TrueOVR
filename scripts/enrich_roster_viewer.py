@@ -649,6 +649,26 @@ function impactChips(p) {
   }
   document.addEventListener('visibilitychange', repaint);
   addEventListener('pageshow', repaint); addEventListener('focus', repaint);
+  // 重開瀏覽器／閒置久／切分頁後名單整片空白、只剩中間一條直線（使用者 2026-11-08，Edge 桌機）：
+  // 桌機 .tbox 是 width:fit-content＋置中，外框被算成約 0 寬（左右框線疊成一條線），表格被 overflow-x:hidden 藏掉。
+  // 偵測到外框遠窄於表格就把外框 display:none 再放回，強迫重算寬度、重建繪圖層；捲動位置（外框與整頁）存起來寫回。
+  const tbl = document.getElementById('tbl'); let lastHeal = 0;
+  function heal() {
+    if (document.hidden || !tbl || !tbl.tBodies[0] || !tbl.tBodies[0].rows.length) return;
+    const tw = tbl.offsetWidth, bw = box.offsetWidth;
+    if (!tw || bw >= Math.min(tw * 0.5, 200)) return;  // 名單隱藏（戰力排行）時兩者都 0；正常縮放時外框約表格 0.6 倍以上
+    const now = Date.now(); if (now - lastHeal < 500) return; lastHeal = now;  // ResizeObserver 不會因此連環觸發
+    const sx = scrollX, sy = scrollY, l = box.scrollLeft, t = box.scrollTop, d = box.style.display;
+    box.style.display = 'none'; void box.offsetWidth; box.style.display = d; void box.offsetWidth;
+    box.scrollLeft = l; box.scrollTop = t; scrollTo(sx, sy);
+  }
+  // 用 setTimeout 不用 rAF：分頁剛切回、或被系統遮蔽時 rAF 可能還停著
+  const healSoon = () => { setTimeout(heal, 50); setTimeout(heal, 600); };
+  document.addEventListener('visibilitychange', healSoon);
+  addEventListener('pageshow', healSoon); addEventListener('focus', healSoon); addEventListener('resize', healSoon);
+  if (document.fonts) document.fonts.ready.then(healSoon);
+  addEventListener('load', healSoon); setTimeout(heal, 1500); setTimeout(heal, 5000);
+  if (window.ResizeObserver) new ResizeObserver(() => heal()).observe(box);
 })();
 // 手機表格手勢鎖方向（使用者 2026-10-29：往上滑時手會左右偏，表格跟著晃）：先移動 10px 才判方向，
 // 水平量要大於垂直 1.5 倍才算左右捲，判定後整段手勢只動那一軸。放手後照速度慣性滑行。
