@@ -1,0 +1,117 @@
+{
+ "date": "2026-11-08",
+ "dataDir": "D:\\Projects\\CODING\\basketball-autochess\\reports\\ovr-inseason-2026-27\\live\\2026-11-07",
+ "n_pool": 222,
+ "n_ranked": 222,
+ "off_def_bad": 0,
+ "bigs": [
+  "Victor Wembanyama",
+  "Nikola Jokić",
+  "Anthony Davis",
+  "Karl-Anthony Towns",
+  "Joel Embiid",
+  "Jarrett Allen",
+  "Bam Adebayo",
+  "Rudy Gobert",
+  "Paul Reed",
+  "Domantas Sabonis"
+ ],
+ "players": {
+  "Kevin Durant": {
+   "D0": -0.95,
+   "D0_rank": 187,
+   "D2_oppPts100_vs_avg": -0.8270414650171727,
+   "D2_rank": 67
+  },
+  "Stephen Curry": {
+   "D0": -0.41,
+   "D0_rank": 137,
+   "D2_oppPts100_vs_avg": 0.6422475546866924,
+   "D2_rank": 135
+  },
+  "Fred VanVleet": {
+   "D0": 1.76,
+   "D0_rank": 15,
+   "D2_oppPts100_vs_avg": 0.9524347603589565,
+   "D2_rank": 148
+  },
+  "Victor Wembanyama": {
+   "D0": 4.33,
+   "D0_rank": 1,
+   "D2_oppPts100_vs_avg": -8.347527700635764,
+   "D2_rank": 1
+  },
+  "Rudy Gobert": {
+   "D0": 3.2,
+   "D0_rank": 4,
+   "D2_oppPts100_vs_avg": -3.5199160158365697,
+   "D2_rank": 8
+  },
+  "Amen Thompson": {
+   "D0": 2.23,
+   "D0_rank": 9,
+   "D2_oppPts100_vs_avg": -3.3015455782144993,
+   "D2_rank": 13
+  },
+  "Alperen Sengun": {
+   "D0": -0.14,
+   "D0_rank": 119,
+   "D2_oppPts100_vs_avg": -2.0327164709299534,
+   "D2_rank": 34
+  },
+  "Nikola Jokić": {
+   "D0": 0.0,
+   "D0_rank": 104,
+   "D2_oppPts100_vs_avg": -1.8743350088327855,
+   "D2_rank": 36
+  },
+  "Trae Young": {
+   "D0": -0.96,
+   "D0_rank": 189,
+   "D2_oppPts100_vs_avg": 2.12572721841636,
+   "D2_rank": 197
+  },
+  "Anthony Davis": {
+   "D0": 1.41,
+   "D0_rank": 23,
+   "D2_oppPts100_vs_avg": -4.244226175519797,
+   "D2_rank": 5
+  },
+  "Karl-Anthony Towns": {
+   "D0": -0.64,
+   "D0_rank": 166,
+   "D2_oppPts100_vs_avg": -2.7360481798380345,
+   "D2_rank": 18
+  },
+  "Joel Embiid": {
+   "D0": 0.75,
+   "D0_rank": 49,
+   "D2_oppPts100_vs_avg": -0.2933543503015965,
+   "D2_rank": 86
+  },
+  "Jarrett Allen": {
+   "D0": 0.56,
+   "D0_rank": 60,
+   "D2_oppPts100_vs_avg": -3.343414741727683,
+   "D2_rank": 12
+  },
+  "Bam Adebayo": {
+   "D0": 0.51,
+   "D0_rank": 64,
+   "D2_oppPts100_vs_avg": -2.9632324754923314,
+   "D2_rank": 16
+  },
+  "Paul Reed": {
+   "D0": 1.61,
+   "D0_rank": 19,
+   "D2_oppPts100_vs_avg": -5.1675784170359105,
+   "D2_rank": 2
+  },
+  "Domantas Sabonis": {
+   "D0": -1.02,
+   "D0_rank": 196,
+   "D2_oppPts100_vs_avg": 0.7060739815503627,
+   "D2_rank": 138
+  }
+ }
+}
