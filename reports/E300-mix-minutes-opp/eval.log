@@ -1,0 +1,29 @@
+coef b_def_dreb -0.3109 b_opp_oreb 0.8686 Obar 0.3047 seg 54601 pool 377
+by mpg {"0-16": {"n": 52, "oppOVR": 68.8789164674005, "opp2PA36": 38.15935778475952, "oppOB": 0.22770487322136715}, "16-24": {"n": 138, "oppOVR": 70.19464644521368, "opp2PA36": 38.637085951779, "oppOB": 0.22617335677559}, "24-30": {"n": 117, "oppOVR": 71.95124628839407, "opp2PA36": 39.21090712101818, "oppOB": 0.22594976326483662}, "30-99": {"n": 72, "oppOVR": 72.70670636812497, "opp2PA36": 39.09397920610915, "oppOB": 0.22463787382227662}}
+  Deni Avdija {'mpg': 32.54, 'oppOVR': 72.5, 'oppOB': 0.2256, 'opp2PA36': 42.05}
+  Donovan Clingan {'mpg': 27.36, 'oppOVR': 71.92, 'oppOB': 0.2281, 'opp2PA36': 39.94}
+  Robert Williams III {'mpg': 17.81, 'oppOVR': 70.63, 'oppOB': 0.2272, 'opp2PA36': 41.88}
+  Rudy Gobert {'mpg': 31.09, 'oppOVR': 72.18, 'oppOB': 0.2279, 'opp2PA36': 41.29}
+  Nikola Jokić {'mpg': 34.99, 'oppOVR': 72.65, 'oppOB': 0.2223, 'opp2PA36': 39.05}
+live W1 {'Deni Avdija': (79, 82.3, 0.0), 'Donovan Clingan': (72, 83.1, 10.5), 'Robert Williams III': (50, 86.8, 7.92)} S1 False
+W1  S1 False S2 True S3 True drops []
+    ρW {'TW': 0.7821, 'EPMW': 0.7394, '2K': 0.7796} {'TW': (0.0, [0.0, 0.0]), 'EPMW': (0.0, [0.0, 0.0]), '2K': (0.0, [0.0, 0.0])}
+    ρraw {'T': 0.7653, 'EPM': 0.715, '2K': 0.7796} {'T': 0.0, 'EPM': 0.0, '2K': 0.0}
+    live {'Deni Avdija': (79, 82.3, 0.0), 'Donovan Clingan': (72, 83.1, 10.5), 'Robert Williams III': (50, 86.8, 7.92), 'Rudy Gobert': (26, 91.7, 7.86)}
+M   S1 True S2 True S3 True drops []
+    ρW {'TW': 0.7783, 'EPMW': 0.7381, '2K': 0.7816} {'TW': (-0.0038, [-0.0066, -0.0014]), 'EPMW': (-0.0013, [-0.004, 0.0013]), '2K': (0.002, [0.0003, 0.0037])}
+    ρraw {'T': 0.7604, 'EPM': 0.7125, '2K': 0.7816} {'T': -0.005, 'EPM': -0.0025, '2K': 0.002}
+    live {'Deni Avdija': (75, 82.3, 0.0), 'Donovan Clingan': (80, 82.1, 9.52), 'Robert Williams III': (60, 84.7, 5.85), 'Rudy Gobert': (27, 91.4, 7.52)}
+O   S1 False S2 True S3 True drops []
+    ρW {'TW': 0.7825, 'EPMW': 0.7404, '2K': 0.7794} {'TW': (0.0004, [-0.0008, 0.0018]), 'EPMW': (0.0009, [-0.0002, 0.0023]), '2K': (-0.0002, [-0.0008, 0.0005])}
+    ρraw {'T': 0.7659, 'EPM': 0.7161, '2K': 0.7794} {'T': 0.0006, 'EPM': 0.0011, '2K': -0.0002}
+    live {'Deni Avdija': (79, 82.3, 0.0), 'Donovan Clingan': (72, 83.1, 10.47), 'Robert Williams III': (54, 86.1, 7.22), 'Rudy Gobert': (27, 91.4, 7.55)}
+MO  S1 True S2 True S3 True drops []
+    ρW {'TW': 0.7788, 'EPMW': 0.7388, '2K': 0.7814} {'TW': (-0.0033, [-0.0062, -0.0007]), 'EPMW': (-0.0006, [-0.0034, 0.0023]), '2K': (0.0018, [-0.0, 0.0037])}
+    ρraw {'T': 0.761, 'EPM': 0.7133, '2K': 0.7814} {'T': -0.0044, 'EPM': -0.0016, '2K': 0.0018}
+    live {'Deni Avdija': (76, 82.3, 0.0), 'Donovan Clingan': (79, 82.1, 9.49), 'Robert Williams III': (63, 84.2, 5.34), 'Rudy Gobert': (27, 91.1, 7.22)}
+bench W1  Δbase +0.0139 ΔW1 +0.0000 (0/4)
+bench M   Δbase +0.0130 ΔW1 -0.0010 (1/4)
+bench O   Δbase +0.0142 ΔW1 +0.0002 (3/4)
+bench MO  Δbase +0.0131 ΔW1 -0.0008 (1/4)
+verdicts {'M': 'adopt_candidate', 'O': 'reject', 'MO': 'adopt_candidate'} pick M

@@ -2833,3 +2833,10 @@
 - 結論：4/5，V 為 adopt_candidate（網站兩格描述性顯示）。上線要每天抓 Synergy 與 CatchShoot，並補 registry。`reports/E301-offball-two-cells/report.md`
 - 狀態：完成；adopt_candidate（待使用者裁定；未稽核）
 - 相關：E-297、F-178、R-165
+
+## E-300 中鋒加分照分鐘曲線＋對手籃板修正（2026-11-10）
+- 做法：預註冊 `reports/E300-mix-minutes-opp/preregistration.md`（commit 222cdc3，R-165）。臂：M＝W1 加分×min(1,W(MPG))（OVR 主體同一條 R-047 曲線）；O＝ob／db 按對面五人籃板強度、con 按對手兩分出手量修正（係數由 stints 籃板結果估）；MO＝兩者。S1 設在 live 名次（L-146），S3 改對 T·W、EPM·W、2K。
+- 結果：M、MO 過關，pick M。live Avdija 79→75、Clingan 72→80、RW3 50→60；T·W −0.0038、EPM·W −0.0013（雜訊內）、2K +0.002、前瞻 −0.0010。O 非劣（+0.0002）但排序不動：每場 <16 分鐘的人對面平均 OVR 68.9 對 ≥30 分鐘 72.7，但對面籃板強度與出手量幾乎一樣。
+- 結論：4/5，M 為 adopt_candidate；對手修正不必上。RW3 高於 Avdija 的主因是每 36 分換算＋小樣本防守意識，另案。`reports/E300-mix-minutes-opp/report.md`
+- 狀態：完成；adopt_candidate（待使用者裁定；未稽核）
+- 相關：E-298、E-295、R-025、R-047、R-187、L-146
