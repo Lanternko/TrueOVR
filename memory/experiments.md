@@ -2825,3 +2825,11 @@
 - 結論：3/5。T 不加；W-eq 可當描述性「無球」格的候選，建議另做拆成射手／切入順下兩格的預註冊。`reports/E297-offball-t-composite/report.md`
 - 狀態：完成；T 不採用；顯示權重待使用者裁定（未稽核）
 - 相關：F-178、E-227、E-285、R-165、R-178
+
+## E-301 無球拆射手／切入順下兩格（2026-11-10）
+- 問題：E-297 單格 W-eq 偏射手（Gordon 26、Gobert 19）。使用者裁定「拆兩格再測」。
+- 做法：預註冊 `reports/E301-offball-two-cells/prereg.md`（commit 440af34，R-165）。兩格是 SHOOT（Spotup、OffScreen、Handoff、cs3pct）和 CUTROLL（Cut、Roll、Putback、Transition、cutPPP）。三臂：V 量 z 等權、P 得分貢獻、VP 兩者平均。驗收：年對年 ≥0.60、E-297 指名球員 ≥75% 達 70 百分位、2024-25 樣本外加在 OVR 上 ΔR² ≥ W-eq。
+- 結果：V 過關且最佳。年對年 0.85／0.80；2024-25 ΔR² +0.095（W-eq +0.028）。Gordon 83、Allen 99、Gobert 88、Klay 99、D. White 82。P 年對年約 0.5 不過；VP 也過，但 +0.070。副作用：CUTROLL 和身高相關 0.67。
+- 結論：4/5，V 為 adopt_candidate（網站兩格描述性顯示）。上線要每天抓 Synergy 與 CatchShoot，並補 registry。`reports/E301-offball-two-cells/report.md`
+- 狀態：完成；adopt_candidate（待使用者裁定；未稽核）
+- 相關：E-297、F-178、R-165
