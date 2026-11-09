@@ -230,6 +230,14 @@
 - 對應測試或關卡：上線前一定要跑「預設旗標」那一臂並確認有完整輸出，不能只跑回退臂；`grep -n "0.2.<舊版>'" live/*.py` 的每一處都要決定加不加新版
 - 相關：L-140、L-144、R-187
 
+### L-149
+- 日期：2026-11-10
+- 規則：`ovr_history.py` 的遠端同步清單（`remote_files`）要涵蓋 truncate 讀到的每一個檔。新增 truncate 輸入時，要同時加進 `remote_files`；看到 log 出現「遠端停用：…sha 對不上」，先比對鏡像和本機的檔案時間，不要只重跑。
+- 細節：`truncate` 在沒有當日快照的日子，會用 `_scale_undated` 讀整季的 `synergy-pnr.json`／`gravity.json`，但 `remote_files` 沒同步這兩個檔。本機在 11-09 22:30 更新以後，鏡像仍是 11-08 版，10-22 以後的每一天遠端 sha 都對不上，整批退回本機。E-302 三臂第一次跑因此全在本機；線上每日折線也一樣，一直靜默退回本機。
+- 由來：E-302（`reports/E302-attr-anchor/report.md`）
+- 對應測試或關卡：改 truncate 後跑一次 `HIST_REMOTE=… ovr_history.py`，log 不得出現「遠端停用」
+- 相關：L-134、E-302
+
 ## 預註冊
 
 ### L-041

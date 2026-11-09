@@ -221,6 +221,7 @@ def remote_files(deps, live) -> list:
     """遠端鏡像要有的檔：快取鍵 deps＋本季最新資料（live）＋truncate 的輸入。"""
     rel = lambda p: p.relative_to(ROOT).as_posix()
     src = [rel(DATA26 / n) for n in ('player-games.json', 'team-games.json') + STATIC] + [rel(SEASON_SRC / 'player-games.json')]
+    src += [rel(DATA26 / n) for n in SNAPSHOTS if (DATA26 / n).exists()]   # 沒快照的日子 truncate 用整季檔縮小（_scale_undated）；不同步則遠端 sha 對不上、整批退回本機（E-302 踩到）
     for sub in ('pbp', 'boxes'):
         src += [rel(p) for p in sorted((DATA26 / sub).glob('*.json'))]
     src += [rel(p) for p in sorted(MATCHUP_SRC.glob('00*.json'))]

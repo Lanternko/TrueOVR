@@ -1552,3 +1552,11 @@
 - 證據：`reports/E297-offball-t-composite/{report.md,results/eval.json,results/routeb.json,results/composite.json}`
 - 狀態：成立（測試＋前瞻，未稽核）
 - 相關：E-297、E-227、E-285
+
+### F-179
+- 日期：2026-11-10
+- 事實：賽中能力值窗口照各項穩定點 M_x 加快（E-302 AA-max，本季份量 λ0＝d_ev／(d_ev＋M_x)）。加快後每場屬性移動量變成 3～5 倍（pass |Δ| 中位 0.5→2.4、rebound 0.5→1.9、creation 0.4→1.8），但逐場變動與該場 rt 的 Spearman 完全沒變（pass +0.213→+0.217、rebound +0.148→+0.141、predNew +0.488→+0.473）。OVR 層 B1 0.486→0.476，好表現掉分率 26.8%→25.7%。穩定得快的是量類（vol、astvol、driveVol、tpa、cr，M_x 1～32），穩定得慢的是效率類（mid 177、f3 258、short 90）。
+- 意義：「表現好卻扣分」不是窗口反應慢造成的。能力值的組成（量＋比率，經 predNew 權重）和單場 rt 本來就量不同的東西，加快能力值只會放大和單場無關的跳動。要讓單場好壞反映到 OVR，只能靠 OVR 層的錨點（E-299／E-302 MR）。
+- 證據：`reports/E302-attr-anchor/{report.md,eval.json,diag_attr.json}`
+- 狀態：成立（10-21～11-08 逐日重算，時間上樣本外；未稽核）
+- 相關：E-302、E-299、E-296、R-150
