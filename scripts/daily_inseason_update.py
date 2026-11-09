@@ -58,7 +58,7 @@ TEAMS_PAGE = ROOT / 'scripts/build_teams_page.py'
 GAMES_DATA = ROOT / 'scripts/build_games_data.py'
 CREATE_NO_WINDOW = getattr(subprocess, 'CREATE_NO_WINDOW', 0)
 
-TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'tracking': 600, 'gravity': 300, 'pnr': 300, 'possessions': 300, 'stints': 1800, 'c4': 3600, 'viewer': 600, 'history': 3600, 'prereg': 900, 'ratings': 1800, 'e229': 900, 'ratings_m0': 1800, 'tswap': 1800, 'live': 180, 'git': 180}
+TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'tracking': 600, 'gravity': 300, 'pnr': 300, 'trackcells': 600,'possessions': 300, 'stints': 1800, 'c4': 3600, 'viewer': 600, 'history': 3600, 'prereg': 900, 'ratings': 1800, 'e229': 900, 'ratings_m0': 1800, 'tswap': 1800, 'live': 180, 'git': 180}
 CO_AUTHOR = 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
 
 log = logging.getLogger('daily_inseason')
@@ -224,6 +224,20 @@ def step_fetch_pnr() -> None:
         log.warning('fetch_synergy_pnr exit=%s：%s', r.returncode, (r.stderr or r.stdout).strip()[-300:])
     else:
         log.info('fetch_synergy_pnr：%s', ((r.stdout or '').strip().splitlines()[-1:] or [''])[0])
+
+
+def step_fetch_tracking_cells() -> None:
+    """無球兩格 SPOT／CUT（E-301，2026-11-10 上站）＋球員卡追蹤格子：本季 Synergy 各 play type 與 tracking 表（季累計）
+    → data/tracking-cells/2026-27/。只顯示、不進 OVR。失敗不擋發布：失敗的表保留舊檔（沒有檔時 offball_cells 只用過去季）。"""
+    try:
+        r = run([node_exe(), 'scripts/fetch_tracking_cells.mjs', SEASON, 'data/tracking-cells/2026-27'], ROOT, TIMEOUTS['trackcells'])
+    except subprocess.TimeoutExpired:
+        log.warning('fetch_tracking_cells 逾時；無球兩格沿用上次的檔')
+        return
+    if r.returncode != 0:
+        log.warning('fetch_tracking_cells exit=%s：%s', r.returncode, (r.stderr or r.stdout).strip()[-300:])
+    else:
+        log.info('fetch_tracking_cells：%s', ((r.stdout or '').strip().splitlines()[-1:] or [''])[0])
 
 
 def step_fetch_possessions() -> None:
@@ -659,8 +673,9 @@ def _run(args) -> int:
     step_fetch_tracking()
     step_fetch_gravity()
     step_fetch_pnr()
+    step_fetch_tracking_cells()
     step_fetch_possessions()
-    publish_games(args, state)          # 賽程檔提早發布（OVR 要再算 30–40 分鐘）；失敗只記警告
+    publish_games(args, state)         # 賽程檔提早發布（OVR 要再算 30–40 分鐘）；失敗只記警告
     data_sha = sha256_file(PLAYER_GAMES)
     pbp_count = len(list(PBP_DIR.glob('*.json'))) if PBP_DIR.exists() else 0
     log.info('player-games sha256=%s…  pbp=%d', data_sha[:12], pbp_count)

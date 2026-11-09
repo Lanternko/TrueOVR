@@ -1,6 +1,6 @@
 """球員卡追蹤格子（E-239 後續，使用者 2026-11-05「加格子」）：把 NBA.com 追蹤資料裡穩定的「量」類數字補進既有格子提示卡。
 只列量與占比（逐年 Spearman ≥ 0.60），不列效率（PPP、切入失誤率…逐年相關 < 0.30，是雜訊）；不進任何分數、不碰 OVR。
-只用單季（NBA 2024-25 起追蹤定義有斷層，不跨季混窗口）。資料：data/tracking-cells/<季>/，由 scripts/fetch_tracking_cells.mjs 手動抓（沒有每日自動更新）。"""
+只用單季（NBA 2024-25 起追蹤定義有斷層，不跨季混窗口）。資料：data/tracking-cells/<季>/，由 scripts/fetch_tracking_cells.mjs 抓；2026-27 由 daily_inseason_update 每天抓（2026-11-10 起）。"""
 import json
 import sys
 from datetime import datetime
@@ -75,7 +75,7 @@ def build(season, pool, note=''):
         m = json.loads(meta.read_text(encoding='utf-8'))
         when = datetime.fromisoformat(m['fetchedAt'].replace('Z', '+00:00')).astimezone().strftime('%m/%d')
     gmax = max((f['gp'] for f in feats.values()), default=0)
-    src = f'{season} 追蹤資料' + (f'（{when} 手動抓取，約 {gmax} 場，不自動更新）' if when and note == 'snapshot' else '（整季）')
+    src = f'{season} 追蹤資料' + (f'（{when} 抓取，約 {gmax} 場，每日更新）' if when and note == 'snapshot' else '（整季）')
     out = {}
     for cell, items in CELLS.items():
         dist = {k: [feats[p][k] for p in pool if p in feats and k in feats[p]] for _, k, _ in items}

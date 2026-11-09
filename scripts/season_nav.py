@@ -348,6 +348,11 @@ ATTR_TIPS = {
     'gravity': ('引力', 'Gravity', '<b>沒拿球</b>時吸引防守貼防的程度', [], None),
     'pnr': ('擋拆', 'Pick & Roll', '<b>擋拆持球</b>的次數與每回合得分各半',
             [('次數 50%', '擋拆持球回合 / 36'), ('得分 50%', '每回合得分（不到 50 回合只看次數）')], ''),
+    # E-301（使用者 2026-11-10「做上網站」）：無球兩格，只顯示，不進 OVR／OFF（scripts/offball_cells.py）
+    'spot': ('空檔射手', 'Off-Ball Shooter', '<b>不持球</b>時接球投籃的量與接球三分準度（只顯示，不進 OVR）',
+             [('量', '定點投籃、繞掩護接球、手遞手（Synergy 回合 / 36）'), ('準度（半份）', '接球三分命中率')], ''),
+    'cutroll': ('切入順下', 'Cutter / Roller', '<b>不持球</b>時往籃下跑的量與空切效率（只顯示，不進 OVR）',
+                [('量', '空切、擋拆順下、進攻籃板補籃、快攻（回合 / 36）'), ('效率（半份）', '空切每回合得分')], ''),
     'pass': ('傳球', 'Passing', '<b>50%</b> 助攻量 ＋ <b>50%</b> 助攻率',
              [('助攻量 50%', '助攻 / 36'), ('助攻率 50%', '在場時隊友進球被他助攻的比例')], ''),
     'creation': ('自主創造', 'Shot Creation', '<b>自己創造</b>的跳投與低位出手量', [], ''),
@@ -990,7 +995,9 @@ REGROUP = [
     ("if (k === 'pressure') h += th('dbon', 'DIQ', '防守意識');", "if (k === 'help') h += th('dbon', 'DIQ', '防守意識');"),
     # 切入不放主畫面（使用者 2026-11-02「切入既然是負分 那就不要列在主畫面了」；0.2.10i 係數每 10 點 −0.03）；仍算進 OFF／OVR
     # 0.2.10j（R-134／R-135）：原本切入的位置改放引力（進攻組第一欄、製造犯規前面）
-    ("['drive', 'DRV', '切入'], ['foulDraw', 'FD', '製造犯規']", "['gravity', 'GRV', '引力'], ['pnr', 'PNR', '擋拆'], ['foulDraw', 'FD', '製造犯規']"),
+    # E-301（2026-11-10）：擋拆右邊加無球兩格 SPOT／CUT（只顯示）
+    ("['drive', 'DRV', '切入'], ['foulDraw', 'FD', '製造犯規']", "['gravity', 'GRV', '引力'], ['pnr', 'PNR', '擋拆'], "
+     "['spot', 'SPOT', '空檔射手'], ['cutroll', 'CUT', '切入順下'], ['foulDraw', 'FD', '製造犯規']"),
 ]
 
 
@@ -998,9 +1005,9 @@ def regroup_attrs(s):
     for a, b in REGROUP:
         assert s.count(a) == 1, a
         s = s.replace(a, b)
-    s, n = re.subn(r'colspan="(\d+)" class="empty"', lambda m: f'colspan="{int(m.group(1)) + 1}" class="empty"', s)
+    s, n = re.subn(r'colspan="(\d+)" class="empty"', lambda m: f'colspan="{int(m.group(1)) + 3}" class="empty"', s)
     assert n == 1
-    return s   # 0.2.10j：切入換成引力，欄數不變；0.2.13：引力右邊加擋拆，空列 colspan +1
+    return s   # 0.2.10j：切入換成引力，欄數不變；0.2.13：引力右邊加擋拆，空列 colspan +1；E-301：再加 SPOT／CUT 兩欄（+3）
 
 
 # 防守意識是能力值，放表格防守組 PRES 右邊（使用者 2026-10-30），不放卡片資訊列（那列桌機整列藏掉）。

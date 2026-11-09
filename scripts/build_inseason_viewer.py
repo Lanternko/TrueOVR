@@ -21,6 +21,7 @@ from site_header import add_masthead  # noqa: E402
 import attr_cell_tips as AT  # noqa: E402
 import blend_display as BD  # noqa: E402
 import tracking_cells as TC  # noqa: E402
+import offball_cells as OB  # noqa: E402
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'reports/impact-epm-2026-27'))
 import epm_live  # noqa: E402
 from build_card_viewer import (onball_rows, onball_tip, pres_tip, pres_tips, tov_tip,  # noqa: E402
@@ -195,6 +196,11 @@ def main():
     wstat = AT.window_stats(False, meta['window8']['gamesDone'])
     bdisp = BD.build(wstat, False)   # 3PT／FT 顯示欄量準混合（R-168）：只改顯示，OVR／名次不動
     atips = AT.build(wstat, ipool, AT.season_near_rim())   # MID／INS／FT／DRV／FD／PASS／CRT／REB／RIM 提示卡：四季窗口含本季
+    _rs = json.loads(SRC26.read_text(encoding='utf-8'))['data']['resultSets'][0]
+    c_games = len({r[_rs['headers'].index('GAME_ID')] for r in _rs['rowSet']}) / 1230 * 82   # 同 onball_live
+    obc, ob_info = OB.compute(c_games)   # E-301 無球兩格 SPOT／CUT（只顯示）：近三季窗口含本季（同 pnr），新秀＝本季
+    obt = OB.tips(obc, ipool, '（近三季加權，含本季）')
+    print('無球兩格：', ob_info, file=sys.stderr)
     trk = TC.build('2026-27', ipool, 'snapshot')   # 追蹤量格子（E-239 後續）：手動快照，接在 DRV／INS／CRT／PASS／3PT 提示卡後面，不進分數
     orows, ob_note = onball_live(rows, ipool)
     base = BASE.read_text(encoding='utf-8')
@@ -259,6 +265,7 @@ def main():
         pv = pnrd.get(r['playerId'])
         if pv and r.get('pnr', '') != '':
             t['pnr'] = sn.pnr_tip(float(r['pnr']), pv.get('poss'), pv.get('vol'), pv.get('rate'), p_pool, r['playerId'] in pool)
+        t.update(obt.get(int(r['playerId']), {}))
         return t
     rows = sn.display_rows(rows)   # 能力值顯示尺（2026-11-02 方案 B）：off/def、名次人群已用原值算完
     for r in rows:   # R-168：有窗口資料的人 3PT／FT 換量準混合（已含顯示尺）；新秀沒資料維持原值
@@ -280,8 +287,9 @@ def main():
                           *[opt('presDisplay') if (a == 'pressure' and has_pd) else opt(a) for a in cols[10:25]],
                           num('lastOVR'), num('dOVR'), tips(r), *([num('pressure'), opt('foulDisc')] if has_pd else []),
                           *od[r['playerId']], opt('gravity') if r.get('gravity', '') != '' else None,
-                          opt('pnr') if r.get('pnr', '') != '' else None])
-    cols += ['off', 'def', 'gravity', 'pnr']   # 0.2.10j：引力；0.2.13：擋拆（舊版夾沒有該欄 → null）
+                          opt('pnr') if r.get('pnr', '') != '' else None,
+                          *((obc[int(r['playerId'])]['SPOT'], obc[int(r['playerId'])]['CUT']) if int(r['playerId']) in obc else (None, None))])
+    cols += ['off', 'def', 'gravity', 'pnr', 'spot', 'cutroll']   # E-301：無球兩格（只顯示）   # 0.2.10j：引力；0.2.13：擋拆（舊版夾沒有該欄 → null）
     # ΔOVR 五色：≥+4 深綠、+1～+4 淺綠、±1 內灰、−1～−4 橘、≤−4 紅（沿用等第色）
     dcol = ("(v => v >= 4 ? 'var(--g-a)' : v >= 1 ? 'var(--g-b)' : v > -1 ? 'var(--muted)'"
             " : v > -4 ? 'var(--g-d)' : 'var(--g-f)')(p.dovr)")
@@ -290,7 +298,7 @@ def main():
     s = s.replace('<h1>2025-26 <span>OVR</span> 名單</h1>', '<h1>2026-27 <span>OVR</span> 名單</h1>', 1)
     s = re.sub(r'<div class="src">.*?</div>',
                f'<div class="src">OVR：賽中 C4（{meta["version"]}），開季起點 {meta["priorCard"]}{"（用人回歸＋當季 RAPM 目標）" if "predNew" in rows[0] else ""}；數據截至 {meta["dataCutoff"]}；'
-               f'{("PRES＝逼失誤扣犯規（老將近三季加權含本季、新秀只看本季）· " if pd_live else "PRES＝逼失誤扣犯規（沿用 2025-26 數據）· ") if has_pd else ""}{"GRV＝引力：沒拿球時防守人也不敢離開他的程度（NBA.com 無球外線引力，2025-26 與本季加權；沒有資料的人用三分出手、命中率、用球率與位置推估）· " if 'gravity' in rows[0] else ""}{"PNR＝擋拆：擋拆持球的次數與每回合得分各半（Synergy，近四季加權含本季；不到 50 回合只看次數）· " if 'pnr' in rows[0] else ""}N=已打場數 · {len(rows)} 人（另 {nopr} 人沒有上季卡，未列入）· 樣本很小，只看趨勢</div>', s, count=1, flags=re.S)
+               f'{("PRES＝逼失誤扣犯規（老將近三季加權含本季、新秀只看本季）· " if pd_live else "PRES＝逼失誤扣犯規（沿用 2025-26 數據）· ") if has_pd else ""}{"GRV＝引力：沒拿球時防守人也不敢離開他的程度（NBA.com 無球外線引力，2025-26 與本季加權；沒有資料的人用三分出手、命中率、用球率與位置推估）· " if 'gravity' in rows[0] else ""}{"PNR＝擋拆：擋拆持球的次數與每回合得分各半（Synergy，近四季加權含本季；不到 50 回合只看次數）· " if 'pnr' in rows[0] else ""}SPOT／CUT＝無球兩格（只顯示，不進 OVR）：空檔射手看定點、繞掩護、手遞手的接球投籃量與接球三分準度，切入順下看空切、擋拆順下、補籃、快攻的量與空切效率（Synergy，近三季加權含本季）· N=已打場數 · {len(rows)} 人（另 {nopr} 人沒有上季卡，未列入）· 樣本很小，只看趨勢</div>', s, count=1, flags=re.S)
     new_data = json.dumps({'cols': cols, 'rows': data_rows}, ensure_ascii=False, separators=(',', ':'))
     s = re.sub(r'const DATA=\{.*?\};\nconst COLS', lambda m: f'const DATA={new_data};\nconst COLS', s, count=1, flags=re.S)
     for a, b in [

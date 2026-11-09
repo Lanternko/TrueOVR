@@ -1,11 +1,13 @@
 import fs from 'node:fs/promises';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
 // 球員卡追蹤格子（E-239 後續）：抓 NBA.com 追蹤量表。node fetch（python／curl 會被擋）。
-// 用法：node fetch_tracking_cells.mjs <季> <輸出目錄>  → <目錄>/<檔名>.json，同名檔直接覆寫（賽中手動更新用）；失敗的表保留舊檔
+// 用法：node fetch_tracking_cells.mjs <季> <輸出目錄>  → <目錄>/<檔名>.json，同名檔直接覆寫（2026-27 由 daily_inseason_update 每天跑）；失敗的表保留舊檔
 const H = {headers: {'User-Agent': 'Mozilla/5.0', Referer: 'https://www.nba.com/', Origin: 'https://www.nba.com'}};
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const [season, outDir] = process.argv.slice(2);
 if (!season || !outDir) { console.log('用法：node fetch_tracking_cells.mjs <季> <輸出目錄>'); process.exit(2); }
-const dir = new URL('file:///' + outDir.split(String.fromCharCode(92)).join('/').replace(/[/]?$/, '/'));
+const dir = new URL(pathToFileURL(path.resolve(outDir)).href.replace(/[/]?$/, '/'));   // 相對路徑照 cwd 解析
 await fs.mkdir(dir, {recursive: true});
 
 const ptBase = {College: '', Conference: '', Country: '', DateFrom: '', DateTo: '', Division: '', DraftPick: '', DraftYear: '', GameScope: '', GameSegment: '', Height: '', LastNGames: '0', LeagueID: '00', Location: '', Month: '0', OpponentTeamID: '0', Outcome: '', PORound: '0', PerMode: 'Totals', PlayerExperience: '', PlayerOrTeam: 'Player', PlayerPosition: '', SeasonSegment: '', SeasonType: 'Regular Season', StarterBench: '', TeamID: '0', VsConference: '', VsDivision: '', Weight: ''};

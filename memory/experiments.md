@@ -2831,8 +2831,8 @@
 - 做法：預註冊 `reports/E301-offball-two-cells/prereg.md`（commit 440af34，R-165）。兩格是 SHOOT（Spotup、OffScreen、Handoff、cs3pct）和 CUTROLL（Cut、Roll、Putback、Transition、cutPPP）。三臂：V 量 z 等權、P 得分貢獻、VP 兩者平均。驗收：年對年 ≥0.60、E-297 指名球員 ≥75% 達 70 百分位、2024-25 樣本外加在 OVR 上 ΔR² ≥ W-eq。
 - 結果：V 過關且最佳。年對年 0.85／0.80；2024-25 ΔR² +0.095（W-eq +0.028）。Gordon 83、Allen 99、Gobert 88、Klay 99、D. White 82。P 年對年約 0.5 不過；VP 也過，但 +0.070。副作用：CUTROLL 和身高相關 0.67。
 - 結論：4/5，V 為 adopt_candidate（網站兩格描述性顯示）。上線要每天抓 Synergy 與 CatchShoot，並補 registry。`reports/E301-offball-two-cells/report.md`
-- 狀態：完成；adopt_candidate（待使用者裁定；未稽核）
-- 相關：E-297、F-178、R-165
+- 狀態：完成；V 已採用上線（2026-11-10，R-189，網站 SPOT／CUT 兩格只顯示；未稽核）
+- 相關：E-297、F-178、R-165、R-189
 
 ## E-300 中鋒加分照分鐘曲線＋對手籃板修正（2026-11-10）
 - 做法：預註冊 `reports/E300-mix-minutes-opp/preregistration.md`（commit 222cdc3，R-165）。臂：M＝W1 加分×min(1,W(MPG))（OVR 主體同一條 R-047 曲線）；O＝ob／db 按對面五人籃板強度、con 按對手兩分出手量修正（係數由 stints 籃板結果估）；MO＝兩者。S1 設在 live 名次（L-146），S3 改對 T·W、EPM·W、2K。

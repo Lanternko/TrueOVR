@@ -26,6 +26,7 @@ from site_header import add_masthead  # noqa: E402
 import attr_cell_tips as AT  # noqa: E402
 import blend_display as BD  # noqa: E402
 import tracking_cells as TC  # noqa: E402
+import offball_cells as OB  # noqa: E402
 
 ROOT = er.ROOT
 BASE = ROOT / 'reports/ovr-v58-card-2025-26/roster-viewer.html'
@@ -110,7 +111,7 @@ def main(out=None):
         gp_src[row[h['PLAYER_NAME']]] = gp_src.get(row[h['PLAYER_NAME']], 0) + 1
     cols = ['rank', 'ovr', 'name', 'pos', 'team', 'ht', 'min', 'gp', 'imp', 'dbon', 'threeValue', 'mid', 'short', 'ft',
             'drive', 'foulDraw', 'pass', 'tovSkill', 'creation', 'rebound', 'physique', 'stamina', 'onBall', 'help', 'pressure', 'force', 'foulDisc',
-            'tips', 'off', 'def', 'gravity', 'pnr']
+            'tips', 'off', 'def', 'gravity', 'pnr', 'spot', 'cutroll']
     ga = {g['name']: float(g['gravity']) for g in csv.DictReader(GRAVITY_ATTR.open(encoding='utf-8'))}
     gr = {g['name']: (float(g['raw']), g['imputed'] == '1') for g in csv.DictReader(GRAVITY_RAW.open(encoding='utf-8'))}
     pa = {g['name']: g for g in csv.DictReader(PNR_ATTR.open(encoding='utf-8'))}
@@ -128,6 +129,9 @@ def main(out=None):
     pid_of = {row[h['PLAYER_NAME']]: int(row[h['PLAYER_ID']]) for row in rs['rowSet']}
     wstat = AT.window_stats(True)
     atips = AT.build(wstat, {pid_of[n] for n in pool if n in pid_of})   # MID／INS／FT／DRV／FD／PASS／CRT／REB／RIM 提示卡：2025-26 季末近三季窗口（WIN_LEN 246）
+    obc, ob_info = OB.compute(0, cur=False)   # E-301 無球兩格 SPOT／CUT（只顯示）：2025-26 季末＝c=0 近三季窗口（同 pnr 卡片端）
+    obt = OB.tips(obc, {pid_of[n] for n in pool if n in pid_of}, '（近三季加權）')
+    print('無球兩格：', ob_info, file=sys.stderr)
     trk = TC.build('2025-26', {pid_of[n] for n in pool if n in pid_of})   # 追蹤量格子（E-239 後續）：接在 DRV／INS／CRT／PASS／3PT 提示卡後面，不進分數
     oc_ = list(csv.DictReader(ONBALL.open(encoding='utf-8')))
     orows = onball_rows({r['name']: (float(r['C3']), float(r['B']), float(r['T'])) for r in oc_ if '' not in (r['C3'], r['B'], r['T'])}, pool)
@@ -166,12 +170,14 @@ def main(out=None):
                            **({'tovSkill': tov_tip(num('tovSkill'), trows[r['name']], n_tov, inpool=r['name'] in pool)} if r['name'] in trows else {}),
                            **({'onBall': onball_tip(num('onBall'), orows[r['name']], inpool=r['name'] in pool)} if r['name'] in orows else {}),
                            'gravity': sn.gravity_tip(num('gravity'), gr[r['name']][0], 'ols' if gr[r['name']][1] else 'api', g_pool, r['name'] in pool, '（2025-26）'),
-                           'pnr': sn.pnr_tip(num('pnr'), float(pa[r['name']]['poss']), float(pa[r['name']]['vol']), float(pa[r['name']]['rate']), p_pool, r['name'] in pool)}, trk.get(pid_of.get(r['name']))),
-                          *od[r['name']], num('gravity'), num('pnr')])
+                           'pnr': sn.pnr_tip(num('pnr'), float(pa[r['name']]['poss']), float(pa[r['name']]['vol']), float(pa[r['name']]['rate']), p_pool, r['name'] in pool),
+                           **obt.get(pid_of.get(r['name']), {})}, trk.get(pid_of.get(r['name']))),
+                          *od[r['name']], num('gravity'), num('pnr'),
+                          *((obc[pid_of[r['name']]]['SPOT'], obc[pid_of[r['name']]]['CUT']) if pid_of.get(r['name']) in obc else (None, None))])
     s = base
     s = s.replace('<title>OVR 名單檢視</title>', '<title>球員能力值 · TrueOVR · 2026</title>', 1)
     s = re.sub(r'<div class="src">.*?</div>',
-               f'<div class="src">OVR：正式卡 card 0.2.14c（2025-26 整季；長人的籃板與兩分干擾另有加分（看實際打中鋒／大前鋒的上場比例，和同位置平均比、頂端漸緩；上場不到 500 分鐘按比例打折，再照每場上場分鐘打折，和 OVR 本體同一條曲線）；OVR 為每場，含上場時間，相對替補水準；FD 以量為主；PRES＝逼失誤扣犯規；OVR 能力估計納入教練用人證據，DNP 與輪休分開，用人回歸（上場強度、出賽率看近三季窗口）對齊當季 RAPM；分鐘權重遞減；能力值對 2022-23～2025-26 四季比較；切入只算帶球切入的自主兩分、自主創造看自主跳投與低位；GRV＝引力：沒拿球時防守人也不敢離開他的程度（NBA.com 無球外線引力，沒有資料的人用三分出手、命中率、用球率與位置推估）；PNR＝擋拆：擋拆持球的次數與每回合得分各半（Synergy，不到 50 回合只看次數）；防守加成不打折、近期加權；OVR 評分標準為 DARKO 加 BPM；年輕人沒有爛隊折扣；傳球看量也看率；3PT、RIM、PRES 頂端不封在 99；OVR 不看身高體重；OVR 尺頂端另以 PR90、PR95 定位）；3PT 顯示 threeValue；{len(rows)} 人</div>',
+               f'<div class="src">OVR：正式卡 card 0.2.14c（2025-26 整季；長人的籃板與兩分干擾另有加分（看實際打中鋒／大前鋒的上場比例，和同位置平均比、頂端漸緩；上場不到 500 分鐘按比例打折，再照每場上場分鐘打折，和 OVR 本體同一條曲線）；OVR 為每場，含上場時間，相對替補水準；FD 以量為主；PRES＝逼失誤扣犯規；OVR 能力估計納入教練用人證據，DNP 與輪休分開，用人回歸（上場強度、出賽率看近三季窗口）對齊當季 RAPM；分鐘權重遞減；能力值對 2022-23～2025-26 四季比較；切入只算帶球切入的自主兩分、自主創造看自主跳投與低位；GRV＝引力：沒拿球時防守人也不敢離開他的程度（NBA.com 無球外線引力，沒有資料的人用三分出手、命中率、用球率與位置推估）；PNR＝擋拆：擋拆持球的次數與每回合得分各半（Synergy，不到 50 回合只看次數）；SPOT／CUT＝無球兩格（只顯示，不進 OVR）：空檔射手看定點、繞掩護、手遞手的接球投籃量與接球三分準度，切入順下看空切、擋拆順下、補籃、快攻的量與空切效率（Synergy，近三季加權）；防守加成不打折、近期加權；OVR 評分標準為 DARKO 加 BPM；年輕人沒有爛隊折扣；傳球看量也看率；3PT、RIM、PRES 頂端不封在 99；OVR 不看身高體重；OVR 尺頂端另以 PR90、PR95 定位）；3PT 顯示 threeValue；{len(rows)} 人</div>',
                s, count=1, flags=re.S)
     new_data = json.dumps({'cols': cols, 'rows': data_rows}, ensure_ascii=False, separators=(',', ':'))
     s = re.sub(r'const DATA=\{.*?\};\nconst COLS', lambda m: f'const DATA={new_data};\nconst COLS', s, count=1, flags=re.S)
