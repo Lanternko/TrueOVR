@@ -2728,3 +2728,12 @@
 - 結論：4/5；中鋒低估成立，CON 是候選，待使用者裁定 R-001 是否容許 Mobley 進前十，再交 role-card 在 0.2.13a 管線重做。
 - 狀態：完成，未稽核
 - 相關：R-001、R-178、E-271、E-239、F-082
+
+### E-289
+- 日期：2026-11-09
+- 問題：中鋒被低估（E-288），OVR 該加護框還是籃板的價值？用陣容 Transformer 拆（使用者「要放寬護框還是籃板的價值？用 Transformer 測測看」）
+- 做法：預註冊 `reports/E289-rim-vs-reb-T/preregistration.md`（11-09 凍結）；M1 線上 T（2026-11-07 live、名次人群 288 人、3000 組）把球員自己的 RIM（help/blk36/cont2pt36）、REB（rebound/oreb/dreb/orebPct/drebPct/boxout×2）、CTRL（screenAst36）設聯盟平均看淨值掉多少；M2 pct(T)−pct(OVR) 對兩組 credit 回歸控位置；M3 E-288 前瞻台 RIMc／REBc 加分。
+- 結果：中鋒 credit 籃板 +2.80、護框 +1.01／100 回合；M2 β_REB +0.102 [+0.067, +0.138]、β_RIM −0.007（跨 0），差 −0.109 [−0.160, −0.062]。M3 RIMc +0.0074、REBc +0.0059，差 +0.0015 跨 0；RIMc C 缺口矯枉到 −0.026 並擠掉 Jalen Johnson／Reaves／Amen，REBc 缺口 −0.003 無副作用；兩者都敗 R-001（Mobley）。`reports/E289-rim-vs-reb-T/report.md`
+- 結論：4/5 建議加籃板；凍結規則第三條（前瞻台 REBc ≥ RIMc）以雜訊內差距沒過，正式判「層間不一致」：T 明確說籃板、前瞻台打平。護框已定價足夠。
+- 狀態：完成，未稽核
+- 相關：E-288、E-285、E-227、R-001、R-178

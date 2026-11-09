@@ -17,7 +17,7 @@
 
 ## 進行中（未稽核，待派 role-audit）
 - **防守三步（R-178、L-137）**：① `help` 位置係數改 PG→C 遞增（現行 U 字形 PG .43／SG .01／SF .03／PF .37／C .29）→ ② 干擾／抄截／蓋帽獨立定係數 → ③ `DEF` 顯示對齊 T／EPM／加權。驗收看結構＋代表球員＋EPM／T 對齊＋OVR 不壞，不拿單季防守 RAPM 單一否決。**第一步 E-277 完成（採用 M1）**：help 斜率變兩層台階 PG≈SG≈SF＜PF≈C，OVR ΔR² −0.004 在雜訊內；Durant 只升 20 名。使用者採用 M1（R-179）。**第二步 E-278 完成（2/5 無候選）**：2025-26 蓋帽係數翻負／歸零 S1 不過；抄截四原點穩定為正、干擾≈0；只加蓋帽臂 DEF 對 EPM 防守 +0.030 但缺 S1。**E-280 蓋帽每 SD 0.3 已採用（R-180）**；E-281 拿掉 pressure 不採用、干擾不進。E-282 抄截只宜 0.1（3/5）；E-283 拆 pressure 分量、E-284 有球／無球犯規，自由擬合都全面變差，保留合成 pressure。E-285 T 加逼失誤／犯規：stint MSE −2.6 但 E-286 跨季球隊評分兩季都變差（Brier +0.0027），X 版不進球隊評分；E-287 OFF/DEF 各混 0.5 T 已上線（R-181，每日 t_swap_live）。待裁定抄截 0.1，之後第三步。`reports/E280-blk-weight/report.md`E-274～E-276、E-269 舊結論（D0 ρ 0.422 最高）依 R-178 不再當否決依據。`reports/E276-def-stl-blk-defl/report.md`
-- **E-288 中鋒被低估**（4/5 未稽核）：C 缺口 +0.060；CON 加分 Δρ +0.0071，只敗 R-001（Mobley 進前十），待裁定後交 role-card。`reports/E288-center-underrated/report.md`
+- **E-288／E-289 中鋒低估**（4/5 未稽核）：C 缺口 +0.060；T 說少算的是籃板不是護框（E-289）；CON／REBc 只敗 R-001（Mobley），待裁定交 role-card。`reports/E288-center-underrated/`、`E289-rim-vs-reb-T/`
 - **E-271 低效中距＋慘 On/Off 扣分**（11-08，未 commit／未稽核）：`AR` +0.0085、`D` +0.0104 adopt_candidate，`A` 救回 Booker／Harden／Cade；待使用者選臂交 role-card 做 0.2.14。E-272 bog 進 T 不採用。`reports/E271-ineff-midrange-bog-penalty/report.md`
 - **E-273 T 各版本同場次重測**（3/5）：各步區間跨 0，每隊滿 20 場重跑。`reports/team-model-versions/report.md`
 - **R-171 戰力排行混入本季實際表現**（11-07，E-253 K10）：殘差 ÷(場數+10) 加回 T 評分，`scripts/actual_blend.py`、回退 `ACTUAL_BLEND=0`；已發布（POR 14→9）。**R-172**：殘差改每天對今天的 T 重算（`today-margins.json`，避免和本季 OVR 更新重複計入，L-129）。K10 是看過前向才選，每隊滿 20 場用凍結 K10 前向複查一次（F-172）。
