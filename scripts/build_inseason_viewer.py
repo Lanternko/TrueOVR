@@ -288,37 +288,43 @@ def main():
                           num('lastOVR'), num('dOVR'), tips(r), *([num('pressure'), opt('foulDisc')] if has_pd else []),
                           *od[r['playerId']], opt('gravity') if r.get('gravity', '') != '' else None,
                           opt('pnr') if r.get('pnr', '') != '' else None,
-                          *((obc[int(r['playerId'])]['SPOT'], obc[int(r['playerId'])]['CUT']) if int(r['playerId']) in obc else (None, None))])
-    cols += ['off', 'def', 'gravity', 'pnr', 'spot', 'cutroll']   # E-301：無球兩格（只顯示）   # 0.2.10j：引力；0.2.13：擋拆（舊版夾沒有該欄 → null）
+                          *((obc[int(r['playerId'])]['SPOT'], obc[int(r['playerId'])]['CUT']) if int(r['playerId']) in obc else (None, None)),
+                          round(num('formBonus'), 2) if r.get('formBonus', '') != '' else 0.0])
+    cols += ['off', 'def', 'gravity', 'pnr', 'spot', 'cutroll', 'form']   # R-190（0.2.14d）：近況＝OVR 錨點項，已含在 OVR 裡   # E-301：無球兩格（只顯示）   # 0.2.10j：引力；0.2.13：擋拆（舊版夾沒有該欄 → null）
     # ΔOVR 五色：≥+4 深綠、+1～+4 淺綠、±1 內灰、−1～−4 橘、≤−4 紅（沿用等第色）
     dcol = ("(v => v >= 4 ? 'var(--g-a)' : v >= 1 ? 'var(--g-b)' : v > -1 ? 'var(--muted)'"
             " : v > -4 ? 'var(--g-d)' : 'var(--g-f)')(p.dovr)")
+    fcol = dcol.replace('(p.dovr)', '(p.form)')   # 近況同五色、同門檻
+    has_form = 'formBonus' in rows[0]
     s = base
     s = s.replace('<title>OVR 名單檢視</title>', '<title>球員能力值 · TrueOVR</title>', 1)
     s = s.replace('<h1>2025-26 <span>OVR</span> 名單</h1>', '<h1>2026-27 <span>OVR</span> 名單</h1>', 1)
     s = re.sub(r'<div class="src">.*?</div>',
-               f'<div class="src">OVR：賽中 C4（{meta["version"]}），開季起點 {meta["priorCard"]}{"（用人回歸＋當季 RAPM 目標）" if "predNew" in rows[0] else ""}；數據截至 {meta["dataCutoff"]}；'
+               f'<div class="src">OVR：賽中 C4（{meta["version"]}）{"；OVR＝能力值算出的 OVR＋近況（近況＝最近幾場單場評分把 OVR 往該水準拉的分數，打越多、越近期越重；傷停越久越淡，季末收回 0）" if has_form else ""}，開季起點 {meta["priorCard"]}{"（用人回歸＋當季 RAPM 目標）" if "predNew" in rows[0] else ""}；數據截至 {meta["dataCutoff"]}；'
                f'{("PRES＝逼失誤扣犯規（老將近三季加權含本季、新秀只看本季）· " if pd_live else "PRES＝逼失誤扣犯規（沿用 2025-26 數據）· ") if has_pd else ""}{"GRV＝引力：沒拿球時防守人也不敢離開他的程度（NBA.com 無球外線引力，2025-26 與本季加權；沒有資料的人用三分出手、命中率、用球率與位置推估）· " if 'gravity' in rows[0] else ""}{"PNR＝擋拆：擋拆持球的次數與每回合得分各半（Synergy，近四季加權含本季；不到 50 回合只看次數）· " if 'pnr' in rows[0] else ""}SPOT／CUT＝無球兩格（只顯示，不進 OVR）：空檔射手看定點、繞掩護、手遞手的接球投籃量與接球三分準度，切入順下看空切、擋拆順下、補籃、快攻的量與空切效率（Synergy，近三季加權含本季）· N=已打場數 · {len(rows)} 人（另 {nopr} 人沒有上季卡，未列入）· 樣本很小，只看趨勢</div>', s, count=1, flags=re.S)
     new_data = json.dumps({'cols': cols, 'rows': data_rows}, ensure_ascii=False, separators=(',', ':'))
     s = re.sub(r'const DATA=\{.*?\};\nconst COLS', lambda m: f'const DATA={new_data};\nconst COLS', s, count=1, flags=re.S)
     for a, b in [
         ("['long', '3PT', '三分']", "['threeValue', '3PT', '三分']"),
         ("['drive', 'DRV', '切入']", "['drive', 'DRV', '切入'], ['foulDraw', 'FD', '製造犯規']"),
-        ('<th class="g" colspan="2">出場</th>', '<th class="g" colspan="3">出場</th>'),
-        ('colspan="22"', 'colspan="25"'),
+        ('<th class="g" colspan="2">出場</th>', '<th class="g" colspan="4">出場</th>'),
+        ('colspan="22"', 'colspan="26"'),
         ("th('min', 'MIN', '分鐘', 'gl') + th('gp', 'GP', '場數')",
-         "th('min', 'MPG', '分鐘', 'gl') + th('gp', 'N', '場數') + th('dovr', 'ΔOVR', '較開季')"),
+         "th('min', 'MPG', '分鐘', 'gl') + th('gp', 'N', '場數') + th('dovr', 'ΔOVR', '較開季') + th('form', 'FORM', '近況')"),
         ("[[0, '全部'], [500, '≥500'], [1000, '≥1000'], [1500, '≥1500']]",
          "[[0, '全部'], [10, '≥10'], [20, '≥20'], [30, '≥30']]"),
         ('<td class="sub${sc(\'gp\')}">${p.gp}</td>',
          '<td class="sub${sc(\'gp\')}">${p.gp}</td>\n'
          '      <td class="sub${sc(\'dovr\')}" style="color:${' + dcol + '}">'
-         '${(v => (v > 0 ? \'+\' : \'\') + v.toFixed(1))(Math.abs(p.dovr) < 0.05 ? 0 : p.dovr)}</td>'),
+         '${(v => (v > 0 ? \'+\' : \'\') + v.toFixed(1))(Math.abs(p.dovr) < 0.05 ? 0 : p.dovr)}</td>\n'
+         '      <td class="sub${sc(\'form\')}" style="color:${' + fcol + '}">'
+         '${(v => (v > 0 ? \'+\' : \'\') + v.toFixed(1))(Math.abs(p.form) < 0.05 ? 0 : p.form)}</td>'),
         ('<td class="sub gl${sc(\'min\')}">${p.min.toLocaleString()}</td>',
          '<td class="sub gl${sc(\'min\')}">${p.min.toFixed(1)}</td>'),
         ('<span>上場 <b>${p.min.toLocaleString()}</b> 分鐘</span><span>出賽 <b>${p.gp}</b> 場</span>',
          '<span>場均 <b>${p.min.toFixed(1)}</b> 分鐘</span><span>已打 N=<b>${p.gp}</b> 場</span>'
-         "<span>開季卡 OVR <b>${p.last.toFixed(1)}</b>（<b>${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(2)}</b>）</span>"),
+         "<span>開季卡 OVR <b>${p.last.toFixed(1)}</b>（<b>${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(2)}</b>）</span>"
+         "<span title=\"OVR＝能力值算出的 OVR＋近況；近況＝最近幾場單場評分把 OVR 往該水準拉的分數\">近況 <b>${(p.form > 0 ? '+' : '') + p.form.toFixed(1)}</b></span>"),
         ('模擬每 36 分鐘淨值', '新賽季預測每 36 分鐘淨值'),
     ]:
         assert s.count(a) >= 1, a

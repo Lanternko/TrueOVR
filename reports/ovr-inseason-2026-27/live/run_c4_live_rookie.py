@@ -38,6 +38,9 @@ if PNR and ROOKIE_JSON != HERE / 'rookie-prior-2026.json':
     raise SystemExit('重現 0.2.12e 以前的版本要同時設 PNR=0')
 if not PNR and ROOKIE_JSON == HERE / 'rookie-prior-2026.json':
     ROOKIE_JSON = HERE / '_retired/rookie-prior-2026-0212e.json'
+NEG_MIN_ON = all(os.environ.get(k, '1') != '0' for k in ('PNR_FIX', 'MIX_BONUS', 'MIX_H', 'MIX_W1', 'MIX_MIN', 'NEG_MIN'))   # 同 run_c4_live.NEG_MIN 的開關鏈
+if not NEG_MIN_ON and ROOKIE_JSON == HERE / 'rookie-prior-2026.json':   # 0.2.14d（R-190）改了低分端映射、δ 重解（L-109）；NEG_MIN=0 回 0.2.13～0.2.14c 的起點
+    ROOKIE_JSON = HERE / '_retired/rookie-prior-2026-0214c.json'
 if PNR:
     import pnr_live as PNL  # noqa: E402
 if GRAVITY:
@@ -164,7 +167,7 @@ def ovr_of(ns, pw, anc, r_repl, x, pos, mpg_hat, height):
     xx = dict(x, heightInches=float(height))      # 身高凍結（bio）
     raw = np.array([[xx[a] for a in getattr(P, 'attrs', ns['ATTRS'])]], float)
     pred0 = float(P.design(raw)[0])
-    g = (pred0 - r_repl) * ns['sat_w'](mpg_hat)
+    g = ns['g_of'](pred0 - r_repl, mpg_hat)      # 0.2.14d：D<0 走 A2-15-R（NEG_MIN=0＝D·W(m)）
     return pred0, g, ns['e064_map'](g, anc)
 
 
@@ -201,7 +204,7 @@ def chain_rookie(ns, pw, anc, r_repl, cur, pos, n_games, dl, coef, d):
     full = (coef['b0'] + coef['b1_p'] * p + coef['b2_L'] * L + coef['b3_a'] + coef['b4_y']
             + coef['b6_yL'] * L + coef['b8_ydL'] * d * L)
     pn = p + min(n_games / USAGE_N, 1.0) * (full - p)
-    g = (pn - r_repl) * ns['sat_w'](mh)
+    g = ns['g_of'](pn - r_repl, mh)      # 0.2.14d：D<0 走 A2-15-R（NEG_MIN=0＝D·W(m)）
     return {'bonus': bonus, 'possW': possW, 'pred': p, 'predNew': pn, 'g': g, 'ovr': ns['e064_map'](g, anc)}
 
 
@@ -476,6 +479,11 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
         else:
             mix = MX.apply(merged, g['r1'], g['DATA26'], h=True) if g.get('MIX_H') else MX.apply(merged, g['r1'], g['DATA26'])   # 0.2.14a：H-same（位置＝merged 的 pos 欄）；MIX_H=0 走 0.2.14
         head = head + ['mixBonus']
+    form = None
+    if g.get('GAME_ANCHOR'):    # 0.2.14d（R-190，E-302 MR）：近況＝OVR 錨點項疊在 OVR（含 mixBonus）上（live/game_anchor.py），再重排名次；GAME_ANCHOR=0 不碰
+        import game_anchor as GA
+        form, form_meta = GA.apply(merged, g['r1'])
+        head = head + ['formBonus']
     merged.sort(key=lambda r: -r['_ovr'])
     for i, r in enumerate(merged, 1):
         r['rank'] = i
@@ -492,6 +500,8 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
     if mix is not None:     # 0.2.14：每人加分明細（混合後籃板率／干擾、打折分鐘、REBc／CON）
         json.dump({'meta': {'frozen': MX.frozen_path(bool(g.get('MIX_H')), bool(g.get('MIX_W1'))).name, 'config': MX.load_frozen(bool(g.get('MIX_H')), bool(g.get('MIX_W1')))['config']}, 'players': mix},
                   open(out_dir / 'mix.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    if form is not None:    # 0.2.14d：每人近況明細（A、β、最近五場 rt），檢視器「近況」提示卡用
+        json.dump({'meta': form_meta, 'players': form}, open(out_dir / 'form.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     if GRAVITY:     # 檢視器 GRV tooltip 用：原始引力值、來源（是否推估）
         json.dump({'meta': GRAV_INFO, 'players': {str(p): v for p, v in GRAV.items()}}, open(out_dir / 'gravity.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     if PNR:         # 檢視器 PNR tooltip 用：窗口後的擋拆回合、每 36 分鐘回合、每回合得分、來源

@@ -238,6 +238,14 @@
 - 對應測試或關卡：改 truncate 後跑一次 `HIST_REMOTE=… ovr_history.py`，log 不得出現「遠端停用」
 - 相關：L-134、E-302
 
+### L-150
+- 日期：2026-11-10
+- 規則：要改的程式碼字串裡有反斜線（`\n`、`\'`）時，不要用 Bash 工具的 heredoc 跑 python 去 replace；改用 Edit／Write 工具，或把 patch 腳本用 Write 寫成檔再執行。改完一律 `python -m py_compile` 每個動到的檔。
+- 細節：0.2.14d 改 `ovr_history.py` 時，heredoc 裡的 `\n` 被吃成真的換行，f-string 斷成兩行，檔案直接 SyntaxError；正式每日排程的 history 步驟會整個失敗。同一招改 `build_inseason_viewer.py` 時 `\'` 也被吃掉（replace 比對不到才發現）。
+- 由來：inseason 0.2.14d 上線（R-190），單日 history 冒煙測試才抓到
+- 對應測試或關卡：上線前對每個改過的 .py 跑 py_compile，並跑一次 `ovr_history.py --day <早期日> <暫存夾>`
+- 相關：L-148、L-149、R-190
+
 ## 預註冊
 
 ### L-041

@@ -7,6 +7,7 @@
   季累計可帶日期：防守追蹤 rim／three／hustle／advanced、持球 possessions、bio 用 NBA.com DateTo＝d 抓（scripts/fetch_asof.mjs，
     存 data/defense-seventh/2026-27-asof/<d>/，抓一次就留著）；
   對位 matchups：季表不吃日期，改用 data/matchup-source/2026-27 逐場對位檔加總（只放模型會用的欄）；
+    逐場對位原檔本身（0.2.14d 近況的單場評分 rating_m10 會讀）也導到截斷資料夾 _mu/，只留 d 以前的場次；
   Synergy 擋拆、引力：NBA.com 不吃日期，只能用「當天存下的快照」：每天 build 把當天的 synergy-pnr.json／gravity.json 存進 asof/<截止日>/，
     歷史日用 ≤ d 最近的一份；沒有快照的日子（2026-11-08 以前）預設 HIST_UNDATED=scale：拿最新整季那份，回合數 POSS／PTS、引力 FRAMES
     依每人「截至 d 的分鐘 ÷ 整季分鐘」縮小（量對了，效率／分數仍是整季的＝殘留洩漏，只在這兩項、只在舊日子）；
@@ -51,9 +52,9 @@ STINTS = ROOT / f'reports/defense-seventh/{SEASON}/stints/stints.jsonl'
 CACHE = HERE / 'ovr-history-cache.json'
 PAST_PKL = ROOT / 'data/_inseason_build/def-obs-past.pkl'     # defense_bonus 的過去季快取：不存在時第一個單日會寫它，所以先單獨跑一天
 SEASON_SRC = ROOT / f'data/season-source-{SEASON}'
-LIVE_DATA = (DATA26, STINTS.parent, SEASON_SRC)   # 本季最新資料：單日重算時整個導到截斷資料夾（見檔頭）
-ASOF = ROOT / 'data/defense-seventh' / f'{SEASON}-asof'          # <日期>/ 截至那天的季累計表
 MATCHUP_SRC = ROOT / 'data/matchup-source' / SEASON              # 逐場對位 <gameId>.json
+LIVE_DATA = (DATA26, STINTS.parent, SEASON_SRC, MATCHUP_SRC)   # 本季最新資料：單日重算時整個導到截斷資料夾（見檔頭）；MATCHUP_SRC 自 0.2.14d（近況的單場評分 rating_m10 直接讀逐場對位）
+ASOF = ROOT / 'data/defense-seventh' / f'{SEASON}-asof'          # <日期>/ 截至那天的季累計表
 ASOF_FETCH = ('tracking/rim.json', 'tracking/three.json', 'tracking/hustle.json', 'tracking/advanced.json', 'possessions.json', 'bio.json')
 SNAPSHOTS = ('synergy-pnr.json', 'gravity.json')                 # 不吃日期，只能用每天存下的快照
 UNDATED = os.environ.get('HIST_UNDATED', 'scale')                # 沒快照的日子：scale＝整季檔依分鐘比例縮小；none＝當作沒有
@@ -118,7 +119,7 @@ def _redirect(data_dir: Path):
     import io
     data_dir = Path(data_dir).resolve()
     pairs = [(os.path.normcase(str(DATA26)), str(data_dir)), (os.path.normcase(str(STINTS.parent)), str(data_dir / '_stints')),
-             (os.path.normcase(str(SEASON_SRC)), str(data_dir / '_ss'))]
+             (os.path.normcase(str(SEASON_SRC)), str(data_dir / '_ss')), (os.path.normcase(str(MATCHUP_SRC)), str(data_dir / '_mu'))]
 
     def remap(p):
         if isinstance(p, int):
@@ -253,8 +254,9 @@ def _src():
         _SRC['ss/player-games.json'] = (SEASON_SRC / 'player-games.json').read_text(encoding='utf-8')
         for sub in ('pbp', 'boxes'):
             _SRC[sub] = {p.stem: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((DATA26 / sub).glob('*.json'))}
-        _SRC['mu'] = {}
+        _SRC['mu'], _SRC['mu_sha'] = {}, {}
         for p in sorted(MATCHUP_SRC.glob('00*.json')):
+            _SRC['mu_sha'][p.stem] = hashlib.sha256(p.read_bytes()).hexdigest()
             _SRC['mu'][p.stem] = [(m['off'], m['def'], m['partialPossessions'] or 0, m['matchupFieldGoalsAttempted'] or 0, m['matchupTurnovers'] or 0)
                                   for m in json.loads(p.read_text(encoding='utf-8')).get('matchups') or ()]
         _SRC['stints'] = [(json.loads(line)['id'], line) for line in STINTS.open(encoding='utf-8')]
@@ -304,6 +306,9 @@ def truncate(day: str, dst: Path | None = None) -> str:
         per_game[sub] = [g for g in sorted(games) if g in src[sub]]
         for g in per_game[sub]:
             h.update(f'{sub}/{g}:{src[sub][g]}\n'.encode('utf-8'))
+    per_game['_mu'] = [g for g in sorted(games) if g in src['mu_sha']]   # 逐場對位原檔（近況的單場評分讀；0.2.14d）
+    for g in per_game['_mu']:
+        h.update(f'mu/{g}:{src["mu_sha"][g]}\n'.encode('utf-8'))
     lines = [line for gid, line in src['stints'] if gid in games]
     for line in lines:
         h.update(line.encode('utf-8'))
@@ -344,7 +349,7 @@ def truncate(day: str, dst: Path | None = None) -> str:
         for sub, gs in per_game.items():
             (dst / sub).mkdir(parents=True, exist_ok=True)
             for g in gs:
-                _link(DATA26 / sub / f'{g}.json', dst / sub / f'{g}.json')
+                _link((MATCHUP_SRC if sub == '_mu' else DATA26 / sub) / f'{g}.json', dst / sub / f'{g}.json')
         (dst / '_stints').mkdir(parents=True, exist_ok=True)
         (dst / '_stints' / 'stints.jsonl').write_text(''.join(lines), encoding='utf-8')
         for name, p in asof:
