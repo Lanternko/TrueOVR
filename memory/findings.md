@@ -1544,3 +1544,11 @@
 - 證據：`reports/E269-def-coef-pooling/{report.md,results.json}`
 - 狀態：成立（樣本外三整季，未稽核）
 - 相關：E-269、E-164、F-173
+
+### F-178
+- 日期：2026-11-09
+- 事實：Synergy 無球 play type（cut、offScreen、handoff、spotup、roll、putback、transition）、SpeedDistance 無球速度與距離、CatchShoot 量與命中率，共 12 欄，單欄或全部加進 E-227 R2-stats T，測試淨值 MSE 都顯著變差（+2.1～+8.6，90% 區間不含 0），2026-27 前瞻也沒有一欄顯著變好。fold 0 上切入量、cs3pct、補籃、順下對實際勝負的斜率顯著為正，但扣掉 base T 的預測後大多歸 0。
+- 意義：無球信號已被 T 現有輸入吸收（long、rebound、oreb36、screenAst36…）。「CRT 換成無球」不能靠 T 準度驗收。無球量欄（distOff、speedOff、cs3a36、spotup）和 2K／OBPM 是負相關，合併顯示值不能等權納入。
+- 證據：`reports/E297-offball-t-composite/{report.md,results/eval.json,results/routeb.json,results/composite.json}`
+- 狀態：成立（測試＋前瞻，未稽核）
+- 相關：E-297、E-227、E-285

@@ -2817,3 +2817,11 @@
 - 結論：4/5；R 主臂 adopt_candidate，C adopt_candidate（量小）；上線 C 要整條卡片鏈重跑（現輸入已不重現 K6）。`reports/E299-game-anchor-nonneg/report.md`
 - 狀態：完成；adopt_candidate（待使用者裁定；未稽核）
 - 相關：E-296、R-150、R-165、R-178
+
+## E-297 無球細項進 T 與合併能力值（2026-11-09）
+- 問題：使用者問 CRT 不重要能否換成「無球」；要找出影響勝負的無球信號、逐欄控制變量加進 T，看準度或對 BPM／2K 的契合度；最後決定無球各欄權重，合併成網站顯示值。
+- 做法：預註冊 `reports/E297-offball-t-composite/prereg.md`（commit 835a2a8，R-165）。共 12 欄（Synergy cut、offScreen、handoff、spotup、roll、putback、transition、SpeedDistance、CatchShoot），疊在 E-227 R2-stats 上，5 seed。第一階段：fold 0 斜率。第二階段：單欄臂、ALL、前向選擇 SEL。第三階段：W-eq／W-imp／W-dist 三組權重，比較加在 0.2.14a OVR 上的 ΔR²，並要求年對年 ≥0.60。
+- 結果：12 欄全部讓 T 測試 MSE 顯著變差（+2.1～+8.6），前瞻集無一顯著變好，SEL 為空，路線 B 最好 +0.002。第三階段只有 W-eq 通過年對年（0.70），ΔR² 平均 +0.024。W-dist 契合度高（+0.060），但年對年只有 0.48。W-eq 偏射手（Klay 98、Gordon 26、Gobert 19）。
+- 結論：3/5。T 不加；W-eq 可當描述性「無球」格的候選，建議另做拆成射手／切入順下兩格的預註冊。`reports/E297-offball-t-composite/report.md`
+- 狀態：完成；T 不採用；顯示權重待使用者裁定（未稽核）
+- 相關：F-178、E-227、E-285、R-165、R-178
