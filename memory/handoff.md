@@ -3,10 +3,10 @@
 只記「目前狀態」，每次收工整份覆寫，不往下追加日期段。每條最多兩行，細節寫進 findings／experiments／rulings 或報告檔，這裡只放 ID 與路徑。UI 小改不進本檔（看 git log）。舊版全文在 `archive/`（最近一份 `handoff-2026-11-09-full.md`）。
 **多個 session 同時改本檔與工作樹**：覆寫前先重讀一次，只改自己負責的條目。
 
-- **更新**：2026-11-09 R-178／L-137 防守分步修正、分層驗收；E-271 低效中距扣分 adopt_candidate；2026-11-08 OVR 折線加速＋去洩漏（L-133／134）；card／inseason 0.2.13a 修 pnr 窗口外季回合（R-173、L-132）；0.2.13 稽核 4/5（`reports/audit-0.2.13/`）；2026-11-05 球隊評分 T 的 21 欄追蹤統計改本季混合（R-169、E-246）；3PT／FT 顯示欄換量準混合（R-168，未 commit）；球員卡加追蹤量格子並發布（R-166）；11-04 E-239、0.2.12e（R-161～165）；11-03 球隊評分 Transformer（R-160）、近期加成（R-150）。
+- **更新**：2026-11-09 card／inseason 0.2.14 上線（R-185）；R-178／L-137 防守分步修正、分層驗收；E-271 低效中距扣分 adopt_candidate；2026-11-08 OVR 折線加速＋去洩漏（L-133／134）；card／inseason 0.2.13a 修 pnr 窗口外季回合（R-173、L-132）；0.2.13 稽核 4/5（`reports/audit-0.2.13/`）；2026-11-05 球隊評分 T 的 21 欄追蹤統計改本季混合（R-169、E-246）；3PT／FT 顯示欄換量準混合（R-168，未 commit）；球員卡加追蹤量格子並發布（R-166）；11-04 E-239、0.2.12e（R-161～165）；11-03 球隊評分 Transformer（R-160）、近期加成（R-150）。
 
 ## 目前基準（線上）
-- **card／inseason 0.2.13a**（11-08，R-173、L-132）：加擋拆持球 pnr（E-258，全部係數重擬合，role-audit 4/5、G5 過）；0.2.13a 修窗口外季回合。正式卡 `reports/card-0.2.13a/`；回退 `PNR_FIX=0`＝0.2.13、`PNR=0`＝0.2.12e。
+- **card／inseason 0.2.14**（11-09，R-185）：0.2.13a＋MIX 籃板／兩分干擾加分（R-183）×min(1,MIN/500)（R-184），賽中每天依本季重算（`live/mix_live.py`）。正式卡 `reports/card-0.2.14/`；回退 `MIX_BONUS=0`＝0.2.13a、`PNR_FIX=0`＝0.2.13。
 - **inseason 0.2.12e**（11-04，已 commit）：復出老將補卡（R-161）＋新秀起點加季前賽位移（R-162）＋防守 D 個人場次軸（R-163）＋復出老將補進用人層 hi（R-164）。未修：復出老將 gravity＝70 佔位（L-127）。回退 `DEF_AXIS=calendar`、`RV_USAGE=0`、`RETURNING_VETS=0`、`PS_START=0`。
 - **3PT／FT 顯示欄**（R-168，11-05，只改顯示、OVR 不動、未 commit／未發布）：3PT＝60% 量＋40% 率、FT＝只看命中率，PR99 以上每 SD +10 分；`scripts/blend_display.py`，兩頁已重建。
 - **追蹤量格子**（R-166，11-05）：DRV／INS／CRT／PASS／3PT 提示卡加量類追蹤列，不進分數。`scripts/tracking_cells.py`；2026-27 資料是手動快照，重抓 `node scripts/fetch_tracking_cells.mjs <季> data/tracking-cells/<季>` 後重建頁面。
@@ -17,7 +17,7 @@
 
 ## 進行中（未稽核，待派 role-audit）
 - **防守三步（R-178、L-137）**：① `help` 位置係數改 PG→C 遞增（現行 U 字形 PG .43／SG .01／SF .03／PF .37／C .29）→ ② 干擾／抄截／蓋帽獨立定係數 → ③ `DEF` 顯示對齊 T／EPM／加權。驗收看結構＋代表球員＋EPM／T 對齊＋OVR 不壞，不拿單季防守 RAPM 單一否決。**第一步 E-277 完成（採用 M1）**：help 斜率變兩層台階 PG≈SG≈SF＜PF≈C，OVR ΔR² −0.004 在雜訊內；Durant 只升 20 名。使用者採用 M1（R-179）。**第二步 E-278 完成（2/5 無候選）**：2025-26 蓋帽係數翻負／歸零 S1 不過；抄截四原點穩定為正、干擾≈0；只加蓋帽臂 DEF 對 EPM 防守 +0.030 但缺 S1。**E-280 蓋帽每 SD 0.3 已採用（R-180）**；E-281 拿掉 pressure 不採用、干擾不進。E-282 抄截只宜 0.1（3/5）；E-283 拆 pressure 分量、E-284 有球／無球犯規，自由擬合都全面變差，保留合成 pressure。E-285 T 加逼失誤／犯規：stint MSE −2.6 但 E-286 跨季球隊評分兩季都變差（Brier +0.0027），X 版不進球隊評分；E-287 OFF/DEF 各混 0.5 T 已上線（R-181，每日 t_swap_live）。待裁定抄截 0.1，之後第三步。`reports/E280-blk-weight/report.md`E-274～E-276、E-269 舊結論（D0 ρ 0.422 最高）依 R-178 不再當否決依據。`reports/E276-def-stl-blk-defl/report.md`
-- **E-288～E-292 中鋒低估**：上線候選改為 `card-0.2.14-cand2/`（MIX＋500 分鐘以下按比例打折，R-184）；≥500 分鐘與已稽核 4/5 的 cand 相同，待上線決定。
+- **E-288～E-292 中鋒低估**：已上線為 0.2.14（R-185）；cand2 未另派 role-audit（≥500 分鐘同 cand 4/5）。
 - **E-271 低效中距＋慘 On/Off 扣分**（11-08，未 commit／未稽核）：`AR` +0.0085、`D` +0.0104 adopt_candidate，`A` 救回 Booker／Harden／Cade；待使用者選臂交 role-card 做 0.2.14。E-272 bog 進 T 不採用。`reports/E271-ineff-midrange-bog-penalty/report.md`
 - **E-273 T 各版本同場次重測**（3/5）：各步區間跨 0，每隊滿 20 場重跑。`reports/team-model-versions/report.md`
 - **R-171 戰力排行混入本季實際表現**（11-07，E-253 K10）：殘差 ÷(場數+10) 加回 T 評分，`scripts/actual_blend.py`、回退 `ACTUAL_BLEND=0`；已發布（POR 14→9）。**R-172**：殘差改每天對今天的 T 重算（`today-margins.json`，避免和本季 OVR 更新重複計入，L-129）。K10 是看過前向才選，每隊滿 20 場用凍結 K10 前向複查一次（F-172）。

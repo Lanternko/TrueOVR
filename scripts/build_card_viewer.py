@@ -1,12 +1,12 @@
-"""2025-26 正式卡名單頁（card 0.2.13a，2026-11-08 修 pnr 窗口外季回合；card 0.2.13，E-258：加擋拆持球 pnr、全部係數重擬合；檔案在 card-0.2.13/。之前 card 0.2.12b，E-204／R-140：四季窗口 328→246 格；檔案在 card-0.2.12b/。card 0.2.12＝R-139 升 PATCH，TO 改看持球時間，檔案在 card-0.2.12-tov/）：以正式卡名單頁為版型，換成 card 0.2.13 的 OVR／能力值（OVR 為每場、含上場時間、相對替補水準，R-028；能力值同 0.1.2），3PT 顯示 threeValue（R-024）。
+"""2025-26 正式卡名單頁（card 0.2.14，2026-11-09 加 MIX 籃板／兩分干擾加分 E-290／E-292，ovr 與 mixBonus 在 card-0.2.14/；card 0.2.13a，2026-11-08 修 pnr 窗口外季回合；card 0.2.13，E-258：加擋拆持球 pnr、全部係數重擬合；檔案在 card-0.2.13/。之前 card 0.2.12b，E-204／R-140：四季窗口 328→246 格；檔案在 card-0.2.12b/。card 0.2.12＝R-139 升 PATCH，TO 改看持球時間，檔案在 card-0.2.12-tov/）：以正式卡名單頁為版型，換成 card 0.2.13 的 OVR／能力值（OVR 為每場、含上場時間、相對替補水準，R-028；能力值同 0.1.2），3PT 顯示 threeValue（R-024）。
 OVR 能力估計納入教練用人證據（分鐘、出賽率、年齡、練兵隊），DNP 與輪休分開（E-075）；用人回歸的訓練目標是 2025-26 單季 RAPM（E-084）；分鐘權重為飽和曲線 W(m)（E-089）；補籃改歸近距離、能力值錨點對四季合併池、頂端只壓縮（E-101）；OVR 迴歸不用 physique（E-131），網站不顯示 PHYS。
 PRES 顯示 presDisplay（逼失誤 − 0.25·犯規，E-071），提示卡列逼失誤（卡片 pressure）與五個分量（抄截、干擾球、對位逼失誤、造進攻犯規、犯規，E-071 收縮後值＋PR＋前十名次）；
 提示卡 PR／名次人群＝場均 ≥ sn.POOL_MPG 分鐘的人，其餘註腳改標「*上場時間不足」；
 TO 提示卡列失誤、球權、失誤率（player-games.json 整季加總）；PER D 提示卡列 E-060 三分量（三分干擾、對位負擔、威懾力）。
 
-輸入：reports/card-0.2.13a/ranking.csv（card 0.2.13a）、pnr-attr.csv（PNR 欄與提示卡）、
-      reports/card-0.2.13a/three-value.csv（以姓名對 tv_main；E-123 頂端開尾；同 0.2.10i）、
-      reports/card-0.2.13a/gravity-attr.csv、gravity-raw.csv（GRV 欄與提示卡；ranking.csv 沒有 gravity 欄）、data/season-source/player-games.json。
+輸入：reports/card-0.2.14/ranking.csv（card 0.2.14）、pnr-attr.csv（PNR 欄與提示卡）、
+      reports/card-0.2.14/three-value.csv（以姓名對 tv_main；E-123 頂端開尾；同 0.2.10i）、
+      reports/card-0.2.14/gravity-attr.csv、gravity-raw.csv（GRV 欄與提示卡；ranking.csv 沒有 gravity 欄）、data/season-source/player-games.json。
 版型：reports/ovr-v58-card-2025-26/roster-viewer.html（只讀；team／ht／gp 依姓名取自它）。
 輸出：reports/card-0.1.2-2025-26/roster-viewer.html（或 argv[1] 指定路徑）
 
@@ -29,11 +29,11 @@ import tracking_cells as TC  # noqa: E402
 
 ROOT = er.ROOT
 BASE = ROOT / 'reports/ovr-v58-card-2025-26/roster-viewer.html'
-CARD = ROOT / 'reports/card-0.2.13a/ranking.csv'
-THREE_VALUE = ROOT / 'reports/card-0.2.13a/three-value.csv'
-GRAVITY_ATTR = ROOT / 'reports/card-0.2.13a/gravity-attr.csv'   # 0.2.10j（R-134）：引力能力值（0–99）與是否推估
-PNR_ATTR = ROOT / 'reports/card-0.2.13a/pnr-attr.csv'           # 0.2.13（E-258）：擋拆持球能力值與 Synergy 原始回合／每回合得分
-GRAVITY_RAW = ROOT / 'reports/card-0.2.13a/gravity-raw.csv'     # NBA.com 無球外線引力原始分數（推估的人是 OLS 值）
+CARD = ROOT / 'reports/card-0.2.14/ranking.csv'
+THREE_VALUE = ROOT / 'reports/card-0.2.14/three-value.csv'
+GRAVITY_ATTR = ROOT / 'reports/card-0.2.14/gravity-attr.csv'   # 0.2.10j（R-134）：引力能力值（0–99）與是否推估
+PNR_ATTR = ROOT / 'reports/card-0.2.14/pnr-attr.csv'           # 0.2.13（E-258）：擋拆持球能力值與 Synergy 原始回合／每回合得分
+GRAVITY_RAW = ROOT / 'reports/card-0.2.14/gravity-raw.csv'     # NBA.com 無球外線引力原始分數（推估的人是 OLS 值）
 FORCE = ROOT / 'reports/card-0.2.0+E071-pressure/force-2025-26.csv'
 DEFAULT_OUT = ROOT / 'reports/card-0.1.2-2025-26/roster-viewer.html'
 # PRES 提示卡的分量（E-071 force 的收縮後值）；PR／名次對場均 ≥ sn.POOL_MPG 分鐘的人群
@@ -132,7 +132,7 @@ def main(out=None):
     oc_ = list(csv.DictReader(ONBALL.open(encoding='utf-8')))
     orows = onball_rows({r['name']: (float(r['C3']), float(r['B']), float(r['T'])) for r in oc_ if '' not in (r['C3'], r['B'], r['T'])}, pool)
     # DIQ 顯示負分：card 0.2.10i 的 defenseBonus（同 0.2.7b） 用 def-L-primary，posMeanD 從同一批人算（max(0, ·) 逐人核對）
-    dcen = sn.defense_centered(rows, 'name', [(ROOT / 'reports/card-0.2.13a/def-L-primary.csv', None)])   # 0.2.12b：窗口 246 重擬合的 D（E-204；card 0.2.12 用 card-0.2.5+E104 的 def-L-primary.csv）
+    dcen = sn.defense_centered(rows, 'name', [(ROOT / 'reports/card-0.2.14/def-L-primary.csv', None)])   # 0.2.12b：窗口 246 重擬合的 D（E-204；card 0.2.12 用 card-0.2.5+E104 的 def-L-primary.csv）
     assert dcen, 'DIQ 負分：def-L-primary 算回來的 defenseBonus 對不上 card 0.2.10i'
     rows = sn.display_rows(rows)   # 能力值顯示尺（2026-11-02 方案 B）：off/def、名次人群已用原值算完
     # 3PT、FT 顯示欄改量＋準混合（R-168，使用者 2026-11-05）：只換頁面數字，ranking.csv／OVR／名次／模擬不動；off/def 已用原值算完。
@@ -171,7 +171,7 @@ def main(out=None):
     s = base
     s = s.replace('<title>OVR 名單檢視</title>', '<title>球員能力值 · TrueOVR · 2026</title>', 1)
     s = re.sub(r'<div class="src">.*?</div>',
-               f'<div class="src">OVR：正式卡 card 0.2.13a（2025-26 整季；OVR 為每場，含上場時間，相對替補水準；FD 以量為主；PRES＝逼失誤扣犯規；OVR 能力估計納入教練用人證據，DNP 與輪休分開，用人回歸（上場強度、出賽率看近三季窗口）對齊當季 RAPM；分鐘權重遞減；能力值對 2022-23～2025-26 四季比較；切入只算帶球切入的自主兩分、自主創造看自主跳投與低位；GRV＝引力：沒拿球時防守人也不敢離開他的程度（NBA.com 無球外線引力，沒有資料的人用三分出手、命中率、用球率與位置推估）；PNR＝擋拆：擋拆持球的次數與每回合得分各半（Synergy，不到 50 回合只看次數）；防守加成不打折、近期加權；OVR 評分標準為 DARKO 加 BPM；年輕人沒有爛隊折扣；傳球看量也看率；3PT、RIM、PRES 頂端不封在 99；OVR 不看身高體重；OVR 尺頂端另以 PR90、PR95 定位）；3PT 顯示 threeValue；{len(rows)} 人</div>',
+               f'<div class="src">OVR：正式卡 card 0.2.14（2025-26 整季；籃板與兩分干擾另有加分（上場不到 500 分鐘按比例打折）；OVR 為每場，含上場時間，相對替補水準；FD 以量為主；PRES＝逼失誤扣犯規；OVR 能力估計納入教練用人證據，DNP 與輪休分開，用人回歸（上場強度、出賽率看近三季窗口）對齊當季 RAPM；分鐘權重遞減；能力值對 2022-23～2025-26 四季比較；切入只算帶球切入的自主兩分、自主創造看自主跳投與低位；GRV＝引力：沒拿球時防守人也不敢離開他的程度（NBA.com 無球外線引力，沒有資料的人用三分出手、命中率、用球率與位置推估）；PNR＝擋拆：擋拆持球的次數與每回合得分各半（Synergy，不到 50 回合只看次數）；防守加成不打折、近期加權；OVR 評分標準為 DARKO 加 BPM；年輕人沒有爛隊折扣；傳球看量也看率；3PT、RIM、PRES 頂端不封在 99；OVR 不看身高體重；OVR 尺頂端另以 PR90、PR95 定位）；3PT 顯示 threeValue；{len(rows)} 人</div>',
                s, count=1, flags=re.S)
     new_data = json.dumps({'cols': cols, 'rows': data_rows}, ensure_ascii=False, separators=(',', ':'))
     s = re.sub(r'const DATA=\{.*?\};\nconst COLS', lambda m: f'const DATA={new_data};\nconst COLS', s, count=1, flags=re.S)

@@ -468,6 +468,11 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
     nopr[:] = [r for r in nopr if r['playerId'] not in loc_rookies]
     # 老將列複製一份重排名次（原 rows 不動，後面的統計照舊只含老將）
     merged = [dict(r) for r in rows] + [dict(r) for r in rk_rows]
+    mix = None
+    if g.get('MIX_BONUS'):      # 0.2.14（R-183／R-184）：MIX 加分疊在 OVR 上（live/mix_live.py），再重排名次；MIX_BONUS=0 不碰（重現 0.2.13a）
+        import mix_live as MX
+        mix = MX.apply(merged, g['r1'], g['DATA26'])
+        head = head + ['mixBonus']
     merged.sort(key=lambda r: -r['_ovr'])
     for i, r in enumerate(merged, 1):
         r['rank'] = i
@@ -481,6 +486,9 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
                      'x0': r['_base']['x'], 'xhat': r['_cur']['x'], 'w': r['_cur']['w'],
                      'chain': {k: r['_chain'][k] for k in ('possW', 'bonus', 'pred', 'predNew', 'd')}})
     json.dump(slim, open(out_dir / 'rookies-detail.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    if mix is not None:     # 0.2.14：每人加分明細（混合後籃板率／干擾、打折分鐘、REBc／CON）
+        json.dump({'meta': {'frozen': MX.FROZEN.name, 'config': MX.load_frozen()['config']}, 'players': mix},
+                  open(out_dir / 'mix.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     if GRAVITY:     # 檢視器 GRV tooltip 用：原始引力值、來源（是否推估）
         json.dump({'meta': GRAV_INFO, 'players': {str(p): v for p, v in GRAV.items()}}, open(out_dir / 'gravity.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     if PNR:         # 檢視器 PNR tooltip 用：窗口後的擋拆回合、每 36 分鐘回合、每回合得分、來源
