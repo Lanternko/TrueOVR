@@ -2743,6 +2743,6 @@
 - 問題：E-288／E-289 的籃板加分（REBc）在現行 card 0.2.13a 重做，R-182 放寬後能不能採用。
 - 做法：預註冊 `reports/E290-reb-bonus-0213a/preregistration.md`（11-09 凍結）；2025-26 折用真 0.2.13a 卡→2026-27 季中 EPM，前三折用 E-164 歷史卡（0.2.13a 無舊原點卡，已揭露）；臂 REBc／CON／MIX（各半）／CPOS，λ 留一折，bootstrap 2000；第 4 條改成 R-182 容許名單（含 Mobley）＋前 30 掉 >10 名 ≤1。
 - 結果：三臂都只敗第 4 條。REBc Δρ +0.0100 [+0.0023, +0.0177]、2025-26 折 +0.0194、C 缺口 +0.071→−0.004，但 Towns 進前十、5 人掉 >10 名；MIX +0.0122、前十合規、Booker／Maxey 掉 >10 名（上限 1）；CON +0.0129、Embiid 進前十。Gobert 56→32、Allen 47→25、Mobley 16→9。`reports/E290-reb-bonus-0213a/report.md`
-- 結論：3.5/5 籃板加分方向在現行卡成立，但凍結判定無 adopt_candidate，未產 `card-0.2.14-cand/`；MIX 只差一個名額，待使用者決定是否放寬第 4 條。
+- 結論：3.5/5 籃板加分方向在現行卡成立，但凍結判定無 adopt_candidate，未產 `card-0.2.14-cand/`；MIX 只差一個名額。**R-183（使用者看過結果後裁定，非盲測 L-026）：採 MIX λ=0.5，第 4 條掉名上限 1→2**；候選卡 `reports/card-0.2.14-cand/`（ranking.csv＋mixBonus、summary.json、g5.md）：新前十加 Chet 6、Mobley 7（Edwards、Durant 掉到 13、14），Gobert 57→30、Allen 48→23、Hartenstein 54→29；全卡前 30 無人掉 >10 名。
 - 狀態：完成，未稽核
 - 相關：E-288、E-289、R-182、R-001、L-026
