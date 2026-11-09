@@ -189,6 +189,14 @@
 - 對應測試或關卡：G2 資料 sha256；預註冊列出參考檔時寫「已複製到 reports/<實驗>/inputs/」
 - 相關：L-134、E-294
 
+### L-144
+- 日期：2026-11-09
+- 規則：工作樹裡有別的 session 的未提交改動時，回退驗證（L-140）的「舊程式」是「目前工作樹扣掉自己的改動」，不是 HEAD 原檔；只換回自己改的檔或段落，把舊程式複製到暫存資料夾跑，別人改的檔照工作樹的版本。
+- 細節：0.2.14a 上線時 `live/run_c4_live_rookie.py`（deflP 欄）、`window8.py`、`pres_drive.py` 有其他 session 未提交的改動；拿 HEAD 原檔對比會把別人的改動算成回退不一致。做法：複製 live/ 到 `live_head0214/`，只把 mix_live.py、run_c4_live.py 換成 HEAD，run_c4_live_rookie.py 只撤掉自己兩段，同資料跑完 cmp，事後刪暫存資料夾。
+- 由來：card／inseason 0.2.14a 上線（R-186）
+- 對應測試或關卡：回退驗收前 `git status` 看共用檔；舊程式＝工作樹－自己的 hunk
+- 相關：L-140、L-047、R-186
+
 ## 預註冊
 
 ### L-041
