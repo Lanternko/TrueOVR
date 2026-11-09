@@ -31,6 +31,11 @@ inseason／card 0.2.14b（E-295 臂 W1，role-audit 4/5 reports/audit-0.2.14b/�
     都沒有（新秀）＝heightPrior[身高]（70–91 吋，超出取端點，身高四捨五入到整數吋）。
   不再有「標籤不在 mpos 就給 0」的分支。w1=False 走 0.2.14a（MIX_W1=0），逐位元不變。
 
+inseason／card 0.2.14c（E-300 臂 M，使用者 2026-11-10「採用 M 上線」）：apply(..., h=True, w1=True, mm=True)。
+  W1 加分再乘 min(1, W(MPG))，W(m)＝(1−e^(−m/15))/(1−e^(−36/15))＝OVR 主體同一條分鐘曲線（R-025／R-047）；
+  賽中 MPG＝該列 MPGhat（OVR 主體 e064_convert 用的同一個值），卡片＝card 0.2.13a 的 mpg 欄。凍結檔沿用 0.2.14b，不另凍結。
+  lastOVR 基準改加 card 0.2.14c 的 mixBonus（卡外的人＝凍結 cardBonus×min(1,W(MPGhat))）。mm=False 走 0.2.14b（MIX_MIN=0），逐位元不變。
+
 用法：python -I -X utf8 reports/ovr-inseason-2026-27/live/mix_live.py freeze     （重產 0.2.14 凍結檔並核對 cand2 卡）
       python -I -X utf8 reports/ovr-inseason-2026-27/live/mix_live.py freeze_h   （產 0.2.14a 凍結檔並核對 card-0.2.15-cand／E-294 bonus_pick）
       python -I -X utf8 reports/ovr-inseason-2026-27/live/mix_live.py freeze_w1  （產 0.2.14b 凍結檔；核對 card-0.2.14b-cand：別名 3 人以外差 ≤0.02）
@@ -53,6 +58,7 @@ CARD14 = ROOT / 'reports/card-0.2.14/ranking.csv'
 CARD14A = ROOT / 'reports/card-0.2.14a/ranking.csv'
 FROZEN_W1 = HERE / 'mix-pool-card0214b.json'    # 0.2.14b（E-295 W1）
 CARD14B = ROOT / 'reports/card-0.2.14b/ranking.csv'
+CARD14C = ROOT / 'reports/card-0.2.14c/ranking.csv'   # 0.2.14c（E-300 M）
 CAND_W1 = ROOT / 'reports/card-0.2.14b-cand/ranking.csv'
 ALIAS_W1 = ROOT / 'reports/card-0.2.14b/bbref-alias.csv'
 E295 = ROOT / 'reports/E295-mix-pos-continuous/e295_eval.py'
@@ -477,16 +483,28 @@ def live_bonus(frozen, pid, rebound, cur_min, cur, pos=None, height=None):
     return out
 
 
-def apply(rows, r1, data26=DATA26, h=False, w1=False):
+def w_min(m):
+    """OVR 主體的分鐘曲線 W(m)，上限 1（0.2.14c）。"""
+    return min(1.0, (1 - math.exp(-max(float(m), 0.0) / 15)) / (1 - math.exp(-36 / 15)))
+
+
+def row_mpg(r):
+    for k in ('MPGhat', 'MPG0'):
+        if r.get(k) not in ('', None):
+            return float(r[k])
+    return 0.0
+
+
+def apply(rows, r1, data26=DATA26, h=False, w1=False, mm=False):
     """rows＝寫 ranking.csv 前的合併列（老將＋新秀）。原地改 ovr／_ovr／lastOVR／dOVR／formalOVR，加 mixBonus；回傳 {pid: 明細}。
     lastOVR 基準（本季 0 場）加正式卡（h：card 0.2.14a；否則 card 0.2.14）的 mixBonus（卡外的人 0），dOVR 只反映本季造成的變化。
     h＝True（0.2.14a）時位置取 rows 的 pos 欄；h＝w1＝True（0.2.14b）時位置取凍結 π，查不到用 rows 的 heightInches 查身高帶。"""
-    w1 = bool(h and w1)
+    w1 = bool(h and w1); mm = bool(w1 and mm)
     frozen = load_frozen(h, w1)
     cur = current(data26)
-    card14 = {}
-    for r in csv.DictReader(open(CARD14B if w1 else (CARD14A if h else CARD14), encoding='utf-8')):
-        card14.setdefault(r['name'], float(r['ovr']))
+    card14, cardb = {}, {}
+    for r in csv.DictReader(open(CARD14C if mm else (CARD14B if w1 else (CARD14A if h else CARD14)), encoding='utf-8')):
+        card14.setdefault(r['name'], float(r['ovr'])); cardb.setdefault(r['name'], float(r['mixBonus']))
     detail = {}
     for r in rows:
         pid = int(r['playerId'])
@@ -496,6 +514,12 @@ def apply(rows, r1, data26=DATA26, h=False, w1=False):
         else:
             d = live_bonus(frozen, pid, float(r['rebound']), m, cur, r.get('pos')) if h else live_bonus(frozen, pid, float(r['rebound']), m, cur)
         b, b0 = d['bonus'], d['cardBonus']
+        if mm:   # 0.2.14c：照 OVR 主體同一條分鐘曲線
+            wm = w_min(row_mpg(r))
+            d.update(bonusW1=b, wMin=round(wm, 4))
+            b = b * wm
+            b0 = cardb[r['name']] if r['name'] in cardb else b0 * wm
+            d['bonus'], d['cardBonus'] = b, b0
         r['_ovr'] = r['_ovr'] + b
         r['ovr'] = r1(r['_ovr'])
         if r.get('lastOVR') not in ('', None):

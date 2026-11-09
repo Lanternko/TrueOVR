@@ -423,6 +423,7 @@
   - 0.2.14 上線（R-185，2026-11-09，使用者「接進線上並發布」）：card／inseason 0.2.14＝0.2.13a＋MIX 加分（R-183）×min(1, MIN/500)（R-184）；正式卡 `reports/card-0.2.14/`（＝cand2）。賽中每天重算：常數凍結（mix-pool-card0214.json），rebound 用當日能力值、orebPct／drebPct／con2_36 依 R-169 規則 w＝本季分鐘/(本季分鐘+500) 混 2025-26 與本季、打折分鐘＝2025-26＋本季，新秀只用本季（L-117：不凍結）。回退 `MIX_BONUS=0`＝0.2.13a。
   - 0.2.14a 上線（R-186，2026-11-09，使用者裁定「採用 H、版號用字母版 0.2.14a＝修同版本的錯估」；role-audit 4/5 `reports/audit-0.2.14a/`）：MIX 加分改 E-294 臂 H-same（z_H＝z_L−0.5·m_pos、1.5·tanh 軟上限、位置權重 C=1／PF=0.243／其他 0），正式卡 `reports/card-0.2.14a/`（＝card-0.2.15-cand）；賽中 m_pos 與縮放凍結（mix-pool-card0214a.json），原始特徵仍每天混本季；位置卡片＝F-033、賽中＝ranking pos 欄（新秀 G／F＝0）。回退 `MIX_H=0`＝0.2.14、`MIX_BONUS=0`＝0.2.13a。位置斷崖另開實驗（E-177 BBRef 比例）。
   - 0.2.14b 上線（R-187，2026-11-09，使用者裁定採用 E-295 W1、字母版 0.2.14b＝修 0.2.14a 的 PF／C 標籤斷崖；role-audit 4/5 `reports/audit-0.2.14b/`）：MIX 加分的位置權重 w 與位置平均 m 改 BBRef 2025-26 上場位置比例 π 加權（w＝π_C＋0.243·π_PF），BBRef 對名補手動別名 3 人（Ronald Holland II、Trevon Scott、Adama Bal）；正式卡 `reports/card-0.2.14b/`。賽中讀凍結 π／m_p／縮放／身高帶（mix-pool-card0214b.json），卡外復出老將用最近一季 BBRef、新秀用身高帶（70–91 吋取端點），整季用 2025-26 比例；籃板與兩分干擾原始特徵仍每天混本季（L-117）。回退 `MIX_W1=0`＝0.2.14a、`MIX_H=0`＝0.2.14、`MIX_BONUS=0`＝0.2.13a（皆逐位元驗過）。
+  - 0.2.14c 上線（R-188，2026-11-10，使用者「採用 M 上線」，E-300 臂 M，未稽核）：MIX 加分再乘 min(1, W(MPG))，W＝OVR 主體同一條分鐘曲線（R-025／R-047）；卡片 mpg＝card 0.2.13a mpg 欄、賽中＝MPGhat（OVR 主體同一個值）；凍結檔沿用 0.2.14b。正式卡 `reports/card-0.2.14c/`；回退 `MIX_MIN=0`＝0.2.14b（11-08 資料 ranking.csv 逐位元相同）。live Avdija 79→75、Clingan 72→81；對手籃板／干擾修正（臂 O）不上。
 - 狀態：有效
 - 合併：R-002、R-006、R-106
 - 相關：F-014、F-015、E-026、E-027、L-023
@@ -714,3 +715,4 @@
 | R-185 | R-001 | 2026-11-09；card／inseason 0.2.14 上線（MIX＋500 分鐘打折，每天重算） |
 | R-186 | R-001 | 2026-11-09；card／inseason 0.2.14a 上線（E-294 H-same，字母版） |
 | R-187 | R-001 | 2026-11-09；card／inseason 0.2.14b 上線（E-295 W1 BBRef 位置比例，字母版） |
+| R-188 | R-001 | 2026-11-10；card／inseason 0.2.14c 上線（E-300 M，MIX 加分×分鐘曲線，字母版） |

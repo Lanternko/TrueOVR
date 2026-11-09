@@ -472,7 +472,7 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
     if g.get('MIX_BONUS'):      # 0.2.14（R-183／R-184）：MIX 加分疊在 OVR 上（live/mix_live.py），再重排名次；MIX_BONUS=0 不碰（重現 0.2.13a）
         import mix_live as MX
         if g.get('MIX_W1'):   # 0.2.14b：W1（位置＝凍結 π／復出老將最近一季／新秀身高帶）；MIX_W1=0 走 0.2.14a
-            mix = MX.apply(merged, g['r1'], g['DATA26'], h=True, w1=True)
+            mix = MX.apply(merged, g['r1'], g['DATA26'], h=True, w1=True, mm=bool(g.get('MIX_MIN')))   # 0.2.14c：×min(1,W(MPGhat))；MIX_MIN=0 走 0.2.14b
         else:
             mix = MX.apply(merged, g['r1'], g['DATA26'], h=True) if g.get('MIX_H') else MX.apply(merged, g['r1'], g['DATA26'])   # 0.2.14a：H-same（位置＝merged 的 pos 欄）；MIX_H=0 走 0.2.14
         head = head + ['mixBonus']

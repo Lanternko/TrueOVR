@@ -1,7 +1,9 @@
-"""inseason／card 0.2.14b MIX 加分閘門（E-295 W1；0.2.14a＝E-294 H-same；0.2.14＝R-183／R-184）。npm test 會跑。
+"""inseason／card 0.2.14c MIX 加分閘門（0.2.14c＝E-300 M：W1 加分×min(1,W(MPG))；0.2.14b＝E-295 W1；0.2.14a＝E-294 H-same；0.2.14＝R-183／R-184）。npm test 會跑。
 (1) day0 一致性：開季前（本季沒有資料、本季 0 分鐘、rebound＝卡片值、pos＝卡片 pos）賽中公式算出的加分＝card-0.2.14b 的 mixBonus（差 ≤0.001）。
     走 mix_live.apply(h=True, w1=True)（賽中寫 ranking 前同一條路徑），本季資料夾指到空資料夾＝開季前。
     回退路徑 apply(h=True)（MIX_W1=0）仍要＝card-0.2.14a，apply(h=False)（MIX_H=0）仍要＝card-0.2.14。
+(1c) 0.2.14c：apply(h=True, w1=True, mm=True)，列的 MPGhat＝卡片 mpg 時 day0 加分＝card-0.2.14c mixBonus；card-0.2.14c＝0.2.14b 加分×min(1,W(mpg))。
+    回退 mm=False（MIX_MIN=0）仍要＝card-0.2.14b。
 (1b) card-0.2.14b：別名 3 人以外加分與 card-0.2.14b-cand 差 ≤0.02；凍結檔記 0214a 基底 sha；π／m_p／縮放／身高帶表齊全；
     卡外：復出老將用最近一季 BBRef，新秀用身高帶（超出 70–91 取端點），沒有「標籤不在 mpos 給 0」。
 (2) card-0.2.14a：ranking.csv sha＝summary.json；ovr＝round(ovr_0213a＋mixBonus, 1)；與 card-0.2.15-cand 逐位元相同。card-0.2.14 同理（對 cand2）。
@@ -24,6 +26,7 @@ import mix_live as MX  # noqa: E402
 CARD14 = ROOT / 'reports' / 'card-0.2.14'
 CARD14A = ROOT / 'reports' / 'card-0.2.14a'
 CARD14B = ROOT / 'reports' / 'card-0.2.14b'
+CARD14C = ROOT / 'reports' / 'card-0.2.14c'
 sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
 
@@ -37,21 +40,25 @@ class MixDay0(unittest.TestCase):
         cls.base = {r['name']: r for r in csv.DictReader(open(ROOT / 'reports/card-0.2.13a/ranking.csv', encoding='utf-8'))}
         cls.cards = {False: list(csv.DictReader(open(CARD14 / 'ranking.csv', encoding='utf-8'))),
                      True: list(csv.DictReader(open(CARD14A / 'ranking.csv', encoding='utf-8'))),
-                     'w1': list(csv.DictReader(open(CARD14B / 'ranking.csv', encoding='utf-8')))}
+                     'w1': list(csv.DictReader(open(CARD14B / 'ranking.csv', encoding='utf-8'))),
+                     'mm': list(csv.DictReader(open(CARD14C / 'ranking.csv', encoding='utf-8')))}
         cls.frozens = {h: MX.load_frozen(h) for h in (False, True)}
         cls.frozens['w1'] = MX.load_frozen(True, True)
         cls.pid = {v['name']: int(p) for p, v in cls.frozens[True]['players'].items()}
 
     def _day0(self, h):
-        card, label = self.cards[h], {'w1': 'card-0.2.14b', True: 'card-0.2.14a', False: 'card-0.2.14'}[h]
+        card, label = self.cards[h], {'mm': 'card-0.2.14c', 'w1': 'card-0.2.14b', True: 'card-0.2.14a', False: 'card-0.2.14'}[h]
         rows = []
         for r in card:
             o0 = float(self.base[r['name']]['ovr'])
             rows.append({'playerId': self.pid[r['name']], 'name': r['name'], 'pos': self.base[r['name']]['pos'], 'rebound': self.base[r['name']]['rebound'],
                          'heightInches': self.base[r['name']]['heightInches'],
+                         'MPGhat': self.base[r['name']]['mpg'], 'MPG0': '',
                          'MIN26': 0.0, '_ovr': o0, 'ovr': o0, 'lastOVR': o0, 'dOVR': 0.0, 'formalOVR': o0})
         with tempfile.TemporaryDirectory() as empty:
-            if h == 'w1':
+            if h == 'mm':
+                MX.apply(rows, r1, Path(empty), h=True, w1=True, mm=True)
+            elif h == 'w1':
                 MX.apply(rows, r1, Path(empty), h=True, w1=True)
             else:
                 MX.apply(rows, r1, Path(empty), h=h)
@@ -65,8 +72,26 @@ class MixDay0(unittest.TestCase):
         self.assertTrue(all(abs(r['dOVR']) <= 0.1001 for r in rows), 'day0 dOVR 應為 0（lastOVR 也加了卡片加分）')
         self.assertTrue(all(r['formalOVR'] == want[r['name']][1] for r in rows), f'formalOVR 應換成 {label}')
 
-    def test_day0_equals_card_0214b(self):
+    def test_day0_equals_card_0214c(self):
+        self._day0('mm')
+
+    def test_day0_rollback_equals_card_0214b(self):
         self._day0('w1')
+
+    def test_card_0214c(self):
+        d = CARD14C
+        s = json.loads((d / 'summary.json').read_text(encoding='utf-8'))
+        self.assertEqual(s['version'], 'card 0.2.14c')
+        self.assertEqual(sha(d / 'ranking.csv'), s['ranking_csv_sha256'])
+        b = {r['name']: float(r['mixBonus']) for r in self.cards['w1']}
+        for r in self.cards['mm']:
+            m = float(self.base[r['name']]['mpg'])
+            self.assertAlmostEqual(float(r['wMin']), MX.w_min(m), places=4)
+            self.assertLessEqual(float(r['wMin']), 1.0)
+            self.assertLessEqual(abs(float(r['mixBonus']) - b[r['name']] * MX.w_min(m)), 0.001, msg=r['name'])
+            self.assertLessEqual(abs(float(r['ovr']) - (float(self.base[r['name']]['ovr']) + float(r['mixBonus']))), 0.0505 + 1e-9, msg=r['name'])
+        self.assertAlmostEqual(MX.w_min(36.0), 1.0)
+        self.assertEqual(MX.w_min(48.0), 1.0)
 
     def test_day0_rollback_equals_card_0214a(self):
         self._day0(True)
