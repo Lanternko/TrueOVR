@@ -22,8 +22,18 @@ inseason／card 0.2.14a（E-294 臂 H-same，role-audit 4/5，使用者裁定採
   位置：卡片＝card 0.2.13a 的 pos（F-033，2025-26 先發最多的位置）；賽中＝ranking 的 pos 欄（老將＝卡片 pos，新秀／復出老將照 ranking）。
   原始特徵每天混本季的規則與 0.2.14 相同（L-117）。h=False（MIX_H=0）走原本 0.2.14 路徑，逐位元不變。
 
+inseason／card 0.2.14b（E-295 臂 W1，role-audit 4/5 reports/audit-0.2.14b/，使用者裁定採用、字母版）：apply(..., h=True, w1=True)，凍結檔 mix-pool-card0214b.json。
+  位置改「實際上場位置比例」π（BBRef 2025-26，5 維）而不是標籤：w＝c＝π_C＋0.243·π_PF；m_i,k＝Σ_p π_ip·m_p,k（m_p＝算尺人群以 π 加權的 z_L 平均，凍結）；
+  z_H＝z_L−0.5·m_i（缺值記 0.5·m_i）；其餘（1.5·tanh、z 尺、sd、λ、ref、500 分鐘打折、本季混合）同 0.2.14a；三個縮放在 W1 下重算並凍結。
+  π 的來源（整季沿用 2025-26，不混本季比例；混入另開實驗）：
+    卡片球員＝凍結 players[pid].pi（MP<200 往身高帶收縮，同 E-295；BBRef 對名另加手動別名 reports/card-0.2.14b/bbref-alias.csv）；
+    不在卡片但有較早季 BBRef 的老將（復出老將 Lyles、Niang 等）＝凍結 fallback[pid].pi（最近一季，同收縮規則）；
+    都沒有（新秀）＝heightPrior[身高]（70–91 吋，超出取端點，身高四捨五入到整數吋）。
+  不再有「標籤不在 mpos 就給 0」的分支。w1=False 走 0.2.14a（MIX_W1=0），逐位元不變。
+
 用法：python -I -X utf8 reports/ovr-inseason-2026-27/live/mix_live.py freeze     （重產 0.2.14 凍結檔並核對 cand2 卡）
       python -I -X utf8 reports/ovr-inseason-2026-27/live/mix_live.py freeze_h   （產 0.2.14a 凍結檔並核對 card-0.2.15-cand／E-294 bonus_pick）
+      python -I -X utf8 reports/ovr-inseason-2026-27/live/mix_live.py freeze_w1  （產 0.2.14b 凍結檔；核對 card-0.2.14b-cand：別名 3 人以外差 ≤0.02）
 """
 import csv
 import json
@@ -41,6 +51,13 @@ CAND_H = ROOT / 'reports/card-0.2.15-cand/ranking.csv'
 BONUS_PICK = ROOT / 'reports/E294-mix-pos-z-soft/bonus_pick.npz'
 CARD14 = ROOT / 'reports/card-0.2.14/ranking.csv'
 CARD14A = ROOT / 'reports/card-0.2.14a/ranking.csv'
+FROZEN_W1 = HERE / 'mix-pool-card0214b.json'    # 0.2.14b（E-295 W1）
+CARD14B = ROOT / 'reports/card-0.2.14b/ranking.csv'
+CAND_W1 = ROOT / 'reports/card-0.2.14b-cand/ranking.csv'
+ALIAS_W1 = ROOT / 'reports/card-0.2.14b/bbref-alias.csv'
+E295 = ROOT / 'reports/E295-mix-pos-continuous/e295_eval.py'
+BB_SHARES = ROOT / 'reports/card-0.2.9a+E177-bbref-position-shares'
+RV_PRIOR = HERE / 'prior-2025-26-card0213a-rv.json'
 POSL = ('PG', 'SG', 'SF', 'PF', 'C')
 FEATS = ('rebound', 'orebPct', 'drebPct', 'con2_36')
 CARD0213A = ROOT / 'reports/card-0.2.13a/ranking.csv'
@@ -197,6 +214,106 @@ def freeze_h():
     return doc
 
 
+def freeze_w1():
+    """0.2.14b：照 E-295 臂 W1（e295_eval.py shares_for＋build）凍結 π、m_p、縮放、身高帶表；BBRef 對名加手動別名（audit-0.2.14b 必修 1）。
+    原始特徵、z 尺、sd、λ、ref、算尺人群沿用 mix-pool-card0214a.json（基底）；players 另加 pi、piSrc、cardBonus（W1，未四捨五入）。"""
+    import hashlib
+    import importlib.util
+    import numpy as np
+    sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
+    spec = importlib.util.spec_from_file_location('e295', E295)
+    E = importlib.util.module_from_spec(spec)
+    sys.modules['e295'] = E
+    spec.loader.exec_module(E)
+    base = load_frozen(True)
+    alias = {r['bbref_id']: r for r in csv.DictReader(open(ALIAS_W1, encoding='utf-8'))}
+    SH = E.load_shares()
+    named = {}                               # 季 → norm(BBRef 名) → [(π, MP)]（復出老將名字對照用）
+    for s in E.SEASONS:
+        named[s] = {}
+        for r in csv.DictReader(open(BB_SHARES / f'pos-shares-{s}.csv', encoding='utf-8')):
+            v = np.array([float(r[f'p_{p}']) for p in POSL])
+            if v.sum() <= 0:
+                continue
+            v = v / v.sum()
+            mp = float(r['MP'] or 0)
+            named[s].setdefault(norm(r['name']), []).append((v, mp))
+            if not r['playerId'] and r['bbref_id'] in alias:
+                a = alias[r['bbref_id']]
+                assert norm(r['name']) == norm(a['bbref_name']), (r['name'], a)
+                SH[s][a['playerId']] = (v, mp)
+    for a in alias.values():
+        assert base['players'][a['playerId']]['name'] == a['card_name'], a
+        assert a['playerId'] in SH['2025-26'], ('別名沒對到 2025-26', a)
+    assert set(E.pids) == set(base['players'])
+    PI, SRC, PRI = E.shares_for(E.pids, E.HGT, '2025-26', SH)
+    P, _cap, info = E.build(E.FEAT, E.EPZ, PI, PI @ E.POSW)
+    BON = E.LAM * E.SD * P * E.ramp
+    cand = {r['name']: float(r['mixBonus']) for r in csv.DictReader(open(CAND_W1, encoding='utf-8'))}
+    anames = {a['card_name'] for a in alias.values()}
+    dif = {E.names[i]: float(BON[i] - cand[E.names[i]]) for i in range(E.N)}
+    worst_other = max((abs(v), n) for n, v in dif.items() if n not in anames)
+    assert worst_other[0] <= 0.02, worst_other
+    fmap = {'reb': 'rebound', 'ob': 'orebPct', 'db': 'drebPct', 'con': 'con2_36'}
+    cfg = json.loads(json.dumps(base['config']))
+    cfg.pop('h')
+    cfg['scales'] = {'reb': float(info['scales'][0]), 'con': float(info['scales'][1]), 'mix': float(info['scales'][2])}
+    cfg['w1'] = {'alpha': E.ALPHA, 'hi': E.HI, 'posOrder': list(POSL), 'posWeight': [float(x) for x in E.POSW],
+                 'mpos': {fmap[k]: [float(x) for x in v] for k, v in info['mpos'].items()},
+                 'heightPrior': {str(h): [float(x) for x in PRI(float(h))] for h in range(70, 92)}, 'heightRange': [70, 91],
+                 'heightPriorRule': '卡片 2025-26 BBRef MP≥200 的人（含別名），|身高−h|≤1 吋 π 平均（不足 15 人放寬到 ±2、±3…）；'
+                                    '賽中身高四捨五入到整數吋、超出 70–91 取端點',
+                 'mposPool': 'card 0.2.13a MIN>=500 且姓名在 stats-2025-26 唯一（同 epN），以 π 加權的 z_L 平均',
+                 'shrinkMP': E.MPK}
+    players = {}
+    for i, pid in enumerate(E.pids):
+        q = dict(base['players'][pid])
+        q.update(pi=[float(x) for x in PI[i]], piSrc=SRC[i], cardBonus=float(BON[i]))
+        players[pid] = q
+    # 不在卡片的復出老將：最近一季 BBRef（先用 playerId，再用名字且該季唯一），MP<200 往身高帶收縮
+    rv = json.load(open(RV_PRIOR, encoding='utf-8'))
+    fallback = {}
+    for p in rv['players']:
+        pid = str(p['playerId'])
+        if pid in players or not (p.get('rvMpg') is not None or p.get('returningVet')):
+            continue
+        for s in E.SEASONS[::-1]:
+            hit = SH[s].get(pid)
+            if hit is None:
+                c = named[s].get(norm(p['name'])) or []
+                hit = c[0] if len(c) == 1 else None
+            if hit is not None:
+                v, mp = hit
+                pi = v if mp >= E.MPK else (mp * v + (E.MPK - mp) * PRI(float(p['heightInches']))) / E.MPK
+                fallback[pid] = {'name': p['name'], 'pi': [float(x) for x in pi], 'piSrc': s if mp >= E.MPK else s + '+shrink', 'MP': mp}
+                break
+    worst = 0.0
+    for i, pid in enumerate(E.pids):      # 純 Python 賽中公式核對
+        q = players[pid]
+        b = bonus_w1(cfg, q['pi'], q['cardRebound'], q['orebPct'], q['drebPct'], q['con2_36'], q['MIN'])['bonus']
+        worst = max(worst, abs(b - BON[i]))
+    assert worst <= 1e-9, worst
+    doc = {'version': 'card／inseason 0.2.14b',
+           'note': 'E-295 臂 W1：位置權重與位置平均都改 BBRef 2025-26 上場位置比例 π（c＝π_C＋0.243·π_PF；m_i＝π·m_p）；z 尺／sd／λ／ref／打折／混合規則同 0.2.14a 基底；'
+                   'm_p、縮放、π、身高帶表凍結，整季不重算；players＝0.2.14a 凍結檔的 2025-26 原始特徵＋pi／piSrc＋cardBonus（card 0.2.14b mixBonus，未四捨五入）；'
+                   'fallback＝不在卡片的復出老將最近一季 BBRef π；BBRef 手動別名 reports/card-0.2.14b/bbref-alias.csv',
+           'config': cfg, 'epN': base['epN'], 'aliases': list(alias.values()),
+           'reproduceCandMaxAbsExceptAlias': worst_other[0], 'reproduceCandWorstExceptAlias': worst_other[1],
+           'aliasBonusChange': {n: {'cand': cand[n], 'new': cand[n] + dif[n]} for n in sorted(anames)},
+           'reproducePythonMaxAbs': worst, 'shareSourceCounts': {k: SRC.count(k) for k in sorted(set(SRC))},
+           'base_sha256': {'mix-pool-card0214a.json': sha(FROZEN_H)},
+           'sources_sha256': {'mix-pool-card0214a.json': sha(FROZEN_H), 'card_0213a_ranking': sha(CARD0213A), 'card_0214bcand_ranking': sha(CAND_W1),
+                              'E295_eval': sha(E295), 'E295_preregistration': sha(E295.parent / 'preregistration.md'), 'bbref-alias.csv': sha(ALIAS_W1),
+                              'prior-2025-26-card0213a-rv.json': sha(RV_PRIOR),
+                              **{f'pos-shares-{s}.csv': sha(BB_SHARES / f'pos-shares-{s}.csv') for s in E.SEASONS}},
+           'players': players, 'fallback': fallback}
+    FROZEN_W1.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding='utf-8')
+    print(f"scales={cfg['scales']}\n候選卡差（別名以外）最大 {worst_other[0]:.5f}（{worst_other[1]}）；Python 重現 {worst:.2e}")
+    print('別名 3 人', doc['aliasBonusChange'])
+    print('fallback', {v['name']: (v['piSrc'], [round(x, 2) for x in v['pi']]) for v in fallback.values()})
+    return doc
+
+
 # ------------------------------------------------------------------ 公式
 def _z(cfg, key, x):
     if x is None:
@@ -257,6 +374,42 @@ def bonus_h(cfg, pos, reb, ob, db, con, minutes):
     return {'bonus': full * ramp, 'full': full, 'ramp': ramp, 'rebc': rebc, 'con': conr, 'pos': pos, 'posW': w}
 
 
+def _zw1(cfg, mi, key, x):
+    """0.2.14b：z_H＝z_L−(1−α)·m_i；缺值記 α·m_i（m_i＝π·m_p）。"""
+    a = cfg['w1']['alpha']
+    if x is None:
+        return a * mi
+    return _z(cfg, key, x) - (1 - a) * mi
+
+
+def pi_for(frozen, pid, height):
+    """π 與來源：卡片 players → 復出老將 fallback → 身高帶表（整數吋，超出取端點）。"""
+    q = frozen['players'].get(str(pid))
+    if q is not None and 'pi' in q:
+        return q['pi'], q['piSrc']
+    q = frozen.get('fallback', {}).get(str(pid))
+    if q is not None:
+        return q['pi'], 'fallback:' + q['piSrc']
+    w = frozen['config']['w1']
+    lo, hi = w['heightRange']
+    h = min(max(int(round(float(height))), lo), hi)
+    return w['heightPrior'][str(h)], f'height:{h}'
+
+
+def bonus_w1(cfg, pi, reb, ob, db, con, minutes):
+    w1 = cfg['w1']
+    w = sum(p * q for p, q in zip(pi, w1['posWeight']))
+    ramp = min(1.0, minutes / cfg['rampMin'])
+    m = {k: sum(p * q for p, q in zip(pi, w1['mpos'][k])) for k in FEATS}
+    zr = (_zw1(cfg, m['rebound'], 'rebound', reb) + _zw1(cfg, m['orebPct'], 'orebPct', ob) + _zw1(cfg, m['drebPct'], 'drebPct', db)) / 3
+    zc = _zw1(cfg, m['con2_36'], 'con2_36', con)
+    hi = w1['hi']
+    rebc, conr = hi * math.tanh(max(zr, 0.0) / hi), hi * math.tanh(max(zc, 0.0) / hi)
+    s = cfg['scales']
+    full = cfg['lambda'] * cfg['sd'] * (.5 * rebc * s['reb'] + .5 * conr * s['con']) * s['mix'] * w
+    return {'bonus': full * ramp, 'full': full, 'ramp': ramp, 'rebc': rebc, 'con': conr, 'posW': w}
+
+
 def blend(past, cur, m, k):
     """R-169 box 規則：w＝m/(m+k)；某一邊沒有值就只用另一邊。"""
     if cur is None or m <= 0:
@@ -268,12 +421,12 @@ def blend(past, cur, m, k):
 
 
 # ------------------------------------------------------------------ 賽中
-def frozen_path(h=False):
-    return FROZEN_H if h else FROZEN
+def frozen_path(h=False, w1=False):
+    return FROZEN_W1 if (h and w1) else (FROZEN_H if h else FROZEN)
 
 
-def load_frozen(h=False):
-    return json.load(open(frozen_path(h), encoding='utf-8'))
+def load_frozen(h=False, w1=False):
+    return json.load(open(frozen_path(h, w1), encoding='utf-8'))
 
 
 def _rows(path):
@@ -303,8 +456,8 @@ def current(data26=DATA26):
     return out
 
 
-def live_bonus(frozen, pid, rebound, cur_min, cur, pos=None):
-    """pos 只在 0.2.14a 凍結檔（config 有 'h'）用到。"""
+def live_bonus(frozen, pid, rebound, cur_min, cur, pos=None, height=None):
+    """pos 只在 0.2.14a 凍結檔（config 有 'h'）用到；height 只在 0.2.14b（config 有 'w1'、π 查不到時查身高帶）用到。"""
     cfg = frozen['config']
     past = frozen['players'].get(str(pid)) or {}
     c = cur.get(int(pid)) or {}
@@ -313,26 +466,35 @@ def live_bonus(frozen, pid, rebound, cur_min, cur, pos=None):
     db = blend(past.get('drebPct'), c.get('drebPct'), cur_min, k)
     con = blend(past.get('con2_36'), c.get('con2_36'), cur_min, k)
     mins = (past.get('MIN') or 0.0) + cur_min
-    out = bonus_h(cfg, pos, rebound, ob, db, con, mins) if 'h' in cfg else bonus(cfg, rebound, ob, db, con, mins)
+    if 'w1' in cfg:
+        pi, src = pi_for(frozen, pid, height)
+        out = bonus_w1(cfg, pi, rebound, ob, db, con, mins)
+        out.update(pi=[round(x, 4) for x in pi], piSrc=src)
+    else:
+        out = bonus_h(cfg, pos, rebound, ob, db, con, mins) if 'h' in cfg else bonus(cfg, rebound, ob, db, con, mins)
     out.update(orebPct=ob, drebPct=db, con2_36=con, MIN=mins, w=(cur_min / (cur_min + k) if cur_min > 0 else 0.0),
                cardBonus=past.get('cardBonus', 0.0))
     return out
 
 
-def apply(rows, r1, data26=DATA26, h=False):
+def apply(rows, r1, data26=DATA26, h=False, w1=False):
     """rows＝寫 ranking.csv 前的合併列（老將＋新秀）。原地改 ovr／_ovr／lastOVR／dOVR／formalOVR，加 mixBonus；回傳 {pid: 明細}。
     lastOVR 基準（本季 0 場）加正式卡（h：card 0.2.14a；否則 card 0.2.14）的 mixBonus（卡外的人 0），dOVR 只反映本季造成的變化。
-    h＝True（0.2.14a）時位置取 rows 的 pos 欄。"""
-    frozen = load_frozen(h)
+    h＝True（0.2.14a）時位置取 rows 的 pos 欄；h＝w1＝True（0.2.14b）時位置取凍結 π，查不到用 rows 的 heightInches 查身高帶。"""
+    w1 = bool(h and w1)
+    frozen = load_frozen(h, w1)
     cur = current(data26)
     card14 = {}
-    for r in csv.DictReader(open(CARD14A if h else CARD14, encoding='utf-8')):
+    for r in csv.DictReader(open(CARD14B if w1 else (CARD14A if h else CARD14), encoding='utf-8')):
         card14.setdefault(r['name'], float(r['ovr']))
     detail = {}
     for r in rows:
         pid = int(r['playerId'])
         m = float(r['MIN26'] or 0)
-        d = live_bonus(frozen, pid, float(r['rebound']), m, cur, r.get('pos')) if h else live_bonus(frozen, pid, float(r['rebound']), m, cur)
+        if w1:
+            d = live_bonus(frozen, pid, float(r['rebound']), m, cur, height=r.get('heightInches'))
+        else:
+            d = live_bonus(frozen, pid, float(r['rebound']), m, cur, r.get('pos')) if h else live_bonus(frozen, pid, float(r['rebound']), m, cur)
         b, b0 = d['bonus'], d['cardBonus']
         r['_ovr'] = r['_ovr'] + b
         r['ovr'] = r1(r['_ovr'])
@@ -353,5 +515,7 @@ if __name__ == '__main__':
         freeze()
     elif sys.argv[1:] == ['freeze_h']:
         freeze_h()
+    elif sys.argv[1:] == ['freeze_w1']:
+        freeze_w1()
     else:
         raise SystemExit(__doc__)

@@ -471,7 +471,10 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
     mix = None
     if g.get('MIX_BONUS'):      # 0.2.14（R-183／R-184）：MIX 加分疊在 OVR 上（live/mix_live.py），再重排名次；MIX_BONUS=0 不碰（重現 0.2.13a）
         import mix_live as MX
-        mix = MX.apply(merged, g['r1'], g['DATA26'], h=True) if g.get('MIX_H') else MX.apply(merged, g['r1'], g['DATA26'])   # 0.2.14a：H-same（位置＝merged 的 pos 欄）；MIX_H=0 走 0.2.14
+        if g.get('MIX_W1'):   # 0.2.14b：W1（位置＝凍結 π／復出老將最近一季／新秀身高帶）；MIX_W1=0 走 0.2.14a
+            mix = MX.apply(merged, g['r1'], g['DATA26'], h=True, w1=True)
+        else:
+            mix = MX.apply(merged, g['r1'], g['DATA26'], h=True) if g.get('MIX_H') else MX.apply(merged, g['r1'], g['DATA26'])   # 0.2.14a：H-same（位置＝merged 的 pos 欄）；MIX_H=0 走 0.2.14
         head = head + ['mixBonus']
     merged.sort(key=lambda r: -r['_ovr'])
     for i, r in enumerate(merged, 1):
@@ -487,7 +490,7 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
                      'chain': {k: r['_chain'][k] for k in ('possW', 'bonus', 'pred', 'predNew', 'd')}})
     json.dump(slim, open(out_dir / 'rookies-detail.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     if mix is not None:     # 0.2.14：每人加分明細（混合後籃板率／干擾、打折分鐘、REBc／CON）
-        json.dump({'meta': {'frozen': MX.frozen_path(bool(g.get('MIX_H'))).name, 'config': MX.load_frozen(bool(g.get('MIX_H')))['config']}, 'players': mix},
+        json.dump({'meta': {'frozen': MX.frozen_path(bool(g.get('MIX_H')), bool(g.get('MIX_W1'))).name, 'config': MX.load_frozen(bool(g.get('MIX_H')), bool(g.get('MIX_W1')))['config']}, 'players': mix},
                   open(out_dir / 'mix.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     if GRAVITY:     # 檢視器 GRV tooltip 用：原始引力值、來源（是否推估）
         json.dump({'meta': GRAV_INFO, 'players': {str(p): v for p, v in GRAV.items()}}, open(out_dir / 'gravity.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
