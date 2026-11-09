@@ -44,6 +44,9 @@ if not NEG_MIN_ON and ROOKIE_JSON == HERE / 'rookie-prior-2026.json':   # 0.2.14
 CRTPNR = all(os.environ.get(k, '1') != '0' for k in ('PNR', 'PNR_FIX', 'CRTPNR'))   # 0.2.15（E-303 MRG5）：同 run_c4_live.CRTPNR；creation 欄＝持球進攻合成（live/crtpnr_live.py）
 if NEG_MIN_ON and not CRTPNR and ROOKIE_JSON == HERE / 'rookie-prior-2026.json':   # 0.2.15 改了係數、δ 重解（L-109）；CRTPNR=0 回 0.2.14d 的起點
     ROOKIE_JSON = HERE / '_retired/rookie-prior-2026-0214d.json'
+ROOKIE_POS5 = CRTPNR and NEG_MIN_ON and os.environ.get('ROOKIE_POS5', '1') != '0'   # 0.2.15a（E-304 S5）：同 run_c4_live.ROOKIE_POS5；新秀 OVR 位置改老將規則
+if CRTPNR and NEG_MIN_ON and not ROOKIE_POS5 and ROOKIE_JSON == HERE / 'rookie-prior-2026.json':   # 0.2.15a 起點位置改五段身高、δ 重解（L-109）；ROOKIE_POS5=0 回 0.2.15 的起點
+    ROOKIE_JSON = HERE / '_retired/rookie-prior-2026-0215.json'
 if PNR:
     import pnr_live as PNL  # noqa: E402
 if CRTPNR:
@@ -54,6 +57,47 @@ if TOV_POSS:
     import tov_live as TL  # noqa: E402
 G_GAMES = 82
 DPOS = {'G': 'SG', 'F': 'SF', 'C': 'C'}          # D5：G／F／C → 設計矩陣用的 SG／SF／C（回測與上線同一張表）
+DPOS.update({p: p for p in ('PG', 'SG', 'SF', 'PF')})   # 0.2.15a：五位置標籤直接通過
+POS5 = ('PG', 'SG', 'SF', 'PF', 'C')
+BOXES26 = HERE.parents[2] / 'data/defense-seventh/2026-27/boxes'
+_SLOT = {}             # GAME_ID -> {pid: (先發位置或 None, 秒數)}
+
+
+def h5_pos(h):
+    """老將退回規則（ovr_common.pos_of_height）：≤75 PG、≤78 SG、≤80 SF、≤82 PF、其他 C。"""
+    return 'PG' if h <= 75 else 'SG' if h <= 78 else 'SF' if h <= 80 else 'PF' if h <= 82 else 'C'
+
+
+def _slots(gid):
+    if gid not in _SLOT:
+        import re
+        out = {}
+        f = BOXES26 / f'{gid}.json'
+        if f.exists():
+            g = json.load(open(f, encoding='utf-8'))['data']['game']
+            for t in ('homeTeam', 'awayTeam'):
+                for pl in g[t]['players']:
+                    m = re.match(r'PT(\d+)M([\d.]+)S', pl['statistics'].get('minutes') or '')
+                    sec = int(m.group(1)) * 60 + float(m.group(2)) if m else 0.0
+                    slot = pl.get('position') if pl.get('starter') == '1' and pl.get('position') in POS5 else None
+                    out[int(pl['personId'])] = (slot, sec)
+        _SLOT[gid] = out
+    return _SLOT[gid]
+
+
+def rookie_pos5(pid, height, rows):
+    """E-304 S5＝老將規則（F-033）：到當下為止先發 ≥5 次取先發秒數最多的位置（同秒取 PG→C 順序前者），否則五段身高。
+    只看 rows（sd26 的這個人本季逐場）裡的 GAME_ID，歷史日重算不會偷看之後的比賽（L-134）；缺 box 檔的場次不算先發。"""
+    sec = dict.fromkeys(POS5, 0.0)
+    starts = 0
+    for r in rows or ():
+        slot, s = _slots(str(r['GAME_ID'])).get(int(pid), (None, 0.0))
+        if slot and s > 0:
+            sec[slot] += s
+            starts += 1
+    if starts >= 5:
+        return max(POS5, key=lambda p: (sec[p], -POS5.index(p))), starts
+    return h5_pos(float(height)), starts
 SKIP = ('pressure', 'drive') + (('tovSkill',) if TOV_POSS else ())                     # live 凍結的兩項（同老將）
 DEF_ATTRS = ('onBall', 'help')                   # 2026-10-30 使用者：新秀防守一有數據就換成當季值（w=1，rookie_defense.py）
 
@@ -236,7 +280,8 @@ def eval_rookie(ns, pw, anc, r_repl, rk, rec, arm, rel, dfn=None):
         mh = m0 + ws['stamina'] * (rec['MIN'] / rec['GP'] - m0)
     else:
         mh = m0
-    pred0, g, ovr = ovr_of(ns, pw, anc, r_repl, x, rk['pos'], mh, rk['heightInches'])
+    pos = (rk.get('pos5') or h5_pos(float(rk['heightInches']))) if ROOKIE_POS5 else rk['pos']   # 0.2.15a：沒有 pos5（起點／δ 解）＝五段身高
+    pred0, g, ovr = ovr_of(ns, pw, anc, r_repl, x, pos, mh, rk['heightInches'])
     return {'x': x, 'w': ws, 'pred0': pred0, 'g': g, 'mpgHat': mh, 'ovr': ovr}
 
 
@@ -490,10 +535,11 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
         gp = len(b['rows']) if b else 0
         mins = sum(r['MIN'] for r in b['rows']) if b else 0.0
         rec = wins.get(pid)
-        cur = eval_rookie(g, pw, anc, r_repl, rk, rec, 'e116', rel, dfns.get(pid) if gp > 0 else None)
+        p5, n_st = rookie_pos5(pid, rk['heightInches'], b['rows'] if b else []) if ROOKIE_POS5 else (rk['pos'], 0)
+        cur = eval_rookie(g, pw, anc, r_repl, dict(rk, pos5=p5) if ROOKIE_POS5 else rk, rec, 'e116', rel, dfns.get(pid) if gp > 0 else None)
         base = eval_rookie(g, pw, anc, r_repl, rk, None, 'e116', rel)
         tb = bad.get(max(b['rows'], key=lambda r: r['GAME_DATE'])['TEAM_ID']) if gp > 0 else None
-        ch = chain_rookie(g, pw, anc, r_repl, dict(cur, pid=pid), rk['pos'], gp, dl, coef, tb['d'] if tb else 0.0)
+        ch = chain_rookie(g, pw, anc, r_repl, dict(cur, pid=pid), p5, gp, dl, coef, tb['d'] if tb else 0.0)
         cur.update(pred=ch['pred'], g=ch['g'], ovr=ch['ovr'])
         row = {k: '' for k in head}
         row.update({'ovr': g['r1'](cur['ovr']), 'name': rk['name'], 'pos': rk['pos'], 'MINprior': 0,
@@ -513,6 +559,7 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
             row['presDisplay'] = round(PD_ROOK[pid]['presDisplay'], 1)
         row['_ovr'] = cur['ovr']
         row['_cur'], row['_base'], row['_pick'], row['_chain'] = cur, base, rk['pick'], dict(ch, d=tb['d'] if tb else None)
+        row['_pos5'] = {'pos5': p5, 'starts': n_st} if ROOKIE_POS5 else None
         rk_rows.append(row)
     loc_rookies = {r['playerId'] for r in rk_rows}
     nopr[:] = [r for r in nopr if r['playerId'] not in loc_rookies]
@@ -542,7 +589,8 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
                      'pos': r['pos'], 'N': r['N'], 'ovr': r['ovr'], 'lastOVR': r['lastOVR'],
                      'rank': next(m['rank'] for m in merged if m['playerId'] == r['playerId']),
                      'x0': r['_base']['x'], 'xhat': r['_cur']['x'], 'w': r['_cur']['w'],
-                     'chain': {k: r['_chain'][k] for k in ('possW', 'bonus', 'pred', 'predNew', 'd')}})
+                     'chain': {k: r['_chain'][k] for k in ('possW', 'bonus', 'pred', 'predNew', 'd')}}
+                    | ({'ovrPos': r['_pos5']['pos5'], 'starts': r['_pos5']['starts']} if r['_pos5'] else {}))
     json.dump(slim, open(out_dir / 'rookies-detail.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     if mix is not None:     # 0.2.14：每人加分明細（混合後籃板率／干擾、打折分鐘、REBc／CON）
         json.dump({'meta': {'frozen': MX.frozen_path(bool(g.get('MIX_H')), bool(g.get('MIX_W1'))).name, 'config': MX.load_frozen(bool(g.get('MIX_H')), bool(g.get('MIX_W1')))['config']}, 'players': mix},
