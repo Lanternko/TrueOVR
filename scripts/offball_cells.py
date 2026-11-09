@@ -7,6 +7,8 @@
 窗口：同 pnr（rookie_defense.window_weights(c)＋win_len 246 格＝近三季滑動含本季，每人除以自己有資料那幾季的權重和、下限＝最大單季權重）；
   卡片頁 2025-26＝c=0 不讀本季；新秀只有本季＝本季值。E-301 驗的是單季定義，窗口只是把量平滑（同站上其他能力值）。
 尺：各欄 z 用有效分鐘 ≥200 的人；合成後再 z；百分位人群＝有效分鐘 ≥1000（E-301 母體）；0–99＝attr(PR) 再 display_scale。
+  頂端（使用者 2026-11-10「為何最高是 97 不是 99 然後可以超過」）：PR≥99 改走同 3PT 的百分位尾巴
+  （run_c4_live.m26_top_tail：99＋(150−99)(1−e^(−(z−r99)/(1.96·S)))，S＝max((r99−r90)/1.044, SD)），display_scale 再 −2。
 資料：過去季 reports/E239-tracking-full/data/；本季 data/tracking-cells/2026-27/（daily_inseason_update 每天跑 fetch_tracking_cells.mjs）。"""
 import json
 import sys
@@ -29,6 +31,7 @@ SYN = {'spot': 'Spotup', 'offscr': 'OffScreen', 'hand': 'Handoff', 'cut': 'Cut',
 W = {'SPOT': {'spot': 1, 'offscr': 1, 'hand': 1, 'cs3pct': 0.5},
      'CUT': {'cut': 1, 'roll': 1, 'putback': 1, 'trans': 1, 'cutppp': 0.5}}
 K_CUT, K_CS, Z_MIN, PR_MIN = 30.0, 50.0, 200.0, 1000.0
+TAIL_CEIL, TAIL_K_SD, TAIL_Z9990 = 150.0, 1.96, 1.044   # 同 run_c4_live.M26_*
 LAB = {'spot': '定點投籃', 'offscr': '繞掩護接球', 'hand': '手遞手', 'cs3pct': '接球三分',
        'cut': '空切', 'roll': '擋拆順下', 'putback': '進攻籃板補籃', 'trans': '快攻', 'cutppp': '空切每回合得分'}
 HEAD = {'SPOT': ('空檔射手', 'SPOT', '<b>不持球</b>時接球投籃的量（定點、繞掩護、手遞手）與接球三分準度'),
@@ -110,6 +113,14 @@ def window(c, cur=True):
     return eff, {s: round(ww[s], 4) for s in used}
 
 
+def _tail(d, S):
+    return 99 + (TAIL_CEIL - 99) * (1 - np.exp(-max(0.0, d) / (TAIL_K_SD * S)))
+
+
+def _pct(x, ref):
+    return 100.0 * (np.searchsorted(ref, x, 'left') + np.searchsorted(ref, x, 'right')) / 2 / len(ref)
+
+
 def _attr(p):
     return max(40.0, min(99.0, 40 + (p - 1) * 30 / 49 if p < 50 else 70 + (p - 50) * 29 / 49))
 
@@ -137,10 +148,14 @@ def compute(c, cur=True):
         comp = {p: sum(z[k][p] * x for k, x in w.items()) / sum(w.values()) for p in raw}
         v = np.array([comp[p] for p in zp]); mu, sd = v.mean(), v.std()
         ref = np.sort([(comp[p] - mu) / sd for p, x in eff.items() if x['min'] >= PR_MIN])
+        r90 = min(v for v in ref if _pct(v, ref) >= 90)
+        r99 = min(v for v in ref if _pct(v, ref) >= 99)
+        S = max((r99 - r90) / TAIL_Z9990, float(ref.std()))
         for p in raw:
             zz = (comp[p] - mu) / sd
-            pr = 100.0 * (np.searchsorted(ref, zz, 'left') + np.searchsorted(ref, zz, 'right')) / 2 / len(ref)
-            out[p][cell] = round(float(sn.display_scale(_attr(max(1.0, float(pr))))), 1)
+            pr = float(_pct(zz, ref))
+            a = _tail(zz - r99, S) if pr >= 99 else _attr(max(1.0, pr))
+            out[p][cell] = round(float(sn.display_scale(a)), 1)
             out[p]['z' + cell] = float(zz)
     return out, {'weights': ww, 'lgCutPPP': round(lg_cut, 3), 'lgCs3': round(lg_cs, 3), 'nZ': len(zp),
                  'nPR': sum(x['min'] >= PR_MIN for x in eff.values())}
