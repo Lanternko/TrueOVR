@@ -1,4 +1,4 @@
-# 審查表（2026-11-08）
+# 審查表（2026-11-09）
 
 模擬版本 v54。由 `reports/status/status_snapshot.py` 產生。
 
@@ -8,7 +8,7 @@
 |---:|---:|---:|
 | **未量測** | **未量測** | **未量測** |
 
-- 正式卡片 card 0.2.13 樣本外 ρ（淨值）：A/B 半 RAPM 樣本外尚未量測；樣本內 0.698（循環）；前正式版 v58 H1-m0 為 0.563（不同卡片，僅供參考）
+- 正式卡片 card 0.2.13 樣本外 ρ（淨值）：A/B 半 RAPM 樣本外尚未量測；樣本內 未量測（循環）；前正式版 v58 H1-m0 為 0.563（不同卡片，僅供參考）
 - 正式卡片 card 0.2.13 樣本外 ρ（防守）：尚未量測；v58 H1-m0 為 0.391（僅供參考）
 - 正式卡片 card 0.2.13 對 2K27 ρ（外部基準）：v58 H1-m0 0.537；來源 reports/card-0.2.7b+E131-no-physique/evaluation.json（K1 候選，每場含上場時間）；card 0.2.7b 為 .738、card 0.2.7a 為 .737、card 0.2.7 為 .736、card 0.2.6 為 .737、card 0.2.5 為 .738、card 0.2.4 為 .748、card 0.2.3 為 .740、card 0.2.2 為 .681、card 0.2.0 為 .695、card 0.1.2（每 36 分鐘）為 .518；2K27 不參與擬合
 
@@ -22,7 +22,7 @@
 | 模擬板 v53（收縮修正版） | 414 | 0.398 | 0.276 | 0.356 / 0.246 | 0.433 | 不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26） |
 | 模擬板 v54（原始） | 414 | 0.389 | 0.289 | 0.351 / 0.257 | 0.318 | 不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26） |
 | 模擬板 v54（收縮修正版） | 414 | 0.424 | 0.303 | 0.379 / 0.267 | 0.457 | 已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準；不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26） |
-| 卡片 OVR（正式卡片板，card 0.2.13） | 414 | 0.698 | 0.413 | 未量測 | 未量測 | ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.13 = 0.2.12e + pnr（R-173）；role-audit、G5 未做；對 2K27 ρ 尚無 evaluation.json，不填；來源 card-0.2.13 |
+| 卡片 OVR（正式卡片板，card 0.2.14） | 414 | 0.707 | 0.437 | 未量測 | 未量測 | ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.14 = 0.2.13a + MIX（R-185）；cand role-audit 4/5；對 2K27 ρ 尚無 evaluation.json，不填；來源 card-0.2.14 |
 | 卡片 OVR card 0.2.10g（前正式版） | 414 | 0.728 | 0.441 | 未量測 | 未量測 | ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.10g = 0.2.10f + 用人層 L、a 四季窗口（E-192，係數同 0.2.10d，r_repl、錨點重取）；card 0.2.10f = 0.2.10e + 3PT 欄新對照池（E-191b P1m，OVR 不變）；card 0.2.10e = 0.2.10d + OVR 頂端加 PR90／PR95 錨（E-188 S3，名次不變）；card 0.2.10d = 0.2.10c + long／creation／threeValue／MPG 四季窗口（E-185）；card 0.2.10c = E-175 滑動窗口屬性 + 修正後 T6（L-102）重擬合 + 傳球共用斜率（E-187）；0.2.9 的 E-158 預註冊判定通過（年輕子群 C +0.106、下界 +0.035；全體 +0.001）；此列 ρ vs RAPM 照舊用 RAPM 算；對 2K27 ρ 尚無 0.2.10 的 evaluation.json，不填；來源 card-0.2.10g（0.2.10f 的 ranking.csv 同 card-0.2.10e） |
 | 卡片 OVRcard 0.2.8（前正式版） | 414 | 0.699 | 0.434 | 未量測 | 未量測 | ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.8 = card 0.2.7d + 目標換 T6；E-153 預註冊四項檢查全過（bootstrap 90% 下界 +0.0033，邊際小）；npm test 52 過；此列 ρ vs RAPM 照舊用 RAPM 算（目標已不是 RAPM，樣本內意義不同）；對 2K27 ρ 尚無 0.2.8 的 evaluation.json，不填；來源 card-0.2.8 |
 | 卡片 OVR card 0.2.7d（前正式版） | 414 | 0.779 | 0.526 | 未量測 | 未量測 | ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.7d = card 0.2.7c + E-147；對 2K27 ρ 未接 evaluation.json；來源 card-0.2.7d |
@@ -132,26 +132,26 @@
 
 | # | 球員 | 位置 | OVR | 3PT | 分鐘 | 模擬名次 | RAPM 名次 | 旗標 |
 |---:|---|---|---:|---:|---:|---:|---:|---|
-| 1 | Shai Gilgeous-Alexander | PG | 108.4 | 86.7 | 2259 | 1 | 2 | — |
-| 2 | Nikola Jokić | C | 104.4 | 79.5 | 2265 | 6 | 1 | 長人 |
-| 3 | Luka Dončić | PG | 101.6 | 97.9 | 2289 | 7 | 16 | — |
-| 4 | Victor Wembanyama | C | 101.3 | 75.0 | 1866 | 5 | 5 | 長人 |
-| 5 | Giannis Antetokounmpo | PF | 99.0 | 56.8 | 1039 | 3 | 3 | 長人 |
-| 6 | Kawhi Leonard | SF | 98.3 | 95.1 | 2085 | 2 | 4 | — |
-| 7 | Donovan Mitchell | SG | 96.8 | 94.3 | 2342 | 70 | 17 | — |
-| 8 | Jayson Tatum | PF | 95.4 | 82.7 | 522 | 298 | 40 | 低分鐘、長人 |
-| 9 | Anthony Edwards | SG | 95.1 | 98.9 | 2137 | 49 | 61 | — |
-| 10 | Kevin Durant | SF | 95.0 | 93.3 | 2840 | 56 | 35 | — |
-| 11 | Stephen Curry | PG | 94.2 | 105.0 | 1329 | 115 | 24 | — |
-| 12 | Ty Jerome | PG | 94.1 | 96.6 | 339 | 4 | 136 | 低分鐘、RAPM 差距大 |
-| 13 | Austin Reaves | SG | 94.0 | 83.3 | 1762 | 64 | 59 | — |
-| 14 | Cade Cunningham | PG | 93.9 | 75.4 | 2172 | 78 | 54 | — |
-| 15 | Chet Holmgren | PF | 93.5 | 67.6 | 1997 | 21 | 8 | 長人 |
-| 16 | Kevin Porter Jr. | SG | 93.0 | 61.2 | 1261 | 68 | 249 | RAPM 差距大 |
-| 17 | Evan Mobley | PF | 92.8 | 43.9 | 2074 | 11 | 47 | 長人 |
-| 18 | Desmond Bane | SG | 92.4 | 89.3 | 2756 | 89 | 39 | — |
-| 19 | Jalen Williams | PF | 92.4 | 57.1 | 936 | 267 | 198 | 低分鐘、RAPM 差距大、長人 |
-| 20 | Jimmy Butler III | SF | 92.3 | 64.8 | 1182 | 23 | 12 | — |
+| 1 | Victor Wembanyama | C | 108.9 | 75.0 | 1866 | 5 | 5 | 長人 |
+| 2 | Nikola Jokić | C | 108.5 | 79.5 | 2265 | 6 | 1 | 長人 |
+| 3 | Shai Gilgeous-Alexander | PG | 108.4 | 86.7 | 2259 | 1 | 2 | — |
+| 4 | Giannis Antetokounmpo | PF | 102.9 | 56.8 | 1039 | 3 | 3 | 長人 |
+| 5 | Luka Dončić | PG | 102.8 | 97.9 | 2289 | 7 | 16 | — |
+| 6 | Chet Holmgren | PF | 100.5 | 67.6 | 1997 | 21 | 8 | 長人 |
+| 7 | Evan Mobley | PF | 99.5 | 43.9 | 2074 | 11 | 47 | 長人 |
+| 8 | Kawhi Leonard | SF | 99.2 | 95.1 | 2085 | 2 | 4 | — |
+| 9 | Jayson Tatum | PF | 98.0 | 82.7 | 522 | 298 | 40 | 低分鐘、長人 |
+| 10 | Donovan Mitchell | SG | 96.8 | 94.3 | 2342 | 70 | 17 | — |
+| 11 | Joel Embiid | C | 96.2 | 63.5 | 1201 | 254 | 10 | 長人 |
+| 12 | Anthony Davis | C | 95.4 | 55.8 | 626 | 397 | 32 | 低分鐘、長人 |
+| 13 | Anthony Edwards | SG | 95.1 | 98.9 | 2137 | 49 | 61 | — |
+| 14 | Kevin Durant | SF | 95.0 | 93.3 | 2840 | 56 | 35 | — |
+| 15 | Karl-Anthony Towns | C | 94.6 | 73.0 | 2322 | 215 | 100 | 長人 |
+| 16 | Stephen Curry | PG | 94.2 | 105.0 | 1329 | 115 | 24 | — |
+| 17 | Ty Jerome | PG | 94.1 | 96.6 | 339 | 4 | 136 | 低分鐘、RAPM 差距大 |
+| 18 | Austin Reaves | SG | 94.0 | 83.3 | 1762 | 64 | 59 | — |
+| 19 | Cade Cunningham | PG | 93.9 | 75.4 | 2172 | 78 | 54 | — |
+| 20 | Kristaps Porziņģis | C | 93.5 | 71.3 | 769 | 358 | 90 | 低分鐘、長人 |
 
 ## v55 卡片修正各方向（7 人驗收，v53 名次 → 實驗名次，✗ = 未過；E2 曾為正式卡片，10-21 ~ 10-28 正式卡片為 v58 H1-m0，10-28 ~ 10-29 為 card 0.1.2，10-29 起為 card 0.2.0）
 

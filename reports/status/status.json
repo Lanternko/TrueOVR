@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-08T06:09:26+00:00",
+ "generatedAt": "2026-11-09T06:39:19+00:00",
  "simVersion": "v54",
  "evalPoss": 5000,
  "rapmPool": 415,
@@ -7,7 +7,7 @@
   {
    "label": "正式卡片 card 0.2.13 樣本外 ρ（淨值）",
    "value": "未量測",
-   "sub": "A/B 半 RAPM 樣本外尚未量測；樣本內 0.698（循環）；前正式版 v58 H1-m0 為 0.563（不同卡片，僅供參考）"
+   "sub": "A/B 半 RAPM 樣本外尚未量測；樣本內 未量測（循環）；前正式版 v58 H1-m0 為 0.563（不同卡片，僅供參考）"
   },
   {
    "label": "正式卡片 card 0.2.13 樣本外 ρ（防守）",
@@ -63,14 +63,14 @@
    "note": "已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準；不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）"
   },
   {
-   "layer": "卡片 OVR（正式卡片板，card 0.2.13）",
-   "description": "0.2.13：加擋拆持球 pnr（Synergy 四季窗口含本季，量率各半），卡片係數全部重擬合（R-173、E-258，2026-11-07）；0.2.12：tovSkill 看持球時間（R-139）；0.2.11：引力 gravity（R-137）；以下同 0.2.10g（遊戲本體不讀取任何 OVR）",
+   "layer": "卡片 OVR（正式卡片板，card 0.2.14）",
+   "description": "0.2.14：MIX 籃板／兩分干擾加分（λ0.5，500 分鐘以下按比例打折，R-183～R-185）；0.2.13a：pnr 窗口外季不帶回合；0.2.13：加擋拆持球 pnr（Synergy 四季窗口含本季，量率各半），卡片係數全部重擬合（R-173、E-258，2026-11-07）；0.2.12：tovSkill 看持球時間（R-139）；0.2.11：引力 gravity（R-137）；以下同 0.2.10g（遊戲本體不讀取任何 OVR）",
    "players": 414,
-   "rhoNet": 0.698,
-   "rhoDefense": 0.413,
+   "rhoNet": 0.707,
+   "rhoDefense": 0.437,
    "holdoutRho": "未量測",
    "rho2k": "未量測",
-   "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.13 = 0.2.12e + pnr（R-173）；role-audit、G5 未做；對 2K27 ρ 尚無 evaluation.json，不填；來源 card-0.2.13"
+   "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.14 = 0.2.13a + MIX（R-185）；cand role-audit 4/5；對 2K27 ρ 尚無 evaluation.json，不填；來源 card-0.2.14"
   },
   {
    "layer": "卡片 OVR card 0.2.10g（前正式版）",
@@ -563,6 +563,28 @@
  "top20": [
   {
    "rank": 1,
+   "name": "Victor Wembanyama",
+   "pos": "C",
+   "ovr": 108.9,
+   "minutes": 1866,
+   "threeValue": 75.0,
+   "simRank": 5,
+   "rapmRank": 5,
+   "flags": "長人"
+  },
+  {
+   "rank": 2,
+   "name": "Nikola Jokić",
+   "pos": "C",
+   "ovr": 108.5,
+   "minutes": 2265,
+   "threeValue": 79.5,
+   "simRank": 6,
+   "rapmRank": 1,
+   "flags": "長人"
+  },
+  {
+   "rank": 3,
    "name": "Shai Gilgeous-Alexander",
    "pos": "PG",
    "ovr": 108.4,
@@ -573,43 +595,10 @@
    "flags": "—"
   },
   {
-   "rank": 2,
-   "name": "Nikola Jokić",
-   "pos": "C",
-   "ovr": 104.4,
-   "minutes": 2265,
-   "threeValue": 79.5,
-   "simRank": 6,
-   "rapmRank": 1,
-   "flags": "長人"
-  },
-  {
-   "rank": 3,
-   "name": "Luka Dončić",
-   "pos": "PG",
-   "ovr": 101.6,
-   "minutes": 2289,
-   "threeValue": 97.9,
-   "simRank": 7,
-   "rapmRank": 16,
-   "flags": "—"
-  },
-  {
    "rank": 4,
-   "name": "Victor Wembanyama",
-   "pos": "C",
-   "ovr": 101.3,
-   "minutes": 1866,
-   "threeValue": 75.0,
-   "simRank": 5,
-   "rapmRank": 5,
-   "flags": "長人"
-  },
-  {
-   "rank": 5,
    "name": "Giannis Antetokounmpo",
    "pos": "PF",
-   "ovr": 99.0,
+   "ovr": 102.9,
    "minutes": 1039,
    "threeValue": 56.8,
    "simRank": 3,
@@ -617,10 +606,43 @@
    "flags": "長人"
   },
   {
+   "rank": 5,
+   "name": "Luka Dončić",
+   "pos": "PG",
+   "ovr": 102.8,
+   "minutes": 2289,
+   "threeValue": 97.9,
+   "simRank": 7,
+   "rapmRank": 16,
+   "flags": "—"
+  },
+  {
    "rank": 6,
+   "name": "Chet Holmgren",
+   "pos": "PF",
+   "ovr": 100.5,
+   "minutes": 1997,
+   "threeValue": 67.6,
+   "simRank": 21,
+   "rapmRank": 8,
+   "flags": "長人"
+  },
+  {
+   "rank": 7,
+   "name": "Evan Mobley",
+   "pos": "PF",
+   "ovr": 99.5,
+   "minutes": 2074,
+   "threeValue": 43.9,
+   "simRank": 11,
+   "rapmRank": 47,
+   "flags": "長人"
+  },
+  {
+   "rank": 8,
    "name": "Kawhi Leonard",
    "pos": "SF",
-   "ovr": 98.3,
+   "ovr": 99.2,
    "minutes": 2085,
    "threeValue": 95.1,
    "simRank": 2,
@@ -628,7 +650,18 @@
    "flags": "—"
   },
   {
-   "rank": 7,
+   "rank": 9,
+   "name": "Jayson Tatum",
+   "pos": "PF",
+   "ovr": 98.0,
+   "minutes": 522,
+   "threeValue": 82.7,
+   "simRank": 298,
+   "rapmRank": 40,
+   "flags": "低分鐘、長人"
+  },
+  {
+   "rank": 10,
    "name": "Donovan Mitchell",
    "pos": "SG",
    "ovr": 96.8,
@@ -639,18 +672,29 @@
    "flags": "—"
   },
   {
-   "rank": 8,
-   "name": "Jayson Tatum",
-   "pos": "PF",
+   "rank": 11,
+   "name": "Joel Embiid",
+   "pos": "C",
+   "ovr": 96.2,
+   "minutes": 1201,
+   "threeValue": 63.5,
+   "simRank": 254,
+   "rapmRank": 10,
+   "flags": "長人"
+  },
+  {
+   "rank": 12,
+   "name": "Anthony Davis",
+   "pos": "C",
    "ovr": 95.4,
-   "minutes": 522,
-   "threeValue": 82.7,
-   "simRank": 298,
-   "rapmRank": 40,
+   "minutes": 626,
+   "threeValue": 55.8,
+   "simRank": 397,
+   "rapmRank": 32,
    "flags": "低分鐘、長人"
   },
   {
-   "rank": 9,
+   "rank": 13,
    "name": "Anthony Edwards",
    "pos": "SG",
    "ovr": 95.1,
@@ -661,7 +705,7 @@
    "flags": "—"
   },
   {
-   "rank": 10,
+   "rank": 14,
    "name": "Kevin Durant",
    "pos": "SF",
    "ovr": 95.0,
@@ -672,7 +716,18 @@
    "flags": "—"
   },
   {
-   "rank": 11,
+   "rank": 15,
+   "name": "Karl-Anthony Towns",
+   "pos": "C",
+   "ovr": 94.6,
+   "minutes": 2322,
+   "threeValue": 73.0,
+   "simRank": 215,
+   "rapmRank": 100,
+   "flags": "長人"
+  },
+  {
+   "rank": 16,
    "name": "Stephen Curry",
    "pos": "PG",
    "ovr": 94.2,
@@ -683,7 +738,7 @@
    "flags": "—"
   },
   {
-   "rank": 12,
+   "rank": 17,
    "name": "Ty Jerome",
    "pos": "PG",
    "ovr": 94.1,
@@ -694,7 +749,7 @@
    "flags": "低分鐘、RAPM 差距大"
   },
   {
-   "rank": 13,
+   "rank": 18,
    "name": "Austin Reaves",
    "pos": "SG",
    "ovr": 94.0,
@@ -705,7 +760,7 @@
    "flags": "—"
   },
   {
-   "rank": 14,
+   "rank": 19,
    "name": "Cade Cunningham",
    "pos": "PG",
    "ovr": 93.9,
@@ -716,70 +771,15 @@
    "flags": "—"
   },
   {
-   "rank": 15,
-   "name": "Chet Holmgren",
-   "pos": "PF",
-   "ovr": 93.5,
-   "minutes": 1997,
-   "threeValue": 67.6,
-   "simRank": 21,
-   "rapmRank": 8,
-   "flags": "長人"
-  },
-  {
-   "rank": 16,
-   "name": "Kevin Porter Jr.",
-   "pos": "SG",
-   "ovr": 93.0,
-   "minutes": 1261,
-   "threeValue": 61.2,
-   "simRank": 68,
-   "rapmRank": 249,
-   "flags": "RAPM 差距大"
-  },
-  {
-   "rank": 17,
-   "name": "Evan Mobley",
-   "pos": "PF",
-   "ovr": 92.8,
-   "minutes": 2074,
-   "threeValue": 43.9,
-   "simRank": 11,
-   "rapmRank": 47,
-   "flags": "長人"
-  },
-  {
-   "rank": 18,
-   "name": "Desmond Bane",
-   "pos": "SG",
-   "ovr": 92.4,
-   "minutes": 2756,
-   "threeValue": 89.3,
-   "simRank": 89,
-   "rapmRank": 39,
-   "flags": "—"
-  },
-  {
-   "rank": 19,
-   "name": "Jalen Williams",
-   "pos": "PF",
-   "ovr": 92.4,
-   "minutes": 936,
-   "threeValue": 57.1,
-   "simRank": 267,
-   "rapmRank": 198,
-   "flags": "低分鐘、RAPM 差距大、長人"
-  },
-  {
    "rank": 20,
-   "name": "Jimmy Butler III",
-   "pos": "SF",
-   "ovr": 92.3,
-   "minutes": 1182,
-   "threeValue": 64.8,
-   "simRank": 23,
-   "rapmRank": 12,
-   "flags": "—"
+   "name": "Kristaps Porziņģis",
+   "pos": "C",
+   "ovr": 93.5,
+   "minutes": 769,
+   "threeValue": 71.3,
+   "simRank": 358,
+   "rapmRank": 90,
+   "flags": "低分鐘、長人"
   }
  ],
  "v55fix": [
@@ -1678,21 +1678,21 @@
   },
   {
    "key": "2627fw-brier",
-   "period": "2026-27 凍結前向（11-04～11-06）",
+   "period": "2026-27 凍結前向（11-04～11-08）",
    "metric": "每場 Brier",
-   "T": 0.1767,
-   "M0": 0.1857,
-   "n": 25,
+   "T": 0.1759,
+   "M0": 0.1873,
+   "n": 39,
    "source": "reports/E229-transformer-vs-m0-forward/log",
    "note": "賽前凍結、完全沒偷看；預註冊滿 400 場才正式比"
   },
   {
    "key": "2627fw-acc",
-   "period": "2026-27 凍結前向（11-04～11-06）",
+   "period": "2026-27 凍結前向（11-04～11-08）",
    "metric": "猜中勝隊比例",
-   "T": 0.68,
-   "M0": 0.72,
-   "n": 25,
+   "T": 0.7179,
+   "M0": 0.7436,
+   "n": 39,
    "source": "reports/E229-transformer-vs-m0-forward/log",
    "note": "賽前凍結、完全沒偷看；預註冊滿 400 場才正式比"
   }
