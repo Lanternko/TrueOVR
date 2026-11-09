@@ -141,6 +141,14 @@
 - 對應測試或關卡：防守預註冊與回報必須同列結構合理性（如位置係數單調性、代表球員 KD vs VanVleet 排序）、EPM／Transformer 對齊度與整體 OVR R²，不以單季防守 RAPM 單一指標否決（R-178）
 - 相關：R-178、R-042、R-093、E-269、E-274、E-275、E-276
 
+### L-138
+- 日期：2026-11-09
+- 規則：把評估母體的統計套到全卡時，要按分鐘區間數「拿到非零加分的人數」核對描述；`pop_of` 一類對應表本身可能帶篩選（MIN≥500），不能把被篩掉的人寫成「ID 對不到」。
+- 細節：card-0.2.14-cand 的 build_cand.py／summary.json 寫「套到全部 582 人；對不到唯一 ID 者 P=0（202 人）」，實際 202 人是 `pop_of` 只收 game log ≥500 分鐘造成，加分只套 380 人；500 分鐘處有斷崖（Hukporti 498 分 +7.45、Trayce Jackson-Davis 496 分 0），Edey 等低分鐘長人沒加分。前 100 名不受影響。
+- 由來：role-audit `reports/audit-0.2.14-cand/report.md`（recompute.py 獨立重算）
+- 對應測試或關卡：G2 稽核重算時列「各分鐘區間非零加分人數」；`reports/audit-0.2.14-cand/recompute.py`
+- 相關：E-290、R-183、L-062
+
 ## 預註冊
 
 ### L-041

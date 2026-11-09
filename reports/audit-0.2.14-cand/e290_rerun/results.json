@@ -1,0 +1,1394 @@
+{
+ "prereg_sha256": "5442ef6627fabd5eb9a2487cc31223165ee2ee1d0c8268b2475f24194ff0758d",
+ "card0213a_sha256": "feb5c8023cd99f12413767160d3b98d119051c55ef6e200f26bca631460daf97",
+ "live_epm_sha256": "b33dc8c7cc4d83281021b06803f3f5743ca6d61d0e0d1b12d302c83bafa63a36",
+ "stats_sha256": {
+  "2022-23": "f518e7f4a1a388600ce5fb5cba2c783ba697ea22822c0e734c981fb4bc8327de",
+  "2023-24": "29ee498619214d191db09f4a2f7fd709a290019c84e24943d986f9d4f36803c3",
+  "2024-25": "0d8184bd94f87a698d441806351f71992753201c1a449074fb5e13ce33b8cd4c",
+  "2025-26": "4538b2e3d0644fb8719273dec60f5f40aa9e8856273fb36c5196452d73e76ff6"
+ },
+ "e164_sha256": {
+  "2022-23": "1513ca6589694899ecaa81b9d7272fabef283b919274b443fa70e8a0a6cc09d5",
+  "2023-24": "de2a79d8cb86efaad5c20e3fc1f5123bf0a4fbc7fd835aea071600adb4e5f255",
+  "2024-25": "a28c3792c644b8c36ab05c02f5d519f77852729bcf17f61bf49bbf4f0f2df9fa"
+ },
+ "n": {
+  "2022-23": 262,
+  "2023-24": 286,
+  "2024-25": 319,
+  "2025-26": 240
+ },
+ "stats_cover": {
+  "2022-23": 1.0,
+  "2023-24": 1.0,
+  "2024-25": 1.0,
+  "2025-26": 1.0
+ },
+ "base_gap": {
+  "PG": -0.01118337114341475,
+  "SG": -0.05431768661207159,
+  "SF": 0.029304259393002532,
+  "PF": 0.015793554120827745,
+  "C": 0.0706995612084842
+ },
+ "base_gap_C_fold": {
+  "2022-23": 0.037665729208517476,
+  "2023-24": 0.09620379620379621,
+  "2024-25": 0.08096949308051074,
+  "2025-26": 0.06942934782608697
+ },
+ "arms": {
+  "REBc": {
+   "folds": {
+    "2022-23": {
+     "lambda": 0.75,
+     "all": -0.00927000161504865,
+     "G": 0.004314612678447793
+    },
+    "2023-24": {
+     "lambda": 0.5,
+     "all": 0.017819165879495058,
+     "G": 0.006481966688550167
+    },
+    "2024-25": {
+     "lambda": 0.5,
+     "all": 0.011646540335586208,
+     "G": 0.004465671361265855
+    },
+    "2025-26": {
+     "lambda": 0.5,
+     "all": 0.019416506832037217,
+     "G": -0.002633726658738289
+    }
+   },
+   "mean_all": 0.009975383039867907,
+   "ci90": [
+    0.0022668534660860193,
+    0.017710984367008156
+   ],
+   "fold2526_ci90": [
+    0.002533236289733276,
+    0.037170810768593576
+   ],
+   "n_pos": 3,
+   "mean_G": 0.0034116763873760503,
+   "gap_after": {
+    "PG": 0.02140901171068278,
+    "SG": -0.02636583493515558,
+    "SF": 0.04170843865928946,
+    "PF": -0.021699206471679496,
+    "C": -0.003868591646656188
+   },
+   "gap_C_2526_after": -0.01671195652173912,
+   "rapm": 0.0034309295320420997,
+   "lambda_star": 0.5,
+   "rho_grid": {
+    "2022-23": {
+     "0": 0.7013808819442164,
+     "0.05": 0.7035548212994078,
+     "0.1": 0.7041480032434662,
+     "0.2": 0.7039158015375806,
+     "0.3": 0.7038537476334215,
+     "0.5": 0.6996180682398536,
+     "0.75": 0.6921108803291678,
+     "1.0": 0.6822409733364683
+    },
+    "2023-24": {
+     "0": 0.6764769627952135,
+     "0.05": 0.6795785291240626,
+     "0.1": 0.6822531505752867,
+     "0.2": 0.6858726613078981,
+     "0.3": 0.6901472337193001,
+     "0.5": 0.6942961286747086,
+     "0.75": 0.6957057680586678,
+     "1.0": 0.6934558851117809
+    },
+    "2024-25": {
+     "0": 0.7253655453093409,
+     "0.05": 0.7275063758976589,
+     "0.1": 0.7288837685444007,
+     "0.2": 0.7320237506006075,
+     "0.3": 0.7341907596438713,
+     "0.5": 0.7370120856449272,
+     "0.75": 0.7366901025543978,
+     "1.0": 0.733783382645291
+    },
+    "2025-26": {
+     "0": 0.7231117468820618,
+     "0.05": 0.7264749260750473,
+     "0.1": 0.7290956472204698,
+     "0.2": 0.7337910697695224,
+     "0.3": 0.7393259217149393,
+     "0.5": 0.742528253714099,
+     "0.75": 0.7423780765832086,
+     "1.0": 0.7340462840844459
+    }
+   },
+   "rank": {
+    "top10": [
+     "Nikola Jokić",
+     "Victor Wembanyama",
+     "Shai Gilgeous-Alexander",
+     "Giannis Antetokounmpo",
+     "Luka Dončić",
+     "Jayson Tatum",
+     "Kawhi Leonard",
+     "Chet Holmgren",
+     "Evan Mobley",
+     "Karl-Anthony Towns"
+    ],
+    "top10_before": [
+     "Shai Gilgeous-Alexander",
+     "Nikola Jokić",
+     "Luka Dončić",
+     "Victor Wembanyama",
+     "Giannis Antetokounmpo",
+     "Kawhi Leonard",
+     "Donovan Mitchell",
+     "Jayson Tatum",
+     "Anthony Edwards",
+     "Kevin Durant"
+    ],
+    "r001_new_bigs_violating": [
+     "Karl-Anthony Towns"
+    ],
+    "top30_drops": [
+     [
+      "Paul George",
+      23,
+      35
+     ],
+     [
+      "Devin Booker",
+      28,
+      40
+     ],
+     [
+      "De'Aaron Fox",
+      24,
+      36
+     ],
+     [
+      "Derrick White",
+      26,
+      39
+     ],
+     [
+      "Tyrese Maxey",
+      25,
+      37
+     ]
+    ],
+    "show": {
+     "Rudy Gobert": [
+      56,
+      32
+     ],
+     "Jarrett Allen": [
+      47,
+      25
+     ],
+     "Isaiah Hartenstein": [
+      53,
+      28
+     ],
+     "Ivica Zubac": [
+      88,
+      55
+     ],
+     "Jakob Poeltl": [
+      86,
+      57
+     ],
+     "Myles Turner": [
+      123,
+      125
+     ],
+     "Mitchell Robinson": [
+      125,
+      73
+     ],
+     "Bam Adebayo": [
+      46,
+      30
+     ],
+     "Domantas Sabonis": [
+      79,
+      48
+     ],
+     "Alperen Sengun": [
+      127,
+      86
+     ],
+     "Evan Mobley": [
+      16,
+      9
+     ],
+     "Steven Adams": [
+      207,
+      146
+     ],
+     "Nikola Jokić": [
+      2,
+      1
+     ],
+     "Victor Wembanyama": [
+      4,
+      2
+     ]
+    },
+    "top30_moves": {
+     "LeBron James": [
+      21,
+      22
+     ],
+     "Kevin Durant": [
+      10,
+      14
+     ],
+     "Stephen Curry": [
+      11,
+      17
+     ],
+     "Paul George": [
+      23,
+      35
+     ],
+     "Kawhi Leonard": [
+      6,
+      7
+     ],
+     "Jimmy Butler III": [
+      19,
+      20
+     ],
+     "Anthony Davis": [
+      40,
+      12
+     ],
+     "Giannis Antetokounmpo": [
+      5,
+      4
+     ],
+     "Joel Embiid": [
+      22,
+      16
+     ],
+     "Nikola Jokić": [
+      2,
+      1
+     ],
+     "Karl-Anthony Towns": [
+      29,
+      10
+     ],
+     "Devin Booker": [
+      28,
+      40
+     ],
+     "Jamal Murray": [
+      20,
+      27
+     ],
+     "Jaylen Brown": [
+      27,
+      34
+     ],
+     "De'Aaron Fox": [
+      24,
+      36
+     ],
+     "Jayson Tatum": [
+      8,
+      6
+     ],
+     "Donovan Mitchell": [
+      7,
+      11
+     ],
+     "Jarrett Allen": [
+      47,
+      25
+     ],
+     "Bam Adebayo": [
+      46,
+      30
+     ],
+     "Isaiah Hartenstein": [
+      53,
+      28
+     ],
+     "Derrick White": [
+      26,
+      39
+     ],
+     "Shai Gilgeous-Alexander": [
+      1,
+      3
+     ],
+     "Luka Dončić": [
+      3,
+      5
+     ],
+     "Kevin Porter Jr.": [
+      15,
+      21
+     ],
+     "Anthony Edwards": [
+      9,
+      13
+     ],
+     "Tyrese Maxey": [
+      25,
+      37
+     ],
+     "Desmond Bane": [
+      18,
+      23
+     ],
+     "Jalen Johnson": [
+      30,
+      15
+     ],
+     "Austin Reaves": [
+      12,
+      18
+     ],
+     "Scottie Barnes": [
+      31,
+      26
+     ],
+     "Cade Cunningham": [
+      13,
+      19
+     ],
+     "Evan Mobley": [
+      16,
+      9
+     ],
+     "Chet Holmgren": [
+      14,
+      8
+     ],
+     "Jalen Williams": [
+      17,
+      24
+     ],
+     "Victor Wembanyama": [
+      4,
+      2
+     ],
+     "Amen Thompson": [
+      33,
+      29
+     ]
+    }
+   },
+   "checks": [
+    true,
+    true,
+    true,
+    false
+   ],
+   "verdict": "reject",
+   "diff_vs_CPOS": {
+    "mean": 0.004537960364607191,
+    "ci90": [
+     -0.0012269315443532568,
+     0.010198096412334632
+    ]
+   }
+  },
+  "CON": {
+   "folds": {
+    "2022-23": {
+     "lambda": 0.5,
+     "all": -0.0019870452213524015,
+     "G": 0.001175541318008011
+    },
+    "2023-24": {
+     "lambda": 0.5,
+     "all": 0.020957839015843027,
+     "G": 0.0015883392259496976
+    },
+    "2024-25": {
+     "lambda": 0.5,
+     "all": 0.012957929519219591,
+     "G": 0.00026988016079387833
+    },
+    "2025-26": {
+     "lambda": 0.5,
+     "all": 0.019343476674166027,
+     "G": 0.0012403469313203574
+    }
+   },
+   "mean_all": 0.012872041579916596,
+   "ci90": [
+    0.005826272402567796,
+    0.02017560445049519
+   ],
+   "fold2526_ci90": [
+    0.0021519719705555443,
+    0.03803533199843986
+   ],
+   "n_pos": 3,
+   "mean_G": 0.0010352591497288575,
+   "gap_after": {
+    "PG": 0.01723409835060078,
+    "SG": -0.028234886821893037,
+    "SF": 0.049293584468486494,
+    "PF": -0.021243691768829967,
+    "C": -0.0065083896372557844
+   },
+   "gap_C_2526_after": -0.03550724637681159,
+   "rapm": 0.002320826100512592,
+   "lambda_star": 0.5,
+   "rho_grid": {
+    "2022-23": {
+     "0": 0.7013808819442164,
+     "0.05": 0.7033926663665062,
+     "0.1": 0.7034934211264244,
+     "0.2": 0.7024331607720531,
+     "0.3": 0.7031924913468011,
+     "0.5": 0.699393836722864,
+     "0.75": 0.6934426333870315,
+     "1.0": 0.6865038999539872
+    },
+    "2023-24": {
+     "0": 0.6764769627952135,
+     "0.05": 0.6807996849602383,
+     "0.1": 0.683435839806097,
+     "0.2": 0.6889595049900253,
+     "0.3": 0.6919244738573271,
+     "0.5": 0.6974348018110565,
+     "0.75": 0.6977661806844608,
+     "1.0": 0.6935521289119896
+    },
+    "2024-25": {
+     "0": 0.7253655453093409,
+     "0.05": 0.7278625207885442,
+     "0.1": 0.7300058740829118,
+     "0.2": 0.7340534034413168,
+     "0.3": 0.7363246629515953,
+     "0.5": 0.7383234748285605,
+     "0.75": 0.7406409432318706,
+     "1.0": 0.739055793365322
+    },
+    "2025-26": {
+     "0": 0.7231117468820618,
+     "0.05": 0.7277222329680326,
+     "0.1": 0.7303672613867358,
+     "0.2": 0.7349567806678924,
+     "0.3": 0.740550664202557,
+     "0.5": 0.7424552235562278,
+     "0.75": 0.736300562746052,
+     "1.0": 0.7266571033750726
+    }
+   },
+   "rank": {
+    "top10": [
+     "Victor Wembanyama",
+     "Shai Gilgeous-Alexander",
+     "Nikola Jokić",
+     "Luka Dončić",
+     "Chet Holmgren",
+     "Evan Mobley",
+     "Giannis Antetokounmpo",
+     "Kawhi Leonard",
+     "Joel Embiid",
+     "Donovan Mitchell"
+    ],
+    "top10_before": [
+     "Shai Gilgeous-Alexander",
+     "Nikola Jokić",
+     "Luka Dončić",
+     "Victor Wembanyama",
+     "Giannis Antetokounmpo",
+     "Kawhi Leonard",
+     "Donovan Mitchell",
+     "Jayson Tatum",
+     "Anthony Edwards",
+     "Kevin Durant"
+    ],
+    "r001_new_bigs_violating": [
+     "Joel Embiid"
+    ],
+    "top30_drops": [],
+    "show": {
+     "Rudy Gobert": [
+      56,
+      31
+     ],
+     "Jarrett Allen": [
+      47,
+      22
+     ],
+     "Isaiah Hartenstein": [
+      53,
+      30
+     ],
+     "Ivica Zubac": [
+      88,
+      53
+     ],
+     "Jakob Poeltl": [
+      86,
+      56
+     ],
+     "Myles Turner": [
+      123,
+      70
+     ],
+     "Mitchell Robinson": [
+      125,
+      118
+     ],
+     "Bam Adebayo": [
+      46,
+      52
+     ],
+     "Domantas Sabonis": [
+      79,
+      78
+     ],
+     "Alperen Sengun": [
+      127,
+      94
+     ],
+     "Evan Mobley": [
+      16,
+      6
+     ],
+     "Steven Adams": [
+      207,
+      178
+     ],
+     "Nikola Jokić": [
+      2,
+      3
+     ],
+     "Victor Wembanyama": [
+      4,
+      1
+     ]
+    },
+    "top30_moves": {
+     "LeBron James": [
+      21,
+      28
+     ],
+     "Kevin Durant": [
+      10,
+      14
+     ],
+     "Stephen Curry": [
+      11,
+      16
+     ],
+     "Paul George": [
+      23,
+      32
+     ],
+     "Kawhi Leonard": [
+      6,
+      8
+     ],
+     "Jimmy Butler III": [
+      19,
+      23
+     ],
+     "Anthony Davis": [
+      40,
+      15
+     ],
+     "Giannis Antetokounmpo": [
+      5,
+      7
+     ],
+     "Joel Embiid": [
+      22,
+      9
+     ],
+     "Nikola Jokić": [
+      2,
+      3
+     ],
+     "Kristaps Porziņģis": [
+      37,
+      11
+     ],
+     "Karl-Anthony Towns": [
+      29,
+      26
+     ],
+     "Devin Booker": [
+      28,
+      37
+     ],
+     "Jamal Murray": [
+      20,
+      24
+     ],
+     "Jaylen Brown": [
+      27,
+      36
+     ],
+     "De'Aaron Fox": [
+      24,
+      33
+     ],
+     "Jayson Tatum": [
+      8,
+      12
+     ],
+     "Donovan Mitchell": [
+      7,
+      10
+     ],
+     "Jarrett Allen": [
+      47,
+      22
+     ],
+     "Isaiah Hartenstein": [
+      53,
+      30
+     ],
+     "Derrick White": [
+      26,
+      29
+     ],
+     "Shai Gilgeous-Alexander": [
+      1,
+      2
+     ],
+     "Jaren Jackson Jr.": [
+      50,
+      27
+     ],
+     "Luka Dončić": [
+      3,
+      4
+     ],
+     "Kevin Porter Jr.": [
+      15,
+      19
+     ],
+     "Anthony Edwards": [
+      9,
+      13
+     ],
+     "Tyrese Maxey": [
+      25,
+      34
+     ],
+     "Desmond Bane": [
+      18,
+      20
+     ],
+     "Jalen Johnson": [
+      30,
+      39
+     ],
+     "Austin Reaves": [
+      12,
+      17
+     ],
+     "Cade Cunningham": [
+      13,
+      18
+     ],
+     "Evan Mobley": [
+      16,
+      6
+     ],
+     "Chet Holmgren": [
+      14,
+      5
+     ],
+     "Jalen Williams": [
+      17,
+      21
+     ],
+     "Jaylin Williams": [
+      51,
+      25
+     ],
+     "Victor Wembanyama": [
+      4,
+      1
+     ]
+    }
+   },
+   "checks": [
+    true,
+    true,
+    true,
+    false
+   ],
+   "verdict": "reject",
+   "diff_vs_CPOS": {
+    "mean": 0.007434618904655881,
+    "ci90": [
+     0.0016149245136998342,
+     0.013312857079277431
+    ]
+   }
+  },
+  "MIX": {
+   "folds": {
+    "2022-23": {
+     "lambda": 0.75,
+     "all": -0.008705408731783604,
+     "G": 0.004330090911013551
+    },
+    "2023-24": {
+     "lambda": 0.5,
+     "all": 0.02141976221841735,
+     "G": 0.003314399185964878
+    },
+    "2024-25": {
+     "lambda": 0.5,
+     "all": 0.012786243546313303,
+     "G": 0.003028681576039749
+    },
+    "2025-26": {
+     "lambda": 0.5,
+     "all": 0.023289757673637945,
+     "G": 0.0002206065841071636
+    }
+   },
+   "mean_all": 0.012207396964487,
+   "ci90": [
+    0.004297885200600226,
+    0.01998404742616409
+   ],
+   "fold2526_ci90": [
+    0.007167835856983507,
+    0.04161598429957504
+   ],
+   "n_pos": 3,
+   "mean_G": 0.0028017136303648644,
+   "gap_after": {
+    "PG": 0.021911548607267548,
+    "SG": -0.024436944521248123,
+    "SF": 0.047240048348455,
+    "PF": -0.025671808936483853,
+    "C": -0.012234356276127137
+   },
+   "gap_C_2526_after": -0.029347826086956505,
+   "rapm": 0.002423917636212289,
+   "lambda_star": 0.5,
+   "rho_grid": {
+    "2022-23": {
+     "0": 0.7013808819442164,
+     "0.05": 0.7034248072176137,
+     "0.1": 0.7039572695724327,
+     "0.2": 0.7038571826636322,
+     "0.3": 0.7038972174271524,
+     "0.5": 0.7004435518274741,
+     "0.75": 0.6926754732124328,
+     "1.0": 0.6865401457029581
+    },
+    "2023-24": {
+     "0": 0.6764769627952135,
+     "0.05": 0.6799941111290985,
+     "0.1": 0.6831232212922975,
+     "0.2": 0.6876486327447144,
+     "0.3": 0.6912999452269522,
+     "0.5": 0.6978967250136309,
+     "0.75": 0.6985240859529083,
+     "1.0": 0.6962875416395399
+    },
+    "2024-25": {
+     "0": 0.7253655453093409,
+     "0.05": 0.727595113404353,
+     "0.1": 0.7296619401875665,
+     "0.2": 0.7336909770522138,
+     "0.3": 0.7360775686659548,
+     "0.5": 0.7381517888556542,
+     "0.75": 0.7403306257471334,
+     "1.0": 0.7386279242333647
+    },
+    "2025-26": {
+     "0": 0.7231117468820618,
+     "0.05": 0.7269028090548392,
+     "0.1": 0.7296832525455905,
+     "0.2": 0.735726789099637,
+     "0.3": 0.7410237813508279,
+     "0.5": 0.7464015045556998,
+     "0.75": 0.7446731676871121,
+     "1.0": 0.7353205301069202
+    }
+   },
+   "rank": {
+    "top10": [
+     "Victor Wembanyama",
+     "Nikola Jokić",
+     "Shai Gilgeous-Alexander",
+     "Giannis Antetokounmpo",
+     "Luka Dončić",
+     "Chet Holmgren",
+     "Evan Mobley",
+     "Kawhi Leonard",
+     "Jayson Tatum",
+     "Donovan Mitchell"
+    ],
+    "top10_before": [
+     "Shai Gilgeous-Alexander",
+     "Nikola Jokić",
+     "Luka Dončić",
+     "Victor Wembanyama",
+     "Giannis Antetokounmpo",
+     "Kawhi Leonard",
+     "Donovan Mitchell",
+     "Jayson Tatum",
+     "Anthony Edwards",
+     "Kevin Durant"
+    ],
+    "r001_new_bigs_violating": [],
+    "top30_drops": [
+     [
+      "Devin Booker",
+      28,
+      39
+     ],
+     [
+      "Tyrese Maxey",
+      25,
+      36
+     ]
+    ],
+    "show": {
+     "Rudy Gobert": [
+      56,
+      29
+     ],
+     "Jarrett Allen": [
+      47,
+      21
+     ],
+     "Isaiah Hartenstein": [
+      53,
+      28
+     ],
+     "Ivica Zubac": [
+      88,
+      53
+     ],
+     "Jakob Poeltl": [
+      86,
+      55
+     ],
+     "Myles Turner": [
+      123,
+      95
+     ],
+     "Mitchell Robinson": [
+      125,
+      92
+     ],
+     "Bam Adebayo": [
+      46,
+      41
+     ],
+     "Domantas Sabonis": [
+      79,
+      60
+     ],
+     "Alperen Sengun": [
+      127,
+      86
+     ],
+     "Evan Mobley": [
+      16,
+      7
+     ],
+     "Steven Adams": [
+      207,
+      159
+     ],
+     "Nikola Jokić": [
+      2,
+      2
+     ],
+     "Victor Wembanyama": [
+      4,
+      1
+     ]
+    },
+    "top30_moves": {
+     "LeBron James": [
+      21,
+      26
+     ],
+     "Kevin Durant": [
+      10,
+      14
+     ],
+     "Stephen Curry": [
+      11,
+      16
+     ],
+     "Paul George": [
+      23,
+      32
+     ],
+     "Kawhi Leonard": [
+      6,
+      8
+     ],
+     "Jimmy Butler III": [
+      19,
+      22
+     ],
+     "Anthony Davis": [
+      40,
+      12
+     ],
+     "Rudy Gobert": [
+      56,
+      29
+     ],
+     "Giannis Antetokounmpo": [
+      5,
+      4
+     ],
+     "Joel Embiid": [
+      22,
+      11
+     ],
+     "Nikola Jokić": [
+      2,
+      2
+     ],
+     "Kristaps Porziņģis": [
+      37,
+      19
+     ],
+     "Karl-Anthony Towns": [
+      29,
+      15
+     ],
+     "Devin Booker": [
+      28,
+      39
+     ],
+     "Jamal Murray": [
+      20,
+      27
+     ],
+     "Jaylen Brown": [
+      27,
+      37
+     ],
+     "De'Aaron Fox": [
+      24,
+      34
+     ],
+     "Jayson Tatum": [
+      8,
+      9
+     ],
+     "Donovan Mitchell": [
+      7,
+      10
+     ],
+     "Jarrett Allen": [
+      47,
+      21
+     ],
+     "Isaiah Hartenstein": [
+      53,
+      28
+     ],
+     "Derrick White": [
+      26,
+      31
+     ],
+     "Shai Gilgeous-Alexander": [
+      1,
+      3
+     ],
+     "Luka Dončić": [
+      3,
+      5
+     ],
+     "Kevin Porter Jr.": [
+      15,
+      20
+     ],
+     "Anthony Edwards": [
+      9,
+      13
+     ],
+     "Tyrese Maxey": [
+      25,
+      36
+     ],
+     "Desmond Bane": [
+      18,
+      24
+     ],
+     "Jalen Johnson": [
+      30,
+      25
+     ],
+     "Austin Reaves": [
+      12,
+      17
+     ],
+     "Scottie Barnes": [
+      31,
+      30
+     ],
+     "Cade Cunningham": [
+      13,
+      18
+     ],
+     "Evan Mobley": [
+      16,
+      7
+     ],
+     "Chet Holmgren": [
+      14,
+      6
+     ],
+     "Jalen Williams": [
+      17,
+      23
+     ],
+     "Victor Wembanyama": [
+      4,
+      1
+     ]
+    }
+   },
+   "checks": [
+    true,
+    true,
+    true,
+    false
+   ],
+   "verdict": "reject",
+   "diff_vs_CPOS": {
+    "mean": 0.006769974289226284,
+    "ci90": [
+     0.0012687266738777056,
+     0.01241687662141061
+    ]
+   }
+  },
+  "CPOS": {
+   "folds": {
+    "2022-23": {
+     "lambda": 0.5,
+     "all": -0.006991351324286632,
+     "G": 0.0
+    },
+    "2023-24": {
+     "lambda": 0.3,
+     "all": 0.012531368964104339,
+     "G": 0.0
+    },
+    "2024-25": {
+     "lambda": 0.3,
+     "all": 0.0033962410488029837,
+     "G": 0.0
+    },
+    "2025-26": {
+     "lambda": 0.3,
+     "all": 0.01326495220906132,
+     "G": 0.0
+    }
+   },
+   "mean_all": 0.005437422675260715,
+   "ci90": [
+    -0.00037947233611205356,
+    0.01141082755596042
+   ],
+   "fold2526_ci90": [
+    0.002231930203629878,
+    0.024943156800756844
+   ],
+   "n_pos": 3,
+   "mean_G": 0.0,
+   "gap_after": {
+    "PG": 0.0035769602655041487,
+    "SG": -0.039867704134630665,
+    "SF": 0.04256974946779102,
+    "PF": 0.030161353807954885,
+    "C": -0.0133696805122468
+   },
+   "gap_C_2526_after": -0.005887681159420279,
+   "rapm": -0.004479484224686568,
+   "lambda_star": 0.3,
+   "rho_grid": {
+    "2022-23": {
+     "0": 0.7013808819442164,
+     "0.05": 0.7017826798469851,
+     "0.1": 0.7016192031718381,
+     "0.2": 0.7007724607197503,
+     "0.3": 0.6995140239469863,
+     "0.5": 0.6943895306199298,
+     "0.75": 0.6854683749190519,
+     "1.0": 0.6772731891061734
+    },
+    "2023-24": {
+     "0": 0.6764769627952135,
+     "0.05": 0.6798245839604669,
+     "0.1": 0.682414069459467,
+     "0.2": 0.6861628729512842,
+     "0.3": 0.6890083317593179,
+     "0.5": 0.6915029173341272,
+     "0.75": 0.6908858113406056,
+     "1.0": 0.6878120797419509
+    },
+    "2024-25": {
+     "0": 0.7253655453093409,
+     "0.05": 0.7269533467638091,
+     "0.1": 0.7276036013113223,
+     "0.2": 0.7291248050992798,
+     "0.3": 0.7287617863581439,
+     "0.5": 0.7292660201289274,
+     "0.75": 0.727827992732778,
+     "1.0": 0.7234311038253746
+    },
+    "2025-26": {
+     "0": 0.7231117468820618,
+     "0.05": 0.7256255020591956,
+     "0.1": 0.7290335924546214,
+     "0.2": 0.7336309553517621,
+     "0.3": 0.7363766990911231,
+     "0.5": 0.7378290004746044,
+     "0.75": 0.7321300413696706,
+     "1.0": 0.7213363083139591
+    }
+   },
+   "rank": {
+    "top10": [
+     "Nikola Jokić",
+     "Shai Gilgeous-Alexander",
+     "Victor Wembanyama",
+     "Luka Dončić",
+     "Giannis Antetokounmpo",
+     "Kawhi Leonard",
+     "Donovan Mitchell",
+     "Jayson Tatum",
+     "Anthony Edwards",
+     "Kevin Durant"
+    ],
+    "top10_before": [
+     "Shai Gilgeous-Alexander",
+     "Nikola Jokić",
+     "Luka Dončić",
+     "Victor Wembanyama",
+     "Giannis Antetokounmpo",
+     "Kawhi Leonard",
+     "Donovan Mitchell",
+     "Jayson Tatum",
+     "Anthony Edwards",
+     "Kevin Durant"
+    ],
+    "r001_new_bigs_violating": [],
+    "top30_drops": [],
+    "show": {
+     "Rudy Gobert": [
+      56,
+      45
+     ],
+     "Jarrett Allen": [
+      47,
+      34
+     ],
+     "Isaiah Hartenstein": [
+      53,
+      40
+     ],
+     "Ivica Zubac": [
+      88,
+      66
+     ],
+     "Jakob Poeltl": [
+      86,
+      63
+     ],
+     "Myles Turner": [
+      123,
+      93
+     ],
+     "Mitchell Robinson": [
+      125,
+      96
+     ],
+     "Bam Adebayo": [
+      46,
+      33
+     ],
+     "Domantas Sabonis": [
+      79,
+      58
+     ],
+     "Alperen Sengun": [
+      127,
+      97
+     ],
+     "Evan Mobley": [
+      16,
+      18
+     ],
+     "Steven Adams": [
+      207,
+      174
+     ],
+     "Nikola Jokić": [
+      2,
+      1
+     ],
+     "Victor Wembanyama": [
+      4,
+      3
+     ]
+    },
+    "top30_moves": {
+     "LeBron James": [
+      21,
+      25
+     ],
+     "Kevin Durant": [
+      10,
+      10
+     ],
+     "Stephen Curry": [
+      11,
+      12
+     ],
+     "Paul George": [
+      23,
+      26
+     ],
+     "Kawhi Leonard": [
+      6,
+      6
+     ],
+     "Jimmy Butler III": [
+      19,
+      22
+     ],
+     "Anthony Davis": [
+      40,
+      24
+     ],
+     "Giannis Antetokounmpo": [
+      5,
+      5
+     ],
+     "Joel Embiid": [
+      22,
+      11
+     ],
+     "Nikola Jokić": [
+      2,
+      1
+     ],
+     "Kristaps Porziņģis": [
+      37,
+      21
+     ],
+     "Karl-Anthony Towns": [
+      29,
+      15
+     ],
+     "Devin Booker": [
+      28,
+      31
+     ],
+     "Jamal Murray": [
+      20,
+      23
+     ],
+     "Jaylen Brown": [
+      27,
+      30
+     ],
+     "De'Aaron Fox": [
+      24,
+      27
+     ],
+     "Jayson Tatum": [
+      8,
+      8
+     ],
+     "Donovan Mitchell": [
+      7,
+      7
+     ],
+     "Derrick White": [
+      26,
+      29
+     ],
+     "Shai Gilgeous-Alexander": [
+      1,
+      2
+     ],
+     "Luka Dončić": [
+      3,
+      4
+     ],
+     "Kevin Porter Jr.": [
+      15,
+      17
+     ],
+     "Anthony Edwards": [
+      9,
+      9
+     ],
+     "Tyrese Maxey": [
+      25,
+      28
+     ],
+     "Desmond Bane": [
+      18,
+      19
+     ],
+     "Jalen Johnson": [
+      30,
+      32
+     ],
+     "Austin Reaves": [
+      12,
+      13
+     ],
+     "Cade Cunningham": [
+      13,
+      14
+     ],
+     "Evan Mobley": [
+      16,
+      18
+     ],
+     "Chet Holmgren": [
+      14,
+      16
+     ],
+     "Jalen Williams": [
+      17,
+      20
+     ],
+     "Victor Wembanyama": [
+      4,
+      3
+     ]
+    }
+   },
+   "verdict": "control",
+   "diff_vs_CPOS": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   }
+  }
+ }
+}

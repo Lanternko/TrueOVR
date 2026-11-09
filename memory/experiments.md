@@ -2726,7 +2726,7 @@
 - 做法：預註冊 `reports/E288-center-underrated/preregistration.md`（11-09 凍結，R-165）；E-271 四折台（E-164 卡 2022-23～2025-26 → 下季自製 EPM／季中 EPM）；ovr'＝ovr＋λ·sd·P，λ 四折輪流挑；臂 ROLE／ROLE_BIG／SCR／CON／BOX，對照 CPOS（純中鋒）、HGT（身高）、SHUF。
 - 結果：基準 C 缺口 pct(EPM)−pct(OVR)＝+0.060（四折全正），SG −0.050。CON Δρ_all +0.0071 [+0.0011, +0.0130]、3/4 折、C 缺口→−0.007、下季 RAPM +0.0035、勝 CPOS +0.0041 [−0.0002, +0.0083]，只敗在 R-001（Mobley 16→10）；ROLE +0.0050、BOX +0.0055（4/4 折）區間碰 0；HGT 擠掉 5 名前 30 後衛側翼；SHUF 最大 +0.0025。Turner 125→79、Poeltl 113→76、Zubac 83→58、Gobert 59→36。`reports/E288-center-underrated/report.md`
 - 結論：4/5；中鋒低估成立，CON 是候選，待使用者裁定 R-001 是否容許 Mobley 進前十，再交 role-card 在 0.2.13a 管線重做。
-- 狀態：完成，未稽核
+- 狀態：完成；已稽核 2026-11-09（role-audit 抽查數字相符，`reports/audit-0.2.14-cand/`）
 - 相關：R-001、R-178、E-271、E-239、F-082
 
 ### E-289
@@ -2735,7 +2735,7 @@
 - 做法：預註冊 `reports/E289-rim-vs-reb-T/preregistration.md`（11-09 凍結）；M1 線上 T（2026-11-07 live、名次人群 288 人、3000 組）把球員自己的 RIM（help/blk36/cont2pt36）、REB（rebound/oreb/dreb/orebPct/drebPct/boxout×2）、CTRL（screenAst36）設聯盟平均看淨值掉多少；M2 pct(T)−pct(OVR) 對兩組 credit 回歸控位置；M3 E-288 前瞻台 RIMc／REBc 加分。
 - 結果：中鋒 credit 籃板 +2.80、護框 +1.01／100 回合；M2 β_REB +0.102 [+0.067, +0.138]、β_RIM −0.007（跨 0），差 −0.109 [−0.160, −0.062]。M3 RIMc +0.0074、REBc +0.0059，差 +0.0015 跨 0；RIMc C 缺口矯枉到 −0.026 並擠掉 Jalen Johnson／Reaves／Amen，REBc 缺口 −0.003 無副作用；兩者都敗 R-001（Mobley）。`reports/E289-rim-vs-reb-T/report.md`
 - 結論：4/5 建議加籃板；凍結規則第三條（前瞻台 REBc ≥ RIMc）以雜訊內差距沒過，正式判「層間不一致」：T 明確說籃板、前瞻台打平。護框已定價足夠。
-- 狀態：完成，未稽核
+- 狀態：完成；已稽核 2026-11-09（預註冊 sha 相符，T 未重跑，`reports/audit-0.2.14-cand/`）
 - 相關：E-288、E-285、E-227、R-001、R-178
 
 ### E-290
@@ -2744,5 +2744,5 @@
 - 做法：預註冊 `reports/E290-reb-bonus-0213a/preregistration.md`（11-09 凍結）；2025-26 折用真 0.2.13a 卡→2026-27 季中 EPM，前三折用 E-164 歷史卡（0.2.13a 無舊原點卡，已揭露）；臂 REBc／CON／MIX（各半）／CPOS，λ 留一折，bootstrap 2000；第 4 條改成 R-182 容許名單（含 Mobley）＋前 30 掉 >10 名 ≤1。
 - 結果：三臂都只敗第 4 條。REBc Δρ +0.0100 [+0.0023, +0.0177]、2025-26 折 +0.0194、C 缺口 +0.071→−0.004，但 Towns 進前十、5 人掉 >10 名；MIX +0.0122、前十合規、Booker／Maxey 掉 >10 名（上限 1）；CON +0.0129、Embiid 進前十。Gobert 56→32、Allen 47→25、Mobley 16→9。`reports/E290-reb-bonus-0213a/report.md`
 - 結論：3.5/5 籃板加分方向在現行卡成立，但凍結判定無 adopt_candidate，未產 `card-0.2.14-cand/`；MIX 只差一個名額。**R-183（使用者看過結果後裁定，非盲測 L-026）：採 MIX λ=0.5，第 4 條掉名上限 1→2**；候選卡 `reports/card-0.2.14-cand/`（ranking.csv＋mixBonus、summary.json、g5.md）：新前十加 Chet 6、Mobley 7（Edwards、Durant 掉到 13、14），Gobert 57→30、Allen 48→23、Hartenstein 54→29；全卡前 30 無人掉 >10 名。
-- 狀態：完成，未稽核
+- 狀態：完成；已稽核 2026-11-09（全量重跑逐數相同；候選卡重算吻合、描述人群有誤 L-138；4/5，`reports/audit-0.2.14-cand/`）
 - 相關：E-288、E-289、R-182、R-001、L-026
