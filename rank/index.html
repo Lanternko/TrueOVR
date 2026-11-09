@@ -865,6 +865,8 @@ td.ovr .ob::before{content:"";position:absolute;inset:0;border-radius:inherit;pa
 /* 選中列總評格跟名字一起變金，但紅／金框裡面維持黑（使用者 2026-11-02） */
 #tbl tbody tr.sel td.ovr,#tbl tbody tr.sel:hover td.ovr{background:var(--gold)}
 #tbl tbody tr.sel td.ovr .ob{background:#0a0d10}
+/* t6 字是 background-clip:text 的漸層；上一行把 background 換成深色會讓字變黑（2026-11-09 Wemby 選取列看不到 OVR），選取列改實色紫字 */
+#tbl tbody tr.sel td.ovr .ob.t6{-webkit-background-clip:border-box;background-clip:border-box;color:#d2a8ff;-webkit-text-fill-color:#d2a8ff}
 div.tbox{background:#1b232d}
 #tbl tbody tr:hover td.nm{background:var(--panel-2)}
 #tbl tbody tr.sel td.nm{background:var(--gold);color:var(--gold-ink)}
