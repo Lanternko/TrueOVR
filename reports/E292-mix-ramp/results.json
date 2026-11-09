@@ -1,0 +1,345 @@
+{
+ "prereg_sha256": "9908f56847db5e1757dda68a5551edff1a2f1f13f39e66162ea9b987f575a611",
+ "sources_sha256": {
+  "card_0213a": "feb5c8023cd99f12413767160d3b98d119051c55ef6e200f26bca631460daf97",
+  "e291_arms": "4badf8983537c344b36365e2b8e45eff9949a7da622e2ce62781ebf86726cfb1"
+ },
+ "arms": {
+  "A": {
+   "top10": [
+    "Victor Wembanyama",
+    "Nikola Jokić",
+    "Shai Gilgeous-Alexander",
+    "Giannis Antetokounmpo",
+    "Luka Dončić",
+    "Chet Holmgren",
+    "Evan Mobley",
+    "Kawhi Leonard",
+    "Jayson Tatum",
+    "Donovan Mitchell"
+   ],
+   "top30_drops": [],
+   "n_bonus_pos": 195,
+   "rho_2k_all": [
+    0.786,
+    575
+   ],
+   "rho_epm_all": [
+    0.7167,
+    258
+   ],
+   "rho_2k_min500": [
+    0.7492,
+    376
+   ],
+   "rho_epm_min500": [
+    0.7293,
+    240
+   ],
+   "C_lt200_mean": 0.0,
+   "C_ge500_mean": 5.7798
+  },
+  "D": {
+   "top10": [
+    "Victor Wembanyama",
+    "Nikola Jokić",
+    "Shai Gilgeous-Alexander",
+    "Giannis Antetokounmpo",
+    "Luka Dončić",
+    "Chet Holmgren",
+    "Evan Mobley",
+    "Kawhi Leonard",
+    "Jayson Tatum",
+    "Donovan Mitchell"
+   ],
+   "top30_drops": [],
+   "n_bonus_pos": 309,
+   "rho_2k_all": [
+    0.7838,
+    575
+   ],
+   "rho_epm_all": [
+    0.7201,
+    258
+   ],
+   "rho_2k_min500": [
+    0.7492,
+    376
+   ],
+   "rho_epm_min500": [
+    0.7293,
+    240
+   ],
+   "C_lt200_mean": 0.18753083928419947,
+   "C_ge500_mean": 5.7798
+  }
+ },
+ "rho_0213a": {
+  "2k_all": [
+   0.7741,
+   575
+  ],
+  "epm_all": [
+   0.6903,
+   258
+  ]
+ },
+ "jump_499_501": 0.015275318198436416,
+ "band_jumps": [
+  [
+   "Jae'Sean Tate",
+   405.0,
+   0.42,
+   "Khaman Maluach",
+   411.0,
+   6.28
+  ],
+  [
+   "Obi Toppin",
+   424.0,
+   1.36,
+   "Yanic Konan Niederhäuser",
+   424.0,
+   5.89
+  ],
+  [
+   "Yanic Konan Niederhäuser",
+   424.0,
+   5.89,
+   "Moritz Wagner",
+   427.0,
+   2.38
+  ],
+  [
+   "Larry Nance Jr.",
+   449.0,
+   1.08,
+   "Tony Bradley",
+   451.0,
+   5.02
+  ],
+  [
+   "Ariel Hukporti",
+   498.0,
+   7.42,
+   "Asa Newell",
+   500.0,
+   3.16
+  ],
+  [
+   "Jayson Tatum",
+   522.0,
+   2.65,
+   "Moussa Cisse",
+   530.0,
+   7.64
+  ]
+ ],
+ "checks": {
+  "T1": true,
+  "T2": false,
+  "T3": true,
+  "T4": true,
+  "T5": true
+ },
+ "pass": false,
+ "show": {
+  "Ariel Hukporti": {
+   "pos": "C",
+   "MIN": 498.0,
+   "rank0": 389,
+   "bonus_A": 7.45,
+   "rank_A": 299,
+   "bonus_D": 7.42,
+   "rank_D": 302
+  },
+  "Trayce Jackson-Davis": {
+   "pos": "C",
+   "MIN": 496.0,
+   "rank0": 323,
+   "bonus_A": 0.0,
+   "rank_A": 336,
+   "bonus_D": 7.28,
+   "rank_D": 251
+  },
+  "Zach Edey": {
+   "pos": "C",
+   "MIN": 284.0,
+   "rank0": 151,
+   "bonus_A": 0.0,
+   "rank_A": 166,
+   "bonus_D": 4.34,
+   "rank_D": 115
+  },
+  "Khaman Maluach": {
+   "pos": "C",
+   "MIN": 411.0,
+   "rank0": 507,
+   "bonus_A": 0.0,
+   "rank_A": 514,
+   "bonus_D": 6.28,
+   "rank_D": 380
+  },
+  "Paul Reed": {
+   "pos": "C",
+   "MIN": 901.0,
+   "rank0": 114,
+   "bonus_A": 7.64,
+   "rank_A": 62,
+   "bonus_D": 7.64,
+   "rank_D": 62
+  },
+  "Goga Bitadze": {
+   "pos": "C",
+   "MIN": 972.0,
+   "rank0": 179,
+   "bonus_A": 7.64,
+   "rank_A": 111,
+   "bonus_D": 7.64,
+   "rank_D": 111
+  },
+  "Victor Wembanyama": {
+   "pos": "C",
+   "MIN": 1866.0,
+   "rank0": 4,
+   "bonus_A": 7.64,
+   "rank_A": 1,
+   "bonus_D": 7.64,
+   "rank_D": 1
+  },
+  "Anthony Davis": {
+   "pos": "C",
+   "MIN": 626.0,
+   "rank0": 41,
+   "bonus_A": 7.64,
+   "rank_A": 12,
+   "bonus_D": 7.64,
+   "rank_D": 12
+  },
+  "Rudy Gobert": {
+   "pos": "C",
+   "MIN": 2380.0,
+   "rank0": 57,
+   "bonus_A": 7.64,
+   "rank_A": 30,
+   "bonus_D": 7.64,
+   "rank_D": 30
+  },
+  "Devin Booker": {
+   "pos": "SG",
+   "MIN": 2146.0,
+   "rank0": 30,
+   "bonus_A": 0.0,
+   "rank_A": 40,
+   "bonus_D": 0.0,
+   "rank_D": 40
+  },
+  "Kevin Durant": {
+   "pos": "SF",
+   "MIN": 2840.0,
+   "rank0": 10,
+   "bonus_A": 0.0,
+   "rank_A": 14,
+   "bonus_D": 0.0,
+   "rank_D": 14
+  }
+ },
+ "top_lt500": [
+  [
+   "Ariel Hukporti",
+   "C",
+   498.0,
+   7.42,
+   389,
+   302
+  ],
+  [
+   "Trayce Jackson-Davis",
+   "C",
+   496.0,
+   7.28,
+   323,
+   251
+  ],
+  [
+   "Khaman Maluach",
+   "C",
+   411.0,
+   6.28,
+   507,
+   380
+  ],
+  [
+   "Yanic Konan Niederhäuser",
+   "C",
+   424.0,
+   5.89,
+   320,
+   263
+  ],
+  [
+   "Branden Carlson",
+   "C",
+   488.0,
+   5.72,
+   410,
+   334
+  ],
+  [
+   "Tony Bradley",
+   "C",
+   451.0,
+   5.02,
+   465,
+   368
+  ],
+  [
+   "Lachlan Olbrich",
+   "C",
+   344.0,
+   4.98,
+   493,
+   394
+  ],
+  [
+   "Joan Beringer",
+   "C",
+   314.0,
+   4.63,
+   371,
+   320
+  ],
+  [
+   "Kevon Looney",
+   "C",
+   307.0,
+   4.6,
+   351,
+   307
+  ],
+  [
+   "Zach Edey",
+   "C",
+   284.0,
+   4.34,
+   151,
+   115
+  ],
+  [
+   "Maxi Kleber",
+   "C",
+   461.0,
+   4.33,
+   543,
+   475
+  ],
+  [
+   "Christian Koloko",
+   "C",
+   357.0,
+   3.88,
+   555,
+   526
+  ]
+ ]
+}
