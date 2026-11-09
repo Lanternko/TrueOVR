@@ -59,8 +59,8 @@ if E064_MODE != 'G1':
     raise SystemExit('E064_MODE 只接受 G1（off／G0 是舊頁重現用，已淘汰）')
 # 預註冊 §4.1：stamina 最小樣本 1 場（本身的能力值與 w 都用；其餘 15 屬性照 C4 現行）。
 SA.SEASON_MIN_SAMPLE['stamina'] = 1
-VERSION = 'inseason 0.2.14d'  # 0.2.14d＝E-302 臂 MR（R-190）：D<0 時 g 改 E-296 A2-15-R（多上場不再掉分，PR1 換重取值）＋OVR 錨點「近況」（live/game_anchor.py）；NEG_MIN=0 重現 0.2.14c、GAME_ANCHOR=0 只關近況； 0.2.14c＝MIX 加分再乘 min(1, W(MPGhat))（E-300 臂 M，OVR 主體同一條分鐘曲線；mix_live.py mm；MIX_MIN=0 重現 0.2.14b）； 0.2.14b＝MIX 加分位置改 BBRef 上場位置比例 π（E-295 W1：w＝π_C＋0.243·π_PF、位置平均＝π 加權；live/mix_live.py w1、凍結 mix-pool-card0214b.json；MIX_W1=0 重現 0.2.14a）； 0.2.14a＝MIX 加分改 E-294 H-same（z 減半位置平均＋1.5·tanh 軟上限＋位置權重 C=1／PF=0.243，live/mix_live.py h=True、凍結 mix-pool-card0214a.json；MIX_H=0 重現 0.2.14）； 0.2.14＝MIX 籃板／兩分干擾加分＋500 分鐘以下按比例打折（R-183／R-184，live/mix_live.py；MIX_BONUS=0 重現 0.2.13a）； 0.2.13a＝pnr 窗口外的季不帶回合（PNR_FIX=0 重現 0.2.13）； R-050／R-114：先驗卡 card 0.2.13；0.2.13＝加能力值 pnr（擋拆持球，E-258 G50_W05，live/pnr_live.py；PNR=0 重現 0.2.12e）；0.2.12e＝防守 D 改個人場次軸（R-163，defense_bonus.py；DEF_AXIS=calendar 回退）＋復出老將補進用人層（R-164，rv_usage；RV_USAGE=0 回退），兩者都關＝0.2.12d；0.2.12d＝復出老將補卡：2025-26 沒上場的老將（Lillard、Kyrie、Haliburton 等）用 v5 舊季卡進四季窗口，其餘管線不動（live/build_returning_vet_prior.py；RETURNING_VETS=0 重現 0.2.12c）；0.2.12c＝tovSkill 的失誤率分母由持球分鐘改觸球次數（R-144，E-207，live/tov_live.py，檔名用 0212c／card-0.2.12c；TOV_TOUCH=0 重現 0.2.12b）；0.2.12b＝四季窗口由 328 格縮成 246 格（R-140，E-204，live/win_len.py；WIN_LEN=328 重現 0.2.12a）；0.2.12a＝gravity 補值依本季分鐘往進攻 EPM 收縮（gravity_live.EPM_ON；GRAVITY_EPM=0 重現 0.2.12）；0.2.12＝tovSkill 改看持球時間（R-139，E-203，live/tov_live.py，檔名用 0212／card-0.2.12-tov）；0.2.11（原標 0.2.10j，R-137 使用者升為 PATCH；檔名沿用 0210j）＝加能力值 gravity（無球外線引力，R-134／R-135，live/gravity_live.py）；0.2.10i＝drive→drive_D、creation→creationJ（R-130／R-132，live/split_dc.py）；0.2.10h＝賽中端 y、v 改用開季當天年齡（R-129，E-193），卡片端不動。 第一個字面值會被 daily_inseason_update.probe_base_version 以正規式讀取，勿改成括號／條件式開頭
-CARD_VERSION = 'card 0.2.14c'   # 0.2.14c＝正式卡 reports/card-0.2.14c/（＝card 0.2.14b，mixBonus×min(1,W(mpg))）； 0.2.14b＝正式卡 reports/card-0.2.14b/（＝card 0.2.13a＋W1 mixBonus＋BBRef 別名 3 人）； 0.2.14a＝正式卡 reports/card-0.2.14a/（＝card 0.2.13a＋H-same mixBonus，＝card-0.2.15-cand）； 0.2.14＝正式卡 reports/card-0.2.14/（＝card 0.2.13a＋mixBonus；係數管線、先驗、formal 核對仍用 card-0.2.13a，加分在寫 ranking 前疊上）； 0.2.13a＝正式卡 reports/card-0.2.13a/； 0.2.13＝加 pnr（係數 reports/card-0.2.13-w246/，正式卡 reports/card-0.2.13/）；PNR=0 回 card 0.2.12c。0.2.12c＝觸球分母（W246，reports/card-0.2.12c/；係數／RAPM 在 328 底 reports/card-0.2.12c-w328/）；TOV_TOUCH=0 回 card 0.2.12b／0.2.12。0.2.12b＝同上窗口 246（reports/card-0.2.12b/）；WIN_LEN=328 時回 card 0.2.12
+VERSION = 'inseason 0.2.15'  # 0.2.15＝CRT＋PNR 合成「持球進攻」（E-303 MRG5，見下方 CRTPNR；CRTPNR=0 重現 0.2.14d）； 0.2.14d＝E-302 臂 MR（R-190）：D<0 時 g 改 E-296 A2-15-R（多上場不再掉分，PR1 換重取值）＋OVR 錨點「近況」（live/game_anchor.py）；NEG_MIN=0 重現 0.2.14c、GAME_ANCHOR=0 只關近況； 0.2.14c＝MIX 加分再乘 min(1, W(MPGhat))（E-300 臂 M，OVR 主體同一條分鐘曲線；mix_live.py mm；MIX_MIN=0 重現 0.2.14b）； 0.2.14b＝MIX 加分位置改 BBRef 上場位置比例 π（E-295 W1：w＝π_C＋0.243·π_PF、位置平均＝π 加權；live/mix_live.py w1、凍結 mix-pool-card0214b.json；MIX_W1=0 重現 0.2.14a）； 0.2.14a＝MIX 加分改 E-294 H-same（z 減半位置平均＋1.5·tanh 軟上限＋位置權重 C=1／PF=0.243，live/mix_live.py h=True、凍結 mix-pool-card0214a.json；MIX_H=0 重現 0.2.14）； 0.2.14＝MIX 籃板／兩分干擾加分＋500 分鐘以下按比例打折（R-183／R-184，live/mix_live.py；MIX_BONUS=0 重現 0.2.13a）； 0.2.13a＝pnr 窗口外的季不帶回合（PNR_FIX=0 重現 0.2.13）； R-050／R-114：先驗卡 card 0.2.13；0.2.13＝加能力值 pnr（擋拆持球，E-258 G50_W05，live/pnr_live.py；PNR=0 重現 0.2.12e）；0.2.12e＝防守 D 改個人場次軸（R-163，defense_bonus.py；DEF_AXIS=calendar 回退）＋復出老將補進用人層（R-164，rv_usage；RV_USAGE=0 回退），兩者都關＝0.2.12d；0.2.12d＝復出老將補卡：2025-26 沒上場的老將（Lillard、Kyrie、Haliburton 等）用 v5 舊季卡進四季窗口，其餘管線不動（live/build_returning_vet_prior.py；RETURNING_VETS=0 重現 0.2.12c）；0.2.12c＝tovSkill 的失誤率分母由持球分鐘改觸球次數（R-144，E-207，live/tov_live.py，檔名用 0212c／card-0.2.12c；TOV_TOUCH=0 重現 0.2.12b）；0.2.12b＝四季窗口由 328 格縮成 246 格（R-140，E-204，live/win_len.py；WIN_LEN=328 重現 0.2.12a）；0.2.12a＝gravity 補值依本季分鐘往進攻 EPM 收縮（gravity_live.EPM_ON；GRAVITY_EPM=0 重現 0.2.12）；0.2.12＝tovSkill 改看持球時間（R-139，E-203，live/tov_live.py，檔名用 0212／card-0.2.12-tov）；0.2.11（原標 0.2.10j，R-137 使用者升為 PATCH；檔名沿用 0210j）＝加能力值 gravity（無球外線引力，R-134／R-135，live/gravity_live.py）；0.2.10i＝drive→drive_D、creation→creationJ（R-130／R-132，live/split_dc.py）；0.2.10h＝賽中端 y、v 改用開季當天年齡（R-129，E-193），卡片端不動。 第一個字面值會被 daily_inseason_update.probe_base_version 以正規式讀取，勿改成括號／條件式開頭
+CARD_VERSION = 'card 0.2.15'   # 0.2.15＝正式卡 reports/card-0.2.15/（係數底 card-0.2.15-w246、base card-0.2.15-base，＋MIX 加分同 0.2.14c）； 0.2.14c＝正式卡 reports/card-0.2.14c/（＝card 0.2.14b，mixBonus×min(1,W(mpg))）； 0.2.14b＝正式卡 reports/card-0.2.14b/（＝card 0.2.13a＋W1 mixBonus＋BBRef 別名 3 人）； 0.2.14a＝正式卡 reports/card-0.2.14a/（＝card 0.2.13a＋H-same mixBonus，＝card-0.2.15-cand）； 0.2.14＝正式卡 reports/card-0.2.14/（＝card 0.2.13a＋mixBonus；係數管線、先驗、formal 核對仍用 card-0.2.13a，加分在寫 ranking 前疊上）； 0.2.13a＝正式卡 reports/card-0.2.13a/； 0.2.13＝加 pnr（係數 reports/card-0.2.13-w246/，正式卡 reports/card-0.2.13/）；PNR=0 回 card 0.2.12c。0.2.12c＝觸球分母（W246，reports/card-0.2.12c/；係數／RAPM 在 328 底 reports/card-0.2.12c-w328/）；TOV_TOUCH=0 回 card 0.2.12b／0.2.12。0.2.12b＝同上窗口 246（reports/card-0.2.12b/）；WIN_LEN=328 時回 card 0.2.12
 PNR = os.environ.get('PNR', '1') != '0'   # 0.2.13：PNR=0 重現 0.2.12e（卡 card 0.2.12c；ATTRS 不加 pnr、新秀不 import pnr_live）
 if not PNR:
     VERSION, CARD_VERSION = 'inseason 0.2.12e', 'card 0.2.12c'
@@ -85,6 +85,14 @@ if MIX_BONUS and not MIX_H:
     VERSION, CARD_VERSION = 'inseason 0.2.14', 'card 0.2.14'
 if PNR_FIX and not MIX_BONUS:
     VERSION, CARD_VERSION = 'inseason 0.2.13a', 'card 0.2.13a'
+CRTPNR = PNR_FIX and os.environ.get('CRTPNR', '1') != '0'   # 0.2.15（E-303 MRG5，使用者 2026-11-10「合併做進卡片」）：CRT＋PNR 合成「持球進攻」放 creation 欄（live/crtpnr_live.py，凍結 crtpnr-pool-card0215.json）；pnr 不再是獨立特徵、全部係數重擬合（card-0.2.15-w246）；CRTPNR=0 逐位元重現 0.2.14d
+if CRTPNR:
+    VERSION, CARD_VERSION = ('inseason 0.2.15' if GAME_ANCHOR else 'inseason 0.2.15-noform' if NEG_MIN else 'inseason 0.2.15-card'), 'card 0.2.15'   # -card：卡片路線用（MIX_BONUS=0、NEG_MIN=0；正式卡的 MIX 加分由 build_card_0215.py 疊，不含 0.2.14d 的 D<0 分鐘修正，同 card 0.2.14c）
+    if not NEG_MIN and os.environ.get('PNR_CARD', '0') != '1':
+        raise SystemExit('CRTPNR=1 只能配 0.2.14d 的整條開關（或卡片路線 PNR_CARD=1）；要重現 0.2.14d 以前的版本請同時設 CRTPNR=0')
+else:   # 頂端字面值已是 0.2.15：CRTPNR=0 時把沒被上面覆寫的版號退回 0.2.14d／card 0.2.14c
+    VERSION = 'inseason 0.2.14d' if VERSION == 'inseason 0.2.15' else VERSION
+    CARD_VERSION = 'card 0.2.14c' if CARD_VERSION == 'card 0.2.15' else CARD_VERSION
 AGE_START = os.environ.get('AGE_START', '1') != '0'   # 0.2.10h：y、v 用開季當天足歲（data/defense-seventh/2026-27/birthdates.json，live/window11.py）；AGE_START=0 重現 0.2.10g（本季 bio AGE）
 # 0.2.10i（R-130／R-132）：切入／自主拆開。SPLIT_DC=0 重現 0.2.10h（卡 card 0.2.10g；先驗、usage 讀 _retired/；window8／window10／pres_drive 由 split_dc.ON 走舊路徑）
 SPLIT_DC = os.environ.get('SPLIT_DC', '1') != '0'
@@ -123,7 +131,7 @@ if not USAGE_WIN:   # USAGE_WIN=0：整組回 0.2.10f（先驗卡、usage 檔、
 if not WIN10:
     CARD_VERSION = 'card 0.2.10c'
 _CV = (('card-0.2.12c-w246' if TOV_TOUCH else 'card-0.2.12-tov') if TOV_POSS else (('card-0.2.10j' if GRAVITY else 'card-0.2.10i') if SPLIT_DC else 'card-0.2.10d') if WIN10 else 'card-0.2.10c')   # 係數管線／RAPM 所在的卡（0.2.10e 只換 OVR 映射、0.2.10f 只換 3PT 欄對照池，沒有 cards/、rapm-T6 以外的新檔）
-_OV = 'card-0.2.13a' if CARD_VERSION in ('card 0.2.14', 'card 0.2.14a', 'card 0.2.14b', 'card 0.2.14c') else 'card-0.2.12-tov' if CARD_VERSION == 'card 0.2.12' else 'card-0.2.10j' if CARD_VERSION == 'card 0.2.11' else CARD_VERSION.replace('card ', 'card-')   # 0.2.11＝原標 0.2.10j（R-137），資料夾沿用 card-0.2.10j； OVR 欄與 summary 所在的卡：'card-0.2.10g'（USAGE_WIN=0 時 'card-0.2.10f'、WIN10=0 時 'card-0.2.10c'）
+_OV = ('card-0.2.13a' if os.environ.get('CRTPNR_BOOT') == '1' else 'card-0.2.15-base') if CARD_VERSION == 'card 0.2.15' else 'card-0.2.13a' if CARD_VERSION in ('card 0.2.14', 'card 0.2.14a', 'card 0.2.14b', 'card 0.2.14c') else 'card-0.2.12-tov' if CARD_VERSION == 'card 0.2.12' else 'card-0.2.10j' if CARD_VERSION == 'card 0.2.11' else CARD_VERSION.replace('card ', 'card-')   # 0.2.11＝原標 0.2.10j（R-137），資料夾沿用 card-0.2.10j； OVR 欄與 summary 所在的卡：'card-0.2.10g'（USAGE_WIN=0 時 'card-0.2.10f'、WIN10=0 時 'card-0.2.10c'）
 _SC = ROOT / 'reports/card-0.2.10d/work-selfcheck'   # card 0.2.10c 的逐位元重建（WIN10=0 的卡端檔）
 _RET = HERE / '_retired'
 PRIOR = '2025-26'
@@ -144,12 +152,14 @@ if RETURNING_VETS:
 PNR_CARD = os.environ.get('PNR_CARD', '0') == '1'   # 0.2.13 卡片路線（card_route_0212c.py，2025-26 季末）：正式卡沿用日曆軸、無復出老將（同 card 0.2.12c 建法）
 if PNR and PNR_CARD:
     PRIOR_CARD = HERE / 'prior-2025-26-card0213a.json' if PNR_FIX else _RET / 'prior-2025-26-card0213.json'
-if PNR and not PNR_CARD and (VERSION not in ('inseason 0.2.13', 'inseason 0.2.13a', 'inseason 0.2.14', 'inseason 0.2.14a', 'inseason 0.2.14b', 'inseason 0.2.14c', 'inseason 0.2.14d', 'inseason 0.2.14d-noform') or not RETURNING_VETS or os.environ.get('DEF_AXIS', 'personal') == 'calendar' or os.environ.get('RV_USAGE', 'hi') == '0'):
+if PNR and not PNR_CARD and (VERSION not in ('inseason 0.2.13', 'inseason 0.2.13a', 'inseason 0.2.14', 'inseason 0.2.14a', 'inseason 0.2.14b', 'inseason 0.2.14c', 'inseason 0.2.14d', 'inseason 0.2.14d-noform', 'inseason 0.2.15', 'inseason 0.2.15-noform') or not RETURNING_VETS or os.environ.get('DEF_AXIS', 'personal') == 'calendar' or os.environ.get('RV_USAGE', 'hi') == '0'):
     raise SystemExit('重現 0.2.12e 以前的版本要同時設 PNR=0')
 if PNR:   # 0.2.13：卡片 calibrate --offBallCols gravity,pnr，pnr 接在 gravity 後面
     _CV = 'card-0.2.13-w246'
-    if 'pnr' not in ATTRS:
+    if 'pnr' not in ATTRS and not CRTPNR:   # 0.2.15：pnr 併進 creation 欄，不再是獨立特徵
         ATTRS.append('pnr')
+if CRTPNR:
+    _CV = 'card-0.2.15-w246'
 CARD_DIR = ROOT / f'reports/{_CV}/cards/K6/primary' if WIN10 else _SC / 'base-KAU-2025-26/c0/cards/K0/primary'   # 屬性迴歸／OVR 管線係數（E-164 S 臂，第一層拿掉 stamina）
 CARD_SUMMARY = CARD_DIR / 'summary.json'
 RAPM_STAR = ROOT / f'reports/{_CV}/rapm-T6.csv'   # align／封頂讀 E-153 K6 的 T6 換進去的 RAPM（與 card 0.2.8 起同口徑）
@@ -167,6 +177,8 @@ def sat_w(m):
 
 NEG_MIN_MS = 15.0                       # E-296 A2-15-R：D<0 的分鐘轉折點
 NEG_MIN_PR1 = -0.9317235542699069       # E-296 part_a.json['A2-15-R']['PR1']：卡片池 2025-26 用 A2-15-R 重取的 PR1（凍結）
+if CRTPNR:   # 0.2.15：係數重擬合後照 E-296 part_a 同法重取（card-0.2.15-base 582 人、R_REPL＝usage-2025-26-card0215.json rRepl、A2-15 的 g 取 PR1；同法對 card-0.2.13a 逐位元重現 −0.9317235542699069）
+    NEG_MIN_PR1 = -0.9200015839812904
 
 
 def g_of(D, m):
@@ -178,6 +190,8 @@ def g_of(D, m):
 USAGE_FILE = ((((_RET / 'usage-2025-26-card0212c.json' if TOV_TOUCH else _RET / 'usage-2025-26-card0212-tov.json') if TOV_POSS else _RET / 'usage-2025-26-card0210j.json' if GRAVITY else _RET / 'usage-2025-26-card0210i.json') if SPLIT_DC else _RET / 'usage-2025-26-card0210g.json') if USAGE_WIN else _RET / 'usage-2025-26-card0210f.json') if WIN10 else _SC / 'usage-2025-26-card0210c-nowin.json'     # build_usage_0210g.py 產出（0.2.10g：係數同 0.2.10d，r_repl／錨點用新池重取，features 為 2025-26 季末 c=82 窗口值）；USAGE_WIN=0 讀 _retired/ 的 0.2.10f 檔。以下為 0.2.10f 原註解：build_usage_0210f.py 產出（card 0.2.10d 的 KAU 重擬合係數／r_repl／錨點＋E-188 的 PR90／PR95，不是凍結值；WIN10=0 檔由 _retired/build_usage_0210d.py base10c 產）（係數、r_repl、錨點；b8_ydL＝0）；錨點／r_repl 也從這裡讀
 if PNR:
     USAGE_FILE = HERE / 'usage-2025-26-card0213.json'   # build_usage_0213.py（card-0.2.13-w246 係數／r_repl／錨點）
+if CRTPNR:
+    USAGE_FILE = HERE / 'usage-2025-26-card0215.json'   # build_usage_0215.py（card-0.2.15-w246 係數／r_repl／錨點）
 POOL026 = HERE / 'pool-027b.json'                     # e128-card027b/build_pool_027b.py 產出的凍結合併池
 DEF_L_PRIMARY = ROOT / 'reports/card-0.2.5+E104-defense-pergame-decay/def-L-primary.csv'   # UL 防守加成的 --defRapm
 E128_RB = ROOT / 'reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a'
@@ -949,6 +963,9 @@ def load_usage():
     if CARD_VERSION in ('card 0.2.13', 'card 0.2.13a', 'card 0.2.14', 'card 0.2.14a', 'card 0.2.14b', 'card 0.2.14c'):      # 0.2.13：usage 檔是用 card-0.2.13-w246 建的
         usrc = 'card-0.2.13-w246'
         usumm = load_json(ROOT / 'reports/card-0.2.13-w246/summary.json')
+    if CARD_VERSION == 'card 0.2.15':      # 0.2.15：usage 檔是用 card-0.2.15-w246 建的
+        usrc = 'card-0.2.15-w246'
+        usumm = load_json(ROOT / 'reports/card-0.2.15-w246/summary.json')
     if CARD_VERSION == 'card 0.2.12b':
         usrc = 'card-0.2.12-tov'
         usumm = load_json(ROOT / 'reports/card-0.2.12-tov/summary.json')
@@ -1349,7 +1366,7 @@ def main():
     pbp_files = sorted(p.stem for p in (DATA26 / 'pbp').glob('*.json'))
     games = sorted({r['GAME_ID'] for r in sd26['teamRows']})
     meta = {
-        'version': VERSION, 'cardMode': CARD_MODE, 'e064Mode': E064_MODE, 'e064Anchors': anc064, 'e064RRepl': r_repl064, 'negMin': ({'arm': 'A2-15-R', 'ms': NEG_MIN_MS, 'PR1': NEG_MIN_PR1} if NEG_MIN else None), 'gameAnchor': GAME_ANCHOR,
+        'version': VERSION, 'cardMode': CARD_MODE, 'e064Mode': E064_MODE, 'e064Anchors': anc064, 'e064RRepl': r_repl064, 'negMin': ({'arm': 'A2-15-R', 'ms': NEG_MIN_MS, 'PR1': NEG_MIN_PR1} if NEG_MIN else None), 'gameAnchor': GAME_ANCHOR, 'crtpnr': ({'frozen': 'live/crtpnr-pool-card0215.json', 'a': 0.5, 'note': 'creation 欄＝持球進攻（E-303 MRG5）：z＝(z_crt＋z_pnr)/√(2+2r) → 0–99（PctMapper，頂端尾巴同 3PT）'} if CRTPNR else None),
         'e064MpgNoDataPlayers': len(mpg_nodata), 'priorCard': CARD_VERSION, 'dataCutoff': cutoff,
         'dataFirstDate': min(r['GAME_DATE'] for b in sd26['box'].values() for r in b['rows']),
         'games': len(games), 'pbpGames': len(pbp_files), 'missingPbp': sorted(set(games) - set(pbp_files)),

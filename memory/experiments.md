@@ -2854,8 +2854,8 @@
 - 做法：預註冊 `reports/E303-crt-pnr-merge/preregistration.md`（commit 17abb0a，R-165）。E-255／E-258 的 LineupNet 框架，players json 用 G50，pnr 固定 w＝0.5。臂：BOTH（現行，沿用 E-258 G50 W05）、NOPNR（沿用 E-255 T0）、NOCRT、MRG3／5／7（合成一欄，擋拆權重 a）。主指標 cross_test pts100 MSE ≤ 2σ_seed(BOTH)（1.00）；沒弄壞條件是 M2 − BOTH ≥ −0.005。5090 `experiments/e303/`。
 - 結果：五臂都過 cross_test，差距都在雜訊內（−0.19～+0.52）。只留一欄時 M2 掉 0.007：只留 CRT 是 0.1888→0.1818，只留 PNR 是 0.1821，兩種都不過。合併臂全過：MRG5 的 M2 是 0.1897（+0.001），cross 是 −0.03，test net MSE 從 10905.7 降到 10902.3；MRG7 是 0.1880，MRG3 是 0.1862。依預註冊選 MRG5。
 - 結論：4/5，建議合併成一欄（各半），不要只留一個，因為拿掉任何一欄，下季進攻預測都會掉約 0.007。下一步（R-178 分步）：卡片和賽中改成一欄後全部係數重擬合，跑 R-109 名次檢查，網站 CRT／PNR 合成一格，頂端尾巴照 3PT。`reports/E303-crt-pnr-merge/results.json`
-- 狀態：完成；MRG5 是 adopt_candidate（待使用者裁定；未稽核）
-- 相關：E-255、E-258、E-190、R-130、R-173、R-178、R-165
+- 狀態：採用（2026-11-10、R-191，card／inseason 0.2.15；未稽核）
+- 相關：E-255、E-258、E-190、R-130、R-173、R-178、R-165、R-191
 
 ## E-304 新秀五位置標籤（2026-11-10）
 - 問題：使用者問 Boozer 雙十卻 OVR 68、新秀位置是否扣分。診斷：Boozer 不是位置問題（SF 67.5／PF 66.3／C 66.3），但新秀只有身高三段 G／F／C → SG／SF／C，沒有新秀會被當 PG／PF；老將是五位置（F-033）。

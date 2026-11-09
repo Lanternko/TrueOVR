@@ -1,0 +1,198 @@
+{
+ "version": "card 0.2.15",
+ "base": "card 0.2.15-base（reports/card-0.2.15-base/，係數 card-0.2.15-w246）；MIX 加分底同 card 0.2.14c（mix-pool-card0214b.json cardBonus×min(1,W(mpg))）",
+ "players": 582,
+ "change": "E-303 MRG5（使用者 2026-11-10「合併做進卡片」）：CRT＋PNR 合成一個能力值「持球進攻」（creation 欄，顯示縮寫 CRT）；pnr 不再是獨立特徵；全部係數 W246 重擬合；MIX 加分疊法同 0.2.14c。",
+ "anchors": {
+  "PR1": -0.7618,
+  "PR50": 1.0087,
+  "PR90": 2.1291,
+  "PR95": 2.5839,
+  "PR99": 4.0129
+ },
+ "ovr_map": {
+  "function": "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py:ovr_map",
+  "A_PR90": 88.0,
+  "B_PR95": 92.0
+ },
+ "ovr_changed": "ovr = round(ovr_base0215 + cardBonus×min(1,W(mpg)), 1)；rank 依新 ovr 重排、同分依底卡名次",
+ "pool_90_99": 22,
+ "pool_ge99": 5,
+ "build_command": "python -I -B -X utf8 reports/card-0.2.15/build_card_0215.py",
+ "ranking_csv_sha256": "4d03ec7a50e6532e2a3e2640786060de77f425d99561eb747fdf8d88f3ab38c5",
+ "three_value_csv_sha256": "0e3ef0c040deb5104c36e99e7e4cb43e8338128bf7d33724b13a4e1f666ff623",
+ "three_value_source": "reports/card-0.2.10j/three-value.csv",
+ "win_len": 246,
+ "anchor_source": "reports/card-0.2.15-w246/work/pre-W246/ranking.csv gRepl, MIN>=500, qf（gRepl 4 位小數）",
+ "mix": {
+  "config": {
+   "lambda": 0.5,
+   "sd": 13.406247107921262,
+   "ref": 0.444847369395445,
+   "clip": [
+    0.0,
+    1.5
+   ],
+   "rampMin": 500.0,
+   "blendK": 500.0,
+   "conMinPrior": 200.0,
+   "z": {
+    "rebound": {
+     "mu": 70.94300791556729,
+     "sd": 17.317021456168316
+    },
+    "orebPct": {
+     "mu": 0.04652242744063325,
+     "sd": 0.033799211531870585
+    },
+    "drebPct": {
+     "mu": 0.12901055408970977,
+     "sd": 0.04881989834445755
+    },
+    "con2_36": {
+     "mu": 3.8409042086225194,
+     "sd": 2.362990623973127
+    }
+   },
+   "scales": {
+    "reb": 1.0519290949264455,
+    "con": 1.0387012877560997,
+    "mix": 1.1236193476061815
+   }
+  },
+  "w1": {
+   "alpha": 0.5,
+   "hi": 1.5,
+   "posOrder": [
+    "PG",
+    "SG",
+    "SF",
+    "PF",
+    "C"
+   ],
+   "posWeight": [
+    0.0,
+    0.0,
+    0.0,
+    0.24285714285714288,
+    1.0
+   ],
+   "mpos": {
+    "rebound": [
+     -0.8494663481589968,
+     -0.6502967014315024,
+     -0.1786149023184556,
+     0.43986574645020077,
+     1.187425283488879
+    ],
+    "orebPct": [
+     -0.6573071458266629,
+     -0.48923812786013576,
+     -0.29292295458878354,
+     0.07628207290475192,
+     1.3082798558415036
+    ],
+    "drebPct": [
+     -0.6587212710096716,
+     -0.5917662803810545,
+     -0.27781717757985347,
+     0.2678619042301851,
+     1.2081994698179324
+    ],
+    "con2_36": [
+     -0.726954644880939,
+     -0.518113552542023,
+     -0.35271058046370213,
+     0.06279245199876683,
+     1.4727874101424026
+    ]
+   },
+   "heightRange": [
+    70,
+    91
+   ],
+   "heightPriorRule": "卡片 2025-26 BBRef MP≥200 的人（含別名），|身高−h|≤1 吋 π 平均（不足 15 人放寬到 ±2、±3…）；賽中身高四捨五入到整數吋、超出 70–91 取端點",
+   "mposPool": "card 0.2.13a MIN>=500 且姓名在 stats-2025-26 唯一（同 epN），以 π 加權的 z_L 平均",
+   "shrinkMP": 200.0
+  },
+  "frozen": "reports/ovr-inseason-2026-27/live/mix-pool-card0214b.json",
+  "frozen_sha256": "6c854891f9cdeffc7713fe9ea04e655be248334eb2a3ddf88c0d95ec2643778f",
+  "base_frozen_sha256": {
+   "mix-pool-card0214a.json": "d4c0fb9c3f418f867bd65595658fe0e265cbc87bf85671cc9568e317882ca99f"
+  },
+  "bonus_population": {
+   "MIN>=500 非零": 193,
+   "MIN<500 非零": 108,
+   "零": 281
+  },
+  "bonus_max": 9.905,
+  "share_source_counts": {
+   "2025-26": 465,
+   "2025-26+shrink": 117
+  },
+  "aliases": [
+   {
+    "bbref_id": "hollaro01",
+    "bbref_name": "Ron Holland",
+    "card_name": "Ronald Holland II",
+    "playerId": "1641842",
+    "note": "audit-0.2.14b 必修 1：BBRef 名字寫法不同（E177 對名 none）"
+   },
+   {
+    "bbref_id": "scotttr01",
+    "bbref_name": "Tre Scott",
+    "card_name": "Trevon Scott",
+    "playerId": "1630286",
+    "note": "同上"
+   },
+   {
+    "bbref_id": "balad01",
+    "bbref_name": "Adama-Alpha Bal",
+    "card_name": "Adama Bal",
+    "playerId": "1642380",
+    "note": "同上"
+   }
+  ],
+  "aliasBonusChange": {
+   "Adama Bal": {
+    "cand": 0.0,
+    "new": 0.0
+   },
+   "Ronald Holland II": {
+    "cand": 0.28,
+    "new": 0.19704448201811697
+   },
+   "Trevon Scott": {
+    "cand": 0.095,
+    "new": 1.2752404258103458
+   }
+  },
+  "cand_max_abs_except_alias": 0.014000000000000234,
+  "cand_worst_except_alias": "Nic Claxton"
+ },
+ "source_cand": {
+  "summary": "reports/card-0.2.14b-cand/summary.json",
+  "ranking_csv_sha256": "5cbd7e190d2ce6311234a67a4d00201275dd198c806801a247a926ccbed4feab",
+  "sources_sha256": {
+   "card_0213a_ranking": "feb5c8023cd99f12413767160d3b98d119051c55ef6e200f26bca631460daf97",
+   "card_0214a_ranking": "ff1abb4722247faf3cd61c6cc28dcc547f2728e08486a3123b33747162b7d35f",
+   "E295_bonus_pick": "446cc0ebee135b1525921419f7aa6b814810248b5dc459f1114a51172e2c6465",
+   "E295_preregistration": "d7ba937b6dbd5537410e648d96dbb150111379e0e74973ae17d5c4a63f7a0b14",
+   "E295_results": "5d109f6883d36c0d30883d1a13ea275314afb8d65c51a80b5deb3d18343c199e",
+   "E295_errata1": "a336f2197f67d099e784cab0fd636408840a31891a40b9025504c98463254aef",
+   "mix_pool_cand": "13c1d3d012b7db1e834b8d4d42d767e630642e52535dfc006aaf4b82a6967876"
+  }
+ },
+ "audit": "reports/audit-0.2.14b/report.md（4/5 建議採用）",
+ "card_0213a_ranking_csv_sha256": "feb5c8023cd99f12413767160d3b98d119051c55ef6e200f26bca631460daf97",
+ "card_0214a_ranking_csv_sha256": "ff1abb4722247faf3cd61c6cc28dcc547f2728e08486a3123b33747162b7d35f",
+ "crtpnr": {
+  "tail_csv": "reports/card-0.2.15-fit/tail-W246full-crtpnr.csv",
+  "tail_sha256": "85e51f33ec26f7209f62f3fe4ed501b14d3a4392f179f00184058c78c6f78847",
+  "frozen": "reports/ovr-inseason-2026-27/live/crtpnr-pool-card0215.json",
+  "frozen_sha256": "2250ed2fd1b4a0da666622422e0ca57b4c77b82ff6afa6d40da6b55778b28d88"
+ },
+ "crt_attr_csv_sha256": "17b5caec1ef7453238ea97197e20999cc62f092f43cb74a4a251134df214f2cc",
+ "base_ranking_csv_sha256": "71fe432ded3b4dc464cd248a522902a6665e39571010bd32ff22392f1f4a4bc9",
+ "card_0214c_ranking_csv_sha256": "472f8f1f8215e7f57aa5e75d56ed67f4250f4b16e5742e49ed7e83818f63d856"
+}

@@ -340,7 +340,7 @@ function ensure(){
    資料直接讀名單頁的全域 P（能力值、off/def）與 REAL（NBA 球員 id）；找不到的人不給點 */
 const PC_TIERS=[[100,5,'pink','粉鑽'],[90,4,'gold','霧金'],[80,3,'violet','霧紫'],[70,2,'ice','霧藍'],[-1e9,1,'steel','霧銀']];
 const PC_GROUPS=[['進攻',[['threeValue','3PT','三分'],['mid','MID','中距離'],['short','INS','近框'],['ft','FT','罰球'],['gravity','GRV','引力'],['foulDraw','FD','製造犯規']]],
- ['組織',[['pass','PASS','傳球'],['creation','CRT','自主創造']]],
+ ['組織',[['pass','PASS','傳球'],['creation','CRT','持球進攻']]],
  ['球權',[['rebound','REB','籃板'],['tovSkill','TO','少失誤'],['pressure','PRES','壓迫']]],
  ['防守',[['onBall','PER D','單防'],['help','RIM','護框']]]];
 const PC_SIL='<svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="78" r="42" fill="#fff"/><path d="M20 260c0-62 32-100 80-100s80 38 80 100z" fill="#fff"/></svg>';

@@ -113,6 +113,9 @@ def load_ns():
                  (RK.OLD_LAST, RK.NEW_LAST), (RK.OLD_D, RK.NEW_D)):
         assert src.count(o) == 1, o
         src = src.replace(o, n)
+    if RK.CRTPNR:   # 0.2.15：creation 換成持球進攻（卡片路線沒有 vet_pnr → 擋拆 raw 用凍結卡片值）
+        assert src.count(RK.OLD_W8) == 1
+        src = src.replace(RK.OLD_W8, RK.NEW_W8)
     if RK.PD.ON:
         assert src.count(RK.OLD_PRES) == 1 and src.count(RK.OLD_META) == 1
         src = src.replace(RK.OLD_PRES, RK.NEW_PRES).replace(RK.OLD_META, RK.NEW_META)

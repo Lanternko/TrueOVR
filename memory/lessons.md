@@ -246,6 +246,14 @@
 - 對應測試或關卡：上線前對每個改過的 .py 跑 py_compile，並跑一次 `ovr_history.py --day <早期日> <暫存夾>`
 - 相關：L-148、L-149、R-190
 
+### L-151
+- 日期：2026-11-10
+- 規則：`run_c4_live.py` 加新版號開關時，設 VERSION／CARD_VERSION 的區塊一律放在整條版號鏈的最後；放中間會被後面「舊開關沒開就退回舊版號」的行蓋掉，接著讀錯卡片目錄。改完把各開關組合逐一 exec 一次，印出版號核對。
+- 細節：0.2.15 的 CRTPNR 區塊原本插在 MIX／NEG_MIN 那幾行前面，卡片路線（MIX_BONUS=0）被 `if PNR_FIX and not MIX_BONUS` 蓋回 card 0.2.13a，route 讀 card-0.2.13-w246 而 KeyError。頂端字面值換新版時，關掉新開關要有 else 退回舊版號，否則 CRTPNR=0 會掛著新版號。
+- 由來：card／inseason 0.2.15（R-191）
+- 對應測試或關卡：`test/live_current_gate.py`（頂端字面值＝CURRENT.json）＋上線前開關組合版號表
+- 相關：L-150、R-191
+
 ## 預註冊
 
 ### L-041

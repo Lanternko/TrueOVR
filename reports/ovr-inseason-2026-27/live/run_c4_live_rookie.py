@@ -41,8 +41,13 @@ if not PNR and ROOKIE_JSON == HERE / 'rookie-prior-2026.json':
 NEG_MIN_ON = all(os.environ.get(k, '1') != '0' for k in ('PNR_FIX', 'MIX_BONUS', 'MIX_H', 'MIX_W1', 'MIX_MIN', 'NEG_MIN'))   # 同 run_c4_live.NEG_MIN 的開關鏈
 if not NEG_MIN_ON and ROOKIE_JSON == HERE / 'rookie-prior-2026.json':   # 0.2.14d（R-190）改了低分端映射、δ 重解（L-109）；NEG_MIN=0 回 0.2.13～0.2.14c 的起點
     ROOKIE_JSON = HERE / '_retired/rookie-prior-2026-0214c.json'
+CRTPNR = all(os.environ.get(k, '1') != '0' for k in ('PNR', 'PNR_FIX', 'CRTPNR'))   # 0.2.15（E-303 MRG5）：同 run_c4_live.CRTPNR；creation 欄＝持球進攻合成（live/crtpnr_live.py）
+if NEG_MIN_ON and not CRTPNR and ROOKIE_JSON == HERE / 'rookie-prior-2026.json':   # 0.2.15 改了係數、δ 重解（L-109）；CRTPNR=0 回 0.2.14d 的起點
+    ROOKIE_JSON = HERE / '_retired/rookie-prior-2026-0214d.json'
 if PNR:
     import pnr_live as PNL  # noqa: E402
+if CRTPNR:
+    import crtpnr_live as CPL  # noqa: E402
 if GRAVITY:
     import gravity_live as GV  # noqa: E402
 if TOV_POSS:
@@ -68,6 +73,9 @@ NEW_D = "                    '_ovr': p['ovr'], '_d': p['ovr'] - refw[pid]['ovr']
 OLD_A = "    o1 = pw.predict(a1)\n"
 NEW_A = "    _E116.swap_bonus(pw, 'frozen')\n" + OLD_A + "    _E116.swap_bonus(pw, 'live')\n"
 # 2026-11-01 壓迫、切入解凍（只在 UNFREEZE_PD=1 時替換）：presDisplay 欄改讀窗口值、meta 的 frozenAttrs 拿掉這兩項
+# 0.2.15（CRTPNR）：8 項／long／creation 換成窗口值之後，creation 換成持球進攻合成（crt_merge）；pnr 已由 vet_pnr 算好
+OLD_W8 = "    n_win8 = win8_override(attrs)\n"
+NEW_W8 = OLD_W8 + "    _E116.crt_merge(attrs)\n"
 OLD_PRES = "            row.update({'presDisplay': pc.get('presDisplay', ''), 'foulDisc': pc.get('foulDisc', '')})\n"
 NEW_PRES = "            row.update({'presDisplay': _E116.pres_display(pid, pc), 'foulDisc': pc.get('foulDisc', '')})\n"
 OLD_META = "        'frozenAttrs': frozen + list(IC.FROZEN_ATTRS), "
@@ -91,6 +99,9 @@ def load_ns():
     assert all(src.count(o) == 1 for o in (OLD_REF, OLD_LAST, OLD_D)), 'run_c4_live.py 的 ref／lastOVR 行對不上'
     src = src.replace(OLD_LINE, NEW_LINE).replace(OLD_DEF, NEW_DEF).replace(OLD_A, NEW_A)
     src = src.replace(OLD_REF, NEW_REF).replace(OLD_LAST, NEW_LAST).replace(OLD_D, NEW_D)
+    if CRTPNR:
+        assert src.count(OLD_W8) == 1, 'run_c4_live.py 的 win8_override 行對不上'
+        src = src.replace(OLD_W8, NEW_W8)
     if PD.ON:
         assert src.count(OLD_PRES) == 1 and src.count(OLD_META) == 1, 'run_c4_live.py 的 presDisplay／frozenAttrs 行對不上'
         src = src.replace(OLD_PRES, NEW_PRES).replace(OLD_META, NEW_META)
@@ -104,6 +115,15 @@ def load_ns():
 
 # ------------------------------------------------------------------ 新秀計算
 def xhat_of(ns, x0, k, rec, arm, rel, dfn=None):
+    out, ws, ns_ = _xhat_of(ns, x0, k, rec, arm, rel, dfn)
+    if CRTPNR:   # 0.2.15：creation（C4 更新後的自主創造）＋擋拆 raw（本季值；本季 0 場＝2025 屆新秀中位數 raw）→ 持球進攻
+        raw = dfn['pnrRaw'] if dfn and dfn.get('pnrRaw') is not None else CPL.rookie_raw_p0()
+        m = CPL.merge(out['creation'], raw)
+        out['crtRaw'], out['creation'] = out['creation'], m['crtpnr']
+    return out, ws, ns_
+
+
+def _xhat_of(ns, x0, k, rec, arm, rel, dfn=None):
     """回傳 (xhat {15 項}, w {項: w}, 取樣 n {項: n})。arm：e116（k=σ²/τ²）、frozen（k=50·nRef）、own（w=1）。
     dfn：rookie_defense.inseason() 的這個人（{'onBall','help','n3','nRim'}）；有值就直接取代 onBall／help（w=1）。"""
     C, F, IC, SA = ns['C'], ns['F'], ns['IC'], ns['SA']
@@ -260,6 +280,9 @@ def window_ref(attrs0, posmap, pw, c):
                     x[a] = v[a]
         if int(pid) in d0:
             x.update(d0[int(pid)])
+    if CRTPNR:   # 0.2.15：基準的擋拆 raw＝同一個 c、不讀本季（pnr_live.live cur=False）
+        pv0, _ = PNL.live(c, NS['ns']['DATA26'], list(base), cur=False)
+        crt_merge(base, {p: v['raw'] for p, v in pv0.items()}, side=False)
     swap_bonus(pw, 'base')
     REF_W.clear()
     REF_W.update(pw.predict(base))
@@ -356,6 +379,30 @@ def vet_pnr(c, attrs, prior_cards):
     print(f"擋拆（pnr）：權重 {info['weights']}，本季檔 {info['cur'].get('n')} 人，更新 {n} 人，來源 {info['src']}", file=sys.stderr)
 
 
+CRTD = {}               # 0.2.15：{pid: {'crt','pnr','pnrRaw','crtpnr','zCrt','zPnr','src'}}（老將；新秀在 write_outputs 補）
+
+
+def crt_merge(attrs, raw_of=None, side=True):
+    """0.2.15：attrs 的 creation（窗口值）換成持球進攻＝crtpnr_live.merge(creation, 擋拆 raw)。
+    raw_of 預設＝vet_pnr 的 PNRD（四季窗口含本季）；沒有的人退回凍結卡片 raw，再沒有（復出老將無擋拆資料）只用 creation。冪等性：只能呼叫一次。"""
+    F = CPL.frozen()
+    if raw_of is None:
+        raw_of = {p: v['raw'] for p, v in PNRD.items()}
+    if side:
+        CRTD.clear()
+    for pid, x in attrs.items():
+        r = raw_of.get(pid)
+        src = 'window'
+        if r is None and pid in F['card']:
+            r, src = F['card'][pid]['pnrRaw'], 'card'
+        if r is None:
+            src = 'crt-only'
+        m = CPL.merge(float(x['creation']), r)
+        if side:
+            CRTD[pid] = {'crt': float(x['creation']), 'pnr': x.get('pnr'), 'pnrRaw': r, 'crtpnr': m['crtpnr'], 'zCrt': m['zCrt'], 'zPnr': m['zPnr'], 'src': src}
+        x['creation'] = m['crtpnr']
+
+
 def pres_display(pid, pc):
     v = PD_VET.get(pid)
     return round(v['presDisplay'], 1) if v and v.get('presDisplay') is not None else pc.get('presDisplay', '')
@@ -432,7 +479,7 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
         for rk in rookies:
             v = PNRD.get(rk['playerId'])
             if v is not None and v['src'] != 'rookie-p0':
-                dfns.setdefault(rk['playerId'], {}).update(pnr=v['pnr'], pnrPoss=v['poss'])
+                dfns.setdefault(rk['playerId'], {}).update(pnr=v['pnr'], pnrPoss=v['poss'], pnrRaw=v['raw'])
     _, coef, _ = g['load_usage']()
     dl = {int(r['playerId']): r for r in csv.DictReader(open(DEF_L_LIVE, encoding='utf-8'))}
     bad = team_badness(sd26)
@@ -506,6 +553,17 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
         json.dump({'meta': GRAV_INFO, 'players': {str(p): v for p, v in GRAV.items()}}, open(out_dir / 'gravity.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     if PNR:         # 檢視器 PNR tooltip 用：窗口後的擋拆回合、每 36 分鐘回合、每回合得分、來源
         json.dump({'meta': PNR_INFO, 'players': {str(p): v for p, v in PNRD.items()}}, open(out_dir / 'pnr.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    if CRTPNR:      # 0.2.15 檢視器 CRT（持球進攻）tooltip 用：自主創造、擋拆持球兩個分量（能力值與池內百分位）
+        side = {}
+        for pid, v in CRTD.items():
+            side[str(pid)] = dict(v, src='veteran-' + v['src'])
+        for r in rk_rows:
+            x = r['_cur']['x']
+            side[str(r['playerId'])] = {'crt': x['crtRaw'], 'pnr': x.get('pnr'), 'crtpnr': x['creation'], 'src': 'rookie'}
+        for v in side.values():
+            v['crtPct'] = CPL.pct('crtPool', v['crt'])
+            v['pnrPct'] = CPL.pct('pnrPool', v['pnr']) if v.get('pnr') is not None else None
+        json.dump({'meta': {'frozen': CPL.FROZEN.name, 'a': CPL.A}, 'players': side}, open(out_dir / 'crt.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     if PD.ON:       # 檢視器 PRES tooltip 用：窗口後的收縮分量（老將）／本季分量（有上場的新秀）
         played = {r['playerId'] for r in rk_rows if r['N'] > 0}
         side = {'meta': PD_INFO, 'players': {}}
@@ -513,7 +571,8 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
             for pid, v in d.items():
                 if 'shr' in v:
                     side['players'][str(pid)] = {'src': src, 'pressure': v['pressure'], 'presDisplay': v['presDisplay'],
-                                                 'drive': v.get('drive'), 'force': v['force'], 'minW': v['minW'], 'shr': v['shr']}
+                                                 'drive': v.get('drive'), 'force': v['force'], 'minW': v['minW'], 'shr': v['shr'],
+                                                 'deflP': v.get('deflP'), 'deflPposs': v.get('deflPposs')}   # 隱藏欄位（E-251），檢視器不讀
         json.dump(side, open(out_dir / 'pres-drive.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 
