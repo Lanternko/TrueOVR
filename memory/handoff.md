@@ -3,12 +3,12 @@
 只記「目前狀態」，每次收工整份覆寫，不往下追加日期段。每條最多兩行，細節寫進 findings／experiments／rulings 或報告檔，這裡只放 ID 與路徑。UI 小改不進本檔（看 git log）。舊版全文在 `archive/`（最近一份 `handoff-2026-11-09-full.md`）。
 **多個 session 同時改本檔與工作樹**：覆寫前先重讀一次，只改自己負責的條目。
 
-- **更新**：2026-11-10 inseason 0.2.14d 上線（R-190，E-302 MR：A2-15-R＋近況）；E-302 能力值錨點對 OVR 錨點（4/5）；card／inseason 0.2.14c 上線（R-188，E-300 M）；11-09 E-296／E-299、0.2.14b（R-187）；更早的見 git log 與 `archive/handoff-2026-11-09-full.md`。
+- **更新**：2026-11-10 E-304 新秀五位置（4/5）；inseason 0.2.14d 上線（R-190）；card／inseason 0.2.14c（R-188）；更早的見 git log 與 `archive/handoff-2026-11-09-full.md`。
 
 ## 目前基準（線上）
 - **inseason 0.2.14d**（11-10，R-190，未稽核；卡仍 card 0.2.14c）：E-302 MR＝D<0 分鐘修正 A2-15-R（`run_c4_live.g_of`）＋近況（`live/game_anchor.py`，名單頁 FORM 欄）。新秀 δ 重解（L-109）。回退 `NEG_MIN=0`＝0.2.14c、`GAME_ANCHOR=0` 只關近況。已知：lastOVR 低分端跟著變（Yang 49.2→41.2），卡沒重產。
 - **card／inseason 0.2.14c**（11-10，R-188）：0.2.14b＋MIX 加分×min(1,W(MPG))（OVR 主體分鐘曲線，賽中用 MPGhat）。卡 `reports/card-0.2.14c/`；回退 `MIX_MIN=0`＝0.2.14b、`MIX_W1=0`＝0.2.14a、`MIX_H=0`＝0.2.14、`MIX_BONUS=0`＝0.2.13a（沿革 R-185～R-188）。
-- **inseason 0.2.12e**（11-04，已 commit）：復出老將補卡（R-161）＋新秀起點加季前賽位移（R-162）＋防守 D 個人場次軸（R-163）＋復出老將補進用人層 hi（R-164）。未修：復出老將 gravity＝70 佔位（L-127）。回退 `DEF_AXIS=calendar`、`RV_USAGE=0`、`RETURNING_VETS=0`、`PS_START=0`。
+- **inseason 0.2.12e**（11-04）：復出老將補卡（R-161）＋新秀起點加季前賽位移（R-162）＋防守 D 個人場次軸（R-163）＋復出老將補進用人層 hi（R-164）。未修：復出老將 gravity＝70 佔位（L-127）。回退 `DEF_AXIS=calendar`、`RV_USAGE=0`、`RETURNING_VETS=0`、`PS_START=0`。
 - **追蹤量格子**（R-166，11-05）：DRV／INS／CRT／PASS／3PT 提示卡加量類追蹤列，不進分數。`scripts/tracking_cells.py`；2026-27 資料是手動快照，重抓 `node scripts/fetch_tracking_cells.mjs <季> data/tracking-cells/<季>` 後重建頁面。
 - **賽中近期加成 b=3、h=20**（R-150）；**card／inseason 0.2.12**（R-139，tovSkill 看持球時間）；**0.2.11**（R-137，引力 gravity）。回退旗標 `RECENT_BOOST=0`、`TOV_POSS=0`、`GRAVITY=0`。
 - **網站**：trueovr.com；首頁 2026-27、`2025-26.html`；排行／賽程用乾淨路徑 `/rank/`、`/games/`。只改 UI 用 `python -I scripts/daily_inseason_update.py --shell` 立刻發布；每日排程 14:30／16:30＋22:30（registry `basketball-inseason-daily`）。OVR 折線 `ovr_history.py` 平行＋5090 分攤，歷史日去洩漏（L-134）。能力值說明在 `season_nav.py` 的 `ATTR_TIPS`；新格子提示用 `sn.cell_tip()`。
@@ -16,7 +16,8 @@
 - **模擬 sim 0.1.3**（R-120）；防守 `nba-defense-v3`（R-010）；賽中 OVR C4（E-033）。
 
 ## 進行中（未稽核，待派 role-audit）
-- **防守三步（R-178、L-137）**：① `help` 位置係數改 PG→C 遞增（現行 U 字形 PG .43／SG .01／SF .03／PF .37／C .29）→ ② 干擾／抄截／蓋帽獨立定係數 → ③ `DEF` 顯示對齊 T／EPM／加權。驗收看結構＋代表球員＋EPM／T 對齊＋OVR 不壞，不拿單季防守 RAPM 單一否決。**第一步 E-277 完成（採用 M1）**：help 斜率變兩層台階 PG≈SG≈SF＜PF≈C，OVR ΔR² −0.004 在雜訊內；Durant 只升 20 名。使用者採用 M1（R-179）。**第二步 E-278 完成（2/5 無候選）**：2025-26 蓋帽係數翻負／歸零 S1 不過；抄截四原點穩定為正、干擾≈0；只加蓋帽臂 DEF 對 EPM 防守 +0.030 但缺 S1。**E-280 蓋帽每 SD 0.3 已採用（R-180）**；E-281 拿掉 pressure 不採用、干擾不進。E-282 抄截只宜 0.1（3/5）；E-283 拆 pressure 分量、E-284 有球／無球犯規，自由擬合都全面變差，保留合成 pressure。E-285 T 加逼失誤／犯規：stint MSE −2.6 但 E-286 跨季球隊評分兩季都變差（Brier +0.0027），X 版不進球隊評分；E-287 OFF/DEF 各混 0.5 T 已上線（R-181，每日 t_swap_live）。待裁定抄截 0.1，之後第三步。`reports/E280-blk-weight/report.md`E-274～E-276、E-269 舊結論（D0 ρ 0.422 最高）依 R-178 不再當否決依據。`reports/E276-def-stl-blk-defl/report.md`
+- **防守三步（R-178、L-137）**：① `help` 位置係數改 PG→C 遞增（現行 U 字形 PG .43／SG .01／SF .03／PF .37／C .29）→ ② 干擾／抄截／蓋帽獨立定係數 → ③ `DEF` 顯示對齊 T／EPM／加權。驗收看結構＋代表球員＋EPM／T 對齊＋OVR 不壞，不拿單季防守 RAPM 單一否決。**第一步 E-277 完成（採用 M1）**：help 斜率變兩層台階 PG≈SG≈SF＜PF≈C，OVR ΔR² −0.004 在雜訊內；Durant 只升 20 名。使用者採用 M1（R-179）。**第二步 E-278 完成（2/5 無候選）**：2025-26 蓋帽係數翻負／歸零 S1 不過；抄截四原點穩定為正、干擾≈0；只加蓋帽臂 DEF 對 EPM 防守 +0.030 但缺 S1。**E-280 蓋帽每 SD 0.3 已採用（R-180）**；E-281 拿掉 pressure 不採用、干擾不進。E-282 抄截只宜 0.1（3/5）；E-283 拆 pressure 分量、E-284 有球／無球犯規，自由擬合都全面變差，保留合成 pressure。E-285 T 加逼失誤／犯規：stint MSE −2.6 但 E-286 跨季球隊評分兩季都變差（Brier +0.0027），X 版不進球隊評分；E-287 OFF/DEF 各混 0.5 T 已上線（R-181，每日 t_swap_live）。待裁定抄截 0.1，之後第三步。`reports/E280-blk-weight/report.md``reports/E276-def-stl-blk-defl/report.md`
+- **E-304 新秀五位置**（11-10，4/5）：新秀改老將位置規則 S5，標籤錯誤 0.53→0.19；待選 S5 或 W5（連續）後上線。`reports/E304-rookie-five-pos/report.md`
 - **E-303 CRT／PNR 合併**（11-10，4/5）：只留一欄 M2 −0.007；各半合一欄（MRG5）非劣，待使用者裁定後卡片重擬合＋R-109＋網站合格。SPOT／CUT 頂端尾巴已改 `offball_cells.py`（未發布）。
 - **E-298／E-300 主力權重**（11-10）：E-300 M 已上線（0.2.14c），未稽核；對手籃板修正量太小不上。RW3（live 63）仍高於 Avdija（75）：每 36 分換算＋小樣本防守意識，另案。`reports/E300-mix-minutes-opp/report.md`
 - **E-296／E-299／E-302 單場→OVR**（11-10）：MR 已上線（0.2.14d）；能力值加快無效（F-179）。Yang 剩下的扣分來自卡片中鋒係數，接 E-299 C 非負係數（需卡片鏈重跑）。`reports/E302-attr-anchor/report.md`
