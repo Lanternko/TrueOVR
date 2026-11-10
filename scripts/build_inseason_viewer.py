@@ -22,6 +22,7 @@ import attr_cell_tips as AT  # noqa: E402
 import blend_display as BD  # noqa: E402
 import tracking_cells as TC  # noqa: E402
 import offball_cells as OB  # noqa: E402
+import rim_blk_live as RB  # noqa: E402
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'reports/impact-epm-2026-27'))
 import epm_live  # noqa: E402
 from build_card_viewer import (onball_rows, onball_tip, pres_tip, pres_tips, tov_tip,  # noqa: E402
@@ -282,6 +283,9 @@ def main():
             r['ft'] = repr(round(sn.display_scale(b['ft']), 1))
         if 'threeValue' in b:
             r['threeValue'] = repr(round(sn.display_scale(b['threeValue']), 1))
+    # E-305 D30（R-193）：RIM 欄顯示 0.7·z(help)＋0.3·z(每 36 蓋帽)，每天用當天資料重算；只改顯示，OVR／OFF／DEF 已用原 help 算完。RIM_BLK=0 退回
+    rb = RB.compute({int(r['playerId']): float(r['help']) for r in rows if r['help'] != ''}, ipool, meta['window8']['gamesDone'], meta['dataCutoff'], SRC26)
+    print(f'RIM 加蓋帽：{RB.apply(rows, rb, lambda r: int(r["playerId"]))} 人', file=sys.stderr)
     for r in rows:
         num = lambda k: float(r[k])
         # E-116 新秀先驗列沒有 threeValue／presDisplay／foulDisc（無上季卡）：3PT 退回 long、PRES 退回 pressure、犯規紀律留空

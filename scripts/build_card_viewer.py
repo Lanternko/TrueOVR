@@ -27,6 +27,7 @@ import attr_cell_tips as AT  # noqa: E402
 import blend_display as BD  # noqa: E402
 import tracking_cells as TC  # noqa: E402
 import offball_cells as OB  # noqa: E402
+import rim_blk_live as RB  # noqa: E402
 
 ROOT = er.ROOT
 BASE = ROOT / 'reports/ovr-v58-card-2025-26/roster-viewer.html'
@@ -146,6 +147,10 @@ def main(out=None):
     bdisp = BD.build(wstat, True)
     rows = [dict(r, ft=repr(round(sn.display_scale(bdisp[pid_of[r['name']]]['ft']), 1)))
             if pid_of.get(r['name']) in bdisp and 'ft' in bdisp[pid_of[r['name']]] else r for r in rows]
+    # E-305 D30（R-193）：RIM 欄顯示 0.7·z(help)＋0.3·z(每 36 蓋帽)（c=0 近四季窗口）；只改顯示，OFF／DEF 已用原 help 算完。RIM_BLK=0 退回
+    rb = RB.compute({pid_of[r['name']]: float(r['help']) for r in rows if r['help'] != '' and r['name'] in pid_of},
+                    {pid_of[n] for n in pool if n in pid_of})
+    print(f'RIM 加蓋帽：{RB.apply(rows, rb, lambda r: pid_of.get(r["name"]))} 人', file=sys.stderr)
     def crt_t(name, v):   # 0.2.15 持球進攻提示卡：自主創造（近三季窗口細項）＋擋拆持球（Synergy 回合、每回合得分）
         sub, sfoot = atips.get(pid_of.get(name), {}).get('creation') or ((), ())
         psub = sn.pnr_rows(float(pa[name]['poss']), float(pa[name]['vol']), float(pa[name]['rate']), p_pool, name in pool) if name in pa else ()

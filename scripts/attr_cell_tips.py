@@ -6,6 +6,7 @@
   新賽季頁照 rookie_defense.veteran 的季權重（四季＋本季）。
 卡片頁＝2025-26 季末窗口（同 Win8.check_season_end）；新賽季頁＝已賽 gamesDone 場的窗口（同 run_c4_live）。
 Win8 名單外的人（2026-27 新秀）沒有窗口資料，不給卡。"""
+import os
 import sys
 from pathlib import Path
 
@@ -34,7 +35,8 @@ SPECS = {
                  [('自主出手', 'crj_36', '{:.1f}/36', False, None), ('佔總出手', 'crj_share', '{:.0%}', False, ('fga_36', 3.0))]),
     'rebound': ('籃板', 'REB', '在場時搶下可搶籃板的<b>籃板率</b>',
                 [('籃板率', 'reb_rate', '{:.1%}', False, None), ('籃板量', 'reb_36', '{:.1f}/36', False, None)]),
-    'help': ('護框', 'RIM', '對手在<b>籃下 6 呎內</b>的命中率比預期低多少',
+    'help': ('護框', 'RIM', '<b>70%</b> 籃下 6 呎被防命中率差 ＋ <b>30%</b> 每 36 分鐘蓋帽；下表是前者的細項' if os.environ.get('RIM_BLK') != '0'
+             else '對手在<b>籃下 6 呎內</b>的命中率比預期低多少',
              [('對手命中差', 'rim_diff', '{:+.1%}', True, ('rim_pg', 2.0)), ('護框次數', 'rim_pg', '{:.1f}/場', False, None)]),
 }
 VOL_NOTE = {'mid_36': '中距離出手', 'short_36': '近框出手', 'fta_36': '罰球', 'drive_36': '切入', 'fga_36': '出手', 'rim_pg': '護框次數'}
