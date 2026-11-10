@@ -23,6 +23,7 @@ import blend_display as BD  # noqa: E402
 import tracking_cells as TC  # noqa: E402
 import offball_cells as OB  # noqa: E402
 import rim_blk_live as RB  # noqa: E402
+import lite_cells as LC  # noqa: E402
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'reports/impact-epm-2026-27'))
 import epm_live  # noqa: E402
 from build_card_viewer import (onball_rows, onball_tip, pres_tip, pres_tips, tov_tip,  # noqa: E402
@@ -302,6 +303,7 @@ def main():
                           *((obc[int(r['playerId'])]['SPOT'], obc[int(r['playerId'])]['CUT']) if int(r['playerId']) in obc else (None, None)),
                           round(num('formBonus'), 2) if r.get('formBonus', '') != '' else 0.0])
     cols += ['off', 'def', 'gravity', 'spot', 'cutroll', 'form']   # 0.2.15：pnr 欄拿掉（併進 creation＝持球進攻）   # R-190（0.2.14d）：近況＝OVR 錨點項，已含在 OVR 裡   # E-301：無球兩格（只顯示）   # 0.2.10j：引力；0.2.13：擋拆（舊版夾沒有該欄 → null）
+    LC.augment(cols, data_rows)   # 精簡檢視的 10 個合併能力值（所有成分已是最終顯示值之後；只改顯示，spec reports/roster-lite-view）
     # ΔOVR 五色：≥+4 深綠、+1～+4 淺綠、±1 內灰、−1～−4 橘、≤−4 紅（沿用等第色）
     dcol = ("(v => v >= 4 ? 'var(--g-a)' : v >= 1 ? 'var(--g-b)' : v > -1 ? 'var(--muted)'"
             " : v > -4 ? 'var(--g-d)' : 'var(--g-f)')(p.dovr)")

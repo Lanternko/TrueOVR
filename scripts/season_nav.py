@@ -5,8 +5,8 @@ import os
 import re
 from pathlib import Path
 
-# 標籤用年份（使用者 2026-10-29；11-04 拿掉 beta）：2027＝2026-27 賽中，2026＝2025-26 正式卡
-PAGES = [('inseason', '2027', '/'), ('card', '2026', '/2025-26.html')]
+# 標籤（使用者 2026-10-29；11-04 拿掉 beta；2026-11-10 改成完整賽季「2026-27」「2025-26」）
+PAGES = [('inseason', '2026-27', '/'), ('card', '2025-26', '/2025-26.html')]
 # icon＝五格評分環、亮四格薄荷綠（使用者 2026-11-04 選 E4，取代 10-30 的金色籃球）；favicon 與版標同一張
 # 眉頭只用環（RING，不帶外框，使用者 2026-11-04「外面的框好醜」）；favicon 仍帶深底方框，在分頁列上才看得清楚
 RING = ('<g fill="none" stroke-width="9" transform="rotate(-86 32 32)">'
@@ -279,6 +279,34 @@ def patch_notes_html(now_text, current):
             "d.addEventListener('keydown',e=>{if(e.key==='Escape'){d.open=false;d.querySelector('summary').focus()}})})();</script>")
 
 
+def _lite_layout(s):
+    """表頭、群組列、列樣板、空列 colspan 改走 VIEWS（COMMON_REPLACEMENTS 裡的欄位表）：精簡／詳細各自的欄序與群組（spec §4）。"""
+    for a, b in [
+        ("""<th colspan="6"></th><th colspan="2"></th>' +
+    GROUPS.map(x => `<th class="g" colspan="${x[1].length + (x[0] === '防守' ? 1 : 0)}">${x[0]}</th>`).join('') +""",
+         """<th colspan="6"></th>' +
+    (VIEW().pre.length ? `<th colspan="${VIEW().pre.length}"></th>` : '') +
+    VIEW().groups.map(x => `<th class="g" colspan="${x[1].length}">${x[0]}</th>`).join('') +"""),
+        ("""th('ovr', 'OVR', '總評') + th('off', 'OFF', '進攻') + th('def', 'DEF', '防守');
+  for (const x of GROUPS) x[1].forEach(([k, en, zh], i) => { h += th(k, en, zh, i === 0 ? 'gl' : ''); if (k === 'help') h += th('dbon', 'DIQ', '防守意識'); });""",
+         """th('ovr', 'OVR', '總評') + VIEW().pre.map(([k, en, zh]) => th(k, en, zh)).join('');
+  for (const x of VIEW().groups) x[1].forEach(([k, en, zh], i) => { h += th(k, en, zh, i === 0 ? 'gl' : ''); });"""),
+        ("""${odc(p, 'off')}${odc(p, 'def')}
+      ${GROUPS.map(g => g[1].map(([k], j) => cell(k, p[k], j === 0, p.tips && p.tips[k] ? k : null)).join('')).join('')}${diq(p)}""",
+         """${VIEW().pre.map(([k]) => vcell(k, p[k], false, p.tips && p.tips[k] ? k : null)).join('')}
+      ${VIEW().groups.map(g => g[1].map(([k], j) => k === 'dbon' ? diq(p) : vcell(k, p[k], j === 0, p.tips && p.tips[k] ? k : null)).join('')).join('')}"""),
+    ]:
+        assert s.count(a) == 1, a
+        s = s.replace(a, b)
+    # 出場群組：精簡只剩 MPG 一欄，標題留空
+    s, n = re.subn(r"'<th class=\"g\" colspan=\"(\d+)\">出場</th></tr>';",
+                   lambda m: "(st.view === 'lite' ? '<th class=\"g\"></th>' : '<th class=\"g\" colspan=\"%s\">出場</th>') + '</tr>';" % m.group(1), s)
+    assert n == 1
+    s, n = re.subn(r'colspan="\d+" class="empty"', lambda m: 'colspan="\' + NCOL() + \'" class="empty"', s)
+    assert n == 1
+    return s
+
+
 def add_season_nav(html_str, current):
     """current：'inseason' 或 'card'。取代 <div class="src">…</div>，原說明收進切換列的「更新說明」（點開才看，使用者 2026-10-29）。"""
     assert current in ('inseason', 'card'), current
@@ -303,7 +331,7 @@ def add_season_nav(html_str, current):
                  ('` title="${v}"`', '` title="${Math.round(v)}"`')]:
         assert s.count(a) == 1, a
         s = s.replace(a, b)
-    s = attr_tips(s, current)
+    s = _lite_layout(attr_tips(s, current))
     return s.replace('<nav class="snav', CSS + '<nav class="snav', 1) if CSS not in s else s
 
 
@@ -345,6 +373,22 @@ ATTR_TIPS = {
             [('組成', '75% 進攻能力值 ＋ 25% 進攻影響力'), ('單位', '每 36 分鐘淨分（0＝平均）')], False),
     'def': ('防守', 'Defense', '每 36 分鐘比聯盟平均<b>少丟幾分</b>',
             [('組成', '單防 ＋ 護框 ＋ 壓迫 ＋ 防守意識'), ('單位', '每 36 分鐘淨分（0＝平均）')], False),
+    # 精簡檢視的合併能力值（2026-11-10，scripts/lite_cells.py）：各成分是頁面上的顯示值，缺成分的人權重重新歸一；兩種檢視共用
+    'offR': ('進攻', 'Offense', '每 36 分鐘比聯盟平均<b>多得幾分</b>，換成 40–99+ 的尺（70＝平均）',
+             [('組成', '外線、內線、持球、無球、組織'), ('尺度', '70＋10×與平均差÷標準差；淨分在提示卡第一列')], False),
+    'defR': ('防守', 'Defense', '每 36 分鐘比聯盟平均<b>少丟幾分</b>，換成 40–99+ 的尺（70＝平均）',
+             [('組成', '外防、內防、防守意識'), ('尺度', '70＋10×與平均差÷標準差；淨分在提示卡第一列')], False),
+    'play': ('組織', 'Playmaking', '<b>傳球</b>創造隊友機會、<b>少失誤</b>',
+             [('傳球 70%', '助攻量與助攻率'), ('少失誤 30%', '每次觸球失誤率與持球時間')], False),
+    'outside': ('外線', 'Outside', '<b>投籃的準度與量</b>：三分、中距離、罰球',
+                [('三分 55%', '出手量與命中率'), ('中距離 25%', '命中率與出手量'), ('罰球 20%', '罰球命中率')], False),
+    'inside': ('內線', 'Inside', '<b>禁區得分</b>與<b>製造犯規</b>',
+               [('近框 60%', '油漆區內命中率與自主得分'), ('製造犯規 40%', '罰球量與罰球率')], False),
+    'handle': ('持球', 'Ball Handler', '<b>自己持球創造</b>：自主出手與擋拆持球各半（同詳細檢視的 CRT）', [], False),
+    'offball': ('無球', 'Off-Ball', '<b>沒拿球</b>時的威脅：吸引防守、空檔投籃、切入順下',
+                [('引力 40%', '沒拿球時吸引防守貼防'), ('空檔射手 30%', '接球投籃量與準度'), ('切入順下 30%', '空切、擋拆順下等的量與效率')], False),
+    'perim': ('外防', 'Perimeter D', '<b>外線防守</b>：單防與壓迫（抄截、干擾、逼失誤）',
+              [('單防 60%', '干擾出手、對位負擔、威懾力'), ('壓迫 40%', '抄截、干擾、造進攻犯規')], False),
     'threeValue': ('三分', 'Three-Point', '<b>60%</b> 三分出手量 ＋ <b>40%</b> 三分命中率',
                    [('出手量 60%', '三分出手 / 36'), ('命中率 40%', '三分命中率')], ''),
     'mid': ('中距離', 'Mid-Range', '油漆區外到三分線內的<b>投籃命中率與數量</b>', [], ''),
@@ -783,15 +827,33 @@ document.fonts && document.fonts.ready.then(fitTable);
 // 寬度鎖成欄寬總和（不是 min-width）：不然表格會跟著外框撐寬，外框又照表格寬算，越撐越寬。
 // 只動這幾個屬性、量時除掉 zoom：桌機縮放（enrich_roster_viewer）寫在同一個 style 上。
 function lockCols() {
-  const t = document.getElementById('tbl'), SZ = SIZE, s = t.style, z = parseFloat(s.zoom) || 1, tm = [st.team, st.rk];
+  const t = document.getElementById('tbl'), SZ = SIZE, s = t.style, z = parseFloat(s.zoom) || 1, tm = [st.team, st.rk, st.pos, st.q], V = st.view;
   t.querySelector('colgroup')?.remove();
   s.tableLayout = ''; s.width = 'min-content'; s.minWidth = '0';
   // 網址直接開某隊（/nets）時也照全部球隊量
-  st.team = 'ALL'; st.rk = false; SIZE = 1e5; render(); SIZE = SZ; [st.team, st.rk] = tm;
-  const ws = [...t.querySelectorAll('thead tr:last-child th')].filter(th => getComputedStyle(th).display !== 'none')
-    .map(th => Math.ceil(th.getBoundingClientRect().width / z));
+  const meas = () => { render(); return [...t.querySelectorAll('thead tr:last-child th')].filter(th => getComputedStyle(th).display !== 'none')
+    .map(th => Math.ceil(th.getBoundingClientRect().width / z)); };
+  const sum = a => a.reduce((x, y) => x + y, 0);
+  st.team = 'ALL'; st.rk = false; st.pos = 'ALL'; st.q = ''; SIZE = 1e5;   // 切換檢視時可能已選了位置／搜尋，也要照全部球員量
+  // 精簡檢視（使用者 2026-11-10）：欄位少了，桌機表格仍撐到「詳細」的總寬——頁首與卡片寬度（--tw）跟表格寬，不能一切換就縮
+  st.view = 'full'; const wf = meas(); let ws = wf;
+  if (V !== 'full') {
+    st.view = V; ws = meas();
+    const ks = [...t.querySelectorAll('thead tr:last-child th')].filter(th => getComputedStyle(th).display !== 'none').map(th => th.dataset.k);
+    const fixed = k => !k || k === 'name' || k === 'pos' || k === 'team' || k === 'ovr';   // 不分到寬度的欄（# 球員 位置 球隊 OVR）
+    if (matchMedia('(min-width:641px)').matches) {
+      // 桌機：多出的寬度（詳細總寬 − 精簡自然寬）平均分給數字欄，不全塞給球員欄
+      const ex = Math.max(0, sum(wf) - sum(ws)) / ks.filter(k => !fixed(k)).length;
+      ws = ws.map((w, i) => fixed(ks[i]) ? w : w + ex);
+    } else {
+      // 手機：不捲動的第一屏＝ # 球員 OVR ＋ 四個大類（等寬），右邊只露 12px 的 OUT 當往右滑的提示
+      const big = new Set(['offR', 'defR', 'play', 'rebound']), bw = Math.floor((t.parentElement.clientWidth - 12 - sum(ws.filter((w, i) => fixed(ks[i])))) / 4);
+      if (bw > 0) ws = ws.map((w, i) => big.has(ks[i]) ? bw : w);
+    }
+  }
+  SIZE = SZ; [st.team, st.rk, st.pos, st.q] = tm; st.view = V;
   t.insertAdjacentHTML('afterbegin', '<colgroup>' + ws.map(w => `<col style="width:${w}px">`).join('') + '</colgroup>');
-  s.tableLayout = 'fixed'; s.width = ws.reduce((a, b) => a + b, 0) + 'px';
+  s.tableLayout = 'fixed'; s.width = sum(V !== 'full' && matchMedia('(min-width:641px)').matches ? wf : ws) + 'px';
   render();
 }
 // 不在每次 resize 重鎖（使用者 2026-11-03：Ctrl+- 時整張先膨脹再收回、很卡＝拆掉欄寬重畫全部球員）。
@@ -835,6 +897,48 @@ document.getElementById('q').oninput'''),
     ("mode: 'grade',", "mode: (() => { try { return localStorage.getItem('bbac.mode') === 'num' ? 'num' : 'grade'; } catch (e) { return 'grade'; } })(),"),
     ("b.onclick = () => { st[key] = v;",
      "b.onclick = () => { st[key] = v; if (key === 'mode') try { localStorage.setItem('bbac.mode', v); } catch (e) {}"),
+    # 檢視切換（使用者 2026-11-10「篩選欄：年份、位置、詳細／精簡」）：精簡＝10 個合併能力值（lite_cells.py），詳細＝全部欄位照新分類重排。
+    # 兩種檢視各有自己的欄位表（VIEWS）；精簡看不到的欄（身高、N、ΔOVR、FORM）用 CSS 藏（th／td 加 .vh，位置不變以免動到手機 nth-child 規則）。
+    # 切換時重鎖欄寬；狀態存 localStorage（bbac.view）；沒存過：手機（≤640）預設精簡，其他詳細
+    ("q: '', page: 0, extra: 0,",
+     "view: (() => { try { const v = localStorage.getItem('bbac.view'); if (v === 'lite' || v === 'full') return v; } catch (e) {} return innerWidth <= 640 ? 'lite' : 'full'; })(), q: '', page: 0, extra: 0,"),
+    (" if (key !== 'mode') { st.page = 0; st.extra = 0; } render(); };",
+     " if (key === 'view') { try { localStorage.setItem('bbac.view', v); } catch (e) {} if (!viewKeys(v).has(st.sort)) { st.sort = 'ovr'; st.asc = false; } lockCols(); return; } if (key !== 'mode') { st.page = 0; st.extra = 0; } render(); };"),
+    ("function head() {", """const VIEWS = {
+  full: { pre: [['offR', 'OFF', '進攻'], ['defR', 'DEF', '防守']], groups: [
+    ['外線', [['threeValue', '3PT', '三分'], ['mid', 'MID', '中距離'], ['ft', 'FT', '罰球']]],
+    ['內線', [['short', 'INS', '近框'], ['foulDraw', 'FD', '製造犯規']]],
+    ['持球', [['creation', 'CRT', '持球進攻']]],
+    ['無球', [['gravity', 'GRV', '引力'], ['spot', 'SPOT', '空檔射手'], ['cutroll', 'CUT', '切入順下']]],
+    ['組織', [['pass', 'PASS', '傳球'], ['tovSkill', 'TO', '少失誤']]],
+    ['籃板', [['rebound', 'REB', '籃板']]],
+    ['外防', [['onBall', 'PER D', '單防'], ['pressure', 'PRES', '壓迫']]],
+    ['內防', [['help', 'RIM', '護框'], ['dbon', 'DIQ', '防守意識']]],
+  ] },
+  lite: { pre: [], groups: [
+    ['大類', [['offR', 'OFF', '進攻'], ['defR', 'DEF', '防守'], ['play', 'PLAY', '組織'], ['rebound', 'REB', '籃板']]],
+    ['進攻', [['outside', 'OUT', '外線'], ['inside', 'IN', '內線'], ['handle', 'BALL', '持球'], ['offball', 'OFFB', '無球']]],
+    ['防守', [['perim', 'PER', '外防'], ['help', 'RIM', '護框']]],
+  ] },
+};
+const VIEW = () => VIEWS[st.view] || VIEWS.full;
+const viewKeys = v => new Set(['name', 'pos', 'team', 'ovr', 'min', ...(v === 'lite' ? [] : ['ht', 'gp', 'dovr', 'form']),
+  ...VIEWS[v].pre.map(c => c[0]), ...VIEWS[v].groups.flatMap(g => g[1].map(c => c[0]))]);
+const NCOL = () => document.querySelectorAll('#tbl thead tr:last-child th').length;
+const vcell = (k, v, first, tip) => v == null ? `<td class="${first ? 'gl' : ''}${st.sort === k ? ' sortcol' : ''}" style="color:var(--muted)">—</td>` : cell(k, v, first, tip);
+function applyView() {
+  const t = document.getElementById('tbl'), lite = st.view === 'lite', keep = viewKeys(st.view);
+  t.classList.toggle('lite', lite);
+  const ths = [...t.querySelectorAll('thead tr:last-child th')], hide = ths.map(th => !!th.dataset.k && !keep.has(th.dataset.k));
+  ths.forEach((th, i) => th.classList.toggle('vh', hide[i]));
+  t.querySelector('th.gx')?.setAttribute('colspan', lite ? 2 : 3);   // 精簡藏掉身高，球隊＋OVR 只剩兩欄
+  t.querySelectorAll('tbody tr[data-n]').forEach(tr => [...tr.children].forEach((td, i) => td.classList.toggle('vh', hide[i])));
+}
+function head() {"""),
+    ("  head();\n  const a = list();",
+     "  if (document.getElementById('viewSeg')) seg('viewSeg', [['lite', '精簡'], ['full', '詳細']], 'view');\n  head();\n  const a = list();"),
+    ("  tboxEdges();\n  card(P.find(p => p.name === st.sel) || P[0]);",
+     "  applyView();\n  tboxEdges();\n  card(P.find(p => p.name === st.sel) || P[0]);"),
     ('function render() {', '''function setTeam(cur) {
   st.rk = cur === 'ROOKIE'; st.team = st.rk ? 'ALL' : cur; st.page = 0; st.extra = 0;
   // 記住上次選的球隊／新秀：在其他檢視點眉頭「球隊」時回到這隊（site_header）

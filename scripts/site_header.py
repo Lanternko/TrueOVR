@@ -6,7 +6,7 @@ history.pushState＋popstate 管網址（/rank/、/rank/LAL/、/games/、/games/
 舊的 .top 標題列與 .ctrl 控制列只剩空殼，直接隱藏。add_season_nav 之後呼叫。"""
 import re
 
-from season_nav import RING
+from season_nav import PAGES, RING
 
 ICON = {
     'filter': '<path d="M4.2 4h15.6a1 1 0 0 1 .78 1.63L14.5 13.2v5.3a1 1 0 0 1-.55.9l-3 1.5A1 1 0 0 1 9.5 20v-6.8L3.42 5.63A1 1 0 0 1 4.2 4z" fill="currentColor" stroke="none"/>',
@@ -63,7 +63,7 @@ body{margin:0}  /* 名單頁原本留瀏覽器預設 8px，眉頭在球員／戰
 html{scrollbar-gutter:stable}  /* 排行檢視比名單短，捲軸有無不同會讓眉頭橫向位移 */
 body[data-view="rank"] .wrap,body[data-view="games"] .wrap{display:none}
 body:not([data-view="rank"]) #rankHost,body:not([data-view="games"]) #gamesHost{display:none}
-body[data-view="rank"] #mPosRow,body[data-view="rank"] .msearch,body[data-view="games"] #mPosRow,body[data-view="games"] .msearch{display:none}  /* 位置、搜尋只對球員檢視有意義；賽季切換在篩選裡，各檢視都留著 */
+body[data-view="rank"] .msearch,body[data-view="games"] .msearch{display:none}  /* 搜尋只對球員檢視有意義 */
 body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtabs #teamPick.on summary{color:var(--mfg);background:none}
 .mtabs #teamPick[open] summary,body[data-view="rank"] .mtabs #teamPick[open].on summary,body[data-view="games"] .mtabs #teamPick[open].on summary{color:var(--gold-ink);background:var(--gold)}  /* 點開選隊：黃色高亮 */
 .mind{view-transition-name:tab-ind}  /* 只給底線命名；.wrap 整頁快照太大 */
@@ -107,6 +107,16 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
   border-radius:6px;font:500 .88rem var(--f-body);transition:width .2s,border-color .12s}
 .msearch #q:focus{outline:0;border-color:var(--gold)}
 .wrap>.top,.wrap>.ctrl{display:none}
+/* 篩選欄（使用者 2026-11-10）：卡片與表格之間一條，年份｜位置｜檢視（精簡／詳細）；原眉頭的篩選面板（賽季、位置）併進來，不重複 */
+.fbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;padding:10px 0 4px}
+.fbar .fg{display:flex;align-items:center;gap:8px}
+.fbar .fg>b{color:var(--muted);font:600 .72rem var(--f-disp);letter-spacing:.12em;white-space:nowrap}
+.fbar .seg{flex:none;width:max-content}
+.fbar .seg a{display:block;background:var(--panel);color:var(--muted);border-right:1px solid var(--line);font:600 .9rem var(--f-disp);letter-spacing:.04em;padding:6px 12px;text-decoration:none;white-space:nowrap}
+.fbar .seg a:last-child{border-right:0}
+.fbar .seg a[aria-current="page"]{background:var(--gold);color:var(--gold-ink)}
+.fbar .seg button{height:32px;padding:0 12px;white-space:nowrap}
+#tbl .vh{display:none}
 @media (min-width:641px){.wrap{padding-top:10px}}
 @media (max-width:640px){
   .mast-in{flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:0;gap:0 10px}
@@ -119,9 +129,13 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
   .mbrand{width:auto}
   .mtabs #teamPick:not(.on) summary::before,.mtabs #teamPick.last:not(.on) summary{font-size:15px}
   .mpanel{position:fixed;left:12px;right:12px;top:calc(var(--mh,96px) + 6px);min-width:0}
-  /* 舊手機規則 #posSeg{display:none}（位置要點 .pbtn 才展開）在位置列搬進篩選面板後仍生效 → 面板開了卻空的（使用者 2026-11-02） */
-  #mPos #posSeg{display:flex;position:static;box-shadow:none}
-  #mPos #posSeg button{height:36px;padding:0 13px}
+  /* 舊手機規則 #posSeg{display:none}（位置要點 .pbtn 才展開）：位置列搬進篩選欄後直接攤開 */
+  .fbar{gap:8px 12px;padding:8px 0 2px}
+  .fbar .fg{gap:6px}
+  .fbar #posSeg{display:flex;position:static;box-shadow:none}
+  .fbar .seg button{height:32px;padding:0 10px}
+  .fbar .seg a{padding:6px 10px}
+  .fbar .fg.fpos{order:3;flex-basis:100%}
   .mast .pn{top:calc(var(--mh,96px) + 6px);right:12px;width:calc(100vw - 24px)}
   .msearch .sbox{position:fixed;width:auto;left:12px;right:12px;top:calc(var(--mh,96px) + 6px);z-index:20;padding:10px;background:var(--panel-2);border:1px solid var(--line);border-radius:8px;box-shadow:0 14px 36px rgba(0,0,0,.6)}
   .msearch #q,.msearch #q:focus{height:40px;font-size:16px}
@@ -133,10 +147,10 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
 # 頁尾腳本：搬元素、分頁底線、篩選小點、手機搜尋、捲動陰影
 JS = """<script>(()=>{
 const $=s=>document.querySelector(s),mast=$('.mast');if(!mast)return;
-const tabs=$('.mtabs'),ind=$('.mind'),tp=$('#teamPick'),pos=$('#posSeg'),fb=$('#mFilter>summary');
+const tabs=$('.mtabs'),ind=$('.mind'),tp=$('#teamPick'),pos=$('#posSeg');
 if(tp){$('#mPickPh').replaceWith(tp);if(location.hash==='#team'){history.replaceState(null,'',location.pathname+location.search);setTimeout(()=>tp.open=true);}}
-if(pos)$('#mPos').append(pos);
-const season=$('.snav .seg');if(season)$('#mSeason').append(season);
+if(pos)$('#fPos').append(pos);
+const season=$('.snav .seg');if(season)$('#fSeason').append(season);
 const mode=$('#modeSeg');if(mode)$('#mMode').append(mode);
 const pn=$('.snav .pnote');if(pn)$('#mNotes').append(pn);else $('#mNotes').closest('.mrow').remove();
 const q=$('#q');if(q){$('.msearch .sbox').append(q);q.placeholder='搜尋球員或球隊';}
@@ -153,7 +167,6 @@ const sync=()=>{
   const on=tp&&tp.classList.contains('on');pl.setAttribute('aria-selected',String(!on&&view==='players'));tr.setAttribute('aria-selected',String(view==='rank'));gm.setAttribute('aria-selected',String(view==='games'));
   const t=view==='rank'?tr:view==='games'?gm:on?tp.querySelector('summary'):pl,a=tabs.getBoundingClientRect(),r=t.getBoundingClientRect();
   ind.style.setProperty('--ix',(r.left-a.left)+'px');ind.style.setProperty('--iw',r.width+'px');mast.style.setProperty('--mh',mast.offsetHeight+'px');
-  const b=pos&&pos.querySelector('[aria-pressed="true"]');fb.classList.toggle('dot',!!b&&b!==pos.firstElementChild);
 };
 pl.onclick=()=>{const b=$('#teamGrid [data-t="ALL"]');if(b&&tp&&tp.classList.contains('on'))b.click();if(PR||PG)go('players',true);};
 /* h：要帶進檢視的網址參數（rank：{arg}；games：{arg:日期,gid}）；undefined＝維持檢視目前的狀態 */
@@ -200,7 +213,6 @@ addEventListener('resize',sync);sync();requestAnimationFrame(()=>mast.classList.
 if(document.fonts)document.fonts.ready.then(sync);
 const pops=[...document.querySelectorAll('.mpop')];
 pops.forEach(d=>d.addEventListener('toggle',()=>{if(d.open)pops.forEach(o=>o!==d&&(o.open=false));}));
-pos&&pos.addEventListener('click',e=>{if(e.target.closest('button'))$('#mFilter').open=false;});
 const ms=$('.msearch'),qd=()=>$('.msearch .sbtn').classList.toggle('dot',!!(q&&q.value.trim()));
 q&&q.addEventListener('input',qd);
 $('.msearch .sbtn').onclick=e=>{e.stopPropagation();const o=ms.classList.toggle('open');if(o)q&&q.focus();};
@@ -211,6 +223,12 @@ document.addEventListener('click',e=>{
 document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;pops.forEach(d=>d.open=false);ms.classList.remove('open');});
 const sc=()=>mast.classList.toggle('scrolled',scrollY>4);addEventListener('scroll',sc,{passive:true});sc();
 })()</script>"""
+
+
+FBAR = ('<div class="fbar" role="group" aria-label="篩選">'
+        '<div class="fg"><b>年份</b><div id="fSeason"></div></div>'
+        '<div class="fg fpos"><b>位置</b><div id="fPos"></div></div>'
+        '<div class="fg"><b>檢視</b><div class="seg" id="viewSeg" title="精簡：只看 OVR、進攻、防守、籃板、組織；詳細：全部能力值欄"></div></div></div>')
 
 
 def header_html(current):
@@ -224,11 +242,10 @@ def header_html(current):
         '<a class="mtab" id="mTeams" href="/rank/">戰力排行</a>'
         '<a class="mtab" id="mGames" href="/games/">賽程</a></nav>'
         '<div class="macts">'
-        f'<details class="mpop" id="mFilter"><summary class="micon" aria-label="篩選">{_svg("filter", 15)}</summary>'
-        '<div class="mpanel"><div class="mrow"><b>賽季</b><div id="mSeason"></div></div>'
-        '<div class="mrow" id="mPosRow"><b>位置</b><div id="mPos"></div></div></div></details>'
         f'<details class="mpop" id="mSettings"><summary class="micon" aria-label="設定">{_svg("gear")}</summary>'
-        '<div class="mpanel"><div class="mrow"><b>能力值顯示</b><div id="mMode"></div></div>'
+        '<div class="mpanel"><div class="mrow"><b>賽季</b><div class="seg" id="mSeasonLinks">' + ''.join(
+            f'<a href="{href}"' + (' aria-current="page"' if key == current else '') + f'>{label}</a>' for key, label, href in PAGES) + '</div></div>'
+        '<div class="mrow"><b>能力值顯示</b><div id="mMode"></div></div>'
         '<div class="mrow"><b>版本</b><div id="mNotes"></div></div></div></details>'
         f'<div class="msearch"><button type="button" class="micon sbtn" aria-label="搜尋">{_svg("search")}</button>'
         f'<div class="sbox">{_svg("search", 15)}</div></div>'
@@ -264,6 +281,8 @@ def add_masthead(html_str, current):
         rank_js += games_js
     # 刷新時眉頭不跳（使用者 2026-11-03）：--tw 要等表格畫好、字型載完才量得準，首格先套上次存下的值（enrich_roster_viewer 寫入）
     tw0 = "<script>try{const w=localStorage.getItem('bbac.tw:'+(/^\\/(rank|games)\\//.test(location.pathname)?'/':location.pathname));if(w)document.documentElement.style.setProperty('--tw',w)}catch(e){}</script>"
+    assert s.count('<div class="ctrl">') == 1, 'ctrl not found'
+    s = s.replace('<div class="ctrl">', FBAR + '<div class="ctrl">', 1)   # 卡片（#card）之後、表格（.tbox）之前
     s = s.replace('<div class="wrap">', CSS + tw0 + header_html(current) + '\n' + rank_html + '<div class="wrap">', 1)
     i = s.rfind('</body>')
     tail = rank_js + JS

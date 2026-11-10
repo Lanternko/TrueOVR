@@ -28,6 +28,7 @@ import blend_display as BD  # noqa: E402
 import tracking_cells as TC  # noqa: E402
 import offball_cells as OB  # noqa: E402
 import rim_blk_live as RB  # noqa: E402
+import lite_cells as LC  # noqa: E402
 
 ROOT = er.ROOT
 BASE = ROOT / 'reports/ovr-v58-card-2025-26/roster-viewer.html'
@@ -190,6 +191,7 @@ def main(out=None):
     s = re.sub(r'<div class="src">.*?</div>',
                f'<div class="src">OVR：正式卡 card 0.2.15（2025-26 整季；長人的籃板與兩分干擾另有加分（看實際打中鋒／大前鋒的上場比例，和同位置平均比、頂端漸緩；上場不到 500 分鐘按比例打折，再照每場上場分鐘打折，和 OVR 本體同一條曲線）；OVR 為每場，含上場時間，相對替補水準；FD 以量為主；PRES＝逼失誤扣犯規；OVR 能力估計納入教練用人證據，DNP 與輪休分開，用人回歸（上場強度、出賽率看近三季窗口）對齊當季 RAPM；分鐘權重遞減；能力值對 2022-23～2025-26 四季比較；切入只算帶球切入的自主兩分；CRT＝持球進攻：自主創造（自主跳投與低位）與擋拆持球（Synergy 擋拆持球的次數與每回合得分）各半；GRV＝引力：沒拿球時防守人也不敢離開他的程度（NBA.com 無球外線引力，沒有資料的人用三分出手、命中率、用球率與位置推估）；SPOT／CUT＝無球兩格（只顯示，不進 OVR）：空檔射手看定點、繞掩護、手遞手的接球投籃量與接球三分準度，切入順下看空切、擋拆順下、補籃、快攻的量與空切效率（Synergy，近三季加權）；防守加成不打折、近期加權；OVR 評分標準為 DARKO 加 BPM；年輕人沒有爛隊折扣；傳球看量也看率；3PT、RIM、PRES 頂端不封在 99；OVR 不看身高體重；OVR 尺頂端另以 PR90、PR95 定位）；3PT 顯示 threeValue；{len(rows)} 人</div>',
                s, count=1, flags=re.S)
+    LC.augment(cols, data_rows)   # 精簡檢視的 10 個合併能力值（所有成分已是最終顯示值之後；只改顯示，spec reports/roster-lite-view）
     new_data = json.dumps({'cols': cols, 'rows': data_rows}, ensure_ascii=False, separators=(',', ':'))
     s = re.sub(r'const DATA=\{.*?\};\nconst COLS', lambda m: f'const DATA={new_data};\nconst COLS', s, count=1, flags=re.S)
     for a, b in [
