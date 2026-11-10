@@ -389,8 +389,10 @@ function teamVars(t) {
   // --dk：兩個主題色裡比較深的那個，選中列（金底）的縮寫用
   return c ? `--tc:${c[0]};--tc2:${c[1]};--card:${c[2]};--ink:${c[3]};--tt:${c[4] || c[2]};--dk:${lum(c[0]) <= lum(c[1]) ? c[0] : c[1]}` : '';
 }
+// 表格只顯示現在的球隊；整條「舊/新」放 title。顯示整條會把 TEAM 欄撐成三倍寬、擠掉 NAME（2025-26 有 72 位交易球員，使用者 2026-11-10）
 function teamCell(t) {
-  return teamOf(t) ? `<span class="tabbr" style="${teamVars(t)}">${t}</span>` : t;
+  const cur = t.split('/').pop(), tip = cur === t ? '' : ` title="${t.replace(/\//g, ' → ')}"`;
+  return teamOf(t) ? `<span class="tabbr"${tip} style="${teamVars(t)}">${cur}</span>` : cur === t ? t : `<span${tip}>${cur}</span>`;
 }
 function headshot(p) {
   const r = REAL[p.name], tid = TEAM_IDS[p.team.split('/').pop()];
