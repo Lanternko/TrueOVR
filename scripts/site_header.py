@@ -147,7 +147,7 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
 }
 @media (prefers-reduced-motion:reduce){.mast.ready .mind,.msearch #q{transition:none}}
 /* 表格外觀（使用者 2026-11-11）：乾淨扁平，不做玻璃。表身單一底色（--panel），列線 1px 低對比；分組只在第一欄左邊畫細線；
-   hover／選中＝同色底再疊一層亮度（sticky 欄也不透明，不透出後面捲動的數字）；選中列名字格左側 2px 金條，不再整格金底。
+   hover／選中＝同色底再疊一層亮度（sticky 欄也不透明，不透出後面捲動的數字）；選中列名字格整格金底反白（舊版）。
    數值顏色分級、OVR 徽章、隊色不動。雙 id（#tbl#tbl）壓過 season_nav／enrich_roster_viewer 前面各層補丁 */
 div.tbox{background:var(--panel)}
 #tbl{--hov:linear-gradient(rgba(255,255,255,.04),rgba(255,255,255,.04));--selbg:linear-gradient(rgba(255,255,255,.075),rgba(255,255,255,.075));--selh:linear-gradient(rgba(255,255,255,.10),rgba(255,255,255,.10))}
@@ -157,7 +157,7 @@ div.tbox{background:var(--panel)}
 #tbl#tbl tbody tr:hover td{background-image:var(--hov)}
 #tbl#tbl tbody tr.sel td{background-image:var(--selbg)}
 #tbl#tbl tbody tr.sel:hover td{background-image:var(--selh)}
-#tbl#tbl tbody tr.sel td.nm{color:var(--gold);box-shadow:inset 2px 0 0 var(--gold),inset -1px 0 0 var(--line)}
+#tbl#tbl tbody tr.sel td.nm{background-color:var(--gold);background-image:none;color:var(--gold-ink);box-shadow:inset -1px 0 0 var(--line)}   /* 選中列名字格整格金底反白（舊版樣式，使用者 2026-11-11） */
 /* 排序欄（使用者 2026-11-11）：整欄灰底高亮，表頭同色 */
 #tbl#tbl tbody td.sortcol{background-color:#232a33}
 #tbl#tbl thead th.sorted{background:#232a33}
@@ -165,8 +165,8 @@ div.tbox{background:var(--panel)}
 #tbl#tbl tbody tr.sel .tabbr{color:var(--tt)}
 #tbl#tbl tbody tr.sel td.ovr .ob{background:none}
 #tbl#tbl tbody tr.sel td.ovr .ob.t6{background:linear-gradient(135deg,#f3e6ff,#c896ff 45%,#a466ff);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
-#tbl#tbl tbody tr.sel td.nm .nf,#tbl#tbl tbody tr.sel td.nm .ns{background:none;color:var(--gold);-webkit-text-fill-color:var(--gold)}   /* 選中列名字黃色高亮（使用者 2026-11-11） */
-#tbl#tbl tbody tr.sel td.nm .rkp{background:linear-gradient(160deg,#e6f3fc 0%,#a8d0ec 45%,#6a9fc6 100%)}
+#tbl#tbl tbody tr.sel td.nm .nf,#tbl#tbl tbody tr.sel td.nm .ns{background:none;color:var(--gold-ink);-webkit-text-fill-color:var(--gold-ink)}
+#tbl#tbl tbody tr.sel td.nm .rkp{background:var(--gold-ink)}
 </style>"""
 
 # 頁尾腳本：搬元素、分頁底線、篩選小點、手機搜尋、捲動陰影
