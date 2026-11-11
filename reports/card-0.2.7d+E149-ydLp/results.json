@@ -1,0 +1,902 @@
+{
+ "prereg_sha": "bb16effdc6c3cf701beacfce4dffa9afe124daa74aeb2de06e85e10b6534d026",
+ "c0": {
+  "sha256": "696a8ac7b235acf51cdb5634fa9896a6905fec81adb96166b6995b9015c20649",
+  "want": "696a8ac7b235acf51cdb5634fa9896a6905fec81adb96166b6995b9015c20649",
+  "pass": true
+ },
+ "coef": {
+  "K0": {
+   "b0": -1.1201228161685544,
+   "b1_p": 0.5664390562833088,
+   "b2_L": 0.33418848914231936,
+   "b3_a": 0.43204846487112936,
+   "b4_y": 0.5519286797250327,
+   "b5_v": 0.6573576898817878,
+   "b6_yL": -0.04998029207654334,
+   "b7_vL": -0.28629771735441223,
+   "b8_ydL": -0.574535304929085
+  },
+  "Q1": {
+   "b0": -1.1122052084854994,
+   "b1_p": 0.5682556740995497,
+   "b2_L": 0.33048926366791254,
+   "b3_a": 0.4356810271198151,
+   "b4_y": 0.5206924240396369,
+   "b5_v": 0.6578197032094435,
+   "b6_yL": -0.03965784233794398,
+   "b7_vL": -0.28659280126655895,
+   "b8_ydL": -0.5872292157175645,
+   "b9_ydLp": -0.010659920900265324
+  }
+ },
+ "coef_halves_Q1": {
+  "AB": {
+   "b0": -0.5010590054240708,
+   "b1_p": 0.6090853011512984,
+   "b2_L": 0.22785412861777488,
+   "b3_a": 0.16624100247627777,
+   "b4_y": -1.1714218340836255,
+   "b5_v": 0.10449134554395755,
+   "b6_yL": 0.5435208844220155,
+   "b7_vL": -0.1032457399691401,
+   "b8_ydL": -0.9341133317449835,
+   "b9_ydLp": -0.1355491751557334
+  },
+  "BA": {
+   "b0": -1.8206099906120148,
+   "b1_p": 0.533753446092386,
+   "b2_L": 0.44829831023038014,
+   "b3_a": 0.7487048694403873,
+   "b4_y": 2.049928129988978,
+   "b5_v": 1.330762914458337,
+   "b6_yL": -0.574349356564137,
+   "b7_vL": -0.50641187130828,
+   "b8_ydL": -0.26447915504049935,
+   "b9_ydLp": 0.11337722115062578
+  }
+ },
+ "metrics": {
+  "K0": {
+   "M2K_all": {
+    "n": 376,
+    "rho": 0.7175964160130589
+   },
+   "M2K_y": {
+    "n": 102,
+    "rho": 0.43790389382083866
+   },
+   "Msal_ge24": {
+    "n": 259,
+    "rho": 0.5689977899573202
+   },
+   "Mepm_all": {
+    "n": 310,
+    "rho": 0.841932052221795
+   }
+  },
+  "Q1": {
+   "M2K_all": {
+    "n": 376,
+    "rho": 0.7173995033706434
+   },
+   "M2K_y": {
+    "n": 102,
+    "rho": 0.4373479555363918
+   },
+   "Msal_ge24": {
+    "n": 259,
+    "rho": 0.5691339696746043
+   },
+   "Mepm_all": {
+    "n": 310,
+    "rho": 0.8414512700535937
+   }
+  }
+ },
+ "eval_Q1_vs_K0": {
+  "m1": {
+   "pass": true,
+   "point": -0.004882254075298964,
+   "ci90": [
+    -0.008796841204443748,
+    -0.0013107618866558862
+   ]
+  },
+  "m2": {
+   "pass": true,
+   "point": -0.005246163527206749,
+   "ci90": [
+    -0.010019630173622151,
+    -0.0012686219755920385
+   ]
+  },
+  "m3": {
+   "pass": true,
+   "point": -0.005225617760139634,
+   "ci90": [
+    -0.00948184308683267,
+    -0.0013776459853926644
+   ]
+  }
+ },
+ "R064": {
+  "top20_out": [],
+  "top20_in": [],
+  "top300_movers_ge10": 1
+ },
+ "young_bad": [
+  {
+   "name": "Kennedy Chandler",
+   "team": "UTA",
+   "d": 1.0,
+   "p": 0.408,
+   "MIN": 355.0,
+   "ovr_K0": 57.4,
+   "ovr_Q1": 56.6,
+   "rank_K0": 358,
+   "rank_Q1": 375
+  },
+  {
+   "name": "Javon Small",
+   "team": "MEM",
+   "d": 0.76,
+   "p": 1.629,
+   "MIN": 830.0,
+   "ovr_K0": 66.7,
+   "ovr_Q1": 66.1,
+   "rank_K0": 250,
+   "rank_Q1": 257
+  },
+  {
+   "name": "Kyshawn George",
+   "team": "WAS",
+   "d": 1.0,
+   "p": -0.02,
+   "MIN": 1391.0,
+   "ovr_K0": 54.6,
+   "ovr_Q1": 54.0,
+   "rank_K0": 423,
+   "rank_Q1": 432
+  },
+  {
+   "name": "Egor Dëmin",
+   "team": "BKN",
+   "d": 1.0,
+   "p": -0.055,
+   "MIN": 1308.0,
+   "ovr_K0": 54.8,
+   "ovr_Q1": 54.2,
+   "rank_K0": 419,
+   "rank_Q1": 426
+  },
+  {
+   "name": "Ryan Rollins",
+   "team": "MIL",
+   "d": 0.572,
+   "p": 1.666,
+   "MIN": 2375.0,
+   "ovr_K0": 76.0,
+   "ovr_Q1": 75.5,
+   "rank_K0": 106,
+   "rank_Q1": 118
+  },
+  {
+   "name": "Alex Sarr",
+   "team": "WAS",
+   "d": 1.0,
+   "p": -0.408,
+   "MIN": 1305.0,
+   "ovr_K0": 52.1,
+   "ovr_Q1": 51.6,
+   "rank_K0": 535,
+   "rank_Q1": 536
+  },
+  {
+   "name": "Cooper Flagg",
+   "team": "DAL",
+   "d": 0.624,
+   "p": 0.52,
+   "MIN": 2344.0,
+   "ovr_K0": 68.3,
+   "ovr_Q1": 67.8,
+   "rank_K0": 230,
+   "rank_Q1": 233
+  },
+  {
+   "name": "Noa Essengue",
+   "team": "CHI",
+   "d": 0.398,
+   "p": -0.219,
+   "MIN": 6.0,
+   "ovr_K0": 53.4,
+   "ovr_Q1": 52.9,
+   "rank_K0": 475,
+   "rank_Q1": 476
+  },
+  {
+   "name": "Cedric Coward",
+   "team": "MEM",
+   "d": 0.76,
+   "p": 0.311,
+   "MIN": 1598.0,
+   "ovr_K0": 62.7,
+   "ovr_Q1": 62.2,
+   "rank_K0": 290,
+   "rank_Q1": 293
+  },
+  {
+   "name": "Bez Mbeng",
+   "team": "UTA",
+   "d": 1.0,
+   "p": -0.472,
+   "MIN": 492.0,
+   "ovr_K0": 50.9,
+   "ovr_Q1": 50.4,
+   "rank_K0": 547,
+   "rank_Q1": 547
+  },
+  {
+   "name": "Trey Alexander",
+   "team": "NOP",
+   "d": 0.416,
+   "p": -0.648,
+   "MIN": 111.0,
+   "ovr_K0": 53.7,
+   "ovr_Q1": 53.3,
+   "rank_K0": 452,
+   "rank_Q1": 454
+  },
+  {
+   "name": "Dereck Lively II",
+   "team": "DAL",
+   "d": 0.624,
+   "p": 1.483,
+   "MIN": 115.0,
+   "ovr_K0": 70.2,
+   "ovr_Q1": 69.8,
+   "rank_K0": 199,
+   "rank_Q1": 207
+  },
+  {
+   "name": "Tyler Smith",
+   "team": "DAL",
+   "d": 0.624,
+   "p": -1.048,
+   "MIN": 166.0,
+   "ovr_K0": 53.7,
+   "ovr_Q1": 53.3,
+   "rank_K0": 449,
+   "rank_Q1": 450
+  },
+  {
+   "name": "Moussa Cisse",
+   "team": "DAL",
+   "d": 0.624,
+   "p": -0.711,
+   "MIN": 530.0,
+   "ovr_K0": 54.9,
+   "ovr_Q1": 54.5,
+   "rank_K0": 416,
+   "rank_Q1": 417
+  },
+  {
+   "name": "Patrick Baldwin Jr.",
+   "team": "SAC",
+   "d": 1.0,
+   "p": -1.06,
+   "MIN": 102.0,
+   "ovr_K0": 52.5,
+   "ovr_Q1": 52.1,
+   "rank_K0": 530,
+   "rank_Q1": 530
+  },
+  {
+   "name": "Tristan Vukcevic",
+   "team": "WAS",
+   "d": 1.0,
+   "p": -0.552,
+   "MIN": 671.0,
+   "ovr_K0": 53.1,
+   "ovr_Q1": 52.7,
+   "rank_K0": 501,
+   "rank_Q1": 502
+  },
+  {
+   "name": "Trentyn Flowers",
+   "team": "CHI",
+   "d": 0.398,
+   "p": 0.217,
+   "MIN": 6.0,
+   "ovr_K0": 53.3,
+   "ovr_Q1": 52.9,
+   "rank_K0": 476,
+   "rank_Q1": 480
+  },
+  {
+   "name": "Adama Bal",
+   "team": "MEM",
+   "d": 0.76,
+   "p": -0.312,
+   "MIN": 241.0,
+   "ovr_K0": 58.5,
+   "ovr_Q1": 58.1,
+   "rank_K0": 342,
+   "rank_Q1": 346
+  },
+  {
+   "name": "Danny Wolf",
+   "team": "BKN",
+   "d": 1.0,
+   "p": -0.532,
+   "MIN": 1187.0,
+   "ovr_K0": 52.1,
+   "ovr_Q1": 51.7,
+   "rank_K0": 534,
+   "rank_Q1": 535
+  },
+  {
+   "name": "Julian Reese",
+   "team": "WAS",
+   "d": 1.0,
+   "p": -0.831,
+   "MIN": 402.0,
+   "ovr_K0": 48.6,
+   "ovr_Q1": 48.2,
+   "rank_K0": 563,
+   "rank_Q1": 564
+  },
+  {
+   "name": "Miles Kelly",
+   "team": "DAL",
+   "d": 0.624,
+   "p": -1.337,
+   "MIN": 134.0,
+   "ovr_K0": 53.0,
+   "ovr_Q1": 52.6,
+   "rank_K0": 513,
+   "rank_Q1": 515
+  },
+  {
+   "name": "Lachlan Olbrich",
+   "team": "CHI",
+   "d": 0.398,
+   "p": -0.773,
+   "MIN": 344.0,
+   "ovr_K0": 55.3,
+   "ovr_Q1": 54.9,
+   "rank_K0": 409,
+   "rank_Q1": 410
+  },
+  {
+   "name": "Hayden Gray",
+   "team": "UTA",
+   "d": 1.0,
+   "p": -0.468,
+   "MIN": 25.0,
+   "ovr_K0": 52.0,
+   "ovr_Q1": 51.6,
+   "rank_K0": 537,
+   "rank_Q1": 538
+  },
+  {
+   "name": "Lawson Lovering",
+   "team": "MEM",
+   "d": 0.76,
+   "p": 0.215,
+   "MIN": 49.0,
+   "ovr_K0": 59.6,
+   "ovr_Q1": 59.2,
+   "rank_K0": 325,
+   "rank_Q1": 330
+  },
+  {
+   "name": "Leonard Miller",
+   "team": "CHI",
+   "d": 0.398,
+   "p": -0.102,
+   "MIN": 719.0,
+   "ovr_K0": 59.6,
+   "ovr_Q1": 59.3,
+   "rank_K0": 323,
+   "rank_Q1": 325
+  },
+  {
+   "name": "Dalen Terry",
+   "team": "CHI",
+   "d": 0.398,
+   "p": -0.94,
+   "MIN": 551.0,
+   "ovr_K0": 56.6,
+   "ovr_Q1": 56.3,
+   "rank_K0": 382,
+   "rank_Q1": 383
+  },
+  {
+   "name": "Cam Whitmore",
+   "team": "WAS",
+   "d": 1.0,
+   "p": -1.423,
+   "MIN": 354.0,
+   "ovr_K0": 48.2,
+   "ovr_Q1": 47.9,
+   "rank_K0": 565,
+   "rank_Q1": 565
+  },
+  {
+   "name": "Bilal Coulibaly",
+   "team": "WAS",
+   "d": 1.0,
+   "p": -0.939,
+   "MIN": 1468.0,
+   "ovr_K0": 48.6,
+   "ovr_Q1": 48.3,
+   "rank_K0": 564,
+   "rank_Q1": 563
+  },
+  {
+   "name": "Julian Phillips",
+   "team": "CHI",
+   "d": 0.398,
+   "p": -0.166,
+   "MIN": 427.0,
+   "ovr_K0": 57.6,
+   "ovr_Q1": 57.3,
+   "rank_K0": 354,
+   "rank_Q1": 357
+  },
+  {
+   "name": "Olivier-Maxence Prosper",
+   "team": "MEM",
+   "d": 0.76,
+   "p": -1.145,
+   "MIN": 984.0,
+   "ovr_K0": 52.6,
+   "ovr_Q1": 52.3,
+   "rank_K0": 525,
+   "rank_Q1": 523
+  },
+  {
+   "name": "Keshon Gilbert",
+   "team": "WAS",
+   "d": 1.0,
+   "p": -1.221,
+   "MIN": 74.0,
+   "ovr_K0": 52.1,
+   "ovr_Q1": 51.8,
+   "rank_K0": 533,
+   "rank_Q1": 533
+  },
+  {
+   "name": "Malaki Branham",
+   "team": "WAS",
+   "d": 1.0,
+   "p": -1.984,
+   "MIN": 275.0,
+   "ovr_K0": 49.5,
+   "ovr_Q1": 49.2,
+   "rank_K0": 557,
+   "rank_Q1": 557
+  },
+  {
+   "name": "Kyle Filipowski",
+   "team": "UTA",
+   "d": 1.0,
+   "p": -0.808,
+   "MIN": 1801.0,
+   "ovr_K0": 50.0,
+   "ovr_Q1": 49.7,
+   "rank_K0": 553,
+   "rank_Q1": 554
+  },
+  {
+   "name": "Johnny Furphy",
+   "team": "IND",
+   "d": 1.0,
+   "p": -1.003,
+   "MIN": 643.0,
+   "ovr_K0": 49.9,
+   "ovr_Q1": 49.6,
+   "rank_K0": 555,
+   "rank_Q1": 555
+  },
+  {
+   "name": "AJ Johnson",
+   "team": "DAL",
+   "d": 0.624,
+   "p": -2.987,
+   "MIN": 453.0,
+   "ovr_K0": 48.9,
+   "ovr_Q1": 48.6,
+   "rank_K0": 562,
+   "rank_Q1": 562
+  },
+  {
+   "name": "Jaylen Wells",
+   "team": "MEM",
+   "d": 0.76,
+   "p": -0.334,
+   "MIN": 1821.0,
+   "ovr_K0": 58.3,
+   "ovr_Q1": 58.0,
+   "rank_K0": 348,
+   "rank_Q1": 348
+  },
+  {
+   "name": "John Poulakidas",
+   "team": "DAL",
+   "d": 0.624,
+   "p": -0.797,
+   "MIN": 253.0,
+   "ovr_K0": 55.4,
+   "ovr_Q1": 55.1,
+   "rank_K0": 406,
+   "rank_Q1": 406
+  },
+  {
+   "name": "Josh Giddey",
+   "team": "CHI",
+   "d": 0.398,
+   "p": 0.646,
+   "MIN": 1731.0,
+   "ovr_K0": 73.8,
+   "ovr_Q1": 73.6,
+   "rank_K0": 140,
+   "rank_Q1": 145
+  },
+  {
+   "name": "Max Christie",
+   "team": "DAL",
+   "d": 0.624,
+   "p": -1.059,
+   "MIN": 2244.0,
+   "ovr_K0": 56.5,
+   "ovr_Q1": 56.3,
+   "rank_K0": 383,
+   "rank_Q1": 382
+  },
+  {
+   "name": "Bryce McGowens",
+   "team": "NOP",
+   "d": 0.416,
+   "p": -0.582,
+   "MIN": 880.0,
+   "ovr_K0": 60.0,
+   "ovr_Q1": 59.8,
+   "rank_K0": 315,
+   "rank_Q1": 316
+  },
+  {
+   "name": "Keyonte George",
+   "team": "UTA",
+   "d": 1.0,
+   "p": -1.107,
+   "MIN": 1786.0,
+   "ovr_K0": 46.1,
+   "ovr_Q1": 45.9,
+   "rank_K0": 568,
+   "rank_Q1": 568
+  },
+  {
+   "name": "Brice Sensabaugh",
+   "team": "UTA",
+   "d": 1.0,
+   "p": -1.245,
+   "MIN": 1762.0,
+   "ovr_K0": 47.1,
+   "ovr_Q1": 46.9,
+   "rank_K0": 566,
+   "rank_Q1": 566
+  },
+  {
+   "name": "Rob Dillingham",
+   "team": "CHI",
+   "d": 0.398,
+   "p": -2.972,
+   "MIN": 970.0,
+   "ovr_K0": 49.0,
+   "ovr_Q1": 48.8,
+   "rank_K0": 560,
+   "rank_Q1": 559
+  },
+  {
+   "name": "Ace Bailey",
+   "team": "UTA",
+   "d": 1.0,
+   "p": -1.18,
+   "MIN": 1988.0,
+   "ovr_K0": 46.6,
+   "ovr_Q1": 46.4,
+   "rank_K0": 567,
+   "rank_Q1": 567
+  },
+  {
+   "name": "Tre Johnson",
+   "team": "WAS",
+   "d": 1.0,
+   "p": -1.449,
+   "MIN": 1443.0,
+   "ovr_K0": 45.6,
+   "ovr_Q1": 45.4,
+   "rank_K0": 569,
+   "rank_Q1": 569
+  },
+  {
+   "name": "Jahmai Mashack",
+   "team": "MEM",
+   "d": 0.76,
+   "p": -2.831,
+   "MIN": 673.0,
+   "ovr_K0": 44.7,
+   "ovr_Q1": 44.5,
+   "rank_K0": 571,
+   "rank_Q1": 571
+  },
+  {
+   "name": "Ryan Nembhard",
+   "team": "DAL",
+   "d": 0.624,
+   "p": -2.01,
+   "MIN": 1171.0,
+   "ovr_K0": 50.1,
+   "ovr_Q1": 49.9,
+   "rank_K0": 552,
+   "rank_Q1": 552
+  },
+  {
+   "name": "Taylor Hendricks",
+   "team": "MEM",
+   "d": 0.76,
+   "p": -1.588,
+   "MIN": 1118.0,
+   "ovr_K0": 50.4,
+   "ovr_Q1": 50.2,
+   "rank_K0": 551,
+   "rank_Q1": 549
+  },
+  {
+   "name": "GG Jackson",
+   "team": "MEM",
+   "d": 0.76,
+   "p": -1.249,
+   "MIN": 1178.0,
+   "ovr_K0": 51.8,
+   "ovr_Q1": 51.6,
+   "rank_K0": 539,
+   "rank_Q1": 537
+  },
+  {
+   "name": "Matas Buzelis",
+   "team": "CHI",
+   "d": 0.398,
+   "p": -0.31,
+   "MIN": 2248.0,
+   "ovr_K0": 67.4,
+   "ovr_Q1": 67.3,
+   "rank_K0": 241,
+   "rank_Q1": 241
+  },
+  {
+   "name": "Ousmane Dieng",
+   "team": "MIL",
+   "d": 0.572,
+   "p": -1.864,
+   "MIN": 1099.0,
+   "ovr_K0": 51.7,
+   "ovr_Q1": 51.6,
+   "rank_K0": 540,
+   "rank_Q1": 539
+  },
+  {
+   "name": "Dariq Whitehead",
+   "team": "MEM",
+   "d": 0.76,
+   "p": -1.341,
+   "MIN": 183.0,
+   "ovr_K0": 51.0,
+   "ovr_Q1": 50.9,
+   "rank_K0": 544,
+   "rank_Q1": 544
+  },
+  {
+   "name": "Yves Missi",
+   "team": "NOP",
+   "d": 0.416,
+   "p": -1.545,
+   "MIN": 1297.0,
+   "ovr_K0": 57.0,
+   "ovr_Q1": 56.9,
+   "rank_K0": 371,
+   "rank_Q1": 366
+  },
+  {
+   "name": "Jeremiah Fears",
+   "team": "NOP",
+   "d": 0.416,
+   "p": -1.395,
+   "MIN": 2112.0,
+   "ovr_K0": 58.9,
+   "ovr_Q1": 58.8,
+   "rank_K0": 335,
+   "rank_Q1": 333
+  },
+  {
+   "name": "Walter Clayton Jr.",
+   "team": "UTA",
+   "d": 1.0,
+   "p": -1.763,
+   "MIN": 1411.0,
+   "ovr_K0": 44.8,
+   "ovr_Q1": 44.7,
+   "rank_K0": 570,
+   "rank_Q1": 570
+  },
+  {
+   "name": "Jaden Hardy",
+   "team": "WAS",
+   "d": 1.0,
+   "p": -3.262,
+   "MIN": 898.0,
+   "ovr_K0": 40.6,
+   "ovr_Q1": 40.6,
+   "rank_K0": 573,
+   "rank_Q1": 574
+  },
+  {
+   "name": "Derik Queen",
+   "team": "NOP",
+   "d": 0.416,
+   "p": -1.272,
+   "MIN": 2023.0,
+   "ovr_K0": 59.6,
+   "ovr_Q1": 59.6,
+   "rank_K0": 324,
+   "rank_Q1": 321
+  },
+  {
+   "name": "Ben Saraf",
+   "team": "BKN",
+   "d": 1.0,
+   "p": -3.099,
+   "MIN": 916.0,
+   "ovr_K0": 40.0,
+   "ovr_Q1": 40.0,
+   "rank_K0": 578,
+   "rank_Q1": 578
+  },
+  {
+   "name": "Jarace Walker",
+   "team": "IND",
+   "d": 1.0,
+   "p": -2.145,
+   "MIN": 1953.0,
+   "ovr_K0": 40.4,
+   "ovr_Q1": 40.5,
+   "rank_K0": 575,
+   "rank_Q1": 575
+  },
+  {
+   "name": "Noah Clowney",
+   "team": "BKN",
+   "d": 1.0,
+   "p": -2.102,
+   "MIN": 1780.0,
+   "ovr_K0": 40.3,
+   "ovr_Q1": 40.4,
+   "rank_K0": 577,
+   "rank_Q1": 576
+  },
+  {
+   "name": "Isaiah Collier",
+   "team": "UTA",
+   "d": 1.0,
+   "p": -2.065,
+   "MIN": 1517.0,
+   "ovr_K0": 41.1,
+   "ovr_Q1": 41.2,
+   "rank_K0": 572,
+   "rank_Q1": 572
+  },
+  {
+   "name": "Will Riley",
+   "team": "WAS",
+   "d": 1.0,
+   "p": -2.637,
+   "MIN": 1632.0,
+   "ovr_K0": 39.0,
+   "ovr_Q1": 39.1,
+   "rank_K0": 579,
+   "rank_Q1": 579
+  },
+  {
+   "name": "Maxime Raynaud",
+   "team": "SAC",
+   "d": 1.0,
+   "p": -2.108,
+   "MIN": 1964.0,
+   "ovr_K0": 40.5,
+   "ovr_Q1": 40.6,
+   "rank_K0": 574,
+   "rank_Q1": 573
+  },
+  {
+   "name": "Drake Powell",
+   "team": "BKN",
+   "d": 1.0,
+   "p": -2.505,
+   "MIN": 1320.0,
+   "ovr_K0": 40.3,
+   "ovr_Q1": 40.4,
+   "rank_K0": 576,
+   "rank_Q1": 577
+  },
+  {
+   "name": "Nolan Traore",
+   "team": "BKN",
+   "d": 1.0,
+   "p": -3.58,
+   "MIN": 1243.0,
+   "ovr_K0": 35.1,
+   "ovr_Q1": 35.3,
+   "rank_K0": 582,
+   "rank_Q1": 582
+  },
+  {
+   "name": "Cody Williams",
+   "team": "UTA",
+   "d": 1.0,
+   "p": -3.008,
+   "MIN": 1631.0,
+   "ovr_K0": 35.4,
+   "ovr_Q1": 35.7,
+   "rank_K0": 581,
+   "rank_Q1": 581
+  },
+  {
+   "name": "Bub Carrington",
+   "team": "WAS",
+   "d": 1.0,
+   "p": -2.42,
+   "MIN": 2271.0,
+   "ovr_K0": 37.8,
+   "ovr_Q1": 38.1,
+   "rank_K0": 580,
+   "rank_Q1": 580
+  }
+ ],
+ "judge": {
+  "a_c0": true,
+  "b_metrics": {
+   "M2K_all": {
+    "K0": 0.7175964160130589,
+    "Q1": 0.7173995033706434,
+    "pass": true
+   },
+   "M2K_y": {
+    "K0": 0.43790389382083866,
+    "Q1": 0.4373479555363918,
+    "pass": true
+   },
+   "Msal_ge24": {
+    "K0": 0.5689977899573202,
+    "Q1": 0.5691339696746043,
+    "pass": true
+   },
+   "Mepm_all": {
+    "K0": 0.841932052221795,
+    "Q1": 0.8414512700535937,
+    "pass": true
+   }
+  },
+  "c_m": {
+   "m1": true,
+   "m2": true,
+   "m3": true
+  },
+  "adopt_candidate": true
+ },
+ "sha": {
+  "K0": "696a8ac7b235acf51cdb5634fa9896a6905fec81adb96166b6995b9015c20649",
+  "Q1": "11dffd10d81de7a89751d65cab1a87af9e6a0527a63425b3aa05fcc531110b25"
+ }
+}

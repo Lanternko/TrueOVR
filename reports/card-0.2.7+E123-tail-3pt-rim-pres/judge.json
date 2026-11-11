@@ -1,0 +1,739 @@
+{
+ "npm_test_tail": [
+  "===== 57 passed, 0 failed ====="
+ ],
+ "base_gates_pass": 18,
+ "arms": {
+  "e123": {
+   "m": {
+    "m1": {
+     "point": -0.00030124494136934965,
+     "ci90": [
+      -0.0019596935628006795,
+      0.001193035096009434
+     ],
+     "pass": true
+    },
+    "m2": {
+     "point": 0.0005375402265053175,
+     "ci90": [
+      -0.0007335412096752758,
+      0.0017482340828101962
+     ],
+     "pass": true
+    },
+    "m3": {
+     "point": -0.00024417793155778744,
+     "ci90": [
+      -0.0019066609119308743,
+      0.0012788770504005564
+     ],
+     "pass": true
+    }
+   },
+   "c3": {
+    "pass": 18,
+    "of": 19,
+    "failed": [
+     "big14of16"
+    ]
+   },
+   "c4": {
+    "over140": [],
+    "n": 0,
+    "pass": true
+   },
+   "rho2k": 0.7361787036596098,
+   "rhoRapm": 0.7788480885833736,
+   "rhoDef": 0.5315742733106875,
+   "R061": {
+    "Wagner": 7,
+    "Wembanyama": 2,
+    "pass": true,
+    "Cade": 14,
+    "Tatum": 33
+   },
+   "top20": [
+    "Shai Gilgeous-Alexander",
+    "Victor Wembanyama",
+    "Nikola Jokić",
+    "Derrick White",
+    "Kawhi Leonard",
+    "Giannis Antetokounmpo",
+    "Franz Wagner",
+    "Chet Holmgren",
+    "Luka Dončić",
+    "Lauri Markkanen",
+    "Amen Thompson",
+    "Donovan Mitchell",
+    "Neemias Queta",
+    "Cade Cunningham",
+    "Jimmy Butler III",
+    "Dyson Daniels",
+    "Herbert Jones",
+    "Ryan Rollins",
+    "Kon Knueppel",
+    "Ausar Thompson"
+   ],
+   "top20_in": [
+    "Kon Knueppel"
+   ],
+   "top20_out": [
+    "OG Anunoby"
+   ],
+   "top20_rank_moves": [
+    [
+     "Dyson Daniels",
+     17,
+     16
+    ],
+    [
+     "Herbert Jones",
+     16,
+     17
+    ],
+    [
+     "Kon Knueppel",
+     21,
+     19
+    ]
+   ],
+   "changed_ovr": 338,
+   "maxabs_dovr": 1.8000000000000114,
+   "movers_ge10": 7,
+   "movers_list": [
+    [
+     "Isaiah Stewart",
+     177,
+     151
+    ],
+    [
+     "Dru Smith",
+     275,
+     258
+    ],
+    [
+     "Adama Bal",
+     448,
+     434
+    ],
+    [
+     "Alex Sarr",
+     424,
+     413
+    ],
+    [
+     "Jordan Goodwin",
+     196,
+     186
+    ],
+    [
+     "Royce O'Neale",
+     365,
+     355
+    ],
+    [
+     "Tyrese Martin",
+     484,
+     499
+    ],
+    [
+     "Isaiah Stewart",
+     177,
+     151
+    ],
+    [
+     "Dru Smith",
+     275,
+     258
+    ],
+    [
+     "Adama Bal",
+     448,
+     434
+    ],
+    [
+     "Alex Sarr",
+     424,
+     413
+    ],
+    [
+     "Jordan Goodwin",
+     196,
+     186
+    ],
+    [
+     "Royce O'Neale",
+     365,
+     355
+    ],
+    [
+     "Tyrese Martin",
+     484,
+     499
+    ]
+   ],
+   "help_counts": {
+    ">99": 4,
+    "==99": 0,
+    ">120": 0
+   },
+   "pressure_counts": {
+    ">99": 7,
+    "==99": 1,
+    ">120": 2
+   },
+   "presDisplay_counts": {
+    ">99": 6,
+    "==99": 2,
+    ">120": 2
+   }
+  },
+  "e123h": {
+   "m": {
+    "m1": {
+     "point": -0.00034067002589410755,
+     "ci90": [
+      -0.0018991310968977742,
+      0.0009179203960570644
+     ],
+     "pass": true
+    },
+    "m2": {
+     "point": 0.00010215201778440708,
+     "ci90": [
+      -0.0010788459121374382,
+      0.0011472898225875494
+     ],
+     "pass": true
+    },
+    "m3": {
+     "point": -0.000308467803332213,
+     "ci90": [
+      -0.0018356720480429522,
+      0.0009459292571956156
+     ],
+     "pass": true
+    }
+   },
+   "c3": {
+    "pass": 18,
+    "of": 19,
+    "failed": [
+     "big14of16"
+    ]
+   },
+   "c4": {
+    "over140": [],
+    "n": 0,
+    "pass": true
+   },
+   "rho2k": 0.7363575304519597,
+   "rhoRapm": 0.7789363905332207,
+   "rhoDef": 0.5316287076986252,
+   "R061": {
+    "Wagner": 7,
+    "Wembanyama": 2,
+    "pass": true,
+    "Cade": 14,
+    "Tatum": 33
+   },
+   "top20": [
+    "Shai Gilgeous-Alexander",
+    "Victor Wembanyama",
+    "Nikola Jokić",
+    "Derrick White",
+    "Kawhi Leonard",
+    "Giannis Antetokounmpo",
+    "Franz Wagner",
+    "Chet Holmgren",
+    "Luka Dončić",
+    "Lauri Markkanen",
+    "Amen Thompson",
+    "Donovan Mitchell",
+    "Neemias Queta",
+    "Cade Cunningham",
+    "Jimmy Butler III",
+    "Dyson Daniels",
+    "Herbert Jones",
+    "Ryan Rollins",
+    "Kon Knueppel",
+    "Ausar Thompson"
+   ],
+   "top20_in": [
+    "Kon Knueppel"
+   ],
+   "top20_out": [
+    "OG Anunoby"
+   ],
+   "top20_rank_moves": [
+    [
+     "Dyson Daniels",
+     17,
+     16
+    ],
+    [
+     "Herbert Jones",
+     16,
+     17
+    ],
+    [
+     "Kon Knueppel",
+     21,
+     19
+    ]
+   ],
+   "changed_ovr": 300,
+   "maxabs_dovr": 1.8000000000000114,
+   "movers_ge10": 3,
+   "movers_list": [
+    [
+     "Isaiah Stewart",
+     177,
+     151
+    ],
+    [
+     "Jeremiah Robinson-Earl",
+     454,
+     443
+    ],
+    [
+     "Alex Sarr",
+     424,
+     414
+    ],
+    [
+     "Isaiah Stewart",
+     177,
+     151
+    ],
+    [
+     "Jeremiah Robinson-Earl",
+     454,
+     443
+    ],
+    [
+     "Alex Sarr",
+     424,
+     414
+    ]
+   ],
+   "help_counts": {
+    ">99": 4,
+    "==99": 0,
+    ">120": 0
+   },
+   "pressure_counts": {
+    ">99": 0,
+    "==99": 7,
+    ">120": 0
+   },
+   "presDisplay_counts": {
+    ">99": 0,
+    "==99": 6,
+    ">120": 0
+   }
+  },
+  "e123p": {
+   "m": {
+    "m1": {
+     "point": 7.221044592553572e-05,
+     "ci90": [
+      -0.0006979427407938138,
+      0.000804111920644257
+     ],
+     "pass": true
+    },
+    "m2": {
+     "point": 0.0005348007382189879,
+     "ci90": [
+      -0.00021113479331835716,
+      0.0012946356665056
+     ],
+     "pass": true
+    },
+    "m3": {
+     "point": 0.000146342563473012,
+     "ci90": [
+      -0.0006143165660938338,
+      0.0008767651735526737
+     ],
+     "pass": true
+    }
+   },
+   "c3": {
+    "pass": 18,
+    "of": 19,
+    "failed": [
+     "big14of16"
+    ]
+   },
+   "c4": {
+    "over140": [],
+    "n": 0,
+    "pass": true
+   },
+   "rho2k": 0.7363279197279854,
+   "rhoRapm": 0.7789269889664935,
+   "rhoDef": 0.5316784725383729,
+   "R061": {
+    "Wagner": 7,
+    "Wembanyama": 2,
+    "pass": true,
+    "Cade": 14,
+    "Tatum": 33
+   },
+   "top20": [
+    "Shai Gilgeous-Alexander",
+    "Victor Wembanyama",
+    "Nikola Jokić",
+    "Derrick White",
+    "Kawhi Leonard",
+    "Giannis Antetokounmpo",
+    "Franz Wagner",
+    "Chet Holmgren",
+    "Luka Dončić",
+    "Lauri Markkanen",
+    "Amen Thompson",
+    "Donovan Mitchell",
+    "Neemias Queta",
+    "Cade Cunningham",
+    "Jimmy Butler III",
+    "Herbert Jones",
+    "Dyson Daniels",
+    "Ryan Rollins",
+    "Kon Knueppel",
+    "OG Anunoby"
+   ],
+   "top20_in": [
+    "Kon Knueppel"
+   ],
+   "top20_out": [
+    "Ausar Thompson"
+   ],
+   "top20_rank_moves": [
+    [
+     "Kon Knueppel",
+     21,
+     19
+    ],
+    [
+     "OG Anunoby",
+     19,
+     20
+    ]
+   ],
+   "changed_ovr": 274,
+   "maxabs_dovr": 1.8000000000000043,
+   "movers_ge10": 4,
+   "movers_list": [
+    [
+     "Kyle Filipowski",
+     498,
+     477
+    ],
+    [
+     "Dru Smith",
+     275,
+     259
+    ],
+    [
+     "Bryce McGowens",
+     459,
+     470
+    ],
+    [
+     "Tyrese Martin",
+     484,
+     498
+    ],
+    [
+     "Kyle Filipowski",
+     498,
+     477
+    ],
+    [
+     "Dru Smith",
+     275,
+     259
+    ],
+    [
+     "Bryce McGowens",
+     459,
+     470
+    ],
+    [
+     "Tyrese Martin",
+     484,
+     498
+    ]
+   ],
+   "help_counts": {
+    ">99": 0,
+    "==99": 4,
+    ">120": 0
+   },
+   "pressure_counts": {
+    ">99": 7,
+    "==99": 1,
+    ">120": 2
+   },
+   "presDisplay_counts": {
+    ">99": 6,
+    "==99": 2,
+    ">120": 2
+   }
+  }
+ },
+ "card027_c4": {
+  "n": 0,
+  "over140": []
+ },
+ "card027": {
+  "rho2k": 0.7358940806363692,
+  "rhoRapm": 0.7792522323601216,
+  "rhoDef": 0.5322093792015486,
+  "gates": 18,
+  "R061": {
+   "Wagner": 7,
+   "Wembanyama": 2
+  }
+ },
+ "named_e123": {
+  "Victor Wembanyama": {
+   "rank_0.2.7": 2,
+   "rank_e123": 2,
+   "ovr_0.2.7": 103.7,
+   "ovr_e123": 103.9,
+   "help_0.2.7": 99.0,
+   "help_e123": 108.7,
+   "pressure_0.2.7": 81.6,
+   "pressure_e123": 81.8,
+   "presDisplay_0.2.7": 81.4,
+   "presDisplay_e123": 80.8
+  },
+  "Franz Wagner": {
+   "rank_0.2.7": 7,
+   "rank_e123": 7,
+   "ovr_0.2.7": 97.2,
+   "ovr_e123": 97.6,
+   "help_0.2.7": 72.2,
+   "help_e123": 72.2,
+   "pressure_0.2.7": 84.2,
+   "pressure_e123": 84.0,
+   "presDisplay_0.2.7": 87.7,
+   "presDisplay_e123": 86.7
+  },
+  "Chet Holmgren": {
+   "rank_0.2.7": 8,
+   "rank_e123": 8,
+   "ovr_0.2.7": 96.6,
+   "ovr_e123": 97.0,
+   "help_0.2.7": 99.0,
+   "help_e123": 112.5,
+   "pressure_0.2.7": 62.1,
+   "pressure_e123": 62.4,
+   "presDisplay_0.2.7": 62.6,
+   "presDisplay_e123": 61.9
+  },
+  "Matisse Thybulle": {
+   "rank_0.2.7": 192,
+   "rank_e123": 192,
+   "ovr_0.2.7": 70.6,
+   "ovr_e123": 70.6,
+   "help_0.2.7": 63.3,
+   "help_e123": 63.3,
+   "pressure_0.2.7": 99.0,
+   "pressure_e123": 127.0,
+   "presDisplay_0.2.7": 99.0,
+   "presDisplay_e123": 129.3
+  },
+  "Alex Caruso": {
+   "rank_0.2.7": 32,
+   "rank_e123": 30,
+   "ovr_0.2.7": 83.2,
+   "ovr_e123": 83.7,
+   "help_0.2.7": 66.9,
+   "help_e123": 66.9,
+   "pressure_0.2.7": 99.0,
+   "pressure_e123": 103.8,
+   "presDisplay_0.2.7": 99.0,
+   "presDisplay_e123": 109.8
+  },
+  "Dru Smith": {
+   "rank_0.2.7": 275,
+   "rank_e123": 258,
+   "ovr_0.2.7": 63.1,
+   "ovr_e123": 64.9,
+   "help_0.2.7": 69.4,
+   "help_e123": 69.4,
+   "pressure_0.2.7": 99.0,
+   "pressure_e123": 123.7,
+   "presDisplay_0.2.7": 99.0,
+   "presDisplay_e123": 124.9
+  },
+  "Cason Wallace": {
+   "rank_0.2.7": 77,
+   "rank_e123": 77,
+   "ovr_0.2.7": 79.0,
+   "ovr_e123": 79.2,
+   "help_0.2.7": 65.1,
+   "help_e123": 65.1,
+   "pressure_0.2.7": 99.0,
+   "pressure_e123": 102.7,
+   "presDisplay_0.2.7": 99.0,
+   "presDisplay_e123": 106.7
+  },
+  "Ausar Thompson": {
+   "rank_0.2.7": 20,
+   "rank_e123": 20,
+   "ovr_0.2.7": 85.5,
+   "ovr_e123": 85.3,
+   "help_0.2.7": 83.3,
+   "help_e123": 83.3,
+   "pressure_0.2.7": 99.0,
+   "pressure_e123": 112.1,
+   "presDisplay_0.2.7": 99.0,
+   "presDisplay_e123": 109.8
+  },
+  "Rudy Gobert": {
+   "rank_0.2.7": 46,
+   "rank_e123": 50,
+   "ovr_0.2.7": 81.5,
+   "ovr_e123": 81.2,
+   "help_0.2.7": 94.3,
+   "help_e123": 94.3,
+   "pressure_0.2.7": 58.2,
+   "pressure_e123": 58.1,
+   "presDisplay_0.2.7": 56.5,
+   "presDisplay_e123": 54.9
+  },
+  "Evan Mobley": {
+   "rank_0.2.7": 22,
+   "rank_e123": 29,
+   "ovr_0.2.7": 85.1,
+   "ovr_e123": 84.2,
+   "help_0.2.7": 98.6,
+   "help_e123": 98.6,
+   "pressure_0.2.7": 49.0,
+   "pressure_e123": 48.0,
+   "presDisplay_0.2.7": 46.6,
+   "presDisplay_e123": 47.5
+  },
+  "Isaiah Stewart": {
+   "rank_0.2.7": 177,
+   "rank_e123": 151,
+   "ovr_0.2.7": 71.1,
+   "ovr_e123": 72.9,
+   "help_0.2.7": 99.0,
+   "help_e123": 113.5,
+   "pressure_0.2.7": 40.2,
+   "pressure_e123": 40.1,
+   "presDisplay_0.2.7": 40.0,
+   "presDisplay_e123": 40.0
+  },
+  "Ryan Kalkbrenner": {
+   "rank_0.2.7": 237,
+   "rank_e123": 237,
+   "ovr_0.2.7": 67.2,
+   "ovr_e123": 67.2,
+   "help_0.2.7": 99.0,
+   "help_e123": 99.3,
+   "pressure_0.2.7": 48.3,
+   "pressure_e123": 47.0,
+   "presDisplay_0.2.7": 46.8,
+   "presDisplay_e123": 47.9
+  },
+  "Stephen Curry": {
+   "rank_0.2.7": 34,
+   "rank_e123": 35,
+   "ovr_0.2.7": 83.0,
+   "ovr_e123": 83.1,
+   "help_0.2.7": 67.5,
+   "help_e123": 67.5,
+   "pressure_0.2.7": 83.7,
+   "pressure_e123": 83.7,
+   "presDisplay_0.2.7": 89.4,
+   "presDisplay_e123": 89.2
+  },
+  "Jamal Murray": {
+   "rank_0.2.7": 26,
+   "rank_e123": 23,
+   "ovr_0.2.7": 84.9,
+   "ovr_e123": 85.2,
+   "help_0.2.7": 61.9,
+   "help_e123": 61.9,
+   "pressure_0.2.7": 50.9,
+   "pressure_e123": 50.3,
+   "presDisplay_0.2.7": 64.3,
+   "presDisplay_e123": 63.8
+  },
+  "Kon Knueppel": {
+   "rank_0.2.7": 21,
+   "rank_e123": 19,
+   "ovr_0.2.7": 85.5,
+   "ovr_e123": 85.7,
+   "help_0.2.7": 67.7,
+   "help_e123": 67.7,
+   "pressure_0.2.7": 50.2,
+   "pressure_e123": 49.2,
+   "presDisplay_0.2.7": 53.1,
+   "presDisplay_e123": 52.5
+  }
+ },
+ "crosscheck": {
+  "help_gt99_card_vs_summary": [
+   [
+    "Chet Holmgren",
+    "Isaiah Stewart",
+    "Ryan Kalkbrenner",
+    "Victor Wembanyama"
+   ],
+   [
+    "Chet Holmgren",
+    "Isaiah Stewart",
+    "Ryan Kalkbrenner",
+    "Victor Wembanyama"
+   ]
+  ],
+  "pressure_gt99_card_vs_summary": [
+   [
+    "Alex Caruso",
+    "Ausar Thompson",
+    "Cason Wallace",
+    "Dru Smith",
+    "Jordan Goodwin",
+    "Matisse Thybulle",
+    "Paul Reed"
+   ],
+   [
+    "Alex Caruso",
+    "Ausar Thompson",
+    "Cason Wallace",
+    "Dru Smith",
+    "Jordan Goodwin",
+    "Matisse Thybulle",
+    "Paul Reed"
+   ]
+  ],
+  "presDisplay_gt99_card_vs_summary": [
+   [
+    "Alex Caruso",
+    "Ausar Thompson",
+    "Cason Wallace",
+    "Dru Smith",
+    "Jordan Goodwin",
+    "Matisse Thybulle"
+   ],
+   [
+    "Alex Caruso",
+    "Ausar Thompson",
+    "Cason Wallace",
+    "Dru Smith",
+    "Jordan Goodwin",
+    "Matisse Thybulle"
+   ]
+  ],
+  "all_equal": true
+ }
+}

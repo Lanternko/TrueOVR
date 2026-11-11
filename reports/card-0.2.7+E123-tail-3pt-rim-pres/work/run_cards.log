@@ -1,0 +1,10 @@
+e123 primary rc 0 1s }
+e123 fitA rc 0 1s }
+e123 fitB rc 0 1s }
+e123h primary rc 0 1s }
+e123h fitA rc 0 1s }
+e123h fitB rc 0 1s }
+e123p primary rc 0 1s }
+e123p fitA rc 0 1s }
+e123p fitB rc 0 0s }
+done 0

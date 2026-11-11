@@ -1,0 +1,283 @@
+{
+ "twok_file": "D:\\Projects\\CODING\\basketball-autochess\\reports\\ovr-v55-2k27-compare\\2k_yearly_ovr.csv",
+ "twok_sha256": "5ac1e2d458a72624ea78c03fc623214fb5d289868cfd752e14b6953308f3a851",
+ "sim_file": null,
+ "seed": 20261031,
+ "bootstrap_draws": 2000,
+ "seasons": {
+  "2022-23": {
+   "playerGamesPop_MIN>=500": 367,
+   "cardRows_MIN>=500_matched": {
+    "T0": 271,
+    "T1": 271,
+    "T4": 271,
+    "T5": 271,
+    "T6": 271
+   },
+   "unmatchedRankingNames_first10": {
+    "T0": [],
+    "T1": [],
+    "T4": [],
+    "T5": [],
+    "T6": []
+   },
+   "unmatchedCount": {
+    "T0": 0,
+    "T1": 0,
+    "T4": 0,
+    "T5": 0,
+    "T6": 0
+   },
+   "rankingMinMismatch>1.5": {
+    "T0": 148,
+    "T1": 148,
+    "T4": 148,
+    "T5": 148,
+    "T6": 148
+   },
+   "evalPop(common_and_ref)": 270,
+   "inCommonButNoRef(excluded)": 1,
+   "refExcludedInPop(no_term_at_all)": 14,
+   "availableInEvalPop": {
+    "sal": 180,
+    "twok": 266,
+    "rapm": 262,
+    "sim": 0
+   },
+   "availableInPlayerGamesPop": {
+    "sal": 253,
+    "twok": 266,
+    "rapm": 318,
+    "sim": 0
+   },
+   "salaryStats": {
+    "rookie_no_salary_term": 98,
+    "undated_censored_no_salary_term": 7,
+    "fa_start_after_2021_ignored(leak-guard)": 50,
+    "year_via_tx": 125,
+    "no_salary_row": 9
+   },
+   "leak": {
+    "salaryPage": "contracts2023.html",
+    "rapmFile": "card-0.2.7+E126-tank-next-season/rapm-2023-24.json",
+    "rapmUsesOnlySeason": "2023-24",
+    "twokEdition": "2K24",
+    "simSeasonPresent": false
+   }
+  },
+  "2023-24": {
+   "playerGamesPop_MIN>=500": 360,
+   "cardRows_MIN>=500_matched": {
+    "T0": 303,
+    "T1": 303,
+    "T4": 303,
+    "T5": 303,
+    "T6": 303
+   },
+   "unmatchedRankingNames_first10": {
+    "T0": [],
+    "T1": [],
+    "T4": [],
+    "T5": [],
+    "T6": []
+   },
+   "unmatchedCount": {
+    "T0": 0,
+    "T1": 0,
+    "T4": 0,
+    "T5": 0,
+    "T6": 0
+   },
+   "rankingMinMismatch>1.5": {
+    "T0": 141,
+    "T1": 141,
+    "T4": 141,
+    "T5": 141,
+    "T6": 141
+   },
+   "evalPop(common_and_ref)": 303,
+   "inCommonButNoRef(excluded)": 0,
+   "refExcludedInPop(no_term_at_all)": 4,
+   "availableInEvalPop": {
+    "sal": 205,
+    "twok": 299,
+    "rapm": 286,
+    "sim": 0
+   },
+   "availableInPlayerGamesPop": {
+    "sal": 255,
+    "twok": 299,
+    "rapm": 313,
+    "sim": 0
+   },
+   "salaryStats": {
+    "year_via_tx": 64,
+    "no_salary_row": 8,
+    "rookie_no_salary_term": 95,
+    "fa_start_after_2021_ignored(leak-guard)": 12,
+    "undated_censored_no_salary_term": 2
+   },
+   "leak": {
+    "salaryPage": "contracts2024.html",
+    "rapmFile": "card-0.2.7+E126-tank-next-season/rapm-2024-25.json",
+    "rapmUsesOnlySeason": "2024-25",
+    "twokEdition": "2K25",
+    "simSeasonPresent": false
+   }
+  },
+  "2024-25": {
+   "playerGamesPop_MIN>=500": 375,
+   "cardRows_MIN>=500_matched": {
+    "T0": 346,
+    "T1": 346,
+    "T4": 346,
+    "T5": 346,
+    "T6": 346
+   },
+   "unmatchedRankingNames_first10": {
+    "T0": [
+     "Jock Landale"
+    ],
+    "T1": [
+     "Jock Landale"
+    ],
+    "T4": [
+     "Jock Landale"
+    ],
+    "T5": [
+     "Jock Landale"
+    ],
+    "T6": [
+     "Jock Landale"
+    ]
+   },
+   "unmatchedCount": {
+    "T0": 1,
+    "T1": 1,
+    "T4": 1,
+    "T5": 1,
+    "T6": 1
+   },
+   "rankingMinMismatch>1.5": {
+    "T0": 167,
+    "T1": 167,
+    "T4": 167,
+    "T5": 167,
+    "T6": 167
+   },
+   "evalPop(common_and_ref)": 346,
+   "inCommonButNoRef(excluded)": 0,
+   "refExcludedInPop(no_term_at_all)": 6,
+   "availableInEvalPop": {
+    "sal": 240,
+    "twok": 341,
+    "rapm": 319,
+    "sim": 0
+   },
+   "availableInPlayerGamesPop": {
+    "sal": 262,
+    "twok": 342,
+    "rapm": 319,
+    "sim": 0
+   },
+   "salaryStats": {
+    "year_via_tx": 48,
+    "no_salary_row": 22,
+    "rookie_no_salary_term": 90,
+    "fa_start_after_2021_ignored(leak-guard)": 2,
+    "undated_censored_no_salary_term": 1
+   },
+   "leak": {
+    "salaryPage": "contracts2025.html",
+    "rapmFile": "card-0.2.7+E126-tank-next-season/rapm-2025-26.json",
+    "rapmUsesOnlySeason": "2025-26",
+    "twokEdition": "2K26",
+    "simSeasonPresent": false
+   }
+  },
+  "2025-26": {
+   "playerGamesPop_MIN>=500": 380,
+   "cardRows_MIN>=500_matched": {
+    "T0": 379,
+    "T1": 379,
+    "T4": 379,
+    "T5": 379,
+    "T6": 379
+   },
+   "unmatchedRankingNames_first10": {
+    "T0": [],
+    "T1": [],
+    "T4": [],
+    "T5": [],
+    "T6": []
+   },
+   "unmatchedCount": {
+    "T0": 0,
+    "T1": 0,
+    "T4": 0,
+    "T5": 0,
+    "T6": 0
+   },
+   "rankingMinMismatch>1.5": {
+    "T0": 202,
+    "T1": 202,
+    "T4": 202,
+    "T5": 202,
+    "T6": 202
+   },
+   "evalPop(common_and_ref)": 379,
+   "inCommonButNoRef(excluded)": 0,
+   "refExcludedInPop(no_term_at_all)": 0,
+   "availableInEvalPop": {
+    "sal": 262,
+    "twok": 376,
+    "rapm": 0,
+    "sim": 0
+   },
+   "availableInPlayerGamesPop": {
+    "sal": 263,
+    "twok": 377,
+    "rapm": 0,
+    "sim": 0
+   },
+   "salaryStats": {
+    "rookie_no_salary_term": 89,
+    "year_via_tx": 42,
+    "no_salary_row": 27,
+    "undated_censored_no_salary_term": 1,
+    "fa_start_after_2021_ignored(leak-guard)": 1
+   },
+   "leak": {
+    "salaryPage": "bref2526.html",
+    "rapmFile": null,
+    "rapmUsesOnlySeason": null,
+    "twokEdition": "2K27",
+    "simSeasonPresent": false
+   }
+  }
+ },
+ "T0_reproduction": {
+  "2022-23": {
+   "phase0_sha": "3e7d08ec4878bfb2135775559bb826585751d244bcd8e89903dc0dbddce2b67a",
+   "phase1_sha": "3e7d08ec4878bfb2135775559bb826585751d244bcd8e89903dc0dbddce2b67a",
+   "equal": true
+  },
+  "2023-24": {
+   "phase0_sha": "5c03c2e1ef4af8fb85eb0e3927514e64fc402af950c9a3bcbf2da80f39f2f479",
+   "phase1_sha": "5c03c2e1ef4af8fb85eb0e3927514e64fc402af950c9a3bcbf2da80f39f2f479",
+   "equal": true
+  },
+  "2024-25": {
+   "phase0_sha": "4940c59d43d07cdaf93198dd0bcc2b108ccbc0ea0dc7a7fecb23f734041fcc85",
+   "phase1_sha": "4940c59d43d07cdaf93198dd0bcc2b108ccbc0ea0dc7a7fecb23f734041fcc85",
+   "equal": true
+  },
+  "2025-26": {
+   "phase0_sha": "99466f369d53316a260f2b6d91ee056e2da8048e65d8283a68cec1322fef1655",
+   "phase1_sha": "99466f369d53316a260f2b6d91ee056e2da8048e65d8283a68cec1322fef1655",
+   "equal": true
+  },
+  "all_equal": true,
+  "c0_want_99466f36": true
+ }
+}

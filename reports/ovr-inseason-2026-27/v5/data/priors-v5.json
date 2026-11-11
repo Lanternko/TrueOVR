@@ -1,0 +1,552 @@
+{
+  "spec": "preregistration-v5 §R.7 第 1 條（跨隊加總）",
+  "sourceNotes": {
+    "2021-22..2023-24": "v5/history/box-totals-<season>.csv 的 teamId=ALL",
+    "2024-25": "沒有 box-totals；整季 season-league roster 不存在（calendar-82 v3-league 的 observed 只到約 60-69 場），改用 data/defense-seventh/2024-25/player-games.json 逐場列按 (pid, team) 加總",
+    "2025-26": "reports/ovr-v55-card-E-2025-26/season-league-E2-lam0.4.json 逐隊 +="
+  },
+  "seasons": {
+    "2021-22": {
+      "source": {
+        "kind": "box-totals",
+        "file": "reports\\ovr-inseason-2026-27\\v5\\history\\box-totals-2021-22.csv"
+      },
+      "sourceSha256": "eaa49d3c82e9c6f9833904abf76fc87653cffb3aed90a86fb0a9a8ea21abd7ec",
+      "original": {
+        "file": "reports\\ovr-inseason-2026-27\\v4\\data\\prior-2021-22.json",
+        "sha256": "e604fc29875839e1737c22db31063c81f545e3d6403d1bf48b6374929cc6149c"
+      },
+      "output": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\data\\prior-2021-22-v5.json",
+        "sha256": "f52595fe16eadf6e16c838079df418820ae95a06819587cb800512604267c6e2"
+      },
+      "players": 605,
+      "changedPlayers": 599,
+      "changedTradedPlayers": 97,
+      "missing": [],
+      "attrsUnchanged": true,
+      "dMIN": {
+        "median": -0.067,
+        "max": 5.8,
+        "min": -7.65,
+        "maxAbs": 7.65
+      }
+    },
+    "2022-23": {
+      "source": {
+        "kind": "box-totals",
+        "file": "reports\\ovr-inseason-2026-27\\v5\\history\\box-totals-2022-23.csv"
+      },
+      "sourceSha256": "6e4c1caeaeaa0c6af95168ea70244b20edb9468630f99e80517347407665fa80",
+      "original": {
+        "file": "reports\\ovr-inseason-2026-27\\v3\\data\\prior-2022-23.json",
+        "sha256": "fd4c3f1ccb359182e428ae896f30b3a923e9ffff89833a45a62cc32645912904"
+      },
+      "output": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\data\\prior-2022-23-v5.json",
+        "sha256": "a4efa03897a9bbb79f4ba4e034f2041a9767bc37d8aa480f8c635d1e1da9adcf"
+      },
+      "players": 539,
+      "changedPlayers": 537,
+      "changedTradedPlayers": 70,
+      "missing": [],
+      "attrsUnchanged": true,
+      "dMIN": {
+        "median": -0.283,
+        "max": 6.967,
+        "min": -7.85,
+        "maxAbs": 7.85
+      }
+    },
+    "2023-24": {
+      "source": {
+        "kind": "box-totals",
+        "file": "reports\\ovr-inseason-2026-27\\v5\\history\\box-totals-2023-24.csv"
+      },
+      "sourceSha256": "aa6f602b961c57789da5444e5a4e53084477dc69fcebe68a6765d3a13692e327",
+      "original": {
+        "file": "reports\\ovr-inseason-2026-27\\v3\\data\\prior-2023-24.json",
+        "sha256": "2ef41f85755cde2cae310725ba2eff84364a8caa35807bef8dbb734ff4e62377"
+      },
+      "output": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\data\\prior-2023-24-v5.json",
+        "sha256": "ee694b038d4803d9bd8a6f0b12c7a2f943e373d7a3a1e91136667b796dbed471"
+      },
+      "players": 572,
+      "changedPlayers": 567,
+      "changedTradedPlayers": 78,
+      "missing": [],
+      "attrsUnchanged": true,
+      "dMIN": {
+        "median": -0.083,
+        "max": 5.15,
+        "min": -6.483,
+        "maxAbs": 6.483
+      }
+    },
+    "2024-25": {
+      "source": {
+        "kind": "player-games",
+        "file": "data\\defense-seventh\\2024-25\\player-games.json"
+      },
+      "sourceSha256": "4c3f33c67ffaa1cf88ea01a7acaeef70af088e22f6020c3a02409989f6ad4ffa",
+      "original": {
+        "file": "reports\\ovr-inseason-2026-27\\v3\\data\\prior-2024-25.json",
+        "sha256": "6bc0d647c4f3ef15af658b7c5277fb32311d39364c2ba64f3d2e65a50bba62c9"
+      },
+      "output": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\data\\prior-2024-25-v5.json",
+        "sha256": "a9de0471020ac5d50e5fca5e1df1459424062109ba81e8b93bfab944e8dabb85"
+      },
+      "players": 569,
+      "changedPlayers": 0,
+      "changedTradedPlayers": 0,
+      "missing": [],
+      "attrsUnchanged": true,
+      "dMIN": {
+        "median": 0.0,
+        "max": 0.0,
+        "min": 0.0,
+        "maxAbs": 0.0
+      }
+    },
+    "2025-26": {
+      "source": {
+        "kind": "season-league",
+        "file": "reports\\ovr-v55-card-E-2025-26\\season-league-E2-lam0.4.json"
+      },
+      "sourceSha256": "f454866e98e370c904e88d0efa4c0125900ee2e02f5538478a2142ff2d99fea5",
+      "original": {
+        "file": "reports\\ovr-inseason-2026-27\\v4\\data\\prior-2025-26.json",
+        "sha256": "e982c8613b092880dcf68be52170613566e8dd495fd0992efcfb9a8150f8e434"
+      },
+      "output": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\data\\prior-2025-26-v5.json",
+        "sha256": "95741823d99530894726b53b616b49ddab50003812bdd63ecdbd5017a9001667"
+      },
+      "players": 582,
+      "changedPlayers": 72,
+      "changedTradedPlayers": 72,
+      "missing": [],
+      "attrsUnchanged": true,
+      "dMIN": {
+        "median": 388.0617,
+        "max": 1559.2883,
+        "min": 8.2667,
+        "maxAbs": 1559.2883
+      }
+    }
+  },
+  "changedTop10": {
+    "2021-22": [
+      {
+        "playerId": 1630581,
+        "name": "Josh Giddey",
+        "oldMIN": 1708.0,
+        "newMIN": 1700.35,
+        "dMIN": -7.65,
+        "oldGP": 54.0,
+        "newGP": 54.0,
+        "teams": 1
+      },
+      {
+        "playerId": 2546,
+        "name": "Carmelo Anthony",
+        "oldMIN": 1800.0,
+        "newMIN": 1793.233,
+        "dMIN": -6.767,
+        "oldGP": 69.0,
+        "newGP": 69.0,
+        "teams": 1
+      },
+      {
+        "playerId": 202340,
+        "name": "Avery Bradley",
+        "oldMIN": 1412.0,
+        "newMIN": 1405.917,
+        "dMIN": -6.083,
+        "oldGP": 62.0,
+        "newGP": 62.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1628971,
+        "name": "Bruce Brown",
+        "oldMIN": 1780.0,
+        "newMIN": 1774.033,
+        "dMIN": -5.967,
+        "oldGP": 72.0,
+        "newGP": 72.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1629684,
+        "name": "Grant Williams",
+        "oldMIN": 1881.0,
+        "newMIN": 1875.1,
+        "dMIN": -5.9,
+        "oldGP": 77.0,
+        "newGP": 77.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1629006,
+        "name": "Josh Okogie",
+        "oldMIN": 510.0,
+        "newMIN": 515.8,
+        "dMIN": 5.8,
+        "oldGP": 49.0,
+        "newGP": 49.0,
+        "teams": 1
+      },
+      {
+        "playerId": 201961,
+        "name": "Wayne Ellington",
+        "oldMIN": 816.0,
+        "newMIN": 810.233,
+        "dMIN": -5.767,
+        "oldGP": 43.0,
+        "newGP": 43.0,
+        "teams": 1
+      },
+      {
+        "playerId": 201980,
+        "name": "Danny Green",
+        "oldMIN": 1359.0,
+        "newMIN": 1353.433,
+        "dMIN": -5.567,
+        "oldGP": 62.0,
+        "newGP": 62.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1626167,
+        "name": "Myles Turner",
+        "oldMIN": 1240.0,
+        "newMIN": 1234.733,
+        "dMIN": -5.267,
+        "oldGP": 42.0,
+        "newGP": 42.0,
+        "teams": 1
+      },
+      {
+        "playerId": 202684,
+        "name": "Tristan Thompson",
+        "oldMIN": 891.0,
+        "newMIN": 896.25,
+        "dMIN": 5.25,
+        "oldGP": 57.0,
+        "newGP": 57.0,
+        "teams": 3
+      }
+    ],
+    "2022-23": [
+      {
+        "playerId": 1628386,
+        "name": "Jarrett Allen",
+        "oldMIN": 2228.0,
+        "newMIN": 2220.15,
+        "dMIN": -7.85,
+        "oldGP": 68.0,
+        "newGP": 68.0,
+        "teams": 1
+      },
+      {
+        "playerId": 203486,
+        "name": "Mason Plumlee",
+        "oldMIN": 2046.0,
+        "newMIN": 2052.967,
+        "dMIN": 6.967,
+        "oldGP": 79.0,
+        "newGP": 79.0,
+        "teams": 2
+      },
+      {
+        "playerId": 1630231,
+        "name": "KJ Martin",
+        "oldMIN": 2299.0,
+        "newMIN": 2292.167,
+        "dMIN": -6.833,
+        "oldGP": 82.0,
+        "newGP": 82.0,
+        "teams": 1
+      },
+      {
+        "playerId": 203081,
+        "name": "Damian Lillard",
+        "oldMIN": 2113.0,
+        "newMIN": 2106.6,
+        "dMIN": -6.4,
+        "oldGP": 58.0,
+        "newGP": 58.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1628470,
+        "name": "Torrey Craig",
+        "oldMIN": 1954.0,
+        "newMIN": 1947.833,
+        "dMIN": -6.167,
+        "oldGP": 79.0,
+        "newGP": 79.0,
+        "teams": 1
+      },
+      {
+        "playerId": 202691,
+        "name": "Klay Thompson",
+        "oldMIN": 2285.0,
+        "newMIN": 2278.917,
+        "dMIN": -6.083,
+        "oldGP": 69.0,
+        "newGP": 69.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1630530,
+        "name": "Trey Murphy III",
+        "oldMIN": 2454.0,
+        "newMIN": 2447.983,
+        "dMIN": -6.017,
+        "oldGP": 79.0,
+        "newGP": 79.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1627814,
+        "name": "Damion Lee",
+        "oldMIN": 1512.0,
+        "newMIN": 1506.333,
+        "dMIN": -5.667,
+        "oldGP": 74.0,
+        "newGP": 74.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1629626,
+        "name": "Bol Bol",
+        "oldMIN": 1511.0,
+        "newMIN": 1505.433,
+        "dMIN": -5.567,
+        "oldGP": 70.0,
+        "newGP": 70.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1630162,
+        "name": "Anthony Edwards",
+        "oldMIN": 2847.0,
+        "newMIN": 2841.45,
+        "dMIN": -5.55,
+        "oldGP": 79.0,
+        "newGP": 79.0,
+        "teams": 1
+      }
+    ],
+    "2023-24": [
+      {
+        "playerId": 1631246,
+        "name": "Vince Williams Jr.",
+        "oldMIN": 1443.0,
+        "newMIN": 1436.517,
+        "dMIN": -6.483,
+        "oldGP": 52.0,
+        "newGP": 52.0,
+        "teams": 1
+      },
+      {
+        "playerId": 201942,
+        "name": "DeMar DeRozan",
+        "oldMIN": 2995.0,
+        "newMIN": 2988.6,
+        "dMIN": -6.4,
+        "oldGP": 79.0,
+        "newGP": 79.0,
+        "teams": 1
+      },
+      {
+        "playerId": 203507,
+        "name": "Giannis Antetokounmpo",
+        "oldMIN": 2573.0,
+        "newMIN": 2567.233,
+        "dMIN": -5.767,
+        "oldGP": 73.0,
+        "newGP": 73.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1628966,
+        "name": "Keita Bates-Diop",
+        "oldMIN": 670.0,
+        "newMIN": 664.583,
+        "dMIN": -5.417,
+        "oldGP": 53.0,
+        "newGP": 53.0,
+        "teams": 2
+      },
+      {
+        "playerId": 203497,
+        "name": "Rudy Gobert",
+        "oldMIN": 2588.0,
+        "newMIN": 2593.15,
+        "dMIN": 5.15,
+        "oldGP": 76.0,
+        "newGP": 76.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1630577,
+        "name": "Julian Champagnie",
+        "oldMIN": 1473.0,
+        "newMIN": 1467.867,
+        "dMIN": -5.133,
+        "oldGP": 74.0,
+        "newGP": 74.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1630541,
+        "name": "Moses Moody",
+        "oldMIN": 1161.0,
+        "newMIN": 1155.883,
+        "dMIN": -5.117,
+        "oldGP": 66.0,
+        "newGP": 66.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1631117,
+        "name": "Walker Kessler",
+        "oldMIN": 1488.0,
+        "newMIN": 1493.117,
+        "dMIN": 5.117,
+        "oldGP": 64.0,
+        "newGP": 64.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1627780,
+        "name": "Gary Payton II",
+        "oldMIN": 685.0,
+        "newMIN": 679.933,
+        "dMIN": -5.067,
+        "oldGP": 44.0,
+        "newGP": 44.0,
+        "teams": 1
+      },
+      {
+        "playerId": 1630559,
+        "name": "Austin Reaves",
+        "oldMIN": 2624.0,
+        "newMIN": 2628.967,
+        "dMIN": 4.967,
+        "oldGP": 82.0,
+        "newGP": 82.0,
+        "teams": 1
+      }
+    ],
+    "2024-25": [],
+    "2025-26": [
+      {
+        "playerId": 201935,
+        "name": "James Harden",
+        "oldMIN": 879.2066666666667,
+        "newMIN": 2438.495,
+        "dMIN": 1559.2883,
+        "oldGP": 26.0,
+        "newGP": 70.0,
+        "teams": 2
+      },
+      {
+        "playerId": 202696,
+        "name": "Nikola Vučević",
+        "oldMIN": 337.81166666666667,
+        "newMIN": 1818.1183,
+        "dMIN": 1480.3067,
+        "oldGP": 16.0,
+        "newGP": 64.0,
+        "teams": 2
+      },
+      {
+        "playerId": 1628991,
+        "name": "Jaren Jackson Jr.",
+        "oldMIN": 72.18333333333334,
+        "newMIN": 1454.6483,
+        "dMIN": 1382.465,
+        "oldGP": 3.0,
+        "newGP": 48.0,
+        "teams": 2
+      },
+      {
+        "playerId": 203468,
+        "name": "CJ McCollum",
+        "oldMIN": 1181.5816666666667,
+        "newMIN": 2263.3717,
+        "dMIN": 1081.79,
+        "oldGP": 41.0,
+        "newGP": 76.0,
+        "teams": 2
+      },
+      {
+        "playerId": 1629111,
+        "name": "Jock Landale",
+        "oldMIN": 446.01,
+        "newMIN": 1506.0767,
+        "dMIN": 1060.0667,
+        "oldGP": 23.0,
+        "newGP": 68.0,
+        "teams": 2
+      },
+      {
+        "playerId": 203471,
+        "name": "Dennis Schröder",
+        "oldMIN": 640.635,
+        "newMIN": 1696.2983,
+        "dMIN": 1055.6633,
+        "oldGP": 30.0,
+        "newGP": 70.0,
+        "teams": 2
+      },
+      {
+        "playerId": 1629012,
+        "name": "Collin Sexton",
+        "oldMIN": 675.6766666666666,
+        "newMIN": 1613.2033,
+        "dMIN": 937.5267,
+        "oldGP": 26.0,
+        "newGP": 68.0,
+        "teams": 2
+      },
+      {
+        "playerId": 1631097,
+        "name": "Bennedict Mathurin",
+        "oldMIN": 729.1016666666667,
+        "newMIN": 1620.015,
+        "dMIN": 890.9133,
+        "oldGP": 26.0,
+        "newGP": 54.0,
+        "teams": 2
+      },
+      {
+        "playerId": 1626145,
+        "name": "Tyus Jones",
+        "oldMIN": 132.88666666666666,
+        "newMIN": 978.5783,
+        "dMIN": 845.6917,
+        "oldGP": 8.0,
+        "newGP": 67.0,
+        "teams": 3
+      },
+      {
+        "playerId": 203114,
+        "name": "Khris Middleton",
+        "oldMIN": 612.1166666666667,
+        "newMIN": 1439.0867,
+        "dMIN": 826.97,
+        "oldGP": 29.0,
+        "newGP": 63.0,
+        "teams": 2
+      }
+    ]
+  },
+  "pass": true
+}

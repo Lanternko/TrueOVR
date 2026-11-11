@@ -1,0 +1,6 @@
+k=1 players=150 nonC fta 0.54 ftm 0.46 pts 0.70 | wing fta 0.62 ftm 0.52 pts 0.64 | C fta 0.23 ftm 0.28 pts 0.35
+k=2 players=150 nonC fta 1.04 ftm 0.91 pts 0.87 | wing fta 1.13 ftm 0.96 pts 0.81 | C fta 0.56 ftm 0.51 pts 0.53
+k=3 players=150 nonC fta 1.33 ftm 1.21 pts 1.06 | wing fta 1.39 ftm 1.22 pts 0.99 | C fta 0.72 ftm 0.67 pts 0.68
+k=4 players=150 nonC fta 1.84 ftm 1.71 pts 1.21 | wing fta 1.88 ftm 1.70 pts 1.16 | C fta 0.83 ftm 0.81 pts 0.76
+k=6 players=150 nonC fta 2.60 ftm 2.44 pts 1.37 | wing fta 2.69 ftm 2.44 pts 1.32 | C fta 1.42 ftm 1.36 pts 0.79
+nonC fta ratio {1: np.float64(0.54), 2: np.float64(1.042), 3: np.float64(1.335), 4: np.float64(1.838), 6: np.float64(2.601)} pick k = 2

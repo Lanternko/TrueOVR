@@ -1,0 +1,14 @@
+{
+ "analysis": {
+  "preregSha256": "454e4cc4f208b8d4222772cdd68fdb99e91ef061163b0bff7c614833ac15a169",
+  "inputs": {
+   "legacy": "1341f9d7d630cece12d543e6feaedbe208ddbaefb4210a73e952c36b06ebe837",
+   "ch1": "bb158c124d8faaa5fd7988c799e20a30cf961536a0efe858a027e2be2e8a9dbd"
+  },
+  "scale099Sha256": "6d2387b296d326db0733f62ee30427c768c5c74778ec0c0c84ff6ddf9ea0eeff",
+  "python": "3.13.1",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "seconds": 2.555091381072998
+ }
+}

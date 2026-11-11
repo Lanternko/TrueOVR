@@ -1,0 +1,71 @@
+{
+ "n_cards": 582,
+ "attrs": {
+  "drive": {
+   "n_ranking": 582,
+   "within0.1": 582.0,
+   "max_diff_ranking": 0.04992958848380624,
+   "n_full": 582,
+   "max_diff_full": 2.842170943040401e-14,
+   "share_full_within_0.1": 1.0
+  },
+  "foulDraw": {
+   "n_ranking": 582,
+   "within0.1": 582.0,
+   "max_diff_ranking": 0.04996708360762625,
+   "n_full": 582,
+   "max_diff_full": 1.595421949929232e-05,
+   "share_full_within_0.1": 1.0
+  },
+  "ft": {
+   "n_ranking": 582,
+   "within0.1": 582.0,
+   "max_diff_ranking": 0.04984564388560386,
+   "n_full": 582,
+   "max_diff_full": 7.105427357601002e-14,
+   "share_full_within_0.1": 1.0
+  },
+  "mid": {
+   "n_ranking": 582,
+   "within0.1": 582.0,
+   "max_diff_ranking": 0.04994252545914435,
+   "n_full": 582,
+   "max_diff_full": 0.0,
+   "share_full_within_0.1": 1.0
+  },
+  "pass": {
+   "n_ranking": 582,
+   "within0.1": 582.0,
+   "max_diff_ranking": 0.049941599949036686,
+   "n_full": 582,
+   "max_diff_full": 2.842170943040401e-14,
+   "share_full_within_0.1": 1.0
+  },
+  "rebound": {
+   "n_ranking": 582,
+   "within0.1": 582.0,
+   "max_diff_ranking": 0.049941599949036686,
+   "n_full": 582,
+   "max_diff_full": 0.0,
+   "share_full_within_0.1": 1.0
+  },
+  "short": {
+   "n_ranking": 582,
+   "within0.1": 582.0,
+   "max_diff_ranking": 0.049894179805392014,
+   "n_full": 582,
+   "max_diff_full": 0.0,
+   "share_full_within_0.1": 1.0
+  },
+  "tovSkill": {
+   "n_ranking": 582,
+   "within0.1": 582.0,
+   "max_diff_ranking": 0.04983541803817815,
+   "n_full": 582,
+   "max_diff_full": 4.263256414560601e-14,
+   "share_full_within_0.1": 1.0
+  }
+ },
+ "pooled_share_ranking": 1.0,
+ "values": 4656
+}

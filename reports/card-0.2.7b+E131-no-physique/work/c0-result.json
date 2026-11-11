@@ -1,0 +1,14 @@
+{
+ "c0": {
+  "sha256": "361bcac61075dec1150c3b89b406ecd62dcaf4fdb5d738ccff68a0634de81105",
+  "want": "361bcac61075dec1150c3b89b406ecd62dcaf4fdb5d738ccff68a0634de81105",
+  "pass": true
+ },
+ "presDisplay_overwritten": 582,
+ "work_ranking_sha256": "de0875f70c770e753dc375b5f71f03e318477f19237e3ed262277c0ba34d7501",
+ "anchors": {
+  "PR1": -0.8234348586707387,
+  "PR50": 1.2757551955805375,
+  "PR99": 4.11501094146304
+ }
+}

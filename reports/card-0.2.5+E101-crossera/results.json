@@ -1,0 +1,341 @@
+{
+ "experiment": "E-101",
+ "baseline": "card 0.2.5",
+ "verdict": "通過",
+ "verdict_rule": "預註冊 §5：c-pre 過才判定；主要變體 e101 對 cur，(c0)(c1)(c2N)(c2Q)(c3)(c4) 全過=通過（card 0.2.6 候選、取代 E-090 與 E-096，交使用者 G5）",
+ "gates": {
+  "c-pre": true,
+  "c0": true,
+  "c1": true,
+  "c2N": true,
+  "c2Q": true,
+  "c3": true,
+  "c4": true
+ },
+ "checks": {
+  "c-pre": {
+   "diff": {
+    "mid": 0.0001959239397281154,
+    "short": 9.39724659926311e-05
+   },
+   "pbpFixed": {
+    "mid": 0.41694961292951244,
+    "short": 0.5778296757845371
+   },
+   "shotsJson": {
+    "mid": 0.4167536889897843,
+    "short": 0.5777357033185445
+   },
+   "threshold": "|差| <= 0.010",
+   "pass": true
+  },
+  "c0": {
+   "pass": true,
+   "sha256_equal": false,
+   "columns_equal": true,
+   "rows_equal": true,
+   "nonnumeric_mismatch": 0,
+   "target": "reports/card-0.2.5/ranking.csv",
+   "target_sha256": "73b1d6353142dd86327a022a19e939833c42a0aa0c69f3377201ffe411c0050a",
+   "candidate_sha256": "81b0cf0bdba133bbc1c8731b79526fef3badcc5e2006537c6cd3be8cad89c85a",
+   "max_numeric_diff": 0.0,
+   "cells_text_differs_value_equal": 76
+  },
+  "c1": {
+   "value": "npm test exit 0",
+   "pass": true
+  },
+  "c2N": {
+   "point": -0.0026543974254910063,
+   "ci90": [
+    -0.006879255164348808,
+    0.0014949802883165216
+   ],
+   "threshold": "下界 > -0.02",
+   "pass": true
+  },
+  "c2Q": {
+   "point": -0.003178684281062827,
+   "ci90": [
+    -0.006709407035329851,
+    0.0003973005561405557
+   ],
+   "threshold": "下界 > -0.02",
+   "pass": true
+  },
+  "c3": {
+   "E101": "19/19",
+   "card-0.2.5": "18/19",
+   "pass": true
+  },
+  "c4": {
+   "count>140": 0,
+   "values": [],
+   "threshold": "<= 2",
+   "pass": true
+  }
+ },
+ "h1_e101": {
+  "mid": {
+   "top": false,
+   "bot": false
+  },
+  "short": {
+   "top": true,
+   "bot": false
+  }
+ },
+ "h1v_e101": {
+  "midValue": {
+   "top": true,
+   "bot": false
+  },
+  "shortValue": {
+   "top": true,
+   "bot": true
+  }
+ },
+ "reportOnly": {
+  "rho2k_perGame": {
+   "card-0.2.5": 0.7382609006100155,
+   "E090": 0.7359681626380628,
+   "E096": 0.736181831322821,
+   "E096v": 0.7421510707508328,
+   "E097": 0.738672564036899,
+   "E101": 0.7371454991144253,
+   "E101z": 0.737729969551871,
+   "E101g": 0.7371503744207664,
+   "E101w": 0.7364590945018386
+  },
+  "rhoRapm_inSample_R007": {
+   "card-0.2.5": 0.778984035332651,
+   "E090": 0.7786305642839192,
+   "E096": 0.779421033822991,
+   "E096v": 0.7726657121851493,
+   "E097": 0.7783587085124288,
+   "E101": 0.7802030005017228,
+   "E101z": 0.7778999978024785,
+   "E101g": 0.7803355779858231,
+   "E101w": 0.7797849955735865
+  },
+  "rhoDef": {
+   "card-0.2.5": 0.5377306068522191,
+   "E090": 0.5359397926813089,
+   "E096": 0.5362657000800534,
+   "E096v": 0.5329735251935758,
+   "E097": 0.5343778361648516,
+   "E101": 0.5368523573403511,
+   "E101z": 0.535529538887621,
+   "E101g": 0.537037443410164,
+   "E101w": 0.5370615253751687
+  },
+  "rho_N": {
+   "card025": {
+    "point": 0.4934302701302964,
+    "per_direction": {
+     "AB": 0.46455540854873006,
+     "BA": 0.5223051317118628
+    }
+   },
+   "e101": {
+    "point": 0.4907758727048054,
+    "per_direction": {
+     "AB": 0.46235207296612435,
+     "BA": 0.5191996724434864
+    }
+   }
+  },
+  "rho_Q": {
+   "card025": {
+    "point": 0.5936396817667546,
+    "per_direction": {
+     "AB": 0.5761806131747563,
+     "BA": 0.6110987503587528
+    }
+   },
+   "e101": {
+    "point": 0.5904609974856918,
+    "per_direction": {
+     "AB": 0.5745336157495275,
+     "BA": 0.606388379221856
+    }
+   }
+  },
+  "e101z": {
+   "c2N": {
+    "point": -0.004372892571397502,
+    "ci90": [
+     -0.008616715650552612,
+     -0.00010645527978195398
+    ],
+    "threshold": "下界 > -0.02",
+    "pass": true
+   },
+   "c2Q": {
+    "point": -0.005063160652648557,
+    "ci90": [
+     -0.008730332956929205,
+     -0.0015528944165834617
+    ],
+    "threshold": "下界 > -0.02",
+    "pass": true
+   },
+   "c3": "19/19",
+   "c4": {
+    "count>140": 0,
+    "values": [],
+    "threshold": "<= 2",
+    "pass": true
+   },
+   "note": "只報告、不判定（§4、L-026）"
+  },
+  "e101g": {
+   "c2N": {
+    "point": -0.00267183944003746,
+    "ci90": [
+     -0.006890670084601794,
+     0.0014553254789512163
+    ],
+    "threshold": "下界 > -0.02",
+    "pass": true
+   },
+   "c2Q": {
+    "point": -0.00331004776191568,
+    "ci90": [
+     -0.006874256932201306,
+     0.00031730651306375224
+    ],
+    "threshold": "下界 > -0.02",
+    "pass": true
+   },
+   "c3": "19/19",
+   "c4": {
+    "count>140": 0,
+    "values": [],
+    "threshold": "<= 2",
+    "pass": true
+   },
+   "note": "只報告、不判定（§4、L-026）"
+  },
+  "e101w": {
+   "c2N": {
+    "point": -0.003232148946744562,
+    "ci90": [
+     -0.007240083556468935,
+     0.0008477833263308586
+    ],
+    "threshold": "下界 > -0.02",
+    "pass": true
+   },
+   "c2Q": {
+    "point": -0.0038779562472353035,
+    "ci90": [
+     -0.007435004258502476,
+     -0.00046190850135954256
+    ],
+    "threshold": "下界 > -0.02",
+    "pass": true
+   },
+   "c3": "19/19",
+   "c4": {
+    "count>140": 0,
+    "values": [],
+    "threshold": "<= 2",
+    "pass": true
+   },
+   "note": "只報告、不判定（§4、L-026）"
+  }
+ },
+ "missingFiles": [],
+ "inputs_sha256": {
+  "zones-check.json": "5b4e157f292f1e47ca4647c1cf4cd03ca5b63d16ca815f400b1ba76915fe24b4",
+  "c-pre.json": "c3d8a83e5cb0992551d5279cbd4c3b2504b4a86b70fdbb36f375035d551661ab",
+  "a0-e101.json": "3af850856289875758b4f6ef1ca6a2d63225acf2245eec41c29e376b63861aae",
+  "h1-pairs-e101.json": "fa29da4537a6231a65d37163b81232f7c7aa35f74af37ca311985ca41ad1709f",
+  "h1-results.json": "3424e175e5445e64204a387d312fbe632bbe65fa6ee20a04be66552e09825cf1",
+  "h1v-pairs-e101.json": "d04db3a2f91ec26732c5afb811dfacebcdb7a037291bee76dfdc82a64a4b76f0",
+  "h1v-results.json": "eb08a1599fd9cde89c7571a38143af40c4d77c3622268bd0285b6fcee40bdd90",
+  "tail-summary.json": "99ea3555f3ec08aabf7ad5b2def9c63b471bf4f174ad6fdb4dcd08e2e0e21149",
+  "pool/manifest.json": "6c9f3d06c89314cd8bccbf3452ef54cabf2527f9d4546687724530bba334c14c",
+  "history/pbp-zones-2022-23.csv.gz": "8d8d568f63167f89d0dcaa39ec16b6b974f5376624a518fda9e3955cd03474cd",
+  "history/pbp-zones-2023-24.csv.gz": "bd80fd41e6faa0afd1c9e1187844dd292c2e0485a8d0e8ec284f3648f3ff07dd",
+  "history/pbp-zones-2024-25.csv.gz": "d15e313d0cf2bd9509c78315c17dfe4e8740375eba2112cdfde9a77255780a5c",
+  "history/pbp-zones-2025-26.csv.gz": "f244b875902395cf92e043235b7507800ab1e2342b756a570638eafdc0c6966c",
+  "pool/raw-2015-16.json": "a6d3abee9416939abe310fb0b948b5c4e15d88d0afb294bb8938857bb61410e7",
+  "pool/raw-2016-17.json": "fab00d703712f23c21d6791913cbe821059ed7eb161e6bccc07e40d798a2e01d",
+  "pool/raw-2017-18.json": "8f8aea864d8a1296a232e77d52850bc8113aad10b31369cb6091ec58a08fff53",
+  "pool/raw-2018-19.json": "81eed067eae4ac743c78feb9cf3368c8212c3a3f4e208a8709b03137d981b6a6",
+  "pool/raw-2019-20.json": "ce5ac137432e56170c34abcc27c0a80c54e4cbf727eea9e7a038618eb8c08b43",
+  "pool/raw-2020-21.json": "5f6e878d9c487c3d32a0d58520f6bf1315cc4c2fa226a92df908299bbdd78bdd",
+  "pool/raw-2021-22.json": "65345aaba944d068f539514c28062cb6c247e7c7f79d407b2d30f1e4443f6b99",
+  "pool/raw-2022-23.json": "c6adae248b3f63ead8e959ab1c63dcd5dd9644d72572f15128f0e67ec7963d1f",
+  "pool/raw-2023-24.json": "fd2a5422abd04b4cc6cc40db1c8af6866bc95b1db82263ac6243430b048a5d23",
+  "pool/raw-2024-25.json": "b14e188ee813a01d821a948bad327890b7c1f7c85e956407b91f1dbfa5542ce4",
+  "attributes-e101.csv": "395e86a04f54d1a45584bbc38559eb3ad44bd7374bcb26b10865a883cc3b903f",
+  "attributes-e101z.csv": "708eca9e4eeb80b1134ec6636cb2b2cbe40b6c0e1e6306f0a16beaa71b368769",
+  "attributes-e101g.csv": "400ceb71c3ab1561ea9b581500ac96f3b92e5ab33b63d225bd32327443929c2c",
+  "attributes-e101w.csv": "8724128b81765163039d6883650e0c49176ffff9bdb7a0d590c0739815a18431",
+  "value-attrs-e101.csv": "db87b8b12ab0d7b13ebb1d9c485e891035cf18d649c90885c36921a022437a54",
+  "value-attrs-e101z.csv": "1b46ea70aa1784916bd74d7e38296473ec301945c92bc56710021ac5c2813a74",
+  "value-attrs-e101g.csv": "db87b8b12ab0d7b13ebb1d9c485e891035cf18d649c90885c36921a022437a54",
+  "value-attrs-e101w.csv": "db87b8b12ab0d7b13ebb1d9c485e891035cf18d649c90885c36921a022437a54",
+  "calibrate-wing.py": "1e69769f668767540483eea1e02c50a3d8418eb7383dd556d8ebab051c65654d",
+  "work/extract_pbp_e101.py": "4df00a85501cb74d212536f9111498494f2ac4ceb8059a076d3e0bef6016be16",
+  "work/e101_zones.py": "ca3257a0805e59ee928cfcf22764cb4154c2ae17975e2e26351c77344cd55b01",
+  "work/c_pre.py": "d30e9d4709f45ea5037457cf0c90328da271646c4665e39cb6e00af8d7c524d8",
+  "work/a0_e101.py": "33fa9468d798aa5b9f03fabb25a5b21e5f035e88b1fce6a38b2ca7a9b686f38a",
+  "work/h1_e101_data.py": "6333742c4cab579d095c6e19d827847f1b0cf46ddfca3afd4a4f291a49d5c9d1",
+  "work/h1_e101.py": "1ab557e29427ade1e2d82e872d031c87aa8750a2cd31dd2db6f900f1fe15f3cc",
+  "work/h1v_e101.py": "cfb7aabb2107617c2fc361888d2bf9cb8da509bd425f2473300f800000d963f8",
+  "work/pool_data.py": "736ecec44c622b572c20a117f564eea79fff07fa6e4ca74de91edc056e27d5a6",
+  "work/build_e101.py": "8565703a163dfad6e0e51dea9c7f81665a085c948e401aedc5ad65cdb125f24e",
+  "chain/run_cards.py": "876b659231d84cca2e389e256b6c4d52274f4f372ae50bcf7050317f9884a8b1",
+  "chain/build_card_022.py": "7bcd799572f484b27319d0ac625dee97e2abe7028640de1e649a82fe93cf606c",
+  "chain/e084.py": "b06881b21f925fb466073a6427e57d5a068e1b3a630880d3a1897e40c97277c0",
+  "chain/evaluate.mjs": "0fb2880c8982aa17b7abe7672434d2ce86c2b3e43a363cbcff31deb51f66977d",
+  "chain/compare.py": "371fcb86d844a783858cfafa34a0501cd48cb0a7a040f85815dc66782c3c93d6",
+  "chain/run_all.sh": "8f6bb294262bfa7f6887f56314943fb6810de82e4c005afe24d375265c64df09",
+  "chain/report_data.py": "feda0aa8d87ff8fc607072cfcd56189920fb6b07eeaf9811cc34aefc2238d2f7",
+  "chain/copy-log.txt": "ee0dac3e49cfc4b7f6e898dfd4eb0a149115bbefd8539b29ad975e6ff2d09ed9",
+  "cards/e101/ranking022.csv": "cd8af5dbe6deb2ce2c2db34efc0c70c0ddaa08e71f8ae500db316fd892796431",
+  "cards/e101z/ranking022.csv": "de819bd5c2a0aada22221598e420933da491958e1b5cce7832c68f92889034c6",
+  "cards/e101g/ranking022.csv": "2acaefe465375175203baf51167b69166cb53e28aa674e7da835646a20e7654f",
+  "cards/e101w/ranking022.csv": "4f06df46dba5f33edb732b76c2d4f3953b2fa4135c9ecfc7e89aba61d35fd7c4",
+  "cards/e101/e084/ranking.csv": "a0a81ecb2d591497bc1d6680573e6fbf71a11124c4d33ba60df3e4d412f16c91",
+  "cards/e101z/e084/ranking.csv": "8ca52b53155f7c4b452324727b44b0bbc9d64a654321d7cd4cdbdf5a47a530ae",
+  "cards/e101g/e084/ranking.csv": "d6de4825608ca4028d646b5b69244998db8bb5cd3cf686817f711389361d1ec1",
+  "cards/e101w/e084/ranking.csv": "ed4104e791847f453ff5f7caf94d583121fea91c70af6db9b6fec1dc8326bf9d",
+  "evaluation.json": "8a2f20c1d401b9daccc20cad99e7f81ee35b3330f78d0d76ada8016bc91ccda1",
+  "c2-e101.json": "d75f36bc8ee439665e78a95051d30f6b51482b7d15c4cadc4f9afd5ca4c3333c",
+  "c2-e101z.json": "a19944ea2c6368fe76844585c30bac751097aabc1299745e54724c6ba43b36d4",
+  "c2-e101g.json": "ecaa7e9e3e6dbea1fd1c5c3b78b27c40d533743153870e473e0996c2709ed32b",
+  "c2-e101w.json": "20b3d30160182c4bd26ad88a7a4c8f58b37f1d9386e6a658afaf838859907a01",
+  "report-data.json": "e7b108c0bc2b5d4be27e50a313fd6f44fa3f7bf7e78f04199f3e5131bebb61e0",
+  "npm-test.log": "1b96f5a521a04f6963145721d6d5cc5554bad5d23dcf267906a93125ff4a6b79",
+  "deviations.json": "3b8226a040c157d15184437edc98ec647ed2cd2f90dd2855a585c5397dce67fa",
+  "E090@0.2.4/work/a0-raw.json": "c63ee1df576d70eb5b48d74dad3f5563a0a56a18c9a76f9406e3a6f87d3c15fb",
+  "E090@0.2.4/work/current-attrs.csv": "b69f642e31fc5e4e8a293d51edf7ddc37cae7cd9b14a98e20ab1f672bc1468cc",
+  "E090@0.2.4/h1-results.json": "9e16cd4ddc175052d66216285da3eeb4c9e4ef5806d4fc533042e858cad049cd",
+  "E090@0.2.4/work/h1-pairs.json": "ebad2a34feae1978196e69c0f4d9b37cf70213bc8c7b99992566c0de8756e291",
+  "E090@0.2.4/work/tmp/e070/vol-fit.json": "846408f0e62f65332b1d620a21b3f9d6f74a4d920001191dd9f4315388444c0a",
+  "E090@0.2.5/c0.json": "76dfbce83ae6e79292516ab7ac7a34849c7579f42d38dc6f5bfb6ef1512ddc9c",
+  "E090@0.2.5/cards/cur/e084/ranking.csv": "81b0cf0bdba133bbc1c8731b79526fef3badcc5e2006537c6cd3be8cad89c85a",
+  "E096/attributes-e096.csv": "948f59ae0cefa9199914c7b7b6762e58f61ada3453ebf5b47961c01a465d325b",
+  "E096/value-attrs.csv": "8167020c0df8c31ed9a78a744b49f5952db0a9f580d60255da67db9088e4abea",
+  "E096/h1v-pairs.json": "8f07bc3c6c60757cbf8b7a09d29531d08bd3a90466133ef78575e4f7696f202c",
+  "E097/a0-league.json": "db1a712e22b88faaf06e9f300abbd23d1f065fcd1913df9054119a1a44792058",
+  "E097/diag/area-count.txt": "09dbfbfbf949d3201d5a0fbdcb8b894cfe3635086f589ddcacdc9f3e8a40e01a",
+  "V61/backtest.json": "5ff4991d315de55e935733add4bd4c0ff12dd39473e7ca4ef9a7a4ec7f3d209c",
+  "V61/build_attrs.py": "1c2a10ceed9b7d94ef6ae71a841bf7629162a877b1c1dc9a77523e7d4feb6cdb",
+  "V61/engine.py": "10af8368871f47a884ae67d74ceff38d4d08e4f2aab7089a096b585a1cff66e8",
+  "V61/extract_pbp.py": "e2b9cf957e68f6d935df02c7555d982bc836d6a2c29073b49c595b69a1a90ca3",
+  "V61/history/pbp-zones-2022-23.csv.gz": "e395eee21ceae3595bea462db199b582ac4c196482fbdb71c7e8a90733133a18",
+  "V61/history/pbp-zones-2023-24.csv.gz": "96e6e5108f6f1fd2eab8823918408143066304d9b12132a994fda517f24c2308",
+  "V61/history/pbp-zones-2024-25.csv.gz": "54c2a54e396d548fd02f07751ba993a45f9a6bf9c805fb8ae9cf859a2df14004",
+  "V61/history/pbp-zones-2025-26.csv.gz": "3a2aff097bb4133301790387d38072b2a29e390aed385058d0efa5c41a11f0cb",
+  "data/benchmark-source/shots.json": "860134b915ef78473a7aa548b59efde690cbc775eb001c172b5ea2853bb9ad40",
+  "reports/card-0.2.5/ranking.csv": "73b1d6353142dd86327a022a19e939833c42a0aa0c69f3377201ffe411c0050a",
+  "src/constants.js": "86f968d2a29326d0e4ab8375face0e83f76556464a1caeb8ff00be6797290598"
+ },
+ "preregistration_sha256": "44d1eb0a35f7c5b16d3da2210f7e857a90cd94fe1a3ad22b07d4545d8740f3e5"
+}

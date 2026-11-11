@@ -1,0 +1,41 @@
+{
+ "coverage": {
+  "2025-26": {
+   "tracking_rows_unmatched": 0,
+   "card_players_with_TOV_but_no_tracking": 0,
+   "card_players_with_tracking": 582
+  },
+  "2024-25": {
+   "tracking_rows_unmatched": 0,
+   "card_players_with_TOV_but_no_tracking": 0,
+   "card_players_with_tracking": 464
+  },
+  "2023-24": {
+   "tracking_rows_unmatched": 0,
+   "card_players_with_TOV_but_no_tracking": 0,
+   "card_players_with_tracking": 384
+  },
+  "2022-23": {
+   "tracking_rows_unmatched": 0,
+   "card_players_with_TOV_but_no_tracking": 0,
+   "card_players_with_tracking": 325
+  }
+ },
+ "poolN": 252,
+ "topMissingN": 0,
+ "v_p10": 1.8458048549108794,
+ "max_abs_diff_chain_vs_tailU_K0": 0.0,
+ "h1_tov": {
+  "top": true,
+  "bot": true
+ },
+ "corr_r_v_pool": 0.29593293694511935,
+ "n_players": 582,
+ "arm": "KC",
+ "w_poss": 0.5,
+ "denom": "touch",
+ "rho_touch_per_possmin": 15.592877206893352,
+ "k_used": 997.9441412411745,
+ "kh_used": 3991.776564964698,
+ "rho_touch_per_possmin_pool252": 15.012135819337537
+}

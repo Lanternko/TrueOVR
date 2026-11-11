@@ -1,0 +1,24 @@
+{
+ "version": "card 0.2.15-cand",
+ "base": "card 0.2.13a（reports/card-0.2.13a/ranking.csv）；取代對象 card 0.2.14",
+ "players": 582,
+ "change": "E-294 臂 H-same：MIX 加分的 z 改「全聯盟尺、位置平均只留一半」（中鋒身分分減半、群內差距照全聯盟尺），飽和改 1.5·tanh(z⁺/1.5)（無平台），再乘位置權重 C=1、PF=0.243、其他 0（E-289 M1）；λ=0.5、sd、三個均方根縮放照 0.2.14 規則重算；500 分鐘以下 × MIN/500。候選卡，未取代正式卡；臂 H 是看過探索後加入（非盲測，L-026）。",
+ "formula": "ovr_new = round(ovr_0213a + mixBonus, 1)；mixBonus = 0.5*sd*w(pos)*(0.5*f(zR)*s_reb + 0.5*f(zC)*s_con)*s_mix*min(1,MIN/500)；z = 0.5*m_pos + (z_L - m_pos)，f(x)=1.5*tanh(max(x,0)/1.5)；算尺人群同 mix-pool-card0214.json（379 人）",
+ "bonus_population": {
+  "MIN>=500 非零": 119,
+  "MIN<500 非零": 70,
+  "零": 393
+ },
+ "bonus_max": 10.632,
+ "n_near_cap_0.2": 0,
+ "theoretical_cap_C": 11.739533509574475,
+ "sources_sha256": {
+  "card_0213a_ranking": "feb5c8023cd99f12413767160d3b98d119051c55ef6e200f26bca631460daf97",
+  "card_0214_ranking": "fbb5507846add6ebad78ba770fa544a065e3b7ae0c0a5926e5ae1d24fd46ae7a",
+  "E294_bonus_pick": "55b43250e6946298bdf6a51fa0f5b0e2d3663b4d2be03f2d69a2b97849c95e37",
+  "E294_preregistration": "d6c044197e69d5f947af76f31b1a95528a7acc8ed5968839dbfe6a39c63d7b62",
+  "E294_results": "d9c6d71d18e99823339aaa7198f71ba27dbe6f286b34d07f308541cd6d38ca41"
+ },
+ "ranking_csv_sha256": "ff1abb4722247faf3cd61c6cc28dcc547f2728e08486a3123b33747162b7d35f",
+ "build_command": "python -I -B -X utf8 reports/card-0.2.15-cand/build_cand.py"
+}

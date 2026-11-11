@@ -1,0 +1,597 @@
+{
+ "mode": "B12",
+ "boardNoise": {
+  "players": {
+   "Karlo Matković": {
+    "sourceMinutes": 912,
+    "v54Per36": 3.705,
+    "per36": 5.015,
+    "delta": 1.31,
+    "seOfDelta": 1.897,
+    "z": 0.69
+   },
+   "John Collins": {
+    "sourceMinutes": 1871,
+    "v54Per36": 0.975,
+    "per36": 0.71,
+    "delta": -0.265,
+    "seOfDelta": 1.129,
+    "z": -0.23
+   },
+   "Isaiah Stewart": {
+    "sourceMinutes": 1317,
+    "v54Per36": 2.469,
+    "per36": 1.821,
+    "delta": -0.648,
+    "seOfDelta": 1.396,
+    "z": -0.46
+   },
+   "Luka Garza": {
+    "sourceMinutes": 1118,
+    "v54Per36": 0.607,
+    "per36": 0.546,
+    "delta": -0.061,
+    "seOfDelta": 1.683,
+    "z": -0.04
+   },
+   "Neemias Queta": {
+    "sourceMinutes": 1926,
+    "v54Per36": 2.405,
+    "per36": 2.998,
+    "delta": 0.593,
+    "seOfDelta": 1.187,
+    "z": 0.5
+   },
+   "Rudy Gobert": {
+    "sourceMinutes": 2380,
+    "v54Per36": 3.484,
+    "per36": 2.827,
+    "delta": -0.657,
+    "seOfDelta": 0.994,
+    "z": -0.66
+   },
+   "Jalen Smith": {
+    "sourceMinutes": 1095,
+    "v54Per36": 4.316,
+    "per36": 3.602,
+    "delta": -0.714,
+    "seOfDelta": 1.531,
+    "z": -0.47
+   },
+   "Charles Bassey": {
+    "sourceMinutes": 153,
+    "v54Per36": 5.066,
+    "per36": 3.515,
+    "delta": -1.551,
+    "seOfDelta": 2.527,
+    "z": -0.61
+   },
+   "Jaxson Hayes": {
+    "sourceMinutes": 1207,
+    "v54Per36": 0.573,
+    "per36": 0.754,
+    "delta": 0.181,
+    "seOfDelta": 1.596,
+    "z": 0.11
+   },
+   "Jordan Walsh": {
+    "sourceMinutes": 1212,
+    "v54Per36": -0.116,
+    "per36": 0.925,
+    "delta": 1.041,
+    "seOfDelta": 1.359,
+    "z": 0.77
+   },
+   "Josh Minott": {
+    "sourceMinutes": 834,
+    "v54Per36": 3.102,
+    "per36": 2.766,
+    "delta": -0.336,
+    "seOfDelta": 1.436,
+    "z": -0.23
+   },
+   "Robert Williams III": {
+    "sourceMinutes": 1008,
+    "v54Per36": 3.773,
+    "per36": 1.104,
+    "delta": -2.668,
+    "seOfDelta": 1.731,
+    "z": -1.54
+   },
+   "Shai Gilgeous-Alexander": {
+    "sourceMinutes": 2259,
+    "v54Per36": 8.796,
+    "per36": 7.451,
+    "delta": -1.345,
+    "seOfDelta": 1.119,
+    "z": -1.2
+   },
+   "Nikola Jokić": {
+    "sourceMinutes": 2265,
+    "v54Per36": 5.106,
+    "per36": 6.164,
+    "delta": 1.057,
+    "seOfDelta": 1.052,
+    "z": 1.01
+   },
+   "Luka Dončić": {
+    "sourceMinutes": 2289,
+    "v54Per36": 5.059,
+    "per36": 4.585,
+    "delta": -0.474,
+    "seOfDelta": 1.019,
+    "z": -0.47
+   },
+   "Trae Young": {
+    "sourceMinutes": 384,
+    "v54Per36": 0.079,
+    "per36": 1.343,
+    "delta": 1.263,
+    "seOfDelta": 1.268,
+    "z": 1.0
+   },
+   "Victor Wembanyama": {
+    "sourceMinutes": 1866,
+    "v54Per36": 5.13,
+    "per36": 5.634,
+    "delta": 0.505,
+    "seOfDelta": 1.145,
+    "z": 0.44
+   }
+  },
+  "league": {
+   "medianAbsDelta": 0.772,
+   "medianSeOfDelta": 1.465,
+   "shareAbsZunder2": 0.993
+  }
+ },
+ "cardDecomposition": {
+  "Karlo Matković": {
+   "v53": {
+    "rank": 7.0,
+    "ovr": 95.4,
+    "simulatedPer36": 3.161,
+    "predictedPer36": 2.701
+   },
+   "v54": {
+    "rank": 8.0,
+    "ovr": 94.2,
+    "simulatedPer36": 3.705,
+    "predictedPer36": 2.615
+   },
+   "B12": {
+    "rank": 11.0,
+    "ovr": 91.4,
+    "simulatedPer36": 5.015,
+    "predictedPer36": 2.193
+   }
+  },
+  "John Collins": {
+   "v53": {
+    "rank": 29.0,
+    "ovr": 84.9,
+    "simulatedPer36": 1.553,
+    "predictedPer36": 1.454
+   },
+   "v54": {
+    "rank": 28.0,
+    "ovr": 85.0,
+    "simulatedPer36": 0.975,
+    "predictedPer36": 1.515
+   },
+   "B12": {
+    "rank": 45.0,
+    "ovr": 83.3,
+    "simulatedPer36": 0.71,
+    "predictedPer36": 1.231
+   }
+  },
+  "Isaiah Stewart": {
+   "v53": {
+    "rank": 32.0,
+    "ovr": 84.6,
+    "simulatedPer36": 2.541,
+    "predictedPer36": 1.424
+   },
+   "v54": {
+    "rank": 31.0,
+    "ovr": 84.7,
+    "simulatedPer36": 2.469,
+    "predictedPer36": 1.478
+   },
+   "B12": {
+    "rank": 60.0,
+    "ovr": 81.2,
+    "simulatedPer36": 1.821,
+    "predictedPer36": 0.978
+   }
+  },
+  "Luka Garza": {
+   "v53": {
+    "rank": 33.0,
+    "ovr": 84.5,
+    "simulatedPer36": 1.36,
+    "predictedPer36": 1.405
+   },
+   "v54": {
+    "rank": 49.0,
+    "ovr": 82.0,
+    "simulatedPer36": 0.607,
+    "predictedPer36": 1.149
+   },
+   "B12": {
+    "rank": 61.0,
+    "ovr": 81.1,
+    "simulatedPer36": 0.546,
+    "predictedPer36": 0.971
+   }
+  },
+  "Neemias Queta": {
+   "v53": {
+    "rank": 51.0,
+    "ovr": 82.7,
+    "simulatedPer36": 2.274,
+    "predictedPer36": 1.196
+   },
+   "v54": {
+    "rank": 43.0,
+    "ovr": 82.6,
+    "simulatedPer36": 2.405,
+    "predictedPer36": 1.22
+   },
+   "B12": {
+    "rank": 53.0,
+    "ovr": 81.9,
+    "simulatedPer36": 2.998,
+    "predictedPer36": 1.063
+   }
+  },
+  "Rudy Gobert": {
+   "v53": {
+    "rank": 68.0,
+    "ovr": 80.4,
+    "simulatedPer36": 3.238,
+    "predictedPer36": 0.914
+   },
+   "v54": {
+    "rank": 65.0,
+    "ovr": 80.5,
+    "simulatedPer36": 3.484,
+    "predictedPer36": 0.971
+   },
+   "B12": {
+    "rank": 79.0,
+    "ovr": 79.6,
+    "simulatedPer36": 2.827,
+    "predictedPer36": 0.79
+   }
+  },
+  "Jalen Smith": {
+   "v53": {
+    "rank": 104.0,
+    "ovr": 78.4,
+    "simulatedPer36": 3.859,
+    "predictedPer36": 0.682
+   },
+   "v54": {
+    "rank": 97.0,
+    "ovr": 78.4,
+    "simulatedPer36": 4.316,
+    "predictedPer36": 0.708
+   },
+   "B12": {
+    "rank": 134.0,
+    "ovr": 76.1,
+    "simulatedPer36": 3.602,
+    "predictedPer36": 0.38
+   }
+  },
+  "Charles Bassey": {
+   "v53": {
+    "rank": 42.0,
+    "ovr": 83.4,
+    "simulatedPer36": 4.957,
+    "predictedPer36": 1.276
+   },
+   "v54": {
+    "rank": 38.0,
+    "ovr": 83.6,
+    "simulatedPer36": 5.066,
+    "predictedPer36": 1.342
+   },
+   "B12": {
+    "rank": 56.0,
+    "ovr": 81.6,
+    "simulatedPer36": 3.515,
+    "predictedPer36": 1.026
+   }
+  },
+  "Jaxson Hayes": {
+   "v53": {
+    "rank": 109.0,
+    "ovr": 78.0,
+    "simulatedPer36": 0.813,
+    "predictedPer36": 0.63
+   },
+   "v54": {
+    "rank": 126.0,
+    "ovr": 76.3,
+    "simulatedPer36": 0.573,
+    "predictedPer36": 0.46
+   },
+   "B12": {
+    "rank": 141.0,
+    "ovr": 75.6,
+    "simulatedPer36": 0.754,
+    "predictedPer36": 0.313
+   }
+  },
+  "Jordan Walsh": {
+   "v53": {
+    "rank": 75.0,
+    "ovr": 80.0,
+    "simulatedPer36": 0.026,
+    "predictedPer36": 0.868
+   },
+   "v54": {
+    "rank": 69.0,
+    "ovr": 80.0,
+    "simulatedPer36": -0.116,
+    "predictedPer36": 0.911
+   },
+   "B12": {
+    "rank": 110.0,
+    "ovr": 77.3,
+    "simulatedPer36": 0.925,
+    "predictedPer36": 0.523
+   }
+  },
+  "Josh Minott": {
+   "v53": {
+    "rank": 79.0,
+    "ovr": 79.6,
+    "simulatedPer36": 3.483,
+    "predictedPer36": 0.826
+   },
+   "v54": {
+    "rank": 96.0,
+    "ovr": 78.8,
+    "simulatedPer36": 3.102,
+    "predictedPer36": 0.759
+   },
+   "B12": {
+    "rank": 140.0,
+    "ovr": 75.6,
+    "simulatedPer36": 2.766,
+    "predictedPer36": 0.321
+   }
+  },
+  "Robert Williams III": {
+   "v53": {
+    "rank": 92.0,
+    "ovr": 79.1,
+    "simulatedPer36": 4.008,
+    "predictedPer36": 0.759
+   },
+   "v54": {
+    "rank": 100.0,
+    "ovr": 78.0,
+    "simulatedPer36": 3.773,
+    "predictedPer36": 0.665
+   },
+   "B12": {
+    "rank": 137.0,
+    "ovr": 75.8,
+    "simulatedPer36": 1.104,
+    "predictedPer36": 0.348
+   }
+  },
+  "Shai Gilgeous-Alexander": {
+   "v53": {
+    "rank": 1.0,
+    "ovr": 111.6,
+    "simulatedPer36": 8.707,
+    "predictedPer36": 4.627
+   },
+   "v54": {
+    "rank": 1.0,
+    "ovr": 110.4,
+    "simulatedPer36": 8.796,
+    "predictedPer36": 4.579
+   },
+   "B12": {
+    "rank": 1.0,
+    "ovr": 112.1,
+    "simulatedPer36": 7.451,
+    "predictedPer36": 4.653
+   }
+  },
+  "Nikola Jokić": {
+   "v53": {
+    "rank": 8.0,
+    "ovr": 95.3,
+    "simulatedPer36": 4.946,
+    "predictedPer36": 2.69
+   },
+   "v54": {
+    "rank": 6.0,
+    "ovr": 94.9,
+    "simulatedPer36": 5.106,
+    "predictedPer36": 2.707
+   },
+   "B12": {
+    "rank": 4.0,
+    "ovr": 100.9,
+    "simulatedPer36": 6.164,
+    "predictedPer36": 3.323
+   }
+  },
+  "Luka Dončić": {
+   "v53": {
+    "rank": 2.0,
+    "ovr": 104.3,
+    "simulatedPer36": 5.11,
+    "predictedPer36": 3.761
+   },
+   "v54": {
+    "rank": 2.0,
+    "ovr": 104.2,
+    "simulatedPer36": 5.059,
+    "predictedPer36": 3.825
+   },
+   "B12": {
+    "rank": 3.0,
+    "ovr": 101.3,
+    "simulatedPer36": 4.585,
+    "predictedPer36": 3.367
+   }
+  },
+  "Trae Young": {
+   "v53": {
+    "rank": 140.0,
+    "ovr": 75.8,
+    "simulatedPer36": 0.066,
+    "predictedPer36": 0.374
+   },
+   "v54": {
+    "rank": 137.0,
+    "ovr": 75.6,
+    "simulatedPer36": 0.079,
+    "predictedPer36": 0.379
+   },
+   "B12": {
+    "rank": 113.0,
+    "ovr": 77.3,
+    "simulatedPer36": 1.343,
+    "predictedPer36": 0.516
+   }
+  },
+  "Victor Wembanyama": {
+   "v53": {
+    "rank": 3.0,
+    "ovr": 102.3,
+    "simulatedPer36": 5.202,
+    "predictedPer36": 3.528
+   },
+   "v54": {
+    "rank": 3.0,
+    "ovr": 101.9,
+    "simulatedPer36": 5.13,
+    "predictedPer36": 3.546
+   },
+   "B12": {
+    "rank": 2.0,
+    "ovr": 102.9,
+    "simulatedPer36": 5.634,
+    "predictedPer36": 3.564
+   }
+  }
+ },
+ "coefficientShift": {
+  "long": {
+   "v53": 0.632,
+   "v54": 0.563,
+   "B12": 0.445,
+   "deltaVsV53": -0.187,
+   "bootstrapSE": 0.173
+  },
+  "mid": {
+   "v53": 0.088,
+   "v54": 0.106,
+   "B12": 0.148,
+   "deltaVsV53": 0.06,
+   "bootstrapSE": 0.079
+  },
+  "short": {
+   "v53": 0.364,
+   "v54": 0.342,
+   "B12": 0.361,
+   "deltaVsV53": -0.003,
+   "bootstrapSE": 0.127
+  },
+  "ft": {
+   "v53": 0.18,
+   "v54": 0.197,
+   "B12": 0.2,
+   "deltaVsV53": 0.02,
+   "bootstrapSE": 0.111
+  },
+  "drive": {
+   "v53": 0.082,
+   "v54": 0.091,
+   "B12": 0.073,
+   "deltaVsV53": -0.009,
+   "bootstrapSE": 0.039
+  },
+  "tovSkill": {
+   "v53": 0.121,
+   "v54": 0.116,
+   "B12": 0.141,
+   "deltaVsV53": 0.02,
+   "bootstrapSE": 0.034
+  },
+  "pass": {
+   "v53": 0.302,
+   "v54": 0.316,
+   "B12": 0.412,
+   "deltaVsV53": 0.11,
+   "bootstrapSE": 0.114
+  },
+  "rebound": {
+   "v53": 0.064,
+   "v54": 0.059,
+   "B12": 0.155,
+   "deltaVsV53": 0.091,
+   "bootstrapSE": 0.109
+  },
+  "physique": {
+   "v53": 0.068,
+   "v54": 0.043,
+   "B12": 0.017,
+   "deltaVsV53": -0.051,
+   "bootstrapSE": 0.096
+  },
+  "onBall": {
+   "v53": 0.225,
+   "v54": 0.214,
+   "B12": 0.208,
+   "deltaVsV53": -0.017,
+   "bootstrapSE": 0.088
+  },
+  "help": {
+   "v53": 0.608,
+   "v54": 0.638,
+   "B12": 0.466,
+   "deltaVsV53": -0.142,
+   "bootstrapSE": 0.13
+  },
+  "stamina": {
+   "v53": 0.163,
+   "v54": 0.186,
+   "B12": 0.2,
+   "deltaVsV53": 0.037,
+   "bootstrapSE": 0.038
+  },
+  "heightInches": {
+   "v53": -0.822,
+   "v54": -0.829,
+   "B12": -0.505,
+   "deltaVsV53": 0.317,
+   "bootstrapSE": 0.53
+  },
+  "creation": {
+   "v53": 0.145,
+   "v54": 0.121,
+   "B12": 0.082,
+   "deltaVsV53": -0.063,
+   "bootstrapSE": 0.052
+  },
+  "pressure": {
+   "v53": 0.22,
+   "v54": 0.219,
+   "B12": 0.211,
+   "deltaVsV53": -0.009,
+   "bootstrapSE": 0.035
+  }
+ }
+}

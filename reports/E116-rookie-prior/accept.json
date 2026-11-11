@@ -1,0 +1,22 @@
+{
+ "c1_veteran_rows_identical_ex_rank": true,
+ "c1_counts_orig_vs_rookieVets": [
+  368,
+  368
+ ],
+ "c1_relative_order_same": true,
+ "c2_rookies": {
+  "rookiesInPrior": 42,
+  "rookiesInRanking": 42,
+  "withOvr": 42,
+  "playedN>0": 42,
+  "allPlayedHaveOvr": true
+ },
+ "c3_no_prior": {
+  "origNoPrior": 57,
+  "rookieNoPrior": 15,
+  "rookiesLeftInNoPrior": 0,
+  "removed": 42,
+  "restIdentical": true
+ }
+}

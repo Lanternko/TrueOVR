@@ -1,0 +1,129 @@
+{
+  "version": "card 0.2.6",
+  "baseVersion": "card 0.2.5",
+  "change": "E-101：PBP 把補籃、補扣標成 Mid-Range 的出手（shotDistance < 8）改歸近距離，mid／short 收縮向聯盟平均；百分位與 99 錨點改對 2022-23～2025-26 四季合併池；頂端的尺 S = max((PR99−PR90)/1.044, SD_pool)，只壓縮不放大（R-055、R-056）",
+  "players": 582,
+  "columns": [
+    "rank",
+    "ovr",
+    "name",
+    "pos",
+    "MIN",
+    "predictedPer36",
+    "simulatedPer36",
+    "defenseBonus",
+    "align",
+    "pred0",
+    "pr",
+    "long",
+    "mid",
+    "short",
+    "ft",
+    "drive",
+    "foulDraw",
+    "tovSkill",
+    "pass",
+    "rebound",
+    "physique",
+    "onBall",
+    "help",
+    "stamina",
+    "heightInches",
+    "creation",
+    "pressure",
+    "mpg",
+    "gRepl",
+    "ovr36",
+    "foulDisc",
+    "presDisplay"
+  ],
+  "columnsDifferentFromCard025": {
+    "rank": 531,
+    "ovr": 524,
+    "predictedPer36": 581,
+    "defenseBonus": 19,
+    "align": 412,
+    "pred0": 581,
+    "pr": 562,
+    "long": 9,
+    "mid": 578,
+    "short": 532,
+    "ft": 4,
+    "drive": 480,
+    "foulDraw": 563,
+    "tovSkill": 565,
+    "pass": 560,
+    "rebound": 556,
+    "physique": 547,
+    "onBall": 566,
+    "creation": 546,
+    "pressure": 13,
+    "gRepl": 581,
+    "ovr36": 560
+  },
+  "anchors": {
+    "PR1": -0.8131028885417996,
+    "PR50": 1.2430797590487008,
+    "PR99": 3.5110158484360294
+  },
+  "top20Changes": {
+    "out": [
+      "Jamal Murray",
+      "Kevin Durant",
+      "Ryan Rollins"
+    ],
+    "in": [
+      "Ausar Thompson",
+      "Jimmy Butler III",
+      "OG Anunoby"
+    ]
+  },
+  "verdict_E101": "預註冊判定 通過；role-audit 重算成立；G5 使用者 2026-10-30「A」；樣本外只證明不變差，版號 PATCH（R-019）",
+  "gates_E101": {
+    "c-pre": {
+      "pass": true
+    },
+    "c0": {
+      "pass": true
+    },
+    "c1": {
+      "value": "npm test exit 0",
+      "pass": true
+    },
+    "c2N": {
+      "point": -0.0026543974254910063,
+      "ci90": [
+        -0.006879255164348808,
+        0.0014949802883165216
+      ],
+      "pass": true
+    },
+    "c2Q": {
+      "point": -0.003178684281062827,
+      "ci90": [
+        -0.006709407035329851,
+        0.0003973005561405557
+      ],
+      "pass": true
+    },
+    "c3": {
+      "pass": true
+    },
+    "c4": {
+      "pass": true
+    }
+  },
+  "nextRound": "新賽季頁（inseason）先驗仍是 card 0.2.5（inseason 0.2.5a），要跟上 0.2.6 另走 inseason 實驗",
+  "audit": "role-audit 重算成立（reports/card-0.2.5+E101-crossera/audit/audit.md）",
+  "sources_sha256": {
+    "reports/card-0.2.5/ranking.csv": "73b1d6353142dd86327a022a19e939833c42a0aa0c69f3377201ffe411c0050a",
+    "reports/card-0.2.5+E101-crossera/cards/e101/e084/ranking.csv": "a0a81ecb2d591497bc1d6680573e6fbf71a11124c4d33ba60df3e4d412f16c91",
+    "reports/card-0.2.5+E101-crossera/results.json": "1d7d74dc2d5d1c8e1dd299d10519b1c81b4f350782111a37875871c6d2edb9d0",
+    "reports/card-0.2.5+E101-crossera/preregistration.md": "44d1eb0a35f7c5b16d3da2210f7e857a90cd94fe1a3ad22b07d4545d8740f3e5",
+    "reports/card-0.2.5+E101-crossera/report.md": "61ffa41db9faa9f32c21d9c458c37a69f810764444027c3fc1cfeef9804f52c3",
+    "reports/card-0.2.5+E101-crossera/audit/audit.md": "25b300f6d6724803ca6d208b6913976c9b508669b3de9d6807ac9134c2344410",
+    "reports/card-0.2.5+E101-crossera/cards/e101/e084/results.json": "36d27ecbc08153c93fc9b685c393968e676cc1088f1c0100780bf67408fad410"
+  },
+  "generator": "reports/card-0.2.6/build_card_026.py",
+  "ranking_csv_sha256": "a0a81ecb2d591497bc1d6680573e6fbf71a11124c4d33ba60df3e4d412f16c91"
+}

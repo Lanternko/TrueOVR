@@ -1,0 +1,438 @@
+{
+ "top20_out": [],
+ "top20_in": [],
+ "moved10_top100": 7,
+ "moved10_top100_names": [
+  [
+   "Tre Jones",
+   39,
+   49
+  ],
+  [
+   "Mikal Bridges",
+   53,
+   41
+  ],
+  [
+   "Cameron Johnson",
+   58,
+   43
+  ],
+  [
+   "Ayo Dosunmu",
+   69,
+   94
+  ],
+  [
+   "Alperen Sengun",
+   91,
+   81
+  ],
+  [
+   "Paul Reed",
+   93,
+   79
+  ],
+  [
+   "Deni Avdija",
+   97,
+   107
+  ]
+ ],
+ "moved10_top300": 53,
+ "biggest_up_top100": [
+  [
+   "Cameron Johnson",
+   58,
+   43
+  ],
+  [
+   "Paul Reed",
+   93,
+   79
+  ],
+  [
+   "Mikal Bridges",
+   53,
+   41
+  ],
+  [
+   "Alperen Sengun",
+   91,
+   81
+  ],
+  [
+   "Domantas Sabonis",
+   74,
+   66
+  ],
+  [
+   "Kon Knueppel",
+   83,
+   75
+  ],
+  [
+   "Scottie Barnes",
+   31,
+   24
+  ],
+  [
+   "Santi Aldama",
+   89,
+   82
+  ]
+ ],
+ "biggest_down_top100": [
+  [
+   "Ryan Rollins",
+   72,
+   78
+  ],
+  [
+   "Neemias Queta",
+   81,
+   87
+  ],
+  [
+   "Ajay Mitchell",
+   57,
+   64
+  ],
+  [
+   "Grayson Allen",
+   64,
+   71
+  ],
+  [
+   "Day'Ron Sharpe",
+   79,
+   86
+  ],
+  [
+   "Tre Jones",
+   39,
+   49
+  ],
+  [
+   "Deni Avdija",
+   97,
+   107
+  ],
+  [
+   "Ayo Dosunmu",
+   69,
+   94
+  ]
+ ],
+ "table": [
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "rank_g": 1,
+   "rank_i": 1,
+   "ovr_g": 110.4,
+   "ovr_i": 109.6,
+   "drive_g": 103.2,
+   "drive_i": 101.4,
+   "creation_g": 110.6,
+   "creation_i": 111.9
+  },
+  {
+   "name": "Nikola Jokić",
+   "rank_g": 2,
+   "rank_i": 2,
+   "ovr_g": 107.4,
+   "ovr_i": 106.5,
+   "drive_g": 91.3,
+   "drive_i": 84.5,
+   "creation_g": 82.2,
+   "creation_i": 80.0
+  },
+  {
+   "name": "Victor Wembanyama",
+   "rank_g": 3,
+   "rank_i": 3,
+   "ovr_g": 102.4,
+   "ovr_i": 102.4,
+   "drive_g": 72.5,
+   "drive_i": 73.0,
+   "creation_g": 79.9,
+   "creation_i": 85.3
+  },
+  {
+   "name": "Luka Dončić",
+   "rank_g": 4,
+   "rank_i": 4,
+   "ovr_g": 102.0,
+   "ovr_i": 102.1,
+   "drive_g": 98.4,
+   "drive_i": 98.3,
+   "creation_g": 104.6,
+   "creation_i": 113.1
+  },
+  {
+   "name": "Giannis Antetokounmpo",
+   "rank_g": 5,
+   "rank_i": 5,
+   "ovr_g": 99.0,
+   "ovr_i": 99.0,
+   "drive_g": 98.8,
+   "drive_i": 98.6,
+   "creation_g": 92.2,
+   "creation_i": 90.1
+  },
+  {
+   "name": "Kawhi Leonard",
+   "rank_g": 6,
+   "rank_i": 6,
+   "ovr_g": 98.4,
+   "ovr_i": 98.3,
+   "drive_g": 94.1,
+   "drive_i": 90.9,
+   "creation_g": 96.9,
+   "creation_i": 98.5
+  },
+  {
+   "name": "Donovan Mitchell",
+   "rank_g": 7,
+   "rank_i": 7,
+   "ovr_g": 96.2,
+   "ovr_i": 96.3,
+   "drive_g": 97.3,
+   "drive_i": 98.0,
+   "creation_g": 98.0,
+   "creation_i": 97.3
+  },
+  {
+   "name": "Jayson Tatum",
+   "rank_g": 8,
+   "rank_i": 8,
+   "ovr_g": 96.0,
+   "ovr_i": 96.2,
+   "drive_g": 96.4,
+   "drive_i": 96.7,
+   "creation_g": 96.3,
+   "creation_i": 97.7
+  },
+  {
+   "name": "Jalen Williams",
+   "rank_g": 9,
+   "rank_i": 9,
+   "ovr_g": 94.7,
+   "ovr_i": 94.6,
+   "drive_g": 94.0,
+   "drive_i": 93.2,
+   "creation_g": 92.5,
+   "creation_i": 89.5
+  },
+  {
+   "name": "Anthony Edwards",
+   "rank_g": 10,
+   "rank_i": 10,
+   "ovr_g": 93.9,
+   "ovr_i": 93.8,
+   "drive_g": 96.3,
+   "drive_i": 96.8,
+   "creation_g": 97.5,
+   "creation_i": 98.7
+  },
+  {
+   "name": "Cade Cunningham",
+   "rank_g": 12,
+   "rank_i": 11,
+   "ovr_g": 93.5,
+   "ovr_i": 93.4,
+   "drive_g": 98.2,
+   "drive_i": 97.7,
+   "creation_g": 98.3,
+   "creation_i": 96.4
+  },
+  {
+   "name": "Jimmy Butler III",
+   "rank_g": 11,
+   "rank_i": 12,
+   "ovr_g": 93.5,
+   "ovr_i": 93.4,
+   "drive_g": 88.8,
+   "drive_i": 89.7,
+   "creation_g": 80.8,
+   "creation_i": 76.5
+  },
+  {
+   "name": "Chet Holmgren",
+   "rank_g": 14,
+   "rank_i": 13,
+   "ovr_g": 93.2,
+   "ovr_i": 93.3,
+   "drive_g": 70.1,
+   "drive_i": 70.5,
+   "creation_g": 66.1,
+   "creation_i": 66.6
+  },
+  {
+   "name": "Joel Embiid",
+   "rank_g": 16,
+   "rank_i": 14,
+   "ovr_g": 93.0,
+   "ovr_i": 93.2,
+   "drive_g": 77.7,
+   "drive_i": 76.3,
+   "creation_g": 85.6,
+   "creation_i": 91.6
+  },
+  {
+   "name": "Kevin Durant",
+   "rank_g": 15,
+   "rank_i": 15,
+   "ovr_g": 93.0,
+   "ovr_i": 93.2,
+   "drive_g": 85.4,
+   "drive_i": 82.6,
+   "creation_g": 88.8,
+   "creation_i": 95.3
+  },
+  {
+   "name": "Evan Mobley",
+   "rank_g": 18,
+   "rank_i": 16,
+   "ovr_g": 92.5,
+   "ovr_i": 93.1,
+   "drive_g": 78.5,
+   "drive_i": 78.0,
+   "creation_g": 70.1,
+   "creation_i": 66.2
+  },
+  {
+   "name": "Stephen Curry",
+   "rank_g": 13,
+   "rank_i": 17,
+   "ovr_g": 93.2,
+   "ovr_i": 93.0,
+   "drive_g": 85.3,
+   "drive_i": 90.2,
+   "creation_g": 88.8,
+   "creation_i": 93.0
+  },
+  {
+   "name": "Jamal Murray",
+   "rank_g": 17,
+   "rank_i": 18,
+   "ovr_g": 92.7,
+   "ovr_i": 92.4,
+   "drive_g": 87.8,
+   "drive_i": 87.5,
+   "creation_g": 94.1,
+   "creation_i": 95.7
+  },
+  {
+   "name": "Desmond Bane",
+   "rank_g": 19,
+   "rank_i": 19,
+   "ovr_g": 92.1,
+   "ovr_i": 92.0,
+   "drive_g": 86.3,
+   "drive_i": 89.0,
+   "creation_g": 82.1,
+   "creation_i": 85.0
+  },
+  {
+   "name": "Tyrese Maxey",
+   "rank_g": 20,
+   "rank_i": 20,
+   "ovr_g": 92.0,
+   "ovr_i": 92.0,
+   "drive_g": 95.3,
+   "drive_i": 96.6,
+   "creation_g": 95.9,
+   "creation_i": 94.2
+  },
+  {
+   "name": "Kristaps Porziņģis",
+   "rank_g": 22,
+   "rank_i": 21,
+   "ovr_g": 91.5,
+   "ovr_i": 91.6,
+   "drive_g": 56.1,
+   "drive_i": 41.6,
+   "creation_g": 76.0,
+   "creation_i": 75.5
+  },
+  {
+   "name": "Austin Reaves",
+   "rank_g": 21,
+   "rank_i": 22,
+   "ovr_g": 91.7,
+   "ovr_i": 91.4,
+   "drive_g": 92.3,
+   "drive_i": 92.9,
+   "creation_g": 87.2,
+   "creation_i": 85.1
+  },
+  {
+   "name": "De'Aaron Fox",
+   "rank_g": 27,
+   "rank_i": 23,
+   "ovr_g": 90.6,
+   "ovr_i": 91.2,
+   "drive_g": 97.4,
+   "drive_i": 96.8,
+   "creation_g": 95.4,
+   "creation_i": 95.3
+  },
+  {
+   "name": "Scottie Barnes",
+   "rank_g": 31,
+   "rank_i": 24,
+   "ovr_g": 89.6,
+   "ovr_i": 91.2,
+   "drive_g": 82.6,
+   "drive_i": 79.8,
+   "creation_g": 81.8,
+   "creation_i": 86.1
+  },
+  {
+   "name": "Jalen Brunson",
+   "rank_g": 24,
+   "rank_i": 25,
+   "ovr_g": 90.9,
+   "ovr_i": 91.2,
+   "drive_g": 97.7,
+   "drive_i": 97.8,
+   "creation_g": 98.6,
+   "creation_i": 98.2
+  },
+  {
+   "name": "Devin Booker",
+   "rank_g": 28,
+   "rank_i": 31,
+   "ovr_g": 90.3,
+   "ovr_i": 90.7,
+   "drive_g": 90.4,
+   "drive_i": 88.6,
+   "creation_g": 96.4,
+   "creation_i": 98.1
+  },
+  {
+   "name": "Ja Morant",
+   "rank_g": 62,
+   "rank_i": 61,
+   "ovr_g": 82.8,
+   "ovr_i": 83.2,
+   "drive_g": 99.0,
+   "drive_i": 100.3,
+   "creation_g": 98.0,
+   "creation_i": 94.7
+  },
+  {
+   "name": "Zion Williamson",
+   "rank_g": 41,
+   "rank_i": 45,
+   "ovr_g": 87.9,
+   "ovr_i": 86.4,
+   "drive_g": 98.7,
+   "drive_i": 98.8,
+   "creation_g": 86.8,
+   "creation_i": 63.4
+  }
+ ],
+ "version_rule": "R-109：字母版條件＝前 100 名移動 ≥10 名 ≤25 人"
+}

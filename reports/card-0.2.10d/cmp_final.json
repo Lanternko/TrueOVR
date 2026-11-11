@@ -1,0 +1,386 @@
+{
+ "n_ranked": 379,
+ "spearman": 0.991121603480998,
+ "top20_in": [
+  "Desmond Bane"
+ ],
+ "top20_out": [
+  "Austin Reaves"
+ ],
+ "top100_moved10": 13,
+ "top100_in_out": [
+  4,
+  4
+ ],
+ "top300_moved10": 124,
+ "ovr_diff": {
+  "mean": 1.385567010309278,
+  "sd": 2.2011472964723082,
+  "p90abs": 4.199999999999996,
+  "max_abs": 11.300000000000004
+ },
+ "top10_bigs": {
+  "0.2.10c": [
+   [
+    "Nikola Jokić",
+    2,
+    103.7
+   ],
+   [
+    "Victor Wembanyama",
+    3,
+    101.5
+   ],
+   [
+    "Giannis Antetokounmpo",
+    4,
+    99.3
+   ],
+   [
+    "Jayson Tatum",
+    8,
+    90.6
+   ],
+   [
+    "Jalen Williams",
+    12,
+    87.0
+   ],
+   [
+    "Chet Holmgren",
+    14,
+    86.5
+   ],
+   [
+    "Evan Mobley",
+    16,
+    85.5
+   ],
+   [
+    "Joel Embiid",
+    19,
+    84.8
+   ],
+   [
+    "Anthony Davis",
+    23,
+    83.7
+   ],
+   [
+    "Scottie Barnes",
+    26,
+    83.5
+   ]
+  ],
+  "0.2.10d": [
+   [
+    "Nikola Jokić",
+    2,
+    107.0
+   ],
+   [
+    "Victor Wembanyama",
+    3,
+    102.0
+   ],
+   [
+    "Giannis Antetokounmpo",
+    5,
+    99.0
+   ],
+   [
+    "Jayson Tatum",
+    8,
+    93.2
+   ],
+   [
+    "Jalen Williams",
+    9,
+    90.7
+   ],
+   [
+    "Chet Holmgren",
+    14,
+    87.9
+   ],
+   [
+    "Joel Embiid",
+    15,
+    87.5
+   ],
+   [
+    "Evan Mobley",
+    18,
+    86.5
+   ],
+   [
+    "Anthony Davis",
+    22,
+    85.0
+   ],
+   [
+    "Kristaps Porziņģis",
+    23,
+    84.9
+   ]
+  ]
+ },
+ "sd": {
+  "long": {
+   "sd_a": 12.514288117083067,
+   "sd_b": 12.127108587503574,
+   "ratio": 0.9690610024352116,
+   "corr": 0.858562311144011,
+   "mean_a": 66.26781002638522,
+   "mean_b": 66.08575197889182
+  },
+  "creation": {
+   "sd_a": 16.737610398995052,
+   "sd_b": 16.490673468874316,
+   "ratio": 0.985246583936763,
+   "corr": 0.9934266302900138,
+   "mean_a": 66.53324538258575,
+   "mean_b": 66.49393139841689
+  },
+  "ovr": {
+   "sd_a": 12.185721928127311,
+   "sd_b": 11.971400002851748,
+   "ratio": 0.9824120452986161,
+   "corr": 0.9904507896371707,
+   "mean_a": 67.32242744063326,
+   "mean_b": 68.1335092348285
+  }
+ },
+ "movers_attr": {
+  "long": [
+   [
+    "Tyus Jones",
+    50.0,
+    76.5,
+    343,
+    308
+   ],
+   [
+    "Ausar Thompson",
+    58.3,
+    33.3,
+    51,
+    48
+   ],
+   [
+    "Dyson Daniels",
+    20.1,
+    42.6,
+    90,
+    88
+   ],
+   [
+    "Tidjane Salaün",
+    82.7,
+    60.8,
+    364,
+    369
+   ],
+   [
+    "Domantas Sabonis",
+    51.0,
+    72.4,
+    138,
+    75
+   ],
+   [
+    "Mike Conley",
+    61.6,
+    82.0,
+    320,
+    279
+   ],
+   [
+    "Dorian Finney-Smith",
+    47.4,
+    67.6,
+    357,
+    326
+   ],
+   [
+    "Giannis Antetokounmpo",
+    64.3,
+    44.3,
+    4,
+    5
+   ]
+  ],
+  "creation": [
+   [
+    "Tyus Jones",
+    57.1,
+    65.8,
+    343,
+    308
+   ],
+   [
+    "Kentavious Caldwell-Pope",
+    61.8,
+    55.2,
+    166,
+    173
+   ],
+   [
+    "Jonathan Isaac",
+    48.1,
+    54.6,
+    218,
+    208
+   ],
+   [
+    "Grayson Allen",
+    80.8,
+    74.4,
+    89,
+    71
+   ],
+   [
+    "Michael Porter Jr.",
+    75.4,
+    69.5,
+    34,
+    37
+   ],
+   [
+    "Nickeil Alexander-Walker",
+    76.1,
+    70.4,
+    81,
+    83
+   ],
+   [
+    "Clint Capela",
+    52.2,
+    57.8,
+    191,
+    187
+   ],
+   [
+    "Cameron Johnson",
+    49.1,
+    54.4,
+    64,
+    59
+   ]
+  ]
+ },
+ "key": {
+  "Jayson Tatum": [
+   8,
+   8,
+   90.6,
+   93.2
+  ],
+  "Jalen Williams": [
+   12,
+   9,
+   87.0,
+   90.7
+  ],
+  "Cooper Flagg": [
+   68,
+   64,
+   77.6,
+   78.5
+  ],
+  "Anthony Edwards": [
+   10,
+   10,
+   87.6,
+   89.1
+  ],
+  "Paolo Banchero": [
+   155,
+   143,
+   71.9,
+   72.8
+  ],
+  "Nikola Jokić": [
+   2,
+   2,
+   103.7,
+   107.0
+  ],
+  "Joel Embiid": [
+   19,
+   15,
+   84.8,
+   87.5
+  ],
+  "Stephen Curry": [
+   13,
+   13,
+   86.7,
+   88.0
+  ],
+  "Franz Wagner": [
+   21,
+   42,
+   84.1,
+   81.3
+  ],
+  "Alperen Sengun": [
+   91,
+   96,
+   75.5,
+   75.5
+  ]
+ },
+ "top_movers_rank": [
+  [
+   "Domantas Sabonis",
+   138,
+   75
+  ],
+  [
+   "Javon Small",
+   117,
+   60
+  ],
+  [
+   "Paul Reed",
+   124,
+   90
+  ],
+  [
+   "Josh Hart",
+   85,
+   111
+  ],
+  [
+   "Jaden McDaniels",
+   77,
+   99
+  ],
+  [
+   "Stephon Castle",
+   80,
+   102
+  ],
+  [
+   "Franz Wagner",
+   21,
+   42
+  ],
+  [
+   "Grayson Allen",
+   89,
+   71
+  ],
+  [
+   "Kristaps Porziņģis",
+   39,
+   23
+  ],
+  [
+   "Ayo Dosunmu",
+   56,
+   72
+  ]
+ ]
+}

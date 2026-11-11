@@ -1,0 +1,957 @@
+{
+ "n": 276,
+ "spearman": {
+  "net": 0.99,
+  "def": 0.9844,
+  "off": 0.993
+ },
+ "top20": {
+  "R2-stats:net": [
+   [
+    "Victor Wembanyama",
+    7.65
+   ],
+   [
+    "Giannis Antetokounmpo",
+    7.02
+   ],
+   [
+    "Luka Dončić",
+    6.91
+   ],
+   [
+    "Shai Gilgeous-Alexander",
+    6.64
+   ],
+   [
+    "Nikola Jokić",
+    6.47
+   ],
+   [
+    "Kawhi Leonard",
+    6.41
+   ],
+   [
+    "Scottie Barnes",
+    5.5
+   ],
+   [
+    "Donovan Mitchell",
+    5.42
+   ],
+   [
+    "Jarrett Allen",
+    5.31
+   ],
+   [
+    "Jalen Duren",
+    5.12
+   ],
+   [
+    "Stephen Curry",
+    4.94
+   ],
+   [
+    "Isaiah Hartenstein",
+    4.91
+   ],
+   [
+    "Jimmy Butler III",
+    4.86
+   ],
+   [
+    "Anthony Edwards",
+    4.63
+   ],
+   [
+    "Tyrese Maxey",
+    4.48
+   ],
+   [
+    "Karl-Anthony Towns",
+    4.35
+   ],
+   [
+    "Cade Cunningham",
+    4.33
+   ],
+   [
+    "Kevin Porter Jr.",
+    4.3
+   ],
+   [
+    "Mitchell Robinson",
+    4.27
+   ],
+   [
+    "Ajay Mitchell",
+    4.08
+   ]
+  ],
+  "R2-statsX:net": [
+   [
+    "Victor Wembanyama",
+    7.57
+   ],
+   [
+    "Giannis Antetokounmpo",
+    7.39
+   ],
+   [
+    "Luka Dončić",
+    7.3
+   ],
+   [
+    "Nikola Jokić",
+    7.21
+   ],
+   [
+    "Shai Gilgeous-Alexander",
+    6.49
+   ],
+   [
+    "Kawhi Leonard",
+    6.09
+   ],
+   [
+    "Jarrett Allen",
+    5.95
+   ],
+   [
+    "Jalen Duren",
+    5.21
+   ],
+   [
+    "Scottie Barnes",
+    5.11
+   ],
+   [
+    "Anthony Edwards",
+    5.0
+   ],
+   [
+    "Chet Holmgren",
+    4.96
+   ],
+   [
+    "Jimmy Butler III",
+    4.95
+   ],
+   [
+    "Isaiah Hartenstein",
+    4.92
+   ],
+   [
+    "Donovan Mitchell",
+    4.83
+   ],
+   [
+    "Stephen Curry",
+    4.82
+   ],
+   [
+    "Cade Cunningham",
+    4.47
+   ],
+   [
+    "Amen Thompson",
+    4.26
+   ],
+   [
+    "Kevin Durant",
+    4.22
+   ],
+   [
+    "Tyrese Maxey",
+    4.09
+   ],
+   [
+    "Karl-Anthony Towns",
+    4.07
+   ]
+  ],
+  "R2-stats:def": [
+   [
+    "Victor Wembanyama",
+    5.56
+   ],
+   [
+    "Dru Smith",
+    5.09
+   ],
+   [
+    "Marcus Smart",
+    4.25
+   ],
+   [
+    "Isaiah Hartenstein",
+    4.03
+   ],
+   [
+    "Scottie Barnes",
+    3.92
+   ],
+   [
+    "Jalen Suggs",
+    3.85
+   ],
+   [
+    "Ausar Thompson",
+    3.49
+   ],
+   [
+    "Jarrett Allen",
+    3.48
+   ],
+   [
+    "OG Anunoby",
+    3.34
+   ],
+   [
+    "Ajay Mitchell",
+    3.11
+   ],
+   [
+    "Neemias Queta",
+    2.86
+   ],
+   [
+    "Rudy Gobert",
+    2.82
+   ],
+   [
+    "John Konchar",
+    2.77
+   ],
+   [
+    "Wendell Carter Jr.",
+    2.74
+   ],
+   [
+    "Collin Murray-Boyles",
+    2.73
+   ],
+   [
+    "Cason Wallace",
+    2.6
+   ],
+   [
+    "Amen Thompson",
+    2.6
+   ],
+   [
+    "Jarred Vanderbilt",
+    2.53
+   ],
+   [
+    "Javonte Green",
+    2.52
+   ],
+   [
+    "Chet Holmgren",
+    2.43
+   ]
+  ],
+  "R2-statsX:def": [
+   [
+    "Victor Wembanyama",
+    5.09
+   ],
+   [
+    "Dru Smith",
+    4.36
+   ],
+   [
+    "Ausar Thompson",
+    3.84
+   ],
+   [
+    "Marcus Smart",
+    3.77
+   ],
+   [
+    "Isaiah Hartenstein",
+    3.59
+   ],
+   [
+    "Jarrett Allen",
+    3.57
+   ],
+   [
+    "Scottie Barnes",
+    3.54
+   ],
+   [
+    "Jalen Suggs",
+    3.12
+   ],
+   [
+    "Ajay Mitchell",
+    2.95
+   ],
+   [
+    "Chet Holmgren",
+    2.94
+   ],
+   [
+    "Rudy Gobert",
+    2.83
+   ],
+   [
+    "John Konchar",
+    2.79
+   ],
+   [
+    "OG Anunoby",
+    2.79
+   ],
+   [
+    "Collin Murray-Boyles",
+    2.7
+   ],
+   [
+    "Amen Thompson",
+    2.69
+   ],
+   [
+    "Wendell Carter Jr.",
+    2.58
+   ],
+   [
+    "Neemias Queta",
+    2.5
+   ],
+   [
+    "Jarred Vanderbilt",
+    2.42
+   ],
+   [
+    "Mouhamed Gueye",
+    2.36
+   ],
+   [
+    "Cason Wallace",
+    2.34
+   ]
+  ],
+  "R2-stats:off": [
+   [
+    "Kawhi Leonard",
+    7.54
+   ],
+   [
+    "Nikola Jokić",
+    7.45
+   ],
+   [
+    "Luka Dončić",
+    6.4
+   ],
+   [
+    "Shai Gilgeous-Alexander",
+    5.83
+   ],
+   [
+    "Jimmy Butler III",
+    5.4
+   ],
+   [
+    "Giannis Antetokounmpo",
+    5.3
+   ],
+   [
+    "Donovan Mitchell",
+    5.11
+   ],
+   [
+    "Stephen Curry",
+    4.66
+   ],
+   [
+    "Jamal Murray",
+    4.51
+   ],
+   [
+    "Anthony Edwards",
+    4.23
+   ],
+   [
+    "Jalen Duren",
+    3.89
+   ],
+   [
+    "Kevin Porter Jr.",
+    3.8
+   ],
+   [
+    "Kevin Durant",
+    3.64
+   ],
+   [
+    "Tyrese Maxey",
+    3.44
+   ],
+   [
+    "Payton Pritchard",
+    3.39
+   ],
+   [
+    "Michael Porter Jr.",
+    3.28
+   ],
+   [
+    "Cam Spencer",
+    3.21
+   ],
+   [
+    "DeMar DeRozan",
+    3.16
+   ],
+   [
+    "Jaylen Brown",
+    3.15
+   ],
+   [
+    "Luka Garza",
+    2.94
+   ]
+  ],
+  "R2-statsX:off": [
+   [
+    "Nikola Jokić",
+    7.8
+   ],
+   [
+    "Kawhi Leonard",
+    6.98
+   ],
+   [
+    "Luka Dončić",
+    6.18
+   ],
+   [
+    "Giannis Antetokounmpo",
+    5.65
+   ],
+   [
+    "Jimmy Butler III",
+    5.45
+   ],
+   [
+    "Shai Gilgeous-Alexander",
+    5.29
+   ],
+   [
+    "Donovan Mitchell",
+    4.52
+   ],
+   [
+    "Jamal Murray",
+    4.46
+   ],
+   [
+    "Stephen Curry",
+    4.43
+   ],
+   [
+    "Anthony Edwards",
+    4.27
+   ],
+   [
+    "Jalen Duren",
+    4.03
+   ],
+   [
+    "Kevin Durant",
+    3.82
+   ],
+   [
+    "Kevin Porter Jr.",
+    3.8
+   ],
+   [
+    "Jaylen Brown",
+    3.32
+   ],
+   [
+    "Payton Pritchard",
+    3.24
+   ],
+   [
+    "Michael Porter Jr.",
+    3.05
+   ],
+   [
+    "Tyrese Maxey",
+    3.02
+   ],
+   [
+    "Cam Spencer",
+    2.95
+   ],
+   [
+    "Luka Garza",
+    2.82
+   ],
+   [
+    "Moussa Diabaté",
+    2.76
+   ]
+  ]
+ },
+ "named": {
+  "Kevin Durant": {
+   "net": [
+    27,
+    18
+   ],
+   "def": [
+    135,
+    107
+   ]
+  },
+  "Stephen Curry": {
+   "net": [
+    11,
+    15
+   ],
+   "def": [
+    117,
+    111
+   ]
+  },
+  "Victor Wembanyama": {
+   "net": [
+    1,
+    1
+   ],
+   "def": [
+    1,
+    1
+   ]
+  },
+  "Rudy Gobert": {
+   "net": [
+    45,
+    34
+   ],
+   "def": [
+    12,
+    11
+   ]
+  },
+  "Bam Adebayo": {
+   "net": [
+    90,
+    74
+   ],
+   "def": [
+    50,
+    27
+   ]
+  },
+  "Jarrett Allen": {
+   "net": [
+    9,
+    7
+   ],
+   "def": [
+    8,
+    6
+   ]
+  },
+  "Isaiah Hartenstein": {
+   "net": [
+    12,
+    13
+   ],
+   "def": [
+    4,
+    5
+   ]
+  },
+  "Amen Thompson": {
+   "net": [
+    24,
+    17
+   ],
+   "def": [
+    17,
+    15
+   ]
+  },
+  "Brook Lopez": {
+   "net": [
+    208,
+    208
+   ],
+   "def": [
+    63,
+    48
+   ]
+  },
+  "Herbert Jones": {
+   "net": [
+    213,
+    213
+   ],
+   "def": [
+    57,
+    63
+   ]
+  },
+  "Jaren Jackson Jr.": {
+   "net": [
+    132,
+    117
+   ],
+   "def": [
+    51,
+    57
+   ]
+  },
+  "Nikola Jokić": {
+   "net": [
+    5,
+    4
+   ],
+   "def": [
+    202,
+    176
+   ]
+  },
+  "Karl-Anthony Towns": {
+   "net": [
+    16,
+    20
+   ],
+   "def": [
+    33,
+    38
+   ]
+  }
+ },
+ "movers": {
+  "net": {
+   "up": [
+    [
+     "Isaiah Stewart",
+     180,
+     135
+    ],
+    [
+     "Toumani Camara",
+     118,
+     81
+    ],
+    [
+     "Ronald Holland II",
+     202,
+     168
+    ],
+    [
+     "Russell Westbrook",
+     187,
+     156
+    ],
+    [
+     "Pascal Siakam",
+     129,
+     99
+    ],
+    [
+     "Moussa Diabaté",
+     81,
+     56
+    ],
+    [
+     "Nic Claxton",
+     158,
+     136
+    ],
+    [
+     "Dillon Brooks",
+     199,
+     179
+    ],
+    [
+     "Sidy Cissoko",
+     236,
+     217
+    ],
+    [
+     "De'Andre Hunter",
+     237,
+     218
+    ]
+   ],
+   "down": [
+    [
+     "Luke Kornet",
+     49,
+     84
+    ],
+    [
+     "Daniel Gafford",
+     113,
+     147
+    ],
+    [
+     "Kris Murray",
+     138,
+     169
+    ],
+    [
+     "Deni Avdija",
+     135,
+     164
+    ],
+    [
+     "Gradey Dick",
+     137,
+     166
+    ],
+    [
+     "Marvin Bagley III",
+     115,
+     140
+    ],
+    [
+     "Evan Mobley",
+     57,
+     80
+    ],
+    [
+     "Andrew Wiggins",
+     88,
+     110
+    ],
+    [
+     "Luka Garza",
+     58,
+     79
+    ],
+    [
+     "Draymond Green",
+     201,
+     222
+    ]
+   ],
+   "meanAbsShift": 8.3
+  },
+  "def": {
+   "up": [
+    [
+     "Jamal Shead",
+     124,
+     73
+    ],
+    [
+     "Sion James",
+     120,
+     72
+    ],
+    [
+     "Sidy Cissoko",
+     142,
+     94
+    ],
+    [
+     "De'Andre Hunter",
+     242,
+     197
+    ],
+    [
+     "Luka Dončić",
+     92,
+     58
+    ],
+    [
+     "Ronald Holland II",
+     53,
+     25
+    ],
+    [
+     "Kevin Durant",
+     135,
+     107
+    ],
+    [
+     "Russell Westbrook",
+     175,
+     149
+    ],
+    [
+     "Keyonte George",
+     210,
+     184
+    ],
+    [
+     "Nikola Jokić",
+     202,
+     176
+    ]
+   ],
+   "down": [
+    [
+     "Luka Garza",
+     174,
+     224
+    ],
+    [
+     "Daniel Gafford",
+     69,
+     110
+    ],
+    [
+     "Kevin Porter Jr.",
+     93,
+     133
+    ],
+    [
+     "Luke Kornet",
+     65,
+     100
+    ],
+    [
+     "Nolan Traore",
+     211,
+     241
+    ],
+    [
+     "Isaac Okoro",
+     104,
+     134
+    ],
+    [
+     "Jakob Poeltl",
+     98,
+     127
+    ],
+    [
+     "Miles McBride",
+     160,
+     188
+    ],
+    [
+     "Ousmane Dieng",
+     177,
+     205
+    ],
+    [
+     "Gary Payton II",
+     86,
+     113
+    ]
+   ],
+   "meanAbsShift": 10.0
+  },
+  "off": {
+   "up": [
+    [
+     "Isaiah Stewart",
+     192,
+     144
+    ],
+    [
+     "Jaren Jackson Jr.",
+     197,
+     163
+    ],
+    [
+     "Russell Westbrook",
+     169,
+     138
+    ],
+    [
+     "Isaiah Hartenstein",
+     86,
+     59
+    ],
+    [
+     "Toumani Camara",
+     174,
+     153
+    ],
+    [
+     "Jaden McDaniels",
+     89,
+     69
+    ],
+    [
+     "Pascal Siakam",
+     80,
+     60
+    ],
+    [
+     "Nic Claxton",
+     115,
+     96
+    ],
+    [
+     "Adem Bona",
+     180,
+     164
+    ],
+    [
+     "Gui Santos",
+     171,
+     155
+    ]
+   ],
+   "down": [
+    [
+     "Luke Kornet",
+     50,
+     80
+    ],
+    [
+     "Daniel Gafford",
+     141,
+     170
+    ],
+    [
+     "Dyson Daniels",
+     136,
+     162
+    ],
+    [
+     "Kris Murray",
+     219,
+     245
+    ],
+    [
+     "Andrew Wiggins",
+     68,
+     90
+    ],
+    [
+     "Nikola Vučević",
+     139,
+     158
+    ],
+    [
+     "VJ Edgecombe",
+     92,
+     110
+    ],
+    [
+     "Ryan Kalkbrenner",
+     159,
+     177
+    ],
+    [
+     "Jalen Smith",
+     152,
+     169
+    ],
+    [
+     "Ace Bailey",
+     203,
+     219
+    ]
+   ],
+   "meanAbsShift": 6.7
+  }
+ }
+}

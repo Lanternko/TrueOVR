@@ -1,0 +1,24 @@
+0 2s
+50 68s
+100 131s
+150 197s
+200 260s
+250 309s
+300 362s
+350 418s
+400 463s
+450 507s
+500 551s
+550 597s
+D:\Projects\CODING\basketball-autochess\reports\F129-center-ft-defense-diag\d1_boot.py:49: RuntimeWarning: divide by zero encountered in scalar divide
+  rat = np.array([a['sim_' + c]['tsd'] / a['real']['tsd'] for a in acc[g]]); q['ratio_foultime_basis'] = [float(np.percentile(rat, p)) for p in (5, 50, 95)]; q['ratio_frac_ge_1'] = float((rat >= 1).mean())
+D:\Projects\CODING\basketball-autochess\reports\F129-center-ft-defense-diag\d1_boot.py:47: RuntimeWarning: invalid value encountered in divide
+  gap = np.array([a['real'][b] - a['sim_' + c][b] for a in acc[g]]); sh = gap / tot; q[b + '_share_of_gap'] = [float(np.percentile(sh, p)) for p in (5, 50, 95)]
+D:\Projects\CODING\basketball-autochess\reports\F129-center-ft-defense-diag\d1_boot.py:49: RuntimeWarning: invalid value encountered in scalar divide
+  rat = np.array([a['sim_' + c]['tsd'] / a['real']['tsd'] for a in acc[g]]); q['ratio_foultime_basis'] = [float(np.percentile(rat, p)) for p in (5, 50, 95)]; q['ratio_frac_ge_1'] = float((rat >= 1).mean())
+C:\Python313\Lib\site-packages\numpy\lib\_function_base_impl.py:4596: RuntimeWarning: invalid value encountered in scalar subtract
+  diff_b_a = b - a
+nonC a {'own_gap': [-0.127, -0.038, 0.058], 'mate_gap': [-0.212, -0.007, 0.196], 'nsf_gap': [-0.032, 0.064, 0.152], 'oth_gap': [-0.015, 0.01, 0.037], 'sh_gap': [-0.275, -0.037, 0.181], 'comp_gap': [-0.054, 0.009, 0.061], 'rate_gap': [-0.265, -0.048, 0.155], 'tsd_gap': [-0.245, 0.023, 0.233], 'nsf_share_of_gap': [-3.136, 0.282, 2.555], 'sh_share_of_gap': [-1.896, 0.653, 4.333], 'mate_share_of_gap': [-1.133, 0.661, 3.736], 'own_share_of_gap': [-3.378, 0.038, 2.624], 'rate_share_of_gap': [-2.612, 0.583, 4.879], 'comp_share_of_gap': [-1.135, 0.083, 1.711], 'tot_gap': [-0.244, 0.026, 0.287], 'ratio_foultime_basis': [0.681, 0.962, 1.678], 'ratio_frac_ge_1': 0.437, 'real_nsf_var_gt_sim_frac': 0.847}
+nonC b {'own_gap': [-0.126, -0.041, 0.058], 'mate_gap': [-0.214, 0.001, 0.194], 'nsf_gap': [-0.03, 0.06, 0.161], 'oth_gap': [-0.015, 0.01, 0.037], 'sh_gap': [-0.268, -0.037, 0.168], 'comp_gap': [-0.047, 0.012, 0.067], 'rate_gap': [-0.26, -0.054, 0.154], 'tsd_gap': [-0.26, 0.024, 0.236], 'nsf_share_of_gap': [-2.347, 0.313, 5.17], 'sh_share_of_gap': [-4.1, 0.613, 3.636], 'mate_share_of_gap': [-2.387, 0.684, 2.947], 'own_share_of_gap': [-3.56, 0.04, 2.704], 'rate_share_of_gap': [-4.692, 0.528, 3.863], 'comp_share_of_gap': [-1.433, 0.075, 1.758], 'tot_gap': [-0.251, 0.028, 0.296], 'ratio_foultime_basis': [0.691, 0.96, 1.724], 'ratio_frac_ge_1': 0.403, 'real_nsf_var_gt_sim_frac': 0.853}
+C a {'own_gap': [-0.362, -0.046, 0.201], 'mate_gap': [-0.242, 0.106, 0.63], 'nsf_gap': [-0.025, 0.255, 0.595], 'oth_gap': [-0.074, -0.004, 0.059], 'sh_gap': [-0.299, 0.041, 0.581], 'comp_gap': [-0.096, 0.039, 0.186], 'rate_gap': [-0.305, 0.002, 0.455], 'tsd_gap': [-0.442, 0.289, 0.77], 'nsf_share_of_gap': [nan, nan, nan], 'sh_share_of_gap': [nan, nan, nan], 'mate_share_of_gap': [nan, nan, nan], 'own_share_of_gap': [nan, nan, nan], 'rate_share_of_gap': [nan, nan, nan], 'comp_share_of_gap': [nan, nan, nan], 'tot_gap': [-0.226, 0.298, 1.068], 'ratio_foultime_basis': [nan, nan, nan], 'ratio_frac_ge_1': 0.223, 'real_nsf_var_gt_sim_frac': 0.912}
+C b {'own_gap': [-0.339, -0.043, 0.206], 'mate_gap': [-0.242, 0.094, 0.608], 'nsf_gap': [-0.022, 0.252, 0.598], 'oth_gap': [-0.074, -0.004, 0.059], 'sh_gap': [-0.288, 0.038, 0.56], 'comp_gap': [-0.091, 0.047, 0.195], 'rate_gap': [-0.319, -0.008, 0.449], 'tsd_gap': [-0.4, 0.265, 0.751], 'nsf_share_of_gap': [nan, nan, nan], 'sh_share_of_gap': [nan, nan, nan], 'mate_share_of_gap': [nan, nan, nan], 'own_share_of_gap': [nan, nan, nan], 'rate_share_of_gap': [nan, nan, nan], 'comp_share_of_gap': [nan, nan, nan], 'tot_gap': [-0.206, 0.291, 1.057], 'ratio_foultime_basis': [nan, nan, nan], 'ratio_frac_ge_1': 0.23, 'real_nsf_var_gt_sim_frac': 0.903}

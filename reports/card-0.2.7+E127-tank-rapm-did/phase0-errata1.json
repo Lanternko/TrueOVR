@@ -1,0 +1,96 @@
+{
+ "doc": "E-127 phase 0 (errata-1 c0f)",
+ "prereg_sha256": "dbafa0fe5aa764a7e706b58814630b4f69ab9ad3c71e889a35263203ed75e3e2",
+ "errata1_sha256": "a7159d5702e52194f939bffe292dbafd04a5b642ff2997442d679f689e79c255",
+ "c0f": {
+  "nRef": 582,
+  "missingInMine": 0,
+  "yMismatch": 0,
+  "dMismatch": 0,
+  "maxAbsDiffL_all": 0.039087388708046844,
+  "nCompareL_poss>=1500": 419,
+  "maxAbsDiffL_poss>=1500": 0.00693897342595462,
+  "nLdiffGE0.01_lowPoss": 26,
+  "pass": true
+ },
+ "c0s": {
+  "2022-23": {
+   "nTeams": 4,
+   "teams": [
+    "CHA",
+    "DET",
+    "HOU",
+    "SAS"
+   ]
+  },
+  "2023-24": {
+   "nTeams": 7,
+   "teams": [
+    "CHA",
+    "DET",
+    "MEM",
+    "POR",
+    "SAS",
+    "TOR",
+    "WAS"
+   ]
+  },
+  "2024-25": {
+   "nTeams": 6,
+   "teams": [
+    "BKN",
+    "CHA",
+    "NOP",
+    "PHI",
+    "UTA",
+    "WAS"
+   ]
+  },
+  "2025-26": {
+   "nTeams": 8,
+   "teams": [
+    "BKN",
+    "DAL",
+    "IND",
+    "MEM",
+    "NOP",
+    "SAC",
+    "UTA",
+    "WAS"
+   ]
+  },
+  "pass": true
+ },
+ "c0n": {
+  "perPair": {
+   "2022-23->2023-24": {
+    "eligible": 322,
+    "y1d1": 23,
+    "y1d0": 69,
+    "y0d1": 25,
+    "y0d0": 205,
+    "lost": 68
+   },
+   "2023-24->2024-25": {
+    "eligible": 308,
+    "y1d1": 34,
+    "y1d0": 55,
+    "y0d1": 40,
+    "y0d0": 179,
+    "lost": 81
+   },
+   "2024-25->2025-26": {
+    "eligible": 324,
+    "y1d1": 26,
+    "y1d0": 69,
+    "y0d1": 39,
+    "y0d0": 190,
+    "lost": 81
+   }
+  },
+  "totalY1D1": 83,
+  "threshold": 30,
+  "pass": true
+ },
+ "allPass": true
+}

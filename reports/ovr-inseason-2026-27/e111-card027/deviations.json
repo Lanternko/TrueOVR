@@ -1,0 +1,133 @@
+{
+ "doc": "E-111 實作與預註冊（e111-card027/preregistration.md，繼承 E-107 新賽季版預註冊）的偏差與實作選擇。只記錄、不改判定。",
+ "deviations": [
+  {
+   "id": "D1",
+   "what": "build_prior_027.py 的 x0 不是直接讀 attributes-e101.csv，而是呼叫 card 0.2.7 產生器 calibrate-wing.py 的 load()（UL6 primary 參數），所以 13 個尾巴屬性＝attributes-e101.csv、help＝E-060 new_help、stamina／heightInches＝LEAGUE 名單卡原值。",
+   "why": "預註冊 §1.1 要 E-101 未四捨五入值，並照 card 0.2.5 的來源補 E-101 沒有的欄；直接用產生器同一函式最不會漏欄。核對：四捨五入後對 card 0.2.7 ranking.csv 16 欄 582 人 |差| ≤ 0.05，0 格超過。",
+   "affects": "無（x0 定義與預註冊一致）"
+  },
+  {
+   "id": "D2",
+   "what": "build_prior_027.py 匯入 build_prior_026.py 重用 freeze_foul_draw 等，執行時會印出 026 字樣的訊息。",
+   "why": "重用程式碼，避免複製。",
+   "affects": "只有 log 文字"
+  },
+  {
+   "id": "D3",
+   "what": "用人層係數、r_repl、錨點不是讀檔，而是照 e107.py 的流程重跑 e094.pipeline(set_card_dir(UL6))（build_usage_027.py）再取值。",
+   "why": "card 0.2.7 產生流程沒有另存這些數值。決定性重跑，不擬合新參數；錨點對 phase2.json UL6 差 < 1e-9，582 人 ovr／mpg／gRepl 對 card 0.2.7 ranking.csv 逐格相同。",
+   "affects": "無"
+  },
+  {
+   "id": "D4",
+   "what": "分區修正（§1.4）：『area 缺值的出手跳過』以路徑判定，只用於有 area 欄的季（data/defense-seventh/2022-23～2025-26、data/defense-a-source）。2pt 投籃沒有 area 的就丟掉（全部只有 10 球：2022-23 1、2023-24 7、2024-25 1、2025-26 defense-a-source 1）；2021-22 與 2026-27 沒有 area 欄，照座標規則。",
+   "why": "資料裡沒有『有 area 但值不合法』的情況，只有缺值。",
+   "affects": "(z) 0 人不符"
+  },
+  {
+   "id": "D5",
+   "what": "foulDraw 合併池用各季自己的 z（ddof=0，該季池 GP≥30 且 MPG≥20），對未縮減的原始量做 z，結果存在 pool-027.json seasonMeta[s].foulDrawSeasonZ；賽中視窗仍用 2025-26 凍結 z。",
+   "why": "預註冊 §1.5。",
+   "affects": "無"
+  },
+  {
+   "id": "D6",
+   "what": "run_c4_live.py 的 M26_MODE 語意放寬為 CARD_MODE in ('026','027')，027 另加 M27_MODE；m26 區塊裡 stamina 那行改成『P 裡沒有 stamina 就走 IC 單季映射』。026 分支行為不變。",
+   "why": "預註冊 §1 允許沿用 026 分支；§1.3 stamina 不換尺。",
+   "affects": "025 逐位元相同（c0 過）"
+  },
+  {
+   "id": "D7",
+   "what": "027 時 E084_RESULTS 與 E064_ANCHORS_FILE 都指向 usage-2025-26-card027.json（錨點、r_repl 從這裡讀，並在 load_usage 核對 phase2 UL6）。",
+   "why": "card 0.2.7 沒有 e084 results.json。",
+   "affects": "無；錨點與 r_repl 差 0"
+  },
+  {
+   "id": "D8",
+   "what": "UL 防守加成在賽中凍結：Dw／possW 讀 card-0.2.5+E104 def-L-primary.csv，posMeanD 以先驗卡 observed.MIN 加權，bonus 不乘 taper，算一次後固定。",
+   "why": "預註冊 §1.2。核對：582 人 bonus（3 位小數）對 card 0.2.7 defenseBonus 0 人不符。",
+   "affects": "無"
+  },
+  {
+   "id": "D9",
+   "what": "(L1) 判定用未四捨五入的全卡 582 人 ref OVR 對 card 0.2.7 ovr（0.1 位小數）；E-095 式（兩邊都四捨五入、只看有名次的人）只報告。",
+   "why": "預註冊 §2：『卡內每人 |差| ≤ 0.1』。",
+   "affects": "兩種都不過（0.180、0.200，都是 Toumani Camara）"
+  },
+  {
+   "id": "D10",
+   "what": "(s) 的 stamina 照算、照報告，但不進判定（row.judged=false）。",
+   "why": "預註冊 §2。",
+   "affects": "無；stamina 中位差 0"
+  },
+  {
+   "id": "D11",
+   "what": "前置 (L1) 不過，照預註冊 §4 停下：沒寫 backtest_e111.py，沒產生 results.json、predictions-027.csv、live-compare.json，沒看任何 (1)(2) 數字，也沒做 027 線上名次比較。",
+   "why": "派工 task：前置任一不過就停下回報，不自行修。",
+   "affects": "E-111 未完成",
+   "status": "2026-10-30 已被取代：使用者選 1、errata-1.md 凍結後改同分規則、前置重跑全過，已寫並跑 backtest_e111.py（見 D13–D21）"
+  },
+  {
+   "id": "D12",
+   "what": "唯讀快照前後有 3 個檔不同：live/2026-10-28/card-roster-viewer.html、roster-viewer.html、live/publish_state.json，修改時間 05:25:46–50。",
+   "why": "不是本 session 寫的：另一個 session 05:25:30 commit b4375b3（評分換 M2），05:25:50 由 scripts/daily_inseason_update.py 重發外殼（publish_state.lastShellPublished＝2026-10-30T05:25:50+08:00）。本 session 的程式沒有寫這些檔（run_c4_live.py 不碰 publish_state／viewer）。",
+   "affects": "(c0) 比的 ranking.csv、no-prior.csv、meta inputs 都沒變，c0 仍過",
+   "status": "2026-10-30 第二輪 after 快照（readonly-sha-after.json）與第一輪（readonly-sha-after-v1.json）完全相同：這 3 個檔之後沒再變；新增 3 檔是本實驗在 live/ 的新檔（build_prior_027.py、build_usage_027.py、prior-2025-26-card027.json，spec 允許）"
+  },
+  {
+   "id": "D13",
+   "what": "errata-1：027 分支的 H1 封頂 RAPM 名次改照 card 產生器 attach_external_ranks（rapm.csv 以 name 去重、同名最後一列覆蓋、依列序 stable sort）；只在 run_c4_live.py 的 E-111 段以 m27_card_allowed 覆寫 OVRPipeline.__init__ 的 allowed，不改 tools/。回測的 OVRPipeline 也走同一個覆寫。",
+   "why": "errata-1.md（sha256 1d243371…）",
+   "affects": "前置 (L1) 由不過變通過；run_c4_live.py sha256 → fe417d8a…"
+  },
+  {
+   "id": "D14",
+   "what": "回測用的單季防守 D 檔（def-L）照 card 0.2.7 的 --defRapm 公式重擬合到各起點 RAPM 窗（fit_defL.py）；2021-22 不在 rapm_recency 的季清單，改讀 v3/data/derived-2021-22/stints/stints.jsonl（同格式、同 observations() 過濾）。",
+   "why": "預註冊沒指定歷史窗的 UL 防守 D 從哪來；card 窗重現 def-L-primary.csv 逐位元相同（maxAbsD 0、maxAbsPossW 0）才擬合。",
+   "affects": "Y6 答案窗的 D 多一個資料來源"
+  },
+  {
+   "id": "D15",
+   "what": "各季 027 卡（2017-18～2021-22）只重建 9 個合併池屬性（long、mid、short、ft、foulDraw、tovSkill、pass、rebound、creation），用 m26_window_cards 對該季整季、該季單季 mapping、received 一律 0.5；其餘（stamina、drive、physique、onBall、help、heightInches、pressure）照 v5 pathA 舊卡。onBall／help 在舊卡是 70（舊卡就沒有）。",
+   "why": "歷史季沒有 card 0.2.7 產生器的 x0（E-101 只做 2022-23 起）；先驗卡＝答案卡同一張，兩邊同尺度。",
+   "affects": "回測量尺是「027 映射的歷史卡」，不是 card 0.2.7 本身；sample 欄與舊卡 0 筆不同，stamina／drive 與舊卡差 ≤ 0.27（舊卡四捨五入）"
+  },
+  {
+   "id": "D16",
+   "what": "drive 沿用舊卡的 FTA/FGA 百分位（v58 定義），不是 UL6 用的 v60 drive。",
+   "why": "歷史季沒有 v60 drive 的來源；UL6 裡 drive 只有線性項（標準化係數 0.0087），不在交互項。賽中 027 也是用 FTA/FGA 更新 drive。",
+   "affects": "小"
+  },
+  {
+   "id": "D17",
+   "what": "foulDraw：歷史卡用該季自己的池（GP≥30、MPG≥20）算 z、未縮減；FGA=0 或 MIN=0 的人 foulDraw＝40（2017-18～2021-22 依序 3、4、2、1、9 人）。C4 不更新 foulDraw（同賽中）。",
+   "why": "同 build_pool_027 §1.5；E-070 合成值在 FGA=0 時無定義。",
+   "affects": "19 人"
+  },
+  {
+   "id": "D18",
+   "what": "錨點／r_repl 照 E-095 sat15 算法、池＝card 0.2.7 ranking.csv predictedPer36 × 2025-26 MPG（MIN≥500，378 人）：r_repl＝-1.827、repl 錨點 PR1/50/99＝-1.0116／1.5166／6.5355；與賽中 027 用的 usage027（UL6 用人層）r_repl -1.2464、錨點 -0.8313／1.2521／4.1201 不同。",
+   "why": "設計在看 (1)(2) 前定：沿用 E-095 的錨點算法、只換 ranking；predictedPer36 是屬性迴歸值、usage027 是用人層後的值，所以 PR10 不同。",
+   "affects": "回測與賽中頁的 OVR 尺度不完全相同；(1) 是同尺度內比、不受影響；(2) 兩邊各用自己的尺度"
+  },
+  {
+   "id": "D19",
+   "what": "(2) 的基準誤差取 e095-card025-minutes/predictions-sat15.csv 的 RG1 − targetRepl（檔案四捨五入到 4 位小數）；兩邊各對自己的答案卡（027 答案卡 vs E-095 答案卡），量尺不同。",
+   "why": "照 E-107 §3 (2) 字面（沿用不改）。",
+   "affects": "MAE 差的捨入誤差 ≤ 1e-4；「誤差變小」有一部分可能來自 027 答案卡本身比較好預測，不全是賽中更新變好"
+  },
+  {
+   "id": "D20",
+   "what": "閘門 bootstrap 照 E-095 gate() 的亂數順序：Y1..D3 × N 3,5,10,20,82 依序，沒算的格用 E-095 人數照樣抽一次推進亂數；Y5、Y6、Y3 的人群與 E-095 逐人相同（assert 過）。D1–D3 敏感度、「拿掉第 3 點」變體沒做。",
+   "why": "D1–D3 需要 2022 年以後的答案卡，與 027 先驗季重疊。",
+   "affects": "只報告項少兩項"
+  },
+  {
+   "id": "D21",
+   "what": "Y5、Y6 的錨點池（2025-26）與 027 合併池（2022-23～2025-26）對這兩個起點是未來資料。",
+   "why": "E-107 §2.6 已揭露、照沿用。",
+   "affects": "揭露"
+  }
+ ]
+}

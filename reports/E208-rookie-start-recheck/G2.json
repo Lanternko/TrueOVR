@@ -1,0 +1,25 @@
+{
+ "E141 rookie-players.csv": "a01ef8d272addb7af40271366d7e2368ecf5bc91a52d1339b98b9a51a7562e3e",
+ "E116 fit.json": "c51f7bce9306ee53899089362e783a2711a5749a775acf9e1d071f9918684da2",
+ "rookie-prior-2026.json (live, HEAD 內容)": "ce8ae629ce5a469a3e84817841063928e2c91a4f695ce885e97ec893a75f6967",
+ "CURRENT.json": "85bcacf7cfe1ae95e0d036a5526c9c79ec87421ccb6cf934bc2ff4c48b0ee7be",
+ "card-0.2.12b ranking.csv": "9a8ea84eb61fae855162915543a315c1efeac192cfd69cec6a21f9f5f71c2d8b",
+ "live 2026-10-31 rookies-detail.json": "b2663f4d821083f4b475fcd115e1df48726bd524e14d249454851e69678f8815",
+ "live 2026-10-31 ranking.csv": "aa9eff24c753a8c67405e77253e970964847c1ab6db0707c0c946d587194776e",
+ "live 2026-10-31 meta.json": "a3cf5eea52b4c8cc09566f04f561c9f43c653fd85e60b2ea3b19e44a35764a06",
+ "2026-27 player-games.json": "ca8dc57cc41dfa95873943935b00977d3c633b22d45a76ad11ee2648fd128b08",
+ "benchmark-source bio.json": "d319d00ed383c8a30793907fd0edd56fd26e8cdb19a74bbb0c2667790644196e",
+ "usage-2025-26-card0212-tov.json (已搬 _retired)": "e63470619036f174cac656de8c0326033b796e91247fff9c5edcde3f451ff29e",
+ "prior-2025-26-card0212-tov.json (已搬 _retired)": "73956f2f043e4063e1848395146893bfaf93149737d330a28f133cbc70526aaa",
+ "crJ-2022-23.csv.gz": "95915103dec6c88c5429075938742addefe8a8b70ed5eaec7234a826625c42b0",
+ "crJ-2023-24.csv.gz": "6248924c6d3d5f940574dd9d0a94e01422483f97bcf92dee1b6c8e12b68111d5",
+ "crJ-2024-25.csv.gz": "b79a0efbad24f9920185bd7caedc3a0520d7533a620120154e861ceb987bde0e",
+ "crJ-2025-26.csv.gz": "a38a0bf5642901d5830be5f6ba7d6d389461568fa5cbad6a409830471f801dee",
+ "gitHead": "7c588dcebb094e9f6fe84fb31186ea75163301cb",
+ "pinnedFromHead": [
+  "run_c4_live.py",
+  "run_c4_live_rookie.py",
+  "tov_live.py",
+  "window8.py"
+ ]
+}

@@ -1,0 +1,210 @@
+{
+  "preregistration": "preregistration-v2.md",
+  "players": 582,
+  "fit": {
+    "priorIntercept": -4.1965965096470885,
+    "priorLogMinutesPerGameSlope": 1.2564912837654567,
+    "tau2Per36": 3.730934509387405,
+    "kappa": 96.70563930070723,
+    "sourceNoiseEqualsSignalAtMinutes": 25.919950901680572
+  },
+  "G1splitHalfPrediction": {
+    "all": {
+      "mseRaw": 7.876479350056235,
+      "mseV2": 6.055512688697042,
+      "meanReduction": 1.820966661359193,
+      "ci95": [
+        0.6242301671220609,
+        3.364134430705538
+      ]
+    },
+    "minutesUnder20": {
+      "players": 293,
+      "mseRaw": 14.015928643432108,
+      "mseV2": 10.398854933838079,
+      "meanReduction": 3.6170737095940284,
+      "ci95": [
+        1.2189364024036524,
+        6.562480478114824
+      ]
+    },
+    "minutes20Plus": {
+      "players": 289,
+      "meanReduction": -2.5220362040849012e-18
+    },
+    "v1ForReference": {
+      "all": 1.711886643878923,
+      "minutesUnder20": 3.4782428005444777,
+      "minutes20Plus": -0.07891734886504681
+    },
+    "passed": true
+  },
+  "G2externalRAPM": {
+    "players": 414,
+    "net": {
+      "raw": 0.36256930025608275,
+      "v1": 0.41293554045638287,
+      "v2": 0.39819731605652
+    },
+    "defense": {
+      "raw": 0.2563725372064107,
+      "v1": 0.276852224140271,
+      "v2": 0.27565641024990584
+    },
+    "passed": true
+  },
+  "G3bench": {
+    "smallWInTop50": {
+      "raw": 24,
+      "v1": 9,
+      "v2": 10
+    },
+    "remainingSmallInTop50": [
+      "Ty Jerome",
+      "Zach Edey",
+      "Walker Kessler",
+      "Blake Hinson",
+      "Matisse Thybulle",
+      "Cormac Ryan",
+      "Charles Bassey",
+      "Alondes Williams",
+      "Myron Gardner",
+      "David Roddy"
+    ],
+    "passed": true
+  },
+  "G4starterOrder": {
+    "starterSpearman": 1.0,
+    "passed": true
+  },
+  "gates": {
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "G4": true,
+    "adopt": true
+  },
+  "supplementary": {
+    "rapmPoss1000": {
+      "players": 513,
+      "net": {
+        "raw": 0.3629834836564499,
+        "v1": 0.4266288618961477,
+        "v2": 0.41211208600700855
+      },
+      "defense": {
+        "raw": 0.24361064535121854,
+        "v1": 0.26512866350376596,
+        "v2": 0.2660849823366783
+      }
+    },
+    "splitHalfReliability": {
+      "raw": 0.7838137643408702,
+      "v1": 0.8819229827137733,
+      "v2": 0.86959994952166
+    },
+    "mediaSpearman": {
+      "raw": -0.3893291912003757,
+      "v1": -0.39710291514647983,
+      "v2": -0.38964707582270713
+    },
+    "starterRankChange": {
+      "median": 27.0,
+      "max": 41
+    },
+    "nonStartersEnteringTop50": [
+      "Javonte Green",
+      "Goga Bitadze",
+      "Kenrich Williams"
+    ]
+  },
+  "top30": [
+    "Shai Gilgeous-Alexander",
+    "Kawhi Leonard",
+    "Giannis Antetokounmpo",
+    "Ty Jerome",
+    "Victor Wembanyama",
+    "Luka Dončić",
+    "Mitchell Robinson",
+    "Nikola Jokić",
+    "Zach Edey",
+    "Evan Mobley",
+    "Jalen Smith",
+    "Day'Ron Sharpe",
+    "Walker Kessler",
+    "Chet Holmgren",
+    "Robert Williams III",
+    "Jalen Duren",
+    "Jimmy Butler III",
+    "Kel'el Ware",
+    "Tyrese Maxey",
+    "Blake Hinson",
+    "Rudy Gobert",
+    "Josh Minott",
+    "Scottie Barnes",
+    "Daniel Gafford",
+    "Lauri Markkanen",
+    "Ryan Rollins",
+    "Justin Champagnie",
+    "James Harden",
+    "Javon Small",
+    "Clint Capela"
+  ],
+  "focus": {
+    "Thanasis Antetokounmpo": {
+      "rawRank": 3,
+      "v1Rank": 231,
+      "v2Rank": 234
+    },
+    "Nikola Jokić": {
+      "rawRank": 16,
+      "v1Rank": 6,
+      "v2Rank": 8
+    },
+    "Alex Caruso": {
+      "rawRank": 78,
+      "v1Rank": 72,
+      "v2Rank": 58
+    },
+    "Derrick White": {
+      "rawRank": 142,
+      "v1Rank": 97,
+      "v2Rank": 106
+    },
+    "Shai Gilgeous-Alexander": {
+      "rawRank": 2,
+      "v1Rank": 1,
+      "v2Rank": 1
+    },
+    "Charles Bassey": {
+      "rawRank": 15,
+      "v1Rank": 39,
+      "v2Rank": 36
+    },
+    "Dyson Daniels": {
+      "rawRank": 115,
+      "v1Rank": 68,
+      "v2Rank": 84
+    },
+    "Caleb Houstan": {
+      "rawRank": 4,
+      "v1Rank": 149,
+      "v2Rank": 158
+    },
+    "Victor Wembanyama": {
+      "rawRank": 11,
+      "v1Rank": 5,
+      "v2Rank": 5
+    },
+    "Tosan Evbuomwan": {
+      "rawRank": 1,
+      "v1Rank": 520,
+      "v2Rank": 494
+    },
+    "Jonathan Mogbo": {
+      "rawRank": 5,
+      "v1Rank": 116,
+      "v2Rank": 138
+    }
+  }
+}

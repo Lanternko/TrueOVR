@@ -1,0 +1,274 @@
+[
+ {
+  "pair": "0.2.12->0.2.10d",
+  "n": 484,
+  "changed": 471,
+  "meanDiff": 0.884,
+  "maxAbs": 6.4,
+  "top20_out": 0,
+  "top100_out": 7,
+  "top100_moved10": 23,
+  "movers": [
+   [
+    "Kingston Flemings",
+    "ATL",
+    340,
+    279,
+    6.4
+   ],
+   [
+    "Jahmai Mashack",
+    "MEM",
+    484,
+    483,
+    6.2
+   ],
+   [
+    "Nikola Jokić",
+    "DEN",
+    2,
+    2,
+    5.7
+   ],
+   [
+    "Shai Gilgeous-Alexander",
+    "OKC",
+    1,
+    1,
+    5.6
+   ],
+   [
+    "Leonard Miller",
+    "CHI",
+    441,
+    398,
+    5.4
+   ],
+   [
+    "Darius Acuff Jr.",
+    "SAC",
+    297,
+    263,
+    5.1
+   ],
+   [
+    "Enrique Freeman",
+    "MIN",
+    457,
+    430,
+    5.1
+   ],
+   [
+    "Cody Williams",
+    "MIN",
+    480,
+    477,
+    5.1
+   ]
+  ]
+ },
+ {
+  "pair": "0.2.10a關窗->0.2.10c關窗",
+  "n": 484,
+  "changed": 458,
+  "meanDiff": -0.36,
+  "maxAbs": 9.7,
+  "top20_out": 0,
+  "top100_out": 6,
+  "top100_moved10": 24,
+  "movers": [
+   [
+    "Trevon Brazile",
+    "DEN",
+    413,
+    471,
+    -9.7
+   ],
+   [
+    "Emanuel Sharp",
+    "SAC",
+    480,
+    483,
+    -9.1
+   ],
+   [
+    "Felix Okpara",
+    "WAS",
+    446,
+    467,
+    -6.1
+   ],
+   [
+    "Nate Ament",
+    "MIL",
+    312,
+    403,
+    -5.9
+   ],
+   [
+    "Morez Johnson Jr.",
+    "DAL",
+    366,
+    435,
+    -5.7
+   ],
+   [
+    "Hannes Steinbach",
+    "CHA",
+    363,
+    434,
+    -5.7
+   ],
+   [
+    "Derik Queen",
+    "NOP",
+    283,
+    334,
+    -5.2
+   ],
+   [
+    "Baba Miller",
+    "LAC",
+    391,
+    442,
+    -5.2
+   ]
+  ]
+ },
+ {
+  "pair": "0.2.10c關窗->0.2.10d",
+  "n": 484,
+  "changed": 474,
+  "meanDiff": 1.11,
+  "maxAbs": 8.3,
+  "top20_out": 1,
+  "top100_out": 8,
+  "top100_moved10": 33,
+  "movers": [
+   [
+    "David Jones Garcia",
+    "SAS",
+    372,
+    288,
+    8.3
+   ],
+   [
+    "Dorian Finney-Smith",
+    "ATL",
+    390,
+    304,
+    8.0
+   ],
+   [
+    "Yang Hansen",
+    "POR",
+    476,
+    442,
+    7.8
+   ],
+   [
+    "Myron Gardner",
+    "MIA",
+    304,
+    247,
+    7.5
+   ],
+   [
+    "Tyus Jones",
+    "DEN",
+    392,
+    314,
+    7.3
+   ],
+   [
+    "Mike Conley",
+    "BOS",
+    347,
+    292,
+    7.0
+   ],
+   [
+    "Derik Queen",
+    "NOP",
+    334,
+    285,
+    6.3
+   ],
+   [
+    "Domantas Sabonis",
+    "SAC",
+    144,
+    54,
+    6.2
+   ]
+  ]
+ },
+ {
+  "pair": "0.2.10a關窗->0.2.12",
+  "n": 484,
+  "changed": 433,
+  "meanDiff": -0.135,
+  "maxAbs": 11.3,
+  "top20_out": 1,
+  "top100_out": 7,
+  "top100_moved10": 30,
+  "movers": [
+   [
+    "Jahmai Mashack",
+    "MEM",
+    482,
+    484,
+    -11.3
+   ],
+   [
+    "Cody Williams",
+    "MIN",
+    472,
+    480,
+    -8.0
+   ],
+   [
+    "Keshon Gilbert",
+    "ATL",
+    441,
+    472,
+    -7.8
+   ],
+   [
+    "Caleb Love",
+    "PHI",
+    474,
+    481,
+    -7.6
+   ],
+   [
+    "Ben Saraf",
+    "BKN",
+    481,
+    482,
+    -7.6
+   ],
+   [
+    "Mike Conley",
+    "BOS",
+    339,
+    275,
+    7.3
+   ],
+   [
+    "Tyus Jones",
+    "DEN",
+    431,
+    318,
+    7.0
+   ],
+   [
+    "Enrique Freeman",
+    "MIN",
+    409,
+    457,
+    -6.5
+   ]
+  ]
+ }
+]

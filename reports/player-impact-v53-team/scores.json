@@ -1,0 +1,123 @@
+{
+ "harnessReproducesV47": true,
+ "seeds": [
+  20261012,
+  20261013,
+  20261014
+ ],
+ "note": "tovNonSteal coefficients are pooled 2022-26 four-factor RAPM, so every season is in-sample for the pressure input.",
+ "cells": [
+  {
+   "season": "2022-23",
+   "variant": "v47",
+   "teamMetrics": {
+    "netRMSE": 1.6382809805869825,
+    "winsMAE": 4.377777777777778,
+    "ptsPerGame": 116.38224932249324,
+    "astPerGame": 25.37560975609756,
+    "tovPerGame": 13.982113821138212,
+    "threePct": 36.140951991764176
+   },
+   "tovPer100UsesMAE": 0.9678824340649594,
+   "stl36MAE": 0.0804934333163526
+  },
+  {
+   "season": "2022-23",
+   "variant": "v53",
+   "teamMetrics": {
+    "netRMSE": 1.645905794005765,
+    "winsMAE": 4.022222222222222,
+    "ptsPerGame": 116.47831978319785,
+    "astPerGame": 25.34349593495935,
+    "tovPerGame": 13.923441734417343,
+    "threePct": 36.077044734766275
+   },
+   "tovPer100UsesMAE": 0.9249229823323922,
+   "stl36MAE": 0.08411467275225033
+  },
+  {
+   "season": "2023-24",
+   "variant": "v47",
+   "teamMetrics": {
+    "netRMSE": 1.4246325325111355,
+    "winsMAE": 4.155555555555555,
+    "ptsPerGame": 116.04701897018971,
+    "astPerGame": 26.679539295392956,
+    "tovPerGame": 13.559349593495934,
+    "threePct": 36.751967076052644
+   },
+   "tovPer100UsesMAE": 0.9008900597231713,
+   "stl36MAE": 0.08272898168695968
+  },
+  {
+   "season": "2023-24",
+   "variant": "v53",
+   "teamMetrics": {
+    "netRMSE": 1.382986333874176,
+    "winsMAE": 4.0888888888888895,
+    "ptsPerGame": 116.25582655826557,
+    "astPerGame": 26.775474254742548,
+    "tovPerGame": 13.400677506775066,
+    "threePct": 36.73467055695644
+   },
+   "tovPer100UsesMAE": 0.9036907876995456,
+   "stl36MAE": 0.08085579828872717
+  },
+  {
+   "season": "2024-25",
+   "variant": "v47",
+   "teamMetrics": {
+    "netRMSE": 2.4494717530597065,
+    "winsMAE": 5.044444444444446,
+    "ptsPerGame": 115.38279132791328,
+    "astPerGame": 26.594986449864496,
+    "tovPerGame": 14.133197831978318,
+    "threePct": 36.02763520951578
+   },
+   "tovPer100UsesMAE": 0.9675048119217591,
+   "stl36MAE": 0.09095497385406498
+  },
+  {
+   "season": "2024-25",
+   "variant": "v53",
+   "teamMetrics": {
+    "netRMSE": 2.1880693188181026,
+    "winsMAE": 4.777777777777777,
+    "ptsPerGame": 115.61341463414634,
+    "astPerGame": 26.649051490514907,
+    "tovPerGame": 13.913414634146342,
+    "threePct": 36.06890071137376
+   },
+   "tovPer100UsesMAE": 0.973633724278507,
+   "stl36MAE": 0.09143648720071144
+  },
+  {
+   "season": "2025-26",
+   "variant": "v47",
+   "teamMetrics": {
+    "netRMSE": 2.313069807380149,
+    "winsMAE": 5.377777777777777,
+    "ptsPerGame": 116.89607046070459,
+    "astPerGame": 26.429674796747967,
+    "tovPerGame": 14.298509485094852,
+    "threePct": 35.99817850637523
+   },
+   "tovPer100UsesMAE": 0.8841177000892051,
+   "stl36MAE": 0.09625648320943689
+  },
+  {
+   "season": "2025-26",
+   "variant": "v53",
+   "teamMetrics": {
+    "netRMSE": 2.01904203142402,
+    "winsMAE": 4.555555555555555,
+    "ptsPerGame": 117.12682926829268,
+    "astPerGame": 26.531571815718156,
+    "tovPerGame": 14.10989159891599,
+    "threePct": 36.00754541423452
+   },
+   "tovPer100UsesMAE": 0.9471988800581651,
+   "stl36MAE": 0.09465753038844212
+  }
+ ]
+}

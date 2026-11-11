@@ -1,0 +1,40 @@
+{
+ "host": "kojiek@140.122.184.29",
+ "node": "/home/kojiek/.nvm/versions/node/v22.13.1/bin/node",
+ "commit": "5364ab831b90e6097dcfc1d627242f3ada1d75fc",
+ "remoteDirectory": "/home/kojiek/side_projects/basketball-v55-20261018",
+ "deploymentMethod": {
+  "description": "不同於 v54 deployment-5090.json 的全量 255 檔 sha256 清單（那是從零部署）。v55 改用「複製既有 v54 遠端目錄 + 疊加新檔」：遠端對 basketball-v54-20261018 執行 cp -r 成 basketball-v55-20261018（src/、scripts/、reports/ 其餘子樹與 v54 完全共用，零額外網路傳輸），再用 tar-over-ssh 把本機新增的 reports/ovr-v55-bench-prior-2025-26/ 疊加進去。",
+  "baseDirectoryClonedFrom": "/home/kojiek/side_projects/basketball-v54-20261018",
+  "baseCloneCommand": "ssh kojiek@140.122.184.29 \"cp -r /home/kojiek/side_projects/basketball-v54-20261018 /home/kojiek/side_projects/basketball-v55-20261018\"",
+  "overlayCommand": "tar -czf - reports/ovr-v55-bench-prior-2025-26 | ssh kojiek@140.122.184.29 \"tar -xzf - -C /home/kojiek/side_projects/basketball-v55-20261018\"",
+  "note": "basketball-v54-20261018／v55-20261018 都不是獨立 git repo，只是 /home/kojiek/side_projects 這個與本專案無關的外層 git repo（remote: https://github.com/Lanternko/Beat-tracking.git）底下的一般目錄；git log 看到的是外層 repo 的 commit，與本次部署內容無關。",
+  "sharedFileIntegrityCheck": "未重跑完整 255 檔 sha256 清單；改抽樣比對 7 個關鍵共用依賴檔（src/constants.js、scripts/export_defense_sixth_cards.js、reports/player-impact-v53/engine.mjs、reports/ovr-v53-2025-26/input.mjs、reports/ovr-v47-2025-26/input.mjs、reports/defense-tenth/step4-rebounds-oreb/2025-26/calibration-oreb.json、reports/player-impact-v29/benchmark.mjs），本機與遠端 basketball-v54-20261018 內容逐一確認 sha256 一致；僅 data/season-league.json 在遠端缺失（v54 當時已確認不影響此模擬鏈，故不視為風險）。"
+ },
+ "jobs": [
+  {
+   "name": "ovr-v55-bench-prior-2025-26-AC",
+   "description": "582 名球員，variant both，samples 8，v55 AC（多季加權 + 角色條件先驗，必跑）",
+   "command": "node reports/ovr-v55-bench-prior-2025-26/AC/run.mjs --variant both --samples 8 --workers 18",
+   "workers": 18
+  },
+  {
+   "name": "ovr-v55-bench-prior-2025-26-AC_oos",
+   "description": "582 名球員，variant both，samples 8，v55 AC_oos（嚴格樣本外防護，必跑，排在 AC 之後避免 18x2 搶核）",
+   "command": "node reports/ovr-v55-bench-prior-2025-26/AC_oos/run.mjs --variant both --samples 8 --workers 18",
+   "workers": 18
+  },
+  {
+   "name": "ovr-v55-bench-prior-2025-26-A",
+   "description": "582 名球員，variant both，samples 8，v55 A 單獨（若預算允許的附加變體，用於歸因）",
+   "command": "node reports/ovr-v55-bench-prior-2025-26/A/run.mjs --variant both --samples 8 --workers 18",
+   "workers": 18
+  },
+  {
+   "name": "ovr-v55-bench-prior-2025-26-C",
+   "description": "582 名球員，variant both，samples 8，v55 C 單獨（若預算允許的附加變體，用於歸因）",
+   "command": "node reports/ovr-v55-bench-prior-2025-26/C/run.mjs --variant both --samples 8 --workers 18",
+   "workers": 18
+  }
+ ]
+}

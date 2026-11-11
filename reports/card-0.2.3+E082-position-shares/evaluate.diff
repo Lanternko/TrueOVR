@@ -1,0 +1,15 @@
+1c1
+< // E-075 複本（自 card-0.2.2/evaluate.mjs，只改候選清單與輸出路徑；門檻與函式未改）
+---
+> // E-082 複本（自 reports/card-0.2.2+E073-usage-evidence/evaluate.mjs，只改候選清單與輸出路徑；門檻與函式未改）
+198,200c198,199
+<   ['card-0.2.2', 'reports/card-0.2.2/cards/P1/card/ranking.csv'],
+<   ['card-0.2.2-published', 'reports/card-0.2.2/ranking.csv'],
+<   ['E075', 'reports/card-0.2.2+E073-usage-evidence/ranking.csv'],
+---
+>   ['card-0.2.3', 'reports/card-0.2.3/ranking.csv'],
+>   ['E082', 'reports/card-0.2.3+E082-position-shares/ranking.csv'],
+227c226
+< fs.writeFileSync('reports/card-0.2.2+E073-usage-evidence/evaluation.json', JSON.stringify({
+---
+> fs.writeFileSync('reports/card-0.2.3+E082-position-shares/evaluation.json', JSON.stringify({

@@ -2,7 +2,7 @@ import fs from 'fs';
 import { TEAMS, BASELINE } from './src/teams.js';
 import { monteCarlo, simulateGame } from './src/simulation_engine.js';
 const A=['long','mid','short','ft','drive','pass','tovSkill','rebound','onBall','help','stamina','physique','offBall','screen','handle','breakDbl'];
-const H=['三分','中投','近射','罰球','切入','傳球','失誤','籃板','盯防','協防','體力','肉體','無球','擋拆','持球','破包夾'];
+const H=['三分','中投','近射','罰球','切入','傳球','失誤','籃板','盯防','護框','體力','肉體','無球','擋拆','持球','破包夾'];
 const OPTS={mode:'race',targetScore:21,winBy:1};
 let o=[];
 for(const [k,T] of Object.entries(TEAMS)){

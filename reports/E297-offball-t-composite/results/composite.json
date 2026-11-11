@@ -1,0 +1,380 @@
+{
+ "N": 276,
+ "missingAnyCol": 8,
+ "weights": {
+  "W-eq": {
+   "cut36": 0.0909,
+   "cutPPP": 0.0455,
+   "offScr36": 0.0909,
+   "handoff36": 0.0909,
+   "spotup36": 0.0909,
+   "roll36": 0.0909,
+   "putback36": 0.0909,
+   "trans36": 0.0909,
+   "distOff36": 0.0909,
+   "speedOff": 0.0909,
+   "cs3a36": 0.0909,
+   "cs3pct": 0.0455
+  },
+  "W-imp": {
+   "cut36": 0.0,
+   "cutPPP": 0.1303,
+   "offScr36": 0.0,
+   "handoff36": 0.0,
+   "spotup36": 0.0835,
+   "roll36": 0.1151,
+   "putback36": 0.038,
+   "trans36": 0.0874,
+   "distOff36": 0.0437,
+   "speedOff": 0.1249,
+   "cs3a36": 0.0,
+   "cs3pct": 0.377
+  },
+  "W-dist": {
+   "cut36": 0.0,
+   "cutPPP": 0.1302,
+   "offScr36": 0.0,
+   "handoff36": 0.0824,
+   "spotup36": 0.1498,
+   "roll36": 0.0,
+   "putback36": 0.2524,
+   "trans36": 0.2611,
+   "distOff36": 0.0,
+   "speedOff": 0.0,
+   "cs3a36": 0.0,
+   "cs3pct": 0.1241
+  }
+ },
+ "eval": {
+  "W-eq": {
+   "rhoDT": 0.52,
+   "dR2_OBPM": 0.0353,
+   "n_OBPM": 275,
+   "rhoOBPM": 0.334,
+   "dR2_2K27": 0.0136,
+   "n_2K27": 274,
+   "rho2K27": 0.221,
+   "dR2_mean": 0.0244,
+   "yoy": 0.703,
+   "nYoy": 250,
+   "yoyOK": true
+  },
+  "W-imp": {
+   "rhoDT": 0.507,
+   "dR2_OBPM": 0.0454,
+   "n_OBPM": 275,
+   "rhoOBPM": 0.41,
+   "dR2_2K27": 0.0029,
+   "n_2K27": 274,
+   "rho2K27": 0.225,
+   "dR2_mean": 0.0242,
+   "yoy": 0.389,
+   "nYoy": 250,
+   "yoyOK": false
+  },
+  "W-dist": {
+   "rhoDT": 0.876,
+   "dR2_OBPM": 0.0573,
+   "n_OBPM": 275,
+   "rhoOBPM": 0.451,
+   "dR2_2K27": 0.0619,
+   "n_2K27": 274,
+   "rho2K27": 0.445,
+   "dR2_mean": 0.0596,
+   "yoy": 0.483,
+   "nYoy": 250,
+   "yoyOK": false
+  }
+ },
+ "perCol": {
+  "cut36": {
+   "rhoDT": -0.037,
+   "rhoOBPM": 0.116,
+   "rho2K27": 0.111
+  },
+  "cutPPP": {
+   "rhoDT": 0.442,
+   "rhoOBPM": 0.225,
+   "rho2K27": 0.114
+  },
+  "offScr36": {
+   "rhoDT": 0.375,
+   "rhoOBPM": 0.325,
+   "rho2K27": 0.346
+  },
+  "handoff36": {
+   "rhoDT": 0.339,
+   "rhoOBPM": 0.228,
+   "rho2K27": 0.303
+  },
+  "spotup36": {
+   "rhoDT": 0.341,
+   "rhoOBPM": -0.202,
+   "rho2K27": -0.096
+  },
+  "roll36": {
+   "rhoDT": -0.044,
+   "rhoOBPM": 0.144,
+   "rho2K27": 0.098
+  },
+  "putback36": {
+   "rhoDT": 0.184,
+   "rhoOBPM": 0.095,
+   "rho2K27": 0.082
+  },
+  "trans36": {
+   "rhoDT": 0.598,
+   "rhoOBPM": 0.265,
+   "rho2K27": 0.453
+  },
+  "distOff36": {
+   "rhoDT": -0.006,
+   "rhoOBPM": -0.054,
+   "rho2K27": -0.202
+  },
+  "speedOff": {
+   "rhoDT": 0.013,
+   "rhoOBPM": -0.042,
+   "rho2K27": -0.146
+  },
+  "cs3a36": {
+   "rhoDT": 0.146,
+   "rhoOBPM": -0.13,
+   "rho2K27": -0.213
+  },
+  "cs3pct": {
+   "rhoDT": 0.247,
+   "rhoOBPM": 0.325,
+   "rho2K27": 0.169
+  }
+ },
+ "recommended": "W-eq",
+ "named": {
+  "offball": {
+   "Derrick White": {
+    "pct": 55.1,
+    "pos": "SG",
+    "pctByComp": {
+     "W-eq": 55.1,
+     "W-imp": 17.0,
+     "W-dist": 29.3
+    }
+   },
+   "Klay Thompson": {
+    "pct": 98.2,
+    "pos": "SF",
+    "pctByComp": {
+     "W-eq": 98.2,
+     "W-imp": 65.9,
+     "W-dist": 58.3
+    }
+   },
+   "Aaron Gordon": {
+    "pct": 26.4,
+    "pos": "SF",
+    "pctByComp": {
+     "W-eq": 26.4,
+     "W-imp": 84.1,
+     "W-dist": 78.3
+    }
+   },
+   "Buddy Hield": null,
+   "Duncan Robinson": {
+    "pct": 92.4,
+    "pos": "SF",
+    "pctByComp": {
+     "W-eq": 92.4,
+     "W-imp": 83.3,
+     "W-dist": 46.7
+    }
+   },
+   "Sam Hauser": {
+    "pct": 95.7,
+    "pos": "PF",
+    "pctByComp": {
+     "W-eq": 95.7,
+     "W-imp": 85.5,
+     "W-dist": 44.2
+    }
+   },
+   "Josh Hart": {
+    "pct": 35.5,
+    "pos": "SG",
+    "pctByComp": {
+     "W-eq": 35.5,
+     "W-imp": 78.3,
+     "W-dist": 52.9
+    }
+   },
+   "Mikal Bridges": {
+    "pct": 91.3,
+    "pos": "SF",
+    "pctByComp": {
+     "W-eq": 91.3,
+     "W-imp": 85.9,
+     "W-dist": 72.8
+    }
+   },
+   "Jarrett Allen": {
+    "pct": 57.2,
+    "pos": "PF",
+    "pctByComp": {
+     "W-eq": 57.2,
+     "W-imp": 33.7,
+     "W-dist": 19.2
+    }
+   },
+   "Rudy Gobert": {
+    "pct": 18.5,
+    "pos": "C",
+    "pctByComp": {
+     "W-eq": 18.5,
+     "W-imp": 9.4,
+     "W-dist": 25.0
+    }
+   },
+   "Dereck Lively II": null
+  },
+  "onball": {
+   "Luka Dončić": {
+    "pct": 22.8,
+    "pos": "SF",
+    "pctByComp": {
+     "W-eq": 22.8,
+     "W-imp": 36.2,
+     "W-dist": 68.8
+    }
+   },
+   "Trae Young": null,
+   "Shai Gilgeous-Alexander": {
+    "pct": 4.0,
+    "pos": "PF",
+    "pctByComp": {
+     "W-eq": 4.0,
+     "W-imp": 28.3,
+     "W-dist": 24.6
+    }
+   },
+   "James Harden": {
+    "pct": 0.0,
+    "pos": "SG",
+    "pctByComp": {
+     "W-eq": 0.0,
+     "W-imp": 14.5,
+     "W-dist": 8.7
+    }
+   }
+  }
+ },
+ "posMeanPct": {
+  "PG": 46.8,
+  "SG": 55.2,
+  "SF": 49.8,
+  "PF": 50.4,
+  "C": 46.5
+ },
+ "top15": [
+  {
+   "name": "Lauri Markkanen",
+   "pos": "C",
+   "pct": 99.6
+  },
+  {
+   "name": "Stephen Curry",
+   "pos": "PG",
+   "pct": 99.3
+  },
+  {
+   "name": "Kon Knueppel",
+   "pos": "SG",
+   "pct": 98.9
+  },
+  {
+   "name": "Michael Porter Jr.",
+   "pos": "SF",
+   "pct": 98.6
+  },
+  {
+   "name": "Klay Thompson",
+   "pos": "SF",
+   "pct": 98.2
+  },
+  {
+   "name": "Nickeil Alexander-Walker",
+   "pos": "PG",
+   "pct": 97.8
+  },
+  {
+   "name": "Simone Fontecchio",
+   "pos": "PF",
+   "pct": 97.5
+  },
+  {
+   "name": "Victor Wembanyama",
+   "pos": "C",
+   "pct": 97.1
+  },
+  {
+   "name": "Isaiah Joe",
+   "pos": "SG",
+   "pct": 96.7
+  },
+  {
+   "name": "Aaron Nesmith",
+   "pos": "SG",
+   "pct": 96.4
+  },
+  {
+   "name": "Luka Garza",
+   "pos": "C",
+   "pct": 96.0
+  },
+  {
+   "name": "Sam Hauser",
+   "pos": "PF",
+   "pct": 95.7
+  },
+  {
+   "name": "Brandon Miller",
+   "pos": "SF",
+   "pct": 95.3
+  },
+  {
+   "name": "Sam Merrill",
+   "pos": "SG",
+   "pct": 94.9
+  },
+  {
+   "name": "Jalen Smith",
+   "pos": "C",
+   "pct": 94.6
+  }
+ ],
+ "bottom5": [
+  {
+   "name": "Keon Ellis",
+   "pos": "SG",
+   "pct": 1.4
+  },
+  {
+   "name": "John Konchar",
+   "pos": "SF",
+   "pct": 1.1
+  },
+  {
+   "name": "Marvin Bagley III",
+   "pos": "C",
+   "pct": 0.7
+  },
+  {
+   "name": "Russell Westbrook",
+   "pos": "PG",
+   "pct": 0.4
+  },
+  {
+   "name": "James Harden",
+   "pos": "SG",
+   "pct": 0.0
+  }
+ ]
+}

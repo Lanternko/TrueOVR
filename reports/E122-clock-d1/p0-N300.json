@@ -1,0 +1,89 @@
+{
+ "player": "Nikola Jokić",
+ "identical_beta0": true,
+ "idrows": [
+  {
+   "seed": 20261028,
+   "same": true,
+   "sA": 114,
+   "sB": 127
+  },
+  {
+   "seed": 20261029,
+   "same": true,
+   "sA": 121,
+   "sB": 127
+  },
+  {
+   "seed": 20261030,
+   "same": true,
+   "sA": 121,
+   "sB": 114
+  },
+  {
+   "seed": 20261031,
+   "same": true,
+   "sA": 133,
+   "sB": 103
+  },
+  {
+   "seed": 20261032,
+   "same": true,
+   "sA": 134,
+   "sB": 116
+  },
+  {
+   "seed": 20261033,
+   "same": true,
+   "sA": 124,
+   "sB": 96
+  },
+  {
+   "seed": 20261034,
+   "same": true,
+   "sA": 145,
+   "sB": 120
+  },
+  {
+   "seed": 20261035,
+   "same": true,
+   "sA": 121,
+   "sB": 128
+  },
+  {
+   "seed": 20261036,
+   "same": true,
+   "sA": 112,
+   "sB": 129
+  },
+  {
+   "seed": 20261037,
+   "same": true,
+   "sA": 107,
+   "sB": 117
+  },
+  {
+   "seed": 20261038,
+   "same": true,
+   "sA": 111,
+   "sB": 132
+  },
+  {
+   "seed": 20261039,
+   "same": true,
+   "sA": 120,
+   "sB": 127
+  }
+ ],
+ "N": 300,
+ "beta": 2,
+ "meanOn_base": 13.282506937535993,
+ "meanOn_plus2": 15.045736777913294,
+ "dmeanOn": 1.763229840377301,
+ "nOn_base": 19099,
+ "marginDiff": 2.32,
+ "marginSE": 1.1873791905924371,
+ "durOK": true,
+ "winOK": false,
+ "pass": false
+}

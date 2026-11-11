@@ -177,6 +177,9 @@ def main():
     for side in 'OD':
         print(side, 'lambda', result[side]['lambda'], 'cvR2 %.3f' % result[side]['cvR2'][result[side]['lambda']])
         print('  ', {c: (round(v['value'], 3), round(v['bootstrapSE'], 3)) for c, v in result[side]['perUnitRate'].items()})
+    # 給 reports/impact-epm-2026-27/epm_live.py 取凍結權重（不影響上面的輸出檔）
+    return {'result': result, 'models': models, 'train': train, 'weights': w, 'rapm': rapm}
 
 
-main()
+if __name__ == '__main__':
+    main()

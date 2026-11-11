@@ -1,0 +1,65 @@
+{
+ "experiment": "E-128",
+ "deviations": [
+  {
+   "id": "D1",
+   "topic": "threeValue 欄位",
+   "what": "pool-027b.json 保留 threeValue 欄位但不使用；027b threeValue 還原為 027 算法，027b−027 差 0（report-only）。errata-4 選項：保留、不重跑前置。",
+   "gate": false
+  },
+  {
+   "id": "D2",
+   "topic": "errata-3 step4-t2 7 人",
+   "what": "Alvarado、Trent Jr.、Dunn、V. Williams Jr.、Garza、Dëmin、Gardner：既有來源不一致，027 也有；最大差 0.15006。(h) 以卡片來源 data/benchmark-source/defense-rim.json 判定（門檻 0.05），PAST_RAW 不改。",
+   "gate": false
+  },
+  {
+   "id": "D3",
+   "topic": "defL 重用",
+   "what": "e111-card027/defL/（def-L-<win>.csv）直接重用，m27 UL 加成只依 def-L 的 D、poss；E-111 defL-summary.json sha256 70a504c7d00ef33ef6cadcdb306966cd2c91ba98dfea0e6cc5cc5d7f1263cfea",
+   "gate": false
+  },
+  {
+   "id": "D4",
+   "topic": "窗口 pass 凍結",
+   "what": "m26_window_cards 的窗口 pass 用 M26[passFreeze]（凍結的 2025-26 z 常數），仿 foulDraw 先例（errata-1）。",
+   "gate": false
+  },
+  {
+   "id": "D5",
+   "topic": "歷史 pass 來源",
+   "what": "歷史答案卡／先驗卡 pass 取 E-125 reports/card-0.2.7+E125-pass-volume/pool-P50/raw-<季>.json 的 attrs.pass，再經 pool-027b 映射（含 E-101 尾巴）；2017-18…2021-22 共 2744 人，passFromE125 全數，缺 0。",
+   "gate": false
+  },
+  {
+   "id": "D6",
+   "topic": "歷史 onBall／help／pressure",
+   "what": "照 E-111 D15 固定 70／照 E-111；E-123 尾巴只經 2025-26 先驗起作用。",
+   "gate": false
+  },
+  {
+   "id": "D7",
+   "topic": "唯讀檔快照差異",
+   "what": "readonly-sha-after.json 與 before 比：live/2026-10-28/card-roster-viewer.html、roster-viewer.html、live/publish_state.json 雜湊變了（非本任務產生，疑為他處每日更新或其他 session 的網站發佈）；e111 preregistration.md 不在 after 的樣式內（路徑 pattern 換成 e128）；新增 78 檔為 card-0.2.7b+E131-no-physique 等其他實驗。run_c4_live.py 變更為 errata-4 的 threeValue 還原。本任務未動 src/、tools/、網站、gh-pages。",
+   "gate": false
+  },
+  {
+   "id": "D8",
+   "topic": "執行位置",
+   "what": "回測在本機跑（約 25 秒，無子程序），5090 上無此 repo 副本；歷來前置（c0 等）亦在本機。未起任何子程序。",
+   "gate": false
+  },
+  {
+   "id": "D9",
+   "topic": "名單",
+   "what": "PLAYERS8 擴為 §3 指定球員（Mobley、Ausar Thompson、Anunoby、Giannis、Trae Young、Wembanyama、Wagner）加 E-111 原 8 人；3PT=ranking 欄 long、RIM=short、PRES=pressure（另列 presDisplay）。",
+   "gate": false
+  },
+  {
+   "id": "D10",
+   "topic": "檔名",
+   "what": "歷史卡檔名 prior-<季>-027b.json（第一次跑曾誤產 027bb，已刪重跑，結果相同）。",
+   "gate": false
+  }
+ ]
+}

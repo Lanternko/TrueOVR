@@ -1,0 +1,1396 @@
+{
+  "version": "inseason 0.2.12",
+  "cardMode": "0212",
+  "e064Mode": "G1",
+  "e064Anchors": [
+    -0.5719110063934824,
+    0.9389139623097191,
+    3.925432098281053
+  ],
+  "e064RRepl": -0.9551191824234517,
+  "e064MpgNoDataPlayers": 200,
+  "priorCard": "card 0.2.10a",
+  "dataCutoff": "2026-10-31",
+  "dataFirstDate": "2026-10-20",
+  "games": 88,
+  "pbpGames": 87,
+  "missingPbp": [
+    "0022600101"
+  ],
+  "gitHead": "afd541b4ef47b56124b93bf9d7a9f0c30bd9d006",
+  "start": "S*",
+  "prior": "2025-26",
+  "target": "2026-27",
+  "c": 1.0,
+  "G": 82,
+  "frozenAttrs": [
+    "foulDraw",
+    "ft",
+    "mid",
+    "pass",
+    "rebound",
+    "short",
+    "tovSkill",
+    "physique",
+    "onBall",
+    "help",
+    "heightInches"
+  ],
+  "presDriveUnfreeze": {
+    "c": 5.866666666666667,
+    "weights": {
+      "2022-23": 0.05387682596338158,
+      "2023-24": 0.17855691056910572,
+      "2024-25": 0.30355691056910566,
+      "2025-26": 0.4285569105691057,
+      "2026-27": 0.49552845528455286
+    },
+    "updated": {
+      "pressure": 582,
+      "drive": 582
+    },
+    "module": "live/pres_drive.py"
+  },
+  "updatableAttrs": [
+    "long",
+    "mid",
+    "short",
+    "ft",
+    "drive",
+    "tovSkill",
+    "pass",
+    "rebound",
+    "stamina",
+    "creation",
+    "pressure",
+    "foulDraw"
+  ],
+  "window10": null,
+  "window8": {
+    "attrs": [
+      "drive",
+      "foulDraw",
+      "ft",
+      "mid",
+      "pass",
+      "rebound",
+      "short",
+      "tovSkill"
+    ],
+    "module": "live/window8.py",
+    "gamesDone": 88,
+    "pbpGames": 87,
+    "players": 582,
+    "note": "8 項（drive,foulDraw,ft,mid,pass,rebound,short,tovSkill）＝E-175 U 臂四季滑動窗口；其餘屬性仍走 C4；lastOVR 基準＝同模型、本季 0 場（window8.day0）；係數／錨點／r_repl 全凍結在 0.2.9a（R-114 裁定 B）"
+  },
+  "delta2Undefined": [],
+  "delta2": {
+    "long": 66.32354,
+    "mid": 81.520319,
+    "short": 36.176818,
+    "ft": 27.431913,
+    "drive": 89.836326,
+    "tovSkill": 4.516257,
+    "pass": 45.289347,
+    "rebound": 21.727378,
+    "stamina": 163.767732,
+    "creation": 66.784762,
+    "pressure": 230.796881
+  },
+  "players": {
+    "ranked": 442,
+    "noPrior": 17,
+    "priorCardNotPlayed": 140,
+    "rosterUnplayed": 60,
+    "rosterFile": true
+  },
+  "foulDrawFreeze": {
+    "formula": "percentile_pool(0.75*z(FTA/36)+0.25*z(FTA/FGA))；z 的 mean/std（ddof=0）＝2025-26 池（GP>=30、MPG>=20），同 card 0.2.2／0.2.6 建 foulDraw 時的拉回後值（E-070 attributes-w075）；不用 2026-27 資料重估。poolComposite 是 2025-26 單季池（025 模式用）；026 模式的百分位與尾巴改用 live/pool-026.json 的 foulDraw 合併池。",
+    "wVol": 0.75,
+    "wRate": 0.25,
+    "pool": [
+      30,
+      20
+    ],
+    "poolSize": 252,
+    "vol": {
+      "mean": 3.749331650793651,
+      "std": 1.972270537249601
+    },
+    "rate": {
+      "mean": 0.2639290595238095,
+      "std": 0.10573380686917522
+    },
+    "scale026Check": {
+      "mapping": "E-101 percentile_attr_merged（卡片端合併池，mode max）",
+      "top": true,
+      "bot": true,
+      "anchors": {
+        "r90": 1.2820307661484238,
+        "r99": 2.9510951702260106,
+        "r1": -1.5259863966399028,
+        "SD_pool": 0.9687791199456798,
+        "gapScale": 1.5987206935609068,
+        "S": 1.5987206935609068,
+        "poolN": 961
+      },
+      "poolPerSeason": {
+        "2025-26": 252,
+        "2022-23": 236,
+        "2023-24": 229,
+        "2024-25": 244
+      },
+      "anchorsVsTailSummaryMaxAbs": 2.1414581219403317e-10
+    },
+    "checkMaxAbsDiff": {
+      "compositeVsE070Csv": 6.498483118289045e-07,
+      "vsCard026Ranking": 0.04996708360762625
+    }
+  },
+  "usage": {
+    "file": "reports/card-0.2.12/work/usage-2025-26-card0210a-nowin.json",
+    "payloadSha256": "c5117591784e2e32b3a8cbfbcc2720e6b5342d06347b3307623a5ca184463a2e",
+    "frozenAt": "2025-26",
+    "coef": {
+      "b0": -0.8719502409296505,
+      "b1_p": 0.600155447263929,
+      "b2_L": -0.14389776245479813,
+      "b3_a": 1.7008857939776467,
+      "b4_y": 0.10986198934306406,
+      "b5_v": 0.7855067561524317,
+      "b6_yL": -0.07747053701146689,
+      "b7_vL": -0.3265012655252132,
+      "b8_ydL": 0.0
+    },
+    "mpg0": "card 0.2.4 ranking.csv mpg 欄（依名字配對；卡裡沒有的人退回 MIN／GP）",
+    "mpg0FromCard": 582,
+    "mpg0Fallback": 0
+  },
+  "e128": {
+    "pool027b": {
+      "file": "reports/ovr-inseason-2026-27/live/pool-027b.json",
+      "payloadSha256": "3544d976be35bad0fe6d6847fdd02b89efcb24ba18d56d7b50bc2d522dccef50"
+    },
+    "L1_refVsCard027b": {
+      "n": 582,
+      "maxAbs": 0.05051545988821715,
+      "worst": [
+        [
+          "Tosan Evbuomwan",
+          -0.05051545988821715
+        ],
+        [
+          "Josh Oduro",
+          0.05037713229776841
+        ],
+        [
+          "Orlando Robinson",
+          -0.04980948735149582
+        ],
+        [
+          "Jordan Poole",
+          -0.0497227579645525
+        ],
+        [
+          "Lauri Markkanen",
+          -0.049522061293572506
+        ]
+      ]
+    },
+    "rangeCheck": {
+      "attrs": [
+        "long",
+        "mid",
+        "short",
+        "ft",
+        "foulDraw",
+        "tovSkill",
+        "pass",
+        "rebound",
+        "creation"
+      ],
+      "outOfRange": [],
+      "nOutOfRange": 0
+    },
+    "above99": [
+      [
+        "Stephen Curry",
+        "ft",
+        114.29
+      ],
+      [
+        "Shai Gilgeous-Alexander",
+        "creation",
+        114.19
+      ],
+      [
+        "Andre Drummond",
+        "rebound",
+        113.62
+      ],
+      [
+        "Giannis Antetokounmpo",
+        "foulDraw",
+        112.98
+      ],
+      [
+        "Trae Young",
+        "pass",
+        112.32
+      ],
+      [
+        "Obi Toppin",
+        "short",
+        108.95
+      ],
+      [
+        "Nikola Jokić",
+        "pass",
+        108.67
+      ],
+      [
+        "Luka Dončić",
+        "creation",
+        108.51
+      ],
+      [
+        "Cam Spencer",
+        "ft",
+        108.09
+      ],
+      [
+        "Luke Kennard",
+        "long",
+        107.99
+      ],
+      [
+        "Joel Embiid",
+        "foulDraw",
+        105.91
+      ],
+      [
+        "Giannis Antetokounmpo",
+        "short",
+        105.62
+      ],
+      [
+        "Anthony Edwards",
+        "creation",
+        104.68
+      ],
+      [
+        "Sam Hauser",
+        "tovSkill",
+        104.03
+      ],
+      [
+        "Cade Cunningham",
+        "pass",
+        102.97
+      ],
+      [
+        "Donovan Clingan",
+        "rebound",
+        102.95
+      ],
+      [
+        "Jalen Brunson",
+        "creation",
+        101.59
+      ],
+      [
+        "Tim Hardaway Jr.",
+        "tovSkill",
+        101.47
+      ],
+      [
+        "Mitchell Robinson",
+        "rebound",
+        101.45
+      ],
+      [
+        "Domantas Sabonis",
+        "rebound",
+        99.3
+      ]
+    ],
+    "ulBonus": {
+      "defL": "reports/card-0.2.5+E104-defense-pergame-decay/def-L-primary.csv",
+      "posMeanD": {
+        "PG": -0.16031998908963122,
+        "C": 0.3831111735887641,
+        "SG": 0.2145667863908479,
+        "SF": -0.12808983825660594,
+        "PF": 0.2231225003937336
+      },
+      "vsCard027DefenseBonus3dp": {
+        "n": 582,
+        "maxAbs": 0.6339999999999999,
+        "nMismatch": 225
+      },
+      "refBonusEqualsUl": 0.6334217552574004
+    },
+    "zoneSkippedAreaMissing2pt": {
+      "D:/Projects/CODING/basketball-autochess/data/defense-a-source/pbp": 1
+    },
+    "stamina": "IC 單季映射（E-111 §1.3，不進合併池、不加尾巴）"
+  },
+  "inputs": {
+    "2026-27 player-games": {
+      "path": "data/defense-seventh/2026-27/player-games.json",
+      "sha256": "a4e85866eed5f9f16bd07110af8c796c8f66af4bd7bf5d6dccae619e3ed9e922"
+    },
+    "2026-27 team-games": {
+      "path": "data/defense-seventh/2026-27/team-games.json",
+      "sha256": "d00fccbe898705429ff337665897292d0ae37e2006e49a812a6e32d341539517"
+    },
+    "2026-27 bio": {
+      "path": "data/defense-seventh/2026-27/bio.json",
+      "sha256": "366ae49a04dde396324f1b19da6a5c2d6701798b56ee650844a3c1ed46d0a862"
+    },
+    "prior card": {
+      "path": "reports/ovr-inseason-2026-27/live/_retired/prior-2025-26-card0210.json",
+      "sha256": "69e52dd93943ed9e8ed69906dc09ad11c4614c04ba6e73c1f32a7b68c04e3e42"
+    },
+    "S* RAPM": {
+      "path": "reports/card-0.2.10a/rapm-T6.csv",
+      "sha256": "514ba5e0a14fee5f5e700032bea613486fac68eed6d2073a0b12e21296bc6bb8"
+    },
+    "2025-26 player-games": {
+      "path": "data/season-source/player-games.json",
+      "sha256": "11fc5866b2f61b31e27659e14e4071924b5873ef0d2a4118a585c1a54be04357"
+    },
+    "2025-26 team-games": {
+      "path": "data/season-source/team-games.json",
+      "sha256": "d5cb1a6dbd26a0ed71b24e7e18fcbc862afdf6d8bd8ea3814c5dadbf1989fb8a"
+    },
+    "2025-26 bio": {
+      "path": "data/benchmark-source/bio.json",
+      "sha256": "d319d00ed383c8a30793907fd0edd56fd26e8cdb19a74bbb0c2667790644196e"
+    },
+    "threeValue prior (abilityC)": {
+      "path": "reports/ovr-v62-3pt-difficulty-2025-26/new-long.json",
+      "sha256": "a30d913f342e8e614c69fb70f10e798e11e4cac8c78da2ed7c27d9dd33e769c8"
+    },
+    "dependence-audit": {
+      "path": "reports/player-impact-v30/dependence-audit.json",
+      "sha256": "395d6d186079849ee242f6f10514f9d5180396a937f9436f3488a1249819ed17"
+    },
+    "formal ranking (cross-check)": {
+      "path": "reports/card-0.2.10a/ranking.csv",
+      "sha256": "a868f7b91924d58a73c06083e8a50bbd8bfabb149348518e2691fcdda8405763"
+    },
+    "usage features (E-091)": {
+      "path": "reports/card-0.2.12/work/usage-2025-26-card0210a-nowin.json",
+      "sha256": "b55ae0cb1f6c42163d36c7062eb87de5df73b56bf13e87f766c91fe6d09749b9"
+    },
+    "e084 results (coef/r_repl/anchors)": {
+      "path": "reports/card-0.2.12/work/usage-2025-26-card0210a-nowin.json",
+      "sha256": "b55ae0cb1f6c42163d36c7062eb87de5df73b56bf13e87f766c91fe6d09749b9"
+    },
+    "card 0.2.10a summary": {
+      "path": "reports/card-0.2.10a/summary.json",
+      "sha256": "13edc9b568929a3655f537298b01f5a4ed4dc93099e8b6217edad72ce9413950"
+    },
+    "pool-027b (E-128)": {
+      "path": "reports/ovr-inseason-2026-27/live/pool-027b.json",
+      "sha256": "d4f6ad4802b5c7164b597f4cbba9f550ab734175e58a09a08f9fe34cc1c3fb21"
+    },
+    "window8.py": {
+      "path": "reports/ovr-inseason-2026-27/live/window8.py",
+      "sha256": "9bb2481a9c874dd0b9a8ecd0e716b8d25f52eaf6dd7fcbd00ccf6f1801faf910"
+    },
+    "card-0.2.10 frozen.json": {
+      "path": "reports/card-0.2.10/frozen.json",
+      "sha256": "b069064574f2dc1afc6d533768a739c36684a6ecf9f6b6915e5b4f777e5f8b35"
+    },
+    "card-0.2.10 tail-U.csv": {
+      "path": "reports/card-0.2.10/tail-U.csv",
+      "sha256": "ff959cd0eee276d2817ba10db3c5fc14ca640e302a8c3810590c071730301dba"
+    },
+    "2026-27 pbp (window8) first file": {
+      "path": "data/defense-seventh/2026-27/pbp/0022600001.json",
+      "sha256": "f32e4445edbffdc6968486ca9bbae410e677d8b1f269cbc56a4980d59f7b3be4"
+    },
+    "card 0.2.10a OVR summary": {
+      "path": "reports/card-0.2.10a/cards/K6/primary/summary.json",
+      "sha256": "3c83d54acba8d888f32721ee8c329ca2b183ed7a0db5b4f9c14e4979d756176d"
+    },
+    "def-L primary (UL bonus)": {
+      "path": "reports/card-0.2.5+E104-defense-pergame-decay/def-L-primary.csv",
+      "sha256": "c43396ea951fb7b12060c667e92b7acf26569209f2bc595c642e7a1d5f6aecc9"
+    },
+    "rebase-027a cards-result.json (anchors)": {
+      "path": "reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/work/cards-result.json",
+      "sha256": "83096938dd553fb2157c5f481fdb3e88e0b0abc2e6a6d63f8cff34b9e59f8b1b"
+    }
+  },
+  "mapping2025_26": {
+    "priors": {
+      "long": 0.35964603715510607,
+      "ft": 0.7828555601717214,
+      "mid": 0.41694961292951244,
+      "short": 0.5778296757845371
+    },
+    "poolSize": 252,
+    "boxPlayersDroppedNoBio": 0,
+    "priorShotSampleFilled": [
+      582,
+      582
+    ]
+  },
+  "sanity": {
+    "a_f0_kmax_maxAbsOvrDiff": 0.015769287953503408,
+    "a_liveEqualsC4predict_maxAttrDiff": 0.0,
+    "a_f0_equalsC2_maxAttrDiff": 1.4210854715202004e-14,
+    "b_n": 442,
+    "b_median_abs": 0.7058109909346229,
+    "b_max_abs": 6.821460025667712,
+    "b_mean_abs": 1.0996248914661721,
+    "b_by_N": {
+      "0": {
+        "players": 60,
+        "median": 0.01692339759819106,
+        "max": 0.11811686035650837
+      },
+      "1": {
+        "players": 25,
+        "median": 0.6428457036792281,
+        "max": 4.184604319411669
+      },
+      "2": {
+        "players": 41,
+        "median": 0.6720528352077793,
+        "max": 3.1896220294513995
+      },
+      "3": {
+        "players": 30,
+        "median": 1.1810636082590698,
+        "max": 4.590437066489365
+      },
+      "4": {
+        "players": 41,
+        "median": 0.9512130441404665,
+        "max": 6.821460025667712
+      },
+      "5": {
+        "players": 100,
+        "median": 0.911566628079985,
+        "max": 5.909641676208821
+      },
+      "6": {
+        "players": 113,
+        "median": 0.9204995824155731,
+        "max": 6.166642617722474
+      },
+      "7": {
+        "players": 32,
+        "median": 1.0593008183833312,
+        "max": 5.757501621181817
+      }
+    },
+    "b_ge_1": [
+      [
+        "Victor Wembanyama",
+        6,
+        1.126
+      ],
+      [
+        "Kawhi Leonard",
+        2,
+        -1.22
+      ],
+      [
+        "Jayson Tatum",
+        5,
+        1.352
+      ],
+      [
+        "Ty Jerome",
+        5,
+        2.298
+      ],
+      [
+        "Tyrese Maxey",
+        7,
+        1.263
+      ],
+      [
+        "Kevin Durant",
+        7,
+        -1.167
+      ],
+      [
+        "Austin Reaves",
+        6,
+        -1.338
+      ],
+      [
+        "De'Aaron Fox",
+        6,
+        -1.916
+      ],
+      [
+        "Desmond Bane",
+        5,
+        -1.242
+      ],
+      [
+        "Trey Murphy III",
+        6,
+        -1.868
+      ],
+      [
+        "Cooper Flagg",
+        5,
+        2.601
+      ],
+      [
+        "Ajay Mitchell",
+        6,
+        1.189
+      ],
+      [
+        "Matisse Thybulle",
+        6,
+        3.148
+      ],
+      [
+        "Paul Reed",
+        6,
+        6.167
+      ],
+      [
+        "Tre Jones",
+        6,
+        -2.255
+      ],
+      [
+        "Collin Gillespie",
+        4,
+        -2.282
+      ],
+      [
+        "Cameron Johnson",
+        2,
+        -1.038
+      ],
+      [
+        "Obi Toppin",
+        5,
+        2.003
+      ],
+      [
+        "Josh Hart",
+        6,
+        -1.516
+      ],
+      [
+        "Ja Morant",
+        4,
+        -1.552
+      ],
+      [
+        "Neemias Queta",
+        5,
+        -1.335
+      ],
+      [
+        "Isaiah Joe",
+        3,
+        -2.433
+      ],
+      [
+        "LaMelo Ball",
+        7,
+        -1.984
+      ],
+      [
+        "James Harden",
+        6,
+        -1.217
+      ],
+      [
+        "Ryan Rollins",
+        6,
+        -3.005
+      ],
+      [
+        "Luke Kornet",
+        6,
+        -3.831
+      ],
+      [
+        "Cam Spencer",
+        6,
+        -1.172
+      ],
+      [
+        "DeMar DeRozan",
+        5,
+        -1.536
+      ],
+      [
+        "Dylan Harper",
+        6,
+        1.606
+      ],
+      [
+        "Ivica Zubac",
+        3,
+        -1.622
+      ],
+      [
+        "Jalen Duren",
+        2,
+        -1.07
+      ],
+      [
+        "Jalen Smith",
+        6,
+        1.009
+      ],
+      [
+        "Jrue Holiday",
+        5,
+        -1.142
+      ],
+      [
+        "Brandon Miller",
+        7,
+        1.052
+      ],
+      [
+        "Cason Wallace",
+        3,
+        -1.856
+      ],
+      [
+        "Cedric Coward",
+        5,
+        1.689
+      ],
+      [
+        "Miles McBride",
+        6,
+        -1.591
+      ],
+      [
+        "Josh Giddey",
+        6,
+        -2.33
+      ],
+      [
+        "Aaron Wiggins",
+        7,
+        1.994
+      ],
+      [
+        "Jaxson Hayes",
+        5,
+        1.711
+      ],
+      [
+        "Grayson Allen",
+        7,
+        -1.223
+      ],
+      [
+        "Ja'Kobe Walter",
+        5,
+        2.237
+      ],
+      [
+        "Jabari Smith Jr.",
+        7,
+        1.244
+      ],
+      [
+        "Herbert Jones",
+        6,
+        -1.103
+      ],
+      [
+        "Jakob Poeltl",
+        5,
+        -1.46
+      ],
+      [
+        "Myles Turner",
+        6,
+        -1.708
+      ],
+      [
+        "Keldon Johnson",
+        6,
+        -1.41
+      ],
+      [
+        "Quenton Jackson",
+        6,
+        1.172
+      ],
+      [
+        "Keon Ellis",
+        5,
+        1.017
+      ],
+      [
+        "Collin Sexton",
+        5,
+        -1.808
+      ],
+      [
+        "Kelly Oubre Jr.",
+        6,
+        -1.168
+      ],
+      [
+        "Marvin Bagley III",
+        5,
+        -2.11
+      ],
+      [
+        "Bobby Portis Jr.",
+        6,
+        -1.324
+      ],
+      [
+        "Andrew Wiggins",
+        6,
+        -1.762
+      ],
+      [
+        "Gary Payton II",
+        6,
+        -1.102
+      ],
+      [
+        "Dru Smith",
+        4,
+        -1.938
+      ],
+      [
+        "Duncan Robinson",
+        6,
+        3.471
+      ],
+      [
+        "Karlo Matković",
+        5,
+        1.352
+      ],
+      [
+        "Quentin Grimes",
+        6,
+        -1.438
+      ],
+      [
+        "Collin Murray-Boyles",
+        5,
+        -1.562
+      ],
+      [
+        "Moritz Wagner",
+        5,
+        4.52
+      ],
+      [
+        "Jose Alvarado",
+        2,
+        -1.218
+      ],
+      [
+        "Al Horford",
+        5,
+        -1.163
+      ],
+      [
+        "Terrence Shannon Jr",
+        7,
+        5.758
+      ],
+      [
+        "Isaiah Jackson",
+        5,
+        2.801
+      ],
+      [
+        "Sam Hauser",
+        5,
+        1.831
+      ],
+      [
+        "Rui Hachimura",
+        4,
+        -1.622
+      ],
+      [
+        "Terance Mann",
+        1,
+        -1.594
+      ],
+      [
+        "Jay Huff",
+        5,
+        -1.481
+      ],
+      [
+        "Kris Murray",
+        3,
+        -1.533
+      ],
+      [
+        "Jock Landale",
+        7,
+        -2.191
+      ],
+      [
+        "Zach Collins",
+        4,
+        -6.014
+      ],
+      [
+        "Luka Garza",
+        5,
+        -3.209
+      ],
+      [
+        "Steven Adams",
+        1,
+        -2.46
+      ],
+      [
+        "Daniss Jenkins",
+        6,
+        3.358
+      ],
+      [
+        "Jonathan Kuminga",
+        7,
+        4.898
+      ],
+      [
+        "Kasparas Jakučionis",
+        6,
+        4.381
+      ],
+      [
+        "Jaylon Tyson",
+        5,
+        -2.067
+      ],
+      [
+        "Khris Middleton",
+        5,
+        -3.94
+      ],
+      [
+        "Bones Hyland",
+        7,
+        -2.512
+      ],
+      [
+        "Alex Sarr",
+        6,
+        1.944
+      ],
+      [
+        "Jalen Green",
+        4,
+        -2.752
+      ],
+      [
+        "AJ Green",
+        6,
+        -2.823
+      ],
+      [
+        "P.J. Washington",
+        6,
+        -1.269
+      ],
+      [
+        "Danny Wolf",
+        2,
+        -1.08
+      ],
+      [
+        "Tim Hardaway Jr.",
+        6,
+        -3.201
+      ],
+      [
+        "Nikola Vučević",
+        5,
+        -5.91
+      ],
+      [
+        "Caleb Martin",
+        2,
+        2.08
+      ],
+      [
+        "Ryan Dunn",
+        4,
+        -1.877
+      ],
+      [
+        "Egor Dëmin",
+        4,
+        1.184
+      ],
+      [
+        "Jamaree Bouyea",
+        2,
+        -1.966
+      ],
+      [
+        "Ben Sheppard",
+        1,
+        -1.631
+      ],
+      [
+        "Vít Krejčí",
+        5,
+        -3.466
+      ],
+      [
+        "Tyler Kolek",
+        4,
+        3.872
+      ],
+      [
+        "Malik Monk",
+        5,
+        -3.472
+      ],
+      [
+        "Tyrese Proctor",
+        5,
+        3.975
+      ],
+      [
+        "Hugo González",
+        5,
+        -1.499
+      ],
+      [
+        "Josh Minott",
+        4,
+        -1.404
+      ],
+      [
+        "Brandon Williams",
+        6,
+        -2.229
+      ],
+      [
+        "Isaac Okoro",
+        6,
+        -3.138
+      ],
+      [
+        "CJ McCollum",
+        7,
+        -2.379
+      ],
+      [
+        "Peyton Watson",
+        6,
+        -2.565
+      ],
+      [
+        "Micah Potter",
+        3,
+        -4.59
+      ],
+      [
+        "Josh Green",
+        4,
+        1.253
+      ],
+      [
+        "Brice Sensabaugh",
+        6,
+        -1.314
+      ],
+      [
+        "Craig Porter Jr.",
+        4,
+        -4.063
+      ],
+      [
+        "Anfernee Simons",
+        7,
+        -1.624
+      ],
+      [
+        "Trendon Watford",
+        2,
+        3.19
+      ],
+      [
+        "Deandre Ayton",
+        6,
+        -2.553
+      ],
+      [
+        "Bennedict Mathurin",
+        6,
+        -3.656
+      ],
+      [
+        "Kyle Anderson",
+        3,
+        -2.937
+      ],
+      [
+        "Joan Beringer",
+        7,
+        4.865
+      ],
+      [
+        "Precious Achiuwa",
+        6,
+        1.346
+      ],
+      [
+        "Derik Queen",
+        6,
+        -2.389
+      ],
+      [
+        "Max Christie",
+        6,
+        -2.451
+      ],
+      [
+        "Matas Buzelis",
+        6,
+        -1.047
+      ],
+      [
+        "Will Richard",
+        6,
+        -1.146
+      ],
+      [
+        "Jared McCain",
+        6,
+        -1.213
+      ],
+      [
+        "Kyle Filipowski",
+        4,
+        -3.837
+      ],
+      [
+        "Sidy Cissoko",
+        5,
+        2.991
+      ],
+      [
+        "Nikola Jović",
+        5,
+        2.241
+      ],
+      [
+        "Cam Whitmore",
+        2,
+        -1.419
+      ],
+      [
+        "Bryce McGowens",
+        3,
+        -1.245
+      ],
+      [
+        "Harrison Barnes",
+        4,
+        -3.287
+      ],
+      [
+        "Myron Gardner",
+        3,
+        -2.638
+      ],
+      [
+        "Bogdan Bogdanović",
+        7,
+        1.067
+      ],
+      [
+        "Corey Kispert",
+        3,
+        -2.745
+      ],
+      [
+        "Olivier-Maxence Prosper",
+        2,
+        -2.754
+      ],
+      [
+        "Bilal Coulibaly",
+        6,
+        -3.129
+      ],
+      [
+        "Nique Clifford",
+        5,
+        -5.353
+      ],
+      [
+        "Jake LaRavia",
+        5,
+        -1.276
+      ],
+      [
+        "Royce O'Neale",
+        7,
+        -1.618
+      ],
+      [
+        "Tony Bradley",
+        1,
+        -1.608
+      ],
+      [
+        "Jae'Sean Tate",
+        5,
+        -2.494
+      ],
+      [
+        "Jamison Battle",
+        5,
+        1.289
+      ],
+      [
+        "Jarace Walker",
+        6,
+        -3.209
+      ],
+      [
+        "Simone Fontecchio",
+        3,
+        -2.564
+      ],
+      [
+        "Justin Edwards",
+        2,
+        -2.681
+      ],
+      [
+        "Micah Peavy",
+        2,
+        -1.18
+      ],
+      [
+        "Svi Mykhailiuk",
+        6,
+        -1.05
+      ],
+      [
+        "Tristan Enaruna",
+        1,
+        1.103
+      ],
+      [
+        "Jonathan Mogbo",
+        4,
+        1.704
+      ],
+      [
+        "Jerami Grant",
+        6,
+        -4.252
+      ],
+      [
+        "Riley Minix",
+        1,
+        1.271
+      ],
+      [
+        "Taylor Hendricks",
+        3,
+        -1.105
+      ],
+      [
+        "Scoot Henderson",
+        5,
+        -2.176
+      ],
+      [
+        "Noa Essengue",
+        5,
+        1.463
+      ],
+      [
+        "Mo Bamba",
+        3,
+        2.306
+      ],
+      [
+        "Dennis Schröder",
+        7,
+        -3.109
+      ],
+      [
+        "Jamal Shead",
+        5,
+        -1.837
+      ],
+      [
+        "Cam Christie",
+        3,
+        -1.117
+      ],
+      [
+        "Isaac Jones",
+        2,
+        -1.309
+      ],
+      [
+        "Colin Castleton",
+        2,
+        -1.794
+      ],
+      [
+        "Tre Mann",
+        2,
+        1.661
+      ],
+      [
+        "Jase Richardson",
+        5,
+        -2.47
+      ],
+      [
+        "Will Riley",
+        4,
+        1.656
+      ],
+      [
+        "DeAndre Jordan",
+        2,
+        -1.666
+      ],
+      [
+        "Nick Richards",
+        3,
+        2.008
+      ],
+      [
+        "James Wiseman",
+        3,
+        1.564
+      ],
+      [
+        "Daeqwon Plowden",
+        5,
+        -1.223
+      ],
+      [
+        "Ryan Nembhard",
+        2,
+        2.587
+      ],
+      [
+        "Jordan Clarkson",
+        5,
+        2.295
+      ],
+      [
+        "Noah Clowney",
+        5,
+        -2.789
+      ],
+      [
+        "GG Jackson",
+        6,
+        -1.563
+      ],
+      [
+        "Jericho Sims",
+        2,
+        2.085
+      ],
+      [
+        "Khaman Maluach",
+        4,
+        -3.335
+      ],
+      [
+        "Yang Hansen",
+        3,
+        -3.132
+      ],
+      [
+        "Jaden Hardy",
+        3,
+        2.979
+      ],
+      [
+        "Tidjane Salaün",
+        6,
+        -1.993
+      ],
+      [
+        "Cody Williams",
+        4,
+        6.821
+      ],
+      [
+        "Caleb Love",
+        1,
+        4.185
+      ],
+      [
+        "Bub Carrington",
+        6,
+        -1.683
+      ],
+      [
+        "Ben Saraf",
+        1,
+        3.287
+      ],
+      [
+        "Jahmai Mashack",
+        1,
+        3.689
+      ],
+      [
+        "Nolan Traore",
+        5,
+        -1.428
+      ]
+    ],
+    "mapping_long_maxAbsDiff": 19.863329484389265,
+    "mapping_ft_maxAbsDiff": 22.755297024586568,
+    "pointwiseCheck": 1.0231815394945443e-11,
+    "lastOVR_vs_formal_maxAbs": 0.0,
+    "lastOVR_vs_formal_matched": 442
+  },
+  "threeValue": {
+    "mu": 0.3587347453198488,
+    "rep": 0.3287347453198488,
+    "k": 294.667,
+    "poolMin": 500,
+    "poolSize": 330,
+    "leagueFG3M": 35010.0,
+    "leagueFG3A": 97593.0,
+    "topTail": {
+      "r90": 0.4138614282640741,
+      "r99": 0.6409872623302814,
+      "r1": -0.05421912409455314,
+      "SD_pool": 0.1620659151130412,
+      "gapScale": 0.21755348090632876,
+      "S": 0.21755348090632876,
+      "insuranceActive": false,
+      "poolN": 330
+    },
+    "formula": "vol*(acc-rep); vol=合併(2025-26+2026-27)3PA/MIN*36; acc=(k*abilityC_2025-26+FG3M_2026-27)/(k+FG3A_2026-27)（本季無出手難度資料，用原始命中）; rep=合併聯盟3P%-0.03; 池=合併MIN>=500且有先驗卡; 百分位→attr() 40-99，027b 下 PR≥99 走頂端尾巴（錨點＝即時池 r99、S）",
+    "note": "顯示用，不進 OVR（R-024）；long 欄仍留在 ranking.csv 並進 OVR，但表格不顯示"
+  }
+}

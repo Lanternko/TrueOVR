@@ -1,0 +1,20 @@
+{
+  "version": "card 0.2.0+E070",
+  "definition": "OVR = 每場，含上場時間，相對替補水準：g_r = (pred - r_repl) * MPG / 36；兩段映射錨點 g_r 的 PR1/PR50/PR99（MIN>=500 池）。能力值與 card 0.1.2 相同。",
+  "rRepl_PR10_of_pred": -2.0345671585001224,
+  "anchors": {
+    "PR1": -0.669646449518181,
+    "PR50": 1.2562192267495718,
+    "PR99": 4.765048506925231
+  },
+  "poolSize": 378,
+  "players": 582,
+  "sources_sha256": {
+    "reports/card-0.2.0+E070-foul-volume/cards-w075/primary/ranking.csv": "7e71d7b50fe106ea9c3acc1c395e4e984ff9d56cbde718d2ff3e0fecc2ac882a",
+    "reports/card-0.2.0+E070-foul-volume/cards-w075/primary/pergame-repl.csv": "c3f3b22478cf3c790f2752a4d6ecd1836978587db3bf3bf7a437664c4e80b803",
+    "reports/card-0.2.0+E070-foul-volume/cards-w075/primary/pergame-summary.json": "b7dc4cf174ea9ba41887301287e4c676d6e272eeab1b56891edad924e10d72a9"
+  },
+  "ruling": "R-028（E-064 副版）",
+  "generator": "reports/card-0.2.0+E070-foul-volume/build_card.py",
+  "ranking_csv_sha256": "1ac8f99f13ea6eb56b58eb78da75de9aaa2d96040840e27fdf239c61ad7a682d"
+}

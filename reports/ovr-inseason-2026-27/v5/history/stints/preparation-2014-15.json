@@ -1,0 +1,258 @@
+{
+ "season": "2014-15",
+ "boxGames": 1230,
+ "pbpGames": 1230,
+ "validLineupGames": 1218,
+ "failedGames": 12,
+ "stints": 37384,
+ "filledPeriodStarters": 15,
+ "pointsPer100": 104.66134465335304,
+ "possessionsPerTeamGame": 95.54351395730706,
+ "minuteToleranceSeconds": 2.1,
+ "failures": [
+  {
+   "id": 21400214,
+   "errors": [],
+   "mismatches": [
+    {
+     "playerId": 203112,
+     "errorSeconds": 3.0
+    }
+   ]
+  },
+  {
+   "id": 21400391,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      4,
+      1610612746,
+      [
+       2037,
+       2440,
+       200770,
+       201175,
+       201604,
+       201933
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21400535,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      2,
+      1610612766,
+      [
+       101131,
+       202390,
+       202689,
+       203077,
+       203148,
+       203943
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21400633,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      3,
+      1610612764,
+      [
+       1718,
+       2400,
+       2403,
+       101162,
+       202322,
+       203078
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21400653,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      2,
+      1610612765,
+      [
+       2406,
+       201229,
+       201571,
+       201943,
+       201975,
+       203083
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21400816,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      3,
+      1610612766,
+      [
+       2590,
+       2744,
+       201945,
+       202362,
+       203077,
+       203469
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21400818,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      3,
+      1610612756,
+      [
+       101123,
+       200782,
+       202339,
+       202693,
+       202694,
+       203458
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21400819,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      2,
+      1610612761,
+      [
+       200768,
+       201942,
+       201946,
+       202335,
+       202349,
+       203082
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21401048,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      2,
+      1610612754,
+      [
+       2449,
+       101133,
+       101139,
+       201228,
+       201579,
+       204014
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21401065,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      4,
+      1610612761,
+      [
+       101150,
+       101161,
+       201942,
+       201949,
+       202335,
+       202349
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21401066,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      3,
+      1610612763,
+      [
+       1713,
+       2216,
+       2754,
+       201144,
+       201188,
+       201584
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21401079,
+   "errors": [],
+   "mismatches": [
+    {
+     "playerId": 203112,
+     "errorSeconds": -3.0
+    },
+    {
+     "playerId": 200745,
+     "errorSeconds": 3.0
+    }
+   ]
+  }
+ ],
+ "sources": {
+  "pbp": {
+   "file": "nbastats_2014.csv",
+   "sha256": "223594456bd80372d0982d870ce5fb6c80edcce35e5337892f97a2c409ed1e4a"
+  },
+  "box": [
+   {
+    "file": "regular_season_box_scores_2010_2024_part_1.csv",
+    "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+   },
+   {
+    "file": "regular_season_box_scores_2010_2024_part_2.csv",
+    "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+   },
+   {
+    "file": "regular_season_box_scores_2010_2024_part_3.csv",
+    "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+   }
+  ]
+ }
+}

@@ -1,0 +1,4 @@
+{"mode":"ch1","population":10,"remaining":10,"workers":10,"sampleStart":0,"samples":16,"checkpoint":"reports/sim-0.1.0+E135-dblthreat-phys/g0-ch1.jsonl","startedAt":"2026-10-30T05:49:18.752Z"}
+{"mode":"ch1","finished":10,"remaining":0,"etaMinutes":0,"at":"2026-10-30T05:51:20.404Z"}
+done
+G0DONE

@@ -1,0 +1,10785 @@
+{
+ "prereg_sha256": "d8aac7a67e6b7d06bdd7b4a6aa9ba6e81603e1dbec04e4c9c1ce18cbcb5b150f",
+ "live_dir": "reports\\ovr-inseason-2026-27\\live\\2026-11-07",
+ "dataCutoff": "2026-11-07",
+ "n_pool": 288,
+ "seconds": 1681.3,
+ "credit_by_pos": {
+  "PG": {
+   "RIM": -0.4151262231171131,
+   "REB": -1.5760510018783283,
+   "CTRL": 0.23063212748278272,
+   "REB_O": -0.6131396641785448,
+   "REB_D": -0.9039230005307631,
+   "n": 55,
+   "net": 0.36392248421907425,
+   "gap": -0.04558080808080806
+  },
+  "SG": {
+   "RIM": -0.3181738560622344,
+   "REB": -1.1489542572163656,
+   "CTRL": 0.20127451417540185,
+   "REB_O": -0.4361013420933827,
+   "REB_D": -0.661293963081066,
+   "n": 61,
+   "net": -0.17794177507157208,
+   "gap": -0.0711520947176685
+  },
+  "SF": {
+   "RIM": -0.1884807874989097,
+   "REB": -0.5453939119096114,
+   "CTRL": 0.19647076763794757,
+   "REB_O": -0.3437512401765811,
+   "REB_D": -0.18465731701663962,
+   "n": 56,
+   "net": -0.7185485239814235,
+   "gap": -0.04681299603174603
+  },
+  "PF": {
+   "RIM": 0.20512074798821134,
+   "REB": 0.675645242346094,
+   "CTRL": 0.02022708389670291,
+   "REB_O": 0.030969507695037,
+   "REB_D": 0.6535755582946412,
+   "n": 47,
+   "net": 0.4781899353925218,
+   "gap": 0.024822695035460994
+  },
+  "C": {
+   "RIM": 1.0148355531107103,
+   "REB": 2.8000030597405776,
+   "CTRL": -0.6794357299139457,
+   "REB_O": 1.2918887850828469,
+   "REB_D": 1.6101651529502956,
+   "n": 56,
+   "net": 1.6181428977953536,
+   "gap": 0.1579861111111111
+  }
+ },
+ "credit_def_by_pos": {
+  "PG": {
+   "RIM": -0.5227096661925316,
+   "REB": -0.5305836544118144,
+   "CTRL": 0.040187934379686006,
+   "REB_O": 0.050015908005562694,
+   "REB_D": -0.5809308862821623
+  },
+  "SG": {
+   "RIM": -0.42833365377832633,
+   "REB": -0.47838870961158003,
+   "CTRL": 0.04551466102482843,
+   "REB_O": 0.018617732419830856,
+   "REB_D": -0.48985644784130034
+  },
+  "SF": {
+   "RIM": -0.27139407827468987,
+   "REB": -0.1757758996058588,
+   "CTRL": 0.0484591900894884,
+   "REB_O": 0.009488359039616106,
+   "REB_D": -0.18327600777930847
+  },
+  "PF": {
+   "RIM": 0.24122921044522144,
+   "REB": 0.45606116902955035,
+   "CTRL": 0.002513887400322772,
+   "REB_O": -0.01298837282476907,
+   "REB_D": 0.4729480565862453
+  },
+  "C": {
+   "RIM": 1.309989851965968,
+   "REB": 1.2641376658741916,
+   "CTRL": -0.16119314384247577,
+   "REB_O": -0.04122713873428958,
+   "REB_D": 1.389471386810848
+  }
+ },
+ "M2": {
+  "beta_RIM": -0.006886246956447566,
+  "ci_RIM": [
+   -0.03778722661510769,
+   0.021499036931521394
+  ],
+  "beta_REB": 0.10227130996639883,
+  "ci_REB": [
+   0.06739542611608051,
+   0.13835852475861563
+  ],
+  "beta_CTRL": 0.03222721730314586,
+  "ci_CTRL": [
+   -0.005212463946111534,
+   0.06968827375499972
+  ],
+  "diff_RIM_REB": -0.1091575569228464,
+  "ci_diff": [
+   -0.1595839984169318,
+   -0.062097994813918596
+  ]
+ },
+ "M2_bigs": {
+  "c": 0.060485265184389736,
+  "RIM": 0.001908621730596624,
+  "REB": 0.12935092067208634,
+  "CTRL": 0.07212794402511856,
+  "isC": 0.06756976026601323
+ },
+ "players": {
+  "Karl-Anthony Towns": {
+   "pos": "C",
+   "rankT": 7,
+   "rankOVR": 27,
+   "net": 5.93,
+   "RIM": 0.27,
+   "REB": 4.38,
+   "CTRL": -0.42,
+   "REB_O": 2.07,
+   "REB_D": 2.47
+  },
+  "Kelly Oubre Jr.": {
+   "pos": "SF",
+   "rankT": 235,
+   "rankOVR": 170,
+   "net": -2.44,
+   "RIM": -0.22,
+   "REB": -0.66,
+   "CTRL": 0.34,
+   "REB_O": -0.42,
+   "REB_D": -0.23
+  },
+  "Devin Booker": {
+   "pos": "SG",
+   "rankT": 111,
+   "rankOVR": 38,
+   "net": 0.95,
+   "RIM": -0.38,
+   "REB": -2.34,
+   "CTRL": 0.21,
+   "REB_O": -0.72,
+   "REB_D": -1.58
+  },
+  "Myles Turner": {
+   "pos": "C",
+   "rankT": 223,
+   "rankOVR": 190,
+   "net": -1.87,
+   "RIM": 1.63,
+   "REB": 1.02,
+   "CTRL": -0.5,
+   "REB_O": 0.0,
+   "REB_D": 1.0
+  },
+  "Trey Lyles": {
+   "pos": "PF",
+   "rankT": 167,
+   "rankOVR": 145,
+   "net": -0.46,
+   "RIM": 0.05,
+   "REB": 0.98,
+   "CTRL": 0.05,
+   "REB_O": 0.03,
+   "REB_D": 0.96
+  },
+  "Bobby Portis Jr.": {
+   "pos": "PF",
+   "rankT": 200,
+   "rankOVR": 205,
+   "net": -1.22,
+   "RIM": -0.19,
+   "REB": 1.48,
+   "CTRL": -0.01,
+   "REB_O": 0.09,
+   "REB_D": 1.41
+  },
+  "Norman Powell": {
+   "pos": "SG",
+   "rankT": 222,
+   "rankOVR": 130,
+   "net": -1.85,
+   "RIM": -0.63,
+   "REB": -2.49,
+   "CTRL": 0.25,
+   "REB_O": -0.83,
+   "REB_D": -1.53
+  },
+  "Larry Nance Jr.": {
+   "pos": "PF",
+   "rankT": 120,
+   "rankOVR": 248,
+   "net": 0.72,
+   "RIM": -0.18,
+   "REB": 1.32,
+   "CTRL": -0.23,
+   "REB_O": 0.32,
+   "REB_D": 1.0
+  },
+  "Royce O'Neale": {
+   "pos": "PF",
+   "rankT": 254,
+   "rankOVR": 237,
+   "net": -3.06,
+   "RIM": -0.59,
+   "REB": -0.25,
+   "CTRL": 0.15,
+   "REB_O": -0.47,
+   "REB_D": 0.2
+  },
+  "Domantas Sabonis": {
+   "pos": "C",
+   "rankT": 67,
+   "rankOVR": 66,
+   "net": 2.28,
+   "RIM": -0.11,
+   "REB": 4.38,
+   "CTRL": -1.55,
+   "REB_O": 2.26,
+   "REB_D": 2.33
+  },
+  "Kris Dunn": {
+   "pos": "SG",
+   "rankT": 45,
+   "rankOVR": 121,
+   "net": 3.09,
+   "RIM": -0.34,
+   "REB": -1.44,
+   "CTRL": 0.1,
+   "REB_O": -0.56,
+   "REB_D": -0.82
+  },
+  "Dejounte Murray": {
+   "pos": "PG",
+   "rankT": 96,
+   "rankOVR": 91,
+   "net": 1.32,
+   "RIM": -0.48,
+   "REB": -1.14,
+   "CTRL": 0.32,
+   "REB_O": -1.07,
+   "REB_D": -0.11
+  },
+  "Jamal Murray": {
+   "pos": "PG",
+   "rankT": 42,
+   "rankOVR": 15,
+   "net": 3.27,
+   "RIM": -0.26,
+   "REB": -1.48,
+   "CTRL": 0.12,
+   "REB_O": -0.71,
+   "REB_D": -0.76
+  },
+  "Jakob Poeltl": {
+   "pos": "C",
+   "rankT": 94,
+   "rankOVR": 159,
+   "net": 1.41,
+   "RIM": 0.84,
+   "REB": 3.19,
+   "CTRL": -1.35,
+   "REB_O": 1.44,
+   "REB_D": 1.96
+  },
+  "Jaylen Brown": {
+   "pos": "SF",
+   "rankT": 50,
+   "rankOVR": 25,
+   "net": 2.96,
+   "RIM": -0.31,
+   "REB": 0.23,
+   "CTRL": 0.26,
+   "REB_O": -0.4,
+   "REB_D": 0.61
+  },
+  "Georges Niang": {
+   "pos": "SF",
+   "rankT": 171,
+   "rankOVR": 194,
+   "net": -0.52,
+   "RIM": -0.21,
+   "REB": 0.0,
+   "CTRL": 0.01,
+   "REB_O": -0.03,
+   "REB_D": 0.03
+  },
+  "Pascal Siakam": {
+   "pos": "PF",
+   "rankT": 89,
+   "rankOVR": 84,
+   "net": 1.54,
+   "RIM": -0.33,
+   "REB": 1.0,
+   "CTRL": 0.1,
+   "REB_O": -0.27,
+   "REB_D": 1.25
+  },
+  "Ivica Zubac": {
+   "pos": "C",
+   "rankT": 95,
+   "rankOVR": 131,
+   "net": 1.4,
+   "RIM": 1.34,
+   "REB": 4.05,
+   "CTRL": -0.84,
+   "REB_O": 2.17,
+   "REB_D": 1.96
+  },
+  "Fred VanVleet": {
+   "pos": "PG",
+   "rankT": 150,
+   "rankOVR": 59,
+   "net": -0.11,
+   "RIM": -0.26,
+   "REB": -1.81,
+   "CTRL": 0.01,
+   "REB_O": -0.38,
+   "REB_D": -1.41
+  },
+  "Derrick Jones Jr.": {
+   "pos": "PF",
+   "rankT": 104,
+   "rankOVR": 88,
+   "net": 1.11,
+   "RIM": 0.05,
+   "REB": -0.7,
+   "CTRL": 0.06,
+   "REB_O": -0.18,
+   "REB_D": -0.51
+  },
+  "Alex Caruso": {
+   "pos": "SG",
+   "rankT": 30,
+   "rankOVR": 51,
+   "net": 3.82,
+   "RIM": -0.16,
+   "REB": -0.42,
+   "CTRL": -0.01,
+   "REB_O": -0.56,
+   "REB_D": 0.14
+  },
+  "De'Aaron Fox": {
+   "pos": "PG",
+   "rankT": 63,
+   "rankOVR": 21,
+   "net": 2.42,
+   "RIM": -0.41,
+   "REB": -2.24,
+   "CTRL": 0.26,
+   "REB_O": -0.87,
+   "REB_D": -1.27
+  },
+  "Jayson Tatum": {
+   "pos": "PF",
+   "rankT": 16,
+   "rankOVR": 9,
+   "net": 4.66,
+   "RIM": -0.32,
+   "REB": -0.31,
+   "CTRL": 0.21,
+   "REB_O": -1.21,
+   "REB_D": 0.72
+  },
+  "Malik Monk": {
+   "pos": "PG",
+   "rankT": 273,
+   "rankOVR": 228,
+   "net": -3.67,
+   "RIM": -0.22,
+   "REB": -2.29,
+   "CTRL": 0.22,
+   "REB_O": -0.77,
+   "REB_D": -1.33
+  },
+  "Lauri Markkanen": {
+   "pos": "PF",
+   "rankT": 105,
+   "rankOVR": 52,
+   "net": 1.06,
+   "RIM": 0.15,
+   "REB": 0.64,
+   "CTRL": 0.02,
+   "REB_O": 0.12,
+   "REB_D": 0.53
+  },
+  "Donovan Mitchell": {
+   "pos": "SG",
+   "rankT": 39,
+   "rankOVR": 7,
+   "net": 3.38,
+   "RIM": -0.4,
+   "REB": -1.59,
+   "CTRL": 0.24,
+   "REB_O": -0.95,
+   "REB_D": -0.63
+  },
+  "Luke Kennard": {
+   "pos": "PG",
+   "rankT": 157,
+   "rankOVR": 75,
+   "net": -0.26,
+   "RIM": -0.46,
+   "REB": -1.58,
+   "CTRL": 0.12,
+   "REB_O": -0.53,
+   "REB_D": -1.0
+  },
+  "John Collins": {
+   "pos": "PF",
+   "rankT": 158,
+   "rankOVR": 186,
+   "net": -0.27,
+   "RIM": 0.22,
+   "REB": 1.16,
+   "CTRL": -0.01,
+   "REB_O": 0.47,
+   "REB_D": 0.73
+  },
+  "OG Anunoby": {
+   "pos": "SF",
+   "rankT": 82,
+   "rankOVR": 32,
+   "net": 1.78,
+   "RIM": 0.09,
+   "REB": -0.2,
+   "CTRL": 0.28,
+   "REB_O": -0.27,
+   "REB_D": 0.08
+  },
+  "Jarrett Allen": {
+   "pos": "C",
+   "rankT": 21,
+   "rankOVR": 43,
+   "net": 4.32,
+   "RIM": 1.65,
+   "REB": 3.05,
+   "CTRL": -0.78,
+   "REB_O": 1.32,
+   "REB_D": 1.94
+  },
+  "Bam Adebayo": {
+   "pos": "C",
+   "rankT": 24,
+   "rankOVR": 53,
+   "net": 4.02,
+   "RIM": 0.26,
+   "REB": 2.7,
+   "CTRL": -0.21,
+   "REB_O": 0.84,
+   "REB_D": 1.95
+  },
+  "Isaiah Hartenstein": {
+   "pos": "C",
+   "rankT": 43,
+   "rankOVR": 96,
+   "net": 3.26,
+   "RIM": 1.03,
+   "REB": 4.82,
+   "CTRL": -1.57,
+   "REB_O": 2.41,
+   "REB_D": 2.61
+  },
+  "Kyle Kuzma": {
+   "pos": "SF",
+   "rankT": 234,
+   "rankOVR": 276,
+   "net": -2.37,
+   "RIM": -0.17,
+   "REB": 0.15,
+   "CTRL": 0.17,
+   "REB_O": -0.15,
+   "REB_D": 0.29
+  },
+  "Derrick White": {
+   "pos": "PG",
+   "rankT": 62,
+   "rankOVR": 39,
+   "net": 2.43,
+   "RIM": 0.23,
+   "REB": -1.72,
+   "CTRL": 0.17,
+   "REB_O": -0.48,
+   "REB_D": -1.18
+  },
+  "Josh Hart": {
+   "pos": "PF",
+   "rankT": 72,
+   "rankOVR": 94,
+   "net": 2.16,
+   "RIM": -0.53,
+   "REB": 0.41,
+   "CTRL": 0.08,
+   "REB_O": -0.34,
+   "REB_D": 0.73
+  },
+  "Dillon Brooks": {
+   "pos": "SF",
+   "rankT": 239,
+   "rankOVR": 163,
+   "net": -2.52,
+   "RIM": -0.43,
+   "REB": -1.52,
+   "CTRL": 0.2,
+   "REB_O": -0.52,
+   "REB_D": -0.94
+  },
+  "Luke Kornet": {
+   "pos": "C",
+   "rankT": 123,
+   "rankOVR": 174,
+   "net": 0.64,
+   "RIM": 1.71,
+   "REB": 3.07,
+   "CTRL": -1.63,
+   "REB_O": 1.7,
+   "REB_D": 1.64
+  },
+  "Grayson Allen": {
+   "pos": "SG",
+   "rankT": 190,
+   "rankOVR": 136,
+   "net": -1.0,
+   "RIM": -0.33,
+   "REB": -2.24,
+   "CTRL": 0.29,
+   "REB_O": -0.68,
+   "REB_D": -1.44
+  },
+  "Mo Bamba": {
+   "pos": "C",
+   "rankT": 147,
+   "rankOVR": 238,
+   "net": -0.07,
+   "RIM": 0.52,
+   "REB": 1.94,
+   "CTRL": -0.08,
+   "REB_O": 0.31,
+   "REB_D": 1.72
+  },
+  "Mikal Bridges": {
+   "pos": "SG",
+   "rankT": 148,
+   "rankOVR": 67,
+   "net": -0.08,
+   "RIM": 0.02,
+   "REB": -1.89,
+   "CTRL": 0.25,
+   "REB_O": -0.52,
+   "REB_D": -1.3
+  },
+  "Miles Bridges": {
+   "pos": "PF",
+   "rankT": 61,
+   "rankOVR": 132,
+   "net": 2.45,
+   "RIM": 0.03,
+   "REB": 0.43,
+   "CTRL": 0.19,
+   "REB_O": -0.32,
+   "REB_D": 0.73
+  },
+  "Jalen Brunson": {
+   "pos": "PG",
+   "rankT": 99,
+   "rankOVR": 47,
+   "net": 1.28,
+   "RIM": -0.62,
+   "REB": -2.28,
+   "CTRL": 0.17,
+   "REB_O": -0.73,
+   "REB_D": -1.5
+  },
+  "Wendell Carter Jr.": {
+   "pos": "C",
+   "rankT": 41,
+   "rankOVR": 102,
+   "net": 3.33,
+   "RIM": 0.77,
+   "REB": 3.53,
+   "CTRL": -0.56,
+   "REB_O": 0.87,
+   "REB_D": 2.8
+  },
+  "Shai Gilgeous-Alexander": {
+   "pos": "PG",
+   "rankT": 9,
+   "rankOVR": 1,
+   "net": 5.63,
+   "RIM": -0.0,
+   "REB": -1.43,
+   "CTRL": 0.14,
+   "REB_O": -0.57,
+   "REB_D": -0.84
+  },
+  "Kevin Huerter": {
+   "pos": "SG",
+   "rankT": 215,
+   "rankOVR": 119,
+   "net": -1.6,
+   "RIM": -0.13,
+   "REB": -1.42,
+   "CTRL": 0.17,
+   "REB_O": -0.67,
+   "REB_D": -0.67
+  },
+  "Jaren Jackson Jr.": {
+   "pos": "PF",
+   "rankT": 130,
+   "rankOVR": 54,
+   "net": 0.42,
+   "RIM": 1.38,
+   "REB": 0.04,
+   "CTRL": -0.08,
+   "REB_O": -0.59,
+   "REB_D": 0.58
+  },
+  "Caleb Martin": {
+   "pos": "SF",
+   "rankT": 197,
+   "rankOVR": 222,
+   "net": -1.17,
+   "RIM": -0.22,
+   "REB": -0.78,
+   "CTRL": 0.05,
+   "REB_O": -0.47,
+   "REB_D": -0.29
+  },
+  "De'Anthony Melton": {
+   "pos": "SG",
+   "rankT": 137,
+   "rankOVR": 92,
+   "net": 0.26,
+   "RIM": -0.37,
+   "REB": -0.61,
+   "CTRL": 0.2,
+   "REB_O": -0.44,
+   "REB_D": -0.15
+  },
+  "Svi Mykhailiuk": {
+   "pos": "SF",
+   "rankT": 282,
+   "rankOVR": 259,
+   "net": -4.79,
+   "RIM": -0.36,
+   "REB": -1.26,
+   "CTRL": 0.21,
+   "REB_O": -0.36,
+   "REB_D": -0.83
+  },
+  "Josh Okogie": {
+   "pos": "SG",
+   "rankT": 224,
+   "rankOVR": 126,
+   "net": -1.89,
+   "RIM": -0.13,
+   "REB": -0.18,
+   "CTRL": 0.21,
+   "REB_O": 0.02,
+   "REB_D": -0.19
+  },
+  "Michael Porter Jr.": {
+   "pos": "SF",
+   "rankT": 141,
+   "rankOVR": 35,
+   "net": 0.09,
+   "RIM": -0.58,
+   "REB": 0.13,
+   "CTRL": 0.2,
+   "REB_O": -0.39,
+   "REB_D": 0.48
+  },
+  "Mitchell Robinson": {
+   "pos": "C",
+   "rankT": 31,
+   "rankOVR": 184,
+   "net": 3.79,
+   "RIM": 0.77,
+   "REB": 5.88,
+   "CTRL": -0.6,
+   "REB_O": 3.97,
+   "REB_D": 1.8
+  },
+  "Collin Sexton": {
+   "pos": "SG",
+   "rankT": 193,
+   "rankOVR": 148,
+   "net": -1.01,
+   "RIM": -0.37,
+   "REB": -2.45,
+   "CTRL": 0.24,
+   "REB_O": -0.62,
+   "REB_D": -1.74
+  },
+  "Landry Shamet": {
+   "pos": "SG",
+   "rankT": 237,
+   "rankOVR": 120,
+   "net": -2.48,
+   "RIM": -0.22,
+   "REB": -1.58,
+   "CTRL": 0.15,
+   "REB_O": -0.42,
+   "REB_D": -1.04
+  },
+  "Anfernee Simons": {
+   "pos": "PG",
+   "rankT": 252,
+   "rankOVR": 254,
+   "net": -2.94,
+   "RIM": -0.39,
+   "REB": -2.04,
+   "CTRL": 0.27,
+   "REB_O": -0.59,
+   "REB_D": -1.34
+  },
+  "Moritz Wagner": {
+   "pos": "C",
+   "rankT": 109,
+   "rankOVR": 164,
+   "net": 1.01,
+   "RIM": -0.28,
+   "REB": 1.78,
+   "CTRL": -0.43,
+   "REB_O": 0.48,
+   "REB_D": 1.33
+  },
+  "P.J. Washington": {
+   "pos": "PF",
+   "rankT": 188,
+   "rankOVR": 208,
+   "net": -0.92,
+   "RIM": 0.35,
+   "REB": 0.62,
+   "CTRL": 0.09,
+   "REB_O": -0.09,
+   "REB_D": 0.71
+  },
+  "Kenrich Williams": {
+   "pos": "PF",
+   "rankT": 108,
+   "rankOVR": 155,
+   "net": 1.03,
+   "RIM": -0.37,
+   "REB": 0.91,
+   "CTRL": -0.04,
+   "REB_O": 0.42,
+   "REB_D": 0.49
+  },
+  "Trae Young": {
+   "pos": "PG",
+   "rankT": 139,
+   "rankOVR": 122,
+   "net": 0.21,
+   "RIM": -0.68,
+   "REB": -3.02,
+   "CTRL": 0.32,
+   "REB_O": -1.02,
+   "REB_D": -1.86
+  },
+  "Deandre Ayton": {
+   "pos": "C",
+   "rankT": 227,
+   "rankOVR": 231,
+   "net": -1.98,
+   "RIM": 0.77,
+   "REB": 1.87,
+   "CTRL": -1.41,
+   "REB_O": 0.88,
+   "REB_D": 1.12
+  },
+  "Luka Dončić": {
+   "pos": "PG",
+   "rankT": 4,
+   "rankOVR": 2,
+   "net": 7.11,
+   "RIM": -0.29,
+   "REB": 0.04,
+   "CTRL": 0.2,
+   "REB_O": -0.83,
+   "REB_D": 0.79
+  },
+  "Robert Williams III": {
+   "pos": "C",
+   "rankT": 33,
+   "rankOVR": 95,
+   "net": 3.68,
+   "RIM": 2.01,
+   "REB": 4.06,
+   "CTRL": -0.45,
+   "REB_O": 2.39,
+   "REB_D": 2.0
+  },
+  "Rui Hachimura": {
+   "pos": "PF",
+   "rankT": 251,
+   "rankOVR": 221,
+   "net": -2.93,
+   "RIM": -0.25,
+   "REB": -0.41,
+   "CTRL": 0.15,
+   "REB_O": -0.38,
+   "REB_D": -0.03
+  },
+  "Jock Landale": {
+   "pos": "C",
+   "rankT": 187,
+   "rankOVR": 252,
+   "net": -0.92,
+   "RIM": 0.4,
+   "REB": 4.72,
+   "CTRL": -0.91,
+   "REB_O": 2.74,
+   "REB_D": 2.09
+  },
+  "Duncan Robinson": {
+   "pos": "SG",
+   "rankT": 143,
+   "rankOVR": 180,
+   "net": 0.01,
+   "RIM": -0.48,
+   "REB": -2.31,
+   "CTRL": 0.11,
+   "REB_O": -0.78,
+   "REB_D": -1.37
+  },
+  "Andrew Nembhard": {
+   "pos": "PG",
+   "rankT": 146,
+   "rankOVR": 86,
+   "net": -0.05,
+   "RIM": -0.33,
+   "REB": -2.59,
+   "CTRL": 0.19,
+   "REB_O": -0.86,
+   "REB_D": -1.55
+  },
+  "Max Strus": {
+   "pos": "SF",
+   "rankT": 250,
+   "rankOVR": 137,
+   "net": -2.88,
+   "RIM": -0.29,
+   "REB": -0.31,
+   "CTRL": -0.06,
+   "REB_O": -0.39,
+   "REB_D": 0.08
+  },
+  "Zion Williamson": {
+   "pos": "PF",
+   "rankT": 12,
+   "rankOVR": 33,
+   "net": 5.34,
+   "RIM": -0.22,
+   "REB": 0.58,
+   "CTRL": 0.11,
+   "REB_O": 0.18,
+   "REB_D": 0.38
+  },
+  "RJ Barrett": {
+   "pos": "SG",
+   "rankT": 163,
+   "rankOVR": 82,
+   "net": -0.36,
+   "RIM": -0.28,
+   "REB": -0.05,
+   "CTRL": 0.25,
+   "REB_O": -0.28,
+   "REB_D": 0.23
+  },
+  "Ja Morant": {
+   "pos": "PG",
+   "rankT": 149,
+   "rankOVR": 57,
+   "net": -0.08,
+   "RIM": -0.59,
+   "REB": -2.62,
+   "CTRL": 0.42,
+   "REB_O": -1.03,
+   "REB_D": -1.5
+  },
+  "De'Andre Hunter": {
+   "pos": "SF",
+   "rankT": 281,
+   "rankOVR": 183,
+   "net": -4.33,
+   "RIM": -0.41,
+   "REB": -0.52,
+   "CTRL": 0.17,
+   "REB_O": -0.32,
+   "REB_D": -0.18
+  },
+  "Coby White": {
+   "pos": "SG",
+   "rankT": 258,
+   "rankOVR": 176,
+   "net": -3.2,
+   "RIM": -0.39,
+   "REB": -1.72,
+   "CTRL": 0.27,
+   "REB_O": -0.78,
+   "REB_D": -0.85
+  },
+  "Darius Garland": {
+   "pos": "PG",
+   "rankT": 202,
+   "rankOVR": 90,
+   "net": -1.29,
+   "RIM": -0.48,
+   "REB": -2.78,
+   "CTRL": 0.3,
+   "REB_O": -0.81,
+   "REB_D": -1.76
+  },
+  "Jaxson Hayes": {
+   "pos": "C",
+   "rankT": 87,
+   "rankOVR": 179,
+   "net": 1.59,
+   "RIM": 1.12,
+   "REB": 1.64,
+   "CTRL": -1.04,
+   "REB_O": 0.51,
+   "REB_D": 1.23
+  },
+  "Nickeil Alexander-Walker": {
+   "pos": "PG",
+   "rankT": 125,
+   "rankOVR": 89,
+   "net": 0.54,
+   "RIM": -0.73,
+   "REB": -2.23,
+   "CTRL": 0.22,
+   "REB_O": -0.53,
+   "REB_D": -1.64
+  },
+  "Tyler Herro": {
+   "pos": "SG",
+   "rankT": 115,
+   "rankOVR": 40,
+   "net": 0.89,
+   "RIM": -0.35,
+   "REB": -1.23,
+   "CTRL": 0.3,
+   "REB_O": -0.72,
+   "REB_D": -0.48
+  },
+  "Keldon Johnson": {
+   "pos": "SG",
+   "rankT": 114,
+   "rankOVR": 213,
+   "net": 0.91,
+   "RIM": -0.5,
+   "REB": 1.68,
+   "CTRL": 0.29,
+   "REB_O": 0.9,
+   "REB_D": 0.77
+  },
+  "Luguentz Dort": {
+   "pos": "SF",
+   "rankT": 246,
+   "rankOVR": 226,
+   "net": -2.82,
+   "RIM": -0.21,
+   "REB": -0.63,
+   "CTRL": 0.02,
+   "REB_O": -0.26,
+   "REB_D": -0.35
+  },
+  "Daniel Gafford": {
+   "pos": "C",
+   "rankT": 49,
+   "rankOVR": 116,
+   "net": 2.99,
+   "RIM": 2.29,
+   "REB": 3.67,
+   "CTRL": -1.35,
+   "REB_O": 1.96,
+   "REB_D": 1.99
+  },
+  "Quentin Grimes": {
+   "pos": "SG",
+   "rankT": 194,
+   "rankOVR": 169,
+   "net": -1.01,
+   "RIM": -0.47,
+   "REB": -1.61,
+   "CTRL": 0.23,
+   "REB_O": -0.76,
+   "REB_D": -0.76
+  },
+  "Ty Jerome": {
+   "pos": "PG",
+   "rankT": 23,
+   "rankOVR": 8,
+   "net": 4.1,
+   "RIM": -0.57,
+   "REB": -1.79,
+   "CTRL": 0.19,
+   "REB_O": -0.41,
+   "REB_D": -1.39
+  },
+  "Cameron Johnson": {
+   "pos": "SF",
+   "rankT": 138,
+   "rankOVR": 77,
+   "net": 0.23,
+   "RIM": -0.26,
+   "REB": -1.07,
+   "CTRL": 0.14,
+   "REB_O": -0.55,
+   "REB_D": -0.48
+  },
+  "Jordan Poole": {
+   "pos": "SG",
+   "rankT": 263,
+   "rankOVR": 262,
+   "net": -3.36,
+   "RIM": -0.29,
+   "REB": -2.33,
+   "CTRL": 0.34,
+   "REB_O": -0.76,
+   "REB_D": -1.36
+  },
+  "Neemias Queta": {
+   "pos": "C",
+   "rankT": 69,
+   "rankOVR": 76,
+   "net": 2.21,
+   "RIM": 1.8,
+   "REB": 3.53,
+   "CTRL": -1.45,
+   "REB_O": 1.68,
+   "REB_D": 2.12
+  },
+  "Naz Reid": {
+   "pos": "C",
+   "rankT": 136,
+   "rankOVR": 111,
+   "net": 0.26,
+   "RIM": 0.51,
+   "REB": 0.99,
+   "CTRL": 0.11,
+   "REB_O": -0.17,
+   "REB_D": 1.14
+  },
+  "Matisse Thybulle": {
+   "pos": "SG",
+   "rankT": 55,
+   "rankOVR": 65,
+   "net": 2.61,
+   "RIM": -0.26,
+   "REB": -1.47,
+   "CTRL": 0.08,
+   "REB_O": -0.39,
+   "REB_D": -1.05
+  },
+  "Dean Wade": {
+   "pos": "PF",
+   "rankT": 86,
+   "rankOVR": 109,
+   "net": 1.59,
+   "RIM": 0.14,
+   "REB": 0.34,
+   "CTRL": -0.07,
+   "REB_O": -0.22,
+   "REB_D": 0.55
+  },
+  "Javonte Green": {
+   "pos": "SF",
+   "rankT": 76,
+   "rankOVR": 112,
+   "net": 2.11,
+   "RIM": -0.24,
+   "REB": -0.36,
+   "CTRL": 0.19,
+   "REB_O": -0.28,
+   "REB_D": -0.07
+  },
+  "Anthony Edwards": {
+   "pos": "SG",
+   "rankT": 25,
+   "rankOVR": 11,
+   "net": 3.89,
+   "RIM": -0.16,
+   "REB": -1.53,
+   "CTRL": 0.24,
+   "REB_O": -0.92,
+   "REB_D": -0.56
+  },
+  "LaMelo Ball": {
+   "pos": "PG",
+   "rankT": 70,
+   "rankOVR": 114,
+   "net": 2.19,
+   "RIM": -0.92,
+   "REB": -1.03,
+   "CTRL": 0.3,
+   "REB_O": -0.6,
+   "REB_D": -0.41
+  },
+  "Deni Avdija": {
+   "pos": "PG",
+   "rankT": 102,
+   "rankOVR": 62,
+   "net": 1.15,
+   "RIM": -0.22,
+   "REB": -0.07,
+   "CTRL": 0.42,
+   "REB_O": -0.64,
+   "REB_D": 0.54
+  },
+  "Obi Toppin": {
+   "pos": "PF",
+   "rankT": 84,
+   "rankOVR": 125,
+   "net": 1.68,
+   "RIM": -0.47,
+   "REB": 0.35,
+   "CTRL": -0.06,
+   "REB_O": -0.45,
+   "REB_D": 0.75
+  },
+  "Onyeka Okongwu": {
+   "pos": "C",
+   "rankT": 81,
+   "rankOVR": 106,
+   "net": 1.78,
+   "RIM": 0.79,
+   "REB": 1.81,
+   "CTRL": -0.62,
+   "REB_O": 0.59,
+   "REB_D": 1.31
+  },
+  "Tyrese Haliburton": {
+   "pos": "SG",
+   "rankT": 47,
+   "rankOVR": 18,
+   "net": 3.04,
+   "RIM": -0.17,
+   "REB": -1.37,
+   "CTRL": 0.03,
+   "REB_O": -0.2,
+   "REB_D": -1.19
+  },
+  "Devin Vassell": {
+   "pos": "SF",
+   "rankT": 68,
+   "rankOVR": 127,
+   "net": 2.27,
+   "RIM": -0.22,
+   "REB": -1.72,
+   "CTRL": 0.15,
+   "REB_O": -0.76,
+   "REB_D": -0.93
+  },
+  "Isaac Okoro": {
+   "pos": "SF",
+   "rankT": 266,
+   "rankOVR": 250,
+   "net": -3.49,
+   "RIM": 0.1,
+   "REB": -1.22,
+   "CTRL": 0.14,
+   "REB_O": -0.27,
+   "REB_D": -0.89
+  },
+  "Patrick Williams": {
+   "pos": "SF",
+   "rankT": 284,
+   "rankOVR": 271,
+   "net": -5.4,
+   "RIM": -0.23,
+   "REB": -0.3,
+   "CTRL": 0.11,
+   "REB_O": -0.21,
+   "REB_D": -0.06
+  },
+  "Precious Achiuwa": {
+   "pos": "PF",
+   "rankT": 134,
+   "rankOVR": 249,
+   "net": 0.33,
+   "RIM": 0.59,
+   "REB": 2.07,
+   "CTRL": -0.15,
+   "REB_O": 1.29,
+   "REB_D": 0.86
+  },
+  "Aaron Nesmith": {
+   "pos": "SG",
+   "rankT": 212,
+   "rankOVR": 158,
+   "net": -1.46,
+   "RIM": 0.11,
+   "REB": -1.16,
+   "CTRL": 0.12,
+   "REB_O": -0.39,
+   "REB_D": -0.73
+  },
+  "Tyrese Maxey": {
+   "pos": "PG",
+   "rankT": 36,
+   "rankOVR": 20,
+   "net": 3.42,
+   "RIM": -0.4,
+   "REB": -2.61,
+   "CTRL": 0.21,
+   "REB_O": -1.17,
+   "REB_D": -1.43
+  },
+  "Saddiq Bey": {
+   "pos": "SF",
+   "rankT": 74,
+   "rankOVR": 115,
+   "net": 2.12,
+   "RIM": -0.68,
+   "REB": 0.07,
+   "CTRL": 0.28,
+   "REB_O": -0.2,
+   "REB_D": 0.27
+  },
+  "Josh Green": {
+   "pos": "SG",
+   "rankT": 175,
+   "rankOVR": 242,
+   "net": -0.61,
+   "RIM": -0.38,
+   "REB": -1.45,
+   "CTRL": 0.08,
+   "REB_O": -0.2,
+   "REB_D": -1.21
+  },
+  "Jaden McDaniels": {
+   "pos": "SF",
+   "rankT": 78,
+   "rankOVR": 58,
+   "net": 1.83,
+   "RIM": 0.39,
+   "REB": -0.82,
+   "CTRL": 0.25,
+   "REB_O": -0.43,
+   "REB_D": -0.37
+  },
+  "Jalen Smith": {
+   "pos": "PF",
+   "rankT": 90,
+   "rankOVR": 152,
+   "net": 1.51,
+   "RIM": 1.16,
+   "REB": 3.45,
+   "CTRL": -0.44,
+   "REB_O": 1.28,
+   "REB_D": 2.29
+  },
+  "Isaiah Stewart": {
+   "pos": "PF",
+   "rankT": 113,
+   "rankOVR": 181,
+   "net": 0.92,
+   "RIM": 1.89,
+   "REB": 1.38,
+   "CTRL": -0.43,
+   "REB_O": 0.57,
+   "REB_D": 0.88
+  },
+  "Immanuel Quickley": {
+   "pos": "PG",
+   "rankT": 75,
+   "rankOVR": 61,
+   "net": 2.12,
+   "RIM": -0.45,
+   "REB": -1.95,
+   "CTRL": 0.15,
+   "REB_O": -0.9,
+   "REB_D": -0.99
+  },
+  "Paul Reed": {
+   "pos": "C",
+   "rankT": 5,
+   "rankOVR": 64,
+   "net": 6.65,
+   "RIM": 1.36,
+   "REB": 3.12,
+   "CTRL": -0.5,
+   "REB_O": 1.72,
+   "REB_D": 1.49
+  },
+  "Tre Jones": {
+   "pos": "SG",
+   "rankT": 66,
+   "rankOVR": 56,
+   "net": 2.32,
+   "RIM": -0.68,
+   "REB": -1.9,
+   "CTRL": 0.2,
+   "REB_O": -0.69,
+   "REB_D": -1.17
+  },
+  "Payton Pritchard": {
+   "pos": "SG",
+   "rankT": 93,
+   "rankOVR": 49,
+   "net": 1.42,
+   "RIM": -0.76,
+   "REB": -1.48,
+   "CTRL": 0.23,
+   "REB_O": -0.45,
+   "REB_D": -1.01
+  },
+  "Desmond Bane": {
+   "pos": "SG",
+   "rankT": 58,
+   "rankOVR": 26,
+   "net": 2.56,
+   "RIM": -0.16,
+   "REB": -1.29,
+   "CTRL": 0.18,
+   "REB_O": -0.41,
+   "REB_D": -0.83
+  },
+  "Jalen Green": {
+   "pos": "SF",
+   "rankT": 232,
+   "rankOVR": 203,
+   "net": -2.33,
+   "RIM": -0.27,
+   "REB": -1.87,
+   "CTRL": 0.32,
+   "REB_O": -0.81,
+   "REB_D": -0.95
+  },
+  "Jonathan Kuminga": {
+   "pos": "PF",
+   "rankT": 110,
+   "rankOVR": 182,
+   "net": 0.99,
+   "RIM": 0.0,
+   "REB": 0.5,
+   "CTRL": 0.14,
+   "REB_O": 0.08,
+   "REB_D": 0.42
+  },
+  "Naji Marshall": {
+   "pos": "PG",
+   "rankT": 172,
+   "rankOVR": 211,
+   "net": -0.56,
+   "RIM": -0.69,
+   "REB": -0.9,
+   "CTRL": 0.29,
+   "REB_O": -0.58,
+   "REB_D": -0.3
+  },
+  "Sam Merrill": {
+   "pos": "SF",
+   "rankT": 112,
+   "rankOVR": 72,
+   "net": 0.93,
+   "RIM": -0.37,
+   "REB": -1.76,
+   "CTRL": 0.1,
+   "REB_O": -0.6,
+   "REB_D": -1.1
+  },
+  "Ayo Dosunmu": {
+   "pos": "SG",
+   "rankT": 57,
+   "rankOVR": 60,
+   "net": 2.57,
+   "RIM": -0.24,
+   "REB": -1.45,
+   "CTRL": 0.23,
+   "REB_O": -0.59,
+   "REB_D": -0.84
+  },
+  "Brandon Williams": {
+   "pos": "PG",
+   "rankT": 216,
+   "rankOVR": 232,
+   "net": -1.65,
+   "RIM": -0.67,
+   "REB": -2.0,
+   "CTRL": 0.35,
+   "REB_O": -0.75,
+   "REB_D": -1.17
+  },
+  "Herbert Jones": {
+   "pos": "SG",
+   "rankT": 256,
+   "rankOVR": 138,
+   "net": -3.18,
+   "RIM": -0.47,
+   "REB": -0.9,
+   "CTRL": 0.19,
+   "REB_O": -0.32,
+   "REB_D": -0.53
+  },
+  "Trey Murphy III": {
+   "pos": "SG",
+   "rankT": 133,
+   "rankOVR": 44,
+   "net": 0.36,
+   "RIM": -0.63,
+   "REB": -1.12,
+   "CTRL": 0.14,
+   "REB_O": -0.71,
+   "REB_D": -0.38
+  },
+  "Franz Wagner": {
+   "pos": "SF",
+   "rankT": 60,
+   "rankOVR": 29,
+   "net": 2.46,
+   "RIM": -0.41,
+   "REB": -0.13,
+   "CTRL": 0.33,
+   "REB_O": -0.67,
+   "REB_D": 0.53
+  },
+  "Ziaire Williams": {
+   "pos": "SF",
+   "rankT": 176,
+   "rankOVR": 135,
+   "net": -0.63,
+   "RIM": -0.49,
+   "REB": -0.98,
+   "CTRL": 0.21,
+   "REB_O": -0.5,
+   "REB_D": -0.44
+  },
+  "Miles McBride": {
+   "pos": "PG",
+   "rankT": 211,
+   "rankOVR": 110,
+   "net": -1.43,
+   "RIM": -0.18,
+   "REB": -1.96,
+   "CTRL": 0.15,
+   "REB_O": -0.53,
+   "REB_D": -1.32
+  },
+  "Isaiah Jackson": {
+   "pos": "C",
+   "rankT": 145,
+   "rankOVR": 192,
+   "net": -0.04,
+   "RIM": 0.99,
+   "REB": 2.74,
+   "CTRL": -0.87,
+   "REB_O": 1.81,
+   "REB_D": 1.07
+  },
+  "Terrence Shannon Jr": {
+   "pos": "SF",
+   "rankT": 201,
+   "rankOVR": 219,
+   "net": -1.22,
+   "RIM": -0.3,
+   "REB": -1.33,
+   "CTRL": 0.23,
+   "REB_O": -0.66,
+   "REB_D": -0.61
+  },
+  "Day'Ron Sharpe": {
+   "pos": "C",
+   "rankT": 51,
+   "rankOVR": 81,
+   "net": 2.87,
+   "RIM": 0.62,
+   "REB": 5.18,
+   "CTRL": -0.76,
+   "REB_O": 3.16,
+   "REB_D": 2.12
+  },
+  "Justin Champagnie": {
+   "pos": "SF",
+   "rankT": 83,
+   "rankOVR": 150,
+   "net": 1.7,
+   "RIM": 0.15,
+   "REB": 1.56,
+   "CTRL": 0.26,
+   "REB_O": 0.73,
+   "REB_D": 0.82
+  },
+  "Jalen Johnson": {
+   "pos": "PF",
+   "rankT": 103,
+   "rankOVR": 41,
+   "net": 1.14,
+   "RIM": -0.31,
+   "REB": 0.53,
+   "CTRL": 0.23,
+   "REB_O": -0.67,
+   "REB_D": 1.12
+  },
+  "Davion Mitchell": {
+   "pos": "PG",
+   "rankT": 151,
+   "rankOVR": 117,
+   "net": -0.12,
+   "RIM": -0.46,
+   "REB": -2.46,
+   "CTRL": 0.2,
+   "REB_O": -0.74,
+   "REB_D": -1.52
+  },
+  "Austin Reaves": {
+   "pos": "SG",
+   "rankT": 53,
+   "rankOVR": 16,
+   "net": 2.71,
+   "RIM": -0.77,
+   "REB": -1.91,
+   "CTRL": 0.21,
+   "REB_O": -0.72,
+   "REB_D": -1.15
+  },
+  "Scottie Barnes": {
+   "pos": "PF",
+   "rankT": 35,
+   "rankOVR": 30,
+   "net": 3.5,
+   "RIM": 0.53,
+   "REB": 1.63,
+   "CTRL": 0.05,
+   "REB_O": 0.54,
+   "REB_D": 1.11
+  },
+  "Trendon Watford": {
+   "pos": "SF",
+   "rankT": 262,
+   "rankOVR": 215,
+   "net": -3.36,
+   "RIM": 0.06,
+   "REB": 0.07,
+   "CTRL": 0.2,
+   "REB_O": -0.31,
+   "REB_D": 0.35
+  },
+  "Sandro Mamukelashvili": {
+   "pos": "C",
+   "rankT": 91,
+   "rankOVR": 178,
+   "net": 1.49,
+   "RIM": 0.26,
+   "REB": 1.29,
+   "CTRL": -0.15,
+   "REB_O": 0.1,
+   "REB_D": 1.2
+  },
+  "Sam Hauser": {
+   "pos": "PF",
+   "rankT": 184,
+   "rankOVR": 141,
+   "net": -0.88,
+   "RIM": -0.17,
+   "REB": -0.55,
+   "CTRL": 0.07,
+   "REB_O": -0.45,
+   "REB_D": -0.09
+  },
+  "Julian Champagnie": {
+   "pos": "SF",
+   "rankT": 170,
+   "rankOVR": 118,
+   "net": -0.49,
+   "RIM": -0.24,
+   "REB": -0.2,
+   "CTRL": 0.06,
+   "REB_O": -0.49,
+   "REB_D": 0.27
+  },
+  "Alperen Sengun": {
+   "pos": "C",
+   "rankT": 17,
+   "rankOVR": 79,
+   "net": 4.63,
+   "RIM": 0.99,
+   "REB": 3.78,
+   "CTRL": -0.81,
+   "REB_O": 1.92,
+   "REB_D": 2.05
+  },
+  "Josh Giddey": {
+   "pos": "PG",
+   "rankT": 195,
+   "rankOVR": 142,
+   "net": -1.05,
+   "RIM": -0.22,
+   "REB": -0.01,
+   "CTRL": 0.37,
+   "REB_O": -0.56,
+   "REB_D": 0.51
+  },
+  "Scotty Pippen Jr.": {
+   "pos": "SG",
+   "rankT": 198,
+   "rankOVR": 146,
+   "net": -1.17,
+   "RIM": -0.42,
+   "REB": -1.26,
+   "CTRL": 0.36,
+   "REB_O": -0.33,
+   "REB_D": -0.87
+  },
+  "Jalen Suggs": {
+   "pos": "PG",
+   "rankT": 26,
+   "rankOVR": 46,
+   "net": 3.88,
+   "RIM": -0.24,
+   "REB": -1.55,
+   "CTRL": 0.19,
+   "REB_O": -0.66,
+   "REB_D": -0.85
+  },
+  "Cade Cunningham": {
+   "pos": "PG",
+   "rankT": 14,
+   "rankOVR": 13,
+   "net": 5.09,
+   "RIM": 0.06,
+   "REB": -0.82,
+   "CTRL": 0.21,
+   "REB_O": -0.89,
+   "REB_D": 0.06
+  },
+  "Evan Mobley": {
+   "pos": "PF",
+   "rankT": 15,
+   "rankOVR": 17,
+   "net": 4.94,
+   "RIM": 1.13,
+   "REB": 1.92,
+   "CTRL": -0.32,
+   "REB_O": 0.62,
+   "REB_D": 1.41
+  },
+  "Aaron Wiggins": {
+   "pos": "SF",
+   "rankT": 210,
+   "rankOVR": 144,
+   "net": -1.38,
+   "RIM": -0.16,
+   "REB": -1.06,
+   "CTRL": 0.24,
+   "REB_O": -0.6,
+   "REB_D": -0.43
+  },
+  "Gui Santos": {
+   "pos": "PF",
+   "rankT": 214,
+   "rankOVR": 171,
+   "net": -1.52,
+   "RIM": -0.12,
+   "REB": 0.53,
+   "CTRL": 0.25,
+   "REB_O": 0.02,
+   "REB_D": 0.52
+  },
+  "Jay Huff": {
+   "pos": "C",
+   "rankT": 181,
+   "rankOVR": 191,
+   "net": -0.77,
+   "RIM": 2.25,
+   "REB": 1.55,
+   "CTRL": -0.46,
+   "REB_O": -0.06,
+   "REB_D": 1.56
+  },
+  "Jordan Goodwin": {
+   "pos": "SG",
+   "rankT": 79,
+   "rankOVR": 129,
+   "net": 1.83,
+   "RIM": -0.68,
+   "REB": 0.75,
+   "CTRL": 0.19,
+   "REB_O": 0.52,
+   "REB_D": 0.17
+  },
+  "Dyson Daniels": {
+   "pos": "SG",
+   "rankT": 54,
+   "rankOVR": 99,
+   "net": 2.64,
+   "RIM": -0.4,
+   "REB": 0.62,
+   "CTRL": -0.24,
+   "REB_O": 0.47,
+   "REB_D": 0.14
+  },
+  "Scoot Henderson": {
+   "pos": "PG",
+   "rankT": 285,
+   "rankOVR": 284,
+   "net": -5.43,
+   "RIM": -0.49,
+   "REB": -1.66,
+   "CTRL": 0.38,
+   "REB_O": -0.5,
+   "REB_D": -1.03
+  },
+  "Paolo Banchero": {
+   "pos": "PF",
+   "rankT": 156,
+   "rankOVR": 97,
+   "net": -0.23,
+   "RIM": -0.02,
+   "REB": 0.18,
+   "CTRL": 0.12,
+   "REB_O": -0.51,
+   "REB_D": 0.64
+  },
+  "Jabari Smith Jr.": {
+   "pos": "PF",
+   "rankT": 88,
+   "rankOVR": 108,
+   "net": 1.59,
+   "RIM": 0.33,
+   "REB": 0.14,
+   "CTRL": 0.23,
+   "REB_O": -0.25,
+   "REB_D": 0.37
+  },
+  "Chet Holmgren": {
+   "pos": "PF",
+   "rankT": 6,
+   "rankOVR": 14,
+   "net": 6.32,
+   "RIM": 2.08,
+   "REB": 2.26,
+   "CTRL": -0.13,
+   "REB_O": 0.89,
+   "REB_D": 1.52
+  },
+  "Bennedict Mathurin": {
+   "pos": "SG",
+   "rankT": 268,
+   "rankOVR": 214,
+   "net": -3.5,
+   "RIM": -0.47,
+   "REB": -0.29,
+   "CTRL": 0.36,
+   "REB_O": -0.35,
+   "REB_D": 0.06
+  },
+  "Keegan Murray": {
+   "pos": "PF",
+   "rankT": 206,
+   "rankOVR": 162,
+   "net": -1.33,
+   "RIM": 0.66,
+   "REB": 0.04,
+   "CTRL": 0.29,
+   "REB_O": -0.19,
+   "REB_D": 0.22
+  },
+  "Jalen Duren": {
+   "pos": "C",
+   "rankT": 11,
+   "rankOVR": 98,
+   "net": 5.36,
+   "RIM": 1.15,
+   "REB": 5.52,
+   "CTRL": -0.75,
+   "REB_O": 2.99,
+   "REB_D": 2.62
+  },
+  "Tari Eason": {
+   "pos": "SG",
+   "rankT": 142,
+   "rankOVR": 139,
+   "net": 0.02,
+   "RIM": 0.24,
+   "REB": 1.46,
+   "CTRL": 0.37,
+   "REB_O": 0.58,
+   "REB_D": 0.89
+  },
+  "Max Christie": {
+   "pos": "SG",
+   "rankT": 279,
+   "rankOVR": 240,
+   "net": -4.15,
+   "RIM": -0.11,
+   "REB": -1.31,
+   "CTRL": 0.08,
+   "REB_O": -0.45,
+   "REB_D": -0.73
+  },
+  "Jalen Williams": {
+   "pos": "PF",
+   "rankT": 22,
+   "rankOVR": 24,
+   "net": 4.19,
+   "RIM": -0.13,
+   "REB": -1.02,
+   "CTRL": 0.2,
+   "REB_O": -0.81,
+   "REB_D": -0.21
+  },
+  "Walker Kessler": {
+   "pos": "C",
+   "rankT": 28,
+   "rankOVR": 128,
+   "net": 3.85,
+   "RIM": 1.52,
+   "REB": 2.28,
+   "CTRL": -0.39,
+   "REB_O": 0.67,
+   "REB_D": 1.73
+  },
+  "Jaylin Williams": {
+   "pos": "C",
+   "rankT": 101,
+   "rankOVR": 78,
+   "net": 1.15,
+   "RIM": 0.57,
+   "REB": 0.86,
+   "CTRL": -0.28,
+   "REB_O": -0.47,
+   "REB_D": 1.22
+  },
+  "Christian Braun": {
+   "pos": "SG",
+   "rankT": 119,
+   "rankOVR": 73,
+   "net": 0.76,
+   "RIM": -0.42,
+   "REB": -0.95,
+   "CTRL": 0.02,
+   "REB_O": -0.33,
+   "REB_D": -0.59
+  },
+  "Ryan Rollins": {
+   "pos": "PG",
+   "rankT": 121,
+   "rankOVR": 103,
+   "net": 0.7,
+   "RIM": -0.32,
+   "REB": -1.23,
+   "CTRL": 0.33,
+   "REB_O": -0.58,
+   "REB_D": -0.6
+  },
+  "Leonard Miller": {
+   "pos": "PF",
+   "rankT": 247,
+   "rankOVR": 277,
+   "net": -2.86,
+   "RIM": 0.15,
+   "REB": 1.15,
+   "CTRL": -0.11,
+   "REB_O": 0.27,
+   "REB_D": 0.91
+  },
+  "Keon Ellis": {
+   "pos": "SG",
+   "rankT": 192,
+   "rankOVR": 177,
+   "net": -1.01,
+   "RIM": -0.07,
+   "REB": -1.94,
+   "CTRL": 0.15,
+   "REB_O": -0.5,
+   "REB_D": -1.32
+  },
+  "Jaime Jaquez Jr.": {
+   "pos": "SF",
+   "rankT": 182,
+   "rankOVR": 157,
+   "net": -0.84,
+   "RIM": -0.26,
+   "REB": 0.24,
+   "CTRL": 0.31,
+   "REB_O": -0.05,
+   "REB_D": 0.29
+  },
+  "Marcus Sasser": {
+   "pos": "SG",
+   "rankT": 203,
+   "rankOVR": 210,
+   "net": -1.3,
+   "RIM": -0.33,
+   "REB": -2.66,
+   "CTRL": 0.3,
+   "REB_O": -0.78,
+   "REB_D": -1.69
+  },
+  "Peyton Watson": {
+   "pos": "PF",
+   "rankT": 208,
+   "rankOVR": 225,
+   "net": -1.36,
+   "RIM": 0.63,
+   "REB": -0.43,
+   "CTRL": 0.2,
+   "REB_O": -0.32,
+   "REB_D": -0.1
+  },
+  "Moussa Diabaté": {
+   "pos": "C",
+   "rankT": 38,
+   "rankOVR": 167,
+   "net": 3.41,
+   "RIM": 0.93,
+   "REB": 5.75,
+   "CTRL": -0.59,
+   "REB_O": 3.95,
+   "REB_D": 1.74
+  },
+  "Collin Gillespie": {
+   "pos": "PG",
+   "rankT": 106,
+   "rankOVR": 140,
+   "net": 1.05,
+   "RIM": -0.75,
+   "REB": -1.46,
+   "CTRL": 0.14,
+   "REB_O": -0.52,
+   "REB_D": -0.9
+  },
+  "Jake LaRavia": {
+   "pos": "PF",
+   "rankT": 154,
+   "rankOVR": 204,
+   "net": -0.2,
+   "RIM": -0.26,
+   "REB": 0.21,
+   "CTRL": 0.18,
+   "REB_O": 0.05,
+   "REB_D": 0.17
+  },
+  "Quenton Jackson": {
+   "pos": "PG",
+   "rankT": 127,
+   "rankOVR": 83,
+   "net": 0.52,
+   "RIM": -0.51,
+   "REB": -1.31,
+   "CTRL": 0.25,
+   "REB_O": -0.57,
+   "REB_D": -0.7
+  },
+  "Baylor Scheierman": {
+   "pos": "SG",
+   "rankT": 129,
+   "rankOVR": 172,
+   "net": 0.43,
+   "RIM": -0.47,
+   "REB": -0.03,
+   "CTRL": 0.21,
+   "REB_O": -0.24,
+   "REB_D": 0.2
+  },
+  "Karlo Matković": {
+   "pos": "PF",
+   "rankT": 77,
+   "rankOVR": 187,
+   "net": 1.98,
+   "RIM": 1.09,
+   "REB": 1.93,
+   "CTRL": -0.33,
+   "REB_O": 0.34,
+   "REB_D": 1.65
+  },
+  "AJ Green": {
+   "pos": "SG",
+   "rankT": 245,
+   "rankOVR": 195,
+   "net": -2.78,
+   "RIM": -0.38,
+   "REB": -1.47,
+   "CTRL": 0.17,
+   "REB_O": -0.52,
+   "REB_D": -0.86
+  },
+  "Jamal Cain": {
+   "pos": "SF",
+   "rankT": 274,
+   "rankOVR": 246,
+   "net": -3.68,
+   "RIM": -0.21,
+   "REB": 0.18,
+   "CTRL": 0.16,
+   "REB_O": 0.14,
+   "REB_D": 0.04
+  },
+  "Sidy Cissoko": {
+   "pos": "SF",
+   "rankT": 225,
+   "rankOVR": 233,
+   "net": -1.89,
+   "RIM": -0.16,
+   "REB": -0.79,
+   "CTRL": 0.23,
+   "REB_O": -0.13,
+   "REB_D": -0.65
+  },
+  "Victor Wembanyama": {
+   "pos": "C",
+   "rankT": 1,
+   "rankOVR": 3,
+   "net": 9.85,
+   "RIM": 2.18,
+   "REB": 3.15,
+   "CTRL": -0.22,
+   "REB_O": 1.41,
+   "REB_D": 2.09
+  },
+  "Brandon Miller": {
+   "pos": "SG",
+   "rankT": 165,
+   "rankOVR": 165,
+   "net": -0.39,
+   "RIM": -0.05,
+   "REB": -0.85,
+   "CTRL": 0.25,
+   "REB_O": -0.51,
+   "REB_D": -0.33
+  },
+  "Amen Thompson": {
+   "pos": "PG",
+   "rankT": 18,
+   "rankOVR": 34,
+   "net": 4.52,
+   "RIM": -0.03,
+   "REB": 0.54,
+   "CTRL": 0.1,
+   "REB_O": 0.46,
+   "REB_D": -0.04
+  },
+  "Ausar Thompson": {
+   "pos": "SF",
+   "rankT": 46,
+   "rankOVR": 50,
+   "net": 3.05,
+   "RIM": 0.27,
+   "REB": 0.8,
+   "CTRL": 0.05,
+   "REB_O": 0.3,
+   "REB_D": 0.51
+  },
+  "Anthony Black": {
+   "pos": "SG",
+   "rankT": 173,
+   "rankOVR": 147,
+   "net": -0.56,
+   "RIM": -0.37,
+   "REB": -1.21,
+   "CTRL": 0.29,
+   "REB_O": -0.57,
+   "REB_D": -0.59
+  },
+  "GG Jackson": {
+   "pos": "PF",
+   "rankT": 287,
+   "rankOVR": 281,
+   "net": -5.55,
+   "RIM": 0.14,
+   "REB": -0.03,
+   "CTRL": 0.23,
+   "REB_O": -0.18,
+   "REB_D": 0.13
+  },
+  "Jarace Walker": {
+   "pos": "SF",
+   "rankT": 277,
+   "rankOVR": 256,
+   "net": -4.1,
+   "RIM": -0.54,
+   "REB": 0.0,
+   "CTRL": 0.26,
+   "REB_O": -0.37,
+   "REB_D": 0.35
+  },
+  "Cason Wallace": {
+   "pos": "SG",
+   "rankT": 97,
+   "rankOVR": 87,
+   "net": 1.29,
+   "RIM": -0.31,
+   "REB": -1.55,
+   "CTRL": 0.05,
+   "REB_O": -0.57,
+   "REB_D": -0.93
+  },
+  "Keyonte George": {
+   "pos": "PG",
+   "rankT": 131,
+   "rankOVR": 199,
+   "net": 0.4,
+   "RIM": -0.67,
+   "REB": -2.16,
+   "CTRL": 0.2,
+   "REB_O": -0.9,
+   "REB_D": -1.19
+  },
+  "Noah Clowney": {
+   "pos": "PF",
+   "rankT": 283,
+   "rankOVR": 275,
+   "net": -5.09,
+   "RIM": 0.21,
+   "REB": 0.22,
+   "CTRL": 0.2,
+   "REB_O": -0.1,
+   "REB_D": 0.29
+  },
+  "Bilal Coulibaly": {
+   "pos": "SF",
+   "rankT": 199,
+   "rankOVR": 260,
+   "net": -1.18,
+   "RIM": 0.28,
+   "REB": -0.96,
+   "CTRL": 0.25,
+   "REB_O": -0.5,
+   "REB_D": -0.44
+  },
+  "Toumani Camara": {
+   "pos": "PF",
+   "rankT": 155,
+   "rankOVR": 93,
+   "net": -0.21,
+   "RIM": -0.43,
+   "REB": -0.37,
+   "CTRL": 0.1,
+   "REB_O": -0.21,
+   "REB_D": -0.15
+  },
+  "Zach Edey": {
+   "pos": "C",
+   "rankT": 32,
+   "rankOVR": 124,
+   "net": 3.76,
+   "RIM": 1.79,
+   "REB": 6.3,
+   "CTRL": -1.12,
+   "REB_O": 3.23,
+   "REB_D": 2.92
+  },
+  "Ryan Kalkbrenner": {
+   "pos": "C",
+   "rankT": 59,
+   "rankOVR": 220,
+   "net": 2.55,
+   "RIM": 2.29,
+   "REB": 3.93,
+   "CTRL": -0.82,
+   "REB_O": 1.99,
+   "REB_D": 2.17
+  },
+  "Brandin Podziemski": {
+   "pos": "PG",
+   "rankT": 29,
+   "rankOVR": 31,
+   "net": 3.84,
+   "RIM": -0.41,
+   "REB": -0.35,
+   "CTRL": 0.08,
+   "REB_O": -0.35,
+   "REB_D": 0.02
+  },
+  "Jordan Walsh": {
+   "pos": "PF",
+   "rankT": 160,
+   "rankOVR": 234,
+   "net": -0.31,
+   "RIM": 0.12,
+   "REB": 0.82,
+   "CTRL": 0.14,
+   "REB_O": 0.25,
+   "REB_D": 0.57
+  },
+  "Leaky Black": {
+   "pos": "SF",
+   "rankT": 259,
+   "rankOVR": 255,
+   "net": -3.27,
+   "RIM": -0.24,
+   "REB": -0.67,
+   "CTRL": 0.11,
+   "REB_O": -0.39,
+   "REB_D": -0.26
+  },
+  "Tristan da Silva": {
+   "pos": "SF",
+   "rankT": 257,
+   "rankOVR": 243,
+   "net": -3.2,
+   "RIM": -0.29,
+   "REB": -0.44,
+   "CTRL": 0.13,
+   "REB_O": -0.3,
+   "REB_D": -0.13
+  },
+  "Pelle Larsson": {
+   "pos": "SF",
+   "rankT": 126,
+   "rankOVR": 151,
+   "net": 0.53,
+   "RIM": -0.25,
+   "REB": -1.37,
+   "CTRL": 0.24,
+   "REB_O": -0.39,
+   "REB_D": -0.94
+  },
+  "Matas Buzelis": {
+   "pos": "PF",
+   "rankT": 280,
+   "rankOVR": 201,
+   "net": -4.26,
+   "RIM": 0.61,
+   "REB": -0.19,
+   "CTRL": 0.28,
+   "REB_O": -0.28,
+   "REB_D": 0.06
+  },
+  "Ronald Holland II": {
+   "pos": "SF",
+   "rankT": 166,
+   "rankOVR": 161,
+   "net": -0.42,
+   "RIM": -0.32,
+   "REB": 0.21,
+   "CTRL": 0.28,
+   "REB_O": 0.05,
+   "REB_D": 0.17
+  },
+  "Zaccharie Risacher": {
+   "pos": "SF",
+   "rankT": 221,
+   "rankOVR": 267,
+   "net": -1.8,
+   "RIM": 0.12,
+   "REB": -0.2,
+   "CTRL": 0.25,
+   "REB_O": -0.1,
+   "REB_D": -0.09
+  },
+  "Alex Sarr": {
+   "pos": "C",
+   "rankT": 276,
+   "rankOVR": 241,
+   "net": -3.89,
+   "RIM": 1.9,
+   "REB": 1.65,
+   "CTRL": -1.25,
+   "REB_O": 0.59,
+   "REB_D": 1.25
+  },
+  "Reed Sheppard": {
+   "pos": "PG",
+   "rankT": 135,
+   "rankOVR": 216,
+   "net": 0.27,
+   "RIM": -0.54,
+   "REB": -2.48,
+   "CTRL": 0.26,
+   "REB_O": -0.92,
+   "REB_D": -1.45
+  },
+  "Stephon Castle": {
+   "pos": "SG",
+   "rankT": 118,
+   "rankOVR": 134,
+   "net": 0.8,
+   "RIM": -0.47,
+   "REB": -0.33,
+   "CTRL": 0.18,
+   "REB_O": -0.26,
+   "REB_D": -0.07
+  },
+  "Ja'Kobe Walter": {
+   "pos": "SG",
+   "rankT": 179,
+   "rankOVR": 193,
+   "net": -0.71,
+   "RIM": -0.57,
+   "REB": -0.99,
+   "CTRL": 0.23,
+   "REB_O": -0.29,
+   "REB_D": -0.67
+  },
+  "Bub Carrington": {
+   "pos": "PG",
+   "rankT": 271,
+   "rankOVR": 280,
+   "net": -3.55,
+   "RIM": -0.35,
+   "REB": -1.11,
+   "CTRL": 0.22,
+   "REB_O": -0.47,
+   "REB_D": -0.57
+  },
+  "Isaiah Collier": {
+   "pos": "PG",
+   "rankT": 286,
+   "rankOVR": 283,
+   "net": -5.48,
+   "RIM": -0.28,
+   "REB": -1.18,
+   "CTRL": 0.3,
+   "REB_O": -0.52,
+   "REB_D": -0.57
+  },
+  "Donovan Clingan": {
+   "pos": "C",
+   "rankT": 64,
+   "rankOVR": 153,
+   "net": 2.38,
+   "RIM": 2.18,
+   "REB": 4.44,
+   "CTRL": -0.74,
+   "REB_O": 2.83,
+   "REB_D": 1.77
+  },
+  "Jared McCain": {
+   "pos": "SG",
+   "rankT": 242,
+   "rankOVR": 245,
+   "net": -2.64,
+   "RIM": -0.55,
+   "REB": -2.08,
+   "CTRL": 0.21,
+   "REB_O": -0.79,
+   "REB_D": -1.2
+  },
+  "Kyshawn George": {
+   "pos": "SF",
+   "rankT": 191,
+   "rankOVR": 80,
+   "net": -1.0,
+   "RIM": 0.32,
+   "REB": -0.63,
+   "CTRL": 0.2,
+   "REB_O": -0.48,
+   "REB_D": -0.14
+  },
+  "Yves Missi": {
+   "pos": "C",
+   "rankT": 178,
+   "rankOVR": 257,
+   "net": -0.69,
+   "RIM": 1.18,
+   "REB": 2.98,
+   "CTRL": -0.93,
+   "REB_O": 2.08,
+   "REB_D": 1.16
+  },
+  "Kel'el Ware": {
+   "pos": "C",
+   "rankT": 92,
+   "rankOVR": 264,
+   "net": 1.45,
+   "RIM": 1.31,
+   "REB": 4.47,
+   "CTRL": -0.12,
+   "REB_O": 1.99,
+   "REB_D": 2.43
+  },
+  "Jaylon Tyson": {
+   "pos": "SF",
+   "rankT": 168,
+   "rankOVR": 202,
+   "net": -0.46,
+   "RIM": -0.25,
+   "REB": 0.7,
+   "CTRL": 0.17,
+   "REB_O": 0.44,
+   "REB_D": 0.26
+  },
+  "Cam Spencer": {
+   "pos": "PG",
+   "rankT": 85,
+   "rankOVR": 74,
+   "net": 1.64,
+   "RIM": -0.66,
+   "REB": -1.35,
+   "CTRL": 0.21,
+   "REB_O": -0.43,
+   "REB_D": -0.91
+  },
+  "Oso Ighodaro": {
+   "pos": "C",
+   "rankT": 205,
+   "rankOVR": 143,
+   "net": -1.31,
+   "RIM": 0.95,
+   "REB": 1.11,
+   "CTRL": -1.33,
+   "REB_O": 0.3,
+   "REB_D": 0.92
+  },
+  "Ryan Dunn": {
+   "pos": "SF",
+   "rankT": 186,
+   "rankOVR": 207,
+   "net": -0.91,
+   "RIM": 0.08,
+   "REB": 0.59,
+   "CTRL": 0.14,
+   "REB_O": 0.29,
+   "REB_D": 0.33
+  },
+  "Jamal Shead": {
+   "pos": "PG",
+   "rankT": 238,
+   "rankOVR": 266,
+   "net": -2.51,
+   "RIM": -0.68,
+   "REB": -2.25,
+   "CTRL": 0.22,
+   "REB_O": -0.61,
+   "REB_D": -1.46
+  },
+  "Ajay Mitchell": {
+   "pos": "SG",
+   "rankT": 56,
+   "rankOVR": 70,
+   "net": 2.58,
+   "RIM": -0.18,
+   "REB": -1.87,
+   "CTRL": 0.27,
+   "REB_O": -0.77,
+   "REB_D": -1.07
+  },
+  "Trevon Brazile": {
+   "pos": "C",
+   "rankT": 159,
+   "rankOVR": 223,
+   "net": -0.27,
+   "RIM": -0.03,
+   "REB": 1.02,
+   "CTRL": 0.05,
+   "REB_O": 0.05,
+   "REB_D": 0.98
+  },
+  "Jonathan Mogbo": {
+   "pos": "PF",
+   "rankT": 236,
+   "rankOVR": 272,
+   "net": -2.46,
+   "RIM": 0.26,
+   "REB": 1.68,
+   "CTRL": -0.52,
+   "REB_O": 0.63,
+   "REB_D": 1.12
+  },
+  "Jaylen Wells": {
+   "pos": "SF",
+   "rankT": 209,
+   "rankOVR": 206,
+   "net": -1.36,
+   "RIM": -0.6,
+   "REB": -1.53,
+   "CTRL": 0.21,
+   "REB_O": -0.32,
+   "REB_D": -1.17
+  },
+  "Walter Clayton Jr.": {
+   "pos": "PG",
+   "rankT": 270,
+   "rankOVR": 244,
+   "net": -3.53,
+   "RIM": -0.25,
+   "REB": -1.5,
+   "CTRL": 0.21,
+   "REB_O": -0.56,
+   "REB_D": -0.83
+  },
+  "Jamison Battle": {
+   "pos": "SG",
+   "rankT": 255,
+   "rankOVR": 263,
+   "net": -3.18,
+   "RIM": -0.22,
+   "REB": -0.67,
+   "CTRL": 0.22,
+   "REB_O": -0.19,
+   "REB_D": -0.48
+  },
+  "Daniss Jenkins": {
+   "pos": "PG",
+   "rankT": 180,
+   "rankOVR": 229,
+   "net": -0.75,
+   "RIM": -0.61,
+   "REB": -1.75,
+   "CTRL": 0.28,
+   "REB_O": -0.5,
+   "REB_D": -1.18
+  },
+  "Spencer Jones": {
+   "pos": "SF",
+   "rankT": 124,
+   "rankOVR": 235,
+   "net": 0.55,
+   "RIM": 0.1,
+   "REB": -0.11,
+   "CTRL": -0.06,
+   "REB_O": -0.14,
+   "REB_D": 0.03
+  },
+  "Cooper Flagg": {
+   "pos": "SF",
+   "rankT": 44,
+   "rankOVR": 69,
+   "net": 3.15,
+   "RIM": 0.3,
+   "REB": -0.35,
+   "CTRL": 0.31,
+   "REB_O": -0.84,
+   "REB_D": 0.45
+  },
+  "Dylan Harper": {
+   "pos": "SG",
+   "rankT": 27,
+   "rankOVR": 100,
+   "net": 3.86,
+   "RIM": -0.12,
+   "REB": -1.04,
+   "CTRL": 0.21,
+   "REB_O": -0.61,
+   "REB_D": -0.41
+  },
+  "VJ Edgecombe": {
+   "pos": "SG",
+   "rankT": 34,
+   "rankOVR": 85,
+   "net": 3.56,
+   "RIM": -0.24,
+   "REB": -0.29,
+   "CTRL": 0.22,
+   "REB_O": -0.25,
+   "REB_D": -0.03
+  },
+  "Ace Bailey": {
+   "pos": "SG",
+   "rankT": 264,
+   "rankOVR": 236,
+   "net": -3.38,
+   "RIM": 0.25,
+   "REB": 0.09,
+   "CTRL": 0.39,
+   "REB_O": -0.07,
+   "REB_D": 0.18
+  },
+  "Jeremiah Fears": {
+   "pos": "PG",
+   "rankT": 248,
+   "rankOVR": 268,
+   "net": -2.87,
+   "RIM": -0.57,
+   "REB": -1.03,
+   "CTRL": 0.41,
+   "REB_O": -0.45,
+   "REB_D": -0.54
+  },
+  "Tre Johnson": {
+   "pos": "SG",
+   "rankT": 288,
+   "rankOVR": 287,
+   "net": -6.06,
+   "RIM": -0.29,
+   "REB": -1.39,
+   "CTRL": 0.25,
+   "REB_O": -0.45,
+   "REB_D": -0.83
+  },
+  "Nolan Traore": {
+   "pos": "PG",
+   "rankT": 228,
+   "rankOVR": 285,
+   "net": -2.05,
+   "RIM": -0.18,
+   "REB": -2.48,
+   "CTRL": 0.29,
+   "REB_O": -0.75,
+   "REB_D": -1.53
+  },
+  "Derik Queen": {
+   "pos": "C",
+   "rankT": 261,
+   "rankOVR": 247,
+   "net": -3.31,
+   "RIM": 0.83,
+   "REB": 1.39,
+   "CTRL": -0.45,
+   "REB_O": 0.26,
+   "REB_D": 1.13
+  },
+  "Egor Dëmin": {
+   "pos": "PG",
+   "rankT": 275,
+   "rankOVR": 212,
+   "net": -3.88,
+   "RIM": -0.11,
+   "REB": -1.23,
+   "CTRL": 0.21,
+   "REB_O": -0.46,
+   "REB_D": -0.66
+  },
+  "Kasparas Jakučionis": {
+   "pos": "PG",
+   "rankT": 219,
+   "rankOVR": 156,
+   "net": -1.74,
+   "RIM": -0.4,
+   "REB": -1.36,
+   "CTRL": 0.34,
+   "REB_O": -0.36,
+   "REB_D": -0.96
+  },
+  "Jase Richardson": {
+   "pos": "PG",
+   "rankT": 265,
+   "rankOVR": 288,
+   "net": -3.4,
+   "RIM": -0.38,
+   "REB": -1.93,
+   "CTRL": 0.25,
+   "REB_O": -0.38,
+   "REB_D": -1.47
+  },
+  "Khaman Maluach": {
+   "pos": "C",
+   "rankT": 253,
+   "rankOVR": 286,
+   "net": -2.97,
+   "RIM": 1.56,
+   "REB": 1.46,
+   "CTRL": -1.2,
+   "REB_O": 0.61,
+   "REB_D": 1.02
+  },
+  "Yaxel Lendeborg": {
+   "pos": "F",
+   "rankT": 80,
+   "rankOVR": 42,
+   "net": 1.79,
+   "RIM": -0.07,
+   "REB": 1.0,
+   "CTRL": 0.13,
+   "REB_O": 0.25,
+   "REB_D": 0.76
+  },
+  "Joan Beringer": {
+   "pos": "C",
+   "rankT": 140,
+   "rankOVR": 265,
+   "net": 0.17,
+   "RIM": 1.31,
+   "REB": 3.99,
+   "CTRL": -0.95,
+   "REB_O": 2.54,
+   "REB_D": 1.62
+  },
+  "Collin Murray-Boyles": {
+   "pos": "C",
+   "rankT": 65,
+   "rankOVR": 185,
+   "net": 2.33,
+   "RIM": 0.45,
+   "REB": 2.09,
+   "CTRL": -0.28,
+   "REB_O": 1.3,
+   "REB_D": 0.77
+  },
+  "Danny Wolf": {
+   "pos": "SF",
+   "rankT": 241,
+   "rankOVR": 188,
+   "net": -2.59,
+   "RIM": 0.45,
+   "REB": 0.7,
+   "CTRL": 0.31,
+   "REB_O": 0.01,
+   "REB_D": 0.69
+  },
+  "Micah Peavy": {
+   "pos": "SF",
+   "rankT": 244,
+   "rankOVR": 270,
+   "net": -2.77,
+   "RIM": -0.27,
+   "REB": -0.05,
+   "CTRL": 0.24,
+   "REB_O": -0.07,
+   "REB_D": 0.02
+  },
+  "Tyrese Proctor": {
+   "pos": "SG",
+   "rankT": 144,
+   "rankOVR": 175,
+   "net": -0.03,
+   "RIM": -0.63,
+   "REB": -1.11,
+   "CTRL": 0.23,
+   "REB_O": -0.53,
+   "REB_D": -0.54
+  },
+  "Sion James": {
+   "pos": "SG",
+   "rankT": 269,
+   "rankOVR": 224,
+   "net": -3.5,
+   "RIM": -0.18,
+   "REB": -0.74,
+   "CTRL": 0.15,
+   "REB_O": -0.4,
+   "REB_D": -0.32
+  },
+  "Bennett Stirtz": {
+   "pos": "G",
+   "rankT": 231,
+   "rankOVR": 251,
+   "net": -2.29,
+   "RIM": -0.09,
+   "REB": -1.7,
+   "CTRL": 0.07,
+   "REB_O": -0.23,
+   "REB_D": -1.43
+  },
+  "Cedric Coward": {
+   "pos": "SG",
+   "rankT": 107,
+   "rankOVR": 63,
+   "net": 1.03,
+   "RIM": -0.05,
+   "REB": 0.74,
+   "CTRL": 0.3,
+   "REB_O": -0.04,
+   "REB_D": 0.78
+  },
+  "Javon Small": {
+   "pos": "PG",
+   "rankT": 153,
+   "rankOVR": 154,
+   "net": -0.19,
+   "RIM": -0.28,
+   "REB": -1.03,
+   "CTRL": 0.28,
+   "REB_O": -0.34,
+   "REB_D": -0.65
+  },
+  "Kobe Sanders": {
+   "pos": "SG",
+   "rankT": 189,
+   "rankOVR": 227,
+   "net": -1.0,
+   "RIM": -0.04,
+   "REB": -1.34,
+   "CTRL": 0.25,
+   "REB_O": -0.49,
+   "REB_D": -0.79
+  },
+  "Will Richard": {
+   "pos": "SF",
+   "rankT": 152,
+   "rankOVR": 200,
+   "net": -0.14,
+   "RIM": -0.57,
+   "REB": -1.47,
+   "CTRL": 0.22,
+   "REB_O": -0.12,
+   "REB_D": -1.33
+  },
+  "Chaney Johnson": {
+   "pos": "C",
+   "rankT": 122,
+   "rankOVR": 279,
+   "net": 0.66,
+   "RIM": 0.02,
+   "REB": 1.65,
+   "CTRL": -0.44,
+   "REB_O": 0.93,
+   "REB_D": 0.69
+  },
+  "AJ Dybantsa": {
+   "pos": "F",
+   "rankT": 73,
+   "rankOVR": 101,
+   "net": 2.14,
+   "RIM": -0.13,
+   "REB": 0.31,
+   "CTRL": 0.11,
+   "REB_O": -0.1,
+   "REB_D": 0.41
+  },
+  "Darryn Peterson": {
+   "pos": "F",
+   "rankT": 128,
+   "rankOVR": 68,
+   "net": 0.52,
+   "RIM": -0.11,
+   "REB": -1.03,
+   "CTRL": 0.07,
+   "REB_O": -0.2,
+   "REB_D": -0.82
+  },
+  "Cameron Boozer": {
+   "pos": "F",
+   "rankT": 183,
+   "rankOVR": 198,
+   "net": -0.85,
+   "RIM": 0.03,
+   "REB": 1.13,
+   "CTRL": -0.09,
+   "REB_O": -0.12,
+   "REB_D": 1.24
+  },
+  "Caleb Wilson": {
+   "pos": "C",
+   "rankT": 116,
+   "rankOVR": 104,
+   "net": 0.85,
+   "RIM": 0.13,
+   "REB": 0.42,
+   "CTRL": 0.12,
+   "REB_O": -0.06,
+   "REB_D": 0.48
+  },
+  "Darius Acuff Jr.": {
+   "pos": "G",
+   "rankT": 169,
+   "rankOVR": 173,
+   "net": -0.48,
+   "RIM": -0.32,
+   "REB": -1.88,
+   "CTRL": 0.15,
+   "REB_O": -0.41,
+   "REB_D": -1.43
+  },
+  "Kingston Flemings": {
+   "pos": "G",
+   "rankT": 185,
+   "rankOVR": 160,
+   "net": -0.9,
+   "RIM": 0.02,
+   "REB": -1.22,
+   "CTRL": 0.11,
+   "REB_O": -0.14,
+   "REB_D": -1.07
+  },
+  "Keaton Wagler": {
+   "pos": "F",
+   "rankT": 217,
+   "rankOVR": 133,
+   "net": -1.69,
+   "RIM": -0.04,
+   "REB": 0.1,
+   "CTRL": 0.1,
+   "REB_O": -0.2,
+   "REB_D": 0.3
+  },
+  "Mikel Brown Jr.": {
+   "pos": "G",
+   "rankT": 218,
+   "rankOVR": 149,
+   "net": -1.73,
+   "RIM": -0.16,
+   "REB": -1.62,
+   "CTRL": 0.07,
+   "REB_O": -0.28,
+   "REB_D": -1.31
+  },
+  "Brayden Burries": {
+   "pos": "G",
+   "rankT": 132,
+   "rankOVR": 71,
+   "net": 0.36,
+   "RIM": -0.13,
+   "REB": 0.92,
+   "CTRL": 0.09,
+   "REB_O": 0.36,
+   "REB_D": 0.55
+  },
+  "Nate Ament": {
+   "pos": "C",
+   "rankT": 230,
+   "rankOVR": 261,
+   "net": -2.28,
+   "RIM": 0.17,
+   "REB": -0.38,
+   "CTRL": 0.05,
+   "REB_O": -0.05,
+   "REB_D": -0.33
+  },
+  "Meleek Thomas": {
+   "pos": "G",
+   "rankT": 196,
+   "rankOVR": 269,
+   "net": -1.13,
+   "RIM": -0.15,
+   "REB": -1.28,
+   "CTRL": 0.1,
+   "REB_O": -0.18,
+   "REB_D": -1.08
+  },
+  "Morez Johnson Jr.": {
+   "pos": "C",
+   "rankT": 207,
+   "rankOVR": 218,
+   "net": -1.35,
+   "RIM": -0.14,
+   "REB": 2.0,
+   "CTRL": -0.52,
+   "REB_O": 0.84,
+   "REB_D": 1.29
+  },
+  "Aday Mara": {
+   "pos": "C",
+   "rankT": 174,
+   "rankOVR": 217,
+   "net": -0.56,
+   "RIM": 0.9,
+   "REB": 1.35,
+   "CTRL": -0.36,
+   "REB_O": 0.37,
+   "REB_D": 1.08
+  },
+  "Emanuel Sharp": {
+   "pos": "G",
+   "rankT": 267,
+   "rankOVR": 278,
+   "net": -3.49,
+   "RIM": -0.04,
+   "REB": -1.53,
+   "CTRL": 0.1,
+   "REB_O": -0.2,
+   "REB_D": -1.28
+  },
+  "Bryce Hopkins": {
+   "pos": "F",
+   "rankT": 243,
+   "rankOVR": 273,
+   "net": -2.75,
+   "RIM": -0.11,
+   "REB": 0.17,
+   "CTRL": 0.0,
+   "REB_O": -0.0,
+   "REB_D": 0.17
+  },
+  "Kevin Durant": {
+   "pos": "SF",
+   "rankT": 40,
+   "rankOVR": 12,
+   "net": 3.35,
+   "RIM": 0.27,
+   "REB": -0.95,
+   "CTRL": 0.16,
+   "REB_O": -0.87,
+   "REB_D": -0.08
+  },
+  "Al Horford": {
+   "pos": "C",
+   "rankT": 161,
+   "rankOVR": 209,
+   "net": -0.32,
+   "RIM": 0.78,
+   "REB": 0.76,
+   "CTRL": -0.22,
+   "REB_O": -0.23,
+   "REB_D": 0.96
+  },
+  "Brook Lopez": {
+   "pos": "C",
+   "rankT": 100,
+   "rankOVR": 168,
+   "net": 1.17,
+   "RIM": 1.94,
+   "REB": 0.95,
+   "CTRL": -0.44,
+   "REB_O": -0.25,
+   "REB_D": 1.14
+  },
+  "DeAndre Jordan": {
+   "pos": "C",
+   "rankT": 220,
+   "rankOVR": 258,
+   "net": -1.76,
+   "RIM": 0.21,
+   "REB": 1.31,
+   "CTRL": -0.02,
+   "REB_O": -0.01,
+   "REB_D": 1.32
+  },
+  "James Harden": {
+   "pos": "PG",
+   "rankT": 117,
+   "rankOVR": 105,
+   "net": 0.84,
+   "RIM": -0.57,
+   "REB": -1.04,
+   "CTRL": 0.32,
+   "REB_O": -0.93,
+   "REB_D": -0.11
+  },
+  "Stephen Curry": {
+   "pos": "PG",
+   "rankT": 13,
+   "rankOVR": 6,
+   "net": 5.15,
+   "RIM": -0.39,
+   "REB": -1.61,
+   "CTRL": 0.05,
+   "REB_O": -0.66,
+   "REB_D": -0.92
+  },
+  "DeMar DeRozan": {
+   "pos": "SF",
+   "rankT": 240,
+   "rankOVR": 113,
+   "net": -2.53,
+   "RIM": -0.51,
+   "REB": -2.25,
+   "CTRL": 0.34,
+   "REB_O": -0.73,
+   "REB_D": -1.43
+  },
+  "Jrue Holiday": {
+   "pos": "PG",
+   "rankT": 71,
+   "rankOVR": 45,
+   "net": 2.17,
+   "RIM": -0.67,
+   "REB": -1.05,
+   "CTRL": 0.19,
+   "REB_O": -0.39,
+   "REB_D": -0.63
+  },
+  "Paul George": {
+   "pos": "SF",
+   "rankT": 20,
+   "rankOVR": 28,
+   "net": 4.35,
+   "RIM": -0.08,
+   "REB": -0.59,
+   "CTRL": 0.22,
+   "REB_O": -1.03,
+   "REB_D": 0.38
+  },
+  "Kyrie Irving": {
+   "pos": "PG",
+   "rankT": 37,
+   "rankOVR": 19,
+   "net": 3.42,
+   "RIM": -0.28,
+   "REB": -1.02,
+   "CTRL": 0.09,
+   "REB_O": -0.21,
+   "REB_D": -0.8
+  },
+  "Klay Thompson": {
+   "pos": "SF",
+   "rankT": 272,
+   "rankOVR": 253,
+   "net": -3.66,
+   "RIM": -0.08,
+   "REB": -1.63,
+   "CTRL": 0.18,
+   "REB_O": -0.53,
+   "REB_D": -0.97
+  },
+  "Kawhi Leonard": {
+   "pos": "SF",
+   "rankT": 10,
+   "rankOVR": 5,
+   "net": 5.52,
+   "RIM": -0.74,
+   "REB": 0.2,
+   "CTRL": 0.23,
+   "REB_O": -0.39,
+   "REB_D": 0.59
+  },
+  "Anthony Davis": {
+   "pos": "C",
+   "rankT": 8,
+   "rankOVR": 23,
+   "net": 5.82,
+   "RIM": 1.19,
+   "REB": 3.06,
+   "CTRL": -0.48,
+   "REB_O": 1.55,
+   "REB_D": 1.7
+  },
+  "Damian Lillard": {
+   "pos": "PG",
+   "rankT": 48,
+   "rankOVR": 37,
+   "net": 2.99,
+   "RIM": -0.46,
+   "REB": -1.37,
+   "CTRL": 0.08,
+   "REB_O": -0.32,
+   "REB_D": -1.05
+  },
+  "Draymond Green": {
+   "pos": "PF",
+   "rankT": 177,
+   "rankOVR": 123,
+   "net": -0.64,
+   "RIM": 0.61,
+   "REB": 0.56,
+   "CTRL": -0.5,
+   "REB_O": -0.28,
+   "REB_D": 0.78
+  },
+  "CJ McCollum": {
+   "pos": "PG",
+   "rankT": 229,
+   "rankOVR": 239,
+   "net": -2.2,
+   "RIM": -0.38,
+   "REB": -1.73,
+   "CTRL": 0.24,
+   "REB_O": -0.54,
+   "REB_D": -1.09
+  },
+  "Dennis Schröder": {
+   "pos": "PG",
+   "rankT": 249,
+   "rankOVR": 282,
+   "net": -2.88,
+   "RIM": -0.67,
+   "REB": -2.21,
+   "CTRL": 0.28,
+   "REB_O": -0.72,
+   "REB_D": -1.35
+  },
+  "Kentavious Caldwell-Pope": {
+   "pos": "SF",
+   "rankT": 233,
+   "rankOVR": 166,
+   "net": -2.35,
+   "RIM": -0.65,
+   "REB": -2.08,
+   "CTRL": 0.32,
+   "REB_O": -0.53,
+   "REB_D": -1.45
+  },
+  "Rudy Gobert": {
+   "pos": "C",
+   "rankT": 52,
+   "rankOVR": 55,
+   "net": 2.8,
+   "RIM": 1.59,
+   "REB": 3.48,
+   "CTRL": -1.08,
+   "REB_O": 2.14,
+   "REB_D": 1.62
+  },
+  "Tim Hardaway Jr.": {
+   "pos": "SG",
+   "rankT": 278,
+   "rankOVR": 230,
+   "net": -4.11,
+   "RIM": -0.3,
+   "REB": -1.53,
+   "CTRL": 0.16,
+   "REB_O": -0.48,
+   "REB_D": -0.92
+  },
+  "Giannis Antetokounmpo": {
+   "pos": "PF",
+   "rankT": 3,
+   "rankOVR": 10,
+   "net": 8.06,
+   "RIM": 0.62,
+   "REB": 3.82,
+   "CTRL": -0.26,
+   "REB_O": 1.82,
+   "REB_D": 2.28
+  },
+  "Zach LaVine": {
+   "pos": "SG",
+   "rankT": 213,
+   "rankOVR": 107,
+   "net": -1.5,
+   "RIM": -0.4,
+   "REB": -1.89,
+   "CTRL": 0.26,
+   "REB_O": -0.67,
+   "REB_D": -1.11
+  },
+  "Jerami Grant": {
+   "pos": "SF",
+   "rankT": 260,
+   "rankOVR": 274,
+   "net": -3.28,
+   "RIM": -0.05,
+   "REB": -1.27,
+   "CTRL": 0.25,
+   "REB_O": -0.34,
+   "REB_D": -0.86
+  },
+  "Aaron Gordon": {
+   "pos": "PF",
+   "rankT": 98,
+   "rankOVR": 48,
+   "net": 1.28,
+   "RIM": -0.29,
+   "REB": 0.1,
+   "CTRL": 0.03,
+   "REB_O": -0.21,
+   "REB_D": 0.3
+  },
+  "Marcus Smart": {
+   "pos": "SG",
+   "rankT": 164,
+   "rankOVR": 197,
+   "net": -0.38,
+   "RIM": -0.44,
+   "REB": -1.7,
+   "CTRL": 0.16,
+   "REB_O": -0.6,
+   "REB_D": -1.03
+  },
+  "Julius Randle": {
+   "pos": "PF",
+   "rankT": 162,
+   "rankOVR": 189,
+   "net": -0.34,
+   "RIM": -0.56,
+   "REB": 0.87,
+   "CTRL": 0.15,
+   "REB_O": 0.16,
+   "REB_D": 0.72
+  },
+  "Andrew Wiggins": {
+   "pos": "PF",
+   "rankT": 226,
+   "rankOVR": 196,
+   "net": -1.96,
+   "RIM": 0.15,
+   "REB": -0.23,
+   "CTRL": 0.34,
+   "REB_O": -0.0,
+   "REB_D": -0.23
+  },
+  "Joel Embiid": {
+   "pos": "C",
+   "rankT": 204,
+   "rankOVR": 36,
+   "net": -1.31,
+   "RIM": 1.28,
+   "REB": 2.17,
+   "CTRL": -1.3,
+   "REB_O": 0.32,
+   "REB_D": 1.91
+  },
+  "Nikola Jokić": {
+   "pos": "C",
+   "rankT": 2,
+   "rankOVR": 4,
+   "net": 9.17,
+   "RIM": 0.13,
+   "REB": 3.88,
+   "CTRL": -0.78,
+   "REB_O": 1.4,
+   "REB_D": 2.76
+  },
+  "LeBron James": {
+   "pos": "SF",
+   "rankT": 19,
+   "rankOVR": 22,
+   "net": 4.37,
+   "RIM": -0.18,
+   "REB": -0.34,
+   "CTRL": 0.18,
+   "REB_O": -1.27,
+   "REB_D": 0.82
+  }
+ },
+ "raw": {
+  "1626157": {
+   "full": [
+    1.97188401222229,
+    -3.9567384719848633
+   ],
+   "RIM": [
+    2.0722315311431885,
+    -3.585468292236328
+   ],
+   "REB": [
+    0.1362973004579544,
+    -1.412948727607727
+   ],
+   "CTRL": [
+    2.336484432220459,
+    -4.012913703918457
+   ],
+   "REB_O": [
+    0.057532478123903275,
+    -3.7976202964782715
+   ],
+   "REB_D": [
+    2.026315450668335,
+    -1.4277549982070923
+   ]
+  },
+  "1626162": {
+   "full": [
+    -1.9414526224136353,
+    0.49662432074546814
+   ],
+   "RIM": [
+    -2.051564931869507,
+    0.17060884833335876
+   ],
+   "REB": [
+    -1.636353611946106,
+    0.1422952264547348
+   ],
+   "CTRL": [
+    -2.16287899017334,
+    0.6107076406478882
+   ],
+   "REB_O": [
+    -1.4880071878433228,
+    0.5271304249763489
+   ],
+   "REB_D": [
+    -2.1034533977508545,
+    0.1035497859120369
+   ]
+  },
+  "1626164": {
+   "full": [
+    2.0045418739318848,
+    1.0500494241714478
+   ],
+   "RIM": [
+    1.8811877965927124,
+    0.5479350686073303
+   ],
+   "REB": [
+    3.583109140396118,
+    0.286056250333786
+   ],
+   "CTRL": [
+    1.8367635011672974,
+    1.091027855873108
+   ],
+   "REB_O": [
+    2.755690574645996,
+    1.0808531045913696
+   ],
+   "REB_D": [
+    2.7668166160583496,
+    0.23566055297851562
+   ]
+  },
+  "1626167": {
+   "full": [
+    -3.6025655269622803,
+    -1.7343904972076416
+   ],
+   "RIM": [
+    -3.1633994579315186,
+    0.33441969752311707
+   ],
+   "REB": [
+    -3.6724743843078613,
+    -0.7822617292404175
+   ],
+   "CTRL": [
+    -3.231992244720459,
+    -1.8683650493621826
+   ],
+   "REB_O": [
+    -3.528898239135742,
+    -1.6584992408752441
+   ],
+   "REB_D": [
+    -3.7456612586975098,
+    -0.873275637626648
+   ]
+  },
+  "1626168": {
+   "full": [
+    -1.093816876411438,
+    -0.6371949315071106
+   ],
+   "RIM": [
+    -1.0569196939468384,
+    -0.5488306283950806
+   ],
+   "REB": [
+    -1.55470609664917,
+    -0.11592745780944824
+   ],
+   "CTRL": [
+    -1.131969690322876,
+    -0.621029257774353
+   ],
+   "REB_O": [
+    -1.1344598531723022,
+    -0.6526328325271606
+   ],
+   "REB_D": [
+    -1.5164618492126465,
+    -0.09930586069822311
+   ]
+  },
+  "1626171": {
+   "full": [
+    -1.1379879713058472,
+    0.08177061378955841
+   ],
+   "RIM": [
+    -1.139957308769226,
+    -0.11449860781431198
+   ],
+   "REB": [
+    -1.2459065914154053,
+    1.4577014446258545
+   ],
+   "CTRL": [
+    -1.132685899734497,
+    0.0803423672914505
+   ],
+   "REB_O": [
+    -1.2065194845199585,
+    0.10683895647525787
+   ],
+   "REB_D": [
+    -1.1843701601028442,
+    1.4418984651565552
+   ]
+  },
+  "1626181": {
+   "full": [
+    -0.49643734097480774,
+    1.3576076030731201
+   ],
+   "RIM": [
+    -0.7219824194908142,
+    0.5019133687019348
+   ],
+   "REB": [
+    1.1990917921066284,
+    0.5590736865997314
+   ],
+   "CTRL": [
+    -0.6809371709823608,
+    1.4246913194656372
+   ],
+   "REB_O": [
+    0.4618772268295288,
+    1.4840444326400757
+   ],
+   "REB_D": [
+    0.11245063692331314,
+    0.44130656123161316
+   ]
+  },
+  "1626204": {
+   "full": [
+    -1.7705659866333008,
+    -2.4932045936584473
+   ],
+   "RIM": [
+    -1.8938270807266235,
+    -2.796159029006958
+   ],
+   "REB": [
+    -2.2951385974884033,
+    -1.697532296180725
+   ],
+   "CTRL": [
+    -1.6115643978118896,
+    -2.5611233711242676
+   ],
+   "REB_O": [
+    -2.118269681930542,
+    -2.518280506134033
+   ],
+   "REB_D": [
+    -1.9485869407653809,
+    -1.6663103103637695
+   ]
+  },
+  "1626220": {
+   "full": [
+    -1.974583625793457,
+    1.0868057012557983
+   ],
+   "RIM": [
+    -2.163771629333496,
+    0.3051855266094208
+   ],
+   "REB": [
+    -1.4942010641098022,
+    1.3184499740600586
+   ],
+   "CTRL": [
+    -2.078993558883667,
+    1.1312419176101685
+   ],
+   "REB_O": [
+    -1.4079005718231201,
+    1.1882646083831787
+   ],
+   "REB_D": [
+    -2.051725149154663,
+    1.2113608121871948
+   ]
+  },
+  "1627734": {
+   "full": [
+    2.1109349727630615,
+    -0.17014873027801514
+   ],
+   "RIM": [
+    2.1824493408203125,
+    -0.2088167518377304
+   ],
+   "REB": [
+    -0.34818530082702637,
+    1.7545667886734009
+   ],
+   "CTRL": [
+    3.347527027130127,
+    -0.4819461405277252
+   ],
+   "REB_O": [
+    -0.2746056020259857,
+    -0.29982736706733704
+   ],
+   "REB_D": [
+    1.7904866933822632,
+    1.8384904861450195
+   ]
+  },
+  "1627739": {
+   "full": [
+    -0.3817633390426636,
+    -3.4685165882110596
+   ],
+   "RIM": [
+    -0.6214695572853088,
+    -4.0506391525268555
+   ],
+   "REB": [
+    0.36013612151145935,
+    -4.1638031005859375
+   ],
+   "CTRL": [
+    -0.47531774640083313,
+    -3.464343786239624
+   ],
+   "REB_O": [
+    0.23547373712062836,
+    -3.415879011154175
+   ],
+   "REB_D": [
+    -0.29671892523765564,
+    -4.207352638244629
+   ]
+  },
+  "1627749": {
+   "full": [
+    0.4922802746295929,
+    -0.828456699848175
+   ],
+   "RIM": [
+    0.35394003987312317,
+    -1.4505304098129272
+   ],
+   "REB": [
+    1.6364943981170654,
+    -0.8252720236778259
+   ],
+   "CTRL": [
+    0.22452737390995026,
+    -0.7794790863990784
+   ],
+   "REB_O": [
+    1.6586562395095825,
+    -0.7310984134674072
+   ],
+   "REB_D": [
+    0.5116268396377563,
+    -0.918199896812439
+   ]
+  },
+  "1627750": {
+   "full": [
+    3.6889712810516357,
+    0.4227096736431122
+   ],
+   "RIM": [
+    3.6306540966033936,
+    0.105108343064785
+   ],
+   "REB": [
+    4.834521770477295,
+    0.086881123483181
+   ],
+   "CTRL": [
+    3.5645713806152344,
+    0.4209415316581726
+   ],
+   "REB_O": [
+    4.432156562805176,
+    0.45600366592407227
+   ],
+   "REB_D": [
+    4.071012496948242,
+    0.04397616535425186
+   ]
+  },
+  "1627751": {
+   "full": [
+    -0.5577359199523926,
+    -1.963602900505066
+   ],
+   "RIM": [
+    -0.3373638987541199,
+    -0.9040482044219971
+   ],
+   "REB": [
+    -2.2818334102630615,
+    -0.5016467571258545
+   ],
+   "CTRL": [
+    0.38877448439598083,
+    -2.366542100906372
+   ],
+   "REB_O": [
+    -2.1127047538757324,
+    -2.0759294033050537
+   ],
+   "REB_D": [
+    -0.7887212634086609,
+    -0.23952125012874603
+   ]
+  },
+  "1627759": {
+   "full": [
+    1.90531587600708,
+    -1.051829218864441
+   ],
+   "RIM": [
+    1.7383041381835938,
+    -1.5314841270446777
+   ],
+   "REB": [
+    2.066765069961548,
+    -0.6599931120872498
+   ],
+   "CTRL": [
+    1.6702580451965332,
+    -1.0257033109664917
+   ],
+   "REB_O": [
+    2.2987866401672363,
+    -1.0568987131118774
+   ],
+   "REB_D": [
+    1.687755823135376,
+    -0.6556075811386108
+   ]
+  },
+  "1627777": {
+   "full": [
+    -0.6365833282470703,
+    -0.12052430212497711
+   ],
+   "RIM": [
+    -0.660603404045105,
+    -0.35421332716941833
+   ],
+   "REB": [
+    -0.6389468312263489,
+    -0.11899746209383011
+   ],
+   "CTRL": [
+    -0.6452889442443848,
+    -0.11703092604875565
+   ],
+   "REB_O": [
+    -0.6130351424217224,
+    -0.12674130499362946
+   ],
+   "REB_D": [
+    -0.6626902222633362,
+    -0.11279226839542389
+   ]
+  },
+  "1627783": {
+   "full": [
+    0.6683861613273621,
+    -0.8702499866485596
+   ],
+   "RIM": [
+    0.6334822773933411,
+    -1.237653374671936
+   ],
+   "REB": [
+    0.7025149464607239,
+    0.16788776218891144
+   ],
+   "CTRL": [
+    0.5893988013267517,
+    -0.8486299514770508
+   ],
+   "REB_O": [
+    0.9769887328147888,
+    -0.833920955657959
+   ],
+   "REB_D": [
+    0.41584154963493347,
+    0.12702466547489166
+   ]
+  },
+  "1627826": {
+   "full": [
+    -0.20495657622814178,
+    -1.6023374795913696
+   ],
+   "RIM": [
+    0.09892316162586212,
+    0.03931710496544838
+   ],
+   "REB": [
+    -2.3742189407348633,
+    0.2813374698162079
+   ],
+   "CTRL": [
+    0.43539685010910034,
+    -1.8026705980300903
+   ],
+   "REB_O": [
+    -2.3132057189941406,
+    -1.5385645627975464
+   ],
+   "REB_D": [
+    -0.17806290090084076,
+    0.3806077539920807
+   ]
+  },
+  "1627832": {
+   "full": [
+    -0.1682283580303192,
+    -0.05837215110659599
+   ],
+   "RIM": [
+    -0.23161214590072632,
+    -0.3807199001312256
+   ],
+   "REB": [
+    1.001292109489441,
+    -0.6996207237243652
+   ],
+   "CTRL": [
+    -0.17908704280853271,
+    -0.05581193044781685
+   ],
+   "REB_O": [
+    0.23115091025829315,
+    -0.0383417010307312
+   ],
+   "REB_D": [
+    0.5719696879386902,
+    -0.7231857180595398
+   ]
+  },
+  "1627884": {
+   "full": [
+    -0.9956458210945129,
+    -2.103794813156128
+   ],
+   "RIM": [
+    -0.9691962003707886,
+    -2.0271220207214355
+   ],
+   "REB": [
+    -0.9638198614120483,
+    -2.7764573097229004
+   ],
+   "CTRL": [
+    -1.0456929206848145,
+    -2.090770721435547
+   ],
+   "REB_O": [
+    -0.9238549470901489,
+    -2.2132978439331055
+   ],
+   "REB_D": [
+    -1.0389223098754883,
+    -2.656179428100586
+   ]
+  },
+  "1627936": {
+   "full": [
+    -1.0791977643966675,
+    -4.896244049072266
+   ],
+   "RIM": [
+    -1.2365739345550537,
+    -5.212533473968506
+   ],
+   "REB": [
+    -0.5821982026100159,
+    -4.819352149963379
+   ],
+   "CTRL": [
+    -1.0732593536376953,
+    -4.897149085998535
+   ],
+   "REB_O": [
+    -0.5255065560340881,
+    -4.90490198135376
+   ],
+   "REB_D": [
+    -1.1313320398330688,
+    -4.804583549499512
+   ]
+  },
+  "1628368": {
+   "full": [
+    1.5824906826019287,
+    -0.8365738391876221
+   ],
+   "RIM": [
+    1.436403512954712,
+    -1.3890020847320557
+   ],
+   "REB": [
+    3.0195066928863525,
+    -1.6376112699508667
+   ],
+   "CTRL": [
+    1.3465371131896973,
+    -0.8140643239021301
+   ],
+   "REB_O": [
+    2.4855854511260986,
+    -0.8067998290061951
+   ],
+   "REB_D": [
+    2.0148887634277344,
+    -1.6753015518188477
+   ]
+  },
+  "1628369": {
+   "full": [
+    2.428976535797119,
+    -2.23396635055542
+   ],
+   "RIM": [
+    2.079345226287842,
+    -2.9016671180725098
+   ],
+   "REB": [
+    3.3455886840820312,
+    -1.6277331113815308
+   ],
+   "CTRL": [
+    2.225956439971924,
+    -2.229613780975342
+   ],
+   "REB_O": [
+    3.6779229640960693,
+    -2.198760986328125
+   ],
+   "REB_D": [
+    2.275343179702759,
+    -1.6664878129959106
+   ]
+  },
+  "1628370": {
+   "full": [
+    -0.9182270765304565,
+    2.7513208389282227
+   ],
+   "RIM": [
+    -1.0600100755691528,
+    2.390044689178467
+   ],
+   "REB": [
+    0.6569580435752869,
+    2.0345840454101562
+   ],
+   "CTRL": [
+    -1.0883580446243286,
+    2.8026974201202393
+   ],
+   "REB_O": [
+    0.032403614372015,
+    2.9323055744171143
+   ],
+   "REB_D": [
+    -0.46517258882522583,
+    1.871943712234497
+   ]
+  },
+  "1628374": {
+   "full": [
+    -0.5926788449287415,
+    -1.6552646160125732
+   ],
+   "RIM": [
+    -0.5482367277145386,
+    -1.4584861993789673
+   ],
+   "REB": [
+    -0.9322729706764221,
+    -1.3543484210968018
+   ],
+   "CTRL": [
+    -0.606105625629425,
+    -1.6512264013290405
+   ],
+   "REB_O": [
+    -0.7159045338630676,
+    -1.6592645645141602
+   ],
+   "REB_D": [
+    -0.8135877847671509,
+    -1.346529483795166
+   ]
+  },
+  "1628378": {
+   "full": [
+    3.8597302436828613,
+    0.484648734331131
+   ],
+   "RIM": [
+    3.746703624725342,
+    -0.027562744915485382
+   ],
+   "REB": [
+    5.1720967292785645,
+    0.20488597452640533
+   ],
+   "CTRL": [
+    3.636436700820923,
+    0.500738799571991
+   ],
+   "REB_O": [
+    4.834298133850098,
+    0.5062107443809509
+   ],
+   "REB_D": [
+    4.170679569244385,
+    0.16803903877735138
+   ]
+  },
+  "1628379": {
+   "full": [
+    1.2365095615386963,
+    1.5004180669784546
+   ],
+   "RIM": [
+    1.164555549621582,
+    0.966530442237854
+   ],
+   "REB": [
+    2.3543853759765625,
+    1.0340241193771362
+   ],
+   "CTRL": [
+    1.146480679512024,
+    1.525491714477539
+   ],
+   "REB_O": [
+    1.81204354763031,
+    1.5440770387649536
+   ],
+   "REB_D": [
+    1.7157186269760132,
+    0.9799675941467285
+   ]
+  },
+  "1628381": {
+   "full": [
+    -0.8409580588340759,
+    -0.5759176015853882
+   ],
+   "RIM": [
+    -0.7866666913032532,
+    -0.2990327477455139
+   ],
+   "REB": [
+    -1.6460521221160889,
+    -0.22255347669124603
+   ],
+   "CTRL": [
+    -0.8340515494346619,
+    -0.5786473751068115
+   ],
+   "REB_O": [
+    -1.3197561502456665,
+    -0.58782559633255
+   ],
+   "REB_D": [
+    -1.1852914094924927,
+    -0.1931757926940918
+   ]
+  },
+  "1628384": {
+   "full": [
+    -1.3827645778656006,
+    -3.161494731903076
+   ],
+   "RIM": [
+    -1.3443890810012817,
+    -3.0310447216033936
+   ],
+   "REB": [
+    -1.1243412494659424,
+    -3.098602056503296
+   ],
+   "CTRL": [
+    -1.6039817333221436,
+    -3.098752498626709
+   ],
+   "REB_O": [
+    -1.1672823429107666,
+    -3.2201812267303467
+   ],
+   "REB_D": [
+    -1.344560146331787,
+    -3.0423853397369385
+   ]
+  },
+  "1628386": {
+   "full": [
+    0.030287906527519226,
+    -4.293452262878418
+   ],
+   "RIM": [
+    0.46837660670280457,
+    -2.2005717754364014
+   ],
+   "REB": [
+    -1.5759694576263428,
+    -2.8485140800476074
+   ],
+   "CTRL": [
+    0.6352596282958984,
+    -4.4651336669921875
+   ],
+   "REB_O": [
+    -1.3430622816085815,
+    -4.350810527801514
+   ],
+   "REB_D": [
+    -0.28960365056991577,
+    -2.6727657318115234
+   ]
+  },
+  "1628389": {
+   "full": [
+    0.11941870301961899,
+    -3.90205979347229
+   ],
+   "RIM": [
+    0.1444522589445114,
+    -3.6171908378601074
+   ],
+   "REB": [
+    -0.8654652833938599,
+    -2.1910312175750732
+   ],
+   "CTRL": [
+    0.2946566641330719,
+    -3.934919595718384
+   ],
+   "REB_O": [
+    -0.7288326025009155,
+    -3.915067195892334
+   ],
+   "REB_D": [
+    -0.06071295589208603,
+    -2.1283035278320312
+   ]
+  },
+  "1628392": {
+   "full": [
+    -2.4810266494750977,
+    -5.736210346221924
+   ],
+   "RIM": [
+    -2.239070415496826,
+    -4.460214138031006
+   ],
+   "REB": [
+    -4.650327205657959,
+    -3.0881054401397705
+   ],
+   "CTRL": [
+    -1.3103139400482178,
+    -6.134425163269043
+   ],
+   "REB_O": [
+    -4.47349739074707,
+    -5.323165416717529
+   ],
+   "REB_D": [
+    -2.2484757900238037,
+    -2.889770746231079
+   ]
+  },
+  "1628398": {
+   "full": [
+    -2.341163396835327,
+    0.023876644670963287
+   ],
+   "RIM": [
+    -2.4723281860351562,
+    -0.27856582403182983
+   ],
+   "REB": [
+    -2.21231746673584,
+    0.2989006042480469
+   ],
+   "CTRL": [
+    -2.473557710647583,
+    0.06547041982412338
+   ],
+   "REB_O": [
+    -2.0894570350646973,
+    0.12218371033668518
+   ],
+   "REB_D": [
+    -2.456663131713867,
+    0.19606180489063263
+   ]
+  },
+  "1628401": {
+   "full": [
+    0.992396891117096,
+    -1.434599757194519
+   ],
+   "RIM": [
+    1.0084240436553955,
+    -1.1918913125991821
+   ],
+   "REB": [
+    1.876125693321228,
+    -2.266977310180664
+   ],
+   "CTRL": [
+    0.8321620225906372,
+    -1.4211286306381226
+   ],
+   "REB_O": [
+    1.4479924440383911,
+    -1.4614949226379395
+   ],
+   "REB_D": [
+    1.3722666501998901,
+    -2.2342169284820557
+   ]
+  },
+  "1628404": {
+   "full": [
+    0.13552913069725037,
+    -2.0211775302886963
+   ],
+   "RIM": [
+    0.0032944660633802414,
+    -2.685352087020874
+   ],
+   "REB": [
+    0.09199090301990509,
+    -1.6522786617279053
+   ],
+   "CTRL": [
+    0.06940847635269165,
+    -2.0084550380706787
+   ],
+   "REB_O": [
+    0.42514631152153015,
+    -2.074394464492798
+   ],
+   "REB_D": [
+    -0.1755194365978241,
+    -1.6025540828704834
+   ]
+  },
+  "1628415": {
+   "full": [
+    -1.222845196723938,
+    1.2953369617462158
+   ],
+   "RIM": [
+    -1.4362409114837646,
+    0.6473621726036072
+   ],
+   "REB": [
+    -0.24083974957466125,
+    0.752764880657196
+   ],
+   "CTRL": [
+    -1.3689643144607544,
+    1.3488140106201172
+   ],
+   "REB_O": [
+    -0.6265680193901062,
+    1.3679282665252686
+   ],
+   "REB_D": [
+    -0.8933268189430237,
+    0.6885966062545776
+   ]
+  },
+  "1628436": {
+   "full": [
+    -0.7179672122001648,
+    -1.3545023202896118
+   ],
+   "RIM": [
+    -0.01622771844267845,
+    1.0527150630950928
+   ],
+   "REB": [
+    -2.85487699508667,
+    -0.4246249496936798
+   ],
+   "CTRL": [
+    0.4816608130931854,
+    -1.7860312461853027
+   ],
+   "REB_O": [
+    -2.5873234272003174,
+    -1.5215948820114136
+   ],
+   "REB_D": [
+    -1.0446234941482544,
+    -0.03629384934902191
+   ]
+  },
+  "1628960": {
+   "full": [
+    -0.25355100631713867,
+    0.7506968975067139
+   ],
+   "RIM": [
+    -0.37996503710746765,
+    0.2906390428543091
+   ],
+   "REB": [
+    1.1104025840759277,
+    -0.12908370792865753
+   ],
+   "CTRL": [
+    -0.47588568925857544,
+    0.8171855211257935
+   ],
+   "REB_O": [
+    0.4868531823158264,
+    0.8112043142318726
+   ],
+   "REB_D": [
+    0.260738730430603,
+    -0.17457610368728638
+   ]
+  },
+  "1628964": {
+   "full": [
+    -1.6302295923233032,
+    -1.5648479461669922
+   ],
+   "RIM": [
+    -1.5780744552612305,
+    -0.9884209632873535
+   ],
+   "REB": [
+    -2.7069077491760254,
+    -0.7003366947174072
+   ],
+   "CTRL": [
+    -1.5741169452667236,
+    -1.5867252349853516
+   ],
+   "REB_O": [
+    -2.0361742973327637,
+    -1.6584051847457886
+   ],
+   "REB_D": [
+    -2.3467609882354736,
+    -0.5603014230728149
+   ]
+  },
+  "1628969": {
+   "full": [
+    -0.5103054642677307,
+    -0.4347432851791382
+   ],
+   "RIM": [
+    -0.5211768746376038,
+    -0.42982110381126404
+   ],
+   "REB": [
+    0.48959317803382874,
+    -1.3250715732574463
+   ],
+   "CTRL": [
+    -0.6965417861938477,
+    -0.3688432276248932
+   ],
+   "REB_O": [
+    -0.020355908200144768,
+    -0.4681249260902405
+   ],
+   "REB_D": [
+    -0.06148999184370041,
+    -1.2842814922332764
+   ]
+  },
+  "1628970": {
+   "full": [
+    0.7269110083580017,
+    -1.7192330360412598
+   ],
+   "RIM": [
+    0.697852611541748,
+    -1.7133762836456299
+   ],
+   "REB": [
+    0.8255046010017395,
+    -1.1953846216201782
+   ],
+   "CTRL": [
+    0.5645426511764526,
+    -1.6961408853530884
+   ],
+   "REB_O": [
+    1.0771840810775757,
+    -1.6902908086776733
+   ],
+   "REB_D": [
+    0.49548444151878357,
+    -1.2254281044006348
+   ]
+  },
+  "1628973": {
+   "full": [
+    2.6251578330993652,
+    1.349079966545105
+   ],
+   "RIM": [
+    2.574063539505005,
+    0.6768215298652649
+   ],
+   "REB": [
+    4.228186130523682,
+    0.6761295199394226
+   ],
+   "CTRL": [
+    2.4709410667419434,
+    1.3691505193710327
+   ],
+   "REB_O": [
+    3.3533027172088623,
+    1.3498247861862183
+   ],
+   "REB_D": [
+    3.407874584197998,
+    0.6363498568534851
+   ]
+  },
+  "1628976": {
+   "full": [
+    -1.1277176141738892,
+    -4.461094856262207
+   ],
+   "RIM": [
+    -0.8778356909751892,
+    -3.4373984336853027
+   ],
+   "REB": [
+    -1.9821211099624634,
+    -1.781303882598877
+   ],
+   "CTRL": [
+    -0.7317610383033752,
+    -4.624935626983643
+   ],
+   "REB_O": [
+    -1.7994725704193115,
+    -4.260653972625732
+   ],
+   "REB_D": [
+    -1.2319501638412476,
+    -1.766830325126648
+   ]
+  },
+  "1628983": {
+   "full": [
+    5.170778751373291,
+    -0.4613327980041504
+   ],
+   "RIM": [
+    5.191490173339844,
+    -0.4422172009944916
+   ],
+   "REB": [
+    6.221790790557861,
+    -0.8439205884933472
+   ],
+   "CTRL": [
+    5.010442733764648,
+    -0.48371222615242004
+   ],
+   "REB_O": [
+    5.781254768371582,
+    -0.4254404902458191
+   ],
+   "REB_D": [
+    5.562623023986816,
+    -0.9128919243812561
+   ]
+  },
+  "1628989": {
+   "full": [
+    -2.5716254711151123,
+    -0.9676485061645508
+   ],
+   "RIM": [
+    -2.5955755710601807,
+    -1.1185461282730103
+   ],
+   "REB": [
+    -1.5813093185424805,
+    -1.3946653604507446
+   ],
+   "CTRL": [
+    -2.6967854499816895,
+    -0.9201587438583374
+   ],
+   "REB_O": [
+    -1.84122633934021,
+    -0.9117100238800049
+   ],
+   "REB_D": [
+    -2.3599061965942383,
+    -1.4294929504394531
+   ]
+  },
+  "1628991": {
+   "full": [
+    -2.1149632930755615,
+    -2.5370490550994873
+   ],
+   "RIM": [
+    -1.8918246030807495,
+    -0.9316472411155701
+   ],
+   "REB": [
+    -1.628716230392456,
+    -2.009258270263672
+   ],
+   "CTRL": [
+    -2.055527925491333,
+    -2.5566041469573975
+   ],
+   "REB_O": [
+    -1.5263108015060425,
+    -2.5405027866363525
+   ],
+   "REB_D": [
+    -2.1973583698272705,
+    -2.0417277812957764
+   ]
+  },
+  "1628997": {
+   "full": [
+    -2.2493250370025635,
+    -1.0785118341445923
+   ],
+   "RIM": [
+    -2.3871748447418213,
+    -1.432342290878296
+   ],
+   "REB": [
+    -1.6804572343826294,
+    -1.2854481935501099
+   ],
+   "CTRL": [
+    -2.2860915660858154,
+    -1.063633680343628
+   ],
+   "REB_O": [
+    -1.751617670059204,
+    -1.0540072917938232
+   ],
+   "REB_D": [
+    -2.186805009841919,
+    -1.3052475452423096
+   ]
+  },
+  "1629001": {
+   "full": [
+    -0.9572556018829346,
+    -1.2181252241134644
+   ],
+   "RIM": [
+    -1.1138997077941895,
+    -1.7465003728866577
+   ],
+   "REB": [
+    -0.6324193477630615,
+    -1.504391074180603
+   ],
+   "CTRL": [
+    -1.1073380708694458,
+    -1.167352318763733
+   ],
+   "REB_O": [
+    -0.5182477831840515,
+    -1.2232136726379395
+   ],
+   "REB_D": [
+    -1.0829854011535645,
+    -1.4948725700378418
+   ]
+  },
+  "1629004": {
+   "full": [
+    -2.5040886402130127,
+    2.290908098220825
+   ],
+   "RIM": [
+    -2.7449052333831787,
+    1.6878050565719604
+   ],
+   "REB": [
+    -1.8539400100708008,
+    1.6772557497024536
+   ],
+   "CTRL": [
+    -2.6564958095550537,
+    2.3474624156951904
+   ],
+   "REB_O": [
+    -2.0322659015655518,
+    2.4017765522003174
+   ],
+   "REB_D": [
+    -2.3749403953552246,
+    1.592607855796814
+   ]
+  },
+  "1629006": {
+   "full": [
+    -1.7527447938919067,
+    0.13760055601596832
+   ],
+   "RIM": [
+    -1.8636751174926758,
+    -0.10787405073642731
+   ],
+   "REB": [
+    -2.0994789600372314,
+    -0.3896576762199402
+   ],
+   "CTRL": [
+    -1.883315086364746,
+    0.2137027531862259
+   ],
+   "REB_O": [
+    -1.8936740159988403,
+    0.018733609467744827
+   ],
+   "REB_D": [
+    -1.9545882940292358,
+    -0.25609511137008667
+   ]
+  },
+  "1629008": {
+   "full": [
+    0.19920042157173157,
+    0.11241898685693741
+   ],
+   "RIM": [
+    0.04462316259741783,
+    -0.6202210783958435
+   ],
+   "REB": [
+    0.541300892829895,
+    0.5813388228416443
+   ],
+   "CTRL": [
+    0.04816987365484238,
+    0.1645278036594391
+   ],
+   "REB_O": [
+    0.7304304838180542,
+    0.2586020529270172
+   ],
+   "REB_D": [
+    0.041718147695064545,
+    0.4327200949192047
+   ]
+  },
+  "1629011": {
+   "full": [
+    1.0402579307556152,
+    -2.75471830368042
+   ],
+   "RIM": [
+    1.1394814252853394,
+    -1.8894891738891602
+   ],
+   "REB": [
+    -3.183467149734497,
+    -1.096221685409546
+   ],
+   "CTRL": [
+    1.5324984788894653,
+    -2.866454601287842
+   ],
+   "REB_O": [
+    -3.1554453372955322,
+    -2.981924057006836
+   ],
+   "REB_D": [
+    0.8767392039299011,
+    -1.114871859550476
+   ]
+  },
+  "1629012": {
+   "full": [
+    -0.13121572136878967,
+    0.877727210521698
+   ],
+   "RIM": [
+    -0.28803950548171997,
+    0.348084956407547
+   ],
+   "REB": [
+    1.304935097694397,
+    -0.13995371758937836
+   ],
+   "CTRL": [
+    -0.3162299394607544,
+    0.9370625019073486
+   ],
+   "REB_O": [
+    0.5099939107894897,
+    0.9020422101020813
+   ],
+   "REB_D": [
+    0.566991925239563,
+    -0.16565999388694763
+   ]
+  },
+  "1629013": {
+   "full": [
+    -1.6032257080078125,
+    0.87939453125
+   ],
+   "RIM": [
+    -1.6953098773956299,
+    0.5689435601234436
+   ],
+   "REB": [
+    -0.6549390554428101,
+    0.24899539351463318
+   ],
+   "CTRL": [
+    -1.7144668102264404,
+    0.9193742871284485
+   ],
+   "REB_O": [
+    -1.0763808488845825,
+    0.9871218800544739
+   ],
+   "REB_D": [
+    -1.2806185483932495,
+    0.16666260361671448
+   ]
+  },
+  "1629014": {
+   "full": [
+    0.038524478673934937,
+    2.9833009243011475
+   ],
+   "RIM": [
+    -0.03589789941906929,
+    2.5165562629699707
+   ],
+   "REB": [
+    1.3226206302642822,
+    2.2316393852233887
+   ],
+   "CTRL": [
+    -0.159540057182312,
+    3.0543036460876465
+   ],
+   "REB_O": [
+    0.6775398254394531,
+    3.0328710079193115
+   ],
+   "REB_D": [
+    0.5746240615844727,
+    2.1760001182556152
+   ]
+  },
+  "1629021": {
+   "full": [
+    -0.4874855577945709,
+    -1.5003288984298706
+   ],
+   "RIM": [
+    -0.5634630918502808,
+    -1.8583252429962158
+   ],
+   "REB": [
+    -1.045534610748291,
+    -0.2791411578655243
+   ],
+   "CTRL": [
+    -0.1886880099773407,
+    -1.6312153339385986
+   ],
+   "REB_O": [
+    -0.9156924486160278,
+    -1.4449280500411987
+   ],
+   "REB_D": [
+    -0.6329149603843689,
+    -0.31225690245628357
+   ]
+  },
+  "1629023": {
+   "full": [
+    -2.2054340839385986,
+    -1.285132884979248
+   ],
+   "RIM": [
+    -2.1638176441192627,
+    -0.8918853402137756
+   ],
+   "REB": [
+    -2.3040249347686768,
+    -0.7587476372718811
+   ],
+   "CTRL": [
+    -2.2770791053771973,
+    -1.2623558044433594
+   ],
+   "REB_O": [
+    -2.171933650970459,
+    -1.340958833694458
+   ],
+   "REB_D": [
+    -2.3346636295318604,
+    -0.7073870897293091
+   ]
+  },
+  "1629026": {
+   "full": [
+    -0.19178809225559235,
+    -1.2251381874084473
+   ],
+   "RIM": [
+    -0.34223300218582153,
+    -1.7487415075302124
+   ],
+   "REB": [
+    -0.8396925926208496,
+    -0.9655718803405762
+   ],
+   "CTRL": [
+    -0.16001896560192108,
+    -1.2360478639602661
+   ],
+   "REB_O": [
+    -0.624392569065094,
+    -1.235315203666687
+   ],
+   "REB_D": [
+    -0.41616544127464294,
+    -0.9559317231178284
+   ]
+  },
+  "1629027": {
+   "full": [
+    1.555384635925293,
+    1.3481773138046265
+   ],
+   "RIM": [
+    1.3712987899780273,
+    0.4862343668937683
+   ],
+   "REB": [
+    3.7100844383239746,
+    0.4823075532913208
+   ],
+   "CTRL": [
+    1.2831538915634155,
+    1.3963273763656616
+   ],
+   "REB_O": [
+    2.624922513961792,
+    1.3949159383773804
+   ],
+   "REB_D": [
+    2.468289375305176,
+    0.4018217921257019
+   ]
+  },
+  "1629028": {
+   "full": [
+    -2.0664167404174805,
+    -0.081569142639637
+   ],
+   "RIM": [
+    -1.6903918981552124,
+    1.062842845916748
+   ],
+   "REB": [
+    -3.5801053047180176,
+    0.2773677706718445
+   ],
+   "CTRL": [
+    -1.0358177423477173,
+    -0.459076464176178
+   ],
+   "REB_O": [
+    -3.46657395362854,
+    -0.6009714007377625
+   ],
+   "REB_D": [
+    -2.217700481414795,
+    0.8880605101585388
+   ]
+  },
+  "1629029": {
+   "full": [
+    5.212025165557861,
+    -1.9010577201843262
+   ],
+   "RIM": [
+    5.046136379241943,
+    -2.3521389961242676
+   ],
+   "REB": [
+    5.476845741271973,
+    -1.6008920669555664
+   ],
+   "CTRL": [
+    4.986537456512451,
+    -1.9310222864151
+   ],
+   "REB_O": [
+    6.1229071617126465,
+    -1.8158154487609863
+   ],
+   "REB_D": [
+    4.671673774719238,
+    -1.6537137031555176
+   ]
+  },
+  "1629057": {
+   "full": [
+    0.05829676240682602,
+    -3.618229627609253
+   ],
+   "RIM": [
+    0.4443821310997009,
+    -1.2247445583343506
+   ],
+   "REB": [
+    -2.5455870628356934,
+    -2.165726661682129
+   ],
+   "CTRL": [
+    0.4353596866130829,
+    -3.6901345252990723
+   ],
+   "REB_O": [
+    -2.5610158443450928,
+    -3.843912124633789
+   ],
+   "REB_D": [
+    -0.16743312776088715,
+    -1.8460444211959839
+   ]
+  },
+  "1629060": {
+   "full": [
+    -0.9009929895401001,
+    2.026902914047241
+   ],
+   "RIM": [
+    -1.0171064138412476,
+    1.6594538688659668
+   ],
+   "REB": [
+    -0.34286120533943176,
+    2.1777825355529785
+   ],
+   "CTRL": [
+    -1.0099238157272339,
+    2.0660815238952637
+   ],
+   "REB_O": [
+    -0.34053847193717957,
+    2.209902048110962
+   ],
+   "REB_D": [
+    -0.9098420739173889,
+    1.9928061962127686
+   ]
+  },
+  "1629111": {
+   "full": [
+    -0.7585481405258179,
+    0.1605808287858963
+   ],
+   "RIM": [
+    -0.44373607635498047,
+    0.8712974190711975
+   ],
+   "REB": [
+    -3.9009382724761963,
+    1.7349153757095337
+   ],
+   "CTRL": [
+    -0.12035587430000305,
+    -0.10667142271995544
+   ],
+   "REB_O": [
+    -3.467505931854248,
+    0.19230613112449646
+   ],
+   "REB_D": [
+    -1.1870845556259155,
+    1.8202468156814575
+   ]
+  },
+  "1629130": {
+   "full": [
+    -0.5297649502754211,
+    -0.5364493131637573
+   ],
+   "RIM": [
+    -0.6772741675376892,
+    -1.1680172681808472
+   ],
+   "REB": [
+    0.9843094944953918,
+    -1.3349920511245728
+   ],
+   "CTRL": [
+    -0.6139285564422607,
+    -0.5106079578399658
+   ],
+   "REB_O": [
+    0.33127284049987793,
+    -0.45288217067718506
+   ],
+   "REB_D": [
+    -0.01595555804669857,
+    -1.3973989486694336
+   ]
+  },
+  "1629614": {
+   "full": [
+    1.1242046356201172,
+    1.1694241762161255
+   ],
+   "RIM": [
+    0.9962102770805359,
+    0.7071693539619446
+   ],
+   "REB": [
+    2.9908196926116943,
+    0.4452091455459595
+   ],
+   "CTRL": [
+    0.9640882015228271,
+    1.196540117263794
+   ],
+   "REB_O": [
+    2.0553133487701416,
+    1.2412006855010986
+   ],
+   "REB_D": [
+    1.8753103017807007,
+    0.3718112111091614
+   ]
+  },
+  "1629622": {
+   "full": [
+    -1.3595103025436401,
+    1.5227917432785034
+   ],
+   "RIM": [
+    -1.5408778190612793,
+    1.0526738166809082
+   ],
+   "REB": [
+    -0.8165268898010254,
+    1.7519510984420776
+   ],
+   "CTRL": [
+    -1.315661907196045,
+    1.5110944509506226
+   ],
+   "REB_O": [
+    -0.9039546251296997,
+    1.5857038497924805
+   ],
+   "REB_D": [
+    -1.262891411781311,
+    1.6946179866790771
+   ]
+  },
+  "1629627": {
+   "full": [
+    2.31573486328125,
+    -3.025193691253662
+   ],
+   "RIM": [
+    2.201364755630493,
+    -3.358074903488159
+   ],
+   "REB": [
+    1.8868279457092285,
+    -2.8771731853485107
+   ],
+   "CTRL": [
+    2.197903633117676,
+    -3.0282516479492188
+   ],
+   "REB_O": [
+    2.0524797439575195,
+    -3.110046863555908
+   ],
+   "REB_D": [
+    2.161383867263794,
+    -2.8018174171447754
+   ]
+  },
+  "1629628": {
+   "full": [
+    0.20920296013355255,
+    0.566051185131073
+   ],
+   "RIM": [
+    0.11467583477497101,
+    0.18948854506015778
+   ],
+   "REB": [
+    0.26014378666877747,
+    0.5649024844169617
+   ],
+   "CTRL": [
+    0.016747118905186653,
+    0.625515341758728
+   ],
+   "REB_O": [
+    0.4709923565387726,
+    0.5464855432510376
+   ],
+   "REB_D": [
+    -0.001611783867701888,
+    0.585073709487915
+   ]
+  },
+  "1629630": {
+   "full": [
+    0.9347430467605591,
+    1.0114332437515259
+   ],
+   "RIM": [
+    0.7097213268280029,
+    0.19329361617565155
+   ],
+   "REB": [
+    2.7612531185150146,
+    0.22189296782016754
+   ],
+   "CTRL": [
+    0.5983666777610779,
+    1.093058705329895
+   ],
+   "REB_O": [
+    2.007873773574829,
+    1.0514776706695557
+   ],
+   "REB_D": [
+    1.5864471197128296,
+    0.15858858823776245
+   ]
+  },
+  "1629631": {
+   "full": [
+    -2.3860890865325928,
+    1.9454677104949951
+   ],
+   "RIM": [
+    -2.599135160446167,
+    1.3250651359558105
+   ],
+   "REB": [
+    -1.7922933101654053,
+    2.0230910778045654
+   ],
+   "CTRL": [
+    -2.5192456245422363,
+    1.9859166145324707
+   ],
+   "REB_O": [
+    -1.8653757572174072,
+    2.141221284866333
+   ],
+   "REB_D": [
+    -2.3220176696777344,
+    1.8340859413146973
+   ]
+  },
+  "1629632": {
+   "full": [
+    -1.0049375295639038,
+    2.195012092590332
+   ],
+   "RIM": [
+    -1.1044715642929077,
+    1.7010414600372314
+   ],
+   "REB": [
+    0.4343240559101105,
+    1.916812777519226
+   ],
+   "CTRL": [
+    -1.2176085710525513,
+    2.2525739669799805
+   ],
+   "REB_O": [
+    -0.046321697533130646,
+    2.3692991733551025
+   ],
+   "REB_D": [
+    -0.5650182366371155,
+    1.7833174467086792
+   ]
+  },
+  "1629636": {
+   "full": [
+    1.127649188041687,
+    2.4138412475585938
+   ],
+   "RIM": [
+    1.0618456602096558,
+    1.8712565898895264
+   ],
+   "REB": [
+    3.115785837173462,
+    1.6266934871673584
+   ],
+   "CTRL": [
+    0.876396894454956,
+    2.4616901874542236
+   ],
+   "REB_O": [
+    2.047980785369873,
+    2.5241668224334717
+   ],
+   "REB_D": [
+    1.9820003509521484,
+    1.5118961334228516
+   ]
+  },
+  "1629637": {
+   "full": [
+    -1.389196753501892,
+    -2.980881929397583
+   ],
+   "RIM": [
+    -1.0543047189712524,
+    -1.5220537185668945
+   ],
+   "REB": [
+    -2.3343567848205566,
+    -2.2845842838287354
+   ],
+   "CTRL": [
+    -0.6245627999305725,
+    -3.258178234100342
+   ],
+   "REB_O": [
+    -2.0564160346984863,
+    -3.142282724380493
+   ],
+   "REB_D": [
+    -1.6896072626113892,
+    -2.050947427749634
+   ]
+  },
+  "1629638": {
+   "full": [
+    0.33056825399398804,
+    -0.20844244956970215
+   ],
+   "RIM": [
+    0.22084325551986694,
+    -1.0462769269943237
+   ],
+   "REB": [
+    1.591392159461975,
+    -1.1824777126312256
+   ],
+   "CTRL": [
+    0.1682543307542801,
+    -0.14890950918197632
+   ],
+   "REB_O": [
+    0.8821665644645691,
+    -0.18867194652557373
+   ],
+   "REB_D": [
+    0.9622493386268616,
+    -1.221484899520874
+   ]
+  },
+  "1629639": {
+   "full": [
+    2.0729784965515137,
+    1.1783746480941772
+   ],
+   "RIM": [
+    2.007305145263672,
+    0.7664709687232971
+   ],
+   "REB": [
+    3.021792411804199,
+    0.8952592611312866
+   ],
+   "CTRL": [
+    1.822737216949463,
+    1.2316699028015137
+   ],
+   "REB_O": [
+    2.8357114791870117,
+    1.2202774286270142
+   ],
+   "REB_D": [
+    2.228039503097534,
+    0.8531513214111328
+   ]
+  },
+  "1629640": {
+   "full": [
+    0.2990400493144989,
+    -0.6075579524040222
+   ],
+   "RIM": [
+    0.16272975504398346,
+    -1.2400109767913818
+   ],
+   "REB": [
+    -0.9406120181083679,
+    -0.16410663723945618
+   ],
+   "CTRL": [
+    0.08432982861995697,
+    -0.5349041223526001
+   ],
+   "REB_O": [
+    -0.6368451714515686,
+    -0.6433761119842529
+   ],
+   "REB_D": [
+    -0.0095271160826087,
+    -0.14923495054244995
+   ]
+  },
+  "1629652": {
+   "full": [
+    -2.5589420795440674,
+    0.2589664161205292
+   ],
+   "RIM": [
+    -2.745882272720337,
+    -0.1362922191619873
+   ],
+   "REB": [
+    -2.1687002182006836,
+    0.019376415759325027
+   ],
+   "CTRL": [
+    -2.5761353969573975,
+    0.26528432965278625
+   ],
+   "REB_O": [
+    -2.256971836090088,
+    0.3044150471687317
+   ],
+   "REB_D": [
+    -2.4869863986968994,
+    -0.015797704458236694
+   ]
+  },
+  "1629655": {
+   "full": [
+    -1.0581564903259277,
+    -4.048028469085693
+   ],
+   "RIM": [
+    -0.5844712853431702,
+    -1.288297414779663
+   ],
+   "REB": [
+    -3.0668728351593018,
+    -2.3835315704345703
+   ],
+   "CTRL": [
+    -0.06145693361759186,
+    -4.397206783294678
+   ],
+   "REB_O": [
+    -2.8540828227996826,
+    -3.880061388015747
+   ],
+   "REB_D": [
+    -1.3195602893829346,
+    -2.3147037029266357
+   ]
+  },
+  "1629656": {
+   "full": [
+    -1.7604219913482666,
+    -0.7473813891410828
+   ],
+   "RIM": [
+    -1.900794506072998,
+    -1.3581427335739136
+   ],
+   "REB": [
+    -0.6815685033798218,
+    -1.2740068435668945
+   ],
+   "CTRL": [
+    -1.9385403394699097,
+    -0.6931641697883606
+   ],
+   "REB_O": [
+    -0.9596728086471558,
+    -0.7028092741966248
+   ],
+   "REB_D": [
+    -1.5473644733428955,
+    -1.2903283834457397
+   ]
+  },
+  "1629660": {
+   "full": [
+    4.857188701629639,
+    0.757786214351654
+   ],
+   "RIM": [
+    4.845119953155518,
+    0.17469194531440735
+   ],
+   "REB": [
+    6.117530345916748,
+    0.23193076252937317
+   ],
+   "CTRL": [
+    4.6762614250183105,
+    0.7671153545379639
+   ],
+   "REB_O": [
+    5.266382217407227,
+    0.7602038383483887
+   ],
+   "REB_D": [
+    5.682751178741455,
+    0.19362197816371918
+   ]
+  },
+  "1629661": {
+   "full": [
+    0.22956682741641998,
+    0.002117390977218747
+   ],
+   "RIM": [
+    0.12603247165679932,
+    -0.36231452226638794
+   ],
+   "REB": [
+    1.0063763856887817,
+    -0.2867484986782074
+   ],
+   "CTRL": [
+    0.12569332122802734,
+    0.0405094139277935
+   ],
+   "REB_O": [
+    0.8187667727470398,
+    0.04239215329289436
+   ],
+   "REB_D": [
+    0.3821339011192322,
+    -0.3228055238723755
+   ]
+  },
+  "1629673": {
+   "full": [
+    -2.194345474243164,
+    1.164629578590393
+   ],
+   "RIM": [
+    -2.3546390533447266,
+    0.7112131118774414
+   ],
+   "REB": [
+    -0.6915189027786255,
+    0.34084948897361755
+   ],
+   "CTRL": [
+    -2.453530788421631,
+    1.2429910898208618
+   ],
+   "REB_O": [
+    -1.269879937171936,
+    1.3265591859817505
+   ],
+   "REB_D": [
+    -1.7715822458267212,
+    0.2287633717060089
+   ]
+  },
+  "1629674": {
+   "full": [
+    -1.1733084917068481,
+    -3.3784401416778564
+   ],
+   "RIM": [
+    -0.8216628432273865,
+    -1.2294162511825562
+   ],
+   "REB": [
+    -3.012273073196411,
+    -1.686773657798767
+   ],
+   "CTRL": [
+    -0.100831039249897,
+    -3.7528958320617676
+   ],
+   "REB_O": [
+    -2.7871479988098145,
+    -3.3123619556427
+   ],
+   "REB_D": [
+    -1.3642408847808838,
+    -1.444658875465393
+   ]
+  },
+  "1629675": {
+   "full": [
+    -1.6882039308547974,
+    -1.951392650604248
+   ],
+   "RIM": [
+    -1.656290054321289,
+    -1.4049394130706787
+   ],
+   "REB": [
+    -1.6107336282730103,
+    -0.8794628381729126
+   ],
+   "CTRL": [
+    -1.7722724676132202,
+    -1.9246476888656616
+   ],
+   "REB_O": [
+    -1.5163812637329102,
+    -1.9457182884216309
+   ],
+   "REB_D": [
+    -1.77558434009552,
+    -0.8995741009712219
+   ]
+  },
+  "1629680": {
+   "full": [
+    -2.648703098297119,
+    -5.261707782745361
+   ],
+   "RIM": [
+    -2.7275662422180176,
+    -5.600192546844482
+   ],
+   "REB": [
+    -2.1629576683044434,
+    -6.246330261230469
+   ],
+   "CTRL": [
+    -2.706413984298706,
+    -5.242036819458008
+   ],
+   "REB_O": [
+    -2.240652322769165,
+    -5.24026346206665
+   ],
+   "REB_D": [
+    -2.5956947803497314,
+    -6.260693550109863
+   ]
+  },
+  "1629731": {
+   "full": [
+    -1.5596078634262085,
+    -3.1518051624298096
+   ],
+   "RIM": [
+    -1.4711076021194458,
+    -2.9192686080932617
+   ],
+   "REB": [
+    -1.4390565156936646,
+    -2.6903858184814453
+   ],
+   "CTRL": [
+    -1.5077844858169556,
+    -3.1721508502960205
+   ],
+   "REB_O": [
+    -1.3343132734298706,
+    -3.1468634605407715
+   ],
+   "REB_D": [
+    -1.6616686582565308,
+    -2.703084945678711
+   ]
+  },
+  "1629750": {
+   "full": [
+    -1.3366031646728516,
+    -3.4452641010284424
+   ],
+   "RIM": [
+    -1.4830377101898193,
+    -3.8278040885925293
+   ],
+   "REB": [
+    -1.0884222984313965,
+    -3.560741901397705
+   ],
+   "CTRL": [
+    -1.4804861545562744,
+    -3.3985540866851807
+   ],
+   "REB_O": [
+    -1.0352288484573364,
+    -3.426210880279541
+   ],
+   "REB_D": [
+    -1.395354986190796,
+    -3.5752270221710205
+   ]
+  },
+  "1630162": {
+   "full": [
+    3.221832752227783,
+    -0.6647384166717529
+   ],
+   "RIM": [
+    3.143099069595337,
+    -0.8992441892623901
+   ],
+   "REB": [
+    4.37918758392334,
+    -1.0339808464050293
+   ],
+   "CTRL": [
+    2.985677719116211,
+    -0.661055326461792
+   ],
+   "REB_O": [
+    4.172356128692627,
+    -0.6349782943725586
+   ],
+   "REB_D": [
+    3.3790197372436523,
+    -1.063407301902771
+   ]
+  },
+  "1630163": {
+   "full": [
+    1.7633546590805054,
+    -0.43162813782691956
+   ],
+   "RIM": [
+    1.6008315086364746,
+    -1.517924427986145
+   ],
+   "REB": [
+    2.5195395946502686,
+    -0.7009869813919067
+   ],
+   "CTRL": [
+    1.5266107320785522,
+    -0.3702391982078552
+   ],
+   "REB_O": [
+    2.4020535945892334,
+    -0.39158815145492554
+   ],
+   "REB_D": [
+    1.8583662509918213,
+    -0.7495121955871582
+   ]
+  },
+  "1630166": {
+   "full": [
+    0.9318973422050476,
+    -0.21474133431911469
+   ],
+   "RIM": [
+    0.7968698143959045,
+    -0.5736920833587646
+   ],
+   "REB": [
+    1.2705600261688232,
+    0.05044534429907799
+   ],
+   "CTRL": [
+    0.5935137867927551,
+    -0.13713771104812622
+   ],
+   "REB_O": [
+    1.6019164323806763,
+    -0.1835913360118866
+   ],
+   "REB_D": [
+    0.6282588839530945,
+    0.019282307475805283
+   ]
+  },
+  "1630167": {
+   "full": [
+    -0.1562875509262085,
+    -1.8404133319854736
+   ],
+   "RIM": [
+    -0.34142470359802246,
+    -2.493305206298828
+   ],
+   "REB": [
+    0.12377289682626724,
+    -1.2135097980499268
+   ],
+   "CTRL": [
+    -0.10745927691459656,
+    -1.8520841598510742
+   ],
+   "REB_O": [
+    0.26953262090682983,
+    -1.8685002326965332
+   ],
+   "REB_D": [
+    -0.27224820852279663,
+    -1.205723524093628
+   ]
+  },
+  "1630168": {
+   "full": [
+    -1.4005708694458008,
+    -3.181358814239502
+   ],
+   "RIM": [
+    -1.1432160139083862,
+    -2.1339261531829834
+   ],
+   "REB": [
+    -2.241664409637451,
+    -2.208310604095459
+   ],
+   "CTRL": [
+    -0.9466001987457275,
+    -3.345566749572754
+   ],
+   "REB_O": [
+    -2.0073986053466797,
+    -3.1969878673553467
+   ],
+   "REB_D": [
+    -1.664283037185669,
+    -2.132478952407837
+   ]
+  },
+  "1630169": {
+   "full": [
+    3.291517734527588,
+    0.24695433676242828
+   ],
+   "RIM": [
+    3.3064634799957275,
+    0.09369239211082458
+   ],
+   "REB": [
+    4.192910194396973,
+    -0.22651523351669312
+   ],
+   "CTRL": [
+    3.2622244358062744,
+    0.25132468342781067
+   ],
+   "REB_O": [
+    3.5032479763031006,
+    0.25369977951049805
+   ],
+   "REB_D": [
+    3.991589069366455,
+    -0.2406700849533081
+   ]
+  },
+  "1630170": {
+   "full": [
+    0.2835274040699005,
+    -1.9879591464996338
+   ],
+   "RIM": [
+    0.13796572387218475,
+    -2.348876476287842
+   ],
+   "REB": [
+    1.369231939315796,
+    -2.6180946826934814
+   ],
+   "CTRL": [
+    0.15437203645706177,
+    -1.9702234268188477
+   ],
+   "REB_O": [
+    1.050088882446289,
+    -1.9790818691253662
+   ],
+   "REB_D": [
+    0.5646977424621582,
+    -2.6343910694122314
+   ]
+  },
+  "1630171": {
+   "full": [
+    -2.283005952835083,
+    1.206027626991272
+   ],
+   "RIM": [
+    -2.226335048675537,
+    1.3594944477081299
+   ],
+   "REB": [
+    -1.7405714988708496,
+    0.5332029461860657
+   ],
+   "CTRL": [
+    -2.380755662918091,
+    1.2521170377731323
+   ],
+   "REB_O": [
+    -1.99933660030365,
+    1.2229679822921753
+   ],
+   "REB_D": [
+    -2.0587611198425293,
+    0.5373547077178955
+   ]
+  },
+  "1630172": {
+   "full": [
+    -4.145921230316162,
+    1.2540013790130615
+   ],
+   "RIM": [
+    -4.138012886047363,
+    1.0366932153701782
+   ],
+   "REB": [
+    -3.682493209838867,
+    1.419113039970398
+   ],
+   "CTRL": [
+    -4.2263078689575195,
+    1.278801441192627
+   ],
+   "REB_O": [
+    -3.7738213539123535,
+    1.420082449913025
+   ],
+   "REB_D": [
+    -4.072151184082031,
+    1.267289638519287
+   ]
+  },
+  "1630173": {
+   "full": [
+    -1.4111859798431396,
+    -1.7437859773635864
+   ],
+   "RIM": [
+    -1.243080735206604,
+    -0.9879067540168762
+   ],
+   "REB": [
+    -3.0391573905944824,
+    -1.29936945438385
+   ],
+   "CTRL": [
+    -1.296299695968628,
+    -1.7832127809524536
+   ],
+   "REB_O": [
+    -2.7993223667144775,
+    -1.8370479345321655
+   ],
+   "REB_D": [
+    -1.7362474203109741,
+    -1.2118215560913086
+   ]
+  },
+  "1630174": {
+   "full": [
+    -1.8479268550872803,
+    -0.389568030834198
+   ],
+   "RIM": [
+    -1.9047961235046387,
+    -0.33318859338760376
+   ],
+   "REB": [
+    -1.262948751449585,
+    -0.9619066119194031
+   ],
+   "CTRL": [
+    -1.9351768493652344,
+    -0.35801976919174194
+   ],
+   "REB_O": [
+    -1.4167234897613525,
+    -0.35210299491882324
+   ],
+   "REB_D": [
+    -1.7161355018615723,
+    -0.9834087491035461
+   ]
+  },
+  "1630178": {
+   "full": [
+    2.6334047317504883,
+    -0.7880762815475464
+   ],
+   "RIM": [
+    2.5339224338531494,
+    -1.2882764339447021
+   ],
+   "REB": [
+    4.599961280822754,
+    -1.4357640743255615
+   ],
+   "CTRL": [
+    2.4234507083892822,
+    -0.7847890853881836
+   ],
+   "REB_O": [
+    3.8276073932647705,
+    -0.7611872553825378
+   ],
+   "REB_D": [
+    3.3332056999206543,
+    -1.5163291692733765
+   ]
+  },
+  "1630180": {
+   "full": [
+    1.3201698064804077,
+    -0.8029362559318542
+   ],
+   "RIM": [
+    1.1730239391326904,
+    -1.6280570030212402
+   ],
+   "REB": [
+    1.3739819526672363,
+    -0.6785239577293396
+   ],
+   "CTRL": [
+    1.1066255569458008,
+    -0.7390899062156677
+   ],
+   "REB_O": [
+    1.4656729698181152,
+    -0.8578935265541077
+   ],
+   "REB_D": [
+    1.226027488708496,
+    -0.6235048174858093
+   ]
+  },
+  "1630182": {
+   "full": [
+    -2.1995184421539307,
+    -1.5894768238067627
+   ],
+   "RIM": [
+    -2.3404622077941895,
+    -2.10977840423584
+   ],
+   "REB": [
+    -1.8239233493804932,
+    -2.666067600250244
+   ],
+   "CTRL": [
+    -2.2627406120300293,
+    -1.5682406425476074
+   ],
+   "REB_O": [
+    -2.0736827850341797,
+    -1.6673840284347534
+   ],
+   "REB_D": [
+    -1.9620296955108643,
+    -2.5658295154571533
+   ]
+  },
+  "1630183": {
+   "full": [
+    0.08922844380140305,
+    -1.7364202737808228
+   ],
+   "RIM": [
+    0.10612186044454575,
+    -1.3266592025756836
+   ],
+   "REB": [
+    0.41596680879592896,
+    -2.2345478534698486
+   ],
+   "CTRL": [
+    -0.10173780471086502,
+    -1.679526925086975
+   ],
+   "REB_O": [
+    0.4528660476207733,
+    -1.8003169298171997
+   ],
+   "REB_D": [
+    0.03646246716380119,
+    -2.157353162765503
+   ]
+  },
+  "1630188": {
+   "full": [
+    -1.0043565034866333,
+    -2.513824939727783
+   ],
+   "RIM": [
+    -0.7254795432090759,
+    -1.0743695497512817
+   ],
+   "REB": [
+    -2.3442914485931396,
+    -0.4073942005634308
+   ],
+   "CTRL": [
+    -0.6787158250808716,
+    -2.6244349479675293
+   ],
+   "REB_O": [
+    -2.2313742637634277,
+    -2.4564874172210693
+   ],
+   "REB_D": [
+    -1.1183668375015259,
+    -0.3370170295238495
+   ]
+  },
+  "1630191": {
+   "full": [
+    -1.3690377473831177,
+    -2.286494255065918
+   ],
+   "RIM": [
+    -1.0189543962478638,
+    -0.04525306820869446
+   ],
+   "REB": [
+    -2.0793614387512207,
+    -1.6121422052383423
+   ],
+   "CTRL": [
+    -1.036096453666687,
+    -2.3846542835235596
+   ],
+   "REB_O": [
+    -1.857083797454834,
+    -2.209097385406494
+   ],
+   "REB_D": [
+    -1.6011602878570557,
+    -1.6421180963516235
+   ]
+  },
+  "1630193": {
+   "full": [
+    1.7897425889968872,
+    -0.33003976941108704
+   ],
+   "RIM": [
+    1.6086448431015015,
+    -0.9607232809066772
+   ],
+   "REB": [
+    3.1976845264434814,
+    -0.8763832449913025
+   ],
+   "CTRL": [
+    1.647600769996643,
+    -0.3208734691143036
+   ],
+   "REB_O": [
+    2.712064266204834,
+    -0.30585840344429016
+   ],
+   "REB_D": [
+    2.2022674083709717,
+    -0.9088708758354187
+   ]
+  },
+  "1630194": {
+   "full": [
+    0.5321937203407288,
+    -6.117485523223877
+   ],
+   "RIM": [
+    1.1309000253677368,
+    -4.161930561065674
+   ],
+   "REB": [
+    -1.8341500759124756,
+    -5.3603105545043945
+   ],
+   "CTRL": [
+    1.0520871877670288,
+    -6.102275848388672
+   ],
+   "REB_O": [
+    -1.6279630661010742,
+    -6.557468891143799
+   ],
+   "REB_D": [
+    0.2793862521648407,
+    -4.878789901733398
+   ]
+  },
+  "1630200": {
+   "full": [
+    1.76262629032135,
+    -0.5538766384124756
+   ],
+   "RIM": [
+    1.6167734861373901,
+    -1.3760883808135986
+   ],
+   "REB": [
+    2.953052520751953,
+    -1.2653461694717407
+   ],
+   "CTRL": [
+    1.5867815017700195,
+    -0.5277208685874939
+   ],
+   "REB_O": [
+    2.4235928058624268,
+    -0.5808297395706177
+   ],
+   "REB_D": [
+    2.2279629707336426,
+    -1.2576324939727783
+   ]
+  },
+  "1630202": {
+   "full": [
+    3.1841320991516113,
+    1.7595994472503662
+   ],
+   "RIM": [
+    3.190094232559204,
+    1.0030606985092163
+   ],
+   "REB": [
+    4.199557304382324,
+    1.2914420366287231
+   ],
+   "CTRL": [
+    2.993220329284668,
+    1.8012675046920776
+   ],
+   "REB_O": [
+    3.6347262859344482,
+    1.7606518268585205
+   ],
+   "REB_D": [
+    3.7038986682891846,
+    1.2726843357086182
+   ]
+  },
+  "1630217": {
+   "full": [
+    1.7187062501907349,
+    -0.8388919234275818
+   ],
+   "RIM": [
+    1.6592161655426025,
+    -1.0544273853302002
+   ],
+   "REB": [
+    2.47445011138916,
+    -1.3780807256698608
+   ],
+   "CTRL": [
+    1.5655182600021362,
+    -0.815493643283844
+   ],
+   "REB_O": [
+    2.1528115272521973,
+    -0.8178780674934387
+   ],
+   "REB_D": [
+    1.990334391593933,
+    -1.3996530771255493
+   ]
+  },
+  "1630224": {
+   "full": [
+    -1.4838669300079346,
+    0.8445835709571838
+   ],
+   "RIM": [
+    -1.6285810470581055,
+    0.4272037744522095
+   ],
+   "REB": [
+    -0.2308395355939865,
+    0.23004350066184998
+   ],
+   "CTRL": [
+    -1.7323554754257202,
+    0.916385293006897
+   ],
+   "REB_O": [
+    -0.573280394077301,
+    0.9429389238357544
+   ],
+   "REB_D": [
+    -1.2258352041244507,
+    0.15535840392112732
+   ]
+  },
+  "1630228": {
+   "full": [
+    -0.7495132684707642,
+    -1.7353461980819702
+   ],
+   "RIM": [
+    -0.7683691382408142,
+    -1.7522075176239014
+   ],
+   "REB": [
+    -1.0184332132339478,
+    -1.5054471492767334
+   ],
+   "CTRL": [
+    -0.8610540628433228,
+    -1.7065192461013794
+   ],
+   "REB_O": [
+    -0.8573170304298401,
+    -1.7596262693405151
+   ],
+   "REB_D": [
+    -0.9150204062461853,
+    -1.4804935455322266
+   ]
+  },
+  "1630230": {
+   "full": [
+    -1.1433979272842407,
+    -0.5860692858695984
+   ],
+   "RIM": [
+    -1.307742714881897,
+    -1.4395323991775513
+   ],
+   "REB": [
+    -0.48349863290786743,
+    -0.8306270837783813
+   ],
+   "CTRL": [
+    -1.3619922399520874,
+    -0.5141445398330688
+   ],
+   "REB_O": [
+    -0.4989297389984131,
+    -0.5230554938316345
+   ],
+   "REB_D": [
+    -1.1473000049591064,
+    -0.8899644613265991
+   ]
+  },
+  "1630241": {
+   "full": [
+    -0.16135558485984802,
+    -1.0894633531570435
+   ],
+   "RIM": [
+    -0.30836862325668335,
+    -1.608217716217041
+   ],
+   "REB": [
+    0.9498593807220459,
+    -1.7361916303634644
+   ],
+   "CTRL": [
+    -0.2413722723722458,
+    -1.0687404870986938
+   ],
+   "REB_O": [
+    0.48450806736946106,
+    -1.0387502908706665
+   ],
+   "REB_D": [
+    0.24159500002861023,
+    -1.7880719900131226
+   ]
+  },
+  "1630245": {
+   "full": [
+    2.188748359680176,
+    -0.3816835284233093
+   ],
+   "RIM": [
+    2.1070587635040283,
+    -0.6998580694198608
+   ],
+   "REB": [
+    3.188340902328491,
+    -0.835627019405365
+   ],
+   "CTRL": [
+    1.975799322128296,
+    -0.362025648355484
+   ],
+   "REB_O": [
+    2.7757439613342285,
+    -0.3820766806602478
+   ],
+   "REB_D": [
+    2.569443702697754,
+    -0.8415445685386658
+   ]
+  },
+  "1630314": {
+   "full": [
+    -1.6898798942565918,
+    -0.036522623151540756
+   ],
+   "RIM": [
+    -1.7882524728775024,
+    -0.801328182220459
+   ],
+   "REB": [
+    -0.5236610174179077,
+    -0.8686119318008423
+   ],
+   "CTRL": [
+    -1.964881420135498,
+    0.04226139187812805
+   ],
+   "REB_O": [
+    -0.9169026017189026,
+    -0.008998828008770943
+   ],
+   "REB_D": [
+    -1.3632200956344604,
+    -0.8828219175338745
+   ]
+  },
+  "1630529": {
+   "full": [
+    -4.201340675354004,
+    -1.0175981521606445
+   ],
+   "RIM": [
+    -4.301918029785156,
+    -1.5883903503417969
+   ],
+   "REB": [
+    -3.678151845932007,
+    -1.3953614234924316
+   ],
+   "CTRL": [
+    -4.326125144958496,
+    -0.9570505023002625
+   ],
+   "REB_O": [
+    -3.7821085453033447,
+    -0.9225314855575562
+   ],
+   "REB_D": [
+    -4.124223232269287,
+    -1.466219186782837
+   ]
+  },
+  "1630530": {
+   "full": [
+    0.4827748239040375,
+    0.12531869113445282
+   ],
+   "RIM": [
+    0.38358789682388306,
+    -0.6034097075462341
+   ],
+   "REB": [
+    1.350408911705017,
+    -0.12371790409088135
+   ],
+   "CTRL": [
+    0.3766098618507385,
+    0.16201777756214142
+   ],
+   "REB_O": [
+    1.234716534614563,
+    0.16603584587574005
+   ],
+   "REB_D": [
+    0.5773191452026367,
+    -0.1609557420015335
+   ]
+  },
+  "1630532": {
+   "full": [
+    0.3702484369277954,
+    -2.087307929992676
+   ],
+   "RIM": [
+    0.18496477603912354,
+    -2.6790683269500732
+   ],
+   "REB": [
+    0.8362041115760803,
+    -1.749738335609436
+   ],
+   "CTRL": [
+    0.11076381802558899,
+    -2.0125036239624023
+   ],
+   "REB_O": [
+    0.9848067164421082,
+    -2.141855239868164
+   ],
+   "REB_D": [
+    0.22980308532714844,
+    -1.700380802154541
+   ]
+  },
+  "1630533": {
+   "full": [
+    -1.7948992252349854,
+    -1.164381504058838
+   ],
+   "RIM": [
+    -1.930806040763855,
+    -1.7945952415466309
+   ],
+   "REB": [
+    -1.3887923955917358,
+    -1.7389403581619263
+   ],
+   "CTRL": [
+    -1.943493127822876,
+    -1.1007205247879028
+   ],
+   "REB_O": [
+    -1.2167842388153076,
+    -1.0877759456634521
+   ],
+   "REB_D": [
+    -1.9949933290481567,
+    -1.8066121339797974
+   ]
+  },
+  "1630540": {
+   "full": [
+    -0.7078887820243835,
+    0.719782829284668
+   ],
+   "RIM": [
+    -0.7461389303207397,
+    0.5033681392669678
+   ],
+   "REB": [
+    0.45414140820503235,
+    -0.07852231711149216
+   ],
+   "CTRL": [
+    -0.8251993060112,
+    0.7554247379302979
+   ],
+   "REB_O": [
+    -0.11128010600805283,
+    0.7848724126815796
+   ],
+   "REB_D": [
+    -0.2435753047466278,
+    -0.13978303968906403
+   ]
+  },
+  "1630543": {
+   "full": [
+    -1.6823309659957886,
+    -1.6421356201171875
+   ],
+   "RIM": [
+    -1.354365587234497,
+    -0.32668548822402954
+   ],
+   "REB": [
+    -3.9550368785858154,
+    -1.173810601234436
+   ],
+   "CTRL": [
+    -1.0419816970825195,
+    -1.8743575811386108
+   ],
+   "REB_O": [
+    -3.8291730880737305,
+    -1.9743582010269165
+   ],
+   "REB_D": [
+    -1.9170445203781128,
+    -0.8108898997306824
+   ]
+  },
+  "1630545": {
+   "full": [
+    -1.436565637588501,
+    -0.21606343984603882
+   ],
+   "RIM": [
+    -1.5949312448501587,
+    -0.6750829219818115
+   ],
+   "REB": [
+    -0.46266332268714905,
+    -0.5771030187606812
+   ],
+   "CTRL": [
+    -1.6020241975784302,
+    -0.1561737358570099
+   ],
+   "REB_O": [
+    -0.683107316493988,
+    -0.12240175902843475
+   ],
+   "REB_D": [
+    -1.2704614400863647,
+    -0.6564143300056458
+   ]
+  },
+  "1630549": {
+   "full": [
+    -0.5765501260757446,
+    -3.446232557296753
+   ],
+   "RIM": [
+    -0.4345943331718445,
+    -2.6868231296539307
+   ],
+   "REB": [
+    -4.103726387023926,
+    -1.7959938049316406
+   ],
+   "CTRL": [
+    0.014383349567651749,
+    -3.6192715167999268
+   ],
+   "REB_O": [
+    -3.8631889820098877,
+    -3.574810266494751
+   ],
+   "REB_D": [
+    -0.8256610631942749,
+    -1.578753113746643
+   ]
+  },
+  "1630551": {
+   "full": [
+    0.2194141149520874,
+    -1.4794987440109253
+   ],
+   "RIM": [
+    0.2311418652534485,
+    -1.320937991142273
+   ],
+   "REB": [
+    -1.3550572395324707,
+    -1.4960744380950928
+   ],
+   "CTRL": [
+    0.01971658505499363,
+    -1.4184343814849854
+   ],
+   "REB_O": [
+    -1.031493067741394,
+    -2.003438949584961
+   ],
+   "REB_D": [
+    -0.16540569067001343,
+    -1.0443261861801147
+   ]
+  },
+  "1630552": {
+   "full": [
+    0.1407167613506317,
+    -0.9987685680389404
+   ],
+   "RIM": [
+    0.051397476345300674,
+    -1.3932057619094849
+   ],
+   "REB": [
+    0.5501213669776917,
+    -0.060311026871204376
+   ],
+   "CTRL": [
+    -0.05032835155725479,
+    -0.9589031338691711
+   ],
+   "REB_O": [
+    0.8020194172859192,
+    -1.011639952659607
+   ],
+   "REB_D": [
+    -0.039926677942276,
+    -0.0605161115527153
+   ]
+  },
+  "1630558": {
+   "full": [
+    0.8157663345336914,
+    0.931919276714325
+   ],
+   "RIM": [
+    0.6641279458999634,
+    0.3233325481414795
+   ],
+   "REB": [
+    2.426994800567627,
+    0.08778972923755646
+   ],
+   "CTRL": [
+    0.642639696598053,
+    0.9586494565010071
+   ],
+   "REB_O": [
+    1.6032179594039917,
+    0.9760005474090576
+   ],
+   "REB_D": [
+    1.4418690204620361,
+    0.035419613122940063
+   ]
+  },
+  "1630559": {
+   "full": [
+    2.507129430770874,
+    -0.20702067017555237
+   ],
+   "RIM": [
+    2.410933256149292,
+    -1.072629690170288
+   ],
+   "REB": [
+    3.7790167331695557,
+    -0.844936192035675
+   ],
+   "CTRL": [
+    2.3305323123931885,
+    -0.1769542098045349
+   ],
+   "REB_O": [
+    3.2492318153381348,
+    -0.18237608671188354
+   ],
+   "REB_D": [
+    2.9708433151245117,
+    -0.8913945555686951
+   ]
+  },
+  "1630567": {
+   "full": [
+    0.06604375690221786,
+    -3.4379947185516357
+   ],
+   "RIM": [
+    0.1448131799697876,
+    -2.828331708908081
+   ],
+   "REB": [
+    -0.8769232034683228,
+    -2.752577543258667
+   ],
+   "CTRL": [
+    0.027660708874464035,
+    -3.4274303913116455
+   ],
+   "REB_O": [
+    -0.5127050876617432,
+    -3.477943181991577
+   ],
+   "REB_D": [
+    -0.3254733085632324,
+    -2.7201054096221924
+   ]
+  },
+  "1630570": {
+   "full": [
+    -2.5888864994049072,
+    0.7694941163063049
+   ],
+   "RIM": [
+    -2.516071319580078,
+    0.9062061309814453
+   ],
+   "REB": [
+    -2.4150161743164062,
+    1.0136483907699585
+   ],
+   "CTRL": [
+    -2.7417733669281006,
+    0.8209012150764465
+   ],
+   "REB_O": [
+    -2.2495975494384766,
+    0.7990006804466248
+   ],
+   "REB_D": [
+    -2.7362918853759766,
+    0.9723343849182129
+   ]
+  },
+  "1630572": {
+   "full": [
+    -0.37187883257865906,
+    -1.8642650842666626
+   ],
+   "RIM": [
+    -0.1759827733039856,
+    -1.4072991609573364
+   ],
+   "REB": [
+    -0.9216824173927307,
+    -1.125483751296997
+   ],
+   "CTRL": [
+    -0.25905850529670715,
+    -1.9023405313491821
+   ],
+   "REB_O": [
+    -0.5789945125579834,
+    -1.9727247953414917
+   ],
+   "REB_D": [
+    -0.7245649695396423,
+    -1.0141204595565796
+   ]
+  },
+  "1630573": {
+   "full": [
+    -0.36550483107566833,
+    0.5105185508728027
+   ],
+   "RIM": [
+    -0.459850013256073,
+    0.24588139355182648
+   ],
+   "REB": [
+    0.19209058582782745,
+    0.5192396640777588
+   ],
+   "CTRL": [
+    -0.42159706354141235,
+    0.5289245843887329
+   ],
+   "REB_O": [
+    0.13161121308803558,
+    0.5558467507362366
+   ],
+   "REB_D": [
+    -0.31117773056030273,
+    0.47416648268699646
+   ]
+  },
+  "1630577": {
+   "full": [
+    -0.905039370059967,
+    -0.4179970622062683
+   ],
+   "RIM": [
+    -0.9445673227310181,
+    -0.7017975449562073
+   ],
+   "REB": [
+    -0.4267341196537018,
+    -0.13797685503959656
+   ],
+   "CTRL": [
+    -0.947567343711853,
+    -0.40281933546066284
+   ],
+   "REB_O": [
+    -0.3446528911590576,
+    -0.3494037687778473
+   ],
+   "REB_D": [
+    -0.9667456746101379,
+    -0.2111196219921112
+   ]
+  },
+  "1630578": {
+   "full": [
+    1.4898830652236938,
+    -3.1382334232330322
+   ],
+   "RIM": [
+    1.7100670337677002,
+    -1.9253028631210327
+   ],
+   "REB": [
+    -0.835777759552002,
+    -1.6789088249206543
+   ],
+   "CTRL": [
+    2.154388189315796,
+    -3.286917209625244
+   ],
+   "REB_O": [
+    -0.3349084258079529,
+    -3.047529697418213
+   ],
+   "REB_D": [
+    0.8772843480110168,
+    -1.7035781145095825
+   ]
+  },
+  "1630581": {
+   "full": [
+    -0.32463666796684265,
+    0.729127824306488
+   ],
+   "RIM": [
+    -0.4171448349952698,
+    0.41581228375434875
+   ],
+   "REB": [
+    0.016800424084067345,
+    1.0648014545440674
+   ],
+   "CTRL": [
+    -0.6208881139755249,
+    0.7991634011268616
+   ],
+   "REB_O": [
+    0.2741345167160034,
+    0.7643830180168152
+   ],
+   "REB_D": [
+    -0.5380225777626038,
+    1.027723789215088
+   ]
+  },
+  "1630590": {
+   "full": [
+    -0.6306843757629395,
+    0.5425055623054504
+   ],
+   "RIM": [
+    -0.8162295818328857,
+    -0.059378743171691895
+   ],
+   "REB": [
+    -0.315041720867157,
+    -0.4015956521034241
+   ],
+   "CTRL": [
+    -0.879638671875,
+    0.6489052176475525
+   ],
+   "REB_O": [
+    -0.3285059332847595,
+    0.5124559998512268
+   ],
+   "REB_D": [
+    -0.6709092259407043,
+    -0.3648902475833893
+   ]
+  },
+  "1630591": {
+   "full": [
+    -0.10347330570220947,
+    -3.9876253604888916
+   ],
+   "RIM": [
+    -0.20724175870418549,
+    -4.329952239990234
+   ],
+   "REB": [
+    0.8008697032928467,
+    -4.632280349731445
+   ],
+   "CTRL": [
+    -0.27535638213157654,
+    -3.9710724353790283
+   ],
+   "REB_O": [
+    0.6447217464447021,
+    -3.8994669914245605
+   ],
+   "REB_D": [
+    0.01743096485733986,
+    -4.713001251220703
+   ]
+  },
+  "1630595": {
+   "full": [
+    3.054349899291992,
+    -2.0321204662323
+   ],
+   "RIM": [
+    3.0679283142089844,
+    -1.957992672920227
+   ],
+   "REB": [
+    3.8874688148498535,
+    -2.021496534347534
+   ],
+   "CTRL": [
+    2.829730272293091,
+    -2.04404878616333
+   ],
+   "REB_O": [
+    3.9733588695526123,
+    -2.007449150085449
+   ],
+   "REB_D": [
+    2.9796302318573,
+    -2.043034315109253
+   ]
+  },
+  "1630596": {
+   "full": [
+    1.5593045949935913,
+    -3.3782355785369873
+   ],
+   "RIM": [
+    1.8546706438064575,
+    -1.949229121208191
+   ],
+   "REB": [
+    0.6565309166908264,
+    -2.357470750808716
+   ],
+   "CTRL": [
+    1.8491755723953247,
+    -3.412304162979126
+   ],
+   "REB_O": [
+    0.9323830604553223,
+    -3.3890838623046875
+   ],
+   "REB_D": [
+    1.2219208478927612,
+    -2.309011936187744
+   ]
+  },
+  "1630598": {
+   "full": [
+    -0.9750610589981079,
+    0.4018377661705017
+   ],
+   "RIM": [
+    -1.0085562467575073,
+    0.20711256563663483
+   ],
+   "REB": [
+    -0.23724600672721863,
+    0.08232239633798599
+   ],
+   "CTRL": [
+    -1.1418135166168213,
+    0.47737622261047363
+   ],
+   "REB_O": [
+    -0.32643046975135803,
+    0.451981782913208
+   ],
+   "REB_D": [
+    -0.9178146123886108,
+    0.03328714147210121
+   ]
+  },
+  "1630611": {
+   "full": [
+    -1.3243259191513062,
+    0.1944793313741684
+   ],
+   "RIM": [
+    -1.2950124740600586,
+    0.10194980353116989
+   ],
+   "REB": [
+    -1.7046682834625244,
+    0.348227858543396
+   ],
+   "CTRL": [
+    -1.4931436777114868,
+    0.2750150263309479
+   ],
+   "REB_O": [
+    -1.4400537014007568,
+    0.09405256807804108
+   ],
+   "REB_D": [
+    -1.5899845361709595,
+    0.448379784822464
+   ]
+  },
+  "1630643": {
+   "full": [
+    -3.269073963165283,
+    -2.5009567737579346
+   ],
+   "RIM": [
+    -2.8156464099884033,
+    0.19832506775856018
+   ],
+   "REB": [
+    -3.317471981048584,
+    -1.0011590719223022
+   ],
+   "CTRL": [
+    -2.9352104663848877,
+    -2.6256790161132812
+   ],
+   "REB_O": [
+    -3.137410879135132,
+    -2.4327430725097656
+   ],
+   "REB_D": [
+    -3.4509763717651367,
+    -1.1218210458755493
+   ]
+  },
+  "1630692": {
+   "full": [
+    0.6237106919288635,
+    -1.201744556427002
+   ],
+   "RIM": [
+    0.4490719139575958,
+    -2.0590877532958984
+   ],
+   "REB": [
+    -0.6310165524482727,
+    -1.7049802541732788
+   ],
+   "CTRL": [
+    0.479697048664093,
+    -1.1581833362579346
+   ],
+   "REB_O": [
+    -0.30861350893974304,
+    -1.6095194816589355
+   ],
+   "REB_D": [
+    0.3525610566139221,
+    -1.3038579225540161
+   ]
+  },
+  "1630700": {
+   "full": [
+    -1.4673362970352173,
+    -4.109687328338623
+   ],
+   "RIM": [
+    -1.6111502647399902,
+    -4.658220291137695
+   ],
+   "REB": [
+    -2.70253849029541,
+    -4.72062873840332
+   ],
+   "CTRL": [
+    -1.275098204612732,
+    -4.155728816986084
+   ],
+   "REB_O": [
+    -2.388188123703003,
+    -4.561190605163574
+   ],
+   "REB_D": [
+    -1.800970196723938,
+    -4.307107448577881
+   ]
+  },
+  "1630703": {
+   "full": [
+    -3.450110912322998,
+    1.9768953323364258
+   ],
+   "RIM": [
+    -3.7519822120666504,
+    1.188780426979065
+   ],
+   "REB": [
+    -2.451402425765991,
+    1.3106112480163574
+   ],
+   "CTRL": [
+    -3.728668689727783,
+    2.0759735107421875
+   ],
+   "REB_O": [
+    -2.771566152572632,
+    2.1505985260009766
+   ],
+   "REB_D": [
+    -3.21454119682312,
+    1.1800518035888672
+   ]
+  },
+  "1631094": {
+   "full": [
+    -0.10306145995855331,
+    0.13174086809158325
+   ],
+   "RIM": [
+    -0.10637037456035614,
+    0.10634738206863403
+   ],
+   "REB": [
+    0.29754695296287537,
+    0.7168834805488586
+   ],
+   "CTRL": [
+    -0.2014240175485611,
+    0.15338639914989471
+   ],
+   "REB_O": [
+    0.5010066628456116,
+    0.22262585163116455
+   ],
+   "REB_D": [
+    -0.26108092069625854,
+    0.6175092458724976
+   ]
+  },
+  "1631095": {
+   "full": [
+    0.3281252682209015,
+    -1.2626152038574219
+   ],
+   "RIM": [
+    0.311463862657547,
+    -0.95356684923172
+   ],
+   "REB": [
+    0.37305915355682373,
+    -1.080307126045227
+   ],
+   "CTRL": [
+    0.14852650463581085,
+    -1.209562063217163
+   ],
+   "REB_O": [
+    0.6112645864486694,
+    -1.228737235069275
+   ],
+   "REB_D": [
+    0.10085959732532501,
+    -1.1172690391540527
+   ]
+  },
+  "1631096": {
+   "full": [
+    0.5777299404144287,
+    -5.737392425537109
+   ],
+   "RIM": [
+    1.0352873802185059,
+    -3.1949000358581543
+   ],
+   "REB": [
+    -0.31716009974479675,
+    -4.376639366149902
+   ],
+   "CTRL": [
+    0.6865332126617432,
+    -5.756032943725586
+   ],
+   "REB_O": [
+    -0.19879312813282013,
+    -5.619091033935547
+   ],
+   "REB_D": [
+    0.3939991891384125,
+    -4.397749900817871
+   ]
+  },
+  "1631097": {
+   "full": [
+    -1.8472158908843994,
+    1.6489286422729492
+   ],
+   "RIM": [
+    -2.060512065887451,
+    0.9663562774658203
+   ],
+   "REB": [
+    -1.6404364109039307,
+    1.5705195665359497
+   ],
+   "CTRL": [
+    -2.108686685562134,
+    1.74930739402771
+   ],
+   "REB_O": [
+    -1.4938942193984985,
+    1.6508854627609253
+   ],
+   "REB_D": [
+    -1.9960377216339111,
+    1.5643924474716187
+   ]
+  },
+  "1631099": {
+   "full": [
+    -2.4064953327178955,
+    -1.0788367986679077
+   ],
+   "RIM": [
+    -2.1926655769348145,
+    -0.202266663312912
+   ],
+   "REB": [
+    -2.4467644691467285,
+    -1.0832905769348145
+   ],
+   "CTRL": [
+    -2.6111056804656982,
+    -0.9953598976135254
+   ],
+   "REB_O": [
+    -2.196010112762451,
+    -1.0622127056121826
+   ],
+   "REB_D": [
+    -2.649844169616699,
+    -1.1014721393585205
+   ]
+  },
+  "1631105": {
+   "full": [
+    2.16343355178833,
+    -3.194606304168701
+   ],
+   "RIM": [
+    2.3945822715759277,
+    -1.8092900514602661
+   ],
+   "REB": [
+    -1.1772661209106445,
+    -1.0103133916854858
+   ],
+   "CTRL": [
+    2.798948287963867,
+    -3.309669017791748
+   ],
+   "REB_O": [
+    -0.9363313913345337,
+    -3.306710720062256
+   ],
+   "REB_D": [
+    1.7516275644302368,
+    -0.9894653558731079
+   ]
+  },
+  "1631106": {
+   "full": [
+    -1.7181999683380127,
+    -1.7395942211151123
+   ],
+   "RIM": [
+    -1.6232073307037354,
+    -1.3996552228927612
+   ],
+   "REB": [
+    -3.0624794960021973,
+    -1.6215450763702393
+   ],
+   "CTRL": [
+    -1.9852182865142822,
+    -1.6325773000717163
+   ],
+   "REB_O": [
+    -2.700793743133545,
+    -2.1374926567077637
+   ],
+   "REB_D": [
+    -2.100428342819214,
+    -1.2360390424728394
+   ]
+  },
+  "1631108": {
+   "full": [
+    -2.7087531089782715,
+    1.4430315494537354
+   ],
+   "RIM": [
+    -2.718614101409912,
+    1.325811743736267
+   ],
+   "REB": [
+    -1.6409860849380493,
+    1.2002010345458984
+   ],
+   "CTRL": [
+    -2.771855115890503,
+    1.458046317100525
+   ],
+   "REB_O": [
+    -1.9204868078231812,
+    1.7806615829467773
+   ],
+   "REB_D": [
+    -2.4977593421936035,
+    0.924407958984375
+   ]
+  },
+  "1631114": {
+   "full": [
+    1.474736213684082,
+    -2.7160863876342773
+   ],
+   "RIM": [
+    1.3091157674789429,
+    -3.0069546699523926
+   ],
+   "REB": [
+    2.3570122718811035,
+    -2.853825330734253
+   ],
+   "CTRL": [
+    1.275810718536377,
+    -2.7126033306121826
+   ],
+   "REB_O": [
+    2.318873643875122,
+    -2.6784210205078125
+   ],
+   "REB_D": [
+    1.511901617050171,
+    -2.8929121494293213
+   ]
+  },
+  "1631117": {
+   "full": [
+    -0.5517496466636658,
+    -4.399286270141602
+   ],
+   "RIM": [
+    -0.35746288299560547,
+    -2.687248468399048
+   ],
+   "REB": [
+    -1.6781255006790161,
+    -3.2473974227905273
+   ],
+   "CTRL": [
+    -0.26820385456085205,
+    -4.509025573730469
+   ],
+   "REB_O": [
+    -1.2031195163726807,
+    -4.385171890258789
+   ],
+   "REB_D": [
+    -1.0836200714111328,
+    -3.1994640827178955
+   ]
+  },
+  "1631119": {
+   "full": [
+    -2.871952533721924,
+    -4.025794982910156
+   ],
+   "RIM": [
+    -2.7232911586761475,
+    -3.311744213104248
+   ],
+   "REB": [
+    -2.4304823875427246,
+    -2.7251405715942383
+   ],
+   "CTRL": [
+    -2.6759698390960693,
+    -4.109162330627441
+   ],
+   "REB_O": [
+    -2.505478620529175,
+    -4.128963470458984
+   ],
+   "REB_D": [
+    -2.8358962535858154,
+    -2.767735719680786
+   ]
+  },
+  "1631128": {
+   "full": [
+    0.020133430138230324,
+    -0.7442564964294434
+   ],
+   "RIM": [
+    -0.1031152680516243,
+    -1.2832880020141602
+   ],
+   "REB": [
+    0.42626529932022095,
+    -1.2874336242675781
+   ],
+   "CTRL": [
+    0.0044993325136601925,
+    -0.7399476766586304
+   ],
+   "REB_O": [
+    0.34573251008987427,
+    -0.752155601978302
+   ],
+   "REB_D": [
+    0.07785055786371231,
+    -1.273095965385437
+   ]
+  },
+  "1631157": {
+   "full": [
+    0.8549475073814392,
+    0.1550678014755249
+   ],
+   "RIM": [
+    0.7501576542854309,
+    -0.2741415798664093
+   ],
+   "REB": [
+    1.643496036529541,
+    -0.2880591154098511
+   ],
+   "CTRL": [
+    0.5886437296867371,
+    0.2235414683818817
+   ],
+   "REB_O": [
+    1.4668716192245483,
+    0.18243877589702606
+   ],
+   "REB_D": [
+    0.9886463284492493,
+    -0.3138463795185089
+   ]
+  },
+  "1631159": {
+   "full": [
+    -2.539393186569214,
+    0.3185449242591858
+   ],
+   "RIM": [
+    -2.344346284866333,
+    0.667552649974823
+   ],
+   "REB": [
+    -3.300429105758667,
+    0.7028511762619019
+   ],
+   "CTRL": [
+    -2.4582595825195312,
+    0.2891361117362976
+   ],
+   "REB_O": [
+    -3.1205174922943115,
+    0.011205785907804966
+   ],
+   "REB_D": [
+    -2.7507998943328857,
+    1.0206592082977295
+   ]
+  },
+  "1631165": {
+   "full": [
+    -2.301758289337158,
+    -1.2967143058776855
+   ],
+   "RIM": [
+    -2.332303762435913,
+    -1.3943226337432861
+   ],
+   "REB": [
+    -1.4671978950500488,
+    -2.405667781829834
+   ],
+   "CTRL": [
+    -2.4100353717803955,
+    -1.2511719465255737
+   ],
+   "REB_O": [
+    -1.7109838724136353,
+    -1.2069984674453735
+   ],
+   "REB_D": [
+    -2.159478187561035,
+    -2.473493814468384
+   ]
+  },
+  "1631170": {
+   "full": [
+    0.5356146097183228,
+    1.375386118888855
+   ],
+   "RIM": [
+    0.5192220211029053,
+    1.098966360092163
+   ],
+   "REB": [
+    0.3902433514595032,
+    1.4696125984191895
+   ],
+   "CTRL": [
+    0.30500996112823486,
+    1.4555169343948364
+   ],
+   "REB_O": [
+    0.5642672777175903,
+    1.3494086265563965
+   ],
+   "REB_D": [
+    0.3620535433292389,
+    1.4953651428222656
+   ]
+  },
+  "1631204": {
+   "full": [
+    -0.7091066241264343,
+    0.5915168523788452
+   ],
+   "RIM": [
+    -0.9137163162231445,
+    0.05869158357381821
+   ],
+   "REB": [
+    0.9269212484359741,
+    -0.42784303426742554
+   ],
+   "CTRL": [
+    -0.9460750818252563,
+    0.651846706867218
+   ],
+   "REB_O": [
+    0.11793789267539978,
+    0.6432123184204102
+   ],
+   "REB_D": [
+    -0.0712202936410904,
+    -0.46009621024131775
+   ]
+  },
+  "1631212": {
+   "full": [
+    -2.503192663192749,
+    -1.1424139738082886
+   ],
+   "RIM": [
+    -2.379807710647583,
+    -0.3937571048736572
+   ],
+   "REB": [
+    -2.308379888534546,
+    -1.3754912614822388
+   ],
+   "CTRL": [
+    -2.652186393737793,
+    -1.0900324583053589
+   ],
+   "REB_O": [
+    -2.2143349647521973,
+    -1.1782819032669067
+   ],
+   "REB_D": [
+    -2.5946483612060547,
+    -1.3359737396240234
+   ]
+  },
+  "1631217": {
+   "full": [
+    1.369340419769287,
+    -2.039918899536133
+   ],
+   "RIM": [
+    1.5233948230743408,
+    -0.9518865346908569
+   ],
+   "REB": [
+    -2.6820528507232666,
+    -0.3439970016479492
+   ],
+   "CTRL": [
+    1.8345459699630737,
+    -2.166959524154663
+   ],
+   "REB_O": [
+    -2.376617670059204,
+    -1.837943434715271
+   ],
+   "REB_D": [
+    0.9852838516235352,
+    -0.6873255372047424
+   ]
+  },
+  "1631221": {
+   "full": [
+    -0.3436491787433624,
+    -1.3911925554275513
+   ],
+   "RIM": [
+    -0.5765770673751831,
+    -2.377842903137207
+   ],
+   "REB": [
+    0.3883790671825409,
+    -2.1209442615509033
+   ],
+   "CTRL": [
+    -0.45832836627960205,
+    -1.365911841392517
+   ],
+   "REB_O": [
+    0.16039921343326569,
+    -1.4028830528259277
+   ],
+   "REB_D": [
+    -0.15936848521232605,
+    -2.103163242340088
+   ]
+  },
+  "1631222": {
+   "full": [
+    -1.6566773653030396,
+    -1.453109860420227
+   ],
+   "RIM": [
+    -1.674821138381958,
+    -1.7283203601837158
+   ],
+   "REB": [
+    -2.1378042697906494,
+    -1.7250444889068604
+   ],
+   "CTRL": [
+    -1.7747176885604858,
+    -1.3961150646209717
+   ],
+   "REB_O": [
+    -1.8835101127624512,
+    -1.6341766119003296
+   ],
+   "REB_D": [
+    -1.906959056854248,
+    -1.5372869968414307
+   ]
+  },
+  "1631245": {
+   "full": [
+    0.1198054626584053,
+    -0.4046843945980072
+   ],
+   "RIM": [
+    -0.06402768194675446,
+    -1.1020644903182983
+   ],
+   "REB": [
+    0.9257330298423767,
+    -0.9038980007171631
+   ],
+   "CTRL": [
+    -0.07762496918439865,
+    -0.35014089941978455
+   ],
+   "REB_O": [
+    0.7094192504882812,
+    -0.38292139768600464
+   ],
+   "REB_D": [
+    0.29086732864379883,
+    -0.9287970066070557
+   ]
+  },
+  "1631248": {
+   "full": [
+    -0.19415532052516937,
+    -0.6226648688316345
+   ],
+   "RIM": [
+    -0.37042883038520813,
+    -1.2730603218078613
+   ],
+   "REB": [
+    -0.17786304652690887,
+    -0.6399657726287842
+   ],
+   "CTRL": [
+    -0.34879499673843384,
+    -0.5664232969284058
+   ],
+   "REB_O": [
+    0.009288509376347065,
+    -0.6576849222183228
+   ],
+   "REB_D": [
+    -0.3790837526321411,
+    -0.6037371158599854
+   ]
+  },
+  "1631255": {
+   "full": [
+    -0.8336993455886841,
+    -2.812788963317871
+   ],
+   "RIM": [
+    -0.4894125461578369,
+    -1.3768023252487183
+   ],
+   "REB": [
+    -1.4373323917388916,
+    -1.4885231256484985
+   ],
+   "CTRL": [
+    -0.5930119752883911,
+    -2.898796558380127
+   ],
+   "REB_O": [
+    -1.280147910118103,
+    -2.9187493324279785
+   ],
+   "REB_D": [
+    -1.0094174146652222,
+    -1.3408117294311523
+   ]
+  },
+  "1631260": {
+   "full": [
+    -0.8028274774551392,
+    1.972976803779602
+   ],
+   "RIM": [
+    -0.8978412747383118,
+    1.5020558834075928
+   ],
+   "REB": [
+    0.32492005825042725,
+    1.6286065578460693
+   ],
+   "CTRL": [
+    -0.9318906664848328,
+    2.0135390758514404
+   ],
+   "REB_O": [
+    -0.1261792778968811,
+    2.1325461864471436
+   ],
+   "REB_D": [
+    -0.41895171999931335,
+    1.4979513883590698
+   ]
+  },
+  "1631288": {
+   "full": [
+    -2.756103754043579,
+    0.9264484643936157
+   ],
+   "RIM": [
+    -2.788299560546875,
+    0.6863663792610168
+   ],
+   "REB": [
+    -3.1490657329559326,
+    0.7168108820915222
+   ],
+   "CTRL": [
+    -2.8758530616760254,
+    0.9707010984420776
+   ],
+   "REB_O": [
+    -2.8789589405059814,
+    0.9477837681770325
+   ],
+   "REB_D": [
+    -3.0275468826293945,
+    0.6942739486694336
+   ]
+  },
+  "1631321": {
+   "full": [
+    -2.6904942989349365,
+    -0.7996547818183899
+   ],
+   "RIM": [
+    -2.808901786804199,
+    -1.0803875923156738
+   ],
+   "REB": [
+    -2.6831681728363037,
+    -1.5860106945037842
+   ],
+   "CTRL": [
+    -2.8441054821014404,
+    -0.7207515835762024
+   ],
+   "REB_O": [
+    -2.62904953956604,
+    -0.8698720932006836
+   ],
+   "REB_D": [
+    -2.7492077350616455,
+    -1.5045846700668335
+   ]
+  },
+  "1641705": {
+   "full": [
+    0.5946375131607056,
+    -9.252490043640137
+   ],
+   "RIM": [
+    1.785876989364624,
+    -5.877242088317871
+   ],
+   "REB": [
+    -0.3026359975337982,
+    -7.0034308433532715
+   ],
+   "CTRL": [
+    0.7906968593597412,
+    -9.276439666748047
+   ],
+   "REB_O": [
+    -0.4402294158935547,
+    -8.881426811218262
+   ],
+   "REB_D": [
+    0.6258435249328613,
+    -7.134683132171631
+   ]
+  },
+  "1641706": {
+   "full": [
+    -1.1571050882339478,
+    -0.7649788856506348
+   ],
+   "RIM": [
+    -1.239648699760437,
+    -0.9015994668006897
+   ],
+   "REB": [
+    -0.6942257285118103,
+    -1.1506017446517944
+   ],
+   "CTRL": [
+    -1.3489124774932861,
+    -0.7062841653823853
+   ],
+   "REB_O": [
+    -0.6606717705726624,
+    -0.7763108015060425
+   ],
+   "REB_D": [
+    -1.200861930847168,
+    -1.1338340044021606
+   ]
+  },
+  "1641708": {
+   "full": [
+    0.5255545377731323,
+    -3.9959447383880615
+   ],
+   "RIM": [
+    0.3843201696872711,
+    -4.171090602874756
+   ],
+   "REB": [
+    -0.7619200348854065,
+    -4.741323947906494
+   ],
+   "CTRL": [
+    0.41733264923095703,
+    -4.006496429443359
+   ],
+   "REB_O": [
+    -0.33712735772132874,
+    -4.398171901702881
+   ],
+   "REB_D": [
+    0.16347168385982513,
+    -4.400411605834961
+   ]
+  },
+  "1641709": {
+   "full": [
+    -1.8556791543960571,
+    -4.901708126068115
+   ],
+   "RIM": [
+    -1.836274266242981,
+    -4.616336345672607
+   ],
+   "REB": [
+    -2.6744422912597656,
+    -4.91634464263916
+   ],
+   "CTRL": [
+    -1.8954353332519531,
+    -4.8914384841918945
+   ],
+   "REB_O": [
+    -2.43558406829834,
+    -5.179500102996826
+   ],
+   "REB_D": [
+    -2.1220099925994873,
+    -4.658549785614014
+   ]
+  },
+  "1641710": {
+   "full": [
+    -1.4406778812408447,
+    -0.8830382823944092
+   ],
+   "RIM": [
+    -1.4996812343597412,
+    -1.3109441995620728
+   ],
+   "REB": [
+    -0.7275038957595825,
+    -1.3783141374588013
+   ],
+   "CTRL": [
+    -1.6537210941314697,
+    -0.8046669960021973
+   ],
+   "REB_O": [
+    -0.8506219983100891,
+    -0.8675127625465393
+   ],
+   "REB_D": [
+    -1.3520656824111938,
+    -1.3838437795639038
+   ]
+  },
+  "1641713": {
+   "full": [
+    -3.250239372253418,
+    2.3044068813323975
+   ],
+   "RIM": [
+    -3.05332612991333,
+    2.640082359313965
+   ],
+   "REB": [
+    -3.1139791011810303,
+    2.4094254970550537
+   ],
+   "CTRL": [
+    -3.4296963214874268,
+    2.356252908706665
+   ],
+   "REB_O": [
+    -3.002274990081787,
+    2.371438980102539
+   ],
+   "REB_D": [
+    -3.352677822113037,
+    2.3293442726135254
+   ]
+  },
+  "1641716": {
+   "full": [
+    -3.8693740367889404,
+    0.23216386139392853
+   ],
+   "RIM": [
+    -3.9314019680023193,
+    -0.3689081370830536
+   ],
+   "REB": [
+    -3.378032922744751,
+    0.7242544293403625
+   ],
+   "CTRL": [
+    -4.068093299865723,
+    0.2951999306678772
+   ],
+   "REB_O": [
+    -3.4153759479522705,
+    0.31327107548713684
+   ],
+   "REB_D": [
+    -3.8233349323272705,
+    0.6238013505935669
+   ]
+  },
+  "1641717": {
+   "full": [
+    -1.8294316530227661,
+    -3.1223843097686768
+   ],
+   "RIM": [
+    -2.0020227432250977,
+    -3.601872444152832
+   ],
+   "REB": [
+    -0.9620169401168823,
+    -3.802809476852417
+   ],
+   "CTRL": [
+    -1.871280312538147,
+    -3.1115660667419434
+   ],
+   "REB_O": [
+    -1.259973168373108,
+    -3.121182441711426
+   ],
+   "REB_D": [
+    -1.5791572332382202,
+    -3.8044748306274414
+   ]
+  },
+  "1641718": {
+   "full": [
+    0.9678137898445129,
+    0.5661967396736145
+   ],
+   "RIM": [
+    0.8637276291847229,
+    -0.211274191737175
+   ],
+   "REB": [
+    2.5543525218963623,
+    -0.009598128497600555
+   ],
+   "CTRL": [
+    0.7932290434837341,
+    0.5930742621421814
+   ],
+   "REB_O": [
+    1.9422729015350342,
+    0.6402400135993958
+   ],
+   "REB_D": [
+    1.5104782581329346,
+    -0.0774492546916008
+   ]
+  },
+  "1641730": {
+   "full": [
+    -4.3194580078125,
+    0.7657056450843811
+   ],
+   "RIM": [
+    -4.18532133102417,
+    1.1112174987792969
+   ],
+   "REB": [
+    -4.153985500335693,
+    1.1509745121002197
+   ],
+   "CTRL": [
+    -4.481540203094482,
+    0.8019874095916748
+   ],
+   "REB_O": [
+    -4.050293445587158,
+    0.9382251501083374
+   ],
+   "REB_D": [
+    -4.409692764282227,
+    0.9615076780319214
+   ]
+  },
+  "1641731": {
+   "full": [
+    -3.4333302974700928,
+    -2.2517306804656982
+   ],
+   "RIM": [
+    -3.3744592666625977,
+    -1.9084151983261108
+   ],
+   "REB": [
+    -2.8828818798065186,
+    -2.6582086086273193
+   ],
+   "CTRL": [
+    -3.600980281829834,
+    -2.167196035385132
+   ],
+   "REB_O": [
+    -2.906721591949463,
+    -2.230022430419922
+   ],
+   "REB_D": [
+    -3.4164340496063232,
+    -2.669940710067749
+   ]
+  },
+  "1641739": {
+   "full": [
+    -1.3430486917495728,
+    -1.1379934549331665
+   ],
+   "RIM": [
+    -1.4213839769363403,
+    -1.6420681476593018
+   ],
+   "REB": [
+    -1.1943981647491455,
+    -1.3600966930389404
+   ],
+   "CTRL": [
+    -1.411496639251709,
+    -1.1107137203216553
+   ],
+   "REB_O": [
+    -1.1080282926559448,
+    -1.1105997562408447
+   ],
+   "REB_D": [
+    -1.4358187913894653,
+    -1.3845802545547485
+   ]
+  },
+  "1641744": {
+   "full": [
+    -1.292940378189087,
+    -5.052749156951904
+   ],
+   "RIM": [
+    -0.7338494062423706,
+    -2.7023260593414307
+   ],
+   "REB": [
+    -4.152284145355225,
+    -1.6144312620162964
+   ],
+   "CTRL": [
+    -0.3990856111049652,
+    -5.276607513427734
+   ],
+   "REB_O": [
+    -3.775733232498169,
+    -4.305684566497803
+   ],
+   "REB_D": [
+    -0.9007527828216553,
+    -1.7443441152572632
+   ]
+  },
+  "1641750": {
+   "full": [
+    -0.7640096545219421,
+    -3.3125901222229004
+   ],
+   "RIM": [
+    -0.08352871239185333,
+    -0.3385412096977234
+   ],
+   "REB": [
+    -2.848623514175415,
+    -1.4622596502304077
+   ],
+   "CTRL": [
+    -0.1743241846561432,
+    -3.540315866470337
+   ],
+   "REB_O": [
+    -2.4955883026123047,
+    -3.054980516433716
+   ],
+   "REB_D": [
+    -1.030221700668335,
+    -1.4047255516052246
+   ]
+  },
+  "1641764": {
+   "full": [
+    1.2504823207855225,
+    -2.5911848545074463
+   ],
+   "RIM": [
+    1.0641493797302246,
+    -3.1860737800598145
+   ],
+   "REB": [
+    1.487542748451233,
+    -2.701770544052124
+   ],
+   "CTRL": [
+    1.1690032482147217,
+    -2.5951027870178223
+   ],
+   "REB_O": [
+    1.6384541988372803,
+    -2.553001642227173
+   ],
+   "REB_D": [
+    1.0935295820236206,
+    -2.7307844161987305
+   ]
+  },
+  "1641775": {
+   "full": [
+    -1.537848949432373,
+    -1.2326024770736694
+   ],
+   "RIM": [
+    -1.5936895608901978,
+    -1.1651273965835571
+   ],
+   "REB": [
+    -2.1221697330474854,
+    -0.9966610074043274
+   ],
+   "CTRL": [
+    -1.6351773738861084,
+    -1.1880029439926147
+   ],
+   "REB_O": [
+    -1.9359205961227417,
+    -1.3776949644088745
+   ],
+   "REB_D": [
+    -1.7348345518112183,
+    -0.8580447435379028
+   ]
+  },
+  "1641778": {
+   "full": [
+    -1.9910331964492798,
+    1.2828526496887207
+   ],
+   "RIM": [
+    -2.161715030670166,
+    0.8713975548744202
+   ],
+   "REB": [
+    -1.5521091222763062,
+    1.0567377805709839
+   ],
+   "CTRL": [
+    -2.0621542930603027,
+    1.3178865909576416
+   ],
+   "REB_O": [
+    -1.56168532371521,
+    1.3209559917449951
+   ],
+   "REB_D": [
+    -1.9900903701782227,
+    1.020026445388794
+   ]
+  },
+  "1641783": {
+   "full": [
+    -1.7613492012023926,
+    1.434914469718933
+   ],
+   "RIM": [
+    -1.8156023025512695,
+    1.0887683629989624
+   ],
+   "REB": [
+    -1.4393322467803955,
+    1.3191304206848145
+   ],
+   "CTRL": [
+    -1.8574286699295044,
+    1.4704550504684448
+   ],
+   "REB_O": [
+    -1.3954590559005737,
+    1.500836730003357
+   ],
+   "REB_D": [
+    -1.8144047260284424,
+    1.253029704093933
+   ]
+  },
+  "1641796": {
+   "full": [
+    -1.398146390914917,
+    -1.9249458312988281
+   ],
+   "RIM": [
+    -1.470421314239502,
+    -2.2454569339752197
+   ],
+   "REB": [
+    -0.6182786226272583,
+    -2.519005298614502
+   ],
+   "CTRL": [
+    -1.5806879997253418,
+    -1.8653831481933594
+   ],
+   "REB_O": [
+    -0.964815080165863,
+    -1.8780279159545898
+   ],
+   "REB_D": [
+    -1.086147427558899,
+    -2.5548665523529053
+   ]
+  },
+  "1641824": {
+   "full": [
+    -2.688441753387451,
+    1.5737030506134033
+   ],
+   "RIM": [
+    -2.4470386505126953,
+    2.429744243621826
+   ],
+   "REB": [
+    -2.3474254608154297,
+    1.7215309143066406
+   ],
+   "CTRL": [
+    -2.8955917358398438,
+    1.64480459690094
+   ],
+   "REB_O": [
+    -2.2724385261535645,
+    1.7135796546936035
+   ],
+   "REB_D": [
+    -2.751499652862549,
+    1.5720138549804688
+   ]
+  },
+  "1641842": {
+   "full": [
+    -3.3246288299560547,
+    -2.9060420989990234
+   ],
+   "RIM": [
+    -3.4423537254333496,
+    -3.34270977973938
+   ],
+   "REB": [
+    -3.640446901321411,
+    -3.013923406600952
+   ],
+   "CTRL": [
+    -3.5143723487854004,
+    -2.8165388107299805
+   ],
+   "REB_O": [
+    -3.464977502822876,
+    -3.001133441925049
+   ],
+   "REB_D": [
+    -3.504983425140381,
+    -2.918534278869629
+   ]
+  },
+  "1642258": {
+   "full": [
+    -3.4008419513702393,
+    -1.6017588376998901
+   ],
+   "RIM": [
+    -3.2864186763763428,
+    -1.3645908832550049
+   ],
+   "REB": [
+    -3.5739974975585938,
+    -1.9736597537994385
+   ],
+   "CTRL": [
+    -3.5820610523223877,
+    -1.5316672325134277
+   ],
+   "REB_O": [
+    -3.4235358238220215,
+    -1.7235432863235474
+   ],
+   "REB_D": [
+    -3.554187774658203,
+    -1.8483713865280151
+   ]
+  },
+  "1642259": {
+   "full": [
+    -3.9235775470733643,
+    -0.036216698586940765
+   ],
+   "RIM": [
+    -3.2423202991485596,
+    2.5403358936309814
+   ],
+   "REB": [
+    -4.636307239532471,
+    0.8990483283996582
+   ],
+   "CTRL": [
+    -3.0141477584838867,
+    -0.3810228407382965
+   ],
+   "REB_O": [
+    -4.703261375427246,
+    -0.22971925139427185
+   ],
+   "REB_D": [
+    -3.908193588256836,
+    1.229530930519104
+   ]
+  },
+  "1642263": {
+   "full": [
+    -0.6555173397064209,
+    -0.9241717457771301
+   ],
+   "RIM": [
+    -0.7395269274711609,
+    -1.5454275608062744
+   ],
+   "REB": [
+    0.9333674311637878,
+    -1.8130210638046265
+   ],
+   "CTRL": [
+    -0.8576945066452026,
+    -0.863839328289032
+   ],
+   "REB_O": [
+    0.3580746054649353,
+    -0.8295689225196838
+   ],
+   "REB_D": [
+    -0.2119821459054947,
+    -1.926310420036316
+   ]
+  },
+  "1642264": {
+   "full": [
+    0.3411151170730591,
+    -0.45434054732322693
+   ],
+   "RIM": [
+    0.27990394830703735,
+    -0.9872786402702332
+   ],
+   "REB": [
+    0.3933553695678711,
+    -0.7345578670501709
+   ],
+   "CTRL": [
+    0.20476946234703064,
+    -0.4137025475502014
+   ],
+   "REB_O": [
+    0.5000799298286438,
+    -0.5556074976921082
+   ],
+   "REB_D": [
+    0.23356013000011444,
+    -0.6291681528091431
+   ]
+  },
+  "1642266": {
+   "full": [
+    -1.302903652191162,
+    -0.5937618613243103
+   ],
+   "RIM": [
+    -1.4268771409988403,
+    -1.2831377983093262
+   ],
+   "REB": [
+    -0.9434370994567871,
+    -1.2207911014556885
+   ],
+   "CTRL": [
+    -1.4652599096298218,
+    -0.5241738557815552
+   ],
+   "REB_O": [
+    -1.0036110877990723,
+    -0.5868774056434631
+   ],
+   "REB_D": [
+    -1.2669034004211426,
+    -1.2256348133087158
+   ]
+  },
+  "1642267": {
+   "full": [
+    -1.120436191558838,
+    2.4245753288269043
+   ],
+   "RIM": [
+    -1.2394360303878784,
+    1.958984136581421
+   ],
+   "REB": [
+    -0.18615461885929108,
+    2.244225263595581
+   ],
+   "CTRL": [
+    -1.2898533344268799,
+    2.471630811691284
+   ],
+   "REB_O": [
+    -0.4585917294025421,
+    2.6164979934692383
+   ],
+   "REB_D": [
+    -0.8981817960739136,
+    2.0733273029327393
+   ]
+  },
+  "1642268": {
+   "full": [
+    -2.4679129123687744,
+    3.0101425647735596
+   ],
+   "RIM": [
+    -2.801016092300415,
+    2.4008278846740723
+   ],
+   "REB": [
+    -1.6243524551391602,
+    2.674307107925415
+   ],
+   "CTRL": [
+    -2.6862025260925293,
+    3.091280221939087
+   ],
+   "REB_O": [
+    -1.7562249898910522,
+    3.20499849319458
+   ],
+   "REB_D": [
+    -2.419999361038208,
+    2.484419345855713
+   ]
+  },
+  "1642270": {
+   "full": [
+    0.31639915704727173,
+    -2.0624325275421143
+   ],
+   "RIM": [
+    0.9058679938316345,
+    0.7114139199256897
+   ],
+   "REB": [
+    -2.730587959289551,
+    -0.6683947443962097
+   ],
+   "CTRL": [
+    0.8981552124023438,
+    -2.2217650413513184
+   ],
+   "REB_O": [
+    -2.6515872478485107,
+    -2.2049262523651123
+   ],
+   "REB_D": [
+    0.2029675394296646,
+    -0.40522506833076477
+   ]
+  },
+  "1642272": {
+   "full": [
+    -1.3739924430847168,
+    1.2694013118743896
+   ],
+   "RIM": [
+    -1.5166664123535156,
+    0.5790032148361206
+   ],
+   "REB": [
+    -0.07413516938686371,
+    0.4931919574737549
+   ],
+   "CTRL": [
+    -1.5262805223464966,
+    1.3251121044158936
+   ],
+   "REB_O": [
+    -0.5359448194503784,
+    1.3195489645004272
+   ],
+   "REB_D": [
+    -0.9839462637901306,
+    0.4591046869754791
+   ]
+  },
+  "1642273": {
+   "full": [
+    -0.8240817785263062,
+    0.18059799075126648
+   ],
+   "RIM": [
+    -0.7301557064056396,
+    0.5934705138206482
+   ],
+   "REB": [
+    -0.16812695562839508,
+    0.20861142873764038
+   ],
+   "CTRL": [
+    -0.9765359163284302,
+    0.22412988543510437
+   ],
+   "REB_O": [
+    -0.24564988911151886,
+    0.2817946970462799
+   ],
+   "REB_D": [
+    -0.7525584101676941,
+    0.11057273298501968
+   ]
+  },
+  "1642274": {
+   "full": [
+    -1.4094152450561523,
+    -0.7227270007133484
+   ],
+   "RIM": [
+    -0.9495545625686646,
+    0.9146134853363037
+   ],
+   "REB": [
+    -4.092670440673828,
+    -0.4226403832435608
+   ],
+   "CTRL": [
+    -0.7257944941520691,
+    -0.9740507006645203
+   ],
+   "REB_O": [
+    -3.836920738220215,
+    -1.0662950277328491
+   ],
+   "REB_D": [
+    -1.790506362915039,
+    0.054592959582805634
+   ]
+  },
+  "1642276": {
+   "full": [
+    -1.5576539039611816,
+    -3.010209321975708
+   ],
+   "RIM": [
+    -1.254348874092102,
+    -1.395937204360962
+   ],
+   "REB": [
+    -3.91953706741333,
+    -0.9039780497550964
+   ],
+   "CTRL": [
+    -1.4656257629394531,
+    -3.0379233360290527
+   ],
+   "REB_O": [
+    -3.87982439994812,
+    -3.3393192291259766
+   ],
+   "REB_D": [
+    -1.4428852796554565,
+    -0.46429529786109924
+   ]
+  },
+  "1642281": {
+   "full": [
+    -0.4784598648548126,
+    -0.01966407150030136
+   ],
+   "RIM": [
+    -0.48838454484939575,
+    -0.28195497393608093
+   ],
+   "REB": [
+    -1.1159244775772095,
+    0.04413021728396416
+   ],
+   "CTRL": [
+    -0.6090194582939148,
+    0.02387285977602005
+   ],
+   "REB_O": [
+    -0.8816648721694946,
+    0.01934809610247612
+   ],
+   "REB_D": [
+    -0.7106401324272156,
+    0.00541057949885726
+   ]
+  },
+  "1642285": {
+   "full": [
+    3.1803364753723145,
+    1.5431718826293945
+   ],
+   "RIM": [
+    3.254089593887329,
+    0.9564221501350403
+   ],
+   "REB": [
+    4.142605781555176,
+    1.1512577533721924
+   ],
+   "CTRL": [
+    3.0007660388946533,
+    1.5774786472320557
+   ],
+   "REB_O": [
+    3.6134755611419678,
+    1.5446900129318237
+   ],
+   "REB_D": [
+    3.6774251461029053,
+    1.1352598667144775
+   ]
+  },
+  "1642345": {
+   "full": [
+    -2.8938915729522705,
+    -1.5819960832595825
+   ],
+   "RIM": [
+    -2.7150423526763916,
+    -0.4540752172470093
+   ],
+   "REB": [
+    -3.686000108718872,
+    -1.2602437734603882
+   ],
+   "CTRL": [
+    -1.951371669769287,
+    -1.9713122844696045
+   ],
+   "REB_O": [
+    -3.487095594406128,
+    -1.873954176902771
+   ],
+   "REB_D": [
+    -3.133631944656372,
+    -0.9029073715209961
+   ]
+  },
+  "1642346": {
+   "full": [
+    -2.0830981731414795,
+    -1.1769990921020508
+   ],
+   "RIM": [
+    -2.0722601413726807,
+    -1.083829402923584
+   ],
+   "REB": [
+    -2.819575309753418,
+    -1.3193213939666748
+   ],
+   "CTRL": [
+    -2.187492609024048,
+    -1.137039065361023
+   ],
+   "REB_O": [
+    -2.594928741455078,
+    -1.3996754884719849
+   ],
+   "REB_D": [
+    -2.3285958766937256,
+    -1.09419584274292
+   ]
+  },
+  "1642347": {
+   "full": [
+    -2.6708738803863525,
+    -0.15651284158229828
+   ],
+   "RIM": [
+    -2.9293606281280518,
+    -1.0974953174591064
+   ],
+   "REB": [
+    -1.4625020027160645,
+    -1.2010703086853027
+   ],
+   "CTRL": [
+    -2.8348801136016846,
+    -0.10481788963079453
+   ],
+   "REB_O": [
+    -1.8981776237487793,
+    0.003951741382479668
+   ],
+   "REB_D": [
+    -2.3659565448760986,
+    -1.3090740442276
+   ]
+  },
+  "1642349": {
+   "full": [
+    0.855636477470398,
+    -1.723479986190796
+   ],
+   "RIM": [
+    0.7550739049911499,
+    -2.0086779594421387
+   ],
+   "REB": [
+    2.1114277839660645,
+    -2.3416433334350586
+   ],
+   "CTRL": [
+    0.6258974075317383,
+    -1.6794252395629883
+   ],
+   "REB_O": [
+    1.676558017730713,
+    -1.674483060836792
+   ],
+   "REB_D": [
+    1.2368767261505127,
+    -2.408721446990967
+   ]
+  },
+  "1642350": {
+   "full": [
+    -2.220447301864624,
+    -1.9463073015213013
+   ],
+   "RIM": [
+    -2.2046775817871094,
+    -1.9611544609069824
+   ],
+   "REB": [
+    -2.770446300506592,
+    -1.4773471355438232
+   ],
+   "CTRL": [
+    -2.2572009563446045,
+    -1.9336762428283691
+   ],
+   "REB_O": [
+    -2.356799364089966,
+    -2.028634548187256
+   ],
+   "REB_D": [
+    -2.642556667327881,
+    -1.3904614448547363
+   ]
+  },
+  "1642367": {
+   "full": [
+    -4.0190582275390625,
+    -1.5639272928237915
+   ],
+   "RIM": [
+    -3.8632562160491943,
+    -1.143534779548645
+   ],
+   "REB": [
+    -4.71905517578125,
+    -0.5797916650772095
+   ],
+   "CTRL": [
+    -3.6629087924957275,
+    -1.7327381372451782
+   ],
+   "REB_O": [
+    -4.719820499420166,
+    -1.6382893323898315
+   ],
+   "REB_D": [
+    -4.008450508117676,
+    -0.43116217851638794
+   ]
+  },
+  "1642377": {
+   "full": [
+    -1.5577861070632935,
+    -0.1940433233976364
+   ],
+   "RIM": [
+    -1.705425500869751,
+    -0.9424669146537781
+   ],
+   "REB": [
+    -0.8837302327156067,
+    -1.0466511249542236
+   ],
+   "CTRL": [
+    -1.7121689319610596,
+    -0.13412286341190338
+   ],
+   "REB_O": [
+    -1.1807929277420044,
+    -0.13293614983558655
+   ],
+   "REB_D": [
+    -1.2950469255447388,
+    -1.1019396781921387
+   ]
+  },
+  "1642383": {
+   "full": [
+    -2.012594699859619,
+    1.5144010782241821
+   ],
+   "RIM": [
+    -2.054745674133301,
+    1.2241917848587036
+   ],
+   "REB": [
+    -1.0225752592086792,
+    1.0037028789520264
+   ],
+   "CTRL": [
+    -2.179307222366333,
+    1.562207818031311
+   ],
+   "REB_O": [
+    -1.31531822681427,
+    1.647712230682373
+   ],
+   "REB_D": [
+    -1.794907569885254,
+    0.9029911160469055
+   ]
+  },
+  "1642419": {
+   "full": [
+    -0.9909358024597168,
+    2.1915719509124756
+   ],
+   "RIM": [
+    -1.1339349746704102,
+    1.8312638998031616
+   ],
+   "REB": [
+    -0.6606432199478149,
+    1.8472418785095215
+   ],
+   "CTRL": [
+    -1.1358391046524048,
+    2.265064001083374
+   ],
+   "REB_O": [
+    -0.7568021416664124,
+    2.239929676055908
+   ],
+   "REB_D": [
+    -0.9038594365119934,
+    1.7994168996810913
+   ]
+  },
+  "1642450": {
+   "full": [
+    -0.2742310166358948,
+    0.47333648800849915
+   ],
+   "RIM": [
+    -0.3138653635978699,
+    -0.17511893808841705
+   ],
+   "REB": [
+    0.6792091131210327,
+    -0.3188408315181732
+   ],
+   "CTRL": [
+    -0.49530065059661865,
+    0.5358980894088745
+   ],
+   "REB_O": [
+    0.23164619505405426,
+    0.47472286224365234
+   ],
+   "REB_D": [
+    0.11411754786968231,
+    -0.3170798718929291
+   ]
+  },
+  "1642461": {
+   "full": [
+    -1.4005768299102783,
+    -1.9468598365783691
+   ],
+   "RIM": [
+    -1.339328646659851,
+    -1.7903518676757812
+   ],
+   "REB": [
+    -1.4692473411560059,
+    -2.130368232727051
+   ],
+   "CTRL": [
+    -1.3566935062408447,
+    -1.9645354747772217
+   ],
+   "REB_O": [
+    -1.3636835813522339,
+    -2.0483906269073486
+   ],
+   "REB_D": [
+    -1.5068678855895996,
+    -2.0261361598968506
+   ]
+  },
+  "1642843": {
+   "full": [
+    0.3673616647720337,
+    -2.7827208042144775
+   ],
+   "RIM": [
+    0.3405125141143799,
+    -2.5106372833251953
+   ],
+   "REB": [
+    0.8478445410728455,
+    -2.6567437648773193
+   ],
+   "CTRL": [
+    0.1171402856707573,
+    -2.7202208042144775
+   ],
+   "REB_O": [
+    1.1415438652038574,
+    -2.8445301055908203
+   ],
+   "REB_D": [
+    0.10799073427915573,
+    -2.592646837234497
+   ]
+  },
+  "1642844": {
+   "full": [
+    1.6981788873672485,
+    -2.1601366996765137
+   ],
+   "RIM": [
+    1.5717171430587769,
+    -2.4110448360443115
+   ],
+   "REB": [
+    2.3237736225128174,
+    -2.577566623687744
+   ],
+   "CTRL": [
+    1.4906439781188965,
+    -2.1528429985046387
+   ],
+   "REB_O": [
+    2.290395736694336,
+    -2.173602819442749
+   ],
+   "REB_D": [
+    1.7121134996414185,
+    -2.557034492492676
+   ]
+  },
+  "1642845": {
+   "full": [
+    0.8668191432952881,
+    -2.693704605102539
+   ],
+   "RIM": [
+    0.7675067782402039,
+    -3.0307116508483887
+   ],
+   "REB": [
+    1.0172878503799438,
+    -2.8302552700042725
+   ],
+   "CTRL": [
+    0.6598023176193237,
+    -2.6824934482574463
+   ],
+   "REB_O": [
+    1.1059491634368896,
+    -2.7041590213775635
+   ],
+   "REB_D": [
+    0.7747828364372253,
+    -2.815997362136841
+   ]
+  },
+  "1642846": {
+   "full": [
+    -2.3371846675872803,
+    1.0400441884994507
+   ],
+   "RIM": [
+    -2.282210111618042,
+    1.3451002836227417
+   ],
+   "REB": [
+    -2.6742703914642334,
+    0.7962278723716736
+   ],
+   "CTRL": [
+    -2.6053643226623535,
+    1.1638104915618896
+   ],
+   "REB_O": [
+    -2.4120140075683594,
+    0.8943448662757874
+   ],
+   "REB_D": [
+    -2.6033666133880615,
+    0.9506615996360779
+   ]
+  },
+  "1642847": {
+   "full": [
+    -1.3702579736709595,
+    1.5013000965118408
+   ],
+   "RIM": [
+    -1.5295082330703735,
+    0.7746852040290833
+   ],
+   "REB": [
+    -0.8416450619697571,
+    1.0032845735549927
+   ],
+   "CTRL": [
+    -1.665795087814331,
+    1.6133085489273071
+   ],
+   "REB_O": [
+    -0.9020270705223083,
+    1.5184317827224731
+   ],
+   "REB_D": [
+    -1.3448890447616577,
+    0.982428789138794
+   ]
+  },
+  "1642848": {
+   "full": [
+    -3.3044209480285645,
+    2.7545957565307617
+   ],
+   "RIM": [
+    -3.5325467586517334,
+    2.2363104820251465
+   ],
+   "REB": [
+    -2.3938629627227783,
+    2.271029233932495
+   ],
+   "CTRL": [
+    -3.5058391094207764,
+    2.800971269607544
+   ],
+   "REB_O": [
+    -2.6407060623168945,
+    2.966003179550171
+   ],
+   "REB_D": [
+    -3.130694627761841,
+    2.096388578414917
+   ]
+  },
+  "1642849": {
+   "full": [
+    -1.3529295921325684,
+    0.6959496140480042
+   ],
+   "RIM": [
+    -1.3012384176254272,
+    0.5626665949821472
+   ],
+   "REB": [
+    0.24311132729053497,
+    -0.18825137615203857
+   ],
+   "CTRL": [
+    -1.5802288055419922,
+    0.7622920870780945
+   ],
+   "REB_O": [
+    -0.4864557981491089,
+    0.8152252435684204
+   ],
+   "REB_D": [
+    -0.7817277312278748,
+    -0.2650817036628723
+   ]
+  },
+  "1642852": {
+   "full": [
+    -3.80633544921875,
+    -0.4934740662574768
+   ],
+   "RIM": [
+    -3.5230801105499268,
+    0.6184732913970947
+   ],
+   "REB": [
+    -4.01868200302124,
+    0.6809700131416321
+   ],
+   "CTRL": [
+    -3.4718258380889893,
+    -0.6082032322883606
+   ],
+   "REB_O": [
+    -4.228781700134277,
+    -0.6534386873245239
+   ],
+   "REB_D": [
+    -3.5924150943756104,
+    0.8492785692214966
+   ]
+  },
+  "1642856": {
+   "full": [
+    -2.717445135116577,
+    1.1614797115325928
+   ],
+   "RIM": [
+    -2.800098419189453,
+    0.9640616178512573
+   ],
+   "REB": [
+    -1.749165415763855,
+    0.9046068787574768
+   ],
+   "CTRL": [
+    -2.871490716934204,
+    1.2142027616500854
+   ],
+   "REB_O": [
+    -1.9663070440292358,
+    1.4523441791534424
+   ],
+   "REB_D": [
+    -2.563652515411377,
+    0.6564567685127258
+   ]
+  },
+  "1642857": {
+   "full": [
+    -0.8388233780860901,
+    0.9004656076431274
+   ],
+   "RIM": [
+    -0.9627830982208252,
+    0.37623462080955505
+   ],
+   "REB": [
+    -0.19131606817245483,
+    0.19145645201206207
+   ],
+   "CTRL": [
+    -1.0667026042938232,
+    1.012230396270752
+   ],
+   "REB_O": [
+    -0.45656803250312805,
+    0.918297529220581
+   ],
+   "REB_D": [
+    -0.6043893694877625,
+    0.17643751204013824
+   ]
+  },
+  "1642859": {
+   "full": [
+    -3.0569241046905518,
+    0.3449157476425171
+   ],
+   "RIM": [
+    -3.1539156436920166,
+    -0.1342785656452179
+   ],
+   "REB": [
+    -2.297642707824707,
+    -0.8284808397293091
+   ],
+   "CTRL": [
+    -3.2430338859558105,
+    0.4105411171913147
+   ],
+   "REB_O": [
+    -2.6456542015075684,
+    0.3777439594268799
+   ],
+   "REB_D": [
+    -2.763256549835205,
+    -0.8299028873443604
+   ]
+  },
+  "1642863": {
+   "full": [
+    -4.146605014801025,
+    -1.1800932884216309
+   ],
+   "RIM": [
+    -3.282658815383911,
+    1.2400563955307007
+   ],
+   "REB": [
+    -5.0637006759643555,
+    -0.6348457932472229
+   ],
+   "CTRL": [
+    -3.23421573638916,
+    -1.4697203636169434
+   ],
+   "REB_O": [
+    -5.1631760597229,
+    -1.5838819742202759
+   ],
+   "REB_D": [
+    -3.9903860092163086,
+    0.00036337890196591616
+   ]
+  },
+  "1642865": {
+   "full": [
+    0.9980964064598083,
+    -0.7890053391456604
+   ],
+   "RIM": [
+    1.0381969213485718,
+    -0.821895956993103
+   ],
+   "REB": [
+    0.1981343775987625,
+    -0.5876408219337463
+   ],
+   "CTRL": [
+    0.9006378054618835,
+    -0.7568580508232117
+   ],
+   "REB_O": [
+    0.6717226505279541,
+    -0.8662561178207397
+   ],
+   "REB_D": [
+    0.5224834084510803,
+    -0.5085552930831909
+   ]
+  },
+  "1642866": {
+   "full": [
+    -0.17229731380939484,
+    -0.3458898663520813
+   ],
+   "RIM": [
+    0.503323495388031,
+    1.6366770267486572
+   ],
+   "REB": [
+    -3.3983941078186035,
+    0.4186103940010071
+   ],
+   "CTRL": [
+    0.4990236759185791,
+    -0.621619701385498
+   ],
+   "REB_O": [
+    -3.0930728912353516,
+    -0.7281747460365295
+   ],
+   "REB_D": [
+    -0.6317988038063049,
+    0.8183675408363342
+   ]
+  },
+  "1642867": {
+   "full": [
+    -1.1615214347839355,
+    -3.4954640865325928
+   ],
+   "RIM": [
+    -0.9917187094688416,
+    -2.8732926845550537
+   ],
+   "REB": [
+    -3.047001600265503,
+    -3.286447048187256
+   ],
+   "CTRL": [
+    -0.938869833946228,
+    -3.5526628494262695
+   ],
+   "REB_O": [
+    -2.6467671394348145,
+    -3.680453062057495
+   ],
+   "REB_D": [
+    -1.584650993347168,
+    -3.1447360515594482
+   ]
+  },
+  "1642874": {
+   "full": [
+    -3.4271647930145264,
+    -0.8339938521385193
+   ],
+   "RIM": [
+    -3.2581839561462402,
+    -0.21865619719028473
+   ],
+   "REB": [
+    -3.4825520515441895,
+    -0.19338135421276093
+   ],
+   "CTRL": [
+    -3.6752991676330566,
+    -0.7673034071922302
+   ],
+   "REB_O": [
+    -3.4099552631378174,
+    -0.8076726794242859
+   ],
+   "REB_D": [
+    -3.50081205368042,
+    -0.219993457198143
+   ]
+  },
+  "1642877": {
+   "full": [
+    -3.349001884460449,
+    -0.58378005027771
+   ],
+   "RIM": [
+    -3.5101096630096436,
+    -1.0196670293807983
+   ],
+   "REB": [
+    -3.6427273750305176,
+    -0.9319921135902405
+   ],
+   "CTRL": [
+    -3.514165163040161,
+    -0.5059041380882263
+   ],
+   "REB_O": [
+    -3.3518776893615723,
+    -0.6561421751976013
+   ],
+   "REB_D": [
+    -3.6415369510650635,
+    -0.854495644569397
+   ]
+  },
+  "1642878": {
+   "full": [
+    0.18211495876312256,
+    0.20893746614456177
+   ],
+   "RIM": [
+    -0.036328401416540146,
+    -0.6361556649208069
+   ],
+   "REB": [
+    0.9238123893737793,
+    -0.16156518459320068
+   ],
+   "CTRL": [
+    0.014035172760486603,
+    0.2679288387298584
+   ],
+   "REB_O": [
+    0.811380922794342,
+    0.30639421939849854
+   ],
+   "REB_D": [
+    0.24435670673847198,
+    -0.26811113953590393
+   ]
+  },
+  "1642883": {
+   "full": [
+    -2.997086524963379,
+    0.5036651492118835
+   ],
+   "RIM": [
+    -3.128612995147705,
+    0.19394183158874512
+   ],
+   "REB": [
+    -2.437091112136841,
+    0.3218797445297241
+   ],
+   "CTRL": [
+    -3.1041219234466553,
+    0.5434399843215942
+   ],
+   "REB_O": [
+    -2.4816396236419678,
+    0.619468629360199
+   ],
+   "REB_D": [
+    -2.9652678966522217,
+    0.21822386980056763
+   ]
+  },
+  "1642892": {
+   "full": [
+    -1.5975021123886108,
+    0.6921477913856506
+   ],
+   "RIM": [
+    -1.6790004968643188,
+    0.5182962417602539
+   ],
+   "REB": [
+    -0.5874489545822144,
+    -0.0015676432522013783
+   ],
+   "CTRL": [
+    -1.6472684144973755,
+    0.7099247574806213
+   ],
+   "REB_O": [
+    -1.328235387802124,
+    0.731982409954071
+   ],
+   "REB_D": [
+    -0.8855194449424744,
+    -0.030286718159914017
+   ]
+  },
+  "1642907": {
+   "full": [
+    0.46235567331314087,
+    -0.5711085200309753
+   ],
+   "RIM": [
+    0.42966413497924805,
+    -0.6576050519943237
+   ],
+   "REB": [
+    0.11206299066543579,
+    -0.1774451732635498
+   ],
+   "CTRL": [
+    0.22988346219062805,
+    -0.5069221258163452
+   ],
+   "REB_O": [
+    0.45957717299461365,
+    -0.6107894778251648
+   ],
+   "REB_D": [
+    0.11464515328407288,
+    -0.1397760957479477
+   ]
+  },
+  "1642914": {
+   "full": [
+    0.4852363169193268,
+    0.6777033805847168
+   ],
+   "RIM": [
+    0.3216104805469513,
+    0.2338923215866089
+   ],
+   "REB": [
+    0.9980858564376831,
+    0.15791265666484833
+   ],
+   "CTRL": [
+    0.2565504014492035,
+    0.7325761914253235
+   ],
+   "REB_O": [
+    0.8030793070793152,
+    0.6558969020843506
+   ],
+   "REB_D": [
+    0.6464530229568481,
+    0.18616211414337158
+   ]
+  },
+  "1642920": {
+   "full": [
+    -1.493202805519104,
+    -0.49003171920776367
+   ],
+   "RIM": [
+    -1.5846790075302124,
+    -0.6180002689361572
+   ],
+   "REB": [
+    -0.5511956214904785,
+    -0.8879513144493103
+   ],
+   "CTRL": [
+    -1.6699432134628296,
+    -0.4177998900413513
+   ],
+   "REB_O": [
+    -0.8500789999961853,
+    -0.334896057844162
+   ],
+   "REB_D": [
+    -1.241237759590149,
+    -1.0268031358718872
+   ]
+  },
+  "1642954": {
+   "full": [
+    -1.0681856870651245,
+    -0.9232254028320312
+   ],
+   "RIM": [
+    -1.2067302465438843,
+    -1.633677363395691
+   ],
+   "REB": [
+    -0.6888031959533691,
+    -2.0151100158691406
+   ],
+   "CTRL": [
+    -1.2301346063613892,
+    -0.8605656623840332
+   ],
+   "REB_O": [
+    -0.9861662983894348,
+    -0.9611653685569763
+   ],
+   "REB_D": [
+    -0.781907320022583,
+    -1.9705138206481934
+   ]
+  },
+  "1643052": {
+   "full": [
+    -2.133247137069702,
+    -2.796696662902832
+   ],
+   "RIM": [
+    -2.1568005084991455,
+    -2.801830768585205
+   ],
+   "REB": [
+    -3.4503726959228516,
+    -2.465303421020508
+   ],
+   "CTRL": [
+    -1.807754635810852,
+    -2.9073119163513184
+   ],
+   "REB_O": [
+    -3.2479214668273926,
+    -2.979832887649536
+   ],
+   "REB_D": [
+    -2.3036441802978516,
+    -2.2794673442840576
+   ]
+  },
+  "1643407": {
+   "full": [
+    -0.3054690659046173,
+    -2.446284532546997
+   ],
+   "RIM": [
+    -0.33619192242622375,
+    -2.6061313152313232
+   ],
+   "REB": [
+    -0.5591107606887817,
+    -2.390777826309204
+   ],
+   "CTRL": [
+    -0.3946964740753174,
+    -2.420825958251953
+   ],
+   "REB_O": [
+    -0.23355761170387268,
+    -2.4775547981262207
+   ],
+   "REB_D": [
+    -0.6293840408325195,
+    -2.358604669570923
+   ]
+  },
+  "1643408": {
+   "full": [
+    -0.5063655972480774,
+    -1.0248979330062866
+   ],
+   "RIM": [
+    -0.4977732300758362,
+    -1.1301156282424927
+   ],
+   "REB": [
+    0.05366094410419464,
+    -1.4941508769989014
+   ],
+   "CTRL": [
+    -0.565106987953186,
+    -1.0087463855743408
+   ],
+   "REB_O": [
+    -0.31328052282333374,
+    -1.0361117124557495
+   ],
+   "REB_D": [
+    -0.1489688903093338,
+    -1.4825775623321533
+   ]
+  },
+  "1643409": {
+   "full": [
+    -0.9139201641082764,
+    -0.06388497352600098
+   ],
+   "RIM": [
+    -0.9128216505050659,
+    -0.03012141026556492
+   ],
+   "REB": [
+    -1.2830233573913574,
+    0.6965472102165222
+   ],
+   "CTRL": [
+    -0.847731351852417,
+    -0.08450019359588623
+   ],
+   "REB_O": [
+    -0.8222593665122986,
+    -0.09263292700052261
+   ],
+   "REB_D": [
+    -1.3676179647445679,
+    0.7188695073127747
+   ]
+  },
+  "1643410": {
+   "full": [
+    -1.2480547428131104,
+    -2.09591007232666
+   ],
+   "RIM": [
+    -1.198731541633606,
+    -1.9141343832015991
+   ],
+   "REB": [
+    -1.5390563011169434,
+    -1.9694057703018188
+   ],
+   "CTRL": [
+    -1.3383766412734985,
+    -2.06466007232666
+   ],
+   "REB_O": [
+    -1.240417242050171,
+    -2.1480677127838135
+   ],
+   "REB_D": [
+    -1.5462768077850342,
+    -1.9177449941635132
+   ]
+  },
+  "1643411": {
+   "full": [
+    0.7535701394081116,
+    1.2290701866149902
+   ],
+   "RIM": [
+    0.6911006569862366,
+    0.8437933325767517
+   ],
+   "REB": [
+    2.01124906539917,
+    0.6025822758674622
+   ],
+   "CTRL": [
+    0.6320603489875793,
+    1.258264422416687
+   ],
+   "REB_O": [
+    1.226158618927002,
+    1.2896592617034912
+   ],
+   "REB_D": [
+    1.5032469034194946,
+    0.5466843843460083
+   ]
+  },
+  "1643412": {
+   "full": [
+    -0.5024348497390747,
+    0.401282399892807
+   ],
+   "RIM": [
+    -0.5633466839790344,
+    0.36263182759284973
+   ],
+   "REB": [
+    0.16327059268951416,
+    -0.1553986668586731
+   ],
+   "CTRL": [
+    -0.5864626169204712,
+    0.4275718927383423
+   ],
+   "REB_O": [
+    -0.3695540726184845,
+    0.38946640491485596
+   ],
+   "REB_D": [
+    0.021648583933711052,
+    -0.14002589881420135
+   ]
+  },
+  "1643413": {
+   "full": [
+    -1.4208881855010986,
+    0.2704180181026459
+   ],
+   "RIM": [
+    -1.4288148880004883,
+    0.21887679398059845
+   ],
+   "REB": [
+    -1.4190534353256226,
+    0.37673038244247437
+   ],
+   "CTRL": [
+    -1.4965842962265015,
+    0.29950258135795593
+   ],
+   "REB_O": [
+    -1.2014496326446533,
+    0.28838470578193665
+   ],
+   "REB_D": [
+    -1.6349605321884155,
+    0.3565749228000641
+   ]
+  },
+  "1643414": {
+   "full": [
+    -0.8163609504699707,
+    0.9094303250312805
+   ],
+   "RIM": [
+    -0.8835338354110718,
+    0.6810013651847839
+   ],
+   "REB": [
+    0.21501347422599792,
+    0.32085299491882324
+   ],
+   "CTRL": [
+    -0.8652397394180298,
+    0.9261183142662048
+   ],
+   "REB_O": [
+    -0.4942263066768646,
+    0.9550024271011353
+   ],
+   "REB_D": [
+    -0.13065524399280548,
+    0.28430038690567017
+   ]
+  },
+  "1643415": {
+   "full": [
+    0.19956091046333313,
+    -0.16507665812969208
+   ],
+   "RIM": [
+    0.1699727475643158,
+    -0.3270837664604187
+   ],
+   "REB": [
+    -0.6189565062522888,
+    -0.060343269258737564
+   ],
+   "CTRL": [
+    0.13030116260051727,
+    -0.14249387383460999
+   ],
+   "REB_O": [
+    -0.2541086971759796,
+    -0.25895580649375916
+   ],
+   "REB_D": [
+    -0.1609940379858017,
+    0.029028207063674927
+   ]
+  },
+  "1643417": {
+   "full": [
+    -2.8149526119232178,
+    -0.537305474281311
+   ],
+   "RIM": [
+    -2.817331314086914,
+    -0.371673047542572
+   ],
+   "REB": [
+    -2.654644727706909,
+    -0.7578020691871643
+   ],
+   "CTRL": [
+    -2.8550729751586914,
+    -0.5233186483383179
+   ],
+   "REB_O": [
+    -2.7692551612854004,
+    -0.5401649475097656
+   ],
+   "REB_D": [
+    -2.701775312423706,
+    -0.7531315088272095
+   ]
+  },
+  "1643509": {
+   "full": [
+    -1.7943650484085083,
+    -0.6631680727005005
+   ],
+   "RIM": [
+    -1.8043981790542603,
+    -0.8257245421409607
+   ],
+   "REB": [
+    -0.9999266862869263,
+    -1.1450716257095337
+   ],
+   "CTRL": [
+    -1.8694138526916504,
+    -0.6406049728393555
+   ],
+   "REB_O": [
+    -1.6014991998672485,
+    -0.6552084684371948
+   ],
+   "REB_D": [
+    -1.2072114944458008,
+    -1.1512490510940552
+   ]
+  },
+  "1643516": {
+   "full": [
+    -1.7419672012329102,
+    -0.39421674609184265
+   ],
+   "RIM": [
+    -1.7171950340270996,
+    -0.5079054832458496
+   ],
+   "REB": [
+    -3.133692741394043,
+    0.21673795580863953
+   ],
+   "CTRL": [
+    -1.369433879852295,
+    -0.5449662208557129
+   ],
+   "REB_O": [
+    -2.573819875717163,
+    -0.3849436938762665
+   ],
+   "REB_D": [
+    -2.36513090133667,
+    0.2729065418243408
+   ]
+  },
+  "1643530": {
+   "full": [
+    -2.450471878051758,
+    -1.891141414642334
+   ],
+   "RIM": [
+    -2.2825686931610107,
+    -0.8270718455314636
+   ],
+   "REB": [
+    -3.292222499847412,
+    -1.379663109779358
+   ],
+   "CTRL": [
+    -2.1796371936798096,
+    -1.9792560338974
+   ],
+   "REB_O": [
+    -2.8722331523895264,
+    -1.9458372592926025
+   ],
+   "REB_D": [
+    -2.9116220474243164,
+    -1.2721871137619019
+   ]
+  },
+  "1643567": {
+   "full": [
+    -2.9289979934692383,
+    0.561245322227478
+   ],
+   "RIM": [
+    -2.9976539611816406,
+    0.4507066607475281
+   ],
+   "REB": [
+    -2.0003557205200195,
+    -0.04075966775417328
+   ],
+   "CTRL": [
+    -2.998507022857666,
+    0.5879400372505188
+   ],
+   "REB_O": [
+    -2.6660895347595215,
+    0.6263645887374878
+   ],
+   "REB_D": [
+    -2.2948033809661865,
+    -0.088048554956913
+   ]
+  },
+  "1643624": {
+   "full": [
+    -2.5896313190460205,
+    0.16118639707565308
+   ],
+   "RIM": [
+    -2.649030923843384,
+    -0.007329036481678486
+   ],
+   "REB": [
+    -2.732670783996582,
+    0.1845654398202896
+   ],
+   "CTRL": [
+    -2.5917046070098877,
+    0.16207002103328705
+   ],
+   "REB_O": [
+    -2.563781261444092,
+    0.18256095051765442
+   ],
+   "REB_D": [
+    -2.7579195499420166,
+    0.16243942081928253
+   ]
+  },
+  "201142": {
+   "full": [
+    1.788550615310669,
+    -1.5574833154678345
+   ],
+   "RIM": [
+    1.7202174663543701,
+    -1.3572559356689453
+   ],
+   "REB": [
+    2.62200927734375,
+    -1.6760625839233398
+   ],
+   "CTRL": [
+    1.645545482635498,
+    -1.5399507284164429
+   ],
+   "REB_O": [
+    2.6932802200317383,
+    -1.5268141031265259
+   ],
+   "REB_D": [
+    1.7243750095367432,
+    -1.6969105005264282
+   ]
+  },
+  "201143": {
+   "full": [
+    -2.358534336090088,
+    -2.0394608974456787
+   ],
+   "RIM": [
+    -2.0794670581817627,
+    -0.9774759411811829
+   ],
+   "REB": [
+    -2.2345235347747803,
+    -1.1546109914779663
+   ],
+   "CTRL": [
+    -2.1860766410827637,
+    -2.090064525604248
+   ],
+   "REB_O": [
+    -2.14670467376709,
+    -2.060215711593628
+   ],
+   "REB_D": [
+    -2.4410130977630615,
+    -1.1624492406845093
+   ]
+  },
+  "201572": {
+   "full": [
+    -2.5543651580810547,
+    -3.728776454925537
+   ],
+   "RIM": [
+    -2.206571102142334,
+    -1.4408562183380127
+   ],
+   "REB": [
+    -2.4097049236297607,
+    -2.6377832889556885
+   ],
+   "CTRL": [
+    -2.2510123252868652,
+    -3.8680686950683594
+   ],
+   "REB_O": [
+    -2.296220302581787,
+    -3.717588424682617
+   ],
+   "REB_D": [
+    -2.678617238998413,
+    -2.7162795066833496
+   ]
+  },
+  "201599": {
+   "full": [
+    -2.0660996437072754,
+    -0.30753451585769653
+   ],
+   "RIM": [
+    -2.0628843307495117,
+    -0.09477216750383377
+   ],
+   "REB": [
+    -2.7318100929260254,
+    0.33605027198791504
+   ],
+   "CTRL": [
+    -2.0483713150024414,
+    -0.3140791654586792
+   ],
+   "REB_O": [
+    -2.0663678646087646,
+    -0.3158791661262512
+   ],
+   "REB_D": [
+    -2.7309582233428955,
+    0.3437310457229614
+   ]
+  },
+  "201935": {
+   "full": [
+    1.3680177927017212,
+    0.529060959815979
+   ],
+   "RIM": [
+    1.3201502561569214,
+    -0.08633756637573242
+   ],
+   "REB": [
+    2.466096878051758,
+    0.5920894742012024
+   ],
+   "CTRL": [
+    1.0978467464447021,
+    0.5742464661598206
+   ],
+   "REB_O": [
+    2.370462417602539,
+    0.6025980114936829
+   ],
+   "REB_D": [
+    1.4702202081680298,
+    0.5176096558570862
+   ]
+  },
+  "201939": {
+   "full": [
+    4.854680061340332,
+    -0.2990563213825226
+   ],
+   "RIM": [
+    4.712800979614258,
+    -0.8301219344139099
+   ],
+   "REB": [
+    6.0159077644348145,
+    -0.74448162317276
+   ],
+   "CTRL": [
+    4.798771858215332,
+    -0.30806466937065125
+   ],
+   "REB_O": [
+    5.581978797912598,
+    -0.2337462604045868
+   ],
+   "REB_D": [
+    5.238410472869873,
+    -0.8403009176254272
+   ]
+  },
+  "201942": {
+   "full": [
+    0.4271255135536194,
+    2.957913637161255
+   ],
+   "RIM": [
+    0.2743431627750397,
+    2.290276050567627
+   ],
+   "REB": [
+    1.8216201066970825,
+    2.10467529296875
+   ],
+   "CTRL": [
+    0.1949196606874466,
+    3.0626330375671387
+   ],
+   "REB_O": [
+    1.1591675281524658,
+    2.9572277069091797
+   ],
+   "REB_D": [
+    0.9717320203781128,
+    2.0772368907928467
+   ]
+  },
+  "201950": {
+   "full": [
+    2.309370279312134,
+    0.14400388300418854
+   ],
+   "RIM": [
+    2.2215800285339355,
+    -0.6125888824462891
+   ],
+   "REB": [
+    2.8987157344818115,
+    -0.3126738369464874
+   ],
+   "CTRL": [
+    2.148057460784912,
+    0.17235036194324493
+   ],
+   "REB_O": [
+    2.6716485023498535,
+    0.11475888639688492
+   ],
+   "REB_D": [
+    2.51029372215271,
+    -0.2805960476398468
+   ]
+  },
+  "202331": {
+   "full": [
+    0.4458269476890564,
+    -3.9069974422454834
+   ],
+   "RIM": [
+    0.34216955304145813,
+    -4.094228744506836
+   ],
+   "REB": [
+    1.4004056453704834,
+    -3.5407862663269043
+   ],
+   "CTRL": [
+    0.2550617456436157,
+    -3.8756067752838135
+   ],
+   "REB_O": [
+    1.4689559936523438,
+    -3.912191390991211
+   ],
+   "REB_D": [
+    0.41953757405281067,
+    -3.557873010635376
+   ]
+  },
+  "202681": {
+   "full": [
+    2.784688949584961,
+    -0.6357993483543396
+   ],
+   "RIM": [
+    2.813328504562378,
+    -0.8915920853614807
+   ],
+   "REB": [
+    3.4286186695098877,
+    -1.0075123310089111
+   ],
+   "CTRL": [
+    2.704061508178711,
+    -0.6299941539764404
+   ],
+   "REB_O": [
+    2.9995594024658203,
+    -0.6359047293663025
+   ],
+   "REB_D": [
+    3.212515354156494,
+    -1.0126690864562988
+   ]
+  },
+  "202691": {
+   "full": [
+    -2.0412333011627197,
+    1.6210706233978271
+   ],
+   "RIM": [
+    -2.157719612121582,
+    1.4242217540740967
+   ],
+   "REB": [
+    -0.9208226799964905,
+    1.1092742681503296
+   ],
+   "CTRL": [
+    -2.1815454959869385,
+    1.6591298580169678
+   ],
+   "REB_O": [
+    -1.2725367546081543,
+    1.8630456924438477
+   ],
+   "REB_D": [
+    -1.7731739282608032,
+    0.9158408641815186
+   ]
+  },
+  "202695": {
+   "full": [
+    4.30155086517334,
+    -1.2163771390914917
+   ],
+   "RIM": [
+    4.204399108886719,
+    -2.048914909362793
+   ],
+   "REB": [
+    4.2761430740356445,
+    -1.0416839122772217
+   ],
+   "CTRL": [
+    4.081546783447266,
+    -1.2021983861923218
+   ],
+   "REB_O": [
+    4.686861515045166,
+    -1.2173010110855103
+   ],
+   "REB_D": [
+    3.9008629322052,
+    -1.0251010656356812
+   ]
+  },
+  "203076": {
+   "full": [
+    0.7004101276397705,
+    -5.123181343078613
+   ],
+   "RIM": [
+    1.0520745515823364,
+    -3.5794758796691895
+   ],
+   "REB": [
+    -0.8022630214691162,
+    -3.5662941932678223
+   ],
+   "CTRL": [
+    1.1438895463943481,
+    -5.163345813751221
+   ],
+   "REB_O": [
+    -0.6362549662590027,
+    -4.907994747161865
+   ],
+   "REB_D": [
+    0.4252178966999054,
+    -3.701178550720215
+   ]
+  },
+  "203081": {
+   "full": [
+    2.900482177734375,
+    -0.09318047016859055
+   ],
+   "RIM": [
+    2.919598340988159,
+    -0.5372269153594971
+   ],
+   "REB": [
+    3.827528238296509,
+    -0.5353070497512817
+   ],
+   "CTRL": [
+    2.827608346939087,
+    -0.08598531782627106
+   ],
+   "REB_O": [
+    3.2461323738098145,
+    -0.07147461175918579
+   ],
+   "REB_D": [
+    3.4769864082336426,
+    -0.5635433793067932
+   ]
+  },
+  "203110": {
+   "full": [
+    -3.886667013168335,
+    -3.244082450866699
+   ],
+   "RIM": [
+    -3.8195810317993164,
+    -2.5639686584472656
+   ],
+   "REB": [
+    -3.7038793563842773,
+    -2.5054070949554443
+   ],
+   "CTRL": [
+    -3.5570547580718994,
+    -3.418304204940796
+   ],
+   "REB_O": [
+    -3.6498005390167236,
+    -3.287304639816284
+   ],
+   "REB_D": [
+    -3.94201397895813,
+    -2.521348476409912
+   ]
+  },
+  "203468": {
+   "full": [
+    -0.1578461229801178,
+    2.0381810665130615
+   ],
+   "RIM": [
+    -0.20828482508659363,
+    1.611189603805542
+   ],
+   "REB": [
+    0.9563122391700745,
+    1.4263468980789185
+   ],
+   "CTRL": [
+    -0.34192031621932983,
+    2.0942063331604004
+   ],
+   "REB_O": [
+    0.42819875478744507,
+    2.081157922744751
+   ],
+   "REB_D": [
+    0.2872140407562256,
+    1.388342022895813
+   ]
+  },
+  "203471": {
+   "full": [
+    -1.4322285652160645,
+    1.4477720260620117
+   ],
+   "RIM": [
+    -1.6239351034164429,
+    0.5892407298088074
+   ],
+   "REB": [
+    -0.0008445800631307065,
+    0.6660016179084778
+   ],
+   "CTRL": [
+    -1.6549428701400757,
+    1.5028232336044312
+   ],
+   "REB_O": [
+    -0.6044015884399414,
+    1.5583527088165283
+   ],
+   "REB_D": [
+    -0.9469829797744751,
+    0.5837891697883606
+   ]
+  },
+  "203484": {
+   "full": [
+    -1.5881245136260986,
+    0.7574580907821655
+   ],
+   "RIM": [
+    -1.8444242477416992,
+    -0.14742633700370789
+   ],
+   "REB": [
+    -0.3342594504356384,
+    -0.06830654293298721
+   ],
+   "CTRL": [
+    -1.8177012205123901,
+    0.8442404866218567
+   ],
+   "REB_O": [
+    -0.9429371356964111,
+    0.872038722038269
+   ],
+   "REB_D": [
+    -1.0618855953216553,
+    -0.16756172478199005
+   ]
+  },
+  "203497": {
+   "full": [
+    -1.6726478338241577,
+    -4.469995021820068
+   ],
+   "RIM": [
+    -1.3431484699249268,
+    -2.549623966217041
+   ],
+   "REB": [
+    -3.4614675045013428,
+    -2.7777650356292725
+   ],
+   "CTRL": [
+    -0.8202423453330994,
+    -4.700887680053711
+   ],
+   "REB_O": [
+    -3.4411823749542236,
+    -4.09405517578125
+   ],
+   "REB_D": [
+    -1.5977733135223389,
+    -2.778445243835449
+   ]
+  },
+  "203501": {
+   "full": [
+    -1.9209157228469849,
+    2.1874992847442627
+   ],
+   "RIM": [
+    -2.0710105895996094,
+    1.741387963294983
+   ],
+   "REB": [
+    -0.8370592594146729,
+    1.744359016418457
+   ],
+   "CTRL": [
+    -2.0441551208496094,
+    2.224296808242798
+   ],
+   "REB_O": [
+    -1.1792049407958984,
+    2.448809862136841
+   ],
+   "REB_D": [
+    -1.6666580438613892,
+    1.524829387664795
+   ]
+  },
+  "203507": {
+   "full": [
+    4.91841459274292,
+    -3.1398062705993652
+   ],
+   "RIM": [
+    4.814621448516846,
+    -2.6242432594299316
+   ],
+   "REB": [
+    2.334068775177002,
+    -1.9037445783615112
+   ],
+   "CTRL": [
+    5.16209077835083,
+    -3.1522200107574463
+   ],
+   "REB_O": [
+    2.8091676235198975,
+    -3.424621343612671
+   ],
+   "REB_D": [
+    4.087174415588379,
+    -1.693554401397705
+   ]
+  },
+  "203897": {
+   "full": [
+    0.610572338104248,
+    2.1115379333496094
+   ],
+   "RIM": [
+    0.5423305630683899,
+    1.644729733467102
+   ],
+   "REB": [
+    2.022789478302002,
+    1.6322330236434937
+   ],
+   "CTRL": [
+    0.4017389416694641,
+    2.165294647216797
+   ],
+   "REB_O": [
+    1.4017298221588135,
+    2.233031988143921
+   ],
+   "REB_D": [
+    1.1184377670288086,
+    1.510317325592041
+   ]
+  },
+  "203924": {
+   "full": [
+    -2.431703805923462,
+    0.844165563583374
+   ],
+   "RIM": [
+    -2.5184919834136963,
+    0.7120875716209412
+   ],
+   "REB": [
+    -1.7143458127975464,
+    0.28935566544532776
+   ],
+   "CTRL": [
+    -2.6180756092071533,
+    0.9054858088493347
+   ],
+   "REB_O": [
+    -2.0156569480895996,
+    0.9231421947479248
+   ],
+   "REB_D": [
+    -2.1789584159851074,
+    0.2377196103334427
+   ]
+  },
+  "203932": {
+   "full": [
+    0.41228991746902466,
+    -0.867355227470398
+   ],
+   "RIM": [
+    0.31255748867988586,
+    -1.2608733177185059
+   ],
+   "REB": [
+    0.3479411005973816,
+    -0.833839476108551
+   ],
+   "CTRL": [
+    0.38663744926452637,
+    -0.8611564040184021
+   ],
+   "REB_O": [
+    0.5686233043670654,
+    -0.9177107214927673
+   ],
+   "REB_D": [
+    0.19539666175842285,
+    -0.7827919721603394
+   ]
+  },
+  "203935": {
+   "full": [
+    -2.111272096633911,
+    -1.7324234247207642
+   ],
+   "RIM": [
+    -2.293766975402832,
+    -2.34999418258667
+   ],
+   "REB": [
+    -1.0297991037368774,
+    -2.3507649898529053
+   ],
+   "CTRL": [
+    -2.2233939170837402,
+    -1.6886827945709229
+   ],
+   "REB_O": [
+    -1.4390140771865845,
+    -1.6564507484436035
+   ],
+   "REB_D": [
+    -1.7578340768814087,
+    -2.4059953689575195
+   ]
+  },
+  "203944": {
+   "full": [
+    0.22087600827217102,
+    0.5575808882713318
+   ],
+   "RIM": [
+    0.1288704127073288,
+    -0.08957618474960327
+   ],
+   "REB": [
+    -0.2672078311443329,
+    0.9439876675605774
+   ],
+   "CTRL": [
+    0.10956791788339615,
+    0.5941745042800903
+   ],
+   "REB_O": [
+    0.0677213966846466,
+    0.5669987201690674
+   ],
+   "REB_D": [
+    -0.11860738694667816,
+    0.9370537996292114
+   ]
+  },
+  "203952": {
+   "full": [
+    -0.8478758335113525,
+    1.1104927062988281
+   ],
+   "RIM": [
+    -0.7338008880615234,
+    1.3763775825500488
+   ],
+   "REB": [
+    -0.8063859939575195,
+    0.9186238050460815
+   ],
+   "CTRL": [
+    -1.0860873460769653,
+    1.2134885787963867
+   ],
+   "REB_O": [
+    -0.8546626567840576,
+    1.1026952266693115
+   ],
+   "REB_D": [
+    -0.79930180311203,
+    0.9269742369651794
+   ]
+  },
+  "203954": {
+   "full": [
+    -2.5171470642089844,
+    -1.207392930984497
+   ],
+   "RIM": [
+    -2.2656774520874023,
+    0.3288117051124573
+   ],
+   "REB": [
+    -3.1506285667419434,
+    0.32515645027160645
+   ],
+   "CTRL": [
+    -1.5344691276550293,
+    -1.5206010341644287
+   ],
+   "REB_O": [
+    -2.8798987865448,
+    -1.2516902685165405
+   ],
+   "REB_D": [
+    -2.8005504608154297,
+    0.4236118793487549
+   ]
+  },
+  "203999": {
+   "full": [
+    6.358519077301025,
+    -2.806990623474121
+   ],
+   "RIM": [
+    6.396355152130127,
+    -2.634856700897217
+   ],
+   "REB": [
+    4.434276103973389,
+    -0.8472739458084106
+   ],
+   "CTRL": [
+    7.132043361663818,
+    -2.816532611846924
+   ],
+   "REB_O": [
+    4.877804756164551,
+    -2.890066623687744
+   ],
+   "REB_D": [
+    5.598194599151611,
+    -0.8087421655654907
+   ]
+  },
+  "2544": {
+   "full": [
+    1.1739187240600586,
+    -3.1988167762756348
+   ],
+   "RIM": [
+    0.9554989337921143,
+    -3.599430799484253
+   ],
+   "REB": [
+    2.03733229637146,
+    -2.6750946044921875
+   ],
+   "CTRL": [
+    1.016774296760559,
+    -3.177604913711548
+   ],
+   "REB_O": [
+    2.3639492988586426,
+    -3.2809834480285645
+   ],
+   "REB_D": [
+    0.9313418865203857,
+    -2.619374990463257
+   ]
+  }
+ }
+}

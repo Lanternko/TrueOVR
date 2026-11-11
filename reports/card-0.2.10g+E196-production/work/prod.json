@@ -1,0 +1,28 @@
+{
+ "spec_sha256": "8dadfe0f8e24c4a2b3a9cb4d3ccbdbc4b8a53d3aae9847ced04a5dcd2ba00d9b",
+ "past_pool_creation_maxdiff": 0.0,
+ "past_pool_n": 709,
+ "tailU_creation_maxdiff": 0.0,
+ "tailH_creation_maxdiff": 0.0,
+ "lgTS": {
+  "2022-23": 0.5812526608812262,
+  "2023-24": 0.5799880466593155,
+  "2024-25": 0.5761946811456349,
+  "2025-26": 0.5814019573065193
+ },
+ "lgTS_json_2025-26": 0.581399580141985,
+ "flags_top_bot": [
+  true,
+  true
+ ],
+ "pool_window_n": 252,
+ "tail-U-SP.csv": "f432baa2c52b85fbe260353424ba38c495deadf4d4d67b50811b62b15e59e7d3",
+ "tail-e123a-SP.csv": "52ab87d31a196eed4b6a3dcbb3c9c64a7801f4537de2b1b410cfcb03dc693fb7",
+ "prod-raw.csv": "3be1b12a39fcd42c4514c3532e0eb95cdb4dca5ab4ae83c289304e99dbb1e9ab",
+ "inputs": {
+  "tail-U.csv": "166c808965b292482232c64c83bc870d7c4fdaf795a6702a62978589b86ad1a7",
+  "tail-e123a.csv": "14b27b9d6cc67be1df4a4829666837a3a21c29c20513a4148863624713226231",
+  "w10h.py": "9a36c8f5929e69ee5cab6b50bcbc7b26db2cb452baae40a5c52c11c5fe366bf3",
+  "w8h.py": "f2afe6aa20d6e1474c9712018c0136842ef328ee748cad01262c370279b0ac6f"
+ }
+}

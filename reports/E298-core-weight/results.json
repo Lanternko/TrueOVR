@@ -1,0 +1,1825 @@
+{
+ "prereg_sha256": "fac1771ce484f0b774c0d0024631a8f83185d31bc6956545c8c7688501b0f54e",
+ "arms": {
+  "A": {
+   "S1": true,
+   "S1b_avdija_over_rw3": false,
+   "S2": true,
+   "S3": true,
+   "drops_vs_0214a": [],
+   "rho": {
+    "T": 0.765309327054327,
+    "EPM": 0.7138279548423231,
+    "2K": 0.7793367460714761
+   },
+   "drho_vs_W1": {
+    "T": {
+     "mean": -2.4882498413258958e-05,
+     "ci90": [
+      -0.003042466455870091,
+      0.0031374282614370637
+     ]
+    },
+    "EPM": {
+     "mean": -0.0011445761188531023,
+     "ci90": [
+      -0.003379003174089401,
+      0.001043510262074082
+     ]
+    },
+    "2K": {
+     "mean": -0.00024027262001524718,
+     "ci90": [
+      -0.0013685872487900152,
+      0.0009237118158391898
+     ]
+    }
+   },
+   "watch": {
+    "Deni Avdija": {
+     "rank": 73,
+     "ovr": 82.8,
+     "bonus": 0.0,
+     "mpg": 32.54
+    },
+    "Donovan Clingan": {
+     "rank": 127,
+     "ovr": 77.5,
+     "bonus": 10.63,
+     "mpg": 27.36
+    },
+    "Robert Williams III": {
+     "rank": 44,
+     "ovr": 88.8,
+     "bonus": 7.82,
+     "mpg": 17.81
+    },
+    "Jrue Holiday": {
+     "rank": 109,
+     "ovr": 78.7,
+     "bonus": 0.0,
+     "mpg": 29.12
+    },
+    "Rudy Gobert": {
+     "rank": 22,
+     "ovr": 92.5,
+     "bonus": 8.57,
+     "mpg": 31.09
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "ovr": 108.5,
+     "bonus": 4.05,
+     "mpg": 34.99
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "ovr": 109.0,
+     "bonus": 7.69,
+     "mpg": 28.69
+    },
+    "Anthony Davis": {
+     "rank": 13,
+     "ovr": 94.6,
+     "bonus": 6.81,
+     "mpg": 31.99
+    },
+    "Karl-Anthony Towns": {
+     "rank": 15,
+     "ovr": 94.2,
+     "bonus": 4.46,
+     "mpg": 30.19
+    },
+    "Joel Embiid": {
+     "rank": 19,
+     "ovr": 93.6,
+     "bonus": 2.87,
+     "mpg": 33.26
+    },
+    "Kristaps Porziņģis": {
+     "rank": 20,
+     "ovr": 93.4,
+     "bonus": 5.13,
+     "mpg": 23.66
+    },
+    "Chet Holmgren": {
+     "rank": 9,
+     "ovr": 95.7,
+     "bonus": 2.15,
+     "mpg": 28.65
+    },
+    "Evan Mobley": {
+     "rank": 12,
+     "ovr": 94.7,
+     "bonus": 1.95,
+     "mpg": 30.84
+    },
+    "Ivica Zubac": {
+     "rank": 52,
+     "ovr": 87.4,
+     "bonus": 8.02,
+     "mpg": 28.65
+    },
+    "Jarrett Allen": {
+     "rank": 27,
+     "ovr": 92.0,
+     "bonus": 6.78,
+     "mpg": 27.36
+    },
+    "Clint Capela": {
+     "rank": 112,
+     "ovr": 78.6,
+     "bonus": 9.21,
+     "mpg": 12.81
+    },
+    "Mitchell Robinson": {
+     "rank": 83,
+     "ovr": 81.2,
+     "bonus": 5.39,
+     "mpg": 19.94
+    },
+    "Isaiah Hartenstein": {
+     "rank": 29,
+     "ovr": 91.4,
+     "bonus": 6.94,
+     "mpg": 21.94
+    },
+    "Domantas Sabonis": {
+     "rank": 60,
+     "ovr": 85.2,
+     "bonus": 4.6,
+     "mpg": 26.45
+    },
+    "Alperen Sengun": {
+     "rank": 110,
+     "ovr": 78.7,
+     "bonus": 3.09,
+     "mpg": 32.53
+    },
+    "Bam Adebayo": {
+     "rank": 49,
+     "ovr": 87.7,
+     "bonus": 2.31,
+     "mpg": 33.19
+    },
+    "Scottie Barnes": {
+     "rank": 37,
+     "ovr": 89.7,
+     "bonus": 0.52,
+     "mpg": 32.93
+    },
+    "Jalen Johnson": {
+     "rank": 33,
+     "ovr": 90.3,
+     "bonus": 0.77,
+     "mpg": 35.17
+    },
+    "Franz Wagner": {
+     "rank": 48,
+     "ovr": 88.0,
+     "bonus": 0.0,
+     "mpg": 24.63
+    },
+    "Josh Giddey": {
+     "rank": 126,
+     "ovr": 77.6,
+     "bonus": 0.0,
+     "mpg": 31.78
+    },
+    "Toumani Camara": {
+     "rank": 105,
+     "ovr": 79.3,
+     "bonus": 0.0,
+     "mpg": 33.1
+    }
+   },
+   "top20": [
+    "Victor Wembanyama",
+    "Nikola Jokić",
+    "Shai Gilgeous-Alexander",
+    "Luka Dončić",
+    "Giannis Antetokounmpo",
+    "Kawhi Leonard",
+    "Donovan Mitchell",
+    "Jayson Tatum",
+    "Chet Holmgren",
+    "Anthony Edwards",
+    "Kevin Durant",
+    "Evan Mobley",
+    "Anthony Davis",
+    "Stephen Curry",
+    "Karl-Anthony Towns",
+    "Ty Jerome",
+    "Austin Reaves",
+    "Cade Cunningham",
+    "Joel Embiid",
+    "Kristaps Porziņģis"
+   ],
+   "live": {
+    "Deni Avdija": [
+     79,
+     82.3
+    ],
+    "Donovan Clingan": [
+     72,
+     83.1
+    ],
+    "Robert Williams III": [
+     50,
+     86.8
+    ],
+    "Jrue Holiday": [
+     52,
+     86.2
+    ]
+   },
+   "max_bonus": 10.631554584152596,
+   "top_bonus": [
+    [
+     "Donovan Clingan",
+     10.63,
+     27.36
+    ],
+    [
+     "Moussa Cisse",
+     9.47,
+     17.24
+    ],
+    [
+     "Clint Capela",
+     9.21,
+     12.81
+    ],
+    [
+     "Dylan Cardwell",
+     9.08,
+     21.23
+    ],
+    [
+     "Jonas Valanciunas",
+     8.67,
+     13.32
+    ],
+    [
+     "Rudy Gobert",
+     8.57,
+     31.09
+    ],
+    [
+     "Ivica Zubac",
+     8.02,
+     28.65
+    ],
+    [
+     "Mark Williams",
+     7.94,
+     23.1
+    ],
+    [
+     "Paul Reed",
+     7.82,
+     14.97
+    ],
+    [
+     "Robert Williams III",
+     7.82,
+     17.81
+    ]
+   ]
+  },
+  "W1": {
+   "S1": true,
+   "S1b_avdija_over_rw3": false,
+   "S2": true,
+   "S3": true,
+   "drops_vs_0214a": [],
+   "rho": {
+    "T": 0.7653342095527402,
+    "EPM": 0.7149725309611762,
+    "2K": 0.7795770186914913
+   },
+   "drho_vs_W1": {
+    "T": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    },
+    "EPM": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    },
+    "2K": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "watch": {
+    "Deni Avdija": {
+     "rank": 73,
+     "ovr": 82.9,
+     "bonus": 0.06,
+     "mpg": 32.54
+    },
+    "Donovan Clingan": {
+     "rank": 128,
+     "ovr": 77.6,
+     "bonus": 10.73,
+     "mpg": 27.36
+    },
+    "Robert Williams III": {
+     "rank": 45,
+     "ovr": 88.7,
+     "bonus": 7.74,
+     "mpg": 17.81
+    },
+    "Jrue Holiday": {
+     "rank": 111,
+     "ovr": 78.7,
+     "bonus": 0.0,
+     "mpg": 29.12
+    },
+    "Rudy Gobert": {
+     "rank": 22,
+     "ovr": 92.6,
+     "bonus": 8.7,
+     "mpg": 31.09
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "ovr": 108.5,
+     "bonus": 4.12,
+     "mpg": 34.99
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "ovr": 109.1,
+     "bonus": 7.81,
+     "mpg": 28.69
+    },
+    "Anthony Davis": {
+     "rank": 13,
+     "ovr": 94.5,
+     "bonus": 6.66,
+     "mpg": 31.99
+    },
+    "Karl-Anthony Towns": {
+     "rank": 15,
+     "ovr": 94.2,
+     "bonus": 4.52,
+     "mpg": 30.19
+    },
+    "Joel Embiid": {
+     "rank": 19,
+     "ovr": 93.7,
+     "bonus": 3.05,
+     "mpg": 33.26
+    },
+    "Kristaps Porziņģis": {
+     "rank": 20,
+     "ovr": 93.5,
+     "bonus": 5.19,
+     "mpg": 23.66
+    },
+    "Chet Holmgren": {
+     "rank": 6,
+     "ovr": 99.1,
+     "bonus": 5.6,
+     "mpg": 28.65
+    },
+    "Evan Mobley": {
+     "rank": 8,
+     "ovr": 97.7,
+     "bonus": 4.89,
+     "mpg": 30.84
+    },
+    "Ivica Zubac": {
+     "rank": 52,
+     "ovr": 87.5,
+     "bonus": 8.07,
+     "mpg": 28.65
+    },
+    "Jarrett Allen": {
+     "rank": 27,
+     "ovr": 92.1,
+     "bonus": 6.93,
+     "mpg": 27.36
+    },
+    "Clint Capela": {
+     "rank": 122,
+     "ovr": 78.0,
+     "bonus": 8.6,
+     "mpg": 12.81
+    },
+    "Mitchell Robinson": {
+     "rank": 98,
+     "ovr": 80.3,
+     "bonus": 4.48,
+     "mpg": 19.94
+    },
+    "Isaiah Hartenstein": {
+     "rank": 29,
+     "ovr": 91.5,
+     "bonus": 7.04,
+     "mpg": 21.94
+    },
+    "Domantas Sabonis": {
+     "rank": 63,
+     "ovr": 84.7,
+     "bonus": 4.13,
+     "mpg": 26.45
+    },
+    "Alperen Sengun": {
+     "rank": 109,
+     "ovr": 79.0,
+     "bonus": 3.43,
+     "mpg": 32.53
+    },
+    "Bam Adebayo": {
+     "rank": 49,
+     "ovr": 87.7,
+     "bonus": 2.31,
+     "mpg": 33.19
+    },
+    "Scottie Barnes": {
+     "rank": 36,
+     "ovr": 89.8,
+     "bonus": 0.65,
+     "mpg": 32.93
+    },
+    "Jalen Johnson": {
+     "rank": 33,
+     "ovr": 90.3,
+     "bonus": 0.75,
+     "mpg": 35.17
+    },
+    "Franz Wagner": {
+     "rank": 48,
+     "ovr": 88.0,
+     "bonus": 0.02,
+     "mpg": 24.63
+    },
+    "Josh Giddey": {
+     "rank": 127,
+     "ovr": 77.6,
+     "bonus": 0.0,
+     "mpg": 31.78
+    },
+    "Toumani Camara": {
+     "rank": 106,
+     "ovr": 79.3,
+     "bonus": 0.0,
+     "mpg": 33.1
+    }
+   },
+   "top20": [
+    "Victor Wembanyama",
+    "Nikola Jokić",
+    "Shai Gilgeous-Alexander",
+    "Luka Dončić",
+    "Giannis Antetokounmpo",
+    "Chet Holmgren",
+    "Kawhi Leonard",
+    "Evan Mobley",
+    "Donovan Mitchell",
+    "Jayson Tatum",
+    "Anthony Edwards",
+    "Kevin Durant",
+    "Anthony Davis",
+    "Stephen Curry",
+    "Karl-Anthony Towns",
+    "Ty Jerome",
+    "Austin Reaves",
+    "Cade Cunningham",
+    "Joel Embiid",
+    "Kristaps Porziņģis"
+   ],
+   "live": {
+    "Deni Avdija": [
+     79,
+     82.3
+    ],
+    "Donovan Clingan": [
+     72,
+     83.1
+    ],
+    "Robert Williams III": [
+     50,
+     86.8
+    ],
+    "Jrue Holiday": [
+     52,
+     86.2
+    ]
+   },
+   "max_bonus": 10.732486898094207,
+   "top_bonus": [
+    [
+     "Donovan Clingan",
+     10.73,
+     27.36
+    ],
+    [
+     "Moussa Cisse",
+     9.58,
+     17.24
+    ],
+    [
+     "Rudy Gobert",
+     8.7,
+     31.09
+    ],
+    [
+     "Clint Capela",
+     8.6,
+     12.81
+    ],
+    [
+     "Jonas Valanciunas",
+     8.55,
+     13.32
+    ],
+    [
+     "Mark Williams",
+     8.08,
+     23.1
+    ],
+    [
+     "Ivica Zubac",
+     8.07,
+     28.65
+    ],
+    [
+     "Victor Wembanyama",
+     7.81,
+     28.69
+    ],
+    [
+     "Robert Williams III",
+     7.74,
+     17.81
+    ],
+    [
+     "Dylan Cardwell",
+     7.73,
+     21.23
+    ]
+   ]
+  },
+  "U30": {
+   "S1": true,
+   "S1b_avdija_over_rw3": false,
+   "S2": true,
+   "S3": false,
+   "drops_vs_0214a": [],
+   "rho": {
+    "T": 0.7573353324468202,
+    "EPM": 0.7095327817381228,
+    "2K": 0.7817426713563833
+   },
+   "drho_vs_W1": {
+    "T": {
+     "mean": -0.007998877105920066,
+     "ci90": [
+      -0.012858962681255654,
+      -0.003713732000702758
+     ]
+    },
+    "EPM": {
+     "mean": -0.005439749223053347,
+     "ci90": [
+      -0.010171009684283078,
+      -0.001122465825641611
+     ]
+    },
+    "2K": {
+     "mean": 0.0021656526648919927,
+     "ci90": [
+      -0.00047108168780485846,
+      0.004942005088394014
+     ]
+    }
+   },
+   "watch": {
+    "Deni Avdija": {
+     "rank": 69,
+     "ovr": 82.9,
+     "bonus": 0.06,
+     "mpg": 32.54
+    },
+    "Donovan Clingan": {
+     "rank": 132,
+     "ovr": 76.7,
+     "bonus": 9.79,
+     "mpg": 27.36
+    },
+    "Robert Williams III": {
+     "rank": 57,
+     "ovr": 85.6,
+     "bonus": 4.6,
+     "mpg": 17.81
+    },
+    "Jrue Holiday": {
+     "rank": 111,
+     "ovr": 78.7,
+     "bonus": 0.0,
+     "mpg": 29.12
+    },
+    "Rudy Gobert": {
+     "rank": 21,
+     "ovr": 92.6,
+     "bonus": 8.7,
+     "mpg": 31.09
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "ovr": 108.5,
+     "bonus": 4.12,
+     "mpg": 34.99
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "ovr": 108.8,
+     "bonus": 7.47,
+     "mpg": 28.69
+    },
+    "Anthony Davis": {
+     "rank": 13,
+     "ovr": 94.5,
+     "bonus": 6.66,
+     "mpg": 31.99
+    },
+    "Karl-Anthony Towns": {
+     "rank": 15,
+     "ovr": 94.2,
+     "bonus": 4.52,
+     "mpg": 30.19
+    },
+    "Joel Embiid": {
+     "rank": 19,
+     "ovr": 93.7,
+     "bonus": 3.05,
+     "mpg": 33.26
+    },
+    "Kristaps Porziņģis": {
+     "rank": 25,
+     "ovr": 92.4,
+     "bonus": 4.09,
+     "mpg": 23.66
+    },
+    "Chet Holmgren": {
+     "rank": 6,
+     "ovr": 98.9,
+     "bonus": 5.35,
+     "mpg": 28.65
+    },
+    "Evan Mobley": {
+     "rank": 8,
+     "ovr": 97.7,
+     "bonus": 4.89,
+     "mpg": 30.84
+    },
+    "Ivica Zubac": {
+     "rank": 51,
+     "ovr": 87.1,
+     "bonus": 7.7,
+     "mpg": 28.65
+    },
+    "Jarrett Allen": {
+     "rank": 28,
+     "ovr": 91.5,
+     "bonus": 6.32,
+     "mpg": 27.36
+    },
+    "Clint Capela": {
+     "rank": 175,
+     "ovr": 73.1,
+     "bonus": 3.67,
+     "mpg": 12.81
+    },
+    "Mitchell Robinson": {
+     "rank": 110,
+     "ovr": 78.8,
+     "bonus": 2.98,
+     "mpg": 19.94
+    },
+    "Isaiah Hartenstein": {
+     "rank": 37,
+     "ovr": 89.6,
+     "bonus": 5.15,
+     "mpg": 21.94
+    },
+    "Domantas Sabonis": {
+     "rank": 63,
+     "ovr": 84.2,
+     "bonus": 3.64,
+     "mpg": 26.45
+    },
+    "Alperen Sengun": {
+     "rank": 108,
+     "ovr": 79.0,
+     "bonus": 3.43,
+     "mpg": 32.53
+    },
+    "Bam Adebayo": {
+     "rank": 46,
+     "ovr": 87.7,
+     "bonus": 2.31,
+     "mpg": 33.19
+    },
+    "Scottie Barnes": {
+     "rank": 35,
+     "ovr": 89.8,
+     "bonus": 0.65,
+     "mpg": 32.93
+    },
+    "Jalen Johnson": {
+     "rank": 32,
+     "ovr": 90.3,
+     "bonus": 0.75,
+     "mpg": 35.17
+    },
+    "Franz Wagner": {
+     "rank": 45,
+     "ovr": 88.0,
+     "bonus": 0.02,
+     "mpg": 24.63
+    },
+    "Josh Giddey": {
+     "rank": 125,
+     "ovr": 77.6,
+     "bonus": 0.0,
+     "mpg": 31.78
+    },
+    "Toumani Camara": {
+     "rank": 103,
+     "ovr": 79.3,
+     "bonus": 0.0,
+     "mpg": 33.1
+    }
+   },
+   "top20": [
+    "Victor Wembanyama",
+    "Nikola Jokić",
+    "Shai Gilgeous-Alexander",
+    "Luka Dončić",
+    "Giannis Antetokounmpo",
+    "Chet Holmgren",
+    "Kawhi Leonard",
+    "Evan Mobley",
+    "Donovan Mitchell",
+    "Jayson Tatum",
+    "Anthony Edwards",
+    "Kevin Durant",
+    "Anthony Davis",
+    "Stephen Curry",
+    "Karl-Anthony Towns",
+    "Ty Jerome",
+    "Austin Reaves",
+    "Cade Cunningham",
+    "Joel Embiid",
+    "Kevin Porter Jr."
+   ],
+   "live": {
+    "Deni Avdija": [
+     74,
+     82.3
+    ],
+    "Donovan Clingan": [
+     81,
+     81.7
+    ],
+    "Robert Williams III": [
+     65,
+     83.3
+    ],
+    "Jrue Holiday": [
+     50,
+     86.2
+    ]
+   },
+   "max_bonus": 9.788028051061916,
+   "top_bonus": [
+    [
+     "Donovan Clingan",
+     9.79,
+     27.36
+    ],
+    [
+     "Rudy Gobert",
+     8.7,
+     31.09
+    ],
+    [
+     "Ivica Zubac",
+     7.7,
+     28.65
+    ],
+    [
+     "Victor Wembanyama",
+     7.47,
+     28.69
+    ],
+    [
+     "Jalen Duren",
+     7.01,
+     28.38
+    ],
+    [
+     "Anthony Davis",
+     6.66,
+     31.99
+    ],
+    [
+     "Jarrett Allen",
+     6.32,
+     27.36
+    ],
+    [
+     "Mark Williams",
+     6.22,
+     23.1
+    ],
+    [
+     "Neemias Queta",
+     6.03,
+     25.82
+    ],
+    [
+     "Moussa Diabaté",
+     5.84,
+     27.32
+    ]
+   ],
+   "S4": true,
+   "verdict": "reject"
+  },
+  "U24": {
+   "S1": true,
+   "S1b_avdija_over_rw3": false,
+   "S2": true,
+   "S3": true,
+   "drops_vs_0214a": [],
+   "rho": {
+    "T": 0.7609309659832397,
+    "EPM": 0.7124791046327391,
+    "2K": 0.7821134998799084
+   },
+   "drho_vs_W1": {
+    "T": {
+     "mean": -0.0044032435695005034,
+     "ci90": [
+      -0.007455443782952609,
+      -0.0017629483079523501
+     ]
+    },
+    "EPM": {
+     "mean": -0.002493426328437076,
+     "ci90": [
+      -0.0055834563985702025,
+      0.0003499242570021654
+     ]
+    },
+    "2K": {
+     "mean": 0.0025364811884170946,
+     "ci90": [
+      0.0006234504176603761,
+      0.0046376034066359815
+     ]
+    }
+   },
+   "watch": {
+    "Deni Avdija": {
+     "rank": 70,
+     "ovr": 82.9,
+     "bonus": 0.06,
+     "mpg": 32.54
+    },
+    "Donovan Clingan": {
+     "rank": 126,
+     "ovr": 77.6,
+     "bonus": 10.73,
+     "mpg": 27.36
+    },
+    "Robert Williams III": {
+     "rank": 54,
+     "ovr": 86.7,
+     "bonus": 5.75,
+     "mpg": 17.81
+    },
+    "Jrue Holiday": {
+     "rank": 111,
+     "ovr": 78.7,
+     "bonus": 0.0,
+     "mpg": 29.12
+    },
+    "Rudy Gobert": {
+     "rank": 22,
+     "ovr": 92.6,
+     "bonus": 8.7,
+     "mpg": 31.09
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "ovr": 108.5,
+     "bonus": 4.12,
+     "mpg": 34.99
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "ovr": 109.1,
+     "bonus": 7.81,
+     "mpg": 28.69
+    },
+    "Anthony Davis": {
+     "rank": 13,
+     "ovr": 94.5,
+     "bonus": 6.66,
+     "mpg": 31.99
+    },
+    "Karl-Anthony Towns": {
+     "rank": 15,
+     "ovr": 94.2,
+     "bonus": 4.52,
+     "mpg": 30.19
+    },
+    "Joel Embiid": {
+     "rank": 19,
+     "ovr": 93.7,
+     "bonus": 3.05,
+     "mpg": 33.26
+    },
+    "Kristaps Porziņģis": {
+     "rank": 20,
+     "ovr": 93.4,
+     "bonus": 5.11,
+     "mpg": 23.66
+    },
+    "Chet Holmgren": {
+     "rank": 6,
+     "ovr": 99.1,
+     "bonus": 5.6,
+     "mpg": 28.65
+    },
+    "Evan Mobley": {
+     "rank": 8,
+     "ovr": 97.7,
+     "bonus": 4.89,
+     "mpg": 30.84
+    },
+    "Ivica Zubac": {
+     "rank": 50,
+     "ovr": 87.5,
+     "bonus": 8.07,
+     "mpg": 28.65
+    },
+    "Jarrett Allen": {
+     "rank": 27,
+     "ovr": 92.1,
+     "bonus": 6.93,
+     "mpg": 27.36
+    },
+    "Clint Capela": {
+     "rank": 167,
+     "ovr": 74.0,
+     "bonus": 4.59,
+     "mpg": 12.81
+    },
+    "Mitchell Robinson": {
+     "rank": 105,
+     "ovr": 79.5,
+     "bonus": 3.72,
+     "mpg": 19.94
+    },
+    "Isaiah Hartenstein": {
+     "rank": 29,
+     "ovr": 90.9,
+     "bonus": 6.43,
+     "mpg": 21.94
+    },
+    "Domantas Sabonis": {
+     "rank": 62,
+     "ovr": 84.7,
+     "bonus": 4.13,
+     "mpg": 26.45
+    },
+    "Alperen Sengun": {
+     "rank": 109,
+     "ovr": 79.0,
+     "bonus": 3.43,
+     "mpg": 32.53
+    },
+    "Bam Adebayo": {
+     "rank": 47,
+     "ovr": 87.7,
+     "bonus": 2.31,
+     "mpg": 33.19
+    },
+    "Scottie Barnes": {
+     "rank": 36,
+     "ovr": 89.8,
+     "bonus": 0.65,
+     "mpg": 32.93
+    },
+    "Jalen Johnson": {
+     "rank": 33,
+     "ovr": 90.3,
+     "bonus": 0.75,
+     "mpg": 35.17
+    },
+    "Franz Wagner": {
+     "rank": 46,
+     "ovr": 88.0,
+     "bonus": 0.02,
+     "mpg": 24.63
+    },
+    "Josh Giddey": {
+     "rank": 125,
+     "ovr": 77.6,
+     "bonus": 0.0,
+     "mpg": 31.78
+    },
+    "Toumani Camara": {
+     "rank": 106,
+     "ovr": 79.3,
+     "bonus": 0.0,
+     "mpg": 33.1
+    }
+   },
+   "top20": [
+    "Victor Wembanyama",
+    "Nikola Jokić",
+    "Shai Gilgeous-Alexander",
+    "Luka Dončić",
+    "Giannis Antetokounmpo",
+    "Chet Holmgren",
+    "Kawhi Leonard",
+    "Evan Mobley",
+    "Donovan Mitchell",
+    "Jayson Tatum",
+    "Anthony Edwards",
+    "Kevin Durant",
+    "Anthony Davis",
+    "Stephen Curry",
+    "Karl-Anthony Towns",
+    "Ty Jerome",
+    "Austin Reaves",
+    "Cade Cunningham",
+    "Joel Embiid",
+    "Kristaps Porziņģis"
+   ],
+   "live": {
+    "Deni Avdija": [
+     79,
+     82.3
+    ],
+    "Donovan Clingan": [
+     71,
+     83.1
+    ],
+    "Robert Williams III": [
+     63,
+     84.4
+    ],
+    "Jrue Holiday": [
+     51,
+     86.2
+    ]
+   },
+   "max_bonus": 10.732486898094207,
+   "top_bonus": [
+    [
+     "Donovan Clingan",
+     10.73,
+     27.36
+    ],
+    [
+     "Rudy Gobert",
+     8.7,
+     31.09
+    ],
+    [
+     "Ivica Zubac",
+     8.07,
+     28.65
+    ],
+    [
+     "Victor Wembanyama",
+     7.81,
+     28.69
+    ],
+    [
+     "Mark Williams",
+     7.78,
+     23.1
+    ],
+    [
+     "Jalen Duren",
+     7.41,
+     28.38
+    ],
+    [
+     "Neemias Queta",
+     7.01,
+     25.82
+    ],
+    [
+     "Jarrett Allen",
+     6.93,
+     27.36
+    ],
+    [
+     "Moussa Cisse",
+     6.88,
+     17.24
+    ],
+    [
+     "Dylan Cardwell",
+     6.83,
+     21.23
+    ]
+   ],
+   "S4": true,
+   "verdict": "adopt_candidate"
+  },
+  "K5": {
+   "S1": true,
+   "S1b_avdija_over_rw3": false,
+   "S2": false,
+   "S3": false,
+   "drops_vs_0214a": [
+    [
+     "Anthony Davis",
+     13,
+     25
+    ],
+    [
+     "Rudy Gobert",
+     22,
+     42
+    ]
+   ],
+   "rho": {
+    "T": 0.7547383280420149,
+    "EPM": 0.7080557983194843,
+    "2K": 0.7795696946646385
+   },
+   "drho_vs_W1": {
+    "T": {
+     "mean": -0.010595881510725325,
+     "ci90": [
+      -0.017746098602281424,
+      -0.004639077223058907
+     ]
+    },
+    "EPM": {
+     "mean": -0.006916732641691903,
+     "ci90": [
+      -0.014238228453858798,
+      -0.0009738402281580241
+     ]
+    },
+    "2K": {
+     "mean": -7.324026852773002e-06,
+     "ci90": [
+      -0.0024179354278975273,
+      0.0023255824625458108
+     ]
+    }
+   },
+   "watch": {
+    "Deni Avdija": {
+     "rank": 69,
+     "ovr": 82.9,
+     "bonus": 0.06,
+     "mpg": 32.54
+    },
+    "Donovan Clingan": {
+     "rank": 189,
+     "ovr": 71.8,
+     "bonus": 4.87,
+     "mpg": 27.36
+    },
+    "Robert Williams III": {
+     "rank": 55,
+     "ovr": 85.6,
+     "bonus": 4.57,
+     "mpg": 17.81
+    },
+    "Jrue Holiday": {
+     "rank": 109,
+     "ovr": 78.7,
+     "bonus": 0.0,
+     "mpg": 29.12
+    },
+    "Rudy Gobert": {
+     "rank": 42,
+     "ovr": 88.6,
+     "bonus": 4.7,
+     "mpg": 31.09
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "ovr": 107.8,
+     "bonus": 3.39,
+     "mpg": 34.99
+    },
+    "Victor Wembanyama": {
+     "rank": 3,
+     "ovr": 105.9,
+     "bonus": 4.58,
+     "mpg": 28.69
+    },
+    "Anthony Davis": {
+     "rank": 25,
+     "ovr": 92.1,
+     "bonus": 4.35,
+     "mpg": 31.99
+    },
+    "Karl-Anthony Towns": {
+     "rank": 18,
+     "ovr": 93.3,
+     "bonus": 3.59,
+     "mpg": 30.19
+    },
+    "Joel Embiid": {
+     "rank": 17,
+     "ovr": 93.4,
+     "bonus": 2.72,
+     "mpg": 33.26
+    },
+    "Kristaps Porziņģis": {
+     "rank": 23,
+     "ovr": 92.2,
+     "bonus": 3.88,
+     "mpg": 23.66
+    },
+    "Chet Holmgren": {
+     "rank": 7,
+     "ovr": 97.5,
+     "bonus": 4.04,
+     "mpg": 28.65
+    },
+    "Evan Mobley": {
+     "rank": 9,
+     "ovr": 96.6,
+     "bonus": 3.76,
+     "mpg": 30.84
+    },
+    "Ivica Zubac": {
+     "rank": 63,
+     "ovr": 84.0,
+     "bonus": 4.62,
+     "mpg": 28.65
+    },
+    "Jarrett Allen": {
+     "rank": 35,
+     "ovr": 89.6,
+     "bonus": 4.41,
+     "mpg": 27.36
+    },
+    "Clint Capela": {
+     "rank": 166,
+     "ovr": 74.1,
+     "bonus": 4.69,
+     "mpg": 12.81
+    },
+    "Mitchell Robinson": {
+     "rank": 102,
+     "ovr": 79.4,
+     "bonus": 3.57,
+     "mpg": 19.94
+    },
+    "Isaiah Hartenstein": {
+     "rank": 39,
+     "ovr": 88.9,
+     "bonus": 4.43,
+     "mpg": 21.94
+    },
+    "Domantas Sabonis": {
+     "rank": 62,
+     "ovr": 84.0,
+     "bonus": 3.39,
+     "mpg": 26.45
+    },
+    "Alperen Sengun": {
+     "rank": 111,
+     "ovr": 78.6,
+     "bonus": 2.98,
+     "mpg": 32.53
+    },
+    "Bam Adebayo": {
+     "rank": 47,
+     "ovr": 87.6,
+     "bonus": 2.16,
+     "mpg": 33.19
+    },
+    "Scottie Barnes": {
+     "rank": 33,
+     "ovr": 89.8,
+     "bonus": 0.64,
+     "mpg": 32.93
+    },
+    "Jalen Johnson": {
+     "rank": 31,
+     "ovr": 90.2,
+     "bonus": 0.75,
+     "mpg": 35.17
+    },
+    "Franz Wagner": {
+     "rank": 45,
+     "ovr": 88.0,
+     "bonus": 0.02,
+     "mpg": 24.63
+    },
+    "Josh Giddey": {
+     "rank": 125,
+     "ovr": 77.6,
+     "bonus": 0.0,
+     "mpg": 31.78
+    },
+    "Toumani Camara": {
+     "rank": 103,
+     "ovr": 79.3,
+     "bonus": 0.0,
+     "mpg": 33.1
+    }
+   },
+   "top20": [
+    "Shai Gilgeous-Alexander",
+    "Nikola Jokić",
+    "Victor Wembanyama",
+    "Luka Dončić",
+    "Giannis Antetokounmpo",
+    "Kawhi Leonard",
+    "Chet Holmgren",
+    "Donovan Mitchell",
+    "Evan Mobley",
+    "Jayson Tatum",
+    "Anthony Edwards",
+    "Kevin Durant",
+    "Stephen Curry",
+    "Ty Jerome",
+    "Austin Reaves",
+    "Cade Cunningham",
+    "Joel Embiid",
+    "Karl-Anthony Towns",
+    "Kevin Porter Jr.",
+    "Desmond Bane"
+   ],
+   "live": {
+    "Deni Avdija": [
+     73,
+     82.3
+    ],
+    "Donovan Clingan": [
+     119,
+     77.5
+    ],
+    "Robert Williams III": [
+     62,
+     83.5
+    ],
+    "Jrue Holiday": [
+     49,
+     86.2
+    ]
+   },
+   "max_bonus": 4.8652024290133795,
+   "top_bonus": [
+    [
+     "Donovan Clingan",
+     4.87,
+     27.36
+    ],
+    [
+     "Moussa Cisse",
+     4.79,
+     17.24
+    ],
+    [
+     "Rudy Gobert",
+     4.7,
+     31.09
+    ],
+    [
+     "Clint Capela",
+     4.69,
+     12.81
+    ],
+    [
+     "Jonas Valanciunas",
+     4.68,
+     13.32
+    ],
+    [
+     "Mark Williams",
+     4.62,
+     23.1
+    ],
+    [
+     "Ivica Zubac",
+     4.62,
+     28.65
+    ],
+    [
+     "Victor Wembanyama",
+     4.58,
+     28.69
+    ],
+    [
+     "Robert Williams III",
+     4.57,
+     17.81
+    ],
+    [
+     "Dylan Cardwell",
+     4.56,
+     21.23
+    ]
+   ],
+   "S4": false,
+   "verdict": "reject"
+  },
+  "UK": {
+   "S1": true,
+   "S1b_avdija_over_rw3": false,
+   "S2": false,
+   "S3": false,
+   "drops_vs_0214a": [
+    [
+     "Anthony Davis",
+     13,
+     24
+    ],
+    [
+     "Isaiah Hartenstein",
+     29,
+     42
+    ],
+    [
+     "Rudy Gobert",
+     22,
+     41
+    ]
+   ],
+   "rho": {
+    "T": 0.7509860498020337,
+    "EPM": 0.7047563856853627,
+    "2K": 0.7805676328528087
+   },
+   "drho_vs_W1": {
+    "T": {
+     "mean": -0.01434815975070658,
+     "ci90": [
+      -0.022502931930028502,
+      -0.007456784075611683
+     ]
+    },
+    "EPM": {
+     "mean": -0.010216145275813493,
+     "ci90": [
+      -0.01824984653951075,
+      -0.0031930785557542146
+     ]
+    },
+    "2K": {
+     "mean": 0.0009906141613174047,
+     "ci90": [
+      -0.0023856133487557885,
+      0.00437407033298584
+     ]
+    }
+   },
+   "watch": {
+    "Deni Avdija": {
+     "rank": 69,
+     "ovr": 82.9,
+     "bonus": 0.06,
+     "mpg": 32.54
+    },
+    "Donovan Clingan": {
+     "rank": 188,
+     "ovr": 71.7,
+     "bonus": 4.8,
+     "mpg": 27.36
+    },
+    "Robert Williams III": {
+     "rank": 59,
+     "ovr": 84.6,
+     "bonus": 3.63,
+     "mpg": 17.81
+    },
+    "Jrue Holiday": {
+     "rank": 107,
+     "ovr": 78.7,
+     "bonus": 0.0,
+     "mpg": 29.12
+    },
+    "Rudy Gobert": {
+     "rank": 41,
+     "ovr": 88.6,
+     "bonus": 4.7,
+     "mpg": 31.09
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "ovr": 107.8,
+     "bonus": 3.39,
+     "mpg": 34.99
+    },
+    "Victor Wembanyama": {
+     "rank": 3,
+     "ovr": 105.8,
+     "bonus": 4.52,
+     "mpg": 28.69
+    },
+    "Anthony Davis": {
+     "rank": 24,
+     "ovr": 92.1,
+     "bonus": 4.35,
+     "mpg": 31.99
+    },
+    "Karl-Anthony Towns": {
+     "rank": 18,
+     "ovr": 93.3,
+     "bonus": 3.59,
+     "mpg": 30.19
+    },
+    "Joel Embiid": {
+     "rank": 17,
+     "ovr": 93.4,
+     "bonus": 2.72,
+     "mpg": 33.26
+    },
+    "Kristaps Porziņģis": {
+     "rank": 26,
+     "ovr": 91.7,
+     "bonus": 3.37,
+     "mpg": 23.66
+    },
+    "Chet Holmgren": {
+     "rank": 7,
+     "ovr": 97.4,
+     "bonus": 3.95,
+     "mpg": 28.65
+    },
+    "Evan Mobley": {
+     "rank": 9,
+     "ovr": 96.6,
+     "bonus": 3.76,
+     "mpg": 30.84
+    },
+    "Ivica Zubac": {
+     "rank": 62,
+     "ovr": 84.0,
+     "bonus": 4.56,
+     "mpg": 28.65
+    },
+    "Jarrett Allen": {
+     "rank": 35,
+     "ovr": 89.5,
+     "bonus": 4.26,
+     "mpg": 27.36
+    },
+    "Clint Capela": {
+     "rank": 178,
+     "ovr": 72.5,
+     "bonus": 3.13,
+     "mpg": 12.81
+    },
+    "Mitchell Robinson": {
+     "rank": 112,
+     "ovr": 78.5,
+     "bonus": 2.67,
+     "mpg": 19.94
+    },
+    "Isaiah Hartenstein": {
+     "rank": 42,
+     "ovr": 88.4,
+     "bonus": 3.87,
+     "mpg": 21.94
+    },
+    "Domantas Sabonis": {
+     "rank": 65,
+     "ovr": 83.7,
+     "bonus": 3.11,
+     "mpg": 26.45
+    },
+    "Alperen Sengun": {
+     "rank": 110,
+     "ovr": 78.6,
+     "bonus": 2.98,
+     "mpg": 32.53
+    },
+    "Bam Adebayo": {
+     "rank": 46,
+     "ovr": 87.6,
+     "bonus": 2.16,
+     "mpg": 33.19
+    },
+    "Scottie Barnes": {
+     "rank": 33,
+     "ovr": 89.8,
+     "bonus": 0.64,
+     "mpg": 32.93
+    },
+    "Jalen Johnson": {
+     "rank": 31,
+     "ovr": 90.2,
+     "bonus": 0.75,
+     "mpg": 35.17
+    },
+    "Franz Wagner": {
+     "rank": 44,
+     "ovr": 88.0,
+     "bonus": 0.02,
+     "mpg": 24.63
+    },
+    "Josh Giddey": {
+     "rank": 125,
+     "ovr": 77.6,
+     "bonus": 0.0,
+     "mpg": 31.78
+    },
+    "Toumani Camara": {
+     "rank": 101,
+     "ovr": 79.3,
+     "bonus": 0.0,
+     "mpg": 33.1
+    }
+   },
+   "top20": [
+    "Shai Gilgeous-Alexander",
+    "Nikola Jokić",
+    "Victor Wembanyama",
+    "Luka Dončić",
+    "Giannis Antetokounmpo",
+    "Kawhi Leonard",
+    "Chet Holmgren",
+    "Donovan Mitchell",
+    "Evan Mobley",
+    "Jayson Tatum",
+    "Anthony Edwards",
+    "Kevin Durant",
+    "Stephen Curry",
+    "Ty Jerome",
+    "Austin Reaves",
+    "Cade Cunningham",
+    "Joel Embiid",
+    "Karl-Anthony Towns",
+    "Kevin Porter Jr.",
+    "Desmond Bane"
+   ],
+   "live": {
+    "Deni Avdija": [
+     73,
+     82.3
+    ],
+    "Donovan Clingan": [
+     119,
+     77.3
+    ],
+    "Robert Williams III": [
+     72,
+     82.4
+    ],
+    "Jrue Holiday": [
+     48,
+     86.2
+    ]
+   },
+   "max_bonus": 4.804533513402996,
+   "top_bonus": [
+    [
+     "Donovan Clingan",
+     4.8,
+     27.36
+    ],
+    [
+     "Rudy Gobert",
+     4.7,
+     31.09
+    ],
+    [
+     "Ivica Zubac",
+     4.56,
+     28.65
+    ],
+    [
+     "Victor Wembanyama",
+     4.52,
+     28.69
+    ],
+    [
+     "Jalen Duren",
+     4.43,
+     28.38
+    ],
+    [
+     "Anthony Davis",
+     4.35,
+     31.99
+    ],
+    [
+     "Jarrett Allen",
+     4.26,
+     27.36
+    ],
+    [
+     "Mark Williams",
+     4.23,
+     23.1
+    ],
+    [
+     "Neemias Queta",
+     4.18,
+     25.82
+    ],
+    [
+     "Moussa Diabaté",
+     4.12,
+     27.32
+    ]
+   ],
+   "S4": false,
+   "verdict": "reject"
+  }
+ },
+ "bench": {
+  "n": {
+   "2022-23": 262,
+   "2023-24": 286,
+   "2024-25": 319,
+   "2025-26": 243
+  },
+  "W1": {
+   "vs_base": 0.01394158577605018,
+   "vs_W1": 0.0,
+   "per_fold_vs_W1": {
+    "2022-23": 0.0,
+    "2023-24": 0.0,
+    "2024-25": 0.0,
+    "2025-26": 0.0
+   },
+   "n_pos_vs_W1": 0,
+   "gap_C": 3.265742975206397e-05
+  },
+  "U30": {
+   "vs_base": 0.01203585922665248,
+   "vs_W1": -0.0019057265493977002,
+   "per_fold_vs_W1": {
+    "2022-23": 0.0005811721896231692,
+    "2023-24": -0.001499917348099733,
+    "2024-25": -0.0033843302551900267,
+    "2025-26": -0.0031236455578212974
+   },
+   "n_pos_vs_W1": 1,
+   "gap_C": 0.012752536342945736
+  },
+  "U24": {
+   "vs_base": 0.013216560386704625,
+   "vs_W1": -0.0007250253893455538,
+   "per_fold_vs_W1": {
+    "2022-23": 0.0004877576011647067,
+    "2023-24": 0.00025443194413721226,
+    "2024-25": -0.0026316818226868044,
+    "2025-26": -0.0006824350134356783
+   },
+   "n_pos_vs_W1": 2,
+   "gap_C": 0.006405191520563626
+  },
+  "K5": {
+   "vs_base": 0.01186048563246979,
+   "vs_W1": -0.002081100143580389,
+   "per_fold_vs_W1": {
+    "2022-23": 0.0018709607574091125,
+    "2023-24": -0.003378917774258916,
+    "2024-25": -0.0015230410323739951,
+    "2025-26": -0.00554729343642002
+   },
+   "n_pos_vs_W1": 1,
+   "gap_C": 0.01835010624618087
+  },
+  "UK": {
+   "vs_base": 0.010630332879103794,
+   "vs_W1": -0.003311252896946385,
+   "per_fold_vs_W1": {
+    "2022-23": 0.002398753182198954,
+    "2023-24": -0.0036005197901204378,
+    "2024-25": -0.00461828922753571,
+    "2025-26": -0.007411444962091673
+   },
+   "n_pos_vs_W1": 1,
+   "gap_C": 0.024384514792489476
+  }
+ },
+ "pick": "U24"
+}

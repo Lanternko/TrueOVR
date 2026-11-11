@@ -1,0 +1,237 @@
+proxy self-check max|err| 0.06544035674470905
+{
+ "n": 582,
+ "dOVR_mean": -0.0918116808880332,
+ "dOVR_absmean": 1.381868970587362,
+ "dOVR_p90abs": 3.0880889391782858,
+ "dOVR_maxabs": 7.065654390104257,
+ "top20_out": [
+  "Tyrese Maxey",
+  "Scottie Barnes"
+ ],
+ "top20_in": [
+  "Anthony Davis",
+  "Joel Embiid"
+ ],
+ "top100_moved>=10": 33,
+ "top100_n": 101,
+ "top300_moved>=10": 164,
+ "rank_spearman_UV": 0.9792515779163214,
+ "key_players": {
+  "Jayson Tatum": {
+   "ovrV": 92.8,
+   "rankV": 8,
+   "ovrU": 92.8,
+   "rankU": 8
+  },
+  "Jalen Williams": {
+   "ovrV": 88.2,
+   "rankV": 10,
+   "ovrU": 87.8,
+   "rankU": 11
+  },
+  "Cooper Flagg": {
+   "ovrV": 76.1,
+   "rankV": 87,
+   "ovrU": 77.0,
+   "rankU": 72
+  },
+  "Anthony Edwards": {
+   "ovrV": 87.5,
+   "rankV": 14,
+   "ovrU": 86.9,
+   "rankU": 14
+  },
+  "Paolo Banchero": {
+   "ovrV": 72.7,
+   "rankV": 149,
+   "ovrU": 73.2,
+   "rankU": 141
+  },
+  "Nikola Jokić": {
+   "ovrV": 93.4,
+   "rankV": 7,
+   "ovrU": 93.5,
+   "rankU": 6
+  }
+ },
+ "bigs_top10": [
+  {
+   "name": "Victor Wembanyama",
+   "pos": "C",
+   "rankV": 2,
+   "rankU": 2,
+   "ovrV": 107.0,
+   "ovrU": 105.1
+  },
+  {
+   "name": "Giannis Antetokounmpo",
+   "pos": "PF",
+   "rankV": 4,
+   "rankU": 3,
+   "ovrV": 101.2,
+   "ovrU": 101.4
+  },
+  {
+   "name": "Nikola Jokić",
+   "pos": "C",
+   "rankV": 7,
+   "rankU": 6,
+   "ovrV": 93.4,
+   "ovrU": 93.5
+  },
+  {
+   "name": "Jayson Tatum",
+   "pos": "PF",
+   "rankV": 8,
+   "rankU": 8,
+   "ovrV": 92.8,
+   "ovrU": 92.8
+  },
+  {
+   "name": "Jalen Williams",
+   "pos": "PF",
+   "rankV": 10,
+   "rankU": 11,
+   "ovrV": 88.2,
+   "ovrU": 87.8
+  },
+  {
+   "name": "Chet Holmgren",
+   "pos": "PF",
+   "rankV": 11,
+   "rankU": 9,
+   "ovrV": 87.9,
+   "ovrU": 88.3
+  },
+  {
+   "name": "Evan Mobley",
+   "pos": "PF",
+   "rankV": 16,
+   "rankU": 16,
+   "ovrV": 86.9,
+   "ovrU": 86.2
+  },
+  {
+   "name": "Scottie Barnes",
+   "pos": "PF",
+   "rankV": 20,
+   "rankU": 22,
+   "ovrV": 85.2,
+   "ovrU": 85.1
+  },
+  {
+   "name": "Anthony Davis",
+   "pos": "C",
+   "rankV": 22,
+   "rankU": 13,
+   "ovrV": 84.6,
+   "ovrU": 87.3
+  },
+  {
+   "name": "Joel Embiid",
+   "pos": "C",
+   "rankV": 23,
+   "rankU": 18,
+   "ovrV": 84.0,
+   "ovrU": 85.9
+  }
+ ],
+ "biggest_rank_moves_min500": [
+  {
+   "name": "Jordan Poole",
+   "rankV": 539,
+   "rankU": 412,
+   "MIN": 933.0
+  },
+  {
+   "name": "Andre Drummond",
+   "rankV": 528,
+   "rankU": 420,
+   "MIN": 1231.0
+  },
+  {
+   "name": "Noah Penda",
+   "rankV": 417,
+   "rankU": 520,
+   "MIN": 757.0
+  },
+  {
+   "name": "Caris LeVert",
+   "rankV": 250,
+   "rankU": 156,
+   "MIN": 1154.0
+  },
+  {
+   "name": "Nicolas Batum",
+   "rankV": 508,
+   "rankU": 423,
+   "MIN": 1295.0
+  },
+  {
+   "name": "Kobe Brown",
+   "rankV": 389,
+   "rankU": 474,
+   "MIN": 962.0
+  }
+ ],
+ "spearman_2025-26": {
+  "V": {
+   "sal": 0.5900211036895453,
+   "n_sal": 262,
+   "twok": 0.7656899652715955,
+   "n_twok": 376
+  },
+  "U": {
+   "sal": 0.617144926524581,
+   "n_sal": 262,
+   "twok": 0.7686073606030365,
+   "n_twok": 376
+  }
+ }
+}
+{
+ "V_p90abs_all": 5.181953561728262,
+ "U_p90abs_all": 3.363518129243829,
+ "V_p90abs_min500": 4.784037924300116,
+ "U_p90abs_min500": 3.4561038500580197,
+ "n_all": 582,
+ "n_min500": 379,
+ "V_median_min500": 1.7135175363301585,
+ "U_median_min500": 1.2842939402437707,
+ "ratio_p90_min500_UoverV": 0.7224240076574294,
+ "attr_p90abs_dAttr": {
+  "drive": {
+   "V": 9.954847218186288,
+   "U": 1.1966604823747569
+  },
+  "foulDraw": {
+   "V": 12.647841456586596,
+   "U": 10.887157449571173
+  },
+  "ft": {
+   "V": 3.1522517404991444,
+   "U": 0.5154582833581258
+  },
+  "mid": {
+   "V": 9.551250487254821,
+   "U": 0.5898817224922545
+  },
+  "pass": {
+   "V": 5.590300636383584,
+   "U": 3.830765247975207
+  },
+  "rebound": {
+   "V": 4.553929792520547,
+   "U": 0.5096731720784071
+  },
+  "short": {
+   "V": 11.717348052955058,
+   "U": 6.6498033547588244
+  },
+  "tovSkill": {
+   "V": 7.036675232007477,
+   "U": 0.8621971160993098
+  }
+ }
+}

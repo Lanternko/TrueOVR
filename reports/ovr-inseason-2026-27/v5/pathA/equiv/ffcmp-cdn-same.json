@@ -1,0 +1,78 @@
+{
+ "ref": "reports/ovr-inseason-2026-27/v3/data/four-factors-2021-22.csv",
+ "cand": "D:/Projects/temp/nba-old-seasons/equiv/ff-cdn-same/four-factors.csv",
+ "minPoss": 0,
+ "refN": 602,
+ "candN": 602,
+ "common": 602,
+ "cols": {
+  "tovNonSteal_defense": {
+   "r": 0.999317,
+   "maxAbsDiff": 0.0702
+  },
+  "tovNonSteal_offense": {
+   "r": 0.998968,
+   "maxAbsDiff": 0.0791
+  },
+  "steal_defense": {
+   "r": 0.999468,
+   "maxAbsDiff": 0.1063
+  },
+  "steal_offense": {
+   "r": 0.999348,
+   "maxAbsDiff": 0.0634
+  },
+  "fgaPerPoss_defense": {
+   "r": 0.99953,
+   "maxAbsDiff": 0.1661
+  },
+  "fgaPerPoss_offense": {
+   "r": 0.999492,
+   "maxAbsDiff": 0.1971
+  },
+  "efg_defense": {
+   "r": 0.999299,
+   "maxAbsDiff": 0.1335
+  },
+  "efg_offense": {
+   "r": 0.999421,
+   "maxAbsDiff": 0.1644
+  },
+  "rimShare_defense": {
+   "r": null,
+   "maxAbsDiff": 0.0
+  },
+  "rimShare_offense": {
+   "r": null,
+   "maxAbsDiff": 0.0
+  },
+  "threeShare_defense": {
+   "r": 0.999543,
+   "maxAbsDiff": 0.3706
+  },
+  "threeShare_offense": {
+   "r": 0.999625,
+   "maxAbsDiff": 0.7126
+  },
+  "ftRate_defense": {
+   "r": 0.99961,
+   "maxAbsDiff": 0.3634
+  },
+  "ftRate_offense": {
+   "r": 0.999738,
+   "maxAbsDiff": 0.2687
+  },
+  "orebRate_defense": {
+   "r": 0.999461,
+   "maxAbsDiff": 0.1886
+  },
+  "orebRate_offense": {
+   "r": 0.99942,
+   "maxAbsDiff": 0.2461
+  },
+  "defensePossessions": {
+   "r": 0.999936,
+   "maxAbsDiff": 166.0
+  }
+ }
+}

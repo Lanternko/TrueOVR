@@ -1,0 +1,438 @@
+{
+ "2022-23": {
+  "bbref_rows": 541,
+  "pop_cards": 299,
+  "card_MIN500": 271,
+  "found": 271,
+  "found_pct": 1.0,
+  "usable": 271,
+  "usable_pct": 1.0,
+  "argmax_differs_from_label": 140,
+  "argmax_differs_pct_of_usable": 0.5166051660516605,
+  "match_status": {
+   "ok": 299,
+   "none": 242,
+   "dup_bbref": 0,
+   "dup_pop": 0
+  },
+  "examples": [
+   [
+    "Luka Dončić",
+    "SF",
+    [
+     96,
+     4,
+     0,
+     0,
+     0
+    ]
+   ],
+   [
+    "Giannis Antetokounmpo",
+    "C",
+    [
+     0,
+     0,
+     0,
+     59,
+     41
+    ]
+   ],
+   [
+    "Shai Gilgeous-Alexander",
+    "SG",
+    [
+     84,
+     17,
+     0,
+     0,
+     0
+    ]
+   ],
+   [
+    "Jimmy Butler III",
+    "SF",
+    [
+     0,
+     0,
+     15,
+     83,
+     3
+    ]
+   ],
+   [
+    "Donovan Mitchell",
+    "PG",
+    [
+     30,
+     69,
+     1,
+     0,
+     0
+    ]
+   ],
+   [
+    "James Harden",
+    "SG",
+    [
+     100,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   [
+    "Devin Booker",
+    "SG",
+    [
+     0,
+     47,
+     50,
+     3,
+     0
+    ]
+   ],
+   [
+    "Jamal Murray",
+    "SG",
+    [
+     81,
+     19,
+     0,
+     0,
+     0
+    ]
+   ]
+  ]
+ },
+ "2023-24": {
+  "bbref_rows": 572,
+  "pop_cards": 353,
+  "card_MIN500": 303,
+  "found": 303,
+  "found_pct": 1.0,
+  "usable": 303,
+  "usable_pct": 1.0,
+  "argmax_differs_from_label": 157,
+  "argmax_differs_pct_of_usable": 0.5181518151815182,
+  "match_status": {
+   "ok": 353,
+   "none": 219,
+   "dup_bbref": 0,
+   "dup_pop": 0
+  },
+  "examples": [
+   [
+    "Shai Gilgeous-Alexander",
+    "SG",
+    [
+     98,
+     2,
+     0,
+     0,
+     0
+    ]
+   ],
+   [
+    "Luka Dončić",
+    "SF",
+    [
+     74,
+     26,
+     0,
+     0,
+     0
+    ]
+   ],
+   [
+    "Jayson Tatum",
+    "SF",
+    [
+     0,
+     0,
+     26,
+     72,
+     2
+    ]
+   ],
+   [
+    "Giannis Antetokounmpo",
+    "C",
+    [
+     0,
+     0,
+     0,
+     59,
+     41
+    ]
+   ],
+   [
+    "Kevin Durant",
+    "C",
+    [
+     0,
+     0,
+     6,
+     85,
+     9
+    ]
+   ],
+   [
+    "Anthony Davis",
+    "PF",
+    [
+     0,
+     0,
+     0,
+     3,
+     97
+    ]
+   ],
+   [
+    "Jrue Holiday",
+    "SG",
+    [
+     69,
+     31,
+     0,
+     0,
+     0
+    ]
+   ],
+   [
+    "Paul George",
+    "SF",
+    [
+     0,
+     0,
+     3,
+     86,
+     11
+    ]
+   ]
+  ]
+ },
+ "2024-25": {
+  "bbref_rows": 569,
+  "pop_cards": 421,
+  "card_MIN500": 347,
+  "found": 346,
+  "found_pct": 0.9971181556195965,
+  "usable": 346,
+  "usable_pct": 0.9971181556195965,
+  "argmax_differs_from_label": 166,
+  "argmax_differs_pct_of_usable": 0.4797687861271676,
+  "match_status": {
+   "ok": 420,
+   "none": 149,
+   "dup_bbref": 0,
+   "dup_pop": 0
+  },
+  "examples": [
+   [
+    "Shai Gilgeous-Alexander",
+    "SG",
+    [
+     100,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   [
+    "Kawhi Leonard",
+    "SF",
+    [
+     0,
+     0,
+     15,
+     80,
+     5
+    ]
+   ],
+   [
+    "Giannis Antetokounmpo",
+    "C",
+    [
+     0,
+     0,
+     0,
+     68,
+     32
+    ]
+   ],
+   [
+    "Luka Dončić",
+    "SG",
+    [
+     57,
+     36,
+     7,
+     0,
+     0
+    ]
+   ],
+   [
+    "Donovan Mitchell",
+    "PG",
+    [
+     45,
+     55,
+     1,
+     0,
+     0
+    ]
+   ],
+   [
+    "Jimmy Butler III",
+    "SF",
+    [
+     0,
+     1,
+     43,
+     57,
+     0
+    ]
+   ],
+   [
+    "Anthony Davis",
+    "PF",
+    [
+     0,
+     0,
+     0,
+     13,
+     87
+    ]
+   ],
+   [
+    "Kevin Durant",
+    "C",
+    [
+     0,
+     0,
+     8,
+     68,
+     25
+    ]
+   ]
+  ]
+ },
+ "2025-26": {
+  "bbref_rows": 582,
+  "pop_cards": 582,
+  "card_MIN500": 379,
+  "found": 378,
+  "found_pct": 0.9973614775725593,
+  "usable": 378,
+  "usable_pct": 0.9973614775725593,
+  "argmax_differs_from_label": 107,
+  "argmax_differs_pct_of_usable": 0.2830687830687831,
+  "match_status": {
+   "ok": 579,
+   "none": 3,
+   "dup_bbref": 0,
+   "dup_pop": 0
+  },
+  "examples": [
+   [
+    "Jalen Williams",
+    "PF",
+    [
+     0,
+     18,
+     51,
+     31,
+     0
+    ]
+   ],
+   [
+    "Chet Holmgren",
+    "PF",
+    [
+     0,
+     0,
+     1,
+     37,
+     62
+    ]
+   ],
+   [
+    "Jimmy Butler III",
+    "SF",
+    [
+     0,
+     6,
+     39,
+     54,
+     0
+    ]
+   ],
+   [
+    "Evan Mobley",
+    "PF",
+    [
+     0,
+     0,
+     0,
+     35,
+     65
+    ]
+   ],
+   [
+    "Franz Wagner",
+    "SF",
+    [
+     0,
+     0,
+     49,
+     50,
+     1
+    ]
+   ],
+   [
+    "OG Anunoby",
+    "SF",
+    [
+     0,
+     0,
+     8,
+     90,
+     2
+    ]
+   ],
+   [
+    "Trey Murphy III",
+    "SG",
+    [
+     0,
+     29,
+     63,
+     8,
+     0
+    ]
+   ],
+   [
+    "Derrick White",
+    "PG",
+    [
+     22,
+     75,
+     4,
+     0,
+     0
+    ]
+   ]
+  ]
+ },
+ "selfcheck_JW_2025-26": [
+  0,
+  18,
+  51,
+  31,
+  0
+ ],
+ "s0_pass": true
+}

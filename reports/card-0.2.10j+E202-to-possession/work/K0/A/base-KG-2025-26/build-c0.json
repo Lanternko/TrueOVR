@@ -1,0 +1,31 @@
+{
+ "origin": "2025-26",
+ "swap": "T6-errata1",
+ "swapRows": {
+  "primary": {
+   "in": 877,
+   "out": 506
+  },
+  "fitA": {
+   "in": 864,
+   "out": 505
+  },
+  "fitB": {
+   "in": 863,
+   "out": 506
+  }
+ },
+ "part_card_sha256": {
+  "primary": "3c8d08ccfd18d190bbf00dbd7da4a39a45773c2385d94e3bd3de6e6160369da2",
+  "fitA": "86bfbe47db38a8ebb7167d72b32725771079aa48a0ef35f8a1db24648fce80a4",
+  "fitB": "1c19fdf1faa16cc6903c7cd4d0054be8411b358b54eceeab319abd9692a28ada"
+ },
+ "ranking_sha256": "fdb4bdc38e1f9686bbb104cd02a712b24c5851aff085d4d6d96c131887a11c98",
+ "rapm_inputs_sha256": {
+  "primary": "514ba5e0a14fee5f5e700032bea613486fac68eed6d2073a0b12e21296bc6bb8",
+  "fitA": "b468cba3e8d608b1178565c87862ca918005e14a1e2f5749e6ab7533d1400fa8",
+  "fitB": "a5def5e9d4aa7f09a44947cf2dcad3c22b07eb0be6a22459943bc432ecf91c20",
+  "cand_pkl_rows": 506
+ },
+ "seconds": 6.4
+}

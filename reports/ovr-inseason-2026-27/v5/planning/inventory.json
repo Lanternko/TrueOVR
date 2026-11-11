@@ -1,0 +1,346 @@
+{
+  "generatedBy": "reports/ovr-inseason-2026-27/v5/planning/inventory.py",
+  "scope": "local archive only; no network calls",
+  "seasons": {
+    "2021-22": {
+      "pbp": 1230,
+      "boxes": 1230,
+      "stints_local": 0,
+      "bio": true,
+      "bioColumns": {
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TEAM_ID",
+          "TEAM_ABBREVIATION",
+          "AGE",
+          "PLAYER_HEIGHT",
+          "PLAYER_HEIGHT_INCHES",
+          "PLAYER_WEIGHT",
+          "COLLEGE",
+          "COUNTRY",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GP",
+          "PTS",
+          "REB",
+          "AST",
+          "NET_RATING",
+          "OREB_PCT",
+          "DREB_PCT",
+          "USG_PCT",
+          "TS_PCT",
+          "AST_PCT"
+        ],
+        "rows": 605
+      },
+      "playerGames": true,
+      "teamGames": true,
+      "leagueSchedule": true,
+      "gameExposure": true,
+      "manifest": true,
+      "shotFields": {
+        "pbpGames": 1230,
+        "sampleGame": "0022100001.json",
+        "shotActions": 216713,
+        "withArea": 0,
+        "withXY": 216713,
+        "sentinelXY": 5809,
+        "areaRate": 0.0,
+        "xyRate": 1.0
+      },
+      "shotOrigin": false,
+      "dependenceAudit": false,
+      "cards": false
+    },
+    "2022-23": {
+      "pbp": 1230,
+      "boxes": 1230,
+      "stints_local": 4,
+      "bio": true,
+      "bioColumns": {
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TEAM_ID",
+          "TEAM_ABBREVIATION",
+          "AGE",
+          "PLAYER_HEIGHT",
+          "PLAYER_HEIGHT_INCHES",
+          "PLAYER_WEIGHT",
+          "COLLEGE",
+          "COUNTRY",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GP",
+          "PTS",
+          "REB",
+          "AST",
+          "NET_RATING",
+          "OREB_PCT",
+          "DREB_PCT",
+          "USG_PCT",
+          "TS_PCT",
+          "AST_PCT"
+        ],
+        "rows": 539
+      },
+      "playerGames": true,
+      "teamGames": true,
+      "leagueSchedule": true,
+      "gameExposure": true,
+      "manifest": true,
+      "shotFields": {
+        "pbpGames": 1230,
+        "sampleGame": "0022200001.json",
+        "shotActions": 217221,
+        "withArea": 217220,
+        "withXY": 217221,
+        "sentinelXY": 6284,
+        "areaRate": 0.999995,
+        "xyRate": 1.0
+      },
+      "shotOrigin": false,
+      "dependenceAudit": false,
+      "cards": false
+    },
+    "2023-24": {
+      "pbp": 1230,
+      "boxes": 1230,
+      "stints_local": 4,
+      "bio": true,
+      "bioColumns": {
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TEAM_ID",
+          "TEAM_ABBREVIATION",
+          "AGE",
+          "PLAYER_HEIGHT",
+          "PLAYER_HEIGHT_INCHES",
+          "PLAYER_WEIGHT",
+          "COLLEGE",
+          "COUNTRY",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GP",
+          "PTS",
+          "REB",
+          "AST",
+          "NET_RATING",
+          "OREB_PCT",
+          "DREB_PCT",
+          "USG_PCT",
+          "TS_PCT",
+          "AST_PCT"
+        ],
+        "rows": 572
+      },
+      "playerGames": true,
+      "teamGames": true,
+      "leagueSchedule": true,
+      "gameExposure": true,
+      "manifest": true,
+      "shotFields": {
+        "pbpGames": 1230,
+        "sampleGame": "0022300001.json",
+        "shotActions": 218693,
+        "withArea": 218686,
+        "withXY": 218693,
+        "sentinelXY": 6154,
+        "areaRate": 0.999968,
+        "xyRate": 1.0
+      },
+      "shotOrigin": false,
+      "dependenceAudit": false,
+      "cards": false
+    },
+    "2024-25": {
+      "pbp": 1229,
+      "boxes": 1230,
+      "stints_local": 4,
+      "bio": true,
+      "bioColumns": {
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TEAM_ID",
+          "TEAM_ABBREVIATION",
+          "AGE",
+          "PLAYER_HEIGHT",
+          "PLAYER_HEIGHT_INCHES",
+          "PLAYER_WEIGHT",
+          "COLLEGE",
+          "COUNTRY",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GP",
+          "PTS",
+          "REB",
+          "AST",
+          "NET_RATING",
+          "OREB_PCT",
+          "DREB_PCT",
+          "USG_PCT",
+          "TS_PCT",
+          "AST_PCT"
+        ],
+        "rows": 569
+      },
+      "playerGames": true,
+      "teamGames": true,
+      "leagueSchedule": true,
+      "gameExposure": true,
+      "manifest": true,
+      "shotFields": {
+        "pbpGames": 1229,
+        "sampleGame": "0022400001.json",
+        "shotActions": 219344,
+        "withArea": 219343,
+        "withXY": 219344,
+        "sentinelXY": 5675,
+        "areaRate": 0.999995,
+        "xyRate": 1.0
+      },
+      "shotOrigin": false,
+      "dependenceAudit": false,
+      "cards": false
+    },
+    "2025-26": {
+      "pbp": 0,
+      "boxes": 0,
+      "stints_local": 0,
+      "bio": false,
+      "bioColumns": null,
+      "playerGames": false,
+      "teamGames": false,
+      "leagueSchedule": false,
+      "gameExposure": false,
+      "manifest": false,
+      "shotFields": null,
+      "shotOrigin": false,
+      "dependenceAudit": false,
+      "cards": false
+    }
+  },
+  "globalLayers": {
+    "benchmarkSourceFiles": [
+      "advanced.json",
+      "base.json",
+      "bio.json",
+      "defense-long.json",
+      "defense-rim.json",
+      "shots.json",
+      "team-1610612737.json",
+      "team-1610612738.json",
+      "team-1610612739.json",
+      "team-1610612740.json",
+      "team-1610612741.json",
+      "team-1610612742.json",
+      "team-1610612743.json",
+      "team-1610612744.json",
+      "team-1610612745.json",
+      "team-1610612746.json",
+      "team-1610612747.json",
+      "team-1610612748.json",
+      "team-1610612749.json",
+      "team-1610612750.json",
+      "team-1610612751.json",
+      "team-1610612752.json",
+      "team-1610612753.json",
+      "team-1610612754.json",
+      "team-1610612755.json",
+      "team-1610612756.json",
+      "team-1610612757.json",
+      "team-1610612758.json",
+      "team-1610612759.json",
+      "team-1610612760.json",
+      "team-1610612761.json",
+      "team-1610612762.json",
+      "team-1610612763.json",
+      "team-1610612764.json",
+      "team-1610612765.json",
+      "team-1610612766.json",
+      "teams.json"
+    ],
+    "benchmarkSourcePlayerLevel": [
+      "base.json",
+      "advanced.json",
+      "bio.json",
+      "shots.json",
+      "defense-long.json",
+      "defense-rim.json",
+      "teams.json"
+    ],
+    "seasonSourceFiles": [
+      "game-summary-0022500147.json",
+      "game-summary-0022500578.json",
+      "game-summary-0022500602.json",
+      "game-summary-0022501229.json",
+      "game-summary-0022501230.json",
+      "player-games.json",
+      "team-games.json"
+    ],
+    "defenseASourcePbp": 1227,
+    "defenseFifthSource": [
+      "pre25",
+      "pre55"
+    ],
+    "v4RapmOutputs": [
+      "rapm-2021-22_2024-25.csv",
+      "rapm-v4.json"
+    ],
+    "v4Cards": [
+      "2021-22.csv",
+      "2022-23.csv",
+      "2023-24.csv",
+      "2024-25.csv",
+      "2025-26.csv"
+    ],
+    "v4PriorFiles": [
+      "prior-2021-22.json",
+      "prior-2025-26.json"
+    ]
+  },
+  "fetchTools": {
+    "scripts/fetch_defense_a_pbp.js": {
+      "hardCodedSeasonVar": [],
+      "seasonLiterals": []
+    },
+    "scripts/fetch_season_games.js": {
+      "hardCodedSeasonVar": [
+        "2025-26"
+      ],
+      "seasonLiterals": [
+        "'2025-26'"
+      ]
+    },
+    "scripts/fetch_defense_seventh_season.js": {
+      "hardCodedSeasonVar": [],
+      "seasonLiterals": [
+        "'2024-25'"
+      ]
+    },
+    "scripts/fetch_benchmark_league.js": {
+      "hardCodedSeasonVar": [
+        "2025-26"
+      ],
+      "seasonLiterals": [
+        "'2025-26'"
+      ]
+    },
+    "scripts/fetch_league_context.js": {
+      "hardCodedSeasonVar": [],
+      "seasonLiterals": [
+        "'2001-02'",
+        "'2015-16'",
+        "'2016-17'",
+        "'2025-26'"
+      ]
+    }
+  }
+}

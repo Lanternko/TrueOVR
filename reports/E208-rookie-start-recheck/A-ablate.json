@@ -1,0 +1,23 @@
+{
+ "D1": {
+  "n": 30,
+  "meanMaskedMinusWith": -2.2690204123906637,
+  "meanMaskedMinusWithC": -1.368996157246711,
+  "medWith": 61.80964408553869,
+  "medMasked": 58.81664492992334
+ },
+ "D2": {
+  "n": 35,
+  "meanMaskedMinusWith": -1.7935741024719294,
+  "meanMaskedMinusWithC": -1.0917435737987116,
+  "medWith": 52.63443272083503,
+  "medMasked": 50.63502608832092
+ },
+ "D3": {
+  "n": 33,
+  "meanMaskedMinusWith": -2.5563534028992496,
+  "meanMaskedMinusWithC": -1.5069720457469806,
+  "medWith": 54.97104382186583,
+  "medMasked": 50.612904735879724
+ }
+}

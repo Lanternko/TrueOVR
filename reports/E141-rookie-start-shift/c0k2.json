@@ -1,0 +1,13 @@
+{
+ "players": 42,
+ "shape_within_player_spread_max": 1.4210854715202004e-14,
+ "shape_vs_stored_delta_max": 0.0004903683249208868,
+ "target_vs_stored_max": 0.004871655650518392,
+ "delta_old_new_maxdiff": 0.09546146125430977,
+ "shape_pass": true,
+ "target_pass": true,
+ "solve_opening_ovr_minus_T_max": 2.1316282072803006e-14,
+ "solve_pass": true,
+ "ovr_old_vs_new_maxdiff_listed_only": 0.20770287511595598,
+ "pass": true
+}

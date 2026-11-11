@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>球員卡 決選三款</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0d12; --ink:#e9eaf0; --mute:#8b8fa3;
+  --num:'Bebas Neue','Impact','Arial Narrow',sans-serif;
+  --tc:'Noto Sans TC','Microsoft JhengHei',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+body{background:radial-gradient(1200px 700px at 50% -10%,#1b1d2b,var(--bg));color:var(--ink);font-family:var(--tc);min-height:100vh;padding:32px 16px 64px}
+h1{font-size:20px;font-weight:700;text-align:center;letter-spacing:.08em}
+.lead{color:var(--mute);font-size:13px;text-align:center;margin:6px 0 28px}
+.ladder-h{max-width:1400px;margin:0 auto 14px;display:flex;align-items:center;gap:12px;color:var(--mute);font-size:12px;letter-spacing:.12em}
+.ladder-h::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,#ffffff33,transparent)}
+.row{display:flex;flex-wrap:wrap;gap:28px 24px;justify-content:center;max-width:1400px;margin:0 auto 44px}
+.slot{display:flex;flex-direction:column;align-items:center;gap:12px;width:300px}
+.cap{text-align:center}
+.cap b{display:block;font-size:15px;letter-spacing:.06em}
+.cap span{font-size:12px;color:var(--mute);line-height:1.5}
+.stage{perspective:900px}
+footer{max-width:760px;margin:0 auto;color:var(--mute);font-size:12px;line-height:1.9;text-align:center}
+footer b{color:var(--ink)}
+
+/* ===== 共用骨架 ===== */
+.card{
+  --mx:50%;--my:30%;--rx:0deg;--ry:0deg;
+  position:relative;width:300px;height:430px;border-radius:18px;overflow:hidden;isolation:isolate;
+  transform:rotateX(var(--rx)) rotateY(var(--ry));transform-style:preserve-3d;
+  transition:transform .15s ease-out, box-shadow .3s;
+  font-family:var(--tc);user-select:none;
+}
+.card.live{transition:transform .04s linear}
+.card>*{position:absolute}
+.card .bg,.card .fx,.card .fx2{inset:0;pointer-events:none}
+.portrait{left:0;right:0;top:0;height:300px;overflow:hidden;z-index:2}
+.portrait img{position:absolute;left:50%;transform:translateX(-50%);bottom:-8px;height:274px;width:auto;max-width:none;filter:drop-shadow(0 8px 14px rgba(0,0,0,.45))}
+.portrait svg{position:absolute;left:50%;transform:translateX(-50%);bottom:0;height:80%;opacity:.0}
+.noimg .portrait img{display:none}
+.noimg .portrait svg{opacity:.55}
+.ovr{left:16px;top:8px;z-index:4;line-height:.8}
+.ovr b{display:block;font:400 112px/0.86 var(--num);letter-spacing:-.01em}
+.ovr small{display:block;font:700 12px/1 var(--tc);letter-spacing:.32em;margin:4px 0 0 4px}
+.plate{left:0;right:0;top:282px;z-index:5;height:50px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1px}
+.plate .name{font:400 30px/1 var(--num);letter-spacing:.09em}
+.plate .zh{font:500 11px/1 var(--tc);letter-spacing:.3em;opacity:.8}
+@keyframes sweep{0%{transform:translateX(-120%) skewX(-18deg)}60%,100%{transform:translateX(220%) skewX(-18deg)}}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.3) rotate(0)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+@keyframes shoot{0%,66%{transform:translate(0,0) rotate(-30deg);opacity:0}69%{opacity:1}82%,100%{transform:translate(430px,-250px) rotate(-30deg);opacity:0}}
+.sp{position:absolute;background:#fff;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:twinkle 3s ease-in-out infinite;filter:drop-shadow(0 0 4px #fff)}
+
+/* ===== A. 粉鑽（微調版）：三向切面、鑽石色散、人像粉邊光 ===== */
+.pink2{color:#fff;box-shadow:0 0 0 1px #ffe3f3 inset,0 0 0 5px rgba(255,255,255,.16) inset,0 0 0 6px rgba(255,120,200,.55) inset,0 18px 50px -12px #ff3fa4aa,0 0 44px -6px #ff7cc588}
+.pink2 .bg{background:
+  repeating-linear-gradient(0deg,rgba(255,255,255,0) 0 38px,rgba(255,255,255,.12) 38px 39px),
+  repeating-linear-gradient(60deg,rgba(255,255,255,0) 0 30px,rgba(255,255,255,.22) 30px 31px),
+  repeating-linear-gradient(-60deg,rgba(255,255,255,0) 0 30px,rgba(255,255,255,.15) 30px 31px),
+  conic-gradient(from 200deg at 62% 34%,#ffe9f6 0deg,#ff8fcd 40deg,#d92c91 95deg,#ff9fd6 150deg,#fff0f8 200deg,#f063b4 255deg,#a3166f 310deg,#ffe9f6 360deg)}
+.pink2 .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(112deg,transparent 30%,rgba(120,255,235,.45) 41%,rgba(255,240,150,.45) 49%,rgba(255,130,210,.5) 57%,transparent 68%);background-size:280% 280%;background-position:var(--mx) var(--my);mix-blend-mode:overlay}
+.pink2 .fx{z-index:3;background:conic-gradient(from calc(var(--mx) * 1.2) at var(--mx) var(--my),rgba(255,255,255,0),rgba(255,255,255,.7) 7%,rgba(255,255,255,0) 17%,rgba(255,235,250,.45) 55%,rgba(255,255,255,0) 66%);mix-blend-mode:soft-light}
+.pink2 .fx2{z-index:6;overflow:hidden}
+.pink2 .fx2::before{content:"";position:absolute;top:0;bottom:0;width:34%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);animation:sweep 5s ease-in-out infinite}
+.pink2 .portrait img{filter:drop-shadow(0 0 1px #fff) drop-shadow(0 0 14px #ff6fbf99) drop-shadow(0 8px 12px rgba(80,0,50,.5))}
+.pink2 .ovr b{background:linear-gradient(180deg,#fff 5%,#ffe0f2 45%,#ff9fd2 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 0 #fff) drop-shadow(0 3px 0 #a3166f) drop-shadow(0 7px 12px #ff3fa488)}
+.pink2 .ovr small{color:#fff;text-shadow:0 1px 4px #a3166f}
+.pink2 .plate{background:linear-gradient(90deg,transparent,rgba(110,8,74,.62) 14%,rgba(110,8,74,.62) 86%,transparent);backdrop-filter:blur(3px)}
+.pink2 .plate .name{text-shadow:0 2px 8px #7b0c55}
+.pink2 .st{background:linear-gradient(180deg,rgba(255,255,255,.2),rgba(130,12,88,.72) 60%);border:1px solid rgba(255,255,255,.85);box-shadow:inset 0 1px 0 #fff,0 6px 14px -6px #7b0c55;backdrop-filter:blur(4px)}
+.pink2 .st b,.pink2 .st em{text-shadow:0 1px 5px #8e1260}
+.pink2 .sp{background:#fff;filter:drop-shadow(0 0 5px #fff)}
+
+/* ===== B. 玻璃（微調版）：邊緣折射、斜向反光帶、霧面名牌 ===== */
+.glass2{color:#fff;background:#0a1220;box-shadow:0 22px 50px -16px #000b,0 0 0 1px rgba(255,255,255,.3) inset}
+.glass2 .bg{background:
+  radial-gradient(170px 170px at 16% 20%,#22d3ee,transparent 70%),
+  radial-gradient(210px 210px at 90% 26%,#a78bfa,transparent 70%),
+  radial-gradient(240px 240px at 72% 94%,#fb7185,transparent 70%),
+  radial-gradient(190px 190px at 6% 86%,#fbbf24,transparent 70%),#0b1326}
+.glass2 .fx{z-index:1;inset:8px;border-radius:14px;background:linear-gradient(165deg,rgba(255,255,255,.3),rgba(255,255,255,.05) 38%,rgba(255,255,255,.1));backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35),inset 0 1.5px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(255,255,255,.25),inset 0 -26px 40px -24px rgba(255,255,255,.22)}
+.glass2 .fx::before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(112deg,transparent 36%,rgba(255,255,255,.3) 46%,rgba(255,255,255,.05) 52%,transparent 60%);background-size:260% 100%;background-position:var(--mx) 0}
+.glass2 .fx2{z-index:6;inset:8px;border-radius:14px;background:radial-gradient(220px 180px at var(--mx) var(--my),rgba(255,255,255,.4),rgba(255,255,255,0) 70%);mix-blend-mode:soft-light}
+.glass2 .portrait{top:8px;left:8px;right:8px;height:292px;border-radius:14px 14px 0 0}
+.glass2 .ovr{left:24px;top:18px}
+.glass2 .ovr b{background:linear-gradient(180deg,#fff,rgba(255,255,255,.5));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.8);filter:drop-shadow(0 6px 18px rgba(20,30,90,.55))}
+.glass2 .ovr small{color:#fff;opacity:.92}
+.glass2 .plate{left:22px;right:22px;top:280px;height:46px;border-radius:12px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 8px 18px -8px rgba(10,20,60,.6)}
+.glass2 .plate .name{font-size:27px;text-shadow:0 2px 12px rgba(10,20,60,.7)}
+.glass2 .plate .zh{font-size:10px}
+.glass2 .stats{left:20px;right:20px;bottom:20px}
+.glass2 .st{background:linear-gradient(180deg,rgba(255,255,255,.36),rgba(255,255,255,.1));border:1px solid rgba(255,255,255,.6);backdrop-filter:blur(10px);box-shadow:0 8px 16px -6px #0a143c99,inset 0 1px 0 #fffc,inset 0 -8px 12px -8px rgba(255,255,255,.3)}
+.glass2 .st b{text-shadow:0 2px 10px rgba(10,20,60,.55)}
+/* ===== F. 全幅隊色（靈感：FC 球隊卡、Donruss／Optic 斜切配色） ===== */
+.jersey{color:#fff;background:var(--c1);box-shadow:0 18px 44px -14px #000b}
+.jersey .bg{background:
+  linear-gradient(118deg,transparent 0 56%,var(--c2) 56% 63%,transparent 63%),
+  linear-gradient(160deg,rgba(255,255,255,.2),transparent 40%),
+  linear-gradient(180deg,transparent 42%,rgba(0,0,0,.75)),var(--c1)}
+.jersey .bg::after{content:attr(data-t);position:absolute;right:-8px;top:92px;font:400 172px/1 var(--num);color:rgba(255,255,255,.1);letter-spacing:-.02em}
+.jersey .fx2{z-index:6;background:radial-gradient(200px 160px at var(--mx) var(--my),rgba(255,255,255,.28),transparent 70%);mix-blend-mode:soft-light}
+.jersey .ovr b{transform:skewX(-6deg);transform-origin:left bottom;text-shadow:4px 4px 0 var(--c2)}
+.jersey .plate{top:284px;height:48px;background:#fff;color:#111;clip-path:polygon(0 16%,100% 0,100% 84%,0 100%)}
+.jersey .plate .zh{opacity:.7}
+.jersey .st{background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.3);border-top:3px solid var(--c2);backdrop-filter:blur(4px)}
+
+/* ===== 數值格：三種版型（只寫英文） ===== */
+.stats{left:14px;right:14px;bottom:14px;z-index:5;display:grid;gap:6px}
+.st{position:relative;border-radius:9px;display:flex;align-items:center;justify-content:center}
+.st em{font:700 10px/1 var(--tc);font-style:normal;letter-spacing:.16em;opacity:1;text-shadow:0 1px 4px rgba(0,0,0,.45)}
+.st.free em{opacity:.85}
+.st b{font:400 30px/.9 var(--num);letter-spacing:.02em}
+/* 1×4 一排 */
+.m-row{grid-template-columns:repeat(4,1fr)}
+.m-row .st{flex-direction:column;gap:5px;padding:9px 0 7px}
+/* 2×2 */
+.m-grid{grid-template-columns:1fr 1fr}
+.m-grid .st{flex-direction:row;justify-content:space-between;height:34px;padding:0 12px}
+.m-grid .st em{font-size:11px}
+.m-grid .st b{font-size:27px}
+/* 只留 OFF／DEF 兩格 */
+.m-two{grid-template-columns:1fr 1fr;bottom:18px}
+.m-two .st{flex-direction:column;gap:5px;padding:10px 0 8px}
+.m-two .st em{font-size:11px;letter-spacing:.24em}
+.m-two .st b{font-size:42px}
+
+/* OVR 下面的小字：細字球隊名 */
+.ovr small.tm{font:300 11px/1 var(--tc);letter-spacing:.34em;margin:5px 0 0 5px}
+.glass2 .stats{left:20px;right:20px;bottom:20px}
+
+/* 控制列 */
+.ctl{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:center;margin:0 auto 26px;max-width:900px}
+.grp{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mute);letter-spacing:.1em}
+.grp span{display:flex;gap:6px}
+.grp button{font:500 12px var(--tc);letter-spacing:.06em;color:var(--ink);background:#ffffff12;border:1px solid #ffffff30;border-radius:99px;padding:6px 13px;cursor:pointer}
+.grp button.on{background:#fff;color:#111;border-color:#fff}
+</style>
+</head>
+<body>
+<h1>球員卡 決選三款</h1>
+<p class="lead">滑鼠移到卡片上有 3D 傾斜與反光　·　數字為示意，不是正式卡表</p>
+<div class="ctl">
+  <div class="grp">數值格<span id="g-mode"></span></div>
+  <div class="grp">OVR 小字<span id="g-sub"></span></div>
+</div>
+<div id="rows"></div>
+<footer>
+  <p><b>三款</b>：球隊（全幅隊色，隨球員換色）、粉鑽、玻璃。</p>
+  <p><b>數值格</b>：只寫英文縮寫。OFF／DEF 固定在前兩格；GRAVITY／3PT／RIM／REB 是該球員其餘能力裡最高的兩項（字色較淡）。</p>
+  <p><b>OVR 小字</b>：可選「無」或「細字球隊名」。</p>
+</footer>
+<script>
+const SIL = '<svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="78" r="42" fill="#fff"/><path d="M20 260c0-62 32-100 80-100s80 38 80 100z" fill="#fff"/></svg>';
+const CURRY = {id:201939, name:'STEPHEN CURRY', zh:'史蒂芬・柯瑞', t:'GSW', tn:'WARRIORS', c1:'#1d428a', c2:'#ffc72c', ovr:93,
+  s:[['OFF',97],['DEF',55],['GRAVITY',99],['3PT',98]]};
+const WEMBY = {id:1641705, name:'VICTOR WEMBANYAMA', zh:'維克多・文班亞馬', t:'SAS', tn:'SPURS', c1:'#222428', c2:'#c4ced4', ovr:96,
+  s:[['OFF',84],['DEF',99],['RIM',99],['REB',95]]};
+const SPARK = new Set(['pink2']);
+const THEMES = [
+  ['jersey','球隊','隊色斜切、隊名浮水印，換球員就換色'],
+  ['pink2','粉鑽','三向切面＋鑽石色散＋人像粉邊光'],
+  ['glass2','玻璃','邊緣折射＋斜向反光帶＋霧面名牌'],
+];
+const MODES = [['row','1×4 一排'],['grid','2×2'],['two','只留 OFF／DEF']];
+const SUBS = [['none','無'],['team','細字球隊名']];
+let mode='grid', sub='team';
+function card(p,[cls]){
+  const list = mode==='two' ? p.s.slice(0,2) : p.s;
+  const st = list.map(([k,v],i)=>`<div class="st ${i<2?'core':'free'}"><em>${k}</em><b>${v}</b></div>`).join('');
+  const sparks = SPARK.has(cls) ? [[12,18,0],[78,11,1.1],[88,52,.5],[30,60,1.8],[60,34,2.3]].map(([x,y,d])=>`<span class="sp" style="left:${x}%;top:${y}%;animation-delay:${d}s;width:${10+d*3}px;height:${10+d*3}px"></span>`).join('') : '';
+  return `<div class="stage"><div class="card ${cls}" style="--c1:${p.c1};--c2:${p.c2}">
+    <div class="bg" data-t="${p.t}"></div><div class="fx"></div>
+    <div class="portrait">${SIL}<img src="https://cdn.nba.com/headshots/nba/latest/1040x760/${p.id}.png" alt="" onerror="this.closest('.card').classList.add('noimg')"></div>
+    <div class="ovr"><b>${p.ovr}</b>${sub==='team'?`<small class="tm">${p.tn}</small>`:''}</div>
+    <div class="plate"><div class="name">${p.name}</div><div class="zh">${p.zh}</div></div>
+    <div class="stats m-${mode}">${st}</div>
+    <div class="fx2">${sparks}</div>
+  </div></div>`;
+}
+const rows = document.getElementById('rows');
+function render(){
+  rows.innerHTML = [CURRY,WEMBY].map(p=>`<div class="row">${THEMES.map(t=>`<div class="slot">${card(p,t)}<div class="cap"><b>${t[1]}</b><span>${t[2]}</span></div></div>`).join('')}</div>`).join('');
+}
+function buttons(id,opts,get,set){
+  const el=document.getElementById(id);
+  el.innerHTML=opts.map(([k,l])=>`<button data-k="${k}" class="${get()===k?'on':''}">${l}</button>`).join('');
+  el.onclick=e=>{const k=e.target.dataset.k; if(!k) return; set(k); el.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.k===k)); render();};
+}
+buttons('g-mode',MODES,()=>mode,k=>mode=k);
+buttons('g-sub',SUBS,()=>sub,k=>sub=k);
+render();
+rows.addEventListener('pointermove',e=>{
+  const c=e.target.closest('.card'); if(!c) return;
+  const r=c.getBoundingClientRect(), x=(e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;
+  c.classList.add('live');
+  c.style.setProperty('--mx',(x*100)+'%'); c.style.setProperty('--my',(y*100)+'%');
+  c.style.setProperty('--ry',((x-.5)*14)+'deg'); c.style.setProperty('--rx',((.5-y)*12)+'deg');
+});
+rows.addEventListener('pointerout',e=>{
+  const c=e.target.closest('.card'); if(!c||c.contains(e.relatedTarget)) return;
+  c.classList.remove('live');
+  ['--mx','--my','--rx','--ry'].forEach(k=>c.style.removeProperty(k));
+});
+</script>
+</body>
+</html>

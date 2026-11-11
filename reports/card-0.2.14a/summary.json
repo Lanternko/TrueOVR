@@ -1,0 +1,140 @@
+{
+ "version": "card 0.2.14a",
+ "base": "card 0.2.13a（reports/card-0.2.13a/）＋MIX 加分 H-same（reports/card-0.2.15-cand/，E-294）；取代 card 0.2.14",
+ "players": 582,
+ "change": "E-294 臂 H-same（使用者裁定採用，字母版 0.2.14a＝修 0.2.14 的錯估；role-audit 4/5 reports/audit-0.2.14a/）：MIX 加分的 z 改「全聯盟尺、位置平均只留一半」z_H＝z_L−0.5·m_pos（m_pos＝該位置在算尺人群的全聯盟 z 平均，缺值記 0.5·m_pos），飽和改 1.5·tanh(z⁺/1.5)，再乘位置權重 C=1、PF=0.243（0.68/2.80）、其他 0；λ＝0.5、sd＝13.41 同 0.2.14，三個均方根縮放在同一算尺人群重算（s_reb 1.05237、s_con 1.02558、s_mix 1.12377）；500 分鐘以下 × MIN/500（R-184）。位置＝card 0.2.13a pos（F-033，2025-26 先發最多的位置）。能力值、係數、錨點與 0.2.13a 相同。",
+ "anchors": {
+  "PR1": -0.7541,
+  "PR50": 1.0023,
+  "PR90": 2.1176,
+  "PR95": 2.5903,
+  "PR99": 4.0078
+ },
+ "ovr_map": {
+  "function": "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py:ovr_map",
+  "A_PR90": 88.0,
+  "B_PR95": 92.0
+ },
+ "ovr_changed": "ovr = round(ovr_0213a + mixBonus, 1)；rank 依新 ovr 重排、同分依原名次；欄 mixBonus",
+ "pool_90_99": 22,
+ "pool_ge99": 5,
+ "build_command": "python -I -B -X utf8 reports/card-0.2.15-cand/build_cand.py → python -I -X utf8 reports/ovr-inseason-2026-27/live/mix_live.py freeze_h → python -I -B -X utf8 reports/card-0.2.14a/build_card_0214a.py",
+ "ranking_csv_sha256": "ff1abb4722247faf3cd61c6cc28dcc547f2728e08486a3123b33747162b7d35f",
+ "three_value_csv_sha256": "0e3ef0c040deb5104c36e99e7e4cb43e8338128bf7d33724b13a4e1f666ff623",
+ "three_value_source": "reports/card-0.2.10j/three-value.csv",
+ "win_len": 246,
+ "anchor_source": "reports/card-0.2.13-w246/work/pre-W246/ranking.csv gRepl, MIN>=500, qf（gRepl 4 位小數）",
+ "change_0213a": "0.2.13a（2026-11-08 role-audit）：pnr 窗口外的季（win_len 1e-12 佔位權重）不帶擋拆回合，7 人 pnr≈51→43.5，其他人 ≤0.5；凍結池 live/pnr-pool-card0213a.json；係數與錨點沿用 card-0.2.13-w246，不重擬合。",
+ "pnr_attr_csv_sha256": "6f0f8523de765e642dc495e693bfbddd45a3505e76c30e7866953dd776e5f4db",
+ "pnr": {
+  "attr_csv": "reports/card-0.2.13-w246/gravity-pnr-attr.csv",
+  "attr_sha256": "c9d65541a92418ddcde666950549d06adbf61a96cbe316d12df9a147f61c8cd7",
+  "frozen": "reports/ovr-inseason-2026-27/live/pnr-pool-card0213.json"
+ },
+ "mix": {
+  "config": {
+   "lambda": 0.5,
+   "sd": 13.406247107921262,
+   "ref": 0.444847369395445,
+   "clip": [
+    0.0,
+    1.5
+   ],
+   "rampMin": 500.0,
+   "blendK": 500.0,
+   "conMinPrior": 200.0,
+   "z": {
+    "rebound": {
+     "mu": 70.94300791556729,
+     "sd": 17.317021456168316
+    },
+    "orebPct": {
+     "mu": 0.04652242744063325,
+     "sd": 0.033799211531870585
+    },
+    "drebPct": {
+     "mu": 0.12901055408970977,
+     "sd": 0.04881989834445755
+    },
+    "con2_36": {
+     "mu": 3.8409042086225194,
+     "sd": 2.362990623973127
+    }
+   },
+   "h": {
+    "alpha": 0.5,
+    "mpos": {
+     "PG": {
+      "rebound": -0.7915878036646767,
+      "orebPct": -0.645610585287132,
+      "drebPct": -0.6078032269277788,
+      "con2_36": -0.6930217354553149
+     },
+     "SG": {
+      "rebound": -0.6157928254423511,
+      "orebPct": -0.47727808170083996,
+      "drebPct": -0.5728110468585252,
+      "con2_36": -0.5178260161214404
+     },
+     "SF": {
+      "rebound": -0.1932754597815759,
+      "orebPct": -0.29730703098300343,
+      "drebPct": -0.2743171020674314,
+      "con2_36": -0.3652444047010483
+     },
+     "PF": {
+      "rebound": 0.5772386787031505,
+      "orebPct": 0.11537096229862667,
+      "drebPct": 0.3502428618274957,
+      "con2_36": 0.24586997915490333
+     },
+     "C": {
+      "rebound": 1.2302919493608342,
+      "orebPct": 1.419290679235711,
+      "drebPct": 1.2675728820039425,
+      "con2_36": 1.4724857749865392
+     }
+    },
+    "posWeight": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 0.24285714285714288,
+     "C": 1.0
+    },
+    "sat": "tanh",
+    "hi": 1.5,
+    "mposPool": "card 0.2.13a MIN>=500 且姓名在 stats-2025-26 唯一（同 epN），z_L 平均，有值的人"
+   },
+   "scales": {
+    "reb": 1.0523710315802024,
+    "con": 1.025575182363618,
+    "mix": 1.123771593640557
+   }
+  },
+  "frozen": "reports/ovr-inseason-2026-27/live/mix-pool-card0214a.json",
+  "bonus_population": {
+   "MIN>=500 非零": 119,
+   "MIN<500 非零": 70,
+   "零": 393
+  },
+  "bonus_max": 10.632,
+  "n_near_cap_0.2": 0,
+  "theoretical_cap_C": 11.739533509574475,
+  "reproduceCandMaxAbs": 0.0004946370455985449
+ },
+ "source_cand": {
+  "summary": "reports/card-0.2.15-cand/summary.json",
+  "ranking_csv_sha256": "ff1abb4722247faf3cd61c6cc28dcc547f2728e08486a3123b33747162b7d35f",
+  "sources_sha256": {
+   "card_0213a_ranking": "feb5c8023cd99f12413767160d3b98d119051c55ef6e200f26bca631460daf97",
+   "card_0214_ranking": "fbb5507846add6ebad78ba770fa544a065e3b7ae0c0a5926e5ae1d24fd46ae7a",
+   "E294_bonus_pick": "55b43250e6946298bdf6a51fa0f5b0e2d3663b4d2be03f2d69a2b97849c95e37",
+   "E294_preregistration": "d6c044197e69d5f947af76f31b1a95528a7acc8ed5968839dbfe6a39c63d7b62",
+   "E294_results": "d9c6d71d18e99823339aaa7198f71ba27dbe6f286b34d07f308541cd6d38ca41"
+  }
+ },
+ "audit": "reports/audit-0.2.14a/report.md（4/5 建議採用）",
+ "card_0213a_ranking_csv_sha256": "feb5c8023cd99f12413767160d3b98d119051c55ef6e200f26bca631460daf97",
+ "card_0214_ranking_csv_sha256": "fbb5507846add6ebad78ba770fa544a065e3b7ae0c0a5926e5ae1d24fd46ae7a"
+}

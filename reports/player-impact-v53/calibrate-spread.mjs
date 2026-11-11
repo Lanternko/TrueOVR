@@ -11,7 +11,7 @@ import {ovrInput} from '../ovr-v47-2025-26/input.mjs';
 const MIX = {ra: [0.30, 0.66, 1], paint: [0.16, 0.44, 1], mid: [0.12, 0.42, 1], corner: [0.10, 0.39, 1.5], arc: [0.32, 0.35, 1.5]};
 const x = await ovrInput();
 const rows = fs.readFileSync('reports/impact-rapm/four-factors.csv', 'utf8').trim().split('\n');
-const head = rows[0].split(','), col = k => head.indexOf(k);
+const head = rows[0].trimEnd().split(','), col = k => head.indexOf(k);
 const ff = new Map(rows.slice(1).map(l => l.split(',')).map(r => [Number(r[col('playerId')]), {efg: Number(r[col('efg_defense')]), poss: Number(r[col('defensePossessions')])}]));
 const pts = [];
 for (const p of x.players) {

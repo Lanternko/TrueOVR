@@ -1,0 +1,101 @@
+{
+ "version": "card 0.2.9a",
+ "baseVersion": "card 0.2.9",
+ "players": 582,
+ "change": "E-164 S：第一層（OVR 迴歸）不再用 stamina 當預測變數（--dropAttr stamina 重擬合三張部件卡）；用人層、映射錨、r_repl 同 0.2.9；stamina 顯示值照舊。",
+ "prereg_verdict": "E-164 預註冊 S 臂過；使用者 2026-11-01 裁定採用（R-107）。",
+ "version_rule": "PATCH：前 300 名移動 ≥10 名 128 人（> 30），不符字母版；不升 MINOR。",
+ "moved10_top300": 128,
+ "rapm_window": "T6 目標（DARKO＋BPM 季內 z 平均，E-153）；rapm1 用人層不換（errata-1）；rapm-T6.csv 沿用 0.2.9",
+ "key_players_2025_26": {
+  "Jalen Williams": {
+   "0.2.9": [
+    86.9,
+    17
+   ],
+   "0.2.9a": [
+    88.2,
+    10
+   ]
+  },
+  "Nikola Jokić": {
+   "0.2.9": [
+    95.2,
+    6
+   ],
+   "0.2.9a": [
+    93.4,
+    7
+   ]
+  },
+  "Chet Holmgren": {
+   "0.2.9": [
+    87.0,
+    16
+   ],
+   "0.2.9a": [
+    87.9,
+    11
+   ]
+  },
+  "Shai Gilgeous-Alexander": {
+   "0.2.9": [
+    119.4,
+    1
+   ],
+   "0.2.9a": [
+    119.2,
+    1
+   ]
+  },
+  "Victor Wembanyama": {
+   "0.2.9": [
+    106.4,
+    2
+   ],
+   "0.2.9a": [
+    107.0,
+    2
+   ]
+  },
+  "Cooper Flagg": {
+   "0.2.9": [
+    77.6,
+    75
+   ],
+   "0.2.9a": [
+    76.1,
+    82
+   ]
+  }
+ },
+ "top20": {
+  "out": [],
+  "in": []
+ },
+ "part_card_sha256": {
+  "primary": "d50e947994e346b7d9db9847eaa95db4cc196011361eb3507f833bf6f403de76",
+  "fitA": "f0acff8158927517d35c23115181342838ad29306ad721d0238b7063db13431f",
+  "fitB": "083774b6a7a856b84a95334991ffbe397848450c94edcdbed93b29b5f4bc063c"
+ },
+ "rapm_inputs_sha256": {
+  "primary": "a35ebcacceefc85e1fefbc46afc8e118e87f36b1cd0b326e46e040b7be0dad33",
+  "fitA": "e5932b649aa65d78b73628e12cc9b2fd4814fac7883a17f8e17a4bf1192c1936",
+  "fitB": "2908af9fc86af385cacfcbbe88bfab47404984a0470b1d1ceb9b7967dfa3a90a",
+  "cand_pkl_rows": 504
+ },
+ "part_card_pred_csv_sha256": {
+  "primary": "8b8a54062ceb8271c4940ea34dee5ad2c8db1448a69ce1abe284b478231c077f",
+  "fitA": "3b4ce6ddaf02697c0bf53bcdee3d6a17bbecc5cb35fdbdab758932ef8d0cd625",
+  "fitB": "c0f4c464143cd48ab39453c848fa24edfa06967006f0b41993f17dc7f58da4c7"
+ },
+ "sources_sha256": {
+  "reports/card-0.2.9/ranking.csv": "032889088a08064bf045d479f8bad442d9f288f690bc7f851f6651f66c334eae",
+  "reports/card-0.2.9+E164-no-stamina/ranking-S-2025-26.csv": "b7972182261683b9b7b75ad99eafeb9211f96825bab4b00783344c3bab7580ef",
+  "reports/card-0.2.9+E164-no-stamina/results.json": "013608aa0b1925cb05b67e73fe3c38ddf67068f0063a783b94c2837f8df8c376",
+  "reports/card-0.2.9/rapm-T6.csv": "a35ebcacceefc85e1fefbc46afc8e118e87f36b1cd0b326e46e040b7be0dad33",
+  "reports/card-0.2.9/three-value.csv": "1176f259beb1c6a59cadbf066a4eab3b6c4a306a10a2d44d30b9720f4f4e225f"
+ },
+ "generator": "reports/card-0.2.9a/build_card_029a.py",
+ "ranking_csv_sha256": "b7972182261683b9b7b75ad99eafeb9211f96825bab4b00783344c3bab7580ef"
+}

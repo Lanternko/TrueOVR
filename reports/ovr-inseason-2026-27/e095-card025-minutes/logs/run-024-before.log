@@ -1,0 +1,1181 @@
+{
+ "out": "reports/ovr-inseason-2026-27/e095-card025-minutes/out-024-before",
+ "ranked": 368,
+ "noPrior": 57,
+ "sanity": {
+  "a_f0_kmax_maxAbsOvrDiff": 0.04435506963420721,
+  "a_liveEqualsC4predict_maxAttrDiff": 0.0,
+  "a_f0_equalsC2_maxAttrDiff": 2.842170943040401e-14,
+  "b_n": 368,
+  "b_median_abs": 1.691014100097707,
+  "b_max_abs": 11.209857767310424,
+  "b_mean_abs": 2.286108911089931,
+  "b_ge_1": [
+   [
+    "Shai Gilgeous-Alexander",
+    5,
+    -4.292
+   ],
+   [
+    "Franz Wagner",
+    4,
+    3.167
+   ],
+   [
+    "Victor Wembanyama",
+    5,
+    1.922
+   ],
+   [
+    "Amen Thompson",
+    5,
+    -3.13
+   ],
+   [
+    "Derrick White",
+    4,
+    -3.639
+   ],
+   [
+    "Cade Cunningham",
+    5,
+    1.067
+   ],
+   [
+    "Joel Embiid",
+    4,
+    1.936
+   ],
+   [
+    "Tyrese Maxey",
+    5,
+    -1.257
+   ],
+   [
+    "Kawhi Leonard",
+    2,
+    -4.317
+   ],
+   [
+    "Jayson Tatum",
+    4,
+    3.896
+   ],
+   [
+    "Kevin Durant",
+    5,
+    -5.023
+   ],
+   [
+    "Dylan Harper",
+    5,
+    8.884
+   ],
+   [
+    "Lauri Markkanen",
+    4,
+    -7.531
+   ],
+   [
+    "Dyson Daniels",
+    5,
+    -3.664
+   ],
+   [
+    "Zion Williamson",
+    4,
+    1.409
+   ],
+   [
+    "Aaron Gordon",
+    4,
+    1.942
+   ],
+   [
+    "Anthony Edwards",
+    4,
+    -1.511
+   ],
+   [
+    "Desmond Bane",
+    4,
+    -2.131
+   ],
+   [
+    "Scottie Barnes",
+    4,
+    -2.394
+   ],
+   [
+    "Ty Jerome",
+    4,
+    7.705
+   ],
+   [
+    "Anthony Davis",
+    5,
+    1.271
+   ],
+   [
+    "Brandin Podziemski",
+    3,
+    3.278
+   ],
+   [
+    "VJ Edgecombe",
+    4,
+    -2.245
+   ],
+   [
+    "Alperen Sengun",
+    4,
+    1.133
+   ],
+   [
+    "Davion Mitchell",
+    5,
+    3.594
+   ],
+   [
+    "Stephen Curry",
+    4,
+    -3.731
+   ],
+   [
+    "Dean Wade",
+    3,
+    3.636
+   ],
+   [
+    "Jalen Brunson",
+    5,
+    -2.122
+   ],
+   [
+    "Ryan Rollins",
+    5,
+    -6.429
+   ],
+   [
+    "Michael Porter Jr.",
+    4,
+    -2.229
+   ],
+   [
+    "Jalen Williams",
+    3,
+    1.982
+   ],
+   [
+    "Jalen Suggs",
+    3,
+    3.15
+   ],
+   [
+    "Moussa Diabaté",
+    5,
+    3.03
+   ],
+   [
+    "Brandon Miller",
+    5,
+    2.17
+   ],
+   [
+    "Immanuel Quickley",
+    4,
+    -2.146
+   ],
+   [
+    "Christian Braun",
+    4,
+    2.12
+   ],
+   [
+    "Nickeil Alexander-Walker",
+    5,
+    -2.147
+   ],
+   [
+    "Toumani Camara",
+    3,
+    -5.351
+   ],
+   [
+    "Walker Kessler",
+    5,
+    -1.7
+   ],
+   [
+    "Jalen Johnson",
+    5,
+    -1.22
+   ],
+   [
+    "Derrick Jones Jr.",
+    4,
+    3.004
+   ],
+   [
+    "Trey Murphy III",
+    4,
+    -3.359
+   ],
+   [
+    "Jrue Holiday",
+    3,
+    -2.27
+   ],
+   [
+    "Deni Avdija",
+    3,
+    -1.259
+   ],
+   [
+    "Jaren Jackson Jr.",
+    4,
+    -2.775
+   ],
+   [
+    "Onyeka Okongwu",
+    5,
+    -3.453
+   ],
+   [
+    "Peyton Watson",
+    4,
+    1.587
+   ],
+   [
+    "Dejounte Murray",
+    4,
+    3.547
+   ],
+   [
+    "Herbert Jones",
+    4,
+    -8.981
+   ],
+   [
+    "Marcus Smart",
+    2,
+    -2.606
+   ],
+   [
+    "Sion James",
+    5,
+    2.075
+   ],
+   [
+    "Josh Giddey",
+    5,
+    -4.857
+   ],
+   [
+    "Mikal Bridges",
+    5,
+    -6.339
+   ],
+   [
+    "Pelle Larsson",
+    5,
+    2.703
+   ],
+   [
+    "Keegan Murray",
+    2,
+    -4.452
+   ],
+   [
+    "Neemias Queta",
+    4,
+    -5.536
+   ],
+   [
+    "Jonathan Kuminga",
+    5,
+    10.018
+   ],
+   [
+    "Rui Hachimura",
+    3,
+    1.478
+   ],
+   [
+    "Domantas Sabonis",
+    4,
+    4.716
+   ],
+   [
+    "Darius Garland",
+    4,
+    1.451
+   ],
+   [
+    "Cameron Johnson",
+    1,
+    -7.334
+   ],
+   [
+    "Trae Young",
+    5,
+    7.688
+   ],
+   [
+    "Zach LaVine",
+    4,
+    2.354
+   ],
+   [
+    "Kris Dunn",
+    4,
+    1.943
+   ],
+   [
+    "RJ Barrett",
+    4,
+    1.207
+   ],
+   [
+    "James Harden",
+    4,
+    -2.476
+   ],
+   [
+    "Jalen Smith",
+    5,
+    2.047
+   ],
+   [
+    "Jalen Duren",
+    2,
+    -6.245
+   ],
+   [
+    "Collin Gillespie",
+    3,
+    -3.504
+   ],
+   [
+    "John Collins",
+    5,
+    -1.344
+   ],
+   [
+    "Ja'Kobe Walter",
+    4,
+    4.557
+   ],
+   [
+    "Anthony Black",
+    2,
+    -2.367
+   ],
+   [
+    "Oso Ighodaro",
+    1,
+    -2.776
+   ],
+   [
+    "Ivica Zubac",
+    3,
+    -5.861
+   ],
+   [
+    "Paul Reed",
+    5,
+    11.21
+   ],
+   [
+    "Donovan Clingan",
+    3,
+    -2.872
+   ],
+   [
+    "Payton Pritchard",
+    4,
+    -5.177
+   ],
+   [
+    "Daniel Gafford",
+    5,
+    1.094
+   ],
+   [
+    "Matas Buzelis",
+    5,
+    -2.347
+   ],
+   [
+    "P.J. Washington",
+    5,
+    2.088
+   ],
+   [
+    "Sandro Mamukelashvili",
+    5,
+    1.042
+   ],
+   [
+    "Cason Wallace",
+    3,
+    -5.937
+   ],
+   [
+    "Zach Edey",
+    3,
+    -2.938
+   ],
+   [
+    "Day'Ron Sharpe",
+    4,
+    1.319
+   ],
+   [
+    "LaMelo Ball",
+    5,
+    -2.957
+   ],
+   [
+    "Miles McBride",
+    5,
+    -5.745
+   ],
+   [
+    "Sam Merrill",
+    4,
+    -1.213
+   ],
+   [
+    "Duncan Robinson",
+    5,
+    1.94
+   ],
+   [
+    "Obi Toppin",
+    5,
+    1.886
+   ],
+   [
+    "Collin Murray-Boyles",
+    4,
+    -2.361
+   ],
+   [
+    "Landry Shamet",
+    5,
+    1.291
+   ],
+   [
+    "Jaime Jaquez Jr.",
+    5,
+    1.032
+   ],
+   [
+    "Saddiq Bey",
+    4,
+    -4.728
+   ],
+   [
+    "Kelly Oubre Jr.",
+    5,
+    -5.665
+   ],
+   [
+    "Sam Hauser",
+    4,
+    -2.188
+   ],
+   [
+    "Brook Lopez",
+    4,
+    1.543
+   ],
+   [
+    "Keon Ellis",
+    4,
+    3.987
+   ],
+   [
+    "Kentavious Caldwell-Pope",
+    5,
+    2.254
+   ],
+   [
+    "Grayson Allen",
+    5,
+    -1.055
+   ],
+   [
+    "Matisse Thybulle",
+    5,
+    5.068
+   ],
+   [
+    "Jaylon Tyson",
+    4,
+    -3.59
+   ],
+   [
+    "Aaron Nesmith",
+    4,
+    -4.771
+   ],
+   [
+    "Andrew Wiggins",
+    5,
+    -3.321
+   ],
+   [
+    "Gui Santos",
+    4,
+    3.735
+   ],
+   [
+    "DeMar DeRozan",
+    4,
+    -3.585
+   ],
+   [
+    "Sidy Cissoko",
+    3,
+    3.587
+   ],
+   [
+    "Jaxson Hayes",
+    4,
+    7.178
+   ],
+   [
+    "Jakob Poeltl",
+    4,
+    -3.428
+   ],
+   [
+    "Kasparas Jakučionis",
+    5,
+    7.475
+   ],
+   [
+    "Zaccharie Risacher",
+    5,
+    4.721
+   ],
+   [
+    "Luguentz Dort",
+    5,
+    -1.409
+   ],
+   [
+    "Quentin Grimes",
+    5,
+    -1.508
+   ],
+   [
+    "AJ Green",
+    5,
+    -6.656
+   ],
+   [
+    "Tre Jones",
+    5,
+    -6.333
+   ],
+   [
+    "Kris Murray",
+    1,
+    -2.822
+   ],
+   [
+    "Daniss Jenkins",
+    5,
+    6.148
+   ],
+   [
+    "Jaylin Williams",
+    5,
+    -1.705
+   ],
+   [
+    "Ronald Holland II",
+    5,
+    -3.381
+   ],
+   [
+    "Luke Kornet",
+    5,
+    -3.84
+   ],
+   [
+    "Jordan Walsh",
+    4,
+    2.539
+   ],
+   [
+    "Isaiah Joe",
+    3,
+    -4.027
+   ],
+   [
+    "Cam Spencer",
+    4,
+    -3.675
+   ],
+   [
+    "Kyle Kuzma",
+    5,
+    1.773
+   ],
+   [
+    "Kel'el Ware",
+    5,
+    -1.948
+   ],
+   [
+    "Isaiah Stewart",
+    3,
+    -2.205
+   ],
+   [
+    "Jordan Goodwin",
+    3,
+    -1.086
+   ],
+   [
+    "Aaron Wiggins",
+    5,
+    5.455
+   ],
+   [
+    "Keldon Johnson",
+    5,
+    -1.162
+   ],
+   [
+    "Precious Achiuwa",
+    4,
+    1.984
+   ],
+   [
+    "Jamal Shead",
+    4,
+    -1.246
+   ],
+   [
+    "Tristan da Silva",
+    4,
+    2.568
+   ],
+   [
+    "Luke Kennard",
+    2,
+    -2.255
+   ],
+   [
+    "Isaac Okoro",
+    5,
+    -5.644
+   ],
+   [
+    "Al Horford",
+    4,
+    -2.447
+   ],
+   [
+    "Bobby Portis Jr.",
+    5,
+    -1.878
+   ],
+   [
+    "Jalen Green",
+    3,
+    1.83
+   ],
+   [
+    "Kevin Huerter",
+    5,
+    -1.2
+   ],
+   [
+    "Jose Alvarado",
+    2,
+    -3.056
+   ],
+   [
+    "CJ McCollum",
+    5,
+    -4.547
+   ],
+   [
+    "Ryan Dunn",
+    3,
+    -3.169
+   ],
+   [
+    "Scoot Henderson",
+    3,
+    -3.717
+   ],
+   [
+    "Quenton Jackson",
+    5,
+    2.369
+   ],
+   [
+    "Dennis Schröder",
+    5,
+    5.059
+   ],
+   [
+    "Reed Sheppard",
+    4,
+    -3.339
+   ],
+   [
+    "Jared McCain",
+    5,
+    4.149
+   ],
+   [
+    "Jay Huff",
+    4,
+    -3.31
+   ],
+   [
+    "Kenrich Williams",
+    5,
+    -1.114
+   ],
+   [
+    "Ziaire Williams",
+    4,
+    4.52
+   ],
+   [
+    "Collin Sexton",
+    4,
+    -4.602
+   ],
+   [
+    "Marvin Bagley III",
+    4,
+    -4.851
+   ],
+   [
+    "Jock Landale",
+    5,
+    -3.285
+   ],
+   [
+    "Karlo Matković",
+    3,
+    -1.71
+   ],
+   [
+    "Isaiah Jackson",
+    4,
+    3.066
+   ],
+   [
+    "Leonard Miller",
+    5,
+    6.02
+   ],
+   [
+    "Scotty Pippen Jr.",
+    4,
+    -1.465
+   ],
+   [
+    "Adem Bona",
+    5,
+    -2.828
+   ],
+   [
+    "Will Richard",
+    5,
+    -1.633
+   ],
+   [
+    "Gary Payton II",
+    5,
+    -1.059
+   ],
+   [
+    "Nique Clifford",
+    3,
+    -9.726
+   ],
+   [
+    "Kobe Sanders",
+    4,
+    1.843
+   ],
+   [
+    "Josh Minott",
+    3,
+    -1.698
+   ],
+   [
+    "Ryan Kalkbrenner",
+    5,
+    -3.054
+   ],
+   [
+    "Zach Collins",
+    3,
+    -6.93
+   ],
+   [
+    "Steven Adams",
+    1,
+    -4.544
+   ],
+   [
+    "Jake LaRavia",
+    4,
+    -2.131
+   ],
+   [
+    "Bennedict Mathurin",
+    4,
+    -8.35
+   ],
+   [
+    "Jevon Carter",
+    2,
+    3.011
+   ],
+   [
+    "Tim Hardaway Jr.",
+    5,
+    -5.766
+   ],
+   [
+    "Terrence Shannon Jr",
+    5,
+    5.694
+   ],
+   [
+    "Nikola Vučević",
+    4,
+    -10.881
+   ],
+   [
+    "Jarred Vanderbilt",
+    1,
+    2.021
+   ],
+   [
+    "Cedric Coward",
+    3,
+    2.117
+   ],
+   [
+    "Ben Sheppard",
+    1,
+    -2.503
+   ],
+   [
+    "Luka Garza",
+    4,
+    -3.09
+   ],
+   [
+    "Kyshawn George",
+    5,
+    2.856
+   ],
+   [
+    "Hugo González",
+    4,
+    -1.458
+   ],
+   [
+    "Joan Beringer",
+    5,
+    6.482
+   ],
+   [
+    "Jerami Grant",
+    4,
+    -3.935
+   ],
+   [
+    "Chaney Johnson",
+    4,
+    5.675
+   ],
+   [
+    "Deandre Ayton",
+    5,
+    -8.466
+   ],
+   [
+    "Jalen Slawson",
+    4,
+    -3.647
+   ],
+   [
+    "Micah Potter",
+    1,
+    -1.598
+   ],
+   [
+    "Harrison Barnes",
+    4,
+    -10.518
+   ],
+   [
+    "Dru Smith",
+    3,
+    -1.302
+   ],
+   [
+    "Brandon Williams",
+    5,
+    -3.193
+   ],
+   [
+    "Moritz Wagner",
+    4,
+    2.365
+   ],
+   [
+    "Anfernee Simons",
+    5,
+    -3.889
+   ],
+   [
+    "Vít Krejčí",
+    3,
+    -5.547
+   ],
+   [
+    "Leaky Black",
+    2,
+    -10.458
+   ],
+   [
+    "Larry Nance Jr.",
+    5,
+    3.15
+   ],
+   [
+    "Khaman Maluach",
+    3,
+    5.466
+   ],
+   [
+    "Marcus Sasser",
+    5,
+    4.312
+   ],
+   [
+    "Khris Middleton",
+    4,
+    -2.819
+   ],
+   [
+    "Gradey Dick",
+    4,
+    1.259
+   ],
+   [
+    "Malik Monk",
+    3,
+    -2.675
+   ],
+   [
+    "Jamal Cain",
+    4,
+    2.661
+   ],
+   [
+    "Kyle Anderson",
+    3,
+    -2.726
+   ],
+   [
+    "Craig Porter Jr.",
+    2,
+    -3.385
+   ],
+   [
+    "Buddy Hield",
+    5,
+    1.169
+   ],
+   [
+    "Jabari Walker",
+    3,
+    -1.684
+   ],
+   [
+    "Bogdan Bogdanović",
+    5,
+    1.944
+   ],
+   [
+    "Trayce Jackson-Davis",
+    4,
+    1.12
+   ],
+   [
+    "Jaylen Clark",
+    4,
+    -3.855
+   ],
+   [
+    "Anthony Gill",
+    1,
+    -2.964
+   ],
+   [
+    "Bones Hyland",
+    5,
+    -1.716
+   ],
+   [
+    "Jase Richardson",
+    4,
+    1.932
+   ],
+   [
+    "Jaylen Wells",
+    4,
+    1.291
+   ],
+   [
+    "Egor Dëmin",
+    4,
+    -1.786
+   ],
+   [
+    "Corey Kispert",
+    2,
+    -2.653
+   ],
+   [
+    "Justin Edwards",
+    1,
+    -2.682
+   ],
+   [
+    "Simone Fontecchio",
+    2,
+    -3.142
+   ],
+   [
+    "Kevon Looney",
+    4,
+    1.315
+   ],
+   [
+    "Taurean Prince",
+    2,
+    -3.191
+   ],
+   [
+    "Jalen Pickett",
+    2,
+    -1.295
+   ],
+   [
+    "Jamison Battle",
+    4,
+    1.202
+   ],
+   [
+    "Dorian Finney-Smith",
+    2,
+    -1.716
+   ],
+   [
+    "Mohamed Diawara",
+    1,
+    -1.447
+   ],
+   [
+    "Klay Thompson",
+    5,
+    -1.059
+   ],
+   [
+    "Royce O'Neale",
+    5,
+    -4.71
+   ],
+   [
+    "Jae'Sean Tate",
+    4,
+    -2.312
+   ],
+   [
+    "Noa Essengue",
+    4,
+    2.081
+   ],
+   [
+    "Jett Howard",
+    2,
+    -1.122
+   ],
+   [
+    "Kobe Brown",
+    2,
+    -1.726
+   ],
+   [
+    "Caleb Love",
+    1,
+    1.354
+   ],
+   [
+    "Keyonte George",
+    5,
+    1.72
+   ],
+   [
+    "Ryan Nembhard",
+    2,
+    3.512
+   ],
+   [
+    "Walter Clayton Jr.",
+    4,
+    1.593
+   ],
+   [
+    "Will Riley",
+    3,
+    6.897
+   ],
+   [
+    "Ben Saraf",
+    1,
+    2.32
+   ],
+   [
+    "Cody Williams",
+    3,
+    8.434
+   ],
+   [
+    "Jaden Hardy",
+    2,
+    1.706
+   ],
+   [
+    "Drake Powell",
+    1,
+    1.469
+   ]
+  ],
+  "mapping_long_maxAbsDiff": 0.04996992280636903,
+  "mapping_ft_maxAbsDiff": 22.576946547021578,
+  "pointwiseCheck": 9.677592061052565e-12,
+  "lastOVR_vs_formal_maxAbs": 0.10000000000000853,
+  "lastOVR_vs_formal_matched": 368
+ }
+}

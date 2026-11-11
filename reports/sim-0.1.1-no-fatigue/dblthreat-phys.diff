@@ -1,0 +1,45 @@
+diff --git a/src/constants.js b/src/constants.js
+index 777658b..ce54199 100644
+--- a/src/constants.js
++++ b/src/constants.js
+@@ -316,9 +316,10 @@ export const LEAGUE_DOUBLE_RATE = 0.16;
+  * 引力量的是「會不會被拉出三分線」（三分為主）；包夾量的是「不夾住他就會得分」
+  * ——低位與禁區才是包夾的主場，而且**必須自己製造得分**：接球才會投的人
+  * 沒有人會去包夾（Klay 從來不被包夾，Shaq 每一球都被包夾）。
+- * 只用得分效率不行：Rick Fox 的近射 93 是小樣本，算出來會比 Shaq 還高。
++ * sim 0.1.1 拿掉原本的體格項（phys 0.25，R-089）：真實球員的包夾威脅被量測錨點抵銷，
++ * 體格項只動到平均隊友，E-135 量不出效果。三項在 doubleThreat 裡除以權重和。
+  */
+-export const DOUBLE_THREAT_W = { long: 0.20, mid: 0.10, short: 0.45, phys: 0.25 };
++export const DOUBLE_THREAT_W = { long: 0.20, mid: 0.10, short: 0.45 };
+ export const DOUBLE_CREATE_W = { handle: 0.50, drive: 0.50 };
+ export const DOUBLE_THREAT_MIX = 0.50;   // 得分能力與自主製造能力各半
+ /**
+diff --git a/src/probability_model.js b/src/probability_model.js
+index 2f6492f..cf5e5b2 100644
+--- a/src/probability_model.js
++++ b/src/probability_model.js
+@@ -79,10 +79,8 @@ export function teammateContext(lineup, handlerIdx) {
+  */
+ export function doubleThreat(p) {
+   const M = C.ATTR_MIDPOINT, w = C.DOUBLE_THREAT_W, c = C.DOUBLE_CREATE_W;
+-  // 肉體直接進得分項：包夾是空間決策，夾的是「離籃框最近又擋不住」的那個人。
+-  // 投射效率percentile 分不出 Shaq 與 Rick Fox，體格可以。
+-  const score = w.long * p.long + w.mid * p.mid + w.short * p.short
+-    + w.phys * p.physique;
++  // 體格項已拿掉（sim 0.1.1，R-089）；寫法同 E-086 ch1，逐位元相同。
++  const score = (w.long * p.long + w.mid * p.mid + w.short * p.short) / (w.long + w.mid + w.short);
+   const create = c.handle * (p.handle ?? M) + c.drive * p.drive;
+   return C.DOUBLE_THREAT_MIX * score + (1 - C.DOUBLE_THREAT_MIX) * create;
+ }
+diff --git a/test/timed_game.js b/test/timed_game.js
+index a63b06e..5c89283 100644
+--- a/test/timed_game.js
++++ b/test/timed_game.js
+@@ -92,5 +92,5 @@ for(const opts of [{pace:0},{quarterSeconds:NaN},{maxOvertimes:-1},{fatigue:'yes
+ assert.throws(()=>simulateGame({roster:[]},team,{mode:'timed'}));
+ assert.throws(()=>monteCarlo(team,team,1,{mode:'timed'}));
+ const legacyHash=createHash('sha256').update(JSON.stringify([1,42,20260909].map(seed=>simulateGame(TEAMS.GSW,TEAMS.CLE,{seed,replay:true})))).digest('hex');
+-assert.equal(legacyHash,'e87f8dce73e6b71f754f5b5fc0b3dc367060d12b441233d4c185ed9b988afdde');
++assert.equal(legacyHash,'edec43423b3ef919c839a27fd9feb49f32ee6f79ab15dfb235db6304d6b771e3'); // sim 0.1.1：拿掉體力＋doubleThreat 體格項（R-089）；等於舊引擎 fatigue:false＋E-086 ch1 hook
+ console.log(`Timed game: 60 full games; accounting, rotation, clock, FT, assists, overtime, replay and legacy parity passed. ${rotations} substitutions, ${andOnes} and-ones, ${ftRebounds} FT rebounds.`);

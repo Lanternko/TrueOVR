@@ -1,0 +1,366 @@
+{
+ "topLong": [
+  {
+   "playerId": 1630610,
+   "name": "DeJon Jarreau",
+   "pos": "SG",
+   "long": "44.0 -> 56.4 (+12.4)",
+   "threeAttempts": "4/30",
+   "short": "70.8 -> 66.7 (-4.2)",
+   "rimAttempts": "27/46"
+  },
+  {
+   "playerId": 1642358,
+   "name": "AJ Johnson",
+   "pos": "SG",
+   "long": "43.1 -> 54.6 (+11.5)",
+   "threeAttempts": "12/57",
+   "short": "40.0 -> 40.0 (+0.0)",
+   "rimAttempts": "45/115"
+  },
+  {
+   "playerId": 1631451,
+   "name": "Javonte Cooke",
+   "pos": "SG",
+   "long": "48.3 -> 59.1 (+10.8)",
+   "threeAttempts": "3/23",
+   "short": "55.4 -> 46.5 (-8.9)",
+   "rimAttempts": "6/17"
+  },
+  {
+   "playerId": 1631117,
+   "name": "Walker Kessler",
+   "pos": "C",
+   "long": "80.7 -> 69.9 (-10.8)",
+   "threeAttempts": "6/8",
+   "short": "78.4 -> 91.5 (+13.1)",
+   "rimAttempts": "20/29"
+  },
+  {
+   "playerId": 1631247,
+   "name": "Luke Travers",
+   "pos": "SG",
+   "long": "49.2 -> 60.0 (+10.8)",
+   "threeAttempts": "1/16",
+   "short": "58.8 -> 50.7 (-8.1)",
+   "rimAttempts": "8/19"
+  },
+  {
+   "playerId": 1629630,
+   "name": "Ja Morant",
+   "pos": "PG",
+   "long": "41.7 -> 51.8 (+10.1)",
+   "threeAttempts": "20/85",
+   "short": "43.4 -> 40.0 (-3.4)",
+   "rimAttempts": "97/199"
+  },
+  {
+   "playerId": 1641989,
+   "name": "Elijah Harkless",
+   "pos": "PG",
+   "long": "41.9 -> 51.9 (+9.9)",
+   "threeAttempts": "21/88",
+   "short": "54.0 -> 42.3 (-11.7)",
+   "rimAttempts": "30/62"
+  },
+  {
+   "playerId": 1643016,
+   "name": "Bez Mbeng",
+   "pos": "SG",
+   "long": "49.9 -> 59.7 (+9.8)",
+   "threeAttempts": "6/31",
+   "short": "78.2 -> 76.3 (-1.9)",
+   "rimAttempts": "44/69"
+  },
+  {
+   "playerId": 1630570,
+   "name": "Trendon Watford",
+   "pos": "SF",
+   "long": "43.5 -> 52.8 (+9.3)",
+   "threeAttempts": "10/50",
+   "short": "73.7 -> 73.2 (-0.5)",
+   "rimAttempts": "126/212"
+  },
+  {
+   "playerId": 1642942,
+   "name": "Jahmai Mashack",
+   "pos": "SG",
+   "long": "47.1 -> 56.3 (+9.3)",
+   "threeAttempts": "19/75",
+   "short": "52.5 -> 47.8 (-4.7)",
+   "rimAttempts": "58/115"
+  },
+  {
+   "playerId": 200768,
+   "name": "Kyle Lowry",
+   "pos": "PG",
+   "long": "49.7 -> 58.9 (+9.2)",
+   "threeAttempts": "4/25",
+   "short": "69.8 -> 52.8 (-17.0)",
+   "rimAttempts": "0/0"
+  },
+  {
+   "playerId": 1628963,
+   "name": "Marvin Bagley III",
+   "pos": "PF",
+   "long": "83.3 -> 74.2 (-9.0)",
+   "threeAttempts": "24/52",
+   "short": "85.4 -> 87.7 (+2.2)",
+   "rimAttempts": "226/355"
+  },
+  {
+   "playerId": 1641748,
+   "name": "Andre Jackson Jr.",
+   "pos": "SG",
+   "long": "49.1 -> 58.1 (+9.0)",
+   "threeAttempts": "15/60",
+   "short": "47.8 -> 40.2 (-7.5)",
+   "rimAttempts": "24/55"
+  },
+  {
+   "playerId": 1629637,
+   "name": "Jaxson Hayes",
+   "pos": "C",
+   "long": "76.2 -> 67.2 (-9.0)",
+   "threeAttempts": "3/3",
+   "short": "99.0 -> 99.0 (+0.0)",
+   "rimAttempts": "195/259"
+  },
+  {
+   "playerId": 1641723,
+   "name": "Kobe Bufkin",
+   "pos": "SG",
+   "long": "52.1 -> 61.1 (+9.0)",
+   "threeAttempts": "5/26",
+   "short": "66.2 -> 59.6 (-6.6)",
+   "rimAttempts": "10/19"
+  },
+  {
+   "playerId": 1630534,
+   "name": "Ochai Agbaji",
+   "pos": "SG",
+   "long": "43.7 -> 52.5 (+8.8)",
+   "threeAttempts": "34/128",
+   "short": "70.2 -> 67.7 (-2.5)",
+   "rimAttempts": "84/145"
+  },
+  {
+   "playerId": 1642353,
+   "name": "Cam Christie",
+   "pos": "SG",
+   "long": "50.7 -> 59.4 (+8.8)",
+   "threeAttempts": "12/49",
+   "short": "42.4 -> 40.0 (-2.4)",
+   "rimAttempts": "35/80"
+  },
+  {
+   "playerId": 1642879,
+   "name": "Ben Saraf",
+   "pos": "SG",
+   "long": "40.0 -> 48.4 (+8.4)",
+   "threeAttempts": "19/90",
+   "short": "43.9 -> 40.1 (-3.8)",
+   "rimAttempts": "101/206"
+  },
+  {
+   "playerId": 1642268,
+   "name": "Isaiah Collier",
+   "pos": "SG",
+   "long": "47.4 -> 55.8 (+8.4)",
+   "threeAttempts": "27/100",
+   "short": "68.9 -> 67.6 (-1.3)",
+   "rimAttempts": "218/379"
+  },
+  {
+   "playerId": 1642269,
+   "name": "Devin Carter",
+   "pos": "PG",
+   "long": "44.4 -> 52.7 (+8.3)",
+   "threeAttempts": "30/114",
+   "short": "57.5 -> 51.0 (-6.5)",
+   "rimAttempts": "89/167"
+  }
+ ],
+ "topShort": [
+  {
+   "playerId": 200768,
+   "name": "Kyle Lowry",
+   "pos": "PG",
+   "long": "49.7 -> 58.9 (+9.2)",
+   "threeAttempts": "4/25",
+   "short": "69.8 -> 52.8 (-17.0)",
+   "rimAttempts": "0/0"
+  },
+  {
+   "playerId": 1642468,
+   "name": "Darius Brown II",
+   "pos": "PG",
+   "long": "68.0 -> 69.1 (+1.1)",
+   "threeAttempts": "0/0",
+   "short": "69.8 -> 52.8 (-17.0)",
+   "rimAttempts": "0/0"
+  },
+  {
+   "playerId": 1642935,
+   "name": "Chucky Hepburn",
+   "pos": "PG",
+   "long": "60.2 -> 65.1 (+4.9)",
+   "threeAttempts": "0/5",
+   "short": "69.8 -> 52.8 (-17.0)",
+   "rimAttempts": "0/0"
+  },
+  {
+   "playerId": 1631211,
+   "name": "Trevor Keels",
+   "pos": "PG",
+   "long": "62.8 -> 66.4 (+3.5)",
+   "threeAttempts": "2/9",
+   "short": "69.1 -> 52.4 (-16.7)",
+   "rimAttempts": "1/2"
+  },
+  {
+   "playerId": 1642404,
+   "name": "Chaz Lanier",
+   "pos": "PG",
+   "long": "54.0 -> 60.1 (+6.1)",
+   "threeAttempts": "19/67",
+   "short": "65.5 -> 48.9 (-16.6)",
+   "rimAttempts": "3/7"
+  },
+  {
+   "playerId": 1642938,
+   "name": "Curtis Jones",
+   "pos": "PG",
+   "long": "66.2 -> 68.0 (+1.8)",
+   "threeAttempts": "6/18",
+   "short": "65.5 -> 48.9 (-16.6)",
+   "rimAttempts": "3/7"
+  },
+  {
+   "playerId": 1641813,
+   "name": "Mark Sears",
+   "pos": "PG",
+   "long": "72.7 -> 71.4 (-1.2)",
+   "threeAttempts": "4/8",
+   "short": "68.5 -> 52.0 (-16.5)",
+   "rimAttempts": "2/4"
+  },
+  {
+   "playerId": 1641815,
+   "name": "Isaiah Stevens",
+   "pos": "PG",
+   "long": "66.4 -> 68.3 (+1.9)",
+   "threeAttempts": "0/1",
+   "short": "67.9 -> 51.6 (-16.2)",
+   "rimAttempts": "3/6"
+  },
+  {
+   "playerId": 1628420,
+   "name": "Monte Morris",
+   "pos": "PG",
+   "long": "64.3 -> 67.1 (+2.8)",
+   "threeAttempts": "2/8",
+   "short": "64.4 -> 48.3 (-16.1)",
+   "rimAttempts": "5/11"
+  },
+  {
+   "playerId": 1642368,
+   "name": "N'Faly Dante",
+   "pos": "C",
+   "long": "68.0 -> 62.9 (-5.2)",
+   "threeAttempts": "0/0",
+   "short": "66.7 -> 82.6 (+16.0)",
+   "rimAttempts": "1/3"
+  },
+  {
+   "playerId": 1642884,
+   "name": "Vladislav Goldin",
+   "pos": "C",
+   "long": "68.0 -> 62.9 (-5.2)",
+   "threeAttempts": "0/0",
+   "short": "72.1 -> 88.0 (+15.9)",
+   "rimAttempts": "3/4"
+  },
+  {
+   "playerId": 1642951,
+   "name": "Sean Pedulla",
+   "pos": "PG",
+   "long": "65.5 -> 67.8 (+2.2)",
+   "threeAttempts": "3/10",
+   "short": "70.7 -> 54.8 (-15.9)",
+   "rimAttempts": "2/3"
+  },
+  {
+   "playerId": 1642443,
+   "name": "Jahmir Young",
+   "pos": "PG",
+   "long": "67.0 -> 68.5 (+1.5)",
+   "threeAttempts": "3/9",
+   "short": "63.9 -> 48.1 (-15.8)",
+   "rimAttempts": "6/13"
+  },
+  {
+   "playerId": 1642530,
+   "name": "Yuki Kawamura",
+   "pos": "PG",
+   "long": "60.3 -> 64.5 (+4.2)",
+   "threeAttempts": "11/37",
+   "short": "63.9 -> 48.1 (-15.8)",
+   "rimAttempts": "6/13"
+  },
+  {
+   "playerId": 101108,
+   "name": "Chris Paul",
+   "pos": "PG",
+   "long": "65.2 -> 67.4 (+2.2)",
+   "threeAttempts": "10/30",
+   "short": "55.8 -> 40.0 (-15.8)",
+   "rimAttempts": "5/15"
+  },
+  {
+   "playerId": 201569,
+   "name": "Eric Gordon",
+   "pos": "PG",
+   "long": "79.4 -> 75.0 (-4.4)",
+   "threeAttempts": "8/14",
+   "short": "69.6 -> 54.0 (-15.7)",
+   "rimAttempts": "4/7"
+  },
+  {
+   "playerId": 1643018,
+   "name": "LJ Cryer",
+   "pos": "PG",
+   "long": "75.3 -> 73.5 (-1.8)",
+   "threeAttempts": "37/94",
+   "short": "66.1 -> 50.6 (-15.5)",
+   "rimAttempts": "6/12"
+  },
+  {
+   "playerId": 1642911,
+   "name": "Rocco Zikarsky",
+   "pos": "C",
+   "long": "68.0 -> 62.9 (-5.2)",
+   "threeAttempts": "0/0",
+   "short": "72.9 -> 88.4 (+15.5)",
+   "rimAttempts": "5/7"
+  },
+  {
+   "playerId": 1643047,
+   "name": "CJ Huntley",
+   "pos": "C",
+   "long": "63.2 -> 60.5 (-2.7)",
+   "threeAttempts": "0/3",
+   "short": "72.9 -> 88.4 (+15.5)",
+   "rimAttempts": "5/7"
+  },
+  {
+   "playerId": 1642918,
+   "name": "Alijah Martin",
+   "pos": "PG",
+   "long": "54.5 -> 61.7 (+7.1)",
+   "threeAttempts": "4/21",
+   "short": "55.4 -> 40.3 (-15.2)",
+   "rimAttempts": "12/28"
+  }
+ ]
+}

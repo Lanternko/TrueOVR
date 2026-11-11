@@ -1,0 +1,101 @@
+{
+ "h1": {
+  "threeValue": {
+   "top": {
+    "b": 0.7295387678002814,
+    "lo90": 0.3617433768289611,
+    "hi90": 0.9390866365004692,
+    "nObs": 87,
+    "nPlayers": 62,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 0.09135566218178744,
+    "lo90": -0.61196328913035,
+    "hi90": 0.6449698094756455,
+    "nObs": 87,
+    "nPlayers": 66,
+    "nanDraws": 0,
+    "pass": false
+   },
+   "allSlope": 0.687926233102675,
+   "nObsAll": 872,
+   "nPairs": 3
+  },
+  "help": {
+   "top": {
+    "b": 0.8167606395443758,
+    "lo90": 0.5379633024801711,
+    "hi90": 1.0697001730751634,
+    "nObs": 87,
+    "nPlayers": 55,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 0.6469217108009258,
+    "lo90": 0.40674028967000514,
+    "hi90": 0.9553437980838279,
+    "nObs": 87,
+    "nPlayers": 69,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "allSlope": 0.7311333409660694,
+   "nObsAll": 872,
+   "nPairs": 3
+  },
+  "pressure": {
+   "top": {
+    "b": 0.7246623554521182,
+    "lo90": 0.4183054616435661,
+    "hi90": 0.9242914322234538,
+    "nObs": 87,
+    "nPlayers": 55,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 0.2024892277528491,
+    "lo90": -0.14953507940475708,
+    "hi90": 0.5462209869632021,
+    "nObs": 87,
+    "nPlayers": 62,
+    "nanDraws": 0,
+    "pass": false
+   },
+   "allSlope": 0.8135122706708584,
+   "nObsAll": 872,
+   "nPairs": 3
+  },
+  "presDisplay": {
+   "top": {
+    "b": 0.7969873753426254,
+    "lo90": 0.5075391029115169,
+    "hi90": 0.9861197408516038,
+    "nObs": 87,
+    "nPlayers": 59,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "bot": {
+    "b": 0.614764153142981,
+    "lo90": 0.20380405459501585,
+    "hi90": 0.9834916574800412,
+    "nObs": 87,
+    "nPlayers": 67,
+    "nanDraws": 0,
+    "pass": true
+   },
+   "allSlope": 0.8018545793216173,
+   "nObsAll": 872,
+   "nPairs": 3,
+   "reportOnly": "預註冊：presDisplay 跟 pressure 的開關；此列為事後報告用，在 6 個檢定之後才抽樣，不影響其他抽樣序列"
+  }
+ },
+ "h1PairsSha256": "8f3e25fa063790c87c42686b8cd10a5cd69f253890e0a680b2ecdda68c7fd943",
+ "seed": 20261029,
+ "bootstrapDraws": 2000,
+ "order": "threeValue top/bot, help top/bot, pressure top/bot (6 tests), then presDisplay report-only"
+}

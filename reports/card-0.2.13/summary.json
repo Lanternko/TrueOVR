@@ -1,0 +1,33 @@
+{
+ "version": "card 0.2.13",
+ "base": "reports/card-0.2.12c（card 0.2.12c，W246）",
+ "players": 582,
+ "change": "E-258：加能力值 pnr（擋拆持球）＝Synergy PRBallHandler 每 36 分鐘回合（量）與每回合得分（率，經驗貝氏收縮，只在 ≥50 回合的人裡排）各半，四季滑動窗口；0–99 映射凍結於 live/pnr-pool-card0213.json；全部係數與 OVR 錨點在 W246 窗口重擬合（card-0.2.13-w246）。",
+ "anchors": {
+  "PR1": -0.7541,
+  "PR50": 1.0023,
+  "PR90": 2.1176,
+  "PR95": 2.5903,
+  "PR99": 4.0078
+ },
+ "ovr_map": {
+  "function": "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py:ovr_map",
+  "A_PR90": 88.0,
+  "B_PR95": 92.0
+ },
+ "ovr_changed": null,
+ "pool_90_99": 22,
+ "pool_ge99": 5,
+ "build_command": "WIN_LEN=246 reports/card-0.2.12b-touch/card_route_0212c.py <work> → reports/card-0.2.13-fit/make_card_0213.py <work> reports/card-0.2.13 0.2.13（PNR=0 逐位元重現 card 0.2.12c）",
+ "ranking_csv_sha256": "792fabfe46f9d89542ec73a34ca4abe23f1da9ab4c8edb077f3570be960ec1ab",
+ "three_value_csv_sha256": "0e3ef0c040deb5104c36e99e7e4cb43e8338128bf7d33724b13a4e1f666ff623",
+ "three_value_source": "reports/card-0.2.10j/three-value.csv",
+ "win_len": 246,
+ "anchor_source": "reports/card-0.2.13-w246/work/pre-W246/ranking.csv gRepl, MIN>=500, qf（gRepl 4 位小數）",
+ "pnr_attr_csv_sha256": "306d16a25253ca6213317fe36d060c42669cceead662101e5babec7b5dd33094",
+ "pnr": {
+  "attr_csv": "reports/card-0.2.13-w246/gravity-pnr-attr.csv",
+  "attr_sha256": "c9d65541a92418ddcde666950549d06adbf61a96cbe316d12df9a147f61c8cd7",
+  "frozen": "reports/ovr-inseason-2026-27/live/pnr-pool-card0213.json"
+ }
+}

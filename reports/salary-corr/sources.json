@@ -1,0 +1,117 @@
+{
+ "adv2021.html": {
+  "url": "https://www.basketball-reference.com/leagues/NBA_2021_advanced.html",
+  "sha256": "977db4b1adadceb288ac17741e8cc36285fb02c66d93f582103dba3600df9c1c",
+  "fetched": "2026-10-30"
+ },
+ "adv2022.html": {
+  "url": "https://www.basketball-reference.com/leagues/NBA_2022_advanced.html",
+  "sha256": "5cee2367d48d2a72434b8f17c2c739d2c2bee7726f030c23c68dc3479be5be7c",
+  "fetched": "2026-10-30"
+ },
+ "adv2023.html": {
+  "url": "https://www.basketball-reference.com/leagues/NBA_2023_advanced.html",
+  "sha256": "92a9f34b9480ed7515c6ecad1de85842dfec949b0ed2b7691623a71668cac5d3",
+  "fetched": "2026-10-30"
+ },
+ "adv2024.html": {
+  "url": "https://www.basketball-reference.com/leagues/NBA_2024_advanced.html",
+  "sha256": "e46cd2e79ef849ece97e61ddb46aa18785770ddc702c8814b5f4ee00db188770",
+  "fetched": "2026-10-30"
+ },
+ "adv2025.html": {
+  "url": "https://www.basketball-reference.com/leagues/NBA_2025_advanced.html",
+  "sha256": "7dfacc792c5c1d5e7d7be316617e2ac5cdad1e3d86c163c64ebebefcc324a7c0",
+  "fetched": "2026-10-30"
+ },
+ "adv2026.html": {
+  "url": "https://www.basketball-reference.com/leagues/NBA_2026_advanced.html",
+  "sha256": "406a5233ea315ec5806540d631dd743f4a8b3aa701817ca62a8bd48d402486c6",
+  "fetched": "2026-10-30"
+ },
+ "bref.html": {
+  "url": "https://www.basketball-reference.com/contracts/players.html (2026-10-30，2026-27 薪水)",
+  "sha256": "a9d4a3fe79321b8ddbcb53910776d7fb16a3d868efa8088dc65ba944b5c51f96",
+  "fetched": "2026-10-30"
+ },
+ "bref2526.html": {
+  "url": "https://web.archive.org/web/20260220014153id_/https://www.basketball-reference.com/contracts/players.html",
+  "sha256": "a5b2fb9953989bae125d5f1c75c077fc0dfcb12354c19333b73ef69541c488e2",
+  "fetched": "2026-10-30"
+ },
+ "contracts2022.html": {
+  "url": "https://web.archive.org/web/20220217201529id_/https://www.basketball-reference.com/contracts/players.html",
+  "sha256": "916c584e7dadd1d0fb010b11f566b9e9b381977c60d015964ba02e60f1c69013",
+  "fetched": "2026-10-30"
+ },
+ "contracts2023.html": {
+  "url": "https://web.archive.org/web/20230307155436id_/https://www.basketball-reference.com/contracts/players.html",
+  "sha256": "aa15e66e69e6e71bfd6e3604341edbbdcc817a105318b89a8d7f119dd684110d",
+  "fetched": "2026-10-30"
+ },
+ "contracts2024.html": {
+  "url": "https://web.archive.org/web/20240302010127id_/https://www.basketball-reference.com/contracts/players.html",
+  "sha256": "2830765507727cd840f2ace61c5cc84582c456ee9c4e586372489e538e71054d",
+  "fetched": "2026-10-30"
+ },
+ "contracts2025.html": {
+  "url": "https://web.archive.org/web/20250203214302id_/https://www.basketball-reference.com/contracts/players.html",
+  "sha256": "981ae5e8f8ae1f2b9bd08b82ca6e02b628618eed24e6b2f0ceb63c6d158bb64a",
+  "fetched": "2026-10-30"
+ },
+ "draft2021.html": {
+  "url": "https://www.basketball-reference.com/draft/NBA_2021.html",
+  "sha256": "e8242f5aa42e0128a131eb33a45c0d32bbf7839d11ed2a0b5659dbd9bfdcef8f",
+  "fetched": "2026-10-30"
+ },
+ "draft2022.html": {
+  "url": "https://www.basketball-reference.com/draft/NBA_2022.html",
+  "sha256": "4540471ade597846afef2f0552d03879a2473beb7c9042c7e5b16f9ed2aee718",
+  "fetched": "2026-10-30"
+ },
+ "draft2023.html": {
+  "url": "https://www.basketball-reference.com/draft/NBA_2023.html",
+  "sha256": "c65970255b0f35fc7a3ebf2843d2bdc970bf96856144a9ab5c3497df746cefd9",
+  "fetched": "2026-10-30"
+ },
+ "draft2024.html": {
+  "url": "https://www.basketball-reference.com/draft/NBA_2024.html",
+  "sha256": "b830a651de561f6ca85dd569ec8692b54d633c1defb32196ac8d622bce5c3650",
+  "fetched": "2026-10-30"
+ },
+ "draft2025.html": {
+  "url": "https://www.basketball-reference.com/draft/NBA_2025.html",
+  "sha256": "3abee85b9553b7b1122c2a0fcf5679e2825c48be7199a11f4dc25464115f20ee",
+  "fetched": "2026-10-30"
+ },
+ "tx2021.html": {
+  "url": "https://www.basketball-reference.com/leagues/NBA_2021_transactions.html",
+  "sha256": "6ee54484bc0aecfd3c6a65ad14848fcd3966579f7a95660d127845c4b42f4829",
+  "fetched": "2026-10-30"
+ },
+ "tx2022.html": {
+  "url": "https://www.basketball-reference.com/leagues/NBA_2022_transactions.html",
+  "sha256": "9b52029f455337bdb89976d2a3cc80eb76140f9c3ed35f57440c332a1e661969",
+  "fetched": "2026-10-30"
+ },
+ "tx2023.html": {
+  "url": "https://www.basketball-reference.com/leagues/NBA_2023_transactions.html",
+  "sha256": "bde8b0daf5b24e0c7568dc436f6473f9c3ad34af18301dccf4abee5712ce1ec8",
+  "fetched": "2026-10-30"
+ },
+ "tx2024.html": {
+  "url": "https://www.basketball-reference.com/leagues/NBA_2024_transactions.html",
+  "sha256": "525de03ba73b3c61410adb30b8ef027233fc813f779a5f818f27a74dc92f11ee",
+  "fetched": "2026-10-30"
+ },
+ "tx2025.html": {
+  "url": "https://www.basketball-reference.com/leagues/NBA_2025_transactions.html",
+  "sha256": "b5f20a4e83b8dd95d690deddf33ed67b1445194861fd58f136bc864ed1d74b1d",
+  "fetched": "2026-10-30"
+ },
+ "tx2026.html": {
+  "url": "https://www.basketball-reference.com/leagues/NBA_2026_transactions.html",
+  "sha256": "b263aa8964e3d882267d2d04fc02a6d6b3501fbf2649380b56e1dc6abd023227",
+  "fetched": "2026-10-30"
+ }
+}

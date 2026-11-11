@@ -1,0 +1,79 @@
+{
+ "hustle_headers_equal_E071": {
+  "2022-23": true,
+  "2023-24": true,
+  "2024-25": true,
+  "2025-26": true
+ },
+ "matchups_headers_equal_E071": {
+  "2022-23": true,
+  "2023-24": true,
+  "2024-25": true,
+  "2025-26": true
+ },
+ "2024-25_rows": [
+  567,
+  567
+ ],
+ "2024-25_idsets_equal": true,
+ "2024-25_defl_chg_rowdiffs": 0,
+ "2024-25_fullrow_rowdiffs": 1,
+ "2024-25_matchups_identical": true,
+ "2022-23_hustle": {
+  "rows": 535,
+  "uniqueIds": true,
+  "medianHustleMIN_over_baseMIN": 0.9996,
+  "minRatio": 0.916,
+  "maxRatio": 1.001,
+  "deflPer36Median": 1.997
+ },
+ "2022-23_matchups": {
+  "rows": 135389,
+  "medianPossPerRow": 4.8,
+  "tovSum": 33283,
+  "possSum": 1214298.1
+ },
+ "2023-24_hustle": {
+  "rows": 567,
+  "uniqueIds": true,
+  "medianHustleMIN_over_baseMIN": 0.9997,
+  "minRatio": 0.902,
+  "maxRatio": 1.0,
+  "deflPer36Median": 2.065
+ },
+ "2023-24_matchups": {
+  "rows": 137763,
+  "medianPossPerRow": 4.6,
+  "tovSum": 31847,
+  "possSum": 1202071.7
+ },
+ "2024-25_hustle": {
+  "rows": 567,
+  "uniqueIds": true,
+  "medianHustleMIN_over_baseMIN": 0.9997,
+  "minRatio": 0.79,
+  "maxRatio": 1.001,
+  "deflPer36Median": 2.376
+ },
+ "2024-25_matchups": {
+  "rows": 141577,
+  "medianPossPerRow": 4.5,
+  "tovSum": 27395,
+  "possSum": 1121489.6
+ },
+ "2025-26_hustle": {
+  "rows": 581,
+  "uniqueIds": true,
+  "medianHustleMIN_over_baseMIN": 0.9997,
+  "minRatio": 0.82,
+  "maxRatio": 1.001,
+  "deflPer36Median": 2.447
+ },
+ "2025-26_matchups": {
+  "rows": 147805,
+  "medianPossPerRow": 4.6,
+  "tovSum": 26906,
+  "possSum": 1168041.2
+ },
+ "2025-26_hustle_equal_E071": false
+}

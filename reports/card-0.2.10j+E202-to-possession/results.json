@@ -1,0 +1,990 @@
+{
+ "phase0": {
+  "MDE": 0.08794460396314678,
+  "h": 0.05693156409536515,
+  "notBroken_threshold": -0.1138631281907303,
+  "K0_tov_vs_2K_BallHandle_rho": 0.0797545752463673,
+  "K0_ovr_vs_rapm_rho": 0.5905336274034345
+ },
+ "ranking_sha256": {
+  "K0": "4519d61545f783a245fc0aebd1f0a31e95ab5530117293f8aa76c84f0a64426d",
+  "KT": "29ca32eb65cfa40c465f9b8555912ae9829047cd87c497674d804f8f31f300a5"
+ },
+ "A": {
+  "n": 376,
+  "rho": {
+   "K0": 0.0797545752463673,
+   "KT": 0.7947476076866452
+  },
+  "diff": 0.7149930324402779,
+  "diff_ci90": [
+   0.623233890490773,
+   0.8024748829418099
+  ],
+  "MDE": 0.08794460396314678,
+  "pass": true
+ },
+ "rapm": {
+  "full": {
+   "n": 379,
+   "rho": {
+    "K0": 0.5905336274034345,
+    "KT": 0.5750950069404726
+   },
+   "diff": -0.01543862046296196,
+   "diff_ci90": [
+    -0.029843968765787127,
+    -0.0007012476616946441
+   ]
+  },
+  "odd": {
+   "n": 379,
+   "rho": {
+    "K0": 0.4900400611054454,
+    "KT": 0.47812500536965824
+   },
+   "diff": -0.011915055735787161,
+   "diff_ci90": [
+    -0.027420499506304305,
+    0.003249172944702975
+   ]
+  },
+  "even": {
+   "n": 379,
+   "rho": {
+    "K0": 0.508185913020629,
+    "KT": 0.4964996470955943
+   },
+   "diff": -0.011686265925034689,
+   "diff_ci90": [
+    -0.02699056326380863,
+    0.004361824790998728
+   ]
+  }
+ },
+ "notBroken": {
+  "rho_diff": -0.01543862046296196,
+  "threshold": -0.1138631281907303,
+  "pass_rho": true,
+  "c0_bitwise": true,
+  "split_direction_same": true
+ },
+ "B": {
+  "K0": {
+   "median": 2.8605252842022737,
+   "n_below": 19,
+   "n_nodata": 0,
+   "top30_mean_poss36": 3.1949456851100964,
+   "top5": [
+    "Sam Hauser",
+    "Tim Hardaway Jr.",
+    "Saddiq Bey",
+    "Miles McBride",
+    "Gary Trent Jr."
+   ]
+  },
+  "KT": {
+   "median": 2.8605252842022737,
+   "n_below": 0,
+   "n_nodata": 0,
+   "top30_mean_poss36": 7.686580763801786,
+   "top5": [
+    "Jalen Brunson",
+    "Shai Gilgeous-Alexander",
+    "T.J. McConnell",
+    "Tyrese Maxey",
+    "Tyus Jones"
+   ]
+  },
+  "threshold_le": 10,
+  "pass": true
+ },
+ "coef_per10": {
+  "K0": {
+   "primary": {
+    "long": {
+     "per36": 0.3688356406681811,
+     "bootstrapSE": 0.15534895373863092
+    },
+    "mid": {
+     "per36": 0.1859593292234324,
+     "bootstrapSE": 0.06456162087959738
+    },
+    "short": {
+     "per36": 0.49517426464210024,
+     "bootstrapSE": 0.12209536992094379
+    },
+    "ft": {
+     "per36": 0.06460436697208069,
+     "bootstrapSE": 0.07236618108779089
+    },
+    "drive": {
+     "per36": -0.03729675559011564,
+     "bootstrapSE": 0.059110120478244293
+    },
+    "foulDraw": {
+     "per36": 0.17236922626045198,
+     "bootstrapSE": 0.04134037635254142
+    },
+    "tovSkill": {
+     "per36": 0.3265022577140233,
+     "bootstrapSE": 0.03794637239764496
+    },
+    "pass": {
+     "per36": 0.40986531949472826,
+     "bootstrapSE": 0.05377385796208005
+    },
+    "rebound": {
+     "per36": 0.18518389967359755,
+     "bootstrapSE": 0.09372151338647308
+    },
+    "onBall": {
+     "per36": 0.15497569461644034,
+     "bootstrapSE": 0.03759734811520929
+    },
+    "help": {
+     "per36": 0.3386462823814657,
+     "bootstrapSE": 0.12006954275771906
+    },
+    "heightInches": {
+     "per36": 0.186610769083546,
+     "bootstrapSE": 0.32054998319887684
+    },
+    "creation": {
+     "per36": 0.1356772121989141,
+     "bootstrapSE": 0.0471623827444526
+    },
+    "pressure": {
+     "per36": 0.26199209027633086,
+     "bootstrapSE": 0.03486862385529531
+    },
+    "gravity": {
+     "per36": 0.18635349168745158,
+     "bootstrapSE": 0.04010971436031274
+    }
+   },
+   "fitA": {
+    "long": {
+     "per36": 0.3547941579681086,
+     "bootstrapSE": 0.15526471314667367
+    },
+    "mid": {
+     "per36": 0.182928605601034,
+     "bootstrapSE": 0.06414616914512052
+    },
+    "short": {
+     "per36": 0.5047844652307152,
+     "bootstrapSE": 0.1210874154841861
+    },
+    "ft": {
+     "per36": 0.07233710109658434,
+     "bootstrapSE": 0.07303776702896463
+    },
+    "drive": {
+     "per36": -0.028335981294822895,
+     "bootstrapSE": 0.05899902051223335
+    },
+    "foulDraw": {
+     "per36": 0.17288570830304473,
+     "bootstrapSE": 0.04167494411815252
+    },
+    "tovSkill": {
+     "per36": 0.33580314774687314,
+     "bootstrapSE": 0.03820234967109931
+    },
+    "pass": {
+     "per36": 0.39656928910677947,
+     "bootstrapSE": 0.05494547341881276
+    },
+    "rebound": {
+     "per36": 0.2318197389954711,
+     "bootstrapSE": 0.09561071289094793
+    },
+    "onBall": {
+     "per36": 0.16465838629418098,
+     "bootstrapSE": 0.03805865080071761
+    },
+    "help": {
+     "per36": 0.34039145243873226,
+     "bootstrapSE": 0.11931978288351167
+    },
+    "heightInches": {
+     "per36": 0.07293602232313508,
+     "bootstrapSE": 0.32361159177468063
+    },
+    "creation": {
+     "per36": 0.12151960301939688,
+     "bootstrapSE": 0.04785275212775996
+    },
+    "pressure": {
+     "per36": 0.2501568691436984,
+     "bootstrapSE": 0.03585458235465354
+    },
+    "gravity": {
+     "per36": 0.1973162813357933,
+     "bootstrapSE": 0.04034475902348927
+    }
+   },
+   "fitB": {
+    "long": {
+     "per36": 0.23115037619913853,
+     "bootstrapSE": 0.14456178932231853
+    },
+    "mid": {
+     "per36": 0.19249026302368408,
+     "bootstrapSE": 0.06503835267510491
+    },
+    "short": {
+     "per36": 0.4560178971775999,
+     "bootstrapSE": 0.1262567525021988
+    },
+    "ft": {
+     "per36": 0.09203417855470367,
+     "bootstrapSE": 0.07120374231754123
+    },
+    "drive": {
+     "per36": -0.018214205874793766,
+     "bootstrapSE": 0.05910758992135094
+    },
+    "foulDraw": {
+     "per36": 0.16884308555665364,
+     "bootstrapSE": 0.04155581687907721
+    },
+    "tovSkill": {
+     "per36": 0.31457015244975783,
+     "bootstrapSE": 0.03861138955992107
+    },
+    "pass": {
+     "per36": 0.3974252208846534,
+     "bootstrapSE": 0.05427125880268121
+    },
+    "rebound": {
+     "per36": 0.2080852237018107,
+     "bootstrapSE": 0.09362116012912658
+    },
+    "onBall": {
+     "per36": 0.15262697563525704,
+     "bootstrapSE": 0.037467130078457395
+    },
+    "help": {
+     "per36": 0.31334232504354603,
+     "bootstrapSE": 0.12050733741102716
+    },
+    "heightInches": {
+     "per36": 0.24015553365762637,
+     "bootstrapSE": 0.32016320211644406
+    },
+    "creation": {
+     "per36": 0.12315939855699301,
+     "bootstrapSE": 0.04665244327185605
+    },
+    "pressure": {
+     "per36": 0.2497935412301032,
+     "bootstrapSE": 0.03510078700721278
+    },
+    "gravity": {
+     "per36": 0.18189448036948724,
+     "bootstrapSE": 0.04073898275758949
+    }
+   }
+  },
+  "KT": {
+   "primary": {
+    "long": {
+     "per36": 0.3906260938673909,
+     "bootstrapSE": 0.15996801198718508
+    },
+    "mid": {
+     "per36": 0.21522482268876225,
+     "bootstrapSE": 0.0692283388160306
+    },
+    "short": {
+     "per36": 0.4647676410693529,
+     "bootstrapSE": 0.12552006704102062
+    },
+    "ft": {
+     "per36": 0.15008778859553903,
+     "bootstrapSE": 0.07235633064135397
+    },
+    "drive": {
+     "per36": -0.10433758529884027,
+     "bootstrapSE": 0.06177251092716899
+    },
+    "foulDraw": {
+     "per36": 0.12768453205725577,
+     "bootstrapSE": 0.04221100612710928
+    },
+    "tovSkill": {
+     "per36": 0.2634577771299449,
+     "bootstrapSE": 0.06294795583471816
+    },
+    "pass": {
+     "per36": 0.21832392353895638,
+     "bootstrapSE": 0.05864240955931943
+    },
+    "rebound": {
+     "per36": 0.18403090706940284,
+     "bootstrapSE": 0.0927227537798428
+    },
+    "onBall": {
+     "per36": 0.13900319686408763,
+     "bootstrapSE": 0.039689664496343126
+    },
+    "help": {
+     "per36": 0.32341403397067653,
+     "bootstrapSE": 0.12948505930040796
+    },
+    "heightInches": {
+     "per36": 0.29956354945701985,
+     "bootstrapSE": 0.35193828413372263
+    },
+    "creation": {
+     "per36": 0.10131182342196235,
+     "bootstrapSE": 0.050190590025064735
+    },
+    "pressure": {
+     "per36": 0.25269475634872784,
+     "bootstrapSE": 0.03699206435193905
+    },
+    "gravity": {
+     "per36": 0.23430818856628177,
+     "bootstrapSE": 0.04273085715283568
+    }
+   },
+   "fitA": {
+    "long": {
+     "per36": 0.3771689400664358,
+     "bootstrapSE": 0.16009958441162303
+    },
+    "mid": {
+     "per36": 0.21304879053210468,
+     "bootstrapSE": 0.06879355455170662
+    },
+    "short": {
+     "per36": 0.47409556885789095,
+     "bootstrapSE": 0.12548380450025484
+    },
+    "ft": {
+     "per36": 0.16019753754214108,
+     "bootstrapSE": 0.07276192669904778
+    },
+    "drive": {
+     "per36": -0.0972684315842752,
+     "bootstrapSE": 0.06184425576459865
+    },
+    "foulDraw": {
+     "per36": 0.12704096414277916,
+     "bootstrapSE": 0.04277037048811286
+    },
+    "tovSkill": {
+     "per36": 0.27018915921606595,
+     "bootstrapSE": 0.06265018064364394
+    },
+    "pass": {
+     "per36": 0.199895696552581,
+     "bootstrapSE": 0.06030776886289624
+    },
+    "rebound": {
+     "per36": 0.22972938477325916,
+     "bootstrapSE": 0.09474164834988907
+    },
+    "onBall": {
+     "per36": 0.1482604987051283,
+     "bootstrapSE": 0.040008021980051225
+    },
+    "help": {
+     "per36": 0.32492275044649715,
+     "bootstrapSE": 0.12945417972210646
+    },
+    "heightInches": {
+     "per36": 0.18818734727073333,
+     "bootstrapSE": 0.36147618342205023
+    },
+    "creation": {
+     "per36": 0.08642340858451653,
+     "bootstrapSE": 0.05086552553962443
+    },
+    "pressure": {
+     "per36": 0.24055939651005898,
+     "bootstrapSE": 0.0382588116310262
+    },
+    "gravity": {
+     "per36": 0.24651263174029675,
+     "bootstrapSE": 0.04300782675913742
+    }
+   },
+   "fitB": {
+    "long": {
+     "per36": 0.25318138108257965,
+     "bootstrapSE": 0.13968375491387933
+    },
+    "mid": {
+     "per36": 0.22077765570355556,
+     "bootstrapSE": 0.06957096373735426
+    },
+    "short": {
+     "per36": 0.427006330615599,
+     "bootstrapSE": 0.12741300101580674
+    },
+    "ft": {
+     "per36": 0.17446543734547848,
+     "bootstrapSE": 0.07126709165240078
+    },
+    "drive": {
+     "per36": -0.08228250730324749,
+     "bootstrapSE": 0.06194395998990517
+    },
+    "foulDraw": {
+     "per36": 0.12602097098277387,
+     "bootstrapSE": 0.042655271820651056
+    },
+    "tovSkill": {
+     "per36": 0.2501374886523782,
+     "bootstrapSE": 0.0632564906620126
+    },
+    "pass": {
+     "per36": 0.2140236648120139,
+     "bootstrapSE": 0.05825900859552144
+    },
+    "rebound": {
+     "per36": 0.20622732796089988,
+     "bootstrapSE": 0.09139393142092571
+    },
+    "onBall": {
+     "per36": 0.13760924079301762,
+     "bootstrapSE": 0.039480790527367235
+    },
+    "help": {
+     "per36": 0.2993836435324743,
+     "bootstrapSE": 0.1287116086874589
+    },
+    "heightInches": {
+     "per36": 0.3431004056261979,
+     "bootstrapSE": 0.34737805221287726
+    },
+    "creation": {
+     "per36": 0.09110891832206844,
+     "bootstrapSE": 0.04951740860643283
+    },
+    "pressure": {
+     "per36": 0.24072881493125195,
+     "bootstrapSE": 0.03703465256516237
+    },
+    "gravity": {
+     "per36": 0.22790701415280665,
+     "bootstrapSE": 0.043174196124324535
+    }
+   }
+  }
+ },
+ "tov_per10": {
+  "ovr_per_per36_slope": 8.711509526338752,
+  "K0": {
+   "per36": 0.3265022577140233,
+   "SE": 0.03794637239764496,
+   "ovr": 2.8443275284468243,
+   "ovr_SE": 0.33057018463208193,
+   "fitA": {
+    "per36": 0.33580314774687314,
+    "bootstrapSE": 0.03820234967109931
+   },
+   "fitB": {
+    "per36": 0.31457015244975783,
+    "bootstrapSE": 0.03861138955992107
+   }
+  },
+  "KT": {
+   "per36": 0.2634577771299449,
+   "SE": 0.06294795583471816,
+   "ovr": 2.2951149352555467,
+   "ovr_SE": 0.5483717169176983,
+   "fitA": {
+    "per36": 0.27018915921606595,
+    "bootstrapSE": 0.06265018064364394
+   },
+   "fitB": {
+    "per36": 0.2501374886523782,
+    "bootstrapSE": 0.0632564906620126
+   }
+  }
+ },
+ "vif_tovSkill": {
+  "attrs_used": [
+   "long",
+   "mid",
+   "short",
+   "ft",
+   "drive",
+   "foulDraw",
+   "tovSkill",
+   "pass",
+   "rebound",
+   "onBall",
+   "help",
+   "heightInches",
+   "creation",
+   "pressure"
+  ],
+  "K0": {
+   "vif": 1.543597920772487,
+   "corr": {
+    "creation": 0.06820164070906758,
+    "pass": -0.2170355836196748,
+    "gravity": 0.20392255321293257
+   }
+  },
+  "KT": {
+   "vif": 5.372982719081184,
+   "corr": {
+    "creation": 0.7241236703265533,
+    "pass": 0.7760158220849773,
+    "gravity": 0.5829338252075387
+   }
+  }
+ },
+ "external": {
+  "K0": {
+   "salary_wspearman": 0.6308282564236619,
+   "n_sal": 262,
+   "twok27_ovr_spearman": 0.7648197191465512,
+   "n_2k": 376,
+   "epm_spearman": 0.7925717733853653,
+   "n_epm": 379
+  },
+  "KT": {
+   "salary_wspearman": 0.6428786786708721,
+   "n_sal": 262,
+   "twok27_ovr_spearman": 0.7657800534099771,
+   "n_2k": 376,
+   "epm_spearman": 0.7694724543166691,
+   "n_epm": 379
+  }
+ },
+ "moves": {
+  "top100_moved_ge10": 34,
+  "list": [
+   [
+    "Ryan Rollins",
+    98,
+    56
+   ],
+   [
+    "Deni Avdija",
+    87,
+    55
+   ],
+   [
+    "Collin Sexton",
+    89,
+    61
+   ],
+   [
+    "Robert Williams III",
+    90,
+    64
+   ],
+   [
+    "Scotty Pippen Jr.",
+    68,
+    48
+   ],
+   [
+    "Donte DiVincenzo",
+    91,
+    74
+   ],
+   [
+    "Karl-Anthony Towns",
+    41,
+    26
+   ],
+   [
+    "Ivica Zubac",
+    85,
+    70
+   ],
+   [
+    "Kevin Porter Jr.",
+    32,
+    17
+   ],
+   [
+    "Austin Reaves",
+    26,
+    12
+   ],
+   [
+    "Jalen Suggs",
+    48,
+    36
+   ],
+   [
+    "Paul George",
+    30,
+    20
+   ],
+   [
+    "Jarrett Allen",
+    44,
+    54
+   ],
+   [
+    "Immanuel Quickley",
+    46,
+    57
+   ],
+   [
+    "Brandin Podziemski",
+    57,
+    68
+   ],
+   [
+    "Jalen Williams",
+    10,
+    22
+   ],
+   [
+    "Tyrese Maxey",
+    22,
+    35
+   ],
+   [
+    "Ajay Mitchell",
+    65,
+    78
+   ],
+   [
+    "Jaylin Williams",
+    70,
+    84
+   ],
+   [
+    "Kristaps Porziņģis",
+    24,
+    40
+   ],
+   [
+    "Mikal Bridges",
+    47,
+    63
+   ],
+   [
+    "Neemias Queta",
+    82,
+    98
+   ],
+   [
+    "Dylan Harper",
+    71,
+    87
+   ],
+   [
+    "Paul Reed",
+    86,
+    103
+   ],
+   [
+    "VJ Edgecombe",
+    94,
+    111
+   ],
+   [
+    "RJ Barrett",
+    80,
+    101
+   ],
+   [
+    "Onyeka Okongwu",
+    78,
+    105
+   ],
+   [
+    "DeMar DeRozan",
+    72,
+    104
+   ],
+   [
+    "Luke Kornet",
+    62,
+    99
+   ],
+   [
+    "Alperen Sengun",
+    92,
+    130
+   ],
+   [
+    "Pascal Siakam",
+    42,
+    85
+   ],
+   [
+    "Collin Gillespie",
+    100,
+    150
+   ],
+   [
+    "Santi Aldama",
+    81,
+    132
+   ],
+   [
+    "Cooper Flagg",
+    58,
+    119
+   ]
+  ],
+  "top20_in": [
+   "Desmond Bane",
+   "Paul George",
+   "Kevin Porter Jr.",
+   "Austin Reaves"
+  ],
+  "top20_out": [
+   "De'Aaron Fox",
+   "Jalen Williams",
+   "Jamal Murray",
+   "Jimmy Butler III"
+  ]
+ },
+ "topMissing": [],
+ "table": [
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "TO_K0": 94.9,
+   "TO_KT": 104.4,
+   "TOrank_K0": 18,
+   "TOrank_KT": 2,
+   "ovr_K0": 108.5,
+   "ovr_KT": 106.3,
+   "rank_K0": 1,
+   "rank_KT": 1,
+   "poss36": 8.199203187250996,
+   "MIN": "2259"
+  },
+  {
+   "name": "Jalen Brunson",
+   "TO_K0": 90.8,
+   "TO_KT": 114.6,
+   "TOrank_K0": 36,
+   "TOrank_KT": 1,
+   "ovr_K0": 90.7,
+   "ovr_KT": 89.3,
+   "rank_K0": 27,
+   "rank_KT": 31,
+   "poss36": 9.678301158301158,
+   "MIN": "2590"
+  },
+  {
+   "name": "Luka Dončić",
+   "TO_K0": 64.9,
+   "TO_KT": 96.0,
+   "TOrank_K0": 200,
+   "TOrank_KT": 19,
+   "ovr_K0": 101.7,
+   "ovr_KT": 101.6,
+   "rank_K0": 4,
+   "rank_KT": 3,
+   "poss36": 8.149934469200526,
+   "MIN": "2289"
+  },
+  {
+   "name": "Nikola Jokić",
+   "TO_K0": 64.5,
+   "TO_KT": 80.5,
+   "TOrank_K0": 205,
+   "TOrank_KT": 113,
+   "ovr_K0": 105.7,
+   "ovr_KT": 103.2,
+   "rank_K0": 2,
+   "rank_KT": 2,
+   "poss36": 5.114701986754967,
+   "MIN": "2265"
+  },
+  {
+   "name": "Joel Embiid",
+   "TO_K0": 58.9,
+   "TO_KT": 68.4,
+   "TOrank_K0": 242,
+   "TOrank_KT": 178,
+   "ovr_K0": 92.6,
+   "ovr_KT": 93.1,
+   "rank_K0": 17,
+   "rank_KT": 16,
+   "poss36": 4.3463780183180685,
+   "MIN": "1201"
+  },
+  {
+   "name": "Bam Adebayo",
+   "TO_K0": 81.0,
+   "TO_KT": 74.8,
+   "TOrank_K0": 92,
+   "TOrank_KT": 142,
+   "ovr_K0": 85.8,
+   "ovr_KT": 84.2,
+   "rank_K0": 49,
+   "rank_KT": 47,
+   "poss36": 2.9698097251585622,
+   "MIN": "2365"
+  },
+  {
+   "name": "Tyrese Haliburton",
+   "missing": true
+  },
+  {
+   "name": "Jrue Holiday",
+   "TO_K0": 55.6,
+   "TO_KT": 83.0,
+   "TOrank_K0": 267,
+   "TOrank_KT": 95,
+   "ovr_K0": 77.7,
+   "ovr_KT": 78.7,
+   "rank_K0": 103,
+   "rank_KT": 93,
+   "poss36": 6.053076923076923,
+   "MIN": "1560"
+  },
+  {
+   "name": "Tyus Jones",
+   "TO_K0": 96.1,
+   "TO_KT": 98.9,
+   "TOrank_K0": 14,
+   "TOrank_KT": 5,
+   "ovr_K0": 55.0,
+   "ovr_KT": 50.7,
+   "rank_K0": 421,
+   "rank_KT": 497,
+   "poss36": 6.3946884576098055,
+   "MIN": "979"
+  },
+  {
+   "name": "Cade Cunningham",
+   "TO_K0": 49.9,
+   "TO_KT": 98.5,
+   "TOrank_K0": 308,
+   "TOrank_KT": 7,
+   "ovr_K0": 93.4,
+   "ovr_KT": 93.7,
+   "rank_K0": 11,
+   "rank_KT": 13,
+   "poss36": 8.867403314917127,
+   "MIN": "2172"
+  },
+  {
+   "name": "Trae Young",
+   "TO_K0": 45.7,
+   "TO_KT": 103.7,
+   "TOrank_K0": null,
+   "TOrank_KT": null,
+   "ovr_K0": 73.9,
+   "ovr_KT": 76.7,
+   "rank_K0": 156,
+   "rank_KT": 126,
+   "poss36": 8.653125,
+   "MIN": "384"
+  },
+  {
+   "name": "James Harden",
+   "TO_K0": 45.6,
+   "TO_KT": 98.1,
+   "TOrank_K0": 336,
+   "TOrank_KT": 9,
+   "ovr_K0": 73.7,
+   "ovr_KT": 75.8,
+   "rank_K0": 159,
+   "rank_KT": 137,
+   "poss36": 8.334044298605415,
+   "MIN": "2438"
+  },
+  {
+   "name": "Sam Hauser",
+   "TO_K0": 103.3,
+   "TO_KT": 64.0,
+   "TOrank_K0": 1,
+   "TOrank_KT": 202,
+   "ovr_K0": 73.6,
+   "ovr_KT": 73.2,
+   "rank_K0": 160,
+   "rank_KT": 169,
+   "poss36": 1.5971044467425024,
+   "MIN": "1934"
+  },
+  {
+   "name": "Tim Hardaway Jr.",
+   "TO_K0": 102.0,
+   "TO_KT": 67.0,
+   "TOrank_K0": 2,
+   "TOrank_KT": 184,
+   "ovr_K0": 60.8,
+   "ovr_KT": 58.4,
+   "rank_K0": 317,
+   "rank_KT": 341,
+   "poss36": 1.2338504936530326,
+   "MIN": "2127"
+  },
+  {
+   "name": "Dean Wade",
+   "TO_K0": 97.3,
+   "TO_KT": 66.0,
+   "TOrank_K0": 8,
+   "TOrank_KT": 189,
+   "ovr_K0": 75.8,
+   "ovr_KT": 76.4,
+   "rank_K0": 128,
+   "rank_KT": 131,
+   "poss36": 1.6279210925644918,
+   "MIN": "1318"
+  },
+  {
+   "name": "Rudy Gobert",
+   "TO_K0": 46.6,
+   "TO_KT": 44.6,
+   "TOrank_K0": 326,
+   "TOrank_KT": 333,
+   "ovr_K0": 82.5,
+   "ovr_KT": 82.8,
+   "rank_K0": 61,
+   "rank_KT": 58,
+   "poss36": 1.6835294117647057,
+   "MIN": "2380"
+  },
+  {
+   "name": "Jarrett Allen",
+   "TO_K0": 71.0,
+   "TO_KT": 46.6,
+   "TOrank_K0": 156,
+   "TOrank_KT": 316,
+   "ovr_K0": 86.4,
+   "ovr_KT": 83.6,
+   "rank_K0": 44,
+   "rank_KT": 54,
+   "poss36": 1.5144173798551679,
+   "MIN": "1519"
+  },
+  {
+   "name": "Luke Kornet",
+   "TO_K0": 93.8,
+   "TO_KT": 55.8,
+   "TOrank_K0": 22,
+   "TOrank_KT": 253,
+   "ovr_K0": 82.5,
+   "ovr_KT": 77.9,
+   "rank_K0": 62,
+   "rank_KT": 99,
+   "poss36": 1.5759440559440558,
+   "MIN": "1430"
+  }
+ ],
+ "inputs_sha256": {
+  "reports/card-0.2.7+E126-tank-next-season/rapm-2025-26.json": "7b75724173a9ce476cc24ef595f11d7cc4f31011a9bf6d97b2f482fe72fc81b6",
+  "reports/card-0.2.10j+E202-to-possession/work/rapm-2025-26-odd.json": "86ba7115375c1769ef61d79e6943ca8f6322af2c9feafb37521af44dedad06cb",
+  "reports/card-0.2.10j+E202-to-possession/work/rapm-2025-26-even.json": "5165e371f93671bb5def349c2103d38e3b94387510dfc840369a74b9d7397cda",
+  "reports/card-0.2.10i/tail-U.csv": "bc5fa6e1ce70e1c9c251985743fb32c0184423f2f5629364286834bcfdc08a63",
+  "reports/ovr-v55-2k27-compare/2k27_ratings.csv": "a8e071cf899388e58243cb24caa3c904b11f5c6bceeb0580bbc31cf91bc2d25f",
+  "reports/handle-E069/handle.csv": "2ee470e6c92df01c609500a951dfb7332cac831ce53c524e60ffc82e1b5d10bd",
+  "data/external-impact/epm_self/epm_2025-26.csv": "4e62d7b0eeef1094dd98042c36a84f8c76310a209b897fe94142283070b68528",
+  "reports/card-0.2.10j+E202-to-possession/tail-KT.csv": "c56918f8269578a8ad2a7d233755031cfab8d3a53e0c0f2769eab5536ee81175",
+  "reports/card-0.2.10j+E202-to-possession/tov-raw.csv": "197213b5203284bac4379a13104901e9154654dfc31c7a1f3900be8ed99e66ac",
+  "reports/card-0.2.10j+E202-to-possession/preregistration.md": "bd31eda8eeb21f476870e2f78fff3ce0cae5ac8b7d3e32e52d24bd6f33718a39"
+ }
+}

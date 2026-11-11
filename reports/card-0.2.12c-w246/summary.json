@@ -1,0 +1,35 @@
+{
+ "version": "card 0.2.12c（W246 窗口底）",
+ "base": "reports/card-0.2.12c-w246/work/pre-W246",
+ "players": 582,
+ "change": "E-188／F-131：OVR 映射 PR50 以上加 PR90→88、PR95→92 兩錨（S3），≥PR99 與 ≤PR50 不變；名次不變。",
+ "anchors": {
+  "PR1": -0.7267,
+  "PR50": 1.0103,
+  "PR90": 2.1246,
+  "PR95": 2.6166,
+  "PR99": 4.0314
+ },
+ "anchor_source": "reports/card-0.2.12c-w246/work/pre-W246/ranking.csv gRepl, MIN>=500, qf（gRepl 4 位小數）",
+ "ovr_map": {
+  "function": "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py:ovr_map",
+  "A_PR90": 88.0,
+  "B_PR95": 92.0
+ },
+ "ovr_changed": 196,
+ "pool_90_99": 21,
+ "pool_ge99": 5,
+ "sources_sha256": {
+  "reports/card-0.2.12c-w246/work/pre-W246/ranking.csv": "22571cc1f82008626ccc8707fcc65eed18d3145fdb99c43b817110fae0c58244",
+  "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py": "7c9bc8ccd63c0b637c42ac715a30d7716ee1899f8fec6722f927a3ae118b90de",
+  "reports/card-0.2.10a+E188-ovr-top-scale/preregistration.md": "8cf866fe753a587696b2d803f64fcf0b98fa21f22818da352a9193497296b0ca"
+ },
+ "build_command": "python -I -X utf8 reports/card-0.2.10a+E188-ovr-top-scale/apply_to_card.py reports/card-0.2.12c-w246/work/pre-W246 reports/card-0.2.12c-w246 \"card 0.2.12c W246\"",
+ "ranking_csv_sha256": "224db7812a36fcd4855c157b81c81acb0f312b7fbe80d14642e777d4d5b5a90d",
+ "equals_fit246_W246_final": true,
+ "ranking_sha256": "224db7812a36fcd4855c157b81c81acb0f312b7fbe80d14642e777d4d5b5a90d",
+ "tov": {
+  "raw_csv": "reports/card-0.2.12c-w246/tov-raw.csv",
+  "raw_sha256": "1f583bb96b9413336588423f869cc02a41758b120728e0725c5ade7bb8d9c11f"
+ }
+}

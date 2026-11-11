@@ -1,0 +1,14 @@
+cards exit 0
+build022 e101 exit 0
+e101 exit 0
+build022 e101z exit 0
+e101z exit 0
+build022 e101g exit 0
+e101g exit 0
+build022 e101w exit 0
+e101w exit 0
+compare e101 exit 0
+compare e101z exit 0
+compare e101g exit 0
+compare e101w exit 0
+done

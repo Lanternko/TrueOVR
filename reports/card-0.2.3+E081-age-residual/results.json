@@ -1,0 +1,333 @@
+{
+ "experiment": "E-081",
+ "purpose": "card 0.2.3 樣本外年齡偏差診斷（不改卡）",
+ "verdict": "年輕被低估",
+ "verdict_rule": "S_N 的 90% 區間上界 < 0 → 年輕被低估；下界 > 0 → 老將被低估；其他 → 沒有可偵測的偏差",
+ "S_N": {
+  "point": -0.20212533172684055,
+  "lo90": -0.2618729465589709,
+  "hi90": -0.14095959871204783,
+  "per_direction": {
+   "AB": -0.22499170886382489,
+   "BA": -0.17925895458985622
+  }
+ },
+ "S_Q": {
+  "point": -0.021030290573326196,
+  "lo90": -0.07754954331849764,
+  "hi90": 0.03380386128701259,
+  "per_direction": {
+   "AB": -0.027165640343172304,
+   "BA": -0.014894940803480085
+  },
+  "note": "只報告，不作判準"
+ },
+ "S_N_minus_S_Q": {
+  "point": -0.18109504115351435,
+  "lo90": -0.2294561102488167,
+  "hi90": -0.13316779292587172,
+  "note": "同一組 bootstrap，只報告"
+ },
+ "S_N_rerank_in_resample": {
+  "point": -0.20212533172684055,
+  "lo90": -0.2619033321672739,
+  "hi90": -0.1400630750012364,
+  "note": "僅供參考：重抽樣本內重新排名 u（主分析 u 固定為全人群排名）"
+ },
+ "groups": {
+  "<=23": {
+   "N": {
+    "mean_u": 0.10083464246135068,
+    "lo90": 0.06989561501902652,
+    "hi90": 0.13356840682397594,
+    "n_AB": 91,
+    "n_BA": 88,
+    "mean_u_AB": 0.11657414750198257,
+    "mean_u_BA": 0.08509513742071881
+   },
+   "Q": {
+    "mean_u": 0.031059017303323222,
+    "lo90": 0.0024076820113724012,
+    "hi90": 0.06006798299583293,
+    "n_AB": 91,
+    "n_BA": 88,
+    "mean_u_AB": 0.04273818964540614,
+    "mean_u_BA": 0.019379844961240306
+   }
+  },
+  "24-27": {
+   "N": {
+    "mean_u": 0.0032650758912348295,
+    "lo90": -0.029230623188493156,
+    "hi90": 0.034705388158330144,
+    "n_AB": 142,
+    "n_BA": 144,
+    "mean_u_AB": -0.003303325105270799,
+    "mean_u_BA": 0.009833476887740458
+   },
+   "Q": {
+    "mean_u": -0.026001314136688557,
+    "lo90": -0.049483273030143445,
+    "hi90": -0.001995541749140684,
+    "n_AB": 142,
+    "n_BA": 144,
+    "mean_u_AB": -0.04272542471322782,
+    "mean_u_BA": -0.009277203560149294
+   }
+  },
+  "28-30": {
+   "N": {
+    "mean_u": -0.030487182219380737,
+    "lo90": -0.0660507353277605,
+    "hi90": 0.00671896311200109,
+    "n_AB": 81,
+    "n_BA": 81,
+    "mean_u_AB": -0.044896270841288034,
+    "mean_u_BA": -0.016078093597473437
+   },
+   "Q": {
+    "mean_u": 0.010201406997627815,
+    "lo90": -0.02554092586302837,
+    "hi90": 0.04323777495574008,
+    "n_AB": 81,
+    "n_BA": 81,
+    "mean_u_AB": 0.005345551737304308,
+    "mean_u_BA": 0.015057262257951322
+   }
+  },
+  ">=31": {
+   "N": {
+    "mean_u": -0.09403096335366776,
+    "lo90": -0.1487285249621725,
+    "hi90": -0.04384180243041297,
+    "n_AB": 75,
+    "n_BA": 75,
+    "mean_u_AB": -0.08670103092783506,
+    "mean_u_BA": -0.10136089577950044
+   },
+   "Q": {
+    "mean_u": 0.0010379871600202512,
+    "lo90": -0.03529323210803001,
+    "hi90": 0.038356868012196885,
+    "n_AB": 75,
+    "n_BA": 75,
+    "mean_u_AB": 0.023264604810996573,
+    "mean_u_BA": -0.02118863049095607
+   }
+  }
+ },
+ "age_groups": [
+  "<=23",
+  "24-27",
+  "28-30",
+  ">=31"
+ ],
+ "players": {
+  "AB": {
+   "pool": 389,
+   "used": 389,
+   "excluded_no_age": 0,
+   "excluded_no_rapm1": 0
+  },
+  "BA": {
+   "pool": 388,
+   "used": 388,
+   "excluded_no_age": 0,
+   "excluded_no_rapm1": 0
+  }
+ },
+ "excluded_names": {
+  "AB": {
+   "no_age": [],
+   "no_rapm1": []
+  },
+  "BA": {
+   "no_age": [],
+   "no_rapm1": []
+  }
+ },
+ "master_size": 395,
+ "n_boot": 2000,
+ "seed": 1,
+ "k0": {
+  "maxAbsDiff": 0.0,
+  "pass": true,
+  "values_this_run_vs_E075": {
+   "delta": [
+    -0.0005048907728013585,
+    -0.0005048907728013585
+   ],
+   "ci90": [
+    [
+     -0.018612540335751333,
+     0.01591603627675013
+    ],
+    [
+     -0.018612540335751333,
+     0.01591603627675013
+    ]
+   ],
+   "rho_cand": [
+    {
+     "AB": 0.6124916161939458,
+     "BA": 0.5978089213952708
+    },
+    {
+     "AB": 0.6124916161939458,
+     "BA": 0.5978089213952708
+    }
+   ],
+   "rho_base": [
+    {
+     "AB": 0.6171779853994361,
+     "BA": 0.5941323337353831
+    },
+    {
+     "AB": 0.6171779853994361,
+     "BA": 0.5941323337353831
+    }
+   ]
+  },
+  "threshold": "< 1e-9"
+ },
+ "k1": {
+  "maxAbsDiff": 0.0,
+  "pass": true,
+  "threshold": "< 1e-6（兩邊都四捨五入到 3 位小數後比）",
+  "players_fit": 582,
+  "players_in_ref": 877,
+  "compared_present": 582,
+  "ref_players_absent_in_season(csv=0)": 295,
+  "fit_players_not_in_ref": 0,
+  "intercept": 112.14309785743575,
+  "poss_maxAbsDiff_rounded": 0.0
+ },
+ "named_players": {
+  "Paolo Banchero": {
+   "AB": {
+    "age": 23,
+    "pct_card": 0.6185567010309279,
+    "pct_N": 0.12886597938144329,
+    "pct_Q": 0.07474226804123711,
+    "u_N": -0.4896907216494846,
+    "u_Q": -0.5438144329896908,
+    "rapm1_net": -1.0456623316180735,
+    "mpg_ev": 34.1
+   },
+   "BA": {
+    "age": 23,
+    "pct_card": 0.42118863049095606,
+    "pct_N": 0.7260981912144703,
+    "pct_Q": 0.12919896640826872,
+    "u_N": 0.3049095607235142,
+    "u_Q": -0.29198966408268734,
+    "rapm1_net": 0.7257311306682935,
+    "mpg_ev": 35.46875
+   }
+  },
+  "Jalen Williams": {
+   "AB": {
+    "age": 25,
+    "pct_card": 0.8273195876288659,
+    "pct_N": 0.8427835051546392,
+    "pct_Q": 0.5618556701030928,
+    "u_N": 0.015463917525773252,
+    "u_Q": -0.26546391752577314,
+    "rapm1_net": 1.5108677272275828,
+    "mpg_ev": 28.7
+   },
+   "BA": {
+    "age": 25,
+    "pct_card": 0.8087855297157622,
+    "pct_N": 0.8010335917312662,
+    "pct_Q": 0.7390180878552972,
+    "u_N": -0.007751937984496027,
+    "u_Q": -0.06976744186046502,
+    "rapm1_net": 1.3027730957097499,
+    "mpg_ev": 27.923076923076923
+   }
+  },
+  "Jalen Johnson": {
+   "AB": {
+    "age": 24,
+    "pct_card": 0.7654639175257731,
+    "pct_N": 0.9742268041237113,
+    "pct_Q": 0.9123711340206185,
+    "u_N": 0.20876288659793818,
+    "u_Q": 0.1469072164948454,
+    "rapm1_net": 2.819936044425985,
+    "mpg_ev": 35.85
+   },
+   "BA": {
+    "age": 24,
+    "pct_card": 0.9328165374677002,
+    "pct_N": 0.08785529715762273,
+    "pct_Q": 0.24289405684754523,
+    "u_N": -0.8449612403100775,
+    "u_Q": -0.6899224806201549,
+    "rapm1_net": -1.1811838817216633,
+    "mpg_ev": 34.40625
+   }
+  }
+ },
+ "readonly_sha256": {
+  "dirs": {
+   "reports/impact-rapm": {
+    "n_files_before": 12,
+    "n_files_after": 12,
+    "aggregate_sha256_before": "689c3dd29767766838adf69194c714bc6ab024aee8773941a5cc1a53a4df0a30",
+    "aggregate_sha256_after": "689c3dd29767766838adf69194c714bc6ab024aee8773941a5cc1a53a4df0a30",
+    "unchanged": true
+   },
+   "reports/ovr-v58-holdout-2025-26": {
+    "n_files_before": 49,
+    "n_files_after": 49,
+    "aggregate_sha256_before": "621ef1f488c8791b1bbe8c3da0ac8e5633b6dddee71b34f20f7ed5f56b229790",
+    "aggregate_sha256_after": "621ef1f488c8791b1bbe8c3da0ac8e5633b6dddee71b34f20f7ed5f56b229790",
+    "unchanged": true
+   },
+   "reports/card-0.2.2": {
+    "n_files_before": 57,
+    "n_files_after": 57,
+    "aggregate_sha256_before": "7b3da94722aebb1aad80ba6618a7b33dc951045ad1e6f152f8eb09b3893886ca",
+    "aggregate_sha256_after": "7b3da94722aebb1aad80ba6618a7b33dc951045ad1e6f152f8eb09b3893886ca",
+    "unchanged": true
+   },
+   "reports/card-0.2.3": {
+    "n_files_before": 6,
+    "n_files_after": 6,
+    "aggregate_sha256_before": "02b16f96363855c4e7ff1237eb97ea09e1a4149a135d38eb82f7bdf6f11b621b",
+    "aggregate_sha256_after": "02b16f96363855c4e7ff1237eb97ea09e1a4149a135d38eb82f7bdf6f11b621b",
+    "unchanged": true
+   },
+   "reports/card-0.2.2+E073-usage-evidence": {
+    "n_files_before": 38,
+    "n_files_after": 38,
+    "aggregate_sha256_before": "805e849c288db13b04526a55991a7e7e935481bd5a2eb061cca9cdceade868d9",
+    "aggregate_sha256_after": "805e849c288db13b04526a55991a7e7e935481bd5a2eb061cca9cdceade868d9",
+    "unchanged": true
+   },
+   "data": {
+    "n_files_before": 23455,
+    "n_files_after": 23455,
+    "aggregate_sha256_before": "9e49035fc7e4e9a1cea843479eb1c3f753454963ac20356a2bcd62f89a1a2f48",
+    "aggregate_sha256_after": "9e49035fc7e4e9a1cea843479eb1c3f753454963ac20356a2bcd62f89a1a2f48",
+    "unchanged": true
+   }
+  },
+  "all_unchanged": true,
+  "manifest_before": "work/ro_before.json",
+  "manifest_after": "work/ro_after.json"
+ },
+ "preregistration_sha256": {
+  "frozen": "9e1402e0681580de27e9a344cd3ea0c01f8b7ad40b6a5b5fc570c4566829296e",
+  "before": "9e1402e0681580de27e9a344cd3ea0c01f8b7ad40b6a5b5fc570c4566829296e",
+  "after": "9e1402e0681580de27e9a344cd3ea0c01f8b7ad40b6a5b5fc570c4566829296e",
+  "unchanged": true
+ },
+ "inputs_sha256": {
+  "cards.json": "98fc9ea7319885adeefe51649656d67f82c5d05220d803789edee9b8da19d2ab",
+  "rapm1-A.csv": "c52b1c3f3ab6b16d19d53a14d94b55347d5ec0e7841ec012c1325d0da6bde520",
+  "rapm1-B.csv": "665217f7e8fef15c62aef19c68138a600783452f0c68d65d7059be900bd0b7fa"
+ }
+}

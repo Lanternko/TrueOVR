@@ -1,0 +1,227 @@
+{
+  "generatedBy": "reports/ovr-inseason-2026-27/v5/planning/inventory_old.py",
+  "scope": "local archive + tool source only; no network calls; no 2026-27 data",
+  "seasons": {
+    "2014-15": {
+      "dirExists": false,
+      "pbp": 0,
+      "boxes": 0,
+      "bio": false,
+      "playerGames": false,
+      "teamGames": false,
+      "leagueSchedule": false,
+      "gameExposure": false,
+      "manifest": false,
+      "stintsJsonl": 0,
+      "shotOrigin": false,
+      "dependenceAudit": false,
+      "seasonCards": false,
+      "v3OrV4Card": false,
+      "repoMentions": [
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory_old.py"
+      ],
+      "repoMentionCount": 1
+    },
+    "2015-16": {
+      "dirExists": false,
+      "pbp": 0,
+      "boxes": 0,
+      "bio": false,
+      "playerGames": false,
+      "teamGames": false,
+      "leagueSchedule": false,
+      "gameExposure": false,
+      "manifest": false,
+      "stintsJsonl": 0,
+      "shotOrigin": false,
+      "dependenceAudit": false,
+      "seasonCards": false,
+      "v3OrV4Card": false,
+      "repoMentions": [
+        "data\\league-context.json",
+        "data\\reference-seasons.json",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory-old-seasons.json",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory.json",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory_old.py",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\probe\\probe-rerun.json",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\probe\\probe-results.json"
+      ],
+      "repoMentionCount": 7
+    },
+    "2016-17": {
+      "dirExists": false,
+      "pbp": 0,
+      "boxes": 0,
+      "bio": false,
+      "playerGames": false,
+      "teamGames": false,
+      "leagueSchedule": false,
+      "gameExposure": false,
+      "manifest": false,
+      "stintsJsonl": 0,
+      "shotOrigin": false,
+      "dependenceAudit": false,
+      "seasonCards": false,
+      "v3OrV4Card": false,
+      "repoMentions": [
+        "data\\league-context.json",
+        "data\\reference-seasons.json",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory-old-seasons.json",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory.json",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory_old.py"
+      ],
+      "repoMentionCount": 5
+    },
+    "2017-18": {
+      "dirExists": false,
+      "pbp": 0,
+      "boxes": 0,
+      "bio": false,
+      "playerGames": false,
+      "teamGames": false,
+      "leagueSchedule": false,
+      "gameExposure": false,
+      "manifest": false,
+      "stintsJsonl": 0,
+      "shotOrigin": false,
+      "dependenceAudit": false,
+      "seasonCards": false,
+      "v3OrV4Card": false,
+      "repoMentions": [
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory-old-seasons.json",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory_old.py",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\probe\\probe-rerun.json",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\probe\\probe-results.json"
+      ],
+      "repoMentionCount": 4
+    },
+    "2018-19": {
+      "dirExists": false,
+      "pbp": 0,
+      "boxes": 0,
+      "bio": false,
+      "playerGames": false,
+      "teamGames": false,
+      "leagueSchedule": false,
+      "gameExposure": false,
+      "manifest": false,
+      "stintsJsonl": 0,
+      "shotOrigin": false,
+      "dependenceAudit": false,
+      "seasonCards": false,
+      "v3OrV4Card": false,
+      "repoMentions": [
+        "reports\\ovr-inseason-2026-27\\preregistration-v3.md",
+        "reports\\ovr-inseason-2026-27\\preregistration-v4.md",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory-old-seasons.json",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory_old.py"
+      ],
+      "repoMentionCount": 4
+    },
+    "2019-20": {
+      "dirExists": false,
+      "pbp": 0,
+      "boxes": 0,
+      "bio": false,
+      "playerGames": false,
+      "teamGames": false,
+      "leagueSchedule": false,
+      "gameExposure": false,
+      "manifest": false,
+      "stintsJsonl": 0,
+      "shotOrigin": false,
+      "dependenceAudit": false,
+      "seasonCards": false,
+      "v3OrV4Card": false,
+      "repoMentions": [
+        "reports\\ovr-inseason-2026-27\\preregistration-v3.md",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory-old-seasons.json",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory_old.py"
+      ],
+      "repoMentionCount": 3
+    },
+    "2020-21": {
+      "dirExists": false,
+      "pbp": 0,
+      "boxes": 0,
+      "bio": false,
+      "playerGames": false,
+      "teamGames": false,
+      "leagueSchedule": false,
+      "gameExposure": false,
+      "manifest": false,
+      "stintsJsonl": 0,
+      "shotOrigin": false,
+      "dependenceAudit": false,
+      "seasonCards": false,
+      "v3OrV4Card": false,
+      "repoMentions": [
+        "reports\\ovr-inseason-2026-27\\preregistration-v3.md",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory-old-seasons.json",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\inventory_old.py",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\probe\\probe-rerun.json",
+        "reports\\ovr-inseason-2026-27\\v5\\planning\\probe\\probe-results.json"
+      ],
+      "repoMentionCount": 5
+    }
+  },
+  "references": {
+    "data/reference-seasons.json": [
+      "2001-02",
+      "2015-16",
+      "2016-17",
+      "2025-26"
+    ],
+    "data/league-context.json": [
+      "2001-02",
+      "2015-16",
+      "2016-17",
+      "2025-26",
+      "2025-26"
+    ],
+    "data/benchmark-source": "2025-26 only (see inventory.json)"
+  },
+  "fetchTools": {
+    "scripts/fetch_defense_seventh_season.js": {
+      "seasonLiterals": [
+        "'2024-25'"
+      ],
+      "argvSeason": true,
+      "hardCoded1230": true,
+      "requiresV4Freeze": true
+    },
+    "scripts/fetch_season_games.js": {
+      "seasonLiterals": [
+        "'2025-26'"
+      ],
+      "argvSeason": false,
+      "hardCoded1230": false,
+      "requiresV4Freeze": false
+    },
+    "scripts/fetch_benchmark_league.js": {
+      "seasonLiterals": [
+        "'2025-26'"
+      ],
+      "argvSeason": false,
+      "hardCoded1230": false,
+      "requiresV4Freeze": false
+    },
+    "scripts/fetch_league_context.js": {
+      "seasonLiterals": [
+        "'2001-02'",
+        "'2015-16'",
+        "'2016-17'",
+        "'2025-26'"
+      ],
+      "argvSeason": false,
+      "hardCoded1230": false,
+      "requiresV4Freeze": false
+    },
+    "scripts/fetch_defense_a_pbp.js": {
+      "seasonLiterals": [],
+      "argvSeason": false,
+      "hardCoded1230": true,
+      "requiresV4Freeze": false
+    }
+  }
+}

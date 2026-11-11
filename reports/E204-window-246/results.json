@@ -1,0 +1,620 @@
+{
+ "c0a_live_vs_published": {
+  "ovr": 0.0
+ },
+ "c0a_n": [
+  484,
+  484,
+  0
+ ],
+ "c0b_card_vs_card0212": {
+  "max_abs_ovr": 0.0,
+  "n": [
+   582,
+   582
+  ]
+ },
+ "c0b_card_vs_published": 0.0,
+ "veteran": {
+  "W328": {
+   "vet_n": 277,
+   "abs_median": 0.77,
+   "gt2": 43,
+   "top12_abs_median": 0.31
+  },
+  "W246": {
+   "vet_n": 277,
+   "abs_median": 0.8,
+   "gt2": 53,
+   "top12_abs_median": 0.29500000000000004
+  }
+ },
+ "live_top12": [
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "ovr328": 106.1,
+   "d328": -0.8,
+   "ovr246": 106.3,
+   "d246": -1.4
+  },
+  {
+   "name": "Nikola Jokić",
+   "ovr328": 103.5,
+   "d328": 0.07,
+   "ovr246": 102.4,
+   "d246": -0.86
+  },
+  {
+   "name": "Luka Dončić",
+   "ovr328": 102.5,
+   "d328": 0.79,
+   "ovr246": 101.9,
+   "d246": 0.2
+  },
+  {
+   "name": "Victor Wembanyama",
+   "ovr328": 102.1,
+   "d328": 0.25,
+   "ovr246": 102.1,
+   "d246": 0.25
+  },
+  {
+   "name": "Kawhi Leonard",
+   "ovr328": 98.2,
+   "d328": -0.11,
+   "ovr246": 98.2,
+   "d246": -0.12
+  },
+  {
+   "name": "Giannis Antetokounmpo",
+   "ovr328": 97.4,
+   "d328": -1.95,
+   "ovr246": 97.3,
+   "d246": -2.22
+  },
+  {
+   "name": "Donovan Mitchell",
+   "ovr328": 97.0,
+   "d328": 0.05,
+   "ovr246": 96.3,
+   "d246": 0.15
+  },
+  {
+   "name": "Stephen Curry",
+   "ovr328": 95.7,
+   "d328": 1.79,
+   "ovr246": 95.7,
+   "d246": 1.82
+  },
+  {
+   "name": "Kevin Durant",
+   "ovr328": 95.2,
+   "d328": -0.37,
+   "ovr246": 95.0,
+   "d246": -0.34
+  },
+  {
+   "name": "Jayson Tatum",
+   "ovr328": 95.0,
+   "d328": 0.37,
+   "ovr246": 94.8,
+   "d246": 0.37
+  },
+  {
+   "name": "Anthony Edwards",
+   "ovr328": 94.4,
+   "d328": -0.05,
+   "ovr246": 94.6,
+   "d246": -0.08
+  },
+  {
+   "name": "Austin Reaves",
+   "ovr328": 94.0,
+   "d328": -0.07,
+   "ovr246": 93.9,
+   "d246": -0.15
+  }
+ ],
+ "live_top10_move_abs_dOVR": [
+  {
+   "name": "Kasparas Jakučionis",
+   "N": 6,
+   "d328": 7.14,
+   "d246": 7.26
+  },
+  {
+   "name": "Jordan Poole",
+   "N": 4,
+   "d328": -6.24,
+   "d246": -6.32
+  },
+  {
+   "name": "Jalen Suggs",
+   "N": 3,
+   "d328": -5.54,
+   "d246": -6.07
+  },
+  {
+   "name": "Jaden Hardy",
+   "N": 3,
+   "d328": -5.4,
+   "d246": -5.58
+  },
+  {
+   "name": "Nique Clifford",
+   "N": 5,
+   "d328": -4.47,
+   "d246": -4.6
+  },
+  {
+   "name": "Ousmane Dieng",
+   "N": 5,
+   "d328": -4.06,
+   "d246": -4.25
+  },
+  {
+   "name": "Ja Morant",
+   "N": 4,
+   "d328": -3.69,
+   "d246": -4.24
+  },
+  {
+   "name": "Jalen Green",
+   "N": 4,
+   "d328": -4.35,
+   "d246": -4.14
+  },
+  {
+   "name": "Luke Kornet",
+   "N": 6,
+   "d328": -3.76,
+   "d246": -4.1
+  },
+  {
+   "name": "Scoot Henderson",
+   "N": 5,
+   "d328": -5.07,
+   "d246": -3.81
+  }
+ ],
+ "move_live": {
+  "top20_out": [
+   "Desmond Bane",
+   "De'Aaron Fox"
+  ],
+  "top20_in": [
+   "Tyrese Maxey",
+   "Jimmy Butler III"
+  ],
+  "n_top20_swapped": 2,
+  "top100_moved_ge10_by_old_rank": 15,
+  "top100_moved_ge10_either": 17,
+  "ovr_abs_change_median_min500": 0.5,
+  "ovr_abs_change_max": 7.5,
+  "top12_old": [
+   {
+    "name": "Shai Gilgeous-Alexander",
+    "rank328": 1,
+    "ovr328": 106.1,
+    "rank246": 1,
+    "ovr246": 106.3
+   },
+   {
+    "name": "Nikola Jokić",
+    "rank328": 2,
+    "ovr328": 103.5,
+    "rank246": 2,
+    "ovr246": 102.4
+   },
+   {
+    "name": "Luka Dončić",
+    "rank328": 3,
+    "ovr328": 102.5,
+    "rank246": 4,
+    "ovr246": 101.9
+   },
+   {
+    "name": "Victor Wembanyama",
+    "rank328": 4,
+    "ovr328": 102.1,
+    "rank246": 3,
+    "ovr246": 102.1
+   },
+   {
+    "name": "Kawhi Leonard",
+    "rank328": 5,
+    "ovr328": 98.2,
+    "rank246": 5,
+    "ovr246": 98.2
+   },
+   {
+    "name": "Giannis Antetokounmpo",
+    "rank328": 6,
+    "ovr328": 97.4,
+    "rank246": 6,
+    "ovr246": 97.3
+   },
+   {
+    "name": "Donovan Mitchell",
+    "rank328": 7,
+    "ovr328": 97.0,
+    "rank246": 7,
+    "ovr246": 96.3
+   },
+   {
+    "name": "Stephen Curry",
+    "rank328": 8,
+    "ovr328": 95.7,
+    "rank246": 8,
+    "ovr246": 95.7
+   },
+   {
+    "name": "Kevin Durant",
+    "rank328": 9,
+    "ovr328": 95.2,
+    "rank246": 9,
+    "ovr246": 95.0
+   },
+   {
+    "name": "Jayson Tatum",
+    "rank328": 10,
+    "ovr328": 95.0,
+    "rank246": 10,
+    "ovr246": 94.8
+   },
+   {
+    "name": "Anthony Edwards",
+    "rank328": 11,
+    "ovr328": 94.4,
+    "rank246": 11,
+    "ovr246": 94.6
+   },
+   {
+    "name": "Austin Reaves",
+    "rank328": 12,
+    "ovr328": 94.0,
+    "rank246": 12,
+    "ovr246": 93.9
+   }
+  ],
+  "top20_new": [
+   [
+    "Shai Gilgeous-Alexander",
+    1
+   ],
+   [
+    "Nikola Jokić",
+    2
+   ],
+   [
+    "Victor Wembanyama",
+    3
+   ],
+   [
+    "Luka Dončić",
+    4
+   ],
+   [
+    "Kawhi Leonard",
+    5
+   ],
+   [
+    "Giannis Antetokounmpo",
+    6
+   ],
+   [
+    "Donovan Mitchell",
+    7
+   ],
+   [
+    "Stephen Curry",
+    8
+   ],
+   [
+    "Kevin Durant",
+    9
+   ],
+   [
+    "Jayson Tatum",
+    10
+   ],
+   [
+    "Anthony Edwards",
+    11
+   ],
+   [
+    "Austin Reaves",
+    12
+   ],
+   [
+    "Ty Jerome",
+    13
+   ],
+   [
+    "Cade Cunningham",
+    14
+   ],
+   [
+    "Chet Holmgren",
+    15
+   ],
+   [
+    "Evan Mobley",
+    16
+   ],
+   [
+    "Jamal Murray",
+    17
+   ],
+   [
+    "Tyrese Maxey",
+    18
+   ],
+   [
+    "Joel Embiid",
+    19
+   ],
+   [
+    "Jimmy Butler III",
+    20
+   ]
+  ]
+ },
+ "move_card": {
+  "top20_out": [
+   "Paul George"
+  ],
+  "top20_in": [
+   "Jimmy Butler III"
+  ],
+  "n_top20_swapped": 1,
+  "top100_moved_ge10_by_old_rank": 14,
+  "top100_moved_ge10_either": 17,
+  "ovr_abs_change_median_min500": 0.5,
+  "ovr_abs_change_max": 6.800000000000004,
+  "top12_old": [
+   {
+    "name": "Shai Gilgeous-Alexander",
+    "rank328": 1,
+    "ovr328": 106.3,
+    "rank246": 1,
+    "ovr246": 107.2
+   },
+   {
+    "name": "Nikola Jokić",
+    "rank328": 2,
+    "ovr328": 103.2,
+    "rank246": 2,
+    "ovr246": 102.6
+   },
+   {
+    "name": "Luka Dončić",
+    "rank328": 3,
+    "ovr328": 101.6,
+    "rank246": 3,
+    "ovr246": 101.6
+   },
+   {
+    "name": "Victor Wembanyama",
+    "rank328": 4,
+    "ovr328": 101.6,
+    "rank246": 4,
+    "ovr246": 101.6
+   },
+   {
+    "name": "Giannis Antetokounmpo",
+    "rank328": 5,
+    "ovr328": 99.0,
+    "rank246": 5,
+    "ovr246": 99.1
+   },
+   {
+    "name": "Kawhi Leonard",
+    "rank328": 6,
+    "ovr328": 98.2,
+    "rank246": 6,
+    "ovr246": 98.3
+   },
+   {
+    "name": "Donovan Mitchell",
+    "rank328": 7,
+    "ovr328": 97.0,
+    "rank246": 7,
+    "ovr246": 96.2
+   },
+   {
+    "name": "Jayson Tatum",
+    "rank328": 8,
+    "ovr328": 95.5,
+    "rank246": 8,
+    "ovr246": 95.3
+   },
+   {
+    "name": "Kevin Durant",
+    "rank328": 9,
+    "ovr328": 95.5,
+    "rank246": 9,
+    "ovr246": 95.3
+   },
+   {
+    "name": "Anthony Edwards",
+    "rank328": 10,
+    "ovr328": 94.8,
+    "rank246": 10,
+    "ovr246": 95.1
+   },
+   {
+    "name": "Stephen Curry",
+    "rank328": 11,
+    "ovr328": 94.3,
+    "rank246": 11,
+    "ovr246": 93.9
+   },
+   {
+    "name": "Austin Reaves",
+    "rank328": 12,
+    "ovr328": 93.7,
+    "rank246": 13,
+    "ovr246": 93.7
+   }
+  ],
+  "top20_new": [
+   [
+    "Shai Gilgeous-Alexander",
+    1
+   ],
+   [
+    "Nikola Jokić",
+    2
+   ],
+   [
+    "Luka Dončić",
+    3
+   ],
+   [
+    "Victor Wembanyama",
+    4
+   ],
+   [
+    "Giannis Antetokounmpo",
+    5
+   ],
+   [
+    "Kawhi Leonard",
+    6
+   ],
+   [
+    "Donovan Mitchell",
+    7
+   ],
+   [
+    "Jayson Tatum",
+    8
+   ],
+   [
+    "Kevin Durant",
+    9
+   ],
+   [
+    "Anthony Edwards",
+    10
+   ],
+   [
+    "Stephen Curry",
+    11
+   ],
+   [
+    "Cade Cunningham",
+    12
+   ],
+   [
+    "Austin Reaves",
+    13
+   ],
+   [
+    "Ty Jerome",
+    14
+   ],
+   [
+    "Chet Holmgren",
+    15
+   ],
+   [
+    "Kevin Porter Jr.",
+    16
+   ],
+   [
+    "Evan Mobley",
+    17
+   ],
+   [
+    "Desmond Bane",
+    18
+   ],
+   [
+    "Joel Embiid",
+    19
+   ],
+   [
+    "Jimmy Butler III",
+    20
+   ]
+  ]
+ },
+ "rho_card328": {
+  "rapm": {
+   "rho": 0.5750950069404726,
+   "n": 379
+  },
+  "epm": {
+   "rho": 0.7694724543166691,
+   "n": 379
+  },
+  "twok": {
+   "rho": 0.7657800534099771,
+   "n": 376
+  },
+  "sal": {
+   "rho": 0.6428786786708721,
+   "n": 262
+  }
+ },
+ "rho_card246": {
+  "rapm": {
+   "rho": 0.5834390939854731,
+   "n": 379
+  },
+  "epm": {
+   "rho": 0.7698048630228674,
+   "n": 379
+  },
+  "twok": {
+   "rho": 0.7704224734354941,
+   "n": 376
+  },
+  "sal": {
+   "rho": 0.6271330500750565,
+   "n": 262
+  }
+ },
+ "rho_diff_246_minus_328": {
+  "rapm": 0.008344087045000559,
+  "epm": 0.0003324087061983283,
+  "twok": 0.004642420025516958,
+  "sal": -0.01574562859581563
+ },
+ "rho_paired_h": {
+  "rapm": {
+   "diff": -0.008344087045000559,
+   "h": 0.006624216888619926,
+   "ci90": [
+    -0.01517743504690578,
+    -0.0019290012696659255
+   ]
+  },
+  "epm": {
+   "diff": -0.0003324087061983283,
+   "h": 0.00514020807676059,
+   "ci90": [
+    -0.005525380952319697,
+    0.004755035201201484
+   ]
+  },
+  "twok": {
+   "diff": -0.004642420025516958,
+   "h": 0.0059236568443182,
+   "ci90": [
+    -0.01095042051822811,
+    0.0008968931704082886
+   ]
+  },
+  "sal": {
+   "diff": 0.01574562859581563,
+   "h": 0.00848205561159629,
+   "ci90": [
+    0.007581436397350566,
+    0.024545547620543146
+   ]
+  }
+ }
+}

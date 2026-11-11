@@ -1,0 +1,38 @@
+salary col 2025-26 | card 582 matched salary 435 | epm 0 2k 431 rapm 435
+
+== all matched ==  metric | n | Spearman | Pearson vs log(salary)
+our OVR (card 0.2.7c)     435  0.579  0.577
+2K27 overall              431  0.710  0.713
+own EPM-style prior       324  0.474  0.496
+RAPM multi-yr             435  0.436  0.463
+RAPM 2025-26              435  0.255  0.278
+-- common subset n=323: ovr=0.539  twok=0.705  own=0.475  rapm_pool=0.420  rapm_2526=0.212
+
+== MIN>=1000 ==  metric | n | Spearman | Pearson vs log(salary)
+our OVR (card 0.2.7c)     266  0.509  0.484
+2K27 overall              264  0.695  0.668
+own EPM-style prior       240  0.453  0.469
+RAPM multi-yr             266  0.413  0.435
+RAPM 2025-26              266  0.193  0.212
+-- common subset n=239: ovr=0.502  twok=0.711  own=0.455  rapm_pool=0.407  rapm_2526=0.175
+
+Underpaid (OVR rank >> salary rank):
+  Toumani Camara: OVR #32, salary #254 $2.2M
+  Neemias Queta: OVR #11, salary #230 $2.3M
+  Oso Ighodaro: OVR #63, salary #261 $2.0M
+  Moussa Diabaté: OVR #53, salary #249 $2.3M
+  Ryan Rollins: OVR #15, salary #194 $4.0M
+  Collin Gillespie: OVR #76, salary #241 $2.3M
+  Pelle Larsson: OVR #99, salary #261 $2.0M
+  Sion James: OVR #83, salary #241 $2.3M
+Overpaid:
+  Kyle Kuzma: OVR #200, salary #68 $22.4M
+  Malik Monk: OVR #224, salary #81 $18.8M
+  Klay Thompson: OVR #238, salary #92 $16.7M
+  Patrick Williams: OVR #235, salary #88 $18.0M
+  Zach LaVine: OVR #164, salary #13 $47.5M
+  Anfernee Simons: OVR #217, salary #53 $27.7M
+  Jerami Grant: OVR #220, salary #44 $32.0M
+  Khris Middleton: OVR #229, salary #41 $33.3M
+
+unmatched MIN>=1000: 13 ['Dominick Barlow', 'Ronald Holland II', 'Spencer Jones', 'Jamir Watkins', 'Sidy Cissoko', 'Daniss Jenkins', 'Jordan Miller', 'Kobe Sanders', "Nae'Qwan Tomlin", 'Egor Dëmin', 'Pat Spencer', 'Caleb Love', 'Ryan Nembhard']

@@ -1,0 +1,40 @@
+{
+ "k": 2,
+ "c": -0.05625,
+ "pace": 0.998125,
+ "k_rule": "nonC fta noise-corrected ratio closest to 1.00, tie -> smaller k; if k=6 still <0.90 use 6",
+ "k_ratios_nonC_fta": {
+  "1": 0.5401818693264937,
+  "2": 1.0421870751490723,
+  "3": 1.3348396188637135,
+  "4": 1.8376155689351585,
+  "6": 2.6005581068355417
+ },
+ "k_seeds": [
+  20261103,
+  20261104
+ ],
+ "cp_converged": true,
+ "cp_foulGapRel": -0.003184805890573572,
+ "cp_possGap": -0.009051724137933093,
+ "cp_target_012": {
+  "games": 6960,
+  "foulPer100": 10.701996928902007,
+  "possPerTeamGame": 100.4451867816092,
+  "ptsPerTeamGame": 119.11810344827586
+ },
+ "cp_rounds": [
+  {
+   "round": 1,
+   "c": -0.05625,
+   "pace": 0.998125,
+   "foulGapRel": -0.003184805890573572,
+   "possGap": -0.009051724137933093,
+   "games": 6960,
+   "foulPer100": 10.66791314604194,
+   "possPerTeamGame": 100.43613505747126,
+   "ptsPerTeamGame": 118.77104885057472
+  }
+ ],
+ "written": "2026-11-01, before any judging seed run"
+}

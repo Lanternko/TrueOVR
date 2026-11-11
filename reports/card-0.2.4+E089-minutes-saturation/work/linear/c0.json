@@ -1,0 +1,8 @@
+{
+ "pass": true,
+ "ranking_sha256_equal_card024": true,
+ "ranking_shared_cols_equal": true,
+ "ranking_sha256": "af37ce25169c64b5e747afe066b42747c187b5d2ef20ffb3cc454e3ba95b7203",
+ "card024_sha256": "af37ce25169c64b5e747afe066b42747c187b5d2ef20ffb3cc454e3ba95b7203",
+ "max_diff_ranking_numeric": 0.0
+}

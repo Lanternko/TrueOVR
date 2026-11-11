@@ -1,0 +1,1401 @@
+{
+ "preregSha256": "2dc539163a49db8d2d9191ca75f854344cae0fd8427dc698d29794bd6383177d",
+ "models": {
+  "card 0.1.2 fit 卡": {
+   "verdict": "未偵測到偏袒",
+   "directions": {
+    "AB": {
+     "n": 345,
+     "nC": 72,
+     "nG": 145,
+     "S": 2.959961685823755,
+     "CI90": [
+      -17.55234913793103,
+      23.853627873563212
+     ],
+     "rho": 0.5842145152078314,
+     "groupMean": {
+      "PG": -15.207692307692307,
+      "SG": 9.15625,
+      "SF": -9.119718309859154,
+      "PF": 14.342105263157896,
+      "C": 1.1944444444444444
+     },
+     "top20C_model": 4,
+     "top20C_answer": 4,
+     "over10": [
+      [
+       "Aaron Nesmith",
+       260.5
+      ],
+      [
+       "Ronald Holland II",
+       258.0
+      ],
+      [
+       "Anthony Black",
+       249.5
+      ],
+      [
+       "Miles Bridges",
+       249.5
+      ],
+      [
+       "Nic Claxton",
+       247.0
+      ],
+      [
+       "Keegan Murray",
+       241.0
+      ],
+      [
+       "Jabari Smith Jr.",
+       224.0
+      ],
+      [
+       "Keon Ellis",
+       205.0
+      ],
+      [
+       "Sandro Mamukelashvili",
+       202.0
+      ],
+      [
+       "Julius Randle",
+       201.5
+      ]
+     ],
+     "under10": [
+      [
+       "Steven Adams",
+       -258.0
+      ],
+      [
+       "AJ Green",
+       -225.0
+      ],
+      [
+       "Nicolas Batum",
+       -209.5
+      ],
+      [
+       "Duncan Robinson",
+       -206.0
+      ],
+      [
+       "Andre Drummond",
+       -205.0
+      ],
+      [
+       "Alperen Sengun",
+       -191.0
+      ],
+      [
+       "Gabe Vincent",
+       -184.0
+      ],
+      [
+       "Luguentz Dort",
+       -173.5
+      ],
+      [
+       "Kevin Huerter",
+       -172.0
+      ],
+      [
+       "Royce O'Neale",
+       -170.5
+      ]
+     ],
+     "heightTercileMean": [
+      -9.047619047619047,
+      1.0245901639344261,
+      10.463917525773196
+     ]
+    },
+    "BA": {
+     "n": 344,
+     "nC": 72,
+     "nG": 145,
+     "S": 13.083908045977012,
+     "CI90": [
+      -7.335828544061301,
+      33.295799808429116
+     ],
+     "rho": 0.595728395172328,
+     "groupMean": {
+      "PG": -8.9765625,
+      "SG": -8.87037037037037,
+      "SF": 14.36231884057971,
+      "PF": 0.034482758620689655,
+      "C": 4.166666666666667
+     },
+     "top20C_model": 3,
+     "top20C_answer": 4,
+     "over10": [
+      [
+       "Tre Jones",
+       263.5
+      ],
+      [
+       "Brandon Ingram",
+       261.5
+      ],
+      [
+       "Andrew Wiggins",
+       254.0
+      ],
+      [
+       "Andrew Nembhard",
+       239.0
+      ],
+      [
+       "Jalen Duren",
+       238.0
+      ],
+      [
+       "Ja'Kobe Walter",
+       221.0
+      ],
+      [
+       "Ryan Rollins",
+       205.0
+      ],
+      [
+       "John Collins",
+       203.5
+      ],
+      [
+       "Jaden McDaniels",
+       202.5
+      ],
+      [
+       "Jalen Johnson",
+       201.0
+      ]
+     ],
+     "under10": [
+      [
+       "Anthony Black",
+       -252.0
+      ],
+      [
+       "Keegan Murray",
+       -247.0
+      ],
+      [
+       "Ronald Holland II",
+       -231.0
+      ],
+      [
+       "Dorian Finney-Smith",
+       -221.0
+      ],
+      [
+       "Jamal Shead",
+       -215.5
+      ],
+      [
+       "Nikola Jović",
+       -211.0
+      ],
+      [
+       "Mike Conley",
+       -205.0
+      ],
+      [
+       "Ochai Agbaji",
+       -202.0
+      ],
+      [
+       "Aaron Nesmith",
+       -201.0
+      ],
+      [
+       "Jaylen Clark",
+       -200.0
+      ]
+     ],
+     "heightTercileMean": [
+      -3.0393700787401574,
+      -6.352459016393443,
+      12.221052631578948
+     ]
+    }
+   },
+   "vs2K27": {
+    "AB": {
+     "S": 22.59472809076682,
+     "CI90": [
+      -0.3781934663536776,
+      46.033157276995304
+     ],
+     "n": 342
+    },
+    "BA": {
+     "S": 17.191656885759,
+     "CI90": [
+      -3.509120696400625,
+      37.3048586658842
+     ],
+     "n": 341
+    }
+   }
+  },
+  "WinImp 主版": {
+   "verdict": "偏袒長人",
+   "directions": {
+    "AB": {
+     "n": 345,
+     "nC": 72,
+     "nG": 145,
+     "S": 81.78390804597701,
+     "CI90": [
+      59.92508141762452,
+      104.32752634099616
+     ],
+     "rho": 0.41395302872098166,
+     "groupMean": {
+      "PG": 9.046153846153846,
+      "SG": -24.78125,
+      "SF": -29.12676056338028,
+      "PF": -30.412280701754387,
+      "C": 72.16666666666667
+     },
+     "top20C_model": 11,
+     "top20C_answer": 4,
+     "over10": [
+      [
+       "Mark Williams",
+       300.0
+      ],
+      [
+       "Nic Claxton",
+       279.0
+      ],
+      [
+       "Micah Potter",
+       267.0
+      ],
+      [
+       "Keyonte George",
+       254.5
+      ],
+      [
+       "Deandre Ayton",
+       243.5
+      ],
+      [
+       "Kevin Porter Jr.",
+       225.0
+      ],
+      [
+       "Marvin Bagley III",
+       224.0
+      ],
+      [
+       "Cam Spencer",
+       223.0
+      ],
+      [
+       "Reed Sheppard",
+       210.5
+      ],
+      [
+       "Jericho Sims",
+       209.0
+      ]
+     ],
+     "under10": [
+      [
+       "Marcus Smart",
+       -306.0
+      ],
+      [
+       "AJ Green",
+       -293.5
+      ],
+      [
+       "Luguentz Dort",
+       -276.5
+      ],
+      [
+       "Sam Hauser",
+       -261.5
+      ],
+      [
+       "Kentavious Caldwell-Pope",
+       -235.0
+      ],
+      [
+       "Cameron Johnson",
+       -225.5
+      ],
+      [
+       "Dillon Brooks",
+       -220.5
+      ],
+      [
+       "Kevin Huerter",
+       -215.0
+      ],
+      [
+       "Nicolas Batum",
+       -214.5
+      ],
+      [
+       "Jaden McDaniels",
+       -206.5
+      ]
+     ]
+    },
+    "BA": {
+     "n": 344,
+     "nC": 72,
+     "nG": 145,
+     "S": 95.19985632183909,
+     "CI90": [
+      71.13105603448275,
+      119.18815373563218
+     ],
+     "rho": 0.3508761483659666,
+     "groupMean": {
+      "PG": 16.4140625,
+      "SG": -42.901234567901234,
+      "SF": -11.73913043478261,
+      "PF": -41.6551724137931,
+      "C": 78.47916666666667
+     },
+     "top20C_model": 11,
+     "top20C_answer": 4,
+     "over10": [
+      [
+       "Mark Williams",
+       300.0
+      ],
+      [
+       "Jalen Duren",
+       284.0
+      ],
+      [
+       "Cooper Flagg",
+       278.5
+      ],
+      [
+       "Russell Westbrook",
+       275.5
+      ],
+      [
+       "Keyonte George",
+       256.5
+      ],
+      [
+       "Yves Missi",
+       253.5
+      ],
+      [
+       "Andre Drummond",
+       245.5
+      ],
+      [
+       "Nic Claxton",
+       234.0
+      ],
+      [
+       "Derik Queen",
+       223.5
+      ],
+      [
+       "T.J. McConnell",
+       223.0
+      ]
+     ],
+     "under10": [
+      [
+       "Keegan Murray",
+       -298.0
+      ],
+      [
+       "Aaron Nesmith",
+       -295.5
+      ],
+      [
+       "Marcus Smart",
+       -267.0
+      ],
+      [
+       "Dillon Brooks",
+       -264.5
+      ],
+      [
+       "Herbert Jones",
+       -264.5
+      ],
+      [
+       "Isaac Okoro",
+       -233.0
+      ],
+      [
+       "Jamal Shead",
+       -230.0
+      ],
+      [
+       "Dean Wade",
+       -224.0
+      ],
+      [
+       "Sam Hauser",
+       -223.5
+      ],
+      [
+       "Kris Dunn",
+       -222.5
+      ]
+     ]
+    }
+   },
+   "vs2K27": {
+    "AB": {
+     "S": 101.7378716744914,
+     "CI90": [
+      79.76813624804382,
+      122.90571694053209
+     ],
+     "n": 342
+    },
+    "BA": {
+     "S": 98.99012128325508,
+     "CI90": [
+      79.10221048513303,
+      119.70391969874804
+     ],
+     "n": 341
+    }
+   }
+  },
+  "WinImp 位置版": {
+   "verdict": "偏袒長人",
+   "directions": {
+    "AB": {
+     "n": 345,
+     "nC": 72,
+     "nG": 145,
+     "S": 37.53299808429119,
+     "CI90": [
+      9.921551724137931,
+      65.4822198275862
+     ],
+     "rho": 0.29144678646221606,
+     "groupMean": {
+      "PG": -72.01538461538462,
+      "SG": 30.875,
+      "SF": -4.232394366197183,
+      "PF": 15.912280701754385,
+      "C": 22.28472222222222
+     },
+     "top20C_model": 7,
+     "top20C_answer": 4,
+     "over10": [
+      [
+       "Ayo Dosunmu",
+       305.0
+      ],
+      [
+       "Mark Williams",
+       280.0
+      ],
+      [
+       "Vít Krejčí",
+       270.0
+      ],
+      [
+       "Keldon Johnson",
+       266.0
+      ],
+      [
+       "Marvin Bagley III",
+       239.5
+      ],
+      [
+       "Kevin Porter Jr.",
+       235.0
+      ],
+      [
+       "Ryan Kalkbrenner",
+       233.0
+      ],
+      [
+       "Yves Missi",
+       221.0
+      ],
+      [
+       "Tim Hardaway Jr.",
+       220.0
+      ],
+      [
+       "Bennedict Mathurin",
+       216.5
+      ]
+     ],
+     "under10": [
+      [
+       "Miles McBride",
+       -290.5
+      ],
+      [
+       "Ja Morant",
+       -289.0
+      ],
+      [
+       "Jalen Brunson",
+       -286.0
+      ],
+      [
+       "De'Aaron Fox",
+       -283.5
+      ],
+      [
+       "Jaden McDaniels",
+       -273.5
+      ],
+      [
+       "Davion Mitchell",
+       -251.5
+      ],
+      [
+       "Jayson Tatum",
+       -245.5
+      ],
+      [
+       "Dillon Brooks",
+       -233.5
+      ],
+      [
+       "Brandon Ingram",
+       -231.0
+      ],
+      [
+       "Marcus Smart",
+       -230.0
+      ]
+     ]
+    },
+    "BA": {
+     "n": 344,
+     "nC": 72,
+     "nG": 145,
+     "S": 50.11834291187739,
+     "CI90": [
+      22.495505268199235,
+      77.40257423371646
+     ],
+     "rho": 0.31660787460492495,
+     "groupMean": {
+      "PG": -66.0,
+      "SG": 11.944444444444445,
+      "SF": 13.608695652173912,
+      "PF": 5.620689655172414,
+      "C": 27.65972222222222
+     },
+     "top20C_model": 7,
+     "top20C_answer": 4,
+     "over10": [
+      [
+       "Mark Williams",
+       279.0
+      ],
+      [
+       "Yves Missi",
+       271.0
+      ],
+      [
+       "Jalen Duren",
+       269.0
+      ],
+      [
+       "Precious Achiuwa",
+       266.0
+      ],
+      [
+       "John Collins",
+       257.0
+      ],
+      [
+       "Trey Murphy III",
+       244.0
+      ],
+      [
+       "Jaxson Hayes",
+       238.0
+      ],
+      [
+       "Justin Champagnie",
+       231.0
+      ],
+      [
+       "Kevin Porter Jr.",
+       223.0
+      ],
+      [
+       "Ryan Kalkbrenner",
+       218.0
+      ]
+     ],
+     "under10": [
+      [
+       "Dillon Brooks",
+       -276.5
+      ],
+      [
+       "Keegan Murray",
+       -276.0
+      ],
+      [
+       "Naji Marshall",
+       -270.0
+      ],
+      [
+       "Jalen Brunson",
+       -265.0
+      ],
+      [
+       "Donte DiVincenzo",
+       -259.0
+      ],
+      [
+       "Dorian Finney-Smith",
+       -258.0
+      ],
+      [
+       "Ja Morant",
+       -254.0
+      ],
+      [
+       "Anthony Davis",
+       -249.0
+      ],
+      [
+       "Brandin Podziemski",
+       -242.5
+      ],
+      [
+       "Jayson Tatum",
+       -238.5
+      ]
+     ]
+    }
+   },
+   "vs2K27": {
+    "AB": {
+     "S": 59.47642801251956,
+     "CI90": [
+      31.776110133020346,
+      86.72559419014084
+     ],
+     "n": 342
+    },
+    "BA": {
+     "S": 55.885612284820034,
+     "CI90": [
+      27.298963223787165,
+      84.4507604655712
+     ],
+     "n": 341
+    }
+   }
+  },
+  "E140 on 主版": {
+   "verdict": "偏袒長人",
+   "directions": {
+    "AB": {
+     "n": 345,
+     "nC": 72,
+     "nG": 145,
+     "S": 79.07902298850574,
+     "CI90": [
+      55.66614942528736,
+      104.34977250957854
+     ],
+     "rho": 0.38669944236234405,
+     "groupMean": {
+      "PG": -52.26923076923077,
+      "SG": 26.84375,
+      "SF": -23.1056338028169,
+      "PF": -38.28947368421053,
+      "C": 70.45833333333333
+     },
+     "top20C_model": 11,
+     "top20C_answer": 4,
+     "over10": [
+      [
+       "Ayo Dosunmu",
+       306.0
+      ],
+      [
+       "Keldon Johnson",
+       290.0
+      ],
+      [
+       "Mark Williams",
+       289.0
+      ],
+      [
+       "Nic Claxton",
+       286.0
+      ],
+      [
+       "Deandre Ayton",
+       279.0
+      ],
+      [
+       "Micah Potter",
+       262.0
+      ],
+      [
+       "Jericho Sims",
+       243.0
+      ],
+      [
+       "Kevin Porter Jr.",
+       236.5
+      ],
+      [
+       "Marvin Bagley III",
+       229.0
+      ],
+      [
+       "Tyler Herro",
+       228.0
+      ]
+     ],
+     "under10": [
+      [
+       "Marcus Smart",
+       -270.5
+      ],
+      [
+       "Luguentz Dort",
+       -263.0
+      ],
+      [
+       "De'Andre Hunter",
+       -240.5
+      ],
+      [
+       "Cameron Johnson",
+       -234.5
+      ],
+      [
+       "Rui Hachimura",
+       -234.0
+      ],
+      [
+       "Brandon Ingram",
+       -228.0
+      ],
+      [
+       "Ja Morant",
+       -227.5
+      ],
+      [
+       "Miles McBride",
+       -224.5
+      ],
+      [
+       "Tobias Harris",
+       -224.5
+      ],
+      [
+       "Aaron Gordon",
+       -219.0
+      ]
+     ]
+    },
+    "BA": {
+     "n": 344,
+     "nC": 72,
+     "nG": 145,
+     "S": 93.35253831417624,
+     "CI90": [
+      69.09812978927202,
+      115.8166091954023
+     ],
+     "rho": 0.3845182271305808,
+     "groupMean": {
+      "PG": -46.3984375,
+      "SG": 7.598765432098766,
+      "SF": -5.253623188405797,
+      "PF": -48.89655172413793,
+      "C": 77.11805555555556
+     },
+     "top20C_model": 11,
+     "top20C_answer": 4,
+     "over10": [
+      [
+       "Mark Williams",
+       289.0
+      ],
+      [
+       "Jalen Duren",
+       273.0
+      ],
+      [
+       "Andre Drummond",
+       257.0
+      ],
+      [
+       "Cooper Flagg",
+       256.0
+      ],
+      [
+       "Yves Missi",
+       256.0
+      ],
+      [
+       "Tre Jones",
+       252.0
+      ],
+      [
+       "Ja'Kobe Walter",
+       247.5
+      ],
+      [
+       "Nic Claxton",
+       241.0
+      ],
+      [
+       "Trey Murphy III",
+       236.5
+      ],
+      [
+       "Derik Queen",
+       226.5
+      ]
+     ],
+     "under10": [
+      [
+       "Keegan Murray",
+       -300.0
+      ],
+      [
+       "Aaron Nesmith",
+       -264.0
+      ],
+      [
+       "Herbert Jones",
+       -260.0
+      ],
+      [
+       "Dorian Finney-Smith",
+       -246.0
+      ],
+      [
+       "Dean Wade",
+       -236.5
+      ],
+      [
+       "Naji Marshall",
+       -234.5
+      ],
+      [
+       "Marcus Smart",
+       -231.5
+      ],
+      [
+       "Aaron Gordon",
+       -225.0
+      ],
+      [
+       "Jevon Carter",
+       -220.0
+      ],
+      [
+       "Jamal Shead",
+       -220.0
+      ]
+     ]
+    }
+   },
+   "vs2K27": {
+    "AB": {
+     "S": 99.05736502347418,
+     "CI90": [
+      77.71701877934274,
+      120.35844581377151
+     ],
+     "n": 342
+    },
+    "BA": {
+     "S": 97.1545872456964,
+     "CI90": [
+      75.39048806729265,
+      118.05429137323942
+     ],
+     "n": 341
+    }
+   }
+  },
+  "E166 k2 主版": {
+   "verdict": "偏袒長人",
+   "directions": {
+    "AB": {
+     "n": 345,
+     "nC": 72,
+     "nG": 145,
+     "S": 107.47068965517241,
+     "CI90": [
+      84.1843271072797,
+      131.25239942528734
+     ],
+     "rho": 0.40507013295123995,
+     "groupMean": {
+      "PG": -46.91538461538462,
+      "SG": -0.34375,
+      "SF": -33.232394366197184,
+      "PF": -13.570175438596491,
+      "C": 86.25
+     },
+     "top20C_model": 14,
+     "top20C_answer": 4,
+     "over10": [
+      [
+       "Deandre Ayton",
+       297.0
+      ],
+      [
+       "Nic Claxton",
+       296.0
+      ],
+      [
+       "Mark Williams",
+       277.0
+      ],
+      [
+       "Micah Potter",
+       262.0
+      ],
+      [
+       "Ayo Dosunmu",
+       240.0
+      ],
+      [
+       "Ryan Kalkbrenner",
+       234.0
+      ],
+      [
+       "Kevin Porter Jr.",
+       233.0
+      ],
+      [
+       "Olivier-Maxence Prosper",
+       224.5
+      ],
+      [
+       "Yves Missi",
+       222.0
+      ],
+      [
+       "Keldon Johnson",
+       216.5
+      ]
+     ],
+     "under10": [
+      [
+       "Marcus Smart",
+       -278.0
+      ],
+      [
+       "Brandon Ingram",
+       -262.0
+      ],
+      [
+       "Ja Morant",
+       -248.0
+      ],
+      [
+       "De'Andre Hunter",
+       -240.0
+      ],
+      [
+       "Luguentz Dort",
+       -237.5
+      ],
+      [
+       "Cameron Johnson",
+       -237.0
+      ],
+      [
+       "Kevin Huerter",
+       -224.0
+      ],
+      [
+       "Kentavious Caldwell-Pope",
+       -222.5
+      ],
+      [
+       "AJ Green",
+       -216.0
+      ],
+      [
+       "Pelle Larsson",
+       -214.5
+      ]
+     ]
+    },
+    "BA": {
+     "n": 344,
+     "nC": 72,
+     "nG": 145,
+     "S": 119.90162835249042,
+     "CI90": [
+      96.64679358237548,
+      143.10400622605366
+     ],
+     "rho": 0.4013544313405344,
+     "groupMean": {
+      "PG": -40.15625,
+      "SG": -18.691358024691358,
+      "SF": -14.608695652173912,
+      "PF": -26.086206896551722,
+      "C": 91.73611111111111
+     },
+     "top20C_model": 14,
+     "top20C_answer": 4,
+     "over10": [
+      [
+       "Jalen Duren",
+       281.0
+      ],
+      [
+       "Tre Jones",
+       277.5
+      ],
+      [
+       "Mark Williams",
+       277.0
+      ],
+      [
+       "Yves Missi",
+       273.0
+      ],
+      [
+       "Andre Drummond",
+       266.0
+      ],
+      [
+       "Nic Claxton",
+       251.0
+      ],
+      [
+       "Olivier-Maxence Prosper",
+       241.5
+      ],
+      [
+       "Jaxson Hayes",
+       235.0
+      ],
+      [
+       "Deandre Ayton",
+       225.0
+      ],
+      [
+       "Cooper Flagg",
+       223.0
+      ]
+     ],
+     "under10": [
+      [
+       "Keegan Murray",
+       -308.5
+      ],
+      [
+       "Aaron Nesmith",
+       -297.0
+      ],
+      [
+       "Herbert Jones",
+       -264.0
+      ],
+      [
+       "Marcus Smart",
+       -240.0
+      ],
+      [
+       "Jamal Shead",
+       -238.0
+      ],
+      [
+       "Brandin Podziemski",
+       -233.5
+      ],
+      [
+       "Dorian Finney-Smith",
+       -233.5
+      ],
+      [
+       "Isaac Okoro",
+       -229.0
+      ],
+      [
+       "Cameron Johnson",
+       -215.0
+      ],
+      [
+       "Ja Morant",
+       -214.0
+      ]
+     ]
+    }
+   },
+   "vs2K27": {
+    "AB": {
+     "S": 127.40908646322379,
+     "CI90": [
+      107.37988556338027,
+      148.93771517996868
+     ],
+     "n": 342
+    },
+    "BA": {
+     "S": 123.65664123630674,
+     "CI90": [
+      103.71672779733959,
+      144.77992224178402
+     ],
+     "n": 341
+    }
+   }
+  },
+  "E166 k2 位置版": {
+   "verdict": "偏袒長人",
+   "directions": {
+    "AB": {
+     "n": 345,
+     "nC": 72,
+     "nG": 145,
+     "S": 27.74152298850575,
+     "CI90": [
+      2.6910799808429138,
+      52.87359195402298
+     ],
+     "rho": 0.4198373364746716,
+     "groupMean": {
+      "PG": -41.261538461538464,
+      "SG": 7.75,
+      "SF": 3.028169014084507,
+      "PF": 15.324561403508772,
+      "C": 13.520833333333334
+     },
+     "top20C_model": 6,
+     "top20C_answer": 4,
+     "over10": [
+      [
+       "Mark Williams",
+       298.0
+      ],
+      [
+       "Ayo Dosunmu",
+       268.0
+      ],
+      [
+       "Tim Hardaway Jr.",
+       254.0
+      ],
+      [
+       "Keldon Johnson",
+       240.0
+      ],
+      [
+       "Noah Clowney",
+       233.0
+      ],
+      [
+       "Kevin Porter Jr.",
+       230.0
+      ],
+      [
+       "Julius Randle",
+       220.0
+      ],
+      [
+       "Isaiah Stewart",
+       212.0
+      ],
+      [
+       "Precious Achiuwa",
+       209.5
+      ],
+      [
+       "Marvin Bagley III",
+       206.0
+      ]
+     ],
+     "under10": [
+      [
+       "Ja Morant",
+       -290.0
+      ],
+      [
+       "Brandon Ingram",
+       -287.0
+      ],
+      [
+       "AJ Green",
+       -265.5
+      ],
+      [
+       "Miles McBride",
+       -256.5
+      ],
+      [
+       "Tobias Harris",
+       -242.5
+      ],
+      [
+       "Marcus Smart",
+       -227.0
+      ],
+      [
+       "De'Andre Hunter",
+       -223.0
+      ],
+      [
+       "Naz Reid",
+       -215.0
+      ],
+      [
+       "Myles Turner",
+       -212.5
+      ],
+      [
+       "Dorian Finney-Smith",
+       -205.0
+      ]
+     ]
+    },
+    "BA": {
+     "n": 344,
+     "nC": 72,
+     "nG": 145,
+     "S": 39.389176245210734,
+     "CI90": [
+      14.806436781609197,
+      64.65022749042146
+     ],
+     "rho": 0.41227201124975393,
+     "groupMean": {
+      "PG": -34.078125,
+      "SG": -10.592592592592593,
+      "SF": 20.630434782608695,
+      "PF": 4.974137931034483,
+      "C": 18.430555555555557
+     },
+     "top20C_model": 6,
+     "top20C_answer": 4,
+     "over10": [
+      [
+       "Mark Williams",
+       298.0
+      ],
+      [
+       "Jalen Duren",
+       284.0
+      ],
+      [
+       "John Collins",
+       268.5
+      ],
+      [
+       "Tre Jones",
+       267.0
+      ],
+      [
+       "Precious Achiuwa",
+       260.5
+      ],
+      [
+       "Yves Missi",
+       244.5
+      ],
+      [
+       "Trey Murphy III",
+       244.0
+      ],
+      [
+       "Andrew Wiggins",
+       240.0
+      ],
+      [
+       "Devin Vassell",
+       233.0
+      ],
+      [
+       "Collin Sexton",
+       225.5
+      ]
+     ],
+     "under10": [
+      [
+       "Naji Marshall",
+       -262.0
+      ],
+      [
+       "Dorian Finney-Smith",
+       -258.0
+      ],
+      [
+       "Ja Morant",
+       -257.0
+      ],
+      [
+       "Donte DiVincenzo",
+       -251.0
+      ],
+      [
+       "Aaron Nesmith",
+       -249.5
+      ],
+      [
+       "Jamal Shead",
+       -236.0
+      ],
+      [
+       "Herbert Jones",
+       -234.5
+      ],
+      [
+       "Keegan Murray",
+       -227.5
+      ],
+      [
+       "Jevon Carter",
+       -224.0
+      ],
+      [
+       "Nikola Jović",
+       -223.0
+      ]
+     ]
+    }
+   },
+   "vs2K27": {
+    "AB": {
+     "S": 48.88722613458529,
+     "CI90": [
+      23.688817977308297,
+      72.99616099374022
+     ],
+     "n": 342
+    },
+    "BA": {
+     "S": 44.334898278560246,
+     "CI90": [
+      19.856890649452268,
+      70.19703149452269
+     ],
+     "n": 341
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,883 @@
+{
+ "A_vs_card0214_maxabs": 0.0004989642321422405,
+ "H_vs_npz_maxabs": 1.7763568394002505e-15,
+ "H_vs_cand_csv_maxabs": 0.0004946370455985449,
+ "scales_H": {
+  "sa": 1.0523710315802024,
+  "sb": 1.025575182363618,
+  "sm": 1.123771593640557
+ },
+ "m_pos": {
+  "rebound": {
+   "PG": -0.792,
+   "SG": -0.616,
+   "SF": -0.193,
+   "PF": 0.577,
+   "C": 1.23,
+   "nC": 75
+  },
+  "orebPct": {
+   "PG": -0.646,
+   "SG": -0.477,
+   "SF": -0.297,
+   "PF": 0.115,
+   "C": 1.419,
+   "nC": 75
+  },
+  "drebPct": {
+   "PG": -0.608,
+   "SG": -0.573,
+   "SF": -0.274,
+   "PF": 0.35,
+   "C": 1.268,
+   "nC": 75
+  },
+  "con2_36": {
+   "PG": -0.693,
+   "SG": -0.518,
+   "SF": -0.365,
+   "PF": 0.246,
+   "C": 1.472,
+   "nC": 75
+  }
+ },
+ "disc_A": {
+  "near_cap": 20,
+  "near90pct_cap": 28,
+  "top30_max_tie": 18,
+  "top50_tie_groups": 7,
+  "C_mean": 5.78,
+  "C_sd": 1.834,
+  "C_iqr": 2.721,
+  "nC": 75,
+  "max": 7.64,
+  "cap_C": 7.64,
+  "min": 0.0
+ },
+ "disc_H": {
+  "near_cap": 0,
+  "near90pct_cap": 1,
+  "top30_max_tie": 3,
+  "top50_tie_groups": 4,
+  "C_mean": 4.795,
+  "C_sd": 2.592,
+  "C_iqr": 3.719,
+  "nC": 75,
+  "max": 10.63,
+  "cap_C": 11.74,
+  "min": 0.0
+ },
+ "cand_rank_mismatch": [],
+ "show": {
+  "Joel Embiid": {
+   "pos": "C",
+   "MIN": 1201.0,
+   "rank0213a": 23,
+   "rankA": 11,
+   "rankH": 19,
+   "bonusA": 5.48,
+   "bonusH": 2.87,
+   "zr": 0.81,
+   "zc": 1.36
+  },
+  "Anthony Davis": {
+   "pos": "C",
+   "MIN": 626.0,
+   "rank0213a": 41,
+   "rankA": 12,
+   "rankH": 13,
+   "bonusA": 7.64,
+   "bonusH": 6.81,
+   "zr": 1.77,
+   "zc": 1.61
+  },
+  "Karl-Anthony Towns": {
+   "pos": "C",
+   "MIN": 2322.0,
+   "rank0213a": 29,
+   "rankA": 15,
+   "rankH": 15,
+   "bonusA": 4.95,
+   "bonusH": 4.46,
+   "zr": 2.12,
+   "zc": 0.43
+  },
+  "Rudy Gobert": {
+   "pos": "C",
+   "MIN": 2380.0,
+   "rank0213a": 57,
+   "rankA": 30,
+   "rankH": 22,
+   "bonusA": 7.64,
+   "bonusH": 8.57,
+   "zr": 1.88,
+   "zc": 2.34
+  },
+  "Jarrett Allen": {
+   "pos": "C",
+   "MIN": 1519.0,
+   "rank0213a": 48,
+   "rankA": 23,
+   "rankH": 27,
+   "bonusA": 7.54,
+   "bonusH": 6.78,
+   "zr": 1.46,
+   "zc": 1.94
+  },
+  "Domantas Sabonis": {
+   "pos": "C",
+   "MIN": 564.0,
+   "rank0213a": 81,
+   "rankA": 61,
+   "rankH": 60,
+   "bonusA": 4.74,
+   "bonusH": 4.6,
+   "zr": 2.2,
+   "zc": 0.35
+  },
+  "Ivica Zubac": {
+   "pos": "C",
+   "MIN": 1447.0,
+   "rank0213a": 93,
+   "rankA": 54,
+   "rankH": 52,
+   "bonusA": 7.64,
+   "bonusH": 8.02,
+   "zr": 1.94,
+   "zc": 1.95
+  },
+  "Zach Edey": {
+   "pos": "C",
+   "MIN": 284.0,
+   "rank0213a": 151,
+   "rankA": 115,
+   "rankH": 101,
+   "bonusA": 4.34,
+   "bonusH": 5.31,
+   "zr": 2.31,
+   "zc": 2.34
+  },
+  "Chet Holmgren": {
+   "pos": "PF",
+   "MIN": 1997.0,
+   "rank0213a": 15,
+   "rankA": 6,
+   "rankH": 9,
+   "bonusA": 7.01,
+   "bonusH": 2.15,
+   "zr": 1.26,
+   "zc": 2.29
+  },
+  "Evan Mobley": {
+   "pos": "PF",
+   "MIN": 2074.0,
+   "rank0213a": 17,
+   "rankA": 7,
+   "rankH": 12,
+   "bonusA": 6.7,
+   "bonusH": 1.95,
+   "zr": 1.14,
+   "zc": 1.79
+  },
+  "Alperen Sengun": {
+   "pos": "C",
+   "MIN": 2398.0,
+   "rank0213a": 135,
+   "rankA": 90,
+   "rankH": 110,
+   "bonusA": 5.6,
+   "bonusH": 3.09,
+   "zr": 1.15,
+   "zc": 1.04
+  },
+  "Bam Adebayo": {
+   "pos": "C",
+   "MIN": 2365.0,
+   "rank0213a": 47,
+   "rankA": 42,
+   "rankH": 49,
+   "bonusA": 4.04,
+   "bonusH": 2.31,
+   "zr": 1.27,
+   "zc": 0.31
+  },
+  "Isaiah Hartenstein": {
+   "pos": "C",
+   "MIN": 1137.0,
+   "rank0213a": 54,
+   "rankA": 29,
+   "rankH": 29,
+   "bonusA": 7.43,
+   "bonusH": 6.94,
+   "zr": 2.13,
+   "zc": 1.42
+  },
+  "Victor Wembanyama": {
+   "pos": "C",
+   "MIN": 1866.0,
+   "rank0213a": 4,
+   "rankA": 1,
+   "rankH": 1,
+   "bonusA": 7.64,
+   "bonusH": 7.69,
+   "zr": 1.82,
+   "zc": 1.92
+  },
+  "Nikola Jokić": {
+   "pos": "C",
+   "MIN": 2265.0,
+   "rank0213a": 2,
+   "rankA": 2,
+   "rankH": 2,
+   "bonusA": 4.1,
+   "bonusH": 4.05,
+   "zr": 1.9,
+   "zc": 0.09
+  },
+  "Donovan Clingan": {
+   "pos": "C",
+   "MIN": 2094.0,
+   "rank0213a": 241,
+   "rankA": 173,
+   "rankH": 127,
+   "bonusA": 7.64,
+   "bonusH": 10.63,
+   "zr": 2.5,
+   "zc": 3.89
+  }
+ },
+ "top10": {
+  "0213a": [
+   "Shai Gilgeous-Alexander",
+   "Nikola Jokić",
+   "Luka Dončić",
+   "Victor Wembanyama",
+   "Giannis Antetokounmpo",
+   "Kawhi Leonard",
+   "Donovan Mitchell",
+   "Jayson Tatum",
+   "Anthony Edwards",
+   "Kevin Durant"
+  ],
+  "A": [
+   "Victor Wembanyama",
+   "Nikola Jokić",
+   "Shai Gilgeous-Alexander",
+   "Giannis Antetokounmpo",
+   "Luka Dončić",
+   "Chet Holmgren",
+   "Evan Mobley",
+   "Kawhi Leonard",
+   "Jayson Tatum",
+   "Donovan Mitchell"
+  ],
+  "H": [
+   "Victor Wembanyama",
+   "Nikola Jokić",
+   "Shai Gilgeous-Alexander",
+   "Luka Dončić",
+   "Giannis Antetokounmpo",
+   "Kawhi Leonard",
+   "Donovan Mitchell",
+   "Jayson Tatum",
+   "Chet Holmgren",
+   "Anthony Edwards"
+  ]
+ },
+ "rank11_15_H": [
+  [
+   "Kevin Durant",
+   "SF"
+  ],
+  [
+   "Evan Mobley",
+   "PF"
+  ],
+  [
+   "Anthony Davis",
+   "C"
+  ],
+  [
+   "Stephen Curry",
+   "PG"
+  ],
+  [
+   "Karl-Anthony Towns",
+   "C"
+  ]
+ ],
+ "top30_0213a_drop_gt10_H": [],
+ "top30_0213a_drop_gt5_H": [
+  [
+   "LeBron James",
+   22,
+   28
+  ],
+  [
+   "Paul George",
+   24,
+   30
+  ],
+  [
+   "De'Aaron Fox",
+   25,
+   31
+  ],
+  [
+   "Tyrese Maxey",
+   26,
+   32
+  ],
+  [
+   "Derrick White",
+   27,
+   34
+  ],
+  [
+   "Jaylen Brown",
+   28,
+   35
+  ],
+  [
+   "Devin Booker",
+   30,
+   36
+  ]
+ ],
+ "top_bonus_H": [
+  [
+   "Donovan Clingan",
+   "C",
+   2094.0,
+   10.63,
+   2.5,
+   3.89
+  ],
+  [
+   "Moussa Cisse",
+   "C",
+   530.0,
+   9.47,
+   2.13,
+   2.67
+  ],
+  [
+   "Clint Capela",
+   "C",
+   926.0,
+   9.21,
+   1.98,
+   2.68
+  ],
+  [
+   "Dylan Cardwell",
+   "C",
+   907.0,
+   9.08,
+   2.01,
+   2.52
+  ],
+  [
+   "Jonas Valanciunas",
+   "C",
+   871.0,
+   8.67,
+   2.1,
+   2.13
+  ],
+  [
+   "Rudy Gobert",
+   "C",
+   2380.0,
+   8.57,
+   1.88,
+   2.34
+  ],
+  [
+   "Ivica Zubac",
+   "C",
+   1447.0,
+   8.02,
+   1.94,
+   1.95
+  ],
+  [
+   "Mark Williams",
+   "C",
+   1416.0,
+   7.94,
+   1.74,
+   2.14
+  ],
+  [
+   "Paul Reed",
+   "C",
+   901.0,
+   7.82,
+   1.71,
+   2.11
+  ],
+  [
+   "Robert Williams III",
+   "C",
+   1008.0,
+   7.82,
+   2.21,
+   1.67
+  ],
+  [
+   "Luke Kornet",
+   "C",
+   1430.0,
+   7.69,
+   1.2,
+   3.81
+  ],
+  [
+   "Victor Wembanyama",
+   "C",
+   1866.0,
+   7.69,
+   1.82,
+   1.92
+  ]
+ ],
+ "rho": {
+  "T": {
+   "n": 265,
+   "0213a": 0.7238,
+   "A": 0.7661,
+   "H": 0.7658,
+   "H-A": -0.0003
+  },
+  "EPM": {
+   "n": 262,
+   "0213a": 0.6851,
+   "A": 0.7144,
+   "H": 0.7138,
+   "H-A": -0.0006
+  },
+  "2K": {
+   "n": 575,
+   "0213a": 0.7741,
+   "A": 0.7838,
+   "H": 0.7793,
+   "H-A": -0.0045
+  }
+ },
+ "n_negative_H": 0,
+ "soft_monotone": true,
+ "low_min_bonus_gt3": [
+  [
+   "Zach Edey",
+   "C",
+   284.0,
+   5.31
+  ],
+  [
+   "Yanic Konan Niederhäuser",
+   "C",
+   424.0,
+   6.12
+  ],
+  [
+   "Trayce Jackson-Davis",
+   "C",
+   496.0,
+   7.55
+  ],
+  [
+   "Kevon Looney",
+   "C",
+   307.0,
+   4.11
+  ],
+  [
+   "Joan Beringer",
+   "C",
+   314.0,
+   5.15
+  ],
+  [
+   "Ariel Hukporti",
+   "C",
+   498.0,
+   7.27
+  ],
+  [
+   "Branden Carlson",
+   "C",
+   488.0,
+   5.57
+  ],
+  [
+   "Julian Reese",
+   "C",
+   402.0,
+   3.31
+  ],
+  [
+   "Lachlan Olbrich",
+   "C",
+   344.0,
+   3.64
+  ],
+  [
+   "Khaman Maluach",
+   "C",
+   411.0,
+   6.85
+  ],
+  [
+   "Oscar Tshiebwe",
+   "C",
+   448.0,
+   4.13
+  ],
+  [
+   "Maxi Kleber",
+   "C",
+   461.0,
+   3.03
+  ],
+  [
+   "PJ Hall",
+   "C",
+   213.0,
+   3.42
+  ],
+  [
+   "Christian Koloko",
+   "C",
+   357.0,
+   3.95
+  ]
+ ],
+ "C_missing_con": [
+  [
+   "Walker Kessler",
+   154.0,
+   0.42,
+   1.67
+  ],
+  [
+   "Dereck Lively II",
+   115.0,
+   0.26,
+   1.19
+  ],
+  [
+   "Grant Nelson",
+   35.0,
+   0.07,
+   0.35
+  ],
+  [
+   "Brandon Clarke",
+   20.0,
+   0.04,
+   0.19
+  ],
+  [
+   "Lawson Lovering",
+   49.0,
+   0.11,
+   0.5
+  ],
+  [
+   "Mason Plumlee",
+   171.0,
+   0.43,
+   1.82
+  ],
+  [
+   "Mo Bamba",
+   44.0,
+   0.11,
+   0.47
+  ],
+  [
+   "Omer Yurtseven",
+   104.0,
+   0.25,
+   1.09
+  ],
+  [
+   "Trevon Scott",
+   182.0,
+   0.11,
+   1.47
+  ],
+  [
+   "DeAndre Jordan",
+   199.0,
+   0.54,
+   2.17
+  ],
+  [
+   "CJ Huntley",
+   40.0,
+   0.07,
+   0.39
+  ],
+  [
+   "Tolu Smith",
+   137.0,
+   0.34,
+   1.45
+  ],
+  [
+   "Amari Williams",
+   146.0,
+   0.3,
+   1.47
+  ],
+  [
+   "N'Faly Dante",
+   15.0,
+   0.04,
+   0.16
+  ],
+  [
+   "Vladislav Goldin",
+   24.0,
+   0.06,
+   0.25
+  ],
+  [
+   "Taj Gibson",
+   97.0,
+   0.19,
+   0.96
+  ],
+  [
+   "Rocco Zikarsky",
+   36.0,
+   0.08,
+   0.38
+  ],
+  [
+   "DaRon Holmes II",
+   210.0,
+   0.04,
+   1.11
+  ],
+  [
+   "Hunter Dickinson",
+   42.0,
+   0.07,
+   0.4
+  ],
+  [
+   "James Wiseman",
+   58.0,
+   0.12,
+   0.58
+  ],
+  [
+   "Orlando Robinson",
+   25.0,
+   0.05,
+   0.25
+  ],
+  [
+   "Xavier Tillman",
+   184.0,
+   0.22,
+   1.64
+  ],
+  [
+   "Bismack Biyombo",
+   141.0,
+   0.25,
+   1.37
+  ]
+ ],
+ "C_missing_obdb": [
+  [
+   "Walker Kessler",
+   154.0,
+   1.67
+  ],
+  [
+   "Dereck Lively II",
+   115.0,
+   1.19
+  ],
+  [
+   "Grant Nelson",
+   35.0,
+   0.35
+  ],
+  [
+   "Brandon Clarke",
+   20.0,
+   0.19
+  ],
+  [
+   "Lawson Lovering",
+   49.0,
+   0.5
+  ],
+  [
+   "Mason Plumlee",
+   171.0,
+   1.82
+  ],
+  [
+   "Mo Bamba",
+   44.0,
+   0.47
+  ],
+  [
+   "Omer Yurtseven",
+   104.0,
+   1.09
+  ],
+  [
+   "Trevon Scott",
+   182.0,
+   1.47
+  ],
+  [
+   "DeAndre Jordan",
+   199.0,
+   2.17
+  ],
+  [
+   "CJ Huntley",
+   40.0,
+   0.39
+  ],
+  [
+   "Tolu Smith",
+   137.0,
+   1.45
+  ],
+  [
+   "Amari Williams",
+   146.0,
+   1.47
+  ],
+  [
+   "N'Faly Dante",
+   15.0,
+   0.16
+  ],
+  [
+   "Vladislav Goldin",
+   24.0,
+   0.25
+  ],
+  [
+   "Taj Gibson",
+   97.0,
+   0.96
+  ],
+  [
+   "Rocco Zikarsky",
+   36.0,
+   0.38
+  ],
+  [
+   "Hunter Dickinson",
+   42.0,
+   0.4
+  ],
+  [
+   "James Wiseman",
+   58.0,
+   0.58
+  ],
+  [
+   "Orlando Robinson",
+   25.0,
+   0.25
+  ],
+  [
+   "Xavier Tillman",
+   184.0,
+   1.64
+  ],
+  [
+   "Bismack Biyombo",
+   141.0,
+   1.37
+  ]
+ ],
+ "pos_flip_top": [
+  [
+   "Donovan Clingan",
+   "C",
+   10.63,
+   2.7
+  ],
+  [
+   "Moussa Cisse",
+   "C",
+   9.47,
+   2.55
+  ],
+  [
+   "Clint Capela",
+   "C",
+   9.21,
+   2.51
+  ],
+  [
+   "Dylan Cardwell",
+   "C",
+   9.08,
+   2.5
+  ],
+  [
+   "Jonas Valanciunas",
+   "C",
+   8.67,
+   2.45
+  ],
+  [
+   "Rudy Gobert",
+   "C",
+   8.57,
+   2.43
+  ],
+  [
+   "Ivica Zubac",
+   "C",
+   8.02,
+   2.36
+  ],
+  [
+   "Mark Williams",
+   "C",
+   7.94,
+   2.34
+  ],
+  [
+   "Paul Reed",
+   "C",
+   7.82,
+   2.32
+  ],
+  [
+   "Robert Williams III",
+   "C",
+   7.82,
+   2.34
+  ],
+  [
+   "Luke Kornet",
+   "C",
+   7.69,
+   2.23
+  ],
+  [
+   "Victor Wembanyama",
+   "C",
+   7.69,
+   2.31
+  ]
+ ],
+ "pos_flip_median_abs": 1.2899999999999998
+}

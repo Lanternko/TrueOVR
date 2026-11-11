@@ -1,0 +1,31 @@
+{
+ "c0a": {
+  "P0_sha": "395e86a04f54d1a45584bbc38559eb3ad44bd7374bcb26b10865a883cc3b903f",
+  "e101_sha": "395e86a04f54d1a45584bbc38559eb3ad44bd7374bcb26b10865a883cc3b903f",
+  "pass": true
+ },
+ "u1": {
+  "rows": 582,
+  "columns": [
+   "playerId",
+   "name",
+   "long",
+   "mid",
+   "short",
+   "ft",
+   "drive",
+   "foulDraw",
+   "tovSkill",
+   "pass",
+   "rebound",
+   "physique",
+   "onBall",
+   "creation",
+   "pressure"
+  ],
+  "differingColumns": {
+   "pass": 575
+  },
+  "pass": true
+ }
+}

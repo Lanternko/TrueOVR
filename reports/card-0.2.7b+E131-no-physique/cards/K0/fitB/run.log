@@ -1,0 +1,17 @@
+reports/card-0.2.7b+E131-no-physique/calibrate-wing.py --direction H1 --capMargin 0 --attrSource reports/card-0.2.0+E070-foul-volume/attributes-w075/attributes-new.csv --defSource reports/card-0.2.7+E123-tail-3pt-rim-pres/work/def-new.csv --perGame --pressure force --pressureSource reports/card-0.2.0+E071-pressure/force-pressure-source.csv --tailSource reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/work/tail-e123a.csv --rapm reports/ovr-v58-holdout-2025-26/rapm-B.csv --possScale 0.5 --mpgSource reports/card-0.1.2+E064-pergame/mpg-B.csv --bonusShape none --defWindow season --defRapm reports/card-0.2.5+E104-defense-pergame-decay/def-L-fitB.csv --defPossFactor 0.5 --out reports/card-0.2.7b+E131-no-physique/cards/K0/fitB
+{
+ "direction": "H1",
+ "gamma": null,
+ "delta": null,
+ "capMargin": 0.0,
+ "phi": null,
+ "capIterations": 10,
+ "cappedPlayers": 96,
+ "restrictPos": null,
+ "chosen": {
+  "form": "position-interactions",
+  "ridge": 1.0
+ },
+ "noiseCeilingR2": 0.910385939642417
+}
+

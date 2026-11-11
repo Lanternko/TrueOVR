@@ -1,0 +1,30 @@
+{
+ "nCenters": 55,
+ "draws": 4000,
+ "arms": {
+  "R2-abil": {
+   "centersMinusBalanced": 4.019,
+   "sd": 7.907,
+   "shareCentersWin": 0.687,
+   "control_balancedVsBalanced": 0.036
+  },
+  "R2-stats": {
+   "centersMinusBalanced": 0.152,
+   "sd": 8.538,
+   "shareCentersWin": 0.5,
+   "control_balancedVsBalanced": -0.014
+  },
+  "R2-stats-rapm": {
+   "centersMinusBalanced": 1.261,
+   "sd": 8.316,
+   "shareCentersWin": 0.557,
+   "control_balancedVsBalanced": -0.031
+  },
+  "E225-T-nomin": {
+   "centersMinusBalanced": 4.236,
+   "sd": 7.283,
+   "shareCentersWin": 0.708,
+   "control_balancedVsBalanced": 0.057
+  }
+ }
+}

@@ -1,0 +1,193 @@
+{
+  "spec": "preregistration-v5 §R.3（答案端：含目標季、最多四季、最早 2021-22）",
+  "decision": "2026-10-27 使用者決定 2023-24 主卡用三季版（照 §R.3）；四季版只做對照",
+  "method": "v4/tools/rapm_v4.build → tools/rapm_2022_25.py fit_rapm（ridge，CV 選 λ，網格 100..30000）",
+  "targets": {
+    "2023-24": {
+      "usedSeasons": [
+        "2021-22",
+        "2022-23",
+        "2023-24"
+      ],
+      "seasons": [
+        "2021-22",
+        "2022-23",
+        "2023-24"
+      ],
+      "file": "reports/ovr-inseason-2026-27/v3/data/rapm-2021-22_2023-24.csv",
+      "sha256": "b8c9f273f4d01c7a03be923b98f82a06812a551da158fabcb679801474e6e1d2",
+      "rerunSha256": "b8c9f273f4d01c7a03be923b98f82a06812a551da158fabcb679801474e6e1d2",
+      "rerun": {
+        "observations": 184843,
+        "players": 815,
+        "pooled": {
+          "lambda": 3000,
+          "cvWeightedMSE": {
+            "100": 4200.417189348094,
+            "300": 4194.031017032503,
+            "1000": 4186.782820441551,
+            "3000": 4183.298622115755,
+            "10000": 4186.988220002827,
+            "30000": 4195.023867004164
+          },
+          "intercept": 109.16587482581618
+        },
+        "lastSeason": {
+          "lambda": 3000,
+          "cvWeightedMSE": {
+            "100": 4195.364778611854,
+            "300": 4176.8348551812705,
+            "1000": 4158.967639616221,
+            "3000": 4153.179599572461,
+            "10000": 4158.144944673044,
+            "30000": 4167.09747071596
+          },
+          "intercept": 111.34273800686935
+        }
+      },
+      "rerunVsFile": {
+        "n": 815,
+        "onlyA": 0,
+        "onlyB": 0,
+        "maxAbsDiff": 0.0,
+        "identical": true
+      },
+      "rerunVsFileNote": "從 stint 重跑，與檔案逐位比對",
+      "stintSha256": {
+        "2021-22": "aad3227a7e41565e8eec855b7825fda0bfd50c066c64e2b3f28181d942ea2123",
+        "2022-23": "5936e16bbfcce88da4743cb72b828be2d602bdb67e470e549c68bd2d7c3eaec6",
+        "2023-24": "a83b1c42ba735810f2fd8dccd8355d2f41e4fd164389ee82fb4318b4a3d0adb6"
+      },
+      "stintSources": {},
+      "comparison": {
+        "note": "對照用，不進答案卡",
+        "seasons": [
+          "2020-21",
+          "2021-22",
+          "2022-23",
+          "2023-24"
+        ],
+        "file": "reports/ovr-inseason-2026-27/v5/data/rapm-2020-21_2023-24.csv",
+        "sha256": "02d896dbab0987ad56a2716c71646a0d66bfbd40a8e00319862be6c8012c7cf5",
+        "rerunSha256": "02d896dbab0987ad56a2716c71646a0d66bfbd40a8e00319862be6c8012c7cf5",
+        "rerun": {
+          "observations": 243306,
+          "players": 882,
+          "pooled": {
+            "lambda": 3000,
+            "cvWeightedMSE": {
+              "100": 4180.49148441195,
+              "300": 4175.2667423422,
+              "1000": 4169.2087563322875,
+              "3000": 4165.736976738867,
+              "10000": 4168.395935109115,
+              "30000": 4176.246088582497
+            },
+            "intercept": 108.58721078869168
+          },
+          "lastSeason": {
+            "lambda": 3000,
+            "cvWeightedMSE": {
+              "100": 4195.364778611854,
+              "300": 4176.8348551812705,
+              "1000": 4158.967639616221,
+              "3000": 4153.179599572461,
+              "10000": 4158.144944673044,
+              "30000": 4167.09747071596
+            },
+            "intercept": 111.34273800686935
+          }
+        },
+        "rerunVsFile": {
+          "n": 882,
+          "onlyA": 0,
+          "onlyB": 0,
+          "maxAbsDiff": 0.0,
+          "identical": true
+        },
+        "rerunVsFileNote": "從 stint 重跑，與檔案逐位比對",
+        "stintSha256": {
+          "2020-21": "6ccb8eb71d5ab917bd7dc9e47d02c1e835a20c9dba37cbda7afb94a2df3409c0",
+          "2021-22": "aad3227a7e41565e8eec855b7825fda0bfd50c066c64e2b3f28181d942ea2123",
+          "2022-23": "5936e16bbfcce88da4743cb72b828be2d602bdb67e470e549c68bd2d7c3eaec6",
+          "2023-24": "a83b1c42ba735810f2fd8dccd8355d2f41e4fd164389ee82fb4318b4a3d0adb6"
+        },
+        "stintSources": {
+          "2020-21": {
+            "archive": "v5/history/stints/stints-2020-21.jsonl.gz（解壓到 reports/defense-seventh/2020-21/stints/stints.jsonl）",
+            "preparation": "v5/history/stints/preparation-2020-21.json",
+            "validation": "v5/history/validation-onoff.json",
+            "pipelineDiffs": [
+              "從 stats.nba.com playbyplayv2 存檔重建（shufinskiy/nba_data 鏡像），不是 cdn liveData",
+              "回合數為回合結束的整數計數，不按時鐘分攤",
+              "排除規則的分鐘容許誤差 2.1 秒（cdn 管線 1.1 秒）",
+              "1080 場中 1066 場可用；整季得分效率比值 1.002",
+              "同法重建 2022-23/2023-24 對照 repo onoff.csv（≥2000 回合）：在場淨效率 r=0.966/0.978，on-off 差 r=0.945/0.943"
+            ]
+          }
+        }
+      }
+    },
+    "2024-25": {
+      "usedSeasons": [
+        "2021-22",
+        "2022-23",
+        "2023-24",
+        "2024-25"
+      ],
+      "seasons": [
+        "2021-22",
+        "2022-23",
+        "2023-24",
+        "2024-25"
+      ],
+      "file": "reports/ovr-inseason-2026-27/v4/data/rapm-2021-22_2024-25.csv",
+      "sha256": "681b9c11d66ab3471ca38ab1e4a27bab3b88b1f97cced6133fae049ae9a50615",
+      "rerunSha256": "681b9c11d66ab3471ca38ab1e4a27bab3b88b1f97cced6133fae049ae9a50615",
+      "rerun": {
+        "observations": 248236,
+        "players": 923,
+        "pooled": {
+          "lambda": 3000,
+          "cvWeightedMSE": {
+            "100": 4244.864411008323,
+            "300": 4239.950036263911,
+            "1000": 4234.611777101995,
+            "3000": 4232.167998537678,
+            "10000": 4235.706281732925,
+            "30000": 4243.627375578859
+          },
+          "intercept": 108.6453183525849
+        },
+        "lastSeason": {
+          "lambda": 3000,
+          "cvWeightedMSE": {
+            "100": 4422.666643501123,
+            "300": 4403.907305396347,
+            "1000": 4386.407700745648,
+            "3000": 4381.498976760255,
+            "10000": 4387.267851698559,
+            "30000": 4396.909546027031
+          },
+          "intercept": 110.50298147677412
+        }
+      },
+      "rerunVsFile": {
+        "n": 923,
+        "onlyA": 0,
+        "onlyB": 0,
+        "maxAbsDiff": 0.0,
+        "identical": true
+      },
+      "rerunVsFileNote": "從 stint 重跑，與檔案逐位比對",
+      "stintSha256": {
+        "2021-22": "aad3227a7e41565e8eec855b7825fda0bfd50c066c64e2b3f28181d942ea2123",
+        "2022-23": "5936e16bbfcce88da4743cb72b828be2d602bdb67e470e549c68bd2d7c3eaec6",
+        "2023-24": "a83b1c42ba735810f2fd8dccd8355d2f41e4fd164389ee82fb4318b4a3d0adb6",
+        "2024-25": "8790976ac74edf2054470427c50984d35d8c8ab0abf72fd92b5105489cf74ac0"
+      },
+      "stintSources": {}
+    }
+  },
+  "pass": true
+}

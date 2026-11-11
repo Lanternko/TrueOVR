@@ -1,0 +1,27 @@
+{
+ "version": "card 0.2.12c",
+ "base": "reports/card-0.2.12b（card 0.2.12b，W246）",
+ "players": 582,
+ "change": "E-207／R-144：tovSkill 的失誤率 r 分母由持球分鐘改觸球次數（k、kh 乘 ρ＝15.593；v 仍用持球分鐘）；池 mu/sd／先驗／0-99 映射／全部係數與 OVR 錨點皆在 W246 窗口重擬合（card-0.2.12c-w246，2026-11-02；其餘 7 項屬性池仍照 win_len 慣例以 328 建）。",
+ "anchors": {
+  "PR1": -0.7267,
+  "PR50": 1.0103,
+  "PR90": 2.1246,
+  "PR95": 2.6166,
+  "PR99": 4.0314
+ },
+ "ovr_map": {
+  "function": "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py:ovr_map",
+  "A_PR90": 88.0,
+  "B_PR95": 92.0
+ },
+ "ovr_changed": null,
+ "pool_90_99": 21,
+ "pool_ge99": 5,
+ "build_command": "WIN_LEN=246 reports/card-0.2.12b-touch/card_route_0212c.py <work> → make_card_0212c.py <work> reports/card-0.2.12c \"0.2.12c\"（TOV_TOUCH=0 逐位元重現 card 0.2.12b；WIN_LEN=328 的重現見 card-0.2.12c-fit246 V328 臂＝E-206 KC final）",
+ "ranking_csv_sha256": "d0a71fa8ec00532cfe550db546e5d1f3008d9a25b4935a7a839298780b6b4a78",
+ "three_value_csv_sha256": "873bc130ebfe63ae7de784bdcd1f750ea0b0f3353c8b6721bb6ea7b552ceb463",
+ "three_value_source": "reports/card-0.2.10j/three-value.csv",
+ "win_len": 246,
+ "anchor_source": "reports/card-0.2.12c-w246/work/pre-W246/ranking.csv gRepl, MIN>=500, qf（gRepl 4 位小數）"
+}

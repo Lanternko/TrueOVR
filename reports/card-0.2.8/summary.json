@@ -1,0 +1,105 @@
+{
+ "version": "card 0.2.8",
+ "baseVersion": "card 0.2.7d",
+ "players": 582,
+ "change": "E-153 K6：OVR 迴歸目標整個換成 T6（DARKO＋BPM 季內 z 平均）；2025-26 原點 alpha=1、B12 目標表不用，primary／fitA／fitB 的 --rapm 全換 T6，usage 層 rapm1 不換（errata-1）。",
+ "prereg_verdict": "4/4 全過（E-153 預註冊 §4），採用候選；使用者 2026-11-01 裁定採用（R-102）。bootstrap 90% 下界 +0.0033，邊際小。",
+ "judgement": {
+  "1": true,
+  "2_sal": true,
+  "2-2_2k": true,
+  "3_rapm": true,
+  "verdict": "adopt_candidate"
+ },
+ "bootstrap": {
+  "lower90": 0.003324233244939564,
+  "upper90": 0.042168928413938774,
+  "draws": 2000,
+  "seed": 20261101
+ },
+ "key_players_2025_26": {
+  "Cooper Flagg": {
+   "0.2.7d": [
+    68.3,
+    230
+   ],
+   "0.2.8": [
+    70.6,
+    195
+   ]
+  },
+  "Paolo Banchero": {
+   "0.2.7d": [
+    72.1,
+    166
+   ],
+   "0.2.8": [
+    79.8,
+    65
+   ]
+  },
+  "Anthony Edwards": {
+   "0.2.7d": [
+    82.5,
+    38
+   ],
+   "0.2.8": [
+    89.0,
+    10
+   ]
+  },
+  "Shai Gilgeous-Alexander": {
+   "0.2.7d": [
+    104.6,
+    1
+   ],
+   "0.2.8": [
+    118.5,
+    1
+   ]
+  },
+  "Herbert Jones": {
+   "0.2.7d": [
+    85.4,
+    19
+   ],
+   "0.2.8": [
+    72.9,
+    156
+   ]
+  }
+ },
+ "top20": {
+  "out": [
+   "Ausar Thompson",
+   "Derrick White",
+   "Dyson Daniels",
+   "Franz Wagner",
+   "Herbert Jones",
+   "Kon Knueppel",
+   "Lauri Markkanen",
+   "Neemias Queta",
+   "OG Anunoby"
+  ],
+  "in": [
+   "Anthony Edwards",
+   "Evan Mobley",
+   "Jalen Williams",
+   "Jamal Murray",
+   "Jayson Tatum",
+   "Michael Porter Jr.",
+   "Scottie Barnes",
+   "Stephen Curry",
+   "Tyrese Maxey"
+  ]
+ },
+ "sources_sha256": {
+  "reports/card-0.2.7d/ranking.csv": "696a8ac7b235acf51cdb5634fa9896a6905fec81adb96166b6995b9015c20649",
+  "reports/card-0.2.7d+E153-t6-target/work/K6-2025-26/c0/ranking.csv": "e920a840e55d7d32cb378100b2ea47b8d87a1d27587d934ea1cc8b8ec981278e",
+  "reports/card-0.2.7d+E153-t6-target/results.json": "d78a74d33cd86d19c30e8b46ab0fe969ff91a23d0b9200a6da0f1cabbcdd7abd",
+  "reports/card-0.2.7d+E153-t6-target/preregistration.md": "c98b87d9faf4523e0f85e29121aef9279830108c04fc75830f6953f56203b285",
+  "reports/card-0.2.7d+E153-t6-target/errata-1.md": "2e6c162ffc8bbe6c0825485e448294d1faab6e6b0db18880b32d0689dc003329"
+ },
+ "generator": "reports/card-0.2.8/build_card_028.py",
+ "ranking_csv_sha256": "e920a840e55d7d32cb378100b2ea47b8d87a1d27587d934ea1cc8b8ec981278e"
+}

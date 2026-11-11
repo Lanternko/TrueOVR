@@ -1,0 +1,220 @@
+{
+  "version": "card 0.2.4",
+  "baseVersion": "card 0.2.3",
+  "change": "E-084：E-075 用人回歸的訓練目標由四季合併 RAPM 改成 2025-26 單季 RAPM（修正年輕被低估、老將被高估）。能力值欄、foulDisc、presDisplay 與 card 0.2.3 逐欄相同",
+  "players": 582,
+  "columns": [
+    "rank",
+    "ovr",
+    "name",
+    "pos",
+    "MIN",
+    "predictedPer36",
+    "simulatedPer36",
+    "defenseBonus",
+    "align",
+    "pred0",
+    "pr",
+    "long",
+    "mid",
+    "short",
+    "ft",
+    "drive",
+    "foulDraw",
+    "tovSkill",
+    "pass",
+    "rebound",
+    "physique",
+    "onBall",
+    "help",
+    "stamina",
+    "heightInches",
+    "creation",
+    "pressure",
+    "mpg",
+    "gRepl",
+    "ovr36",
+    "foulDisc",
+    "presDisplay"
+  ],
+  "columnsFromE084": [
+    "rank",
+    "ovr",
+    "mpg",
+    "gRepl"
+  ],
+  "columnsFromCard023": [
+    "name",
+    "pos",
+    "MIN",
+    "predictedPer36",
+    "simulatedPer36",
+    "defenseBonus",
+    "align",
+    "pred0",
+    "pr",
+    "long",
+    "mid",
+    "short",
+    "ft",
+    "drive",
+    "foulDraw",
+    "tovSkill",
+    "pass",
+    "rebound",
+    "physique",
+    "onBall",
+    "help",
+    "stamina",
+    "heightInches",
+    "creation",
+    "pressure",
+    "ovr36",
+    "foulDisc",
+    "presDisplay"
+  ],
+  "columnsDifferentFromCard023": {
+    "rank": 562,
+    "ovr": 561,
+    "gRepl": 582
+  },
+  "verdict_E084": "機械判定只差 (c3)（evaluate 16/19，參考名次與偏差同源）；使用者依機會成本裁定通過（R-042），G5 已過，版號 PATCH（R-044）",
+  "gates_E084": {
+    "c0": {
+      "pass": true
+    },
+    "c1": {
+      "value": true,
+      "threshold": "npm test exit 0",
+      "pass": true
+    },
+    "b": {
+      "value": {
+        "point": 0.12725954590095487,
+        "ci90": [
+          0.10709366296989324,
+          0.14740978917882008
+        ]
+      },
+      "threshold": "ΔS_N 下界 > 0",
+      "pass": true
+    },
+    "c2N": {
+      "value": {
+        "point": 0.02464694222457925,
+        "ci90": [
+          0.00935588245813978,
+          0.03948017664092719
+        ]
+      },
+      "threshold": "Δρ_N 下界 > -0.02",
+      "pass": true
+    },
+    "c2Q": {
+      "value": {
+        "point": -0.016651927792999177,
+        "ci90": [
+          -0.030427710097004262,
+          -0.004097500571299124
+        ]
+      },
+      "threshold": "Δρ_Q 下界 > -0.05",
+      "pass": true
+    },
+    "c3": {
+      "value": {
+        "E084": {
+          "pass": 16,
+          "of": 19
+        },
+        "card-0.2.3": {
+          "pass": 18,
+          "of": 19
+        }
+      },
+      "threshold": "E084 閘數 >= card 0.2.3（18/19）",
+      "pass": false
+    },
+    "c4": {
+      "value": {
+        "delta": 0.04647516750663144,
+        "ci90": [
+          0.027805055890233202,
+          0.06499260535630941
+        ],
+        "rho_pn": {
+          "AB": 0.4723908270459035,
+          "BA": 0.5281805636790693
+        },
+        "rho_p": {
+          "AB": 0.4365615488584773,
+          "BA": 0.4710595068532325
+        }
+      },
+      "threshold": "下界 > 0",
+      "pass": true
+    },
+    "R1_reportOnly": {
+      "value": {
+        "Sandfort": 53.0,
+        "Drummond": 52.6,
+        "Sheppard": 70.0
+      },
+      "threshold": "Sandfort < min(Drummond, Sheppard)",
+      "pass": false
+    },
+    "R2": {
+      "value": {
+        "F_n": 109,
+        "F_median_ovr": 51.5,
+        "MIN>=1000_n": 279,
+        "MIN>=1000_PR10": 52.6
+      },
+      "threshold": "F 中位數 < MIN>=1000 的 PR10",
+      "pass": true
+    },
+    "R3": {
+      "value": {
+        "candidate_median_std": 0.764527319862708,
+        "card023_median_std": 0.7468984962406013,
+        "n_teams": 30,
+        "reportOnly_origScript_v15_candidate": 0.7727272727272727,
+        "reportOnly_origScript_v15_card023": 0.7473684210526315
+      },
+      "threshold": "候選中位數(標準 Spearman、第15/16小平均) >= card 0.2.3 同算法中位數",
+      "pass": true
+    },
+    "R4": {
+      "value": {
+        "MIN<100_n": 79,
+        "MIN<100_PR90": 56.4,
+        "MIN>=1000_and_12<=MPG<=22_n": 74,
+        "group_median": 64.5
+      },
+      "threshold": "MIN<100 組 PR90 < MIN>=1000 且 12<=MPG<=22 組中位數（嚴格小於）",
+      "pass": true
+    }
+  },
+  "rho2k_perGame": {
+    "card-0.2.3": 0.7400906895851106,
+    "card-0.2.4(E084)": 0.7478997048817106
+  },
+  "evaluate_mjs": {
+    "card-0.2.3": 18,
+    "card-0.2.4(E084)": 16,
+    "of": 19
+  },
+  "nextRound": "R-042／R-043：四季量尺 ρ −0.017、分鐘權重改遞減（pred 標準差 1.65 → 1.01）、老將、p_B 間接路徑、p 上限、mpg-A/B 出賽數",
+  "audit": "role-audit（Opus）重算成立（reports/card-0.2.3+E084-current-target/audit/audit.md）；ranking 與稽核重算逐位元相同",
+  "sources_sha256": {
+    "reports/card-0.2.3/ranking.csv": "933797d84f6c411b57f3caadcf26a898c203858b4808cf97b461717a9c3ebc64",
+    "reports/card-0.2.3+E084-current-target/ranking.csv": "af37ce25169c64b5e747afe066b42747c187b5d2ef20ffb3cc454e3ba95b7203",
+    "reports/card-0.2.3+E084-current-target/results.json": "6df9fd48e704ad3799fcea78b8540161083135708e276d5d08636358f3f9ea16",
+    "reports/card-0.2.3+E084-current-target/evaluation.json": "2bd803a5285a09b7f586b2d656b0041f125a64ac5e128a6ec457b97459131427",
+    "reports/card-0.2.3+E084-current-target/preregistration.md": "a7a034b50b39b48471f8f65e85b23c5875eee02bd064cbf39f87a066e03bb6ca",
+    "reports/card-0.2.3+E084-current-target/e084.py": "685e405e04c9e4e02e52b3d9297f74398e8cf0768b8ff84ce5455d9fd8afc744",
+    "reports/card-0.2.3+E084-current-target/audit/audit.md": "d2d0bd52bad2054a5003d7634b96a23e2e2f6691db3593c2028e7039bb801556"
+  },
+  "generator": "reports/card-0.2.4/build_card_024.py",
+  "ranking_csv_sha256": "af37ce25169c64b5e747afe066b42747c187b5d2ef20ffb3cc454e3ba95b7203"
+}

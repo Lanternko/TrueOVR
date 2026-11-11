@@ -1,0 +1,1320 @@
+{
+  "bottom20": [
+    {
+      "TIME_OF_POSS": 61.2,
+      "handle": 40.0,
+      "name": "Deandre Ayton",
+      "passSec": 98.53498542274052,
+      "pos": "C",
+      "r_sec_raw": 0.6535947712418301,
+      "r_sec_used": 0.5118946981956237,
+      "vol": 1.125229826353422
+    },
+    {
+      "TIME_OF_POSS": 80.0,
+      "handle": 40.0,
+      "name": "Ace Bailey",
+      "passSec": 47.04081632653061,
+      "pos": "PF",
+      "r_sec_raw": 0.6,
+      "r_sec_used": 0.4942028985507247,
+      "vol": 1.448692152917505
+    },
+    {
+      "TIME_OF_POSS": 85.6,
+      "handle": 40.0,
+      "name": "GG Jackson",
+      "passSec": 82.32993197278911,
+      "pos": "PF",
+      "r_sec_raw": 0.6308411214953271,
+      "r_sec_used": 0.5252178552763198,
+      "vol": 2.615959252971137
+    },
+    {
+      "TIME_OF_POSS": 102.7,
+      "handle": 40.23809523809524,
+      "name": "Michael Porter Jr.",
+      "passSec": 64.533527696793,
+      "pos": "PF",
+      "r_sec_raw": 0.5355404089581305,
+      "r_sec_used": 0.46058235193809494,
+      "vol": 2.18898756660746
+    },
+    {
+      "TIME_OF_POSS": 127.8,
+      "handle": 40.481049562682216,
+      "name": "Chet Holmgren",
+      "passSec": 98.06527372853904,
+      "pos": "C",
+      "r_sec_raw": 0.5086071987480438,
+      "r_sec_used": 0.4652959992678129,
+      "vol": 2.303855783675513
+    },
+    {
+      "TIME_OF_POSS": 152.6,
+      "handle": 40.72400388726919,
+      "name": "Victor Wembanyama",
+      "passSec": 54.08649173955297,
+      "pos": "C",
+      "r_sec_raw": 0.5373525557011796,
+      "r_sec_used": 0.4936729680684896,
+      "vol": 2.9440514469453376
+    },
+    {
+      "TIME_OF_POSS": 63.9,
+      "handle": 40.96695821185617,
+      "name": "Jarrett Allen",
+      "passSec": 81.1556527372854,
+      "pos": "PF",
+      "r_sec_raw": 0.5477308294209703,
+      "r_sec_used": 0.41719926953767716,
+      "vol": 1.5144173798551679
+    },
+    {
+      "TIME_OF_POSS": 62.3,
+      "handle": 41.20991253644315,
+      "name": "Zaccharie Risacher",
+      "passSec": 75.04940071266601,
+      "pos": "SF",
+      "r_sec_raw": 0.5136436597110755,
+      "r_sec_used": 0.41193170405036034,
+      "vol": 1.4922155688622754
+    },
+    {
+      "TIME_OF_POSS": 55.8,
+      "handle": 41.452866861030124,
+      "name": "Ziaire Williams",
+      "passSec": 49.713313896987366,
+      "pos": "PF",
+      "r_sec_raw": 0.5197132616487455,
+      "r_sec_used": 0.4148132802621403,
+      "vol": 1.568149882903981
+    },
+    {
+      "TIME_OF_POSS": 106.6,
+      "handle": 41.695821185617106,
+      "name": "Onyeka Okongwu",
+      "passSec": 92.6635892452219,
+      "pos": "PF",
+      "r_sec_raw": 0.48780487804878053,
+      "r_sec_used": 0.4155199560427523,
+      "vol": 1.67070091423596
+    },
+    {
+      "TIME_OF_POSS": 89.5,
+      "handle": 41.93877551020408,
+      "name": "Maxime Raynaud",
+      "passSec": 91.48931000971817,
+      "pos": "C",
+      "r_sec_raw": 0.4581005586592179,
+      "r_sec_used": 0.4118879509060816,
+      "vol": 1.6405295315682282
+    },
+    {
+      "TIME_OF_POSS": 83.9,
+      "handle": 42.18172983479106,
+      "name": "Precious Achiuwa",
+      "passSec": 97.3607061872368,
+      "pos": "SF",
+      "r_sec_raw": 0.5125148986889153,
+      "r_sec_used": 0.41439927671561333,
+      "vol": 1.7308882521489972
+    },
+    {
+      "TIME_OF_POSS": 75.9,
+      "handle": 42.42468415937804,
+      "name": "Myles Turner",
+      "passSec": 86.32248137350177,
+      "pos": "C",
+      "r_sec_raw": 0.4479578392621871,
+      "r_sec_used": 0.39947546294653097,
+      "vol": 1.42907949790795
+    },
+    {
+      "TIME_OF_POSS": 126.1,
+      "handle": 42.667638483965014,
+      "name": "Kyle Kuzma",
+      "passSec": 66.7201166180758,
+      "pos": "SF",
+      "r_sec_raw": 0.49960348929421095,
+      "r_sec_used": 0.43687962548359005,
+      "vol": 2.5136212624584715
+    },
+    {
+      "TIME_OF_POSS": 161.3,
+      "handle": 42.91059280855199,
+      "name": "Karl-Anthony Towns",
+      "passSec": 68.66375121477162,
+      "pos": "C",
+      "r_sec_raw": 0.5021698698078115,
+      "r_sec_used": 0.4312288004982709,
+      "vol": 2.50077519379845
+    },
+    {
+      "TIME_OF_POSS": 70.4,
+      "handle": 43.15354713313897,
+      "name": "Jay Huff",
+      "passSec": 85.61791383219955,
+      "pos": "C",
+      "r_sec_raw": 0.3977272727272727,
+      "r_sec_used": 0.3832176388531712,
+      "vol": 1.4743455497382199
+    },
+    {
+      "TIME_OF_POSS": 99.7,
+      "handle": 43.39650145772595,
+      "name": "Jaren Jackson Jr.",
+      "passSec": 83.2693553611921,
+      "pos": "PF",
+      "r_sec_raw": 0.5015045135406219,
+      "r_sec_used": 0.42696577430039817,
+      "vol": 2.4668041237113405
+    },
+    {
+      "TIME_OF_POSS": 58.7,
+      "handle": 43.63945578231292,
+      "name": "Dominick Barlow",
+      "passSec": 91.95902170391966,
+      "pos": "PF",
+      "r_sec_raw": 0.3918228279386712,
+      "r_sec_used": 0.36584911267102405,
+      "vol": 1.2511545293072825
+    },
+    {
+      "TIME_OF_POSS": 55.2,
+      "handle": 43.882410106899904,
+      "name": "Ryan Kalkbrenner",
+      "passSec": 91.25445416261744,
+      "pos": "C",
+      "r_sec_raw": 0.3804347826086956,
+      "r_sec_used": 0.36262416496714367,
+      "vol": 1.3436105476673428
+    },
+    {
+      "TIME_OF_POSS": 59.2,
+      "handle": 44.12536443148688,
+      "name": "Marvin Bagley III",
+      "passSec": 88.67103984450924,
+      "pos": "PF",
+      "r_sec_raw": 0.4054054054054054,
+      "r_sec_used": 0.37860441055203414,
+      "vol": 1.7745212323064115
+    }
+  ],
+  "boundaries": {
+    "2020-21": {
+      "D1": "2021-03-01",
+      "H2From": "2021-03-02",
+      "gamesOnD1": 7,
+      "gamesOnD1InRuleH2": 4,
+      "nGames": 1080,
+      "nH1ByDate": 508,
+      "nH1Rule": 504,
+      "nH2ByDate": 572,
+      "seasonFirst": "2020-12-22",
+      "seasonLast": "2021-05-16"
+    },
+    "2021-22": {
+      "D1": "2022-01-07",
+      "H2From": "2022-01-08",
+      "gamesOnD1": 9,
+      "gamesOnD1InRuleH2": 5,
+      "nGames": 1230,
+      "nH1ByDate": 579,
+      "nH1Rule": 574,
+      "nH2ByDate": 651,
+      "seasonFirst": "2021-10-19",
+      "seasonLast": "2022-04-10"
+    },
+    "2022-23": {
+      "D1": "2023-01-04",
+      "H2From": "2023-01-05",
+      "gamesOnD1": 12,
+      "gamesOnD1InRuleH2": 1,
+      "nGames": 1230,
+      "nH1ByDate": 575,
+      "nH1Rule": 574,
+      "nH2ByDate": 655,
+      "seasonFirst": "2022-10-18",
+      "seasonLast": "2023-04-09"
+    },
+    "2023-24": {
+      "D1": "2024-01-13",
+      "H2From": "2024-01-14",
+      "gamesOnD1": 8,
+      "gamesOnD1InRuleH2": 5,
+      "nGames": 1230,
+      "nH1ByDate": 579,
+      "nH1Rule": 574,
+      "nH2ByDate": 651,
+      "seasonFirst": "2023-10-24",
+      "seasonLast": "2024-04-14"
+    },
+    "2024-25": {
+      "D1": "2025-01-13",
+      "H2From": "2025-01-14",
+      "gamesOnD1": 6,
+      "gamesOnD1InRuleH2": 5,
+      "nGames": 1230,
+      "nH1ByDate": 579,
+      "nH1Rule": 574,
+      "nH2ByDate": 651,
+      "seasonFirst": "2024-10-22",
+      "seasonLast": "2025-04-13"
+    },
+    "2025-26": {
+      "D1": "2026-01-11",
+      "H2From": "2026-01-12",
+      "gamesOnD1": 10,
+      "gamesOnD1InRuleH2": 8,
+      "nGames": 1230,
+      "nH1ByDate": 582,
+      "nH1Rule": 574,
+      "nH2ByDate": 648,
+      "seasonFirst": "2025-10-21",
+      "seasonLast": "2026-04-12"
+    }
+  },
+  "cache": {
+    "2020-21": {
+      "leagueCtl": 11447,
+      "leaguePassDen": 628681,
+      "leaguePassTov": 14242,
+      "leagueTOF": 44852.6,
+      "pbpGamesNotInHalves": 0,
+      "pbpTovNotInTracking": {
+        "ctl": 0,
+        "pass": 0
+      }
+    },
+    "2021-22": {
+      "leagueCtl": 12471,
+      "leaguePassDen": 713924,
+      "leaguePassTov": 16201,
+      "leagueTOF": 51057.8,
+      "pbpGamesNotInHalves": 0,
+      "pbpTovNotInTracking": {
+        "ctl": 0,
+        "pass": 0
+      }
+    },
+    "2022-23": {
+      "leagueCtl": 13627,
+      "leaguePassDen": 706708,
+      "leaguePassTov": 15523,
+      "leagueTOF": 51722.9,
+      "pbpGamesNotInHalves": 0,
+      "pbpTovNotInTracking": {
+        "ctl": 0,
+        "pass": 0
+      }
+    },
+    "2023-24": {
+      "leagueCtl": 12842,
+      "leaguePassDen": 701982,
+      "leaguePassTov": 15629,
+      "leagueTOF": 50422.9,
+      "pbpGamesNotInHalves": 0,
+      "pbpTovNotInTracking": {
+        "ctl": 0,
+        "pass": 0
+      }
+    },
+    "2024-25": {
+      "leagueCtl": 13419,
+      "leaguePassDen": 730812,
+      "leaguePassTov": 16795,
+      "leagueTOF": 86136.1,
+      "pbpGamesNotInHalves": 0,
+      "pbpTovNotInTracking": {
+        "ctl": 0,
+        "pass": 0
+      }
+    },
+    "2025-26": {
+      "leagueCtl": 13686,
+      "leaguePassDen": 725196,
+      "leaguePassTov": 16910,
+      "leagueTOF": 59275.4,
+      "pbpGamesNotInHalves": 0,
+      "pbpTovNotInTracking": {
+        "ctl": 0,
+        "pass": 0
+      }
+    }
+  },
+  "fits": {
+    "passSec": {
+      "b": {
+        "k": 362.03867196751236,
+        "prior": "position",
+        "trainMae": 0.005967288517333419
+      },
+      "bAll": {
+        "league": {
+          "k": 256.0,
+          "prior": "league",
+          "trainMae": 0.0060846665200204675
+        },
+        "position": {
+          "k": 362.03867196751236,
+          "prior": "position",
+          "trainMae": 0.005967288517333419
+        }
+      },
+      "c": {
+        "k": 1024.0,
+        "kh": 512.0,
+        "lam": 1.0,
+        "prior": "position",
+        "trainMae": 0.005686121402043926
+      },
+      "cAll": {
+        "league": {
+          "k": 724.0773439350247,
+          "kh": 512.0,
+          "lam": 1.0,
+          "prior": "league",
+          "trainMae": 0.005771943474934837
+        },
+        "position": {
+          "k": 1024.0,
+          "kh": 512.0,
+          "lam": 1.0,
+          "prior": "position",
+          "trainMae": 0.005686121402043926
+        }
+      },
+      "params": {
+        "k": 1024.0,
+        "kh": 512.0,
+        "lam": 1.0,
+        "prior": "position",
+        "trainMae": 0.005686121402043926
+      },
+      "selected": "c",
+      "trainMae": {
+        "a": 0.007691205010743931,
+        "b": 0.005967288517333419,
+        "c": 0.005686121402043926
+      },
+      "trainN": 2053
+    },
+    "rsec": {
+      "b": {
+        "k": 45.254833995939045,
+        "prior": "position",
+        "trainMae": 0.07493240157444417
+      },
+      "bAll": {
+        "league": {
+          "k": 22.627416997969522,
+          "prior": "league",
+          "trainMae": 0.0793167692903163
+        },
+        "position": {
+          "k": 45.254833995939045,
+          "prior": "position",
+          "trainMae": 0.07493240157444417
+        }
+      },
+      "c": {
+        "k": 64.0,
+        "kh": 256.0,
+        "lam": 0.2,
+        "prior": "position",
+        "trainMae": 0.07404939425871528
+      },
+      "cAll": {
+        "league": {
+          "k": 32.0,
+          "kh": 128.0,
+          "lam": 0.2,
+          "prior": "league",
+          "trainMae": 0.07757481873724008
+        },
+        "position": {
+          "k": 64.0,
+          "kh": 256.0,
+          "lam": 0.2,
+          "prior": "position",
+          "trainMae": 0.07404939425871528
+        }
+      },
+      "params": {
+        "k": 64.0,
+        "kh": 256.0,
+        "lam": 0.2,
+        "prior": "position",
+        "trainMae": 0.07404939425871528
+      },
+      "selected": "c",
+      "trainMae": {
+        "a": 0.10201570544712553,
+        "b": 0.07493240157444417,
+        "c": 0.07404939425871528
+      },
+      "trainN": 1633
+    }
+  },
+  "g5": [
+    {
+      "TIME_OF_POSS": 518.2,
+      "ctlTov": 75,
+      "handle": 96.89099449303531,
+      "inPool": true,
+      "name": "Luka Dončić",
+      "passSec": 40.0,
+      "passTov": 169,
+      "passes": 3391,
+      "query": "Doncic",
+      "r_sec_raw": 0.14473176379776148,
+      "r_sec_used": 0.14632556746970915,
+      "rankHandle": 12,
+      "rankPassSec": 252,
+      "vol": 8.149934469200526
+    },
+    {
+      "TIME_OF_POSS": 514.5,
+      "ctlTov": 59,
+      "handle": 98.76984126984127,
+      "inPool": true,
+      "name": "Shai Gilgeous-Alexander",
+      "passSec": 54.815354713313894,
+      "passTov": 76,
+      "passes": 2593,
+      "query": "Gilgeous-Alexander",
+      "r_sec_raw": 0.11467444120505345,
+      "r_sec_used": 0.11466369719723359,
+      "rankHandle": 4,
+      "rankPassSec": 189,
+      "vol": 8.199203187250996
+    },
+    {
+      "TIME_OF_POSS": 696.3,
+      "ctlTov": 59,
+      "handle": 99.0,
+      "inPool": true,
+      "name": "Jalen Brunson",
+      "passSec": 71.05685131195335,
+      "passTov": 107,
+      "passes": 4666,
+      "query": "Brunson",
+      "r_sec_raw": 0.08473359184259659,
+      "r_sec_used": 0.08447988867823644,
+      "rankHandle": 1,
+      "rankPassSec": 122,
+      "vol": 9.678301158301158
+    },
+    {
+      "TIME_OF_POSS": 321.8,
+      "ctlTov": 76,
+      "handle": 82.56478781988986,
+      "inPool": true,
+      "name": "Nikola Jokić",
+      "passSec": 48.74149659863946,
+      "passTov": 151,
+      "passes": 4736,
+      "query": "Jokic",
+      "r_sec_raw": 0.23617153511497824,
+      "r_sec_used": 0.23207956794976706,
+      "rankHandle": 73,
+      "rankPassSec": 214,
+      "vol": 5.114701986754967
+    },
+    {
+      "TIME_OF_POSS": 467.8,
+      "ctlTov": 54,
+      "handle": 94.30758017492711,
+      "inPool": true,
+      "name": "Derrick White",
+      "passSec": 86.08762552640104,
+      "passTov": 77,
+      "passes": 4434,
+      "query": "Derrick White",
+      "r_sec_raw": 0.11543394613082514,
+      "r_sec_used": 0.11618434299004933,
+      "rankHandle": 23,
+      "rankPassSec": 58,
+      "vol": 6.415542857142857
+    },
+    {
+      "TIME_OF_POSS": 85.8,
+      "ctlTov": 12,
+      "handle": 69.14965986394557,
+      "inPool": true,
+      "name": "Sam Hauser",
+      "passSec": 99.0,
+      "passTov": 17,
+      "passes": 2056,
+      "query": "Hauser",
+      "r_sec_raw": 0.13986013986013987,
+      "r_sec_used": 0.18267503463854776,
+      "rankHandle": 130,
+      "rankPassSec": 3,
+      "vol": 1.5971044467425024
+    },
+    {
+      "TIME_OF_POSS": 17.5,
+      "ctlTov": 6,
+      "handle": 45.947521865889215,
+      "inPool": false,
+      "name": "Yanic Konan Niederhäuser",
+      "passSec": 74.46226109491415,
+      "passTov": 8,
+      "passes": 334,
+      "query": "Hauser",
+      "r_sec_raw": 0.34285714285714286,
+      "r_sec_used": 0.3463165701114543,
+      "rankHandle": null,
+      "rankPassSec": null,
+      "vol": 1.4858490566037734
+    },
+    {
+      "TIME_OF_POSS": 111.3,
+      "ctlTov": 44,
+      "handle": 45.583090379008745,
+      "inPool": true,
+      "name": "Rudy Gobert",
+      "passSec": 95.95157110463234,
+      "passTov": 37,
+      "passes": 2623,
+      "query": "Gobert",
+      "r_sec_raw": 0.3953279424977538,
+      "r_sec_used": 0.35978006624543424,
+      "rankHandle": 227,
+      "rankPassSec": 16,
+      "vol": 1.6835294117647057
+    },
+    {
+      "TIME_OF_POSS": 92.0,
+      "ctlTov": 15,
+      "handle": 79.8639455782313,
+      "inPool": false,
+      "name": "Alex Caruso",
+      "passSec": 67.08454810495627,
+      "passTov": 32,
+      "passes": 1229,
+      "query": "Caruso",
+      "r_sec_raw": 0.16304347826086957,
+      "r_sec_used": 0.16680100690814442,
+      "rankHandle": null,
+      "rankPassSec": null,
+      "vol": 3.2470588235294118
+    },
+    {
+      "TIME_OF_POSS": 386.8,
+      "ctlTov": 59,
+      "handle": 95.01214771622935,
+      "inPool": true,
+      "name": "Russell Westbrook",
+      "passSec": 40.0,
+      "passTov": 146,
+      "passes": 3087,
+      "query": "Westbrook",
+      "r_sec_raw": 0.15253360910031025,
+      "r_sec_used": 0.15535285323938802,
+      "rankHandle": 20,
+      "rankPassSec": 250,
+      "vol": 7.514732865623314
+    },
+    {
+      "TIME_OF_POSS": 479.0,
+      "ctlTov": 48,
+      "handle": 96.42128279883381,
+      "inPool": true,
+      "name": "Payton Pritchard",
+      "passSec": 97.59556203433755,
+      "passTov": 47,
+      "passes": 4090,
+      "query": "Pritchard",
+      "r_sec_raw": 0.10020876826722339,
+      "r_sec_used": 0.10120680991373053,
+      "rankHandle": 14,
+      "rankPassSec": 9,
+      "vol": 6.746478873239437
+    },
+    {
+      "TIME_OF_POSS": 121.2,
+      "ctlTov": 30,
+      "handle": 77.2805312601231,
+      "inPool": false,
+      "name": "Jared McCain",
+      "passSec": 80.80336896663427,
+      "passTov": 21,
+      "passes": 1292,
+      "query": "McCain",
+      "r_sec_raw": 0.24752475247524752,
+      "r_sec_used": 0.2163753182144466,
+      "rankHandle": null,
+      "rankPassSec": null,
+      "vol": 3.761379310344828
+    }
+  ],
+  "h1": {
+    "attr": "r_sec",
+    "ci90": [
+      -0.03343888761198377,
+      -0.019077136556427347
+    ],
+    "diffSelMinusA": -0.02609077739450426,
+    "infoOnly": {
+      "b": {
+        "ci90": [
+          -0.030244617068332053,
+          -0.01643576427800769
+        ],
+        "diffMinusA": -0.02322067491073085
+      },
+      "c": {
+        "ci90": [
+          -0.03343888761198377,
+          -0.019077136556427347
+        ],
+        "diffMinusA": -0.02609077739450426
+      }
+    },
+    "mae": {
+      "a": 0.10103400323689353,
+      "b": 0.07781332832616267,
+      "c": 0.07494322584238926
+    },
+    "n": 361,
+    "pass": true,
+    "selected": "c"
+  },
+  "h2": {
+    "attr": "passSec",
+    "ci90": [
+      -0.0026008554850569946,
+      -0.0016184751195317754
+    ],
+    "diffSelMinusA": -0.0020767150335066938,
+    "infoOnly": {
+      "b": {
+        "ci90": [
+          -0.0020662257936896805,
+          -0.0011592906162383842
+        ],
+        "diffMinusA": -0.0015896396898140226
+      },
+      "c": {
+        "ci90": [
+          -0.0026008554850569946,
+          -0.0016184751195317754
+        ],
+        "diffMinusA": -0.0020767150335066938
+      }
+    },
+    "mae": {
+      "a": 0.007796691072533938,
+      "b": 0.0062070513827199155,
+      "c": 0.005719976039027245
+    },
+    "n": 441,
+    "pass": true,
+    "selected": "c"
+  },
+  "h3": {
+    "after": {
+      "ranking.csv": "22cd49cf03262d0dd0ea7ee3455dd0eab5bb481aefceaaded2f17343504f8494",
+      "summary.json": "63746cdccd75d0d8f9c35573193277f269adb3d71fd81eb46ec269623008ba6b"
+    },
+    "before": {
+      "ranking.csv": "22cd49cf03262d0dd0ea7ee3455dd0eab5bb481aefceaaded2f17343504f8494",
+      "summary.json": "63746cdccd75d0d8f9c35573193277f269adb3d71fd81eb46ec269623008ba6b"
+    },
+    "note": "本腳本只讀 card 0.2.0 檔，不寫入；新欄位只在 handle.csv",
+    "pass": true
+  },
+  "manifest": {
+    "2020-21": {
+      "games": 1080,
+      "rows": 15089,
+      "sha256": "8a36513471fb5b82833b337167ba0df2eab37f0345d22e4716b64677cf10e240"
+    },
+    "2021-22": {
+      "games": 1230,
+      "rows": 17096,
+      "sha256": "045a957c33879d415952b653177333d7f0d2f4ac228f76de2875375e10f4f1b7"
+    },
+    "2022-23": {
+      "games": 1230,
+      "rows": 17285,
+      "sha256": "6e07ce8c7edc03008bfa4db38b7d342a7360bc176260a4be728d82d431b9a1c4"
+    },
+    "2023-24": {
+      "games": 1230,
+      "rows": 16979,
+      "sha256": "111ec171d0168dfe19b1f0275e73f25abe3f2f41919524faad51fed52c6a0b07"
+    },
+    "2024-25": {
+      "games": 1229,
+      "rows": 17431,
+      "sha256": "9819f058273a0b8142cdc58e38fe9840b47d1609bc195a07e51fe7a52d9b9b34"
+    },
+    "2025-26": {
+      "games": 1227,
+      "rows": 17799,
+      "sha256": "9bae205674090b2e14be1faff82b2659a22c0be14d2e7a000662f143c267c382"
+    }
+  },
+  "production": {
+    "cardPlayers": 582,
+    "cardPlayersNotInTracking": [],
+    "leagueRate": {
+      "passSec": 0.02331783407520174,
+      "rsec": 0.2308918674978279
+    },
+    "poolSize": 252
+  },
+  "rho2k27": {
+    "handle_allCard": {
+      "col": "Ball Handle",
+      "n": 574,
+      "rho": 0.7340418776133103
+    },
+    "handle_pool": {
+      "col": "Ball Handle",
+      "n": 249,
+      "rho": 0.7394338667962527
+    },
+    "passSec_allCard": {
+      "col": "Pass Accuracy",
+      "n": 574,
+      "rho": -0.4001716740840987
+    },
+    "passSec_pool": {
+      "col": "Pass Accuracy",
+      "n": 249,
+      "rho": -0.46638345963024747
+    }
+  },
+  "seasons": {
+    "fit": [
+      "2020-21",
+      "2021-22",
+      "2022-23",
+      "2023-24",
+      "2024-25"
+    ],
+    "test": "2025-26"
+  },
+  "sha256": {
+    "addendum": "eb84d28baeec7baefc0360fbaa507c25aff5ad3da43c2168cd1a43fba01e2e22",
+    "handle.csv": "2ee470e6c92df01c609500a951dfb7332cac831ce53c524e60ffc82e1b5d10bd",
+    "preregistration.md": "fc6e375e6fc4abc808655f6154fcd3dafb652d8b1f565f7a84b89e8b2214e441"
+  },
+  "subtypes": {
+    "2020-21": {
+      "detail": {
+        "cls_ctl": 11447,
+        "cls_other": 4195,
+        "cls_pass": 14242,
+        "of_charge": 1127,
+        "of_total": 3633,
+        "oob_total": 5787
+      },
+      "subType": {
+        "": 39,
+        "3-second-violation": 152,
+        "5-second-back-to-the-basket": 3,
+        "5-second-violation": 31,
+        "8-second-violation": 27,
+        "backcourt": 179,
+        "bad pass": 10728,
+        "discontinued dribble": 56,
+        "double dribble": 97,
+        "excess timeout": 2,
+        "illegal assist": 3,
+        "illegal-out-of-bounds-screen": 1,
+        "inbound": 23,
+        "jumpball violation": 3,
+        "laneviolation": 10,
+        "lost ball": 5847,
+        "offensive foul": 3633,
+        "offensive goaltending": 118,
+        "offensive-kicked-ball": 18,
+        "out-of-bounds": 5787,
+        "palming": 73,
+        "shot clock": 1258,
+        "swinging elbows": 1,
+        "traveling": 1795
+      }
+    },
+    "2021-22": {
+      "detail": {
+        "cls_ctl": 12471,
+        "cls_other": 5168,
+        "cls_pass": 16201,
+        "of_charge": 1105,
+        "of_total": 4077,
+        "oob_total": 6627
+      },
+      "subType": {
+        "": 44,
+        "3-second-violation": 199,
+        "5-second-back-to-the-basket": 2,
+        "5-second-violation": 49,
+        "8-second-violation": 37,
+        "backcourt": 217,
+        "bad pass": 12287,
+        "basket-from-below": 4,
+        "discontinued dribble": 43,
+        "double dribble": 78,
+        "excess timeout": 1,
+        "illegal assist": 14,
+        "inbound": 20,
+        "jumpball violation": 2,
+        "laneviolation": 14,
+        "lost ball": 6691,
+        "offensive foul": 4077,
+        "offensive goaltending": 133,
+        "offensive-kicked-ball": 23,
+        "out-of-bounds": 6627,
+        "palming": 67,
+        "punched ball": 3,
+        "shot clock": 1650,
+        "too-many-players": 1,
+        "traveling": 1557
+      }
+    },
+    "2022-23": {
+      "detail": {
+        "cls_ctl": 13627,
+        "cls_other": 5519,
+        "cls_pass": 15523,
+        "of_charge": 1220,
+        "of_total": 4738,
+        "oob_total": 6407
+      },
+      "subType": {
+        "": 9,
+        "10-second-freethrow-shooter": 1,
+        "3-second-violation": 149,
+        "5-second-back-to-the-basket": 1,
+        "5-second-violation": 51,
+        "8-second-violation": 35,
+        "backcourt": 213,
+        "bad pass": 11666,
+        "basket-from-below": 2,
+        "discontinued dribble": 115,
+        "double dribble": 93,
+        "excess timeout": 2,
+        "illegal assist": 16,
+        "illegal-out-of-bounds-screen": 1,
+        "inbound": 27,
+        "jumpball violation": 3,
+        "laneviolation": 15,
+        "lost ball": 6508,
+        "offensive foul": 4738,
+        "offensive goaltending": 115,
+        "offensive-kicked-ball": 26,
+        "out-of-bounds": 6407,
+        "palming": 160,
+        "punched ball": 1,
+        "shot clock": 1547,
+        "traveling": 2768
+      }
+    },
+    "2023-24": {
+      "detail": {
+        "cls_ctl": 12842,
+        "cls_other": 4996,
+        "cls_pass": 15629,
+        "of_charge": 996,
+        "of_total": 3891,
+        "oob_total": 6623
+      },
+      "subType": {
+        "": 1,
+        "10-second-freethrow-shooter": 1,
+        "3-second-violation": 159,
+        "5-second-back-to-the-basket": 3,
+        "5-second-violation": 58,
+        "8-second-violation": 52,
+        "backcourt": 194,
+        "bad pass": 11691,
+        "basket-from-below": 1,
+        "discontinued dribble": 55,
+        "double dribble": 86,
+        "excess timeout": 2,
+        "illegal assist": 8,
+        "illegal-out-of-bounds-screen": 2,
+        "inbound": 20,
+        "jumpball violation": 3,
+        "laneviolation": 11,
+        "lost ball": 6932,
+        "offensive foul": 3891,
+        "offensive goaltending": 122,
+        "offensive-kicked-ball": 33,
+        "out-of-bounds": 6623,
+        "palming": 59,
+        "punched ball": 3,
+        "shot clock": 1621,
+        "swinging elbows": 1,
+        "traveling": 1835
+      }
+    },
+    "2024-25": {
+      "detail": {
+        "cls_ctl": 13419,
+        "cls_other": 4921,
+        "cls_pass": 16795,
+        "of_charge": 801,
+        "of_nofoul": 1,
+        "of_total": 3426,
+        "oob_total": 6984
+      },
+      "subType": {
+        "": 1,
+        "10-second-freethrow-shooter": 1,
+        "3-second-violation": 114,
+        "5-second-back-to-the-basket": 2,
+        "5-second-violation": 63,
+        "8-second-violation": 61,
+        "backcourt": 261,
+        "bad pass": 12658,
+        "basket-from-below": 3,
+        "discontinued dribble": 44,
+        "double dribble": 76,
+        "excess timeout": 3,
+        "illegal assist": 10,
+        "illegal-out-of-bounds-screen": 2,
+        "inbound": 26,
+        "jumpball violation": 1,
+        "laneviolation": 7,
+        "lost ball": 7778,
+        "offensive foul": 3426,
+        "offensive goaltending": 127,
+        "offensive-kicked-ball": 45,
+        "out-of-bounds": 6984,
+        "palming": 61,
+        "punched ball": 3,
+        "shot clock": 1826,
+        "too-many-players": 1,
+        "traveling": 1551
+      }
+    },
+    "2025-26": {
+      "detail": {
+        "cls_ctl": 13686,
+        "cls_other": 5009,
+        "cls_pass": 16910,
+        "of_charge": 739,
+        "of_total": 3618,
+        "oob_total": 7142
+      },
+      "subType": {
+        "": 3,
+        "10-second-freethrow-shooter": 2,
+        "3-second-violation": 123,
+        "5-second-back-to-the-basket": 3,
+        "5-second-violation": 53,
+        "8-second-violation": 49,
+        "backcourt": 284,
+        "bad pass": 12723,
+        "discontinued dribble": 49,
+        "double dribble": 95,
+        "excess timeout": 1,
+        "illegal assist": 9,
+        "inbound": 27,
+        "jumpball violation": 4,
+        "laneviolation": 21,
+        "lost ball": 8210,
+        "offensive foul": 3618,
+        "offensive goaltending": 145,
+        "offensive-kicked-ball": 35,
+        "out-of-bounds": 7142,
+        "palming": 53,
+        "punched ball": 1,
+        "shot clock": 1653,
+        "too-many-players": 1,
+        "traveling": 1301
+      }
+    }
+  },
+  "tests": {
+    "passSec": {
+      "ci90": [
+        -0.0026008554850569946,
+        -0.0016184751195317754
+      ],
+      "diffSelMinusA": -0.0020767150335066938,
+      "infoOnly": {
+        "b": {
+          "ci90": [
+            -0.0020662257936896805,
+            -0.0011592906162383842
+          ],
+          "diffMinusA": -0.0015896396898140226
+        },
+        "c": {
+          "ci90": [
+            -0.0026008554850569946,
+            -0.0016184751195317754
+          ],
+          "diffMinusA": -0.0020767150335066938
+        }
+      },
+      "mae": {
+        "a": 0.007796691072533938,
+        "b": 0.0062070513827199155,
+        "c": 0.005719976039027245
+      },
+      "n": 441,
+      "pass": true,
+      "selected": "c"
+    },
+    "rsec": {
+      "ci90": [
+        -0.03343888761198377,
+        -0.019077136556427347
+      ],
+      "diffSelMinusA": -0.02609077739450426,
+      "infoOnly": {
+        "b": {
+          "ci90": [
+            -0.030244617068332053,
+            -0.01643576427800769
+          ],
+          "diffMinusA": -0.02322067491073085
+        },
+        "c": {
+          "ci90": [
+            -0.03343888761198377,
+            -0.019077136556427347
+          ],
+          "diffMinusA": -0.02609077739450426
+        }
+      },
+      "mae": {
+        "a": 0.10103400323689353,
+        "b": 0.07781332832616267,
+        "c": 0.07494322584238926
+      },
+      "n": 361,
+      "pass": true,
+      "selected": "c"
+    }
+  },
+  "top20": [
+    {
+      "TIME_OF_POSS": 696.3,
+      "handle": 99.0,
+      "name": "Jalen Brunson",
+      "passSec": 71.05685131195335,
+      "pos": "PG",
+      "r_sec_raw": 0.08473359184259659,
+      "r_sec_used": 0.08447988867823644,
+      "vol": 9.678301158301158
+    },
+    {
+      "TIME_OF_POSS": 492.7,
+      "handle": 99.0,
+      "name": "Andrew Nembhard",
+      "passSec": 86.79219306770327,
+      "pos": "SG",
+      "r_sec_raw": 0.13598538664501725,
+      "r_sec_used": 0.13923193415279145,
+      "vol": 9.931243001119821
+    },
+    {
+      "TIME_OF_POSS": 472.3,
+      "handle": 99.0,
+      "name": "Immanuel Quickley",
+      "passSec": 87.73161645610625,
+      "pos": "PG",
+      "r_sec_raw": 0.07410544145670125,
+      "r_sec_used": 0.07884584074221926,
+      "vol": 7.6211564320932315
+    },
+    {
+      "TIME_OF_POSS": 514.5,
+      "handle": 98.76984126984127,
+      "name": "Shai Gilgeous-Alexander",
+      "passSec": 54.815354713313894,
+      "pos": "SG",
+      "r_sec_raw": 0.11467444120505345,
+      "r_sec_used": 0.11466369719723359,
+      "vol": 8.199203187250996
+    },
+    {
+      "TIME_OF_POSS": 378.3,
+      "handle": 98.53498542274052,
+      "name": "Isaiah Collier",
+      "passSec": 51.413994169096206,
+      "pos": "SG",
+      "r_sec_raw": 0.1506740681998414,
+      "r_sec_used": 0.1520202617469922,
+      "vol": 8.977455504284773
+    },
+    {
+      "TIME_OF_POSS": 497.2,
+      "handle": 98.30012957563977,
+      "name": "LaMelo Ball",
+      "passSec": 45.34013605442177,
+      "pos": "SF",
+      "r_sec_raw": 0.14481094127111827,
+      "r_sec_used": 0.14744191889886132,
+      "vol": 8.87416955875062
+    },
+    {
+      "TIME_OF_POSS": 535.0,
+      "handle": 98.06527372853904,
+      "name": "Cade Cunningham",
+      "passSec": 42.42468415937804,
+      "pos": "SG",
+      "r_sec_raw": 0.14766355140186915,
+      "r_sec_used": 0.1489717735291561,
+      "vol": 8.867403314917127
+    },
+    {
+      "TIME_OF_POSS": 564.4,
+      "handle": 97.8304178814383,
+      "name": "James Harden",
+      "passSec": 40.481049562682216,
+      "pos": "SG",
+      "r_sec_raw": 0.13111268603827073,
+      "r_sec_used": 0.13162896780681835,
+      "vol": 8.334044298605415
+    },
+    {
+      "TIME_OF_POSS": 307.4,
+      "handle": 97.59556203433755,
+      "name": "Kevin Porter Jr.",
+      "passSec": 58.21671525753158,
+      "pos": "SG",
+      "r_sec_raw": 0.1561483409238777,
+      "r_sec_used": 0.15954460114247238,
+      "vol": 8.775892149088024
+    },
+    {
+      "TIME_OF_POSS": 588.8,
+      "handle": 97.3607061872368,
+      "name": "Tyrese Maxey",
+      "passSec": 83.97392290249434,
+      "pos": "PG",
+      "r_sec_raw": 0.12907608695652176,
+      "r_sec_used": 0.12709321272968238,
+      "vol": 7.965727170236752
+    },
+    {
+      "TIME_OF_POSS": 329.1,
+      "handle": 97.12585034013605,
+      "name": "Jamal Shead",
+      "passSec": 57.0019436345967,
+      "pos": "PG",
+      "r_sec_raw": 0.05469462169553327,
+      "r_sec_used": 0.0619518247019342,
+      "vol": 6.397192224622031
+    },
+    {
+      "TIME_OF_POSS": 518.2,
+      "handle": 96.89099449303531,
+      "name": "Luka Dončić",
+      "passSec": 40.0,
+      "pos": "SF",
+      "r_sec_raw": 0.14473176379776148,
+      "r_sec_used": 0.14632556746970915,
+      "vol": 8.149934469200526
+    },
+    {
+      "TIME_OF_POSS": 395.5,
+      "handle": 96.65613864593456,
+      "name": "Austin Reaves",
+      "passSec": 46.55490767735665,
+      "pos": "SG",
+      "r_sec_raw": 0.14917825537294563,
+      "r_sec_used": 0.14560848281582575,
+      "vol": 8.080590238365494
+    },
+    {
+      "TIME_OF_POSS": 479.0,
+      "handle": 96.42128279883381,
+      "name": "Payton Pritchard",
+      "passSec": 97.59556203433755,
+      "pos": "PG",
+      "r_sec_raw": 0.10020876826722339,
+      "r_sec_used": 0.10120680991373053,
+      "vol": 6.746478873239437
+    },
+    {
+      "TIME_OF_POSS": 493.4,
+      "handle": 96.18642695173307,
+      "name": "Jamal Murray",
+      "passSec": 49.22740524781341,
+      "pos": "SG",
+      "r_sec_raw": 0.0993109039319011,
+      "r_sec_used": 0.10141848917879562,
+      "vol": 6.697737556561086
+    },
+    {
+      "TIME_OF_POSS": 303.6,
+      "handle": 95.95157110463234,
+      "name": "Brandon Williams",
+      "passSec": 43.63945578231292,
+      "pos": "PG",
+      "r_sec_raw": 0.1416337285902503,
+      "r_sec_used": 0.137810581118852,
+      "vol": 7.470676691729324
+    },
+    {
+      "TIME_OF_POSS": 336.8,
+      "handle": 95.71671525753158,
+      "name": "Dennis Schröder",
+      "passSec": 65.99125364431487,
+      "pos": "PG",
+      "r_sec_raw": 0.13064133016627077,
+      "r_sec_used": 0.1255380967323374,
+      "vol": 7.149056603773586
+    },
+    {
+      "TIME_OF_POSS": 285.9,
+      "handle": 95.48185941043084,
+      "name": "Darius Garland",
+      "passSec": 42.667638483965014,
+      "pos": "PG",
+      "r_sec_raw": 0.15739769150052468,
+      "r_sec_used": 0.15191697075969604,
+      "vol": 7.658035714285714
+    },
+    {
+      "TIME_OF_POSS": 291.4,
+      "handle": 95.2470035633301,
+      "name": "Cam Spencer",
+      "passSec": 73.4054097829608,
+      "pos": "PG",
+      "r_sec_raw": 0.07892930679478381,
+      "r_sec_used": 0.08714118339651584,
+      "vol": 6.120420070011668
+    },
+    {
+      "TIME_OF_POSS": 386.8,
+      "handle": 95.01214771622935,
+      "name": "Russell Westbrook",
+      "passSec": 40.0,
+      "pos": "SG",
+      "r_sec_raw": 0.15253360910031025,
+      "r_sec_used": 0.15535285323938802,
+      "vol": 7.514732865623314
+    }
+  ],
+  "trackingSum": {
+    "maxAbsPasses_H1plusH2_minus_FULL": 0,
+    "maxAbsTOF_H1plusH2_minus_FULL": 0.10000000000002274
+  },
+  "unmatched2k27": [
+    "Cam Thomas",
+    "Chris Paul",
+    "Mo Bamba",
+    "Nate Williams",
+    "Nic Claxton",
+    "Svi Mykhailiuk",
+    "Taj Gibson"
+  ],
+  "used": {
+    "passSec": "c",
+    "rsec": "c"
+  }
+}

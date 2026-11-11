@@ -1,0 +1,16 @@
+JW live pos PF MIN 936
+PF OFF 2.28 {'long': np.float64(-0.41), 'mid': np.float64(0.07), 'short': np.float64(-0.09), 'ft': np.float64(0.09), 'drive': np.float64(-0.2), 'foulDraw': np.float64(0.34), 'tovSkill': np.float64(0.54), 'pass': np.float64(1.31), 'creation': np.float64(0.64)}
+SF OFF 1.93 {'long': np.float64(-0.33), 'mid': np.float64(0.07), 'short': np.float64(-0.11), 'ft': np.float64(0.09), 'drive': np.float64(-0.2), 'foulDraw': np.float64(0.34), 'tovSkill': np.float64(0.55), 'pass': np.float64(0.9), 'creation': np.float64(0.63)}
+SG OFF 1.55 {'long': np.float64(-0.31), 'mid': np.float64(0.07), 'short': np.float64(-0.09), 'ft': np.float64(0.09), 'drive': np.float64(-0.2), 'foulDraw': np.float64(0.34), 'tovSkill': np.float64(0.54), 'pass': np.float64(0.49), 'creation': np.float64(0.63)}
+attrs {'long': '55.8', 'mid': '71.7', 'short': '64.3', 'ft': '74.7', 'drive': '93.3', 'foulDraw': '83.7', 'tovSkill': '83.9', 'pass': '91.7', 'creation': '92.5'}
+live OFF (2.28, 1.31) rank 18 / 484
+2022-23 {'OBPM': (-0.4, 164, 434), 'DARKO_O': (-1.66, 380, 499), 'EPM_O': (1.03, 137, 390)}
+2023-24 {'OBPM': (1.9, 55, 443), 'DARKO_O': (-0.08, 152, 526), 'EPM_O': (1.94, 57, 389)}
+2024-25 {'OBPM': (2.7, 39, 443), 'DARKO_O': (1.83, 36, 524), 'EPM_O': (0.87, 153, 405)}
+2025-26 {'OBPM': (1.1, 87, 432), 'DARKO_O': (2.46, 27, 522), 'EPM_O': (0.61, 191, 419)}
+games 33 2025-11-28 … 2026-04-08
+gaps>10d [('2026-02-09', 23), ('2026-03-23', 40)]
+all {'G': 33, 'MPG': 28.4, 'PTS36': 21.6, 'FGA36': 17.1, 'FTA36': 5.0, 'AST36': 7.0, 'TOV36': 2.4, 'TS': 0.56, 'PM36': 8.8}
+2025-11-28 → 2026-01-17 {'G': 24, 'MPG': 29.7, 'PTS36': 20.4, 'FGA36': 17.0, 'FTA36': 4.2, 'AST36': 6.8, 'TOV36': 2.4, 'TS': 0.542, 'PM36': 6.7}
+2026-02-09 → 2026-02-11 {'G': 2, 'MPG': 22.0, 'PTS36': 41.7, 'FGA36': 23.7, 'FTA36': 14.7, 'AST36': 4.9, 'TOV36': 2.5, 'TS': 0.691, 'PM36': 7.4}
+2026-03-23 → 2026-04-08 {'G': 7, 'MPG': 25.9, 'PTS36': 21.5, 'FGA36': 16.1, 'FTA36': 5.4, 'AST36': 8.0, 'TOV36': 2.6, 'TS': 0.581, 'PM36': 17.5}

@@ -1,0 +1,88 @@
+{
+ "mode": "new",
+ "pass": true,
+ "n": 10,
+ "seconds": 372,
+ "rows": [
+  {
+   "id": 203935,
+   "name": "Marcus Smart",
+   "winsPer82_new": -0.25625000000000003,
+   "winsPer82_csv": -0.25625,
+   "csvEqual5dp": true,
+   "checkpointJsonIdentical": true
+  },
+  {
+   "id": 203999,
+   "name": "Nikola Jokić",
+   "winsPer82_new": 17.126041666666666,
+   "winsPer82_csv": 17.12604,
+   "csvEqual5dp": true,
+   "checkpointJsonIdentical": true
+  },
+  {
+   "id": 1628401,
+   "name": "Derrick White",
+   "winsPer82_new": 3.886458333333333,
+   "winsPer82_csv": 3.88646,
+   "csvEqual5dp": true,
+   "checkpointJsonIdentical": true
+  },
+  {
+   "id": 1628983,
+   "name": "Shai Gilgeous-Alexander",
+   "winsPer82_new": 14.136458333333334,
+   "winsPer82_csv": 14.13646,
+   "csvEqual5dp": true,
+   "checkpointJsonIdentical": true
+  },
+  {
+   "id": 1629651,
+   "name": "Nic Claxton",
+   "winsPer82_new": 6.619791666666667,
+   "winsPer82_csv": 6.61979,
+   "csvEqual5dp": true,
+   "checkpointJsonIdentical": true
+  },
+  {
+   "id": 1629652,
+   "name": "Luguentz Dort",
+   "winsPer82_new": -3.929166666666667,
+   "winsPer82_csv": -3.92917,
+   "csvEqual5dp": true,
+   "checkpointJsonIdentical": true
+  },
+  {
+   "id": 1630529,
+   "name": "Herbert Jones",
+   "winsPer82_new": -1.4947916666666667,
+   "winsPer82_csv": -1.49479,
+   "csvEqual5dp": true,
+   "checkpointJsonIdentical": true
+  },
+  {
+   "id": 1631105,
+   "name": "Jalen Duren",
+   "winsPer82_new": 8.926041666666666,
+   "winsPer82_csv": 8.92604,
+   "csvEqual5dp": true,
+   "checkpointJsonIdentical": true
+  },
+  {
+   "id": 1631109,
+   "name": "Mark Williams",
+   "winsPer82_new": 7.132291666666666,
+   "winsPer82_csv": 7.13229,
+   "csvEqual5dp": true,
+   "checkpointJsonIdentical": true
+  },
+  {
+   "id": 1641705,
+   "name": "Victor Wembanyama",
+   "winsPer82_new": 15.759375,
+   "winsPer82_csv": 15.75938,
+   "csvEqual5dp": true,
+   "checkpointJsonIdentical": true
+  }
+ ]
+}

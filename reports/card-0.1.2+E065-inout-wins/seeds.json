@@ -1,0 +1,54 @@
+{
+ "note": "E-065 WinImp seed list, fixed before any run (L-026). Job seed per draw = (baseSeed + imul(opponent*5+slot,1000003) + imul(i,7919))>>>0 as in reports/ovr-v53-2025-26/worker.mjs; i=0..samples-1, phase=i%2.",
+ "baseSeed": 20261028,
+ "samples": 16,
+ "sampleIndices": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15
+ ],
+ "opponents": 30,
+ "sides": [
+  0,
+  1
+ ],
+ "demo": {
+  "seeds": [
+   20261028,
+   20261029,
+   20261030,
+   20261031,
+   20261032,
+   20261033,
+   20261034,
+   20261035,
+   20261036,
+   20261037,
+   20261038,
+   20261039,
+   20261040,
+   20261041,
+   20261042,
+   20261043
+  ],
+  "note": "season replay seeds (16); same seeds for every arm of the demo (paired)"
+ },
+ "bootstrap": {
+  "unit": "opponent x seed-index cells (team+seed, G3)",
+  "resamples": 400,
+  "rngSeed": 65
+ }
+}

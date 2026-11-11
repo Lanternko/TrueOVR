@@ -1,0 +1,29 @@
+{
+ "version": "card 0.2.14b-cand",
+ "base": "card 0.2.13a＋MIX 加分 E-295 W1；取代對象 card 0.2.14a",
+ "players": 582,
+ "change": "E-295 臂 W1：MIX 加分的位置權重 w 與位置平均 m 都改 BBRef 2025-26 上場位置比例加權（c＝π_C＋0.243·π_PF），取代硬標籤；MP<200 往身高帶收縮、沒有 BBRef 用身高帶。其餘同 0.2.14a。候選卡，未取代正式卡；判定依 errata-1（G2 度量修正）。",
+ "bonus_population": {
+  "MIN>=500 非零": 193,
+  "MIN<500 非零": 108,
+  "零": 281
+ },
+ "bonus_max": 10.732,
+ "share_source_counts": {
+  "2025-26": 463,
+  "2025-26+shrink": 116,
+  "height": 3
+ },
+ "errata_near_cap_cap_ge_1": 0,
+ "sources_sha256": {
+  "card_0213a_ranking": "feb5c8023cd99f12413767160d3b98d119051c55ef6e200f26bca631460daf97",
+  "card_0214a_ranking": "ff1abb4722247faf3cd61c6cc28dcc547f2728e08486a3123b33747162b7d35f",
+  "E295_bonus_pick": "446cc0ebee135b1525921419f7aa6b814810248b5dc459f1114a51172e2c6465",
+  "E295_preregistration": "d7ba937b6dbd5537410e648d96dbb150111379e0e74973ae17d5c4a63f7a0b14",
+  "E295_results": "5d109f6883d36c0d30883d1a13ea275314afb8d65c51a80b5deb3d18343c199e",
+  "E295_errata1": "a336f2197f67d099e784cab0fd636408840a31891a40b9025504c98463254aef",
+  "mix_pool_cand": "13c1d3d012b7db1e834b8d4d42d767e630642e52535dfc006aaf4b82a6967876"
+ },
+ "ranking_csv_sha256": "5cbd7e190d2ce6311234a67a4d00201275dd198c806801a247a926ccbed4feab",
+ "build_command": "python -I -B -X utf8 reports/E295-mix-pos-continuous/e295_eval.py → errata_g2.py → reports/card-0.2.14b-cand/build_cand.py"
+}

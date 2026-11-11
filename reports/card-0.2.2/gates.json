@@ -1,0 +1,653 @@
+{
+ "c0a": {
+  "pass": true,
+  "primaryRankingIdentical": true,
+  "primaryPergameReplIdentical": true,
+  "cardBaseVsE070PrimaryByteIdentical": true,
+  "cardBaseVsE070PrimaryMaxAbsOvrDiff": 0.0,
+  "rows": 582,
+  "allFilesIdenticalVsE070cardsW075": {
+   "primary/ranking.csv": true,
+   "primary/pergame-repl.csv": true,
+   "primary/pred.csv": true,
+   "primary/pergame-main.csv": true,
+   "fitA/ranking.csv": true,
+   "fitA/pergame-repl.csv": true,
+   "fitA/pred.csv": true,
+   "fitA/pergame-main.csv": true,
+   "fitB/ranking.csv": true,
+   "fitB/pergame-repl.csv": true,
+   "fitB/pred.csv": true,
+   "fitB/pergame-main.csv": true
+  },
+  "sha256CardBase": "1ac8f99f13ea6eb56b58eb78da75de9aaa2d96040840e27fdf239c61ad7a682d",
+  "sha256E070Primary": "1ac8f99f13ea6eb56b58eb78da75de9aaa2d96040840e27fdf239c61ad7a682d"
+ },
+ "c0b": {
+  "pass": true,
+  "columnsDifferingP1VsBase": {
+   "rank": 562,
+   "ovr": 568,
+   "predictedPer36": 580,
+   "defenseBonus": 26,
+   "align": 412,
+   "pred0": 581,
+   "pr": 568,
+   "pressure": 578,
+   "gRepl": 582,
+   "ovr36": 563
+  },
+  "unexpectedColumns": [],
+  "nonDerivedNonPressureColumnsIdentical": true,
+  "foulDrawDiffersVsE071P1_players": 568,
+  "foulDrawDiffersVsE071P1_expected": "> 0",
+  "foulDrawDiffersVsCard020_players": 568
+ },
+ "c1": {
+  "pass": true,
+  "npmExit": 0
+ },
+ "c3": {
+  "pass": true,
+  "gatesPassed": {
+   "card0.2.0": 18,
+   "E070-w075": 18,
+   "card0.2.1": 18,
+   "base-switch-off": 18,
+   "card0.2.2": 18
+  },
+  "of": 19,
+  "rho2kRapmDef": {
+   "card0.2.0": [
+    0.6953224301281907,
+    0.813869992667118,
+    0.5572219340048653
+   ],
+   "E070-w075": [
+    0.6987005526899608,
+    0.8135757027648579,
+    0.5550578678325699
+   ],
+   "card0.2.1": [
+    0.6783857584962177,
+    0.8284377209178844,
+    0.5675188949730757
+   ],
+   "base-switch-off": [
+    0.6987005526899608,
+    0.8135757027648579,
+    0.5550578678325699
+   ],
+   "card0.2.2": [
+    0.6809913271279749,
+    0.8289104391225837,
+    0.5667053734759323
+   ]
+  }
+ },
+ "population": {
+  "v58CommonPlayers": 575,
+  "commonWithCards": 575,
+  "A_to_B_n": 389,
+  "B_to_A_n": 388,
+  "unionN": 395,
+  "threshold": 2500,
+  "minGamesEachHalf": 5
+ },
+ "rho": {
+  "byDirection": {
+   "AB": {
+    "n": 389,
+    "c020": 0.609420034289512,
+    "E070": 0.60988606178228,
+    "M": 0.6171779853994361,
+    "E071P1": 0.6173005061882173,
+    "Mbase": 0.60988606178228
+   },
+   "BA": {
+    "n": 388,
+    "c020": 0.5956782837879453,
+    "E070": 0.5965565477712945,
+    "M": 0.5941323337353831,
+    "E071P1": 0.5953275945202079,
+    "Mbase": 0.5965565477712945
+   }
+  },
+  "avg": {
+   "c020": 0.6025491590387286,
+   "E070": 0.6032213047767873,
+   "M": 0.6056551595674096,
+   "E071P1": 0.6063140503542126,
+   "Mbase": 0.6032213047767873
+  }
+ },
+ "bootstrap": {
+  "resamples": 2000,
+  "seed": 1,
+  "unit": "player (union of both directions)",
+  "results": {
+   "M-c020": {
+    "delta": 0.0031060005286809855,
+    "ci90": [
+     -0.00614153191151274,
+     0.012689478969240735
+    ],
+    "byDirectionDelta": {
+     "AB": 0.007757951109924166,
+     "BA": -0.001545950052562195
+    }
+   },
+   "M-E070": {
+    "delta": 0.0024338547906223584,
+    "ci90": [
+     -0.006740422288365744,
+     0.011967328815098007
+    ],
+    "byDirectionDelta": {
+     "AB": 0.0072919236171561375,
+     "BA": -0.0024242140359114206
+    }
+   },
+   "M-E071P1": {
+    "delta": -0.0006588907868029792,
+    "ci90": [
+     -0.002354304964154538,
+     0.0009640718857798378
+    ],
+    "byDirectionDelta": {
+     "AB": -0.00012252078878116635,
+     "BA": -0.001195260784824792
+    }
+   },
+   "E070-c020": {
+    "delta": 0.0006721457380586271,
+    "ci90": [
+     -0.0008938931603084538,
+     0.0022496501759991126
+    ],
+    "byDirectionDelta": {
+     "AB": 0.00046602749276802857,
+     "BA": 0.0008782639833492256
+    }
+   },
+   "E071P1-c020": {
+    "delta": 0.0037648913154839647,
+    "ci90": [
+     -0.005458071901530031,
+     0.013461767119308715
+    ],
+    "byDirectionDelta": {
+     "AB": 0.007880471898705332,
+     "BA": -0.00035068926773740294
+    }
+   },
+   "Mbase-E070": {
+    "delta": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ],
+    "byDirectionDelta": {
+     "AB": 0.0,
+     "BA": 0.0
+    }
+   }
+  }
+ },
+ "c2": {
+  "pass": true,
+  "threshold": "CI90 lower > -0.02",
+  "delta": 0.0031060005286809855,
+  "ci90": [
+   -0.00614153191151274,
+   0.012689478969240735
+  ],
+  "vsCard020": {
+   "delta": 0.0031060005286809855,
+   "ci90": [
+    -0.00614153191151274,
+    0.012689478969240735
+   ],
+   "byDirectionDelta": {
+    "AB": 0.007757951109924166,
+    "BA": -0.001545950052562195
+   }
+  },
+  "vsE070primary_reportOnly": {
+   "delta": 0.0024338547906223584,
+   "ci90": [
+    -0.006740422288365744,
+    0.011967328815098007
+   ],
+   "byDirectionDelta": {
+    "AB": 0.0072919236171561375,
+    "BA": -0.0024242140359114206
+   }
+  },
+  "rhoAvg": {
+   "c020": 0.6025491590387286,
+   "E070": 0.6032213047767873,
+   "M": 0.6056551595674096,
+   "E071P1": 0.6063140503542126,
+   "Mbase": 0.6032213047767873
+  }
+ },
+ "rho2k": {
+  "n": 575,
+  "c020": {
+   "perGame_repl": 0.6951901469458452,
+   "per36": 0.5183412610593084,
+   "halfFitMean_perGame": 0.6967456902995245
+  },
+  "E070": {
+   "perGame_repl": 0.6988765381815172,
+   "per36": 0.5204218205586716,
+   "halfFitMean_perGame": 0.6980269091629628
+  },
+  "E071P1": {
+   "perGame_repl": 0.6784622322249134,
+   "per36": 0.517381178007823,
+   "halfFitMean_perGame": 0.6907607126523377
+  },
+  "M": {
+   "perGame_repl": 0.6810435822281367,
+   "per36": 0.5198104531836251,
+   "halfFitMean_perGame": 0.6942937039451478
+  }
+ },
+ "top20Changes": {
+  "vs_card0.2.1_published": {
+   "entered": [
+    "Herbert Jones"
+   ],
+   "exited": [
+    "Evan Mobley"
+   ],
+   "nEntered": 1,
+   "nExited": 1,
+   "needG4": false,
+   "note": "c2 本身就是 G4"
+  },
+  "vs_card0.2.0": {
+   "entered": [
+    "Stephen Curry",
+    "Tyrese Maxey"
+   ],
+   "exited": [
+    "Evan Mobley",
+    "OG Anunoby"
+   ],
+   "nEntered": 2,
+   "nExited": 2,
+   "needG4": false,
+   "note": "c2 本身就是 G4"
+  },
+  "top20": [
+   {
+    "rank": 1,
+    "name": "Shai Gilgeous-Alexander",
+    "pos": "PG",
+    "ovr": 109.8,
+    "rank021": 1,
+    "rank020": 1
+   },
+   {
+    "rank": 2,
+    "name": "Nikola Jokić",
+    "pos": "C",
+    "ovr": 107.3,
+    "rank021": 2,
+    "rank020": 2
+   },
+   {
+    "rank": 3,
+    "name": "Luka Dončić",
+    "pos": "PG",
+    "ovr": 102.9,
+    "rank021": 3,
+    "rank020": 3
+   },
+   {
+    "rank": 4,
+    "name": "Derrick White",
+    "pos": "PG",
+    "ovr": 101.0,
+    "rank021": 4,
+    "rank020": 4
+   },
+   {
+    "rank": 5,
+    "name": "Kawhi Leonard",
+    "pos": "SF",
+    "ovr": 99.0,
+    "rank021": 5,
+    "rank020": 5
+   },
+   {
+    "rank": 6,
+    "name": "Kevin Durant",
+    "pos": "SF",
+    "ovr": 96.5,
+    "rank021": 6,
+    "rank020": 7
+   },
+   {
+    "rank": 7,
+    "name": "Franz Wagner",
+    "pos": "SF",
+    "ovr": 96.3,
+    "rank021": 7,
+    "rank020": 8
+   },
+   {
+    "rank": 8,
+    "name": "Giannis Antetokounmpo",
+    "pos": "PF",
+    "ovr": 95.3,
+    "rank021": 9,
+    "rank020": 10
+   },
+   {
+    "rank": 9,
+    "name": "Lauri Markkanen",
+    "pos": "PF",
+    "ovr": 95.3,
+    "rank021": 8,
+    "rank020": 6
+   },
+   {
+    "rank": 10,
+    "name": "Chet Holmgren",
+    "pos": "PF",
+    "ovr": 94.4,
+    "rank021": 10,
+    "rank020": 13
+   },
+   {
+    "rank": 11,
+    "name": "Victor Wembanyama",
+    "pos": "C",
+    "ovr": 93.8,
+    "rank021": 11,
+    "rank020": 9
+   },
+   {
+    "rank": 12,
+    "name": "Joel Embiid",
+    "pos": "C",
+    "ovr": 93.6,
+    "rank021": 12,
+    "rank020": 16
+   },
+   {
+    "rank": 13,
+    "name": "Amen Thompson",
+    "pos": "PG",
+    "ovr": 91.2,
+    "rank021": 14,
+    "rank020": 15
+   },
+   {
+    "rank": 14,
+    "name": "Stephen Curry",
+    "pos": "PG",
+    "ovr": 91.1,
+    "rank021": 15,
+    "rank020": 23
+   },
+   {
+    "rank": 15,
+    "name": "Jimmy Butler III",
+    "pos": "SF",
+    "ovr": 90.7,
+    "rank021": 13,
+    "rank020": 14
+   },
+   {
+    "rank": 16,
+    "name": "Donovan Mitchell",
+    "pos": "SG",
+    "ovr": 90.5,
+    "rank021": 16,
+    "rank020": 12
+   },
+   {
+    "rank": 17,
+    "name": "Cade Cunningham",
+    "pos": "PG",
+    "ovr": 90.0,
+    "rank021": 18,
+    "rank020": 19
+   },
+   {
+    "rank": 18,
+    "name": "Jamal Murray",
+    "pos": "PG",
+    "ovr": 89.9,
+    "rank021": 17,
+    "rank020": 17
+   },
+   {
+    "rank": 19,
+    "name": "Tyrese Maxey",
+    "pos": "PG",
+    "ovr": 89.7,
+    "rank021": 19,
+    "rank020": 24
+   },
+   {
+    "rank": 20,
+    "name": "Herbert Jones",
+    "pos": "SG",
+    "ovr": 88.8,
+    "rank021": 21,
+    "rank020": 18
+   }
+  ]
+ },
+ "maxAbsOvrDelta": {
+  "vs021": 2.299999999999997,
+  "vs020": 9.099999999999994
+ },
+ "spotCheck": [
+  {
+   "name": "Moussa Diabaté",
+   "pos": "C",
+   "MIN": 1899,
+   "v022": {
+    "ovr": 79.1,
+    "rank": 75,
+    "PRES": 61.4,
+    "presDisplay": 54.8,
+    "foulDisc": 53.6,
+    "foulDraw": 81.9
+   },
+   "v021": {
+    "ovr": 79.2,
+    "rank": 74,
+    "PRES": 61.4,
+    "presDisplay": 54.8,
+    "foulDisc": 53.6,
+    "foulDraw": 96.0
+   },
+   "v020": {
+    "ovr": 84.2,
+    "rank": 42,
+    "PRES": 99.0,
+    "foulDraw": 96.0
+   },
+   "E070": {
+    "ovr": 84.1,
+    "rank": 43,
+    "foulDraw": 81.9
+   }
+  },
+  {
+   "name": "Kyle Lowry",
+   "pos": "PG",
+   "MIN": 118,
+   "v022": {
+    "ovr": 53.2,
+    "rank": 508,
+    "PRES": 62.5,
+    "presDisplay": 65.9,
+    "foulDisc": 75.4,
+    "foulDraw": 54.0
+   },
+   "v021": {
+    "ovr": 53.4,
+    "rank": 499,
+    "PRES": 62.5,
+    "presDisplay": 65.9,
+    "foulDisc": 75.4,
+    "foulDraw": 66.8
+   },
+   "v020": {
+    "ovr": 54.4,
+    "rank": 441,
+    "PRES": 99.0,
+    "foulDraw": 66.8
+   },
+   "E070": {
+    "ovr": 54.1,
+    "rank": 454,
+    "foulDraw": 54.0
+   }
+  },
+  {
+   "name": "Luguentz Dort",
+   "pos": "SF",
+   "MIN": 1849,
+   "v022": {
+    "ovr": 70.3,
+    "rank": 199,
+    "PRES": 83.5,
+    "presDisplay": 78.1,
+    "foulDisc": 50.4,
+    "foulDraw": 41.5
+   },
+   "v021": {
+    "ovr": 69.9,
+    "rank": 204,
+    "PRES": 83.5,
+    "presDisplay": 78.1,
+    "foulDisc": 50.4,
+    "foulDraw": 43.9
+   },
+   "v020": {
+    "ovr": 71.3,
+    "rank": 178,
+    "PRES": 99.0,
+    "foulDraw": 43.9
+   },
+   "E070": {
+    "ovr": 71.5,
+    "rank": 176,
+    "foulDraw": 41.5
+   }
+  },
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "pos": "PG",
+   "MIN": 2259,
+   "v022": {
+    "ovr": 109.8,
+    "rank": 1,
+    "PRES": 81.2,
+    "presDisplay": 88.4,
+    "foulDisc": 88.2,
+    "foulDraw": 98.5
+   },
+   "v021": {
+    "ovr": 109.9,
+    "rank": 1,
+    "PRES": 81.2,
+    "presDisplay": 88.4,
+    "foulDisc": 88.2,
+    "foulDraw": 96.4
+   },
+   "v020": {
+    "ovr": 112.8,
+    "rank": 1,
+    "PRES": 85.1,
+    "foulDraw": 96.4
+   },
+   "E070": {
+    "ovr": 112.6,
+    "rank": 1,
+    "foulDraw": 98.5
+   }
+  },
+  {
+   "name": "Dru Smith",
+   "pos": "PG",
+   "MIN": 1141,
+   "v022": {
+    "ovr": 62.0,
+    "rank": 293,
+    "PRES": 99.0,
+    "presDisplay": 99.0,
+    "foulDisc": 52.3,
+    "foulDraw": 65.9
+   },
+   "v021": {
+    "ovr": 61.7,
+    "rank": 296,
+    "PRES": 99.0,
+    "presDisplay": 99.0,
+    "foulDisc": 52.3,
+    "foulDraw": 74.9
+   },
+   "v020": {
+    "ovr": 61.4,
+    "rank": 291,
+    "PRES": 94.0,
+    "foulDraw": 74.9
+   },
+   "E070": {
+    "ovr": 61.3,
+    "rank": 294,
+    "foulDraw": 65.9
+   }
+  },
+  {
+   "name": "Ausar Thompson",
+   "pos": "SF",
+   "MIN": 1896,
+   "v022": {
+    "ovr": 82.4,
+    "rank": 53,
+    "PRES": 99.0,
+    "presDisplay": 99.0,
+    "foulDisc": 46.1,
+    "foulDraw": 77.4
+   },
+   "v021": {
+    "ovr": 82.2,
+    "rank": 56,
+    "PRES": 99.0,
+    "presDisplay": 99.0,
+    "foulDisc": 46.1,
+    "foulDraw": 84.2
+   },
+   "v020": {
+    "ovr": 82.0,
+    "rank": 58,
+    "PRES": 93.8,
+    "foulDraw": 84.2
+   },
+   "E070": {
+    "ovr": 82.1,
+    "rank": 59,
+    "foulDraw": 77.4
+   }
+  }
+ ],
+ "allPass": true,
+ "inputs": {
+  "rapmA": "aa95b4e00357421e1f4cb86f42e6b16f21e6af92fc60524d9d9f391920c439cb",
+  "rapmB": "9a0497c76c582b6a92dae24bf063601d1f7e44d55629ce0e114a328535a240a5",
+  "ranking_csv_sha256": "2102b2f6463405a3711827372cb0774af0d6b4f769d65d0403b938de1369059e",
+  "evaluation_json": "1fb83294b3e89cefde690874c8e1d92793fa9fdb7cfb1dd09ce256b5a15ffc1a"
+ }
+}

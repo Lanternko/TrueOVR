@@ -1,0 +1,51 @@
+10a11
+> import os
+22,23c23,27
+< C022 = ROOT / 'reports/card-0.2.2/cards/P1'
+< W = HERE / 'work'
+---
+> MODE = os.environ['E082_MODE']                      # off／on（E-082：輸入卡換成本資料夾 cards/<mode>）
+> BASELINE = os.environ.get('E082_BASE', '022')       # 022＝card 0.2.2（重現 E-075 用）；023＝card 0.2.3（候選的 R3／R4 基準，預註冊 §4）
+> C022 = HERE / 'cards' / MODE
+> OUTD = HERE / 'out' / MODE
+> W = OUTD / 'work'
+112c116
+<     D['card022_rows'] = list(csv.DictReader((C022 / 'card/ranking.csv').open(encoding='utf-8')))
+---
+>     D['card022_rows'] = list(csv.DictReader(((C022 / 'card/ranking.csv') if BASELINE == '022' else (ROOT / 'reports/card-0.2.3/ranking.csv')).open(encoding='utf-8')))
+406a411,413
+>     if full_report:
+>         W.mkdir(parents=True, exist_ok=True)
+>         (W / 'dirs.json').write_text(json.dumps({dn: {k_: (v_.tolist() if hasattr(v_, 'tolist') else v_) for k_, v_ in d.items()} for dn, d in dirs.items()}, ensure_ascii=False) + chr(10), encoding='utf-8')
+470c477
+<     for path, rws, cl in ((W / 'c0/ranking.csv', rows_c0, cols), (HERE / 'ranking.csv', rows_new, cols2)):
+---
+>     for path, rws, cl in ((W / 'c0/ranking.csv', rows_c0, cols), (OUTD / 'ranking.csv', rows_new, cols2)):
+620,621c627,628
+<         g = cc.get('E075')
+<         c3 = {'value': {'E075': f"{g['pass']}/{g['of']}", 'card-0.2.2': (f"{cc['card-0.2.2']['pass']}/{cc['card-0.2.2']['of']}" if 'card-0.2.2' in cc else None)},
+---
+>         g = cc.get('E082')
+>         c3 = {'value': {'E082': f"{g['pass']}/{g['of']}", 'card-0.2.3': (f"{cc['card-0.2.3']['pass']}/{cc['card-0.2.3']['of']}" if 'card-0.2.3' in cc else None)},
+635,638c642,645
+<         'reports/card-0.2.2+E073-usage-evidence/preregistration.md', 'reports/card-0.2.0+E073-usage-evidence/preregistration.md', 'reports/card-0.2.0+E073-usage-evidence/supplement-1.md',
+<         'reports/card-0.2.2/cards/P1/card/ranking.csv', 'reports/card-0.2.2/cards/P1/primary/pred.csv', 'reports/card-0.2.2/cards/P1/primary/pergame-repl.csv',
+<         'reports/card-0.2.2/cards/P1/primary/ranking.csv', 'reports/card-0.2.2/cards/P1/fitA/pred.csv', 'reports/card-0.2.2/cards/P1/fitB/pred.csv',
+<         'reports/card-0.2.2/cards/P1/fitA/pergame-summary.json', 'reports/card-0.2.2/cards/P1/fitB/pergame-summary.json',
+---
+>         'reports/card-0.2.2+E073-usage-evidence/preregistration.md', 'reports/card-0.2.3+E082-position-shares/preregistration.md', 'reports/card-0.2.0+E073-usage-evidence/preregistration.md', 'reports/card-0.2.0+E073-usage-evidence/supplement-1.md',
+>         f'reports/card-0.2.3+E082-position-shares/cards/{MODE}/card/ranking.csv', f'reports/card-0.2.3+E082-position-shares/cards/{MODE}/primary/pred.csv', f'reports/card-0.2.3+E082-position-shares/cards/{MODE}/primary/pergame-repl.csv',
+>         f'reports/card-0.2.3+E082-position-shares/cards/{MODE}/primary/ranking.csv', f'reports/card-0.2.3+E082-position-shares/cards/{MODE}/fitA/pred.csv', f'reports/card-0.2.3+E082-position-shares/cards/{MODE}/fitB/pred.csv',
+>         f'reports/card-0.2.3+E082-position-shares/cards/{MODE}/fitA/pergame-summary.json', f'reports/card-0.2.3+E082-position-shares/cards/{MODE}/fitB/pergame-summary.json',
+643c650
+<     results = {'experiment': 'E-075', 'version': 'card 0.2.2+E073（候選；版號待使用者定，預註冊記候選版號 0.3.0）', 'baseline': 'card 0.2.2',
+---
+>     results = {'experiment': 'E-082', 'mode': MODE, 'baselineSwitch': BASELINE, 'version': 'card 0.2.2+E073（候選；版號待使用者定，預註冊記候選版號 0.3.0）', 'baseline': 'card 0.2.2',
+646,648c653,655
+<                'population': main_res['population'], 'ranking_csv_sha256': sha(HERE / 'ranking.csv'), 'inputs_sha256': inputs,
+<                'generator': 'reports/card-0.2.2+E073-usage-evidence/e075.py'}
+<     (HERE / 'results.json').write_text(json.dumps(results, ensure_ascii=False, indent=1, default=float) + '\n', encoding='utf-8')
+---
+>                'population': main_res['population'], 'ranking_csv_sha256': sha(OUTD / 'ranking.csv'), 'inputs_sha256': inputs,
+>                'generator': 'reports/card-0.2.3+E082-position-shares/e082.py（自 e075.py，只改路徑與基準來源）'}
+>     (OUTD / 'results.json').write_text(json.dumps(results, ensure_ascii=False, indent=1, default=float) + '\n', encoding='utf-8')

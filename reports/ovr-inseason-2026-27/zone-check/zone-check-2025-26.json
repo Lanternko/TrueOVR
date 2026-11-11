@@ -1,0 +1,167 @@
+{
+ "source": "data\\defense-a-source\\pbp",
+ "games": 1227,
+ "no_area_shots_skipped": 1,
+ "confusion_judged": {
+  "mid->mid": 21564,
+  "mid->short": 535,
+  "short->short": 99788
+ },
+ "undetermined_by_official": {
+  "short": 3561,
+  "mid": 2404
+ },
+ "agree_mid": 0.9757907597628852,
+ "undet_mid": 0.09811043545688283,
+ "agree_short": 1.0,
+ "undet_short": 0.03445606633832935,
+ "agree_other": null,
+ "undet_other": null,
+ "pass": true,
+ "mid_ratio_maxabsdiff_A>=100": 0.08531371184249775,
+ "mid_top10_by_absdiff_A>=100": [
+  {
+   "pid": 1642852,
+   "offA": 113,
+   "derA": 89,
+   "off": 0.4336,
+   "der": 0.3483
+  },
+  {
+   "pid": 203952,
+   "offA": 119,
+   "derA": 98,
+   "off": 0.4622,
+   "der": 0.4082
+  },
+  {
+   "pid": 1630578,
+   "offA": 133,
+   "derA": 105,
+   "off": 0.3835,
+   "der": 0.3333
+  },
+  {
+   "pid": 1630552,
+   "offA": 161,
+   "derA": 138,
+   "off": 0.4845,
+   "der": 0.4348
+  },
+  {
+   "pid": 203999,
+   "offA": 139,
+   "derA": 116,
+   "off": 0.6043,
+   "der": 0.5603
+  },
+  {
+   "pid": 1641705,
+   "offA": 204,
+   "derA": 181,
+   "off": 0.4461,
+   "der": 0.4033
+  },
+  {
+   "pid": 1627783,
+   "offA": 210,
+   "derA": 189,
+   "off": 0.3857,
+   "der": 0.3439
+  },
+  {
+   "pid": 1628389,
+   "offA": 156,
+   "derA": 127,
+   "off": 0.391,
+   "der": 0.3543
+  },
+  {
+   "pid": 203954,
+   "offA": 236,
+   "derA": 207,
+   "off": 0.5,
+   "der": 0.4638
+  },
+  {
+   "pid": 1642846,
+   "offA": 216,
+   "derA": 195,
+   "off": 0.3981,
+   "der": 0.3641
+  }
+ ],
+ "short_ratio_maxabsdiff_A>=100": 0.03900679473198554,
+ "short_top10_by_absdiff_A>=100": [
+  {
+   "pid": 1629011,
+   "offA": 182,
+   "derA": 131,
+   "off": 0.7473,
+   "der": 0.7863
+  },
+  {
+   "pid": 1629637,
+   "offA": 252,
+   "derA": 225,
+   "off": 0.7619,
+   "der": 0.8
+  },
+  {
+   "pid": 203083,
+   "offA": 207,
+   "derA": 168,
+   "off": 0.4928,
+   "der": 0.5298
+  },
+  {
+   "pid": 1642276,
+   "offA": 361,
+   "derA": 317,
+   "off": 0.6011,
+   "der": 0.6341
+  },
+  {
+   "pid": 1642928,
+   "offA": 163,
+   "derA": 144,
+   "off": 0.5951,
+   "der": 0.5625
+  },
+  {
+   "pid": 1628436,
+   "offA": 233,
+   "derA": 199,
+   "off": 0.6609,
+   "der": 0.6935
+  },
+  {
+   "pid": 1630568,
+   "offA": 203,
+   "derA": 180,
+   "off": 0.6552,
+   "der": 0.6833
+  },
+  {
+   "pid": 1631243,
+   "offA": 124,
+   "derA": 116,
+   "off": 0.5806,
+   "der": 0.6034
+  },
+  {
+   "pid": 1630549,
+   "offA": 296,
+   "derA": 270,
+   "off": 0.6554,
+   "der": 0.6333
+  },
+  {
+   "pid": 203076,
+   "offA": 208,
+   "derA": 187,
+   "off": 0.5721,
+   "der": 0.5508
+  }
+ ]
+}

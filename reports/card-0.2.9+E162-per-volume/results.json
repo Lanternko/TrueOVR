@@ -1,0 +1,1003 @@
+{
+ "c0": {
+  "2022-23": {
+   "K_sha": "dc85fc894d9d56c4fde0e6f621950ebf6ef2fa8261478997908b64b11de2ad62",
+   "ref_sha": "dc85fc894d9d56c4fde0e6f621950ebf6ef2fa8261478997908b64b11de2ad62",
+   "same": true
+  },
+  "2023-24": {
+   "K_sha": "f9fff76eceb1ab65f481caf14a30b32176185041beeee2e77df1d137e96f4a6a",
+   "ref_sha": "f9fff76eceb1ab65f481caf14a30b32176185041beeee2e77df1d137e96f4a6a",
+   "same": true
+  },
+  "2024-25": {
+   "K_sha": "70070e7af08ea306d2ed754d269db238d7753518b7a2e5a77c3f4cf7aa1e983f",
+   "ref_sha": "70070e7af08ea306d2ed754d269db238d7753518b7a2e5a77c3f4cf7aa1e983f",
+   "same": true
+  },
+  "2025-26": {
+   "K_sha": "032889088a08064bf045d479f8bad442d9f288f690bc7f851f6651f66c334eae",
+   "ref_sha": "032889088a08064bf045d479f8bad442d9f288f690bc7f851f6651f66c334eae",
+   "same": true
+  }
+ },
+ "c0_pass": true,
+ "seed": 20261103,
+ "draws": 2000,
+ "n_eval": {
+  "2022-23": 271,
+  "2023-24": 303,
+  "2024-25": 346,
+  "2025-26": 379
+ },
+ "subgroup": {
+  "2022-23": {
+   "n_pop": 271,
+   "n_adv": 269,
+   "usg_p75": 23.4,
+   "ts_p25": 0.551,
+   "ts_p75": 0.614,
+   "n_sub": 41
+  },
+  "2023-24": {
+   "n_pop": 303,
+   "n_adv": 300,
+   "usg_p75": 23.150000000000002,
+   "ts_p25": 0.5515000000000001,
+   "ts_p75": 0.612,
+   "n_sub": 46
+  },
+  "2024-25": {
+   "n_pop": 346,
+   "n_adv": 342,
+   "usg_p75": 23.125,
+   "ts_p25": 0.544,
+   "ts_p75": 0.605,
+   "n_sub": 54
+  },
+  "2025-26": {
+   "n_pop": 379,
+   "n_adv": 375,
+   "usg_p75": 22.8,
+   "ts_p25": 0.544,
+   "ts_p75": 0.609,
+   "n_sub": 64
+  }
+ },
+ "per_season_all": {
+  "2022-23": {
+   "K": {
+    "n": 271,
+    "C": 0.7595358741374719,
+    "n_sal": 180,
+    "sal": 0.7515600836082986,
+    "n_twok": 269,
+    "twok": 0.7431824471703152,
+    "n_rapm": 262,
+    "rapm": 0.3920500760859127,
+    "n_epm": 262,
+    "epm": 0.6729804408908706
+   },
+   "P15": {
+    "n": 271,
+    "C": 0.760441731829159,
+    "n_sal": 180,
+    "sal": 0.7502058036117327,
+    "n_twok": 269,
+    "twok": 0.7460331397348552,
+    "n_rapm": 262,
+    "rapm": 0.3936069805863614,
+    "n_epm": 262,
+    "epm": 0.6730112436360439
+   },
+   "P30": {
+    "n": 271,
+    "C": 0.7618106290537773,
+    "n_sal": 180,
+    "sal": 0.7469582258689582,
+    "n_twok": 269,
+    "twok": 0.7511413422524686,
+    "n_rapm": 262,
+    "rapm": 0.3932262470494485,
+    "n_epm": 262,
+    "epm": 0.6710607506405442
+   }
+  },
+  "2023-24": {
+   "K": {
+    "n": 303,
+    "C": 0.7171079331782634,
+    "n_sal": 205,
+    "sal": 0.6507899894769024,
+    "n_twok": 303,
+    "twok": 0.673778234434839,
+    "n_rapm": 286,
+    "rapm": 0.33433705511183054,
+    "n_epm": 286,
+    "epm": 0.6670279724017866
+   },
+   "P15": {
+    "n": 303,
+    "C": 0.7183844070628616,
+    "n_sal": 205,
+    "sal": 0.6441243151855988,
+    "n_twok": 303,
+    "twok": 0.6764388258278539,
+    "n_rapm": 286,
+    "rapm": 0.3366199248242609,
+    "n_epm": 286,
+    "epm": 0.6700570930123935
+   },
+   "P30": {
+    "n": 303,
+    "C": 0.7171105924080716,
+    "n_sal": 205,
+    "sal": 0.6345435980578977,
+    "n_twok": 303,
+    "twok": 0.6784304531423202,
+    "n_rapm": 286,
+    "rapm": 0.3350793277128043,
+    "n_epm": 286,
+    "epm": 0.6715952406158805
+   }
+  },
+  "2024-25": {
+   "K": {
+    "n": 346,
+    "C": 0.7669237763509201,
+    "n_sal": 240,
+    "sal": 0.6784079640634368,
+    "n_twok": 345,
+    "twok": 0.708984185187726,
+    "n_rapm": 319,
+    "rapm": 0.4351613480780051,
+    "n_epm": 319,
+    "epm": 0.7294729110721682
+   },
+   "P15": {
+    "n": 346,
+    "C": 0.7689487368838624,
+    "n_sal": 240,
+    "sal": 0.6736180150089408,
+    "n_twok": 345,
+    "twok": 0.7142732902288195,
+    "n_rapm": 319,
+    "rapm": 0.4337380664722223,
+    "n_epm": 319,
+    "epm": 0.7297701543480867
+   },
+   "P30": {
+    "n": 346,
+    "C": 0.7684297401542884,
+    "n_sal": 240,
+    "sal": 0.6658164164872347,
+    "n_twok": 345,
+    "twok": 0.7161718088654518,
+    "n_rapm": 319,
+    "rapm": 0.4319247551001488,
+    "n_epm": 319,
+    "epm": 0.7280081602432938
+   }
+  },
+  "2025-26": {
+   "K": {
+    "n": 379,
+    "C": 0.7142304544213195,
+    "n_sal": 262,
+    "sal": 0.5919078466615914,
+    "n_twok": 376,
+    "twok": 0.7684950977336678,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "P15": {
+    "n": 379,
+    "C": 0.7125163847778507,
+    "n_sal": 262,
+    "sal": 0.5863928744907547,
+    "n_twok": 376,
+    "twok": 0.7676814691734961,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "P30": {
+    "n": 379,
+    "C": 0.7179995455166299,
+    "n_sal": 262,
+    "sal": 0.5895709894496629,
+    "n_twok": 376,
+    "twok": 0.7736258391620564,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   }
+  }
+ },
+ "per_season_sub": {
+  "2022-23": {
+   "K": {
+    "n": 41,
+    "C": 0.7628300339023184,
+    "n_sal": 29,
+    "sal": 0.5842063568881892,
+    "n_twok": 40,
+    "twok": 0.7919205539159634,
+    "n_rapm": 40,
+    "rapm": 0.5570048076568976,
+    "n_epm": 40,
+    "epm": 0.7915924119598363
+   },
+   "P15": {
+    "n": 41,
+    "C": 0.7541712224212229,
+    "n_sal": 29,
+    "sal": 0.5482365657789671,
+    "n_twok": 40,
+    "twok": 0.778784284688041,
+    "n_rapm": 40,
+    "rapm": 0.5718039097034733,
+    "n_epm": 40,
+    "epm": 0.7853624424381476
+   },
+   "P30": {
+    "n": 41,
+    "C": 0.7607265822675697,
+    "n_sal": 29,
+    "sal": 0.5490343369533142,
+    "n_twok": 40,
+    "twok": 0.773622820049688,
+    "n_rapm": 40,
+    "rapm": 0.5879814290998904,
+    "n_epm": 40,
+    "epm": 0.7978608701237384
+   }
+  },
+  "2023-24": {
+   "K": {
+    "n": 46,
+    "C": 0.6362571044045933,
+    "n_sal": 31,
+    "sal": 0.3120943186843587,
+    "n_twok": 46,
+    "twok": 0.7556087574554743,
+    "n_rapm": 46,
+    "rapm": 0.34869233264170285,
+    "n_epm": 46,
+    "epm": 0.6462497026511802
+   },
+   "P15": {
+    "n": 46,
+    "C": 0.635699108420752,
+    "n_sal": 31,
+    "sal": 0.30206141294117944,
+    "n_twok": 46,
+    "twok": 0.7620260710902141,
+    "n_rapm": 46,
+    "rapm": 0.34132199581678996,
+    "n_epm": 46,
+    "epm": 0.6427932760547537
+   },
+   "P30": {
+    "n": 46,
+    "C": 0.644154565312592,
+    "n_sal": 31,
+    "sal": 0.2980469584977253,
+    "n_twok": 46,
+    "twok": 0.7617302610834631,
+    "n_rapm": 46,
+    "rapm": 0.34872174571786624,
+    "n_epm": 46,
+    "epm": 0.6510007120714677
+   }
+  },
+  "2024-25": {
+   "K": {
+    "n": 54,
+    "C": 0.8629805415597668,
+    "n_sal": 40,
+    "sal": 0.643150483686736,
+    "n_twok": 53,
+    "twok": 0.8080579051063057,
+    "n_rapm": 54,
+    "rapm": 0.5893609325966498,
+    "n_epm": 54,
+    "epm": 0.8298930770041824
+   },
+   "P15": {
+    "n": 54,
+    "C": 0.861276309383527,
+    "n_sal": 40,
+    "sal": 0.6375040931764551,
+    "n_twok": 53,
+    "twok": 0.8037395116006052,
+    "n_rapm": 54,
+    "rapm": 0.5865355329604277,
+    "n_epm": 54,
+    "epm": 0.8334095815404181
+   },
+   "P30": {
+    "n": 54,
+    "C": 0.849328127367881,
+    "n_sal": 40,
+    "sal": 0.6137726388286378,
+    "n_twok": 53,
+    "twok": 0.7887010076908295,
+    "n_rapm": 54,
+    "rapm": 0.575964931615858,
+    "n_epm": 54,
+    "epm": 0.8253121165850371
+   }
+  },
+  "2025-26": {
+   "K": {
+    "n": 64,
+    "C": 0.6931708897410966,
+    "n_sal": 50,
+    "sal": 0.6599942176240214,
+    "n_twok": 64,
+    "twok": 0.7391235476845855,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "P15": {
+    "n": 64,
+    "C": 0.6884324300019595,
+    "n_sal": 50,
+    "sal": 0.6414584465849271,
+    "n_twok": 64,
+    "twok": 0.737260590391361,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "P30": {
+    "n": 64,
+    "C": 0.6956377377596681,
+    "n_sal": 50,
+    "sal": 0.6611958613858387,
+    "n_twok": 64,
+    "twok": 0.7423300706651275,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   }
+  }
+ },
+ "cand": {
+  "P15": {
+   "sub_diff": {
+    "C": -0.003352536336869265,
+    "sal": -0.015799996406172374,
+    "twok": -0.0033030877533884277,
+    "rapm": 0.0007168357682931439,
+    "epm": -0.001559308281045998
+   },
+   "all_diff": {
+    "C": 0.0014487993107374787,
+    "sal": -0.004415714243485038,
+    "twok": 0.0037052745159454853,
+    "rapm": 0.0006998649188326725,
+    "epm": 0.0011179001371245494
+   },
+   "sub_boot": {
+    "lower90": -0.015028423932277924,
+    "upper90": 0.008534157060870136,
+    "draws": 2000,
+    "seed": 20261103,
+    "n_union": 76
+   },
+   "a": false,
+   "a_diff_ge_0.01": false,
+   "a_lower_gt_-0.02": true,
+   "b": true,
+   "c": {
+    "sal": true,
+    "twok": true,
+    "rapm": true,
+    "epm": true
+   },
+   "pass": false
+  },
+  "P30": {
+   "sub_diff": {
+    "C": -0.003263749515025447,
+    "sal": -0.026305705382209433,
+    "twok": -0.010620401084775327,
+    "rapm": 0.0036930986161462223,
+    "epm": 0.0015850921232533257
+   },
+   "all_diff": {
+    "C": 0.0012373128314305283,
+    "sal": -0.011489305683625195,
+    "twok": 0.006576112556468375,
+    "rapm": -0.0005905725531848702,
+    "epm": 0.00038757133706392535
+   },
+   "sub_boot": {
+    "lower90": -0.020805105004001942,
+    "upper90": 0.013186108470541403,
+    "draws": 2000,
+    "seed": 20261103,
+    "n_union": 76
+   },
+   "a": false,
+   "a_diff_ge_0.01": false,
+   "a_lower_gt_-0.02": false,
+   "b": true,
+   "c": {
+    "sal": true,
+    "twok": true,
+    "rapm": true,
+    "epm": true
+   },
+   "pass": false
+  }
+ },
+ "verdict": "K (維持 0.2.9)",
+ "y2526": {
+  "K": {
+   "all": {
+    "n": 379,
+    "C": 0.7142304544213195,
+    "n_sal": 262,
+    "sal": 0.5919078466615914,
+    "n_twok": 376,
+    "twok": 0.7684950977336678,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "sub": {
+    "n": 64,
+    "C": 0.6931708897410966,
+    "n_sal": 50,
+    "sal": 0.6599942176240214,
+    "n_twok": 64,
+    "twok": 0.7391235476845855,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   }
+  },
+  "P15": {
+   "all": {
+    "n": 379,
+    "C": 0.7125163847778507,
+    "n_sal": 262,
+    "sal": 0.5863928744907547,
+    "n_twok": 376,
+    "twok": 0.7676814691734961,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "sub": {
+    "n": 64,
+    "C": 0.6884324300019595,
+    "n_sal": 50,
+    "sal": 0.6414584465849271,
+    "n_twok": 64,
+    "twok": 0.737260590391361,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   }
+  },
+  "P30": {
+   "all": {
+    "n": 379,
+    "C": 0.7179995455166299,
+    "n_sal": 262,
+    "sal": 0.5895709894496629,
+    "n_twok": 376,
+    "twok": 0.7736258391620564,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   },
+   "sub": {
+    "n": 64,
+    "C": 0.6956377377596681,
+    "n_sal": 50,
+    "sal": 0.6611958613858387,
+    "n_twok": 64,
+    "twok": 0.7423300706651275,
+    "n_rapm": 0,
+    "rapm": null,
+    "n_epm": 0,
+    "epm": null
+   }
+  }
+ },
+ "key_players": {
+  "Cooper Flagg": {
+   "K": {
+    "rank": 75,
+    "ovr": 77.6
+   },
+   "P15": {
+    "rank": 78,
+    "ovr": 77.2
+   },
+   "P30": {
+    "rank": 77,
+    "ovr": 76.9
+   }
+  },
+  "Paolo Banchero": {
+   "K": {
+    "rank": 141,
+    "ovr": 72.7
+   },
+   "P15": {
+    "rank": 147,
+    "ovr": 72.4
+   },
+   "P30": {
+    "rank": 147,
+    "ovr": 72.1
+   }
+  },
+  "Kon Knueppel": {
+   "K": {
+    "rank": 82,
+    "ovr": 77.0
+   },
+   "P15": {
+    "rank": 84,
+    "ovr": 76.5
+   },
+   "P30": {
+    "rank": 86,
+    "ovr": 76.0
+   }
+  },
+  "Anthony Edwards": {
+   "K": {
+    "rank": 9,
+    "ovr": 88.7
+   },
+   "P15": {
+    "rank": 9,
+    "ovr": 88.3
+   },
+   "P30": {
+    "rank": 9,
+    "ovr": 87.9
+   }
+  },
+  "Jalen Green": {
+   "K": {
+    "rank": 168,
+    "ovr": 71.1
+   },
+   "P15": {
+    "rank": 167,
+    "ovr": 71.3
+   },
+   "P30": {
+    "rank": 158,
+    "ovr": 71.4
+   }
+  },
+  "Zach LaVine": {
+   "K": {
+    "rank": 189,
+    "ovr": 70.0
+   },
+   "P15": {
+    "rank": 197,
+    "ovr": 69.7
+   },
+   "P30": {
+    "rank": 197,
+    "ovr": 69.2
+   }
+  },
+  "DeMar DeRozan": {
+   "K": {
+    "rank": 84,
+    "ovr": 77.0
+   },
+   "P15": {
+    "rank": 82,
+    "ovr": 76.6
+   },
+   "P30": {
+    "rank": 85,
+    "ovr": 76.2
+   }
+  },
+  "Jordan Poole": {
+   "K": {
+    "rank": 358,
+    "ovr": 47.5
+   },
+   "P15": {
+    "rank": 357,
+    "ovr": 47.4
+   },
+   "P30": {
+    "rank": 355,
+    "ovr": 47.2
+   }
+  },
+  "Trae Young": null,
+  "Shai Gilgeous-Alexander": {
+   "K": {
+    "rank": 1,
+    "ovr": 119.4
+   },
+   "P15": {
+    "rank": 1,
+    "ovr": 118.2
+   },
+   "P30": {
+    "rank": 1,
+    "ovr": 116.8
+   }
+  },
+  "Nikola Jokić": {
+   "K": {
+    "rank": 6,
+    "ovr": 95.2
+   },
+   "P15": {
+    "rank": 6,
+    "ovr": 94.6
+   },
+   "P30": {
+    "rank": 6,
+    "ovr": 93.9
+   }
+  },
+  "Victor Wembanyama": {
+   "K": {
+    "rank": 2,
+    "ovr": 106.4
+   },
+   "P15": {
+    "rank": 2,
+    "ovr": 105.7
+   },
+   "P30": {
+    "rank": 2,
+    "ovr": 105.0
+   }
+  },
+  "RJ Barrett": {
+   "K": {
+    "rank": 121,
+    "ovr": 74.0
+   },
+   "P15": {
+    "rank": 111,
+    "ovr": 74.4
+   },
+   "P30": {
+    "rank": 100,
+    "ovr": 74.8
+   }
+  },
+  "Jerami Grant": {
+   "K": {
+    "rank": 299,
+    "ovr": 57.4
+   },
+   "P15": {
+    "rank": 294,
+    "ovr": 58.2
+   },
+   "P30": {
+    "rank": 281,
+    "ovr": 59.1
+   }
+  },
+  "Brandon Williams": {
+   "K": {
+    "rank": 269,
+    "ovr": 60.8
+   },
+   "P15": {
+    "rank": 260,
+    "ovr": 61.8
+   },
+   "P30": {
+    "rank": 251,
+    "ovr": 62.7
+   }
+  },
+  "Bennedict Mathurin": {
+   "K": {
+    "rank": 206,
+    "ovr": 67.8
+   },
+   "P15": {
+    "rank": 201,
+    "ovr": 68.7
+   },
+   "P30": {
+    "rank": 193,
+    "ovr": 69.5
+   }
+  },
+  "Shaedon Sharpe": {
+   "K": {
+    "rank": 175,
+    "ovr": 70.9
+   },
+   "P15": {
+    "rank": 173,
+    "ovr": 71.1
+   },
+   "P30": {
+    "rank": 164,
+    "ovr": 71.2
+   }
+  },
+  "De'Andre Hunter": {
+   "K": {
+    "rank": 205,
+    "ovr": 68.0
+   },
+   "P15": {
+    "rank": 211,
+    "ovr": 67.5
+   },
+   "P30": {
+    "rank": 216,
+    "ovr": 66.9
+   }
+  },
+  "Tristan Vukcevic": {
+   "K": {
+    "rank": 231,
+    "ovr": 65.0
+   },
+   "P15": {
+    "rank": 235,
+    "ovr": 64.8
+   },
+   "P30": {
+    "rank": 242,
+    "ovr": 63.8
+   }
+  },
+  "Brandon Miller": {
+   "K": {
+    "rank": 130,
+    "ovr": 73.3
+   },
+   "P15": {
+    "rank": 138,
+    "ovr": 72.9
+   },
+   "P30": {
+    "rank": 140,
+    "ovr": 72.7
+   }
+  },
+  "Brice Sensabaugh": {
+   "K": {
+    "rank": 233,
+    "ovr": 64.8
+   },
+   "P15": {
+    "rank": 239,
+    "ovr": 64.4
+   },
+   "P30": {
+    "rank": 243,
+    "ovr": 63.8
+   }
+  },
+  "Bobby Portis Jr.": {
+   "K": {
+    "rank": 182,
+    "ovr": 70.4
+   },
+   "P15": {
+    "rank": 186,
+    "ovr": 70.3
+   },
+   "P30": {
+    "rank": 191,
+    "ovr": 69.9
+   }
+  }
+ },
+ "sub_up5_K_to_P30": [
+  "RJ Barrett",
+  "Jerami Grant",
+  "Brandon Williams",
+  "Bennedict Mathurin",
+  "Shaedon Sharpe"
+ ],
+ "sub_down5_K_to_P30": [
+  "De'Andre Hunter",
+  "Tristan Vukcevic",
+  "Brandon Miller",
+  "Brice Sensabaugh",
+  "Bobby Portis Jr."
+ ],
+ "K_top10_bigs": {
+  "Victor Wembanyama": {
+   "pos": "C",
+   "K": 2,
+   "P15": 2,
+   "P30": 2
+  },
+  "Giannis Antetokounmpo": {
+   "pos": "PF",
+   "K": 4,
+   "P15": 4,
+   "P30": 4
+  },
+  "Nikola Jokić": {
+   "pos": "C",
+   "K": 6,
+   "P15": 6,
+   "P30": 6
+  },
+  "Jayson Tatum": {
+   "pos": "PF",
+   "K": 8,
+   "P15": 8,
+   "P30": 8
+  },
+  "Scottie Barnes": {
+   "pos": "PF",
+   "K": 12,
+   "P15": 12,
+   "P30": 11
+  },
+  "Evan Mobley": {
+   "pos": "PF",
+   "K": 15,
+   "P15": 13,
+   "P30": 18
+  },
+  "Chet Holmgren": {
+   "pos": "PF",
+   "K": 16,
+   "P15": 14,
+   "P30": 12
+  },
+  "Jalen Williams": {
+   "pos": "PF",
+   "K": 17,
+   "P15": 17,
+   "P30": 13
+  },
+  "Jalen Johnson": {
+   "pos": "PF",
+   "K": 21,
+   "P15": 20,
+   "P30": 21
+  },
+  "Anthony Davis": {
+   "pos": "C",
+   "K": 22,
+   "P15": 22,
+   "P30": 22
+  }
+ },
+ "top20": {
+  "K": [
+   "Shai Gilgeous-Alexander",
+   "Victor Wembanyama",
+   "Kawhi Leonard",
+   "Giannis Antetokounmpo",
+   "Luka Dončić",
+   "Nikola Jokić",
+   "Donovan Mitchell",
+   "Jayson Tatum",
+   "Anthony Edwards",
+   "Jimmy Butler III",
+   "Cade Cunningham",
+   "Scottie Barnes",
+   "Jamal Murray",
+   "Stephen Curry",
+   "Evan Mobley",
+   "Chet Holmgren",
+   "Jalen Williams",
+   "Tyrese Maxey",
+   "Michael Porter Jr.",
+   "Kevin Durant"
+  ],
+  "P15": [
+   "Shai Gilgeous-Alexander",
+   "Victor Wembanyama",
+   "Kawhi Leonard",
+   "Giannis Antetokounmpo",
+   "Luka Dončić",
+   "Nikola Jokić",
+   "Donovan Mitchell",
+   "Jayson Tatum",
+   "Anthony Edwards",
+   "Jimmy Butler III",
+   "Cade Cunningham",
+   "Scottie Barnes",
+   "Evan Mobley",
+   "Chet Holmgren",
+   "Jamal Murray",
+   "Stephen Curry",
+   "Jalen Williams",
+   "Tyrese Maxey",
+   "Michael Porter Jr.",
+   "Jalen Johnson"
+  ],
+  "P30": [
+   "Shai Gilgeous-Alexander",
+   "Victor Wembanyama",
+   "Kawhi Leonard",
+   "Giannis Antetokounmpo",
+   "Luka Dončić",
+   "Nikola Jokić",
+   "Donovan Mitchell",
+   "Jayson Tatum",
+   "Anthony Edwards",
+   "Jimmy Butler III",
+   "Scottie Barnes",
+   "Chet Holmgren",
+   "Jalen Williams",
+   "Cade Cunningham",
+   "Jamal Murray",
+   "Stephen Curry",
+   "Michael Porter Jr.",
+   "Evan Mobley",
+   "Tyrese Maxey",
+   "Austin Reaves"
+  ]
+ },
+ "top20_changes": {
+  "P15": {
+   "in": [
+    "Jalen Johnson"
+   ],
+   "out": [
+    "Kevin Durant"
+   ]
+  },
+  "P30": {
+   "in": [
+    "Austin Reaves"
+   ],
+   "out": [
+    "Kevin Durant"
+   ]
+  }
+ },
+ "moved10_top300": {
+  "P15": 19,
+  "P30": 87
+ },
+ "sha256": {
+  "K-2022-23": "dc85fc894d9d56c4fde0e6f621950ebf6ef2fa8261478997908b64b11de2ad62",
+  "K-2023-24": "f9fff76eceb1ab65f481caf14a30b32176185041beeee2e77df1d137e96f4a6a",
+  "K-2024-25": "70070e7af08ea306d2ed754d269db238d7753518b7a2e5a77c3f4cf7aa1e983f",
+  "K-2025-26": "032889088a08064bf045d479f8bad442d9f288f690bc7f851f6651f66c334eae",
+  "P15-2022-23": "758a989b2be1cad3a1c7cc6a94791f7d190e437dea17b6df95959f76640ed84a",
+  "P15-2023-24": "04a1eb902b5b0867553dd908d2b5c1cabb704d32e67ec334ec185d01eb6640eb",
+  "P15-2024-25": "601645621a7cc5debb49959abf3e379ac84a63a0f12d67a3ad7f0ee716847de7",
+  "P15-2025-26": "fa5557c77cbd9adafbbce7b773d8872f55cad6246a3c133350b7ded199ee535d",
+  "P30-2022-23": "5e39d92e2680392666fec5af6bcd5ae24310220cca5a4f6cb3fdcaade33b7e52",
+  "P30-2023-24": "48d002618e37e25276ac0faf14cb4d19ad8f0110c4b34090a0f5191dbfe0bb6b",
+  "P30-2024-25": "5f4dd5962ecdb48fd372f88c8ba6423a610d0629baae584589a731729baade10",
+  "P30-2025-26": "1d1221d9f1751173d0ec3eb6c20a6ad4c27d14105774fbbf9ee992e295024952"
+ }
+}

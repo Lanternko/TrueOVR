@@ -1,0 +1,638 @@
+{
+ "audit": "E-084",
+ "date": "2026-10-29",
+ "role": "role-audit",
+ "conclusion": "重算成立",
+ "tolerances": {
+  "point": 1e-06,
+  "ci": 0.005
+ },
+ "max_diffs": {
+  "point": 0.0,
+  "ci_seed1": 0.0,
+  "coef": 0.0,
+  "ovr": 0.0,
+  "seed2to5_ci_shift_vs_seed1": 0.0012715554622620973
+ },
+ "coef_maxabs": {
+  "AB": 0.0,
+  "pooled_vs_E075_AB": 0.0,
+  "BA": 0.0,
+  "pooled_vs_E075_BA": 0.0,
+  "card": 0.0,
+  "pooled_vs_E075_card": 0.0
+ },
+ "ranking": {
+  "rows": 582,
+  "string_identical_rows": 582,
+  "max_abs_ovr_diff_rounded": 0.0,
+  "max_abs_ovr_unrounded_vs_csv": 0.04997552890772283,
+  "max_abs_gRepl_diff": 0.0,
+  "rank_identical": true
+ },
+ "eval": {
+  "dS_N": {
+   "mine_point": 0.12725954590095487,
+   "e084_point": 0.12725954590095487,
+   "point_absdiff": 0.0,
+   "mine_ci90": [
+    0.10709366296989324,
+    0.14740978917882008
+   ],
+   "e084_ci90": [
+    0.10709366296989324,
+    0.14740978917882008
+   ],
+   "ci_absdiff": 0.0
+  },
+  "c2N": {
+   "mine_point": 0.02464694222457925,
+   "e084_point": 0.02464694222457925,
+   "point_absdiff": 0.0,
+   "mine_ci90": [
+    0.00935588245813978,
+    0.03948017664092719
+   ],
+   "e084_ci90": [
+    0.00935588245813978,
+    0.03948017664092719
+   ],
+   "ci_absdiff": 0.0
+  },
+  "c2Q": {
+   "mine_point": -0.016651927792999177,
+   "e084_point": -0.016651927792999177,
+   "point_absdiff": 0.0,
+   "mine_ci90": [
+    -0.030427710097004262,
+    -0.004097500571299124
+   ],
+   "e084_ci90": [
+    -0.030427710097004262,
+    -0.004097500571299124
+   ],
+   "ci_absdiff": 0.0
+  },
+  "c4": {
+   "mine_point": 0.04647516750663144,
+   "e084_point": 0.04647516750663144,
+   "point_absdiff": 0.0,
+   "mine_ci90": [
+    0.027805055890233202,
+    0.06499260535630941
+   ],
+   "e084_ci90": [
+    0.027805055890233202,
+    0.06499260535630941
+   ],
+   "ci_absdiff": 0.0
+  },
+  "dS_Q": {
+   "mine_point": 0.15835124682964233,
+   "e084_point": 0.15835124682964233,
+   "point_absdiff": 0.0,
+   "mine_ci90": [
+    0.13476790381107656,
+    0.18351379060141024
+   ],
+   "e084_ci90": [
+    0.13476790381107656,
+    0.18351379060141024
+   ],
+   "ci_absdiff": 0.0
+  },
+  "SN_c": {
+   "mine": -0.07486578582588568,
+   "e084": -0.07486578582588568,
+   "absdiff": 0.0
+  },
+  "SN_b": {
+   "mine": -0.20212533172684055,
+   "e084": -0.20212533172684055,
+   "absdiff": 0.0
+  },
+  "SQ_c": {
+   "mine": 0.13732095625631613,
+   "e084": 0.13732095625631613,
+   "absdiff": 0.0
+  },
+  "SQ_b": {
+   "mine": -0.021030290573326196,
+   "e084": -0.021030290573326196,
+   "absdiff": 0.0
+  },
+  "rN_c": {
+   "mine": 0.484716404332415,
+   "e084": 0.484716404332415,
+   "absdiff": 0.0
+  },
+  "rN_b": {
+   "mine": 0.4600694621078357,
+   "e084": 0.4600694621078357,
+   "absdiff": 0.0
+  },
+  "rQ_c": {
+   "mine": 0.588498341001609,
+   "e084": 0.588498341001609,
+   "absdiff": 0.0
+  },
+  "rQ_b": {
+   "mine": 0.6051502687946082,
+   "e084": 0.6051502687946082,
+   "absdiff": 0.0
+  },
+  "SN_b_vs_E081": 0.0,
+  "SQ_b_vs_E081": 0.0
+ },
+ "seed_stability": {
+  "dS_N": {
+   "lo": [
+    0.10709366296989324,
+    0.10679259447533015,
+    0.10665677495301087,
+    0.10582210750763114,
+    0.10615493346461824
+   ],
+   "hi": [
+    0.14740978917882008,
+    0.14808559649826467,
+    0.14818430292884752,
+    0.14740665154897184,
+    0.14774122012430785
+   ],
+   "lo_range": 0.0012715554622620973,
+   "hi_range": 0.0007776513798756768,
+   "max_shift_vs_seed1": 0.0012715554622620973
+  },
+  "c2N": {
+   "lo": [
+    0.00935588245813978,
+    0.009511239003501471,
+    0.009610260598560547,
+    0.009703927187208344,
+    0.009751072986547168
+   ],
+   "hi": [
+    0.03948017664092719,
+    0.040643614560672676,
+    0.04029608672282269,
+    0.0402641100529492,
+    0.03914301151582139
+   ],
+   "lo_range": 0.0003951905284073874,
+   "hi_range": 0.0015006030448512855,
+   "max_shift_vs_seed1": 0.0011634379197454844
+  },
+  "c2Q": {
+   "lo": [
+    -0.030427710097004262,
+    -0.029649441261219944,
+    -0.029181261512006416,
+    -0.029820792884104434,
+    -0.030052528611137237
+   ],
+   "hi": [
+    -0.004097500571299124,
+    -0.0039023054584827175,
+    -0.003557647741545728,
+    -0.00458133231067876,
+    -0.003909575181773058
+   ],
+   "lo_range": 0.001246448584997846,
+   "hi_range": 0.001023684569133032,
+   "max_shift_vs_seed1": 0.001246448584997846
+  },
+  "c4": {
+   "lo": [
+    0.027805055890233202,
+    0.02816599762317436,
+    0.02810354276462127,
+    0.027518416288477145,
+    0.02783196103342469
+   ],
+   "hi": [
+    0.06499260535630941,
+    0.0650016434359867,
+    0.06515791052563036,
+    0.06618717554709865,
+    0.06536102569102273
+   ],
+   "lo_range": 0.0006475813346972156,
+   "hi_range": 0.0011945701907892375,
+   "max_shift_vs_seed1": 0.0011945701907892375
+  }
+ },
+ "pred_std": {
+  "mine": {
+   "season": 1.0115639255758189,
+   "pooled": 1.647047801338789,
+   "n": 279,
+   "mean_season": 0.3608776543434828,
+   "mean_pooled": 0.7415594197347515
+  },
+  "e084": {
+   "MIN>=1000_n": 279,
+   "pred_new_std_new": 1.0115639255758189,
+   "pred_new_std_card023": 1.647047801338789,
+   "ddof": 0,
+   "pred_new_mean_new": 0.3608776543434828,
+   "pred_new_mean_card023": 0.7415594197347515
+  }
+ },
+ "rapm1_check": {
+  "observations_total": 74746,
+  "A": {
+   "observations": 37581,
+   "games": 613,
+   "players": 575,
+   "all_game_parity_ok": true,
+   "maxAbsDiff_net": 5.5067062021407764e-14,
+   "maxAbsDiff_poss": 3.637978807091713e-12,
+   "intercept": 112.37237112816901
+  },
+  "B": {
+   "observations": 37165,
+   "games": 607,
+   "players": 579,
+   "all_game_parity_ok": true,
+   "maxAbsDiff_net": 6.128431095930864e-14,
+   "maxAbsDiff_poss": 2.7284841053187847e-12,
+   "intercept": 112.67628913215782
+  },
+  "games_overlap_A_B": 0,
+  "games_total": 1220,
+  "player_games_games": 1230,
+  "stint_games_equal_player_games_games": false
+ },
+ "rerun_e084": {
+  "run_c0_exit": 0,
+  "c0": {
+   "pass": true,
+   "c2_c4_equal_E075": true,
+   "ranking_sha256_equal_card023": true,
+   "ranking_shared_cols_equal": true,
+   "coefficients_equal_E075": true,
+   "ranking_sha256": "933797d84f6c411b57f3caadcf26a898c203858b4808cf97b461717a9c3ebc64",
+   "card023_sha256": "933797d84f6c411b57f3caadcf26a898c203858b4808cf97b461717a9c3ebc64",
+   "max_diff_c2_c4": 0.0,
+   "max_diff_ranking_numeric": 0.0
+  },
+  "pooled_ranking_sha256": "933797d84f6c411b57f3caadcf26a898c203858b4808cf97b461717a9c3ebc64",
+  "card023_sha256": "933797d84f6c411b57f3caadcf26a898c203858b4808cf97b461717a9c3ebc64",
+  "season_ranking_sha256": "af37ce25169c64b5e747afe066b42747c187b5d2ef20ffb3cc454e3ba95b7203",
+  "e084_ranking_sha256": "af37ce25169c64b5e747afe066b42747c187b5d2ef20ffb3cc454e3ba95b7203",
+  "pooled_equal_card023": true,
+  "season_equal_e084": true
+ },
+ "evaluation_rerun_equal_original": true,
+ "c3": {
+  "gates_passed": {
+   "card023": "18/19",
+   "E084": "16/19"
+  },
+  "changed_gates": {
+   "carusoGate": {
+    "card023": "pass",
+    "E084": "fail (103 vs ref 94)"
+   },
+   "big14of16": {
+    "card023": "pass 15/16",
+    "E084": "fail 13/16"
+   }
+  },
+  "unchanged_fail": [
+   "allFourStayTop10"
+  ],
+  "big16_fails": {
+   "card023": [
+    "Wembanyama 23 vs 5"
+   ],
+   "E084": [
+    "Wembanyama 6 vs 5",
+    "Embiid 18 vs 17.5",
+    "Davis 45 vs 32"
+   ]
+  },
+  "wing_guard_fails": {
+   "card023": [
+    "Ausar Thompson 82 vs 47.5",
+    "Ajay Mitchell 96 vs 81"
+   ],
+   "E084": [
+    "Caruso 103 vs 94",
+    "Ajay Mitchell 95 vs 81"
+   ]
+  },
+  "rho_report_only": {
+   "rho2k": [
+    0.7401,
+    0.7479
+   ],
+   "rhoRapm": [
+    0.7747,
+    0.746
+   ],
+   "rhoDef": [
+    0.4901,
+    0.4877
+   ]
+  }
+ },
+ "six": [
+  {
+   "name": "LeBron James",
+   "age": 41,
+   "MIN": 1989.055,
+   "mpgAvail": 33.15091666666667,
+   "playRate_a": 1.0,
+   "rank_card023": 21,
+   "rank_E084": 57,
+   "ovr_card023": 89.1,
+   "ovr_E084": 84.9,
+   "rapm1_A_net": -0.08303410109477069,
+   "rapm1_A_poss": 4383.062972844509,
+   "rapm1_B_net": 0.14848405749572813,
+   "rapm1_B_poss": 3874.1447630713974,
+   "season_net_full": -0.061,
+   "pooled_net_4season": 3.535,
+   "rank1000_seasonNet": 173,
+   "rank1000_pooledNet": 44,
+   "rank1000_ansN(seasonNet*mpg)": 173,
+   "rank1000_ansQ(pooledNet*mpg)": 33,
+   "p": 1.4629223592266807,
+   "pred_card023": 2.9009184587208967,
+   "pred_E084": 0.9697112394813783,
+   "rank1000_pred_card023": 23,
+   "rank1000_pred_E084": 78,
+   "rank1000_g_card023": 20,
+   "rank1000_g_E084": 55,
+   "dpred_terms": {
+    "b0": -0.3340964454257036,
+    "b1_p": -0.5129420427347999,
+    "b2_L": -2.755945601731259,
+    "b3_a": 2.6520793293830134,
+    "b4_y": 0.0,
+    "b5_v": 0.4254952669612334,
+    "b6_yL": 0.0,
+    "b7_vL": -1.4057977256920025,
+    "b8_ydL": -0.0
+   },
+   "dpred": -1.9312072192395184
+  },
+  {
+   "name": "Stephen Curry",
+   "age": 38,
+   "MIN": 1328.7283333333332,
+   "mpgAvail": 30.90065891472868,
+   "playRate_a": 1.0,
+   "rank_card023": 10,
+   "rank_E084": 27,
+   "ovr_card023": 92.3,
+   "ovr_E084": 89.7,
+   "rapm1_A_net": 0.9627514829303957,
+   "rapm1_A_poss": 3259.596204589133,
+   "rapm1_B_net": 1.7186272975247237,
+   "rapm1_B_poss": 2336.2403221573995,
+   "season_net_full": 2.155,
+   "pooled_net_4season": 4.572,
+   "rank1000_seasonNet": 56,
+   "rank1000_pooledNet": 22,
+   "rank1000_ansN(seasonNet*mpg)": 49,
+   "rank1000_ansQ(pooledNet*mpg)": 19,
+   "p": 2.6002185168716094,
+   "pred_card023": 3.823399471505623,
+   "pred_E084": 1.5737674688477956,
+   "rank1000_pred_card023": 11,
+   "rank1000_pred_E084": 26,
+   "rank1000_g_card023": 10,
+   "rank1000_g_E084": 27,
+   "dpred_terms": {
+    "b0": -0.3340964454257036,
+    "b1_p": -0.9117103099757244,
+    "b2_L": -2.7027413905513744,
+    "b3_a": 2.6520793293830134,
+    "b4_y": 0.0,
+    "b5_v": 0.4254952669612334,
+    "b6_yL": 0.0,
+    "b7_vL": -1.3786584530492718,
+    "b8_ydL": -0.0
+   },
+   "dpred": -2.249632002657828
+  },
+  {
+   "name": "Rudy Gobert",
+   "age": 34,
+   "MIN": 2380.0466666666666,
+   "mpgAvail": 31.31640350877193,
+   "playRate_a": 1.0,
+   "rank_card023": 16,
+   "rank_E084": 44,
+   "ovr_card023": 89.3,
+   "ovr_E084": 86.0,
+   "rapm1_A_net": 0.2605942339366254,
+   "rapm1_A_poss": 5238.917892397094,
+   "rapm1_B_net": 3.185596408537612,
+   "rapm1_B_poss": 4767.298903499892,
+   "season_net_full": 2.294,
+   "pooled_net_4season": 4.315,
+   "rank1000_seasonNet": 52,
+   "rank1000_pooledNet": 27,
+   "rank1000_ansN(seasonNet*mpg)": 41,
+   "rank1000_ansQ(pooledNet*mpg)": 24,
+   "p": 1.8941712632787124,
+   "pred_card023": 3.2119795933713755,
+   "pred_E084": 1.1946456194599342,
+   "rank1000_pred_card023": 16,
+   "rank1000_pred_E084": 47,
+   "rank1000_g_card023": 16,
+   "rank1000_g_E084": 43,
+   "dpred_terms": {
+    "b0": -0.3340964454257036,
+    "b1_p": -0.6641501313776758,
+    "b2_L": -2.7128481298304385,
+    "b3_a": 2.6520793293830134,
+    "b4_y": 0.0,
+    "b5_v": 0.4254952669612334,
+    "b6_yL": 0.0,
+    "b7_vL": -1.38381386362187,
+    "b8_ydL": -0.0
+   },
+   "dpred": -2.017333973911441
+  },
+  {
+   "name": "Anthony Davis",
+   "age": 33,
+   "MIN": 625.63,
+   "mpgAvail": 31.2815,
+   "playRate_a": 1.0,
+   "rank_card023": 18,
+   "rank_E084": 45,
+   "ovr_card023": 89.3,
+   "ovr_E084": 85.9,
+   "rapm1_A_net": 0.0021503711521330127,
+   "rapm1_A_poss": 1097.0464009501022,
+   "rapm1_B_net": -0.42029938468830497,
+   "rapm1_B_poss": 1527.9086958865732,
+   "season_net_full": -0.004,
+   "pooled_net_4season": 4.024,
+   "rank1000_seasonNet": null,
+   "rank1000_pooledNet": null,
+   "rank1000_ansN(seasonNet*mpg)": null,
+   "rank1000_ansQ(pooledNet*mpg)": null,
+   "p": 1.8941712632757122,
+   "pred_card023": 3.21055437382114,
+   "pred_E084": 1.1944941498510802,
+   "rank1000_pred_card023": null,
+   "rank1000_pred_E084": null,
+   "rank1000_g_card023": null,
+   "rank1000_g_E084": null,
+   "dpred_terms": {
+    "b0": -0.3340964454257036,
+    "b1_p": -0.6641501313766237,
+    "b2_L": -2.7120046406314233,
+    "b3_a": 2.6520793293830134,
+    "b4_y": 0.0,
+    "b5_v": 0.4254952669612334,
+    "b6_yL": 0.0,
+    "b7_vL": -1.3833836028805562,
+    "b8_ydL": -0.0
+   },
+   "dpred": -2.01606022397006
+  },
+  {
+   "name": "Joel Embiid",
+   "age": 32,
+   "MIN": 1200.6383333333333,
+   "mpgAvail": 31.59574561403509,
+   "playRate_a": 1.0,
+   "rank_card023": 7,
+   "rank_E084": 18,
+   "ovr_card023": 94.4,
+   "ovr_E084": 92.0,
+   "rapm1_A_net": 1.7417609819395958,
+   "rapm1_A_poss": 1841.1182774186307,
+   "rapm1_B_net": 1.5752535265467398,
+   "rapm1_B_poss": 3004.924255401702,
+   "season_net_full": 2.813,
+   "pooled_net_4season": 5.795,
+   "rank1000_seasonNet": 32,
+   "rank1000_pooledNet": 10,
+   "rank1000_ansN(seasonNet*mpg)": 27,
+   "rank1000_ansQ(pooledNet*mpg)": 10,
+   "p": 2.855655366265156,
+   "pred_card023": 4.079208163262629,
+   "pred_E084": 1.7146057396768075,
+   "rank1000_pred_card023": 7,
+   "rank1000_pred_E084": 16,
+   "rank1000_g_card023": 7,
+   "rank1000_g_E084": 18,
+   "dpred_terms": {
+    "b0": -0.3340964454257036,
+    "b1_p": -1.0012737092164936,
+    "b2_L": -2.7195661594434415,
+    "b3_a": 2.6520793293830134,
+    "b4_y": 0.0,
+    "b5_v": 0.4254952669612334,
+    "b6_yL": 0.0,
+    "b7_vL": -1.3872407058444296,
+    "b8_ydL": -0.0
+   },
+   "dpred": -2.364602423585821
+  },
+  {
+   "name": "Alex Caruso",
+   "age": 32,
+   "MIN": 1020.3466666666667,
+   "mpgAvail": 17.900818713450292,
+   "playRate_a": 0.9824561403508771,
+   "rank_card023": 78,
+   "rank_E084": 103,
+   "ovr_card023": 79.8,
+   "ovr_E084": 78.9,
+   "rapm1_A_net": 4.69180041794057,
+   "rapm1_A_poss": 2187.4446418504194,
+   "rapm1_B_net": 0.9415314005903328,
+   "rapm1_B_poss": 2030.811370663604,
+   "season_net_full": 3.832,
+   "pooled_net_4season": 5.907,
+   "rank1000_seasonNet": 16,
+   "rank1000_pooledNet": 9,
+   "rank1000_ansN(seasonNet*mpg)": 43,
+   "rank1000_ansQ(pooledNet*mpg)": 44,
+   "p": 3.404421266057308,
+   "pred_card023": 3.8874240996862355,
+   "pred_E084": 1.9262452179284602,
+   "rank1000_pred_card023": 10,
+   "rank1000_pred_E084": 11,
+   "rank1000_g_card023": 74,
+   "rank1000_g_E084": 96,
+   "dpred_terms": {
+    "b0": -0.3340964454257036,
+    "b1_p": -1.1936865873485796,
+    "b2_L": -2.2941865882888637,
+    "b3_a": 2.605551621849978,
+    "b4_y": 0.0,
+    "b5_v": 0.4254952669612334,
+    "b6_yL": 0.0,
+    "b7_vL": -1.1702561495058401,
+    "b8_ydL": -0.0
+   },
+   "dpred": -1.9611788817577753
+  }
+ ],
+ "six_reason": {
+  "LeBron James": "季 RAPM 真的低（季第 173 vs 四季第 44）；經老將項＋p 壓縮，非分鐘",
+  "Stephen Curry": "季 RAPM 較低（季第 56 vs 四季第 22）；老將項＋p 壓縮，非分鐘",
+  "Rudy Gobert": "季 RAPM 較低（季第 52 vs 四季第 27）；老將項＋p 壓縮，非分鐘",
+  "Anthony Davis": "季 RAPM 真的低（兩半約 0 vs 四季 4.0）；老將項＋p 壓縮，非分鐘",
+  "Joel Embiid": "季 RAPM 較低（季第 32 vs 四季第 10）；老將項＋p 壓縮，非分鐘",
+  "Alex Caruso": "分鐘權重變重：pred 名次 10→11 幾乎不變、季 RAPM 第 16，但 mpgAvail 17.9 使 g 名次 74→96"
+ },
+ "issues": [
+  "results.json verdict 與 report.md 第 3 行仍為「不通過（不採用）」，未照 R-042 改為「通過（R-042）」",
+  "沿用 E-075：coef_AB 訓練特徵含 p_B（擬合自評估半 rapm-B），只經 9 個全域係數的間接路徑，E-084 未改",
+  "card 0.2.2 p 上限平手：9 人 p=1.894171263（E-084 之前就有）",
+  "mpg-A/B（card 0.2.2 fitA/B 輸入）gp 與 player-games 奇偶重算各有 35 人不同，原因未追；上游、非兩半對調",
+  "未重算：R3 隊內相關中位數；npm test 未重跑"
+ ],
+ "leakage": {
+  "pipeline_eval_uses_ev_half_answer": true,
+  "training_uses_fit_half_rapm1": true,
+  "ab_mapping_reversed": false,
+  "rapm1_halves_parity_ok": true,
+  "rapm1_games_overlap": 0,
+  "per_player_leak": false,
+  "indirect_path_inherited_from_E075": "coef_AB 的 X_B 含 p_B（rapm-B 擬合）"
+ },
+ "readonly_check": {
+  "files_before": 44841,
+  "files_after": 44861,
+  "changed": [],
+  "removed": [],
+  "added": [
+   "reports/E080-rimd-scurve/boot.mjs",
+   "reports/E080-rimd-scurve/engine-check-off.json",
+   "reports/E080-rimd-scurve/engine-check-on.json",
+   "reports/E080-rimd-scurve/engine-check.mjs",
+   "reports/E080-rimd-scurve/g0/benchmark-league.json",
+   "reports/E080-rimd-scurve/g0/season-league.json",
+   "reports/E080-rimd-scurve/g0/sonnet-outputs.sha256",
+   "reports/E080-rimd-scurve/handcheck.md",
+   "reports/E080-rimd-scurve/help-2025-26.json",
+   "reports/E080-rimd-scurve/ro-sha256-start.tsv",
+   "reports/E080-rimd-scurve/rr-core.mjs",
+   "reports/E080-rimd-scurve/rr-run.mjs",
+   "reports/E080-rimd-scurve/rr-worker.mjs",
+   "reports/E080-rimd-scurve/tools/handcheck.py",
+   "reports/E080-rimd-scurve/tools/redirect-data-writes.mjs",
+   "reports/E080-rimd-scurve/tools/ref-sorted-v.json",
+   "reports/E080-rimd-scurve/tools/ro_manifest.py",
+   "reports/E080-rimd-scurve/winimp-run.mjs",
+   "reports/E080-rimd-scurve/winimp-worker.mjs",
+   "reports/sim-0.1.0+E085-physedge/rapm_2022_25.py"
+  ],
+  "ok": false,
+  "note": "changed=0、removed=0；新增 20 檔都在 reports/E080-rimd-scurve/ 與 reports/sim-0.1.0+E085-physedge/，是同時進行的其他派工 session 寫入，本稽核沒有寫這些目錄",
+  "ok_for_this_audit": true
+ }
+}

@@ -1,0 +1,351 @@
+{
+ "mode": "B2",
+ "down": [
+  {
+   "name": "Karlo Matković",
+   "archetype": "吃餅長人",
+   "rank2k": 294.5,
+   "rapmPooledRank": 212.0,
+   "rapmLastRank": 230.0,
+   "v53": 7,
+   "v54": 8,
+   "B2": 8,
+   "deltaV53": 1,
+   "deltaV54": 0
+  },
+  {
+   "name": "John Collins",
+   "archetype": "吃餅長人",
+   "rank2k": 142.0,
+   "rapmPooledRank": 240.0,
+   "rapmLastRank": 328.0,
+   "v53": 29,
+   "v54": 28,
+   "B2": 28,
+   "deltaV53": -1,
+   "deltaV54": 0
+  },
+  {
+   "name": "Isaiah Stewart",
+   "archetype": "吃餅長人",
+   "rank2k": 194.5,
+   "rapmPooledRank": 261.0,
+   "rapmLastRank": 411.0,
+   "v53": 32,
+   "v54": 31,
+   "B2": 31,
+   "deltaV53": -1,
+   "deltaV54": 0
+  },
+  {
+   "name": "Luka Garza",
+   "archetype": "吃餅長人",
+   "rank2k": 255.5,
+   "rapmPooledRank": 174.5,
+   "rapmLastRank": 178.0,
+   "v53": 33,
+   "v54": 49,
+   "B2": 49,
+   "deltaV53": 16,
+   "deltaV54": 0
+  }
+ ],
+ "keep": [
+  {
+   "name": "Neemias Queta",
+   "archetype": "吃餅長人",
+   "rank2k": 110.5,
+   "rapmPooledRank": 13.0,
+   "rapmLastRank": 7.0,
+   "v53": 51,
+   "v54": 43,
+   "B2": 43,
+   "deltaV53": -8,
+   "deltaV54": 0
+  },
+  {
+   "name": "Rudy Gobert",
+   "archetype": "吃餅長人",
+   "rank2k": 60.5,
+   "rapmPooledRank": 29.0,
+   "rapmLastRank": 57.0,
+   "v53": 68,
+   "v54": 65,
+   "B2": 65,
+   "deltaV53": -3,
+   "deltaV54": 0
+  },
+  {
+   "name": "Jalen Smith",
+   "archetype": "吃餅長人",
+   "rank2k": 220.0,
+   "rapmPooledRank": 65.0,
+   "rapmLastRank": 23.0,
+   "v53": 104,
+   "v54": 97,
+   "B2": 97,
+   "deltaV53": -7,
+   "deltaV54": 0
+  }
+ ],
+ "extra": [
+  {
+   "name": "Charles Bassey",
+   "archetype": "其他",
+   "rank2k": 428.0,
+   "rapmPooledRank": 353.0,
+   "rapmLastRank": 385.0,
+   "v53": 42,
+   "v54": 38,
+   "B2": 38,
+   "deltaV53": -4,
+   "deltaV54": 0
+  },
+  {
+   "name": "Jaxson Hayes",
+   "archetype": "吃餅長人",
+   "rank2k": 220.0,
+   "rapmPooledRank": 325.0,
+   "rapmLastRank": 212.0,
+   "v53": 109,
+   "v54": 126,
+   "B2": 126,
+   "deltaV53": 17,
+   "deltaV54": 0
+  },
+  {
+   "name": "Jordan Walsh",
+   "archetype": "吃餅長人",
+   "rank2k": 294.5,
+   "rapmPooledRank": 213.0,
+   "rapmLastRank": 222.0,
+   "v53": 75,
+   "v54": 69,
+   "B2": 69,
+   "deltaV53": -6,
+   "deltaV54": 0
+  },
+  {
+   "name": "Josh Minott",
+   "archetype": "吃餅長人",
+   "rank2k": 294.5,
+   "rapmPooledRank": 221.0,
+   "rapmLastRank": 207.5,
+   "v53": 79,
+   "v54": 96,
+   "B2": 96,
+   "deltaV53": 17,
+   "deltaV54": 0
+  },
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "archetype": "持球創造",
+   "rank2k": 2.0,
+   "rapmPooledRank": 2.0,
+   "rapmLastRank": 1.0,
+   "v53": 1,
+   "v54": 1,
+   "B2": 1,
+   "deltaV53": 0,
+   "deltaV54": 0
+  },
+  {
+   "name": "Nikola Jokić",
+   "archetype": "持球創造",
+   "rank2k": 2.0,
+   "rapmPooledRank": 1.0,
+   "rapmLastRank": 8.0,
+   "v53": 8,
+   "v54": 6,
+   "B2": 6,
+   "deltaV53": -2,
+   "deltaV54": 0
+  },
+  {
+   "name": "Luka Dončić",
+   "archetype": "持球創造",
+   "rank2k": 5.0,
+   "rapmPooledRank": 16.0,
+   "rapmLastRank": 45.0,
+   "v53": 2,
+   "v54": 2,
+   "B2": 2,
+   "deltaV53": 0,
+   "deltaV54": 0
+  },
+  {
+   "name": "Trae Young",
+   "archetype": "持球創造",
+   "rank2k": 30.5,
+   "rapmPooledRank": 199.0,
+   "rapmLastRank": 372.0,
+   "v53": 140,
+   "v54": 137,
+   "B2": 137,
+   "deltaV53": -3,
+   "deltaV54": 0
+  },
+  {
+   "name": "Victor Wembanyama",
+   "archetype": "其他",
+   "rank2k": 2.0,
+   "rapmPooledRank": 5.0,
+   "rapmLastRank": 2.0,
+   "v53": 3,
+   "v54": 3,
+   "B2": 3,
+   "deltaV53": 0,
+   "deltaV54": 0
+  }
+ ],
+ "archetypeDelta": {
+  "吃餅長人": {
+   "players": 40,
+   "meanDeltaVsV53": 0.1,
+   "medianDeltaVsV53": 0.0,
+   "meanDeltaVsV54": 0.0,
+   "medianDeltaVsV54": 0.0
+  },
+  "持球創造": {
+   "players": 172,
+   "meanDeltaVsV53": 1.872093023255814,
+   "medianDeltaVsV53": 1.0,
+   "meanDeltaVsV54": 0.0,
+   "medianDeltaVsV54": 0.0
+  },
+  "3D": {
+   "players": 109,
+   "meanDeltaVsV53": 7.10091743119266,
+   "medianDeltaVsV53": 6.0,
+   "meanDeltaVsV54": 0.0,
+   "medianDeltaVsV54": 0.0
+  },
+  "其他": {
+   "players": 261,
+   "meanDeltaVsV53": -4.21455938697318,
+   "medianDeltaVsV53": -2.0,
+   "meanDeltaVsV54": 0.0,
+   "medianDeltaVsV54": 0.0
+  }
+ },
+ "agreement": {
+  "rank2k": {
+   "players": 575,
+   "v53": {
+    "spearman": 0.4461200954400849,
+    "meanAbsRankGap": 138.1391304347826
+   },
+   "v54": {
+    "spearman": 0.45531245265868814,
+    "meanAbsRankGap": 136.64
+   },
+   "B2": {
+    "spearman": 0.45531245265868814,
+    "meanAbsRankGap": 136.64
+   },
+   "finishersMeanTargetMinusCard": {
+    "v53": 61.775,
+    "v54": 61.675,
+    "B2": 61.675
+   },
+   "finishers": 40
+  },
+  "rapmPooledRank": {
+   "players": 414,
+   "v53": {
+    "spearman": 0.4996581758130533,
+    "meanAbsRankGap": 131.54347826086956
+   },
+   "v54": {
+    "spearman": 0.5134420828909914,
+    "meanAbsRankGap": 130.22222222222223
+   },
+   "B2": {
+    "spearman": 0.5134420828909914,
+    "meanAbsRankGap": 130.22222222222223
+   },
+   "finishersMeanTargetMinusCard": {
+    "v53": 15.93939393939394,
+    "v54": 14.151515151515152,
+    "B2": 14.151515151515152
+   },
+   "finishers": 33
+  },
+  "rapmLastRank": {
+   "players": 497,
+   "v53": {
+    "spearman": 0.5015048511042939,
+    "meanAbsRankGap": 129.02213279678068
+   },
+   "v54": {
+    "spearman": 0.506576282412704,
+    "meanAbsRankGap": 128.32595573440645
+   },
+   "B2": {
+    "spearman": 0.506576282412704,
+    "meanAbsRankGap": 128.32595573440645
+   },
+   "finishersMeanTargetMinusCard": {
+    "v53": 27.615384615384617,
+    "v54": 26.846153846153847,
+    "B2": 26.846153846153847
+   },
+   "finishers": 39
+  }
+ },
+ "verdict": {
+  "down": {
+   "Karlo Matković": {
+    "v53": 7,
+    "B2": 8,
+    "delta": 1,
+    "rank2k": 294.5,
+    "rapmPooledRank": 212.0
+   },
+   "John Collins": {
+    "v53": 29,
+    "B2": 28,
+    "delta": -1,
+    "rank2k": 142.0,
+    "rapmPooledRank": 240.0
+   },
+   "Isaiah Stewart": {
+    "v53": 32,
+    "B2": 31,
+    "delta": -1,
+    "rank2k": 194.5,
+    "rapmPooledRank": 261.0
+   },
+   "Luka Garza": {
+    "v53": 33,
+    "B2": 49,
+    "delta": 16,
+    "rank2k": 255.5,
+    "rapmPooledRank": 174.5
+   }
+  },
+  "keep": {
+   "Neemias Queta": {
+    "v53": 51,
+    "B2": 43,
+    "delta": -8,
+    "withinTolerance": true
+   },
+   "Rudy Gobert": {
+    "v53": 68,
+    "B2": 65,
+    "delta": -3,
+    "withinTolerance": true
+   },
+   "Jalen Smith": {
+    "v53": 104,
+    "B2": 97,
+    "delta": -7,
+    "withinTolerance": true
+   }
+  },
+  "keepTolerance": 15,
+  "downAllMoved": false,
+  "keepAllWithinTolerance": true
+ }
+}

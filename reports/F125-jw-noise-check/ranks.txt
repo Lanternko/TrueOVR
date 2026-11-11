@@ -1,0 +1,29 @@
+N 303
+name                        pos    ovr     T6    dpm    bpm    epm  rapm4   2k26
+Shai Gilgeous-Alexander      PG      1      1      2      1      2      1      1
+Victor Wembanyama             C      2      3      3      2      3    nan      3
+Kawhi Leonard                SF      3      4      4      5      4      4     12
+Giannis Antetokounmpo        PF      4      2      1      3      5      2      2
+Luka Dončić                  PG      5    nan    nan      4      8      3    nan
+Donovan Mitchell             SG      6      5      5     10     11      5      9
+Nikola Jokić                  C      7    nan    nan    nan      1    nan    nan
+Cade Cunningham              PG      8     11     47      6     21     12      9
+Chet Holmgren                PF      9     12     16     18     10     13     20
+Jalen Williams               PF     10     23     12     63    111     23     16
+Jimmy Butler III             SF     10    nan    nan    nan      9     11    nan
+Anthony Edwards              SG     12      6      6     14     32      6      4
+Jamal Murray                 PG     13     13     23     21    128     16     38
+Evan Mobley                  PF     14     17     13     32     41     17     20
+Kevin Durant                 SF     15     10     19     14     37     10      9
+Stephen Curry                PG     16      7      8      8     40      7      6
+Joel Embiid                   C     18      9      9     12     13      9     12
+Scottie Barnes               PF     18     30     60     18     83     33     24
+Tyrese Maxey                 PG     19     18     52      8     46     18     38
+Franz Wagner                 SF     20     33     31     50      7     37     38
+Jaylen Brown                 SF     21     21     25     26    196     21     16
+LeBron James                 SF     22     15     18     24     59     15      6
+Zion Williamson              PF     23     36     39     35     50     38     28
+Jalen Johnson                PF     24     27     54     18     90     34     82
+Austin Reaves                SG     26     42     49     38     58     43     44
+T6 resid JW -0.01 sd 0.44 pct 47.8% ; z -0.02
+among card top40 JW resid rank (most negative=1): 7

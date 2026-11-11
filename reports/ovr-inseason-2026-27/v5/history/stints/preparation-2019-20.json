@@ -1,0 +1,237 @@
+{
+ "season": "2019-20",
+ "boxGames": 1059,
+ "pbpGames": 1056,
+ "validLineupGames": 1046,
+ "failedGames": 13,
+ "stints": 33397,
+ "filledPeriodStarters": 12,
+ "pointsPer100": 110.2755356065178,
+ "possessionsPerTeamGame": 101.38432122370936,
+ "minuteToleranceSeconds": 2.1,
+ "failures": [
+  {
+   "id": 21900380,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      4,
+      1610612756,
+      [
+       201937,
+       1626162,
+       1626163,
+       1626164,
+       1628969,
+       1629661
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21900622,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      3,
+      1610612739,
+      [
+       201567,
+       202684,
+       203089,
+       1626224,
+       1629012,
+       1629636
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21900633,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      3,
+      1610612747,
+      [
+       2544,
+       2730,
+       201580,
+       201980,
+       202340,
+       1628398
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21900786,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      3,
+      1610612738,
+      [
+       202330,
+       202689,
+       203935,
+       1627759,
+       1628369,
+       1628464
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21900871,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      2,
+      1610612746,
+      [
+       101150,
+       201976,
+       202704,
+       203210,
+       1626149,
+       1629013
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21900940,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      4,
+      1610612745,
+      [
+       200757,
+       200782,
+       201935,
+       201960,
+       203085,
+       203496
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21901233,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      3,
+      1610612751,
+      [
+       202498,
+       203925,
+       1627747,
+       1628386,
+       1629066,
+       1629185
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21901251,
+   "errors": [],
+   "mismatches": [
+    {
+     "playerId": 1629008,
+     "errorSeconds": -3.0
+    }
+   ]
+  },
+  {
+   "id": 21901265,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      3,
+      1610612747,
+      [
+       2544,
+       201580,
+       201980,
+       202693,
+       203076,
+       203484
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21901300,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      4,
+      1610612757,
+      [
+       2546,
+       202355,
+       203468,
+       203994,
+       1626209,
+       1628380,
+       1629018
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21901316,
+   "error": "missing pbp"
+  },
+  {
+   "id": 21901317,
+   "error": "missing pbp"
+  },
+  {
+   "id": 21901318,
+   "error": "missing pbp"
+  }
+ ],
+ "sources": {
+  "pbp": {
+   "file": "nbastats_2019.csv",
+   "sha256": "ed8bde17e05e84f6acdbe1c7e42c6c580a34ddc76d567cc3dae766727a0e11fb"
+  },
+  "box": [
+   {
+    "file": "regular_season_box_scores_2010_2024_part_1.csv",
+    "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+   },
+   {
+    "file": "regular_season_box_scores_2010_2024_part_2.csv",
+    "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+   },
+   {
+    "file": "regular_season_box_scores_2010_2024_part_3.csv",
+    "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+   }
+  ]
+ }
+}

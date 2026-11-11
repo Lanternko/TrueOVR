@@ -1,0 +1,1147 @@
+{
+ "arms": {
+  "A0": {
+   "B1": 0.4808118178654351,
+   "n": 2791,
+   "good": 716,
+   "drop": 194,
+   "drop_rate": 0.2709497206703911,
+   "absd_med": 0.6473064047561792,
+   "absd_max": 12.38868020238423,
+   "F_pm": 0.18002152469474847,
+   "F_rt": 0.35345240655596627,
+   "nF": 2788,
+   "R3_term_med": 0.0,
+   "R3_n": 400,
+   "R1": false,
+   "R2": true
+  },
+  "M": {
+   "B1": 0.4860494818529055,
+   "n": 2791,
+   "good": 716,
+   "drop": 192,
+   "drop_rate": 0.2681564245810056,
+   "absd_med": 0.6093858152917591,
+   "absd_max": 11.25068621286254,
+   "F_pm": 0.17881079225159974,
+   "F_rt": 0.3522218356554793,
+   "nF": 2788,
+   "R3_term_med": 0.0,
+   "R3_n": 400,
+   "R1": false,
+   "R2": true
+  },
+  "MR": {
+   "B1": 0.7533768413916992,
+   "n": 2791,
+   "good": 716,
+   "drop": 61,
+   "drop_rate": 0.08519553072625698,
+   "absd_med": 1.0679964327299132,
+   "absd_max": 12.280262265313603,
+   "F_pm": 0.1935832854491013,
+   "F_rt": 0.3620000615942146,
+   "nF": 2788,
+   "R3_term_med": 1.3555530211094045,
+   "R3_n": 400,
+   "R1": true,
+   "R2": true
+  },
+  "MA": {
+   "B1": 0.47626729528998174,
+   "n": 2791,
+   "good": 716,
+   "drop": 184,
+   "drop_rate": 0.2569832402234637,
+   "absd_med": 0.8900093108538343,
+   "absd_max": 11.254829732454809,
+   "F_pm": 0.1794020053182804,
+   "F_rt": 0.3539220509278367,
+   "nF": 2788,
+   "R3_term_med": 0.0,
+   "R3_n": 400,
+   "R1": false,
+   "R2": true
+  },
+  "MAp": {
+   "B1": 0.4190546548855736,
+   "n": 2791,
+   "good": 716,
+   "drop": 188,
+   "drop_rate": 0.26256983240223464,
+   "absd_med": 0.7289016864634164,
+   "absd_max": 9.989995312170038,
+   "F_pm": 0.18316871666164336,
+   "F_rt": 0.353552243081892,
+   "nF": 2788,
+   "R3_term_med": 0.0,
+   "R3_n": 400,
+   "R1": false,
+   "R2": true
+  },
+  "MAR": {
+   "B1": 0.636394248133981,
+   "n": 2791,
+   "good": 716,
+   "drop": 97,
+   "drop_rate": 0.13547486033519554,
+   "absd_med": 1.0661102143556604,
+   "absd_max": 11.772461444939069,
+   "F_pm": 0.18696852305012518,
+   "F_rt": 0.3592339877480761,
+   "nF": 2788,
+   "R3_term_med": 0.6968468671797289,
+   "R3_n": 400,
+   "R1": false,
+   "R2": true
+  }
+ },
+ "pick": "MR",
+ "score_capped_at_3": false,
+ "side": {
+  "A0": {
+   "top20_overlap": 20,
+   "last_absd_vs_A0_med": 0.0,
+   "top20": [
+    [
+     "Victor Wembanyama",
+     109.9
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     107.8
+    ],
+    [
+     "Luka Dončić",
+     106.3
+    ],
+    [
+     "Nikola Jokić",
+     105.4
+    ],
+    [
+     "Chet Holmgren",
+     98.8
+    ],
+    [
+     "Kawhi Leonard",
+     98.1
+    ],
+    [
+     "Stephen Curry",
+     98.0
+    ],
+    [
+     "Giannis Antetokounmpo",
+     97.3
+    ],
+    [
+     "Evan Mobley",
+     96.9
+    ],
+    [
+     "Donovan Mitchell",
+     96.8
+    ],
+    [
+     "Ty Jerome",
+     96.3
+    ],
+    [
+     "Anthony Davis",
+     95.5
+    ],
+    [
+     "Jayson Tatum",
+     95.4
+    ],
+    [
+     "Anthony Edwards",
+     94.6
+    ],
+    [
+     "Karl-Anthony Towns",
+     94.2
+    ],
+    [
+     "Cade Cunningham",
+     94.0
+    ],
+    [
+     "Kevin Durant",
+     94.0
+    ],
+    [
+     "Austin Reaves",
+     93.4
+    ],
+    [
+     "Jarrett Allen",
+     93.2
+    ],
+    [
+     "Jamal Murray",
+     93.0
+    ]
+   ]
+  },
+  "M": {
+   "top20_overlap": 20,
+   "last_absd_vs_A0_med": 0.3692966995929581,
+   "top20": [
+    [
+     "Victor Wembanyama",
+     109.9
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     107.8
+    ],
+    [
+     "Luka Dončić",
+     106.3
+    ],
+    [
+     "Nikola Jokić",
+     105.4
+    ],
+    [
+     "Chet Holmgren",
+     98.8
+    ],
+    [
+     "Kawhi Leonard",
+     98.1
+    ],
+    [
+     "Stephen Curry",
+     98.0
+    ],
+    [
+     "Giannis Antetokounmpo",
+     97.3
+    ],
+    [
+     "Evan Mobley",
+     96.9
+    ],
+    [
+     "Donovan Mitchell",
+     96.8
+    ],
+    [
+     "Ty Jerome",
+     96.3
+    ],
+    [
+     "Anthony Davis",
+     95.5
+    ],
+    [
+     "Jayson Tatum",
+     95.4
+    ],
+    [
+     "Anthony Edwards",
+     94.6
+    ],
+    [
+     "Karl-Anthony Towns",
+     94.2
+    ],
+    [
+     "Cade Cunningham",
+     94.0
+    ],
+    [
+     "Kevin Durant",
+     94.0
+    ],
+    [
+     "Austin Reaves",
+     93.4
+    ],
+    [
+     "Jarrett Allen",
+     93.2
+    ],
+    [
+     "Jamal Murray",
+     93.0
+    ]
+   ]
+  },
+  "MR": {
+   "top20_overlap": 17,
+   "last_absd_vs_A0_med": 1.7600322440130043,
+   "top20": [
+    [
+     "Luka Dončić",
+     119.9
+    ],
+    [
+     "Victor Wembanyama",
+     118.2
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     109.2
+    ],
+    [
+     "Stephen Curry",
+     107.3
+    ],
+    [
+     "Nikola Jokić",
+     99.8
+    ],
+    [
+     "Anthony Edwards",
+     98.7
+    ],
+    [
+     "Jayson Tatum",
+     98.7
+    ],
+    [
+     "Chet Holmgren",
+     97.7
+    ],
+    [
+     "Kawhi Leonard",
+     97.4
+    ],
+    [
+     "Giannis Antetokounmpo",
+     96.4
+    ],
+    [
+     "Jamal Murray",
+     96.1
+    ],
+    [
+     "Ty Jerome",
+     95.8
+    ],
+    [
+     "Anthony Davis",
+     94.6
+    ],
+    [
+     "Evan Mobley",
+     94.4
+    ],
+    [
+     "Karl-Anthony Towns",
+     94.1
+    ],
+    [
+     "Donovan Mitchell",
+     93.7
+    ],
+    [
+     "Jarrett Allen",
+     92.5
+    ],
+    [
+     "Tyrese Maxey",
+     92.4
+    ],
+    [
+     "Tyrese Haliburton",
+     92.3
+    ],
+    [
+     "Kyrie Irving",
+     92.1
+    ]
+   ]
+  },
+  "MA": {
+   "top20_overlap": 18,
+   "last_absd_vs_A0_med": 1.1581767931933271,
+   "top20": [
+    [
+     "Victor Wembanyama",
+     110.0
+    ],
+    [
+     "Luka Dončić",
+     109.4
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     107.8
+    ],
+    [
+     "Nikola Jokić",
+     104.1
+    ],
+    [
+     "Chet Holmgren",
+     98.8
+    ],
+    [
+     "Stephen Curry",
+     98.6
+    ],
+    [
+     "Kawhi Leonard",
+     98.2
+    ],
+    [
+     "Donovan Mitchell",
+     96.8
+    ],
+    [
+     "Evan Mobley",
+     96.8
+    ],
+    [
+     "Giannis Antetokounmpo",
+     96.6
+    ],
+    [
+     "Ty Jerome",
+     96.2
+    ],
+    [
+     "Jayson Tatum",
+     95.6
+    ],
+    [
+     "Karl-Anthony Towns",
+     95.1
+    ],
+    [
+     "Anthony Davis",
+     94.5
+    ],
+    [
+     "Cade Cunningham",
+     94.0
+    ],
+    [
+     "Anthony Edwards",
+     94.0
+    ],
+    [
+     "Jamal Murray",
+     93.8
+    ],
+    [
+     "Kevin Durant",
+     92.9
+    ],
+    [
+     "Tyrese Haliburton",
+     92.8
+    ],
+    [
+     "Tyrese Maxey",
+     92.8
+    ]
+   ]
+  },
+  "MAp": {
+   "top20_overlap": 18,
+   "last_absd_vs_A0_med": 1.4716126125975393,
+   "top20": [
+    [
+     "Victor Wembanyama",
+     110.0
+    ],
+    [
+     "Luka Dončić",
+     108.5
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     107.8
+    ],
+    [
+     "Nikola Jokić",
+     106.4
+    ],
+    [
+     "Stephen Curry",
+     98.8
+    ],
+    [
+     "Chet Holmgren",
+     98.8
+    ],
+    [
+     "Kawhi Leonard",
+     98.2
+    ],
+    [
+     "Giannis Antetokounmpo",
+     97.0
+    ],
+    [
+     "Donovan Mitchell",
+     96.8
+    ],
+    [
+     "Evan Mobley",
+     96.8
+    ],
+    [
+     "Ty Jerome",
+     96.7
+    ],
+    [
+     "Jayson Tatum",
+     95.7
+    ],
+    [
+     "Karl-Anthony Towns",
+     94.2
+    ],
+    [
+     "Cade Cunningham",
+     94.0
+    ],
+    [
+     "Jamal Murray",
+     93.9
+    ],
+    [
+     "Anthony Edwards",
+     93.9
+    ],
+    [
+     "Joel Embiid",
+     93.7
+    ],
+    [
+     "Anthony Davis",
+     93.7
+    ],
+    [
+     "Kevin Durant",
+     93.0
+    ],
+    [
+     "Tyrese Maxey",
+     92.9
+    ]
+   ]
+  },
+  "MAR": {
+   "top20_overlap": 17,
+   "last_absd_vs_A0_med": 1.6127995649669629,
+   "top20": [
+    [
+     "Luka Dončić",
+     115.7
+    ],
+    [
+     "Victor Wembanyama",
+     114.1
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     108.5
+    ],
+    [
+     "Stephen Curry",
+     103.1
+    ],
+    [
+     "Nikola Jokić",
+     101.5
+    ],
+    [
+     "Chet Holmgren",
+     98.2
+    ],
+    [
+     "Kawhi Leonard",
+     97.8
+    ],
+    [
+     "Jayson Tatum",
+     97.2
+    ],
+    [
+     "Giannis Antetokounmpo",
+     96.2
+    ],
+    [
+     "Anthony Edwards",
+     96.1
+    ],
+    [
+     "Ty Jerome",
+     96.0
+    ],
+    [
+     "Evan Mobley",
+     95.5
+    ],
+    [
+     "Donovan Mitchell",
+     95.3
+    ],
+    [
+     "Jamal Murray",
+     95.2
+    ],
+    [
+     "Karl-Anthony Towns",
+     94.9
+    ],
+    [
+     "Anthony Davis",
+     94.2
+    ],
+    [
+     "Tyrese Maxey",
+     92.9
+    ],
+    [
+     "Tyrese Haliburton",
+     92.6
+    ],
+    [
+     "Kyrie Irving",
+     92.2
+    ],
+    [
+     "Cade Cunningham",
+     92.1
+    ]
+   ]
+  }
+ },
+ "yang": {
+  "A0": [
+   [
+    "2026-10-21",
+    47.0,
+    47.0
+   ],
+   [
+    "2026-10-29",
+    50.39,
+    50.39
+   ],
+   [
+    "2026-10-31",
+    50.94,
+    50.94
+   ],
+   [
+    "2026-11-04",
+    50.77,
+    50.77
+   ],
+   [
+    "2026-11-06",
+    51.69,
+    51.69
+   ],
+   [
+    "2026-11-07",
+    50.19,
+    50.19
+   ]
+  ],
+  "M": [
+   [
+    "2026-10-21",
+    37.19,
+    37.19
+   ],
+   [
+    "2026-10-29",
+    45.07,
+    45.07
+   ],
+   [
+    "2026-10-31",
+    47.55,
+    47.55
+   ],
+   [
+    "2026-11-04",
+    46.0,
+    46.0
+   ],
+   [
+    "2026-11-06",
+    48.0,
+    48.0
+   ],
+   [
+    "2026-11-07",
+    46.53,
+    46.53
+   ]
+  ],
+  "MR": [
+   [
+    "2026-10-21",
+    37.75,
+    37.19
+   ],
+   [
+    "2026-10-29",
+    45.65,
+    45.07
+   ],
+   [
+    "2026-10-31",
+    48.49,
+    47.55
+   ],
+   [
+    "2026-11-04",
+    46.99,
+    46.0
+   ],
+   [
+    "2026-11-06",
+    48.83,
+    48.0
+   ],
+   [
+    "2026-11-07",
+    48.11,
+    46.53
+   ]
+  ],
+  "MA": [
+   [
+    "2026-10-21",
+    36.84,
+    36.84
+   ],
+   [
+    "2026-10-29",
+    45.58,
+    45.58
+   ],
+   [
+    "2026-10-31",
+    47.7,
+    47.7
+   ],
+   [
+    "2026-11-04",
+    45.96,
+    45.96
+   ],
+   [
+    "2026-11-06",
+    47.59,
+    47.59
+   ],
+   [
+    "2026-11-07",
+    45.97,
+    45.97
+   ]
+  ],
+  "MAp": [
+   [
+    "2026-10-21",
+    29.63,
+    29.63
+   ],
+   [
+    "2026-10-29",
+    32.55,
+    32.55
+   ],
+   [
+    "2026-10-31",
+    30.15,
+    30.15
+   ],
+   [
+    "2026-11-04",
+    28.49,
+    28.49
+   ],
+   [
+    "2026-11-06",
+    29.03,
+    29.03
+   ],
+   [
+    "2026-11-07",
+    28.64,
+    28.64
+   ]
+  ],
+  "MAR": [
+   [
+    "2026-10-21",
+    37.13,
+    36.84
+   ],
+   [
+    "2026-10-29",
+    45.86,
+    45.58
+   ],
+   [
+    "2026-10-31",
+    48.16,
+    47.7
+   ],
+   [
+    "2026-11-04",
+    46.45,
+    45.96
+   ],
+   [
+    "2026-11-06",
+    48.02,
+    47.59
+   ],
+   [
+    "2026-11-07",
+    46.79,
+    45.97
+   ]
+  ],
+  "attrs_1106_1107": {
+   "r0": {
+    "long": [
+     59.1,
+     58.0
+    ],
+    "mid": [
+     65.8,
+     65.8
+    ],
+    "short": [
+     61.9,
+     56.0
+    ],
+    "ft": [
+     69.1,
+     71.2
+    ],
+    "drive": [
+     56.8,
+     67.1
+    ],
+    "foulDraw": [
+     80.3,
+     88.2
+    ],
+    "tovSkill": [
+     29.5,
+     28.9
+    ],
+    "pass": [
+     57.2,
+     53.5
+    ],
+    "rebound": [
+     88.8,
+     90.7
+    ],
+    "creation": [
+     50.1,
+     48.2
+    ],
+    "onBall": [
+     46.9,
+     44.6
+    ],
+    "help": [
+     72.9,
+     74.4
+    ],
+    "threeValue": [
+     86.6,
+     83.8
+    ],
+    "predNew": [
+     -1.3783,
+     -1.5513
+    ],
+    "MPGhat": [
+     6.78,
+     8.82
+    ]
+   },
+   "ra": {
+    "long": [
+     59.1,
+     58.0
+    ],
+    "mid": [
+     65.8,
+     65.8
+    ],
+    "short": [
+     61.9,
+     56.0
+    ],
+    "ft": [
+     69.1,
+     71.2
+    ],
+    "drive": [
+     57.1,
+     67.4
+    ],
+    "foulDraw": [
+     80.3,
+     88.2
+    ],
+    "tovSkill": [
+     29.5,
+     28.9
+    ],
+    "pass": [
+     56.3,
+     51.7
+    ],
+    "rebound": [
+     89.2,
+     91.6
+    ],
+    "creation": [
+     48.6,
+     46.3
+    ],
+    "onBall": [
+     46.9,
+     44.6
+    ],
+    "help": [
+     72.9,
+     74.4
+    ],
+    "threeValue": [
+     86.6,
+     83.8
+    ],
+    "predNew": [
+     -1.3977,
+     -1.5836
+    ],
+    "MPGhat": [
+     6.78,
+     8.82
+    ]
+   },
+   "rap": {
+    "long": [
+     23.3,
+     16.8
+    ],
+    "mid": [
+     65.8,
+     65.8
+    ],
+    "short": [
+     68.1,
+     64.4
+    ],
+    "ft": [
+     67.1,
+     69.2
+    ],
+    "drive": [
+     62.7,
+     63.7
+    ],
+    "foulDraw": [
+     81.1,
+     87.0
+    ],
+    "tovSkill": [
+     29.5,
+     28.9
+    ],
+    "pass": [
+     56.3,
+     51.7
+    ],
+    "rebound": [
+     89.2,
+     91.6
+    ],
+    "creation": [
+     48.6,
+     46.3
+    ],
+    "onBall": [
+     46.9,
+     44.6
+    ],
+    "help": [
+     72.9,
+     74.4
+    ],
+    "threeValue": [
+     68.7,
+     66.2
+    ],
+    "predNew": [
+     -2.2723,
+     -2.542
+    ],
+    "MPGhat": [
+     6.78,
+     8.82
+    ]
+   }
+  },
+  "games": [
+   [
+    "2026-10-21",
+    4.7,
+    12
+   ],
+   [
+    "2026-10-29",
+    5.8,
+    5
+   ],
+   [
+    "2026-10-31",
+    5.5,
+    13
+   ],
+   [
+    "2026-11-04",
+    4.1,
+    2
+   ],
+   [
+    "2026-11-06",
+    4.5,
+    3
+   ],
+   [
+    "2026-11-07",
+    5.2,
+    26
+   ]
+  ]
+ },
+ "recon_max_abs_r0": 0.05293062412555116,
+ "season_end_identity": true,
+ "r033": {
+  "A0": {
+   "negD": 82,
+   "ovr_drops_with_more_min": 82
+  },
+  "A2-15": {
+   "negD": 82,
+   "ovr_drops_with_more_min": 0
+  }
+ },
+ "mx": {
+  "ft": {
+   "rho_half": 0.698,
+   "n": 300,
+   "d_half_med": 66.0,
+   "M": 28.562,
+   "lam_at_half": 0.698
+  },
+  "rebound": {
+   "rho_half": 0.9554,
+   "n": 300,
+   "d_half_med": 1438.443,
+   "M": 67.125,
+   "lam_at_half": 0.955
+  },
+  "vol": {
+   "rho_half": 0.9267,
+   "n": 300,
+   "d_half_med": 21.972,
+   "M": 1.737,
+   "lam_at_half": 0.927
+  },
+  "foulDraw": {
+   "rho_half": 0.839,
+   "n": 300,
+   "d_half_med": 283.0,
+   "M": 54.287,
+   "lam_at_half": 0.839
+  },
+  "astvol": {
+   "rho_half": 0.9581,
+   "n": 300,
+   "d_half_med": 21.972,
+   "M": 0.962,
+   "lam_at_half": 0.958
+  },
+  "pass": {
+   "rho_half": 0.9672,
+   "n": 300,
+   "d_half_med": 553.605,
+   "M": 18.761,
+   "lam_at_half": 0.967
+  },
+  "mid": {
+   "rho_half": 0.1104,
+   "n": 300,
+   "d_half_med": 22.0,
+   "M": 177.358,
+   "lam_at_half": 0.11
+  },
+  "short": {
+   "rho_half": 0.6025,
+   "n": 300,
+   "d_half_med": 136.0,
+   "M": 89.738,
+   "lam_at_half": 0.602
+  },
+  "driveVol": {
+   "rho_half": 0.9616,
+   "n": 300,
+   "d_half_med": 791.0,
+   "M": 31.599,
+   "lam_at_half": 0.962
+  },
+  "driveEff": {
+   "rho_half": 0.6005,
+   "n": 300,
+   "d_half_med": 27.051,
+   "M": 17.999,
+   "lam_at_half": 0.6
+  },
+  "f3": {
+   "rho_half": 0.3219,
+   "n": 300,
+   "d_half_med": 122.5,
+   "M": 258.024,
+   "lam_at_half": 0.322
+  },
+  "cr": {
+   "rho_half": 0.9647,
+   "n": 300,
+   "d_half_med": 791.0,
+   "M": 28.968,
+   "lam_at_half": 0.965
+  },
+  "crJ": {
+   "rho_half": 0.9774,
+   "n": 300,
+   "d_half_med": 791.0,
+   "M": 18.31,
+   "lam_at_half": 0.977
+  },
+  "tpa": {
+   "rho_half": 0.9746,
+   "n": 300,
+   "d_half_med": 791.0,
+   "M": 20.612,
+   "lam_at_half": 0.975
+  }
+ },
+ "MA_minus_M_B1": -0.009782186562923734
+}

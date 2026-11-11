@@ -1,0 +1,30 @@
+{
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "split": "int(gameId) % 2 (0 = A, 1 = B)",
+  "observationsTotal": 262169,
+  "A": {
+    "observations": 131566,
+    "games": 2270,
+    "players": 864,
+    "lambda": 3000,
+    "defPossessionsTotal": 456468
+  },
+  "B": {
+    "observations": 130603,
+    "games": 2255,
+    "players": 863,
+    "lambda": 3000,
+    "defPossessionsTotal": 454593
+  },
+  "fullCheck": {
+    "lambda": 3000,
+    "players": 877,
+    "maxAbsDiffPooledNet": 0.0,
+    "refLambda": 3000
+  }
+}

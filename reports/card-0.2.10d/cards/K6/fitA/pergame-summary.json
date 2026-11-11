@@ -1,0 +1,19 @@
+{
+  "definition": "g = pred*MPG/36 (main); g_r = (pred - r_repl)*MPG/36 (repl, r_repl = PR10 of pred in MIN>=500 pool); anchors PR1/PR50/PR99 of g in MIN>=500 pool",
+  "rRepl_PR10_of_pred": -1.6886681726406911,
+  "anchors": {
+    "main": {
+      "PR1": -1.73664286592549,
+      "PR50": -0.07169636765182606,
+      "PR99": 4.157321935245106
+    },
+    "repl": {
+      "PR1": -0.7613668252581669,
+      "PR50": 0.9596873531306913,
+      "PR99": 5.568454366549016
+    }
+  },
+  "poolSize": 378,
+  "mpgSource": "D:\\Projects\\CODING\\basketball-autochess\\reports\\card-0.2.7c+E134-rolling-prior\\stage1\\work\\c0p\\mpg\\mpg-A.csv",
+  "playersWithoutMpg": 7
+}

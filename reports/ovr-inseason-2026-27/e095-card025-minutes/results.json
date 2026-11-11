@@ -1,0 +1,1836 @@
+{
+ "experiment": "E-095",
+ "version": "inseason 0.2.4a+E095",
+ "prereg_sha256": "66000292b8f4e4e4c12ea1687147bf9b537ec767a5b9605145ae21367936db71",
+ "minutesModes": [
+  "linear",
+  "sat15"
+ ],
+ "prereq": {
+  "u": {
+   "pass": true,
+   "W": {
+    "0.0": 0.0,
+    "36.0": 1.0,
+    "5.0": 0.31175,
+    "20.0": 0.809873
+   },
+   "absDiff": {
+    "0.0": 0.0,
+    "36.0": 0.0,
+    "5.0": 0.0,
+    "20.0": 3e-06
+   },
+   "threshold": "|差| < 1e-5"
+  },
+  "c0L": {
+   "ranking.csv": {
+    "before": "2cf26edbdfed52c4a346a98468fbec93b19992ab612a46bed2d639ef1a40e6f8",
+    "after": "2cf26edbdfed52c4a346a98468fbec93b19992ab612a46bed2d639ef1a40e6f8",
+    "same": true
+   },
+   "no-prior.csv": {
+    "before": "e061bff3438e61c02b67b41a12fbec8d7032644536f2261f08d37793bb862137",
+    "after": "e061bff3438e61c02b67b41a12fbec8d7032644536f2261f08d37793bb862137",
+    "same": true
+   },
+   "inputsSame": true,
+   "dataCutoff": "2026-10-28",
+   "runCodeShaBefore": "7e9f0091ba999ab960c8cd72ac6440c0daeb113fae283a585e32a5cd15f2224f",
+   "runCodeShaAfter": "f2ee7b0724e130f54528ebde66724a789b0fff3cbb4a024bd2c9b8c9e4464acc",
+   "pass": true
+  },
+  "L1": {
+   "pass": true,
+   "matchedPlayers": 368,
+   "maxAbsLastOvrVsCard025": 0.1,
+   "top3": [
+    [
+     0.1,
+     "Shai Gilgeous-Alexander",
+     "110.4",
+     "110.3"
+    ],
+    [
+     0.1,
+     "P.J. Washington",
+     "70.3",
+     "70.4"
+    ],
+    [
+     0.1,
+     "Marcus Smart",
+     "83.9",
+     "83.8"
+    ]
+   ],
+   "nGt0.05": 36,
+   "anchorsMaxAbsDiffVsE089": 0.0,
+   "rReplDiff": 0.0,
+   "anchors": [
+    -0.815308,
+    1.250641,
+    3.442928
+   ],
+   "threshold": "|lastOVR − card 0.2.5 ovr| ≤ 0.1（兩邊都是 1 位小數，容許 1e-9 浮點誤差）；錨點與 E-089 差 0",
+   "note": "只能核對有出賽、進 ranking.csv 的球員（ref 只輸出這些人）；lastOVR 已四捨五入到 1 位"
+  },
+  "c1": {
+   "pass": true,
+   "exit": "0"
+  },
+  "c0": {
+   "anchorsRepl_equal": true,
+   "anchorsMain_equal": true,
+   "rRepl_equal": true,
+   "rRepl": -1.813,
+   "anchorsRepl": [
+    -0.772029,
+    1.091999,
+    4.684364
+   ],
+   "perStart": {
+    "Y1": {
+     "rowsE064": 1399,
+     "rowsMine": 1399,
+     "missing": 0,
+     "cellsCompared": 11192,
+     "exact": 11192,
+     "maxAbsDiff": 0.0
+    },
+    "Y2": {
+     "rowsE064": 1330,
+     "rowsMine": 1330,
+     "missing": 0,
+     "cellsCompared": 10640,
+     "exact": 10640,
+     "maxAbsDiff": 0.0
+    },
+    "Y3": {
+     "rowsE064": 1341,
+     "rowsMine": 1341,
+     "missing": 0,
+     "cellsCompared": 10728,
+     "exact": 10728,
+     "maxAbsDiff": 0.0
+    },
+    "Y4": {
+     "rowsE064": 1315,
+     "rowsMine": 1315,
+     "missing": 0,
+     "cellsCompared": 10520,
+     "exact": 10520,
+     "maxAbsDiff": 0.0
+    },
+    "Y5": {
+     "rowsE064": 1363,
+     "rowsMine": 1363,
+     "missing": 0,
+     "cellsCompared": 10904,
+     "exact": 10904,
+     "maxAbsDiff": 0.0
+    },
+    "Y6": {
+     "rowsE064": 1459,
+     "rowsMine": 1459,
+     "missing": 0,
+     "cellsCompared": 11672,
+     "exact": 11672,
+     "maxAbsDiff": 0.0
+    },
+    "D1": {
+     "rowsE064": 1416,
+     "rowsMine": 1416,
+     "missing": 0,
+     "cellsCompared": 11328,
+     "exact": 11328,
+     "maxAbsDiff": 0.0
+    },
+    "D2": {
+     "rowsE064": 1350,
+     "rowsMine": 1350,
+     "missing": 0,
+     "cellsCompared": 10800,
+     "exact": 10800,
+     "maxAbsDiff": 0.0
+    },
+    "D3": {
+     "rowsE064": 1377,
+     "rowsMine": 1377,
+     "missing": 0,
+     "cellsCompared": 11016,
+     "exact": 11016,
+     "maxAbsDiff": 0.0
+    }
+   },
+   "maxAbsDiff": 0.0,
+   "exact": 98800,
+   "cellsCompared": 98800,
+   "pass": true,
+   "note": "比對 E-064 predictions-{start}.csv 的 targetGame/targetRepl/A/RA/RG1/mpg 欄（四捨五入 4 位後）與 anchors.json"
+  }
+ },
+ "prereqAllPass": true,
+ "anchors": {
+  "linear": {
+   "main": [
+    -1.911087,
+    0.010398,
+    3.168508
+   ],
+   "repl": [
+    -0.772029,
+    1.091999,
+    4.684364
+   ],
+   "rRepl": -1.813
+  },
+  "sat15": {
+   "main": [
+    -2.609401,
+    0.016413,
+    3.300677
+   ],
+   "repl": [
+    -0.999237,
+    1.550673,
+    5.089119
+   ],
+   "rRepl": -1.813
+  }
+ },
+ "judged": true,
+ "verdict": {
+  "1": true,
+  "1_literalE064Baseline": true,
+  "2": false,
+  "outcome": "(1) 過、(2) 不過",
+  "baselineNote": "(1) 主判定用同尺度先驗卡 RA 當 V1/V2 的基準（RG1 與 RA 都對同一答案卡 targetRepl）；E-064 gate1Repl 沿用 non-repl A，另列"
+ },
+ "gates": {
+  "sat15": {
+   "main": {
+    "vsRA": {
+     "starts": [
+      "Y5",
+      "Y6"
+     ],
+     "V1": {
+      "3": {
+       "U_pool": -0.119871,
+       "T_s": {
+        "Y5": -0.423062,
+        "Y6": -0.78334
+       },
+       "pass": true
+      },
+      "5": {
+       "U_pool": -0.266244,
+       "T_s": {
+        "Y5": -0.911657,
+        "Y6": -0.760304
+       },
+       "pass": true
+      }
+     },
+     "V2": {
+      "10": {
+       "cells": {
+        "Y5": {
+         "dMAE": -0.471948,
+         "gt10C": 59,
+         "gt10A": 60,
+         "ciHi": -0.021056,
+         "pass": true
+        },
+        "Y6": {
+         "dMAE": -0.892904,
+         "gt10C": 43,
+         "gt10A": 67,
+         "ciHi": -0.534013,
+         "pass": true
+        }
+       },
+       "pass": true
+      },
+      "20": {
+       "cells": {
+        "Y5": {
+         "dMAE": -0.985147,
+         "gt10C": 48,
+         "gt10A": 61,
+         "ciHi": -0.506159,
+         "pass": true
+        },
+        "Y6": {
+         "dMAE": -1.25496,
+         "gt10C": 37,
+         "gt10A": 67,
+         "ciHi": -0.855239,
+         "pass": true
+        }
+       },
+       "pass": true
+      }
+     },
+     "pass": true
+    },
+    "vsA_literalE064": {
+     "starts": [
+      "Y5",
+      "Y6"
+     ],
+     "V1": {
+      "3": {
+       "U_pool": -0.060394,
+       "T_s": {
+        "Y5": -0.162299,
+        "Y6": -0.805351
+       },
+       "pass": true
+      },
+      "5": {
+       "U_pool": -0.239241,
+       "T_s": {
+        "Y5": -0.644519,
+        "Y6": -0.782315
+       },
+       "pass": true
+      }
+     },
+     "V2": {
+      "10": {
+       "cells": {
+        "Y5": {
+         "dMAE": -0.20578,
+         "gt10C": 59,
+         "gt10A": 61,
+         "ciHi": 0.211255,
+         "pass": true
+        },
+        "Y6": {
+         "dMAE": -0.650684,
+         "gt10C": 43,
+         "gt10A": 61,
+         "ciHi": -0.315162,
+         "pass": true
+        }
+       },
+       "pass": true
+      },
+      "20": {
+       "cells": {
+        "Y5": {
+         "dMAE": -0.715493,
+         "gt10C": 48,
+         "gt10A": 61,
+         "ciHi": -0.276678,
+         "pass": true
+        },
+        "Y6": {
+         "dMAE": -0.995064,
+         "gt10C": 37,
+         "gt10A": 61,
+         "ciHi": -0.611002,
+         "pass": true
+        }
+       },
+       "pass": true
+      }
+     },
+     "pass": true
+    }
+   },
+   "Y3": {
+    "vsRA": {
+     "starts": [
+      "Y3"
+     ],
+     "V1": {
+      "3": {
+       "U_pool": 0.50949,
+       "T_s": {
+        "Y3": -0.073261
+       },
+       "pass": false
+      },
+      "5": {
+       "U_pool": 0.375998,
+       "T_s": {
+        "Y3": -0.277434
+       },
+       "pass": true
+      }
+     },
+     "V2": {
+      "10": {
+       "cells": {
+        "Y3": {
+         "dMAE": -0.765925,
+         "gt10C": 39,
+         "gt10A": 53,
+         "ciHi": -0.385598,
+         "pass": true
+        }
+       },
+       "pass": true
+      },
+      "20": {
+       "cells": {
+        "Y3": {
+         "dMAE": -1.173973,
+         "gt10C": 34,
+         "gt10A": 54,
+         "ciHi": -0.743217,
+         "pass": true
+        }
+       },
+       "pass": true
+      }
+     },
+     "pass": false
+    },
+    "vsA_literalE064": {
+     "starts": [
+      "Y3"
+     ],
+     "V1": {
+      "3": {
+       "U_pool": 0.385794,
+       "T_s": {
+        "Y3": -0.087274
+       },
+       "pass": true
+      },
+      "5": {
+       "U_pool": 0.236773,
+       "T_s": {
+        "Y3": -0.479993
+       },
+       "pass": true
+      }
+     },
+     "V2": {
+      "10": {
+       "cells": {
+        "Y3": {
+         "dMAE": -0.475791,
+         "gt10C": 39,
+         "gt10A": 43,
+         "ciHi": -0.096659,
+         "pass": true
+        }
+       },
+       "pass": true
+      },
+      "20": {
+       "cells": {
+        "Y3": {
+         "dMAE": -0.876172,
+         "gt10C": 34,
+         "gt10A": 44,
+         "ciHi": -0.460986,
+         "pass": true
+        }
+       },
+       "pass": true
+      }
+     },
+     "pass": true
+    }
+   },
+   "D": {
+    "vsRA": {
+     "starts": [
+      "D1",
+      "D2",
+      "D3"
+     ],
+     "V1": {
+      "3": {
+       "U_pool": -0.097559,
+       "T_s": {
+        "D1": -0.582362,
+        "D2": -0.335511,
+        "D3": -0.48602
+       },
+       "pass": true
+      },
+      "5": {
+       "U_pool": -0.213655,
+       "T_s": {
+        "D1": -0.771407,
+        "D2": -0.462638,
+        "D3": -0.671652
+       },
+       "pass": true
+      }
+     },
+     "V2": {
+      "10": {
+       "cells": {
+        "D1": {
+         "dMAE": -0.512677,
+         "gt10C": 46,
+         "gt10A": 49,
+         "ciHi": -0.231215,
+         "pass": true
+        },
+        "D2": {
+         "dMAE": -0.391118,
+         "gt10C": 33,
+         "gt10A": 40,
+         "ciHi": -0.039982,
+         "pass": true
+        },
+        "D3": {
+         "dMAE": -1.076173,
+         "gt10C": 40,
+         "gt10A": 56,
+         "ciHi": -0.724528,
+         "pass": true
+        }
+       },
+       "pass": true
+      },
+      "20": {
+       "cells": {
+        "D1": {
+         "dMAE": -0.716465,
+         "gt10C": 38,
+         "gt10A": 51,
+         "ciHi": -0.373704,
+         "pass": true
+        },
+        "D2": {
+         "dMAE": -0.703768,
+         "gt10C": 26,
+         "gt10A": 40,
+         "ciHi": -0.34859,
+         "pass": true
+        },
+        "D3": {
+         "dMAE": -1.488367,
+         "gt10C": 37,
+         "gt10A": 57,
+         "ciHi": -1.095113,
+         "pass": true
+        }
+       },
+       "pass": true
+      }
+     },
+     "pass": true
+    },
+    "vsA_literalE064": {
+     "starts": [
+      "D1",
+      "D2",
+      "D3"
+     ],
+     "V1": {
+      "3": {
+       "U_pool": -0.274405,
+       "T_s": {
+        "D1": -0.662799,
+        "D2": -0.713993,
+        "D3": -0.775257
+       },
+       "pass": true
+      },
+      "5": {
+       "U_pool": -0.363211,
+       "T_s": {
+        "D1": -0.644833,
+        "D2": -0.743666,
+        "D3": -1.077836
+       },
+       "pass": true
+      }
+     },
+     "V2": {
+      "10": {
+       "cells": {
+        "D1": {
+         "dMAE": -0.230675,
+         "gt10C": 46,
+         "gt10A": 47,
+         "ciHi": 0.033063,
+         "pass": true
+        },
+        "D2": {
+         "dMAE": -0.32213,
+         "gt10C": 33,
+         "gt10A": 40,
+         "ciHi": 0.003777,
+         "pass": true
+        },
+        "D3": {
+         "dMAE": -0.750175,
+         "gt10C": 40,
+         "gt10A": 53,
+         "ciHi": -0.443204,
+         "pass": true
+        }
+       },
+       "pass": true
+      },
+      "20": {
+       "cells": {
+        "D1": {
+         "dMAE": -0.435698,
+         "gt10C": 38,
+         "gt10A": 49,
+         "ciHi": -0.123557,
+         "pass": true
+        },
+        "D2": {
+         "dMAE": -0.647562,
+         "gt10C": 26,
+         "gt10A": 40,
+         "ciHi": -0.294515,
+         "pass": true
+        },
+        "D3": {
+         "dMAE": -1.155619,
+         "gt10C": 37,
+         "gt10A": 53,
+         "ciHi": -0.813098,
+         "pass": true
+        }
+       },
+       "pass": true
+      }
+     },
+     "pass": true
+    }
+   }
+  },
+  "linear": {
+   "main": {
+    "vsRA": {
+     "starts": [
+      "Y5",
+      "Y6"
+     ],
+     "V1": {
+      "3": {
+       "U_pool": 0.109089,
+       "T_s": {
+        "Y5": -0.307414,
+        "Y6": -0.559664
+       },
+       "pass": true
+      },
+      "5": {
+       "U_pool": 0.002797,
+       "T_s": {
+        "Y5": -0.682016,
+        "Y6": -0.522409
+       },
+       "pass": true
+      }
+     },
+     "V2": {
+      "10": {
+       "cells": {
+        "Y5": {
+         "dMAE": -0.68582,
+         "gt10C": 54,
+         "gt10A": 64,
+         "ciHi": -0.168825,
+         "pass": true
+        },
+        "Y6": {
+         "dMAE": -1.095129,
+         "gt10C": 37,
+         "gt10A": 63,
+         "ciHi": -0.677626,
+         "pass": true
+        }
+       },
+       "pass": true
+      },
+      "20": {
+       "cells": {
+        "Y5": {
+         "dMAE": -1.244925,
+         "gt10C": 41,
+         "gt10A": 65,
+         "ciHi": -0.705133,
+         "pass": true
+        },
+        "Y6": {
+         "dMAE": -1.502298,
+         "gt10C": 33,
+         "gt10A": 63,
+         "ciHi": -1.055601,
+         "pass": true
+        }
+       },
+       "pass": true
+      }
+     },
+     "pass": true
+    },
+    "vsA_literalE064": {
+     "starts": [
+      "Y5",
+      "Y6"
+     ],
+     "V1": {
+      "3": {
+       "U_pool": 0.105312,
+       "T_s": {
+        "Y5": 0.035669,
+        "Y6": -0.58646
+       },
+       "pass": true
+      },
+      "5": {
+       "U_pool": -0.037788,
+       "T_s": {
+        "Y5": -0.389231,
+        "Y6": -0.590068
+       },
+       "pass": true
+      }
+     },
+     "V2": {
+      "10": {
+       "cells": {
+        "Y5": {
+         "dMAE": -0.289795,
+         "gt10C": 54,
+         "gt10A": 52,
+         "ciHi": 0.209934,
+         "pass": false
+        },
+        "Y6": {
+         "dMAE": -0.760108,
+         "gt10C": 37,
+         "gt10A": 55,
+         "ciHi": -0.351013,
+         "pass": true
+        }
+       },
+       "pass": false
+      },
+      "20": {
+       "cells": {
+        "Y5": {
+         "dMAE": -0.83479,
+         "gt10C": 41,
+         "gt10A": 52,
+         "ciHi": -0.339818,
+         "pass": true
+        },
+        "Y6": {
+         "dMAE": -1.147712,
+         "gt10C": 33,
+         "gt10A": 55,
+         "ciHi": -0.718512,
+         "pass": true
+        }
+       },
+       "pass": true
+      }
+     },
+     "pass": false
+    }
+   },
+   "Y3": {
+    "vsRA": {
+     "starts": [
+      "Y3"
+     ],
+     "V1": {
+      "3": {
+       "U_pool": 0.453963,
+       "T_s": {
+        "Y3": -0.169298
+       },
+       "pass": true
+      },
+      "5": {
+       "U_pool": 0.360135,
+       "T_s": {
+        "Y3": -0.369065
+       },
+       "pass": true
+      }
+     },
+     "V2": {
+      "10": {
+       "cells": {
+        "Y3": {
+         "dMAE": -0.919251,
+         "gt10C": 36,
+         "gt10A": 53,
+         "ciHi": -0.46081,
+         "pass": true
+        }
+       },
+       "pass": true
+      },
+      "20": {
+       "cells": {
+        "Y3": {
+         "dMAE": -1.348167,
+         "gt10C": 30,
+         "gt10A": 54,
+         "ciHi": -0.842461,
+         "pass": true
+        }
+       },
+       "pass": true
+      }
+     },
+     "pass": true
+    },
+    "vsA_literalE064": {
+     "starts": [
+      "Y3"
+     ],
+     "V1": {
+      "3": {
+       "U_pool": 0.42687,
+       "T_s": {
+        "Y3": -0.236173
+       },
+       "pass": true
+      },
+      "5": {
+       "U_pool": 0.39072,
+       "T_s": {
+        "Y3": -0.452705
+       },
+       "pass": true
+      }
+     },
+     "V2": {
+      "10": {
+       "cells": {
+        "Y3": {
+         "dMAE": -0.560854,
+         "gt10C": 36,
+         "gt10A": 44,
+         "ciHi": -0.103467,
+         "pass": true
+        }
+       },
+       "pass": true
+      },
+      "20": {
+       "cells": {
+        "Y3": {
+         "dMAE": -0.975707,
+         "gt10C": 30,
+         "gt10A": 45,
+         "ciHi": -0.502839,
+         "pass": true
+        }
+       },
+       "pass": true
+      }
+     },
+     "pass": true
+    }
+   },
+   "D": {
+    "vsRA": {
+     "starts": [
+      "D1",
+      "D2",
+      "D3"
+     ],
+     "V1": {
+      "3": {
+       "U_pool": -0.239438,
+       "T_s": {
+        "D1": -1.015853,
+        "D2": -0.836869,
+        "D3": -0.236726
+       },
+       "pass": true
+      },
+      "5": {
+       "U_pool": -0.343354,
+       "T_s": {
+        "D1": -0.910379,
+        "D2": -1.028745,
+        "D3": -0.647893
+       },
+       "pass": true
+      }
+     },
+     "V2": {
+      "10": {
+       "cells": {
+        "D1": {
+         "dMAE": -0.694016,
+         "gt10C": 35,
+         "gt10A": 47,
+         "ciHi": -0.350585,
+         "pass": true
+        },
+        "D2": {
+         "dMAE": -0.598271,
+         "gt10C": 27,
+         "gt10A": 38,
+         "ciHi": -0.187628,
+         "pass": true
+        },
+        "D3": {
+         "dMAE": -1.295753,
+         "gt10C": 42,
+         "gt10A": 59,
+         "ciHi": -0.863636,
+         "pass": true
+        }
+       },
+       "pass": true
+      },
+      "20": {
+       "cells": {
+        "D1": {
+         "dMAE": -0.929335,
+         "gt10C": 37,
+         "gt10A": 49,
+         "ciHi": -0.527913,
+         "pass": true
+        },
+        "D2": {
+         "dMAE": -0.955965,
+         "gt10C": 23,
+         "gt10A": 38,
+         "ciHi": -0.558156,
+         "pass": true
+        },
+        "D3": {
+         "dMAE": -1.807636,
+         "gt10C": 31,
+         "gt10A": 60,
+         "ciHi": -1.331925,
+         "pass": true
+        }
+       },
+       "pass": true
+      }
+     },
+     "pass": true
+    },
+    "vsA_literalE064": {
+     "starts": [
+      "D1",
+      "D2",
+      "D3"
+     ],
+     "V1": {
+      "3": {
+       "U_pool": -0.398854,
+       "T_s": {
+        "D1": -0.5919,
+        "D2": -1.312773,
+        "D3": -0.340862
+       },
+       "pass": true
+      },
+      "5": {
+       "U_pool": -0.432035,
+       "T_s": {
+        "D1": -0.463257,
+        "D2": -1.508429,
+        "D3": -0.703867
+       },
+       "pass": true
+      }
+     },
+     "V2": {
+      "10": {
+       "cells": {
+        "D1": {
+         "dMAE": -0.231773,
+         "gt10C": 35,
+         "gt10A": 43,
+         "ciHi": 0.116315,
+         "pass": true
+        },
+        "D2": {
+         "dMAE": -0.43783,
+         "gt10C": 27,
+         "gt10A": 35,
+         "ciHi": -0.049147,
+         "pass": true
+        },
+        "D3": {
+         "dMAE": -0.679698,
+         "gt10C": 42,
+         "gt10A": 53,
+         "ciHi": -0.29518,
+         "pass": true
+        }
+       },
+       "pass": true
+      },
+      "20": {
+       "cells": {
+        "D1": {
+         "dMAE": -0.472653,
+         "gt10C": 37,
+         "gt10A": 45,
+         "ciHi": -0.110388,
+         "pass": true
+        },
+        "D2": {
+         "dMAE": -0.801321,
+         "gt10C": 23,
+         "gt10A": 35,
+         "ciHi": -0.409096,
+         "pass": true
+        },
+        "D3": {
+         "dMAE": -1.160047,
+         "gt10C": 31,
+         "gt10A": 53,
+         "ciHi": -0.781689,
+         "pass": true
+        }
+       },
+       "pass": true
+      }
+     },
+     "pass": true
+    }
+   }
+  }
+ },
+ "cmp2": {
+  "main": {
+   "cells": {
+    "Y5/N3": {
+     "n": 260,
+     "MAE_linear": 6.242448,
+     "MAE_sat15": 6.484639,
+     "diff": 0.242191,
+     "signed_linear": -2.152124,
+     "signed_sat15": -1.968412
+    },
+    "Y5/N5": {
+     "n": 267,
+     "MAE_linear": 6.256283,
+     "MAE_sat15": 6.528275,
+     "diff": 0.271992,
+     "signed_linear": -2.350251,
+     "signed_sat15": -2.18358
+    },
+    "Y5/N10": {
+     "n": 276,
+     "MAE_linear": 6.004327,
+     "MAE_sat15": 6.251145,
+     "diff": 0.246817,
+     "signed_linear": -2.184222,
+     "signed_sat15": -2.12096
+    },
+    "Y5/N20": {
+     "n": 279,
+     "MAE_linear": 5.418181,
+     "MAE_sat15": 5.707215,
+     "diff": 0.289034,
+     "signed_linear": -1.869612,
+     "signed_sat15": -1.862608
+    },
+    "Y6/N3": {
+     "n": 278,
+     "MAE_linear": 5.726999,
+     "MAE_sat15": 5.91517,
+     "diff": 0.188171,
+     "signed_linear": -0.353083,
+     "signed_sat15": -0.120771
+    },
+    "Y6/N5": {
+     "n": 284,
+     "MAE_linear": 5.48333,
+     "MAE_sat15": 5.67524,
+     "diff": 0.19191,
+     "signed_linear": -0.438482,
+     "signed_sat15": -0.261101
+    },
+    "Y6/N10": {
+     "n": 292,
+     "MAE_linear": 5.228809,
+     "MAE_sat15": 5.453225,
+     "diff": 0.224416,
+     "signed_linear": -0.507157,
+     "signed_sat15": -0.387487
+    },
+    "Y6/N20": {
+     "n": 298,
+     "MAE_linear": 4.784303,
+     "MAE_sat15": 5.037929,
+     "diff": 0.253626,
+     "signed_linear": -0.608372,
+     "signed_sat15": -0.539237
+    }
+   },
+   "maxDiff": 0.289034,
+   "pass2": false,
+   "boot": {
+    "point": 0.23852,
+    "lo5": 0.162062,
+    "hi95": 0.316788,
+    "cells": 8
+   }
+  },
+  "Y3": {
+   "cells": {
+    "Y3/N3": {
+     "n": 251,
+     "MAE_linear": 5.870565,
+     "MAE_sat15": 5.950167,
+     "diff": 0.079602,
+     "signed_linear": 0.124846,
+     "signed_sat15": 0.106569
+    },
+    "Y3/N5": {
+     "n": 265,
+     "MAE_linear": 5.666941,
+     "MAE_sat15": 5.824009,
+     "diff": 0.157068,
+     "signed_linear": -0.284042,
+     "signed_sat15": -0.223577
+    },
+    "Y3/N10": {
+     "n": 270,
+     "MAE_linear": 5.159859,
+     "MAE_sat15": 5.353184,
+     "diff": 0.193325,
+     "signed_linear": -0.334156,
+     "signed_sat15": -0.250295
+    },
+    "Y3/N20": {
+     "n": 274,
+     "MAE_linear": 4.751944,
+     "MAE_sat15": 4.958482,
+     "diff": 0.206538,
+     "signed_linear": -0.154498,
+     "signed_sat15": -0.125968
+    }
+   },
+   "maxDiff": 0.206538,
+   "pass2": false,
+   "boot": {
+    "point": 0.159133,
+    "lo5": 0.053928,
+    "hi95": 0.265186,
+    "cells": 4
+   }
+  },
+  "D": {
+   "cells": {
+    "D1/N3": {
+     "n": 270,
+     "MAE_linear": 5.655542,
+     "MAE_sat15": 5.907831,
+     "diff": 0.252289,
+     "signed_linear": -0.382822,
+     "signed_sat15": -0.266201
+    },
+    "D1/N5": {
+     "n": 275,
+     "MAE_linear": 5.439107,
+     "MAE_sat15": 5.762816,
+     "diff": 0.323709,
+     "signed_linear": -0.520524,
+     "signed_sat15": -0.384537
+    },
+    "D1/N10": {
+     "n": 286,
+     "MAE_linear": 5.331518,
+     "MAE_sat15": 5.643885,
+     "diff": 0.312367,
+     "signed_linear": -0.477455,
+     "signed_sat15": -0.41199
+    },
+    "D1/N20": {
+     "n": 292,
+     "MAE_linear": 5.151888,
+     "MAE_sat15": 5.499158,
+     "diff": 0.34727,
+     "signed_linear": -0.140114,
+     "signed_sat15": -0.120472
+    },
+    "D2/N3": {
+     "n": 258,
+     "MAE_linear": 5.076619,
+     "MAE_sat15": 5.195364,
+     "diff": 0.118745,
+     "signed_linear": -0.224858,
+     "signed_sat15": -0.083183
+    },
+    "D2/N5": {
+     "n": 261,
+     "MAE_linear": 4.981646,
+     "MAE_sat15": 5.11571,
+     "diff": 0.134065,
+     "signed_linear": -0.292381,
+     "signed_sat15": -0.210546
+    },
+    "D2/N10": {
+     "n": 268,
+     "MAE_linear": 4.877211,
+     "MAE_sat15": 5.076156,
+     "diff": 0.198945,
+     "signed_linear": -0.092421,
+     "signed_sat15": -0.035753
+    },
+    "D2/N20": {
+     "n": 275,
+     "MAE_linear": 4.460026,
+     "MAE_sat15": 4.711754,
+     "diff": 0.251728,
+     "signed_linear": 0.005868,
+     "signed_sat15": -0.005244
+    },
+    "D3/N3": {
+     "n": 262,
+     "MAE_linear": 6.129243,
+     "MAE_sat15": 6.318495,
+     "diff": 0.189252,
+     "signed_linear": 0.314806,
+     "signed_sat15": 0.328259
+    },
+    "D3/N5": {
+     "n": 267,
+     "MAE_linear": 5.783802,
+     "MAE_sat15": 6.007811,
+     "diff": 0.224009,
+     "signed_linear": 0.168788,
+     "signed_sat15": 0.195633
+    },
+    "D3/N10": {
+     "n": 275,
+     "MAE_linear": 5.420815,
+     "MAE_sat15": 5.682869,
+     "diff": 0.262054,
+     "signed_linear": 0.201168,
+     "signed_sat15": 0.210937
+    },
+    "D3/N20": {
+     "n": 284,
+     "MAE_linear": 4.905247,
+     "MAE_sat15": 5.245211,
+     "diff": 0.339964,
+     "signed_linear": 0.537247,
+     "signed_sat15": 0.471696
+    }
+   },
+   "maxDiff": 0.34727,
+   "pass2": false,
+   "boot": {
+    "point": 0.2462,
+    "lo5": 0.178796,
+    "hi95": 0.307747,
+    "cells": 12
+   }
+  }
+ },
+ "tertile": [
+  {
+   "start": "Y5",
+   "N": 5,
+   "group": "low",
+   "n": 89,
+   "mpg0_lo": 11.362069,
+   "mpg0_hi": 22.439394,
+   "signed_linear": -1.554017,
+   "MAE_linear": 6.884809,
+   "signed_sat15": -1.292289,
+   "MAE_sat15": 7.315263
+  },
+  {
+   "start": "Y5",
+   "N": 5,
+   "group": "mid",
+   "n": 89,
+   "mpg0_lo": 22.660714,
+   "mpg0_hi": 29.511111,
+   "signed_linear": -2.207127,
+   "MAE_linear": 5.996841,
+   "signed_sat15": -2.086573,
+   "MAE_sat15": 6.214294
+  },
+  {
+   "start": "Y5",
+   "N": 5,
+   "group": "high",
+   "n": 89,
+   "mpg0_lo": 29.541667,
+   "mpg0_hi": 37.469697,
+   "signed_linear": -3.289608,
+   "MAE_linear": 5.8872,
+   "signed_sat15": -3.171877,
+   "MAE_sat15": 6.055268
+  },
+  {
+   "start": "Y5",
+   "N": 10,
+   "group": "low",
+   "n": 92,
+   "mpg0_lo": 11.362069,
+   "mpg0_hi": 22.424658,
+   "signed_linear": -1.694426,
+   "MAE_linear": 6.609705,
+   "signed_sat15": -1.565706,
+   "MAE_sat15": 6.993028
+  },
+  {
+   "start": "Y5",
+   "N": 10,
+   "group": "mid",
+   "n": 92,
+   "mpg0_lo": 22.431034,
+   "mpg0_hi": 29.47619,
+   "signed_linear": -1.821045,
+   "MAE_linear": 5.731546,
+   "signed_sat15": -1.779459,
+   "MAE_sat15": 5.994517
+  },
+  {
+   "start": "Y5",
+   "N": 10,
+   "group": "high",
+   "n": 92,
+   "mpg0_lo": 29.511111,
+   "mpg0_hi": 37.469697,
+   "signed_linear": -3.037194,
+   "MAE_linear": 5.67173,
+   "signed_sat15": -3.017713,
+   "MAE_sat15": 5.765888
+  },
+  {
+   "start": "Y6",
+   "N": 5,
+   "group": "low",
+   "n": 95,
+   "mpg0_lo": 11.048387,
+   "mpg0_hi": 22.097561,
+   "signed_linear": -1.324794,
+   "MAE_linear": 5.88159,
+   "signed_sat15": -1.261793,
+   "MAE_sat15": 6.264239
+  },
+  {
+   "start": "Y6",
+   "N": 5,
+   "group": "mid",
+   "n": 94,
+   "mpg0_lo": 22.333333,
+   "mpg0_hi": 29.196721,
+   "signed_linear": -0.275047,
+   "MAE_linear": 5.265903,
+   "signed_sat15": -0.081941,
+   "MAE_sat15": 5.506264
+  },
+  {
+   "start": "Y6",
+   "N": 5,
+   "group": "high",
+   "n": 95,
+   "mpg0_lo": 29.23913,
+   "mpg0_hi": 37.549296,
+   "signed_linear": 0.286116,
+   "MAE_linear": 5.300208,
+   "signed_sat15": 0.562319,
+   "MAE_sat15": 5.25344
+  },
+  {
+   "start": "Y6",
+   "N": 10,
+   "group": "low",
+   "n": 98,
+   "mpg0_lo": 11.048387,
+   "mpg0_hi": 22.043478,
+   "signed_linear": -1.375425,
+   "MAE_linear": 5.257164,
+   "signed_sat15": -1.278772,
+   "MAE_sat15": 5.658913
+  },
+  {
+   "start": "Y6",
+   "N": 10,
+   "group": "mid",
+   "n": 97,
+   "mpg0_lo": 22.097561,
+   "mpg0_hi": 29.142857,
+   "signed_linear": -0.295644,
+   "MAE_linear": 5.367345,
+   "signed_sat15": -0.200327,
+   "MAE_sat15": 5.641986
+  },
+  {
+   "start": "Y6",
+   "N": 10,
+   "group": "high",
+   "n": 97,
+   "mpg0_lo": 29.196721,
+   "mpg0_hi": 37.549296,
+   "signed_linear": 0.15855,
+   "MAE_linear": 5.061627,
+   "signed_sat15": 0.325825,
+   "MAE_sat15": 5.056656
+  }
+ ],
+ "live": {
+  "n": 368,
+  "absDeltaMedian": 1.4,
+  "absDeltaMax": 6.8,
+  "gt10": 0,
+  "gt5": 3,
+  "medianSigned": 0.6,
+  "top20_024": [
+   {
+    "rank": 1,
+    "name": "Shai Gilgeous-Alexander",
+    "ovr": 105.8
+   },
+   {
+    "rank": 2,
+    "name": "Luka Dončić",
+    "ovr": 104.9
+   },
+   {
+    "rank": 3,
+    "name": "Nikola Jokić",
+    "ovr": 103.9
+   },
+   {
+    "rank": 4,
+    "name": "Franz Wagner",
+    "ovr": 100.1
+   },
+   {
+    "rank": 5,
+    "name": "Victor Wembanyama",
+    "ovr": 99.9
+   },
+   {
+    "rank": 6,
+    "name": "Amen Thompson",
+    "ovr": 96.8
+   },
+   {
+    "rank": 7,
+    "name": "Derrick White",
+    "ovr": 95.4
+   },
+   {
+    "rank": 8,
+    "name": "Chet Holmgren",
+    "ovr": 94.4
+   },
+   {
+    "rank": 9,
+    "name": "Cade Cunningham",
+    "ovr": 94.1
+   },
+   {
+    "rank": 10,
+    "name": "Joel Embiid",
+    "ovr": 93.9
+   },
+   {
+    "rank": 11,
+    "name": "Giannis Antetokounmpo",
+    "ovr": 93.9
+   },
+   {
+    "rank": 12,
+    "name": "Jamal Murray",
+    "ovr": 93.8
+   },
+   {
+    "rank": 13,
+    "name": "Donovan Mitchell",
+    "ovr": 93.7
+   },
+   {
+    "rank": 14,
+    "name": "Tyrese Maxey",
+    "ovr": 93.3
+   },
+   {
+    "rank": 15,
+    "name": "Kawhi Leonard",
+    "ovr": 92.5
+   },
+   {
+    "rank": 16,
+    "name": "Jayson Tatum",
+    "ovr": 91.8
+   },
+   {
+    "rank": 17,
+    "name": "OG Anunoby",
+    "ovr": 91.6
+   },
+   {
+    "rank": 18,
+    "name": "Evan Mobley",
+    "ovr": 91.4
+   },
+   {
+    "rank": 19,
+    "name": "Kevin Durant",
+    "ovr": 90.6
+   },
+   {
+    "rank": 20,
+    "name": "Dylan Harper",
+    "ovr": 90.5
+   }
+  ],
+  "top20_025": [
+   {
+    "rank": 1,
+    "name": "Shai Gilgeous-Alexander",
+    "ovr": 105.8
+   },
+   {
+    "rank": 2,
+    "name": "Luka Dončić",
+    "ovr": 102.1
+   },
+   {
+    "rank": 3,
+    "name": "Victor Wembanyama",
+    "ovr": 100.8
+   },
+   {
+    "rank": 4,
+    "name": "Nikola Jokić",
+    "ovr": 100.1
+   },
+   {
+    "rank": 5,
+    "name": "Franz Wagner",
+    "ovr": 100.1
+   },
+   {
+    "rank": 6,
+    "name": "Chet Holmgren",
+    "ovr": 96.3
+   },
+   {
+    "rank": 7,
+    "name": "Derrick White",
+    "ovr": 96.1
+   },
+   {
+    "rank": 8,
+    "name": "Kawhi Leonard",
+    "ovr": 95.2
+   },
+   {
+    "rank": 9,
+    "name": "Amen Thompson",
+    "ovr": 94.4
+   },
+   {
+    "rank": 10,
+    "name": "Giannis Antetokounmpo",
+    "ovr": 94.3
+   },
+   {
+    "rank": 11,
+    "name": "Cade Cunningham",
+    "ovr": 91.6
+   },
+   {
+    "rank": 12,
+    "name": "Joel Embiid",
+    "ovr": 91.3
+   },
+   {
+    "rank": 13,
+    "name": "Donovan Mitchell",
+    "ovr": 91.2
+   },
+   {
+    "rank": 14,
+    "name": "Lauri Markkanen",
+    "ovr": 91.1
+   },
+   {
+    "rank": 15,
+    "name": "Dylan Harper",
+    "ovr": 91.1
+   },
+   {
+    "rank": 16,
+    "name": "Ausar Thompson",
+    "ovr": 90.1
+   },
+   {
+    "rank": 17,
+    "name": "OG Anunoby",
+    "ovr": 89.6
+   },
+   {
+    "rank": 18,
+    "name": "Dyson Daniels",
+    "ovr": 89.5
+   },
+   {
+    "rank": 19,
+    "name": "Dean Wade",
+    "ovr": 89.0
+   },
+   {
+    "rank": 20,
+    "name": "Aaron Gordon",
+    "ovr": 89.0
+   }
+  ],
+  "entered": [
+   {
+    "name": "Lauri Markkanen",
+    "team": "UTA",
+    "N": 4,
+    "MPGhat": 29.92,
+    "predNew": 1.724,
+    "ovr024": 90.3,
+    "rank024": 21,
+    "ovr025": 91.1,
+    "rank025": 14
+   },
+   {
+    "name": "Ausar Thompson",
+    "team": "DET",
+    "N": 4,
+    "MPGhat": 26.37,
+    "predNew": 1.7685,
+    "ovr024": 87.0,
+    "rank024": 34,
+    "ovr025": 90.1,
+    "rank025": 16
+   },
+   {
+    "name": "Dyson Daniels",
+    "team": "ATL",
+    "N": 5,
+    "MPGhat": 29.53,
+    "predNew": 1.6095,
+    "ovr024": 88.7,
+    "rank024": 23,
+    "ovr025": 89.5,
+    "rank025": 18
+   },
+   {
+    "name": "Dean Wade",
+    "team": "PHI",
+    "N": 3,
+    "MPGhat": 25.81,
+    "predNew": 1.702,
+    "ovr024": 85.8,
+    "rank024": 43,
+    "ovr025": 89.0,
+    "rank025": 19
+   },
+   {
+    "name": "Aaron Gordon",
+    "team": "DEN",
+    "N": 4,
+    "MPGhat": 29.88,
+    "predNew": 1.5551,
+    "ovr024": 88.5,
+    "rank024": 25,
+    "ovr025": 89.0,
+    "rank025": 20
+   }
+  ],
+  "left": [
+   {
+    "name": "Jamal Murray",
+    "team": "DEN",
+    "N": 4,
+    "MPGhat": 37.73,
+    "predNew": 1.369,
+    "ovr024": 93.8,
+    "rank024": 12,
+    "ovr025": 88.8,
+    "rank025": 22
+   },
+   {
+    "name": "Tyrese Maxey",
+    "team": "PHI",
+    "N": 5,
+    "MPGhat": 37.69,
+    "predNew": 1.3312,
+    "ovr024": 93.3,
+    "rank024": 14,
+    "ovr025": 88.3,
+    "rank025": 26
+   },
+   {
+    "name": "Jayson Tatum",
+    "team": "BOS",
+    "N": 4,
+    "MPGhat": 35.4,
+    "predNew": 1.3801,
+    "ovr024": 91.8,
+    "rank024": 16,
+    "ovr025": 88.4,
+    "rank025": 24
+   },
+   {
+    "name": "Evan Mobley",
+    "team": "CLE",
+    "N": 4,
+    "MPGhat": 34.05,
+    "predNew": 1.4493,
+    "ovr024": 91.4,
+    "rank024": 18,
+    "ovr025": 89.0,
+    "rank025": 21
+   },
+   {
+    "name": "Kevin Durant",
+    "team": "HOU",
+    "N": 5,
+    "MPGhat": 34.81,
+    "predNew": 1.3268,
+    "ovr024": 90.6,
+    "rank024": 19,
+    "ovr025": 87.6,
+    "rank025": 28
+   }
+  ],
+  "lowMinutesHighEff": [
+   {
+    "name": "Alex Caruso",
+    "team": "OKC",
+    "N": 4,
+    "MPGhat": 18.73,
+    "predNew": 1.9277,
+    "ovr024": 79.9,
+    "rank024": 85,
+    "ovr025": 86.7,
+    "rank025": 33
+   },
+   {
+    "name": "Herbert Jones",
+    "team": "NOP",
+    "N": 4,
+    "MPGhat": 20.16,
+    "predNew": 1.8437,
+    "ovr024": 80.9,
+    "rank024": 74,
+    "ovr025": 87.0,
+    "rank025": 31
+   },
+   {
+    "name": "Dean Wade",
+    "team": "PHI",
+    "N": 3,
+    "MPGhat": 25.81,
+    "predNew": 1.702,
+    "ovr024": 85.8,
+    "rank024": 43,
+    "ovr025": 89.0,
+    "rank025": 19
+   },
+   {
+    "name": "Neemias Queta",
+    "team": "BOS",
+    "N": 4,
+    "MPGhat": 20.94,
+    "predNew": 1.6345,
+    "ovr024": 80.2,
+    "rank024": 84,
+    "ovr025": 85.3,
+    "rank025": 39
+   },
+   {
+    "name": "Oso Ighodaro",
+    "team": "PHX",
+    "N": 1,
+    "MPGhat": 19.06,
+    "predNew": 1.3669,
+    "ovr024": 76.5,
+    "rank024": 112,
+    "ovr025": 81.1,
+    "rank025": 74
+   }
+  ],
+  "fullMinutesStarters": [
+   {
+    "name": "Shai Gilgeous-Alexander",
+    "team": "OKC",
+    "N": 5,
+    "MPGhat": 33.04,
+    "predNew": 2.772,
+    "ovr024": 105.8,
+    "rank024": 1,
+    "ovr025": 105.8,
+    "rank025": 1
+   },
+   {
+    "name": "Luka Dončić",
+    "team": "LAL",
+    "N": 4,
+    "MPGhat": 35.56,
+    "predNew": 2.4165,
+    "ovr024": 104.9,
+    "rank024": 2,
+    "ovr025": 102.1,
+    "rank025": 2
+   },
+   {
+    "name": "Nikola Jokić",
+    "team": "DEN",
+    "N": 4,
+    "MPGhat": 36.47,
+    "predNew": 2.2462,
+    "ovr024": 103.9,
+    "rank024": 3,
+    "ovr025": 100.1,
+    "rank025": 4
+   },
+   {
+    "name": "Franz Wagner",
+    "team": "ORL",
+    "N": 4,
+    "MPGhat": 32.46,
+    "predNew": 2.3514,
+    "ovr024": 100.1,
+    "rank024": 4,
+    "ovr025": 100.1,
+    "rank025": 5
+   },
+   {
+    "name": "Amen Thompson",
+    "team": "HOU",
+    "N": 5,
+    "MPGhat": 34.53,
+    "predNew": 1.8568,
+    "ovr024": 96.8,
+    "rank024": 6,
+    "ovr025": 94.4,
+    "rank025": 9
+   }
+  ],
+  "caruso": {
+   "name": "Alex Caruso",
+   "team": "OKC",
+   "N": 4,
+   "MPGhat": 18.73,
+   "predNew": 1.9277,
+   "ovr024": 79.9,
+   "rank024": 85,
+   "ovr025": 86.7,
+   "rank025": 33
+  },
+  "rule": "低分鐘高效率＝MPGhat < 26 者中 predNew（用人回歸每 36 預測）最高 5 人；打滿分鐘先發＝MPGhat ≥ 32 者中 024 OVR 最高 5 人（規則在看結果前訂，只報告）"
+ }
+}

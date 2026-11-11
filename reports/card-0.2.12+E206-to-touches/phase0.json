@@ -1,0 +1,77 @@
+{
+ "n_2k_pool": 376,
+ "K12_tov_vs_2K_BallHandle_rho": 0.7947476076866452,
+ "MDE": 0.03248785670597565,
+ "ci90": [
+  0.7590083185043397,
+  0.823984031916291
+ ],
+ "n_rapm_pop": 379,
+ "K12_ovr_vs_rapm_rho": 0.5750950069404726,
+ "h": 0.058128419585834756,
+ "notBroken_threshold": -0.11625683917166951,
+ "F143": {
+  "median": 2.8605252842022737,
+  "n_below": 0,
+  "n_nodata": 0,
+  "top30_mean_poss36": 7.686580763801786,
+  "top5": [
+   "Jalen Brunson",
+   "Shai Gilgeous-Alexander",
+   "T.J. McConnell",
+   "Tyrese Maxey",
+   "Tyus Jones"
+  ]
+ },
+ "seed": 20261102,
+ "draws": 2000,
+ "A_subgroup": {
+  "n": 64,
+  "K12_rho_tov_vs_avgsec": 0.7117328563371671,
+  "MDE_A": 0.11128766193379969,
+  "ci90": [
+   0.579884323373936,
+   0.8024596472415354
+  ],
+  "threshold_K12_minus_KC_ge": 0.11128766193379969
+ },
+ "conversion_rho_touch_per_possmin": {
+  "card_pool_582": 15.592877206893352,
+  "z_pool_252": 15.012135819337537,
+  "k_t": 997.9441412411745,
+  "kh_t": 3991.776564964698
+ },
+ "KC_thresholds": {
+  "A_rho_drop_ge": 0.11128766193379969,
+  "keepE202_BH_rho_ge": 0.16770000000000002,
+  "notBroken_rho_diff_ge": -0.11625683917166951,
+  "B_le": 10
+ },
+ "K12_ranking_sha256": "29ca32eb65cfa40c465f9b8555912ae9829047cd87c497674d804f8f31f300a5",
+ "K12_vif": {
+  "vif": 5.372982719081184,
+  "attrs_used": [
+   "long",
+   "mid",
+   "short",
+   "ft",
+   "drive",
+   "foulDraw",
+   "tovSkill",
+   "pass",
+   "rebound",
+   "onBall",
+   "help",
+   "heightInches",
+   "creation",
+   "pressure"
+  ],
+  "corr": {
+   "creation": 0.7241236703265533,
+   "pass": 0.7760158220849773,
+   "gravity": 0.5829338252075387
+  }
+ },
+ "E202_K0_BH_rho_0211": 0.0798,
+ "pop_def": "2K 池＝卡片 MIN≥500 且 2K27 有 Ball Handle（姓名正規化比對）；RAPM 人群＝MIN≥500 且本季 RAPM poss≥1000（同 E-198）；F-143＝MIN≥500，持球/36＝handle.csv TIME_OF_POSS÷卡片 MIN×36，中位數取同人群"
+}

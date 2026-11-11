@@ -1,0 +1,31 @@
+{
+ "version": "card 0.2.10f",
+ "base": "reports/card-0.2.10e",
+ "players": 582,
+ "change": "E-191b P1m：3PT 欄（three-value.csv 的 tv_main）改用「近三季同窗口人群＋本季」對照池映射；threeValue 只顯示，ranking.csv／OVR／名次與 0.2.10e 逐位元組相同。",
+ "anchors": {
+  "PR1": -0.7275,
+  "PR50": 1.0039,
+  "PR90": 2.1771,
+  "PR95": 2.5397,
+  "PR99": 3.8692
+ },
+ "anchor_source": "reports/card-0.2.10d/ranking.csv gRepl, MIN>=500, qf（gRepl 4 位小數）",
+ "ovr_map": {
+  "function": "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py:ovr_map",
+  "A_PR90": 88.0,
+  "B_PR95": 92.0
+ },
+ "ovr_changed": 200,
+ "pool_90_99": 23,
+ "pool_ge99": 5,
+ "sources_sha256": {
+  "reports/card-0.2.10e/ranking.csv": "d7fd938bd85a76865040638608f2cf092cee5e70384a2c75fb5f183b9054102c",
+  "reports/card-0.2.10e/three-value.csv": "70392d30c92bcb9f427c34c4647877920e2a2b626656fd707219201c2a446b4a",
+  "reports/E191-threevalue-dispersion/three-value-candidate.csv": "e805bf686232bb0e2fa3b08d840a7f6f2115ebc6abafbf9f5f073b812af12272"
+ },
+ "build_command": "python -I -X utf8 reports/card-0.2.10f/build_0210f.py",
+ "ranking_csv_sha256": "d7fd938bd85a76865040638608f2cf092cee5e70384a2c75fb5f183b9054102c",
+ "three_value_changed_rows": 582,
+ "three_value_csv_sha256": "873bc130ebfe63ae7de784bdcd1f750ea0b0f3353c8b6721bb6ea7b552ceb463"
+}

@@ -1,0 +1,129 @@
+{
+  "preregistration": "preregistration.md",
+  "alpha": 0.5,
+  "evaluatedPlayers": 414,
+  "heldOutRho": {
+    "net": {
+      "baseline": 0.45452326201320703,
+      "shrunk": 0.4559726980350078,
+      "delta": 0.001449436021800754,
+      "bootstrap95": [
+        -0.009939710415511959,
+        0.013199719606925465
+      ]
+    },
+    "defense": {
+      "baseline": 0.2533636049620104,
+      "shrunk": 0.2583228418463833,
+      "delta": 0.004959236884372942,
+      "bootstrap95": [
+        -0.006212511906770147,
+        0.018341918045907145
+      ]
+    }
+  },
+  "top50": {
+    "baseline": {
+      "lowMinuteTop50": [
+        [
+          20,
+          "Ty Jerome",
+          339
+        ],
+        [
+          23,
+          "Norchad Omier",
+          24
+        ],
+        [
+          27,
+          "Dejounte Murray",
+          389
+        ],
+        [
+          39,
+          "Obi Toppin",
+          424
+        ],
+        [
+          41,
+          "Walker Kessler",
+          154
+        ],
+        [
+          42,
+          "Charles Bassey",
+          153
+        ]
+      ],
+      "under1000Top50": 10
+    },
+    "shrunk": {
+      "lowMinuteTop50": [
+        [
+          24,
+          "Ty Jerome",
+          339
+        ],
+        [
+          28,
+          "Dejounte Murray",
+          389
+        ],
+        [
+          43,
+          "Walker Kessler",
+          154
+        ]
+      ],
+      "under1000Top50": 7
+    }
+  },
+  "focusRanks": {
+    "Norchad Omier": {
+      "baseline": 23,
+      "shrunk": 74
+    },
+    "Javon Small": {
+      "baseline": 14,
+      "shrunk": 19
+    },
+    "Ty Jerome": {
+      "baseline": 20,
+      "shrunk": 24
+    },
+    "Dejounte Murray": {
+      "baseline": 27,
+      "shrunk": 28
+    },
+    "Obi Toppin": {
+      "baseline": 39,
+      "shrunk": 51
+    },
+    "Walker Kessler": {
+      "baseline": 41,
+      "shrunk": 43
+    },
+    "Charles Bassey": {
+      "baseline": 42,
+      "shrunk": 66
+    },
+    "Karlo Matković": {
+      "baseline": 7,
+      "shrunk": 9
+    }
+  },
+  "pseudoMinutes": {
+    "drive": 139.1155342465457,
+    "tovSkill": 2000,
+    "pass": 50,
+    "rebound": 50,
+    "creation": 500
+  },
+  "gates": {
+    "net": true,
+    "defense": true,
+    "lowMinutes": false,
+    "adopt": false
+  }
+}

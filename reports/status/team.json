@@ -1,0 +1,227 @@
+[
+ {
+  "version": "v14",
+  "order": 14,
+  "winsMAE": 5.73,
+  "netRMSE": 2.912,
+  "ptsMAE": 2.25,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v17",
+  "order": 17,
+  "winsMAE": 5.91,
+  "netRMSE": 3.008,
+  "ptsMAE": 2.45,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v19",
+  "order": 19,
+  "winsMAE": 6.71,
+  "netRMSE": 3.17,
+  "ptsMAE": 2.44,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v20",
+  "order": 20,
+  "winsMAE": 7.64,
+  "netRMSE": 3.496,
+  "ptsMAE": 2.4,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v21",
+  "order": 21,
+  "winsMAE": 8.02,
+  "netRMSE": 3.689,
+  "ptsMAE": 2.36,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v22",
+  "order": 22,
+  "winsMAE": 7.84,
+  "netRMSE": 3.616,
+  "ptsMAE": 2.16,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v23",
+  "order": 23,
+  "winsMAE": 7.96,
+  "netRMSE": 3.624,
+  "ptsMAE": 2.36,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v24",
+  "order": 24,
+  "winsMAE": 7.96,
+  "netRMSE": 3.624,
+  "ptsMAE": 2.36,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v25",
+  "order": 25,
+  "winsMAE": 6.62,
+  "netRMSE": 3.377,
+  "ptsMAE": 2.4,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v26",
+  "order": 26,
+  "winsMAE": 7.31,
+  "netRMSE": 3.505,
+  "ptsMAE": 2.59,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v28",
+  "order": 28,
+  "winsMAE": 7.22,
+  "netRMSE": 3.459,
+  "ptsMAE": 2.58,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v30",
+  "order": 30,
+  "winsMAE": 6.91,
+  "netRMSE": 3.391,
+  "ptsMAE": 2.55,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v31",
+  "order": 31,
+  "winsMAE": 7.18,
+  "netRMSE": 3.384,
+  "ptsMAE": 2.6,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v34",
+  "order": 34,
+  "winsMAE": 6.4,
+  "netRMSE": 3.061,
+  "ptsMAE": 2.47,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v35",
+  "order": 35,
+  "winsMAE": 6.89,
+  "netRMSE": 3.324,
+  "ptsMAE": 2.53,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v36",
+  "order": 36,
+  "winsMAE": 6.78,
+  "netRMSE": 3.372,
+  "ptsMAE": 2.39,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v37",
+  "order": 37,
+  "winsMAE": 6.87,
+  "netRMSE": 3.166,
+  "ptsMAE": 2.33,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v39",
+  "order": 39,
+  "winsMAE": 6.91,
+  "netRMSE": 3.391,
+  "ptsMAE": 2.55,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v41",
+  "order": 41,
+  "winsMAE": 6.67,
+  "netRMSE": 2.876,
+  "ptsMAE": 2.42,
+  "source": "model-evolution-20261016",
+  "measured": true
+ },
+ {
+  "version": "v46",
+  "order": 46,
+  "winsMAE": 5.24,
+  "netRMSE": 2.302,
+  "ptsMAE": "未量測",
+  "source": "player-impact-v46",
+  "measured": true
+ },
+ {
+  "version": "v47",
+  "order": 47,
+  "winsMAE": 5.38,
+  "netRMSE": 2.313,
+  "ptsMAE": "未量測",
+  "source": "player-impact-v47",
+  "measured": true
+ },
+ {
+  "version": "v48",
+  "order": 48,
+  "winsMAE": 4.98,
+  "netRMSE": 2.174,
+  "ptsMAE": "未量測",
+  "source": "player-impact-v48",
+  "measured": true
+ },
+ {
+  "version": "v49",
+  "order": 49,
+  "winsMAE": 6.24,
+  "netRMSE": 2.723,
+  "ptsMAE": "未量測",
+  "source": "player-impact-v49",
+  "measured": true
+ },
+ {
+  "version": "v53",
+  "order": 53,
+  "winsMAE": 4.56,
+  "netRMSE": 2.019,
+  "ptsMAE": "未量測",
+  "source": "player-impact-v53-team（壓迫係數為樣本內）",
+  "measured": true
+ },
+ {
+  "version": "v54",
+  "order": 54,
+  "winsMAE": 6.29,
+  "netRMSE": 2.703,
+  "ptsMAE": "未量測",
+  "source": "player-impact-v54-team（未採用）",
+  "measured": true
+ }
+]

@@ -1,0 +1,9 @@
+v53  rho2k 0.4492 rhoRapm 0.4996 rhoDef 0.2879
+E2-lam0.4  rho2k 0.4778 rhoRapm 0.5290 rhoDef 0.2972 gates 10/19
+F2-gamma0.5 rho2k 0.4878 rhoRapm 0.5700 rhoDef 0.3624 gates 12/19
+G3-delta0.25 rho2k 0.5299 rhoRapm 0.8424 rhoDef 0.6969 gates 18/19
+---
+card-0.2.7b rho2k 0.7382 rhoRapm 0.7789 rhoDef 0.5317 pass 18/19 top10Bigs ["Victor Wembanyama","Nikola Jokić","Giannis Antetokounmpo","Chet Holmgren","Lauri Markkanen"] wgPass 13/14 bigPass 13/16 strictFour false
+K0 rho2k 0.7382 rhoRapm 0.7789 rhoDef 0.5317 pass 18/19 top10Bigs ["Victor Wembanyama","Nikola Jokić","Giannis Antetokounmpo","Chet Holmgren","Lauri Markkanen"] wgPass 13/14 bigPass 13/16 strictFour false
+K1 rho2k 0.7334 rhoRapm 0.7805 rhoDef 0.5345 pass 18/19 top10Bigs ["Victor Wembanyama","Nikola Jokić","Giannis Antetokounmpo","Chet Holmgren","Lauri Markkanen"] wgPass 13/14 bigPass 13/16 strictFour false
+data/season-league.json sha256: 497725ecb6a2ec181aeb3cf93263f53a81bdfed772a2c4c733ba3a2d65a79bf6
