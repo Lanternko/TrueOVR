@@ -158,6 +158,7 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
   .fbar #posSeg button:last-child{border-bottom:0}
   .fbar .seg .pgn{height:32px;min-width:0;padding:0 5px;letter-spacing:0;word-spacing:-.25em}
   .fbar #fpg button{padding:0 9px}
+  @media (max-width:350px){.fbar{gap:4px}.fbar .seg a,.fbar .seg button,.fbar .pbtn{padding:0 6px}.fbar #fpg button{padding:0 7px}.fbar .seg .pgn{padding:0 3px}}   /* 320px 窄機也排得下一行 */
   .mast .pn{top:calc(var(--mh,96px) + 6px);right:12px;width:calc(100vw - 24px)}
   .msearch .sbox{position:fixed;width:auto;left:12px;right:12px;top:calc(var(--mh,96px) + 6px);z-index:20;padding:10px;background:var(--panel-2);border:1px solid var(--line);border-radius:8px;box-shadow:0 14px 36px rgba(0,0,0,.6)}
   .msearch #q,.msearch #q:focus{height:40px;font-size:16px}

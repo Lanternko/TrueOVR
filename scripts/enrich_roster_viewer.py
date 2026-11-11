@@ -697,6 +697,9 @@ function impactChips(p) {
     const page = !!e.target.closest('thead,td.no,td.nm,td.ovr');
     s = {x: t.clientX, y: t.clientY, el: page ? document.scrollingElement : box, axis: page ? 'y' : null, hist: []};
     s.l = s.el.scrollLeft; s.tp = s.el.scrollTop;
+    // 表格已捲到底才開始的這一下往上滑 → 改捲整頁（使用者 2026-11-11：手機網址列會擋住頁面最底下）。
+    // 只看手勢開始時：同一下滑到底不會接著帶頁面，要放手再滑一次
+    s.bottom = !page && box.scrollTop + box.clientHeight >= box.scrollHeight - 2;
   }, {passive: true});
   box.addEventListener('touchmove', e => {
     if (!s || e.touches.length > 1) return;
@@ -704,6 +707,7 @@ function impactChips(p) {
     if (!s.axis) {
       if (Math.hypot(dx, dy) < LOCK) return;
       s.axis = Math.abs(dx) > Math.abs(dy) * RATIO ? 'x' : 'y';
+      if (s.axis === 'y' && s.bottom && dy < 0) { s.el = document.scrollingElement; s.tp = s.el.scrollTop; }
     }
     if (s.axis === 'x') s.el.scrollLeft = s.l - dx; else s.el.scrollTop = s.tp - dy;
     const now = performance.now();
@@ -725,6 +729,18 @@ function impactChips(p) {
   };
   box.addEventListener('touchend', end);
   box.addEventListener('touchcancel', () => { s = null; });
+  // 桌機滾輪同規則：表格已在底、停 300ms 後的下一輪往下滾改捲整頁（.tbox 是 overscroll-behavior:contain，瀏覽器不會自己傳）
+  let lastW = 0, chain = false;
+  box.addEventListener('wheel', e => {
+    if (mq.matches || e.ctrlKey || !e.deltaY) return;
+    const now = performance.now();
+    if (now - lastW > 300) chain = e.deltaY > 0 && box.scrollTop + box.clientHeight >= box.scrollHeight - 2;
+    lastW = now;
+    if (e.deltaY < 0) chain = false;
+    if (!chain) return;
+    e.preventDefault();
+    document.scrollingElement.scrollTop += e.deltaY * (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? innerHeight : 1);
+  }, {passive: false});
 })();
 """
 
