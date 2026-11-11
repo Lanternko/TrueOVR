@@ -256,16 +256,27 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
   .mbrand{width:auto}
   .mtabs #teamPick:not(.on) summary::before,.mtabs #teamPick.last:not(.on) summary{font-size:15px}
   .mpanel{position:fixed;left:12px;right:12px;top:calc(var(--mh,96px) + 6px);min-width:0}
-  /* 舊手機規則 #posSeg{display:none}（位置要點 .pbtn 才展開）：位置列搬進篩選欄後直接攤開 */
-  .fbar{gap:6px 12px;padding:6px 0 2px}
-  .fbar .fg{gap:6px}
-  .fbar #posSeg{display:flex;position:static;box-shadow:none}
-  .fbar .seg a,.fbar .seg button{height:32px;padding:0 10px}
-  .fbar .seg .pgn{height:32px}
-  .fbar .fg.fpg{order:2}
-  .fbar .fg.fpos{order:3;flex-basis:100%;min-width:0}
-  .fbar .fg.fpos #fPos{min-width:0;flex:0 1 auto;overflow-x:auto;scrollbar-width:none;border-radius:6px}   /* 位置放不下時整組橫向捲，不換行 */
-  .fbar .fg.fpos #fPos::-webkit-scrollbar{display:none}
+  /* 手機篩選欄只佔一行（使用者 2026-11-11：年份＋位置＋檢視＋分頁被排成三行）：不顯示「年份／位置／檢視」字樣，
+     年份縮成 2027／2026（data-s，頁尾腳本寫入），位置收成下拉（.pbtn，點了才往下展開），分頁縮成「‹ 1/8 ›」靠右 */
+  .fbar{flex-wrap:nowrap;gap:6px;padding:6px 0 2px}
+  .fbar .fg>b{display:none}
+  .fbar .seg a,.fbar .seg button{height:32px;padding:0 8px}
+  .fbar #fSeason a{font-size:0;letter-spacing:0}
+  .fbar #fSeason a::after{content:attr(data-s);font-size:.78rem;letter-spacing:.04em}
+  .fbar .fg.fpos{position:relative}
+  .fbar .pbtn{display:flex;align-items:center;gap:4px;height:34px;box-sizing:border-box;padding:0 8px;background:transparent;color:var(--muted);
+    border:1px solid var(--line);border-radius:6px;font:500 .78rem var(--f-disp);letter-spacing:.04em;white-space:nowrap;cursor:pointer}
+  .fbar .pbtn::after{content:"▾";font-size:.8em;opacity:.8}
+  .fbar .pbtn.on,.fbar .pbtn[aria-expanded="true"]{background:rgba(255,255,255,.10);color:#fff}
+  .fbar .pbtn.on{font-weight:600}
+  .fbar #posSeg{display:none}
+  .fbar .pbtn[aria-expanded="true"]+#posSeg{display:flex;flex-direction:column;position:absolute;left:0;top:calc(100% + 4px);z-index:20;min-width:100%;
+    background:var(--panel-2);box-shadow:0 12px 32px rgba(0,0,0,.55)}
+  .fbar #posSeg button{height:38px;padding:0 14px;border-right:0;border-bottom:1px solid rgba(255,255,255,.06)}
+  .fbar #posSeg button:last-child{border-bottom:0}
+  .fbar .seg .pgn{height:32px;min-width:0;padding:0 5px;letter-spacing:0;word-spacing:-.25em}
+  .fbar #fpg button{padding:0 9px}
+  @media (max-width:350px){.fbar{gap:4px}.fbar .seg a,.fbar .seg button,.fbar .pbtn{padding:0 6px}.fbar #fpg button{padding:0 7px}.fbar .seg .pgn{padding:0 3px}}   /* 320px 窄機也排得下一行 */
   .mast .pn{top:calc(var(--mh,96px) + 6px);right:12px;width:calc(100vw - 24px)}
   .msearch .sbox{position:fixed;width:auto;left:12px;right:12px;top:calc(var(--mh,96px) + 6px);z-index:20;padding:10px;background:var(--panel-2);border:1px solid var(--line);border-radius:8px;box-shadow:0 14px 36px rgba(0,0,0,.6)}
   .msearch #q,.msearch #q:focus{height:40px;font-size:16px}
@@ -274,9 +285,13 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
 @media (prefers-reduced-motion:reduce){.mast.ready .mind,.msearch #q{transition:none}}
 /* 表格外觀（使用者 2026-11-11，第 2 輪加強）：乾淨扁平，不做玻璃／漸層底。表身單一底色（--panel），列線 1px 低對比；分組只在第一欄左邊畫細線；
    hover＝整列 .04 淡亮＋名字左 2px 金線，選中（名字格整格金底，使用者 2026-11-11 裁定）其餘格 .09，兩者肉眼可分；sticky 欄不透明（同色底再疊亮度）。
-   能力值數字與 OVR 徽章同一套等級（q1 暗灰→q2 白→q3 藍→q4 金→q5 紅→q6 紫，門檻 70／80／90／100／110 同 ovrBadge）；
+   能力值數字與 OVR 徽章同一套等級（第 3 輪收斂成五級：q1 暗灰 <70→q2 白 70–79→q3 藍 80–89→q4 金 90–99→q5 紫 ≥100，同 ovrBadge）；色票在 --q1～--q5，說明列圖例共用；
+   除五級色階、隊色、OVR 徽章、ΔOVR／FORM 的柔綠柔紅、選中列金底與排序金色外，表格內不再有別的顏色（DIQ 改中性：正白、≤0 暗灰）；
    雙 id（#tbl#tbl）壓過 season_nav／enrich_roster_viewer 前面各層補丁 */
 div.tbox{background:var(--panel);border-radius:8px}
+:root{--q1:#6b7482;--q2:#e3e8ee;--q3:#62b0ff;--q4:#f2c94c;--q5:#d2a8ff}
+.legend .lq{font-weight:700}
+.legend .lq.q1{color:var(--q1)}.legend .lq.q2{color:var(--q2)}.legend .lq.q3{color:var(--q3)}.legend .lq.q4{color:var(--q4)}.legend .lq.q5{color:var(--q5)}
 #tbl{--hov:linear-gradient(rgba(255,255,255,.04),rgba(255,255,255,.04));--selbg:linear-gradient(rgba(255,255,255,.09),rgba(255,255,255,.09));--selh:linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,.12))}
 #tbl#tbl thead th,#tbl#tbl th.nm{background:#0c1014;border-bottom:1px solid var(--line)}
 #tbl#tbl thead tr.grp th{background:#0c1014;border-bottom:0;color:#c3ccd7;font:700 .78rem var(--f-disp);letter-spacing:.1em}
@@ -286,7 +301,7 @@ div.tbox{background:var(--panel);border-radius:8px}
 #tbl#tbl thead tr.grp th.g.gk-n{box-shadow:inset 0 -2px 0 #3a4452}
 #tbl#tbl thead tr:last-child th[data-k]{color:#e8edf2;font:700 .8rem var(--f-disp);letter-spacing:.06em;text-transform:uppercase}
 #tbl#tbl thead tr:last-child th[data-k] .zh{color:var(--muted);opacity:1;font-size:.68rem;text-transform:none;letter-spacing:0;font-weight:500}
-#tbl#tbl:not(.lite) thead tr:last-child th[data-k] .zh{font-size:.58rem}   /* 詳細檢視欄窄，四字副標（製造犯規）要縮才放得下 */
+#tbl#tbl:not(.lite) thead tr:last-child th[data-k]:not([data-k=name],[data-k=ovr],[data-k=pos],[data-k=team],[data-k=ht]){font-size:.72rem;letter-spacing:.03em}   /* 詳細檢視欄窄，英文欄名略縮（副標改兩字，第 3 輪） */
 #tbl#tbl thead tr:last-child th.sorted{color:var(--gold);background:#232a33}
 #tbl#tbl tbody td{background-color:var(--panel);background-image:none;border-bottom:1px solid rgba(255,255,255,.05)}
 #tbl#tbl tbody tr:hover td{background-image:var(--hov)}
@@ -297,13 +312,12 @@ div.tbox{background:var(--panel);border-radius:8px}
 #tbl#tbl tbody td.sortcol{background-color:#232a33}
 #tbl#tbl tbody td.no{color:var(--muted);font:500 .85rem var(--f-disp);font-variant-numeric:tabular-nums}
 #tbl#tbl tbody td.nm{color:#fff;font-weight:700}
-#tbl#tbl tbody td:is(.q1,.q2,.q3,.q4,.q5,.q6){font:700 1rem var(--f-disp);font-variant-numeric:tabular-nums;letter-spacing:.01em}
-#tbl#tbl tbody td.q1{color:#6b7482;font-weight:500}
-#tbl#tbl tbody td.q2{color:#e3e8ee}
-#tbl#tbl tbody td.q3{color:#62b0ff}
-#tbl#tbl tbody td.q4{color:#f2c94c}
-#tbl#tbl tbody td.q5{color:#ff7a7a}
-#tbl#tbl tbody td.q6{color:#d2a8ff}
+#tbl#tbl tbody td:is(.q1,.q2,.q3,.q4,.q5){font:700 1rem var(--f-disp);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+#tbl#tbl tbody td.q1{color:var(--q1);font-weight:500}
+#tbl#tbl tbody td.q2{color:var(--q2)}
+#tbl#tbl tbody td.q3{color:var(--q3)}
+#tbl#tbl tbody td.q4{color:var(--q4)}
+#tbl#tbl tbody td.q5{color:var(--q5)}
 #tbl#tbl tbody tr.sel td.sub{color:var(--muted)}
 #tbl#tbl tbody tr.sel .tabbr{color:var(--tt)}
 #tbl#tbl tbody tr.sel td.ovr .ob{background:none}
@@ -514,9 +528,10 @@ div.tbox{background:var(--panel);border-radius:8px}
   <div class="tbox"><table id="tbl"><thead></thead><tbody></tbody></table></div>
 
   <div class="legend">
-    <span>等第：<b class="gA">A</b> ≥82 · <b class="gB">B</b> ≥68 · <b class="gC">C</b> ≥56 · <b class="gD">D</b> ≥44 · <b class="gF">F</b> &lt;44</span>
-    <button type="button" class="ovr-t" aria-expanded="false" onclick="const b=this.nextElementSibling,o=b.hidden;b.hidden=!o;this.setAttribute('aria-expanded',o)">OVR：綜合<b>場上能力 ＋ 防守意識 ＋ 上場時間</b>的每場比賽影響力 <i>▼</i></button>
-    <div class="ovr-how" hidden><div><span class="oh-t">1. 場上能力（14 項）</span>結合傳統數據、逐球紀錄與官方追蹤，不只看帳面產量，也區分<b>自主創造 vs 吃餅</b>、<b>無球牽制（引力）</b>、<b>持球保護</b>與<b>對位主將／護框降命中率</b>，拆成 14 項單項能力（頂尖可破 99）。</div><div><span class="oh-t">2. 防守意識（DIQ）</span>抄截與阻攻只佔防守一小部分。DIQ 計算扣除隊友與對手強弱後，在場能幫球隊<b>少丟幾分</b>（跨季防守 RAPM 比同位置平均），補齊數據抓不到的<b>無球輪轉、站位與協防</b>。</div><div><span class="oh-t">3. 上場時間與用人</span>結合<b>場均分鐘</b>與<b>出賽率</b>（區分正常輪休與被棄用 DNP）。同效率下，<b>能扛越多上場時間，單場價值越高</b>（邊際遞減）。</div><div><span class="oh-t">4. 怎麼合成 OVR</span>將上述三項對齊進階指標（DARKO、BPM）校準權重，衡量<b>每場能幫球隊多贏幾分</b>；球員卡右側另列<b>實際在場影響</b>與<b>單場評分</b>供對照。全站<b>隨比賽逐場更新</b>並反映近期狀態（新秀以選秀順位為起點）。</div></div>
+    <span id="lgNum">色階：<b class="lq q5">100+</b> · <b class="lq q4">90–99</b> · <b class="lq q3">80–89</b> · <b class="lq q2">70–79</b> · <b class="lq q1">&lt;70</b></span>
+    <span id="lgGrade" hidden>等第：<b class="lq q3">A</b> ≥82 · <b class="lq q2">B</b> ≥68 · <b class="lq q1">C</b> ≥56 · <b class="lq q1">D</b> ≥44 · <b class="lq q1">F</b> &lt;44</span>
+    <button type="button" class="ovr-t" aria-expanded="false" onclick="const b=this.nextElementSibling,o=b.hidden;b.hidden=!o;this.setAttribute('aria-expanded',o)">OVR：<b>數據 ＋ 防守 ＋ 場上影響力 ＋ 上場時間</b> <i>▼</i></button>
+    <div class="ovr-how" hidden><div><span class="oh-t">1. 數據（14 項能力）</span>結合傳統數據、逐球紀錄與官方追蹤，不只看帳面產量，也區分<b>自主創造 vs 吃餅</b>、<b>無球牽制（引力）</b>、<b>持球保護</b>與<b>對位主將／護框降命中率</b>，拆成 14 項單項能力（頂尖可破 99）。</div><div><span class="oh-t">2. 防守（意識 DIQ）</span>抄截與阻攻只佔防守一小部分。DIQ 計算扣除隊友與對手強弱後，在場能幫球隊<b>少丟幾分</b>（跨季防守 RAPM 比同位置平均），補齊數據抓不到的<b>無球輪轉、站位與協防</b>。</div><div><span class="oh-t">3. 上場時間</span>結合<b>場均分鐘</b>與<b>出賽率</b>（區分正常輪休與被棄用 DNP）。同效率下，<b>能扛越多上場時間，單場價值越高</b>（邊際遞減）。</div><div><span class="oh-t">4. 怎麼合成 OVR</span>將上述三項對齊進階指標（DARKO、BPM）校準權重，衡量<b>每場能幫球隊多贏幾分</b>；球員卡右側另列<b>實際在場影響</b>與<b>單場評分</b>供對照。全站<b>隨比賽逐場更新</b>並反映近期狀態（新秀以選秀順位為起點）。</div></div>
   </div>
 </div>
 <!-- real-stats:begin -->
@@ -853,7 +868,7 @@ const EYE_Y=76;
 // 手機表格用的縮寫名：名縮成首字母，姓（含 Jr. 等）照留
 const shortName = n => { const i = n.indexOf(' '); return i > 0 ? n[0] + '. ' + n.slice(i + 1) : n; };
 // OVR 分級：110 珍珠／100 紫／90 金／80 銀／70 銅／其他灰字無框（門檻同 Baseball_algo getRarityClass，配色見 CSS）
-const ovrBadge = v => { const r = Math.round(v); return `<span class="ob t${r >= 110 ? 6 : r >= 100 ? 5 : r >= 90 ? 4 : r >= 80 ? 3 : r >= 70 ? 2 : 1}">${r}</span>`; };
+const ovrBadge = v => { const r = Math.round(v); return `<span class="ob t${r >= 100 ? 6 : r >= 90 ? 4 : r >= 80 ? 3 : r >= 70 ? 2 : 1}">${r}</span>`; };
 // E-116：2027 頁（近 5 場）的新秀都是新秀先驗，起點由選秀順位估，打越多場越靠自己的數據
 const rookieTag = p => REAL_VIEW === 'g5' && ROOKIES.has(p.name)
   ? `<span class="rkp" title="新秀：沒有上季卡，開季起點由選秀順位與位置估，已打 ${p.gp} 場，打越多場越看自己的數據" role="img" aria-label="新秀"></span>` : '';
@@ -1255,14 +1270,13 @@ function list() {
 
 const VIEWS = {
   full: { pre: [['offR', 'OFF', '進攻'], ['defR', 'DEF', '防守']], groups: [
-    ['外線', [['threeValue', '3PT', '三分'], ['mid', 'MID', '中距離'], ['ft', 'FT', '罰球']]],
-    ['內線', [['short', 'INS', '近框'], ['foulDraw', 'FD', '製造犯規']]],
-    ['持球', [['creation', 'CRT', '持球進攻']]],
-    ['無球', [['gravity', 'GRV', '引力'], ['spot', 'SPOT', '空檔射手'], ['cutroll', 'CUT', '切入順下']]],
-    ['組織', [['pass', 'PASS', '傳球'], ['tovSkill', 'TO', '少失誤']]],
+    ['外線', [['threeValue', '3PT', '三分'], ['mid', 'MID', '中距'], ['ft', 'FT', '罰球']]],
+    ['內線', [['short', 'INS', '近框'], ['foulDraw', 'FD', '造犯']]],
+    ['無球', [['gravity', 'GRV', '引力'], ['spot', 'SPOT', '空檔'], ['cutroll', 'CUT', '切入']]],
+    ['持球', [['creation', 'CRT', '持球'], ['pass', 'PASS', '傳球'], ['tovSkill', 'TO', '失誤']]],
     ['籃板', [['rebound', 'REB', '籃板']]],
     ['外防', [['onBall', 'PER D', '單防'], ['pressure', 'PRES', '壓迫']]],
-    ['內防', [['help', 'RIM', '護框'], ['dbon', 'DIQ', '防守意識']]],
+    ['內防', [['help', 'RIM', '護框'], ['dbon', 'DIQ', '意識']]],
   ] },
   lite: { pre: [], groups: [
     ['大類', [['offR', 'OFF', '進攻'], ['defR', 'DEF', '防守'], ['play', 'PLAY', '組織'], ['rebound', 'REB', '籃板']]],
@@ -1271,6 +1285,7 @@ const VIEWS = {
   ] },
 };
 const VIEW = () => VIEWS[st.view] || VIEWS.full;
+function legendSync() { const n = st.mode === 'num', a = document.getElementById('lgNum'), b = document.getElementById('lgGrade'); if (a) a.hidden = !n; if (b) b.hidden = n; }
 const viewKeys = v => new Set(['name', 'pos', 'team', 'ovr', 'min', ...(v === 'lite' ? [] : ['ht', 'gp', 'dovr', 'form']),
   ...VIEWS[v].pre.map(c => c[0]), ...VIEWS[v].groups.flatMap(g => g[1].map(c => c[0]))]);
 const NCOL = () => document.querySelectorAll('#tbl thead tr:last-child th').length;
@@ -1290,8 +1305,8 @@ function head() {
     `<th tabindex="0" data-k="${k}" class="${cls}${st.sort === k ? ' sorted' + (st.asc ? ' asc' : '') : ''}" ${ATIP[k] ? ` data-tip="${k}"` : ` title="依${zh}排序"`}>${en}<span class="zh">${zh}</span></th>`;
   let g = '<tr class="grp"><th colspan="3"></th><th class="gx" colspan="3"></th>' +
     (VIEW().pre.length ? `<th colspan="${VIEW().pre.length}"></th>` : '') +
-    VIEW().groups.map(x => `<th class="g gk-${({ '大類': 'b', '籃板': 'b', '進攻': 'o', '外線': 'o', '內線': 'o', '持球': 'o', '無球': 'o', '組織': 'o', '防守': 'd', '外防': 'd', '內防': 'd' })[x[0]] || 'n'}" colspan="${x[1].length}">${x[0]}</th>`).join('') +
-    (st.view === 'lite' ? '<th class="g"></th>' : '<th class="g" colspan="2">出場</th>') + '</tr>';
+    VIEW().groups.map(x => `<th class="g gk-${({ '大類': 'b', '籃板': 'b', '進攻': 'o', '外線': 'o', '內線': 'o', '持球': 'b', '無球': 'o', '組織': 'o', '防守': 'd', '外防': 'd', '內防': 'd' })[x[0]] || 'n'}" colspan="${x[1].length}">${x[0]}</th>`).join('') +
+    (st.view === 'lite' ? '<th class="g"></th>' : '<th class="g gk-n" colspan="2">出場</th>') + '</tr>';
   let h = '<tr><th class="noh">#</th>' + th('name', 'NAME', '球員', 'nm') + th('pos', 'POS', '位置') + th('team', 'TEAM', '球隊') +
     th('ht', 'HT', '身高') + th('ovr', 'OVR', '總評') + VIEW().pre.map(([k, en, zh]) => th(k, en, zh)).join('');
   for (const x of VIEW().groups) x[1].forEach(([k, en, zh], i) => { h += th(k, en, zh, i === 0 ? 'gl' : ''); });
@@ -1311,9 +1326,9 @@ function head() {
   });
 }
 
-const diq = p => `<td data-nodec class="${p.dbon >= 2 ? 'gA' : p.dbon >= 1 ? 'gB' : p.dbon > 0 ? 'gC' : ''}${st.sort === 'dbon' ? ' sortcol' : ''}"${p.dbon > 0 ? '' : ' style="color:var(--muted)"'} title="防守意識：真實比賽防守 RAPM 和同位置平均的差（負＝低於平均），補能力值量不到的輪轉、站位、補位；只有正的部分會加進 OVR">${p.dbon == null ? '—' : (p.dbon > 0 ? '+' : p.dbon < 0 ? '−' : '') + Math.abs(p.dbon).toFixed(2)}</td>`;
+const diq = p => `<td data-nodec class="${p.dbon > 0 ? 'q2' : 'q1'}${st.sort === 'dbon' ? ' sortcol' : ''}" title="防守意識：真實比賽防守 RAPM 和同位置平均的差（負＝低於平均），補能力值量不到的輪轉、站位、補位；只有正的部分會加進 OVR">${p.dbon == null ? '—' : (p.dbon > 0 ? '+' : p.dbon < 0 ? '−' : '') + Math.abs(p.dbon).toFixed(2)}</td>`;
 const odc = (p, k) => { const v = p[k]; return `<td class="${v == null ? '' : v >= 2 ? 'gA' : v >= 1 ? 'gB' : v >= 0 ? 'gC' : ''}${st.sort === k ? ' sortcol' : ''}"${v != null && v >= 0 ? '' : ' style="color:var(--muted)"'}>${v == null ? '—' : (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(1)}</td>`; };
-const qcls = v => { const r = Math.round(v); return 'q' + (r >= 110 ? 6 : r >= 100 ? 5 : r >= 90 ? 4 : r >= 80 ? 3 : r >= 70 ? 2 : 1); };
+const qcls = v => { const r = Math.round(v); return 'q' + (r >= 100 ? 5 : r >= 90 ? 4 : r >= 80 ? 3 : r >= 70 ? 2 : 1); };
 function cell(k, v, first, tip) {
   const cls = [];
   if (first) cls.push('gl');
@@ -1456,6 +1471,7 @@ function render() {
   const lk = [st.sort, st.asc, st.pos, st.team, st.rk, st.q, st.page].join('|');
   if (lk !== listKey) { listKey = lk; document.querySelector('.tbox').scrollTop = 0; }
   applyView();
+  legendSync();
   tboxEdges();
   card(P.find(p => p.name === st.sel) || P[0]);
   pages(a.length);
@@ -1526,12 +1542,12 @@ function lockCols() {
   const desk = matchMedia('(min-width:641px)').matches, AVW = 28;
   t.style.removeProperty('--gap');
   st.view = 'full'; const wf0 = meas(), kf = keys();
-  const eqb = k => ['min', 'gp', 'dovr', 'form'].includes(k), eqf = k => !fixed(k) && !eqb(k) && k !== 'ht';
+  const eqb = k => ['dbon', 'min', 'gp', 'dovr', 'form'].includes(k), eqf = k => !fixed(k) && !eqb(k) && k !== 'ht';
   let wf = wf0;
   if (desk) {
-    // 詳細檢視球員欄固定 168px（名字太長用 … 截斷）；預算＝球員欄 140px（第 2 輪之前）時的自然寬總和
-    const ni0 = kf.indexOf('name'), NMW = 168, budget = sum(wf0) - wf0[ni0] + NMW - AVW;
-    const mb = Math.max(...wf0.filter((w, i) => eqb(kf[i]))), nA = kf.filter(eqf).length, nB = kf.filter(eqb).length;
+    // 詳細檢視總預算＝球員欄 140px（第 2 輪之前）時的自然寬總和；第 3 輪：球員欄勻到 150px（名字太長用 … 截斷），DIQ 與「出場」四欄同寬（至少 EQB_MIN，數字左右各留 4px 以上）
+    const ni0 = kf.indexOf('name'), NMW = 150, EQB_MIN = 44, budget = sum(wf0) - wf0[ni0] + 168 - AVW;
+    const mb = Math.max(EQB_MIN, ...wf0.filter((w, i) => eqb(kf[i]))), nA = kf.filter(eqf).length, nB = kf.filter(eqb).length;
     const rest = sum(wf0.filter((w, i) => !eqf(kf[i]) && !eqb(kf[i]) && i !== ni0)) + NMW, w = Math.floor((budget - rest - nB * mb) / nA);
     wf = wf0.map((w0, i) => eqf(kf[i]) ? w : eqb(kf[i]) ? mb : i === ni0 ? NMW : w0);
     wf[kf.indexOf('name')] += budget - sum(wf);   // 餘數（<18px）給球員欄
@@ -1573,8 +1589,8 @@ render();
 const $=s=>document.querySelector(s),mast=$('.mast');if(!mast)return;
 const tabs=$('.mtabs'),ind=$('.mind'),tp=$('#teamPick'),pos=$('#posSeg');
 if(tp){$('#mPickPh').replaceWith(tp);if(location.hash==='#team'){history.replaceState(null,'',location.pathname+location.search);setTimeout(()=>tp.open=true);}}
-if(pos)$('#fPos').append(pos);
-const season=$('.snav .seg');if(season)$('#fSeason').append(season);
+if(pos){const pb=$('.pbtn');$('#fPos').append(pos);if(pb)pos.before(pb);}   /* 手機位置下拉鈕跟著位置列搬進篩選欄 */
+const season=$('.snav .seg');if(season){$('#fSeason').append(season);season.querySelectorAll('a').forEach(a=>a.dataset.s='20'+a.textContent.trim().slice(-2));}   /* 手機年份縮寫：2026-27 → 2027 */
 const mode=$('#modeSeg');if(mode)$('#mMode').append(mode);
 const pn=$('.snav .pnote');if(pn)$('#mNotes').append(pn);else $('#mNotes').closest('.mrow').remove();
 const q=$('#q');if(q){$('.msearch .sbox').append(q);q.placeholder='搜尋球員或球隊';}
