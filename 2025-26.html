@@ -237,6 +237,12 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
 .fbar .seg a:hover,.fbar .seg button:hover{color:var(--fg)}
 .fbar .seg a[aria-current="page"],.fbar .seg button[aria-pressed="true"]{background:rgba(255,255,255,.10);color:#fff;font-weight:600}
 .fbar .seg a:focus-visible,.fbar .seg button:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.fbar .fg[hidden]{display:none}
+/* 分頁（使用者 2026-11-11）：篩選欄最右邊「‹ 1 / N ›」，和中性 seg 同高同框；每頁 50 人，只有 1 頁時隱藏 */
+.fbar .fpg{margin-left:auto}
+.fbar .seg .pgn{display:flex;align-items:center;box-sizing:border-box;height:26px;min-width:58px;justify-content:center;padding:0 10px;color:#fff;font:600 .78rem var(--f-disp);letter-spacing:.04em;white-space:nowrap;font-variant-numeric:tabular-nums;border-right:1px solid rgba(255,255,255,.06)}
+.fbar .seg button:disabled{opacity:.35;cursor:default}
+.fbar .seg button:disabled:hover{color:var(--muted)}
 #tbl .vh{display:none}
 @media (min-width:641px){.wrap{padding-top:10px}}
 @media (max-width:640px){
@@ -255,6 +261,8 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
   .fbar .fg{gap:6px}
   .fbar #posSeg{display:flex;position:static;box-shadow:none}
   .fbar .seg a,.fbar .seg button{height:32px;padding:0 10px}
+  .fbar .seg .pgn{height:32px}
+  .fbar .fg.fpg{order:2}
   .fbar .fg.fpos{order:3;flex-basis:100%;min-width:0}
   .fbar .fg.fpos #fPos{min-width:0;flex:0 1 auto;overflow-x:auto;scrollbar-width:none;border-radius:6px}   /* 位置放不下時整組橫向捲，不換行 */
   .fbar .fg.fpos #fPos::-webkit-scrollbar{display:none}
@@ -264,27 +272,59 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
   .mtabs .tpick .tpop{position:fixed;left:12px!important;right:12px;top:calc(var(--mh,96px) + 6px);width:auto}
 }
 @media (prefers-reduced-motion:reduce){.mast.ready .mind,.msearch #q{transition:none}}
-/* 表格外觀（使用者 2026-11-11）：乾淨扁平，不做玻璃。表身單一底色（--panel），列線 1px 低對比；分組只在第一欄左邊畫細線；
-   hover／選中＝同色底再疊一層亮度（sticky 欄也不透明，不透出後面捲動的數字）；選中列名字格整格金底反白（舊版）。
-   數值顏色分級、OVR 徽章、隊色不動。雙 id（#tbl#tbl）壓過 season_nav／enrich_roster_viewer 前面各層補丁 */
-div.tbox{background:var(--panel)}
-#tbl{--hov:linear-gradient(rgba(255,255,255,.04),rgba(255,255,255,.04));--selbg:linear-gradient(rgba(255,255,255,.075),rgba(255,255,255,.075));--selh:linear-gradient(rgba(255,255,255,.10),rgba(255,255,255,.10))}
-#tbl#tbl thead th,#tbl#tbl th.nm{background:#10151a}
-#tbl#tbl thead tr.grp th{color:var(--muted);font-size:.72rem;font-weight:600}
+/* 表格外觀（使用者 2026-11-11，第 2 輪加強）：乾淨扁平，不做玻璃／漸層底。表身單一底色（--panel），列線 1px 低對比；分組只在第一欄左邊畫細線；
+   hover＝整列 .04 淡亮＋名字左 2px 金線，選中（名字格整格金底，使用者 2026-11-11 裁定）其餘格 .09，兩者肉眼可分；sticky 欄不透明（同色底再疊亮度）。
+   能力值數字與 OVR 徽章同一套等級（q1 暗灰→q2 白→q3 藍→q4 金→q5 紅→q6 紫，門檻 70／80／90／100／110 同 ovrBadge）；
+   雙 id（#tbl#tbl）壓過 season_nav／enrich_roster_viewer 前面各層補丁 */
+div.tbox{background:var(--panel);border-radius:8px}
+#tbl{--hov:linear-gradient(rgba(255,255,255,.04),rgba(255,255,255,.04));--selbg:linear-gradient(rgba(255,255,255,.09),rgba(255,255,255,.09));--selh:linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,.12))}
+#tbl#tbl thead th,#tbl#tbl th.nm{background:#0c1014;border-bottom:1px solid var(--line)}
+#tbl#tbl thead tr.grp th{background:#0c1014;border-bottom:0;color:#c3ccd7;font:700 .78rem var(--f-disp);letter-spacing:.1em}
+#tbl#tbl thead tr.grp th.g.gk-b{box-shadow:inset 0 -2px 0 #f2c230}
+#tbl#tbl thead tr.grp th.g.gk-o{box-shadow:inset 0 -2px 0 #5aa9ff}
+#tbl#tbl thead tr.grp th.g.gk-d{box-shadow:inset 0 -2px 0 #3fae7a}
+#tbl#tbl thead tr.grp th.g.gk-n{box-shadow:inset 0 -2px 0 #3a4452}
+#tbl#tbl thead tr:last-child th[data-k]{color:#e8edf2;font:700 .8rem var(--f-disp);letter-spacing:.06em;text-transform:uppercase}
+#tbl#tbl thead tr:last-child th[data-k] .zh{color:var(--muted);opacity:1;font-size:.68rem;text-transform:none;letter-spacing:0;font-weight:500}
+#tbl#tbl:not(.lite) thead tr:last-child th[data-k] .zh{font-size:.58rem}   /* 詳細檢視欄窄，四字副標（製造犯規）要縮才放得下 */
+#tbl#tbl thead tr:last-child th.sorted{color:var(--gold);background:#232a33}
 #tbl#tbl tbody td{background-color:var(--panel);background-image:none;border-bottom:1px solid rgba(255,255,255,.05)}
 #tbl#tbl tbody tr:hover td{background-image:var(--hov)}
 #tbl#tbl tbody tr.sel td{background-image:var(--selbg)}
 #tbl#tbl tbody tr.sel:hover td{background-image:var(--selh)}
-#tbl#tbl tbody tr.sel td.nm{background-color:var(--gold);background-image:none;color:var(--gold-ink);box-shadow:inset -1px 0 0 var(--line)}   /* 選中列名字格整格金底反白（舊版樣式，使用者 2026-11-11） */
-/* 排序欄（使用者 2026-11-11）：整欄灰底高亮，表頭同色 */
+#tbl#tbl tbody tr:hover td.nm{box-shadow:inset 2px 0 0 var(--gold),inset -1px 0 0 var(--line)}
+#tbl#tbl tbody tr.sel td.nm,#tbl#tbl tbody tr.sel:hover td.nm{background-color:var(--gold);background-image:none;color:var(--gold-ink);box-shadow:inset -1px 0 0 var(--line)}   /* 選中列名字格整格金底反白（使用者 2026-11-11） */
 #tbl#tbl tbody td.sortcol{background-color:#232a33}
-#tbl#tbl thead th.sorted{background:#232a33}
+#tbl#tbl tbody td.no{color:var(--muted);font:500 .85rem var(--f-disp);font-variant-numeric:tabular-nums}
+#tbl#tbl tbody td.nm{color:#fff;font-weight:700}
+#tbl#tbl tbody td:is(.q1,.q2,.q3,.q4,.q5,.q6){font:700 1rem var(--f-disp);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+#tbl#tbl tbody td.q1{color:#6b7482;font-weight:500}
+#tbl#tbl tbody td.q2{color:#e3e8ee}
+#tbl#tbl tbody td.q3{color:#62b0ff}
+#tbl#tbl tbody td.q4{color:#f2c94c}
+#tbl#tbl tbody td.q5{color:#ff7a7a}
+#tbl#tbl tbody td.q6{color:#d2a8ff}
 #tbl#tbl tbody tr.sel td.sub{color:var(--muted)}
 #tbl#tbl tbody tr.sel .tabbr{color:var(--tt)}
 #tbl#tbl tbody tr.sel td.ovr .ob{background:none}
 #tbl#tbl tbody tr.sel td.ovr .ob.t6{background:linear-gradient(135deg,#f3e6ff,#c896ff 45%,#a466ff);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 #tbl#tbl tbody tr.sel td.nm .nf,#tbl#tbl tbody tr.sel td.nm .ns{background:none;color:var(--gold-ink);-webkit-text-fill-color:var(--gold-ink)}
 #tbl#tbl tbody tr.sel td.nm .rkp{background:var(--gold-ink)}
+#tbl#tbl td.ovr .ob{width:46px;min-width:0;box-sizing:border-box;padding:1px 0}   /* OVR 徽章寬度一致 */
+#tbl#tbl td.gl{padding-left:calc(4px + var(--gap,0px))}
+#tbl#tbl th.gl{padding-left:calc(1px + var(--gap,0px))}
+/* 球員欄頭像：30px 圓形、固定寬高避免版面跳動；無頭像／載入失敗顯示隊色底＋姓名縮寫；手機名字欄只有 76px，不放 */
+#tbl td.nm .av{display:inline-block;vertical-align:middle;position:relative;width:30px;height:30px;margin-right:8px;border-radius:50%;overflow:hidden;
+  background:var(--panel-2);background:color-mix(in srgb,var(--tc,#2a3340) 60%,#10151a);color:#fff;text-align:center;font:700 .66rem/30px var(--f-disp);letter-spacing:.02em;-webkit-text-fill-color:currentColor}
+#tbl td.nm .av b{font:inherit}
+#tbl td.nm .av.ok b{visibility:hidden}
+#tbl td.nm .av img{position:absolute;inset:0;width:30px;height:30px;object-fit:cover;object-position:50% 12%}
+#tbl td.nm .nf{vertical-align:middle}
+#tbl td.nm .rkp{vertical-align:middle}
+@media (min-width:641px){
+  #tbl#tbl tbody td{height:44px;padding-top:0;padding-bottom:0}
+}
+@media (max-width:640px){#tbl td.nm .av{display:none}}
 </style><script>try{const w=localStorage.getItem('bbac.tw:'+(/^\/(rank|games)\//.test(location.pathname)?'/':location.pathname));if(w)document.documentElement.style.setProperty('--tw',w)}catch(e){}</script><header class="mast"><div class="mast-in"><a class="mbrand" href="/" aria-label="TrueOVR 首頁"><svg class="mlogo" viewBox="8 8 48 48" aria-hidden="true"><g fill="none" stroke-width="9" transform="rotate(-86 32 32)"><circle cx="32" cy="32" r="19" stroke="#1f2a26" stroke-dasharray="19.87 4"/><circle cx="32" cy="32" r="19" stroke="#3ddc97" stroke-dasharray="19.87 4 19.87 4 19.87 4 19.87 23.87"/></g></svg><b>TrueOVR</b><small>2025-26</small></a><nav class="mtabs" aria-label="主要分頁"><button type="button" class="mtab" id="mPlayers" aria-selected="true">球員</button><span class="mtab mtab-pick" id="mPickPh">球隊</span><span class="mind" aria-hidden="true"></span><a class="mtab" id="mTeams" href="/rank/">戰力排行</a><a class="mtab" id="mGames" href="/games/">賽程</a></nav><div class="macts"><details class="mpop" id="mSettings"><summary class="micon" aria-label="設定"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></summary><div class="mpanel"><div class="mrow"><b>賽季</b><div class="seg" id="mSeasonLinks"><a href="/">2026-27</a><a href="/2025-26.html" aria-current="page">2025-26</a></div></div><div class="mrow"><b>能力值顯示</b><div id="mMode"></div></div><div class="mrow"><b>版本</b><div id="mNotes"></div></div></div></details><div class="msearch"><button type="button" class="micon sbtn" aria-label="搜尋"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button><div class="sbox"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div></div></div></div></header>
 <div class="wrap">
   <div class="top">
@@ -461,7 +501,7 @@ div.tbox{background:var(--panel)}
 
   <section class="card" id="card" aria-live="polite"></section>
 
-  <div class="fbar" role="group" aria-label="篩選"><div class="fg"><b>年份</b><div id="fSeason"></div></div><div class="fg fpos"><b>位置</b><div id="fPos"></div></div><div class="fg"><b>檢視</b><div class="seg" id="viewSeg" title="精簡：只看 OVR、進攻、防守、籃板、組織；詳細：全部能力值欄"></div></div></div><div class="ctrl">
+  <div class="fbar" role="group" aria-label="篩選"><div class="fg"><b>年份</b><div id="fSeason"></div></div><div class="fg fpos"><b>位置</b><div id="fPos"></div></div><div class="fg"><b>檢視</b><div class="seg" id="viewSeg" title="精簡：只看 OVR、進攻、防守、籃板、組織；詳細：全部能力值欄"></div></div><div class="fg fpg" id="fpgWrap" hidden><div class="seg" id="fpg" role="group" aria-label="分頁"></div></div></div><div class="ctrl">
     <span class="lbl">位置</span>
     <div class="seg" id="posSeg"></div>
     <span class="tgrp"><span class="lbl">球隊</span>
@@ -473,13 +513,6 @@ div.tbox{background:var(--panel)}
 
   <div class="tbox"><table id="tbl"><thead></thead><tbody></tbody></table></div>
 
-  <div class="pager">
-    <div class="pages" id="pages"></div>
-    <div class="pager-r">
-      <span class="count" id="count"></span>
-      <button class="more" id="more" type="button">展開至 50 人</button>
-    </div>
-  </div>
   <div class="legend">
     <span>等第：<b class="gA">A</b> ≥82 · <b class="gB">B</b> ≥68 · <b class="gC">C</b> ≥56 · <b class="gD">D</b> ≥44 · <b class="gF">F</b> &lt;44</span>
     <button type="button" class="ovr-t" aria-expanded="false" onclick="const b=this.nextElementSibling,o=b.hidden;b.hidden=!o;this.setAttribute('aria-expanded',o)">OVR：綜合<b>場上能力 ＋ 防守意識 ＋ 上場時間</b>的每場比賽影響力 <i>▼</i></button>
@@ -547,13 +580,14 @@ td.ovr .ob::before{content:"";position:absolute;inset:0;border-radius:inherit;pa
 #tbl tbody tr.sel td.ovr .ob{background:#0a0d10}
 /* t6 字是 background-clip:text 的漸層；上一行把 background 換成深色會讓字變黑（2026-11-09 Wemby 選取列看不到 OVR），選取列改實色紫字 */
 #tbl tbody tr.sel td.ovr .ob.t6{-webkit-background-clip:border-box;background-clip:border-box;color:#d2a8ff;-webkit-text-fill-color:#d2a8ff}
-div.tbox{background:#1b232d}
+div.tbox{background:var(--panel);border-radius:8px}   /* 原 #1b232d 蓋過 site_header 的 var(--panel)（死規則，2026-11-11 審查），外框改面板色＋8px 圓角 */
 #tbl tbody tr:hover td.nm{background:var(--panel-2)}
 #tbl tbody tr.sel td.nm{background:var(--gold);color:var(--gold-ink)}
 /* 桌機名字欄固定寬（使用者 2026-11-01：表格只畫目前這頁的人，換排序時名字欄跟著當頁最長名字變寬變窄）；
    160px（使用者 2026-11-02 收窄到剛好放下 Shai Gilgeous-Alexander，原 200px）：Giannis Antetokounmpo 約 138px 也放得下，最長的 Yanic Konan Niederhäuser 約 162px 會截成 … */
 @media (min-width:641px){
-  #tbl th.nm,#tbl td.nm{width:140px;min-width:140px;max-width:140px;box-sizing:border-box}
+  /* 2026-11-11 第 2 輪：加 30px 頭像，名字欄 140→168（詳細檢視總寬不變，由能力值欄讓出 28px；精簡檢視名字欄由 lockCols 照剩餘寬度給，不設上限） */
+  #tbl th.nm,#tbl td.nm{width:168px;min-width:0;max-width:none;box-sizing:border-box}
   /* 名字欄收緊後整張表也往中間縮（使用者 2026-11-02）：不再撐滿 1280／最小 1060，改成內容寬並置中 */
   .tbox{width:fit-content;max-width:100%;margin-inline:auto;overflow-x:hidden!important}
   #tbl{width:auto;min-width:0}
@@ -1181,7 +1215,7 @@ const GROUPS = [
 ];
 const ATTR = GROUPS.flatMap(g => g[1]);
 const TEXT_KEYS = new Set(['name', 'pos', 'team']);
-let SIZE = 20;
+let SIZE = 50;   /*R2*/
 const st = { sort: 'ovr', asc: false, pos: 'ALL', team: 'ALL', rk: false, mode: (() => { try { return localStorage.getItem('bbac.mode') === 'grade' ? 'grade' : 'num'; } catch (e) { return 'num'; } })(), view: (() => { try { const v = localStorage.getItem('bbac.view'); if (v === 'lite' || v === 'full') return v; } catch (e) {} return innerWidth <= 640 ? 'lite' : 'full'; })(), q: '', page: 0, extra: 0, sel: P[0].name };
 
 function grade(v) {
@@ -1256,7 +1290,7 @@ function head() {
     `<th tabindex="0" data-k="${k}" class="${cls}${st.sort === k ? ' sorted' + (st.asc ? ' asc' : '') : ''}" ${ATIP[k] ? ` data-tip="${k}"` : ` title="依${zh}排序"`}>${en}<span class="zh">${zh}</span></th>`;
   let g = '<tr class="grp"><th colspan="3"></th><th class="gx" colspan="3"></th>' +
     (VIEW().pre.length ? `<th colspan="${VIEW().pre.length}"></th>` : '') +
-    VIEW().groups.map(x => `<th class="g" colspan="${x[1].length}">${x[0]}</th>`).join('') +
+    VIEW().groups.map(x => `<th class="g gk-${({ '大類': 'b', '籃板': 'b', '進攻': 'o', '外線': 'o', '內線': 'o', '持球': 'o', '無球': 'o', '組織': 'o', '防守': 'd', '外防': 'd', '內防': 'd' })[x[0]] || 'n'}" colspan="${x[1].length}">${x[0]}</th>`).join('') +
     (st.view === 'lite' ? '<th class="g"></th>' : '<th class="g" colspan="2">出場</th>') + '</tr>';
   let h = '<tr><th class="noh">#</th>' + th('name', 'NAME', '球員', 'nm') + th('pos', 'POS', '位置') + th('team', 'TEAM', '球隊') +
     th('ht', 'HT', '身高') + th('ovr', 'OVR', '總評') + VIEW().pre.map(([k, en, zh]) => th(k, en, zh)).join('');
@@ -1279,13 +1313,14 @@ function head() {
 
 const diq = p => `<td data-nodec class="${p.dbon >= 2 ? 'gA' : p.dbon >= 1 ? 'gB' : p.dbon > 0 ? 'gC' : ''}${st.sort === 'dbon' ? ' sortcol' : ''}"${p.dbon > 0 ? '' : ' style="color:var(--muted)"'} title="防守意識：真實比賽防守 RAPM 和同位置平均的差（負＝低於平均），補能力值量不到的輪轉、站位、補位；只有正的部分會加進 OVR">${p.dbon == null ? '—' : (p.dbon > 0 ? '+' : p.dbon < 0 ? '−' : '') + Math.abs(p.dbon).toFixed(2)}</td>`;
 const odc = (p, k) => { const v = p[k]; return `<td class="${v == null ? '' : v >= 2 ? 'gA' : v >= 1 ? 'gB' : v >= 0 ? 'gC' : ''}${st.sort === k ? ' sortcol' : ''}"${v != null && v >= 0 ? '' : ' style="color:var(--muted)"'}>${v == null ? '—' : (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(1)}</td>`; };
+const qcls = v => { const r = Math.round(v); return 'q' + (r >= 110 ? 6 : r >= 100 ? 5 : r >= 90 ? 4 : r >= 80 ? 3 : r >= 70 ? 2 : 1); };
 function cell(k, v, first, tip) {
   const cls = [];
   if (first) cls.push('gl');
   if (st.sort === k) cls.push('sortcol');
-  if (st.mode === 'num') { cls.push(gcls(grade(v))); return `<td class="${cls.join(' ')}"${tip ? ` data-ck="${tip}"` : ''}>${Math.round(v)}</td>`; }
+  if (st.mode === 'num') { cls.push(qcls(v)); return `<td class="${cls.join(' ')}"${tip ? ` data-ck="${tip}"` : ''}>${Math.round(v)}</td>`; }
   const g = grade(v);
-  cls.push(gcls(g));
+  cls.push(qcls(v));
   return `<td class="${cls.join(' ')}"${tip ? ` data-ck="${tip}"` : ` title="${Math.round(v)}"`}>${g}</td>`;
 }
 
@@ -1319,32 +1354,21 @@ function card(p) {
 }
 
 function pages(n) {
-  const tot = Math.max(1, Math.ceil(n / SIZE)), el = document.getElementById('pages');
+  const tot = Math.max(1, Math.ceil(n / SIZE)), el = document.getElementById('fpg'), wrap = document.getElementById('fpgWrap');
+  if (!el) return;
+  wrap.hidden = tot <= 1;   // 只有 1 頁（含球隊名單）不顯示
   el.innerHTML = '';
-  const mk = (l, pg, dis, cur) => {
+  const mk = (l, pg, dis, lab) => {
     const b = document.createElement('button');
-    b.type = 'button'; b.textContent = l; b.disabled = dis;
-    if (cur) b.setAttribute('aria-current', 'page');
-    b.onclick = () => {
-      const pe = document.getElementById('pages'), y0 = pe.getBoundingClientRect().top;
-      st.page = pg; st.extra = 0; render();
-      if (SIZE === 50) scrollBy(0, pe.getBoundingClientRect().top - y0);
-      else document.querySelector('.tbox').scrollIntoView({ block: 'nearest' });
-    };
+    b.type = 'button'; b.textContent = l; b.disabled = dis; b.setAttribute('aria-label', lab);
+    b.onclick = () => { st.page = pg; st.extra = 0; render(); };
     el.appendChild(b);
   };
-  mk('‹', st.page - 1, st.page === 0);
-  const show = tot <= 7 ? [...Array(tot).keys()]
-    : st.page < 4 ? [0, 1, 2, 3, 4, tot - 1]
-    : st.page > tot - 5 ? [0, tot - 5, tot - 4, tot - 3, tot - 2, tot - 1]
-    : [0, st.page - 1, st.page, st.page + 1, tot - 1];
-  let prev = -1;
-  for (const i of show) {
-    if (i - prev > 1) { const s = document.createElement('span'); s.className = 'gap'; s.textContent = '…'; el.appendChild(s); }
-    mk(String(i + 1), i, false, i === st.page);
-    prev = i;
-  }
-  mk('›', st.page + 1, st.page >= tot - 1);
+  mk('\u2039', st.page - 1, st.page === 0, '上一頁');
+  const c = document.createElement('span');
+  c.className = 'pgn'; c.textContent = (st.page + 1) + ' / ' + tot;
+  el.appendChild(c);
+  mk('\u203a', st.page + 1, st.page >= tot - 1, '下一頁');
 }
 
 function setTeam(cur) {
@@ -1400,6 +1424,10 @@ function teamPick() {
   grid.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.t === cur)));
 }
 
+const avatar = p => {
+  const r = REAL[p.name], pr = p.name.split(' '), ini = (pr[0][0] + (pr.length > 1 ? pr[pr.length - 1][0] : '')).toUpperCase();
+  return `<span class="av" style="${teamVars(p.team)}"><b>${esc(ini)}</b>${r && r.id ? `<img alt="" width="30" height="30" loading="lazy" decoding="async" src="https://cdn.nba.com/headshots/nba/latest/260x190/${r.id}.png" onload="this.parentNode.classList.add('ok')" onerror="this.remove()">` : ''}</span>`;
+};
 function render() {
   seg('posSeg', [['ALL', '全部'], ['PG', 'PG'], ['SG', 'SG'], ['SF', 'SF'], ['PF', 'PF'], ['C', 'C']], 'pos');
   teamPick();
@@ -1413,7 +1441,7 @@ function render() {
   document.querySelector('#tbl tbody').innerHTML = rows.map((p, i) => `
     <tr data-n="${encodeURIComponent(p.name)}" class="${p.name === st.sel ? 'sel' : ''}">
       <td class="no">${start + i + 1}</td>
-      <td class="nm${rookieTag(p) ? ' rk' : ''}" title="${esc(p.name)}"><span class="nf">${esc(p.name)}</span><span class="ns">${esc(shortName(p.name))}</span>${rookieTag(p)}</td>
+      <td class="nm${rookieTag(p) ? ' rk' : ''}" title="${esc(p.name)}">${avatar(p)}<span class="nf">${esc(p.name)}</span><span class="ns">${esc(shortName(p.name))}</span>${rookieTag(p)}</td>
       <td class="sub${sc('pos')}">${p.pos}</td>
       <td class="sub${sc('team')}">${teamCell(p.team)}</td>
       <td class="sub${sc('ht')}">${ht(p.ht)}</td>
@@ -1431,12 +1459,6 @@ function render() {
   tboxEdges();
   card(P.find(p => p.name === st.sel) || P[0]);
   pages(a.length);
-  document.getElementById('count').textContent = a.length ? `第 ${start + 1}–${end} 位，共 ${a.length} 人` : '0 人';
-  const m = document.getElementById('more');
-  m.hidden = SIZE === 20 && a.length <= 20;
-  m.textContent = SIZE === 20 ? '展開至 50 人' : '收回 20 人';
-  document.querySelector('.tbox').classList.toggle('grow', SIZE === 50);
-  m.onclick = () => { const top = st.page * SIZE; SIZE = SIZE === 20 ? 50 : 20; st.page = Math.floor(top / SIZE); st.extra = 0; const t = document.querySelector('.tbox'); t.scrollTop = 0; render(); tboxEdges(); if (SIZE === 20 && t.getBoundingClientRect().top < 0) t.scrollIntoView({ block: 'start' }); };
 }
 
 let listKey = '';
@@ -1496,20 +1518,38 @@ function lockCols() {
   const sum = a => a.reduce((x, y) => x + y, 0);
   st.team = 'ALL'; st.rk = false; st.pos = 'ALL'; st.q = ''; SIZE = 1e5;   // 切換檢視時可能已選了位置／搜尋，也要照全部球員量
   // 精簡檢視（使用者 2026-11-10）：欄位少了，桌機表格仍撐到「詳細」的總寬——頁首與卡片寬度（--tw）跟表格寬，不能一切換就縮
-  // 欄寬一致（使用者 2026-11-11）：桌機詳細檢視的能力值欄一律取最寬那欄的自然寬；精簡檢視固定欄（# 球員 位置 球隊 OVR）維持量測寬，
-  // 其餘欄（能力值＋MPG）平均分剩下的寬度，等寬（原本「自然寬＋平均分攤」，自然寬不同就不等寬）
+  // 第 2 輪（使用者 2026-11-11）：精簡太鬆散 → 能力值／MPG／OVR 固定 64px、POS／TEAM 固定 44px，剩下的寬度全給球員欄（頭像＋全名）；
+  // 球員欄超過 300px 時多的平均加到各分組第一欄的左邊距（--gap），不撐數字欄。詳細檢視能力值欄等寬、「出場」四欄等寬，
+  // 總寬＝各欄自然寬總和（扣掉頭像讓的 AVW），不因等寬而變寬。
   const keys = () => [...t.querySelectorAll('thead tr:last-child th')].filter(th => getComputedStyle(th).display !== 'none').map(th => th.dataset.k);
   const fixed = k => !k || k === 'name' || k === 'pos' || k === 'team' || k === 'ovr';   // 不分到寬度的欄（# 球員 位置 球隊 OVR）
-  const desk = matchMedia('(min-width:641px)').matches;
+  const desk = matchMedia('(min-width:641px)').matches, AVW = 28;
+  t.style.removeProperty('--gap');
   st.view = 'full'; const wf0 = meas(), kf = keys();
-  const eqf = k => !fixed(k) && !['ht', 'min', 'gp', 'dovr', 'form'].includes(k);
-  const mxw = Math.max(...wf0.filter((w, i) => eqf(kf[i])));
-  const wf = desk ? wf0.map((w, i) => eqf(kf[i]) ? mxw : w) : wf0; let ws = wf;
+  const eqb = k => ['min', 'gp', 'dovr', 'form'].includes(k), eqf = k => !fixed(k) && !eqb(k) && k !== 'ht';
+  let wf = wf0;
+  if (desk) {
+    // 詳細檢視球員欄固定 168px（名字太長用 … 截斷）；預算＝球員欄 140px（第 2 輪之前）時的自然寬總和
+    const ni0 = kf.indexOf('name'), NMW = 168, budget = sum(wf0) - wf0[ni0] + NMW - AVW;
+    const mb = Math.max(...wf0.filter((w, i) => eqb(kf[i]))), nA = kf.filter(eqf).length, nB = kf.filter(eqb).length;
+    const rest = sum(wf0.filter((w, i) => !eqf(kf[i]) && !eqb(kf[i]) && i !== ni0)) + NMW, w = Math.floor((budget - rest - nB * mb) / nA);
+    wf = wf0.map((w0, i) => eqf(kf[i]) ? w : eqb(kf[i]) ? mb : i === ni0 ? NMW : w0);
+    wf[kf.indexOf('name')] += budget - sum(wf);   // 餘數（<18px）給球員欄
+  }
+  let ws = wf;
   if (V !== 'full') {
     st.view = V; ws = meas(); const ks = keys();
     if (desk) {
-      const each = Math.floor((sum(wf) - sum(ws.filter((w, i) => fixed(ks[i])))) / ks.filter(k => !fixed(k)).length * 100) / 100;
-      ws = ws.map((w, i) => fixed(ks[i]) ? w : Math.max(w, each));
+      const total = sum(wf), ni = ks.indexOf('name');
+      ws = ws.map((w, i) => ks[i] === 'pos' || ks[i] === 'team' ? 44 : !ks[i] ? w : 64);
+      ws[ni] = 0;
+      let nm = total - sum(ws);
+      if (nm > 300) {
+        const firsts = new Set(['offR', 'outside', 'perim', 'min']), g = Math.floor((nm - 300) / firsts.size);
+        ws = ws.map((w, i) => firsts.has(ks[i]) ? w + g : w); nm -= g * firsts.size;
+        t.style.setProperty('--gap', g + 'px');
+      }
+      ws[ni] = nm;
     } else {
       // 手機：不捲動的第一屏＝ # 球員 OVR ＋ 四個大類（等寬），右邊只露 12px 的 OUT 當往右滑的提示
       const big = new Set(['offR', 'defR', 'play', 'rebound']), bw = Math.floor((t.parentElement.clientWidth - 12 - sum(ws.filter((w, i) => fixed(ks[i])))) / 4);
