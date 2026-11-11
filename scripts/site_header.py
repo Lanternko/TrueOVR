@@ -157,12 +157,15 @@ div.tbox{background:var(--panel)}
 #tbl#tbl tbody tr:hover td{background-image:var(--hov)}
 #tbl#tbl tbody tr.sel td{background-image:var(--selbg)}
 #tbl#tbl tbody tr.sel:hover td{background-image:var(--selh)}
-#tbl#tbl tbody tr.sel td.nm{color:var(--fg);box-shadow:inset 2px 0 0 var(--gold),inset -1px 0 0 var(--line)}
+#tbl#tbl tbody tr.sel td.nm{color:var(--gold);box-shadow:inset 2px 0 0 var(--gold),inset -1px 0 0 var(--line)}
+/* 排序欄（使用者 2026-11-11）：整欄灰底高亮，表頭同色 */
+#tbl#tbl tbody td.sortcol{background-color:#232a33}
+#tbl#tbl thead th.sorted{background:#232a33}
 #tbl#tbl tbody tr.sel td.sub{color:var(--muted)}
 #tbl#tbl tbody tr.sel .tabbr{color:var(--tt)}
 #tbl#tbl tbody tr.sel td.ovr .ob{background:none}
 #tbl#tbl tbody tr.sel td.ovr .ob.t6{background:linear-gradient(135deg,#f3e6ff,#c896ff 45%,#a466ff);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
-#tbl#tbl tbody tr.sel td.nm.rk .nf,#tbl#tbl tbody tr.sel td.nm.rk .ns{background:linear-gradient(105deg,transparent 0 38%,rgba(255,255,255,.55) 46%,transparent 54%),linear-gradient(176deg,#e6f3fc 0%,#a8d0ec 45%,#6a9fc6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+#tbl#tbl tbody tr.sel td.nm .nf,#tbl#tbl tbody tr.sel td.nm .ns{background:none;color:var(--gold);-webkit-text-fill-color:var(--gold)}   /* 選中列名字黃色高亮（使用者 2026-11-11） */
 #tbl#tbl tbody tr.sel td.nm .rkp{background:linear-gradient(160deg,#e6f3fc 0%,#a8d0ec 45%,#6a9fc6 100%)}
 </style>"""
 
