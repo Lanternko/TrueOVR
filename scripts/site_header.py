@@ -119,6 +119,12 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
 .fbar .seg a:hover,.fbar .seg button:hover{color:var(--fg)}
 .fbar .seg a[aria-current="page"],.fbar .seg button[aria-pressed="true"]{background:rgba(255,255,255,.10);color:#fff;font-weight:600}
 .fbar .seg a:focus-visible,.fbar .seg button:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.fbar .fg[hidden]{display:none}
+/* 分頁（使用者 2026-11-11）：篩選欄最右邊「‹ 1 / N ›」，和中性 seg 同高同框；每頁 50 人，只有 1 頁時隱藏 */
+.fbar .fpg{margin-left:auto}
+.fbar .seg .pgn{display:flex;align-items:center;box-sizing:border-box;height:26px;min-width:58px;justify-content:center;padding:0 10px;color:#fff;font:600 .78rem var(--f-disp);letter-spacing:.04em;white-space:nowrap;font-variant-numeric:tabular-nums;border-right:1px solid rgba(255,255,255,.06)}
+.fbar .seg button:disabled{opacity:.35;cursor:default}
+.fbar .seg button:disabled:hover{color:var(--muted)}
 #tbl .vh{display:none}
 @media (min-width:641px){.wrap{padding-top:10px}}
 @media (max-width:640px){
@@ -137,6 +143,8 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
   .fbar .fg{gap:6px}
   .fbar #posSeg{display:flex;position:static;box-shadow:none}
   .fbar .seg a,.fbar .seg button{height:32px;padding:0 10px}
+  .fbar .seg .pgn{height:32px}
+  .fbar .fg.fpg{order:2}
   .fbar .fg.fpos{order:3;flex-basis:100%;min-width:0}
   .fbar .fg.fpos #fPos{min-width:0;flex:0 1 auto;overflow-x:auto;scrollbar-width:none;border-radius:6px}   /* 位置放不下時整組橫向捲，不換行 */
   .fbar .fg.fpos #fPos::-webkit-scrollbar{display:none}
@@ -146,27 +154,59 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
   .mtabs .tpick .tpop{position:fixed;left:12px!important;right:12px;top:calc(var(--mh,96px) + 6px);width:auto}
 }
 @media (prefers-reduced-motion:reduce){.mast.ready .mind,.msearch #q{transition:none}}
-/* 表格外觀（使用者 2026-11-11）：乾淨扁平，不做玻璃。表身單一底色（--panel），列線 1px 低對比；分組只在第一欄左邊畫細線；
-   hover／選中＝同色底再疊一層亮度（sticky 欄也不透明，不透出後面捲動的數字）；選中列名字格整格金底反白（舊版）。
-   數值顏色分級、OVR 徽章、隊色不動。雙 id（#tbl#tbl）壓過 season_nav／enrich_roster_viewer 前面各層補丁 */
-div.tbox{background:var(--panel)}
-#tbl{--hov:linear-gradient(rgba(255,255,255,.04),rgba(255,255,255,.04));--selbg:linear-gradient(rgba(255,255,255,.075),rgba(255,255,255,.075));--selh:linear-gradient(rgba(255,255,255,.10),rgba(255,255,255,.10))}
-#tbl#tbl thead th,#tbl#tbl th.nm{background:#10151a}
-#tbl#tbl thead tr.grp th{color:var(--muted);font-size:.72rem;font-weight:600}
+/* 表格外觀（使用者 2026-11-11，第 2 輪加強）：乾淨扁平，不做玻璃／漸層底。表身單一底色（--panel），列線 1px 低對比；分組只在第一欄左邊畫細線；
+   hover＝整列 .04 淡亮＋名字左 2px 金線，選中（名字格整格金底，使用者 2026-11-11 裁定）其餘格 .09，兩者肉眼可分；sticky 欄不透明（同色底再疊亮度）。
+   能力值數字與 OVR 徽章同一套等級（q1 暗灰→q2 白→q3 藍→q4 金→q5 紅→q6 紫，門檻 70／80／90／100／110 同 ovrBadge）；
+   雙 id（#tbl#tbl）壓過 season_nav／enrich_roster_viewer 前面各層補丁 */
+div.tbox{background:var(--panel);border-radius:8px}
+#tbl{--hov:linear-gradient(rgba(255,255,255,.04),rgba(255,255,255,.04));--selbg:linear-gradient(rgba(255,255,255,.09),rgba(255,255,255,.09));--selh:linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,.12))}
+#tbl#tbl thead th,#tbl#tbl th.nm{background:#0c1014;border-bottom:1px solid var(--line)}
+#tbl#tbl thead tr.grp th{background:#0c1014;border-bottom:0;color:#c3ccd7;font:700 .78rem var(--f-disp);letter-spacing:.1em}
+#tbl#tbl thead tr.grp th.g.gk-b{box-shadow:inset 0 -2px 0 #f2c230}
+#tbl#tbl thead tr.grp th.g.gk-o{box-shadow:inset 0 -2px 0 #5aa9ff}
+#tbl#tbl thead tr.grp th.g.gk-d{box-shadow:inset 0 -2px 0 #3fae7a}
+#tbl#tbl thead tr.grp th.g.gk-n{box-shadow:inset 0 -2px 0 #3a4452}
+#tbl#tbl thead tr:last-child th[data-k]{color:#e8edf2;font:700 .8rem var(--f-disp);letter-spacing:.06em;text-transform:uppercase}
+#tbl#tbl thead tr:last-child th[data-k] .zh{color:var(--muted);opacity:1;font-size:.68rem;text-transform:none;letter-spacing:0;font-weight:500}
+#tbl#tbl:not(.lite) thead tr:last-child th[data-k] .zh{font-size:.58rem}   /* 詳細檢視欄窄，四字副標（製造犯規）要縮才放得下 */
+#tbl#tbl thead tr:last-child th.sorted{color:var(--gold);background:#232a33}
 #tbl#tbl tbody td{background-color:var(--panel);background-image:none;border-bottom:1px solid rgba(255,255,255,.05)}
 #tbl#tbl tbody tr:hover td{background-image:var(--hov)}
 #tbl#tbl tbody tr.sel td{background-image:var(--selbg)}
 #tbl#tbl tbody tr.sel:hover td{background-image:var(--selh)}
-#tbl#tbl tbody tr.sel td.nm{background-color:var(--gold);background-image:none;color:var(--gold-ink);box-shadow:inset -1px 0 0 var(--line)}   /* 選中列名字格整格金底反白（舊版樣式，使用者 2026-11-11） */
-/* 排序欄（使用者 2026-11-11）：整欄灰底高亮，表頭同色 */
+#tbl#tbl tbody tr:hover td.nm{box-shadow:inset 2px 0 0 var(--gold),inset -1px 0 0 var(--line)}
+#tbl#tbl tbody tr.sel td.nm,#tbl#tbl tbody tr.sel:hover td.nm{background-color:var(--gold);background-image:none;color:var(--gold-ink);box-shadow:inset -1px 0 0 var(--line)}   /* 選中列名字格整格金底反白（使用者 2026-11-11） */
 #tbl#tbl tbody td.sortcol{background-color:#232a33}
-#tbl#tbl thead th.sorted{background:#232a33}
+#tbl#tbl tbody td.no{color:var(--muted);font:500 .85rem var(--f-disp);font-variant-numeric:tabular-nums}
+#tbl#tbl tbody td.nm{color:#fff;font-weight:700}
+#tbl#tbl tbody td:is(.q1,.q2,.q3,.q4,.q5,.q6){font:700 1rem var(--f-disp);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+#tbl#tbl tbody td.q1{color:#6b7482;font-weight:500}
+#tbl#tbl tbody td.q2{color:#e3e8ee}
+#tbl#tbl tbody td.q3{color:#62b0ff}
+#tbl#tbl tbody td.q4{color:#f2c94c}
+#tbl#tbl tbody td.q5{color:#ff7a7a}
+#tbl#tbl tbody td.q6{color:#d2a8ff}
 #tbl#tbl tbody tr.sel td.sub{color:var(--muted)}
 #tbl#tbl tbody tr.sel .tabbr{color:var(--tt)}
 #tbl#tbl tbody tr.sel td.ovr .ob{background:none}
 #tbl#tbl tbody tr.sel td.ovr .ob.t6{background:linear-gradient(135deg,#f3e6ff,#c896ff 45%,#a466ff);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 #tbl#tbl tbody tr.sel td.nm .nf,#tbl#tbl tbody tr.sel td.nm .ns{background:none;color:var(--gold-ink);-webkit-text-fill-color:var(--gold-ink)}
 #tbl#tbl tbody tr.sel td.nm .rkp{background:var(--gold-ink)}
+#tbl#tbl td.ovr .ob{width:46px;min-width:0;box-sizing:border-box;padding:1px 0}   /* OVR 徽章寬度一致 */
+#tbl#tbl td.gl{padding-left:calc(4px + var(--gap,0px))}
+#tbl#tbl th.gl{padding-left:calc(1px + var(--gap,0px))}
+/* 球員欄頭像：30px 圓形、固定寬高避免版面跳動；無頭像／載入失敗顯示隊色底＋姓名縮寫；手機名字欄只有 76px，不放 */
+#tbl td.nm .av{display:inline-block;vertical-align:middle;position:relative;width:30px;height:30px;margin-right:8px;border-radius:50%;overflow:hidden;
+  background:var(--panel-2);background:color-mix(in srgb,var(--tc,#2a3340) 60%,#10151a);color:#fff;text-align:center;font:700 .66rem/30px var(--f-disp);letter-spacing:.02em;-webkit-text-fill-color:currentColor}
+#tbl td.nm .av b{font:inherit}
+#tbl td.nm .av.ok b{visibility:hidden}
+#tbl td.nm .av img{position:absolute;inset:0;width:30px;height:30px;object-fit:cover;object-position:50% 12%}
+#tbl td.nm .nf{vertical-align:middle}
+#tbl td.nm .rkp{vertical-align:middle}
+@media (min-width:641px){
+  #tbl#tbl tbody td{height:44px;padding-top:0;padding-bottom:0}
+}
+@media (max-width:640px){#tbl td.nm .av{display:none}}
 </style>"""
 
 # 頁尾腳本：搬元素、分頁底線、篩選小點、手機搜尋、捲動陰影
@@ -253,7 +293,8 @@ const sc=()=>mast.classList.toggle('scrolled',scrollY>4);addEventListener('scrol
 FBAR = ('<div class="fbar" role="group" aria-label="篩選">'
         '<div class="fg"><b>年份</b><div id="fSeason"></div></div>'
         '<div class="fg fpos"><b>位置</b><div id="fPos"></div></div>'
-        '<div class="fg"><b>檢視</b><div class="seg" id="viewSeg" title="精簡：只看 OVR、進攻、防守、籃板、組織；詳細：全部能力值欄"></div></div></div>')
+        '<div class="fg"><b>檢視</b><div class="seg" id="viewSeg" title="精簡：只看 OVR、進攻、防守、籃板、組織；詳細：全部能力值欄"></div></div>'
+        '<div class="fg fpg" id="fpgWrap" hidden><div class="seg" id="fpg" role="group" aria-label="分頁"></div></div></div>')
 
 
 def header_html(current):

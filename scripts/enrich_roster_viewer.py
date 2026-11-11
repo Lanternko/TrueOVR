@@ -92,13 +92,14 @@ td.ovr .ob::before{content:"";position:absolute;inset:0;border-radius:inherit;pa
 #tbl tbody tr.sel td.ovr .ob{background:#0a0d10}
 /* t6 字是 background-clip:text 的漸層；上一行把 background 換成深色會讓字變黑（2026-11-09 Wemby 選取列看不到 OVR），選取列改實色紫字 */
 #tbl tbody tr.sel td.ovr .ob.t6{-webkit-background-clip:border-box;background-clip:border-box;color:#d2a8ff;-webkit-text-fill-color:#d2a8ff}
-div.tbox{background:#1b232d}
+div.tbox{background:var(--panel);border-radius:8px}   /* 原 #1b232d 蓋過 site_header 的 var(--panel)（死規則，2026-11-11 審查），外框改面板色＋8px 圓角 */
 #tbl tbody tr:hover td.nm{background:var(--panel-2)}
 #tbl tbody tr.sel td.nm{background:var(--gold);color:var(--gold-ink)}
 /* 桌機名字欄固定寬（使用者 2026-11-01：表格只畫目前這頁的人，換排序時名字欄跟著當頁最長名字變寬變窄）；
    160px（使用者 2026-11-02 收窄到剛好放下 Shai Gilgeous-Alexander，原 200px）：Giannis Antetokounmpo 約 138px 也放得下，最長的 Yanic Konan Niederhäuser 約 162px 會截成 … */
 @media (min-width:641px){
-  #tbl th.nm,#tbl td.nm{width:140px;min-width:140px;max-width:140px;box-sizing:border-box}
+  /* 2026-11-11 第 2 輪：加 30px 頭像，名字欄 140→168（詳細檢視總寬不變，由能力值欄讓出 28px；精簡檢視名字欄由 lockCols 照剩餘寬度給，不設上限） */
+  #tbl th.nm,#tbl td.nm{width:168px;min-width:0;max-width:none;box-sizing:border-box}
   /* 名字欄收緊後整張表也往中間縮（使用者 2026-11-02）：不再撐滿 1280／最小 1060，改成內容寬並置中 */
   .tbox{width:fit-content;max-width:100%;margin-inline:auto;overflow-x:hidden!important}
   #tbl{width:auto;min-width:0}
@@ -1003,12 +1004,76 @@ def inject(path, real, view='g5'):
     s = s.replace('<span class="first">${esc(first)}</span>${esc(last)}<span class="nht">${ht(p.ht)}</span>',
                   '<span class="first">${esc(first)}<span class="nht">${ht(p.ht)}<span class="b1">${bioTag(p)}</span></span></span>'
                   '<span class="last">${esc(last)}</span><span class="nbio">${bioTag(p)}</span>')
+    s = roster_round2(s)
     path.write_text(s, encoding='utf-8')
     missing = [n for n in roster if n not in sub]
     print(f'{path}: {len(sub)}/{len(roster)} 人有真實數據；缺 {len(missing)}: {missing[:10]}')
     print(f'  年齡 {sum("age" in v for v in prof.values())}、薪水 {sum("sal" in v for v in prof.values())} 人；'
           f'缺薪水: {[n for n in roster if "sal" not in prof.get(n, {})][:10]}')
 
+
+# 名單表格第 2 輪（使用者 2026-11-11）：能力值色階與 OVR 徽章同一套、頭像、分頁搬進篩選欄（每頁 50 人）。
+# 兩個頁面（2026-27、2025-26 卡片）共用；只改顯示，不動數值。要在 inject 其他 JS 補丁之後套。
+def roster_round2(s):
+    if '/*R2*/' in s:
+        return s
+
+    def sub1(old, new):
+        nonlocal s
+        assert s.count(old) == 1, old[:80]
+        s = s.replace(old, new)
+
+    # 每頁固定 50 人；移除「展開至 50 人」按鈕與表格底部分頁列
+    sub1('let SIZE = 20;', 'let SIZE = 50;   /*R2*/')
+    i = s.index("  const m = document.getElementById('more');")
+    tail = "scrollIntoView({ block: 'start' }); };\n"
+    j = s.index(tail, i) + len(tail)
+    s = s[:i] + s[j:]
+    s, n = re.subn(r"  document\.getElementById\('count'\)\.textContent = [^\n]*\n", '', s)
+    assert n == 1
+    s, n = re.subn(r'\n  <div class="pager">.*?</button>\s*</div>\s*</div>\n', '\n', s, flags=re.S)
+    assert n == 1
+    # 分頁：「‹ 1 / N ›」放在篩選欄（site_header 的 #fpgWrap／#fpg）；排序跨全部球員，換頁時 render() 會把表格捲回頂端
+    i = s.index('function pages(n) {')
+    j = s.index('\n}\n', i) + 3
+    s = s[:i] + """function pages(n) {
+  const tot = Math.max(1, Math.ceil(n / SIZE)), el = document.getElementById('fpg'), wrap = document.getElementById('fpgWrap');
+  if (!el) return;
+  wrap.hidden = tot <= 1;   // 只有 1 頁（含球隊名單）不顯示
+  el.innerHTML = '';
+  const mk = (l, pg, dis, lab) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.textContent = l; b.disabled = dis; b.setAttribute('aria-label', lab);
+    b.onclick = () => { st.page = pg; st.extra = 0; render(); };
+    el.appendChild(b);
+  };
+  mk('\\u2039', st.page - 1, st.page === 0, '上一頁');
+  const c = document.createElement('span');
+  c.className = 'pgn'; c.textContent = (st.page + 1) + ' / ' + tot;
+  el.appendChild(c);
+  mk('\\u203a', st.page + 1, st.page >= tot - 1, '下一頁');
+}
+""" + s[j:]
+    # 能力值數字與 OVR 徽章同一套等級（110／100／90／80／70 門檻，見 ovrBadge）：q1 灰（暗）→ q2 白 → q3 藍 → q4 金 → q5 紅 → q6 紫
+    i = s.index('function cell(k, v, first, tip) {')
+    j = s.index('\n}\n', i)
+    body = s[i:j]
+    assert body.count('gcls(grade(v))') == 1 and body.count('gcls(g)') == 1
+    body = body.replace('gcls(grade(v))', 'qcls(v)').replace('gcls(g)', 'qcls(v)')
+    s = s[:i] + "const qcls = v => { const r = Math.round(v); return 'q' + (r >= 110 ? 6 : r >= 100 ? 5 : r >= 90 ? 4 : r >= 80 ? 3 : r >= 70 ? 2 : 1); };\n" + body + s[j:]
+    # 球員欄頭像：30px 圓形、固定寬高、lazy；沒頭像（或載入失敗）顯示隊色底＋姓名縮寫（同排行檢視 .av 的來源：cdn.nba.com 260x190）
+    sub1("\nfunction render() {\n  seg('posSeg'", """
+const avatar = p => {
+  const r = REAL[p.name], pr = p.name.split(' '), ini = (pr[0][0] + (pr.length > 1 ? pr[pr.length - 1][0] : '')).toUpperCase();
+  return `<span class="av" style="${teamVars(p.team)}"><b>${esc(ini)}</b>${r && r.id ? `<img alt="" width="30" height="30" loading="lazy" decoding="async" src="https://cdn.nba.com/headshots/nba/latest/260x190/${r.id}.png" onload="this.parentNode.classList.add('ok')" onerror="this.remove()">` : ''}</span>`;
+};
+function render() {
+  seg('posSeg'""")
+    sub1('title="${esc(p.name)}"><span class="nf">', 'title="${esc(p.name)}">${avatar(p)}<span class="nf">')
+    # 表頭分組列：色條顏色依分組（進攻藍、防守綠、大類／籃板金）
+    sub1("VIEW().groups.map(x => `<th class=\"g\" colspan=\"${x[1].length}\">${x[0]}</th>`).join('')",
+         "VIEW().groups.map(x => `<th class=\"g gk-${({ '大類': 'b', '籃板': 'b', '進攻': 'o', '外線': 'o', '內線': 'o', '持球': 'o', '無球': 'o', '組織': 'o', '防守': 'd', '外防': 'd', '內防': 'd' })[x[0]] || 'n'}\" colspan=\"${x[1].length}\">${x[0]}</th>`).join('')")
+    return s
 
 if __name__ == '__main__':
     real = aggregate()

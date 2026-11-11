@@ -836,20 +836,38 @@ function lockCols() {
   const sum = a => a.reduce((x, y) => x + y, 0);
   st.team = 'ALL'; st.rk = false; st.pos = 'ALL'; st.q = ''; SIZE = 1e5;   // 切換檢視時可能已選了位置／搜尋，也要照全部球員量
   // 精簡檢視（使用者 2026-11-10）：欄位少了，桌機表格仍撐到「詳細」的總寬——頁首與卡片寬度（--tw）跟表格寬，不能一切換就縮
-  // 欄寬一致（使用者 2026-11-11）：桌機詳細檢視的能力值欄一律取最寬那欄的自然寬；精簡檢視固定欄（# 球員 位置 球隊 OVR）維持量測寬，
-  // 其餘欄（能力值＋MPG）平均分剩下的寬度，等寬（原本「自然寬＋平均分攤」，自然寬不同就不等寬）
+  // 第 2 輪（使用者 2026-11-11）：精簡太鬆散 → 能力值／MPG／OVR 固定 64px、POS／TEAM 固定 44px，剩下的寬度全給球員欄（頭像＋全名）；
+  // 球員欄超過 300px 時多的平均加到各分組第一欄的左邊距（--gap），不撐數字欄。詳細檢視能力值欄等寬、「出場」四欄等寬，
+  // 總寬＝各欄自然寬總和（扣掉頭像讓的 AVW），不因等寬而變寬。
   const keys = () => [...t.querySelectorAll('thead tr:last-child th')].filter(th => getComputedStyle(th).display !== 'none').map(th => th.dataset.k);
   const fixed = k => !k || k === 'name' || k === 'pos' || k === 'team' || k === 'ovr';   // 不分到寬度的欄（# 球員 位置 球隊 OVR）
-  const desk = matchMedia('(min-width:641px)').matches;
+  const desk = matchMedia('(min-width:641px)').matches, AVW = 28;
+  t.style.removeProperty('--gap');
   st.view = 'full'; const wf0 = meas(), kf = keys();
-  const eqf = k => !fixed(k) && !['ht', 'min', 'gp', 'dovr', 'form'].includes(k);
-  const mxw = Math.max(...wf0.filter((w, i) => eqf(kf[i])));
-  const wf = desk ? wf0.map((w, i) => eqf(kf[i]) ? mxw : w) : wf0; let ws = wf;
+  const eqb = k => ['min', 'gp', 'dovr', 'form'].includes(k), eqf = k => !fixed(k) && !eqb(k) && k !== 'ht';
+  let wf = wf0;
+  if (desk) {
+    // 詳細檢視球員欄固定 168px（名字太長用 … 截斷）；預算＝球員欄 140px（第 2 輪之前）時的自然寬總和
+    const ni0 = kf.indexOf('name'), NMW = 168, budget = sum(wf0) - wf0[ni0] + NMW - AVW;
+    const mb = Math.max(...wf0.filter((w, i) => eqb(kf[i]))), nA = kf.filter(eqf).length, nB = kf.filter(eqb).length;
+    const rest = sum(wf0.filter((w, i) => !eqf(kf[i]) && !eqb(kf[i]) && i !== ni0)) + NMW, w = Math.floor((budget - rest - nB * mb) / nA);
+    wf = wf0.map((w0, i) => eqf(kf[i]) ? w : eqb(kf[i]) ? mb : i === ni0 ? NMW : w0);
+    wf[kf.indexOf('name')] += budget - sum(wf);   // 餘數（<18px）給球員欄
+  }
+  let ws = wf;
   if (V !== 'full') {
     st.view = V; ws = meas(); const ks = keys();
     if (desk) {
-      const each = Math.floor((sum(wf) - sum(ws.filter((w, i) => fixed(ks[i])))) / ks.filter(k => !fixed(k)).length * 100) / 100;
-      ws = ws.map((w, i) => fixed(ks[i]) ? w : Math.max(w, each));
+      const total = sum(wf), ni = ks.indexOf('name');
+      ws = ws.map((w, i) => ks[i] === 'pos' || ks[i] === 'team' ? 44 : !ks[i] ? w : 64);
+      ws[ni] = 0;
+      let nm = total - sum(ws);
+      if (nm > 300) {
+        const firsts = new Set(['offR', 'outside', 'perim', 'min']), g = Math.floor((nm - 300) / firsts.size);
+        ws = ws.map((w, i) => firsts.has(ks[i]) ? w + g : w); nm -= g * firsts.size;
+        t.style.setProperty('--gap', g + 'px');
+      }
+      ws[ni] = nm;
     } else {
       // 手機：不捲動的第一屏＝ # 球員 OVR ＋ 四個大類（等寬），右邊只露 12px 的 OUT 當往右滑的提示
       const big = new Set(['offR', 'defR', 'play', 'rebound']), bw = Math.floor((t.parentElement.clientWidth - 12 - sum(ws.filter((w, i) => fixed(ks[i])))) / 4);
