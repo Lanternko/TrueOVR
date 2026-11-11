@@ -529,9 +529,9 @@ div.tbox{background:var(--panel);border-radius:8px}
 
   <div class="legend">
     <span id="lgNum">色階：<b class="lq q5">100+</b> · <b class="lq q4">90–99</b> · <b class="lq q3">80–89</b> · <b class="lq q2">70–79</b> · <b class="lq q1">&lt;70</b></span>
-    <span id="lgGrade" hidden>等第：<b class="lq q3">A</b> ≥82 · <b class="lq q2">B</b> ≥68 · <b class="lq q1">C</b> ≥56 · <b class="lq q1">D</b> ≥44 · <b class="lq q1">F</b> &lt;44</span>
+    <span id="lgGrade" hidden>等第：<b class="lq q5">A+</b> ≥93 · <b class="lq q4">A</b> ≥82 · <b class="lq q3">B</b> ≥68 · <b class="lq q2">C</b> ≥56 · <b class="lq q1">D</b> ≥44 · <b class="lq q1">F</b> &lt;44</span>
     <button type="button" class="ovr-t" aria-expanded="false" onclick="const b=this.nextElementSibling,o=b.hidden;b.hidden=!o;this.setAttribute('aria-expanded',o)">OVR：<b>數據 ＋ 防守 ＋ 場上影響力 ＋ 上場時間</b> <i>▼</i></button>
-    <div class="ovr-how" hidden><div><span class="oh-t">1. 數據（14 項能力）</span>結合傳統數據、逐球紀錄與官方追蹤，不只看帳面產量，也區分<b>自主創造 vs 吃餅</b>、<b>無球牽制（引力）</b>、<b>持球保護</b>與<b>對位主將／護框降命中率</b>，拆成 14 項單項能力（頂尖可破 99）。</div><div><span class="oh-t">2. 防守（意識 DIQ）</span>抄截與阻攻只佔防守一小部分。DIQ 計算扣除隊友與對手強弱後，在場能幫球隊<b>少丟幾分</b>（跨季防守 RAPM 比同位置平均），補齊數據抓不到的<b>無球輪轉、站位與協防</b>。</div><div><span class="oh-t">3. 上場時間</span>結合<b>場均分鐘</b>與<b>出賽率</b>（區分正常輪休與被棄用 DNP）。同效率下，<b>能扛越多上場時間，單場價值越高</b>（邊際遞減）。</div><div><span class="oh-t">4. 怎麼合成 OVR</span>將上述三項對齊進階指標（DARKO、BPM）校準權重，衡量<b>每場能幫球隊多贏幾分</b>；球員卡右側另列<b>實際在場影響</b>與<b>單場評分</b>供對照。全站<b>隨比賽逐場更新</b>並反映近期狀態（新秀以選秀順位為起點）。</div></div>
+    <div class="ovr-how" hidden><div><span class="oh-t">1. 數據（14 項能力）</span>結合傳統數據、逐球紀錄與官方追蹤，不只看帳面產量，也區分<b>自主創造 vs 吃餅</b>、<b>無球牽制（引力）</b>、<b>持球保護</b>與<b>對位主將／護框降命中率</b>，拆成 14 項單項能力（頂尖可破 99）。</div><div><span class="oh-t">2. 防守（意識 DIQ）</span>抄截與阻攻只佔防守一小部分。DIQ 計算扣除隊友與對手強弱後，在場能幫球隊<b>少丟幾分</b>（跨季防守 RAPM 比同位置平均），補齊數據抓不到的<b>無球輪轉、站位與協防</b>。</div><div><span class="oh-t">3. 場上影響力</span>進攻端混入跨季<b>在場影響力（RAPM）</b>，長人另計<b>籃板與籃下干擾</b>加分（依實際打中鋒／大前鋒比例與同位置比較），捕捉數據以外的勝利貢獻。</div><div><span class="oh-t">4. 上場時間</span>結合<b>場均分鐘</b>與<b>出賽率</b>（區分正常輪休與被棄用 DNP）。同效率下，<b>能扛越多上場時間，單場價值越高</b>（邊際遞減）。</div><div><span class="oh-t">5. 怎麼合成 OVR</span>將上述四項對齊進階指標（DARKO、BPM）校準權重，衡量<b>每場能幫球隊多贏幾分</b>；球員卡右側另列<b>實際在場影響</b>與<b>單場評分</b>供對照。全站<b>隨比賽逐場更新</b>並反映近期狀態（新秀以選秀順位為起點）。</div></div>
   </div>
 </div>
 <!-- real-stats:begin -->
@@ -1314,7 +1314,7 @@ function applyView() {
   t.querySelector('th.gx')?.setAttribute('colspan', lite ? 2 : 3);   // 精簡藏掉身高，球隊＋OVR 只剩兩欄
   t.querySelectorAll('tbody tr[data-n]').forEach(tr => [...tr.children].forEach((td, i) => td.classList.toggle('vh', hide[i])));
 }
-const ATIP = {"ovr":["總評","Overall","綜合進攻、防守與上場時間的<b>每場比賽影響力</b>",[["場上能力","14 項進攻與防守能力值"],["防守意識","DIQ（防守 RAPM）"],["上場時間","場均分鐘＋出賽率"]],""],"off":["進攻","Offense","每 36 分鐘比聯盟平均<b>多得幾分</b>",[["組成","75% 進攻能力值 ＋ 25% 進攻影響力"],["單位","每 36 分鐘淨分（0＝平均）"]],false],"def":["防守","Defense","每 36 分鐘比聯盟平均<b>少丟幾分</b>",[["組成","單防 ＋ 護框 ＋ 壓迫 ＋ 防守意識"],["單位","每 36 分鐘淨分（0＝平均）"]],false],"offR":["進攻","Offense","每 36 分鐘比聯盟平均<b>多得幾分</b>，換成 40–99+ 的尺（70＝平均）",[["組成","外線、內線、持球、無球、組織"],["尺度","70＋10×與平均差÷標準差；淨分在提示卡第一列"]],false],"defR":["防守","Defense","每 36 分鐘比聯盟平均<b>少丟幾分</b>，換成 40–99+ 的尺（70＝平均）",[["組成","外防、內防、防守意識"],["尺度","70＋10×與平均差÷標準差；淨分在提示卡第一列"]],false],"play":["組織","Playmaking","<b>傳球</b>創造隊友機會、<b>少失誤</b>",[["傳球 70%","助攻量與助攻率"],["少失誤 30%","每次觸球失誤率與持球時間"]],false],"outside":["外線","Outside","<b>投籃的準度與量</b>：三分、中距離、罰球",[["三分 55%","出手量與命中率"],["中距離 25%","命中率與出手量"],["罰球 20%","罰球命中率"]],false],"inside":["內線","Inside","<b>禁區得分</b>與<b>製造犯規</b>",[["近框 60%","油漆區內命中率與自主得分"],["製造犯規 40%","罰球量與罰球率"]],false],"handle":["持球","Ball Handler","<b>自己持球創造</b>：自主出手與擋拆持球各半（同詳細檢視的 CRT）",[],false],"offball":["無球","Off-Ball","<b>沒拿球</b>時的威脅：吸引防守、空檔投籃、切入順下",[["引力 40%","沒拿球時吸引防守貼防"],["空檔射手 30%","接球投籃量與準度"],["切入順下 30%","空切、擋拆順下等的量與效率"]],false],"perim":["外防","Perimeter D","<b>外線防守</b>：單防與壓迫（抄截、干擾、逼失誤）",[["單防 60%","干擾出手、對位負擔、威懾力"],["壓迫 40%","抄截、干擾、造進攻犯規"]],false],"threeValue":["三分","Three-Point","<b>60%</b> 三分出手量 ＋ <b>40%</b> 三分命中率",[["出手量 60%","三分出手 / 36"],["命中率 40%","三分命中率"]],""],"mid":["中距離","Mid-Range","油漆區外到三分線內的<b>投籃命中率與數量</b>",[],""],"short":["近框","Inside Scoring","油漆區內（含籃下）的<b>命中率與自主得分</b>",[["自主創造","100% 計入"],["被餵球（吃餅）","打折計入"]],""],"ft":["罰球","Free Throw","<b>罰球命中率</b>（罰球沒有防守，只看準度；量已在造犯規）",[["命中率","罰球命中率"]],""],"drive":["切入","Drive","<b>帶球切入</b>到 10 呎內的自主兩分（量與效率各半）",[],""],"foulDraw":["製造犯規","Foul Drawing","<b>75%</b> 罰球量 ＋ <b>25%</b> 罰球率",[["罰球量 75%","罰球數 / 36"],["罰球率 25%","罰球數 ÷ 投籃出手"]],""],"gravity":["引力","Gravity","<b>沒拿球</b>時吸引防守貼防的程度",[],null],"spot":["空檔射手","Off-Ball Shooter","<b>不持球</b>時接球投籃的量與接球三分準度（只顯示，不進 OVR）",[["量","定點投籃、繞掩護接球、手遞手（Synergy 回合 / 36）"],["準度（半份）","接球三分命中率"]],""],"cutroll":["切入順下","Cutter / Roller","<b>不持球</b>時往籃下跑的量與空切效率（只顯示，不進 OVR）",[["量","空切、擋拆順下、進攻籃板補籃、快攻（回合 / 36）"],["效率（半份）","空切每回合得分"]],""],"pass":["傳球","Passing","<b>50%</b> 助攻量 ＋ <b>50%</b> 助攻率",[["助攻量 50%","助攻 / 36"],["助攻率 50%","在場時隊友進球被他助攻的比例"]],""],"creation":["持球進攻","Shot Creation","<b>自主創造</b>與<b>擋拆持球</b>各半（0.2.15 合成一項）",[["自主創造 50%","自己創造的跳投與低位出手量"],["擋拆持球 50%","擋拆持球回合與每回合得分"]],""],"rebound":["籃板","Rebounding","在場時搶下可搶籃板的<b>籃板率</b>",[],""],"tovSkill":["少失誤","Ball Security","<b>每次觸球的失誤率</b>與<b>持球時間</b>各半；不持球、失誤少的人不算數",[["每次觸球失誤 50%","越少越高"],["持球時間 50%","每 36 分鐘的持球時間"]],""],"pressure":["壓迫","Pressure","<b>抄截、干擾、逼失誤、造進攻犯規</b>（扣犯規）",[["抄截／干擾／逼失誤","各 1 份"],["造進攻犯規","0.5 份"],["犯規","扣 0.25"]],""],"onBall":["單防","On-Ball Defense","外線<b>干擾出手 ＋ 對位負擔 ＋ 威懾力</b>",[["對位負擔","防守對象的球權使用率"],["威懾力","降低對手出手意願"]],""],"help":["護框","Rim Protection","<b>70%</b> 籃下 6 呎被防命中率差 ＋ <b>30%</b> 每 36 分鐘蓋帽",[["籃下 6 呎被防命中率差 70%","對手命中率比預期低多少"],["每 36 分鐘蓋帽 30%","近四季窗口含本季"]],""],"dbon":["防守意識","Defensive IQ","數據以外的<b>團隊防守影響力</b>（輪轉、站位、補防）",[["單位","每百回合淨分（非 0–99）"],["計入 OVR","僅正分加分"]],false]};
+const ATIP = {"ovr":["總評","Overall","綜合數據、防守、場上影響力與上場時間的<b>每場比賽影響力</b>",[["數據","14 項進攻與防守能力值"],["防守","DIQ（防守 RAPM）"],["場上影響力","進攻 RAPM ＋ 長人籃板與干擾"],["上場時間","場均分鐘＋出賽率"]],""],"off":["進攻","Offense","每 36 分鐘比聯盟平均<b>多得幾分</b>",[["組成","75% 進攻能力值 ＋ 25% 進攻影響力"],["單位","每 36 分鐘淨分（0＝平均）"]],false],"def":["防守","Defense","每 36 分鐘比聯盟平均<b>少丟幾分</b>",[["組成","單防 ＋ 護框 ＋ 壓迫 ＋ 防守意識"],["單位","每 36 分鐘淨分（0＝平均）"]],false],"offR":["進攻","Offense","每 36 分鐘比聯盟平均<b>多得幾分</b>，換成 40–99+ 的尺（70＝平均）",[["組成","外線、內線、持球、無球、組織"],["尺度","70＋10×與平均差÷標準差；淨分在提示卡第一列"]],false],"defR":["防守","Defense","每 36 分鐘比聯盟平均<b>少丟幾分</b>，換成 40–99+ 的尺（70＝平均）",[["組成","外防、內防、防守意識"],["尺度","70＋10×與平均差÷標準差；淨分在提示卡第一列"]],false],"play":["組織","Playmaking","<b>傳球</b>創造隊友機會、<b>少失誤</b>",[["傳球 70%","助攻量與助攻率"],["少失誤 30%","每次觸球失誤率與持球時間"]],false],"outside":["外線","Outside","<b>投籃的準度與量</b>：三分、中距離、罰球",[["三分 55%","出手量與命中率"],["中距離 25%","命中率與出手量"],["罰球 20%","罰球命中率"]],false],"inside":["內線","Inside","<b>禁區得分</b>與<b>製造犯規</b>",[["近框 60%","油漆區內命中率與自主得分"],["製造犯規 40%","罰球量與罰球率"]],false],"handle":["持球","Ball Handler","<b>自己持球創造</b>：自主出手與擋拆持球各半（同詳細檢視的 CRT）",[],false],"offball":["無球","Off-Ball","<b>沒拿球</b>時的威脅：吸引防守、空檔投籃、切入順下",[["引力 40%","沒拿球時吸引防守貼防"],["空檔射手 30%","接球投籃量與準度"],["切入順下 30%","空切、擋拆順下等的量與效率"]],false],"perim":["外防","Perimeter D","<b>外線防守</b>：單防與壓迫（抄截、干擾、逼失誤）",[["單防 60%","干擾出手、對位負擔、威懾力"],["壓迫 40%","抄截、干擾、造進攻犯規"]],false],"threeValue":["三分","Three-Point","<b>60%</b> 三分出手量 ＋ <b>40%</b> 三分命中率",[["出手量 60%","三分出手 / 36"],["命中率 40%","三分命中率"]],""],"mid":["中距離","Mid-Range","油漆區外到三分線內的<b>投籃命中率與數量</b>",[],""],"short":["近框","Inside Scoring","油漆區內（含籃下）的<b>命中率與自主得分</b>",[["自主創造","100% 計入"],["被餵球（吃餅）","打折計入"]],""],"ft":["罰球","Free Throw","<b>罰球命中率</b>（罰球沒有防守，只看準度；量已在造犯規）",[["命中率","罰球命中率"]],""],"drive":["切入","Drive","<b>帶球切入</b>到 10 呎內的自主兩分（量與效率各半）",[],""],"foulDraw":["製造犯規","Foul Drawing","<b>75%</b> 罰球量 ＋ <b>25%</b> 罰球率",[["罰球量 75%","罰球數 / 36"],["罰球率 25%","罰球數 ÷ 投籃出手"]],""],"gravity":["引力","Gravity","<b>沒拿球</b>時吸引防守貼防的程度",[],null],"spot":["空檔射手","Off-Ball Shooter","<b>不持球</b>時接球投籃的量與接球三分準度（只顯示，不進 OVR）",[["量","定點投籃、繞掩護接球、手遞手（Synergy 回合 / 36）"],["準度（半份）","接球三分命中率"]],""],"cutroll":["切入順下","Cutter / Roller","<b>不持球</b>時往籃下跑的量與空切效率（只顯示，不進 OVR）",[["量","空切、擋拆順下、進攻籃板補籃、快攻（回合 / 36）"],["效率（半份）","空切每回合得分"]],""],"pass":["傳球","Passing","<b>50%</b> 助攻量 ＋ <b>50%</b> 助攻率",[["助攻量 50%","助攻 / 36"],["助攻率 50%","在場時隊友進球被他助攻的比例"]],""],"creation":["持球進攻","Shot Creation","<b>自主創造</b>與<b>擋拆持球</b>各半（0.2.15 合成一項）",[["自主創造 50%","自己創造的跳投與低位出手量"],["擋拆持球 50%","擋拆持球回合與每回合得分"]],""],"rebound":["籃板","Rebounding","在場時搶下可搶籃板的<b>籃板率</b>",[],""],"tovSkill":["少失誤","Ball Security","<b>每次觸球的失誤率</b>與<b>持球時間</b>各半；不持球、失誤少的人不算數",[["每次觸球失誤 50%","越少越高"],["持球時間 50%","每 36 分鐘的持球時間"]],""],"pressure":["壓迫","Pressure","<b>抄截、干擾、逼失誤、造進攻犯規</b>（扣犯規）",[["抄截／干擾／逼失誤","各 1 份"],["造進攻犯規","0.5 份"],["犯規","扣 0.25"]],""],"onBall":["單防","On-Ball Defense","外線<b>干擾出手 ＋ 對位負擔 ＋ 威懾力</b>",[["對位負擔","防守對象的球權使用率"],["威懾力","降低對手出手意願"]],""],"help":["護框","Rim Protection","<b>70%</b> 籃下 6 呎被防命中率差 ＋ <b>30%</b> 每 36 分鐘蓋帽",[["籃下 6 呎被防命中率差 70%","對手命中率比預期低多少"],["每 36 分鐘蓋帽 30%","近四季窗口含本季"]],""],"dbon":["防守意識","Defensive IQ","數據以外的<b>團隊防守影響力</b>（輪轉、站位、補防）",[["單位","每百回合淨分（非 0–99）"],["計入 OVR","僅正分加分"]],false]};
 const FRZ = false;
 function head() {
   const th = (k, en, zh, cls = '') =>
@@ -1351,7 +1351,7 @@ function cell(k, v, first, tip) {
   if (st.sort === k) cls.push('sortcol');
   if (st.mode === 'num') { cls.push(qcls(v)); return `<td class="${cls.join(' ')}"${tip ? ` data-ck="${tip}"` : ''}>${Math.round(v)}</td>`; }
   const g = grade(v);
-  cls.push(qcls(v));
+  cls.push(g === 'A+' ? 'q5' : g[0] === 'A' ? 'q4' : g[0] === 'B' ? 'q3' : g[0] === 'C' ? 'q2' : 'q1');
   return `<td class="${cls.join(' ')}"${tip ? ` data-ck="${tip}"` : ` title="${Math.round(v)}"`}>${g}</td>`;
 }
 
@@ -1541,14 +1541,15 @@ document.fonts && document.fonts.ready.then(fitTable);
 // 寬度鎖成欄寬總和（不是 min-width）：不然表格會跟著外框撐寬，外框又照表格寬算，越撐越寬。
 // 只動這幾個屬性、量時除掉 zoom：桌機縮放（enrich_roster_viewer）寫在同一個 style 上。
 function lockCols() {
-  const t = document.getElementById('tbl'), SZ = SIZE, s = t.style, z = parseFloat(s.zoom) || 1, tm = [st.team, st.rk, st.pos, st.q], V = st.view;
+  const t = document.getElementById('tbl'), SZ = SIZE, s = t.style, z = parseFloat(s.zoom) || 1, tm = [st.team, st.rk, st.pos, st.q, st.page, st.extra], V = st.view;
   t.querySelector('colgroup')?.remove();
+  t.classList.remove('lite');
   s.tableLayout = ''; s.width = 'min-content'; s.minWidth = '0';
-  // 網址直接開某隊（/nets）時也照全部球隊量
+  // 網址直接開某隊（/nets）或停在後面的分頁時也照全部球隊第 1 頁量
   const meas = () => { render(); return [...t.querySelectorAll('thead tr:last-child th')].filter(th => getComputedStyle(th).display !== 'none')
     .map(th => Math.ceil(th.getBoundingClientRect().width / z)); };
   const sum = a => a.reduce((x, y) => x + y, 0);
-  st.team = 'ALL'; st.rk = false; st.pos = 'ALL'; st.q = ''; SIZE = 1e5;   // 切換檢視時可能已選了位置／搜尋，也要照全部球員量
+  st.team = 'ALL'; st.rk = false; st.pos = 'ALL'; st.q = ''; st.page = 0; st.extra = 0; SIZE = 1e5;   // 切換檢視時可能已選了位置／搜尋／分頁，也要照全部球員量
   // 精簡檢視（使用者 2026-11-10）：欄位少了，桌機表格仍撐到「詳細」的總寬——頁首與卡片寬度（--tw）跟表格寬，不能一切換就縮
   // 第 2 輪（使用者 2026-11-11）：精簡太鬆散 → 能力值／MPG／OVR 固定 64px、POS／TEAM 固定 44px，剩下的寬度全給球員欄（頭像＋全名）；
   // 球員欄超過 300px 時多的平均加到各分組第一欄的左邊距（--gap），不撐數字欄。詳細檢視能力值欄等寬、「出場」四欄等寬，
@@ -1567,10 +1568,14 @@ function lockCols() {
     const rest = sum(wf0.filter((w, i) => !eqf(kf[i]) && !eqb(kf[i]) && i !== ni0)) + NMW, w = Math.floor((budget - rest - nB * mb) / nA);
     wf = wf0.map((w0, i) => eqf(kf[i]) ? w : eqb(kf[i]) ? mb : i === ni0 ? NMW : w0);
     wf[kf.indexOf('name')] += budget - sum(wf);   // 餘數（<18px）給球員欄
+  } else {
+    // 手機詳細檢視：OVR 徽章 46px、DIQ 約 35px、MPG 約 23px，各欄至少留左右 4px（格寬 − 內容寬 ≥ 8px）
+    const mmin = { ovr: 54, dbon: 44, min: 32 };
+    wf = wf0.map((w0, i) => Math.max(w0, mmin[kf[i]] || 0));
   }
   let ws = wf;
   if (V !== 'full') {
-    st.view = V; ws = meas(); const ks = keys();
+    st.view = V; t.classList.toggle('lite', V === 'lite'); ws = meas(); const ks = keys();
     if (desk) {
       const total = sum(wf), ni = ks.indexOf('name');
       ws = ws.map((w, i) => ks[i] === 'pos' || ks[i] === 'team' ? 44 : !ks[i] ? w : 64);
@@ -1588,15 +1593,17 @@ function lockCols() {
       if (bw > 0) ws = ws.map((w, i) => big.has(ks[i]) ? bw : w);
     }
   }
-  SIZE = SZ; [st.team, st.rk, st.pos, st.q] = tm; st.view = V;
+  SIZE = SZ; [st.team, st.rk, st.pos, st.q, st.page, st.extra] = tm; st.view = V;
   t.insertAdjacentHTML('afterbegin', '<colgroup>' + ws.map(w => `<col style="width:${w}px">`).join('') + '</colgroup>');
   s.tableLayout = 'fixed'; s.width = sum(V !== 'full' && desk ? wf : ws) + 'px';
   render();
 }
 // 不在每次 resize 重鎖（使用者 2026-11-03：Ctrl+- 時整張先膨脹再收回、很卡＝拆掉欄寬重畫全部球員）。
 // 瀏覽器縮放時 CSS 欄寬不變；只有跨手機／桌機分界（欄位顯示不同）才要重量。
+// 字型 link 載入前 ready 可能已先解析（備用字型較寬），loadingdone 與 load 後再重鎖一次確保欄寬一致。
 matchMedia('(max-width:640px)').addEventListener('change', lockCols);
-(document.fonts ? document.fonts.ready : Promise.resolve()).then(lockCols);
+if (document.fonts) { document.fonts.ready.then(lockCols); document.fonts.addEventListener('loadingdone', lockCols); }
+addEventListener('load', () => (document.fonts ? document.fonts.ready : Promise.resolve()).then(lockCols));
 
 document.getElementById('q').oninput = e => { st.q = e.target.value; st.page = 0; st.extra = 0; render(); };
 render();
