@@ -300,7 +300,7 @@ def _lite_layout(s):
         s = s.replace(a, b)
     # 出場群組：精簡只剩 MPG 一欄，標題留空
     s, n = re.subn(r"'<th class=\"g\" colspan=\"(\d+)\">出場</th></tr>';",
-                   lambda m: "(st.view === 'lite' ? '<th class=\"g\"></th>' : '<th class=\"g\" colspan=\"%s\">出場</th>') + '</tr>';" % m.group(1), s)
+                   lambda m: "(st.view === 'lite' ? '<th class=\"g\"></th>' : '<th class=\"g gk-n\" colspan=\"%s\">出場</th>') + '</tr>';" % m.group(1), s)
     assert n == 1
     s, n = re.subn(r'colspan="\d+" class="empty"', lambda m: 'colspan="\' + NCOL() + \'" class="empty"', s)
     assert n == 1
@@ -331,6 +331,9 @@ def add_season_nav(html_str, current):
                  ('` title="${v}"`', '` title="${Math.round(v)}"`')]:
         assert s.count(a) == 1, a
         s = s.replace(a, b)
+    if current == 'inseason':   # 2026-11-11：賽中 OVR 含近況（R-190）；2025-26 卡片頁沒有近況項
+        assert s.count('場上影響力 ＋ 上場時間</b>') == 1
+        s = s.replace('場上影響力 ＋ 上場時間</b>', '場上影響力 ＋ 上場時間 ＋ 近況</b>')
     s = _lite_layout(attr_tips(s, current))
     return s.replace('<nav class="snav', CSS + '<nav class="snav', 1) if CSS not in s else s
 
@@ -747,13 +750,18 @@ COMMON_REPLACEMENTS = [
      'thead th.sorted::before{content:"▼";font-size:.6rem;position:absolute;transform:translateX(calc(-100% - 2px))}'),
     # 頁尾只留等第與 OVR 簡述，點 ▼ 展開詳細算法（使用者 2026-11-01）
     ('    <span>點欄位標題排序，再點一次反向</span>\n    <span>點任一列看球員卡</span>\n', ''),
+    # 說明列色階圖例（使用者 2026-11-11）：數值模式＝五級色階圖例、等第模式＝等第門檻；字母／級距用和格子同一份 q1～q5 class（色票在 site_header 的 --q1～--q5）。
+    # 等第字母色＝該等第格子實際最多的色階（A 82–89 藍居多、B 70–81 白、C 以下暗灰）；由 legendSync() 依顯示模式切換
+    ('    <span>等第：<b class="gA">A</b> ≥82 · <b class="gB">B</b> ≥68 · <b class="gC">C</b> ≥56 · <b class="gD">D</b> ≥44 · <b class="gF">F</b> &lt;44</span>\n',
+     '    <span id="lgNum">色階：<b class="lq q5">100+</b> · <b class="lq q4">90–99</b> · <b class="lq q3">80–89</b> · <b class="lq q2">70–79</b> · <b class="lq q1">&lt;70</b></span>\n'
+     '    <span id="lgGrade" hidden>等第：<b class="lq q3">A</b> ≥82 · <b class="lq q2">B</b> ≥68 · <b class="lq q1">C</b> ≥56 · <b class="lq q1">D</b> ≥44 · <b class="lq q1">F</b> &lt;44</span>\n'),
     ('    <span>OVR 同分多半是 2K27 名次封頂造成的</span>',
      '    <button type="button" class="ovr-t" aria-expanded="false" onclick="const b=this.nextElementSibling,o=b.hidden;b.hidden=!o;this.setAttribute(\'aria-expanded\',o)">'
-     'OVR：綜合<b>場上能力 ＋ 防守意識 ＋ 上場時間</b>的每場比賽影響力 <i>▼</i></button>\n'
+     'OVR：<b>數據 ＋ 防守 ＋ 場上影響力 ＋ 上場時間</b> <i>▼</i></button>\n'
      '    <div class="ovr-how" hidden>'
-     '<div><span class="oh-t">1. 場上能力（14 項）</span>結合傳統數據、逐球紀錄與官方追蹤，不只看帳面產量，也區分<b>自主創造 vs 吃餅</b>、<b>無球牽制（引力）</b>、<b>持球保護</b>與<b>對位主將／護框降命中率</b>，拆成 14 項單項能力（頂尖可破 99）。</div>'
-     '<div><span class="oh-t">2. 防守意識（DIQ）</span>抄截與阻攻只佔防守一小部分。DIQ 計算扣除隊友與對手強弱後，在場能幫球隊<b>少丟幾分</b>（跨季防守 RAPM 比同位置平均），補齊數據抓不到的<b>無球輪轉、站位與協防</b>。</div>'
-     '<div><span class="oh-t">3. 上場時間與用人</span>結合<b>場均分鐘</b>與<b>出賽率</b>（區分正常輪休與被棄用 DNP）。同效率下，<b>能扛越多上場時間，單場價值越高</b>（邊際遞減）。</div>'
+     '<div><span class="oh-t">1. 數據（14 項能力）</span>結合傳統數據、逐球紀錄與官方追蹤，不只看帳面產量，也區分<b>自主創造 vs 吃餅</b>、<b>無球牽制（引力）</b>、<b>持球保護</b>與<b>對位主將／護框降命中率</b>，拆成 14 項單項能力（頂尖可破 99）。</div>'
+     '<div><span class="oh-t">2. 防守（意識 DIQ）</span>抄截與阻攻只佔防守一小部分。DIQ 計算扣除隊友與對手強弱後，在場能幫球隊<b>少丟幾分</b>（跨季防守 RAPM 比同位置平均），補齊數據抓不到的<b>無球輪轉、站位與協防</b>。</div>'
+     '<div><span class="oh-t">3. 上場時間</span>結合<b>場均分鐘</b>與<b>出賽率</b>（區分正常輪休與被棄用 DNP）。同效率下，<b>能扛越多上場時間，單場價值越高</b>（邊際遞減）。</div>'
      '<div><span class="oh-t">4. 怎麼合成 OVR</span>將上述三項對齊進階指標（DARKO、BPM）校準權重，衡量<b>每場能幫球隊多贏幾分</b>；球員卡右側另列<b>實際在場影響</b>與<b>單場評分</b>供對照。全站<b>隨比賽逐場更新</b>並反映近期狀態（新秀以選秀順位為起點）。</div>'
      '</div>'),
 ] + [
@@ -844,12 +852,12 @@ function lockCols() {
   const desk = matchMedia('(min-width:641px)').matches, AVW = 28;
   t.style.removeProperty('--gap');
   st.view = 'full'; const wf0 = meas(), kf = keys();
-  const eqb = k => ['min', 'gp', 'dovr', 'form'].includes(k), eqf = k => !fixed(k) && !eqb(k) && k !== 'ht';
+  const eqb = k => ['dbon', 'min', 'gp', 'dovr', 'form'].includes(k), eqf = k => !fixed(k) && !eqb(k) && k !== 'ht';
   let wf = wf0;
   if (desk) {
-    // 詳細檢視球員欄固定 168px（名字太長用 … 截斷）；預算＝球員欄 140px（第 2 輪之前）時的自然寬總和
-    const ni0 = kf.indexOf('name'), NMW = 168, budget = sum(wf0) - wf0[ni0] + NMW - AVW;
-    const mb = Math.max(...wf0.filter((w, i) => eqb(kf[i]))), nA = kf.filter(eqf).length, nB = kf.filter(eqb).length;
+    // 詳細檢視總預算＝球員欄 140px（第 2 輪之前）時的自然寬總和；第 3 輪：球員欄勻到 150px（名字太長用 … 截斷），DIQ 與「出場」四欄同寬（至少 EQB_MIN，數字左右各留 4px 以上）
+    const ni0 = kf.indexOf('name'), NMW = 150, EQB_MIN = 44, budget = sum(wf0) - wf0[ni0] + 168 - AVW;
+    const mb = Math.max(EQB_MIN, ...wf0.filter((w, i) => eqb(kf[i]))), nA = kf.filter(eqf).length, nB = kf.filter(eqb).length;
     const rest = sum(wf0.filter((w, i) => !eqf(kf[i]) && !eqb(kf[i]) && i !== ni0)) + NMW, w = Math.floor((budget - rest - nB * mb) / nA);
     wf = wf0.map((w0, i) => eqf(kf[i]) ? w : eqb(kf[i]) ? mb : i === ni0 ? NMW : w0);
     wf[kf.indexOf('name')] += budget - sum(wf);   // 餘數（<18px）給球員欄
@@ -929,14 +937,13 @@ document.getElementById('q').oninput'''),
      " if (key === 'view') { try { localStorage.setItem('bbac.view', v); } catch (e) {} if (!viewKeys(v).has(st.sort)) { st.sort = 'ovr'; st.asc = false; } lockCols(); return; } if (key !== 'mode') { st.page = 0; st.extra = 0; } render(); };"),
     ("function head() {", """const VIEWS = {
   full: { pre: [['offR', 'OFF', '進攻'], ['defR', 'DEF', '防守']], groups: [
-    ['外線', [['threeValue', '3PT', '三分'], ['mid', 'MID', '中距離'], ['ft', 'FT', '罰球']]],
-    ['內線', [['short', 'INS', '近框'], ['foulDraw', 'FD', '製造犯規']]],
-    ['持球', [['creation', 'CRT', '持球進攻']]],
-    ['無球', [['gravity', 'GRV', '引力'], ['spot', 'SPOT', '空檔射手'], ['cutroll', 'CUT', '切入順下']]],
-    ['組織', [['pass', 'PASS', '傳球'], ['tovSkill', 'TO', '少失誤']]],
+    ['外線', [['threeValue', '3PT', '三分'], ['mid', 'MID', '中距'], ['ft', 'FT', '罰球']]],
+    ['內線', [['short', 'INS', '近框'], ['foulDraw', 'FD', '造犯']]],
+    ['無球', [['gravity', 'GRV', '引力'], ['spot', 'SPOT', '空檔'], ['cutroll', 'CUT', '切入']]],
+    ['持球', [['creation', 'CRT', '持球'], ['pass', 'PASS', '傳球'], ['tovSkill', 'TO', '失誤']]],
     ['籃板', [['rebound', 'REB', '籃板']]],
     ['外防', [['onBall', 'PER D', '單防'], ['pressure', 'PRES', '壓迫']]],
-    ['內防', [['help', 'RIM', '護框'], ['dbon', 'DIQ', '防守意識']]],
+    ['內防', [['help', 'RIM', '護框'], ['dbon', 'DIQ', '意識']]],
   ] },
   lite: { pre: [], groups: [
     ['大類', [['offR', 'OFF', '進攻'], ['defR', 'DEF', '防守'], ['play', 'PLAY', '組織'], ['rebound', 'REB', '籃板']]],
@@ -945,6 +952,7 @@ document.getElementById('q').oninput'''),
   ] },
 };
 const VIEW = () => VIEWS[st.view] || VIEWS.full;
+function legendSync() { const n = st.mode === 'num', a = document.getElementById('lgNum'), b = document.getElementById('lgGrade'); if (a) a.hidden = !n; if (b) b.hidden = n; }
 const viewKeys = v => new Set(['name', 'pos', 'team', 'ovr', 'min', ...(v === 'lite' ? [] : ['ht', 'gp', 'dovr', 'form']),
   ...VIEWS[v].pre.map(c => c[0]), ...VIEWS[v].groups.flatMap(g => g[1].map(c => c[0]))]);
 const NCOL = () => document.querySelectorAll('#tbl thead tr:last-child th').length;
@@ -961,7 +969,7 @@ function head() {"""),
     ("  head();\n  const a = list();",
      "  if (document.getElementById('viewSeg')) seg('viewSeg', [['lite', '精簡'], ['full', '詳細']], 'view');\n  head();\n  const a = list();"),
     ("  tboxEdges();\n  card(P.find(p => p.name === st.sel) || P[0]);",
-     "  applyView();\n  tboxEdges();\n  card(P.find(p => p.name === st.sel) || P[0]);"),
+     "  applyView();\n  legendSync();\n  tboxEdges();\n  card(P.find(p => p.name === st.sel) || P[0]);"),
     ('function render() {', '''function setTeam(cur) {
   st.rk = cur === 'ROOKIE'; st.team = st.rk ? 'ALL' : cur; st.page = 0; st.extra = 0;
   // 記住上次選的球隊／新秀：在其他檢視點眉頭「球隊」時回到這隊（site_header）
@@ -1180,8 +1188,8 @@ def regroup_attrs(s):
 
 # 防守意識是能力值，放表格防守組 PRES 右邊（使用者 2026-10-30），不放卡片資訊列（那列桌機整列藏掉）。
 # 單位是防守 RAPM 分（不是 0–99），所以不換等第、直接顯示 +x.xx；0 顯示「—」。不進 ATTR，免得卡片前三／最弱排序被它佔掉。
-DIQ_TD = ("const diq = p => `<td data-nodec class=\"${p.dbon >= 2 ? 'gA' : p.dbon >= 1 ? 'gB' : p.dbon > 0 ? 'gC' : ''}"
-          "${st.sort === 'dbon' ? ' sortcol' : ''}\"${p.dbon > 0 ? '' : ' style=\"color:var(--muted)\"'}"
+DIQ_TD = ("const diq = p => `<td data-nodec class=\"${p.dbon > 0 ? 'q2' : 'q1'}"
+          "${st.sort === 'dbon' ? ' sortcol' : ''}\""
           " title=\"防守意識：真實比賽防守 RAPM 和同位置平均的差（負＝低於平均），補能力值量不到的輪轉、站位、補位；只有正的部分會加進 OVR\">"
           "${p.dbon == null ? '—' : (p.dbon > 0 ? '+' : p.dbon < 0 ? '−' : '') + Math.abs(p.dbon).toFixed(2)}</td>`;\n")
 

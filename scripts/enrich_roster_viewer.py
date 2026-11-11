@@ -378,7 +378,7 @@ JS = r"""
 // 手機表格用的縮寫名：名縮成首字母，姓（含 Jr. 等）照留
 const shortName = n => { const i = n.indexOf(' '); return i > 0 ? n[0] + '. ' + n.slice(i + 1) : n; };
 // OVR 分級：110 珍珠／100 紫／90 金／80 銀／70 銅／其他灰字無框（門檻同 Baseball_algo getRarityClass，配色見 CSS）
-const ovrBadge = v => { const r = Math.round(v); return `<span class="ob t${r >= 110 ? 6 : r >= 100 ? 5 : r >= 90 ? 4 : r >= 80 ? 3 : r >= 70 ? 2 : 1}">${r}</span>`; };
+const ovrBadge = v => { const r = Math.round(v); return `<span class="ob t${r >= 100 ? 6 : r >= 90 ? 4 : r >= 80 ? 3 : r >= 70 ? 2 : 1}">${r}</span>`; };
 // E-116：2027 頁（近 5 場）的新秀都是新秀先驗，起點由選秀順位估，打越多場越靠自己的數據
 const rookieTag = p => REAL_VIEW === 'g5' && ROOKIES.has(p.name)
   ? `<span class="rkp" title="新秀：沒有上季卡，開季起點由選秀順位與位置估，已打 ${p.gp} 場，打越多場越看自己的數據" role="img" aria-label="新秀"></span>` : '';
@@ -1054,13 +1054,13 @@ def roster_round2(s):
   mk('\\u203a', st.page + 1, st.page >= tot - 1, '下一頁');
 }
 """ + s[j:]
-    # 能力值數字與 OVR 徽章同一套等級（110／100／90／80／70 門檻，見 ovrBadge）：q1 灰（暗）→ q2 白 → q3 藍 → q4 金 → q5 紅 → q6 紫
+    # 能力值數字與 OVR 徽章同一套等級（2026-11-11 收斂成五級：≥100 一律紫，原 100–109 紅拿掉；見 ovrBadge）：q1 暗灰 → q2 白 → q3 藍 → q4 金 → q5 紫
     i = s.index('function cell(k, v, first, tip) {')
     j = s.index('\n}\n', i)
     body = s[i:j]
     assert body.count('gcls(grade(v))') == 1 and body.count('gcls(g)') == 1
     body = body.replace('gcls(grade(v))', 'qcls(v)').replace('gcls(g)', 'qcls(v)')
-    s = s[:i] + "const qcls = v => { const r = Math.round(v); return 'q' + (r >= 110 ? 6 : r >= 100 ? 5 : r >= 90 ? 4 : r >= 80 ? 3 : r >= 70 ? 2 : 1); };\n" + body + s[j:]
+    s = s[:i] + "const qcls = v => { const r = Math.round(v); return 'q' + (r >= 100 ? 5 : r >= 90 ? 4 : r >= 80 ? 3 : r >= 70 ? 2 : 1); };\n" + body + s[j:]
     # 球員欄頭像：30px 圓形、固定寬高、lazy；沒頭像（或載入失敗）顯示隊色底＋姓名縮寫（同排行檢視 .av 的來源：cdn.nba.com 260x190）
     sub1("\nfunction render() {\n  seg('posSeg'", """
 const avatar = p => {
@@ -1072,7 +1072,7 @@ function render() {
     sub1('title="${esc(p.name)}"><span class="nf">', 'title="${esc(p.name)}">${avatar(p)}<span class="nf">')
     # 表頭分組列：色條顏色依分組（進攻藍、防守綠、大類／籃板金）
     sub1("VIEW().groups.map(x => `<th class=\"g\" colspan=\"${x[1].length}\">${x[0]}</th>`).join('')",
-         "VIEW().groups.map(x => `<th class=\"g gk-${({ '大類': 'b', '籃板': 'b', '進攻': 'o', '外線': 'o', '內線': 'o', '持球': 'o', '無球': 'o', '組織': 'o', '防守': 'd', '外防': 'd', '內防': 'd' })[x[0]] || 'n'}\" colspan=\"${x[1].length}\">${x[0]}</th>`).join('')")
+         "VIEW().groups.map(x => `<th class=\"g gk-${({ '大類': 'b', '籃板': 'b', '進攻': 'o', '外線': 'o', '內線': 'o', '持球': 'b', '無球': 'o', '組織': 'o', '防守': 'd', '外防': 'd', '內防': 'd' })[x[0]] || 'n'}\" colspan=\"${x[1].length}\">${x[0]}</th>`).join('')")
     return s
 
 if __name__ == '__main__':

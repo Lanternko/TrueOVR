@@ -138,16 +138,26 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
   .mbrand{width:auto}
   .mtabs #teamPick:not(.on) summary::before,.mtabs #teamPick.last:not(.on) summary{font-size:15px}
   .mpanel{position:fixed;left:12px;right:12px;top:calc(var(--mh,96px) + 6px);min-width:0}
-  /* 舊手機規則 #posSeg{display:none}（位置要點 .pbtn 才展開）：位置列搬進篩選欄後直接攤開 */
-  .fbar{gap:6px 12px;padding:6px 0 2px}
-  .fbar .fg{gap:6px}
-  .fbar #posSeg{display:flex;position:static;box-shadow:none}
-  .fbar .seg a,.fbar .seg button{height:32px;padding:0 10px}
-  .fbar .seg .pgn{height:32px}
-  .fbar .fg.fpg{order:2}
-  .fbar .fg.fpos{order:3;flex-basis:100%;min-width:0}
-  .fbar .fg.fpos #fPos{min-width:0;flex:0 1 auto;overflow-x:auto;scrollbar-width:none;border-radius:6px}   /* 位置放不下時整組橫向捲，不換行 */
-  .fbar .fg.fpos #fPos::-webkit-scrollbar{display:none}
+  /* 手機篩選欄只佔一行（使用者 2026-11-11：年份＋位置＋檢視＋分頁被排成三行）：不顯示「年份／位置／檢視」字樣，
+     年份縮成 2027／2026（data-s，頁尾腳本寫入），位置收成下拉（.pbtn，點了才往下展開），分頁縮成「‹ 1/8 ›」靠右 */
+  .fbar{flex-wrap:nowrap;gap:6px;padding:6px 0 2px}
+  .fbar .fg>b{display:none}
+  .fbar .seg a,.fbar .seg button{height:32px;padding:0 8px}
+  .fbar #fSeason a{font-size:0;letter-spacing:0}
+  .fbar #fSeason a::after{content:attr(data-s);font-size:.78rem;letter-spacing:.04em}
+  .fbar .fg.fpos{position:relative}
+  .fbar .pbtn{display:flex;align-items:center;gap:4px;height:34px;box-sizing:border-box;padding:0 8px;background:transparent;color:var(--muted);
+    border:1px solid var(--line);border-radius:6px;font:500 .78rem var(--f-disp);letter-spacing:.04em;white-space:nowrap;cursor:pointer}
+  .fbar .pbtn::after{content:"▾";font-size:.8em;opacity:.8}
+  .fbar .pbtn.on,.fbar .pbtn[aria-expanded="true"]{background:rgba(255,255,255,.10);color:#fff}
+  .fbar .pbtn.on{font-weight:600}
+  .fbar #posSeg{display:none}
+  .fbar .pbtn[aria-expanded="true"]+#posSeg{display:flex;flex-direction:column;position:absolute;left:0;top:calc(100% + 4px);z-index:20;min-width:100%;
+    background:var(--panel-2);box-shadow:0 12px 32px rgba(0,0,0,.55)}
+  .fbar #posSeg button{height:38px;padding:0 14px;border-right:0;border-bottom:1px solid rgba(255,255,255,.06)}
+  .fbar #posSeg button:last-child{border-bottom:0}
+  .fbar .seg .pgn{height:32px;min-width:0;padding:0 5px;letter-spacing:0;word-spacing:-.25em}
+  .fbar #fpg button{padding:0 9px}
   .mast .pn{top:calc(var(--mh,96px) + 6px);right:12px;width:calc(100vw - 24px)}
   .msearch .sbox{position:fixed;width:auto;left:12px;right:12px;top:calc(var(--mh,96px) + 6px);z-index:20;padding:10px;background:var(--panel-2);border:1px solid var(--line);border-radius:8px;box-shadow:0 14px 36px rgba(0,0,0,.6)}
   .msearch #q,.msearch #q:focus{height:40px;font-size:16px}
@@ -156,9 +166,13 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
 @media (prefers-reduced-motion:reduce){.mast.ready .mind,.msearch #q{transition:none}}
 /* 表格外觀（使用者 2026-11-11，第 2 輪加強）：乾淨扁平，不做玻璃／漸層底。表身單一底色（--panel），列線 1px 低對比；分組只在第一欄左邊畫細線；
    hover＝整列 .04 淡亮＋名字左 2px 金線，選中（名字格整格金底，使用者 2026-11-11 裁定）其餘格 .09，兩者肉眼可分；sticky 欄不透明（同色底再疊亮度）。
-   能力值數字與 OVR 徽章同一套等級（q1 暗灰→q2 白→q3 藍→q4 金→q5 紅→q6 紫，門檻 70／80／90／100／110 同 ovrBadge）；
+   能力值數字與 OVR 徽章同一套等級（第 3 輪收斂成五級：q1 暗灰 <70→q2 白 70–79→q3 藍 80–89→q4 金 90–99→q5 紫 ≥100，同 ovrBadge）；色票在 --q1～--q5，說明列圖例共用；
+   除五級色階、隊色、OVR 徽章、ΔOVR／FORM 的柔綠柔紅、選中列金底與排序金色外，表格內不再有別的顏色（DIQ 改中性：正白、≤0 暗灰）；
    雙 id（#tbl#tbl）壓過 season_nav／enrich_roster_viewer 前面各層補丁 */
 div.tbox{background:var(--panel);border-radius:8px}
+:root{--q1:#6b7482;--q2:#e3e8ee;--q3:#62b0ff;--q4:#f2c94c;--q5:#d2a8ff}
+.legend .lq{font-weight:700}
+.legend .lq.q1{color:var(--q1)}.legend .lq.q2{color:var(--q2)}.legend .lq.q3{color:var(--q3)}.legend .lq.q4{color:var(--q4)}.legend .lq.q5{color:var(--q5)}
 #tbl{--hov:linear-gradient(rgba(255,255,255,.04),rgba(255,255,255,.04));--selbg:linear-gradient(rgba(255,255,255,.09),rgba(255,255,255,.09));--selh:linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,.12))}
 #tbl#tbl thead th,#tbl#tbl th.nm{background:#0c1014;border-bottom:1px solid var(--line)}
 #tbl#tbl thead tr.grp th{background:#0c1014;border-bottom:0;color:#c3ccd7;font:700 .78rem var(--f-disp);letter-spacing:.1em}
@@ -168,7 +182,7 @@ div.tbox{background:var(--panel);border-radius:8px}
 #tbl#tbl thead tr.grp th.g.gk-n{box-shadow:inset 0 -2px 0 #3a4452}
 #tbl#tbl thead tr:last-child th[data-k]{color:#e8edf2;font:700 .8rem var(--f-disp);letter-spacing:.06em;text-transform:uppercase}
 #tbl#tbl thead tr:last-child th[data-k] .zh{color:var(--muted);opacity:1;font-size:.68rem;text-transform:none;letter-spacing:0;font-weight:500}
-#tbl#tbl:not(.lite) thead tr:last-child th[data-k] .zh{font-size:.58rem}   /* 詳細檢視欄窄，四字副標（製造犯規）要縮才放得下 */
+#tbl#tbl:not(.lite) thead tr:last-child th[data-k]:not([data-k=name],[data-k=ovr],[data-k=pos],[data-k=team],[data-k=ht]){font-size:.72rem;letter-spacing:.03em}   /* 詳細檢視欄窄，英文欄名略縮（副標改兩字，第 3 輪） */
 #tbl#tbl thead tr:last-child th.sorted{color:var(--gold);background:#232a33}
 #tbl#tbl tbody td{background-color:var(--panel);background-image:none;border-bottom:1px solid rgba(255,255,255,.05)}
 #tbl#tbl tbody tr:hover td{background-image:var(--hov)}
@@ -179,13 +193,12 @@ div.tbox{background:var(--panel);border-radius:8px}
 #tbl#tbl tbody td.sortcol{background-color:#232a33}
 #tbl#tbl tbody td.no{color:var(--muted);font:500 .85rem var(--f-disp);font-variant-numeric:tabular-nums}
 #tbl#tbl tbody td.nm{color:#fff;font-weight:700}
-#tbl#tbl tbody td:is(.q1,.q2,.q3,.q4,.q5,.q6){font:700 1rem var(--f-disp);font-variant-numeric:tabular-nums;letter-spacing:.01em}
-#tbl#tbl tbody td.q1{color:#6b7482;font-weight:500}
-#tbl#tbl tbody td.q2{color:#e3e8ee}
-#tbl#tbl tbody td.q3{color:#62b0ff}
-#tbl#tbl tbody td.q4{color:#f2c94c}
-#tbl#tbl tbody td.q5{color:#ff7a7a}
-#tbl#tbl tbody td.q6{color:#d2a8ff}
+#tbl#tbl tbody td:is(.q1,.q2,.q3,.q4,.q5){font:700 1rem var(--f-disp);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+#tbl#tbl tbody td.q1{color:var(--q1);font-weight:500}
+#tbl#tbl tbody td.q2{color:var(--q2)}
+#tbl#tbl tbody td.q3{color:var(--q3)}
+#tbl#tbl tbody td.q4{color:var(--q4)}
+#tbl#tbl tbody td.q5{color:var(--q5)}
 #tbl#tbl tbody tr.sel td.sub{color:var(--muted)}
 #tbl#tbl tbody tr.sel .tabbr{color:var(--tt)}
 #tbl#tbl tbody tr.sel td.ovr .ob{background:none}
@@ -214,8 +227,8 @@ JS = """<script>(()=>{
 const $=s=>document.querySelector(s),mast=$('.mast');if(!mast)return;
 const tabs=$('.mtabs'),ind=$('.mind'),tp=$('#teamPick'),pos=$('#posSeg');
 if(tp){$('#mPickPh').replaceWith(tp);if(location.hash==='#team'){history.replaceState(null,'',location.pathname+location.search);setTimeout(()=>tp.open=true);}}
-if(pos)$('#fPos').append(pos);
-const season=$('.snav .seg');if(season)$('#fSeason').append(season);
+if(pos){const pb=$('.pbtn');$('#fPos').append(pos);if(pb)pos.before(pb);}   /* 手機位置下拉鈕跟著位置列搬進篩選欄 */
+const season=$('.snav .seg');if(season){$('#fSeason').append(season);season.querySelectorAll('a').forEach(a=>a.dataset.s='20'+a.textContent.trim().slice(-2));}   /* 手機年份縮寫：2026-27 → 2027 */
 const mode=$('#modeSeg');if(mode)$('#mMode').append(mode);
 const pn=$('.snav .pnote');if(pn)$('#mNotes').append(pn);else $('#mNotes').closest('.mrow').remove();
 const q=$('#q');if(q){$('.msearch .sbox').append(q);q.placeholder='搜尋球員或球隊';}

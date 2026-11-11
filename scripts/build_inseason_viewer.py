@@ -304,9 +304,8 @@ def main():
                           round(num('formBonus'), 2) if r.get('formBonus', '') != '' else 0.0])
     cols += ['off', 'def', 'gravity', 'spot', 'cutroll', 'form']   # 0.2.15：pnr 欄拿掉（併進 creation＝持球進攻）   # R-190（0.2.14d）：近況＝OVR 錨點項，已含在 OVR 裡   # E-301：無球兩格（只顯示）   # 0.2.10j：引力；0.2.13：擋拆（舊版夾沒有該欄 → null）
     LC.augment(cols, data_rows)   # 精簡檢視的 10 個合併能力值（所有成分已是最終顯示值之後；只改顯示，spec reports/roster-lite-view）
-    # ΔOVR 五色：≥+4 深綠、+1～+4 淺綠、±1 內灰、−1～−4 橘、≤−4 紅（沿用等第色）
-    dcol = ("(v => v >= 4 ? 'var(--g-a)' : v >= 1 ? 'var(--g-b)' : v > -1 ? 'var(--muted)'"
-            " : v > -4 ? 'var(--g-d)' : 'var(--g-f)')(p.dovr)")
+    # ΔOVR／FORM（2026-11-11）：綠紅只留給變化量，降飽和、字重 500 退到背景：≥+1 柔綠、≤−1 柔紅、±1 內灰（不再分深淺）
+    dcol = ("(v => v >= 1 ? '#6fae8c' : v <= -1 ? '#c08585' : 'var(--muted)')(p.dovr)")
     fcol = dcol.replace('(p.dovr)', '(p.form)')   # 近況同五色、同門檻
     has_form = 'formBonus' in rows[0]
     s = base
@@ -323,14 +322,14 @@ def main():
         ('<th class="g" colspan="2">出場</th>', '<th class="g" colspan="4">出場</th>'),
         ('colspan="22"', 'colspan="26"'),
         ("th('min', 'MIN', '分鐘', 'gl') + th('gp', 'GP', '場數')",
-         "th('min', 'MPG', '分鐘', 'gl') + th('gp', 'N', '場數') + th('dovr', 'ΔOVR', '較開季') + th('form', 'FORM', '近況')"),
+         "th('min', 'MPG', '分鐘', 'gl') + th('gp', 'N', '場數') + th('dovr', 'ΔOVR', '開季') + th('form', 'FORM', '近況')"),
         ("[[0, '全部'], [500, '≥500'], [1000, '≥1000'], [1500, '≥1500']]",
          "[[0, '全部'], [10, '≥10'], [20, '≥20'], [30, '≥30']]"),
         ('<td class="sub${sc(\'gp\')}">${p.gp}</td>',
          '<td class="sub${sc(\'gp\')}">${p.gp}</td>\n'
-         '      <td class="sub${sc(\'dovr\')}" style="color:${' + dcol + '}">'
+         '      <td class="sub${sc(\'dovr\')}" style="font-weight:500;color:${' + dcol + '}">'
          '${(v => (v > 0 ? \'+\' : \'\') + v.toFixed(1))(Math.abs(p.dovr) < 0.05 ? 0 : p.dovr)}</td>\n'
-         '      <td class="sub${sc(\'form\')}" style="color:${' + fcol + '}">'
+         '      <td class="sub${sc(\'form\')}" style="font-weight:500;color:${' + fcol + '}">'
          '${(v => (v > 0 ? \'+\' : \'\') + v.toFixed(1))(Math.abs(p.form) < 0.05 ? 0 : p.form)}</td>'),
         ('<td class="sub gl${sc(\'min\')}">${p.min.toLocaleString()}</td>',
          '<td class="sub gl${sc(\'min\')}">${p.min.toFixed(1)}</td>'),
