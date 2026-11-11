@@ -107,15 +107,18 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
   border-radius:6px;font:500 .88rem var(--f-body);transition:width .2s,border-color .12s}
 .msearch #q:focus{outline:0;border-color:var(--gold)}
 .wrap>.top,.wrap>.ctrl{display:none}
-/* 篩選欄（使用者 2026-11-10）：卡片與表格之間一條，年份｜位置｜檢視（精簡／詳細）；原眉頭的篩選面板（賽季、位置）併進來，不重複 */
-.fbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;padding:10px 0 4px}
-.fbar .fg{display:flex;align-items:center;gap:8px}
-.fbar .fg>b{color:var(--muted);font:600 .72rem var(--f-disp);letter-spacing:.12em;white-space:nowrap}
-.fbar .seg{flex:none;width:max-content}
-.fbar .seg a{display:block;background:var(--panel);color:var(--muted);border-right:1px solid var(--line);font:600 .9rem var(--f-disp);letter-spacing:.04em;padding:6px 12px;text-decoration:none;white-space:nowrap}
-.fbar .seg a:last-child{border-right:0}
-.fbar .seg a[aria-current="page"]{background:var(--gold);color:var(--gold-ink)}
-.fbar .seg button{height:32px;padding:0 12px;white-space:nowrap}
+/* 篩選欄（使用者 2026-11-10）：卡片與表格之間一條，年份｜位置｜檢視（精簡／詳細）；原眉頭的篩選面板（賽季、位置）併進來，不重複。
+   2026-11-11 改中性色、縮小：選中＝稍亮的中性底＋白字，金色只留給表格的 OVR／排序；整組一個 6px 細框，段與段只有低對比細線 */
+.fbar{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;padding:8px 0 2px}
+.fbar .fg{display:flex;align-items:center;gap:6px}
+.fbar .fg>b{color:var(--muted);font:600 .72rem var(--f-disp);letter-spacing:.08em;white-space:nowrap}
+.fbar .seg{flex:none;width:max-content;display:flex;border:1px solid var(--line);border-radius:6px;background:transparent;overflow:hidden}
+.fbar .seg a,.fbar .seg button{display:flex;align-items:center;box-sizing:border-box;height:26px;padding:0 10px;margin:0;background:transparent;color:var(--muted);
+  border:0;border-right:1px solid rgba(255,255,255,.06);border-radius:0;font:500 .78rem var(--f-disp);letter-spacing:.04em;text-decoration:none;white-space:nowrap;cursor:pointer}
+.fbar .seg a:last-child,.fbar .seg button:last-child{border-right:0}
+.fbar .seg a:hover,.fbar .seg button:hover{color:var(--fg)}
+.fbar .seg a[aria-current="page"],.fbar .seg button[aria-pressed="true"]{background:rgba(255,255,255,.10);color:#fff;font-weight:600}
+.fbar .seg a:focus-visible,.fbar .seg button:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
 #tbl .vh{display:none}
 @media (min-width:641px){.wrap{padding-top:10px}}
 @media (max-width:640px){
@@ -130,18 +133,37 @@ body[data-view="rank"] .mtabs #teamPick.on summary,body[data-view="games"] .mtab
   .mtabs #teamPick:not(.on) summary::before,.mtabs #teamPick.last:not(.on) summary{font-size:15px}
   .mpanel{position:fixed;left:12px;right:12px;top:calc(var(--mh,96px) + 6px);min-width:0}
   /* 舊手機規則 #posSeg{display:none}（位置要點 .pbtn 才展開）：位置列搬進篩選欄後直接攤開 */
-  .fbar{gap:8px 12px;padding:8px 0 2px}
+  .fbar{gap:6px 12px;padding:6px 0 2px}
   .fbar .fg{gap:6px}
   .fbar #posSeg{display:flex;position:static;box-shadow:none}
-  .fbar .seg button{height:32px;padding:0 10px}
-  .fbar .seg a{padding:6px 10px}
-  .fbar .fg.fpos{order:3;flex-basis:100%}
+  .fbar .seg a,.fbar .seg button{height:32px;padding:0 10px}
+  .fbar .fg.fpos{order:3;flex-basis:100%;min-width:0}
+  .fbar .fg.fpos #fPos{min-width:0;flex:0 1 auto;overflow-x:auto;scrollbar-width:none;border-radius:6px}   /* 位置放不下時整組橫向捲，不換行 */
+  .fbar .fg.fpos #fPos::-webkit-scrollbar{display:none}
   .mast .pn{top:calc(var(--mh,96px) + 6px);right:12px;width:calc(100vw - 24px)}
   .msearch .sbox{position:fixed;width:auto;left:12px;right:12px;top:calc(var(--mh,96px) + 6px);z-index:20;padding:10px;background:var(--panel-2);border:1px solid var(--line);border-radius:8px;box-shadow:0 14px 36px rgba(0,0,0,.6)}
   .msearch #q,.msearch #q:focus{height:40px;font-size:16px}
   .mtabs .tpick .tpop{position:fixed;left:12px!important;right:12px;top:calc(var(--mh,96px) + 6px);width:auto}
 }
 @media (prefers-reduced-motion:reduce){.mast.ready .mind,.msearch #q{transition:none}}
+/* 表格外觀（使用者 2026-11-11）：乾淨扁平，不做玻璃。表身單一底色（--panel），列線 1px 低對比；分組只在第一欄左邊畫細線；
+   hover／選中＝同色底再疊一層亮度（sticky 欄也不透明，不透出後面捲動的數字）；選中列名字格左側 2px 金條，不再整格金底。
+   數值顏色分級、OVR 徽章、隊色不動。雙 id（#tbl#tbl）壓過 season_nav／enrich_roster_viewer 前面各層補丁 */
+div.tbox{background:var(--panel)}
+#tbl{--hov:linear-gradient(rgba(255,255,255,.04),rgba(255,255,255,.04));--selbg:linear-gradient(rgba(255,255,255,.075),rgba(255,255,255,.075));--selh:linear-gradient(rgba(255,255,255,.10),rgba(255,255,255,.10))}
+#tbl#tbl thead th,#tbl#tbl th.nm{background:#10151a}
+#tbl#tbl thead tr.grp th{color:var(--muted);font-size:.72rem;font-weight:600}
+#tbl#tbl tbody td{background-color:var(--panel);background-image:none;border-bottom:1px solid rgba(255,255,255,.05)}
+#tbl#tbl tbody tr:hover td{background-image:var(--hov)}
+#tbl#tbl tbody tr.sel td{background-image:var(--selbg)}
+#tbl#tbl tbody tr.sel:hover td{background-image:var(--selh)}
+#tbl#tbl tbody tr.sel td.nm{color:var(--fg);box-shadow:inset 2px 0 0 var(--gold),inset -1px 0 0 var(--line)}
+#tbl#tbl tbody tr.sel td.sub{color:var(--muted)}
+#tbl#tbl tbody tr.sel .tabbr{color:var(--tt)}
+#tbl#tbl tbody tr.sel td.ovr .ob{background:none}
+#tbl#tbl tbody tr.sel td.ovr .ob.t6{background:linear-gradient(135deg,#f3e6ff,#c896ff 45%,#a466ff);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+#tbl#tbl tbody tr.sel td.nm.rk .nf,#tbl#tbl tbody tr.sel td.nm.rk .ns{background:linear-gradient(105deg,transparent 0 38%,rgba(255,255,255,.55) 46%,transparent 54%),linear-gradient(176deg,#e6f3fc 0%,#a8d0ec 45%,#6a9fc6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+#tbl#tbl tbody tr.sel td.nm .rkp{background:linear-gradient(160deg,#e6f3fc 0%,#a8d0ec 45%,#6a9fc6 100%)}
 </style>"""
 
 # 頁尾腳本：搬元素、分頁底線、篩選小點、手機搜尋、捲動陰影

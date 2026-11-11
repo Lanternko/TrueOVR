@@ -836,15 +836,20 @@ function lockCols() {
   const sum = a => a.reduce((x, y) => x + y, 0);
   st.team = 'ALL'; st.rk = false; st.pos = 'ALL'; st.q = ''; SIZE = 1e5;   // 切換檢視時可能已選了位置／搜尋，也要照全部球員量
   // 精簡檢視（使用者 2026-11-10）：欄位少了，桌機表格仍撐到「詳細」的總寬——頁首與卡片寬度（--tw）跟表格寬，不能一切換就縮
-  st.view = 'full'; const wf = meas(); let ws = wf;
+  // 欄寬一致（使用者 2026-11-11）：桌機詳細檢視的能力值欄一律取最寬那欄的自然寬；精簡檢視固定欄（# 球員 位置 球隊 OVR）維持量測寬，
+  // 其餘欄（能力值＋MPG）平均分剩下的寬度，等寬（原本「自然寬＋平均分攤」，自然寬不同就不等寬）
+  const keys = () => [...t.querySelectorAll('thead tr:last-child th')].filter(th => getComputedStyle(th).display !== 'none').map(th => th.dataset.k);
+  const fixed = k => !k || k === 'name' || k === 'pos' || k === 'team' || k === 'ovr';   // 不分到寬度的欄（# 球員 位置 球隊 OVR）
+  const desk = matchMedia('(min-width:641px)').matches;
+  st.view = 'full'; const wf0 = meas(), kf = keys();
+  const eqf = k => !fixed(k) && !['ht', 'min', 'gp', 'dovr', 'form'].includes(k);
+  const mxw = Math.max(...wf0.filter((w, i) => eqf(kf[i])));
+  const wf = desk ? wf0.map((w, i) => eqf(kf[i]) ? mxw : w) : wf0; let ws = wf;
   if (V !== 'full') {
-    st.view = V; ws = meas();
-    const ks = [...t.querySelectorAll('thead tr:last-child th')].filter(th => getComputedStyle(th).display !== 'none').map(th => th.dataset.k);
-    const fixed = k => !k || k === 'name' || k === 'pos' || k === 'team' || k === 'ovr';   // 不分到寬度的欄（# 球員 位置 球隊 OVR）
-    if (matchMedia('(min-width:641px)').matches) {
-      // 桌機：多出的寬度（詳細總寬 − 精簡自然寬）平均分給數字欄，不全塞給球員欄
-      const ex = Math.max(0, sum(wf) - sum(ws)) / ks.filter(k => !fixed(k)).length;
-      ws = ws.map((w, i) => fixed(ks[i]) ? w : w + ex);
+    st.view = V; ws = meas(); const ks = keys();
+    if (desk) {
+      const each = Math.floor((sum(wf) - sum(ws.filter((w, i) => fixed(ks[i])))) / ks.filter(k => !fixed(k)).length * 100) / 100;
+      ws = ws.map((w, i) => fixed(ks[i]) ? w : Math.max(w, each));
     } else {
       // 手機：不捲動的第一屏＝ # 球員 OVR ＋ 四個大類（等寬），右邊只露 12px 的 OUT 當往右滑的提示
       const big = new Set(['offR', 'defR', 'play', 'rebound']), bw = Math.floor((t.parentElement.clientWidth - 12 - sum(ws.filter((w, i) => fixed(ks[i])))) / 4);
@@ -853,7 +858,7 @@ function lockCols() {
   }
   SIZE = SZ; [st.team, st.rk, st.pos, st.q] = tm; st.view = V;
   t.insertAdjacentHTML('afterbegin', '<colgroup>' + ws.map(w => `<col style="width:${w}px">`).join('') + '</colgroup>');
-  s.tableLayout = 'fixed'; s.width = sum(V !== 'full' && matchMedia('(min-width:641px)').matches ? wf : ws) + 'px';
+  s.tableLayout = 'fixed'; s.width = sum(V !== 'full' && desk ? wf : ws) + 'px';
   render();
 }
 // 不在每次 resize 重鎖（使用者 2026-11-03：Ctrl+- 時整張先膨脹再收回、很卡＝拆掉欄寬重畫全部球員）。
