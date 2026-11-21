@@ -1,0 +1,711 @@
+{
+ "n": 379,
+ "onSource": "reports/card-0.1.2+E065-inout-wins/winimp.csv",
+ "offSource": "reports/sim-0.1.0+E117-fatigue-off/winimp-off.csv",
+ "rankDefinition": "rank 1 = highest winsPer82 (descending, average rank for ties); rank change = rank_on - rank_off, positive = rises when fatigue is off",
+ "main": {
+  "spearman_on_off": 0.9079411994508306,
+  "meanAbsRankChange": 36.23482849604222,
+  "medianAbsRankChange": 29.5,
+  "meanWinsOn": 1.4668455145118733,
+  "meanWinsOff": 1.7730156992084432,
+  "top10Rises": [
+   {
+    "name": "Jordan Poole",
+    "pos": "SG",
+    "mpg": 23.92915,
+    "stamina": 56.75898931000972,
+    "rankOn": 332.5,
+    "rankOff": 186.5,
+    "rankChange": 146.0,
+    "winsOn": -2.39167,
+    "winsOff": 1.36667
+   },
+   {
+    "name": "Carter Bryant",
+    "pos": "SG",
+    "mpg": 11.51923,
+    "stamina": 40,
+    "rankOn": 297.0,
+    "rankOff": 172.5,
+    "rankChange": 124.5,
+    "winsOn": -1.49479,
+    "winsOff": 1.62292
+   },
+   {
+    "name": "Jamison Battle",
+    "pos": "SG",
+    "mpg": 8.47178,
+    "stamina": 40,
+    "rankOn": 257.0,
+    "rankOff": 134.5,
+    "rankChange": 122.5,
+    "winsOn": -0.5125,
+    "winsOff": 2.77604
+   },
+   {
+    "name": "Cam Thomas",
+    "pos": "SG",
+    "mpg": 20.96492,
+    "stamina": 44.12536443148688,
+    "rankOn": 354.5,
+    "rankOff": 239.0,
+    "rankChange": 115.5,
+    "winsOn": -3.075,
+    "winsOff": 0.12813
+   },
+   {
+    "name": "Shaedon Sharpe",
+    "pos": "SG",
+    "mpg": 29.42603,
+    "stamina": 78.80709426627794,
+    "rankOn": 260.5,
+    "rankOff": 153.5,
+    "rankChange": 107.0,
+    "winsOn": -0.59792,
+    "winsOff": 2.30625
+   },
+   {
+    "name": "Jabari Walker",
+    "pos": "PF",
+    "mpg": 11.90107,
+    "stamina": 40,
+    "rankOn": 254.0,
+    "rankOff": 147.5,
+    "rankChange": 106.5,
+    "winsOn": -0.46979,
+    "winsOff": 2.43437
+   },
+   {
+    "name": "Nique Clifford",
+    "pos": "SG",
+    "mpg": 25.09233,
+    "stamina": 60.646258503401356,
+    "rankOn": 345.5,
+    "rankOff": 239.0,
+    "rankChange": 106.5,
+    "winsOn": -2.73333,
+    "winsOff": 0.12813
+   },
+   {
+    "name": "Marcus Smart",
+    "pos": "SG",
+    "mpg": 28.53191,
+    "stamina": 75.75396825396825,
+    "rankOn": 362.0,
+    "rankOff": 256.0,
+    "rankChange": 106.0,
+    "winsOn": -3.50208,
+    "winsOff": -0.25625
+   },
+   {
+    "name": "Grayson Allen",
+    "pos": "SG",
+    "mpg": 28.77016,
+    "stamina": 76.22367994816975,
+    "rankOn": 288.5,
+    "rankOff": 183.0,
+    "rankChange": 105.5,
+    "winsOn": -1.28125,
+    "winsOff": 1.40938
+   },
+   {
+    "name": "Ochai Agbaji",
+    "pos": "SG",
+    "mpg": 15.69683,
+    "stamina": 40,
+    "rankOn": 325.5,
+    "rankOff": 223.5,
+    "rankChange": 102.0,
+    "winsOn": -2.17813,
+    "winsOff": 0.42708
+   }
+  ],
+  "top10Falls": [
+   {
+    "name": "Rasheer Fleming",
+    "pos": "PF",
+    "mpg": 12.24367,
+    "stamina": 40,
+    "rankOn": 142.5,
+    "rankOff": 268.0,
+    "rankChange": -125.5,
+    "winsOn": 2.26354,
+    "winsOff": -0.5125
+   },
+   {
+    "name": "Keaton Wallace",
+    "pos": "PG",
+    "mpg": 10.11302,
+    "stamina": 40,
+    "rankOn": 186.5,
+    "rankOff": 305.0,
+    "rankChange": -118.5,
+    "winsOn": 1.11042,
+    "winsOff": -1.06771
+   },
+   {
+    "name": "Maxime Raynaud",
+    "pos": "C",
+    "mpg": 26.53892,
+    "stamina": 66.96307094266278,
+    "rankOn": 148.0,
+    "rankOff": 263.0,
+    "rankChange": -115.0,
+    "winsOn": 2.17813,
+    "winsOff": -0.42708
+   },
+   {
+    "name": "Dru Smith",
+    "pos": "PG",
+    "mpg": 16.3044,
+    "stamina": 40,
+    "rankOn": 61.5,
+    "rankOff": 167.0,
+    "rankChange": -105.5,
+    "winsOn": 4.69792,
+    "winsOff": 1.87917
+   },
+   {
+    "name": "Craig Porter Jr.",
+    "pos": "PG",
+    "mpg": 17.93221,
+    "stamina": 40,
+    "rankOn": 129.0,
+    "rankOff": 231.0,
+    "rankChange": -102.0,
+    "winsOn": 2.73333,
+    "winsOff": 0.25625
+   },
+   {
+    "name": "Jerami Grant",
+    "pos": "SF",
+    "mpg": 29.73863,
+    "stamina": 80.45108519598315,
+    "rankOn": 179.0,
+    "rankOff": 280.0,
+    "rankChange": -101.0,
+    "winsOn": 1.32396,
+    "winsOff": -0.64063
+   },
+   {
+    "name": "Egor Dëmin",
+    "pos": "PG",
+    "mpg": 25.15785,
+    "stamina": 61.13216715257532,
+    "rankOn": 217.5,
+    "rankOff": 318.0,
+    "rankChange": -100.5,
+    "winsOn": 0.46979,
+    "winsOff": -1.40938
+   },
+   {
+    "name": "Pascal Siakam",
+    "pos": "PF",
+    "mpg": 33.1718,
+    "stamina": 91.95902170391966,
+    "rankOn": 79.5,
+    "rankOff": 178.5,
+    "rankChange": -99.0,
+    "winsOn": 4.22812,
+    "winsOff": 1.49479
+   },
+   {
+    "name": "Isaiah Collier",
+    "pos": "PG",
+    "mpg": 25.71051,
+    "stamina": 62.10398445092322,
+    "rankOn": 176.0,
+    "rankOff": 274.0,
+    "rankChange": -98.0,
+    "winsOn": 1.36667,
+    "winsOff": -0.55521
+   },
+   {
+    "name": "Javonte Green",
+    "pos": "SF",
+    "mpg": 17.63368,
+    "stamina": 40,
+    "rankOn": 161.5,
+    "rankOff": 259.0,
+    "rankChange": -97.5,
+    "winsOn": 1.75104,
+    "winsOff": -0.29896
+   }
+  ],
+  "W2_top20": {
+   "kept": [
+    "Donovan Clingan",
+    "Donovan Mitchell",
+    "Giannis Antetokounmpo",
+    "Isaiah Hartenstein",
+    "Jalen Duren",
+    "Joel Embiid",
+    "Kawhi Leonard",
+    "Luka Dončić",
+    "Mitchell Robinson",
+    "Neemias Queta",
+    "Nikola Jokić",
+    "Rudy Gobert",
+    "Shai Gilgeous-Alexander",
+    "Victor Wembanyama"
+   ],
+   "enteredWhenOff": [
+    "Devin Booker",
+    "Jimmy Butler III",
+    "Kel'el Ware",
+    "Kevin Porter Jr.",
+    "Moussa Diabaté",
+    "Ryan Kalkbrenner"
+   ],
+   "leftWhenOff": [
+    "Alperen Sengun",
+    "Evan Mobley",
+    "Mark Williams",
+    "Scottie Barnes",
+    "Tyrese Maxey",
+    "Zion Williamson"
+   ],
+   "rankOffOfEntered": {
+    "Devin Booker": 20.0,
+    "Kevin Porter Jr.": 15.0,
+    "Ryan Kalkbrenner": 12.0,
+    "Moussa Diabaté": 18.0,
+    "Jimmy Butler III": 11.0,
+    "Kel'el Ware": 17.0
+   },
+   "rankOffOfLeft": {
+    "Zion Williamson": 46.0,
+    "Tyrese Maxey": 22.5,
+    "Scottie Barnes": 21.0,
+    "Alperen Sengun": 26.0,
+    "Mark Williams": 24.5,
+    "Evan Mobley": 49.0
+   }
+  },
+  "W3_staminaQuartiles": {
+   "cutPoints25_50_75": [
+    40.0,
+    55.78717201166181,
+    78.21995464852608
+   ],
+   "note": "quartile 1 = lowest stamina",
+   "groups": [
+    {
+     "quartile": 1,
+     "staminaRange": [
+      40.0,
+      40.0
+     ],
+     "n": 123,
+     "meanRankChange": -5.085365853658536,
+     "meanMpg": 16.057809349593498,
+     "meanWinsChange": 0.13229138211382116
+    },
+    {
+     "quartile": 2,
+     "staminaRange": [
+      40.23809523809524,
+      55.78717201166181
+     ],
+     "n": 67,
+     "meanRankChange": 4.940298507462686,
+     "meanMpg": 21.837957761194026,
+     "meanWinsChange": 0.49210194029850746
+    },
+    {
+     "quartile": 3,
+     "staminaRange": [
+      56.030126336248784,
+      78.1025267249757
+     ],
+     "n": 94,
+     "meanRankChange": 2.6382978723404253,
+     "meanMpg": 26.621521914893616,
+     "meanWinsChange": 0.43526138297872347
+    },
+    {
+     "quartile": 4,
+     "staminaRange": [
+      78.33738257207645,
+      99.0
+     ],
+     "n": 95,
+     "meanRankChange": 0.48947368421052634,
+     "meanMpg": 32.201745578947374,
+     "meanWinsChange": 0.2724343157894737
+    }
+   ],
+   "ties": "stamina has many ties at 40/99; digitize(right=True) splits by cut points so group sizes are uneven"
+  },
+  "spearman_stamina_vs_rankChange": 0.03780654497006766
+ },
+ "pos": {
+  "spearman_on_off": 0.7661679524978277,
+  "meanAbsRankChange": 56.422163588390504,
+  "medianAbsRankChange": 43.5,
+  "meanWinsOn": 0.08936100263852241,
+  "meanWinsOff": 0.251404327176781,
+  "top10Rises": [
+   {
+    "name": "Deni Avdija",
+    "pos": "PG",
+    "mpg": 33.32402,
+    "stamina": 93.36815678652414,
+    "rankOn": 269.5,
+    "rankOff": 69.5,
+    "rankChange": 200.0,
+    "winsOn": -1.58021,
+    "winsOff": 2.51979
+   },
+   {
+    "name": "Royce O'Neale",
+    "pos": "PF",
+    "mpg": 28.37248,
+    "stamina": 74.81454486556527,
+    "rankOn": 308.5,
+    "rankOff": 122.0,
+    "rankChange": 186.5,
+    "winsOn": -2.43437,
+    "winsOff": 1.5375
+   },
+   {
+    "name": "LaMelo Ball",
+    "pos": "PG",
+    "mpg": 28.02009,
+    "stamina": 73.4054097829608,
+    "rankOn": 235.0,
+    "rankOff": 67.5,
+    "rankChange": 167.5,
+    "winsOn": -1.025,
+    "winsOff": 2.5625
+   },
+   {
+    "name": "Cameron Johnson",
+    "pos": "SF",
+    "mpg": 30.50059,
+    "stamina": 83.97392290249434,
+    "rankOn": 208.5,
+    "rankOff": 41.5,
+    "rankChange": 167.0,
+    "winsOn": -0.5125,
+    "winsOff": 3.54479
+   },
+   {
+    "name": "Darius Garland",
+    "pos": "PG",
+    "mpg": 29.87281,
+    "stamina": 81.1556527372854,
+    "rankOn": 253.0,
+    "rankOff": 87.0,
+    "rankChange": 166.0,
+    "winsOn": -1.32396,
+    "winsOff": 2.22083
+   },
+   {
+    "name": "Micah Peavy",
+    "pos": "SF",
+    "mpg": 14.96615,
+    "stamina": 40,
+    "rankOn": 302.5,
+    "rankOff": 137.5,
+    "rankChange": 165.0,
+    "winsOn": -2.26354,
+    "winsOff": 1.23854
+   },
+   {
+    "name": "LeBron James",
+    "pos": "SF",
+    "mpg": 33.15092,
+    "stamina": 91.48931000971817,
+    "rankOn": 212.0,
+    "rankOff": 47.5,
+    "rankChange": 164.5,
+    "winsOn": -0.59792,
+    "winsOff": 3.28854
+   },
+   {
+    "name": "Devin Vassell",
+    "pos": "SF",
+    "mpg": 30.51092,
+    "stamina": 84.20877874959507,
+    "rankOn": 235.0,
+    "rankOff": 75.0,
+    "rankChange": 160.0,
+    "winsOn": -1.025,
+    "winsOff": 2.39167
+   },
+   {
+    "name": "Craig Porter Jr.",
+    "pos": "PG",
+    "mpg": 17.93221,
+    "stamina": 40,
+    "rankOn": 245.5,
+    "rankOff": 96.5,
+    "rankChange": 149.0,
+    "winsOn": -1.23854,
+    "winsOff": 2.00729
+   },
+   {
+    "name": "Kasparas Jakučionis",
+    "pos": "PG",
+    "mpg": 17.82318,
+    "stamina": 40,
+    "rankOn": 360.0,
+    "rankOff": 212.0,
+    "rankChange": 148.0,
+    "winsOn": -4.6125,
+    "winsOff": -0.17083
+   }
+  ],
+  "top10Falls": [
+   {
+    "name": "Jakob Poeltl",
+    "pos": "C",
+    "mpg": 24.97957,
+    "stamina": 59.91739552964043,
+    "rankOn": 72.0,
+    "rankOff": 341.5,
+    "rankChange": -269.5,
+    "winsOn": 2.39167,
+    "winsOff": -3.37396
+   },
+   {
+    "name": "Brook Lopez",
+    "pos": "C",
+    "mpg": 21.80364,
+    "stamina": 48.01263362487852,
+    "rankOn": 121.5,
+    "rankOff": 335.0,
+    "rankChange": -213.5,
+    "winsOn": 1.23854,
+    "winsOff": -3.16042
+   },
+   {
+    "name": "Jericho Sims",
+    "pos": "C",
+    "mpg": 19.66918,
+    "stamina": 40,
+    "rankOn": 117.0,
+    "rankOff": 320.0,
+    "rankChange": -203.0,
+    "winsOn": 1.28125,
+    "winsOff": -2.64792
+   },
+   {
+    "name": "Tristan Vukcevic",
+    "pos": "C",
+    "mpg": 13.69347,
+    "stamina": 40,
+    "rankOn": 165.0,
+    "rankOff": 361.0,
+    "rankChange": -196.0,
+    "winsOn": 0.42708,
+    "winsOff": -4.35625
+   },
+   {
+    "name": "Isaiah Hartenstein",
+    "pos": "C",
+    "mpg": 24.20053,
+    "stamina": 57.730806608357625,
+    "rankOn": 23.0,
+    "rankOff": 212.0,
+    "rankChange": -189.0,
+    "winsOn": 5.03958,
+    "winsOff": -0.17083
+   },
+   {
+    "name": "Jay Huff",
+    "pos": "C",
+    "mpg": 20.96638,
+    "stamina": 44.36831875607386,
+    "rankOn": 92.0,
+    "rankOff": 274.5,
+    "rankChange": -182.5,
+    "winsOn": 1.92188,
+    "winsOff": -1.5375
+   },
+   {
+    "name": "Moussa Cisse",
+    "pos": "C",
+    "mpg": 13.93632,
+    "stamina": 40,
+    "rankOn": 43.5,
+    "rankOff": 221.0,
+    "rankChange": -177.5,
+    "winsOn": 3.88646,
+    "winsOff": -0.42708
+   },
+   {
+    "name": "Kevin Huerter",
+    "pos": "SG",
+    "mpg": 22.45039,
+    "stamina": 51.413994169096206,
+    "rankOn": 108.0,
+    "rankOff": 269.5,
+    "rankChange": -161.5,
+    "winsOn": 1.40938,
+    "winsOff": -1.40938
+   },
+   {
+    "name": "Dwight Powell",
+    "pos": "C",
+    "mpg": 14.35574,
+    "stamina": 40,
+    "rankOn": 74.5,
+    "rankOff": 234.5,
+    "rankChange": -160.0,
+    "winsOn": 2.34896,
+    "winsOff": -0.68333
+   },
+   {
+    "name": "Andre Drummond",
+    "pos": "C",
+    "mpg": 19.53569,
+    "stamina": 40,
+    "rankOn": 130.0,
+    "rankOff": 288.5,
+    "rankChange": -158.5,
+    "winsOn": 1.06771,
+    "winsOff": -1.83646
+   }
+  ],
+  "W2_top20": {
+   "kept": [
+    "Chet Holmgren",
+    "Donovan Mitchell",
+    "Evan Mobley",
+    "Giannis Antetokounmpo",
+    "Kawhi Leonard",
+    "Kevin Porter Jr.",
+    "Lauri Markkanen",
+    "Luka Dončić",
+    "Nikola Jokić",
+    "Rudy Gobert",
+    "Scottie Barnes",
+    "Shai Gilgeous-Alexander",
+    "Victor Wembanyama"
+   ],
+   "enteredWhenOff": [
+    "Isaiah Stewart",
+    "Jimmy Butler III",
+    "Josh Minott",
+    "Karlo Matković",
+    "Kon Knueppel",
+    "OG Anunoby",
+    "Tyrese Maxey"
+   ],
+   "leftWhenOff": [
+    "Brandon Miller",
+    "Jalen Smith",
+    "Mitchell Robinson",
+    "Moussa Diabaté",
+    "Neemias Queta",
+    "Ryan Kalkbrenner",
+    "Zion Williamson"
+   ],
+   "rankOffOfEntered": {
+    "Josh Minott": 14.5,
+    "Karlo Matković": 11.0,
+    "OG Anunoby": 13.0,
+    "Tyrese Maxey": 18.0,
+    "Isaiah Stewart": 19.0,
+    "Kon Knueppel": 14.5,
+    "Jimmy Butler III": 16.5
+   },
+   "rankOffOfLeft": {
+    "Zion Williamson": 23.0,
+    "Jalen Smith": 28.0,
+    "Neemias Queta": 21.0,
+    "Ryan Kalkbrenner": 87.0,
+    "Moussa Diabaté": 84.0,
+    "Mitchell Robinson": 26.0,
+    "Brandon Miller": 32.5
+   }
+  },
+  "W3_staminaQuartiles": {
+   "cutPoints25_50_75": [
+    40.0,
+    55.78717201166181,
+    78.21995464852608
+   ],
+   "note": "quartile 1 = lowest stamina",
+   "groups": [
+    {
+     "quartile": 1,
+     "staminaRange": [
+      40.0,
+      40.0
+     ],
+     "n": 123,
+     "meanRankChange": -4.939024390243903,
+     "meanMpg": 16.057809349593498,
+     "meanWinsChange": 0.07083284552845528
+    },
+    {
+     "quartile": 2,
+     "staminaRange": [
+      40.23809523809524,
+      55.78717201166181
+     ],
+     "n": 67,
+     "meanRankChange": -17.69402985074627,
+     "meanMpg": 21.837957761194026,
+     "meanWinsChange": -0.28111014925373135
+    },
+    {
+     "quartile": 3,
+     "staminaRange": [
+      56.030126336248784,
+      78.1025267249757
+     ],
+     "n": 94,
+     "meanRankChange": 1.425531914893617,
+     "meanMpg": 26.621521914893616,
+     "meanWinsChange": 0.1276703191489361
+    },
+    {
+     "quartile": 4,
+     "staminaRange": [
+      78.33738257207645,
+      99.0
+     ],
+     "n": 95,
+     "meanRankChange": 17.46315789473684,
+     "meanMpg": 32.201745578947374,
+     "meanWinsChange": 0.6266878947368422
+    }
+   ],
+   "ties": "stamina has many ties at 40/99; digitize(right=True) splits by cut points so group sizes are uneven"
+  },
+  "spearman_stamina_vs_rankChange": 0.1113053807791557
+ },
+ "W5_rho": {
+  "main": {
+   "rho_on": {
+    "AB": 0.41395302872098166,
+    "BA": 0.3508761483659666
+   },
+   "rho_off": {
+    "AB": 0.3828863010599392,
+    "BA": 0.3857346636582877
+   },
+   "rho_on_mean": 0.3824145885434741,
+   "rho_off_mean": 0.38431048235911347,
+   "diff": 0.0018958938156393712
+  },
+  "pos": {
+   "rho_on": {
+    "AB": 0.29144678646221606,
+    "BA": 0.31660787460492495
+   },
+   "rho_off": {
+    "AB": 0.30740062891775527,
+    "BA": 0.300752705499527
+   },
+   "rho_on_mean": 0.3040273305335705,
+   "rho_off_mean": 0.3040766672086411,
+   "diff": 4.933667507062145e-05
+  }
+ }
+}

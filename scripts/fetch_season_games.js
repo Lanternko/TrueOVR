@@ -1,11 +1,14 @@
 import fs from 'node:fs/promises';
 
 // Separate snapshots: do not overwrite the fixed-five benchmark's sources.
-const season = '2025-26';
-const directory = new URL('../data/season-source/', import.meta.url);
+// 用法：node scripts/fetch_season_games.js [季別]；預設 2025-26 寫 data/season-source/，其他季寫 data/season-source-<季別>/。
+const season = process.argv[2] || '2025-26';
+const directory = new URL(season==='2025-26' ? '../data/season-source/' : `../data/season-source-${season}/`, import.meta.url);
+// 整季才檢查球隊列數（30 隊 × 82 場）；賽季進行中不檢查。
+const fullTeamRows = season==='2025-26' ? 2460 : null;
 await fs.mkdir(directory, {recursive:true});
 let teamGames;
-for (const [name, kind, expected] of [['team-games','T',2460], ['player-games','P',null]]) {
+for (const [name, kind, expected] of [['team-games','T',fullTeamRows], ['player-games','P',null]]) {
   const query = new URLSearchParams({Counter:'1000',DateFrom:'',DateTo:'',Direction:'DESC',
     LeagueID:'00',Season:season,SeasonType:'Regular Season',Sorter:'DATE',PlayerOrTeam:kind});
   const url = `https://stats.nba.com/stats/leaguegamelog?${query}`;

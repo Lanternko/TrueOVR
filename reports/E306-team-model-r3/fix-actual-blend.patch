@@ -1,0 +1,23 @@
+diff --git a/scripts/actual_blend.py b/scripts/actual_blend.py
+index 02a7fb5d..b8c33144 100644
+--- a/scripts/actual_blend.py
++++ b/scripts/actual_blend.py
+@@ -69,7 +69,8 @@ def _rotations(games: dict, folder: str | None = None):
+ 
+     def rk(f):
+         if f not in cache:
+-            R = list(csv.DictReader(open(LIVE / f / 'ranking.csv', encoding='utf-8')))
++            d_ = Path(f) if (Path(f) / 'ranking.csv').exists() else LIVE / f      # 每日流程傳的是 build 夾的實際路徑（E-306：只給夾名會找不到檔，殘差混入整個失效）
++            R = list(csv.DictReader(open(d_ / 'ranking.csv', encoding='utf-8')))
+             cache[f] = ({int(x['playerId']): float(x['MPGhat']) for x in R}, {int(x['playerId']): float(x['ovr']) for x in R})
+         return cache[f]
+     for g in games.values():
+@@ -147,7 +148,7 @@ def today_margins(today: str, live_dir, log=None) -> dict:
+     import e229_live
+     from e227_model import predict
+     torch.set_num_threads(4)
+-    _rotations(todo, folder=live_dir.name)
++    _rotations(todo, folder=str(live_dir.resolve()))
+     names = {p: 1 for g in todo.values() for s in ('home', 'away') for p, _ in g['rot_' + s]}
+     C, _ = e229_live.make_ctx(today, str(live_dir), names)
+     pos = torch.tensor(list(range(5)) * 2).unsqueeze(0); side = torch.tensor([0] * 5 + [1] * 5).unsqueeze(0)

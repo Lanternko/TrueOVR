@@ -9,3 +9,16 @@ __pycache__/
 *.pyc
 *.log
 /test/.defense_eighth_b_serialized.js
+
+# 外部工具快取
+/graphify-out/
+
+# scripts/ 產生器（build_defense_seventh_base.js、run_defense_eighth_c_versions.js、build_inseason_stints.js 等）跑的時候
+# 寫出的暫時補丁副本，每次重跑都會重產；舊的已搬到 scripts/archive/generated/
+/scripts/.*
+
+# memory 摘要表是本機產生物（python memory/build_digest.py），不進 git
+/memory/digest.md
+
+# E-225 資料（可由 build_dataset.py 重產；sha256 見 manifest.json）
+reports/E225-lineup-transformer/data/

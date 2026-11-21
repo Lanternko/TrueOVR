@@ -1,0 +1,115 @@
+{
+ "calibration": {
+  "k": 2,
+  "c": -0.05625,
+  "pace": 0.998125
+ },
+ "j0": {
+  "k1_identical_to_rr_on": true,
+  "games": 13920,
+  "npm_test_log_tail": [
+   "Timed game: 60 full games; accounting, rotation, clock, FT, assists, overtime, replay and legacy parity passed. 6978 substitutions, 597 and-ones, 246 FT rebounds.",
+   "....",
+   "----------------------------------------------------------------------",
+   "Ran 4 tests in 5.572s",
+   "",
+   "OK"
+  ]
+ },
+ "j1": {
+  "base_mean_gap": 90.58333333333333,
+  "new_mean_gap": 78.97222222222223,
+  "improvement": 11.6111111111111,
+  "pass": true
+ },
+ "j2": {
+  "base_spearman": 0.3882827014454702,
+  "new_spearman": 0.4315805995919008,
+  "delta": 0.04329789814643059,
+  "pass": true
+ },
+ "j3": {
+  "base_mae": 3.222005333333333,
+  "new_mae": 3.3763156781609194,
+  "delta": 0.1543103448275862,
+  "pass": false
+ },
+ "C_mean_gap": {
+  "base": -60.08474576271186,
+  "new": -56.6271186440678,
+  "n": 59
+ },
+ "adopt": false,
+ "league_judge_seeds": {
+  "base": {
+   "foulPer100": 10.743840346880555,
+   "possPerTeamGame": 100.50165229885057,
+   "ptsPerTeamGame": 118.98369252873563,
+   "ftaPerTeamGame": 23.788541666666667
+  },
+  "new": {
+   "foulPer100": 10.679590128561248,
+   "possPerTeamGame": 100.46253591954023,
+   "ptsPerTeamGame": 118.86002155172413,
+   "ftaPerTeamGame": 23.657830459770114
+  }
+ }
+}
+  Shai Gilgeous-Alexander  PG D +2.41 ans   2 | base   2 -> new   2
+  Kawhi Leonard            SF D +2.09 ans   3 | base   4 -> new   4
+  Franz Wagner             SF D +4.36 ans   4 | base  66 -> new  68
+  Giannis Antetokounmpo    PF D +2.06 ans   5 | base   7 -> new   7
+  Draymond Green           PF D +4.93 ans   6 | base 193 -> new 145
+  Derrick White            PG D +2.94 ans   7 | base  68 -> new  54
+  Herbert Jones            SG D +3.48 ans   9 | base 254 -> new 236
+  Donovan Mitchell         SG D +1.70 ans  12 | base  19 -> new  21
+  Tobias Harris            PF D +2.28 ans  20 | base 228 -> new 205
+  Chet Holmgren            PF D +1.50 ans  21 | base  40 -> new  16
+  Aaron Gordon             PF D +2.50 ans  23 | base 159 -> new 136
+  Dean Wade                PF D +3.82 ans  24 | base 227 -> new 203
+  Ja Morant                PG D +1.97 ans  29 | base 219 -> new 231
+  Jaren Jackson Jr.        PF D +2.61 ans  31 | base 125 -> new 106
+  Toumani Camara           PF D +2.94 ans  35 | base 153 -> new 128
+  Dillon Brooks            SF D +3.18 ans  36 | base 158 -> new 140
+  Jrue Holiday             PG D +2.31 ans  37 | base  64 -> new  45
+  OG Anunoby               SF D +2.35 ans  38 | base  78 -> new  62
+  Evan Mobley              PF D +2.04 ans  41 | base  27 -> new  19
+  Alex Caruso              SG D +4.58 ans  45 | base 145 -> new 121
+  Immanuel Quickley        PG D +2.50 ans  49 | base  63 -> new  34
+  AJ Green                 SG D +2.38 ans  53 | base 180 -> new 198
+  Kenrich Williams         PF D +2.62 ans  61 | base 179 -> new 172
+  Kentavious Caldwell-Pope SF D +1.98 ans  62 | base 251 -> new 258
+  Marcus Smart             SG D +1.96 ans  66 | base 271 -> new 264
+  Derrick Jones Jr.        PF D +2.49 ans  67 | base 200 -> new 177
+  Ausar Thompson           SF D +2.22 ans  68 | base  79 -> new  79
+  Tari Eason               SG D +1.77 ans  80 | base 140 -> new 126
+  Miles McBride            PG D +1.81 ans  84 | base 234 -> new 227
+  Rui Hachimura            PF D +1.63 ans  96 | base 253 -> new 246
+  Josh Okogie              SG D +2.30 ans 101 | base 151 -> new 151
+  Jalen Suggs              PG D +2.01 ans 102 | base  88 -> new  91
+  Jevon Carter             PG D +2.10 ans 117 | base 266 -> new 259
+  Jonathan Isaac           PF D +2.59 ans 130 | base 199 -> new 173
+  Kris Murray              SF D +2.07 ans 141 | base 218 -> new 195
+  Isaiah Stewart           PF D +1.95 ans 143 | base 101 -> new  92
+examples
+  Herbert Jones            SG ans   9 | base 254 -> new 236
+  Alex Caruso              SG ans  45 | base 145 -> new 121
+  Marcus Smart             SG ans  66 | base 271 -> new 264
+  Derrick White            PG ans   7 | base  68 -> new  54
+  Dyson Daniels            SG ans 110 | base  81 -> new  55
+  Draymond Green           PF ans   6 | base 193 -> new 145
+  Dillon Brooks            SF ans  36 | base 158 -> new 140
+  Rudy Gobert              C  ans  39 | base   5 -> new   6
+  Bam Adebayo              C  ans  86 | base  91 -> new  89
+  Jrue Holiday             PG ans  37 | base  64 -> new  45
+bigs
+  Nikola Jokić             ans   1 | base   1 -> new   1
+  Victor Wembanyama        ans  14 | base   3 -> new   3
+  Rudy Gobert              ans  39 | base   5 -> new   6
+  Mitchell Robinson        ans  58 | base   8 -> new   9
+  Donovan Clingan          ans  91 | base   9 -> new   8
+  Jalen Duren              ans 183 | base  10 -> new  10
+  Alperen Sengun           ans  25 | base  12 -> new  17
+  Joel Embiid              ans  10 | base  13 -> new  15
+  Luke Kornet              ans 109 | base  14 -> new  14
+  Isaiah Hartenstein       ans  51 | base  15 -> new  18

@@ -1,0 +1,10 @@
+{
+ "seed": 20261190,
+ "swapPathRecordsEqual": true,
+ "flagOnDoubleRunIdentical": true,
+ "flagOnDiffersFromOff": true,
+ "flagOnNsFoul": 7091,
+ "flagOffNsFoul": 6578,
+ "judgement_seed_double_run_identical": true,
+ "note": "flag off = default options (sim 0.1.3) with the E-189 engine wrapper; swap path = record-for-record equal; flag on is deterministic and differs from off (more nsfoul). 5090 vs local outputs md5-identical (checked earlier). npm test: see npm-test.log"
+}

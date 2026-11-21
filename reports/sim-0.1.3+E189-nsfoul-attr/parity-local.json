@@ -1,0 +1,8 @@
+{
+ "seed": 20261190,
+ "swapPathRecordsEqual": true,
+ "flagOnDoubleRunIdentical": true,
+ "flagOnDiffersFromOff": true,
+ "flagOnNsFoul": 7091,
+ "flagOffNsFoul": 6578
+}

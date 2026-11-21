@@ -1,0 +1,743 @@
+{
+ "generatedAt": "2026-10-21T04:14:42+00:00",
+ "threshold": 2500,
+ "commonPlayers": 575,
+ "poolSizes": {
+  "A": 408,
+  "B": 408
+ },
+ "rho2kPlayers": 575,
+ "rho2kPoolNote": "所有層（含模擬板與舊版 sim-only）共有且 merged.csv 有 overall2k 的球員",
+ "layers": {
+  "sim_v53_raw": {
+   "kind": "no-rapm",
+   "out": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.3276679238403724,
+    "def": 0.2322930630370681
+   },
+   "rho2k": 0.302069911877159,
+   "holdoutRho": "0.328 / 0.232"
+  },
+  "sim_v53_v2": {
+   "kind": "no-rapm",
+   "out": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.3556945044740645,
+    "def": 0.2461797516613408
+   },
+   "rho2k": 0.43272103990919336,
+   "holdoutRho": "0.356 / 0.246"
+  },
+  "sim_v54_raw": {
+   "kind": "no-rapm",
+   "out": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.3510246889655815,
+    "def": 0.2574269101754246
+   },
+   "rho2k": 0.3177635935388839,
+   "holdoutRho": "0.351 / 0.257"
+  },
+  "sim_v54_v2": {
+   "kind": "no-rapm",
+   "out": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.37900885653487637,
+    "def": 0.2665179134621779
+   },
+   "rho2k": 0.4572246563435796,
+   "holdoutRho": "0.379 / 0.267"
+  },
+  "legacy": {
+   "kind": "no-rapm",
+   "out": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.3375449021648902,
+    "def": 0.18318861476172332
+   },
+   "rho2k": 0.3366790452123288,
+   "holdoutRho": "0.338 / 0.183"
+  },
+  "E2": {
+   "kind": "holdout-json",
+   "out": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.4570714003369569,
+    "def": 0.244566647234581
+   },
+   "rho2k": 0.4778212899225707,
+   "fromHoldoutJson": true,
+   "holdoutRho": "0.457 / 0.245"
+  },
+  "F2": {
+   "kind": "holdout-json",
+   "out": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.4736833069884922,
+    "def": 0.2727387912978597
+   },
+   "rho2k": 0.4878294867659036,
+   "fromHoldoutJson": true,
+   "holdoutRho": "0.474 / 0.273"
+  },
+  "G3": {
+   "kind": "holdout-json",
+   "out": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.5546207576049009,
+    "def": 0.4005411917542589
+   },
+   "rho2k": 0.5299133822204477,
+   "fromHoldoutJson": true,
+   "holdoutRho": "0.555 / 0.401"
+  },
+  "H1": {
+   "kind": "holdout-json",
+   "out": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.5626649787936131,
+    "def": 0.3909101133791195
+   },
+   "rho2k": 0.5368902800736428,
+   "fromHoldoutJson": true,
+   "holdoutRho": "0.563 / 0.391"
+  },
+  "v53": {
+   "kind": "refit",
+   "out": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.4252251924774896,
+    "def": 0.23660210233262244
+   },
+   "rho2k": 0.4491775018575659,
+   "refit": {
+    "players": 582,
+    "maxAbsOvrDiff": 0.0,
+    "sameNames": true
+   },
+   "holdoutRho": "0.425 / 0.237"
+  },
+  "B12": {
+   "kind": "refit",
+   "out": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.45454626748611904,
+    "def": 0.2427980886084852
+   },
+   "rho2k": 0.48326134221238426,
+   "refit": {
+    "players": 582,
+    "maxAbsOvrDiff": 0.0,
+    "sameNames": true
+   },
+   "holdoutRho": "0.455 / 0.243"
+  },
+  "C1": {
+   "kind": "refit",
+   "out": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.45513581555615157,
+    "def": 0.2436433894824926
+   },
+   "rho2k": 0.4834555215995384,
+   "refit": {
+    "players": 582,
+    "maxAbsOvrDiff": 0.0,
+    "sameNames": true
+   },
+   "holdoutRho": "0.455 / 0.244"
+  },
+  "D1": {
+   "kind": "refit",
+   "out": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.4579877761897445,
+    "def": 0.24662784502669402
+   },
+   "rho2k": 0.48463208028578275,
+   "refit": {
+    "players": 582,
+    "maxAbsOvrDiff": 0.0,
+    "sameNames": true
+   },
+   "holdoutRho": "0.458 / 0.247"
+  },
+  "blend": {
+   "kind": "refit",
+   "out": {
+    "n": [
+     408,
+     408
+    ],
+    "net": 0.4252251924774896,
+    "def": 0.23660210233262244
+   },
+   "rho2k": 0.4491775018575659,
+   "refit": {
+    "players": 582,
+    "maxAbsOvrDiff": 0.0,
+    "sameNames": true,
+    "note": "blend.py 的 α=0.5 與 calibrate.py --alpha 0.5 輸出逐名相同，故共用 v53 重擬合版"
+   },
+   "holdoutRho": "0.425 / 0.237"
+  }
+ },
+ "refitReproduction": {
+  "v53": {
+   "players": 582,
+   "maxAbsOvrDiff": 0.0,
+   "sameNames": true
+  },
+  "B12": {
+   "players": 582,
+   "maxAbsOvrDiff": 0.0,
+   "sameNames": true
+  },
+  "C1": {
+   "players": 582,
+   "maxAbsOvrDiff": 0.0,
+   "sameNames": true
+  },
+  "D1": {
+   "players": 582,
+   "maxAbsOvrDiff": 0.0,
+   "sameNames": true
+  },
+  "blend": {
+   "players": 582,
+   "maxAbsOvrDiff": 0.0,
+   "sameNames": true,
+   "note": "blend.py 的 α=0.5 與 calibrate.py --alpha 0.5 輸出逐名相同，故共用 v53 重擬合版"
+  }
+ },
+ "teamCard": {
+  "source": "data/season-league.json 球隊 observed.PLUS_MINUS / GP（每場分差）；名單 observed.MIN 為權重",
+  "cards": [
+   {
+    "card": "legacy",
+    "teams": 30,
+    "pearsonR": 0.7911729152229992,
+    "spearmanRho": 0.7423804226918799,
+    "minutesCoverageMin": 1.0
+   },
+   {
+    "card": "v53",
+    "teams": 30,
+    "pearsonR": 0.8635385848573045,
+    "spearmanRho": 0.8331479421579533,
+    "minutesCoverageMin": 1.0
+   },
+   {
+    "card": "E2",
+    "teams": 30,
+    "pearsonR": 0.8762899930355142,
+    "spearmanRho": 0.8518353726362626,
+    "minutesCoverageMin": 1.0
+   },
+   {
+    "card": "F2",
+    "teams": 30,
+    "pearsonR": 0.877990064310741,
+    "spearmanRho": 0.832258064516129,
+    "minutesCoverageMin": 1.0
+   },
+   {
+    "card": "G3",
+    "teams": 30,
+    "pearsonR": 0.9529111385756707,
+    "spearmanRho": 0.9065628476084538,
+    "minutesCoverageMin": 1.0
+   },
+   {
+    "card": "H1",
+    "teams": 30,
+    "pearsonR": 0.9649618616792031,
+    "spearmanRho": 0.9474972191323694,
+    "minutesCoverageMin": 1.0
+   },
+   {
+    "card": "B12",
+    "teams": 30,
+    "pearsonR": 0.8688545730751048,
+    "spearmanRho": 0.8206896551724139,
+    "minutesCoverageMin": 1.0
+   },
+   {
+    "card": "C1",
+    "teams": 30,
+    "pearsonR": 0.8715502451737804,
+    "spearmanRho": 0.8202447163515018,
+    "minutesCoverageMin": 1.0
+   },
+   {
+    "card": "D1",
+    "teams": 30,
+    "pearsonR": 0.8649952625994105,
+    "spearmanRho": 0.8122358175750835,
+    "minutesCoverageMin": 1.0
+   }
+  ],
+  "teams": [
+   {
+    "team": "Oklahoma City Thunder",
+    "wins": 64,
+    "marginPerGame": 11.146,
+    "legacy": 76.38,
+    "v53": 76.2,
+    "E2": 75.46,
+    "F2": 75.06,
+    "G3": 78.33,
+    "H1": 79.79,
+    "B12": 75.85,
+    "C1": 75.85,
+    "D1": 75.74
+   },
+   {
+    "team": "San Antonio Spurs",
+    "wins": 62,
+    "marginPerGame": 8.305,
+    "legacy": 74.98,
+    "v53": 75.83,
+    "E2": 75.77,
+    "F2": 75.74,
+    "G3": 74.39,
+    "H1": 75.99,
+    "B12": 75.85,
+    "C1": 75.88,
+    "D1": 75.98
+   },
+   {
+    "team": "Detroit Pistons",
+    "wins": 60,
+    "marginPerGame": 8.159,
+    "legacy": 72.93,
+    "v53": 72.34,
+    "E2": 72.07,
+    "F2": 71.4,
+    "G3": 75.35,
+    "H1": 74.96,
+    "B12": 71.81,
+    "C1": 71.75,
+    "D1": 71.53
+   },
+   {
+    "team": "Boston Celtics",
+    "wins": 56,
+    "marginPerGame": 7.695,
+    "legacy": 75.25,
+    "v53": 75.8,
+    "E2": 75.41,
+    "F2": 74.65,
+    "G3": 76.58,
+    "H1": 76.5,
+    "B12": 76.0,
+    "C1": 76.12,
+    "D1": 75.82
+   },
+   {
+    "team": "New York Knicks",
+    "wins": 53,
+    "marginPerGame": 6.329,
+    "legacy": 71.72,
+    "v53": 73.58,
+    "E2": 73.08,
+    "F2": 71.87,
+    "G3": 73.45,
+    "H1": 73.92,
+    "B12": 73.63,
+    "C1": 73.64,
+    "D1": 73.58
+   },
+   {
+    "team": "Houston Rockets",
+    "wins": 52,
+    "marginPerGame": 5.22,
+    "legacy": 70.42,
+    "v53": 71.95,
+    "E2": 71.33,
+    "F2": 70.78,
+    "G3": 74.91,
+    "H1": 75.35,
+    "B12": 71.32,
+    "C1": 71.27,
+    "D1": 70.95
+   },
+   {
+    "team": "Denver Nuggets",
+    "wins": 54,
+    "marginPerGame": 5.146,
+    "legacy": 77.38,
+    "v53": 77.14,
+    "E2": 76.75,
+    "F2": 75.77,
+    "G3": 73.93,
+    "H1": 75.54,
+    "B12": 76.96,
+    "C1": 76.77,
+    "D1": 76.87
+   },
+   {
+    "team": "Charlotte Hornets",
+    "wins": 44,
+    "marginPerGame": 4.829,
+    "legacy": 72.84,
+    "v53": 72.69,
+    "E2": 71.47,
+    "F2": 70.83,
+    "G3": 71.28,
+    "H1": 72.13,
+    "B12": 71.87,
+    "C1": 71.92,
+    "D1": 71.72
+   },
+   {
+    "team": "Cleveland Cavaliers",
+    "wins": 52,
+    "marginPerGame": 4.11,
+    "legacy": 74.9,
+    "v53": 75.33,
+    "E2": 75.15,
+    "F2": 74.87,
+    "G3": 73.94,
+    "H1": 75.32,
+    "B12": 75.4,
+    "C1": 75.3,
+    "D1": 75.43
+   },
+   {
+    "team": "Minnesota Timberwolves",
+    "wins": 49,
+    "marginPerGame": 3.354,
+    "legacy": 71.85,
+    "v53": 73.28,
+    "E2": 73.32,
+    "F2": 73.97,
+    "G3": 75.22,
+    "H1": 72.91,
+    "B12": 73.57,
+    "C1": 73.59,
+    "D1": 73.37
+   },
+   {
+    "team": "Toronto Raptors",
+    "wins": 46,
+    "marginPerGame": 2.829,
+    "legacy": 73.23,
+    "v53": 74.94,
+    "E2": 74.92,
+    "F2": 73.86,
+    "G3": 72.71,
+    "H1": 73.19,
+    "B12": 75.58,
+    "C1": 75.44,
+    "D1": 75.47
+   },
+   {
+    "team": "Atlanta Hawks",
+    "wins": 46,
+    "marginPerGame": 2.415,
+    "legacy": 68.87,
+    "v53": 70.74,
+    "E2": 70.75,
+    "F2": 70.39,
+    "G3": 71.37,
+    "H1": 71.5,
+    "B12": 70.97,
+    "C1": 70.98,
+    "D1": 70.93
+   },
+   {
+    "team": "Miami Heat",
+    "wins": 43,
+    "marginPerGame": 2.329,
+    "legacy": 70.87,
+    "v53": 72.06,
+    "E2": 71.7,
+    "F2": 71.3,
+    "G3": 71.66,
+    "H1": 71.49,
+    "B12": 71.93,
+    "C1": 71.94,
+    "D1": 71.73
+   },
+   {
+    "team": "Los Angeles Lakers",
+    "wins": 53,
+    "marginPerGame": 1.756,
+    "legacy": 73.82,
+    "v53": 74.35,
+    "E2": 73.42,
+    "F2": 72.28,
+    "G3": 71.59,
+    "H1": 72.75,
+    "B12": 73.69,
+    "C1": 73.79,
+    "D1": 73.47
+   },
+   {
+    "team": "Phoenix Suns",
+    "wins": 45,
+    "marginPerGame": 1.463,
+    "legacy": 68.96,
+    "v53": 69.7,
+    "E2": 68.76,
+    "F2": 68.28,
+    "G3": 69.87,
+    "H1": 69.39,
+    "B12": 68.89,
+    "C1": 68.94,
+    "D1": 68.53
+   },
+   {
+    "team": "LA Clippers",
+    "wins": 42,
+    "marginPerGame": 1.134,
+    "legacy": 74.0,
+    "v53": 73.06,
+    "E2": 71.28,
+    "F2": 71.31,
+    "G3": 71.52,
+    "H1": 72.13,
+    "B12": 71.44,
+    "C1": 71.47,
+    "D1": 71.37
+   },
+   {
+    "team": "Orlando Magic",
+    "wins": 45,
+    "marginPerGame": 0.634,
+    "legacy": 69.22,
+    "v53": 71.16,
+    "E2": 71.08,
+    "F2": 70.84,
+    "G3": 72.78,
+    "H1": 70.79,
+    "B12": 71.66,
+    "C1": 71.62,
+    "D1": 71.59
+   },
+   {
+    "team": "Philadelphia 76ers",
+    "wins": 45,
+    "marginPerGame": -0.183,
+    "legacy": 70.75,
+    "v53": 72.16,
+    "E2": 71.66,
+    "F2": 70.93,
+    "G3": 68.77,
+    "H1": 69.37,
+    "B12": 72.07,
+    "C1": 72.03,
+    "D1": 71.93
+   },
+   {
+    "team": "Portland Trail Blazers",
+    "wins": 42,
+    "marginPerGame": -0.293,
+    "legacy": 68.42,
+    "v53": 69.4,
+    "E2": 68.53,
+    "F2": 68.65,
+    "G3": 71.54,
+    "H1": 70.21,
+    "B12": 68.83,
+    "C1": 68.8,
+    "D1": 68.85
+   },
+   {
+    "team": "Golden State Warriors",
+    "wins": 37,
+    "marginPerGame": -0.561,
+    "legacy": 73.87,
+    "v53": 74.77,
+    "E2": 73.31,
+    "F2": 73.04,
+    "G3": 73.26,
+    "H1": 72.41,
+    "B12": 74.04,
+    "C1": 73.89,
+    "D1": 73.73
+   },
+   {
+    "team": "New Orleans Pelicans",
+    "wins": 26,
+    "marginPerGame": -4.5,
+    "legacy": 67.15,
+    "v53": 67.94,
+    "E2": 66.52,
+    "F2": 65.89,
+    "G3": 65.39,
+    "H1": 66.32,
+    "B12": 67.05,
+    "C1": 66.94,
+    "D1": 66.84
+   },
+   {
+    "team": "Chicago Bulls",
+    "wins": 31,
+    "marginPerGame": -5.207,
+    "legacy": 69.79,
+    "v53": 68.83,
+    "E2": 68.16,
+    "F2": 67.33,
+    "G3": 65.58,
+    "H1": 65.93,
+    "B12": 68.24,
+    "C1": 68.16,
+    "D1": 68.12
+   },
+   {
+    "team": "Dallas Mavericks",
+    "wins": 26,
+    "marginPerGame": -5.512,
+    "legacy": 65.54,
+    "v53": 65.37,
+    "E2": 65.0,
+    "F2": 64.65,
+    "G3": 64.22,
+    "H1": 64.23,
+    "B12": 64.94,
+    "C1": 64.92,
+    "D1": 64.73
+   },
+   {
+    "team": "Memphis Grizzlies",
+    "wins": 25,
+    "marginPerGame": -6.012,
+    "legacy": 69.78,
+    "v53": 68.39,
+    "E2": 68.0,
+    "F2": 67.76,
+    "G3": 67.37,
+    "H1": 67.65,
+    "B12": 67.91,
+    "C1": 67.89,
+    "D1": 67.85
+   },
+   {
+    "team": "Milwaukee Bucks",
+    "wins": 32,
+    "marginPerGame": -6.207,
+    "legacy": 72.01,
+    "v53": 70.79,
+    "E2": 69.35,
+    "F2": 68.79,
+    "G3": 66.6,
+    "H1": 67.59,
+    "B12": 69.68,
+    "C1": 69.71,
+    "D1": 69.55
+   },
+   {
+    "team": "Indiana Pacers",
+    "wins": 19,
+    "marginPerGame": -7.988,
+    "legacy": 69.33,
+    "v53": 69.22,
+    "E2": 68.61,
+    "F2": 67.88,
+    "G3": 65.09,
+    "H1": 65.43,
+    "B12": 68.71,
+    "C1": 68.69,
+    "D1": 68.75
+   },
+   {
+    "team": "Utah Jazz",
+    "wins": 22,
+    "marginPerGame": -8.427,
+    "legacy": 63.09,
+    "v53": 63.4,
+    "E2": 64.38,
+    "F2": 64.38,
+    "G3": 61.9,
+    "H1": 62.39,
+    "B12": 64.17,
+    "C1": 64.05,
+    "D1": 64.14
+   },
+   {
+    "team": "Brooklyn Nets",
+    "wins": 20,
+    "marginPerGame": -9.988,
+    "legacy": 62.79,
+    "v53": 63.53,
+    "E2": 63.63,
+    "F2": 62.99,
+    "G3": 60.24,
+    "H1": 60.71,
+    "B12": 63.5,
+    "C1": 63.58,
+    "D1": 63.54
+   },
+   {
+    "team": "Sacramento Kings",
+    "wins": 22,
+    "marginPerGame": -10.0,
+    "legacy": 65.39,
+    "v53": 65.08,
+    "E2": 65.48,
+    "F2": 64.99,
+    "G3": 62.9,
+    "H1": 63.14,
+    "B12": 65.29,
+    "C1": 65.19,
+    "D1": 65.37
+   },
+   {
+    "team": "Washington Wizards",
+    "wins": 17,
+    "marginPerGame": -11.976,
+    "legacy": 66.52,
+    "v53": 65.3,
+    "E2": 64.37,
+    "F2": 63.83,
+    "G3": 60.22,
+    "H1": 60.21,
+    "B12": 64.55,
+    "C1": 64.54,
+    "D1": 64.17
+   }
+  ]
+ }
+}

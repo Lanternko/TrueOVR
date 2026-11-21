@@ -1,0 +1,147 @@
+[
+ {
+  "label": "all >=2000 def poss",
+  "n": 261,
+  "rel_half_sh": 0.7613462109725414,
+  "rel_half_ns": 0.7128475111856235,
+  "rel_half_nsft": 0.42694405789911577,
+  "cross_sh_ns": 0.1554799187951512,
+  "true_r_sh_ns": 0.21104977376687456,
+  "raw_full_r_sh_ns": 0.1732992024252032,
+  "cross_sh_nsft": 0.07300141495788817,
+  "true_r_sh_nsft": 0.1280426623889749,
+  "raw_full_r_sh_nsft": 0.0973737600953238,
+  "mean_sh": 2.0323670258121225,
+  "mean_ns": 1.5039457600596253
+ },
+ {
+  "label": "C",
+  "n": 38,
+  "rel_half_sh": 0.6446526848245526,
+  "rel_half_ns": 0.6836283575754566,
+  "rel_half_nsft": 0.47241130290501177,
+  "cross_sh_ns": 0.23322733244775984,
+  "true_r_sh_ns": 0.351322943273962,
+  "raw_full_r_sh_ns": 0.255226294805244,
+  "cross_sh_nsft": 0.18731692613013473,
+  "true_r_sh_nsft": 0.33943293901980787,
+  "raw_full_r_sh_nsft": 0.19347675475390413,
+  "mean_sh": 2.580990580334511,
+  "mean_ns": 1.303679928510119
+ },
+ {
+  "label": "non-C",
+  "n": 223,
+  "rel_half_sh": 0.7533700982638767,
+  "rel_half_ns": 0.7140726901905475,
+  "rel_half_nsft": 0.4142651584107999,
+  "cross_sh_ns": 0.22210157055067897,
+  "true_r_sh_ns": 0.30281419404684135,
+  "raw_full_r_sh_ns": 0.2498869929308894,
+  "cross_sh_nsft": 0.09964510776755416,
+  "true_r_sh_nsft": 0.17836621127873878,
+  "raw_full_r_sh_nsft": 0.140876970975206,
+  "mean_sh": 1.9388796039652578,
+  "mean_ns": 1.5380717761981064
+ },
+ {
+  "examples_top_shooting_fouls": [
+   {
+    "id": 1630568,
+    "name": "Luka Garza",
+    "pos": "PF",
+    "sh100": 3.97,
+    "ns100": 2.15,
+    "pct_rank_ns": 0.88
+   },
+   {
+    "id": 1629655,
+    "name": "Daniel Gafford",
+    "pos": "PF",
+    "sh100": 3.93,
+    "ns100": 1.15,
+    "pct_rank_ns": 0.27
+   },
+   {
+    "id": 1642461,
+    "name": "Spencer Jones",
+    "pos": "SF",
+    "sh100": 3.67,
+    "ns100": 1.87,
+    "pct_rank_ns": 0.77
+   },
+   {
+    "id": 1629011,
+    "name": "Mitchell Robinson",
+    "pos": "C",
+    "sh100": 3.6,
+    "ns100": 1.37,
+    "pct_rank_ns": 0.44
+   },
+   {
+    "id": 1642874,
+    "name": "Danny Wolf",
+    "pos": "C",
+    "sh100": 3.6,
+    "ns100": 1.39,
+    "pct_rank_ns": 0.45
+   },
+   {
+    "id": 1642846,
+    "name": "Ace Bailey",
+    "pos": "PF",
+    "sh100": 3.53,
+    "ns100": 0.72,
+    "pct_rank_ns": 0.05
+   },
+   {
+    "id": 1628963,
+    "name": "Marvin Bagley III",
+    "pos": "PF",
+    "sh100": 3.52,
+    "ns100": 0.89,
+    "pct_rank_ns": 0.11
+   },
+   {
+    "id": 1627751,
+    "name": "Jakob Poeltl",
+    "pos": "C",
+    "sh100": 3.5,
+    "ns100": 1.94,
+    "pct_rank_ns": 0.82
+   },
+   {
+    "id": 1629674,
+    "name": "Neemias Queta",
+    "pos": "C",
+    "sh100": 3.47,
+    "ns100": 1.39,
+    "pct_rank_ns": 0.46
+   },
+   {
+    "id": 1642867,
+    "name": "Collin Murray-Boyles",
+    "pos": "SF",
+    "sh100": 3.44,
+    "ns100": 1.88,
+    "pct_rank_ns": 0.79
+   },
+   {
+    "id": 1630643,
+    "name": "Jay Huff",
+    "pos": "C",
+    "sh100": 3.42,
+    "ns100": 1.39,
+    "pct_rank_ns": 0.46
+   },
+   {
+    "id": 1642265,
+    "name": "Rob Dillingham",
+    "pos": "PG",
+    "sh100": 3.36,
+    "ns100": 1.84,
+    "pct_rank_ns": 0.76
+   }
+  ]
+ }
+]

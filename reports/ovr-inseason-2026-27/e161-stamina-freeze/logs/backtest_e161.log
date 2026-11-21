@@ -1,0 +1,13 @@
+{'c0L': True, 'u': True, 'c1': True}
+cells Y1
+cells Y2
+cells Y3
+cells Y4
+cells Y5
+cells Y6
+cells D1
+cells D2
+cells D3
+prereq {'c0L': True, 'u': True, 'c1': True, 'c0': True} {'maxAbsFrozenVsPrior': 0.0}
+verdict {'1': True, '2': False, 'outcome': '(1) ¹L¡B(2) ¤£¹L'}
+exit=0

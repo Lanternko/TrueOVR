@@ -1,0 +1,88 @@
+E-131 卡片 OVR 迴歸拿掉 physique：執行報告（card 0.2.7b+E131；2026-10-30；預註冊 sha256 bd56dc35…1263，跑前跑後核對相同）
+=====================================================================================================
+
+一、硬條件
+  c0  K0 最終 ranking.csv sha256 = 361bcac61075dec1150c3b89b406ecd62dcaf4fdb5d738ccff68a0634de81105，與 reports/card-0.2.7b/ranking.csv 逐位元相同：通過（先只跑 K0，過了才跑 K1）
+  c1  npm test：57 passed, 0 failed（exit 0）：通過（npm-test.log）
+  u1  K1 對 K0：582 人同一批、同一順序；非 OVR 相關欄（MIN、pos、各屬性含 physique、heightInches、presDisplay 等）逐位元相同：通過
+      有變的欄只有 rank、ovr、predictedPer36、pred0、pr、align、gRepl、ovr36（530 人 ovr 有變，平均絕對變動 0.42，最大 4.0：Lawson Lovering）
+      （注意：simulatedPer36、defenseBonus 在 K1 與 K0 逐位元相同。判定「OVR 相關欄」的清單是我依欄名列的，見偏離項 4）
+
+二、m1–m3（K1 對 K0，同組抽樣 seed 1、2000 次、master 395 人）
+  m1 Δρ_N_W   點估計 +0.0015  90% CI [-0.0014, +0.0044]  門檻下界 > -0.02  通過
+  m2 Δρ_Q_W   點估計 -0.0014  90% CI [-0.0040, +0.0011]  門檻下界 > -0.05  通過
+  m3 Δρ_N_lin 點估計 +0.0013  90% CI [-0.0016, +0.0042]  門檻下界 > -0.05  通過
+  （附：Δρ_Q_lin -0.0017 [-0.0043, +0.0010]，非門檻項）
+  G4：OVR 前 20 名對 card 0.2.7b 只換 1 人（出：Ausar Thompson；進：OG Anunoby），未超過 3 人，依預註冊不需重跑 G4。
+
+三、只報告：16→15 項係數（valuePer10AttributePoints，per36；K0 -> K1）
+  形式／ridge：K0、K1 都是 position-interactions、ridge 1.0（沒變）。CV R²：K0 0.4157 -> K1 0.4106。
+  long 0.393->0.388  mid 0.137->0.143  short 0.533->0.522  ft 0.119->0.104  drive 0.004->0.010  foulDraw 0.127->0.134
+  tovSkill 0.221->0.221  pass 0.344->0.344  rebound 0.033->0.095  physique 0.240->（移除）  onBall 0.177->0.167
+  help 0.555->0.528  stamina 0.146->0.155  heightInches -0.771->+0.101  creation 0.090->0.073  pressure 0.245->0.227
+  heightInches 由負轉小正（lead 事前預期方向對）；rebound 由 0.03 升到 0.10；其餘變動 <0.03。bootstrapSE 見 results.json。
+  錨點（卡片管線，ovr 換算用）PR1／PR50／PR99：K0 -0.823／1.276／4.115 -> K1 -0.862／1.272／4.157。
+  錨點（calibrate 的 scaleAnchorsPer36）：K0 -3.129／-0.072／5.054 -> K1 -3.153／-0.001／5.040。
+
+四、只報告：evaluate.mjs（19 道門檻）
+  card 0.2.7b 與 K0：18/19（rho2k 0.7382、rhoRapm 0.7789、rhoDef 0.5317）。
+  K1：18/19（rho2k 0.7334、rhoRapm 0.7805、rhoDef 0.5345）。沒過的同一道：big14of16（長人 16 人過 13 人，兩者相同；沒過的是 Joel Embiid、Christian Koloko、Anthony Davis）。
+  2K27 ρ：0.7382 -> 0.7334（-0.005）；ρRAPM（樣本內）0.7789 -> 0.7805。ρ 不是證據，只是報告（R-007）。
+  前十長人（R-002）K0、K1 相同：Wembanyama、Jokić、Giannis、Holmgren、Markkanen（5 人，沒有 Mobley／Gordon）。
+
+五、只報告：具名球員（K0 -> K1；身高吋／physique 在兩者相同）
+  球員                    身高  physique   OVR              名次
+  Zion Williamson          78    90.9    81.8 -> 79.8      43 -> 65
+  Bam Adebayo              81    91.3    82.0 -> 81.6      41 -> 43
+  Julius Randle            81    90.0    72.9 -> 72.2     154 -> 163
+  Steven Adams             83    97.5    67.0 -> 67.3     240 -> 232
+  Jusuf Nurkić             83    98.9    76.9 -> 76.9     100 -> 96
+  Giannis Antetokounmpo    83    92.9    97.6 -> 97.7       6 -> 6
+  Joel Embiid              84    98.5    85.1 -> 84.9      23 -> 22
+  Nikola Jokić             83    98.7   101.9 -> 101.7      3 -> 3
+  Victor Wembanyama        88    98.8   103.9 -> 103.6      2 -> 2
+  Chet Holmgren            85    89.4    97.0 -> 96.5       8 -> 8
+  Evan Mobley              83    87.0    84.3 -> 84.9      28 -> 23
+  Jarrett Allen            81    88.5    83.2 -> 82.8      33 -> 33
+  Ivica Zubac              84    94.6    77.1 -> 77.5      98 -> 89
+  Shai Gilgeous-Alexander  78    58.9   105.0 -> 104.6      1 -> 1
+  Tyrese Maxey             74    45.8    84.1 -> 83.6      29 -> 29
+  Trae Young               74    40.2    70.0 -> 69.9     199 -> 202
+  Herbert Jones            79    70.7    86.3 -> 85.3      16 -> 19
+  Luguentz Dort            76    61.6    71.7 -> 71.0     168 -> 174
+  對預期的核對：lead 預期「同身高偏壯的長人 Zion、Adebayo、Randle、Adams 類小降、偏瘦的長人與後衛小升」。
+  實際：Zion -2.0（-22 名）、Randle -0.7、Adebayo -0.4 小降，符合；Steven Adams +0.3 微升，不符；
+  偏瘦的長人 Mobley +0.6（+5 名）符合；後衛 SGA、Maxey、Young 都是小降（-0.4／-0.5／-0.1），不符「後衛小升」。
+
+六、只報告：OVR 前 20 名（K0 -> K1）
+  只有 Ausar Thompson（K0 第 20）掉出、OG Anunoby（K1 第 20）進入。前 10 名順序完全相同（Franz Wagner 97.6->97.0、Dončić 95.6->94.4 是前十最大降幅）。
+  11–19 名內部小調：Queta 14->11、Herbert Jones 16->19、Cunningham 13->16、Amen Thompson 11->12 等。
+
+七、只報告：名次移動 ≥10 名（MIN≥1000）：共 42 人（掉 26、升 16）
+  掉最多：Kyle Filipowski 464->501（-37；physique 94.6、身高 83）、Patrick Williams 356->385（-29）、Jamal Shead 175->199（-24；physique 43.7、後衛）、
+         Zion 43->65（-22）、Jake LaRavia 264->285、Paul George 51->70（-19）、Danny Wolf 402->421、Guerschon Yabusele 344->363。
+  升最多：Gui Santos 196->170（+26）、Hugo González 204->183（+21）、Isaiah Joe 130->112（+18）、Gary Payton II 232->216（+16）、Nique Clifford 172->157（+15）、
+         Ousmane Dieng、Jordan Walsh（+14）、Alex Sarr、Moussa Diabaté（+13）。
+  完整名單見 results.json 的 movers_ge10_MIN1000。這些人多半在 200 名以後，OVR 差距只有 1 分上下，名次密集所以名次動得比分數大。
+
+八、只報告：依 physique 五等分的平均 OVR 變化（K1 - K0）
+  全部 582 人：Q1（physique 28.8–50.4）+0.29｜Q2（51.0–63.9）+0.25｜Q3（63.9–76.4）+0.01｜Q4（76.4–88.0）-0.16｜Q5（88.0–117.6）+0.01
+  MIN≥1000（約 280 人）：+0.17｜+0.15｜-0.13｜-0.39｜-0.20
+  方向是「體格低的略升、體格中高的略降」，量級都在 0.4 分以內；最高 physique 那組全體不降（全部人口 +0.01），是因為大量低分鐘數的人拉平。
+
+九、唯讀核對
+  跑前（sha-before.json）、跑後（sha-after.json）逐檔 sha256 完全相同，涵蓋：reports/card-0.2.7b、card-0.2.7a、card-0.2.7、card-0.2.7+E123-tail-3pt-rim-pres（含 rebase-027a）、card-0.2.7+E125-pass-volume、card-0.2.5+E094-defense-ceiling、impact-rapm、data（共 37556 檔）。
+  git status 與開工時相同，只多了本實驗的新目錄；src／live／memory／名單頁／狀態板沒碰；沒有 commit、push、部署。
+
+十、偏離預註冊（逐項）
+  1. calibrate-wing.py 除了預註冊寫的 --dropAttr 之外，另加一個內部變數 OUT_ATTRS（＝移除前的 ATTRS），讓 ranking.csv 的 physique 欄照舊輸出。不加的話 K1 的 ranking.csv 會少一欄 physique，u1 無法成立，e094 的 ARM_COLS 檢查也會失敗。迴歸矩陣只移除 physique，heightInches 與其餘屬性不變。預設不帶 --dropAttr 時行為不變（c0 逐位元相同可證）。diff 見 diff-calibrate.txt。
+  2. pools（build_pools）沿用 rebase-027a/cards/c0（card 0.2.7 卡，唯讀），K0 與 K1 共用同一組，與 card 0.2.7b 當初 e123a 的建法一致（預註冊寫「pools 照 e123a 的建法」）。
+  3. e131.py 拆成 k0、k1 兩個階段（c0 過了才跑 k1，符合凍結後第一步）。k1 階段會把 K0 的 pipeline 重算一次當 m1–m3 基準，並再核對一次 K0 sha256 仍為 361bcac6…1105。
+  4. u1 的「OVR 相關欄」清單是我依欄名決定的：rank、ovr、predictedPer36、pred0、pr、align、gRepl、ovr36、simulatedPer36、defenseBonus。預註冊只寫了「ovr、predictedPer36、pred0、rank 等」。實際有變的只有 rank、ovr、predictedPer36、pred0、pr、align、gRepl、ovr36；其他欄（包含 simulatedPer36、defenseBonus）逐位元不變，所以清單怎麼取都不影響 u1 通過。
+  5. run_gates.py 是由 rebase-027a/run_gates.py 複製，只把 ROOT 的 parents[2] 改成 parents[1]（目錄深度不同）。npm-test.exit、evaluate.exit 事後移到 work/。
+  6. 另外新增 analyze.py（彙整 results.json、並列 ranking.csv）。「sha 核對」用的小腳本放在 scratchpad，不在專案內，逐檔 hash 後比對。
+  7. 沒有其他偏離：沒改 src／模擬引擎、沒改門檻、沒加候選、沒重跑。
+
+十一、限制
+  不是盲測（L-026）：方向由使用者看過係數與相關後選；m1–m3 只證明「沒變差」。K1 的 ρ2K 與 ρRAPM 彼此升降不一，且都在抽樣誤差內，不構成「變好」的證據。
+  版號（影響小＝字母小版本 card 0.2.7c，否則 PATCH card 0.2.8）由 lead 照 R-064 判斷：530/582 人 ovr 有變但平均 0.42 分、前 20 名換 1 人、前十不變。

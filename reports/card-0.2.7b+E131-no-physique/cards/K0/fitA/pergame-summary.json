@@ -1,0 +1,19 @@
+{
+  "definition": "g = pred*MPG/36 (main); g_r = (pred - r_repl)*MPG/36 (repl, r_repl = PR10 of pred in MIN>=500 pool); anchors PR1/PR50/PR99 of g in MIN>=500 pool",
+  "rRepl_PR10_of_pred": -1.6061237549316238,
+  "anchors": {
+    "main": {
+      "PR1": -1.5716344591804885,
+      "PR50": -0.032750836570074396,
+      "PR99": 3.4496127827395306
+    },
+    "repl": {
+      "PR1": -0.634061494079831,
+      "PR50": 0.9273932875603911,
+      "PR99": 4.8801567006625
+    }
+  },
+  "poolSize": 378,
+  "mpgSource": "reports/card-0.1.2+E064-pergame/mpg-A.csv",
+  "playersWithoutMpg": 7
+}

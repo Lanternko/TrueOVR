@@ -1,0 +1,67 @@
+{
+ "seeds": [
+  20261028,
+  20261029,
+  20261030
+ ],
+ "filter": "actualMinutes>=800",
+ "modes": {
+  "legacy": {
+   "teamPtsRMSE": 4.1728488123992715,
+   "teamPtsMeanSim": 117.26321839080457,
+   "teamPtsMeanActual": 115.00750533333333,
+   "teammateFGerr": {
+    "G": 0.7562586078854183,
+    "F": 0.29961010326604315,
+    "C": 0.9398938172236159
+   },
+   "n": {
+    "G": 61,
+    "F": 65,
+    "C": 24
+   },
+   "gapCminusG": 0.18363520933819755,
+   "six": {
+    "Rudy Gobert": 1.092965239845384,
+    "Jalen Duren": 3.3581367617369935,
+    "Neemias Queta": 0.3868619405727287,
+    "Donovan Clingan": 3.2180811522251176,
+    "Mitchell Robinson": null,
+    "Scottie Barnes": -0.15360309198367617
+   }
+  },
+  "ch1": {
+   "teamPtsRMSE": 4.17565626833671,
+   "teamPtsMeanSim": 117.30344827586205,
+   "teamPtsMeanActual": 115.00750533333333,
+   "teammateFGerr": {
+    "G": 0.767031987914099,
+    "F": 0.3079057431982033,
+    "C": 0.9351469358097196
+   },
+   "n": {
+    "G": 61,
+    "F": 65,
+    "C": 24
+   },
+   "gapCminusG": 0.16811494789562065,
+   "six": {
+    "Rudy Gobert": 1.1617530109668337,
+    "Jalen Duren": 3.447131656159705,
+    "Neemias Queta": 0.3868619405727287,
+    "Donovan Clingan": 3.261877105833314,
+    "Mitchell Robinson": null,
+    "Scottie Barnes": -0.15360309198367617
+   }
+  }
+ },
+ "gate": {
+  "gapShrinks": true,
+  "rmseOk": true,
+  "gapLegacy": 0.18363520933819755,
+  "gapCh1": 0.16811494789562065,
+  "rmseDiff": 0.0028074559374386965,
+  "pass": true
+ },
+ "bitIdenticalGames": false
+}

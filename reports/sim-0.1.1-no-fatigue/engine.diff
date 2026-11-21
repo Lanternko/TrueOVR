@@ -1,0 +1,928 @@
+diff --git a/reports/player-impact-v29/benchmark.mjs b/reports/player-impact-v29/benchmark.mjs
+index aebf74b..06c69ec 100644
+--- a/reports/player-impact-v29/benchmark.mjs
++++ b/reports/player-impact-v29/benchmark.mjs
+@@ -17,7 +17,7 @@ export function opponentTeam(x, opponent, cap, phase=0){
+   schedule:workloadRotation(loads,phase)};
+ }
+ export function options(x, seed, schedules){
+- return {...x.options,quarterSeconds:720,sourcePeriods:4,maxOvertimes:0,fatigue:true,substitutions:true,
++ return {...x.options,quarterSeconds:720,sourcePeriods:4,maxOvertimes:0,substitutions:true,
+   minuteMode:'budget',foulOut:99,sourceRotations:schedules,seed,creationPolicy:'rotation-space',contextLongScale:1,
+   spaceCenter:read('reports/player-impact-v20/2025-26-synthetic-center.json').fullCenter};
+ }
+diff --git a/src/constants.js b/src/constants.js
+index 6765c8d..777658b 100644
+--- a/src/constants.js
++++ b/src/constants.js
+@@ -455,10 +455,6 @@ export function weightedTop(values, weights) {
+   return head + (rest.reduce((s, x) => s + x, 0) / rest.length) * restW;
+ }
+ 
+-// --- 體力 ---------------------------------------------------------------
+-export const STAMINA_MIN_EFF = 0.70;
+-export const STAMINA_MAX_EFF = 1.00;
+-
+ // --- 夾值 ---------------------------------------------------------------
+ export const CLAMP = {
+   makeLong: [0.05, 0.62],
+diff --git a/src/defense_a_game.js b/src/defense_a_game.js
+index eaedc8e..b1adae5 100644
+--- a/src/defense_a_game.js
++++ b/src/defense_a_game.js
+@@ -16,7 +16,7 @@ const finish = s => ({ ...s, seconds:Math.round(s.seconds*10)/10, reb:s.oreb+s.d
+   fgPct:s.fga?s.fgm/s.fga:null, threePct:s.fg3a?s.fg3m/s.fg3a:null, ftPct:s.fta?s.ftm/s.fta:null });
+ 
+ export const TIMED_DEFAULTS = Object.freeze({ quarterSeconds:720, overtimeSeconds:300,
+-  maxOvertimes:20, fatigue:true, substitutions:true, foulOut:6, pace:1,
++  maxOvertimes:20, substitutions:true, foulOut:6, pace:1,
+   nonShootingFoulRate:0.04, andOneRate:0.025, replay:false, seed:1,
+   contextScale:1, turnoverScale:1, blocks:true });
+ 
+@@ -53,7 +53,8 @@ export function simulateDefenseAGame(teamA, teamB, options = {}) {
+   if (!Number.isFinite(opt.pace) || opt.pace < 0.5 || opt.pace > 2) throw new RangeError('Invalid pace');
+   for (const k of ['nonShootingFoulRate','andOneRate']) if (!Number.isFinite(opt[k]) || opt[k]<0 || opt[k]>1) throw new RangeError(`Invalid ${k}`);
+   for (const k of ['contextScale','turnoverScale']) if (!Number.isFinite(opt[k]) || opt[k]<0) throw new RangeError(`Invalid ${k}`);
+-  for (const k of ['fatigue','substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  for (const k of ['substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  if (opt.fatigue !== undefined) { if (typeof opt.fatigue !== 'boolean') throw new TypeError('Invalid fatigue'); if (opt.fatigue) throw new Error('fatigue removed in sim 0.1.1'); }
+   if (!Number.isSafeInteger(opt.seed)) throw new RangeError('Invalid seed');
+   const attrs = ['long','mid','short','drive','tovSkill','pass','ft','rebound','onBall','help','stamina','physique','offBall','screen'];
+   const sides = [teamA,teamB].map(t => {
+@@ -67,7 +68,7 @@ export function simulateDefenseAGame(teamA, teamB, options = {}) {
+     if(opt.minuteMode==='budget'&&t.roster.some(p=>p.injured))throw new Error('Budget diagnostic cannot contain injured players');
+     return { roster:t.roster, lineup:eligible.slice(0,5), players:t.roster.map(blank), stat:blank(),
+       budget:opt.minuteMode==='budget'?minuteBudgetSchedule(t.roster):null,
+-      energy:t.roster.map(()=>1), stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
++      stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
+   });
+   const rng = makeRng(opt.seed), timeRng = makeRng(opt.seed ^ 0x2B947EF1), eventRng=makeRng(opt.seed^0x791BC34D);
+   const reboundRng=makeRng(opt.seed^0x163AB371);
+@@ -105,8 +106,6 @@ export function simulateDefenseAGame(teamA, teamB, options = {}) {
+     for (const s of sides) for (let i=0;i<s.roster.length;i++) {
+       const playing=s.lineup.includes(i);
+       if (playing) { record(s===sides[0]?0:1,i,'seconds',dt/10);if(period<=4)record(s===sides[0]?0:1,i,'regulationSeconds',dt/10);s.stint[i]+=dt/10; }
+-      if (opt.fatigue) s.energy[i]=clamp(s.energy[i]+(playing
+-        ? -dt/(10*1800*(0.6+Math.min(s.roster[i].stamina,150)/175)) : dt/(10*900)),0,1);
+     }
+   };
+   const advance = ticks => {
+@@ -134,7 +133,7 @@ export function simulateDefenseAGame(teamA, teamB, options = {}) {
+           const ability=sum(['long','short','pass','onBall','help','rebound'].map(k=>p[k]))/6;
+           const target=p.targetMinutes ?? (i<5?32:16);
+           const expected=target/48*(elapsed/600);
+-          return ability*(0.55+0.45*s.energy[i])+(opt.minuteTargets?6*(expected-s.players[i].seconds/60):0)
++          return ability+(opt.minuteTargets?6*(expected-s.players[i].seconds/60):0)
+             +(p.pos===s.roster[out].pos?8:0);
+         };
+         candidates.sort((a,b)=>value(b)-value(a)||a-b);
+@@ -146,7 +145,7 @@ export function simulateDefenseAGame(teamA, teamB, options = {}) {
+       }
+     }
+   };
+-  const lineups = () => sides.map(s=>s.lineup.map(i=>opt.fatigue?M.applyStamina(s.roster[i],1-s.energy[i]):s.roster[i]));
++  const lineups = () => sides.map(s=>s.lineup.map(i=>s.roster[i]));
+   const rebound = (shooter, zone, freeThrow=false) => {
+     // No player rebound is awarded to a miss after the period has expired.
+     if (clock<=0) {record(off,null,'periodMiss');return {end:true,dead:true};}
+@@ -325,7 +324,7 @@ export function simulateDefenseAGame(teamA, teamB, options = {}) {
+     clock=Math.round((period<=4?opt.quarterSeconds:opt.overtimeSeconds)*10);
+     shotClock=240;
+     off=period>4?(rng()<0.5?0:1):([opening,1-opening,1-opening,opening][period-1]);
+-    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;if(period>1 && opt.fatigue)s.energy=s.energy.map(e=>Math.min(1,e+0.12));}
++    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;}
+     rotate(true);emit('PERIOD_START');
+     const start=sides.map(s=>s.stat.pts);
+     while(clock>0) {
+diff --git a/src/defense_clock_game.js b/src/defense_clock_game.js
+index 009411f..cb286b6 100644
+--- a/src/defense_clock_game.js
++++ b/src/defense_clock_game.js
+@@ -16,7 +16,7 @@ const finish = s => ({ ...s, seconds:Math.round(s.seconds*10)/10, reb:s.oreb+s.d
+   fgPct:s.fga?s.fgm/s.fga:null, threePct:s.fg3a?s.fg3m/s.fg3a:null, ftPct:s.fta?s.ftm/s.fta:null });
+ 
+ export const TIMED_DEFAULTS = Object.freeze({ quarterSeconds:720, overtimeSeconds:300,
+-  maxOvertimes:20, fatigue:true, substitutions:true, foulOut:6, pace:1,
++  maxOvertimes:20, substitutions:true, foulOut:6, pace:1,
+   nonShootingFoulRate:0.04, andOneRate:0.025, replay:false, seed:1,
+   contextScale:1, turnoverScale:1, blocks:true });
+ 
+@@ -55,7 +55,8 @@ export function simulateDefenseClockGame(teamA, teamB, options = {}) {
+   if (!Number.isFinite(opt.pace) || opt.pace < 0.5 || opt.pace > 2) throw new RangeError('Invalid pace');
+   for (const k of ['nonShootingFoulRate','andOneRate']) if (!Number.isFinite(opt[k]) || opt[k]<0 || opt[k]>1) throw new RangeError(`Invalid ${k}`);
+   for (const k of ['contextScale','turnoverScale']) if (!Number.isFinite(opt[k]) || opt[k]<0) throw new RangeError(`Invalid ${k}`);
+-  for (const k of ['fatigue','substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  for (const k of ['substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  if (opt.fatigue !== undefined) { if (typeof opt.fatigue !== 'boolean') throw new TypeError('Invalid fatigue'); if (opt.fatigue) throw new Error('fatigue removed in sim 0.1.1'); }
+   if (!Number.isSafeInteger(opt.seed)) throw new RangeError('Invalid seed');
+   const attrs = ['long','mid','short','drive','tovSkill','pass','ft','rebound','onBall','help','stamina','physique','offBall','screen'];
+   const sides = [teamA,teamB].map(t => {
+@@ -69,7 +70,7 @@ export function simulateDefenseClockGame(teamA, teamB, options = {}) {
+     if(opt.minuteMode==='budget'&&t.roster.some(p=>p.injured))throw new Error('Budget diagnostic cannot contain injured players');
+     return { roster:t.roster, lineup:eligible.slice(0,5), players:t.roster.map(blank), stat:blank(),
+       budget:opt.minuteMode==='budget'?minuteBudgetSchedule(t.roster):null,
+-      energy:t.roster.map(()=>1), stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
++      stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
+   });
+   const rng = makeRng(opt.seed), timeRng = makeRng(opt.seed ^ 0x2B947EF1), eventRng=makeRng(opt.seed^0x791BC34D);
+   const reboundRng=makeRng(opt.seed^0x163AB371);
+@@ -117,8 +118,6 @@ export function simulateDefenseClockGame(teamA, teamB, options = {}) {
+     for (const s of sides) for (let i=0;i<s.roster.length;i++) {
+       const playing=s.lineup.includes(i);
+       if (playing) { record(s===sides[0]?0:1,i,'seconds',dt/10);if(period<=4)record(s===sides[0]?0:1,i,'regulationSeconds',dt/10);s.stint[i]+=dt/10; }
+-      if (opt.fatigue) s.energy[i]=clamp(s.energy[i]+(playing
+-        ? -dt/(10*1800*(0.6+Math.min(s.roster[i].stamina,150)/175)) : dt/(10*900)),0,1);
+     }
+   };
+   const advance = ticks => {
+@@ -146,7 +145,7 @@ export function simulateDefenseClockGame(teamA, teamB, options = {}) {
+           const ability=sum(['long','short','pass','onBall','help','rebound'].map(k=>p[k]))/6;
+           const target=p.targetMinutes ?? (i<5?32:16);
+           const expected=target/48*(elapsed/600);
+-          return ability*(0.55+0.45*s.energy[i])+(opt.minuteTargets?6*(expected-s.players[i].seconds/60):0)
++          return ability+(opt.minuteTargets?6*(expected-s.players[i].seconds/60):0)
+             +(p.pos===s.roster[out].pos?8:0);
+         };
+         candidates.sort((a,b)=>value(b)-value(a)||a-b);
+@@ -158,7 +157,7 @@ export function simulateDefenseClockGame(teamA, teamB, options = {}) {
+       }
+     }
+   };
+-  const lineups = () => sides.map(s=>s.lineup.map(i=>opt.fatigue?M.applyStamina(s.roster[i],1-s.energy[i]):s.roster[i]));
++  const lineups = () => sides.map(s=>s.lineup.map(i=>s.roster[i]));
+   const rebound = (shooter, zone, freeThrow=false) => {
+     // No player rebound is awarded to a miss after the period has expired.
+     if (clock<=0) {record(off,null,'periodMiss');return {end:true,dead:true};}
+@@ -349,7 +348,7 @@ export function simulateDefenseClockGame(teamA, teamB, options = {}) {
+     clock=Math.round((period<=4?opt.quarterSeconds:opt.overtimeSeconds)*10);
+     shotClock=240;
+     off=period>4?(rng()<0.5?0:1):([opening,1-opening,1-opening,opening][period-1]);
+-    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;if(period>1 && opt.fatigue)s.energy=s.energy.map(e=>Math.min(1,e+0.12));}
++    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;}
+     rotate(true);emit('PERIOD_START');
+     origin='period';
+     const start=sides.map(s=>s.stat.pts);
+diff --git a/src/defense_fifth_game.js b/src/defense_fifth_game.js
+index 4ddc784..c1949c4 100644
+--- a/src/defense_fifth_game.js
++++ b/src/defense_fifth_game.js
+@@ -17,7 +17,7 @@ const finish = s => ({ ...s, seconds:Math.round(s.seconds*10)/10, reb:s.oreb+s.d
+   fgPct:s.fga?s.fgm/s.fga:null, threePct:s.fg3a?s.fg3m/s.fg3a:null, ftPct:s.fta?s.ftm/s.fta:null });
+ 
+ export const TIMED_DEFAULTS = Object.freeze({ quarterSeconds:720, overtimeSeconds:300,
+-  maxOvertimes:20, fatigue:true, substitutions:true, foulOut:6, pace:1,
++  maxOvertimes:20, substitutions:true, foulOut:6, pace:1,
+   nonShootingFoulRate:0.04, andOneRate:0.025, replay:false, seed:1,
+   contextScale:1, turnoverScale:1, blocks:true });
+ 
+@@ -56,7 +56,8 @@ export function simulateDefenseFifthGame(teamA, teamB, options = {}) {
+   if (!Number.isFinite(opt.pace) || opt.pace < 0.5 || opt.pace > 2) throw new RangeError('Invalid pace');
+   for (const k of ['nonShootingFoulRate','andOneRate']) if (!Number.isFinite(opt[k]) || opt[k]<0 || opt[k]>1) throw new RangeError(`Invalid ${k}`);
+   for (const k of ['contextScale','turnoverScale']) if (!Number.isFinite(opt[k]) || opt[k]<0) throw new RangeError(`Invalid ${k}`);
+-  for (const k of ['fatigue','substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  for (const k of ['substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  if (opt.fatigue !== undefined) { if (typeof opt.fatigue !== 'boolean') throw new TypeError('Invalid fatigue'); if (opt.fatigue) throw new Error('fatigue removed in sim 0.1.1'); }
+   if (!Number.isSafeInteger(opt.seed)) throw new RangeError('Invalid seed');
+   const attrs = ['long','mid','short','drive','tovSkill','pass','ft','rebound','onBall','help','stamina','physique','offBall','screen'];
+   const sides = [teamA,teamB].map(t => {
+@@ -70,7 +71,7 @@ export function simulateDefenseFifthGame(teamA, teamB, options = {}) {
+     if(opt.minuteMode==='budget'&&t.roster.some(p=>p.injured))throw new Error('Budget diagnostic cannot contain injured players');
+     return { roster:t.roster, lineup:eligible.slice(0,5), players:t.roster.map(blank), stat:blank(),
+       budget:opt.minuteMode==='budget'?minuteBudgetSchedule(t.roster):null,
+-      energy:t.roster.map(()=>1), stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
++      stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
+   });
+   const rng = makeRng(opt.seed), timeRng = makeRng(opt.seed ^ 0x2B947EF1), eventRng=makeRng(opt.seed^0x791BC34D);
+   const reboundRng=makeRng(opt.seed^0x163AB371);
+@@ -118,8 +119,6 @@ export function simulateDefenseFifthGame(teamA, teamB, options = {}) {
+     for (const s of sides) for (let i=0;i<s.roster.length;i++) {
+       const playing=s.lineup.includes(i);
+       if (playing) { record(s===sides[0]?0:1,i,'seconds',dt/10);if(period<=4)record(s===sides[0]?0:1,i,'regulationSeconds',dt/10);s.stint[i]+=dt/10; }
+-      if (opt.fatigue) s.energy[i]=clamp(s.energy[i]+(playing
+-        ? -dt/(10*1800*(0.6+Math.min(s.roster[i].stamina,150)/175)) : dt/(10*900)),0,1);
+     }
+   };
+   const advance = (ticks,tag="Other") => {
+@@ -149,7 +148,7 @@ export function simulateDefenseFifthGame(teamA, teamB, options = {}) {
+           const ability=sum(['long','short','pass','onBall','help','rebound'].map(k=>p[k]))/6;
+           const target=p.targetMinutes ?? (i<5?32:16);
+           const expected=target/48*(elapsed/600);
+-          return ability*(0.55+0.45*s.energy[i])+(opt.minuteTargets?6*(expected-s.players[i].seconds/60):0)
++          return ability+(opt.minuteTargets?6*(expected-s.players[i].seconds/60):0)
+             +(p.pos===s.roster[out].pos?8:0)
+             +(opt.scoreRotation&&i<5?(opt.rotationGain??60)*(5*desired-s.lineup.filter(j=>j<5).length):0);
+         };
+@@ -162,7 +161,7 @@ export function simulateDefenseFifthGame(teamA, teamB, options = {}) {
+       }
+     }
+   };
+-  const lineups = () => sides.map(s=>s.lineup.map(i=>opt.fatigue?M.applyStamina(s.roster[i],1-s.energy[i]):s.roster[i]));
++  const lineups = () => sides.map(s=>s.lineup.map(i=>s.roster[i]));
+   const rebound = (shooter, zone, freeThrow=false) => {
+     // No player rebound is awarded to a miss after the period has expired.
+     if (clock<=0) {record(off,null,'periodMiss');return {end:true,dead:true};}
+@@ -384,7 +383,7 @@ export function simulateDefenseFifthGame(teamA, teamB, options = {}) {
+     clock=Math.round((period<=4?opt.quarterSeconds:opt.overtimeSeconds)*10);
+     shotClock=240;
+     off=period>4?(rng()<0.5?0:1):([opening,1-opening,1-opening,opening][period-1]);
+-    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;if(period>1 && opt.fatigue)s.energy=s.energy.map(e=>Math.min(1,e+0.12));}
++    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;}
+     rotate(true);emit('PERIOD_START');
+     origin='period';
+     const start=sides.map(s=>s.stat.pts);
+diff --git a/src/defense_fourth_game.js b/src/defense_fourth_game.js
+index 15c05c0..48ee5ea 100644
+--- a/src/defense_fourth_game.js
++++ b/src/defense_fourth_game.js
+@@ -17,7 +17,7 @@ const finish = s => ({ ...s, seconds:Math.round(s.seconds*10)/10, reb:s.oreb+s.d
+   fgPct:s.fga?s.fgm/s.fga:null, threePct:s.fg3a?s.fg3m/s.fg3a:null, ftPct:s.fta?s.ftm/s.fta:null });
+ 
+ export const TIMED_DEFAULTS = Object.freeze({ quarterSeconds:720, overtimeSeconds:300,
+-  maxOvertimes:20, fatigue:true, substitutions:true, foulOut:6, pace:1,
++  maxOvertimes:20, substitutions:true, foulOut:6, pace:1,
+   nonShootingFoulRate:0.04, andOneRate:0.025, replay:false, seed:1,
+   contextScale:1, turnoverScale:1, blocks:true });
+ 
+@@ -56,7 +56,8 @@ export function simulateDefenseFourthGame(teamA, teamB, options = {}) {
+   if (!Number.isFinite(opt.pace) || opt.pace < 0.5 || opt.pace > 2) throw new RangeError('Invalid pace');
+   for (const k of ['nonShootingFoulRate','andOneRate']) if (!Number.isFinite(opt[k]) || opt[k]<0 || opt[k]>1) throw new RangeError(`Invalid ${k}`);
+   for (const k of ['contextScale','turnoverScale']) if (!Number.isFinite(opt[k]) || opt[k]<0) throw new RangeError(`Invalid ${k}`);
+-  for (const k of ['fatigue','substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  for (const k of ['substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  if (opt.fatigue !== undefined) { if (typeof opt.fatigue !== 'boolean') throw new TypeError('Invalid fatigue'); if (opt.fatigue) throw new Error('fatigue removed in sim 0.1.1'); }
+   if (!Number.isSafeInteger(opt.seed)) throw new RangeError('Invalid seed');
+   const attrs = ['long','mid','short','drive','tovSkill','pass','ft','rebound','onBall','help','stamina','physique','offBall','screen'];
+   const sides = [teamA,teamB].map(t => {
+@@ -70,7 +71,7 @@ export function simulateDefenseFourthGame(teamA, teamB, options = {}) {
+     if(opt.minuteMode==='budget'&&t.roster.some(p=>p.injured))throw new Error('Budget diagnostic cannot contain injured players');
+     return { roster:t.roster, lineup:eligible.slice(0,5), players:t.roster.map(blank), stat:blank(),
+       budget:opt.minuteMode==='budget'?minuteBudgetSchedule(t.roster):null,
+-      energy:t.roster.map(()=>1), stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
++      stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
+   });
+   const rng = makeRng(opt.seed), timeRng = makeRng(opt.seed ^ 0x2B947EF1), eventRng=makeRng(opt.seed^0x791BC34D);
+   const reboundRng=makeRng(opt.seed^0x163AB371);
+@@ -118,8 +119,6 @@ export function simulateDefenseFourthGame(teamA, teamB, options = {}) {
+     for (const s of sides) for (let i=0;i<s.roster.length;i++) {
+       const playing=s.lineup.includes(i);
+       if (playing) { record(s===sides[0]?0:1,i,'seconds',dt/10);if(period<=4)record(s===sides[0]?0:1,i,'regulationSeconds',dt/10);s.stint[i]+=dt/10; }
+-      if (opt.fatigue) s.energy[i]=clamp(s.energy[i]+(playing
+-        ? -dt/(10*1800*(0.6+Math.min(s.roster[i].stamina,150)/175)) : dt/(10*900)),0,1);
+     }
+   };
+   const advance = (ticks,tag="Other") => {
+@@ -149,7 +148,7 @@ export function simulateDefenseFourthGame(teamA, teamB, options = {}) {
+           const ability=sum(['long','short','pass','onBall','help','rebound'].map(k=>p[k]))/6;
+           const target=p.targetMinutes ?? (i<5?32:16);
+           const expected=target/48*(elapsed/600);
+-          return ability*(0.55+0.45*s.energy[i])+(opt.minuteTargets?6*(expected-s.players[i].seconds/60):0)
++          return ability+(opt.minuteTargets?6*(expected-s.players[i].seconds/60):0)
+             +(p.pos===s.roster[out].pos?8:0)
+             +(opt.scoreRotation&&i<5?(opt.rotationGain??60)*(5*desired-s.lineup.filter(j=>j<5).length):0);
+         };
+@@ -162,7 +161,7 @@ export function simulateDefenseFourthGame(teamA, teamB, options = {}) {
+       }
+     }
+   };
+-  const lineups = () => sides.map(s=>s.lineup.map(i=>opt.fatigue?M.applyStamina(s.roster[i],1-s.energy[i]):s.roster[i]));
++  const lineups = () => sides.map(s=>s.lineup.map(i=>s.roster[i]));
+   const rebound = (shooter, zone, freeThrow=false) => {
+     // No player rebound is awarded to a miss after the period has expired.
+     if (clock<=0) {record(off,null,'periodMiss');return {end:true,dead:true};}
+@@ -384,7 +383,7 @@ export function simulateDefenseFourthGame(teamA, teamB, options = {}) {
+     clock=Math.round((period<=4?opt.quarterSeconds:opt.overtimeSeconds)*10);
+     shotClock=240;
+     off=period>4?(rng()<0.5?0:1):([opening,1-opening,1-opening,opening][period-1]);
+-    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;if(period>1 && opt.fatigue)s.energy=s.energy.map(e=>Math.min(1,e+0.12));}
++    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;}
+     rotate(true);emit('PERIOD_START');
+     origin='period';
+     const start=sides.map(s=>s.stat.pts);
+diff --git a/src/defense_game.js b/src/defense_game.js
+index 36b2f38..07d5b0b 100644
+--- a/src/defense_game.js
++++ b/src/defense_game.js
+@@ -15,7 +15,7 @@ const finish = s => ({ ...s, seconds:Math.round(s.seconds*10)/10, reb:s.oreb+s.d
+   fgPct:s.fga?s.fgm/s.fga:null, threePct:s.fg3a?s.fg3m/s.fg3a:null, ftPct:s.fta?s.ftm/s.fta:null });
+ 
+ export const TIMED_DEFAULTS = Object.freeze({ quarterSeconds:720, overtimeSeconds:300,
+-  maxOvertimes:20, fatigue:true, substitutions:true, foulOut:6, pace:1,
++  maxOvertimes:20, substitutions:true, foulOut:6, pace:1,
+   nonShootingFoulRate:0.04, andOneRate:0.025, replay:false, seed:1,
+   contextScale:1, turnoverScale:1, blocks:true });
+ 
+@@ -47,7 +47,8 @@ export function simulateDefenseGame(teamA, teamB, options = {}) {
+   if (!Number.isFinite(opt.pace) || opt.pace < 0.5 || opt.pace > 2) throw new RangeError('Invalid pace');
+   for (const k of ['nonShootingFoulRate','andOneRate']) if (!Number.isFinite(opt[k]) || opt[k]<0 || opt[k]>1) throw new RangeError(`Invalid ${k}`);
+   for (const k of ['contextScale','turnoverScale']) if (!Number.isFinite(opt[k]) || opt[k]<0) throw new RangeError(`Invalid ${k}`);
+-  for (const k of ['fatigue','substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  for (const k of ['substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  if (opt.fatigue !== undefined) { if (typeof opt.fatigue !== 'boolean') throw new TypeError('Invalid fatigue'); if (opt.fatigue) throw new Error('fatigue removed in sim 0.1.1'); }
+   if (!Number.isSafeInteger(opt.seed)) throw new RangeError('Invalid seed');
+   const attrs = ['long','mid','short','drive','tovSkill','pass','ft','rebound','onBall','help','stamina','physique','offBall','screen'];
+   const sides = [teamA,teamB].map(t => {
+@@ -61,7 +62,7 @@ export function simulateDefenseGame(teamA, teamB, options = {}) {
+     if(opt.minuteMode==='budget'&&t.roster.some(p=>p.injured))throw new Error('Budget diagnostic cannot contain injured players');
+     return { roster:t.roster, lineup:eligible.slice(0,5), players:t.roster.map(blank), stat:blank(),
+       budget:opt.minuteMode==='budget'?minuteBudgetSchedule(t.roster):null,
+-      energy:t.roster.map(()=>1), stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
++      stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
+   });
+   const rng = makeRng(opt.seed), timeRng = makeRng(opt.seed ^ 0x2B947EF1), eventRng=makeRng(opt.seed^0x791BC34D);
+   const events = [];
+@@ -98,8 +99,6 @@ export function simulateDefenseGame(teamA, teamB, options = {}) {
+     for (const s of sides) for (let i=0;i<s.roster.length;i++) {
+       const playing=s.lineup.includes(i);
+       if (playing) { record(s===sides[0]?0:1,i,'seconds',dt/10);if(period<=4)record(s===sides[0]?0:1,i,'regulationSeconds',dt/10);s.stint[i]+=dt/10; }
+-      if (opt.fatigue) s.energy[i]=clamp(s.energy[i]+(playing
+-        ? -dt/(10*1800*(0.6+Math.min(s.roster[i].stamina,150)/175)) : dt/(10*900)),0,1);
+     }
+   };
+   const advance = ticks => {
+@@ -127,7 +126,7 @@ export function simulateDefenseGame(teamA, teamB, options = {}) {
+           const ability=sum(['long','short','pass','onBall','help','rebound'].map(k=>p[k]))/6;
+           const target=p.targetMinutes ?? (i<5?32:16);
+           const expected=target/48*(elapsed/600);
+-          return ability*(0.55+0.45*s.energy[i])+6*(expected-s.players[i].seconds/60)
++          return ability+6*(expected-s.players[i].seconds/60)
+             +(p.pos===s.roster[out].pos?8:0);
+         };
+         candidates.sort((a,b)=>value(b)-value(a)||a-b);
+@@ -139,7 +138,7 @@ export function simulateDefenseGame(teamA, teamB, options = {}) {
+       }
+     }
+   };
+-  const lineups = () => sides.map(s=>s.lineup.map(i=>opt.fatigue?M.applyStamina(s.roster[i],1-s.energy[i]):s.roster[i]));
++  const lineups = () => sides.map(s=>s.lineup.map(i=>s.roster[i]));
+   const rebound = (shooter, zone, freeThrow=false) => {
+     // No player rebound is awarded to a miss after the period has expired.
+     if (clock<=0) return {end:true,dead:true};
+@@ -307,7 +306,7 @@ export function simulateDefenseGame(teamA, teamB, options = {}) {
+     clock=Math.round((period<=4?opt.quarterSeconds:opt.overtimeSeconds)*10);
+     shotClock=240;
+     off=period>4?(rng()<0.5?0:1):([opening,1-opening,1-opening,opening][period-1]);
+-    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;if(period>1 && opt.fatigue)s.energy=s.energy.map(e=>Math.min(1,e+0.12));}
++    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;}
+     rotate(true);emit('PERIOD_START');
+     const start=sides.map(s=>s.stat.pts);
+     while(clock>0) {
+diff --git a/src/defense_third_clock_audit.js b/src/defense_third_clock_audit.js
+index 3d65286..5397299 100644
+--- a/src/defense_third_clock_audit.js
++++ b/src/defense_third_clock_audit.js
+@@ -16,7 +16,7 @@ const finish = s => ({ ...s, seconds:Math.round(s.seconds*10)/10, reb:s.oreb+s.d
+   fgPct:s.fga?s.fgm/s.fga:null, threePct:s.fg3a?s.fg3m/s.fg3a:null, ftPct:s.fta?s.ftm/s.fta:null });
+ 
+ export const TIMED_DEFAULTS = Object.freeze({ quarterSeconds:720, overtimeSeconds:300,
+-  maxOvertimes:20, fatigue:true, substitutions:true, foulOut:6, pace:1,
++  maxOvertimes:20, substitutions:true, foulOut:6, pace:1,
+   nonShootingFoulRate:0.04, andOneRate:0.025, replay:false, seed:1,
+   contextScale:1, turnoverScale:1, blocks:true });
+ 
+@@ -55,7 +55,8 @@ export function simulateDefenseClockAuditGame(teamA, teamB, options = {}) {
+   if (!Number.isFinite(opt.pace) || opt.pace < 0.5 || opt.pace > 2) throw new RangeError('Invalid pace');
+   for (const k of ['nonShootingFoulRate','andOneRate']) if (!Number.isFinite(opt[k]) || opt[k]<0 || opt[k]>1) throw new RangeError(`Invalid ${k}`);
+   for (const k of ['contextScale','turnoverScale']) if (!Number.isFinite(opt[k]) || opt[k]<0) throw new RangeError(`Invalid ${k}`);
+-  for (const k of ['fatigue','substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  for (const k of ['substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  if (opt.fatigue !== undefined) { if (typeof opt.fatigue !== 'boolean') throw new TypeError('Invalid fatigue'); if (opt.fatigue) throw new Error('fatigue removed in sim 0.1.1'); }
+   if (!Number.isSafeInteger(opt.seed)) throw new RangeError('Invalid seed');
+   const attrs = ['long','mid','short','drive','tovSkill','pass','ft','rebound','onBall','help','stamina','physique','offBall','screen'];
+   const sides = [teamA,teamB].map(t => {
+@@ -69,7 +70,7 @@ export function simulateDefenseClockAuditGame(teamA, teamB, options = {}) {
+     if(opt.minuteMode==='budget'&&t.roster.some(p=>p.injured))throw new Error('Budget diagnostic cannot contain injured players');
+     return { roster:t.roster, lineup:eligible.slice(0,5), players:t.roster.map(blank), stat:blank(),
+       budget:opt.minuteMode==='budget'?minuteBudgetSchedule(t.roster):null,
+-      energy:t.roster.map(()=>1), stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
++      stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
+   });
+   const rng = makeRng(opt.seed), timeRng = makeRng(opt.seed ^ 0x2B947EF1), eventRng=makeRng(opt.seed^0x791BC34D);
+   const reboundRng=makeRng(opt.seed^0x163AB371);
+@@ -118,8 +119,6 @@ export function simulateDefenseClockAuditGame(teamA, teamB, options = {}) {
+     for (const s of sides) for (let i=0;i<s.roster.length;i++) {
+       const playing=s.lineup.includes(i);
+       if (playing) { record(s===sides[0]?0:1,i,'seconds',dt/10);if(period<=4)record(s===sides[0]?0:1,i,'regulationSeconds',dt/10);s.stint[i]+=dt/10; }
+-      if (opt.fatigue) s.energy[i]=clamp(s.energy[i]+(playing
+-        ? -dt/(10*1800*(0.6+Math.min(s.roster[i].stamina,150)/175)) : dt/(10*900)),0,1);
+     }
+   };
+   const advance = (ticks,tag="Other") => {
+@@ -148,7 +147,7 @@ export function simulateDefenseClockAuditGame(teamA, teamB, options = {}) {
+           const ability=sum(['long','short','pass','onBall','help','rebound'].map(k=>p[k]))/6;
+           const target=p.targetMinutes ?? (i<5?32:16);
+           const expected=target/48*(elapsed/600);
+-          return ability*(0.55+0.45*s.energy[i])+(opt.minuteTargets?6*(expected-s.players[i].seconds/60):0)
++          return ability+(opt.minuteTargets?6*(expected-s.players[i].seconds/60):0)
+             +(p.pos===s.roster[out].pos?8:0);
+         };
+         candidates.sort((a,b)=>value(b)-value(a)||a-b);
+@@ -160,7 +159,7 @@ export function simulateDefenseClockAuditGame(teamA, teamB, options = {}) {
+       }
+     }
+   };
+-  const lineups = () => sides.map(s=>s.lineup.map(i=>opt.fatigue?M.applyStamina(s.roster[i],1-s.energy[i]):s.roster[i]));
++  const lineups = () => sides.map(s=>s.lineup.map(i=>s.roster[i]));
+   const rebound = (shooter, zone, freeThrow=false) => {
+     // No player rebound is awarded to a miss after the period has expired.
+     if (clock<=0) {record(off,null,'periodMiss');return {end:true,dead:true};}
+@@ -373,7 +372,7 @@ export function simulateDefenseClockAuditGame(teamA, teamB, options = {}) {
+     clock=Math.round((period<=4?opt.quarterSeconds:opt.overtimeSeconds)*10);
+     shotClock=240;
+     off=period>4?(rng()<0.5?0:1):([opening,1-opening,1-opening,opening][period-1]);
+-    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;if(period>1 && opt.fatigue)s.energy=s.energy.map(e=>Math.min(1,e+0.12));}
++    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;}
+     rotate(true);emit('PERIOD_START');
+     origin='period';
+     const start=sides.map(s=>s.stat.pts);
+diff --git a/src/defense_third_game.js b/src/defense_third_game.js
+index 50cdd2a..4b27293 100644
+--- a/src/defense_third_game.js
++++ b/src/defense_third_game.js
+@@ -16,7 +16,7 @@ const finish = s => ({ ...s, seconds:Math.round(s.seconds*10)/10, reb:s.oreb+s.d
+   fgPct:s.fga?s.fgm/s.fga:null, threePct:s.fg3a?s.fg3m/s.fg3a:null, ftPct:s.fta?s.ftm/s.fta:null });
+ 
+ export const TIMED_DEFAULTS = Object.freeze({ quarterSeconds:720, overtimeSeconds:300,
+-  maxOvertimes:20, fatigue:true, substitutions:true, foulOut:6, pace:1,
++  maxOvertimes:20, substitutions:true, foulOut:6, pace:1,
+   nonShootingFoulRate:0.04, andOneRate:0.025, replay:false, seed:1,
+   contextScale:1, turnoverScale:1, blocks:true });
+ 
+@@ -55,7 +55,8 @@ export function simulateDefenseThirdGame(teamA, teamB, options = {}) {
+   if (!Number.isFinite(opt.pace) || opt.pace < 0.5 || opt.pace > 2) throw new RangeError('Invalid pace');
+   for (const k of ['nonShootingFoulRate','andOneRate']) if (!Number.isFinite(opt[k]) || opt[k]<0 || opt[k]>1) throw new RangeError(`Invalid ${k}`);
+   for (const k of ['contextScale','turnoverScale']) if (!Number.isFinite(opt[k]) || opt[k]<0) throw new RangeError(`Invalid ${k}`);
+-  for (const k of ['fatigue','substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  for (const k of ['substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  if (opt.fatigue !== undefined) { if (typeof opt.fatigue !== 'boolean') throw new TypeError('Invalid fatigue'); if (opt.fatigue) throw new Error('fatigue removed in sim 0.1.1'); }
+   if (!Number.isSafeInteger(opt.seed)) throw new RangeError('Invalid seed');
+   const attrs = ['long','mid','short','drive','tovSkill','pass','ft','rebound','onBall','help','stamina','physique','offBall','screen'];
+   const sides = [teamA,teamB].map(t => {
+@@ -69,7 +70,7 @@ export function simulateDefenseThirdGame(teamA, teamB, options = {}) {
+     if(opt.minuteMode==='budget'&&t.roster.some(p=>p.injured))throw new Error('Budget diagnostic cannot contain injured players');
+     return { roster:t.roster, lineup:eligible.slice(0,5), players:t.roster.map(blank), stat:blank(),
+       budget:opt.minuteMode==='budget'?minuteBudgetSchedule(t.roster):null,
+-      energy:t.roster.map(()=>1), stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
++      stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
+   });
+   const rng = makeRng(opt.seed), timeRng = makeRng(opt.seed ^ 0x2B947EF1), eventRng=makeRng(opt.seed^0x791BC34D);
+   const reboundRng=makeRng(opt.seed^0x163AB371);
+@@ -117,8 +118,6 @@ export function simulateDefenseThirdGame(teamA, teamB, options = {}) {
+     for (const s of sides) for (let i=0;i<s.roster.length;i++) {
+       const playing=s.lineup.includes(i);
+       if (playing) { record(s===sides[0]?0:1,i,'seconds',dt/10);if(period<=4)record(s===sides[0]?0:1,i,'regulationSeconds',dt/10);s.stint[i]+=dt/10; }
+-      if (opt.fatigue) s.energy[i]=clamp(s.energy[i]+(playing
+-        ? -dt/(10*1800*(0.6+Math.min(s.roster[i].stamina,150)/175)) : dt/(10*900)),0,1);
+     }
+   };
+   const advance = (ticks,tag="Other") => {
+@@ -147,7 +146,7 @@ export function simulateDefenseThirdGame(teamA, teamB, options = {}) {
+           const ability=sum(['long','short','pass','onBall','help','rebound'].map(k=>p[k]))/6;
+           const target=p.targetMinutes ?? (i<5?32:16);
+           const expected=target/48*(elapsed/600);
+-          return ability*(0.55+0.45*s.energy[i])+(opt.minuteTargets?6*(expected-s.players[i].seconds/60):0)
++          return ability+(opt.minuteTargets?6*(expected-s.players[i].seconds/60):0)
+             +(p.pos===s.roster[out].pos?8:0);
+         };
+         candidates.sort((a,b)=>value(b)-value(a)||a-b);
+@@ -159,7 +158,7 @@ export function simulateDefenseThirdGame(teamA, teamB, options = {}) {
+       }
+     }
+   };
+-  const lineups = () => sides.map(s=>s.lineup.map(i=>opt.fatigue?M.applyStamina(s.roster[i],1-s.energy[i]):s.roster[i]));
++  const lineups = () => sides.map(s=>s.lineup.map(i=>s.roster[i]));
+   const rebound = (shooter, zone, freeThrow=false) => {
+     // No player rebound is awarded to a miss after the period has expired.
+     if (clock<=0) {record(off,null,'periodMiss');return {end:true,dead:true};}
+@@ -372,7 +371,7 @@ export function simulateDefenseThirdGame(teamA, teamB, options = {}) {
+     clock=Math.round((period<=4?opt.quarterSeconds:opt.overtimeSeconds)*10);
+     shotClock=240;
+     off=period>4?(rng()<0.5?0:1):([opening,1-opening,1-opening,opening][period-1]);
+-    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;if(period>1 && opt.fatigue)s.energy=s.energy.map(e=>Math.min(1,e+0.12));}
++    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;}
+     rotate(true);emit('PERIOD_START');
+     origin='period';
+     const start=sides.map(s=>s.stat.pts);
+diff --git a/src/probability_model.js b/src/probability_model.js
+index afe50d0..2f6492f 100644
+--- a/src/probability_model.js
++++ b/src/probability_model.js
+@@ -565,23 +565,3 @@ export function creationScore(p) {
+     + w.drive * p.drive + w.pass * (p.pass ?? C.ATTR_MIDPOINT)
+     - C.CREATE_OFFBALL_PENALTY * (p.offBall - C.ATTR_MIDPOINT);
+ }
+-
+-/** 體力：削弱屬性而非加減機率（照 Nine_innings 的 pitcherEffectiveness）。 */
+-export function applyStamina(player, fatigue) {
+-  const eff = C.STAMINA_MAX_EFF
+-    - (C.STAMINA_MAX_EFF - C.STAMINA_MIN_EFF) * Math.max(0, Math.min(1, fatigue));
+-  return {
+-    ...player,
+-    long: player.long * eff,
+-    mid: player.mid * eff,
+-    short: player.short * eff,
+-    drive: player.drive * eff,
+-    _eff: eff,
+-  };
+-}
+-
+-/** 一名球員在該 possession 消耗的體力，體力屬性越高消耗越慢。 */
+-export function fatigueRate(player, possessions) {
+-  const resist = 0.6 + tanhEff(player.stamina, 45) * 0.4;
+-  return possessions / (150 * resist);
+-}
+diff --git a/src/simulation_engine.js b/src/simulation_engine.js
+index c89cf05..18fa4e1 100644
+--- a/src/simulation_engine.js
++++ b/src/simulation_engine.js
+@@ -55,7 +55,7 @@ export function simulateGame(teamA, teamB, opts = {}) {
+   }
+   const {
+     mode = 'fixed', possessions = 20, targetScore = 21, winBy = 1,
+-    maxPossessions = 200, seed = 1, fatigue = true,
++    maxPossessions = 200, seed = 1,
+     reboundModel = 'opportunity', blocks = true, replay = false,
+     leagueReboundShare = DEFAULT_OREB_SHARE, contextScale = 1, turnoverScale = 1, turnoverFloor = 0,
+     possessionModel = 'legacy', rollAccess = 0,
+@@ -66,7 +66,7 @@ export function simulateGame(teamA, teamB, opts = {}) {
+   if (!Number.isFinite(rollAccess)||rollAccess<0) throw new RangeError('Invalid interior access');
+   if (!Number.isFinite(leagueReboundShare) || leagueReboundShare <= 0 || leagueReboundShare >= 1) throw new RangeError('Invalid leagueReboundShare');
+   if (!['fixed', 'race'].includes(mode)) throw new RangeError('Unknown game mode');
+-  if (typeof fatigue !== 'boolean') throw new TypeError('fatigue must be boolean');
++  if (opts.fatigue !== undefined) { if (typeof opts.fatigue !== 'boolean') throw new TypeError('fatigue must be boolean'); if (opts.fatigue) throw new Error('fatigue removed in sim 0.1.1'); }
+   if (typeof blocks !== 'boolean') throw new TypeError('blocks must be boolean');
+   if (!['legacy','opportunity'].includes(reboundModel)) throw new RangeError('Unknown rebound model');
+   if (mode === 'fixed' && (!Number.isSafeInteger(possessions) || possessions < 1)) {
+@@ -139,16 +139,13 @@ export function simulateGame(teamA, teamB, opts = {}) {
+     while (alive && chances < 6) {
+       chances++;
+ 
+-      const fat = Math.floor(poss / 2);
+-      const handlers = fatigue
+-        ? O.lineup.map(p => M.applyStamina(p, M.fatigueRate(p, fat)))
+-        : O.lineup;
++      const handlers = O.lineup;
+       const dist = (i, options) => {
+         const key = `${i}/${options.assist}/${!!options.forced}/${!!options.putback}`;
+-        if (!fatigue && distributions[off].has(key)) return distributions[off].get(key);
++        if (distributions[off].has(key)) return distributions[off].get(key);
+         const value = M.possessionProbabilities(handlers[i], O.ctxs[i], D.lineup[i], help[1-off], O.reb, D.reb, D.phys,
+           {...options,contextScale,turnoverScale,turnoverFloor,consistentTouch:possessionModel==='stable'});
+-        if (!fatigue) distributions[off].set(key,value);
++        distributions[off].set(key,value);
+         return value;
+       };
+ 
+@@ -172,7 +169,7 @@ export function simulateGame(teamA, teamB, opts = {}) {
+       } else {
+         // 第一手：誰把球帶起來。由**持球能力**決定，不是由期望得分決定——
+         // 出手多跟持球多是兩件事（Durant 出手多，但持球核心是 Curry 與 Draymond）。
+-        const weights = fatigue ? M.handlingWeights(handlers) : initialWeights[off];
++        const weights = initialWeights[off];
+         hi = pickWeighted(weights, rng());
+         record(O, hi, 'firstTouches');
+         p = best(hi, assist);
+@@ -311,7 +308,7 @@ export function simulateGame(teamA, teamB, opts = {}) {
+     statA: finalize(sides[0].stat), statB: finalize(sides[1].stat),
+     playersA: playerRows(sides[0].players, teamA.roster, sides[0].stat),
+     playersB: playerRows(sides[1].players, teamB.roster, sides[1].stat),
+-    fatigue, reboundModel,
++    fatigue: false, reboundModel,
+     coverage: { blocks: blocks ? 'miss-decomposition-v1' : 'disabled', steals: 'pass-interceptions-only',
+       rebounds: 'live-field-goal-misses-only' },
+     log,
+diff --git a/src/source_rotation_energy.js b/src/source_rotation_energy.js
+deleted file mode 100644
+index ae142db..0000000
+--- a/src/source_rotation_energy.js
++++ /dev/null
+@@ -1,13 +0,0 @@
+-// Reference energy under observed game-clock rotations, using the same drain,
+-// bench recovery and period recovery equations as the simulation. This is a
+-// model reference, not a measurement of players' physiological fatigue.
+-const clamp=x=>Math.max(0,Math.min(1,x));
+-export function rotationEnergyStep(energy,seconds,playing,stamina){
+- if(![energy,seconds,stamina].every(Number.isFinite)||energy<0||energy>1||seconds<0||stamina<0)throw Error('Invalid rotation energy input');
+- const slope=playing?-1/(1800*(.6+Math.min(stamina,150)/175)):1/900,end=clamp(energy+slope*seconds);
+- if(seconds===0)return {end,mean:energy};
+- const bound=playing?0:1,time=Math.max(0,Math.min(seconds,(bound-energy)/slope));
+- const mean=time<seconds?((energy+bound)*.5*time+bound*(seconds-time))/seconds:(energy+end)*.5;
+- return {end,mean};
+-}
+-export function periodEnergyRecovery(energy,periods=1){return Math.min(1,energy+.12*periods);}
+diff --git a/src/timed_game.js b/src/timed_game.js
+index 2c64ce8..530481c 100644
+--- a/src/timed_game.js
++++ b/src/timed_game.js
+@@ -13,7 +13,7 @@ const finish = s => ({ ...s, seconds:Math.round(s.seconds*10)/10, reb:s.oreb+s.d
+   fgPct:s.fga?s.fgm/s.fga:null, threePct:s.fg3a?s.fg3m/s.fg3a:null, ftPct:s.fta?s.ftm/s.fta:null });
+ 
+ export const TIMED_DEFAULTS = Object.freeze({ quarterSeconds:720, overtimeSeconds:300,
+-  maxOvertimes:20, fatigue:true, substitutions:true, foulOut:6, pace:1,
++  maxOvertimes:20, substitutions:true, foulOut:6, pace:1,
+   nonShootingFoulRate:0.04, andOneRate:0.025, replay:false, seed:1,
+   contextScale:1, turnoverScale:1, blocks:true });
+ 
+@@ -39,7 +39,8 @@ export function simulateTimedGame(teamA, teamB, options = {}) {
+   if (!Number.isFinite(opt.pace) || opt.pace < 0.5 || opt.pace > 2) throw new RangeError('Invalid pace');
+   for (const k of ['nonShootingFoulRate','andOneRate']) if (!Number.isFinite(opt[k]) || opt[k]<0 || opt[k]>1) throw new RangeError(`Invalid ${k}`);
+   for (const k of ['contextScale','turnoverScale']) if (!Number.isFinite(opt[k]) || opt[k]<0) throw new RangeError(`Invalid ${k}`);
+-  for (const k of ['fatigue','substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  for (const k of ['substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
++  if (opt.fatigue !== undefined) { if (typeof opt.fatigue !== 'boolean') throw new TypeError('Invalid fatigue'); if (opt.fatigue) throw new Error('fatigue removed in sim 0.1.1'); }
+   if (!Number.isSafeInteger(opt.seed)) throw new RangeError('Invalid seed');
+   const attrs = ['long','mid','short','drive','tovSkill','pass','ft','rebound','onBall','help','stamina','physique','offBall','screen'];
+   const sides = [teamA,teamB].map(t => {
+@@ -51,7 +52,7 @@ export function simulateTimedGame(teamA, teamB, options = {}) {
+     const eligible = t.roster.flatMap((p,i)=>p.injured?[]:[i]);
+     if (eligible.length<5) throw new RangeError('At least five healthy players are required');
+     return { roster:t.roster, lineup:eligible.slice(0,5), players:t.roster.map(blank), stat:blank(),
+-      energy:t.roster.map(()=>1), stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
++      stint:t.roster.map(()=>0), teamFouls:0, lastTwoFouls:0, periods:[] };
+   });
+   const rng = makeRng(opt.seed), timeRng = makeRng(opt.seed ^ 0x2B947EF1);
+   const events = [];
+@@ -72,8 +73,6 @@ export function simulateTimedGame(teamA, teamB, options = {}) {
+     for (const s of sides) for (let i=0;i<s.roster.length;i++) {
+       const playing=s.lineup.includes(i);
+       if (playing) { record(s===sides[0]?0:1,i,'seconds',dt/10); s.stint[i]+=dt/10; }
+-      if (opt.fatigue) s.energy[i]=clamp(s.energy[i]+(playing
+-        ? -dt/(10*1800*(0.6+Math.min(s.roster[i].stamina,150)/175)) : dt/(10*900)),0,1);
+     }
+   };
+   const rotate = (forced=false, protectedPlayer=null, protectedSide=-1) => {
+@@ -90,7 +89,7 @@ export function simulateTimedGame(teamA, teamB, options = {}) {
+           const ability=sum(['long','short','pass','onBall','help','rebound'].map(k=>p[k]))/6;
+           const target=p.targetMinutes ?? (i<5?32:16);
+           const expected=target/48*(elapsed/600);
+-          return ability*(0.55+0.45*s.energy[i])+6*(expected-s.players[i].seconds/60)
++          return ability+6*(expected-s.players[i].seconds/60)
+             +(p.pos===s.roster[out].pos?8:0);
+         };
+         candidates.sort((a,b)=>value(b)-value(a)||a-b);
+@@ -102,7 +101,7 @@ export function simulateTimedGame(teamA, teamB, options = {}) {
+       }
+     }
+   };
+-  const lineups = () => sides.map(s=>s.lineup.map(i=>opt.fatigue?M.applyStamina(s.roster[i],1-s.energy[i]):s.roster[i]));
++  const lineups = () => sides.map(s=>s.lineup.map(i=>s.roster[i]));
+   const rebound = (shooter, zone, freeThrow=false) => {
+     // No player rebound is awarded to a miss after the period has expired.
+     if (clock<=0) return {end:true,dead:true};
+@@ -244,7 +243,7 @@ export function simulateTimedGame(teamA, teamB, options = {}) {
+     clock=Math.round((period<=4?opt.quarterSeconds:opt.overtimeSeconds)*10);
+     shotClock=240;
+     off=period>4?(rng()<0.5?0:1):([opening,1-opening,1-opening,opening][period-1]);
+-    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;if(period>1 && opt.fatigue)s.energy=s.energy.map(e=>Math.min(1,e+0.12));}
++    for(const s of sides){s.teamFouls=0;s.lastTwoFouls=0;}
+     rotate(true);emit('PERIOD_START');
+     const start=sides.map(s=>s.stat.pts);
+     while(clock>0) {
+diff --git a/test/fixtures/measurement-legacy.json b/test/fixtures/measurement-legacy.json
+index bdaccd9..679eabb 100644
+--- a/test/fixtures/measurement-legacy.json
++++ b/test/fixtures/measurement-legacy.json
+@@ -1,5 +1,5 @@
+ {
+-  "description": "Captured before measurement changes; fatigue enabled, current working-tree baseline",
++  "description": "Captured before measurement changes; fatigue enabled, current working-tree baseline; sha256 regenerated 2026-10-30 (sim 0.1.1, fatigue removed) from the pre-0.1.1 engine with fatigue:false",
+   "stats": [
+     "poss",
+     "fga",
+@@ -50,7 +50,7 @@
+         "possessions": 75,
+         "targetScore": 21
+       },
+-      "sha256": "9d551a05f99cce205841e9a407f06981495befabc758d19b9a7b83385aef0056"
++      "sha256": "44f912dd2462ce6a144f95b1ff6b899121b3c5a473f8636228975950f2f179c8"
+     },
+     {
+       "key": "GSW",
+@@ -70,7 +70,7 @@
+         "possessions": 75,
+         "targetScore": 21
+       },
+-      "sha256": "6c9d01467ee13842286796181a66ad5d803bd018391b7e7dcec0e6d0c59afe14"
++      "sha256": "d239335e41c20808a3887c274d47191d0e5b03c59e3a4a6255b5f6b8a7a1ce26"
+     },
+     {
+       "key": "CLE",
+@@ -90,7 +90,7 @@
+         "possessions": 75,
+         "targetScore": 21
+       },
+-      "sha256": "0a549e90e9c7751ba91b9499fe4ffd28af36f12efdfa4fcbd9ae6a852647290c"
++      "sha256": "0f21f7f641ebf658d2bcfcbb2bb2186673e9c08fbb45df19fd2061a5973033b8"
+     },
+     {
+       "key": "CLE",
+@@ -100,7 +100,7 @@
+         "possessions": 75,
+         "targetScore": 21
+       },
+-      "sha256": "d09ef4d94feeafc0c55b98244009d3e8cf661fd3df4daea5726426540c8eeb7d"
++      "sha256": "6a25d8852b9ce696c4dc84123ccefac34e0798a2513aa0ad3adae7c5a603c263"
+     },
+     {
+       "key": "CLE",
+@@ -110,7 +110,7 @@
+         "possessions": 75,
+         "targetScore": 21
+       },
+-      "sha256": "3ddeee52ddcb516801fca58f3d418fbd16d2b0db7d7997789828bf819dcef0e3"
++      "sha256": "0e81bab9cd3374569a94bb6a3baa77747054db3a182fcd5ffabdf7ce31d876ce"
+     },
+     {
+       "key": "OKC",
+@@ -130,7 +130,7 @@
+         "possessions": 75,
+         "targetScore": 21
+       },
+-      "sha256": "171bd01c0f46f4ec4f1458f059d97b4f7d12853cecf32e0422738560bec6c94d"
++      "sha256": "3d2fbd1313a00937e2f90965517f860c482bfd8944a5303a6fee458fcc2f1936"
+     },
+     {
+       "key": "OKC",
+@@ -150,7 +150,7 @@
+         "possessions": 75,
+         "targetScore": 21
+       },
+-      "sha256": "299753d1f1b4f07cd83063d7a242bc0150f9acb4d336932f8ac3eb138fb52797"
++      "sha256": "d2df3fd29366d3ce659bb154ac987ab4bd03688ab54bd766373724b6a7e3bc5f"
+     },
+     {
+       "key": "NYK",
+@@ -170,7 +170,7 @@
+         "possessions": 75,
+         "targetScore": 21
+       },
+-      "sha256": "2aca84ab7a51390b743c977ed7728093c0b3da295ed678a4c7b893c9af614b4f"
++      "sha256": "37e6c1db3ddb371ac4fefdc825c70b00d655f7ac8097612523f59990d78ca79a"
+     },
+     {
+       "key": "NYK",
+@@ -190,7 +190,7 @@
+         "possessions": 75,
+         "targetScore": 21
+       },
+-      "sha256": "05f7faf003d5680c57c47e0fd3e01ccab117121b84ebc30164fa8f4dbc9cea80"
++      "sha256": "26956fb32b67c3413c6eff0db2a332d582e2ab88590523123a2b1522bb4b73be"
+     },
+     {
+       "key": "LAL",
+@@ -210,7 +210,7 @@
+         "possessions": 75,
+         "targetScore": 21
+       },
+-      "sha256": "25b1362a52b790b197afa4dd550a8d0495717000f5183f69d0e2eaa0e858a5ea"
++      "sha256": "47f21d9f34de211014a9e5750e482ad77577046add5b86a2595806bd7e768c18"
+     },
+     {
+       "key": "LAL",
+@@ -230,7 +230,7 @@
+         "possessions": 75,
+         "targetScore": 21
+       },
+-      "sha256": "edda67e9fc0bb17236e15b0b91e80fc1b6e33b1a8903cda9551a081f22f03ac0"
++      "sha256": "9840ca71c381ee16322af6e46b14c82bb31df9ed3c7e7a19a09e9c070ba2e34c"
+     }
+   ]
+ }
+diff --git a/test/measurement.js b/test/measurement.js
+index 2260d21..b21aee8 100644
+--- a/test/measurement.js
++++ b/test/measurement.js
+@@ -59,13 +59,13 @@ test('Full counters survive 400-event log cap and preserve game determinism', ()
+   assert.deepEqual(g,simulateGame(TEAMS.GSW,BASELINE,opts));
+ });
+ 
+-test('Fatigue defaults on; disabled fatigue makes stamina irrelevant', () => {
++test('Fatigue removed in sim 0.1.1: false accepted and ignored, true throws, stamina irrelevant', () => {
+   const high={...TEAMS.GSW,roster:TEAMS.GSW.roster.map(p=>({...p,stamina:99}))};
+   const low={...TEAMS.GSW,roster:TEAMS.GSW.roster.map(p=>({...p,stamina:1}))};
+   const opts={possessions:75,seed:300};
+-  assert.deepEqual(simulateGame(high,BASELINE,{...opts,fatigue:false}),simulateGame(low,BASELINE,{...opts,fatigue:false}));
+-  assert.deepEqual(simulateGame(high,BASELINE,opts),simulateGame(high,BASELINE,{...opts,fatigue:true}));
+-  assert.notDeepEqual(simulateGame(high,BASELINE,opts).log,simulateGame(high,BASELINE,{...opts,fatigue:false}).log);
++  assert.deepEqual(simulateGame(high,BASELINE,opts),simulateGame(low,BASELINE,opts));
++  assert.deepEqual(simulateGame(high,BASELINE,opts),simulateGame(high,BASELINE,{...opts,fatigue:false}));
++  assert.throws(()=>simulateGame(high,BASELINE,{...opts,fatigue:true}),/fatigue removed in sim 0\.1\.1/);
+   assert.throws(()=>simulateGame(high,BASELINE,{fatigue:'false'}));
+ });
+ 
+diff --git a/test/run_tests.js b/test/run_tests.js
+index fa3bf6c..a91ccbf 100644
+--- a/test/run_tests.js
++++ b/test/run_tests.js
+@@ -255,20 +255,6 @@ sec('8  中投：必須是「被防守逼出來的」才有存在意義');
+   ok(gainStrong > 0.01, `中投對強防守確實有邊際價值 +${gainStrong.toFixed(3)} 分/回合`);
+ }
+ 
+-// ---------------------------------------------------------------- 9
+-sec('9  體力：疲勞只削弱屬性，不直接加減機率');
+-{
+-  const p = BASELINE.roster[0];
+-  const fresh = M.applyStamina(p, 0), tired = M.applyStamina(p, 1);
+-  ok(fresh.long === p.long && fresh._eff === C.STAMINA_MAX_EFF, '零疲勞時屬性不變');
+-  ok(tired.ft === p.ft, '疲勞不影響罰球（站定投，不吃體能）');
+-  ok(Math.abs(tired.long - p.long * C.STAMINA_MIN_EFF) < 1e-9, '滿疲勞時屬性乘上 MIN_EFF');
+-  ok(tired.rebound === p.rebound && tired.onBall === p.onBall, '疲勞不影響籃板與防守屬性');
+-  const hi = M.fatigueRate({ stamina: 99 }, 40), lo = M.fatigueRate({ stamina: 40 }, 40);
+-  ok(hi < lo, `體力 99 的疲勞累積 ${hi.toFixed(3)} < 體力 40 的 ${lo.toFixed(3)}`);
+-}
+-
+-
+ // ---------------------------------------------------------------- 10
+ sec('10 罰球：唯一不受防守影響的得分路徑');
+ {
+diff --git a/test/shooting_round_trip.js b/test/shooting_round_trip.js
+index 76ce6ac..7cfd3e8 100644
+--- a/test/shooting_round_trip.js
++++ b/test/shooting_round_trip.js
+@@ -2,12 +2,13 @@ import assert from 'node:assert/strict';
+ import * as M from '../src/probability_model.js';
+ import * as C from '../src/constants.js';
+ import {roundTripMake} from '../reports/player-impact-v9/model.mjs';
++const applyStamina=(p,f)=>{const eff=1.00-(1.00-0.70)*Math.max(0,Math.min(1,f));return {...p,long:p.long*eff,mid:p.mid*eff,short:p.short*eff,drive:p.drive*eff,_eff:eff};};// local copy: engine fatigue removed in sim 0.1.1
+ const source={long:80,mid:99,short:90},curves={long:C.CURVE_3PT,mid:C.CURVE_MID,short:C.CURVE_SHORT};
+ const measurement={rates:{long:.39,mid:.54,short:.65},sourceBase:Object.fromEntries(Object.keys(source).map(z=>[z,M.interpolate(source[z],curves[z])]))};
+ const p={...source,shootingMeasurement:measurement},base={make:{...measurement.sourceBase}},copy=structuredClone(p);
+ for(const z of Object.keys(source))assert.ok(Math.abs(roundTripMake(base,p)[z]-measurement.rates[z])<1e-12);
+ assert.deepEqual(p,copy);
+-const tired=M.applyStamina(p,.7),q={make:Object.fromEntries(Object.keys(source).map(z=>[z,M.interpolate(tired[z],curves[z])]))};
++const tired=applyStamina(p,.7),q={make:Object.fromEntries(Object.keys(source).map(z=>[z,M.interpolate(tired[z],curves[z])]))};
+ for(const z of Object.keys(source))assert.ok(Math.abs(roundTripMake(q,tired)[z]-measurement.rates[z])<1e-12);
+ const better={...p,long:90},prob={make:{...base.make,long:M.interpolate(90,C.CURVE_3PT)}};
+ assert.ok(roundTripMake(prob,better).long>roundTripMake(base,p).long,'Source centering must not cancel a shooting improvement');
+diff --git a/test/source_context_shooting.js b/test/source_context_shooting.js
+index 57724e8..c235b7b 100644
+--- a/test/source_context_shooting.js
++++ b/test/source_context_shooting.js
+@@ -2,12 +2,13 @@ import assert from 'node:assert/strict';
+ import * as M from '../src/probability_model.js';
+ import * as C from '../src/constants.js';
+ import {centeredMake} from '../reports/player-impact-v12/model.mjs';
++const applyStamina=(p,f)=>{const eff=1.00-(1.00-0.70)*Math.max(0,Math.min(1,f));return {...p,long:p.long*eff,mid:p.mid*eff,short:p.short*eff,drive:p.drive*eff,_eff:eff};};// local copy: engine fatigue removed in sim 0.1.1
+ const curves={long:C.CURVE_3PT,mid:C.CURVE_MID,short:C.CURVE_SHORT},source={long:80,mid:99,short:90};
+ const base=Object.fromEntries(Object.keys(source).map(z=>[z,M.interpolate(source[z],curves[z])])),context={long:-.014,mid:-.01,short:-.045};
+ const measurement={rates:{long:.39,mid:.54,short:.65},sourceBase:base,contexts:{test:context}};
+ const player={...source,shootingMeasurement:measurement},prob={make:Object.fromEntries(Object.keys(source).map(z=>[z,base[z]+context[z]]))};
+ for(const z of Object.keys(source))assert.ok(Math.abs(centeredMake(prob,player,'test')[z]-measurement.rates[z])<1e-12);
+-const tired=M.applyStamina(player,.7),tp={make:Object.fromEntries(Object.keys(source).map(z=>[z,M.interpolate(tired[z],curves[z])+context[z]]))};
++const tired=applyStamina(player,.7),tp={make:Object.fromEntries(Object.keys(source).map(z=>[z,M.interpolate(tired[z],curves[z])+context[z]]))};
+ for(const z of Object.keys(source))assert.ok(Math.abs(centeredMake(tp,tired,'test')[z]-measurement.rates[z])<1e-12);
+ const better={...player,long:90},bp={make:{...prob.make,long:prob.make.long+M.interpolate(90,C.CURVE_3PT)-base.long}};
+ assert.ok(centeredMake(bp,better,'test').long>measurement.rates.long);
+diff --git a/test/source_rotation_energy.js b/test/source_rotation_energy.js
+deleted file mode 100644
+index 3076387..0000000
+--- a/test/source_rotation_energy.js
++++ /dev/null
+@@ -1,9 +0,0 @@
+-import assert from 'node:assert/strict';
+-import {rotationEnergyStep,periodEnergyRecovery} from '../src/source_rotation_energy.js';
+-const a=rotationEnergyStep(1,360,true,70);assert.ok(a.end<1);assert.equal(a.mean,(1+a.end)/2);
+-const split=rotationEnergyStep(rotationEnergyStep(1,180,true,70).end,180,true,70);assert.ok(Math.abs(a.end-split.end)<1e-12);
+-const rested=rotationEnergyStep(.5,900,false,70);assert.equal(rested.end,1);assert.equal(rested.mean,.875);
+-const exhausted=rotationEnergyStep(.1,3600,true,70);assert.equal(exhausted.end,0);assert.ok(exhausted.mean>0&&exhausted.mean<.05);
+-assert.equal(periodEnergyRecovery(.6,2),.84);assert.equal(periodEnergyRecovery(.95),1);
+-assert.throws(()=>rotationEnergyStep(-.1,60,true,70),/Invalid/);
+-console.log('Continuous rotation energy, recovery boundaries and subdivision invariance passed');
+diff --git a/test/source_rotation_shooting.js b/test/source_rotation_shooting.js
+index aeae0e7..d7e98b7 100644
+--- a/test/source_rotation_shooting.js
++++ b/test/source_rotation_shooting.js
+@@ -2,12 +2,13 @@ import assert from 'node:assert/strict';
+ import * as M from '../src/probability_model.js';
+ import * as C from '../src/constants.js';
+ import {centeredMake} from '../reports/player-impact-v14/model.mjs';
++const applyStamina=(p,f)=>{const eff=1.00-(1.00-0.70)*Math.max(0,Math.min(1,f));return {...p,long:p.long*eff,mid:p.mid*eff,short:p.short*eff,drive:p.drive*eff,_eff:eff};};// local copy: engine fatigue removed in sim 0.1.1
+ 
+ const curves={long:C.CURVE_3PT,mid:C.CURVE_MID,short:C.CURVE_SHORT};
+ const source={long:80,mid:88,short:90};
+ const sourceBase=Object.fromEntries(Object.keys(curves).map(z=>[z,M.interpolate(source[z],curves[z])]));
+ const rates={long:.39,mid:.49,short:.65};
+-const sourcePlayer=M.applyStamina(source,.35);
++const sourcePlayer=applyStamina(source,.35);
+ const environment={long:.018,mid:-.007,short:.024};
+ const prediction=p=>({make:Object.fromEntries(Object.keys(curves).map(z=>[z,M.interpolate(p[z],curves[z])+environment[z]]))});
+ const sourceProbability=prediction(sourcePlayer);
+@@ -16,7 +17,7 @@ const measurement={rates,sourceBase,contexts:{test:context}};
+ const card=p=>({...p,shootingMeasurement:measurement});
+ const reconstructed=centeredMake(sourceProbability,card(sourcePlayer),'test');
+ const rested=centeredMake(prediction(source),card(source),'test');
+-const exhausted=M.applyStamina(source,.7);
++const exhausted=applyStamina(source,.7);
+ const tired=centeredMake(prediction(exhausted),card(exhausted),'test');
+ for(const z of Object.keys(curves)){
+  assert.ok(Math.abs(reconstructed[z]-rates[z])<1e-12,'Observed source rotation must reconstruct empirical FG');
+diff --git a/test/timed_game.js b/test/timed_game.js
+index 409ad12..a63b06e 100644
+--- a/test/timed_game.js
++++ b/test/timed_game.js
+@@ -92,5 +92,5 @@ for(const opts of [{pace:0},{quarterSeconds:NaN},{maxOvertimes:-1},{fatigue:'yes
+ assert.throws(()=>simulateGame({roster:[]},team,{mode:'timed'}));
+ assert.throws(()=>monteCarlo(team,team,1,{mode:'timed'}));
+ const legacyHash=createHash('sha256').update(JSON.stringify([1,42,20260909].map(seed=>simulateGame(TEAMS.GSW,TEAMS.CLE,{seed,replay:true})))).digest('hex');
+-assert.equal(legacyHash,'6380263034d284ba889692ac414c23931ed486b4e0870209753bb72635ca11b4');
++assert.equal(legacyHash,'e87f8dce73e6b71f754f5b5fc0b3dc367060d12b441233d4c185ed9b988afdde');
+ console.log(`Timed game: 60 full games; accounting, rotation, clock, FT, assists, overtime, replay and legacy parity passed. ${rotations} substitutions, ${andOnes} and-ones, ${ftRebounds} FT rebounds.`);

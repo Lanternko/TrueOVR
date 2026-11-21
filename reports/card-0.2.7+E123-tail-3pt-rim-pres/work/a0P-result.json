@@ -1,0 +1,36 @@
+{
+ "force2025-26_maxdiff": 0.0,
+ "n26": 582,
+ "pool26": 252,
+ "force2024-25_maxdiff": 0.0,
+ "n25": 569,
+ "matched": 582,
+ "pressure_maxdiff": [
+  [
+   0.04988662131519561,
+   "Javon Small"
+  ],
+  [
+   0.049757045675406175,
+   "Riley Minix"
+  ],
+  [
+   0.049757045675406175,
+   "Kobe Brown"
+  ]
+ ],
+ "presDisplay_maxdiff": [
+  [
+   0.04988662131519561,
+   "Derrick White"
+  ],
+  [
+   0.049757045675406175,
+   "Simone Fontecchio"
+  ],
+  [
+   0.049757045675406175,
+   "Nicolas Batum"
+  ]
+ ]
+}

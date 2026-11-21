@@ -1,0 +1,754 @@
+{
+ "B": 2000,
+ "cells": {
+  "X|AB|legacy": {
+   "n": 345,
+   "nC": 72,
+   "nG": 145,
+   "S": 86.69425287356322,
+   "rho": 0.43275977954026085,
+   "groupMean": {
+    "PG": 10.276923076923078,
+    "SG": -33.775,
+    "SF": -39.29577464788732,
+    "PF": -7.157894736842105,
+    "C": 72.66666666666667
+   },
+   "top20C_model": 10,
+   "top20C_answer": 4,
+   "over10": [
+    [
+     "Nic Claxton",
+     281.0
+    ],
+    [
+     "Mark Williams",
+     279.0
+    ],
+    [
+     "Deandre Ayton",
+     258.0
+    ],
+    [
+     "Marvin Bagley III",
+     242.0
+    ],
+    [
+     "Keyonte George",
+     235.0
+    ],
+    [
+     "Ryan Kalkbrenner",
+     222.0
+    ],
+    [
+     "Kevin Porter Jr.",
+     218.0
+    ],
+    [
+     "Micah Potter",
+     218.0
+    ],
+    [
+     "Cam Spencer",
+     216.0
+    ],
+    [
+     "Keldon Johnson",
+     206.0
+    ]
+   ],
+   "under10": [
+    [
+     "Marcus Smart",
+     -315.0
+    ],
+    [
+     "AJ Green",
+     -274.0
+    ],
+    [
+     "Luguentz Dort",
+     -261.0
+    ],
+    [
+     "Herbert Jones",
+     -260.0
+    ],
+    [
+     "Cameron Johnson",
+     -233.0
+    ],
+    [
+     "Jaden McDaniels",
+     -232.0
+    ],
+    [
+     "De'Andre Hunter",
+     -230.0
+    ],
+    [
+     "Brandon Ingram",
+     -220.0
+    ],
+    [
+     "Kentavious Caldwell-Pope",
+     -219.0
+    ],
+    [
+     "Miles McBride",
+     -211.0
+    ]
+   ],
+   "CI90_joint": [
+    59.72511015325671,
+    110.70377394636014
+   ]
+  },
+  "X|AB|ch1": {
+   "n": 345,
+   "nC": 72,
+   "nG": 145,
+   "S": 86.4404214559387,
+   "rho": 0.43160663249501746,
+   "groupMean": {
+    "PG": 10.8,
+    "SG": -33.3875,
+    "SF": -38.40845070422535,
+    "PF": -9.649122807017545,
+    "C": 72.86111111111111
+   },
+   "top20C_model": 11,
+   "top20C_answer": 4,
+   "over10": [
+    [
+     "Nic Claxton",
+     283.0
+    ],
+    [
+     "Mark Williams",
+     280.0
+    ],
+    [
+     "Deandre Ayton",
+     255.0
+    ],
+    [
+     "Marvin Bagley III",
+     243.0
+    ],
+    [
+     "Keyonte George",
+     232.0
+    ],
+    [
+     "Ryan Kalkbrenner",
+     222.0
+    ],
+    [
+     "Micah Potter",
+     219.0
+    ],
+    [
+     "Kevin Porter Jr.",
+     218.0
+    ],
+    [
+     "Cam Spencer",
+     215.0
+    ],
+    [
+     "Ayo Dosunmu",
+     209.0
+    ]
+   ],
+   "under10": [
+    [
+     "Marcus Smart",
+     -315.0
+    ],
+    [
+     "AJ Green",
+     -272.0
+    ],
+    [
+     "Luguentz Dort",
+     -262.0
+    ],
+    [
+     "Herbert Jones",
+     -256.0
+    ],
+    [
+     "Cameron Johnson",
+     -234.0
+    ],
+    [
+     "Jaden McDaniels",
+     -233.0
+    ],
+    [
+     "De'Andre Hunter",
+     -229.0
+    ],
+    [
+     "Brandon Ingram",
+     -219.0
+    ],
+    [
+     "Kentavious Caldwell-Pope",
+     -213.0
+    ],
+    [
+     "Sam Hauser",
+     -209.0
+    ]
+   ],
+   "CI90_joint": [
+    59.5827346743295,
+    110.68282567049808
+   ]
+  },
+  "X|BA|legacy": {
+   "n": 344,
+   "nC": 72,
+   "nG": 145,
+   "S": 99.25268199233716,
+   "rho": 0.40261358913058215,
+   "groupMean": {
+    "PG": 16.9375,
+    "SG": -52.074074074074076,
+    "SF": -20.115942028985508,
+    "PF": -18.413793103448278,
+    "C": 77.63888888888889
+   },
+   "top20C_model": 10,
+   "top20C_answer": 4,
+   "over10": [
+    [
+     "Jalen Duren",
+     284.0
+    ],
+    [
+     "Mark Williams",
+     279.0
+    ],
+    [
+     "Cooper Flagg",
+     253.0
+    ],
+    [
+     "Andre Drummond",
+     253.0
+    ],
+    [
+     "Yves Missi",
+     243.0
+    ],
+    [
+     "Keyonte George",
+     236.0
+    ],
+    [
+     "Nic Claxton",
+     236.0
+    ],
+    [
+     "Tre Jones",
+     222.0
+    ],
+    [
+     "Russell Westbrook",
+     216.0
+    ],
+    [
+     "Jaxson Hayes",
+     213.0
+    ]
+   ],
+   "under10": [
+    [
+     "Herbert Jones",
+     -319.0
+    ],
+    [
+     "Keegan Murray",
+     -316.0
+    ],
+    [
+     "Aaron Nesmith",
+     -296.0
+    ],
+    [
+     "Marcus Smart",
+     -275.0
+    ],
+    [
+     "Kris Dunn",
+     -265.0
+    ],
+    [
+     "Dorian Finney-Smith",
+     -249.0
+    ],
+    [
+     "Cason Wallace",
+     -240.0
+    ],
+    [
+     "Dillon Brooks",
+     -228.0
+    ],
+    [
+     "Sion James",
+     -222.0
+    ],
+    [
+     "Christian Braun",
+     -215.0
+    ]
+   ],
+   "CI90_joint": [
+    71.04663793103448,
+    124.76533524904215
+   ]
+  },
+  "X|BA|ch1": {
+   "n": 344,
+   "nC": 72,
+   "nG": 145,
+   "S": 99.06120689655172,
+   "rho": 0.40024821137468414,
+   "groupMean": {
+    "PG": 17.421875,
+    "SG": -51.69135802469136,
+    "SF": -19.202898550724637,
+    "PF": -20.862068965517242,
+    "C": 77.875
+   },
+   "top20C_model": 11,
+   "top20C_answer": 4,
+   "over10": [
+    [
+     "Jalen Duren",
+     284.0
+    ],
+    [
+     "Mark Williams",
+     280.0
+    ],
+    [
+     "Cooper Flagg",
+     254.0
+    ],
+    [
+     "Andre Drummond",
+     251.0
+    ],
+    [
+     "Yves Missi",
+     245.0
+    ],
+    [
+     "Nic Claxton",
+     238.0
+    ],
+    [
+     "Keyonte George",
+     233.0
+    ],
+    [
+     "Tre Jones",
+     225.0
+    ],
+    [
+     "Russell Westbrook",
+     216.0
+    ],
+    [
+     "Jaxson Hayes",
+     216.0
+    ]
+   ],
+   "under10": [
+    [
+     "Keegan Murray",
+     -317.0
+    ],
+    [
+     "Herbert Jones",
+     -315.0
+    ],
+    [
+     "Aaron Nesmith",
+     -297.0
+    ],
+    [
+     "Marcus Smart",
+     -276.0
+    ],
+    [
+     "Kris Dunn",
+     -266.0
+    ],
+    [
+     "Dorian Finney-Smith",
+     -248.0
+    ],
+    [
+     "Cason Wallace",
+     -238.0
+    ],
+    [
+     "Dillon Brooks",
+     -228.0
+    ],
+    [
+     "Sion James",
+     -221.0
+    ],
+    [
+     "Christian Braun",
+     -218.0
+    ]
+   ],
+   "CI90_joint": [
+    70.40944923371647,
+    124.70559865900383
+   ]
+  },
+  "X|OOS|legacy": {
+   "n": 287,
+   "nC": 60,
+   "nG": 115,
+   "S": 61.119565217391305,
+   "rho": 0.41742099364050583,
+   "groupMean": {
+    "PG": 11.34,
+    "SG": -21.93846153846154,
+    "SF": -25.183333333333334,
+    "PF": -16.326923076923077,
+    "C": 53.65
+   },
+   "top20C_model": 10,
+   "top20C_answer": 4,
+   "over10": [
+    [
+     "Yves Missi",
+     211.0
+    ],
+    [
+     "Mark Williams",
+     208.0
+    ],
+    [
+     "Keyonte George",
+     193.0
+    ],
+    [
+     "Brandon Miller",
+     189.0
+    ],
+    [
+     "Paolo Banchero",
+     181.0
+    ],
+    [
+     "Nic Claxton",
+     179.0
+    ],
+    [
+     "Jalen Duren",
+     177.0
+    ],
+    [
+     "Jaxson Hayes",
+     175.0
+    ],
+    [
+     "Deandre Ayton",
+     168.0
+    ],
+    [
+     "Andre Drummond",
+     167.0
+    ]
+   ],
+   "under10": [
+    [
+     "Herbert Jones",
+     -265.0
+    ],
+    [
+     "Keegan Murray",
+     -225.0
+    ],
+    [
+     "Marcus Smart",
+     -217.0
+    ],
+    [
+     "Luguentz Dort",
+     -212.0
+    ],
+    [
+     "Dorian Finney-Smith",
+     -208.0
+    ],
+    [
+     "Kris Dunn",
+     -206.0
+    ],
+    [
+     "Kentavious Caldwell-Pope",
+     -204.0
+    ],
+    [
+     "AJ Green",
+     -198.0
+    ],
+    [
+     "Isaac Okoro",
+     -191.0
+    ],
+    [
+     "Dillon Brooks",
+     -185.0
+    ]
+   ],
+   "CI90_joint": [
+    35.71590579710145,
+    84.04789855072465
+   ]
+  },
+  "X|OOS|ch1": {
+   "n": 287,
+   "nC": 60,
+   "nG": 115,
+   "S": 60.81666666666667,
+   "rho": 0.4142625667015911,
+   "groupMean": {
+    "PG": 11.8,
+    "SG": -21.46153846153846,
+    "SF": -24.433333333333334,
+    "PF": -18.423076923076923,
+    "C": 53.81666666666667
+   },
+   "top20C_model": 11,
+   "top20C_answer": 4,
+   "over10": [
+    [
+     "Yves Missi",
+     213.0
+    ],
+    [
+     "Mark Williams",
+     209.0
+    ],
+    [
+     "Keyonte George",
+     190.0
+    ],
+    [
+     "Brandon Miller",
+     189.0
+    ],
+    [
+     "Nic Claxton",
+     181.0
+    ],
+    [
+     "Paolo Banchero",
+     180.0
+    ],
+    [
+     "Jaxson Hayes",
+     178.0
+    ],
+    [
+     "Jalen Duren",
+     177.0
+    ],
+    [
+     "Marvin Bagley III",
+     167.0
+    ],
+    [
+     "Deandre Ayton",
+     166.0
+    ]
+   ],
+   "under10": [
+    [
+     "Herbert Jones",
+     -262.0
+    ],
+    [
+     "Keegan Murray",
+     -226.0
+    ],
+    [
+     "Marcus Smart",
+     -218.0
+    ],
+    [
+     "Luguentz Dort",
+     -212.0
+    ],
+    [
+     "Dorian Finney-Smith",
+     -207.0
+    ],
+    [
+     "Kris Dunn",
+     -206.0
+    ],
+    [
+     "Kentavious Caldwell-Pope",
+     -199.0
+    ],
+    [
+     "AJ Green",
+     -196.0
+    ],
+    [
+     "Isaac Okoro",
+     -191.0
+    ],
+    [
+     "Dillon Brooks",
+     -185.0
+    ]
+   ],
+   "CI90_joint": [
+    35.48018115942029,
+    83.6543115942029
+   ]
+  }
+ },
+ "dS": {
+  "X|AB": {
+   "diff": 0.2538314176245109,
+   "CI90_joint": [
+    -1.5315900383141803,
+    2.0986925287356404
+   ],
+   "excludes0": false
+  },
+  "X|BA": {
+   "diff": 0.1914750957854352,
+   "CI90_joint": [
+    -1.5366858237547922,
+    2.1665804597701173
+   ],
+   "excludes0": false
+  },
+  "X|OOS": {
+   "diff": 0.3028985507246347,
+   "CI90_joint": [
+    -1.2863768115942014,
+    1.9217753623188447
+   ],
+   "excludes0": false
+  }
+ },
+ "gates": {
+  "b1": {
+   "CI90_joint": [
+    -1.2863768115942014,
+    1.9217753623188447
+   ],
+   "pass": false
+  },
+  "b3": {
+   "rhoLegacy": 0.41742099364050583,
+   "rhoCh1": 0.4142625667015911,
+   "pass": true
+  },
+  "adopt_to_G5": false
+ },
+ "r1": {
+  "legacy": {
+   "Rudy Gobert": {
+    "all379": 7,
+    "oos287": 7
+   },
+   "Jalen Duren": {
+    "all379": 9,
+    "oos287": 9
+   },
+   "Neemias Queta": {
+    "all379": 8,
+    "oos287": 8
+   },
+   "Donovan Clingan": {
+    "all379": 13,
+    "oos287": 13
+   },
+   "Mitchell Robinson": {
+    "all379": 14,
+    "oos287": 14
+   },
+   "Scottie Barnes": {
+    "all379": 10,
+    "oos287": 10
+   },
+   "Herbert Jones": {
+    "all379": 358,
+    "oos287": 275
+   },
+   "Luguentz Dort": {
+    "all379": 334,
+    "oos287": 260
+   },
+   "top20C_all379": 10
+  },
+  "ch1": {
+   "Rudy Gobert": {
+    "all379": 7,
+    "oos287": 7
+   },
+   "Jalen Duren": {
+    "all379": 9,
+    "oos287": 9
+   },
+   "Neemias Queta": {
+    "all379": 8,
+    "oos287": 8
+   },
+   "Donovan Clingan": {
+    "all379": 14,
+    "oos287": 14
+   },
+   "Mitchell Robinson": {
+    "all379": 13,
+    "oos287": 13
+   },
+   "Scottie Barnes": {
+    "all379": 10,
+    "oos287": 10
+   },
+   "Herbert Jones": {
+    "all379": 354,
+    "oos287": 272
+   },
+   "Luguentz Dort": {
+    "all379": 336,
+    "oos287": 260
+   },
+   "top20C_all379": 11
+  },
+  "oosAnswerRank": {
+   "Rudy Gobert": 40,
+   "Jalen Duren": 186,
+   "Neemias Queta": 69,
+   "Donovan Clingan": 93,
+   "Mitchell Robinson": 59,
+   "Scottie Barnes": 110,
+   "Herbert Jones": 10,
+   "Luguentz Dort": 48
+  }
+ },
+ "selfcheckLegacySvsE102": 0.0,
+ "spearmanLegacyVsCh1": 0.9996281380672436
+}

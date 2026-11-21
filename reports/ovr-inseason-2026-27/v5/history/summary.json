@@ -1,0 +1,612 @@
+{
+ "targets": {
+  "2014-15": {
+   "predictor": "2010-11_2013-14",
+   "answer": "2011-12_2014-15"
+  },
+  "2015-16": {
+   "predictor": "2011-12_2014-15",
+   "answer": "2012-13_2015-16"
+  },
+  "2016-17": {
+   "predictor": "2012-13_2015-16",
+   "answer": "2013-14_2016-17"
+  },
+  "2017-18": {
+   "predictor": "2013-14_2016-17",
+   "answer": "2014-15_2017-18"
+  },
+  "2018-19": {
+   "predictor": "2014-15_2017-18",
+   "answer": "2015-16_2018-19"
+  },
+  "2019-20": {
+   "predictor": "2015-16_2018-19",
+   "answer": "2016-17_2019-20"
+  },
+  "2020-21": {
+   "predictor": "2016-17_2019-20",
+   "answer": "2017-18_2020-21"
+  },
+  "2021-22": {
+   "predictor": "2017-18_2020-21",
+   "answer": "2018-19_2021-22"
+  }
+ },
+ "windows": {
+  "2010-11_2013-14": {
+   "seasons": [
+    "2010-11",
+    "2011-12",
+    "2012-13",
+    "2013-14"
+   ],
+   "observations": 245960,
+   "players": 714,
+   "lambda": 3000,
+   "cvWeightedMSE": {
+    "100": 3680.1358162069655,
+    "300": 3676.9740519583056,
+    "1000": 3673.1983133499925,
+    "3000": 3671.756959842736,
+    "10000": 3675.7927693169545,
+    "30000": 3684.112041045106
+   },
+   "intercept": 100.87073845823315
+  },
+  "2011-12_2014-15": {
+   "seasons": [
+    "2011-12",
+    "2012-13",
+    "2013-14",
+    "2014-15"
+   ],
+   "observations": 248419,
+   "players": 740,
+   "lambda": 3000,
+   "cvWeightedMSE": {
+    "100": 3756.623739377964,
+    "300": 3753.2597646547156,
+    "1000": 3749.3369672339904,
+    "3000": 3747.8771648616353,
+    "10000": 3752.0084128362196,
+    "30000": 3760.5857524591574
+   },
+   "intercept": 100.07839553744782
+  },
+  "2012-13_2015-16": {
+   "seasons": [
+    "2012-13",
+    "2013-14",
+    "2014-15",
+    "2015-16"
+   ],
+   "observations": 264726,
+   "players": 729,
+   "lambda": 3000,
+   "cvWeightedMSE": {
+    "100": 3841.225531916962,
+    "300": 3837.9551562890347,
+    "1000": 3833.7474334957546,
+    "3000": 3831.623279282315,
+    "10000": 3834.537021078441,
+    "30000": 3841.8470554787214
+   },
+   "intercept": 101.22290075726593
+  },
+  "2013-14_2016-17": {
+   "seasons": [
+    "2013-14",
+    "2014-15",
+    "2015-16",
+    "2016-17"
+   ],
+   "observations": 268142,
+   "players": 745,
+   "lambda": 3000,
+   "cvWeightedMSE": {
+    "100": 3941.2612252025074,
+    "300": 3938.29783331569,
+    "1000": 3934.759132886315,
+    "3000": 3933.2832625994265,
+    "10000": 3936.8581773615733,
+    "30000": 3944.9151370884333
+   },
+   "intercept": 101.9028426793441
+  },
+  "2014-15_2017-18": {
+   "seasons": [
+    "2014-15",
+    "2015-16",
+    "2016-17",
+    "2017-18"
+   ],
+   "observations": 269406,
+   "players": 792,
+   "lambda": 3000,
+   "cvWeightedMSE": {
+    "100": 4024.7460013231866,
+    "300": 4021.203257502922,
+    "1000": 4017.2873327198563,
+    "3000": 4015.7539112969075,
+    "10000": 4019.2658314254622,
+    "30000": 4027.2748027516136
+   },
+   "intercept": 102.65638081863644
+  },
+  "2015-16_2018-19": {
+   "seasons": [
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19"
+   ],
+   "observations": 270922,
+   "players": 822,
+   "lambda": 3000,
+   "cvWeightedMSE": {
+    "100": 4075.841975979327,
+    "300": 4071.9754542608302,
+    "1000": 4067.786242275837,
+    "3000": 4066.2673174173597,
+    "10000": 4069.902761416554,
+    "30000": 4077.661877182779
+   },
+   "intercept": 103.83894373198125
+  },
+  "2016-17_2019-20": {
+   "seasons": [
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20"
+   ],
+   "observations": 263833,
+   "players": 864,
+   "lambda": 3000,
+   "cvWeightedMSE": {
+    "100": 4148.804149355697,
+    "300": 4144.537185831102,
+    "1000": 4140.064068830125,
+    "3000": 4138.3467705330295,
+    "10000": 4142.027259092462,
+    "30000": 4149.941609847182
+   },
+   "intercept": 105.18250514277442
+  },
+  "2017-18_2020-21": {
+   "seasons": [
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21"
+   ],
+   "observations": 254784,
+   "players": 875,
+   "lambda": 3000,
+   "cvWeightedMSE": {
+    "100": 4151.7612720868265,
+    "300": 4147.0703953282,
+    "1000": 4141.961071813167,
+    "3000": 4139.873907559555,
+    "10000": 4143.871906626484,
+    "30000": 4152.369804432313
+   },
+   "intercept": 105.96430919334205
+  },
+  "2018-19_2021-22": {
+   "seasons": [
+    "2018-19",
+    "2019-20",
+    "2020-21",
+    "2021-22"
+   ],
+   "observations": 255180,
+   "players": 884,
+   "lambda": 3000,
+   "cvWeightedMSE": {
+    "100": 4415.725993937857,
+    "300": 4411.153005798793,
+    "1000": 4405.800782935046,
+    "3000": 4403.2005466019855,
+    "10000": 4406.610799516395,
+    "30000": 4414.816478256298
+   },
+   "intercept": 106.84835614256815
+  }
+ },
+ "prep": {
+  "2010-11": {
+   "boxGames": 1230,
+   "pbpGames": 1230,
+   "validLineupGames": 1225,
+   "stints": 36636,
+   "pointsPer100": 106.29865318397768,
+   "possessionsPerTeamGame": 93.64489795918368,
+   "sources": {
+    "pbp": {
+     "file": "nbastats_2010.csv",
+     "sha256": "85acc37176948af4da2bed7807e45e3657d35f039fce83c0429ea93a923dcb58"
+    },
+    "box": [
+     {
+      "file": "regular_season_box_scores_2010_2024_part_1.csv",
+      "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_2.csv",
+      "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_3.csv",
+      "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+     }
+    ]
+   }
+  },
+  "2011-12": {
+   "boxGames": 990,
+   "pbpGames": 990,
+   "validLineupGames": 985,
+   "stints": 28665,
+   "pointsPer100": 103.54665283956008,
+   "possessionsPerTeamGame": 93.00253807106598,
+   "sources": {
+    "pbp": {
+     "file": "nbastats_2011.csv",
+     "sha256": "c58ff26441b6850521717c9fd636dd1796e4fc00d974192296770fabbca6debe"
+    },
+    "box": [
+     {
+      "file": "regular_season_box_scores_2010_2024_part_1.csv",
+      "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_2.csv",
+      "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_3.csv",
+      "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+     }
+    ]
+   }
+  },
+  "2012-13": {
+   "boxGames": 1229,
+   "pbpGames": 1229,
+   "validLineupGames": 1219,
+   "stints": 35581,
+   "pointsPer100": 104.75788091068301,
+   "possessionsPerTeamGame": 93.6833470057424,
+   "sources": {
+    "pbp": {
+     "file": "nbastats_2012.csv",
+     "sha256": "5462ef3f4795a1c91da5eb1ae5a2ef76fdba164d608e33ccb4ca9b66b38f0b51"
+    },
+    "box": [
+     {
+      "file": "regular_season_box_scores_2010_2024_part_1.csv",
+      "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_2.csv",
+      "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_3.csv",
+      "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+     }
+    ]
+   }
+  },
+  "2013-14": {
+   "boxGames": 1230,
+   "pbpGames": 1230,
+   "validLineupGames": 1223,
+   "stints": 36171,
+   "pointsPer100": 105.662935573415,
+   "possessionsPerTeamGame": 95.58503679476696,
+   "sources": {
+    "pbp": {
+     "file": "nbastats_2013.csv",
+     "sha256": "b27e992a6a8e9a40b55616683231c92cd52870b139976148f771fc45c7d3ccd1"
+    },
+    "box": [
+     {
+      "file": "regular_season_box_scores_2010_2024_part_1.csv",
+      "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_2.csv",
+      "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_3.csv",
+      "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+     }
+    ]
+   }
+  },
+  "2014-15": {
+   "boxGames": 1230,
+   "pbpGames": 1230,
+   "validLineupGames": 1218,
+   "stints": 37384,
+   "pointsPer100": 104.66134465335304,
+   "possessionsPerTeamGame": 95.54351395730706,
+   "sources": {
+    "pbp": {
+     "file": "nbastats_2014.csv",
+     "sha256": "223594456bd80372d0982d870ce5fb6c80edcce35e5337892f97a2c409ed1e4a"
+    },
+    "box": [
+     {
+      "file": "regular_season_box_scores_2010_2024_part_1.csv",
+      "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_2.csv",
+      "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_3.csv",
+      "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+     }
+    ]
+   }
+  },
+  "2015-16": {
+   "boxGames": 1230,
+   "pbpGames": 1230,
+   "validLineupGames": 1222,
+   "stints": 37729,
+   "pointsPer100": 105.53021568808961,
+   "possessionsPerTeamGame": 97.24140752864157,
+   "sources": {
+    "pbp": {
+     "file": "nbastats_2015.csv",
+     "sha256": "e1354d12dbb4fea9f8ad515be03bcd6a9428e188a34a72ec7ddfac51167c4ea8"
+    },
+    "box": [
+     {
+      "file": "regular_season_box_scores_2010_2024_part_1.csv",
+      "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_2.csv",
+      "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_3.csv",
+      "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+     }
+    ]
+   }
+  },
+  "2016-17": {
+   "boxGames": 1230,
+   "pbpGames": 1230,
+   "validLineupGames": 1221,
+   "stints": 37327,
+   "pointsPer100": 108.11518214802543,
+   "possessionsPerTeamGame": 97.62694512694513,
+   "sources": {
+    "pbp": {
+     "file": "nbastats_2016.csv",
+     "sha256": "e706929cc33e0c266438c62e36b35b72bde510be22facb1f74322cdce2e7063f"
+    },
+    "box": [
+     {
+      "file": "regular_season_box_scores_2010_2024_part_1.csv",
+      "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_2.csv",
+      "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_3.csv",
+      "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+     }
+    ]
+   }
+  },
+  "2017-18": {
+   "boxGames": 1230,
+   "pbpGames": 1230,
+   "validLineupGames": 1210,
+   "stints": 36760,
+   "pointsPer100": 108.09696847346994,
+   "possessionsPerTeamGame": 98.2512396694215,
+   "sources": {
+    "pbp": {
+     "file": "nbastats_2017.csv",
+     "sha256": "e4f9dd678d955a0ed7ca0b49a3f7e5a111db254d7b56d20b0a0576ba4a519300"
+    },
+    "box": [
+     {
+      "file": "regular_season_box_scores_2010_2024_part_1.csv",
+      "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_2.csv",
+      "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_3.csv",
+      "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+     }
+    ]
+   }
+  },
+  "2018-19": {
+   "boxGames": 1230,
+   "pbpGames": 1230,
+   "validLineupGames": 1219,
+   "stints": 37630,
+   "pointsPer100": 109.85325712432608,
+   "possessionsPerTeamGame": 101.18539786710419,
+   "sources": {
+    "pbp": {
+     "file": "nbastats_2018.csv",
+     "sha256": "b258ca563d38b1e5b86986e5ceb6557233d52a99ac731446a7460bfda9979144"
+    },
+    "box": [
+     {
+      "file": "regular_season_box_scores_2010_2024_part_1.csv",
+      "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_2.csv",
+      "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_3.csv",
+      "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+     }
+    ]
+   }
+  },
+  "2019-20": {
+   "boxGames": 1059,
+   "pbpGames": 1056,
+   "validLineupGames": 1046,
+   "stints": 33397,
+   "pointsPer100": 110.2755356065178,
+   "possessionsPerTeamGame": 101.38432122370936,
+   "sources": {
+    "pbp": {
+     "file": "nbastats_2019.csv",
+     "sha256": "ed8bde17e05e84f6acdbe1c7e42c6c580a34ddc76d567cc3dae766727a0e11fb"
+    },
+    "box": [
+     {
+      "file": "regular_season_box_scores_2010_2024_part_1.csv",
+      "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_2.csv",
+      "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_3.csv",
+      "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+     }
+    ]
+   }
+  },
+  "2020-21": {
+   "boxGames": 1080,
+   "pbpGames": 1080,
+   "validLineupGames": 1066,
+   "stints": 31911,
+   "pointsPer100": 111.89707149009475,
+   "possessionsPerTeamGame": 100.19887429643528,
+   "sources": {
+    "pbp": {
+     "file": "nbastats_2020.csv",
+     "sha256": "701abce5bbe499b40ae69a11361bc2122860e0bfc9f1190fdbfd72de9d7e1fd8"
+    },
+    "box": [
+     {
+      "file": "regular_season_box_scores_2010_2024_part_1.csv",
+      "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_2.csv",
+      "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_3.csv",
+      "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+     }
+    ]
+   }
+  },
+  "2021-22": {
+   "boxGames": 1230,
+   "pbpGames": 1230,
+   "validLineupGames": 1209,
+   "stints": 36557,
+   "pointsPer100": 111.5941787109049,
+   "possessionsPerTeamGame": 99.11993382961126,
+   "sources": {
+    "pbp": {
+     "file": "nbastats_2021.csv",
+     "sha256": "a47766b022290811546ab41405f94137ca50d9b7837215b31fd85755428f0f53"
+    },
+    "box": [
+     {
+      "file": "regular_season_box_scores_2010_2024_part_1.csv",
+      "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_2.csv",
+      "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_3.csv",
+      "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+     }
+    ]
+   }
+  },
+  "2022-23": {
+   "boxGames": 1230,
+   "pbpGames": 1230,
+   "validLineupGames": 1188,
+   "stints": 35872,
+   "pointsPer100": 114.27846104138605,
+   "possessionsPerTeamGame": 100.30176767676768,
+   "sources": {
+    "pbp": {
+     "file": "nbastats_2022.csv",
+     "sha256": "24b406849bfae876aec2f008fbdead79c351634517aeb013d13c9361d51a60ef"
+    },
+    "box": [
+     {
+      "file": "regular_season_box_scores_2010_2024_part_1.csv",
+      "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_2.csv",
+      "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_3.csv",
+      "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+     }
+    ]
+   }
+  },
+  "2023-24": {
+   "boxGames": 1230,
+   "pbpGames": 1230,
+   "validLineupGames": 1200,
+   "stints": 35611,
+   "pointsPer100": 114.73399511825463,
+   "possessionsPerTeamGame": 99.52041666666666,
+   "sources": {
+    "pbp": {
+     "file": "nbastats_2023.csv",
+     "sha256": "541d9935eb4b9184673adc94580ffc438f01692605dedd1f1fdc8920212d3090"
+    },
+    "box": [
+     {
+      "file": "regular_season_box_scores_2010_2024_part_1.csv",
+      "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_2.csv",
+      "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+     },
+     {
+      "file": "regular_season_box_scores_2010_2024_part_3.csv",
+      "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,21 @@
+# E-101 卡片鏈複本紀錄：全部自 reports/card-0.2.5+E097-topscale/chain/（E-097 鏈本身是 E-096 鏈只改目錄／變體名的複本），calibrate-wing.py 自 E-097 根目錄（與 E-096 的逐位元相同，未改）。
+# 格式：檔案: 舊字串 -> 新字串 ×次數
+chain/run_cards.py: "'reports/card-0.2.5+E097-topscale'" -> "'reports/card-0.2.5+E101-crossera'" ×1
+chain/run_cards.py: '"""E-097 複本' -> '"""E-101 複本（自 reports/card-0.2.5+E097-topscale/chain/run_cards.py，只改目錄與變體）。E-097 原說明：E-097 複本' ×1
+chain/run_cards.py: "    'e097': ['--tailSource', D + '/attributes-e097.csv'],\n    'e097s': ['--tailSource', D + '/attributes-e097s.csv'],\n    'e097p': ['--tailSource', D + '/attributes-e097p.csv'],\n    'e097v': ['--tailSource', D + '/attributes-e097v.csv'],\n" -> "    'e101': ['--tailSource', D + '/attributes-e101.csv'],\n    'e101z': ['--tailSource', D + '/attributes-e101z.csv'],\n    'e101g': ['--tailSource', D + '/attributes-e101g.csv'],\n    'e101w': ['--tailSource', D + '/attributes-e101w.csv'],\n" ×1
+chain/run_cards.py: "else ['e097', 'e097s', 'e097p', 'e097v']" -> "else ['e101', 'e101z', 'e101g', 'e101w']" ×1
+chain/build_card_022.py: "'reports/card-0.2.5+E097-topscale/chain/build_card_022.py'" -> "'reports/card-0.2.5+E101-crossera/chain/build_card_022.py'" ×1
+chain/build_card_022.py: '"""E-097 複本' -> '"""E-101 複本（自 reports/card-0.2.5+E097-topscale/chain/build_card_022.py，只改 generator 字串）。E-097 原說明：E-097 複本' ×1
+chain/e084.py: '"""E-097 複本' -> '"""E-101 複本（自 reports/card-0.2.5+E097-topscale/chain/e084.py，只改變體清單）。E-097 原說明：E-097 複本' ×1
+chain/e084.py: "assert VAR in ('cur', 'e097', 'e097s', 'e097p', 'e097v'), VAR" -> "assert VAR in ('cur', 'e101', 'e101z', 'e101g', 'e101w'), VAR" ×1
+chain/e084.py: '# E-097 目錄' -> '# E-101 目錄' ×1
+chain/compare.py: '"""E-097 複本' -> '"""E-101 複本（自 reports/card-0.2.5+E097-topscale/chain/compare.py，候選改成 E101_CAND：e101 主要／e101z、e101g、e101w 只報告）。E-097 原說明：E-097 複本' ×1
+chain/compare.py: "CAND = os.environ.get('E097_CAND', 'e097')\nassert CAND in ('e097', 'e097s', 'e097p', 'e097v'), CAND" -> "CAND = os.environ.get('E101_CAND', 'e101')\nassert CAND in ('e101', 'e101z', 'e101g', 'e101w'), CAND" ×1
+chain/compare.py: "f'E-097（{CAND}" -> "f'E-101（{CAND}" ×1
+chain/compare.py: '*_cand = E-097' -> '*_cand = E-101' ×1
+chain/evaluate.mjs: "  ['E097v', 'reports/card-0.2.5+E097-topscale/cards/e097v/e084/ranking.csv'],\n" -> "  ['E097v', 'reports/card-0.2.5+E097-topscale/cards/e097v/e084/ranking.csv'],\n  ['E101', 'reports/card-0.2.5+E101-crossera/cards/e101/e084/ranking.csv'],\n  ['E101z', 'reports/card-0.2.5+E101-crossera/cards/e101z/e084/ranking.csv'],\n  ['E101g', 'reports/card-0.2.5+E101-crossera/cards/e101g/e084/ranking.csv'],\n  ['E101w', 'reports/card-0.2.5+E101-crossera/cards/e101w/e084/ranking.csv'],\n" ×1
+chain/evaluate.mjs: "fs.writeFileSync('reports/card-0.2.5+E097-topscale/evaluation.json'" -> "fs.writeFileSync('reports/card-0.2.5+E101-crossera/evaluation.json'" ×1
+calibrate-wing.py: 未改（cp 自 reports/card-0.2.5+E097-topscale/calibrate-wing.py）
+chain/run_all.sh: 自 reports/card-0.2.5+E097-topscale/chain/run_all.sh，sed 換 E-097→E-101、目錄、變體清單 e097,e097s,e097p,e097v→e101,e101z,e101g,e101w、E097_CAND→E101_CAND
+chain/write_results.py: 依 reports/card-0.2.5+E097-topscale/chain/write_results.py 改寫：閘門加 c-pre（c-pre.json）與 c4（attributes-e101.csv 13 項＋value-attrs-e101.csv midAttr/shortAttr，>140 的值 ≤ 2 個）；c3 對照 card-0.2.5 通過數；變體 e101z/e101g/e101w 只報告；inputs_sha256 換成本實驗檔案清單＋外部輸入；啟動時核對 preregistration.md 與 preregistration.sha256
+chain/report_data.py: 依 reports/card-0.2.5+E097-topscale/chain/report_data.py 改寫：照 E-101 §6 改項目（合併池錨點/保險、2025-26 >99/>120/>140 並列 E-096、各季 ≥99、指定球員、mid==99、名次差異、ρ、各變體 c2/c3/c4）

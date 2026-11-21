@@ -1,0 +1,9 @@
+E-135 launch notes (launched 2026-10-30 13:52 Taipei)
+5090 dir : /home/kojiek/side_projects/basketball-e102-20261030   (same snapshot as E-102; src = committed version, not the local E-122-edited defense_fourth_game.js)
+Copied   : reports/sim-0.1.0+E086-param-screen/{e086-hooks,boot,engine-e086,screen-core}.mjs (clean vs git HEAD) and this directory's .mjs
+Launch   : D=reports/sim-0.1.0+E135-dblthreat-phys
+           setsid nohup bash -c "nice -n 19 node $D/winimp-run-135.mjs --mode ch1 --sampleStart 0 --samples 60 --workers 12 --out checkpoint-ch1-60.jsonl > $D/ch1-60.log 2>&1" </dev/null >/dev/null 2>&1 &
+Progress : ssh kojiek@100.97.181.15 'cd /home/kojiek/side_projects/basketball-e102-20261030/reports/sim-0.1.0+E135-dblthreat-phys; tail -1 ch1-60.log; wc -l checkpoint-ch1-60.jsonl'
+Resume   : rerun the same launch command (resumable by id).
+Kill     : pgrep -af 'winimp-run-135.mjs.*checkpoint-ch1-60' -> kill <node pid> (first PID 4096936)
+g0/m1    : g0-legacy/g0-ch1 (10 ids, i=0..15, W=10), m1-legacy/m1-ch1 (rr seeds 20261028-30) ran 13:4x-13:51 on the same dir.

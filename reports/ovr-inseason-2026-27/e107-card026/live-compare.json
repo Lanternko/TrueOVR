@@ -1,0 +1,352 @@
+{
+ "nCommon": 368,
+ "onlyIn025": [],
+ "onlyIn026": [],
+ "absDeltaOVR": {
+  "median": 0.6000000000000014,
+  "max": 3.799999999999997,
+  "nGt10": 0,
+  "nGt5": 0
+ },
+ "largestUp": [
+  [
+   "Oscar Tshiebwe",
+   1.8,
+   "52.6",
+   "54.4",
+   "314",
+   "302"
+  ],
+  [
+   "Giannis Antetokounmpo",
+   1.6,
+   "94.3",
+   "95.9",
+   "10",
+   "6"
+  ],
+  [
+   "Al Horford",
+   1.5,
+   "68.6",
+   "70.1",
+   "186",
+   "170"
+  ],
+  [
+   "Domantas Sabonis",
+   1.5,
+   "75.2",
+   "76.7",
+   "119",
+   "105"
+  ],
+  [
+   "Jay Huff",
+   1.3,
+   "68.0",
+   "69.3",
+   "192",
+   "179"
+  ],
+  [
+   "Jericho Sims",
+   1.3,
+   "51.7",
+   "53.0",
+   "328",
+   "312"
+  ],
+  [
+   "Keegan Murray",
+   1.3,
+   "79.1",
+   "80.4",
+   "92",
+   "76"
+  ],
+  [
+   "Obi Toppin",
+   1.3,
+   "76.0",
+   "77.3",
+   "115",
+   "99"
+  ],
+  [
+   "P.J. Washington",
+   1.2,
+   "72.0",
+   "73.2",
+   "160",
+   "137"
+  ],
+  [
+   "Isaiah Jackson",
+   1.1,
+   "65.3",
+   "66.4",
+   "213",
+   "200"
+  ]
+ ],
+ "largestDown": [
+  [
+   "Danny Wolf",
+   -3.8,
+   "52.4",
+   "48.6",
+   "317",
+   "345"
+  ],
+  [
+   "Zion Williamson",
+   -3.4,
+   "87.6",
+   "84.2",
+   "27",
+   "40"
+  ],
+  [
+   "Stephen Curry",
+   -3.1,
+   "87.2",
+   "84.1",
+   "30",
+   "43"
+  ],
+  [
+   "Yang Hansen",
+   -3.1,
+   "51.3",
+   "48.2",
+   "332",
+   "350"
+  ],
+  [
+   "Brandon Williams",
+   -3.0,
+   "60.9",
+   "57.9",
+   "245",
+   "265"
+  ],
+  [
+   "Amen Thompson",
+   -2.9,
+   "94.4",
+   "91.5",
+   "9",
+   "10"
+  ],
+  [
+   "Kevin Durant",
+   -2.8,
+   "87.6",
+   "84.8",
+   "28",
+   "35"
+  ],
+  [
+   "Khaman Maluach",
+   -2.6,
+   "59.6",
+   "57.0",
+   "252",
+   "272"
+  ],
+  [
+   "VJ Edgecombe",
+   -2.5,
+   "84.8",
+   "82.3",
+   "44",
+   "54"
+  ],
+  [
+   "Chet Holmgren",
+   -2.3,
+   "96.3",
+   "94.0",
+   "6",
+   "9"
+  ]
+ ],
+ "top20_in": [
+  "De'Aaron Fox"
+ ],
+ "top20_out": [
+  "Dean Wade"
+ ],
+ "top10_026": [
+  [
+   "1",
+   "Shai Gilgeous-Alexander",
+   "103.9",
+   "1",
+   "105.8"
+  ],
+  [
+   "2",
+   "Victor Wembanyama",
+   "101.2",
+   "3",
+   "100.8"
+  ],
+  [
+   "3",
+   "Nikola Jokić",
+   "100.6",
+   "4",
+   "100.1"
+  ],
+  [
+   "4",
+   "Luka Dončić",
+   "100.4",
+   "2",
+   "102.1"
+  ],
+  [
+   "5",
+   "Franz Wagner",
+   "98.8",
+   "5",
+   "100.1"
+  ],
+  [
+   "6",
+   "Giannis Antetokounmpo",
+   "95.9",
+   "10",
+   "94.3"
+  ],
+  [
+   "7",
+   "Derrick White",
+   "95.4",
+   "7",
+   "96.1"
+  ],
+  [
+   "8",
+   "Kawhi Leonard",
+   "94.4",
+   "8",
+   "95.2"
+  ],
+  [
+   "9",
+   "Chet Holmgren",
+   "94.0",
+   "6",
+   "96.3"
+  ],
+  [
+   "10",
+   "Amen Thompson",
+   "91.5",
+   "9",
+   "94.4"
+  ]
+ ],
+ "inseasonAbove99_026": [
+  [
+   "Shai Gilgeous-Alexander",
+   "creation",
+   113.86
+  ],
+  [
+   "Mitchell Robinson",
+   "rebound",
+   110.6
+  ],
+  [
+   "Andre Drummond",
+   "rebound",
+   109.9
+  ],
+  [
+   "Luke Kennard",
+   "long",
+   108.0
+  ],
+  [
+   "Tim Hardaway Jr.",
+   "tovSkill",
+   107.9
+  ],
+  [
+   "Luka Dončić",
+   "creation",
+   107.12
+  ],
+  [
+   "Sam Hauser",
+   "tovSkill",
+   106.2
+  ],
+  [
+   "Giannis Antetokounmpo",
+   "foulDraw",
+   106.01
+  ],
+  [
+   "Donovan Clingan",
+   "rebound",
+   105.6
+  ],
+  [
+   "Anthony Edwards",
+   "creation",
+   104.7
+  ],
+  [
+   "Nikola Jokić",
+   "pass",
+   104.14
+  ],
+  [
+   "Domantas Sabonis",
+   "rebound",
+   103.15
+  ],
+  [
+   "Trae Young",
+   "pass",
+   101.31
+  ],
+  [
+   "Jalen Brunson",
+   "creation",
+   101.17
+  ],
+  [
+   "Stephen Curry",
+   "ft",
+   100.85
+  ],
+  [
+   "Cade Cunningham",
+   "pass",
+   100.79
+  ],
+  [
+   "Karl-Anthony Towns",
+   "rebound",
+   100.74
+  ],
+  [
+   "Cam Spencer",
+   "ft",
+   100.3
+  ],
+  [
+   "Josh Giddey",
+   "pass",
+   99.35
+  ]
+ ],
+ "rangeCheck": 0,
+ "note": "欄位 [姓名, ΔOVR(026−025), OVR025, OVR026, 名次025, 名次026]；基準＝inseason 0.2.5a（CARD_MODE=025，同一份 2026-10-28 資料）"
+}

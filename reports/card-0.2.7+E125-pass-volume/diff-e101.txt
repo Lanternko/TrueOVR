@@ -1,0 +1,1294 @@
+=== diff card-0.2.5+E101-crossera/work/build_e101.py card-0.2.7+E125-pass-volume/work/build_e101_p.py
+--- card-0.2.5+E101-crossera/work/build_e101.py	2026-10-30 00:45:29.430848300 +0800
++++ card-0.2.7+E125-pass-volume/work/build_e101_p.py	2026-10-30 08:20:37.820035300 +0800
+@@ -1,412 +1,411 @@
+-"""E-101 §1–§4：寫四個變體的屬性檔、量價屬性檔與 tail-summary.json。由 ../card-0.2.5+E097-topscale/work/build_e097.py 改寫。
+-三處改動（預註冊 §1–§3）：
+-- 改動一：mid、short 的 p 用本實驗 a0-e101.json（修正分區＋聯盟先驗）；mid、short 頂端／底端開關看本實驗 h1-results.json，
+-  midValue、shortValue 看本實驗 h1v-results.json；其他屬性開關照 E-090 h1-results.json。
+-- 改動二：百分位、r99、r01 對跨季合併池（2025-26 卡片本身的池＋pool/raw-<季>.json 的過去季）；每個球員季算一筆，不去重。
+-  池門檻：GP >= 30 且 MPG >= 20（drive 同卡片用前 41 場：GP41 >= 15 且 MPG41 >= 20）；命中率型與量價型 MIN >= 500。pressure 不改。
+-- 改動三：頂端尺 S = max((r99 − r90)/1.044, SD_pool)（e101g 拿掉 max）；百分位型與量價型 top = 99 + 51·(1 − e^(−(r − r99)/(1.96·S)))；
+-  命中率型 s = 1.96·S_p（S_p 用 MIN >= 500 合併池的 p），a99 照曲線。底端公式照 E-096，池換合併池。
+-變體：e101（主）、e101z（只有改動一：單季池、尺照 E-096）、e101g（e101 去掉 max）、e101w（長窗：long、ft、foulDraw、tovSkill、pass、rebound、
+-  physique 2015-16 起，drive 2020-21 起，其餘同 e101）。
+-檢查：e101z 在 mid、short、midValue、shortValue 以外和 E-096 attributes-e096.csv 逐位相同；常態合成資料 (r99 − r90)/1.044 ≈ SD。
+-用法（repo 根目錄）：python -I -B reports/card-0.2.5+E101-crossera/work/build_e101.py
+-"""
+-import csv
+-import json
+-import math
+-import re
+-import sys
+-from pathlib import Path
+-
+-import numpy as np
+-
+-HERE = Path(__file__).resolve().parent
+-OUT = HERE.parent
+-ROOT = OUT.parents[1]
+-E090 = ROOT / 'reports/card-0.2.4+E090-onball-tail'
+-E096 = ROOT / 'reports/card-0.2.5+E096-tail150'
+-sys.path.insert(0, str(ROOT / 'reports/ovr-v61-shrink-history-2025-26'))
+-import build_attrs as B  # noqa: E402
+-
+-sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+-ATTRS13 = ['long', 'mid', 'short', 'ft', 'drive', 'foulDraw', 'tovSkill', 'pass', 'rebound', 'physique', 'onBall', 'creation', 'pressure']
+-CEIL, K_SD, PSEUDO_MIN, REP_GAP = 150.0, 1.96, 200.0, 0.03
+-Z9990 = 1.044   # 常態 z.99 − z.90（預註冊 §0）
+-MAIN = ['2022-23', '2023-24', '2024-25']
+-LONG = ['2015-16', '2016-17', '2017-18', '2018-19', '2019-20', '2020-21', '2021-22']
+-LONG_ATTRS = {'long', 'ft', 'foulDraw', 'tovSkill', 'pass', 'rebound', 'physique', 'drive'}
+-CARD_SEASON = '2025-26'
+-raw = json.load(open(E090 / 'work/a0-raw.json', encoding='utf-8'))
+-H1_E090 = json.load(open(E090 / 'h1-results.json', encoding='utf-8'))['h1']
+-H1 = {**H1_E090, **json.load(open(OUT / 'h1-results.json', encoding='utf-8'))['h1']}
+-H1V = json.load(open(OUT / 'h1v-results.json', encoding='utf-8'))['h1v']
+-P101 = json.load(open(OUT / 'a0-e101.json', encoding='utf-8'))['p']
+-SEAS = {s: json.load(open(OUT / 'pool' / f'raw-{s}.json', encoding='utf-8')) for s in LONG + MAIN}
+-cur = {int(r['playerId']): r for r in csv.DictReader(open(E090 / 'work/current-attrs.csv', encoding='utf-8'))}
+-PIDS = sorted(cur)
+-rank = {r['name']: float(r['MIN']) for r in csv.DictReader(open(ROOT / 'reports/card-0.2.5/ranking.csv', encoding='utf-8'))}
+-POOL = [p for p in PIDS if rank.get(cur[p]['name'], 0) >= 500]
+-txt = (ROOT / 'src/constants.js').read_text(encoding='utf-8')
+-CURVES = {}
+-for name in ('CURVE_3PT', 'CURVE_MID', 'CURVE_SHORT', 'CURVE_FT'):
+-    body = re.search(rf'export const {name} = \[(.*?)\];', txt, re.S).group(1)
+-    CURVES[name] = [(float(a), float(b)) for a, b in re.findall(r'\[\s*([\d.]+)\s*,\s*([\d.]+)\s*\]', body)]
+-
+-
+-def passed(h, a, end):
+-    return bool(h.get(a, {}).get(end, {}).get('pass', False))
+-
+-
+-def pct(x, arr):
+-    return 100 * (sum(v < x for v in arr) + 0.5 * sum(v == x for v in arr)) / len(arr)
+-
+-
+-class Pool:
+-    """合併池；pct 同上式（小於者 + 0.5·相等者），用排序加速，結果與 pct() 同一算式。"""
+-    def __init__(self, vals):
+-        self.v = [float(x) for x in vals]
+-        self.s = np.sort(np.array(self.v))
+-        self.n = len(self.v)
+-
+-    def pct(self, x):
+-        lo = int(np.searchsorted(self.s, x, 'left'))
+-        hi = int(np.searchsorted(self.s, x, 'right'))
+-        return 100 * (lo + 0.5 * (hi - lo)) / self.n
+-
+-    def r_at_least(self, q):
+-        return min(v for v in self.s.tolist() if self.pct(v) >= q)
+-
+-    def r_at_most(self, q):
+-        return max(v for v in self.s.tolist() if self.pct(v) <= q)
+-
+-    def anchors(self, mode):
+-        r90, r99, r1 = self.r_at_least(90), self.r_at_least(99), self.r_at_most(1)
+-        sd = float(np.std(self.v))
+-        gap = (r99 - r90) / Z9990
+-        S = max(gap, sd) if mode == 'max' else gap
+-        return {'r90': r90, 'r99': r99, 'r1': r1, 'SD_pool': sd, 'gapScale': gap, 'ratio': gap / sd, 'S': S,
+-                'insuranceActive': bool(mode == 'max' and sd > gap), 'poolN': self.n}
+-
+-
+-def attr_of(p):
+-    return max(40.0, min(99.0, 40 + (p - 1) * 30 / 49 if p < 50 else 70 + (p - 50) * 29 / 49))
+-
+-
+-def top_tail(d, sd):
+-    return 99 + (CEIL - 99) * (1 - math.exp(-max(0.0, d) / (K_SD * sd)))
+-
+-
+-def bot_tail(d, sd):
+-    return 40 - 15 * (1 - math.exp(-max(0.0, d) / sd))
+-
+-
+-def inverse_open(p, curve, lo, hi):
+-    """同 build_e090.inverse_open。"""
+-    for i in range(1, len(curve)):
+-        x0, y0 = curve[i - 1]
+-        x1, y1 = curve[i]
+-        if min(y0, y1) <= p <= max(y0, y1):
+-            return max(lo, min(hi, x0 + (p - y0) / (y1 - y0) * (x1 - x0)))
+-    x = curve[0][0] if abs(p - curve[0][1]) < abs(p - curve[-1][1]) else curve[-1][0]
+-    return max(lo, min(hi, x))
+-
+-
+-def percentile_attr_e096(vals, pool_vals, top, bot):
+-    """E-096 原式（e101z 用；逐位重現 E-096）。"""
+-    r99 = min(v for v in pool_vals if pct(v, pool_vals) >= 99)
+-    r1 = max(v for v in pool_vals if pct(v, pool_vals) <= 1)
+-    sd = float(np.std(pool_vals))
+-    out = {}
+-    for pid, x in vals.items():
+-        p = pct(x, pool_vals)
+-        if p >= 99 and top:
+-            out[pid] = top_tail(x - r99, sd)
+-        elif p <= 1 and bot:
+-            out[pid] = bot_tail(r1 - x, sd)
+-        else:
+-            out[pid] = attr_of(p)
+-    return out, {'r99': r99, 'r1': r1, 'SD': sd, 'poolN': len(pool_vals)}
+-
+-
+-def percentile_attr_merged(vals, pool, top, bot, mode):
+-    """改動二＋三：百分位對合併池；頂端尺 S；底端 E-096 式（SD = 合併池 SD）。"""
+-    an = pool.anchors(mode)
+-    out = {}
+-    for pid, x in vals.items():
+-        p = pool.pct(x)
+-        if p >= 99 and top:
+-            out[pid] = top_tail(x - an['r99'], an['S'])
+-        elif p <= 1 and bot:
+-            out[pid] = bot_tail(an['r1'] - x, an['SD_pool'])
+-        else:
+-            out[pid] = attr_of(p)
+-    return out, an
+-
+-
+-# ---------------------------------------------------------------- 合併池的原料
+-def in_pool(info, a):
+-    if info is None:
+-        return False
+-    if a == 'drive':
+-        return info['GP41'] >= B.POOL41[0] and info['MIN41'] / info['GP41'] >= B.POOL41[1] if info['GP41'] > 0 else False
+-    return info['GP'] >= B.POOL[0] and info['MIN'] / info['GP'] >= B.POOL[1] if info['GP'] > 0 else False
+-
+-
+-def window(a, var):
+-    if a == 'pressure':
+-        return []
+-    if var == 'e101w' and a in LONG_ATTRS:
+-        return [s for s in LONG + MAIN if a in SEAS[s]['attrs']]
+-    return MAIN
+-
+-
+-def season_vals(a, s, which):
+-    """過去季 s 的屬性 a：which = 'pool'（百分位型池門檻）、'min500'（命中率型）、'all'。回傳 {pid: v}。"""
+-    d, info = SEAS[s]['attrs'].get(a, {}), SEAS[s]['poolInfo']
+-    if which == 'all':
+-        return {int(k): v for k, v in d.items()}
+-    if which == 'min500':
+-        return {int(k): v for k, v in d.items() if info.get(k, {'MIN': 0})['MIN'] >= 500}
+-    return {int(k): v for k, v in d.items() if in_pool(info.get(k), a)}
+-
+-
+-def card_p(a):
+-    return P101[a] if a in ('mid', 'short') else raw[a]['p']
+-
+-
+-def merged_percentile_pool(a, var):
+-    vals = list(raw[a]['pool'])
+-    per = {CARD_SEASON: len(vals)}
+-    for s in window(a, var):
+-        v = season_vals(a, s, 'pool')
+-        vals += list(v.values())
+-        per[s] = len(v)
+-    return Pool(vals), per
+-
+-
+-def merged_curve_pool(a, var):
+-    vals = [card_p(a)[str(p)] for p in POOL]
+-    per = {CARD_SEASON: len(vals)}
+-    for s in window(a, var):
+-        v = season_vals(a, s, 'min500')
+-        vals += list(v.values())
+-        per[s] = len(v)
+-    return Pool(vals), per
+-
+-
+-base = {int(r['PLAYER_ID']): r for r in B.bench_rows('base')}
+-shots = {int(r['PLAYER_ID']): r for r in B.bench_rows('shots')}
+-MINv = {p: float(base[p]['MIN']) for p in PIDS}
+-
+-
+-def card_values(z):
+-    """2025-26 卡片的量價（E-096 §2.3 式；acc = a0-e101 的 p）。"""
+-    A = {p: float(shots[p][z + 'A']) if p in shots else 0.0 for p in PIDS}
+-    M = {p: float(shots[p][z + 'M']) if p in shots else 0.0 for p in PIDS}
+-    mu = sum(A[p] for p in PIDS if MINv[p] > 0) / sum(MINv[p] for p in PIDS if MINv[p] > 0)
+-    lg = sum(M.values()) / sum(A.values())
+-    rep = lg - REP_GAP
+-    rows = {}
+-    for p in PIDS:
+-        vol = 36 * (A[p] + PSEUDO_MIN * mu) / (MINv[p] + PSEUDO_MIN)
+-        acc = P101[z][str(p)]
+-        rows[p] = {'A': A[p], 'M': M[p], 'MIN': MINv[p], 'vol': vol, 'acc': acc, 'value': vol * (acc - rep)}
+-    return rows, {'muPerMin': mu, 'leagueRate': lg, 'rep': rep}
+-
+-
+-CARDVAL = {z: card_values(z) for z in ('mid', 'short')}
+-
+-
+-def merged_value_pool(k):
+-    rows = CARDVAL[k[:-5]][0]
+-    vals = [rows[p]['value'] for p in POOL]
+-    per = {CARD_SEASON: len(vals)}
+-    for s in MAIN:
+-        d = SEAS[s]['value'][k]
+-        v = [x['value'] for x in d.values() if x['MIN'] >= 500]
+-        vals += v
+-        per[s] = len(v)
+-    return Pool(vals), per
+-
+-
+-# ---------------------------------------------------------------- 變體
+-def build(var):
+-    merged = var != 'e101z'
+-    mode = 'gap' if var == 'e101g' else 'max'
+-    new = {pid: {} for pid in PIDS}
+-    summary = {}
+-    for a in ATTRS13:
+-        e = raw[a]
+-        top, bot = passed(H1, a, 'top'), passed(H1, a, 'bot')
+-        info = {'type': e['type'], 'topTail': top, 'botTail': bot}
+-        if e['type'] == 'percentile':
+-            vals = {pid: e['r'][str(pid)] for pid in PIDS if str(pid) in e['r']}
+-            if merged and a != 'pressure':
+-                pool, per = merged_percentile_pool(a, var)
+-                mapped, anchors = percentile_attr_merged(vals, pool, top, bot, mode)
+-                info.update(anchors)
+-                info['poolPerSeason'] = per
+-            else:
+-                mapped, anchors = percentile_attr_e096(vals, e['pool'], top, bot)
+-                info.update(anchors)
+-                if a != 'pressure':   # 單季池也報同一組錨點，方便對照
+-                    info['singleSeasonAnchors'] = Pool(e['pool']).anchors('max')
+-            for pid in PIDS:
+-                new[pid][a] = mapped.get(pid, float(cur[pid][a]))   # 現行填 70 的人不動
+-        else:
+-            curve = CURVES[e['curve']]
+-            a99 = inverse_open(99, [(y, x) for x, y in curve], -1e9, 1e9)
+-            pmap = card_p(a)
+-            lo = 0.0 if bot else 40.0
+-            if merged:
+-                pool, per = merged_curve_pool(a, var)
+-                an = pool.anchors(mode)
+-                s = K_SD * an['S']
+-                info.update({**an, 'poolPerSeason': per})
+-            else:
+-                sdp = float(np.std([pmap[str(p)] for p in POOL]))
+-                s = K_SD * sdp
+-                info.update({'SDp': sdp, 'singleSeasonAnchors': Pool([pmap[str(p)] for p in POOL]).anchors('max')})
+-            info.update({'curve': e['curve'], 'a99': a99, 'lo': lo, 'hi': CEIL if top else 99.0})
+-            for pid in PIDS:
+-                p = pmap[str(pid)]
+-                if top and p > a99:
+-                    v = 99 + (CEIL - 99) * (1 - math.exp(-(p - a99) / s)) / (1 - math.exp(-(1 - a99) / s))
+-                else:
+-                    v = inverse_open(p, curve, lo, 99.0)
+-                if a == 'short':
+-                    v = max(lo, min(CEIL, 70 + (v - 70) * e['discount'][str(pid)]))
+-                new[pid][a] = v
+-        summary[a] = info
+-
+-    val = {}
+-    for z in ('mid', 'short'):
+-        rows, meta = CARDVAL[z]
+-        rows = {p: dict(r) for p, r in rows.items()}
+-        k = z + 'Value'
+-        top, bot = passed(H1V, k, 'top'), passed(H1V, k, 'bot')
+-        vals = {p: rows[p]['value'] for p in PIDS}
+-        if merged:
+-            pool, per = merged_value_pool(k)
+-            mapped, anchors = percentile_attr_merged(vals, pool, top, bot, mode)
+-            anchors = {**anchors, 'poolPerSeason': per}
+-        else:
+-            mapped, anchors = percentile_attr_e096(vals, [rows[p]['value'] for p in POOL], top, bot)
+-        for p in PIDS:
+-            v = mapped[p]
+-            if z == 'short':
+-                lo = 25.0 if bot else 40.0
+-                v = max(lo, min(CEIL, 70 + (v - 70) * raw['short']['discount'][str(p)]))
+-            rows[p]['attr'] = v
+-        val[k] = rows
+-        summary[k] = {'type': 'value', 'topTail': top, 'botTail': bot, **meta, **anchors}
+-    return new, val, summary
+-
+-
+-# ---------------------------------------------------------------- 各季到 99 的人數（§6；合併錨點下）
+-def season99(var, summary):
+-    out = {}
+-    for a in ATTRS13 + ['midValue', 'shortValue']:
+-        if a == 'pressure':
+-            continue
+-        info = summary[a]
+-        rows = {}
+-        seasons = [CARD_SEASON] + window(a, var) if a not in ('midValue', 'shortValue') else [CARD_SEASON] + MAIN
+-        for s in seasons:
+-            if info['type'] == 'percentile':
+-                pool, _ = merged_percentile_pool(a, var)
+-                if s == CARD_SEASON:
+-                    allv = {int(k): v for k, v in raw[a]['r'].items()}
+-                    poolv = list(raw[a]['pool'])
+-                else:
+-                    allv = season_vals(a, s, 'all')
+-                    poolv = list(season_vals(a, s, 'pool').values())
+-                rows[s] = {'pool': sum(pool.pct(v) >= 99 for v in poolv), 'poolN': len(poolv),
+-                           'all': sum(pool.pct(v) >= 99 for v in allv.values()), 'allN': len(allv)}
+-            elif info['type'] == 'curve':
+-                a99 = info['a99']
+-                if s == CARD_SEASON:
+-                    allv = {p: card_p(a)[str(p)] for p in PIDS}
+-                    poolv = [card_p(a)[str(p)] for p in POOL]
+-                else:
+-                    allv = season_vals(a, s, 'all')
+-                    poolv = list(season_vals(a, s, 'min500').values())
+-                rows[s] = {'min500': sum(v >= a99 for v in poolv), 'min500N': len(poolv),
+-                           'all': sum(v >= a99 for v in allv.values()), 'allN': len(allv), 'rule': 'p >= a99（short 為折扣前）'}
+-            else:
+-                pool, _ = merged_value_pool(a)
+-                if s == CARD_SEASON:
+-                    allv = [r['value'] for r in CARDVAL[a[:-5]][0].values()]
+-                    poolv = [CARDVAL[a[:-5]][0][p]['value'] for p in POOL]
+-                else:
+-                    d = SEAS[s]['value'][a]
+-                    allv = [x['value'] for x in d.values()]
+-                    poolv = [x['value'] for x in d.values() if x['MIN'] >= 500]
+-                rows[s] = {'min500': sum(pool.pct(v) >= 99 for v in poolv), 'min500N': len(poolv),
+-                           'all': sum(pool.pct(v) >= 99 for v in allv), 'allN': len(allv), 'rule': 'pct >= 99（short 為折扣前）'}
+-        out[a] = rows
+-    return out
+-
+-
+-# ---------------------------------------------------------------- 輸出
+-name = lambda p: cur[p]['name']
+-COUNTS = (('>99', lambda v: v > 99), ('==99', lambda v: abs(v - 99) < 1e-9), ('>=99', lambda v: v >= 99 - 1e-9), ('>120', lambda v: v > 120),
+-          ('>140', lambda v: v > 140), ('>=150', lambda v: v >= 150 - 1e-9), ('<40', lambda v: v < 40))
+-
+-
+-def write(path, cols):
+-    with open(path, 'w', encoding='utf-8', newline='') as fh:
+-        w = csv.writer(fh, lineterminator='\n')
+-        w.writerow(['playerId', 'name'] + ATTRS13)
+-        for p in PIDS:
+-            w.writerow([p, name(p)] + [repr(float(cols(p, a))) for a in ATTRS13])
+-
+-
+-def write_val(path, val):
+-    with open(path, 'w', encoding='utf-8', newline='') as fh:
+-        w = csv.writer(fh, lineterminator='\n')
+-        w.writerow(['playerId', 'name', 'inPool'] + [f'{z}{c}' for z in ('mid', 'short') for c in ('A', 'M', 'Vol', 'Acc', 'Value', 'Attr')])
+-        for p in PIDS:
+-            w.writerow([p, name(p), int(p in POOL)] + [repr(float(val[z + 'Value'][p][c])) for z in ('mid', 'short') for c in ('A', 'M', 'vol', 'acc', 'value', 'attr')])
+-
+-
+-# 合成資料檢查：常態下 (r99 − r90)/1.044 ≈ SD（S = SD）
+-rng = np.random.default_rng(20261030)
+-syn = Pool(rng.standard_normal(20000).tolist()).anchors('max')
+-assert abs(syn['ratio'] - 1) < 0.05, syn
+-synthetic = {'normal_n20000_seed20261030': {k: syn[k] for k in ('r90', 'r99', 'SD_pool', 'gapScale', 'ratio')}}
+-print('synthetic normal ratio', round(syn['ratio'], 4))
+-
+-summaries = {'_synthetic': synthetic, '_rules': {
+-    'S': 'max((r99 − r90)/1.044, SD_pool)；e101g = (r99 − r90)/1.044；insuranceActive = SD_pool > (r99 − r90)/1.044（保險生效、取 SD）',
+-    'ratio': '(r99 − r90)/1.044 ÷ SD_pool', 'pools': '百分位型 GP>=30 且 MPG>=20（drive 前 41 場 GP41>=15 且 MPG41>=20）；命中率型、量價型 MIN>=500；2025-26 為卡片本身的池',
+-    'switches': 'mid、short：本實驗 h1-results.json；midValue、shortValue：本實驗 h1v-results.json；其他：E-090 h1-results.json'}}
+-VARS = ['e101', 'e101z', 'e101g', 'e101w']
+-for var in VARS:
+-    new, val, summary = build(var)
+-    for a, info in summary.items():
+-        vals = {p: (val[a][p]['attr'] if a in val else new[p][a]) for p in PIDS}
+-        info['count'] = {k: sum(f(v) for v in vals.values()) for k, f in COUNTS}
+-        info['above99'] = [[name(p), round(vals[p], 2)] for p in sorted(PIDS, key=lambda p: -vals[p]) if vals[p] > 99]
+-        info['below40'] = [[name(p), round(vals[p], 2)] for p in sorted(PIDS, key=lambda p: vals[p]) if vals[p] < 40]
+-    if var != 'e101z':
+-        summary['_season99'] = season99(var, summary)
+-    write(OUT / f'attributes-{var}.csv', lambda p, a: new[p][a])
+-    write_val(OUT / f'value-attrs-{var}.csv', val)
+-    summaries[var] = summary
+-
+-# e101z 對照：mid、short 以外 11 項和 E-096 attributes-e096.csv 逐位相同
+-ref = {r['playerId']: r for r in csv.DictReader(open(E096 / 'attributes-e096.csv', encoding='utf-8'))}
+-mine = {r['playerId']: r for r in csv.DictReader(open(OUT / 'attributes-e101z.csv', encoding='utf-8'))}
+-assert set(ref) == set(mine)
+-bad = [(k, a) for k in ref for a in ATTRS13 if a not in ('mid', 'short') and ref[k][a] != mine[k][a]]
+-assert not bad, bad[:5]
+-summaries['_e101zControl'] = {'vsE096attributes': '11 項（mid、short 以外）582 人逐字串相同', 'mismatch': 0}
+-json.dump(summaries, open(OUT / 'tail-summary.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+-for var in VARS:
+-    print('==', var)
+-    for a, v in summaries[var].items():
+-        if a.startswith('_'):
+-            continue
+-        print(f"  {a:10s} top={v['topTail']!s:5s} bot={v['botTail']!s:5s} ratio={v.get('ratio', float('nan')):.3f} ins={v.get('insuranceActive')} "
+-              f"N={v.get('poolN')} {{'>99': {v['count']['>99']}, '>120': {v['count']['>120']}, '>140': {v['count']['>140']}}} top3={v['above99'][:3]}")
++"""E-101 §1–§4：寫四個變體的屬性檔、量價屬性檔與 tail-summary.json。由 ../card-0.2.5+E097-topscale/work/build_e097.py 改寫。
++三處改動（預註冊 §1–§3）：
++- 改動一：mid、short 的 p 用本實驗 a0-e101.json（修正分區＋聯盟先驗）；mid、short 頂端／底端開關看本實驗 h1-results.json，
++  midValue、shortValue 看本實驗 h1v-results.json；其他屬性開關照 E-090 h1-results.json。
++- 改動二：百分位、r99、r01 對跨季合併池（2025-26 卡片本身的池＋pool/raw-<季>.json 的過去季）；每個球員季算一筆，不去重。
++  池門檻：GP >= 30 且 MPG >= 20（drive 同卡片用前 41 場：GP41 >= 15 且 MPG41 >= 20）；命中率型與量價型 MIN >= 500。pressure 不改。
++- 改動三：頂端尺 S = max((r99 − r90)/1.044, SD_pool)（e101g 拿掉 max）；百分位型與量價型 top = 99 + 51·(1 − e^(−(r − r99)/(1.96·S)))；
++  命中率型 s = 1.96·S_p（S_p 用 MIN >= 500 合併池的 p），a99 照曲線。底端公式照 E-096，池換合併池。
++變體：e101（主）、e101z（只有改動一：單季池、尺照 E-096）、e101g（e101 去掉 max）、e101w（長窗：long、ft、foulDraw、tovSkill、pass、rebound、
++  physique 2015-16 起，drive 2020-21 起，其餘同 e101）。
++檢查：e101z 在 mid、short、midValue、shortValue 以外和 E-096 attributes-e096.csv 逐位相同；常態合成資料 (r99 − r90)/1.044 ≈ SD。
++用法（repo 根目錄）：python -I -B reports/card-0.2.5+E101-crossera/work/build_e101.py
++"""
++import csv
++import json
++import math
++import re
++import sys
++from pathlib import Path
++
++import numpy as np
++
++HERE = Path(__file__).resolve().parent
++OUT = HERE.parent
++ROOT = OUT.parents[1]
++W_VOL = float(sys.argv[1]) if len(sys.argv) > 1 else 0.0   # E-125：pass 的 w_vol（預設 0）
++TAG = 'P%d' % round(W_VOL * 100)
++IN = ROOT / 'reports/card-0.2.5+E101-crossera'   # E-101 輸入（唯讀）
++E090 = ROOT / 'reports/card-0.2.4+E090-onball-tail'
++E096 = ROOT / 'reports/card-0.2.5+E096-tail150'
++sys.path.insert(0, str(ROOT / 'reports/ovr-v61-shrink-history-2025-26'))
++import build_attrs as B  # noqa: E402
++
++sys.stdout.reconfigure(encoding='utf-8', errors='replace')
++ATTRS13 = ['long', 'mid', 'short', 'ft', 'drive', 'foulDraw', 'tovSkill', 'pass', 'rebound', 'physique', 'onBall', 'creation', 'pressure']
++CEIL, K_SD, PSEUDO_MIN, REP_GAP = 150.0, 1.96, 200.0, 0.03
++Z9990 = 1.044   # 常態 z.99 − z.90（預註冊 §0）
++MAIN = ['2022-23', '2023-24', '2024-25']
++LONG = ['2015-16', '2016-17', '2017-18', '2018-19', '2019-20', '2020-21', '2021-22']
++LONG_ATTRS = {'long', 'ft', 'foulDraw', 'tovSkill', 'pass', 'rebound', 'physique', 'drive'}
++CARD_SEASON = '2025-26'
++raw = json.load(open(E090 / 'work/a0-raw.json', encoding='utf-8'))
++# E-125：2025-26 的 pass（r、pool）換成 a0_p.py 的輸出（w_vol=0 時逐位元等於 a0-raw）
++_a0p = json.load(open(OUT / f'a0-pass-{TAG}.json', encoding='utf-8'))
++raw['pass'] = {**raw['pass'], 'r': _a0p['r'], 'pool': _a0p['pool']}
++H1_E090 = json.load(open(E090 / 'h1-results.json', encoding='utf-8'))['h1']
++H1 = {**H1_E090, **json.load(open(IN / 'h1-results.json', encoding='utf-8'))['h1']}
++H1V = json.load(open(IN / 'h1v-results.json', encoding='utf-8'))['h1v']
++P101 = json.load(open(IN / 'a0-e101.json', encoding='utf-8'))['p']
++SEAS = {s: json.load(open(OUT / ('pool-' + TAG) / f'raw-{s}.json', encoding='utf-8')) for s in LONG + MAIN}
++cur = {int(r['playerId']): r for r in csv.DictReader(open(E090 / 'work/current-attrs.csv', encoding='utf-8'))}
++PIDS = sorted(cur)
++rank = {r['name']: float(r['MIN']) for r in csv.DictReader(open(ROOT / 'reports/card-0.2.5/ranking.csv', encoding='utf-8'))}
++POOL = [p for p in PIDS if rank.get(cur[p]['name'], 0) >= 500]
++txt = (ROOT / 'src/constants.js').read_text(encoding='utf-8')
++CURVES = {}
++for name in ('CURVE_3PT', 'CURVE_MID', 'CURVE_SHORT', 'CURVE_FT'):
++    body = re.search(rf'export const {name} = \[(.*?)\];', txt, re.S).group(1)
++    CURVES[name] = [(float(a), float(b)) for a, b in re.findall(r'\[\s*([\d.]+)\s*,\s*([\d.]+)\s*\]', body)]
++
++
++def passed(h, a, end):
++    return bool(h.get(a, {}).get(end, {}).get('pass', False))
++
++
++def pct(x, arr):
++    return 100 * (sum(v < x for v in arr) + 0.5 * sum(v == x for v in arr)) / len(arr)
++
++
++class Pool:
++    """合併池；pct 同上式（小於者 + 0.5·相等者），用排序加速，結果與 pct() 同一算式。"""
++    def __init__(self, vals):
++        self.v = [float(x) for x in vals]
++        self.s = np.sort(np.array(self.v))
++        self.n = len(self.v)
++
++    def pct(self, x):
++        lo = int(np.searchsorted(self.s, x, 'left'))
++        hi = int(np.searchsorted(self.s, x, 'right'))
++        return 100 * (lo + 0.5 * (hi - lo)) / self.n
++
++    def r_at_least(self, q):
++        return min(v for v in self.s.tolist() if self.pct(v) >= q)
++
++    def r_at_most(self, q):
++        return max(v for v in self.s.tolist() if self.pct(v) <= q)
++
++    def anchors(self, mode):
++        r90, r99, r1 = self.r_at_least(90), self.r_at_least(99), self.r_at_most(1)
++        sd = float(np.std(self.v))
++        gap = (r99 - r90) / Z9990
++        S = max(gap, sd) if mode == 'max' else gap
++        return {'r90': r90, 'r99': r99, 'r1': r1, 'SD_pool': sd, 'gapScale': gap, 'ratio': gap / sd, 'S': S,
++                'insuranceActive': bool(mode == 'max' and sd > gap), 'poolN': self.n}
++
++
++def attr_of(p):
++    return max(40.0, min(99.0, 40 + (p - 1) * 30 / 49 if p < 50 else 70 + (p - 50) * 29 / 49))
++
++
++def top_tail(d, sd):
++    return 99 + (CEIL - 99) * (1 - math.exp(-max(0.0, d) / (K_SD * sd)))
++
++
++def bot_tail(d, sd):
++    return 40 - 15 * (1 - math.exp(-max(0.0, d) / sd))
++
++
++def inverse_open(p, curve, lo, hi):
++    """同 build_e090.inverse_open。"""
++    for i in range(1, len(curve)):
++        x0, y0 = curve[i - 1]
++        x1, y1 = curve[i]
++        if min(y0, y1) <= p <= max(y0, y1):
++            return max(lo, min(hi, x0 + (p - y0) / (y1 - y0) * (x1 - x0)))
++    x = curve[0][0] if abs(p - curve[0][1]) < abs(p - curve[-1][1]) else curve[-1][0]
++    return max(lo, min(hi, x))
++
++
++def percentile_attr_e096(vals, pool_vals, top, bot):
++    """E-096 原式（e101z 用；逐位重現 E-096）。"""
++    r99 = min(v for v in pool_vals if pct(v, pool_vals) >= 99)
++    r1 = max(v for v in pool_vals if pct(v, pool_vals) <= 1)
++    sd = float(np.std(pool_vals))
++    out = {}
++    for pid, x in vals.items():
++        p = pct(x, pool_vals)
++        if p >= 99 and top:
++            out[pid] = top_tail(x - r99, sd)
++        elif p <= 1 and bot:
++            out[pid] = bot_tail(r1 - x, sd)
++        else:
++            out[pid] = attr_of(p)
++    return out, {'r99': r99, 'r1': r1, 'SD': sd, 'poolN': len(pool_vals)}
++
++
++def percentile_attr_merged(vals, pool, top, bot, mode):
++    """改動二＋三：百分位對合併池；頂端尺 S；底端 E-096 式（SD = 合併池 SD）。"""
++    an = pool.anchors(mode)
++    out = {}
++    for pid, x in vals.items():
++        p = pool.pct(x)
++        if p >= 99 and top:
++            out[pid] = top_tail(x - an['r99'], an['S'])
++        elif p <= 1 and bot:
++            out[pid] = bot_tail(an['r1'] - x, an['SD_pool'])
++        else:
++            out[pid] = attr_of(p)
++    return out, an
++
++
++# ---------------------------------------------------------------- 合併池的原料
++def in_pool(info, a):
++    if info is None:
++        return False
++    if a == 'drive':
++        return info['GP41'] >= B.POOL41[0] and info['MIN41'] / info['GP41'] >= B.POOL41[1] if info['GP41'] > 0 else False
++    return info['GP'] >= B.POOL[0] and info['MIN'] / info['GP'] >= B.POOL[1] if info['GP'] > 0 else False
++
++
++def window(a, var):
++    if a == 'pressure':
++        return []
++    if var == 'e101w' and a in LONG_ATTRS:
++        return [s for s in LONG + MAIN if a in SEAS[s]['attrs']]
++    return MAIN
++
++
++def season_vals(a, s, which):
++    """過去季 s 的屬性 a：which = 'pool'（百分位型池門檻）、'min500'（命中率型）、'all'。回傳 {pid: v}。"""
++    d, info = SEAS[s]['attrs'].get(a, {}), SEAS[s]['poolInfo']
++    if which == 'all':
++        return {int(k): v for k, v in d.items()}
++    if which == 'min500':
++        return {int(k): v for k, v in d.items() if info.get(k, {'MIN': 0})['MIN'] >= 500}
++    return {int(k): v for k, v in d.items() if in_pool(info.get(k), a)}
++
++
++def card_p(a):
++    return P101[a] if a in ('mid', 'short') else raw[a]['p']
++
++
++def merged_percentile_pool(a, var):
++    vals = list(raw[a]['pool'])
++    per = {CARD_SEASON: len(vals)}
++    for s in window(a, var):
++        v = season_vals(a, s, 'pool')
++        vals += list(v.values())
++        per[s] = len(v)
++    return Pool(vals), per
++
++
++def merged_curve_pool(a, var):
++    vals = [card_p(a)[str(p)] for p in POOL]
++    per = {CARD_SEASON: len(vals)}
++    for s in window(a, var):
++        v = season_vals(a, s, 'min500')
++        vals += list(v.values())
++        per[s] = len(v)
++    return Pool(vals), per
++
++
++base = {int(r['PLAYER_ID']): r for r in B.bench_rows('base')}
++shots = {int(r['PLAYER_ID']): r for r in B.bench_rows('shots')}
++MINv = {p: float(base[p]['MIN']) for p in PIDS}
++
++
++def card_values(z):
++    """2025-26 卡片的量價（E-096 §2.3 式；acc = a0-e101 的 p）。"""
++    A = {p: float(shots[p][z + 'A']) if p in shots else 0.0 for p in PIDS}
++    M = {p: float(shots[p][z + 'M']) if p in shots else 0.0 for p in PIDS}
++    mu = sum(A[p] for p in PIDS if MINv[p] > 0) / sum(MINv[p] for p in PIDS if MINv[p] > 0)
++    lg = sum(M.values()) / sum(A.values())
++    rep = lg - REP_GAP
++    rows = {}
++    for p in PIDS:
++        vol = 36 * (A[p] + PSEUDO_MIN * mu) / (MINv[p] + PSEUDO_MIN)
++        acc = P101[z][str(p)]
++        rows[p] = {'A': A[p], 'M': M[p], 'MIN': MINv[p], 'vol': vol, 'acc': acc, 'value': vol * (acc - rep)}
++    return rows, {'muPerMin': mu, 'leagueRate': lg, 'rep': rep}
++
++
++CARDVAL = {z: card_values(z) for z in ('mid', 'short')}
++
++
++def merged_value_pool(k):
++    rows = CARDVAL[k[:-5]][0]
++    vals = [rows[p]['value'] for p in POOL]
++    per = {CARD_SEASON: len(vals)}
++    for s in MAIN:
++        d = SEAS[s]['value'][k]
++        v = [x['value'] for x in d.values() if x['MIN'] >= 500]
++        vals += v
++        per[s] = len(v)
++    return Pool(vals), per
++
++
++# ---------------------------------------------------------------- 變體
++def build(var):
++    merged = var != 'e101z'
++    mode = 'gap' if var == 'e101g' else 'max'
++    new = {pid: {} for pid in PIDS}
++    summary = {}
++    for a in ATTRS13:
++        e = raw[a]
++        top, bot = passed(H1, a, 'top'), passed(H1, a, 'bot')
++        info = {'type': e['type'], 'topTail': top, 'botTail': bot}
++        if e['type'] == 'percentile':
++            vals = {pid: e['r'][str(pid)] for pid in PIDS if str(pid) in e['r']}
++            if merged and a != 'pressure':
++                pool, per = merged_percentile_pool(a, var)
++                mapped, anchors = percentile_attr_merged(vals, pool, top, bot, mode)
++                info.update(anchors)
++                info['poolPerSeason'] = per
++            else:
++                mapped, anchors = percentile_attr_e096(vals, e['pool'], top, bot)
++                info.update(anchors)
++                if a != 'pressure':   # 單季池也報同一組錨點，方便對照
++                    info['singleSeasonAnchors'] = Pool(e['pool']).anchors('max')
++            for pid in PIDS:
++                new[pid][a] = mapped.get(pid, float(cur[pid][a]))   # 現行填 70 的人不動
++        else:
++            curve = CURVES[e['curve']]
++            a99 = inverse_open(99, [(y, x) for x, y in curve], -1e9, 1e9)
++            pmap = card_p(a)
++            lo = 0.0 if bot else 40.0
++            if merged:
++                pool, per = merged_curve_pool(a, var)
++                an = pool.anchors(mode)
++                s = K_SD * an['S']
++                info.update({**an, 'poolPerSeason': per})
++            else:
++                sdp = float(np.std([pmap[str(p)] for p in POOL]))
++                s = K_SD * sdp
++                info.update({'SDp': sdp, 'singleSeasonAnchors': Pool([pmap[str(p)] for p in POOL]).anchors('max')})
++            info.update({'curve': e['curve'], 'a99': a99, 'lo': lo, 'hi': CEIL if top else 99.0})
++            for pid in PIDS:
++                p = pmap[str(pid)]
++                if top and p > a99:
++                    v = 99 + (CEIL - 99) * (1 - math.exp(-(p - a99) / s)) / (1 - math.exp(-(1 - a99) / s))
++                else:
++                    v = inverse_open(p, curve, lo, 99.0)
++                if a == 'short':
++                    v = max(lo, min(CEIL, 70 + (v - 70) * e['discount'][str(pid)]))
++                new[pid][a] = v
++        summary[a] = info
++
++    val = {}
++    for z in ('mid', 'short'):
++        rows, meta = CARDVAL[z]
++        rows = {p: dict(r) for p, r in rows.items()}
++        k = z + 'Value'
++        top, bot = passed(H1V, k, 'top'), passed(H1V, k, 'bot')
++        vals = {p: rows[p]['value'] for p in PIDS}
++        if merged:
++            pool, per = merged_value_pool(k)
++            mapped, anchors = percentile_attr_merged(vals, pool, top, bot, mode)
++            anchors = {**anchors, 'poolPerSeason': per}
++        else:
++            mapped, anchors = percentile_attr_e096(vals, [rows[p]['value'] for p in POOL], top, bot)
++        for p in PIDS:
++            v = mapped[p]
++            if z == 'short':
++                lo = 25.0 if bot else 40.0
++                v = max(lo, min(CEIL, 70 + (v - 70) * raw['short']['discount'][str(p)]))
++            rows[p]['attr'] = v
++        val[k] = rows
++        summary[k] = {'type': 'value', 'topTail': top, 'botTail': bot, **meta, **anchors}
++    return new, val, summary
++
++
++# ---------------------------------------------------------------- 各季到 99 的人數（§6；合併錨點下）
++def season99(var, summary):
++    out = {}
++    for a in ATTRS13 + ['midValue', 'shortValue']:
++        if a == 'pressure':
++            continue
++        info = summary[a]
++        rows = {}
++        seasons = [CARD_SEASON] + window(a, var) if a not in ('midValue', 'shortValue') else [CARD_SEASON] + MAIN
++        for s in seasons:
++            if info['type'] == 'percentile':
++                pool, _ = merged_percentile_pool(a, var)
++                if s == CARD_SEASON:
++                    allv = {int(k): v for k, v in raw[a]['r'].items()}
++                    poolv = list(raw[a]['pool'])
++                else:
++                    allv = season_vals(a, s, 'all')
++                    poolv = list(season_vals(a, s, 'pool').values())
++                rows[s] = {'pool': sum(pool.pct(v) >= 99 for v in poolv), 'poolN': len(poolv),
++                           'all': sum(pool.pct(v) >= 99 for v in allv.values()), 'allN': len(allv)}
++            elif info['type'] == 'curve':
++                a99 = info['a99']
++                if s == CARD_SEASON:
++                    allv = {p: card_p(a)[str(p)] for p in PIDS}
++                    poolv = [card_p(a)[str(p)] for p in POOL]
++                else:
++                    allv = season_vals(a, s, 'all')
++                    poolv = list(season_vals(a, s, 'min500').values())
++                rows[s] = {'min500': sum(v >= a99 for v in poolv), 'min500N': len(poolv),
++                           'all': sum(v >= a99 for v in allv.values()), 'allN': len(allv), 'rule': 'p >= a99（short 為折扣前）'}
++            else:
++                pool, _ = merged_value_pool(a)
++                if s == CARD_SEASON:
++                    allv = [r['value'] for r in CARDVAL[a[:-5]][0].values()]
++                    poolv = [CARDVAL[a[:-5]][0][p]['value'] for p in POOL]
++                else:
++                    d = SEAS[s]['value'][a]
++                    allv = [x['value'] for x in d.values()]
++                    poolv = [x['value'] for x in d.values() if x['MIN'] >= 500]
++                rows[s] = {'min500': sum(pool.pct(v) >= 99 for v in poolv), 'min500N': len(poolv),
++                           'all': sum(pool.pct(v) >= 99 for v in allv), 'allN': len(allv), 'rule': 'pct >= 99（short 為折扣前）'}
++        out[a] = rows
++    return out
++
++
++# ---------------------------------------------------------------- 輸出
++name = lambda p: cur[p]['name']
++COUNTS = (('>99', lambda v: v > 99), ('==99', lambda v: abs(v - 99) < 1e-9), ('>=99', lambda v: v >= 99 - 1e-9), ('>120', lambda v: v > 120),
++          ('>140', lambda v: v > 140), ('>=150', lambda v: v >= 150 - 1e-9), ('<40', lambda v: v < 40))
++
++
++def write(path, cols):
++    with open(path, 'w', encoding='utf-8', newline='') as fh:
++        w = csv.writer(fh, lineterminator='\n')
++        w.writerow(['playerId', 'name'] + ATTRS13)
++        for p in PIDS:
++            w.writerow([p, name(p)] + [repr(float(cols(p, a))) for a in ATTRS13])
++
++
++def write_val(path, val):
++    with open(path, 'w', encoding='utf-8', newline='') as fh:
++        w = csv.writer(fh, lineterminator='\n')
++        w.writerow(['playerId', 'name', 'inPool'] + [f'{z}{c}' for z in ('mid', 'short') for c in ('A', 'M', 'Vol', 'Acc', 'Value', 'Attr')])
++        for p in PIDS:
++            w.writerow([p, name(p), int(p in POOL)] + [repr(float(val[z + 'Value'][p][c])) for z in ('mid', 'short') for c in ('A', 'M', 'vol', 'acc', 'value', 'attr')])
++
++
++# 合成資料檢查：常態下 (r99 − r90)/1.044 ≈ SD（S = SD）
++rng = np.random.default_rng(20261030)
++syn = Pool(rng.standard_normal(20000).tolist()).anchors('max')
++assert abs(syn['ratio'] - 1) < 0.05, syn
++synthetic = {'normal_n20000_seed20261030': {k: syn[k] for k in ('r90', 'r99', 'SD_pool', 'gapScale', 'ratio')}}
++print('synthetic normal ratio', round(syn['ratio'], 4))
++
++summaries = {'_synthetic': synthetic, '_rules': {
++    'S': 'max((r99 − r90)/1.044, SD_pool)；e101g = (r99 − r90)/1.044；insuranceActive = SD_pool > (r99 − r90)/1.044（保險生效、取 SD）',
++    'ratio': '(r99 − r90)/1.044 ÷ SD_pool', 'pools': '百分位型 GP>=30 且 MPG>=20（drive 前 41 場 GP41>=15 且 MPG41>=20）；命中率型、量價型 MIN>=500；2025-26 為卡片本身的池',
++    'switches': 'mid、short：本實驗 h1-results.json；midValue、shortValue：本實驗 h1v-results.json；其他：E-090 h1-results.json'}}
++VARS = ['e101']   # E-125：只要主變體
++for var in VARS:
++    new, val, summary = build(var)
++    for a, info in summary.items():
++        vals = {p: (val[a][p]['attr'] if a in val else new[p][a]) for p in PIDS}
++        info['count'] = {k: sum(f(v) for v in vals.values()) for k, f in COUNTS}
++        info['above99'] = [[name(p), round(vals[p], 2)] for p in sorted(PIDS, key=lambda p: -vals[p]) if vals[p] > 99]
++        info['below40'] = [[name(p), round(vals[p], 2)] for p in sorted(PIDS, key=lambda p: vals[p]) if vals[p] < 40]
++    if var != 'e101z':
++        summary['_season99'] = season99(var, summary)
++    write(OUT / f'attributes-{TAG}.csv', lambda p, a: new[p][a])
++    write_val(OUT / f'value-attrs-{TAG}.csv', val)
++    summaries[var] = summary
++
++json.dump(summaries, open(OUT / f'tail-summary-{TAG}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
++for var in VARS:
++    print('==', var)
++    for a, v in summaries[var].items():
++        if a.startswith('_'):
++            continue
++        print(f"  {a:10s} top={v['topTail']!s:5s} bot={v['botTail']!s:5s} ratio={v.get('ratio', float('nan')):.3f} ins={v.get('insuranceActive')} "
++              f"N={v.get('poolN')} {{'>99': {v['count']['>99']}, '>120': {v['count']['>120']}, '>140': {v['count']['>140']}}} top3={v['above99'][:3]}")
+=== diff card-0.2.5+E101-crossera/work/pool_data.py card-0.2.7+E125-pass-volume/work/pool_data_p.py
+--- card-0.2.5+E101-crossera/work/pool_data.py	2026-10-30 00:43:35.195983400 +0800
++++ card-0.2.7+E125-pass-volume/work/pool_data_p.py	2026-10-30 08:20:03.828162400 +0800
+@@ -1,219 +1,240 @@
+-"""E-101 改動二（預註冊 §2）：逐季算全部名單的原始值，存 pool/raw-<季>.json，供跨季合併池用。
+-逐季程式複製自 ../card-0.2.4+E090-onball-tail/work/h1_data.py（v61_season、seventh_season、onball_season、season_min_gp、shrunk、full_nd），改動：
+-  - v61_season 不算 mid、short（mid、short 改用 h1_e101_data.py 的修正分區＋聯盟先驗 p，work/tmp/zones-seasons-e101.json）；
+-  - drive 只在 V61 DRIVE_SEASONS（2020-21 起）算；creation 只在 dependence-audit 有的季（2022-23 起）；onBall 只在 E-060 components 有的季（2022-23 起）；
+-  - 輸出全部名單，不只是配對。
+-季別：主版本 2022-23..2024-25（2025-26 用卡片本身的值，不在這裡）；e101w 長窗另算 2015-16..2021-22（只算 long、ft、foulDraw、tovSkill、pass、rebound、physique、drive(2020-21 起)）。
+-每人另存池門檻需要的 MIN、GP（V61 pergame，GP = MIN>0 的場數，同 h1_data.season_min_gp）、MIN41、GP41（前 41 場，half==1）。
+-對照：2022-23..2024-25 的值必須逐位元等於 E-090 work/h1-pairs.json 裡同一人同一季的 prev／next（mid、short 除外）。
+-用法（repo 根目錄）：python -I -B reports/card-0.2.5+E101-crossera/work/pool_data.py
+-"""
+-import csv
+-import hashlib
+-import json
+-import sys
+-from collections import defaultdict
+-from pathlib import Path
+-
+-import numpy as np
+-
+-HERE = Path(__file__).resolve().parent
+-OUT = HERE.parent
+-ROOT = OUT.parents[1]
+-R = ROOT / 'reports'
+-V61 = R / 'ovr-v61-shrink-history-2025-26'
+-E090 = R / 'card-0.2.4+E090-onball-tail'
+-sys.path.insert(0, str(V61))
+-import engine as E  # noqa: E402
+-import build_attrs as B  # noqa: E402
+-
+-sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+-MAIN = ['2022-23', '2023-24', '2024-25']
+-LONG = ['2015-16', '2016-17', '2017-18', '2018-19', '2019-20', '2020-21', '2021-22']
+-LONG_ATTRS = ['long', 'ft', 'foulDraw', 'tovSkill', 'pass', 'rebound', 'physique', 'drive']
+-prod = json.load(open(V61 / 'backtest.json', encoding='utf-8'))['production']
+-volfit = json.load(open(E090 / 'work/tmp/e070/vol-fit.json', encoding='utf-8'))['fit']
+-
+-
+-def jrs(path):
+-    d = json.load(open(path, encoding='utf-8'))
+-    rs = d['data']['resultSets'] if 'data' in d else d['resultSets']
+-    rs = rs[0] if isinstance(rs, list) else rs
+-    return [dict(zip(rs['headers'], r)) for r in rs['rowSet']]
+-
+-
+-# ---------------------------------------------------------------- V61 歷史快取（同 E-090 h1_data）
+-cache = {s: E.season_halves(s) for s in E.SEASONS}
+-E.ATTR_SEASONS['vol'] = list(E.SEASONS)
+-E.MIN_D2['vol'] = 300 / 36
+-for s in E.SEASONS:
+-    acc = E._acc()
+-    for r in E.load_pergame(s):
+-        i = 0 if int(r['half']) == 1 else 2
+-        pid = int(r['playerId'])
+-        acc[pid][i] += float(r['FTA'])
+-        acc[pid][i + 1] += float(r['MIN']) / 36
+-    cache[s]['vol'] = acc
+-pos_by = E.positions()
+-
+-
+-def season_min_gp(s, half1=False):
+-    mins, gp = defaultdict(float), defaultdict(int)
+-    for r in E.load_pergame(s):
+-        if half1 and r['half'] != '1':
+-            continue
+-        m = float(r['MIN'])
+-        pid = int(r['playerId'])
+-        mins[pid] += m
+-        gp[pid] += m > 0
+-    return mins, gp
+-
+-
+-def shrunk(attr, s, pids, fit, n, d, pos, method='c'):
+-    ds = E.Dataset(attr, s, cache, pos_by, ids=pids)
+-    league_rate = n.sum() / d.sum()
+-    pn, pd_ = defaultdict(float), defaultdict(float)
+-    for i, p in enumerate(pids):
+-        pn[pos[p]] += n[i]; pd_[pos[p]] += d[i]
+-    m = np.full(len(pids), league_rate) if fit['prior'] == 'league' else np.array([pn[pos[p]] / pd_[pos[p]] for p in pids])
+-    return B.shrink(n, d, m, B.Hist(ds.hn, ds.hd), method, fit)
+-
+-
+-def full_nd(attr, s, pids):
+-    z = [0.0] * 4
+-    cur = cache[s][attr]
+-    return (np.array([cur.get(p, z)[0] + cur.get(p, z)[2] for p in pids], float),
+-            np.array([cur.get(p, z)[1] + cur.get(p, z)[3] for p in pids], float))
+-
+-
+-def v61_season(s, method='c'):
+-    """同 E-090 h1_data.v61_season，但不算 mid、short；drive 只在有 PBP drive 的季。"""
+-    mins, gp = season_min_gp(s)
+-    pids = sorted(p for p in mins if mins[p] > 0)
+-    pos = {p: E.pos_lookup(pos_by, p, s) for p in pids}
+-    out, att = {}, {}
+-    for a in ('ft', 'tovSkill', 'pass', 'rebound', 'foulDraw'):
+-        assert prod[a]['selected'] == 'c'
+-        n, d = full_nd(a, s, pids)
+-        rn = shrunk(a, s, pids, prod[a]['fit'], n, d, pos, method)
+-        sign = -1.0 if a == 'tovSkill' else 1.0
+-        out[a] = {p: sign * float(rn[i]) for i, p in enumerate(pids)}
+-        if a == 'ft':
+-            att[a] = {p: float(d[i]) for i, p in enumerate(pids)}
+-    # foulDraw w075
+-    n, d = full_nd('vol', s, pids)
+-    vol = shrunk('vol', s, pids, volfit, n, d, pos, method)
+-    rate = np.array([out['foulDraw'][p] for p in pids])
+-    inp = np.array([gp[p] >= B.POOL[0] and mins[p] / gp[p] >= B.POOL[1] for p in pids])
+-    zs = lambda x: (x - x[inp].mean()) / x[inp].std()
+-    comp = 0.75 * zs(vol) + 0.25 * zs(rate)
+-    out['foulDraw'] = {p: float(comp[i]) for i, p in enumerate(pids)}
+-    # drive（前 41 場）
+-    if s in E.DRIVE_SEASONS:
+-        dv, de = cache[s]['driveVol'], cache[s]['driveEff']
+-        z4 = [0.0] * 4
+-        mins41 = np.array([dv.get(p, z4)[1] for p in pids], float)
+-        nv = np.array([dv.get(p, z4)[0] for p in pids], float)
+-        pts = np.array([de.get(p, z4)[0] for p in pids], float)
+-        nW = np.array([de.get(p, z4)[1] for p in pids], float)
+-        _, gp41 = season_min_gp(s, half1=True)
+-        g = np.array([gp41.get(p, 0) for p in pids], float)
+-        inpool = (g >= B.POOL41[0]) & (mins41 / np.where(g > 0, g, 1) >= B.POOL41[1])
+-        comp = prod['drive']['components']
+-        rv = 36 * shrunk('driveVol', s, pids, comp['driveVol']['c'], nv, mins41, pos, method)
+-        re_ = shrunk('driveEff', s, pids, comp['driveEff']['c'], pts, nW, pos, method)
+-        sc = .5 * (rv - rv[inpool].mean()) / rv[inpool].std() + .5 * (re_ - re_[inpool].mean()) / re_[inpool].std()
+-        out['drive'] = {p: float(sc[i]) for i, p in enumerate(pids) if mins41[i] > 0}
+-    return out, att
+-
+-
+-DEP = json.load(open(R / 'player-impact-v30/dependence-audit.json', encoding='utf-8'))
+-
+-
+-def seventh_season(s):
+-    pg = jrs(ROOT / f'data/defense-seventh/{s}/player-games.json')
+-    tot = defaultdict(lambda: defaultdict(float))
+-    for r in pg:
+-        t = tot[int(r['PLAYER_ID'])]
+-        for k in ('FG3M', 'FG3A', 'FGA', 'MIN'):
+-            t[k] += float(r[k] or 0)
+-    lg = sum(t['FG3M'] for t in tot.values()) / sum(t['FG3A'] for t in tot.values())
+-    out = {'long': {p: (t['FG3M'] + 100 * lg) / (t['FG3A'] + 100) for p, t in tot.items()}}
+-    att = {'long': {p: t['FG3A'] for p, t in tot.items()}}
+-    bio = jrs(ROOT / f'data/defense-seventh/{s}/bio.json')
+-    out['physique'] = {int(b['PLAYER_ID']): float(b['PLAYER_HEIGHT_INCHES']) + float(b['PLAYER_WEIGHT']) / 10
+-                       for b in bio if b['PLAYER_HEIGHT_INCHES'] and float(b['PLAYER_WEIGHT'] or 0) > 0}
+-    dep = {int(r['playerId']): r['sourceDependence'] for se in DEP['seasons'] if se['season'] == s for r in se['rows']}
+-    if dep:
+-        out['creation'] = {p: (1 - float(dep[p])) * t['FGA'] / max(t['MIN'], 1) * 36 for p, t in tot.items() if dep.get(p) is not None}
+-    return out, att
+-
+-
+-E060 = R / 'card-0.1.1+E060-onball-targeting'
+-USE_T = json.load(open(E060 / 'stability.json', encoding='utf-8'))['T_included']
+-
+-
+-def onball_season(s):
+-    out = {}
+-    for r in csv.DictReader(open(E060 / f'components-{s}.csv', encoding='utf-8')):
+-        try:
+-            if USE_T and r['zT'] == '':
+-                continue
+-            out[int(r['pid'])] = float(r['zC3']) + float(r['zB']) - (float(r['zT']) if USE_T else 0.0)
+-        except ValueError:
+-            continue
+-    return out
+-
+-
+-zones = json.load(open(HERE / 'tmp/zones-seasons-e101.json', encoding='utf-8'))
+-ref = json.load(open(E090 / 'work/h1-pairs.json', encoding='utf-8'))
+-(OUT / 'pool').mkdir(exist_ok=True)
+-control = {}
+-manifest = {}
+-for s in LONG + MAIN:
+-    o1, t1 = v61_season(s)
+-    o2, t2 = seventh_season(s)
+-    attrs = {**o1, **o2}
+-    att = {**t1, **t2}
+-    if s in MAIN:
+-        attrs['onBall'] = onball_season(s)
+-        for z in ('mid', 'short'):
+-            attrs[z] = {int(k): v['p'] for k, v in zones[z][s].items()}
+-            att[z] = {int(k): v['A'] for k, v in zones[z][s].items()}
+-    else:
+-        attrs = {a: v for a, v in attrs.items() if a in LONG_ATTRS}
+-    mins, gp = season_min_gp(s)
+-    mins41, gp41 = season_min_gp(s, half1=True)
+-    allp = sorted(set(mins) | set().union(*[set(v) for v in attrs.values()]))
+-    rec = {
+-        'season': s,
+-        'window': 'main' if s in MAIN else 'e101w-only',
+-        'attrs': {a: {str(p): v for p, v in sorted(attrs[a].items())} for a in sorted(attrs)},
+-        'attempts': {a: {str(p): v for p, v in sorted(att[a].items())} for a in sorted(att)},
+-        'value': ({z + 'Value': {k: {'p': v['p'], 'A': v['A'], 'M': v['M'], 'MIN': v['MIN'], 'value': v['value']} for k, v in zones[z][s].items()}
+-                   for z in ('mid', 'short')} if s in MAIN else {}),
+-        'poolInfo': {str(p): {'MIN': mins.get(p, 0.0), 'GP': gp.get(p, 0), 'MIN41': mins41.get(p, 0.0), 'GP41': gp41.get(p, 0)} for p in allp},
+-        'rules': {'pool': f'GP >= {B.POOL[0]} 且 MIN/GP >= {B.POOL[1]}（drive：GP41 >= {B.POOL41[0]} 且 MIN41/GP41 >= {B.POOL41[1]}）；命中率型與量價型 MIN >= 500',
+-                  'directions': '百分位型越大越好（tovSkill 已取負號）；曲線型 = 收縮後命中率 p；mid、short = 修正分區＋聯盟先驗',
+-                  'source': 'work/pool_data.py（複製自 E-090 work/h1_data.py）'},
+-    }
+-    if s in MAIN:   # 對照：同一人同一季的值必須等於 E-090 配對裡的 prev／next
+-        nchk, bad = 0, []
+-        for a, rows in ref.items():
+-            if a in ('mid', 'short'):
+-                continue
+-            for r in rows:
+-                s0, s1 = r['pair'][:7], r['pair'][-7:]
+-                for ss, key in ((s0, 'prev'), (s1, 'next')):
+-                    if ss == s:
+-                        nchk += 1
+-                        if attrs[a].get(r['pid']) != r[key]:
+-                            bad.append([a, r['pid'], key])
+-        control[s] = {'checked': nchk, 'mismatch': len(bad), 'examples': bad[:5]}
+-        assert not bad, (s, bad[:5])
+-    p = OUT / 'pool' / f'raw-{s}.json'
+-    p.write_text(json.dumps(rec, ensure_ascii=False), encoding='utf-8')
+-    manifest[p.name] = {'sha256': hashlib.sha256(p.read_bytes()).hexdigest(), 'attrs': {a: len(v) for a, v in rec['attrs'].items()}}
+-    print(s, manifest[p.name]['attrs'], flush=True)
+-(OUT / 'pool' / 'manifest.json').write_text(json.dumps({'files': manifest, 'controlVsE090Pairs': control}, ensure_ascii=False, indent=1), encoding='utf-8')
+-print(json.dumps(control))
++"""E-101 改動二（預註冊 §2）：逐季算全部名單的原始值，存 pool/raw-<季>.json，供跨季合併池用。
++逐季程式複製自 ../card-0.2.4+E090-onball-tail/work/h1_data.py（v61_season、seventh_season、onball_season、season_min_gp、shrunk、full_nd），改動：
++  - v61_season 不算 mid、short（mid、short 改用 h1_e101_data.py 的修正分區＋聯盟先驗 p，work/tmp/zones-seasons-e101.json）；
++  - drive 只在 V61 DRIVE_SEASONS（2020-21 起）算；creation 只在 dependence-audit 有的季（2022-23 起）；onBall 只在 E-060 components 有的季（2022-23 起）；
++  - 輸出全部名單，不只是配對。
++季別：主版本 2022-23..2024-25（2025-26 用卡片本身的值，不在這裡）；e101w 長窗另算 2015-16..2021-22（只算 long、ft、foulDraw、tovSkill、pass、rebound、physique、drive(2020-21 起)）。
++每人另存池門檻需要的 MIN、GP（V61 pergame，GP = MIN>0 的場數，同 h1_data.season_min_gp）、MIN41、GP41（前 41 場，half==1）。
++對照：2022-23..2024-25 的值必須逐位元等於 E-090 work/h1-pairs.json 裡同一人同一季的 prev／next（mid、short 除外）。
++用法（repo 根目錄）：python -I -B reports/card-0.2.5+E101-crossera/work/pool_data.py
++"""
++import csv
++import hashlib
++import json
++import sys
++from collections import defaultdict
++from pathlib import Path
++
++import numpy as np
++
++HERE = Path(__file__).resolve().parent
++OUT = HERE.parent
++ROOT = OUT.parents[1]
++# E-125 唯一新增選項：w_vol（argv[1]，預設 0）。pass 每季值 = w_vol*zs(vol)+(1-w_vol)*zs(rate)；w_vol=0 直接用原 rate，不做 zs。
++W_VOL = float(sys.argv[1]) if len(sys.argv) > 1 else 0.0
++TAG = 'P%d' % round(W_VOL * 100)
++E101 = ROOT / 'reports/card-0.2.5+E101-crossera'
++ASTFIT = json.load(open(OUT / 'astvol-fit.json', encoding='utf-8'))['fit']
++R = ROOT / 'reports'
++V61 = R / 'ovr-v61-shrink-history-2025-26'
++E090 = R / 'card-0.2.4+E090-onball-tail'
++sys.path.insert(0, str(V61))
++import engine as E  # noqa: E402
++import build_attrs as B  # noqa: E402
++
++sys.stdout.reconfigure(encoding='utf-8', errors='replace')
++MAIN = ['2022-23', '2023-24', '2024-25']
++LONG = ['2015-16', '2016-17', '2017-18', '2018-19', '2019-20', '2020-21', '2021-22']
++LONG_ATTRS = ['long', 'ft', 'foulDraw', 'tovSkill', 'pass', 'rebound', 'physique', 'drive']
++prod = json.load(open(V61 / 'backtest.json', encoding='utf-8'))['production']
++volfit = json.load(open(E090 / 'work/tmp/e070/vol-fit.json', encoding='utf-8'))['fit']
++
++
++def jrs(path):
++    d = json.load(open(path, encoding='utf-8'))
++    rs = d['data']['resultSets'] if 'data' in d else d['resultSets']
++    rs = rs[0] if isinstance(rs, list) else rs
++    return [dict(zip(rs['headers'], r)) for r in rs['rowSet']]
++
++
++# ---------------------------------------------------------------- V61 歷史快取（同 E-090 h1_data）
++cache = {s: E.season_halves(s) for s in E.SEASONS}
++E.ATTR_SEASONS['vol'] = list(E.SEASONS)
++E.MIN_D2['vol'] = 300 / 36
++E.ATTR_SEASONS['astvol'] = list(E.SEASONS)
++E.MIN_D2['astvol'] = 300 / 36
++for s in E.SEASONS:
++    acc = E._acc()
++    for r in E.load_pergame(s):
++        i = 0 if int(r['half']) == 1 else 2
++        pid = int(r['playerId'])
++        acc[pid][i] += float(r['FTA'])
++        acc[pid][i + 1] += float(r['MIN']) / 36
++    cache[s]['vol'] = acc
++    acc2 = E._acc()
++    for r in E.load_pergame(s):
++        i = 0 if int(r['half']) == 1 else 2
++        pid = int(r['playerId'])
++        acc2[pid][i] += float(r['AST'])
++        acc2[pid][i + 1] += float(r['MIN']) / 36
++    cache[s]['astvol'] = acc2
++pos_by = E.positions()
++
++
++def season_min_gp(s, half1=False):
++    mins, gp = defaultdict(float), defaultdict(int)
++    for r in E.load_pergame(s):
++        if half1 and r['half'] != '1':
++            continue
++        m = float(r['MIN'])
++        pid = int(r['playerId'])
++        mins[pid] += m
++        gp[pid] += m > 0
++    return mins, gp
++
++
++def shrunk(attr, s, pids, fit, n, d, pos, method='c'):
++    ds = E.Dataset(attr, s, cache, pos_by, ids=pids)
++    league_rate = n.sum() / d.sum()
++    pn, pd_ = defaultdict(float), defaultdict(float)
++    for i, p in enumerate(pids):
++        pn[pos[p]] += n[i]; pd_[pos[p]] += d[i]
++    m = np.full(len(pids), league_rate) if fit['prior'] == 'league' else np.array([pn[pos[p]] / pd_[pos[p]] for p in pids])
++    return B.shrink(n, d, m, B.Hist(ds.hn, ds.hd), method, fit)
++
++
++def full_nd(attr, s, pids):
++    z = [0.0] * 4
++    cur = cache[s][attr]
++    return (np.array([cur.get(p, z)[0] + cur.get(p, z)[2] for p in pids], float),
++            np.array([cur.get(p, z)[1] + cur.get(p, z)[3] for p in pids], float))
++
++
++def v61_season(s, method='c'):
++    """同 E-090 h1_data.v61_season，但不算 mid、short；drive 只在有 PBP drive 的季。"""
++    mins, gp = season_min_gp(s)
++    pids = sorted(p for p in mins if mins[p] > 0)
++    pos = {p: E.pos_lookup(pos_by, p, s) for p in pids}
++    out, att = {}, {}
++    for a in ('ft', 'tovSkill', 'pass', 'rebound', 'foulDraw'):
++        assert prod[a]['selected'] == 'c'
++        n, d = full_nd(a, s, pids)
++        rn = shrunk(a, s, pids, prod[a]['fit'], n, d, pos, method)
++        sign = -1.0 if a == 'tovSkill' else 1.0
++        out[a] = {p: sign * float(rn[i]) for i, p in enumerate(pids)}
++        if a == 'ft':
++            att[a] = {p: float(d[i]) for i, p in enumerate(pids)}
++    # foulDraw w075
++    n, d = full_nd('vol', s, pids)
++    vol = shrunk('vol', s, pids, volfit, n, d, pos, method)
++    rate = np.array([out['foulDraw'][p] for p in pids])
++    inp = np.array([gp[p] >= B.POOL[0] and mins[p] / gp[p] >= B.POOL[1] for p in pids])
++    zs = lambda x: (x - x[inp].mean()) / x[inp].std()
++    comp = 0.75 * zs(vol) + 0.25 * zs(rate)
++    out['foulDraw'] = {p: float(comp[i]) for i, p in enumerate(pids)}
++    # pass w_vol（E-125；w_vol=0 保留原 rate 值，不做 zs）
++    if W_VOL > 0:
++        n, d = full_nd('astvol', s, pids)
++        avol = shrunk('astvol', s, pids, ASTFIT, n, d, pos, method)
++        prate = np.array([out['pass'][p] for p in pids])
++        pcomp = W_VOL * zs(avol) + (1 - W_VOL) * zs(prate)
++        out['pass'] = {p: float(pcomp[i]) for i, p in enumerate(pids)}
++    # drive（前 41 場）
++    if s in E.DRIVE_SEASONS:
++        dv, de = cache[s]['driveVol'], cache[s]['driveEff']
++        z4 = [0.0] * 4
++        mins41 = np.array([dv.get(p, z4)[1] for p in pids], float)
++        nv = np.array([dv.get(p, z4)[0] for p in pids], float)
++        pts = np.array([de.get(p, z4)[0] for p in pids], float)
++        nW = np.array([de.get(p, z4)[1] for p in pids], float)
++        _, gp41 = season_min_gp(s, half1=True)
++        g = np.array([gp41.get(p, 0) for p in pids], float)
++        inpool = (g >= B.POOL41[0]) & (mins41 / np.where(g > 0, g, 1) >= B.POOL41[1])
++        comp = prod['drive']['components']
++        rv = 36 * shrunk('driveVol', s, pids, comp['driveVol']['c'], nv, mins41, pos, method)
++        re_ = shrunk('driveEff', s, pids, comp['driveEff']['c'], pts, nW, pos, method)
++        sc = .5 * (rv - rv[inpool].mean()) / rv[inpool].std() + .5 * (re_ - re_[inpool].mean()) / re_[inpool].std()
++        out['drive'] = {p: float(sc[i]) for i, p in enumerate(pids) if mins41[i] > 0}
++    return out, att
++
++
++DEP = json.load(open(R / 'player-impact-v30/dependence-audit.json', encoding='utf-8'))
++
++
++def seventh_season(s):
++    pg = jrs(ROOT / f'data/defense-seventh/{s}/player-games.json')
++    tot = defaultdict(lambda: defaultdict(float))
++    for r in pg:
++        t = tot[int(r['PLAYER_ID'])]
++        for k in ('FG3M', 'FG3A', 'FGA', 'MIN'):
++            t[k] += float(r[k] or 0)
++    lg = sum(t['FG3M'] for t in tot.values()) / sum(t['FG3A'] for t in tot.values())
++    out = {'long': {p: (t['FG3M'] + 100 * lg) / (t['FG3A'] + 100) for p, t in tot.items()}}
++    att = {'long': {p: t['FG3A'] for p, t in tot.items()}}
++    bio = jrs(ROOT / f'data/defense-seventh/{s}/bio.json')
++    out['physique'] = {int(b['PLAYER_ID']): float(b['PLAYER_HEIGHT_INCHES']) + float(b['PLAYER_WEIGHT']) / 10
++                       for b in bio if b['PLAYER_HEIGHT_INCHES'] and float(b['PLAYER_WEIGHT'] or 0) > 0}
++    dep = {int(r['playerId']): r['sourceDependence'] for se in DEP['seasons'] if se['season'] == s for r in se['rows']}
++    if dep:
++        out['creation'] = {p: (1 - float(dep[p])) * t['FGA'] / max(t['MIN'], 1) * 36 for p, t in tot.items() if dep.get(p) is not None}
++    return out, att
++
++
++E060 = R / 'card-0.1.1+E060-onball-targeting'
++USE_T = json.load(open(E060 / 'stability.json', encoding='utf-8'))['T_included']
++
++
++def onball_season(s):
++    out = {}
++    for r in csv.DictReader(open(E060 / f'components-{s}.csv', encoding='utf-8')):
++        try:
++            if USE_T and r['zT'] == '':
++                continue
++            out[int(r['pid'])] = float(r['zC3']) + float(r['zB']) - (float(r['zT']) if USE_T else 0.0)
++        except ValueError:
++            continue
++    return out
++
++
++zones = json.load(open(HERE / 'tmp/zones-seasons-e101.json', encoding='utf-8'))
++ref = json.load(open(E090 / 'work/h1-pairs.json', encoding='utf-8'))
++(OUT / ('pool-' + TAG)).mkdir(exist_ok=True)
++control = {}
++manifest = {}
++for s in LONG + MAIN:
++    o1, t1 = v61_season(s)
++    o2, t2 = seventh_season(s)
++    attrs = {**o1, **o2}
++    att = {**t1, **t2}
++    if s in MAIN:
++        attrs['onBall'] = onball_season(s)
++        for z in ('mid', 'short'):
++            attrs[z] = {int(k): v['p'] for k, v in zones[z][s].items()}
++            att[z] = {int(k): v['A'] for k, v in zones[z][s].items()}
++    else:
++        attrs = {a: v for a, v in attrs.items() if a in LONG_ATTRS}
++    mins, gp = season_min_gp(s)
++    mins41, gp41 = season_min_gp(s, half1=True)
++    allp = sorted(set(mins) | set().union(*[set(v) for v in attrs.values()]))
++    rec = {
++        'season': s,
++        'window': 'main' if s in MAIN else 'e101w-only',
++        'attrs': {a: {str(p): v for p, v in sorted(attrs[a].items())} for a in sorted(attrs)},
++        'attempts': {a: {str(p): v for p, v in sorted(att[a].items())} for a in sorted(att)},
++        'value': ({z + 'Value': {k: {'p': v['p'], 'A': v['A'], 'M': v['M'], 'MIN': v['MIN'], 'value': v['value']} for k, v in zones[z][s].items()}
++                   for z in ('mid', 'short')} if s in MAIN else {}),
++        'poolInfo': {str(p): {'MIN': mins.get(p, 0.0), 'GP': gp.get(p, 0), 'MIN41': mins41.get(p, 0.0), 'GP41': gp41.get(p, 0)} for p in allp},
++        'rules': {'pool': f'GP >= {B.POOL[0]} 且 MIN/GP >= {B.POOL[1]}（drive：GP41 >= {B.POOL41[0]} 且 MIN41/GP41 >= {B.POOL41[1]}）；命中率型與量價型 MIN >= 500',
++                  'directions': '百分位型越大越好（tovSkill 已取負號）；曲線型 = 收縮後命中率 p；mid、short = 修正分區＋聯盟先驗',
++                  'source': 'work/pool_data.py（複製自 E-090 work/h1_data.py）'},
++    }
++    if s in MAIN:   # 對照：同一人同一季的值必須等於 E-090 配對裡的 prev／next
++        nchk, bad = 0, []
++        for a, rows in ref.items():
++            if a in ('mid', 'short') or (a == 'pass' and W_VOL > 0):   # 新 pass 值本來就不等於 E-090 配對裡的舊值
++                continue
++            for r in rows:
++                s0, s1 = r['pair'][:7], r['pair'][-7:]
++                for ss, key in ((s0, 'prev'), (s1, 'next')):
++                    if ss == s:
++                        nchk += 1
++                        if attrs[a].get(r['pid']) != r[key]:
++                            bad.append([a, r['pid'], key])
++        control[s] = {'checked': nchk, 'mismatch': len(bad), 'examples': bad[:5]}
++        assert not bad, (s, bad[:5])
++    p = OUT / ('pool-' + TAG) / f'raw-{s}.json'
++    p.write_text(json.dumps(rec, ensure_ascii=False), encoding='utf-8')
++    manifest[p.name] = {'sha256': hashlib.sha256(p.read_bytes()).hexdigest(), 'attrs': {a: len(v) for a, v in rec['attrs'].items()}}
++    print(s, manifest[p.name]['attrs'], flush=True)
++(OUT / ('pool-' + TAG) / 'manifest.json').write_text(json.dumps({'files': manifest, 'controlVsE090Pairs': control}, ensure_ascii=False, indent=1), encoding='utf-8')
++print(json.dumps(control))
+=== diff card-0.2.6+E107-defense-UL/work/run_cards.py card-0.2.7+E125-pass-volume/work/run_cards_p.py
+diff: card-0.2.6+E107-defense-UL/work/run_cards.py: No such file or directory
+=== diff card-0.2.6+E107-defense-UL/work/e107.py card-0.2.7+E125-pass-volume/work/e125.py
+diff: card-0.2.6+E107-defense-UL/work/e107.py: No such file or directory

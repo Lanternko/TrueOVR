@@ -1,0 +1,576 @@
+{
+ "per_season": {
+  "2022-23": {
+   "K0": {
+    "n": 271,
+    "C": 0.7027372178300753,
+    "n_sal": 180,
+    "sal": 0.7009554403688025,
+    "n_twok": 269,
+    "twok": 0.6838771812729313,
+    "n_rapm": 262,
+    "rapm": 0.40603414959638756
+   },
+   "K6": {
+    "n": 271,
+    "C": 0.7435232326522019,
+    "n_sal": 180,
+    "sal": 0.7593898692815327,
+    "n_twok": 269,
+    "twok": 0.7437215850758118,
+    "n_rapm": 262,
+    "rapm": 0.390424932537596
+   }
+  },
+  "2023-24": {
+   "K0": {
+    "n": 303,
+    "C": 0.6817219344231422,
+    "n_sal": 205,
+    "sal": 0.6652640753449189,
+    "n_twok": 303,
+    "twok": 0.6318809947107803,
+    "n_rapm": 286,
+    "rapm": 0.4011875296829027
+   },
+   "K6": {
+    "n": 303,
+    "C": 0.6905044796275734,
+    "n_sal": 205,
+    "sal": 0.6691503868578662,
+    "n_twok": 303,
+    "twok": 0.6715987817012967,
+    "n_rapm": 286,
+    "rapm": 0.3480331166201705
+   }
+  },
+  "2024-25": {
+   "K0": {
+    "n": 346,
+    "C": 0.6977032194982118,
+    "n_sal": 240,
+    "sal": 0.6393839067364216,
+    "n_twok": 345,
+    "twok": 0.6748034420627639,
+    "n_rapm": 319,
+    "rapm": 0.45026583302102424
+   },
+   "K6": {
+    "n": 346,
+    "C": 0.7173752412636869,
+    "n_sal": 240,
+    "sal": 0.6685334236025828,
+    "n_twok": 345,
+    "twok": 0.7087057385916333,
+    "n_rapm": 319,
+    "rapm": 0.4313417681195163
+   }
+  },
+  "2025-26": {
+   "K0": {
+    "n": 379,
+    "C": 0.6679913176540284,
+    "n_sal": 262,
+    "sal": 0.5814430765121688,
+    "n_twok": 376,
+    "twok": 0.7175964160130588,
+    "n_rapm": 0,
+    "rapm": null
+   },
+   "K6": {
+    "n": 379,
+    "C": 0.6923600728520721,
+    "n_sal": 262,
+    "sal": 0.5963213183760325,
+    "n_twok": 376,
+    "twok": 0.7417942967308295,
+    "n_rapm": 0,
+    "rapm": null
+   }
+  }
+ },
+ "young_le23": {
+  "2022-23": {
+   "K0": {
+    "n": 83,
+    "C": 0.5034188530954572,
+    "n_sal": 16,
+    "sal": 0.36499962604988395,
+    "n_twok": 82,
+    "twok": 0.44762929241595345,
+    "n_rapm": 80,
+    "rapm": 0.3127747109778489
+   },
+   "K6": {
+    "n": 83,
+    "C": 0.5123554941599787,
+    "n_sal": 16,
+    "sal": 0.2670728971096712,
+    "n_twok": 82,
+    "twok": 0.4805896661412551,
+    "n_rapm": 80,
+    "rapm": 0.31559577120183435
+   }
+  },
+  "2023-24": {
+   "K0": {
+    "n": 92,
+    "C": 0.6262869916662456,
+    "n_sal": 14,
+    "sal": 0.46557878642006395,
+    "n_twok": 92,
+    "twok": 0.5586336473303558,
+    "n_rapm": 85,
+    "rapm": 0.5120633220554789
+   },
+   "K6": {
+    "n": 92,
+    "C": 0.6395265055818687,
+    "n_sal": 14,
+    "sal": 0.43454463431804485,
+    "n_twok": 92,
+    "twok": 0.5951273636538404,
+    "n_rapm": 85,
+    "rapm": 0.46582530885330753
+   }
+  },
+  "2024-25": {
+   "K0": {
+    "n": 97,
+    "C": 0.47676907157946796,
+    "n_sal": 20,
+    "sal": -0.1278363620348936,
+    "n_twok": 96,
+    "twok": 0.4225048707508978,
+    "n_rapm": 92,
+    "rapm": 0.5192138005872518
+   },
+   "K6": {
+    "n": 97,
+    "C": 0.4667964128590154,
+    "n_sal": 20,
+    "sal": -0.08236368749135525,
+    "n_twok": 96,
+    "twok": 0.40955903472465893,
+    "n_rapm": 92,
+    "rapm": 0.5002157798958013
+   }
+  },
+  "2025-26": {
+   "K0": {
+    "n": 102,
+    "C": 0.4317387549512414,
+    "n_sal": 26,
+    "sal": 0.314235820396466,
+    "n_twok": 102,
+    "twok": 0.43790389382083866,
+    "n_rapm": 0,
+    "rapm": null
+   },
+   "K6": {
+    "n": 102,
+    "C": 0.44361619588481105,
+    "n_sal": 26,
+    "sal": 0.24535188305110694,
+    "n_twok": 102,
+    "twok": 0.45006958264204544,
+    "n_rapm": 0,
+    "rapm": null
+   }
+  }
+ },
+ "oof_diff": {
+  "C": 0.022305044287601484,
+  "sal": 0.029297240179718905,
+  "twok": 0.04343394371162626,
+  "rapm": -0.029214018118714914
+ },
+ "bootstrap": {
+  "lower90": 0.003324233244939564,
+  "upper90": 0.042168928413938774,
+  "draws": 2000,
+  "seed": 20261101
+ },
+ "judgement": {
+  "1": true,
+  "2_sal": true,
+  "2-2_2k": true,
+  "3_rapm": true,
+  "verdict": "adopt_candidate"
+ },
+ "key_players": {
+  "2025-26": {
+   "n500": 379,
+   "players": {
+    "Cooper Flagg": {
+     "K0_rank": 213,
+     "K0_ovr": 68.3,
+     "K6_rank": 180,
+     "K6_ovr": 70.6
+    },
+    "Kon Knueppel": {
+     "K0_rank": 16,
+     "K0_ovr": 86.4,
+     "K6_rank": 32,
+     "K6_ovr": 83.5
+    },
+    "Paolo Banchero": {
+     "K0_rank": 159,
+     "K0_ovr": 72.1,
+     "K6_rank": 63,
+     "K6_ovr": 79.8
+    },
+    "Jalen Suggs": {
+     "K0_rank": 83,
+     "K0_ovr": 78.2,
+     "K6_rank": 60,
+     "K6_ovr": 80.2
+    },
+    "Dylan Harper": {
+     "K0_rank": 53,
+     "K0_ovr": 80.8,
+     "K6_rank": 83,
+     "K6_ovr": 77.3
+    },
+    "Anthony Edwards": {
+     "K0_rank": 38,
+     "K0_ovr": 82.5,
+     "K6_rank": 10,
+     "K6_ovr": 89.0
+    },
+    "Jonathan Kuminga": {
+     "K0_rank": 140,
+     "K0_ovr": 73.5,
+     "K6_rank": 213,
+     "K6_ovr": 68.5
+    },
+    "Victor Wembanyama": {
+     "K0_rank": 2,
+     "K0_ovr": 104.4,
+     "K6_rank": 2,
+     "K6_ovr": 111.5
+    },
+    "Shai Gilgeous-Alexander": {
+     "K0_rank": 1,
+     "K0_ovr": 104.6,
+     "K6_rank": 1,
+     "K6_ovr": 118.5
+    },
+    "Nikola Jokić": {
+     "K0_rank": 3,
+     "K0_ovr": 101.7,
+     "K6_rank": 7,
+     "K6_ovr": 94.8
+    },
+    "Jalen Brunson": {
+     "K0_rank": 56,
+     "K0_ovr": 80.5,
+     "K6_rank": 33,
+     "K6_ovr": 83.1
+    },
+    "Herbert Jones": {
+     "K0_rank": 19,
+     "K0_ovr": 85.4,
+     "K6_rank": 145,
+     "K6_ovr": 72.9
+    },
+    "Dillon Brooks": {
+     "K0_rank": 50,
+     "K0_ovr": 81.3,
+     "K6_rank": 153,
+     "K6_ovr": 72.5
+    },
+    "Stephon Castle": {
+     "K0_rank": 62,
+     "K0_ovr": 80.0,
+     "K6_rank": 67,
+     "K6_ovr": 79.1
+    },
+    "Jaylen Wells": {
+     "K0_rank": 302,
+     "K0_ovr": 58.3,
+     "K6_rank": 342,
+     "K6_ovr": 54.3
+    },
+    "Brandin Podziemski": {
+     "K0_rank": 41,
+     "K0_ovr": 82.1,
+     "K6_rank": 24,
+     "K6_ovr": 85.0
+    }
+   },
+   "top20_K0": [
+    "Shai Gilgeous-Alexander",
+    "Victor Wembanyama",
+    "Nikola Jokić",
+    "Derrick White",
+    "Kawhi Leonard",
+    "Giannis Antetokounmpo",
+    "Franz Wagner",
+    "Chet Holmgren",
+    "Luka Dončić",
+    "Lauri Markkanen",
+    "Amen Thompson",
+    "Neemias Queta",
+    "Jimmy Butler III",
+    "Donovan Mitchell",
+    "Dyson Daniels",
+    "Kon Knueppel",
+    "Cade Cunningham",
+    "Ausar Thompson",
+    "Herbert Jones",
+    "OG Anunoby"
+   ],
+   "top20_K6": [
+    "Shai Gilgeous-Alexander",
+    "Victor Wembanyama",
+    "Kawhi Leonard",
+    "Giannis Antetokounmpo",
+    "Luka Dončić",
+    "Donovan Mitchell",
+    "Nikola Jokić",
+    "Jayson Tatum",
+    "Amen Thompson",
+    "Anthony Edwards",
+    "Jamal Murray",
+    "Cade Cunningham",
+    "Scottie Barnes",
+    "Jimmy Butler III",
+    "Evan Mobley",
+    "Tyrese Maxey",
+    "Stephen Curry",
+    "Chet Holmgren",
+    "Michael Porter Jr.",
+    "Jalen Williams"
+   ]
+  },
+  "2024-25": {
+   "n500": 347,
+   "players": {
+    "Paolo Banchero": {
+     "K0_rank": 149,
+     "K0_ovr": 71.6,
+     "K6_rank": 63,
+     "K6_ovr": 79.2
+    },
+    "Jalen Suggs": {
+     "K0_rank": 58,
+     "K0_ovr": 80.6,
+     "K6_rank": 68,
+     "K6_ovr": 78.1
+    },
+    "Anthony Edwards": {
+     "K0_rank": 20,
+     "K0_ovr": 87.9,
+     "K6_rank": 11,
+     "K6_ovr": 90.7
+    },
+    "Jonathan Kuminga": {
+     "K0_rank": 152,
+     "K0_ovr": 71.3,
+     "K6_rank": 139,
+     "K6_ovr": 72.5
+    },
+    "Victor Wembanyama": {
+     "K0_rank": 13,
+     "K0_ovr": 90.3,
+     "K6_rank": 3,
+     "K6_ovr": 99.7
+    },
+    "Shai Gilgeous-Alexander": {
+     "K0_rank": 3,
+     "K0_ovr": 99.3,
+     "K6_rank": 1,
+     "K6_ovr": 104.5
+    },
+    "Nikola Jokić": {
+     "K0_rank": 1,
+     "K0_ovr": 110.9,
+     "K6_rank": 5,
+     "K6_ovr": 98.9
+    },
+    "Jalen Brunson": {
+     "K0_rank": 45,
+     "K0_ovr": 82.2,
+     "K6_rank": 19,
+     "K6_ovr": 87.4
+    },
+    "Herbert Jones": {
+     "K0_rank": 8,
+     "K0_ovr": 94.2,
+     "K6_rank": 145,
+     "K6_ovr": 71.8
+    },
+    "Dillon Brooks": {
+     "K0_rank": 15,
+     "K0_ovr": 89.7,
+     "K6_rank": 184,
+     "K6_ovr": 69.4
+    },
+    "Stephon Castle": {
+     "K0_rank": 144,
+     "K0_ovr": 72.2,
+     "K6_rank": 181,
+     "K6_ovr": 69.7
+    },
+    "Jaylen Wells": {
+     "K0_rank": 132,
+     "K0_ovr": 73.4,
+     "K6_rank": 239,
+     "K6_ovr": 65.9
+    },
+    "Brandin Podziemski": {
+     "K0_rank": 79,
+     "K0_ovr": 78.1,
+     "K6_rank": 66,
+     "K6_ovr": 78.4
+    }
+   },
+   "top20_K0": [
+    "Nikola Jokić",
+    "Franz Wagner",
+    "Shai Gilgeous-Alexander",
+    "Giannis Antetokounmpo",
+    "Kawhi Leonard",
+    "Draymond Green",
+    "Jayson Tatum",
+    "Herbert Jones",
+    "Mikal Bridges",
+    "Donovan Mitchell",
+    "Kevin Durant",
+    "Dyson Daniels",
+    "Victor Wembanyama",
+    "Luka Dončić",
+    "Dillon Brooks",
+    "Derrick White",
+    "Joel Embiid",
+    "Jalen Williams",
+    "Aaron Gordon",
+    "Anthony Edwards"
+   ],
+   "top20_K6": [
+    "Shai Gilgeous-Alexander",
+    "Giannis Antetokounmpo",
+    "Victor Wembanyama",
+    "Jayson Tatum",
+    "Nikola Jokić",
+    "Luka Dončić",
+    "Kawhi Leonard",
+    "Donovan Mitchell",
+    "Joel Embiid",
+    "Stephen Curry",
+    "Anthony Edwards",
+    "Derrick White",
+    "Jimmy Butler III",
+    "LeBron James",
+    "Jalen Williams",
+    "Anthony Davis",
+    "Cade Cunningham",
+    "Kevin Durant",
+    "Jalen Brunson",
+    "Franz Wagner"
+   ]
+  }
+ },
+ "checks": {
+  "twok_sha256": "cb40f9a0c14e76e9d0ad10359015f882bcfe1c74b0e8b1021f3ce5b9287cdab4",
+  "seed": 20261101,
+  "draws": 2000,
+  "rank_sha256": {
+   "K0-2022-23": "60bc71613c89b8ab109208defddea38bc4b6f0c98c44360e53030a35b6856239",
+   "K6-2022-23": "1e2bd557bab0f51067171672a8d705c5a6b6aa2b9b15b25fb9c759bf6a2bfa55",
+   "K0-2023-24": "a90cf6bf5b97f2e96bf74e60a7a8027c9edb15753d2eb615d60a62b21d5a50ec",
+   "K6-2023-24": "e7f860c22bd75df9af7441f1065f0c78d52e56a28601796ed3bddde5dea59d66",
+   "K0-2024-25": "62cb54ec6330c28851f50862d207f6f688dbf002127e070c1f18d533ad814700",
+   "K6-2024-25": "18cbda15ee82e7288c82225bc7a2d239f3a0d7c60e4fd89eda5ba7983cd1edf2",
+   "K0-2025-26": "696a8ac7b235acf51cdb5634fa9896a6905fec81adb96166b6995b9015c20649",
+   "K6-2025-26": "e920a840e55d7d32cb378100b2ea47b8d87a1d27587d934ea1cc8b8ec981278e"
+  },
+  "seasons": {
+   "2022-23": {
+    "pop": 367,
+    "evalPop": 271,
+    "cardRows500": {
+     "K0": 271,
+     "K6": 271
+    },
+    "salaryStats": {
+     "rookie_no_salary_term": 98,
+     "undated_censored_no_salary_term": 7,
+     "fa_start_after_2021_ignored(leak-guard)": 50,
+     "year_via_tx": 125,
+     "no_salary_row": 9
+    },
+    "avail": {
+     "sal": 180,
+     "twok": 269,
+     "rapm": 262,
+     "sim": 0
+    }
+   },
+   "2023-24": {
+    "pop": 360,
+    "evalPop": 303,
+    "cardRows500": {
+     "K0": 303,
+     "K6": 303
+    },
+    "salaryStats": {
+     "year_via_tx": 64,
+     "no_salary_row": 8,
+     "rookie_no_salary_term": 95,
+     "fa_start_after_2021_ignored(leak-guard)": 12,
+     "undated_censored_no_salary_term": 2
+    },
+    "avail": {
+     "sal": 205,
+     "twok": 303,
+     "rapm": 286,
+     "sim": 0
+    }
+   },
+   "2024-25": {
+    "pop": 375,
+    "evalPop": 346,
+    "cardRows500": {
+     "K0": 347,
+     "K6": 347
+    },
+    "salaryStats": {
+     "year_via_tx": 48,
+     "no_salary_row": 22,
+     "rookie_no_salary_term": 90,
+     "fa_start_after_2021_ignored(leak-guard)": 2,
+     "undated_censored_no_salary_term": 1
+    },
+    "avail": {
+     "sal": 240,
+     "twok": 345,
+     "rapm": 319,
+     "sim": 0
+    }
+   },
+   "2025-26": {
+    "pop": 380,
+    "evalPop": 379,
+    "cardRows500": {
+     "K0": 379,
+     "K6": 379
+    },
+    "salaryStats": {
+     "rookie_no_salary_term": 89,
+     "year_via_tx": 42,
+     "no_salary_row": 27,
+     "undated_censored_no_salary_term": 1,
+     "fa_start_after_2021_ignored(leak-guard)": 1
+    },
+    "avail": {
+     "sal": 262,
+     "twok": 376,
+     "rapm": 0,
+     "sim": 0
+    }
+   }
+  }
+ }
+}

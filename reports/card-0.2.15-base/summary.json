@@ -1,0 +1,34 @@
+{
+ "version": "card 0.2.15-base",
+ "base": "card 0.2.13a 的管線（W246）；係數 reports/card-0.2.15-w246/",
+ "players": 582,
+ "change": "E-303 MRG5（使用者 2026-11-10「合併做進卡片」）：creation 欄＝持球進攻＝(z_crt＋z_pnr)/√(2+2r) → 0–99（live/crtpnr_live.py，凍結 crtpnr-pool-card0215.json）；pnr 不再是獨立特徵；全部係數在 W246 重擬合（card-0.2.15-w246）。不含 MIX 加分（由 reports/card-0.2.15/build_card_0215.py 疊）。",
+ "anchors": {
+  "PR1": -0.7618,
+  "PR50": 1.0087,
+  "PR90": 2.1291,
+  "PR95": 2.5839,
+  "PR99": 4.0129
+ },
+ "ovr_map": {
+  "function": "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py:ovr_map",
+  "A_PR90": 88.0,
+  "B_PR95": 92.0
+ },
+ "ovr_changed": null,
+ "pool_90_99": 22,
+ "pool_ge99": 5,
+ "build_command": "WIN_LEN=246 PNR_CARD=1 MIX_BONUS=0 DEF_AXIS=calendar RETURNING_VETS=0 RV_USAGE=0 CRTPNR=1 CRTPNR_BOOT=1 card_route_0212c.py <work> → reports/card-0.2.15-fit/make_card_0215.py <work> reports/card-0.2.15-base（CRTPNR=0 逐位元重現 card 0.2.13a）",
+ "ranking_csv_sha256": "71fe432ded3b4dc464cd248a522902a6665e39571010bd32ff22392f1f4a4bc9",
+ "three_value_csv_sha256": "0e3ef0c040deb5104c36e99e7e4cb43e8338128bf7d33724b13a4e1f666ff623",
+ "three_value_source": "reports/card-0.2.10j/three-value.csv",
+ "win_len": 246,
+ "anchor_source": "reports/card-0.2.15-w246/work/pre-W246/ranking.csv gRepl, MIN>=500, qf（gRepl 4 位小數）",
+ "crt_attr_csv_sha256": "17b5caec1ef7453238ea97197e20999cc62f092f43cb74a4a251134df214f2cc",
+ "crtpnr": {
+  "tail_csv": "reports/card-0.2.15-fit/tail-W246full-crtpnr.csv",
+  "tail_sha256": "85e51f33ec26f7209f62f3fe4ed501b14d3a4392f179f00184058c78c6f78847",
+  "frozen": "reports/ovr-inseason-2026-27/live/crtpnr-pool-card0215.json",
+  "frozen_sha256": "2250ed2fd1b4a0da666622422e0ca57b4c77b82ff6afa6d40da6b55778b28d88"
+ }
+}

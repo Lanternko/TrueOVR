@@ -1,0 +1,48 @@
+--- a/scripts/build_card_viewer.py
++++ b/scripts/build_card_viewer.py
+@@ -1,10 +1,10 @@
+-"""2025-26 正式卡名單頁（card 0.2.10a）：以正式卡名單頁為版型，換成 card 0.2.10a 的 OVR／能力值（OVR 為每場、含上場時間、相對替補水準，R-028；能力值同 0.1.2），3PT 顯示 threeValue（R-024）。
++"""2025-26 正式卡名單頁（card 0.2.12）：以正式卡名單頁為版型，換成 card 0.2.12 的 OVR／能力值（OVR 為每場、含上場時間、相對替補水準，R-028；能力值同 0.1.2），3PT 顯示 threeValue（R-024）。
+ OVR 能力估計納入教練用人證據（分鐘、出賽率、年齡、練兵隊），DNP 與輪休分開（E-075）；用人回歸的訓練目標是 2025-26 單季 RAPM（E-084）；分鐘權重為飽和曲線 W(m)（E-089）；補籃改歸近距離、能力值錨點對四季合併池、頂端只壓縮（E-101）；OVR 迴歸不用 physique（E-131），網站不顯示 PHYS。
+ PRES 顯示 presDisplay（逼失誤 − 0.25·犯規，E-071），提示卡列逼失誤（卡片 pressure）與五個分量（抄截、干擾球、對位逼失誤、造進攻犯規、犯規，E-071 收縮後值＋PR＋前十名次）；
+ TO 提示卡列失誤、球權、失誤率（player-games.json 整季加總）；PER D 提示卡列 E-060 三分量（三分干擾、對位負擔、威懾力）。
+ 
+-輸入：reports/card-0.2.10a/ranking.csv（card 0.2.10a）、
+-      reports/card-0.2.10a/three-value.csv（以姓名對 tv_main；E-123 頂端開尾）、data/season-source/player-games.json。
++輸入：reports/card-0.2.12/ranking.csv（card 0.2.12）、
++      reports/card-0.2.12/three-value.csv（以姓名對 tv_main；E-123 頂端開尾）、data/season-source/player-games.json。
+ 版型：reports/ovr-v58-card-2025-26/roster-viewer.html（只讀；team／ht／gp 依姓名取自它）。
+ 輸出：reports/card-0.1.2-2025-26/roster-viewer.html（或 argv[1] 指定路徑）
+ 
+@@ -23,8 +23,8 @@
+ 
+ ROOT = er.ROOT
+ BASE = ROOT / 'reports/ovr-v58-card-2025-26/roster-viewer.html'
+-CARD = ROOT / 'reports/card-0.2.10a/ranking.csv'
+-THREE_VALUE = ROOT / 'reports/card-0.2.10a/three-value.csv'
++CARD = ROOT / 'reports/card-0.2.12/ranking.csv'
++THREE_VALUE = ROOT / 'reports/card-0.2.12/three-value.csv'
+ FORCE = ROOT / 'reports/card-0.2.0+E071-pressure/force-2025-26.csv'
+ DEFAULT_OUT = ROOT / 'reports/card-0.1.2-2025-26/roster-viewer.html'
+ # PRES 提示卡的分量（E-071 force 的收縮後值）；PR／名次對上場 ≥ 1000 分鐘的人群
+@@ -110,9 +110,9 @@
+     oc_ = list(csv.DictReader(ONBALL.open(encoding='utf-8')))
+     orows = onball_rows({r['name']: (float(r['C3']), float(r['B']), float(r['T'])) for r in oc_ if '' not in (r['C3'], r['B'], r['T'])},
+                         {r['name'] for r in oc_ if float(r['min']) >= POOL_MIN})
+-    # DIQ 顯示負分：card 0.2.10a 的 defenseBonus（同 0.2.7b） 用 def-L-primary，posMeanD 從同一批人算（max(0, ·) 逐人核對）
++    # DIQ 顯示負分：card 0.2.12 的 defenseBonus（同 0.2.7b） 用 def-L-primary，posMeanD 從同一批人算（max(0, ·) 逐人核對）
+     dcen = sn.defense_centered(rows, 'name', [(ROOT / 'reports/card-0.2.5+E104-defense-pergame-decay/def-L-primary.csv', None)])
+-    assert dcen, 'DIQ 負分：def-L-primary 算回來的 defenseBonus 對不上 card 0.2.10a'
++    assert dcen, 'DIQ 負分：def-L-primary 算回來的 defenseBonus 對不上 card 0.2.12'
+     data_rows, missing, no_tv = [], [], []
+     for r in rows:
+         num = lambda k: float(r[k])
+@@ -137,7 +137,7 @@
+     s = base
+     s = s.replace('<title>OVR 名單檢視</title>', '<title>2025-26 OVR 名單</title>', 1)
+     s = re.sub(r'<div class="src">.*?</div>',
+-               f'<div class="src">OVR：正式卡 card 0.2.10a（2025-26 整季；OVR 為每場，含上場時間，相對替補水準；FD 以量為主；PRES＝逼失誤扣犯規；OVR 能力估計納入教練用人證據，DNP 與輪休分開，用人回歸對齊當季 RAPM；分鐘權重遞減；能力值對 2022-23～2025-26 四季比較；防守加成不打折、近期加權；OVR 評分標準為 DARKO 加 BPM；年輕人沒有爛隊折扣；傳球看量也看率；3PT、RIM、PRES 頂端不封在 99；OVR 不看身高體重）；3PT 顯示 threeValue；{len(rows)} 人</div>',
++               f'<div class="src">OVR：正式卡 card 0.2.12（2025-26 整季；OVR 為每場，含上場時間，相對替補水準；FD 以量為主；PRES＝逼失誤扣犯規；OVR 能力估計納入教練用人證據，DNP 與輪休分開，用人回歸對齊當季 RAPM；分鐘權重遞減；能力值對 2022-23～2025-26 四季比較；防守加成不打折、近期加權；OVR 評分標準為 DARKO 加 BPM；年輕人沒有爛隊折扣；傳球看量也看率；3PT、RIM、PRES 頂端不封在 99；OVR 不看身高體重）；3PT 顯示 threeValue；{len(rows)} 人</div>',
+                s, count=1, flags=re.S)
+     new_data = json.dumps({'cols': cols, 'rows': data_rows}, ensure_ascii=False, separators=(',', ':'))
+     s = re.sub(r'const DATA=\{.*?\};\nconst COLS', lambda m: f'const DATA={new_data};\nconst COLS', s, count=1, flags=re.S)

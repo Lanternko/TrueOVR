@@ -1,0 +1,56 @@
+PASS (1) c0 ranking.csv 逐位元組相同 2584335f86e3 / 2584335f86e3
+PASS (1) c0 版號 inseason 0.2.11
+PASS (1) 三份資料截止日相同 2026-10-31
+PASS (2) 卡片 ranking.csv＝E-202 KT 定版 29ca32eb65cf
+PASS (2) summary：equals_E202_KT_final
+PASS (2) 卡片 c0（TOV_POSS=0）＝card 0.2.11
+PASS (2) 先驗 tovSkill 對卡片 ranking.csv：582 人 max|diff| 0.050
+PASS (3) 新版號 inseason 0.2.12／card 0.2.12
+PASS (3) ranking 人數 484 / 484
+PASS (3) 檢查 (a) f=0 對卡片 OVR max|diff| 1.0757617019407917e-11
+
+(4) 卡片頁（card 0.2.11 → 0.2.12） 前 20 名 進： ['Austin Reaves', 'Kevin Porter Jr.', 'Desmond Bane', 'Paul George'] 出： ['Jalen Williams', 'Jimmy Butler III', 'Jamal Murray', "De'Aaron Fox"]
+    前 100 名（0.2.11）移動 >=10 名：34 人 [('Jalen Williams', 10, 22), ('Tyrese Maxey', 22, 35), ('Kristaps Porziņģis', 24, 40), ('Austin Reaves', 26, 12), ('Paul George', 30, 20), ('Kevin Porter Jr.', 32, 17), ('Karl-Anthony Towns', 41, 26), ('Pascal Siakam', 42, 85), ('Jarrett Allen', 44, 54), ('Immanuel Quickley', 46, 57), ('Mikal Bridges', 47, 63), ('Jalen Suggs', 48, 36), ('Brandin Podziemski', 57, 68), ('Cooper Flagg', 58, 119), ('Luke Kornet', 62, 99), ('Ajay Mitchell', 65, 78), ('Scotty Pippen Jr.', 68, 48), ('Jaylin Williams', 70, 84), ('Dylan Harper', 71, 87), ('DeMar DeRozan', 72, 104), ('Onyeka Okongwu', 78, 105), ('RJ Barrett', 80, 101), ('Santi Aldama', 81, 132), ('Neemias Queta', 82, 98), ('Ivica Zubac', 85, 70), ('Paul Reed', 86, 103), ('Deni Avdija', 87, 55), ('Collin Sexton', 89, 61), ('Robert Williams III', 90, 64), ('Donte DiVincenzo', 91, 74), ('Alperen Sengun', 92, 130), ('VJ Edgecombe', 94, 111), ('Ryan Rollins', 98, 56), ('Collin Gillespie', 100, 150)]
+    球員                     OVR名次   OVR           TO值         TO名次
+    Shai Gilgeous-Alexander   1->1   108.5->106.3   94.9->104.4   18->2  
+    Nikola Jokić             2->2   105.7->103.2   64.5-> 80.5  308->152
+    Luka Dončić              4->3   101.7->101.6   64.9-> 96.0  301->26 
+    Victor Wembanyama        3->4   102.2->101.6   50.6-> 41.9  462->528
+    Giannis Antetokounmpo    5->5    99.0-> 99.0   64.1-> 95.5  311->31 
+    Kawhi Leonard            6->6    98.3-> 98.2   91.3-> 84.7   39->112
+    Donovan Mitchell         7->7    96.3-> 97.0   81.5-> 95.2  109->32 
+    Jayson Tatum             8->8    96.1-> 95.5   77.9-> 89.5  144->75 
+    Kevin Durant            13->9    93.2-> 95.5   50.8-> 72.2  460->215
+    Anthony Edwards          9->10   93.9-> 94.8   64.8-> 93.8  302->44 
+    Cade Cunningham         11->13   93.4-> 93.7   49.9-> 98.5  471->8  
+    Jalen Brunson           27->31   90.7-> 89.3   90.8->114.6   42->1  
+    Jarrett Allen           44->54   86.4-> 83.6   71.0-> 46.6  217->462
+    Luke Kornet             62->99   82.5-> 77.9   93.8-> 55.8   23->367
+    James Harden           159->137  73.7-> 75.8   45.6-> 98.1  517->10 
+    Sam Hauser             160->169  73.6-> 73.2  103.3-> 64.0    1->277
+    Tim Hardaway Jr.       317->341  60.8-> 58.4  102.0-> 67.0    2->254
+
+(4) 新賽季頁（inseason 0.2.11 → 0.2.12） 前 20 名 進： ['Austin Reaves', 'Joel Embiid', 'Desmond Bane'] 出： ['Jalen Williams', 'Jimmy Butler III', 'Tyrese Maxey']
+    前 100 名（0.2.11）移動 >=10 名：35 人 [('Jalen Williams', 11, 23), ('Austin Reaves', 28, 12), ('Pascal Siakam', 35, 74), ('Kristaps Porziņģis', 39, 51), ('Cooper Flagg', 42, 69), ('Immanuel Quickley', 45, 61), ('Jalen Suggs', 48, 38), ('Karl-Anthony Towns', 50, 33), ('Brandon Ingram', 55, 44), ('Deni Avdija', 59, 43), ('AJ Dybantsa', 62, 52), ('Darryn Peterson', 63, 126), ('Alperen Sengun', 66, 82), ('Ajay Mitchell', 67, 86), ('RJ Barrett', 68, 96), ('Naz Reid', 70, 80), ('Paul Reed', 71, 93), ('Jaylin Williams', 73, 88), ('DeMar DeRozan', 74, 117), ('Sam Merrill', 76, 98), ('Javon Small', 78, 92), ('Neemias Queta', 79, 105), ('Nickeil Alexander-Walker', 80, 66), ('Christian Braun', 81, 71), ('Santi Aldama', 83, 127), ('VJ Edgecombe', 84, 110), ('Onyeka Okongwu', 85, 123), ('T.J. McConnell', 87, 97), ('Matisse Thybulle', 88, 65), ('Jrue Holiday', 89, 55), ('Devin Vassell', 90, 121), ('Dylan Harper', 94, 128), ('Yaxel Lendeborg', 96, 59), ('Jalen Duren', 98, 112), ('Obi Toppin', 99, 113)]
+    球員                     OVR名次   OVR           TO值         TO名次
+    Shai Gilgeous-Alexander   1->1   108.5->106.1   95.3->104.5   17->2  
+    Nikola Jokić             2->2   105.7->103.5   63.5-> 80.1  264->121
+    Luka Dončić              4->3   101.8->102.5   63.3-> 95.6  270->23 
+    Victor Wembanyama        3->4   102.7->102.1   53.3-> 41.8  362->439
+    Kawhi Leonard            5->5    98.2-> 98.2   91.1-> 84.3   32->90 
+    Giannis Antetokounmpo    6->6    97.7-> 97.4   64.8-> 94.7  256->31 
+    Donovan Mitchell         7->7    96.3-> 97.0   79.8-> 94.9  101->25 
+    Stephen Curry            9->8    93.9-> 95.7   68.4-> 91.8  225->45 
+    Kevin Durant            14->9    92.9-> 95.2   50.1-> 70.5  391->190
+    Jayson Tatum             8->10   95.6-> 95.0   79.0-> 89.5  108->61 
+    Cade Cunningham         18->13   92.9-> 93.7   49.4-> 98.4  396->7  
+    Jalen Brunson           29->32   90.4-> 88.8   91.2->114.7   31->1  
+    Jarrett Allen           46->54   85.9-> 82.9   71.1-> 45.9  183->393
+    James Harden           116->84   76.4-> 79.0   45.1-> 97.9  436->11 
+    Sam Hauser             138->151  74.8-> 74.3  104.0-> 64.9    1->238
+    Luke Kornet            110->174  76.6-> 72.6   92.4-> 55.4   26->319
+    Tim Hardaway Jr.       253->278  64.2-> 61.7  101.5-> 66.8    2->219
+
+(4) 前 100 名移動 >=10 名：卡片頁 34 人、新賽季頁 35 人（R-139 已知上限：E-202 回報 34 人）
+
+全部通過

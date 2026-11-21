@@ -16,6 +16,13 @@ export async function impactEngine(version, options = {}) {
   // side, with p the exact probability of that draw. No extra random numbers are consumed, so
   // every game is unchanged. Expected margin = actual margin - (own luck - opponent luck).
   const luck = [
+    // sim 0.1.4 (R-131, E-189): non-shooting-foul attribute. Inert unless opt.nsFoulExp = {playerId: exp(gamma)} is set (no extra rng(), every factor is exactly 1).
+    //   gate probability x mean over the 5 defenders of exp(gamma) (x opt.nsFoulBase, default 1); fouler drawn among the defenders by exp(gamma) (one extra rng() draw, only when set).
+    //   Same two replacements as reports/sim-0.1.3+E189-nsfoul-attr/engine-e189-v53.mjs (which patches its own copy, so its anchors are untouched).
+    ["if(intentional || rng()<ordinaryContactProbability(ls[off],opt)*(opt.foulSignal?Math.exp(effect(ls[1-off],'FTA',opt)):1)) {",
+     "if(intentional || rng()<ordinaryContactProbability(ls[off],opt)*(opt.foulSignal?Math.exp(effect(ls[1-off],'FTA',opt)):1)*(opt.nsFoulBase??1)*(opt.nsFoulExp?ls[1-off].reduce((a,q)=>a+(opt.nsFoulExp[q.playerId]??1),0)/ls[1-off].length:1)) {"],
+    ["foul(D.lineup[hi],intentional?'intentional':'nonShooting',shooter);",
+     "foul(D.lineup[(opt.nsFoulExp&&!intentional)?pickWeighted(ls[1-off].map(q=>opt.nsFoulExp[q.playerId]??1),rng()):hi],intentional?'intentional':'nonShooting',shooter);"],
     ['made=rng()<foulInputs[zone].raw;', '{const drawP=foulInputs[zone].raw;made=rng()<drawP;if(opt.luckLedger)opt.luckLedger[off]+=((made?1:0)-drawP)*points;}'],
     ['made=rng()<(opt.foulConditioning?attemptMakeProbability(p.make[zone],shootingFoulChance):p.make[zone]);',
      '{const drawP=(opt.foulConditioning?attemptMakeProbability(p.make[zone],shootingFoulChance):p.make[zone]);made=rng()<drawP;if(opt.luckLedger)opt.luckLedger[off]+=((made?1:0)-drawP)*points;}'],

@@ -1,5 +1,5 @@
 {
-  "description": "Captured before measurement changes; fatigue enabled, current working-tree baseline",
+  "description": "Captured before measurement changes; fatigue enabled, current working-tree baseline; sha256 regenerated 2026-10-30 (sim 0.1.1, fatigue removed) from the pre-0.1.1 engine with fatigue:false",
   "stats": [
     "poss",
     "fga",
@@ -50,7 +50,7 @@
         "possessions": 75,
         "targetScore": 21
       },
-      "sha256": "9d551a05f99cce205841e9a407f06981495befabc758d19b9a7b83385aef0056"
+      "sha256": "44f912dd2462ce6a144f95b1ff6b899121b3c5a473f8636228975950f2f179c8"
     },
     {
       "key": "GSW",
@@ -70,7 +70,7 @@
         "possessions": 75,
         "targetScore": 21
       },
-      "sha256": "6c9d01467ee13842286796181a66ad5d803bd018391b7e7dcec0e6d0c59afe14"
+      "sha256": "d239335e41c20808a3887c274d47191d0e5b03c59e3a4a6255b5f6b8a7a1ce26"
     },
     {
       "key": "CLE",
@@ -90,7 +90,7 @@
         "possessions": 75,
         "targetScore": 21
       },
-      "sha256": "0a549e90e9c7751ba91b9499fe4ffd28af36f12efdfa4fcbd9ae6a852647290c"
+      "sha256": "0f21f7f641ebf658d2bcfcbb2bb2186673e9c08fbb45df19fd2061a5973033b8"
     },
     {
       "key": "CLE",
@@ -100,7 +100,7 @@
         "possessions": 75,
         "targetScore": 21
       },
-      "sha256": "d09ef4d94feeafc0c55b98244009d3e8cf661fd3df4daea5726426540c8eeb7d"
+      "sha256": "6a25d8852b9ce696c4dc84123ccefac34e0798a2513aa0ad3adae7c5a603c263"
     },
     {
       "key": "CLE",
@@ -110,7 +110,7 @@
         "possessions": 75,
         "targetScore": 21
       },
-      "sha256": "3ddeee52ddcb516801fca58f3d418fbd16d2b0db7d7997789828bf819dcef0e3"
+      "sha256": "0e81bab9cd3374569a94bb6a3baa77747054db3a182fcd5ffabdf7ce31d876ce"
     },
     {
       "key": "OKC",
@@ -130,7 +130,7 @@
         "possessions": 75,
         "targetScore": 21
       },
-      "sha256": "171bd01c0f46f4ec4f1458f059d97b4f7d12853cecf32e0422738560bec6c94d"
+      "sha256": "3d2fbd1313a00937e2f90965517f860c482bfd8944a5303a6fee458fcc2f1936"
     },
     {
       "key": "OKC",
@@ -150,7 +150,7 @@
         "possessions": 75,
         "targetScore": 21
       },
-      "sha256": "299753d1f1b4f07cd83063d7a242bc0150f9acb4d336932f8ac3eb138fb52797"
+      "sha256": "d2df3fd29366d3ce659bb154ac987ab4bd03688ab54bd766373724b6a7e3bc5f"
     },
     {
       "key": "NYK",
@@ -170,7 +170,7 @@
         "possessions": 75,
         "targetScore": 21
       },
-      "sha256": "2aca84ab7a51390b743c977ed7728093c0b3da295ed678a4c7b893c9af614b4f"
+      "sha256": "37e6c1db3ddb371ac4fefdc825c70b00d655f7ac8097612523f59990d78ca79a"
     },
     {
       "key": "NYK",
@@ -190,7 +190,7 @@
         "possessions": 75,
         "targetScore": 21
       },
-      "sha256": "05f7faf003d5680c57c47e0fd3e01ccab117121b84ebc30164fa8f4dbc9cea80"
+      "sha256": "26956fb32b67c3413c6eff0db2a332d582e2ab88590523123a2b1522bb4b73be"
     },
     {
       "key": "LAL",
@@ -210,7 +210,7 @@
         "possessions": 75,
         "targetScore": 21
       },
-      "sha256": "25b1362a52b790b197afa4dd550a8d0495717000f5183f69d0e2eaa0e858a5ea"
+      "sha256": "47f21d9f34de211014a9e5750e482ad77577046add5b86a2595806bd7e768c18"
     },
     {
       "key": "LAL",
@@ -230,7 +230,7 @@
         "possessions": 75,
         "targetScore": 21
       },
-      "sha256": "edda67e9fc0bb17236e15b0b91e80fc1b6e33b1a8903cda9551a081f22f03ac0"
+      "sha256": "9840ca71c381ee16322af6e46b14c82bb31df9ed3c7e7a19a09e9c070ba2e34c"
     }
   ]
 }

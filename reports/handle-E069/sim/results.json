@@ -1,0 +1,112 @@
+{
+ "prereg": "fc6e375e6fc4abc808655f6154fcd3dafb652d8b1f565f7a84b89e8b2214e441",
+ "addendum1": "eb84d28baeec7baefc0360fbaa507c25aff5ad3da43c2168cd1a43fba01e2e22",
+ "m0": {
+  "pass": true,
+  "note": "3 seeds bitwise identical"
+ },
+ "m1": {
+  "pass": true,
+  "note": "57 passed"
+ },
+ "m2": {
+  "pass": false,
+  "primary": {
+   "label": "primary (min>=500)",
+   "n": 378,
+   "maeCurrent": 0.16717818592245845,
+   "maeNew": 0.319510637263599,
+   "diff": 0.1523324513411406,
+   "ci90": [
+    0.1275019790659431,
+    0.1781408386066208
+   ],
+   "upperBelow0": false,
+   "tertileCuts": [
+    0.652550733388685,
+    0.7808520841608522
+   ],
+   "groups": [
+    {
+     "group": "low",
+     "n": 126,
+     "meanErrCurrent": -0.1302449830407536,
+     "meanErrNew": 0.1817640731535834,
+     "maeCurrent": 0.2036624751800841,
+     "maeNew": 0.39086074842542773
+    },
+    {
+     "group": "mid",
+     "n": 126,
+     "meanErrCurrent": -0.0027309804561210143,
+     "meanErrNew": 0.018197561500828206,
+     "maeCurrent": 0.1459343593877501,
+     "maeNew": 0.3163956152009616
+    },
+    {
+     "group": "high",
+     "n": 126,
+     "meanErrCurrent": 0.058385078454872584,
+     "meanErrNew": 0.0021373879108104073,
+     "maeCurrent": 0.1519377231995412,
+     "maeNew": 0.2512755481644077
+    }
+   ]
+  },
+  "leagueTovErr": {
+   "current": -0.012,
+   "new": 0.042
+  }
+ },
+ "calibration": {
+  "kCtl": 0.004377478485370052,
+  "kPass": 0.08705969598726486,
+  "pOther": 0.019171933728160936
+ },
+ "m3": {
+  "WinImp 主版": {
+   "verdictBefore": "偏袒長人",
+   "verdictAfter": "偏袒長人",
+   "S": {
+    "AB": [
+     81.78390804597701,
+     106.07456896551724
+    ],
+    "BA": [
+     95.19985632183909,
+     118.06714559386974
+    ]
+   },
+   "rhoAvg": [
+    0.3824145885434741,
+    0.3333341498495075
+   ],
+   "b1": false,
+   "b2": false,
+   "b3": false
+  },
+  "WinImp 位置版": {
+   "verdictBefore": "偏袒長人",
+   "verdictAfter": "偏袒後衛",
+   "S": {
+    "AB": [
+     37.53299808429119,
+     -50.8212643678161
+    ],
+    "BA": [
+     50.11834291187739,
+     -38.20435823754789
+    ]
+   },
+   "rhoAvg": [
+    0.3040273305335705,
+    0.2777342819490793
+   ],
+   "b1": true,
+   "b2": true,
+   "b3": false
+  },
+  "pass": false
+ },
+ "verdict": "m2 不過 → 記錄結果，模擬不變"
+}

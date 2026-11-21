@@ -1,0 +1,8 @@
+- #1 卡片端（2026-11-02）：舊 reports/card-0.2.12/ 是被放棄的舊實驗夾（許多腳本引用，不動）→ 正式產物放 reports/card-0.2.12-tov/（偏離 spec 路徑）。build_0212.py：TOV_POSS=0 → ranking＝card 0.2.11 逐位元（4519d615…）；預設 ranking sha 29ca32eb…＝E-202 KT final 逐位元；cards/K6、usage-features、tov-raw 已複製。
+- #2 live/tov_live.py（凍結池 tov-pool-card0212.json、賽中老將／新秀函式）完成；window8 掛 TOV_POSS，季末核對 tovSkill 與卡片 tov-raw.csv 差 ≤1.6e-8（raw 取到 1e-9 以免 1e-13 加總抖動讓名次跳格）
+- #3 build_2k_start 重解新秀 δ 完成，rookie-prior-2026.json 更新（run_c4_live_rookie.py 的 TOV_POSS 定義上移修好 NameError）
+- #4 賽中 c0：TOV_POSS=0 ranking.csv 與 HEAD 0.2.11 程式同資料（live_ref11 copy）逐位元組相同 sha 2584335f…
+- #5 賽中 0.2.12 完整跑通（new0212；lastOVR 對正式卡 maxAbs 5.2 與 0.2.11 的 5.1 同量級，pointwise 1e-11）
+- #6 CURRENT.json／README 改 0.2.12
+- #7 check_inseason_0212tov.py 寫好並全 PASS（輸出 reports/card-0.2.12/check_output.txt）
+- #8 網站（03:36）：season_nav／兩個 build 腳本改完（TO 提示卡持球分鐘、OD_CARD、PATCH_NOTES 0.2.12），兩頁已重建、版號 0.2.12 出現。

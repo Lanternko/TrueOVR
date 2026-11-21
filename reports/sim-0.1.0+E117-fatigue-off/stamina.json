@@ -1,0 +1,2330 @@
+{
+ "LeBron James": {
+  "playerId": 2544,
+  "stamina": 91.48931000971817
+ },
+ "Chris Paul": {
+  "playerId": 101108,
+  "stamina": 40
+ },
+ "Kyle Lowry": {
+  "playerId": 200768,
+  "stamina": 40
+ },
+ "Kevin Durant": {
+  "playerId": 201142,
+  "stamina": 99
+ },
+ "Al Horford": {
+  "playerId": 201143,
+  "stamina": 46.55490767735665
+ },
+ "Mike Conley": {
+  "playerId": 201144,
+  "stamina": 40
+ },
+ "Jeff Green": {
+  "playerId": 201145,
+  "stamina": 40
+ },
+ "Russell Westbrook": {
+  "playerId": 201566,
+  "stamina": 76.92824748947199
+ },
+ "Kevin Love": {
+  "playerId": 201567,
+  "stamina": 40
+ },
+ "Eric Gordon": {
+  "playerId": 201569,
+  "stamina": 40
+ },
+ "Brook Lopez": {
+  "playerId": 201572,
+  "stamina": 48.01263362487852
+ },
+ "Nicolas Batum": {
+  "playerId": 201587,
+  "stamina": 40
+ },
+ "DeAndre Jordan": {
+  "playerId": 201599,
+  "stamina": 40
+ },
+ "James Harden": {
+  "playerId": 201935,
+  "stamina": 96.65613864593456
+ },
+ "Stephen Curry": {
+  "playerId": 201939,
+  "stamina": 84.67849044379656
+ },
+ "DeMar DeRozan": {
+  "playerId": 201942,
+  "stamina": 86.55733722060253
+ },
+ "Jrue Holiday": {
+  "playerId": 201950,
+  "stamina": 79.04195011337868
+ },
+ "Taj Gibson": {
+  "playerId": 201959,
+  "stamina": 40
+ },
+ "Garrett Temple": {
+  "playerId": 202066,
+  "stamina": 40
+ },
+ "Paul George": {
+  "playerId": 202331,
+  "stamina": 84.44363459669582
+ },
+ "Jonas Valanciunas": {
+  "playerId": 202685,
+  "stamina": 40
+ },
+ "Bismack Biyombo": {
+  "playerId": 202687,
+  "stamina": 40
+ },
+ "Klay Thompson": {
+  "playerId": 202691,
+  "stamina": 47.04081632653061
+ },
+ "Kawhi Leonard": {
+  "playerId": 202695,
+  "stamina": 89.61046323291221
+ },
+ "Nikola Vučević": {
+  "playerId": 202696,
+  "stamina": 75.04940071266601
+ },
+ "Tobias Harris": {
+  "playerId": 202699,
+  "stamina": 72.46598639455782
+ },
+ "Jimmy Butler III": {
+  "playerId": 202710,
+  "stamina": 86.08762552640104
+ },
+ "Anthony Davis": {
+  "playerId": 203076,
+  "stamina": 86.6747651441529
+ },
+ "Bradley Beal": {
+  "playerId": 203078,
+  "stamina": 40
+ },
+ "Andre Drummond": {
+  "playerId": 203083,
+  "stamina": 40
+ },
+ "Harrison Barnes": {
+  "playerId": 203084,
+  "stamina": 62.83284742468416
+ },
+ "Draymond Green": {
+  "playerId": 203110,
+  "stamina": 71.2917071590541
+ },
+ "Khris Middleton": {
+  "playerId": 203114,
+  "stamina": 53.114674441205054
+ },
+ "CJ McCollum": {
+  "playerId": 203468,
+  "stamina": 80.6859410430839
+ },
+ "Dennis Schröder": {
+  "playerId": 203471,
+  "stamina": 57.97376093294461
+ },
+ "Kelly Olynyk": {
+  "playerId": 203482,
+  "stamina": 40
+ },
+ "Kentavious Caldwell-Pope": {
+  "playerId": 203484,
+  "stamina": 45.34013605442177
+ },
+ "Mason Plumlee": {
+  "playerId": 203486,
+  "stamina": 40
+ },
+ "Rudy Gobert": {
+  "playerId": 203497,
+  "stamina": 87.02704891480401
+ },
+ "Steven Adams": {
+  "playerId": 203500,
+  "stamina": 52.87172011661808
+ },
+ "Tim Hardaway Jr.": {
+  "playerId": 203501,
+  "stamina": 67.44897959183673
+ },
+ "Giannis Antetokounmpo": {
+  "playerId": 203507,
+  "stamina": 76.45853579527049
+ },
+ "Seth Curry": {
+  "playerId": 203552,
+  "stamina": 40
+ },
+ "Thanasis Antetokounmpo": {
+  "playerId": 203648,
+  "stamina": 40
+ },
+ "Zach LaVine": {
+  "playerId": 203897,
+  "stamina": 87.4967606090055
+ },
+ "Jordan Clarkson": {
+  "playerId": 203903,
+  "stamina": 40
+ },
+ "Gary Harris": {
+  "playerId": 203914,
+  "stamina": 40
+ },
+ "Jerami Grant": {
+  "playerId": 203924,
+  "stamina": 80.45108519598315
+ },
+ "Doug McDermott": {
+  "playerId": 203926,
+  "stamina": 40
+ },
+ "Aaron Gordon": {
+  "playerId": 203932,
+  "stamina": 73.17055393586006
+ },
+ "Marcus Smart": {
+  "playerId": 203935,
+  "stamina": 75.75396825396825
+ },
+ "Kyle Anderson": {
+  "playerId": 203937,
+  "stamina": 40
+ },
+ "Dwight Powell": {
+  "playerId": 203939,
+  "stamina": 40
+ },
+ "Julius Randle": {
+  "playerId": 203944,
+  "stamina": 91.01959831551667
+ },
+ "Andrew Wiggins": {
+  "playerId": 203952,
+  "stamina": 83.2693553611921
+ },
+ "Joel Embiid": {
+  "playerId": 203954,
+  "stamina": 88.20132815030775
+ },
+ "Dario Saric": {
+  "playerId": 203967,
+  "stamina": 40
+ },
+ "Clint Capela": {
+  "playerId": 203991,
+  "stamina": 40
+ },
+ "Bogdan Bogdanović": {
+  "playerId": 203992,
+  "stamina": 40
+ },
+ "Jusuf Nurkić": {
+  "playerId": 203994,
+  "stamina": 66.23420796890184
+ },
+ "Nikola Jokić": {
+  "playerId": 203999,
+  "stamina": 96.89099449303531
+ },
+ "Kristaps Porziņģis": {
+  "playerId": 204001,
+  "stamina": 57.0019436345967
+ },
+ "Joe Ingles": {
+  "playerId": 204060,
+  "stamina": 40
+ },
+ "T.J. McConnell": {
+  "playerId": 204456,
+  "stamina": 40
+ },
+ "Tyus Jones": {
+  "playerId": 1626145,
+  "stamina": 40
+ },
+ "D'Angelo Russell": {
+  "playerId": 1626156,
+  "stamina": 40
+ },
+ "Karl-Anthony Towns": {
+  "playerId": 1626157,
+  "stamina": 84.91334629089731
+ },
+ "Kelly Oubre Jr.": {
+  "playerId": 1626162,
+  "stamina": 87.73161645610625
+ },
+ "Devin Booker": {
+  "playerId": 1626164,
+  "stamina": 94.54243602202786
+ },
+ "Cameron Payne": {
+  "playerId": 1626166,
+  "stamina": 40
+ },
+ "Myles Turner": {
+  "playerId": 1626167,
+  "stamina": 68.17784256559767
+ },
+ "Bobby Portis Jr.": {
+  "playerId": 1626171,
+  "stamina": 57.48785228377065
+ },
+ "Kevon Looney": {
+  "playerId": 1626172,
+  "stamina": 40
+ },
+ "Norman Powell": {
+  "playerId": 1626181,
+  "stamina": 79.74651765468091
+ },
+ "Pat Connaughton": {
+  "playerId": 1626192,
+  "stamina": 40
+ },
+ "Larry Nance Jr.": {
+  "playerId": 1626204,
+  "stamina": 40
+ },
+ "Royce O'Neale": {
+  "playerId": 1626220,
+  "stamina": 74.81454486556527
+ },
+ "Domantas Sabonis": {
+  "playerId": 1627734,
+  "stamina": 79.8639455782313
+ },
+ "Kris Dunn": {
+  "playerId": 1627739,
+  "stamina": 70.35228377065111
+ },
+ "Buddy Hield": {
+  "playerId": 1627741,
+  "stamina": 40
+ },
+ "Brandon Ingram": {
+  "playerId": 1627742,
+  "stamina": 95.01214771622935
+ },
+ "Skal Labissiere": {
+  "playerId": 1627746,
+  "stamina": 40
+ },
+ "Caris LeVert": {
+  "playerId": 1627747,
+  "stamina": 40
+ },
+ "Dejounte Murray": {
+  "playerId": 1627749,
+  "stamina": 72.5834143181082
+ },
+ "Jamal Murray": {
+  "playerId": 1627750,
+  "stamina": 98.30012957563977
+ },
+ "Jakob Poeltl": {
+  "playerId": 1627751,
+  "stamina": 59.91739552964043
+ },
+ "Taurean Prince": {
+  "playerId": 1627752,
+  "stamina": 55.42274052478134
+ },
+ "Jaylen Brown": {
+  "playerId": 1627759,
+  "stamina": 95.95157110463234
+ },
+ "Gary Payton II": {
+  "playerId": 1627780,
+  "stamina": 40
+ },
+ "Pascal Siakam": {
+  "playerId": 1627783,
+  "stamina": 91.95902170391966
+ },
+ "Guerschon Yabusele": {
+  "playerId": 1627824,
+  "stamina": 40
+ },
+ "Ivica Zubac": {
+  "playerId": 1627826,
+  "stamina": 82.09507612568837
+ },
+ "Dorian Finney-Smith": {
+  "playerId": 1627827,
+  "stamina": 40
+ },
+ "Derrick Jones Jr.": {
+  "playerId": 1627884,
+  "stamina": 69.14965986394557
+ },
+ "Alex Caruso": {
+  "playerId": 1627936,
+  "stamina": 40
+ },
+ "Markelle Fultz": {
+  "playerId": 1628365,
+  "stamina": 40
+ },
+ "Lonzo Ball": {
+  "playerId": 1628366,
+  "stamina": 42.91059280855199
+ },
+ "De'Aaron Fox": {
+  "playerId": 1628368,
+  "stamina": 85.14820213799806
+ },
+ "Jayson Tatum": {
+  "playerId": 1628369,
+  "stamina": 90.66731454486556
+ },
+ "Malik Monk": {
+  "playerId": 1628370,
+  "stamina": 48.74149659863946
+ },
+ "Jonathan Isaac": {
+  "playerId": 1628371,
+  "stamina": 40
+ },
+ "Lauri Markkanen": {
+  "playerId": 1628374,
+  "stamina": 95.71671525753158
+ },
+ "Donovan Mitchell": {
+  "playerId": 1628378,
+  "stamina": 93.83786848072562
+ },
+ "Luke Kennard": {
+  "playerId": 1628379,
+  "stamina": 46.797862001943635
+ },
+ "Zach Collins": {
+  "playerId": 1628380,
+  "stamina": 40
+ },
+ "John Collins": {
+  "playerId": 1628381,
+  "stamina": 69.39261418853255
+ },
+ "OG Anunoby": {
+  "playerId": 1628384,
+  "stamina": 92.42873339812115
+ },
+ "Jarrett Allen": {
+  "playerId": 1628386,
+  "stamina": 69.63556851311954
+ },
+ "Bam Adebayo": {
+  "playerId": 1628389,
+  "stamina": 90.31503077421445
+ },
+ "Isaiah Hartenstein": {
+  "playerId": 1628392,
+  "stamina": 57.730806608357625
+ },
+ "Tony Bradley": {
+  "playerId": 1628396,
+  "stamina": 40
+ },
+ "Kyle Kuzma": {
+  "playerId": 1628398,
+  "stamina": 64.77648202137998
+ },
+ "Derrick White": {
+  "playerId": 1628401,
+  "stamina": 95.48185941043084
+ },
+ "Josh Hart": {
+  "playerId": 1628404,
+  "stamina": 82.32993197278911
+ },
+ "Dillon Brooks": {
+  "playerId": 1628415,
+  "stamina": 83.50421120829284
+ },
+ "Thomas Bryant": {
+  "playerId": 1628418,
+  "stamina": 40
+ },
+ "Monte Morris": {
+  "playerId": 1628420,
+  "stamina": 40
+ },
+ "Luke Kornet": {
+  "playerId": 1628436,
+  "stamina": 44.61127308066084
+ },
+ "Chris Boucher": {
+  "playerId": 1628449,
+  "stamina": 40
+ },
+ "Maxi Kleber": {
+  "playerId": 1628467,
+  "stamina": 40
+ },
+ "Nigel Hayes-Davis": {
+  "playerId": 1628502,
+  "stamina": 40
+ },
+ "Grayson Allen": {
+  "playerId": 1628960,
+  "stamina": 76.22367994816975
+ },
+ "Marvin Bagley III": {
+  "playerId": 1628963,
+  "stamina": 40
+ },
+ "Mo Bamba": {
+  "playerId": 1628964,
+  "stamina": 40
+ },
+ "Mikal Bridges": {
+  "playerId": 1628969,
+  "stamina": 90.78474246841594
+ },
+ "Miles Bridges": {
+  "playerId": 1628970,
+  "stamina": 85.61791383219955
+ },
+ "Bruce Brown": {
+  "playerId": 1628971,
+  "stamina": 58.70262390670554
+ },
+ "Jalen Brunson": {
+  "playerId": 1628973,
+  "stamina": 97.3607061872368
+ },
+ "Jevon Carter": {
+  "playerId": 1628975,
+  "stamina": 40
+ },
+ "Wendell Carter Jr.": {
+  "playerId": 1628976,
+  "stamina": 78.33738257207645
+ },
+ "Donte DiVincenzo": {
+  "playerId": 1628978,
+  "stamina": 83.73906705539358
+ },
+ "Shai Gilgeous-Alexander": {
+  "playerId": 1628983,
+  "stamina": 92.6635892452219
+ },
+ "Aaron Holiday": {
+  "playerId": 1628988,
+  "stamina": 40
+ },
+ "Kevin Huerter": {
+  "playerId": 1628989,
+  "stamina": 51.413994169096206
+ },
+ "Jaren Jackson Jr.": {
+  "playerId": 1628991,
+  "stamina": 83.03449951409135
+ },
+ "Caleb Martin": {
+  "playerId": 1628997,
+  "stamina": 40
+ },
+ "Cody Martin": {
+  "playerId": 1628998,
+  "stamina": 40
+ },
+ "De'Anthony Melton": {
+  "playerId": 1629001,
+  "stamina": 53.843537414965986
+ },
+ "Svi Mykhailiuk": {
+  "playerId": 1629004,
+  "stamina": 54.329446064139944
+ },
+ "Josh Okogie": {
+  "playerId": 1629006,
+  "stamina": 40
+ },
+ "Michael Porter Jr.": {
+  "playerId": 1629008,
+  "stamina": 90.5498866213152
+ },
+ "Mitchell Robinson": {
+  "playerId": 1629011,
+  "stamina": 40
+ },
+ "Collin Sexton": {
+  "playerId": 1629012,
+  "stamina": 55.78717201166181
+ },
+ "Landry Shamet": {
+  "playerId": 1629013,
+  "stamina": 53.60058309037901
+ },
+ "Anfernee Simons": {
+  "playerId": 1629014,
+  "stamina": 59.674441205053455
+ },
+ "Gary Trent Jr.": {
+  "playerId": 1629018,
+  "stamina": 44.85422740524781
+ },
+ "Jarred Vanderbilt": {
+  "playerId": 1629020,
+  "stamina": 40
+ },
+ "Moritz Wagner": {
+  "playerId": 1629021,
+  "stamina": 40
+ },
+ "P.J. Washington": {
+  "playerId": 1629023,
+  "stamina": 85.3830579850988
+ },
+ "Kenrich Williams": {
+  "playerId": 1629026,
+  "stamina": 40
+ },
+ "Trae Young": {
+  "playerId": 1629027,
+  "stamina": 61.49659863945578
+ },
+ "Deandre Ayton": {
+  "playerId": 1629028,
+  "stamina": 70.58713961775186
+ },
+ "Luka Dončić": {
+  "playerId": 1629029,
+  "stamina": 98.76984126984127
+ },
+ "Goga Bitadze": {
+  "playerId": 1629048,
+  "stamina": 40
+ },
+ "Robert Williams III": {
+  "playerId": 1629057,
+  "stamina": 40
+ },
+ "Rui Hachimura": {
+  "playerId": 1629060,
+  "stamina": 74.10997732426304
+ },
+ "Jock Landale": {
+  "playerId": 1629111,
+  "stamina": 50.19922254616132
+ },
+ "Duncan Robinson": {
+  "playerId": 1629130,
+  "stamina": 71.05685131195335
+ },
+ "Jordan McLaughlin": {
+  "playerId": 1629162,
+  "stamina": 40
+ },
+ "Gabe Vincent": {
+  "playerId": 1629216,
+  "stamina": 40
+ },
+ "Drew Eubanks": {
+  "playerId": 1629234,
+  "stamina": 40
+ },
+ "Haywood Highsmith": {
+  "playerId": 1629312,
+  "stamina": 40
+ },
+ "Amir Coffey": {
+  "playerId": 1629599,
+  "stamina": 40
+ },
+ "DaQuan Jeffries": {
+  "playerId": 1629610,
+  "stamina": 40
+ },
+ "Terance Mann": {
+  "playerId": 1629611,
+  "stamina": 58.21671525753158
+ },
+ "Andrew Nembhard": {
+  "playerId": 1629614,
+  "stamina": 87.26190476190476
+ },
+ "Jalen Pickett": {
+  "playerId": 1629618,
+  "stamina": 40
+ },
+ "Max Strus": {
+  "playerId": 1629622,
+  "stamina": 56.88046647230321
+ },
+ "Zion Williamson": {
+  "playerId": 1629627,
+  "stamina": 80.21622934888241
+ },
+ "RJ Barrett": {
+  "playerId": 1629628,
+  "stamina": 82.56478781988986
+ },
+ "Ja Morant": {
+  "playerId": 1629630,
+  "stamina": 75.1668286362164
+ },
+ "De'Andre Hunter": {
+  "playerId": 1629631,
+  "stamina": 64.533527696793
+ },
+ "Coby White": {
+  "playerId": 1629632,
+  "stamina": 60.40330417881438
+ },
+ "Brandon Clarke": {
+  "playerId": 1629634,
+  "stamina": 40
+ },
+ "Darius Garland": {
+  "playerId": 1629636,
+  "stamina": 81.1556527372854
+ },
+ "Jaxson Hayes": {
+  "playerId": 1629637,
+  "stamina": 40
+ },
+ "Nickeil Alexander-Walker": {
+  "playerId": 1629638,
+  "stamina": 93.60301263362487
+ },
+ "Tyler Herro": {
+  "playerId": 1629639,
+  "stamina": 86.79219306770327
+ },
+ "Keldon Johnson": {
+  "playerId": 1629640,
+  "stamina": 54.57240038872692
+ },
+ "Kevin Porter Jr.": {
+  "playerId": 1629645,
+  "stamina": 92.1938775510204
+ },
+ "Charles Bassey": {
+  "playerId": 1629646,
+  "stamina": 40
+ },
+ "Nic Claxton": {
+  "playerId": 1629651,
+  "stamina": 72.70084224165856
+ },
+ "Luguentz Dort": {
+  "playerId": 1629652,
+  "stamina": 67.69193391642372
+ },
+ "Daniel Gafford": {
+  "playerId": 1629655,
+  "stamina": 47.52672497570457
+ },
+ "Quentin Grimes": {
+  "playerId": 1629656,
+  "stamina": 78.5722384191772
+ },
+ "Ty Jerome": {
+  "playerId": 1629660,
+  "stamina": 52.26433430515063
+ },
+ "Cameron Johnson": {
+  "playerId": 1629661,
+  "stamina": 83.97392290249434
+ },
+ "Jordan Poole": {
+  "playerId": 1629673,
+  "stamina": 56.75898931000972
+ },
+ "Neemias Queta": {
+  "playerId": 1629674,
+  "stamina": 61.375121477162295
+ },
+ "Naz Reid": {
+  "playerId": 1629675,
+  "stamina": 64.29057337220603
+ },
+ "Matisse Thybulle": {
+  "playerId": 1629680,
+  "stamina": 40
+ },
+ "Grant Williams": {
+  "playerId": 1629684,
+  "stamina": 40
+ },
+ "John Konchar": {
+  "playerId": 1629723,
+  "stamina": 40
+ },
+ "Garrison Mathews": {
+  "playerId": 1629726,
+  "stamina": 40
+ },
+ "Dean Wade": {
+  "playerId": 1629731,
+  "stamina": 50.928085519922256
+ },
+ "Javonte Green": {
+  "playerId": 1629750,
+  "stamina": 40
+ },
+ "Anthony Edwards": {
+  "playerId": 1630162,
+  "stamina": 97.59556203433755
+ },
+ "LaMelo Ball": {
+  "playerId": 1630163,
+  "stamina": 73.4054097829608
+ },
+ "James Wiseman": {
+  "playerId": 1630164,
+  "stamina": 40
+ },
+ "Killian Hayes": {
+  "playerId": 1630165,
+  "stamina": 40
+ },
+ "Deni Avdija": {
+  "playerId": 1630166,
+  "stamina": 93.36815678652414
+ },
+ "Obi Toppin": {
+  "playerId": 1630167,
+  "stamina": 40
+ },
+ "Onyeka Okongwu": {
+  "playerId": 1630168,
+  "stamina": 85.8527696793003
+ },
+ "Devin Vassell": {
+  "playerId": 1630170,
+  "stamina": 84.20877874959507
+ },
+ "Isaac Okoro": {
+  "playerId": 1630171,
+  "stamina": 67.9348882410107
+ },
+ "Patrick Williams": {
+  "playerId": 1630172,
+  "stamina": 40.96695821185617
+ },
+ "Precious Achiuwa": {
+  "playerId": 1630173,
+  "stamina": 56.516034985422735
+ },
+ "Aaron Nesmith": {
+  "playerId": 1630174,
+  "stamina": 79.98137350178166
+ },
+ "Cole Anthony": {
+  "playerId": 1630175,
+  "stamina": 40
+ },
+ "Tyrese Maxey": {
+  "playerId": 1630178,
+  "stamina": 99
+ },
+ "Saddiq Bey": {
+  "playerId": 1630180,
+  "stamina": 86.32248137350177
+ },
+ "Josh Green": {
+  "playerId": 1630182,
+  "stamina": 40
+ },
+ "Jaden McDaniels": {
+  "playerId": 1630183,
+  "stamina": 88.43618399740848
+ },
+ "Jalen Smith": {
+  "playerId": 1630188,
+  "stamina": 42.667638483965014
+ },
+ "Isaiah Stewart": {
+  "playerId": 1630191,
+  "stamina": 52.6287657920311
+ },
+ "Zeke Nnaji": {
+  "playerId": 1630192,
+  "stamina": 40
+ },
+ "Immanuel Quickley": {
+  "playerId": 1630193,
+  "stamina": 88.90589569160997
+ },
+ "Paul Reed": {
+  "playerId": 1630194,
+  "stamina": 40
+ },
+ "Isaiah Joe": {
+  "playerId": 1630198,
+  "stamina": 45.097181729834794
+ },
+ "Tre Jones": {
+  "playerId": 1630200,
+  "stamina": 68.66375121477162
+ },
+ "Payton Pritchard": {
+  "playerId": 1630202,
+  "stamina": 90.0801749271137
+ },
+ "Nick Richards": {
+  "playerId": 1630208,
+  "stamina": 40
+ },
+ "Omer Yurtseven": {
+  "playerId": 1630209,
+  "stamina": 40
+ },
+ "Xavier Tillman": {
+  "playerId": 1630214,
+  "stamina": 40
+ },
+ "Desmond Bane": {
+  "playerId": 1630217,
+  "stamina": 94.7772918691286
+ },
+ "Jalen Green": {
+  "playerId": 1630224,
+  "stamina": 63.561710398445086
+ },
+ "Jonathan Kuminga": {
+  "playerId": 1630228,
+  "stamina": 54.08649173955297
+ },
+ "Naji Marshall": {
+  "playerId": 1630230,
+  "stamina": 79.27680596047944
+ },
+ "Sam Merrill": {
+  "playerId": 1630241,
+  "stamina": 66.7201166180758
+ },
+ "Ayo Dosunmu": {
+  "playerId": 1630245,
+  "stamina": 70.8219954648526
+ },
+ "Vít Krejčí": {
+  "playerId": 1630249,
+  "stamina": 46.0689990281827
+ },
+ "Jae'Sean Tate": {
+  "playerId": 1630256,
+  "stamina": 40
+ },
+ "Anthony Gill": {
+  "playerId": 1630264,
+  "stamina": 40
+ },
+ "Trevon Scott": {
+  "playerId": 1630286,
+  "stamina": 83.38678328474246
+ },
+ "Pat Spencer": {
+  "playerId": 1630311,
+  "stamina": 40
+ },
+ "Brandon Williams": {
+  "playerId": 1630314,
+  "stamina": 50.4421768707483
+ },
+ "Lindy Waters III": {
+  "playerId": 1630322,
+  "stamina": 40
+ },
+ "Jeremiah Robinson-Earl": {
+  "playerId": 1630526,
+  "stamina": 40
+ },
+ "Herbert Jones": {
+  "playerId": 1630529,
+  "stamina": 74.57968901846453
+ },
+ "Trey Murphy III": {
+  "playerId": 1630530,
+  "stamina": 98.53498542274052
+ },
+ "Franz Wagner": {
+  "playerId": 1630532,
+  "stamina": 81.62536443148687
+ },
+ "Ziaire Williams": {
+  "playerId": 1630533,
+  "stamina": 53.35762876579203
+ },
+ "Ochai Agbaji": {
+  "playerId": 1630534,
+  "stamina": 40
+ },
+ "Sharife Cooper": {
+  "playerId": 1630536,
+  "stamina": 40
+ },
+ "Bones Hyland": {
+  "playerId": 1630538,
+  "stamina": 40
+ },
+ "Miles McBride": {
+  "playerId": 1630540,
+  "stamina": 65.50534499514092
+ },
+ "Moses Moody": {
+  "playerId": 1630541,
+  "stamina": 61.61807580174927
+ },
+ "Isaiah Jackson": {
+  "playerId": 1630543,
+  "stamina": 40
+ },
+ "Tre Mann": {
+  "playerId": 1630544,
+  "stamina": 40
+ },
+ "Terrence Shannon Jr": {
+  "playerId": 1630545,
+  "stamina": 40
+ },
+ "Johnny Juzang": {
+  "playerId": 1630548,
+  "stamina": 40
+ },
+ "Day'Ron Sharpe": {
+  "playerId": 1630549,
+  "stamina": 40
+ },
+ "Justin Champagnie": {
+  "playerId": 1630551,
+  "stamina": 40
+ },
+ "Jalen Johnson": {
+  "playerId": 1630552,
+  "stamina": 98.06527372853904
+ },
+ "Corey Kispert": {
+  "playerId": 1630557,
+  "stamina": 40
+ },
+ "Davion Mitchell": {
+  "playerId": 1630558,
+  "stamina": 75.988824101069
+ },
+ "Austin Reaves": {
+  "playerId": 1630559,
+  "stamina": 96.18642695173307
+ },
+ "Cam Thomas": {
+  "playerId": 1630560,
+  "stamina": 44.12536443148688
+ },
+ "Scottie Barnes": {
+  "playerId": 1630567,
+  "stamina": 94.30758017492711
+ },
+ "Luka Garza": {
+  "playerId": 1630568,
+  "stamina": 40
+ },
+ "Trendon Watford": {
+  "playerId": 1630570,
+  "stamina": 40
+ },
+ "Sandro Mamukelashvili": {
+  "playerId": 1630572,
+  "stamina": 48.49854227405248
+ },
+ "Sam Hauser": {
+  "playerId": 1630573,
+  "stamina": 59.1885325558795
+ },
+ "Ariel Hukporti": {
+  "playerId": 1630574,
+  "stamina": 40
+ },
+ "Julian Champagnie": {
+  "playerId": 1630577,
+  "stamina": 71.99627470035634
+ },
+ "Alperen Sengun": {
+  "playerId": 1630578,
+  "stamina": 92.89844509232265
+ },
+ "Jericho Sims": {
+  "playerId": 1630579,
+  "stamina": 40
+ },
+ "Josh Giddey": {
+  "playerId": 1630581,
+  "stamina": 89.37560738581146
+ },
+ "Santi Aldama": {
+  "playerId": 1630583,
+  "stamina": 72.93569808875931
+ },
+ "Isaiah Livers": {
+  "playerId": 1630587,
+  "stamina": 40
+ },
+ "Scotty Pippen Jr.": {
+  "playerId": 1630590,
+  "stamina": 44.732750242954324
+ },
+ "Jalen Suggs": {
+  "playerId": 1630591,
+  "stamina": 71.76141885325559
+ },
+ "Jalen Wilson": {
+  "playerId": 1630592,
+  "stamina": 40
+ },
+ "Cade Cunningham": {
+  "playerId": 1630595,
+  "stamina": 95.2470035633301
+ },
+ "Evan Mobley": {
+  "playerId": 1630596,
+  "stamina": 89.14075153871072
+ },
+ "Aaron Wiggins": {
+  "playerId": 1630598,
+  "stamina": 47.76967930029154
+ },
+ "E.J. Liddell": {
+  "playerId": 1630604,
+  "stamina": 40
+ },
+ "DeJon Jarreau": {
+  "playerId": 1630610,
+  "stamina": 44.48979591836735
+ },
+ "Gui Santos": {
+  "playerId": 1630611,
+  "stamina": 41.452866861030124
+ },
+ "Moussa Cisse": {
+  "playerId": 1630619,
+  "stamina": 40
+ },
+ "Hunter Dickinson": {
+  "playerId": 1630621,
+  "stamina": 40
+ },
+ "Tyson Etienne": {
+  "playerId": 1630623,
+  "stamina": 40
+ },
+ "Dalano Banton": {
+  "playerId": 1630625,
+  "stamina": 40
+ },
+ "Jose Alvarado": {
+  "playerId": 1630631,
+  "stamina": 40
+ },
+ "A.J. Lawson": {
+  "playerId": 1630639,
+  "stamina": 40
+ },
+ "Jay Huff": {
+  "playerId": 1630643,
+  "stamina": 44.36831875607386
+ },
+ "Mac McClung": {
+  "playerId": 1630644,
+  "stamina": 40
+ },
+ "Stanley Umude": {
+  "playerId": 1630649,
+  "stamina": 40
+ },
+ "Colin Castleton": {
+  "playerId": 1630658,
+  "stamina": 40
+ },
+ "Ethan Thompson": {
+  "playerId": 1630679,
+  "stamina": 40.23809523809524
+ },
+ "Jordan Goodwin": {
+  "playerId": 1630692,
+  "stamina": 51.65694849368319
+ },
+ "Micah Potter": {
+  "playerId": 1630695,
+  "stamina": 40
+ },
+ "Dru Smith": {
+  "playerId": 1630696,
+  "stamina": 40
+ },
+ "MarJon Beauchamp": {
+  "playerId": 1630699,
+  "stamina": 40
+ },
+ "Dyson Daniels": {
+  "playerId": 1630700,
+  "stamina": 91.72416585681891
+ },
+ "Jaden Hardy": {
+  "playerId": 1630702,
+  "stamina": 40
+ },
+ "Scoot Henderson": {
+  "playerId": 1630703,
+  "stamina": 59.43148688046647
+ },
+ "Keaton Wallace": {
+  "playerId": 1630811,
+  "stamina": 40
+ },
+ "Alex Antetokounmpo": {
+  "playerId": 1630828,
+  "stamina": 40
+ },
+ "Olivier Sarr": {
+  "playerId": 1630846,
+  "stamina": 40
+ },
+ "Jaden Ivey": {
+  "playerId": 1631093,
+  "stamina": 40
+ },
+ "Paolo Banchero": {
+  "playerId": 1631094,
+  "stamina": 96.42128279883381
+ },
+ "Jabari Smith Jr.": {
+  "playerId": 1631095,
+  "stamina": 97.8304178814383
+ },
+ "Chet Holmgren": {
+  "playerId": 1631096,
+  "stamina": 76.69339164237124
+ },
+ "Bennedict Mathurin": {
+  "playerId": 1631097,
+  "stamina": 81.86022027858763
+ },
+ "Keegan Murray": {
+  "playerId": 1631099,
+  "stamina": 96.0689990281827
+ },
+ "Shaedon Sharpe": {
+  "playerId": 1631101,
+  "stamina": 78.80709426627794
+ },
+ "TyTy Washington Jr.": {
+  "playerId": 1631102,
+  "stamina": 40
+ },
+ "Malaki Branham": {
+  "playerId": 1631103,
+  "stamina": 40
+ },
+ "Blake Wesley": {
+  "playerId": 1631104,
+  "stamina": 40
+ },
+ "Jalen Duren": {
+  "playerId": 1631105,
+  "stamina": 73.64026563006155
+ },
+ "Tari Eason": {
+  "playerId": 1631106,
+  "stamina": 63.075801749271136
+ },
+ "Nikola Jović": {
+  "playerId": 1631107,
+  "stamina": 40
+ },
+ "Max Christie": {
+  "playerId": 1631108,
+  "stamina": 77.63281503077421
+ },
+ "Mark Williams": {
+  "playerId": 1631109,
+  "stamina": 55.54421768707483
+ },
+ "Jeremy Sochan": {
+  "playerId": 1631110,
+  "stamina": 40
+ },
+ "Wendell Moore Jr.": {
+  "playerId": 1631111,
+  "stamina": 40
+ },
+ "Kennedy Chandler": {
+  "playerId": 1631113,
+  "stamina": 89.96274700356334
+ },
+ "Jalen Williams": {
+  "playerId": 1631114,
+  "stamina": 74.34483317136379
+ },
+ "Orlando Robinson": {
+  "playerId": 1631115,
+  "stamina": 40
+ },
+ "Patrick Baldwin Jr.": {
+  "playerId": 1631116,
+  "stamina": 40
+ },
+ "Walker Kessler": {
+  "playerId": 1631117,
+  "stamina": 84.5610625202462
+ },
+ "Jaylin Williams": {
+  "playerId": 1631119,
+  "stamina": 40
+ },
+ "JD Davison": {
+  "playerId": 1631120,
+  "stamina": 40
+ },
+ "Bryce McGowens": {
+  "playerId": 1631121,
+  "stamina": 43.882410106899904
+ },
+ "Jamaree Bouyea": {
+  "playerId": 1631123,
+  "stamina": 40
+ },
+ "Julian Strawther": {
+  "playerId": 1631124,
+  "stamina": 40
+ },
+ "Caleb Love": {
+  "playerId": 1631126,
+  "stamina": 42.42468415937804
+ },
+ "Harrison Ingram": {
+  "playerId": 1631127,
+  "stamina": 40
+ },
+ "Christian Braun": {
+  "playerId": 1631128,
+  "stamina": 88.67103984450924
+ },
+ "Oscar Tshiebwe": {
+  "playerId": 1631131,
+  "stamina": 40
+ },
+ "Christian Koloko": {
+  "playerId": 1631132,
+  "stamina": 40
+ },
+ "Jabari Walker": {
+  "playerId": 1631133,
+  "stamina": 40
+ },
+ "Ryan Rollins": {
+  "playerId": 1631157,
+  "stamina": 89.84531908001296
+ },
+ "Leonard Miller": {
+  "playerId": 1631159,
+  "stamina": 40
+ },
+ "Keon Ellis": {
+  "playerId": 1631165,
+  "stamina": 41.695821185617106
+ },
+ "Drew Timme": {
+  "playerId": 1631166,
+  "stamina": 40
+ },
+ "Josh Minott": {
+  "playerId": 1631169,
+  "stamina": 40
+ },
+ "Jaime Jaquez Jr.": {
+  "playerId": 1631170,
+  "stamina": 73.8751214771623
+ },
+ "Ousmane Dieng": {
+  "playerId": 1631172,
+  "stamina": 40
+ },
+ "Tyler Burton": {
+  "playerId": 1631174,
+  "stamina": 61.49659863945578
+ },
+ "Ron Harper Jr.": {
+  "playerId": 1631199,
+  "stamina": 40
+ },
+ "Kris Murray": {
+  "playerId": 1631200,
+  "stamina": 55.05830903790088
+ },
+ "Marcus Sasser": {
+  "playerId": 1631204,
+  "stamina": 40
+ },
+ "Buddy Boeheim": {
+  "playerId": 1631205,
+  "stamina": 40
+ },
+ "Dalen Terry": {
+  "playerId": 1631207,
+  "stamina": 40
+ },
+ "Jacob Toppin": {
+  "playerId": 1631210,
+  "stamina": 40
+ },
+ "Trevor Keels": {
+  "playerId": 1631211,
+  "stamina": 40
+ },
+ "Peyton Watson": {
+  "playerId": 1631212,
+  "stamina": 79.51166180758017
+ },
+ "Tyrese Martin": {
+  "playerId": 1631213,
+  "stamina": 40
+ },
+ "Alondes Williams": {
+  "playerId": 1631214,
+  "stamina": 61.25364431486881
+ },
+ "Caleb Houstan": {
+  "playerId": 1631216,
+  "stamina": 40
+ },
+ "Moussa Diabaté": {
+  "playerId": 1631217,
+  "stamina": 64.04761904761905
+ },
+ "Trayce Jackson-Davis": {
+  "playerId": 1631218,
+  "stamina": 40
+ },
+ "Collin Gillespie": {
+  "playerId": 1631221,
+  "stamina": 75.5191124068675
+ },
+ "Jake LaRavia": {
+  "playerId": 1631222,
+  "stamina": 60.889212827988345
+ },
+ "David Roddy": {
+  "playerId": 1631223,
+  "stamina": 40
+ },
+ "Dominick Barlow": {
+  "playerId": 1631230,
+  "stamina": 56.030126336248784
+ },
+ "Mouhamed Gueye": {
+  "playerId": 1631243,
+  "stamina": 40
+ },
+ "Quenton Jackson": {
+  "playerId": 1631245,
+  "stamina": 40
+ },
+ "Vince Williams Jr.": {
+  "playerId": 1631246,
+  "stamina": 41.20991253644315
+ },
+ "Luke Travers": {
+  "playerId": 1631247,
+  "stamina": 40
+ },
+ "Baylor Scheierman": {
+  "playerId": 1631248,
+  "stamina": 40
+ },
+ "Pete Nance": {
+  "playerId": 1631250,
+  "stamina": 40
+ },
+ "Karlo Matković": {
+  "playerId": 1631255,
+  "stamina": 40
+ },
+ "AJ Green": {
+  "playerId": 1631260,
+  "stamina": 77.39795918367346
+ },
+ "Jamal Cain": {
+  "playerId": 1631288,
+  "stamina": 40
+ },
+ "Sidy Cissoko": {
+  "playerId": 1631321,
+  "stamina": 40
+ },
+ "Simone Fontecchio": {
+  "playerId": 1631323,
+  "stamina": 40
+ },
+ "Mouhamadou Gueye": {
+  "playerId": 1631338,
+  "stamina": 52.75024295432459
+ },
+ "Daeqwon Plowden": {
+  "playerId": 1631342,
+  "stamina": 65.99125364431487
+ },
+ "Lucas Williamson": {
+  "playerId": 1631351,
+  "stamina": 89.2581794622611
+ },
+ "Javonte Cooke": {
+  "playerId": 1631451,
+  "stamina": 40
+ },
+ "Alex Morales": {
+  "playerId": 1631457,
+  "stamina": 40
+ },
+ "Nate Williams": {
+  "playerId": 1631466,
+  "stamina": 40
+ },
+ "Victor Wembanyama": {
+  "playerId": 1641705,
+  "stamina": 77.86767087787496
+ },
+ "Brandon Miller": {
+  "playerId": 1641706,
+  "stamina": 82.7996436669906
+ },
+ "Taylor Hendricks": {
+  "playerId": 1641707,
+  "stamina": 40
+ },
+ "Amen Thompson": {
+  "playerId": 1641708,
+  "stamina": 99
+ },
+ "Ausar Thompson": {
+  "playerId": 1641709,
+  "stamina": 63.80466472303207
+ },
+ "Anthony Black": {
+  "playerId": 1641710,
+  "stamina": 80.92079689018465
+ },
+ "Gradey Dick": {
+  "playerId": 1641711,
+  "stamina": 40
+ },
+ "Rayan Rupert": {
+  "playerId": 1641712,
+  "stamina": 40
+ },
+ "GG Jackson": {
+  "playerId": 1641713,
+  "stamina": 45.82604470359573
+ },
+ "Cam Whitmore": {
+  "playerId": 1641715,
+  "stamina": 40
+ },
+ "Jarace Walker": {
+  "playerId": 1641716,
+  "stamina": 61.86103012633625
+ },
+ "Cason Wallace": {
+  "playerId": 1641717,
+  "stamina": 67.20602526724976
+ },
+ "Keyonte George": {
+  "playerId": 1641718,
+  "stamina": 91.25445416261744
+ },
+ "Jordan Hawkins": {
+  "playerId": 1641722,
+  "stamina": 40
+ },
+ "Kobe Bufkin": {
+  "playerId": 1641723,
+  "stamina": 40
+ },
+ "Jett Howard": {
+  "playerId": 1641724,
+  "stamina": 40
+ },
+ "Trey Alexander": {
+  "playerId": 1641725,
+  "stamina": 40
+ },
+ "Dereck Lively II": {
+  "playerId": 1641726,
+  "stamina": 40
+ },
+ "Dariq Whitehead": {
+  "playerId": 1641727,
+  "stamina": 83.85649497894396
+ },
+ "Brice Sensabaugh": {
+  "playerId": 1641729,
+  "stamina": 55.30126336248785
+ },
+ "Noah Clowney": {
+  "playerId": 1641730,
+  "stamina": 68.9067055393586
+ },
+ "Bilal Coulibaly": {
+  "playerId": 1641731,
+  "stamina": 65.26239067055393
+ },
+ "Colby Jones": {
+  "playerId": 1641732,
+  "stamina": 40
+ },
+ "Nick Smith Jr.": {
+  "playerId": 1641733,
+  "stamina": 40
+ },
+ "Adem Bona": {
+  "playerId": 1641737,
+  "stamina": 40
+ },
+ "Kobe Brown": {
+  "playerId": 1641738,
+  "stamina": 40
+ },
+ "Toumani Camara": {
+  "playerId": 1641739,
+  "stamina": 93.13330093942338
+ },
+ "Jaylen Clark": {
+  "playerId": 1641740,
+  "stamina": 40
+ },
+ "Zach Edey": {
+  "playerId": 1641744,
+  "stamina": 62.95432458697765
+ },
+ "DaRon Holmes II": {
+  "playerId": 1641747,
+  "stamina": 40
+ },
+ "Andre Jackson Jr.": {
+  "playerId": 1641748,
+  "stamina": 40
+ },
+ "Ryan Kalkbrenner": {
+  "playerId": 1641750,
+  "stamina": 46.31195335276968
+ },
+ "Bobi Klintman": {
+  "playerId": 1641752,
+  "stamina": 40
+ },
+ "Chris Livingston": {
+  "playerId": 1641753,
+  "stamina": 40
+ },
+ "Kevin McCullar Jr.": {
+  "playerId": 1641755,
+  "stamina": 40
+ },
+ "Jordan Miller": {
+  "playerId": 1641757,
+  "stamina": 49.47035957240039
+ },
+ "Grant Nelson": {
+  "playerId": 1641761,
+  "stamina": 40
+ },
+ "Julian Phillips": {
+  "playerId": 1641763,
+  "stamina": 40
+ },
+ "Brandin Podziemski": {
+  "playerId": 1641764,
+  "stamina": 75.28425655976676
+ },
+ "Olivier-Maxence Prosper": {
+  "playerId": 1641765,
+  "stamina": 40
+ },
+ "Ben Sheppard": {
+  "playerId": 1641767,
+  "stamina": 45.583090379008745
+ },
+ "Jalen Slawson": {
+  "playerId": 1641771,
+  "stamina": 56.39455782312925
+ },
+ "Nae'Qwan Tomlin": {
+  "playerId": 1641772,
+  "stamina": 40
+ },
+ "Tristan Vukcevic": {
+  "playerId": 1641774,
+  "stamina": 40
+ },
+ "Jordan Walsh": {
+  "playerId": 1641775,
+  "stamina": 40
+ },
+ "Leaky Black": {
+  "playerId": 1641778,
+  "stamina": 76.57596371882086
+ },
+ "Johni Broome": {
+  "playerId": 1641780,
+  "stamina": 40
+ },
+ "Tristan da Silva": {
+  "playerId": 1641783,
+  "stamina": 58.945578231292515
+ },
+ "Tosan Evbuomwan": {
+  "playerId": 1641787,
+  "stamina": 40
+ },
+ "PJ Hall": {
+  "playerId": 1641790,
+  "stamina": 40
+ },
+ "Dillon Jones": {
+  "playerId": 1641794,
+  "stamina": 40
+ },
+ "Pelle Larsson": {
+  "playerId": 1641796,
+  "stamina": 66.47716229348882
+ },
+ "Emanuel Miller": {
+  "playerId": 1641801,
+  "stamina": 40
+ },
+ "Tristen Newton": {
+  "playerId": 1641803,
+  "stamina": 40
+ },
+ "Norchad Omier": {
+  "playerId": 1641807,
+  "stamina": 40
+ },
+ "Drew Peterson": {
+  "playerId": 1641809,
+  "stamina": 40
+ },
+ "Antonio Reeves": {
+  "playerId": 1641810,
+  "stamina": 40
+ },
+ "Mark Sears": {
+  "playerId": 1641813,
+  "stamina": 40
+ },
+ "Isaiah Stevens": {
+  "playerId": 1641815,
+  "stamina": 40
+ },
+ "Hunter Tyson": {
+  "playerId": 1641816,
+  "stamina": 40
+ },
+ "Matas Buzelis": {
+  "playerId": 1641824,
+  "stamina": 78.1025267249757
+ },
+ "Ronald Holland II": {
+  "playerId": 1641842,
+  "stamina": 40
+ },
+ "Craig Porter Jr.": {
+  "playerId": 1641854,
+  "stamina": 40
+ },
+ "Malachi Smith": {
+  "playerId": 1641869,
+  "stamina": 56.63751214771623
+ },
+ "Duop Reath": {
+  "playerId": 1641871,
+  "stamina": 40
+ },
+ "Tyler Smith": {
+  "playerId": 1641890,
+  "stamina": 40
+ },
+ "Elijah Harkless": {
+  "playerId": 1641989,
+  "stamina": 44.00388726919339
+ },
+ "Trey Jemison III": {
+  "playerId": 1641998,
+  "stamina": 40
+ },
+ "Myron Gardner": {
+  "playerId": 1642066,
+  "stamina": 40
+ },
+ "Zaccharie Risacher": {
+  "playerId": 1642258,
+  "stamina": 51.17103984450923
+ },
+ "Alex Sarr": {
+  "playerId": 1642259,
+  "stamina": 69.87852283770651
+ },
+ "Nikola Topić": {
+  "playerId": 1642260,
+  "stamina": 40
+ },
+ "Dalton Knecht": {
+  "playerId": 1642261,
+  "stamina": 40
+ },
+ "Cody Williams": {
+  "playerId": 1642262,
+  "stamina": 58.459669582118565
+ },
+ "Reed Sheppard": {
+  "playerId": 1642263,
+  "stamina": 65.01943634596697
+ },
+ "Stephon Castle": {
+  "playerId": 1642264,
+  "stamina": 81.39050858438614
+ },
+ "Rob Dillingham": {
+  "playerId": 1642265,
+  "stamina": 40
+ },
+ "Ja'Kobe Walter": {
+  "playerId": 1642266,
+  "stamina": 40.72400388726919
+ },
+ "Bub Carrington": {
+  "playerId": 1642267,
+  "stamina": 72.23113054745708
+ },
+ "Isaiah Collier": {
+  "playerId": 1642268,
+  "stamina": 62.10398445092322
+ },
+ "Devin Carter": {
+  "playerId": 1642269,
+  "stamina": 40
+ },
+ "Donovan Clingan": {
+  "playerId": 1642270,
+  "stamina": 70.11742792355037
+ },
+ "Kyle Filipowski": {
+  "playerId": 1642271,
+  "stamina": 54.815354713313894
+ },
+ "Jared McCain": {
+  "playerId": 1642272,
+  "stamina": 40
+ },
+ "Kyshawn George": {
+  "playerId": 1642273,
+  "stamina": 77.16310333657272
+ },
+ "Yves Missi": {
+  "playerId": 1642274,
+  "stamina": 40
+ },
+ "Tidjane Salaün": {
+  "playerId": 1642275,
+  "stamina": 40
+ },
+ "Kel'el Ware": {
+  "playerId": 1642276,
+  "stamina": 49.713313896987366
+ },
+ "Johnny Furphy": {
+  "playerId": 1642277,
+  "stamina": 40
+ },
+ "Tyler Kolek": {
+  "playerId": 1642278,
+  "stamina": 40
+ },
+ "Trentyn Flowers": {
+  "playerId": 1642280,
+  "stamina": 40
+ },
+ "Jaylon Tyson": {
+  "playerId": 1642281,
+  "stamina": 68.42079689018465
+ },
+ "Hunter Sallis": {
+  "playerId": 1642282,
+  "stamina": 40
+ },
+ "Cam Spencer": {
+  "playerId": 1642285,
+  "stamina": 56.27308066083576
+ },
+ "Oso Ighodaro": {
+  "playerId": 1642345,
+  "stamina": 48.98445092322643
+ },
+ "Ryan Dunn": {
+  "playerId": 1642346,
+  "stamina": 40
+ },
+ "Jamal Shead": {
+  "playerId": 1642347,
+  "stamina": 52.38581146744412
+ },
+ "Justin Edwards": {
+  "playerId": 1642348,
+  "stamina": 40
+ },
+ "Ajay Mitchell": {
+  "playerId": 1642349,
+  "stamina": 63.31875607385811
+ },
+ "Keshad Johnson": {
+  "playerId": 1642352,
+  "stamina": 40
+ },
+ "Cam Christie": {
+  "playerId": 1642353,
+  "stamina": 40
+ },
+ "KJ Simpson": {
+  "playerId": 1642354,
+  "stamina": 40
+ },
+ "Bronny James": {
+  "playerId": 1642355,
+  "stamina": 40
+ },
+ "David Jones Garcia": {
+  "playerId": 1642357,
+  "stamina": 40
+ },
+ "AJ Johnson": {
+  "playerId": 1642358,
+  "stamina": 40
+ },
+ "Pacôme Dadiet": {
+  "playerId": 1642359,
+  "stamina": 40
+ },
+ "Payton Sandfort": {
+  "playerId": 1642362,
+  "stamina": 40
+ },
+ "Nique Clifford": {
+  "playerId": 1642363,
+  "stamina": 60.646258503401356
+ },
+ "Jamir Watkins": {
+  "playerId": 1642364,
+  "stamina": 42.18172983479106
+ },
+ "Quinten Post": {
+  "playerId": 1642366,
+  "stamina": 40
+ },
+ "Jonathan Mogbo": {
+  "playerId": 1642367,
+  "stamina": 40
+ },
+ "N'Faly Dante": {
+  "playerId": 1642368,
+  "stamina": 40
+ },
+ "Jaylen Wells": {
+  "playerId": 1642377,
+  "stamina": 65.74829931972789
+ },
+ "Adama Bal": {
+  "playerId": 1642380,
+  "stamina": 82.21250404923875
+ },
+ "Branden Carlson": {
+  "playerId": 1642382,
+  "stamina": 40
+ },
+ "Walter Clayton Jr.": {
+  "playerId": 1642383,
+  "stamina": 40.481049562682216
+ },
+ "Isaiah Crawford": {
+  "playerId": 1642384,
+  "stamina": 40
+ },
+ "Zyon Pullin": {
+  "playerId": 1642389,
+  "stamina": 40
+ },
+ "Blake Hinson": {
+  "playerId": 1642396,
+  "stamina": 40.116618075801746
+ },
+ "Tristan Enaruna": {
+  "playerId": 1642400,
+  "stamina": 40
+ },
+ "Enrique Freeman": {
+  "playerId": 1642402,
+  "stamina": 40
+ },
+ "Isaac Jones": {
+  "playerId": 1642403,
+  "stamina": 40
+ },
+ "Chaz Lanier": {
+  "playerId": 1642404,
+  "stamina": 40
+ },
+ "Jamison Battle": {
+  "playerId": 1642419,
+  "stamina": 40
+ },
+ "Riley Minix": {
+  "playerId": 1642434,
+  "stamina": 40
+ },
+ "Jahmir Young": {
+  "playerId": 1642443,
+  "stamina": 40
+ },
+ "Tolu Smith": {
+  "playerId": 1642449,
+  "stamina": 40
+ },
+ "Daniss Jenkins": {
+  "playerId": 1642450,
+  "stamina": 40
+ },
+ "Spencer Jones": {
+  "playerId": 1642461,
+  "stamina": 49.95626822157435
+ },
+ "Darius Brown II": {
+  "playerId": 1642468,
+  "stamina": 40
+ },
+ "RayJ Dennis": {
+  "playerId": 1642484,
+  "stamina": 40
+ },
+ "Josh Oduro": {
+  "playerId": 1642490,
+  "stamina": 70.70456754130224
+ },
+ "Malevy Leons": {
+  "playerId": 1642502,
+  "stamina": 40
+ },
+ "Cormac Ryan": {
+  "playerId": 1642504,
+  "stamina": 58.82410106899903
+ },
+ "Yuki Kawamura": {
+  "playerId": 1642530,
+  "stamina": 40
+ },
+ "Cooper Flagg": {
+  "playerId": 1642843,
+  "stamina": 94.07272432782636
+ },
+ "Dylan Harper": {
+  "playerId": 1642844,
+  "stamina": 52.14285714285714
+ },
+ "VJ Edgecombe": {
+  "playerId": 1642845,
+  "stamina": 97.12585034013605
+ },
+ "Ace Bailey": {
+  "playerId": 1642846,
+  "stamina": 71.52656300615484
+ },
+ "Jeremiah Fears": {
+  "playerId": 1642847,
+  "stamina": 62.3469387755102
+ },
+ "Tre Johnson": {
+  "playerId": 1642848,
+  "stamina": 57.244897959183675
+ },
+ "Nolan Traore": {
+  "playerId": 1642849,
+  "stamina": 50.68513119533527
+ },
+ "Kon Knueppel": {
+  "playerId": 1642851,
+  "stamina": 87.966472303207
+ },
+ "Derik Queen": {
+  "playerId": 1642852,
+  "stamina": 60.160349854227405
+ },
+ "Rasheer Fleming": {
+  "playerId": 1642853,
+  "stamina": 40
+ },
+ "Asa Newell": {
+  "playerId": 1642854,
+  "stamina": 40
+ },
+ "Noa Essengue": {
+  "playerId": 1642855,
+  "stamina": 40
+ },
+ "Egor Dëmin": {
+  "playerId": 1642856,
+  "stamina": 61.13216715257532
+ },
+ "Kasparas Jakučionis": {
+  "playerId": 1642857,
+  "stamina": 40
+ },
+ "Jase Richardson": {
+  "playerId": 1642859,
+  "stamina": 40
+ },
+ "Will Riley": {
+  "playerId": 1642860,
+  "stamina": 49.22740524781341
+ },
+ "Liam McNeeley": {
+  "playerId": 1642862,
+  "stamina": 40
+ },
+ "Khaman Maluach": {
+  "playerId": 1642863,
+  "stamina": 40
+ },
+ "Hugo González": {
+  "playerId": 1642864,
+  "stamina": 40
+ },
+ "Joan Beringer": {
+  "playerId": 1642866,
+  "stamina": 40
+ },
+ "Collin Murray-Boyles": {
+  "playerId": 1642867,
+  "stamina": 48.2555879494655
+ },
+ "Carter Bryant": {
+  "playerId": 1642868,
+  "stamina": 40
+ },
+ "Noah Penda": {
+  "playerId": 1642869,
+  "stamina": 40
+ },
+ "Amari Williams": {
+  "playerId": 1642873,
+  "stamina": 40
+ },
+ "Danny Wolf": {
+  "playerId": 1642874,
+  "stamina": 43.39650145772595
+ },
+ "Maxime Raynaud": {
+  "playerId": 1642875,
+  "stamina": 66.96307094266278
+ },
+ "Adou Thiero": {
+  "playerId": 1642876,
+  "stamina": 40
+ },
+ "Micah Peavy": {
+  "playerId": 1642877,
+  "stamina": 40
+ },
+ "Tyrese Proctor": {
+  "playerId": 1642878,
+  "stamina": 40
+ },
+ "Ben Saraf": {
+  "playerId": 1642879,
+  "stamina": 43.15354713313897
+ },
+ "Kam Jones": {
+  "playerId": 1642880,
+  "stamina": 40
+ },
+ "Julian Reese": {
+  "playerId": 1642882,
+  "stamina": 84.5610625202462
+ },
+ "Sion James": {
+  "playerId": 1642883,
+  "stamina": 51.899902818270164
+ },
+ "Vladislav Goldin": {
+  "playerId": 1642884,
+  "stamina": 40
+ },
+ "Mohamed Diawara": {
+  "playerId": 1642885,
+  "stamina": 40
+ },
+ "Koby Brea": {
+  "playerId": 1642886,
+  "stamina": 40
+ },
+ "Yang Hansen": {
+  "playerId": 1642905,
+  "stamina": 40
+ },
+ "Cedric Coward": {
+  "playerId": 1642907,
+  "stamina": 62.589893100097186
+ },
+ "John Tonje": {
+  "playerId": 1642910,
+  "stamina": 40
+ },
+ "Rocco Zikarsky": {
+  "playerId": 1642911,
+  "stamina": 40
+ },
+ "Javon Small": {
+  "playerId": 1642914,
+  "stamina": 40
+ },
+ "Max Shulga": {
+  "playerId": 1642917,
+  "stamina": 40
+ },
+ "Alijah Martin": {
+  "playerId": 1642918,
+  "stamina": 40
+ },
+ "Kobe Sanders": {
+  "playerId": 1642920,
+  "stamina": 40
+ },
+ "Dylan Cardwell": {
+  "playerId": 1642928,
+  "stamina": 41.93877551020408
+ },
+ "Keshon Gilbert": {
+  "playerId": 1642933,
+  "stamina": 40
+ },
+ "Chucky Hepburn": {
+  "playerId": 1642935,
+  "stamina": 40
+ },
+ "Curtis Jones": {
+  "playerId": 1642938,
+  "stamina": 40
+ },
+ "Miles Kelly": {
+  "playerId": 1642939,
+  "stamina": 40
+ },
+ "Jahmai Mashack": {
+  "playerId": 1642942,
+  "stamina": 47.28377065111759
+ },
+ "Ryan Nembhard": {
+  "playerId": 1642948,
+  "stamina": 40
+ },
+ "Yanic Konan Niederhäuser": {
+  "playerId": 1642949,
+  "stamina": 40
+ },
+ "Lachlan Olbrich": {
+  "playerId": 1642950,
+  "stamina": 40
+ },
+ "Sean Pedulla": {
+  "playerId": 1642951,
+  "stamina": 40
+ },
+ "Will Richard": {
+  "playerId": 1642954,
+  "stamina": 40
+ },
+ "Kadary Richmond": {
+  "playerId": 1642955,
+  "stamina": 50.80660835762877
+ },
+ "Chris Youngblood": {
+  "playerId": 1642959,
+  "stamina": 40
+ },
+ "Drake Powell": {
+  "playerId": 1642962,
+  "stamina": 43.63945578231292
+ },
+ "Brooks Barnhizer": {
+  "playerId": 1642964,
+  "stamina": 40
+ },
+ "John Poulakidas": {
+  "playerId": 1642967,
+  "stamina": 40
+ },
+ "Taelon Peter": {
+  "playerId": 1643007,
+  "stamina": 40
+ },
+ "Bez Mbeng": {
+  "playerId": 1643016,
+  "stamina": 90.66731454486556
+ },
+ "LJ Cryer": {
+  "playerId": 1643018,
+  "stamina": 40
+ },
+ "Chris Mañon": {
+  "playerId": 1643024,
+  "stamina": 40
+ },
+ "CJ Huntley": {
+  "playerId": 1643047,
+  "stamina": 40
+ },
+ "Chaney Johnson": {
+  "playerId": 1643052,
+  "stamina": 40.602526724975704
+ },
+ "Hayden Gray": {
+  "playerId": 1643060,
+  "stamina": 59.067055393586
+ },
+ "Lawson Lovering": {
+  "playerId": 1643133,
+  "stamina": 58.82410106899903
+ },
+ "Jahmyl Telfort": {
+  "playerId": 1643141,
+  "stamina": 40
+ },
+ "Andersson Garcia": {
+  "playerId": 1643158,
+  "stamina": 94.89471979267898
+ },
+ "Toby Okani": {
+  "playerId": 1643253,
+  "stamina": 98.88726919339165
+ },
+ "Jayson Kent": {
+  "playerId": 1643257,
+  "stamina": 40
+ }
+}

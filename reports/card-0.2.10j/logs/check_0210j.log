@@ -1,0 +1,89 @@
+PASS (1) c0 ranking.csv 逐位元組相同 04a22ee9f9fc / 04a22ee9f9fc
+PASS (1) c0 版號 inseason 0.2.10i
+PASS (1) 三份資料截止日相同 2026-10-31
+PASS (2) 先驗人數 582
+PASS (2) 先驗 gravity 對 gravity-attr.csv max|diff| 0.00e+00
+PASS (2) 其他屬性與 0210i 先驗相同（不同 0 格）
+PASS (2) 卡片 card 0.2.10j＝E-198 KG 定版逐位元相同
+PASS (2) 卡片 c0（GRAVITY=0）＝card 0.2.10i
+PASS (3) 新版號 inseason 0.2.10j／card 0.2.10j
+PASS (3) ranking 人數 484 / 484
+PASS (3) ranking.csv 有 gravity 欄
+PASS (3) gravity.json（GRV 提示卡用）存在
+PASS (3) 檢查 (a) f=0 對卡片 OVR max|diff| 1.0672351891116705e-11
+
+(4) 卡片頁（card 0.2.10i → 0.2.10j） 前 20 名 進： ["De'Aaron Fox"] 出： ['Desmond Bane']
+    前 100 名（0.2.10i）移動 >=10 名：11 人（R-109 字母版上限 25） [('Scottie Barnes', 25, 36), ('Cameron Johnson', 44, 63), ('Karl-Anthony Towns', 52, 41), ('Collin Sexton', 70, 89), ('Ivica Zubac', 73, 85), ('Ryan Rollins', 80, 98), ('Collin Gillespie', 82, 100), ('Scotty Pippen Jr.', 90, 68), ('Obi Toppin', 98, 77), ('Ayo Dosunmu', 99, 110), ('Stephon Castle', 100, 119)]
+PASS (4) 卡片頁 R-109 字母版
+    球員                         名次      OVR           GRV
+    Shai Gilgeous-Alexander      1->1   109.6->108.5  110.8
+    Nikola Jokić                 2->2   106.5->105.7   71.3
+    Victor Wembanyama            3->3   102.4->102.2   93.8
+    Luka Dončić                  4->4   102.1->101.7   99.0
+    Giannis Antetokounmpo        5->5    99.0-> 99.0   86.1
+    Kawhi Leonard                6->6    98.3-> 98.3   97.1
+    Donovan Mitchell             7->7    96.3-> 96.3   98.5
+    Jayson Tatum                 8->8    96.2-> 96.1   92.3
+    Anthony Edwards             10->9    93.8-> 93.9   98.3
+    Jalen Williams               9->10   94.6-> 93.4   67.7
+    Cade Cunningham             11->11   93.4-> 93.4   97.6
+    Chet Holmgren               13->12   93.3-> 93.3   72.2
+    Kevin Durant                16->13   93.2-> 93.2  105.2
+    Ty Jerome                   14->14   93.3-> 93.1   98.2
+    Stephen Curry               18->15   93.0-> 92.9   98.8
+    Evan Mobley                 17->16   93.1-> 92.8   57.5
+    Joel Embiid                 15->17   93.2-> 92.6   83.0
+    Jimmy Butler III            12->18   93.4-> 92.3   68.2
+    Jamal Murray                19->19   92.4-> 92.2   96.2
+    De'Aaron Fox                24->20   91.2-> 92.1   91.0
+    Desmond Bane                20->21   92.0-> 92.0   95.2
+    Tyrese Maxey                21->22   92.0-> 91.8   96.9
+    Jaylen Brown                28->23   91.0-> 91.4   92.4
+    Kristaps Porziņģis          22->24   91.6-> 91.0   75.8
+    Amen Thompson               27->25   91.1-> 90.8   46.1
+    Luke Kennard               135->120  75.6-> 76.4   85.9
+    Myles Turner               108->123  77.8-> 76.3   50.2
+    Sam Hauser                 175->160  72.9-> 73.6   74.1
+    Al Horford                 188->182  72.0-> 72.0   52.1
+    Duncan Robinson            208->199  69.6-> 70.4   96.0
+    Buddy Hield                259->240  65.7-> 66.7   85.3
+    Klay Thompson              419->357  55.9-> 57.9   98.1
+
+(4) 新賽季頁（inseason 0.2.10i → 0.2.10j） 前 20 名 進： ["De'Aaron Fox"] 出： ['Joel Embiid']
+    前 100 名（0.2.10i）移動 >=10 名：10 人（R-109 字母版上限 25） [('Ja Morant', 67, 92), ('VJ Edgecombe', 70, 84), ('Deni Avdija', 74, 59), ('Dylan Harper', 79, 94), ('Obi Toppin', 83, 99), ('Jaden McDaniels', 86, 101), ('Cedric Coward', 89, 75), ('Stephon Castle', 92, 115), ('RJ Barrett', 93, 68), ('Collin Gillespie', 99, 114)]
+PASS (4) 新賽季頁 R-109 字母版
+    球員                         名次      OVR           GRV
+    Shai Gilgeous-Alexander      1->1   109.6->108.5  111.1
+    Nikola Jokić                 2->2   106.6->105.7   71.6
+    Victor Wembanyama            3->3   102.9->102.7   92.5
+    Luka Dončić                  4->4   102.2->101.8  100.2
+    Kawhi Leonard                6->5    98.3-> 98.2   97.1
+    Giannis Antetokounmpo        5->6    98.6-> 97.7   62.5
+    Donovan Mitchell             7->7    96.3-> 96.3   98.2
+    Jayson Tatum                 8->8    95.6-> 95.6   94.2
+    Stephen Curry               18->9    92.9-> 93.9  129.2
+    Ty Jerome                   10->10   94.0-> 93.7   96.8
+    Jalen Williams               9->11   95.2-> 93.6   60.0
+    Anthony Edwards             12->12   93.5-> 93.5   98.3
+    Chet Holmgren               13->13   93.3-> 93.4   72.2
+    Kevin Durant                16->14   93.2-> 92.9  104.1
+    Jimmy Butler III            11->15   93.9-> 92.9   68.2
+    Evan Mobley                 14->16   93.2-> 92.9   56.2
+    Jamal Murray                15->17   93.2-> 92.9   96.3
+    Cade Cunningham             19->18   92.9-> 92.9   97.2
+    De'Aaron Fox                21->19   92.4-> 92.9   90.7
+    Tyrese Maxey                20->20   92.7-> 92.7   96.8
+    Joel Embiid                 17->21   93.1-> 92.5   73.1
+    Desmond Bane                22->22   91.5-> 91.8   95.1
+    Jaylen Brown                24->23   91.0-> 91.4   91.8
+    Anthony Davis               23->24   91.0-> 90.7   65.6
+    Paul George                 27->25   90.8-> 90.6   86.7
+    Luke Kennard               140->121  75.2-> 76.0   86.2
+    Sam Hauser                 155->138  74.3-> 74.9   74.0
+    Myles Turner               137->155  75.4-> 73.9   50.1
+    Duncan Robinson            204->196  69.5-> 70.2   96.5
+    Al Horford                 213->200  68.5-> 69.9   61.7
+    Buddy Hield                258->242  63.6-> 65.8   94.7
+    Klay Thompson              343->316  56.9-> 59.0   97.9
+
+全部通過

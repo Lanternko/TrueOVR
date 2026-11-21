@@ -1,0 +1,33 @@
+2026-11-02 02:09:35,425 INFO ==== 開始 dry_run=False force=True shell=False ====
+2026-11-02 02:09:35,430 INFO $ C:\Program Files\nodejs\node.EXE scripts/fetch_season_games.js 2026-27  (cwd=D:\Projects\CODING\basketball-autochess, timeout=900s)
+2026-11-02 02:09:37,969 INFO $ C:\Program Files\nodejs\node.EXE scripts/fetch_matchups.mjs 2026-27  (cwd=D:\Projects\CODING\basketball-autochess, timeout=1800s)
+2026-11-02 02:09:38,059 INFO fetch_matchups：DONE games 88, fetched 0, skipped 88, failed 0
+2026-11-02 02:09:38,063 INFO $ C:\Program Files\nodejs\node.EXE scripts/fetch_inseason_2026_27.js 2026-27  (cwd=D:\Projects\CODING\basketball-autochess, timeout=3600s)
+2026-11-02 02:09:40,465 WARNING PBP 不完整（預期）：抓到 0、快取 87、失敗 1 場 ['0022600101']
+2026-11-02 02:09:40,476 INFO $ C:\Program Files\nodejs\node.EXE scripts/build_inseason_stints.js 2026-27  (cwd=D:\Projects\CODING\basketball-autochess, timeout=1800s)
+2026-11-02 02:09:42,776 INFO build_inseason_stints：{"games":87,"validLineupGames":81,"failures":6,"stints":2877,"clock":0.6609195402298851,"live":0.5423487544483986,"turnovers":16.149425287356323,"differences":7}
+2026-11-02 02:09:42,777 INFO $ C:\Python313\python.exe -I -X utf8 D:\Projects\CODING\basketball-autochess\reports\card-0.2.7d+E151-young-curve\e151_eval.py  (cwd=D:\Projects\CODING\basketball-autochess, timeout=900s)
+2026-11-02 02:09:43,770 INFO E-151 未評估 exit=1：{"games": 81, "status": "未達觸發條件，不評估"}
+2026-11-02 02:09:43,774 INFO $ C:\Program Files\nodejs\node.EXE scripts/fetch_defense_tracking.mjs 2026-27  (cwd=D:\Projects\CODING\basketball-autochess, timeout=600s)
+2026-11-02 02:09:55,415 INFO fetch_defense_tracking：{"season":"2026-27","rows":{"rim":397,"three":408,"hustle":422,"advanced":441,"matchups":16430},"failures":[]}
+2026-11-02 02:09:55,418 INFO $ C:\Program Files\nodejs\node.EXE scripts/fetch_gravity.mjs 2026-27  (cwd=D:\Projects\CODING\basketball-autochess, timeout=300s)
+2026-11-02 02:09:55,762 INFO fetch_gravity：{"season":"2026-27","ok":true,"n":288}
+2026-11-02 02:09:55,771 INFO player-games sha256=29b2c2a83430…  pbp=87
+2026-11-02 02:09:55,772 INFO $ C:\Python313\python.exe -I D:\Projects\CODING\basketball-autochess\reports\ovr-inseason-2026-27\live\run_c4_live_rookie.py D:\Projects\CODING\basketball-autochess\data\_inseason_build\build-d7ffk1ip  (cwd=D:\Projects\CODING\basketball-autochess, timeout=3600s)
+2026-11-02 02:10:47,127 INFO 決定：publish=True 版號=inseason 0.2.10j（版號 'inseason 0.2.10i' -> 'inseason 0.2.10j'）
+2026-11-02 02:10:47,128 INFO $ C:\Python313\python.exe -I D:\Projects\CODING\basketball-autochess\reports\ovr-inseason-2026-27\live\ovr_history.py D:\Projects\CODING\basketball-autochess\data\_inseason_build\build-d7ffk1ip  (cwd=D:\Projects\CODING\basketball-autochess, timeout=3600s)
+2026-11-02 02:17:09,137 INFO $ C:\Python313\python.exe -I D:\Projects\CODING\basketball-autochess\scripts\build_inseason_viewer.py D:\Projects\CODING\basketball-autochess\data\_inseason_build\build-d7ffk1ip  (cwd=D:\Projects\CODING\basketball-autochess, timeout=600s)
+2026-11-02 02:17:26,780 INFO $ C:\Python313\python.exe -I D:\Projects\CODING\basketball-autochess\scripts\build_card_viewer.py D:\Projects\CODING\basketball-autochess\data\_inseason_build\build-d7ffk1ip\card-roster-viewer.html  (cwd=D:\Projects\CODING\basketball-autochess, timeout=600s)
+2026-11-02 02:17:31,645 INFO $ git fetch origin gh-pages  (cwd=D:\Projects\CODING\basketball-autochess, timeout=180s)
+2026-11-02 02:17:33,173 INFO $ git worktree add --detach C:\Users\柯子捷\AppData\Local\Temp\inseason-pages-jekoj5pu\wt origin/gh-pages  (cwd=D:\Projects\CODING\basketball-autochess, timeout=180s)
+2026-11-02 02:17:33,595 INFO $ git add -- index.html 2025-26.html  (cwd=C:\Users\柯子捷\AppData\Local\Temp\inseason-pages-jekoj5pu\wt, timeout=180s)
+2026-11-02 02:17:33,694 INFO $ git diff --cached --quiet  (cwd=C:\Users\柯子捷\AppData\Local\Temp\inseason-pages-jekoj5pu\wt, timeout=180s)
+2026-11-02 02:17:33,745 INFO $ git commit -m inseason 0.2.10j 數據至 2026-10-31
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+  (cwd=C:\Users\柯子捷\AppData\Local\Temp\inseason-pages-jekoj5pu\wt, timeout=180s)
+2026-11-02 02:17:34,252 INFO $ git push origin HEAD:gh-pages  (cwd=C:\Users\柯子捷\AppData\Local\Temp\inseason-pages-jekoj5pu\wt, timeout=180s)
+2026-11-02 02:17:37,726 INFO $ git rev-parse HEAD  (cwd=C:\Users\柯子捷\AppData\Local\Temp\inseason-pages-jekoj5pu\wt, timeout=180s)
+2026-11-02 02:17:37,783 INFO $ git worktree remove --force C:\Users\柯子捷\AppData\Local\Temp\inseason-pages-jekoj5pu\wt  (cwd=D:\Projects\CODING\basketball-autochess, timeout=180s)
+2026-11-02 02:17:37,834 INFO $ git worktree prune  (cwd=D:\Projects\CODING\basketball-autochess, timeout=180s)
+2026-11-02 02:17:37,879 INFO 已發布 inseason 0.2.10j 數據至 2026-10-31，gh-pages commit=95c14441f6fb9a0c59bc529d7f6c917701f5dad1

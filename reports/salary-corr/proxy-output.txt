@@ -1,0 +1,5 @@
+matched 552 of 582
+ridge 10-fold out-of-sample: Spearman 0.831 RMSE 6.19 | top-50 overlap 32
+   ≥1000 min Spearman 0.797
+gbm 10-fold out-of-sample: Spearman 0.86 RMSE 5.57 | top-50 overlap 31
+   ≥1000 min Spearman 0.797

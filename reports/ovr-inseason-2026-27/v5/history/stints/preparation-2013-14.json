@@ -1,0 +1,151 @@
+{
+ "season": "2013-14",
+ "boxGames": 1230,
+ "pbpGames": 1230,
+ "validLineupGames": 1223,
+ "failedGames": 7,
+ "stints": 36171,
+ "filledPeriodStarters": 14,
+ "pointsPer100": 105.662935573415,
+ "possessionsPerTeamGame": 95.58503679476696,
+ "minuteToleranceSeconds": 2.1,
+ "failures": [
+  {
+   "id": 21300405,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      2,
+      1610612760,
+      [
+       965,
+       2555,
+       201142,
+       202704,
+       203087,
+       203103
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21300530,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      4,
+      1610612760,
+      [
+       965,
+       201142,
+       203087,
+       203103,
+       203460,
+       203500
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21300676,
+   "errors": [],
+   "mismatches": [
+    {
+     "playerId": 200779,
+     "errorSeconds": -3.0
+    }
+   ]
+  },
+  {
+   "id": 21300763,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      2,
+      1610612755,
+      [
+       202323,
+       202343,
+       202730,
+       203100,
+       203102,
+       203138
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21300939,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      3,
+      1610612745,
+      [
+       2730,
+       201935,
+       201976,
+       202706,
+       202718,
+       203093
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "id": 21301006,
+   "errors": [
+    "score {1610612758: 115, 1610612764: 111} vs box {1610612758: 117, 1610612764: 111}"
+   ],
+   "mismatches": []
+  },
+  {
+   "id": 21301178,
+   "error": [
+    "could not infer 5 starters",
+    [
+     [
+      3,
+      1610612766,
+      [
+       2557,
+       2744,
+       201177,
+       201229,
+       201945,
+       203077
+      ]
+     ]
+    ]
+   ]
+  }
+ ],
+ "sources": {
+  "pbp": {
+   "file": "nbastats_2013.csv",
+   "sha256": "b27e992a6a8e9a40b55616683231c92cd52870b139976148f771fc45c7d3ccd1"
+  },
+  "box": [
+   {
+    "file": "regular_season_box_scores_2010_2024_part_1.csv",
+    "sha256": "ca9636d08c577e3d752f69e32f90b173f4c3374c15f4dc8494b655049fdfc557"
+   },
+   {
+    "file": "regular_season_box_scores_2010_2024_part_2.csv",
+    "sha256": "5643af8a9f15ce3540dced759375ca79e77c71644e23270136f23b7a57fc182d"
+   },
+   {
+    "file": "regular_season_box_scores_2010_2024_part_3.csv",
+    "sha256": "65a01fee3df865a272e578cf4b365dce7dbc62eef2ce6f15f0844cf6694ef375"
+   }
+  ]
+ }
+}

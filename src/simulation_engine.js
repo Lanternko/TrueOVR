@@ -55,7 +55,7 @@ export function simulateGame(teamA, teamB, opts = {}) {
   }
   const {
     mode = 'fixed', possessions = 20, targetScore = 21, winBy = 1,
-    maxPossessions = 200, seed = 1, fatigue = true,
+    maxPossessions = 200, seed = 1,
     reboundModel = 'opportunity', blocks = true, replay = false,
     leagueReboundShare = DEFAULT_OREB_SHARE, contextScale = 1, turnoverScale = 1, turnoverFloor = 0,
     possessionModel = 'legacy', rollAccess = 0,
@@ -66,7 +66,7 @@ export function simulateGame(teamA, teamB, opts = {}) {
   if (!Number.isFinite(rollAccess)||rollAccess<0) throw new RangeError('Invalid interior access');
   if (!Number.isFinite(leagueReboundShare) || leagueReboundShare <= 0 || leagueReboundShare >= 1) throw new RangeError('Invalid leagueReboundShare');
   if (!['fixed', 'race'].includes(mode)) throw new RangeError('Unknown game mode');
-  if (typeof fatigue !== 'boolean') throw new TypeError('fatigue must be boolean');
+  if (opts.fatigue !== undefined) { if (typeof opts.fatigue !== 'boolean') throw new TypeError('fatigue must be boolean'); if (opts.fatigue) throw new Error('fatigue removed in sim 0.1.1'); }
   if (typeof blocks !== 'boolean') throw new TypeError('blocks must be boolean');
   if (!['legacy','opportunity'].includes(reboundModel)) throw new RangeError('Unknown rebound model');
   if (mode === 'fixed' && (!Number.isSafeInteger(possessions) || possessions < 1)) {
@@ -139,16 +139,13 @@ export function simulateGame(teamA, teamB, opts = {}) {
     while (alive && chances < 6) {
       chances++;
 
-      const fat = Math.floor(poss / 2);
-      const handlers = fatigue
-        ? O.lineup.map(p => M.applyStamina(p, M.fatigueRate(p, fat)))
-        : O.lineup;
+      const handlers = O.lineup;
       const dist = (i, options) => {
         const key = `${i}/${options.assist}/${!!options.forced}/${!!options.putback}`;
-        if (!fatigue && distributions[off].has(key)) return distributions[off].get(key);
+        if (distributions[off].has(key)) return distributions[off].get(key);
         const value = M.possessionProbabilities(handlers[i], O.ctxs[i], D.lineup[i], help[1-off], O.reb, D.reb, D.phys,
           {...options,contextScale,turnoverScale,turnoverFloor,consistentTouch:possessionModel==='stable'});
-        if (!fatigue) distributions[off].set(key,value);
+        distributions[off].set(key,value);
         return value;
       };
 
@@ -172,7 +169,7 @@ export function simulateGame(teamA, teamB, opts = {}) {
       } else {
         // 第一手：誰把球帶起來。由**持球能力**決定，不是由期望得分決定——
         // 出手多跟持球多是兩件事（Durant 出手多，但持球核心是 Curry 與 Draymond）。
-        const weights = fatigue ? M.handlingWeights(handlers) : initialWeights[off];
+        const weights = initialWeights[off];
         hi = pickWeighted(weights, rng());
         record(O, hi, 'firstTouches');
         p = best(hi, assist);
@@ -311,7 +308,7 @@ export function simulateGame(teamA, teamB, opts = {}) {
     statA: finalize(sides[0].stat), statB: finalize(sides[1].stat),
     playersA: playerRows(sides[0].players, teamA.roster, sides[0].stat),
     playersB: playerRows(sides[1].players, teamB.roster, sides[1].stat),
-    fatigue, reboundModel,
+    fatigue: false, reboundModel,
     coverage: { blocks: blocks ? 'miss-decomposition-v1' : 'disabled', steals: 'pass-interceptions-only',
       rebounds: 'live-field-goal-misses-only' },
     log,

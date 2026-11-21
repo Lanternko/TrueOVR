@@ -1,0 +1,81 @@
+67a68
+> POS_SHARES = None   # E-177：--posShares <CSV|onehot>；None＝原本的單一標籤（輸出與原檔完全相同）
+162a164,195
+> def load_shares(spec, rows):
+>     """E-177：r['pi']＝位置比例。spec＝'onehot'（c0／c0h：比例程式碼餵現行標籤）或 pos-shares-{季}.csv（以 playerId 對）。
+>     退回現行標籤 one-hot：沒有該列、BBRef MP < 200、比例和為 0。其餘 pct/100 後除以列和。"""
+>     byid = {}
+>     if spec != 'onehot':
+>         byid = {int(x['playerId']): x for x in csv.DictReader(open(spec, encoding='utf-8')) if x['playerId'] != ''}
+>     for r in rows:
+>         x = byid.get(int(r['card']['playerId']))
+>         v = [float(x['p_' + p]) / 100 for p in POS] if x is not None and float(str(x['MP']).replace(',', '') or 0) >= 200 else None
+>         if v is None or sum(v) <= 0:
+>             r['pi'] = np.array([1.0 if r['pos'] == p else 0.0 for p in POS]); r['pi_used'] = 0
+>         else:
+>             r['pi'] = np.array(v) / sum(v); r['pi_used'] = 1
+> 
+> 
+> def pos_center(r, mus):
+>     """位置平均：原模式＝mus[pos]；E-177＝Σ_p pi_p · mu_p。"""
+>     if POS_SHARES is None:
+>         return mus[r['pos']]
+>     return float(sum(r['pi'][k] * mus[p] for k, p in enumerate(POS)))
+> 
+> 
+> def share_mean(rows, key, cond, scale):
+>     """E-177：mu_p = Σ MIN·pi_p·scale·key ÷ Σ MIN·pi_p（池＝cond 的列）。"""
+>     pool = [r for r in rows if cond(r)]
+>     out = {}
+>     for k, p in enumerate(POS):
+>         den = sum(r['MIN'] * r['pi'][k] for r in pool)
+>         out[p] = sum(r['MIN'] * r['pi'][k] * scale * r[key] for r in pool) / den if den > 0 else 0.0
+>     return out
+> 
+> 
+172a206,210
+>     if POS_SHARES is not None:
+>         mus = share_mean(rows, 'N', lambda r: r['poss'] >= BLEND_POSS, BLEND_PER36)
+>         for r in rows:
+>             r['r'] = BLEND_PER36 * r['N'] - pos_center(r, mus) if r['poss'] >= BLEND_POSS else np.nan
+>         return
+278c316,319
+<             d = np.array([[1.0 if r['pos'] == p else 0.0] for r in rows])
+---
+>             if POS_SHARES is None:
+>                 d = np.array([[1.0 if r['pos'] == p else 0.0] for r in rows])
+>             else:
+>                 d = np.array([[r['pi'][POS.index(p)]] for r in rows])
+345a387,388
+>     if POS_SHARES is not None:
+>         return share_mean(rows, 'Dw', lambda r: r['possW'] >= blend_poss, BLEND_PER36)
+356a400,401
+>     if POS_SHARES is not None:
+>         return share_mean(rows, 'D', lambda r: r['poss'] >= BLEND_POSS, BLEND_PER36)
+436c481
+<     global ATTRS, OUT_ATTRS, DRIVE_COLUMN, DRIVE_MODE, ATTR_SOURCE, DEF_SOURCE, RAPM, BLEND_POSS, BONUS_MIN_POSS, PRESSURE_MODE, PRESSURE_SOURCE, FOULDISC, TAIL_SOURCE
+---
+>     global POS_SHARES, ATTRS, OUT_ATTRS, DRIVE_COLUMN, DRIVE_MODE, ATTR_SOURCE, DEF_SOURCE, RAPM, BLEND_POSS, BONUS_MIN_POSS, PRESSURE_MODE, PRESSURE_SOURCE, FOULDISC, TAIL_SOURCE
+490a536,538
+>     POS_SHARES = argv[argv.index('--posShares') + 1] if '--posShares' in argv else None
+>     if POS_SHARES not in (None, 'onehot'):
+>         POS_SHARES = str(Path(POS_SHARES).resolve())
+491a540,545
+>     if POS_SHARES is not None:
+>         load_shares(POS_SHARES, rows)
+>         with open(out / 'pos-shares-used.csv', 'w', encoding='utf-8', newline='') as fh:
+>             wr = csv.writer(fh); wr.writerow(['playerId', 'name', 'pos', 'used'] + ['pi_' + p for p in POS])
+>             for r in rows:
+>                 wr.writerow([int(r['card']['playerId']), r['name'], r['pos'], r['pi_used']] + [repr(float(x)) for x in r['pi']])
+517c571
+<         centeredD = np.array([BLEND_PER36 * r['Dw'] - posMeanD[r['pos']] if r['possW'] >= blend_w else np.nan for r in rows])
+---
+>         centeredD = np.array([BLEND_PER36 * r['Dw'] - pos_center(r, posMeanD) if r['possW'] >= blend_w else np.nan for r in rows])
+520c574
+<         centeredD = np.array([BLEND_PER36 * r['D'] - posMeanD[r['pos']] if r['poss'] >= BLEND_POSS else np.nan for r in rows])
+---
+>         centeredD = np.array([BLEND_PER36 * r['D'] - pos_center(r, posMeanD) if r['poss'] >= BLEND_POSS else np.nan for r in rows])
+619c673
+<                            'Dw': float(rows[i].get('Dw', rows[i]['D'])), 'pos': rows[i]['pos'], 'posMeanD': float(posMeanD[rows[i]['pos']])}
+---
+>                            'Dw': float(rows[i].get('Dw', rows[i]['D'])), 'pos': rows[i]['pos'], 'posMeanD': float(pos_center(rows[i], posMeanD))}

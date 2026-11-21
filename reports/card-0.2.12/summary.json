@@ -1,0 +1,260 @@
+{
+ "version": "card 0.2.12",
+ "baseVersion": "card 0.2.10a",
+ "players": 582,
+ "change": "E-185：long、creation（進 OVR）、threeValue（3PT 欄，只顯示）、MPG（g 的 MPG_hat）改 E-175 四季滑動窗口（c=82；long／creation 照 stage1-methods §2 的 U 版；threeValue 窗口加權 3PA／MIN、acc＝逐季 abilityC×加權 3PA 再 THREE_K 收縮；MPG＝Σu·MIN／Σu·GP，窗口長度 L=1 季，只用 2024-25 選）；係數、OVR 錨、r_repl、用人層全凍結用 0.2.9a。",
+ "prereg_verdict": "R-118：使用者決定直接上線，不做預註冊回測。",
+ "mpg_L": 1,
+ "version_rule": "PATCH（R-114）：前 300 名移動 ≥10 名 121 人。",
+ "moved10_top300": 121,
+ "moved10_top100": 15,
+ "frozen": {
+  "r_repl": -0.9551191824234517,
+  "anchors": {
+   "PR1": -0.5719110063934824,
+   "PR50": 0.9389139623097191,
+   "PR99": 3.925432098281053
+  },
+  "wls_card": [
+   -0.8719502409296505,
+   0.600155447263929,
+   -0.14389776245479813,
+   1.7008857939776467,
+   0.10986198934306406,
+   0.7855067561524317,
+   -0.07747053701146689,
+   -0.3265012655252132
+  ],
+  "file": "reports/card-0.2.12/frozen.json"
+ },
+ "self_check": "關掉新窗口（0.2.10 tail-U.csv、不給 mpg 檔）＋修正 T6 用同一條鏈重建＝0.2.10a ranking.csv 逐位元相同（work/Sf）；舊 T6 版＝0.2.10 ranking.csv（work/S）",
+ "key_players_2025_26": {
+  "Jayson Tatum": {
+   "0.2.10a": [
+    92.7,
+    8
+   ],
+   "0.2.12": [
+    93.5,
+    8
+   ]
+  },
+  "Jalen Williams": {
+   "0.2.10a": [
+    87.3,
+    9
+   ],
+   "0.2.12": [
+    90.2,
+    9
+   ]
+  },
+  "Cooper Flagg": {
+   "0.2.10a": [
+    77.0,
+    67
+   ],
+   "0.2.12": [
+    77.2,
+    66
+   ]
+  },
+  "Anthony Edwards": {
+   "0.2.10a": [
+    86.8,
+    12
+   ],
+   "0.2.12": [
+    86.4,
+    11
+   ]
+  },
+  "Paolo Banchero": {
+   "0.2.10a": [
+    73.1,
+    129
+   ],
+   "0.2.12": [
+    73.7,
+    124
+   ]
+  },
+  "Nikola Jokić": {
+   "0.2.10a": [
+    100.6,
+    3
+   ],
+   "0.2.12": [
+    101.3,
+    2
+   ]
+  },
+  "Stephen Curry": {
+   "0.2.10a": [
+    85.9,
+    14
+   ],
+   "0.2.12": [
+    86.4,
+    12
+   ]
+  },
+  "Michael Porter Jr.": {
+   "0.2.10a": [
+    80.9,
+    38
+   ],
+   "0.2.12": [
+    80.8,
+    39
+   ]
+  },
+  "Anthony Davis": {
+   "0.2.10a": [
+    83.5,
+    23
+   ],
+   "0.2.12": [
+    82.7,
+    23
+   ]
+  },
+  "Joel Embiid": {
+   "0.2.10a": [
+    84.8,
+    20
+   ],
+   "0.2.12": [
+    85.4,
+    16
+   ]
+  },
+  "Alperen Sengun": {
+   "0.2.10a": [
+    76.3,
+    77
+   ],
+   "0.2.12": [
+    74.8,
+    99
+   ]
+  }
+ },
+ "top20": {
+  "out": [],
+  "in": []
+ },
+ "part_card_sha256": {
+  "primary": "90fd05239ce2ce7d4ab323610d7533f6cfd4b165f2df26b5a0d88343b474b748",
+  "fitA": "207b65130d56972cd6a52e19f18c0e9844736b153da875e537141c185743cad5",
+  "fitB": "520b201a8cfafde695a2d7048fb04550c1c006ec6eecbf1606533194040312fc"
+ },
+ "part_card_pred_csv_sha256": {
+  "primary": "66e598167ed208863b974ec73062e277fe72e522d0c7d70875b96a80d1cd6cc2",
+  "fitA": "a20d20308b1c84f79944be0af7c09b7d24cdf4ff7665598f89e2079c2de2e0d1",
+  "fitB": "88d5774340d4c42a98e12ecfa834d35d581037de585e4f3cc4e7ca0a77fcec1f"
+ },
+ "t6": {
+  "cand_old_rows": 504,
+  "cand_new_rows": 506,
+  "added": [
+   203999,
+   1641705
+  ],
+  "files": {
+   "repro/primary": {
+    "rows": {
+     "in": 877,
+     "out": 504
+    },
+    "sha256": "a35ebcacceefc85e1fefbc46afc8e118e87f36b1cd0b326e46e040b7be0dad33"
+   },
+   "repro/fitA": {
+    "rows": {
+     "in": 864,
+     "out": 503
+    },
+    "sha256": "e5932b649aa65d78b73628e12cc9b2fd4814fac7883a17f8e17a4bf1192c1936"
+   },
+   "repro/fitB": {
+    "rows": {
+     "in": 863,
+     "out": 504
+    },
+    "sha256": "2908af9fc86af385cacfcbbe88bfab47404984a0470b1d1ceb9b7967dfa3a90a"
+   },
+   "fixed/primary": {
+    "rows": {
+     "in": 877,
+     "out": 506
+    },
+    "sha256": "514ba5e0a14fee5f5e700032bea613486fac68eed6d2073a0b12e21296bc6bb8"
+   },
+   "fixed/fitA": {
+    "rows": {
+     "in": 864,
+     "out": 505
+    },
+    "sha256": "b468cba3e8d608b1178565c87862ca918005e14a1e2f5749e6ab7533d1400fa8"
+   },
+   "fixed/fitB": {
+    "rows": {
+     "in": 863,
+     "out": 506
+    },
+    "sha256": "a5def5e9d4aa7f09a44947cf2dcad3c22b07eb0be6a22459943bc432ecf91c20"
+   }
+  }
+ },
+ "rapm_inputs_sha256": {
+  "primary": "514ba5e0a14fee5f5e700032bea613486fac68eed6d2073a0b12e21296bc6bb8",
+  "fitA": "b468cba3e8d608b1178565c87862ca918005e14a1e2f5749e6ab7533d1400fa8",
+  "fitB": "a5def5e9d4aa7f09a44947cf2dcad3c22b07eb0be6a22459943bc432ecf91c20"
+ },
+ "sources_sha256": {
+  "reports/card-0.2.12/tail-U.csv": "166c808965b292482232c64c83bc870d7c4fdaf795a6702a62978589b86ad1a7",
+  "reports/card-0.2.12/mpg-c82.csv": "f13d6c703559962ddbadc346d759cda8a2bd6042a2bc657f159342fd34db7a1a",
+  "reports/card-0.2.12/three-value.csv": "70392d30c92bcb9f427c34c4647877920e2a2b626656fd707219201c2a446b4a",
+  "reports/card-0.2.12/mpg-L-selection.json": "bf54ce9cae24ebe3037f0337a8bd3ae2221f6663b59d16f00561e8ff0cee1354",
+  "reports/card-0.2.12/abilityC-by-season.json": "62f76607c5b6c039e9f1d15093c5e131e66e43a298fccf541a5fabbfe42b44d5",
+  "reports/card-0.2.12/frozen.json": "b069064574f2dc1afc6d533768a739c36684a6ecf9f6b6915e5b4f777e5f8b35",
+  "reports/card-0.2.12/calibrate_frozen.py": "e6a1bf35f61264c3915db8dd5f0ef15d5bd3e14a4e446f37a5a76d8993f283f6",
+  "reports/card-0.2.12/use_layer.py": "a6d13084d8b7abdc7dbce51aca64bda7a1a6a5f04491466033e479348c18c25a",
+  "reports/card-0.2.12/run_parts.py": "c9063c639d491c319070349efb2e022c986bbc539f69994f4c716feccd26350c",
+  "reports/card-0.2.12/make_t6_fixed.py": "d5f0b8f4e594ac7f58025ee90f26468f538dafae2bfbc54ce4f1a527775c3cee",
+  "reports/card-0.2.12/make_tail_U.py": "6bdadaf8fba22b40fcd00ff208c14af0f9a0fa9575b83baf94943ff729eb1113",
+  "reports/card-0.2.12/mpg_select.py": "1976b1356c671c9ad3f9e1c45db079884d892584e02915f5d21fb9845cf8ecef",
+  "reports/card-0.2.12/dump_abilityc.py": "e593033a5a8070406a522db7cfd8474cb46474c29919e9e05e813b2da219f534",
+  "reports/ovr-inseason-2026-27/live/window10.py": "9fc2942081d4c28433feba754a116bde8713db7fa0655704bc705ad2bba77857",
+  "reports/ovr-inseason-2026-27/live/window8.py": "9bb2481a9c874dd0b9a8ecd0e716b8d25f52eaf6dd7fcbd00ccf6f1801faf910",
+  "reports/card-0.2.10/ranking.csv": "84e9590b28161a23b589e1918ad410f09d6af51a119af8ee57f7beca1146e6c1",
+  "reports/card-0.2.10a/ranking.csv": "a868f7b91924d58a73c06083e8a50bbd8bfabb149348518e2691fcdda8405763",
+  "reports/card-0.2.10/tail-U.csv": "ff959cd0eee276d2817ba10db3c5fc14ca640e302a8c3810590c071730301dba",
+  "reports/card-0.2.10/three-value.csv": "1176f259beb1c6a59cadbf066a4eab3b6c4a306a10a2d44d30b9720f4f4e225f",
+  "reports/card-0.2.10a/three-value.csv": "1176f259beb1c6a59cadbf066a4eab3b6c4a306a10a2d44d30b9720f4f4e225f",
+  "reports/card-0.2.10/frozen.json": "b069064574f2dc1afc6d533768a739c36684a6ecf9f6b6915e5b4f777e5f8b35",
+  "reports/E142-card-target/c0d_collect.py": "679a75d417a5f70053c8551c9856d9bc822475472f73fb6adcd4ed7e332b92cc",
+  "reports/E142-card-target/phase1-work/cands/T6-2025-26.pkl": "13cb929439bf8ff6affcbcba1b8932ef1cce62afe8c56d527d4153b637c2a786",
+  "reports/E175-sliding-window-card/e175_card.py": "1b1e0c00c35d932c1bec17958d6829968ae99ec2c1c8c9419cfe4dbf81b6991d",
+  "reports/E175-sliding-window-card/e175_lib.py": "7175e0d4914e2c8fc2ae9e77c2037935f3754b9c1555bf446d917440b8114b18",
+  "reports/ovr-v62-3pt-difficulty-2025-26/new-long.json": "a30d913f342e8e614c69fb70f10e798e11e4cac8c78da2ed7c27d9dd33e769c8",
+  "reports/player-impact-v41/2025-26-player-validation.csv": "70a99a12d3abe1f0412c4b3724c7057e591cf92114a7f7f20db45825b4b5d52b",
+  "data/season-source/player-games.json": "11fc5866b2f61b31e27659e14e4071924b5873ef0d2a4118a585c1a54be04357"
+ },
+ "frozen_sources_sha256": {
+  "reports/card-0.2.9a/cards/K6/primary/summary.json": "3c59c0dc48c225c76faa2d8dc6a24c067025efad3d33cccf527cbb996b77babd",
+  "reports/card-0.2.9a/cards/K6/primary/pergame-summary.json": "12d8f94f2c2a6d4932774838a563c6ac6e811c67466b22a90c19fe7f27ecfd6d",
+  "reports/card-0.2.9a/cards/K6/primary/pred.csv": "8b8a54062ceb8271c4940ea34dee5ad2c8db1448a69ce1abe284b478231c077f",
+  "reports/card-0.2.9a/cards/K6/fitA/summary.json": "e7ced0173859ce9bc6df02b3a5306a05d4ad89740a594051dd1faf3bc890b6c9",
+  "reports/card-0.2.9a/cards/K6/fitA/pergame-summary.json": "89b61b4fe723d27e32d81bd76c8afdbb5833a190b09cd8f0405f1af761c55035",
+  "reports/card-0.2.9a/cards/K6/fitA/pred.csv": "3b4ce6ddaf02697c0bf53bcdee3d6a17bbecc5cb35fdbdab758932ef8d0cd625",
+  "reports/card-0.2.9a/cards/K6/fitB/summary.json": "c017c76e43a9c2c76cddcd97aad8051ffd6178370c84ccd25fb6d2a8b8b03513",
+  "reports/card-0.2.9a/cards/K6/fitB/pergame-summary.json": "f6e9831028e17ff6d4ba4a34d0a0af0f6c4d9fa32548d8255da6c27e13500ca8",
+  "reports/card-0.2.9a/cards/K6/fitB/pred.csv": "c0f4c464143cd48ab39453c848fa24edfa06967006f0b41993f17dc7f58da4c7",
+  "reports/card-0.2.9a/ranking.csv": "b7972182261683b9b7b75ad99eafeb9211f96825bab4b00783344c3bab7580ef",
+  "reports/card-0.2.10/work/capture/ranking.csv": "b7972182261683b9b7b75ad99eafeb9211f96825bab4b00783344c3bab7580ef"
+ },
+ "build_command": "python -I -X utf8 reports/card-0.2.12/build_card_0212.py --rebuild",
+ "generator": "reports/card-0.2.12/build_card_0212.py",
+ "ranking_csv_sha256": "7597ac4c79c36ca38d78fff6245f51a3563158cd0f59e7bc0dec01d3553fd8e6"
+}

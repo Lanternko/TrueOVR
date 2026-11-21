@@ -1,0 +1,680 @@
+{
+ "_rules": {
+  "S": "max((r99 − r90)/1.044, SD_pool)；insuranceActive = SD_pool > (r99 − r90)/1.044",
+  "pools": "T: MIN>=500（D4/D7）；H: MIN>=500 且 n>0，x = −shrunk（D1）；P: GP>=30 且 MPG>=20，2025-26 為卡片池 252 人（D3）；四季合併、每個球員季一筆",
+  "switches": "h1-results.json；presDisplay 兩端跟 pressure（§2.3）",
+  "order": "threeValue 只顯示不進 OVR（R-024）；help、pressure 進卡片鏈；presDisplay 只顯示，由 e123.py cards 階段覆寫進 ranking.csv"
+ },
+ "checks": {
+  "pressure_single_pool_no_tail_vs_cur_maxdiff": 0.0,
+  "presDisplay_single_pool_no_tail_vs_cur_maxdiff": 0.04988662131519561,
+  "help_inrange_changed_after_round1": 0,
+  "help_inrange_mismatch_examples": []
+ },
+ "e123": {
+  "threeValue": {
+   "type": "value(percentile)",
+   "topTail": true,
+   "botTail": false,
+   "r90": 0.3706654405623313,
+   "r99": 0.6134056300826886,
+   "r1": -0.043617396216529526,
+   "SD_pool": 0.14366051729541052,
+   "gapScale": 0.23250976007697055,
+   "ratio": 1.6184666772350436,
+   "S": 0.23250976007697055,
+   "insuranceActive": false,
+   "poolN": 1480,
+   "poolPerSeason": {
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375,
+    "2025-26": 378
+   },
+   "note": "card players with data 582/582; rest 70",
+   "count": {
+    ">99": 4,
+    "==99": 0,
+    ">=99": 4,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Stephen Curry",
+     105.02
+    ],
+    [
+     "Jamal Murray",
+     104.43
+    ],
+    [
+     "Kon Knueppel",
+     102.05
+    ],
+    [
+     "Isaiah Joe",
+     100.38
+    ]
+   ],
+   "above120": [],
+   "above140": [],
+   "below40": [],
+   "exactly99": [],
+   "cur_count": {
+    ">99": 0,
+    "==99": 4,
+    ">=99": 4,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "cur_exactly99": [
+    "Stephen Curry",
+    "Jamal Murray",
+    "Isaiah Joe",
+    "Kon Knueppel"
+   ]
+  },
+  "help": {
+   "type": "curve(D1)",
+   "topTail": true,
+   "botTail": true,
+   "r90": 0.04140752351097179,
+   "r99": 0.09371406003159559,
+   "r1": -0.06019877675840978,
+   "SD_pool": 0.03193273438037276,
+   "gapScale": 0.050102046475693295,
+   "ratio": 1.5689870425405281,
+   "S": 0.050102046475693295,
+   "insuranceActive": false,
+   "poolN": 1480,
+   "a99": 0.095,
+   "lo": 0.0,
+   "hi": 150.0,
+   "poolPerSeason": {
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375,
+    "2025-26": 378
+   },
+   "count": {
+    ">99": 4,
+    "==99": 0,
+    ">=99": 4,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Isaiah Stewart",
+     113.47
+    ],
+    [
+     "Chet Holmgren",
+     112.49
+    ],
+    [
+     "Victor Wembanyama",
+     108.69
+    ],
+    [
+     "Ryan Kalkbrenner",
+     99.31
+    ]
+   ],
+   "above120": [],
+   "above140": [],
+   "below40": [],
+   "exactly99": [],
+   "cur_count": {
+    ">99": 0,
+    "==99": 4,
+    ">=99": 4,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "cur_exactly99": [
+    "Isaiah Stewart",
+    "Chet Holmgren",
+    "Victor Wembanyama",
+    "Ryan Kalkbrenner"
+   ]
+  },
+  "pressure": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": false,
+   "r90": 0.9942450804379925,
+   "r99": 2.2497279805187893,
+   "r1": -1.225698895612023,
+   "SD_pool": 0.7452806530904122,
+   "gapScale": 1.2025698276635983,
+   "ratio": 1.6135798275146034,
+   "S": 1.2025698276635983,
+   "insuranceActive": false,
+   "poolN": 958,
+   "poolPerSeason": {
+    "2022-23": 234,
+    "2023-24": 228,
+    "2024-25": 244,
+    "2025-26": 252
+   },
+   "note": "card players with value 582/582; rest keep current",
+   "count": {
+    ">99": 7,
+    "==99": 0,
+    ">=99": 7,
+    ">120": 2,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Matisse Thybulle",
+     127.04
+    ],
+    [
+     "Dru Smith",
+     123.7
+    ],
+    [
+     "Ausar Thompson",
+     112.08
+    ],
+    [
+     "Jordan Goodwin",
+     108.34
+    ],
+    [
+     "Alex Caruso",
+     103.81
+    ],
+    [
+     "Paul Reed",
+     103.35
+    ],
+    [
+     "Cason Wallace",
+     102.72
+    ]
+   ],
+   "above120": [
+    [
+     "Matisse Thybulle",
+     127.04
+    ],
+    [
+     "Dru Smith",
+     123.7
+    ]
+   ],
+   "above140": [],
+   "below40": [],
+   "exactly99": [],
+   "cur_count": {
+    ">99": 0,
+    "==99": 7,
+    ">=99": 7,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "cur_exactly99": [
+    "Alex Caruso",
+    "Matisse Thybulle",
+    "Paul Reed",
+    "Jordan Goodwin",
+    "Dru Smith",
+    "Ausar Thompson",
+    "Cason Wallace"
+   ]
+  },
+  "presDisplay": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": false,
+   "r90": 1.0138802866824785,
+   "r99": 2.131702491897282,
+   "r1": -1.2901379680919713,
+   "SD_pool": 0.7144143749102538,
+   "gapScale": 1.0707109245352522,
+   "ratio": 1.4987253366363982,
+   "S": 1.0707109245352522,
+   "insuranceActive": false,
+   "poolN": 958,
+   "poolPerSeason": {
+    "2022-23": 234,
+    "2023-24": 228,
+    "2024-25": 244,
+    "2025-26": 252
+   },
+   "note": "card players with value 582/582; rest keep current",
+   "count": {
+    ">99": 6,
+    "==99": 0,
+    ">=99": 6,
+    ">120": 2,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Matisse Thybulle",
+     129.34
+    ],
+    [
+     "Dru Smith",
+     124.87
+    ],
+    [
+     "Jordan Goodwin",
+     110.32
+    ],
+    [
+     "Ausar Thompson",
+     109.8
+    ],
+    [
+     "Alex Caruso",
+     109.77
+    ],
+    [
+     "Cason Wallace",
+     106.72
+    ]
+   ],
+   "above120": [
+    [
+     "Matisse Thybulle",
+     129.34
+    ],
+    [
+     "Dru Smith",
+     124.87
+    ]
+   ],
+   "above140": [],
+   "below40": [],
+   "exactly99": [],
+   "cur_count": {
+    ">99": 0,
+    "==99": 6,
+    ">=99": 6,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "cur_exactly99": [
+    "Alex Caruso",
+    "Matisse Thybulle",
+    "Jordan Goodwin",
+    "Dru Smith",
+    "Ausar Thompson",
+    "Cason Wallace"
+   ]
+  }
+ },
+ "_season99": {
+  "threeValue": {
+   "2022-23": {
+    "pool": 4,
+    "poolN": 367,
+    "all": 4,
+    "allN": 539,
+    "rule": "merged pct >= 99"
+   },
+   "2023-24": {
+    "pool": 2,
+    "poolN": 360,
+    "all": 2,
+    "allN": 572,
+    "rule": "merged pct >= 99"
+   },
+   "2024-25": {
+    "pool": 5,
+    "poolN": 375,
+    "all": 5,
+    "allN": 569,
+    "rule": "merged pct >= 99"
+   },
+   "2025-26": {
+    "pool": 4,
+    "poolN": 378,
+    "all": 4,
+    "allN": 582,
+    "rule": "merged pct >= 99"
+   }
+  },
+  "help": {
+   "2022-23": {
+    "pool": 2,
+    "poolN": 367,
+    "all": 2,
+    "allN": 529,
+    "rule": "x >= a99"
+   },
+   "2023-24": {
+    "pool": 1,
+    "poolN": 360,
+    "all": 1,
+    "allN": 562,
+    "rule": "x >= a99"
+   },
+   "2024-25": {
+    "pool": 5,
+    "poolN": 375,
+    "all": 5,
+    "allN": 559,
+    "rule": "x >= a99"
+   },
+   "2025-26": {
+    "pool": 4,
+    "poolN": 378,
+    "all": 4,
+    "allN": 576,
+    "rule": "x >= a99"
+   }
+  },
+  "pressure": {
+   "2022-23": {
+    "pool": 2,
+    "poolN": 234,
+    "all": 5,
+    "allN": 539,
+    "rule": "merged pct >= 99"
+   },
+   "2023-24": {
+    "pool": 3,
+    "poolN": 228,
+    "all": 7,
+    "allN": 572,
+    "rule": "merged pct >= 99"
+   },
+   "2024-25": {
+    "pool": 2,
+    "poolN": 244,
+    "all": 6,
+    "allN": 569,
+    "rule": "merged pct >= 99"
+   },
+   "2025-26": {
+    "pool": 3,
+    "poolN": 252,
+    "all": 7,
+    "allN": 582,
+    "rule": "merged pct >= 99"
+   }
+  },
+  "presDisplay": {
+   "2022-23": {
+    "pool": 2,
+    "poolN": 234,
+    "all": 3,
+    "allN": 539,
+    "rule": "merged pct >= 99"
+   },
+   "2023-24": {
+    "pool": 3,
+    "poolN": 228,
+    "all": 6,
+    "allN": 572,
+    "rule": "merged pct >= 99"
+   },
+   "2024-25": {
+    "pool": 2,
+    "poolN": 244,
+    "all": 6,
+    "allN": 569,
+    "rule": "merged pct >= 99"
+   },
+   "2025-26": {
+    "pool": 3,
+    "poolN": 252,
+    "all": 6,
+    "allN": 582,
+    "rule": "merged pct >= 99"
+   }
+  }
+ },
+ "_named": {
+  "threeValue": {
+   "Curry": [
+    [
+     "Stephen Curry",
+     99.0,
+     105.02
+    ],
+    [
+     "Seth Curry",
+     84.44,
+     84.16
+    ]
+   ],
+   "Knueppel": [
+    [
+     "Kon Knueppel",
+     99.0,
+     102.05
+    ]
+   ],
+   "Murray": [
+    [
+     "Dejounte Murray",
+     68.14,
+     68.92
+    ],
+    [
+     "Jamal Murray",
+     99.0,
+     104.43
+    ],
+    [
+     "Keegan Murray",
+     49.97,
+     49.46
+    ],
+    [
+     "Kris Murray",
+     42.54,
+     42.64
+    ],
+    [
+     "Collin Murray-Boyles",
+     54.82,
+     54.8
+    ]
+   ],
+   "Isaiah Joe": [
+    [
+     "Isaiah Joe",
+     99.0,
+     100.38
+    ]
+   ],
+   "Edwards": [
+    [
+     "Anthony Edwards",
+     98.58,
+     98.85
+    ],
+    [
+     "Justin Edwards",
+     79.84,
+     80.9
+    ]
+   ],
+   "Kennard": [
+    [
+     "Luke Kennard",
+     95.77,
+     96.41
+    ]
+   ],
+   "Portis": [
+    [
+     "Bobby Portis Jr.",
+     96.86,
+     97.25
+    ]
+   ]
+  },
+  "help": {
+   "Wembanyama": [
+    [
+     "Victor Wembanyama",
+     99.0,
+     108.69
+    ]
+   ],
+   "Isaiah Stewart": [
+    [
+     "Isaiah Stewart",
+     99.0,
+     113.47
+    ]
+   ],
+   "Kalkbrenner": [
+    [
+     "Ryan Kalkbrenner",
+     99.0,
+     99.31
+    ]
+   ],
+   "Holmgren": [
+    [
+     "Chet Holmgren",
+     99.0,
+     112.49
+    ]
+   ],
+   "Mobley": [
+    [
+     "Evan Mobley",
+     98.6,
+     98.62
+    ]
+   ],
+   "Gobert": [
+    [
+     "Rudy Gobert",
+     94.3,
+     94.29
+    ]
+   ]
+  },
+  "pressure": {
+   "Thybulle": [
+    [
+     "Matisse Thybulle",
+     99.0,
+     127.04
+    ]
+   ],
+   "Caruso": [
+    [
+     "Alex Caruso",
+     99.0,
+     103.81
+    ]
+   ],
+   "Dru Smith": [
+    [
+     "Dru Smith",
+     99.0,
+     123.7
+    ]
+   ],
+   "Cason Wallace": [
+    [
+     "Cason Wallace",
+     99.0,
+     102.72
+    ]
+   ],
+   "Ausar Thompson": [
+    [
+     "Ausar Thompson",
+     99.0,
+     112.08
+    ]
+   ],
+   "Diabat": [
+    [
+     "Moussa Diabaté",
+     61.38,
+     60.89
+    ]
+   ],
+   "Paul Reed": [
+    [
+     "Paul Reed",
+     99.0,
+     103.35
+    ]
+   ]
+  },
+  "presDisplay": {
+   "Thybulle": [
+    [
+     "Matisse Thybulle",
+     99.0,
+     129.34
+    ]
+   ],
+   "Caruso": [
+    [
+     "Alex Caruso",
+     99.0,
+     109.77
+    ]
+   ],
+   "Dru Smith": [
+    [
+     "Dru Smith",
+     99.0,
+     124.87
+    ]
+   ],
+   "Cason Wallace": [
+    [
+     "Cason Wallace",
+     99.0,
+     106.72
+    ]
+   ],
+   "Ausar Thompson": [
+    [
+     "Ausar Thompson",
+     99.0,
+     109.8
+    ]
+   ],
+   "Diabat": [
+    [
+     "Moussa Diabaté",
+     54.8,
+     53.48
+    ]
+   ],
+   "Paul Reed": [
+    [
+     "Paul Reed",
+     98.7,
+     98.67
+    ]
+   ]
+  }
+ }
+}

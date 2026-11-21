@@ -1,0 +1,30 @@
+{
+ "ranking_sha256": "aebcadf1c3dfcbe6aaeed8c34fa5183cd35dbda546dd967faa5ebdf6649cc6b6",
+ "want": "aebcadf1c3dfcbe6aaeed8c34fa5183cd35dbda546dd967faa5ebdf6649cc6b6",
+ "card027_sha256_now": "aebcadf1c3dfcbe6aaeed8c34fa5183cd35dbda546dd967faa5ebdf6649cc6b6",
+ "cards_vs_E107_UL6": {
+  "primary": {
+   "pred.csv": true,
+   "ranking.csv": true,
+   "pergame-main.csv": true,
+   "pergame-repl.csv": true,
+   "pergame-summary.json": true
+  },
+  "fitA": {
+   "pred.csv": true,
+   "ranking.csv": true,
+   "pergame-main.csv": true,
+   "pergame-repl.csv": true,
+   "pergame-summary.json": true
+  },
+  "fitB": {
+   "pred.csv": true,
+   "ranking.csv": true,
+   "pergame-main.csv": true,
+   "pergame-repl.csv": true,
+   "pergame-summary.json": true
+  }
+ },
+ "pass": true,
+ "cards_equal_E107_UL6": true
+}

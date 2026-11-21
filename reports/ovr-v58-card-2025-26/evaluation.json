@@ -1,0 +1,5371 @@
+{
+  "baselines": {
+    "v53": {
+      "rho2k": 0.44917750185756583,
+      "rhoRapm": 0.4995715843031064,
+      "rhoDef": 0.28789306290802535,
+      "gates": {
+        "karloDrop10": false,
+        "collinsDrop": false,
+        "stewartDrop": false,
+        "garzaDrop": false,
+        "quetaGate": true,
+        "gobertGate": false,
+        "jalenSmithGate": true,
+        "rho2kFloor": false,
+        "rhoRapmFloor": false,
+        "wingGuard10of14": false,
+        "herbertJonesGate": false,
+        "carusoGate": false,
+        "marcusSmartGate": false,
+        "big14of16": false,
+        "top10BigsMax5": false,
+        "noMobleyTop10": false,
+        "noGordonTop10": true,
+        "allFourStayTop10": true,
+        "rhoDefFloorE2": false,
+        "hardKeys": [
+          "karloDrop10",
+          "collinsDrop",
+          "stewartDrop",
+          "garzaDrop",
+          "quetaGate",
+          "gobertGate",
+          "jalenSmithGate",
+          "rho2kFloor",
+          "rhoRapmFloor",
+          "wingGuard10of14",
+          "herbertJonesGate",
+          "carusoGate",
+          "marcusSmartGate",
+          "big14of16",
+          "top10BigsMax5",
+          "noMobleyTop10",
+          "noGordonTop10",
+          "allFourStayTop10",
+          "rhoDefFloorE2"
+        ],
+        "pass": 4,
+        "of": 19,
+        "quetaRef": 110.5,
+        "gobertRef": 60.5,
+        "wingGuard14": [
+          {
+            "name": "Alex Caruso",
+            "pos": "SG",
+            "rank": 350,
+            "ref": 94,
+            "pass": false
+          },
+          {
+            "name": "Derrick White",
+            "pos": "PG",
+            "rank": 97,
+            "ref": 70.5,
+            "pass": false
+          },
+          {
+            "name": "Franz Wagner",
+            "pos": "SF",
+            "rank": 58,
+            "ref": 47.5,
+            "pass": false
+          },
+          {
+            "name": "Herbert Jones",
+            "pos": "SG",
+            "rank": 451,
+            "ref": 142,
+            "pass": false
+          },
+          {
+            "name": "Ausar Thompson",
+            "pos": "SF",
+            "rank": 178,
+            "ref": 47.5,
+            "pass": false
+          },
+          {
+            "name": "Marcus Smart",
+            "pos": "SG",
+            "rank": 338,
+            "ref": 142,
+            "pass": false
+          },
+          {
+            "name": "Jalen Suggs",
+            "pos": "PG",
+            "rank": 101,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Jrue Holiday",
+            "pos": "PG",
+            "rank": 45,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Matisse Thybulle",
+            "pos": "SG",
+            "rank": 343,
+            "ref": 294.5,
+            "pass": false
+          },
+          {
+            "name": "Shai Gilgeous-Alexander",
+            "pos": "PG",
+            "rank": 1,
+            "ref": 2,
+            "pass": true
+          },
+          {
+            "name": "Ajay Mitchell",
+            "pos": "SG",
+            "rank": 154,
+            "ref": 81,
+            "pass": false
+          },
+          {
+            "name": "Dillon Brooks",
+            "pos": "SF",
+            "rank": 194,
+            "ref": 81,
+            "pass": false
+          },
+          {
+            "name": "Ronald Holland II",
+            "pos": "SF",
+            "rank": 398,
+            "ref": 255.5,
+            "pass": false
+          },
+          {
+            "name": "OG Anunoby",
+            "pos": "SF",
+            "rank": 21,
+            "ref": 31,
+            "pass": true
+          }
+        ],
+        "wingGuardPassCount": 4,
+        "big16": [
+          {
+            "name": "Victor Wembanyama",
+            "pos": "C",
+            "rank": 3,
+            "ref": 5,
+            "pass": true
+          },
+          {
+            "name": "Rudy Gobert",
+            "pos": "C",
+            "rank": 68,
+            "ref": 60.5,
+            "pass": false
+          },
+          {
+            "name": "Draymond Green",
+            "pos": "PF",
+            "rank": 80,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Dean Wade",
+            "pos": "PF",
+            "rank": 201,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Chet Holmgren",
+            "pos": "PF",
+            "rank": 4,
+            "ref": 38,
+            "pass": true
+          },
+          {
+            "name": "Joel Embiid",
+            "pos": "C",
+            "rank": 17,
+            "ref": 17.5,
+            "pass": true
+          },
+          {
+            "name": "Jaren Jackson Jr.",
+            "pos": "PF",
+            "rank": 125,
+            "ref": 62,
+            "pass": false
+          },
+          {
+            "name": "Brook Lopez",
+            "pos": "C",
+            "rank": 235,
+            "ref": 194.5,
+            "pass": false
+          },
+          {
+            "name": "Jonathan Isaac",
+            "pos": "PF",
+            "rank": 268,
+            "ref": 380,
+            "pass": true
+          },
+          {
+            "name": "Aaron Gordon",
+            "pos": "PF",
+            "rank": 15,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Toumani Camara",
+            "pos": "PF",
+            "rank": 239,
+            "ref": 110.5,
+            "pass": false
+          },
+          {
+            "name": "Wendell Carter Jr.",
+            "pos": "C",
+            "rank": 107,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Christian Koloko",
+            "pos": "C",
+            "rank": 514,
+            "ref": 428,
+            "pass": false
+          },
+          {
+            "name": "Anthony Davis",
+            "pos": "C",
+            "rank": 161,
+            "ref": 32,
+            "pass": false
+          },
+          {
+            "name": "Jusuf Nurkić",
+            "pos": "C",
+            "rank": 279,
+            "ref": 220,
+            "pass": false
+          },
+          {
+            "name": "Tobias Harris",
+            "pos": "PF",
+            "rank": 143,
+            "ref": 94,
+            "pass": false
+          }
+        ],
+        "bigPassCount": 8,
+        "strictFourBigsTop10": false,
+        "extraBigsBeyondFour": [
+          {
+            "name": "Evan Mobley",
+            "rank": 5,
+            "rank2k": 30.5,
+            "rapmNetRank": 47
+          },
+          {
+            "name": "Karlo Matković",
+            "rank": 7,
+            "rank2k": 294.5,
+            "rapmNetRank": 212
+          }
+        ]
+      }
+    },
+    "E2-lam0.4": {
+      "rho2k": 0.4778212899225706,
+      "rhoRapm": 0.528987150664773,
+      "rhoDef": 0.2971596894234016,
+      "top10": [
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 108.8,
+          "isBig": false
+        },
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 2,
+          "ovr": 103.9,
+          "isBig": true
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 3,
+          "ovr": 101.1,
+          "isBig": true
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 4,
+          "ovr": 99.2,
+          "isBig": false
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": true
+        },
+        {
+          "name": "Evan Mobley",
+          "pos": "PF",
+          "rank": 6,
+          "ovr": 98.6,
+          "isBig": true
+        },
+        {
+          "name": "Giannis Antetokounmpo",
+          "pos": "PF",
+          "rank": 7,
+          "ovr": 93.9,
+          "isBig": true
+        },
+        {
+          "name": "Jamal Murray",
+          "pos": "PG",
+          "rank": 8,
+          "ovr": 91.6,
+          "isBig": false
+        },
+        {
+          "name": "Kevin Durant",
+          "pos": "SF",
+          "rank": 9,
+          "ovr": 91.1,
+          "isBig": false
+        },
+        {
+          "name": "Kawhi Leonard",
+          "pos": "SF",
+          "rank": 10,
+          "ovr": 90.8,
+          "isBig": false
+        }
+      ],
+      "top10Bigs": [
+        "Victor Wembanyama",
+        "Nikola Jokić",
+        "Chet Holmgren",
+        "Evan Mobley",
+        "Giannis Antetokounmpo"
+      ],
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaGate": true,
+        "gobertGate": false,
+        "jalenSmithGate": true,
+        "rho2kFloor": false,
+        "rhoRapmFloor": false,
+        "wingGuard10of14": false,
+        "herbertJonesGate": false,
+        "carusoGate": false,
+        "marcusSmartGate": false,
+        "big14of16": false,
+        "top10BigsMax5": true,
+        "noMobleyTop10": false,
+        "noGordonTop10": true,
+        "allFourStayTop10": true,
+        "rhoDefFloorE2": true,
+        "hardKeys": [
+          "karloDrop10",
+          "collinsDrop",
+          "stewartDrop",
+          "garzaDrop",
+          "quetaGate",
+          "gobertGate",
+          "jalenSmithGate",
+          "rho2kFloor",
+          "rhoRapmFloor",
+          "wingGuard10of14",
+          "herbertJonesGate",
+          "carusoGate",
+          "marcusSmartGate",
+          "big14of16",
+          "top10BigsMax5",
+          "noMobleyTop10",
+          "noGordonTop10",
+          "allFourStayTop10",
+          "rhoDefFloorE2"
+        ],
+        "pass": 10,
+        "of": 19,
+        "quetaRef": 110.5,
+        "gobertRef": 60.5,
+        "wingGuard14": [
+          {
+            "name": "Alex Caruso",
+            "pos": "SG",
+            "rank": 311,
+            "ref": 94,
+            "pass": false
+          },
+          {
+            "name": "Derrick White",
+            "pos": "PG",
+            "rank": 42,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Franz Wagner",
+            "pos": "SF",
+            "rank": 56,
+            "ref": 47.5,
+            "pass": false
+          },
+          {
+            "name": "Herbert Jones",
+            "pos": "SG",
+            "rank": 433,
+            "ref": 142,
+            "pass": false
+          },
+          {
+            "name": "Ausar Thompson",
+            "pos": "SF",
+            "rank": 176,
+            "ref": 47.5,
+            "pass": false
+          },
+          {
+            "name": "Marcus Smart",
+            "pos": "SG",
+            "rank": 323,
+            "ref": 142,
+            "pass": false
+          },
+          {
+            "name": "Jalen Suggs",
+            "pos": "PG",
+            "rank": 75,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Jrue Holiday",
+            "pos": "PG",
+            "rank": 55,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Matisse Thybulle",
+            "pos": "SG",
+            "rank": 388,
+            "ref": 294.5,
+            "pass": false
+          },
+          {
+            "name": "Shai Gilgeous-Alexander",
+            "pos": "PG",
+            "rank": 1,
+            "ref": 2,
+            "pass": true
+          },
+          {
+            "name": "Ajay Mitchell",
+            "pos": "SG",
+            "rank": 167,
+            "ref": 81,
+            "pass": false
+          },
+          {
+            "name": "Dillon Brooks",
+            "pos": "SF",
+            "rank": 222,
+            "ref": 81,
+            "pass": false
+          },
+          {
+            "name": "Ronald Holland II",
+            "pos": "SF",
+            "rank": 422,
+            "ref": 255.5,
+            "pass": false
+          },
+          {
+            "name": "OG Anunoby",
+            "pos": "SF",
+            "rank": 31,
+            "ref": 31,
+            "pass": true
+          }
+        ],
+        "wingGuardPassCount": 5,
+        "big16": [
+          {
+            "name": "Victor Wembanyama",
+            "pos": "C",
+            "rank": 2,
+            "ref": 5,
+            "pass": true
+          },
+          {
+            "name": "Rudy Gobert",
+            "pos": "C",
+            "rank": 91,
+            "ref": 60.5,
+            "pass": false
+          },
+          {
+            "name": "Draymond Green",
+            "pos": "PF",
+            "rank": 72,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Dean Wade",
+            "pos": "PF",
+            "rank": 193,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Chet Holmgren",
+            "pos": "PF",
+            "rank": 5,
+            "ref": 38,
+            "pass": true
+          },
+          {
+            "name": "Joel Embiid",
+            "pos": "C",
+            "rank": 11,
+            "ref": 17.5,
+            "pass": true
+          },
+          {
+            "name": "Jaren Jackson Jr.",
+            "pos": "PF",
+            "rank": 191,
+            "ref": 62,
+            "pass": false
+          },
+          {
+            "name": "Brook Lopez",
+            "pos": "C",
+            "rank": 315,
+            "ref": 194.5,
+            "pass": false
+          },
+          {
+            "name": "Jonathan Isaac",
+            "pos": "PF",
+            "rank": 254,
+            "ref": 380,
+            "pass": true
+          },
+          {
+            "name": "Aaron Gordon",
+            "pos": "PF",
+            "rank": 18,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Toumani Camara",
+            "pos": "PF",
+            "rank": 198,
+            "ref": 110.5,
+            "pass": false
+          },
+          {
+            "name": "Wendell Carter Jr.",
+            "pos": "C",
+            "rank": 64,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Christian Koloko",
+            "pos": "C",
+            "rank": 519,
+            "ref": 428,
+            "pass": false
+          },
+          {
+            "name": "Anthony Davis",
+            "pos": "C",
+            "rank": 108,
+            "ref": 32,
+            "pass": false
+          },
+          {
+            "name": "Jusuf Nurkić",
+            "pos": "C",
+            "rank": 212,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Tobias Harris",
+            "pos": "PF",
+            "rank": 126,
+            "ref": 94,
+            "pass": false
+          }
+        ],
+        "bigPassCount": 9,
+        "strictFourBigsTop10": false,
+        "extraBigsBeyondFour": [
+          {
+            "name": "Evan Mobley",
+            "rank": 6,
+            "rank2k": 30.5,
+            "rapmNetRank": 47
+          }
+        ]
+      }
+    },
+    "F2-gamma0.5": {
+      "rho2k": 0.48782948676590354,
+      "rhoRapm": 0.569982266381725,
+      "rhoDef": 0.36239105134290617,
+      "top10": [
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 1,
+          "ovr": 113,
+          "isBig": true
+        },
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 2,
+          "ovr": 103.3,
+          "isBig": false
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 3,
+          "ovr": 102,
+          "isBig": true
+        },
+        {
+          "name": "Evan Mobley",
+          "pos": "PF",
+          "rank": 4,
+          "ovr": 99.3,
+          "isBig": true
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": true
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 6,
+          "ovr": 95.1,
+          "isBig": false
+        },
+        {
+          "name": "Giannis Antetokounmpo",
+          "pos": "PF",
+          "rank": 7,
+          "ovr": 94.5,
+          "isBig": true
+        },
+        {
+          "name": "Joel Embiid",
+          "pos": "C",
+          "rank": 8,
+          "ovr": 93.1,
+          "isBig": true
+        },
+        {
+          "name": "Aaron Gordon",
+          "pos": "PF",
+          "rank": 9,
+          "ovr": 90.6,
+          "isBig": true
+        },
+        {
+          "name": "Jamal Murray",
+          "pos": "PG",
+          "rank": 10,
+          "ovr": 88.4,
+          "isBig": false
+        }
+      ],
+      "top10Bigs": [
+        "Victor Wembanyama",
+        "Chet Holmgren",
+        "Evan Mobley",
+        "Nikola Jokić",
+        "Giannis Antetokounmpo",
+        "Joel Embiid",
+        "Aaron Gordon"
+      ],
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaGate": true,
+        "gobertGate": true,
+        "jalenSmithGate": true,
+        "rho2kFloor": true,
+        "rhoRapmFloor": true,
+        "wingGuard10of14": false,
+        "herbertJonesGate": false,
+        "carusoGate": false,
+        "marcusSmartGate": false,
+        "big14of16": true,
+        "top10BigsMax5": false,
+        "noMobleyTop10": false,
+        "noGordonTop10": false,
+        "allFourStayTop10": true,
+        "rhoDefFloorE2": true,
+        "hardKeys": [
+          "karloDrop10",
+          "collinsDrop",
+          "stewartDrop",
+          "garzaDrop",
+          "quetaGate",
+          "gobertGate",
+          "jalenSmithGate",
+          "rho2kFloor",
+          "rhoRapmFloor",
+          "wingGuard10of14",
+          "herbertJonesGate",
+          "carusoGate",
+          "marcusSmartGate",
+          "big14of16",
+          "top10BigsMax5",
+          "noMobleyTop10",
+          "noGordonTop10",
+          "allFourStayTop10",
+          "rhoDefFloorE2"
+        ],
+        "pass": 12,
+        "of": 19,
+        "quetaRef": 110.5,
+        "gobertRef": 60.5,
+        "wingGuard14": [
+          {
+            "name": "Alex Caruso",
+            "pos": "SG",
+            "rank": 315,
+            "ref": 94,
+            "pass": false
+          },
+          {
+            "name": "Derrick White",
+            "pos": "PG",
+            "rank": 51,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Franz Wagner",
+            "pos": "SF",
+            "rank": 71,
+            "ref": 47.5,
+            "pass": false
+          },
+          {
+            "name": "Herbert Jones",
+            "pos": "SG",
+            "rank": 435,
+            "ref": 142,
+            "pass": false
+          },
+          {
+            "name": "Ausar Thompson",
+            "pos": "SF",
+            "rank": 190,
+            "ref": 47.5,
+            "pass": false
+          },
+          {
+            "name": "Marcus Smart",
+            "pos": "SG",
+            "rank": 325,
+            "ref": 142,
+            "pass": false
+          },
+          {
+            "name": "Jalen Suggs",
+            "pos": "PG",
+            "rank": 87,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Jrue Holiday",
+            "pos": "PG",
+            "rank": 70,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Matisse Thybulle",
+            "pos": "SG",
+            "rank": 388,
+            "ref": 294.5,
+            "pass": false
+          },
+          {
+            "name": "Shai Gilgeous-Alexander",
+            "pos": "PG",
+            "rank": 2,
+            "ref": 2,
+            "pass": true
+          },
+          {
+            "name": "Ajay Mitchell",
+            "pos": "SG",
+            "rank": 181,
+            "ref": 81,
+            "pass": false
+          },
+          {
+            "name": "Dillon Brooks",
+            "pos": "SF",
+            "rank": 231,
+            "ref": 81,
+            "pass": false
+          },
+          {
+            "name": "Ronald Holland II",
+            "pos": "SF",
+            "rank": 423,
+            "ref": 255.5,
+            "pass": false
+          },
+          {
+            "name": "OG Anunoby",
+            "pos": "SF",
+            "rank": 38,
+            "ref": 31,
+            "pass": false
+          }
+        ],
+        "wingGuardPassCount": 4,
+        "big16": [
+          {
+            "name": "Victor Wembanyama",
+            "pos": "C",
+            "rank": 1,
+            "ref": 5,
+            "pass": true
+          },
+          {
+            "name": "Rudy Gobert",
+            "pos": "C",
+            "rank": 13,
+            "ref": 60.5,
+            "pass": true
+          },
+          {
+            "name": "Draymond Green",
+            "pos": "PF",
+            "rank": 17,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Dean Wade",
+            "pos": "PF",
+            "rank": 63,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Chet Holmgren",
+            "pos": "PF",
+            "rank": 3,
+            "ref": 38,
+            "pass": true
+          },
+          {
+            "name": "Joel Embiid",
+            "pos": "C",
+            "rank": 8,
+            "ref": 17.5,
+            "pass": true
+          },
+          {
+            "name": "Jaren Jackson Jr.",
+            "pos": "PF",
+            "rank": 72,
+            "ref": 62,
+            "pass": false
+          },
+          {
+            "name": "Brook Lopez",
+            "pos": "C",
+            "rank": 168,
+            "ref": 194.5,
+            "pass": true
+          },
+          {
+            "name": "Jonathan Isaac",
+            "pos": "PF",
+            "rank": 124,
+            "ref": 380,
+            "pass": true
+          },
+          {
+            "name": "Aaron Gordon",
+            "pos": "PF",
+            "rank": 9,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Toumani Camara",
+            "pos": "PF",
+            "rank": 86,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Wendell Carter Jr.",
+            "pos": "C",
+            "rank": 26,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Christian Koloko",
+            "pos": "C",
+            "rank": 428,
+            "ref": 428,
+            "pass": true
+          },
+          {
+            "name": "Anthony Davis",
+            "pos": "C",
+            "rank": 53,
+            "ref": 32,
+            "pass": false
+          },
+          {
+            "name": "Jusuf Nurkić",
+            "pos": "C",
+            "rank": 111,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Tobias Harris",
+            "pos": "PF",
+            "rank": 56,
+            "ref": 94,
+            "pass": true
+          }
+        ],
+        "bigPassCount": 14,
+        "strictFourBigsTop10": false,
+        "extraBigsBeyondFour": [
+          {
+            "name": "Evan Mobley",
+            "rank": 4,
+            "rank2k": 30.5,
+            "rapmNetRank": 47
+          },
+          {
+            "name": "Joel Embiid",
+            "rank": 8,
+            "rank2k": 17.5,
+            "rapmNetRank": 10
+          },
+          {
+            "name": "Aaron Gordon",
+            "rank": 9,
+            "rank2k": 70.5,
+            "rapmNetRank": 21
+          }
+        ]
+      }
+    },
+    "G3-delta0.25": {
+      "rho2k": 0.5299133822204477,
+      "rhoRapm": 0.8423704345065766,
+      "rhoDef": 0.6968744097135704,
+      "top10": [
+        {
+          "name": "Derrick White",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 105.6,
+          "isBig": false
+        },
+        {
+          "name": "Franz Wagner",
+          "pos": "SF",
+          "rank": 2,
+          "ovr": 103.1,
+          "isBig": false
+        },
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 3,
+          "ovr": 103,
+          "isBig": false
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 4,
+          "ovr": 99.6,
+          "isBig": true
+        },
+        {
+          "name": "Alex Caruso",
+          "pos": "SG",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": false
+        },
+        {
+          "name": "Rudy Gobert",
+          "pos": "C",
+          "rank": 6,
+          "ovr": 98.4,
+          "isBig": true
+        },
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 7,
+          "ovr": 97.9,
+          "isBig": true
+        },
+        {
+          "name": "Jrue Holiday",
+          "pos": "PG",
+          "rank": 8,
+          "ovr": 96,
+          "isBig": false
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 9,
+          "ovr": 93.3,
+          "isBig": true
+        },
+        {
+          "name": "Draymond Green",
+          "pos": "PF",
+          "rank": 10,
+          "ovr": 93.1,
+          "isBig": true
+        }
+      ],
+      "top10Bigs": [
+        "Nikola Jokić",
+        "Rudy Gobert",
+        "Victor Wembanyama",
+        "Chet Holmgren",
+        "Draymond Green"
+      ],
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaGate": true,
+        "gobertGate": true,
+        "jalenSmithGate": true,
+        "rho2kFloor": true,
+        "rhoRapmFloor": true,
+        "wingGuard10of14": true,
+        "herbertJonesGate": true,
+        "carusoGate": true,
+        "marcusSmartGate": true,
+        "big14of16": true,
+        "top10BigsMax5": true,
+        "noMobleyTop10": true,
+        "noGordonTop10": true,
+        "allFourStayTop10": false,
+        "rhoDefFloorE2": true,
+        "hardKeys": [
+          "karloDrop10",
+          "collinsDrop",
+          "stewartDrop",
+          "garzaDrop",
+          "quetaGate",
+          "gobertGate",
+          "jalenSmithGate",
+          "rho2kFloor",
+          "rhoRapmFloor",
+          "wingGuard10of14",
+          "herbertJonesGate",
+          "carusoGate",
+          "marcusSmartGate",
+          "big14of16",
+          "top10BigsMax5",
+          "noMobleyTop10",
+          "noGordonTop10",
+          "allFourStayTop10",
+          "rhoDefFloorE2"
+        ],
+        "pass": 18,
+        "of": 19,
+        "quetaRef": 110.5,
+        "gobertRef": 60.5,
+        "wingGuard14": [
+          {
+            "name": "Alex Caruso",
+            "pos": "SG",
+            "rank": 5,
+            "ref": 94,
+            "pass": true
+          },
+          {
+            "name": "Derrick White",
+            "pos": "PG",
+            "rank": 1,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Franz Wagner",
+            "pos": "SF",
+            "rank": 2,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Herbert Jones",
+            "pos": "SG",
+            "rank": 22,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Ausar Thompson",
+            "pos": "SF",
+            "rank": 13,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Marcus Smart",
+            "pos": "SG",
+            "rank": 36,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Jalen Suggs",
+            "pos": "PG",
+            "rank": 12,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Jrue Holiday",
+            "pos": "PG",
+            "rank": 8,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Matisse Thybulle",
+            "pos": "SG",
+            "rank": 68,
+            "ref": 294.5,
+            "pass": true
+          },
+          {
+            "name": "Shai Gilgeous-Alexander",
+            "pos": "PG",
+            "rank": 3,
+            "ref": 2,
+            "pass": false
+          },
+          {
+            "name": "Ajay Mitchell",
+            "pos": "SG",
+            "rank": 31,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Dillon Brooks",
+            "pos": "SF",
+            "rank": 23,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Ronald Holland II",
+            "pos": "SF",
+            "rank": 67,
+            "ref": 255.5,
+            "pass": true
+          },
+          {
+            "name": "OG Anunoby",
+            "pos": "SF",
+            "rank": 19,
+            "ref": 31,
+            "pass": true
+          }
+        ],
+        "wingGuardPassCount": 13,
+        "big16": [
+          {
+            "name": "Victor Wembanyama",
+            "pos": "C",
+            "rank": 7,
+            "ref": 5,
+            "pass": false
+          },
+          {
+            "name": "Rudy Gobert",
+            "pos": "C",
+            "rank": 6,
+            "ref": 60.5,
+            "pass": true
+          },
+          {
+            "name": "Draymond Green",
+            "pos": "PF",
+            "rank": 10,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Dean Wade",
+            "pos": "PF",
+            "rank": 18,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Chet Holmgren",
+            "pos": "PF",
+            "rank": 9,
+            "ref": 38,
+            "pass": true
+          },
+          {
+            "name": "Joel Embiid",
+            "pos": "C",
+            "rank": 24,
+            "ref": 17.5,
+            "pass": false
+          },
+          {
+            "name": "Jaren Jackson Jr.",
+            "pos": "PF",
+            "rank": 34,
+            "ref": 62,
+            "pass": true
+          },
+          {
+            "name": "Brook Lopez",
+            "pos": "C",
+            "rank": 70,
+            "ref": 194.5,
+            "pass": true
+          },
+          {
+            "name": "Jonathan Isaac",
+            "pos": "PF",
+            "rank": 47,
+            "ref": 380,
+            "pass": true
+          },
+          {
+            "name": "Aaron Gordon",
+            "pos": "PF",
+            "rank": 37,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Toumani Camara",
+            "pos": "PF",
+            "rank": 40,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Wendell Carter Jr.",
+            "pos": "C",
+            "rank": 35,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Christian Koloko",
+            "pos": "C",
+            "rank": 222,
+            "ref": 428,
+            "pass": true
+          },
+          {
+            "name": "Anthony Davis",
+            "pos": "C",
+            "rank": 32,
+            "ref": 32,
+            "pass": true
+          },
+          {
+            "name": "Jusuf Nurkić",
+            "pos": "C",
+            "rank": 48,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Tobias Harris",
+            "pos": "PF",
+            "rank": 26,
+            "ref": 94,
+            "pass": true
+          }
+        ],
+        "bigPassCount": 14,
+        "strictFourBigsTop10": false,
+        "extraBigsBeyondFour": [
+          {
+            "name": "Rudy Gobert",
+            "rank": 6,
+            "rank2k": 60.5,
+            "rapmNetRank": 29
+          },
+          {
+            "name": "Draymond Green",
+            "rank": 10,
+            "rank2k": 142,
+            "rapmNetRank": 46
+          }
+        ]
+      }
+    }
+  },
+  "candidates": [
+    {
+      "label": "card-H1-m0",
+      "rho2k": 0.5368902800736429,
+      "rhoRapm": 0.8519148429366061,
+      "rhoDef": 0.6604634414165802,
+      "n": 582,
+      "nRapm": 414,
+      "sevenPlayer": [
+        {
+          "name": "Karlo Matković",
+          "rank": 70,
+          "ovr": 80.6,
+          "rank2k": 294.5,
+          "rapmRank": 212
+        },
+        {
+          "name": "John Collins",
+          "rank": 128,
+          "ovr": 75,
+          "rank2k": 142,
+          "rapmRank": 240
+        },
+        {
+          "name": "Isaiah Stewart",
+          "rank": 166,
+          "ovr": 73.8,
+          "rank2k": 194.5,
+          "rapmRank": 261
+        },
+        {
+          "name": "Luka Garza",
+          "rank": 140,
+          "ovr": 74.6,
+          "rank2k": 255.5,
+          "rapmRank": 174
+        },
+        {
+          "name": "Neemias Queta",
+          "rank": 13,
+          "ovr": 91.3,
+          "rank2k": 110.5,
+          "rapmRank": 13
+        },
+        {
+          "name": "Rudy Gobert",
+          "rank": 29,
+          "ovr": 84.9,
+          "rank2k": 60.5,
+          "rapmRank": 29
+        },
+        {
+          "name": "Jalen Smith",
+          "rank": 134,
+          "ovr": 74.9,
+          "rank2k": 220,
+          "rapmRank": 65
+        }
+      ],
+      "wingNamed": [
+        {
+          "name": "Herbert Jones",
+          "rank": 14,
+          "rank2k": 142,
+          "rapmRank": 14,
+          "ref": 142
+        },
+        {
+          "name": "Alex Caruso",
+          "rank": 9,
+          "rank2k": 94,
+          "rapmRank": 9,
+          "ref": 94
+        },
+        {
+          "name": "Marcus Smart",
+          "rank": 30,
+          "rank2k": 142,
+          "rapmRank": 30,
+          "ref": 142
+        }
+      ],
+      "top10": [
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 109.9,
+          "isBig": false
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 2,
+          "ovr": 108,
+          "isBig": true
+        },
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 3,
+          "ovr": 104.5,
+          "isBig": true
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 4,
+          "ovr": 99.1,
+          "isBig": false
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": true
+        },
+        {
+          "name": "Derrick White",
+          "pos": "PG",
+          "rank": 6,
+          "ovr": 99,
+          "isBig": false
+        },
+        {
+          "name": "Franz Wagner",
+          "pos": "SF",
+          "rank": 7,
+          "ovr": 99,
+          "isBig": false
+        },
+        {
+          "name": "Giannis Antetokounmpo",
+          "pos": "PF",
+          "rank": 8,
+          "ovr": 98.2,
+          "isBig": true
+        },
+        {
+          "name": "Alex Caruso",
+          "pos": "SG",
+          "rank": 9,
+          "ovr": 98.2,
+          "isBig": false
+        },
+        {
+          "name": "Kawhi Leonard",
+          "pos": "SF",
+          "rank": 10,
+          "ovr": 96.8,
+          "isBig": false
+        }
+      ],
+      "top10Bigs": [
+        "Nikola Jokić",
+        "Victor Wembanyama",
+        "Chet Holmgren",
+        "Giannis Antetokounmpo"
+      ],
+      "extraBigsStrict": [],
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaGate": true,
+        "gobertGate": true,
+        "jalenSmithGate": true,
+        "rho2kFloor": true,
+        "rhoRapmFloor": true,
+        "wingGuard10of14": true,
+        "herbertJonesGate": true,
+        "carusoGate": true,
+        "marcusSmartGate": true,
+        "big14of16": true,
+        "top10BigsMax5": true,
+        "noMobleyTop10": true,
+        "noGordonTop10": true,
+        "allFourStayTop10": true,
+        "rhoDefFloorE2": true,
+        "hardKeys": [
+          "karloDrop10",
+          "collinsDrop",
+          "stewartDrop",
+          "garzaDrop",
+          "quetaGate",
+          "gobertGate",
+          "jalenSmithGate",
+          "rho2kFloor",
+          "rhoRapmFloor",
+          "wingGuard10of14",
+          "herbertJonesGate",
+          "carusoGate",
+          "marcusSmartGate",
+          "big14of16",
+          "top10BigsMax5",
+          "noMobleyTop10",
+          "noGordonTop10",
+          "allFourStayTop10",
+          "rhoDefFloorE2"
+        ],
+        "pass": 19,
+        "of": 19,
+        "quetaRef": 110.5,
+        "gobertRef": 60.5,
+        "wingGuard14": [
+          {
+            "name": "Alex Caruso",
+            "pos": "SG",
+            "rank": 9,
+            "ref": 94,
+            "pass": true
+          },
+          {
+            "name": "Derrick White",
+            "pos": "PG",
+            "rank": 6,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Franz Wagner",
+            "pos": "SF",
+            "rank": 7,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Herbert Jones",
+            "pos": "SG",
+            "rank": 14,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Ausar Thompson",
+            "pos": "SF",
+            "rank": 28,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Marcus Smart",
+            "pos": "SG",
+            "rank": 30,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Jalen Suggs",
+            "pos": "PG",
+            "rank": 85,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Jrue Holiday",
+            "pos": "PG",
+            "rank": 27,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Matisse Thybulle",
+            "pos": "SG",
+            "rank": 132,
+            "ref": 294.5,
+            "pass": true
+          },
+          {
+            "name": "Shai Gilgeous-Alexander",
+            "pos": "PG",
+            "rank": 1,
+            "ref": 2,
+            "pass": true
+          },
+          {
+            "name": "Ajay Mitchell",
+            "pos": "SG",
+            "rank": 77,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Dillon Brooks",
+            "pos": "SF",
+            "rank": 56,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Ronald Holland II",
+            "pos": "SF",
+            "rank": 142,
+            "ref": 255.5,
+            "pass": true
+          },
+          {
+            "name": "OG Anunoby",
+            "pos": "SF",
+            "rank": 31,
+            "ref": 31,
+            "pass": true
+          }
+        ],
+        "wingGuardPassCount": 14,
+        "big16": [
+          {
+            "name": "Victor Wembanyama",
+            "pos": "C",
+            "rank": 3,
+            "ref": 5,
+            "pass": true
+          },
+          {
+            "name": "Rudy Gobert",
+            "pos": "C",
+            "rank": 29,
+            "ref": 60.5,
+            "pass": true
+          },
+          {
+            "name": "Draymond Green",
+            "pos": "PF",
+            "rank": 46,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Dean Wade",
+            "pos": "PF",
+            "rank": 18,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Chet Holmgren",
+            "pos": "PF",
+            "rank": 5,
+            "ref": 38,
+            "pass": true
+          },
+          {
+            "name": "Joel Embiid",
+            "pos": "C",
+            "rank": 12,
+            "ref": 17.5,
+            "pass": true
+          },
+          {
+            "name": "Jaren Jackson Jr.",
+            "pos": "PF",
+            "rank": 62,
+            "ref": 62,
+            "pass": true
+          },
+          {
+            "name": "Brook Lopez",
+            "pos": "C",
+            "rank": 83,
+            "ref": 194.5,
+            "pass": true
+          },
+          {
+            "name": "Jonathan Isaac",
+            "pos": "PF",
+            "rank": 105,
+            "ref": 380,
+            "pass": true
+          },
+          {
+            "name": "Aaron Gordon",
+            "pos": "PF",
+            "rank": 21,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Toumani Camara",
+            "pos": "PF",
+            "rank": 51,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Wendell Carter Jr.",
+            "pos": "C",
+            "rank": 93,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Christian Koloko",
+            "pos": "C",
+            "rank": 215,
+            "ref": 428,
+            "pass": true
+          },
+          {
+            "name": "Anthony Davis",
+            "pos": "C",
+            "rank": 32,
+            "ref": 32,
+            "pass": true
+          },
+          {
+            "name": "Jusuf Nurkić",
+            "pos": "C",
+            "rank": 48,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Tobias Harris",
+            "pos": "PF",
+            "rank": 26,
+            "ref": 94,
+            "pass": true
+          }
+        ],
+        "bigPassCount": 16,
+        "strictFourBigsTop10": true,
+        "extraBigsBeyondFour": []
+      },
+      "cap": {
+        "direction": "H1",
+        "capMargin": 0,
+        "phi": null,
+        "cap": {
+          "refMode": "rapm",
+          "margin": 0,
+          "iterations": 13,
+          "allowedPlayers": 414,
+          "cappedPlayers": 105,
+          "tieEpsilon": 1e-12,
+          "cappedNames": [
+            "Caleb Houstan",
+            "Shai Gilgeous-Alexander",
+            "Victor Wembanyama",
+            "Goga Bitadze",
+            "Walker Kessler",
+            "Chet Holmgren",
+            "Day'Ron Sharpe",
+            "OG Anunoby",
+            "Neemias Queta",
+            "Rudy Gobert",
+            "Isaiah Joe",
+            "Jrue Holiday",
+            "Derrick White",
+            "Haywood Highsmith",
+            "Kevin Durant",
+            "Zion Williamson",
+            "Immanuel Quickley",
+            "Ausar Thompson",
+            "Alex Caruso",
+            "Cedric Coward",
+            "Moses Moody",
+            "Matisse Thybulle",
+            "Jonathan Isaac",
+            "Desmond Bane",
+            "Ryan Dunn",
+            "Deni Avdija",
+            "Baylor Scheierman",
+            "Cade Cunningham",
+            "Isaiah Hartenstein",
+            "Franz Wagner",
+            "Michael Porter Jr.",
+            "Dyson Daniels",
+            "Javonte Green",
+            "Zach Collins",
+            "Cooper Flagg",
+            "Jordan Goodwin",
+            "Ajay Mitchell",
+            "Austin Reaves",
+            "Jalen Johnson",
+            "Stephen Curry",
+            "Aaron Gordon",
+            "Kon Knueppel",
+            "Garrison Mathews",
+            "Robert Williams III",
+            "Paul George",
+            "Jalen Suggs",
+            "Anthony Edwards",
+            "Kenrich Williams",
+            "Kris Murray",
+            "Norman Powell",
+            "Landry Shamet",
+            "Sam Merrill",
+            "Nickeil Alexander-Walker",
+            "De'Aaron Fox",
+            "Anthony Black",
+            "Dru Smith",
+            "LeBron James",
+            "Christian Braun",
+            "Jaren Jackson Jr.",
+            "Jae'Sean Tate",
+            "Collin Gillespie",
+            "Amen Thompson",
+            "John Konchar",
+            "Kyshawn George",
+            "Collin Murray-Boyles",
+            "Ronald Holland II",
+            "Mikal Bridges",
+            "Saddiq Bey",
+            "Cameron Johnson",
+            "Tobias Harris",
+            "Aaron Holiday",
+            "Dylan Harper",
+            "Derrick Jones Jr.",
+            "Wendell Carter Jr.",
+            "Naz Reid",
+            "Caleb Martin",
+            "Oso Ighodaro",
+            "Donte DiVincenzo",
+            "Brandin Podziemski",
+            "Jaden McDaniels",
+            "Andrew Nembhard",
+            "Bam Adebayo",
+            "Toumani Camara",
+            "Ivica Zubac",
+            "Jusuf Nurkić",
+            "Spencer Jones",
+            "Draymond Green",
+            "Dillon Brooks",
+            "Dean Wade",
+            "Vince Williams Jr.",
+            "Davion Mitchell",
+            "Brook Lopez",
+            "Anthony Davis",
+            "Herbert Jones",
+            "Kyle Anderson",
+            "Miles McBride",
+            "Kentavious Caldwell-Pope",
+            "Naji Marshall",
+            "Marcus Smart",
+            "Quenton Jackson",
+            "Jonathan Kuminga",
+            "Cody Martin",
+            "Alex Sarr",
+            "Jaylin Williams",
+            "Jordan McLaughlin"
+          ]
+        }
+      }
+    },
+    {
+      "label": "card-H1-m10",
+      "rho2k": 0.5359447347061836,
+      "rhoRapm": 0.8532272447425083,
+      "rhoDef": 0.669793996980807,
+      "n": 582,
+      "nRapm": 414,
+      "sevenPlayer": [
+        {
+          "name": "Karlo Matković",
+          "rank": 76,
+          "ovr": 78.3,
+          "rank2k": 294.5,
+          "rapmRank": 212
+        },
+        {
+          "name": "John Collins",
+          "rank": 133,
+          "ovr": 73.9,
+          "rank2k": 142,
+          "rapmRank": 240
+        },
+        {
+          "name": "Isaiah Stewart",
+          "rank": 169,
+          "ovr": 72.9,
+          "rank2k": 194.5,
+          "rapmRank": 261
+        },
+        {
+          "name": "Luka Garza",
+          "rank": 144,
+          "ovr": 73.6,
+          "rank2k": 255.5,
+          "rapmRank": 174
+        },
+        {
+          "name": "Neemias Queta",
+          "rank": 13,
+          "ovr": 88.5,
+          "rank2k": 110.5,
+          "rapmRank": 13
+        },
+        {
+          "name": "Rudy Gobert",
+          "rank": 19,
+          "ovr": 86.5,
+          "rank2k": 60.5,
+          "rapmRank": 29
+        },
+        {
+          "name": "Jalen Smith",
+          "rank": 139,
+          "ovr": 73.8,
+          "rank2k": 220,
+          "rapmRank": 65
+        }
+      ],
+      "wingNamed": [
+        {
+          "name": "Herbert Jones",
+          "rank": 14,
+          "rank2k": 142,
+          "rapmRank": 14,
+          "ref": 142
+        },
+        {
+          "name": "Alex Caruso",
+          "rank": 5,
+          "rank2k": 94,
+          "rapmRank": 9,
+          "ref": 94
+        },
+        {
+          "name": "Marcus Smart",
+          "rank": 28,
+          "rank2k": 142,
+          "rapmRank": 30,
+          "ref": 142
+        }
+      ],
+      "top10": [
+        {
+          "name": "Derrick White",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 105.6,
+          "isBig": false
+        },
+        {
+          "name": "Franz Wagner",
+          "pos": "SF",
+          "rank": 2,
+          "ovr": 103.1,
+          "isBig": false
+        },
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 3,
+          "ovr": 103,
+          "isBig": false
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 4,
+          "ovr": 99.6,
+          "isBig": true
+        },
+        {
+          "name": "Alex Caruso",
+          "pos": "SG",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": false
+        },
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 6,
+          "ovr": 97.9,
+          "isBig": true
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 7,
+          "ovr": 93.3,
+          "isBig": true
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 8,
+          "ovr": 92.6,
+          "isBig": false
+        },
+        {
+          "name": "Giannis Antetokounmpo",
+          "pos": "PF",
+          "rank": 9,
+          "ovr": 91.9,
+          "isBig": true
+        },
+        {
+          "name": "Kawhi Leonard",
+          "pos": "SF",
+          "rank": 10,
+          "ovr": 90.9,
+          "isBig": false
+        }
+      ],
+      "top10Bigs": [
+        "Nikola Jokić",
+        "Victor Wembanyama",
+        "Chet Holmgren",
+        "Giannis Antetokounmpo"
+      ],
+      "extraBigsStrict": [],
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaGate": true,
+        "gobertGate": true,
+        "jalenSmithGate": true,
+        "rho2kFloor": true,
+        "rhoRapmFloor": true,
+        "wingGuard10of14": true,
+        "herbertJonesGate": true,
+        "carusoGate": true,
+        "marcusSmartGate": true,
+        "big14of16": true,
+        "top10BigsMax5": true,
+        "noMobleyTop10": true,
+        "noGordonTop10": true,
+        "allFourStayTop10": true,
+        "rhoDefFloorE2": true,
+        "hardKeys": [
+          "karloDrop10",
+          "collinsDrop",
+          "stewartDrop",
+          "garzaDrop",
+          "quetaGate",
+          "gobertGate",
+          "jalenSmithGate",
+          "rho2kFloor",
+          "rhoRapmFloor",
+          "wingGuard10of14",
+          "herbertJonesGate",
+          "carusoGate",
+          "marcusSmartGate",
+          "big14of16",
+          "top10BigsMax5",
+          "noMobleyTop10",
+          "noGordonTop10",
+          "allFourStayTop10",
+          "rhoDefFloorE2"
+        ],
+        "pass": 19,
+        "of": 19,
+        "quetaRef": 110.5,
+        "gobertRef": 60.5,
+        "wingGuard14": [
+          {
+            "name": "Alex Caruso",
+            "pos": "SG",
+            "rank": 5,
+            "ref": 94,
+            "pass": true
+          },
+          {
+            "name": "Derrick White",
+            "pos": "PG",
+            "rank": 1,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Franz Wagner",
+            "pos": "SF",
+            "rank": 2,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Herbert Jones",
+            "pos": "SG",
+            "rank": 14,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Ausar Thompson",
+            "pos": "SF",
+            "rank": 18,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Marcus Smart",
+            "pos": "SG",
+            "rank": 28,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Jalen Suggs",
+            "pos": "PG",
+            "rank": 75,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Jrue Holiday",
+            "pos": "PG",
+            "rank": 17,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Matisse Thybulle",
+            "pos": "SG",
+            "rank": 122,
+            "ref": 294.5,
+            "pass": true
+          },
+          {
+            "name": "Shai Gilgeous-Alexander",
+            "pos": "PG",
+            "rank": 3,
+            "ref": 2,
+            "pass": false
+          },
+          {
+            "name": "Ajay Mitchell",
+            "pos": "SG",
+            "rank": 67,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Dillon Brooks",
+            "pos": "SF",
+            "rank": 46,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Ronald Holland II",
+            "pos": "SF",
+            "rank": 132,
+            "ref": 255.5,
+            "pass": true
+          },
+          {
+            "name": "OG Anunoby",
+            "pos": "SF",
+            "rank": 21,
+            "ref": 31,
+            "pass": true
+          }
+        ],
+        "wingGuardPassCount": 13,
+        "big16": [
+          {
+            "name": "Victor Wembanyama",
+            "pos": "C",
+            "rank": 6,
+            "ref": 5,
+            "pass": false
+          },
+          {
+            "name": "Rudy Gobert",
+            "pos": "C",
+            "rank": 19,
+            "ref": 60.5,
+            "pass": true
+          },
+          {
+            "name": "Draymond Green",
+            "pos": "PF",
+            "rank": 36,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Dean Wade",
+            "pos": "PF",
+            "rank": 12,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Chet Holmgren",
+            "pos": "PF",
+            "rank": 7,
+            "ref": 38,
+            "pass": true
+          },
+          {
+            "name": "Joel Embiid",
+            "pos": "C",
+            "rank": 15,
+            "ref": 17.5,
+            "pass": true
+          },
+          {
+            "name": "Jaren Jackson Jr.",
+            "pos": "PF",
+            "rank": 52,
+            "ref": 62,
+            "pass": true
+          },
+          {
+            "name": "Brook Lopez",
+            "pos": "C",
+            "rank": 73,
+            "ref": 194.5,
+            "pass": true
+          },
+          {
+            "name": "Jonathan Isaac",
+            "pos": "PF",
+            "rank": 95,
+            "ref": 380,
+            "pass": true
+          },
+          {
+            "name": "Aaron Gordon",
+            "pos": "PF",
+            "rank": 29,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Toumani Camara",
+            "pos": "PF",
+            "rank": 41,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Wendell Carter Jr.",
+            "pos": "C",
+            "rank": 98,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Christian Koloko",
+            "pos": "C",
+            "rank": 218,
+            "ref": 428,
+            "pass": true
+          },
+          {
+            "name": "Anthony Davis",
+            "pos": "C",
+            "rank": 24,
+            "ref": 32,
+            "pass": true
+          },
+          {
+            "name": "Jusuf Nurkić",
+            "pos": "C",
+            "rank": 38,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Tobias Harris",
+            "pos": "PF",
+            "rank": 20,
+            "ref": 94,
+            "pass": true
+          }
+        ],
+        "bigPassCount": 15,
+        "strictFourBigsTop10": true,
+        "extraBigsBeyondFour": []
+      },
+      "cap": {
+        "direction": "H1",
+        "capMargin": 10,
+        "phi": null,
+        "cap": {
+          "refMode": "rapm",
+          "margin": 10,
+          "iterations": 7,
+          "allowedPlayers": 414,
+          "cappedPlayers": 75,
+          "tieEpsilon": 1e-12,
+          "cappedNames": [
+            "Caleb Houstan",
+            "Goga Bitadze",
+            "Walker Kessler",
+            "Day'Ron Sharpe",
+            "OG Anunoby",
+            "Rudy Gobert",
+            "Jrue Holiday",
+            "Derrick White",
+            "Haywood Highsmith",
+            "Kevin Durant",
+            "Zion Williamson",
+            "Immanuel Quickley",
+            "Ausar Thompson",
+            "Moses Moody",
+            "Matisse Thybulle",
+            "Jonathan Isaac",
+            "Ryan Dunn",
+            "Cade Cunningham",
+            "Michael Porter Jr.",
+            "Dyson Daniels",
+            "Javonte Green",
+            "Zach Collins",
+            "Cooper Flagg",
+            "Jordan Goodwin",
+            "Ajay Mitchell",
+            "Jalen Johnson",
+            "Kon Knueppel",
+            "Garrison Mathews",
+            "Robert Williams III",
+            "Paul George",
+            "Jalen Suggs",
+            "Kris Murray",
+            "Norman Powell",
+            "Landry Shamet",
+            "Sam Merrill",
+            "Nickeil Alexander-Walker",
+            "Anthony Black",
+            "Dru Smith",
+            "LeBron James",
+            "Christian Braun",
+            "Jaren Jackson Jr.",
+            "Jae'Sean Tate",
+            "Amen Thompson",
+            "John Konchar",
+            "Kyshawn George",
+            "Collin Murray-Boyles",
+            "Ronald Holland II",
+            "Mikal Bridges",
+            "Derrick Jones Jr.",
+            "Wendell Carter Jr.",
+            "Naz Reid",
+            "Caleb Martin",
+            "Oso Ighodaro",
+            "Donte DiVincenzo",
+            "Brandin Podziemski",
+            "Jaden McDaniels",
+            "Andrew Nembhard",
+            "Toumani Camara",
+            "Ivica Zubac",
+            "Jusuf Nurkić",
+            "Spencer Jones",
+            "Draymond Green",
+            "Dillon Brooks",
+            "Vince Williams Jr.",
+            "Davion Mitchell",
+            "Brook Lopez",
+            "Kyle Anderson",
+            "Miles McBride",
+            "Naji Marshall",
+            "Quenton Jackson",
+            "Jonathan Kuminga",
+            "Cody Martin",
+            "Alex Sarr",
+            "Jaylin Williams",
+            "Jordan McLaughlin"
+          ]
+        }
+      }
+    },
+    {
+      "label": "card-H2-m0",
+      "rho2k": 0.5320449408962458,
+      "rhoRapm": 0.858334436199084,
+      "rhoDef": 0.6677144776499768,
+      "n": 582,
+      "nRapm": 414,
+      "sevenPlayer": [
+        {
+          "name": "Karlo Matković",
+          "rank": 86,
+          "ovr": 77.3,
+          "rank2k": 294.5,
+          "rapmRank": 212
+        },
+        {
+          "name": "John Collins",
+          "rank": 133,
+          "ovr": 73.9,
+          "rank2k": 142,
+          "rapmRank": 240
+        },
+        {
+          "name": "Isaiah Stewart",
+          "rank": 189,
+          "ovr": 71.8,
+          "rank2k": 194.5,
+          "rapmRank": 261
+        },
+        {
+          "name": "Luka Garza",
+          "rank": 140,
+          "ovr": 73.6,
+          "rank2k": 255.5,
+          "rapmRank": 174
+        },
+        {
+          "name": "Neemias Queta",
+          "rank": 14,
+          "ovr": 88.5,
+          "rank2k": 110.5,
+          "rapmRank": 13
+        },
+        {
+          "name": "Rudy Gobert",
+          "rank": 17,
+          "ovr": 87.3,
+          "rank2k": 60.5,
+          "rapmRank": 29
+        },
+        {
+          "name": "Jalen Smith",
+          "rank": 136,
+          "ovr": 73.8,
+          "rank2k": 220,
+          "rapmRank": 65
+        }
+      ],
+      "wingNamed": [
+        {
+          "name": "Herbert Jones",
+          "rank": 16,
+          "rank2k": 142,
+          "rapmRank": 14,
+          "ref": 142
+        },
+        {
+          "name": "Alex Caruso",
+          "rank": 5,
+          "rank2k": 94,
+          "rapmRank": 9,
+          "ref": 94
+        },
+        {
+          "name": "Marcus Smart",
+          "rank": 28,
+          "rank2k": 142,
+          "rapmRank": 30,
+          "ref": 142
+        }
+      ],
+      "top10": [
+        {
+          "name": "Derrick White",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 103.3,
+          "isBig": false
+        },
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 2,
+          "ovr": 103,
+          "isBig": false
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 3,
+          "ovr": 99.6,
+          "isBig": true
+        },
+        {
+          "name": "Franz Wagner",
+          "pos": "SF",
+          "rank": 4,
+          "ovr": 99.3,
+          "isBig": false
+        },
+        {
+          "name": "Alex Caruso",
+          "pos": "SG",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": false
+        },
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 6,
+          "ovr": 97.9,
+          "isBig": true
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 7,
+          "ovr": 93.3,
+          "isBig": true
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 8,
+          "ovr": 92.6,
+          "isBig": false
+        },
+        {
+          "name": "Giannis Antetokounmpo",
+          "pos": "PF",
+          "rank": 9,
+          "ovr": 91.9,
+          "isBig": true
+        },
+        {
+          "name": "Kawhi Leonard",
+          "pos": "SF",
+          "rank": 10,
+          "ovr": 90.9,
+          "isBig": false
+        }
+      ],
+      "top10Bigs": [
+        "Nikola Jokić",
+        "Victor Wembanyama",
+        "Chet Holmgren",
+        "Giannis Antetokounmpo"
+      ],
+      "extraBigsStrict": [],
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaGate": true,
+        "gobertGate": true,
+        "jalenSmithGate": true,
+        "rho2kFloor": true,
+        "rhoRapmFloor": true,
+        "wingGuard10of14": true,
+        "herbertJonesGate": true,
+        "carusoGate": true,
+        "marcusSmartGate": true,
+        "big14of16": true,
+        "top10BigsMax5": true,
+        "noMobleyTop10": true,
+        "noGordonTop10": true,
+        "allFourStayTop10": true,
+        "rhoDefFloorE2": true,
+        "hardKeys": [
+          "karloDrop10",
+          "collinsDrop",
+          "stewartDrop",
+          "garzaDrop",
+          "quetaGate",
+          "gobertGate",
+          "jalenSmithGate",
+          "rho2kFloor",
+          "rhoRapmFloor",
+          "wingGuard10of14",
+          "herbertJonesGate",
+          "carusoGate",
+          "marcusSmartGate",
+          "big14of16",
+          "top10BigsMax5",
+          "noMobleyTop10",
+          "noGordonTop10",
+          "allFourStayTop10",
+          "rhoDefFloorE2"
+        ],
+        "pass": 19,
+        "of": 19,
+        "quetaRef": 110.5,
+        "gobertRef": 60.5,
+        "wingGuard14": [
+          {
+            "name": "Alex Caruso",
+            "pos": "SG",
+            "rank": 5,
+            "ref": 94,
+            "pass": true
+          },
+          {
+            "name": "Derrick White",
+            "pos": "PG",
+            "rank": 1,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Franz Wagner",
+            "pos": "SF",
+            "rank": 4,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Herbert Jones",
+            "pos": "SG",
+            "rank": 16,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Ausar Thompson",
+            "pos": "SF",
+            "rank": 11,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Marcus Smart",
+            "pos": "SG",
+            "rank": 28,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Jalen Suggs",
+            "pos": "PG",
+            "rank": 76,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Jrue Holiday",
+            "pos": "PG",
+            "rank": 15,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Matisse Thybulle",
+            "pos": "SG",
+            "rank": 93,
+            "ref": 294.5,
+            "pass": true
+          },
+          {
+            "name": "Shai Gilgeous-Alexander",
+            "pos": "PG",
+            "rank": 2,
+            "ref": 2,
+            "pass": true
+          },
+          {
+            "name": "Ajay Mitchell",
+            "pos": "SG",
+            "rank": 53,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Dillon Brooks",
+            "pos": "SF",
+            "rank": 32,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Ronald Holland II",
+            "pos": "SF",
+            "rank": 89,
+            "ref": 255.5,
+            "pass": true
+          },
+          {
+            "name": "OG Anunoby",
+            "pos": "SF",
+            "rank": 18,
+            "ref": 31,
+            "pass": true
+          }
+        ],
+        "wingGuardPassCount": 14,
+        "big16": [
+          {
+            "name": "Victor Wembanyama",
+            "pos": "C",
+            "rank": 6,
+            "ref": 5,
+            "pass": false
+          },
+          {
+            "name": "Rudy Gobert",
+            "pos": "C",
+            "rank": 17,
+            "ref": 60.5,
+            "pass": true
+          },
+          {
+            "name": "Draymond Green",
+            "pos": "PF",
+            "rank": 35,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Dean Wade",
+            "pos": "PF",
+            "rank": 13,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Chet Holmgren",
+            "pos": "PF",
+            "rank": 7,
+            "ref": 38,
+            "pass": true
+          },
+          {
+            "name": "Joel Embiid",
+            "pos": "C",
+            "rank": 19,
+            "ref": 17.5,
+            "pass": false
+          },
+          {
+            "name": "Jaren Jackson Jr.",
+            "pos": "PF",
+            "rank": 41,
+            "ref": 62,
+            "pass": true
+          },
+          {
+            "name": "Brook Lopez",
+            "pos": "C",
+            "rank": 57,
+            "ref": 194.5,
+            "pass": true
+          },
+          {
+            "name": "Jonathan Isaac",
+            "pos": "PF",
+            "rank": 87,
+            "ref": 380,
+            "pass": true
+          },
+          {
+            "name": "Aaron Gordon",
+            "pos": "PF",
+            "rank": 29,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Toumani Camara",
+            "pos": "PF",
+            "rank": 33,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Wendell Carter Jr.",
+            "pos": "C",
+            "rank": 108,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Christian Koloko",
+            "pos": "C",
+            "rank": 218,
+            "ref": 428,
+            "pass": true
+          },
+          {
+            "name": "Anthony Davis",
+            "pos": "C",
+            "rank": 25,
+            "ref": 32,
+            "pass": true
+          },
+          {
+            "name": "Jusuf Nurkić",
+            "pos": "C",
+            "rank": 40,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Tobias Harris",
+            "pos": "PF",
+            "rank": 21,
+            "ref": 94,
+            "pass": true
+          }
+        ],
+        "bigPassCount": 14,
+        "strictFourBigsTop10": true,
+        "extraBigsBeyondFour": []
+      },
+      "cap": {
+        "direction": "H2",
+        "capMargin": 0,
+        "phi": null,
+        "cap": {
+          "refMode": "rapm",
+          "margin": 0,
+          "iterations": 5,
+          "allowedPlayers": 414,
+          "cappedPlayers": 73,
+          "tieEpsilon": 1e-12,
+          "cappedNames": [
+            "Caleb Houstan",
+            "Karlo Matković",
+            "Goga Bitadze",
+            "Paul Reed",
+            "Walker Kessler",
+            "OG Anunoby",
+            "Rudy Gobert",
+            "Jrue Holiday",
+            "Brandon Miller",
+            "Derrick White",
+            "Haywood Highsmith",
+            "Zion Williamson",
+            "Immanuel Quickley",
+            "Ausar Thompson",
+            "Luke Kornet",
+            "Moses Moody",
+            "Matisse Thybulle",
+            "Jonathan Isaac",
+            "Ryan Dunn",
+            "Baylor Scheierman",
+            "Isaiah Stewart",
+            "Cade Cunningham",
+            "Franz Wagner",
+            "Zach Collins",
+            "Cooper Flagg",
+            "Jordan Goodwin",
+            "Ajay Mitchell",
+            "Jalen Johnson",
+            "Garrison Mathews",
+            "Robert Williams III",
+            "Paul George",
+            "Jalen Suggs",
+            "Kris Murray",
+            "Norman Powell",
+            "Sam Merrill",
+            "Nickeil Alexander-Walker",
+            "Jalen Williams",
+            "Anthony Black",
+            "Dru Smith",
+            "LeBron James",
+            "Christian Braun",
+            "Jaren Jackson Jr.",
+            "Jae'Sean Tate",
+            "Amen Thompson",
+            "Kyshawn George",
+            "Max Strus",
+            "Collin Murray-Boyles",
+            "Ronald Holland II",
+            "Mikal Bridges",
+            "Ja'Kobe Walter",
+            "Derrick Jones Jr.",
+            "Wendell Carter Jr.",
+            "Naz Reid",
+            "Caleb Martin",
+            "Oso Ighodaro",
+            "Zeke Nnaji",
+            "Jabari Smith Jr.",
+            "Brandin Podziemski",
+            "Jaden McDaniels",
+            "Andrew Nembhard",
+            "Toumani Camara",
+            "Ivica Zubac",
+            "Spencer Jones",
+            "Draymond Green",
+            "Dillon Brooks",
+            "Quentin Grimes",
+            "Davion Mitchell",
+            "Kyle Anderson",
+            "Quenton Jackson",
+            "Jonathan Kuminga",
+            "Alex Sarr",
+            "Jaylin Williams",
+            "Jordan McLaughlin"
+          ]
+        }
+      }
+    },
+    {
+      "label": "card-H2-m10",
+      "rho2k": 0.5315615138814296,
+      "rhoRapm": 0.8576752386051861,
+      "rhoDef": 0.6725602094178782,
+      "n": 582,
+      "nRapm": 414,
+      "sevenPlayer": [
+        {
+          "name": "Karlo Matković",
+          "rank": 88,
+          "ovr": 77.3,
+          "rank2k": 294.5,
+          "rapmRank": 212
+        },
+        {
+          "name": "John Collins",
+          "rank": 133,
+          "ovr": 73.9,
+          "rank2k": 142,
+          "rapmRank": 240
+        },
+        {
+          "name": "Isaiah Stewart",
+          "rank": 191,
+          "ovr": 71.8,
+          "rank2k": 194.5,
+          "rapmRank": 261
+        },
+        {
+          "name": "Luka Garza",
+          "rank": 141,
+          "ovr": 73.6,
+          "rank2k": 255.5,
+          "rapmRank": 174
+        },
+        {
+          "name": "Neemias Queta",
+          "rank": 18,
+          "ovr": 88.5,
+          "rank2k": 110.5,
+          "rapmRank": 13
+        },
+        {
+          "name": "Rudy Gobert",
+          "rank": 13,
+          "ovr": 89.9,
+          "rank2k": 60.5,
+          "rapmRank": 29
+        },
+        {
+          "name": "Jalen Smith",
+          "rank": 137,
+          "ovr": 73.8,
+          "rank2k": 220,
+          "rapmRank": 65
+        }
+      ],
+      "wingNamed": [
+        {
+          "name": "Herbert Jones",
+          "rank": 19,
+          "rank2k": 142,
+          "rapmRank": 14,
+          "ref": 142
+        },
+        {
+          "name": "Alex Caruso",
+          "rank": 5,
+          "rank2k": 94,
+          "rapmRank": 9,
+          "ref": 94
+        },
+        {
+          "name": "Marcus Smart",
+          "rank": 30,
+          "rank2k": 142,
+          "rapmRank": 30,
+          "ref": 142
+        }
+      ],
+      "top10": [
+        {
+          "name": "Derrick White",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 105.6,
+          "isBig": false
+        },
+        {
+          "name": "Franz Wagner",
+          "pos": "SF",
+          "rank": 2,
+          "ovr": 103.1,
+          "isBig": false
+        },
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 3,
+          "ovr": 103,
+          "isBig": false
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 4,
+          "ovr": 99.6,
+          "isBig": true
+        },
+        {
+          "name": "Alex Caruso",
+          "pos": "SG",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": false
+        },
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 6,
+          "ovr": 97.9,
+          "isBig": true
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 7,
+          "ovr": 93.3,
+          "isBig": true
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 8,
+          "ovr": 92.6,
+          "isBig": false
+        },
+        {
+          "name": "Ausar Thompson",
+          "pos": "SF",
+          "rank": 9,
+          "ovr": 92.1,
+          "isBig": false
+        },
+        {
+          "name": "Giannis Antetokounmpo",
+          "pos": "PF",
+          "rank": 10,
+          "ovr": 91.9,
+          "isBig": true
+        }
+      ],
+      "top10Bigs": [
+        "Nikola Jokić",
+        "Victor Wembanyama",
+        "Chet Holmgren",
+        "Giannis Antetokounmpo"
+      ],
+      "extraBigsStrict": [],
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaGate": true,
+        "gobertGate": true,
+        "jalenSmithGate": true,
+        "rho2kFloor": true,
+        "rhoRapmFloor": true,
+        "wingGuard10of14": true,
+        "herbertJonesGate": true,
+        "carusoGate": true,
+        "marcusSmartGate": true,
+        "big14of16": true,
+        "top10BigsMax5": true,
+        "noMobleyTop10": true,
+        "noGordonTop10": true,
+        "allFourStayTop10": true,
+        "rhoDefFloorE2": true,
+        "hardKeys": [
+          "karloDrop10",
+          "collinsDrop",
+          "stewartDrop",
+          "garzaDrop",
+          "quetaGate",
+          "gobertGate",
+          "jalenSmithGate",
+          "rho2kFloor",
+          "rhoRapmFloor",
+          "wingGuard10of14",
+          "herbertJonesGate",
+          "carusoGate",
+          "marcusSmartGate",
+          "big14of16",
+          "top10BigsMax5",
+          "noMobleyTop10",
+          "noGordonTop10",
+          "allFourStayTop10",
+          "rhoDefFloorE2"
+        ],
+        "pass": 19,
+        "of": 19,
+        "quetaRef": 110.5,
+        "gobertRef": 60.5,
+        "wingGuard14": [
+          {
+            "name": "Alex Caruso",
+            "pos": "SG",
+            "rank": 5,
+            "ref": 94,
+            "pass": true
+          },
+          {
+            "name": "Derrick White",
+            "pos": "PG",
+            "rank": 1,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Franz Wagner",
+            "pos": "SF",
+            "rank": 2,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Herbert Jones",
+            "pos": "SG",
+            "rank": 19,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Ausar Thompson",
+            "pos": "SF",
+            "rank": 9,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Marcus Smart",
+            "pos": "SG",
+            "rank": 30,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Jalen Suggs",
+            "pos": "PG",
+            "rank": 66,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Jrue Holiday",
+            "pos": "PG",
+            "rank": 11,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Matisse Thybulle",
+            "pos": "SG",
+            "rank": 89,
+            "ref": 294.5,
+            "pass": true
+          },
+          {
+            "name": "Shai Gilgeous-Alexander",
+            "pos": "PG",
+            "rank": 3,
+            "ref": 2,
+            "pass": false
+          },
+          {
+            "name": "Ajay Mitchell",
+            "pos": "SG",
+            "rank": 48,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Dillon Brooks",
+            "pos": "SF",
+            "rank": 28,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Ronald Holland II",
+            "pos": "SF",
+            "rank": 86,
+            "ref": 255.5,
+            "pass": true
+          },
+          {
+            "name": "OG Anunoby",
+            "pos": "SF",
+            "rank": 17,
+            "ref": 31,
+            "pass": true
+          }
+        ],
+        "wingGuardPassCount": 13,
+        "big16": [
+          {
+            "name": "Victor Wembanyama",
+            "pos": "C",
+            "rank": 6,
+            "ref": 5,
+            "pass": false
+          },
+          {
+            "name": "Rudy Gobert",
+            "pos": "C",
+            "rank": 13,
+            "ref": 60.5,
+            "pass": true
+          },
+          {
+            "name": "Draymond Green",
+            "pos": "PF",
+            "rank": 31,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Dean Wade",
+            "pos": "PF",
+            "rank": 15,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Chet Holmgren",
+            "pos": "PF",
+            "rank": 7,
+            "ref": 38,
+            "pass": true
+          },
+          {
+            "name": "Joel Embiid",
+            "pos": "C",
+            "rank": 21,
+            "ref": 17.5,
+            "pass": false
+          },
+          {
+            "name": "Jaren Jackson Jr.",
+            "pos": "PF",
+            "rank": 37,
+            "ref": 62,
+            "pass": true
+          },
+          {
+            "name": "Brook Lopez",
+            "pos": "C",
+            "rank": 59,
+            "ref": 194.5,
+            "pass": true
+          },
+          {
+            "name": "Jonathan Isaac",
+            "pos": "PF",
+            "rank": 74,
+            "ref": 380,
+            "pass": true
+          },
+          {
+            "name": "Aaron Gordon",
+            "pos": "PF",
+            "rank": 32,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Toumani Camara",
+            "pos": "PF",
+            "rank": 34,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Wendell Carter Jr.",
+            "pos": "C",
+            "rank": 108,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Christian Koloko",
+            "pos": "C",
+            "rank": 219,
+            "ref": 428,
+            "pass": true
+          },
+          {
+            "name": "Anthony Davis",
+            "pos": "C",
+            "rank": 27,
+            "ref": 32,
+            "pass": true
+          },
+          {
+            "name": "Jusuf Nurkić",
+            "pos": "C",
+            "rank": 41,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Tobias Harris",
+            "pos": "PF",
+            "rank": 23,
+            "ref": 94,
+            "pass": true
+          }
+        ],
+        "bigPassCount": 14,
+        "strictFourBigsTop10": true,
+        "extraBigsBeyondFour": []
+      },
+      "cap": {
+        "direction": "H2",
+        "capMargin": 10,
+        "phi": null,
+        "cap": {
+          "refMode": "rapm",
+          "margin": 10,
+          "iterations": 6,
+          "allowedPlayers": 414,
+          "cappedPlayers": 63,
+          "tieEpsilon": 1e-12,
+          "cappedNames": [
+            "Caleb Houstan",
+            "Karlo Matković",
+            "Goga Bitadze",
+            "Paul Reed",
+            "Walker Kessler",
+            "Rudy Gobert",
+            "Jrue Holiday",
+            "Brandon Miller",
+            "Haywood Highsmith",
+            "Immanuel Quickley",
+            "Luke Kornet",
+            "Moses Moody",
+            "Matisse Thybulle",
+            "Jonathan Isaac",
+            "Isaiah Stewart",
+            "Cade Cunningham",
+            "Zach Collins",
+            "Cooper Flagg",
+            "Jordan Goodwin",
+            "Ajay Mitchell",
+            "Jalen Johnson",
+            "Garrison Mathews",
+            "Robert Williams III",
+            "Paul George",
+            "Jalen Suggs",
+            "Kris Murray",
+            "Norman Powell",
+            "Sam Merrill",
+            "Jalen Williams",
+            "Anthony Black",
+            "Dru Smith",
+            "LeBron James",
+            "Christian Braun",
+            "Jaren Jackson Jr.",
+            "Jae'Sean Tate",
+            "Amen Thompson",
+            "Kyshawn George",
+            "Max Strus",
+            "Collin Murray-Boyles",
+            "Ronald Holland II",
+            "Mikal Bridges",
+            "Ja'Kobe Walter",
+            "Derrick Jones Jr.",
+            "Wendell Carter Jr.",
+            "Naz Reid",
+            "Caleb Martin",
+            "Oso Ighodaro",
+            "Zeke Nnaji",
+            "Jabari Smith Jr.",
+            "Brandin Podziemski",
+            "Jaden McDaniels",
+            "Andrew Nembhard",
+            "Ivica Zubac",
+            "Spencer Jones",
+            "Draymond Green",
+            "Dillon Brooks",
+            "Quentin Grimes",
+            "Davion Mitchell",
+            "Kyle Anderson",
+            "Quenton Jackson",
+            "Alex Sarr",
+            "Jaylin Williams",
+            "Jordan McLaughlin"
+          ]
+        }
+      }
+    },
+    {
+      "label": "card-H3-m0",
+      "rho2k": 0.5400351997770403,
+      "rhoRapm": 0.8513529449659489,
+      "rhoDef": 0.6644882387845026,
+      "n": 582,
+      "nRapm": 414,
+      "sevenPlayer": [
+        {
+          "name": "Karlo Matković",
+          "rank": 79,
+          "ovr": 80.6,
+          "rank2k": 294.5,
+          "rapmRank": 212
+        },
+        {
+          "name": "John Collins",
+          "rank": 131,
+          "ovr": 75,
+          "rank2k": 142,
+          "rapmRank": 240
+        },
+        {
+          "name": "Isaiah Stewart",
+          "rank": 167,
+          "ovr": 73.8,
+          "rank2k": 194.5,
+          "rapmRank": 261
+        },
+        {
+          "name": "Luka Garza",
+          "rank": 141,
+          "ovr": 74.6,
+          "rank2k": 255.5,
+          "rapmRank": 174
+        },
+        {
+          "name": "Neemias Queta",
+          "rank": 13,
+          "ovr": 91.3,
+          "rank2k": 110.5,
+          "rapmRank": 13
+        },
+        {
+          "name": "Rudy Gobert",
+          "rank": 29,
+          "ovr": 87.5,
+          "rank2k": 60.5,
+          "rapmRank": 29
+        },
+        {
+          "name": "Jalen Smith",
+          "rank": 135,
+          "ovr": 74.8,
+          "rank2k": 220,
+          "rapmRank": 65
+        }
+      ],
+      "wingNamed": [
+        {
+          "name": "Herbert Jones",
+          "rank": 14,
+          "rank2k": 142,
+          "rapmRank": 14,
+          "ref": 142
+        },
+        {
+          "name": "Alex Caruso",
+          "rank": 9,
+          "rank2k": 94,
+          "rapmRank": 9,
+          "ref": 94
+        },
+        {
+          "name": "Marcus Smart",
+          "rank": 30,
+          "rank2k": 142,
+          "rapmRank": 30,
+          "ref": 142
+        }
+      ],
+      "top10": [
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 109.9,
+          "isBig": false
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 2,
+          "ovr": 108,
+          "isBig": true
+        },
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 3,
+          "ovr": 105.9,
+          "isBig": true
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 4,
+          "ovr": 99.1,
+          "isBig": false
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": true
+        },
+        {
+          "name": "Derrick White",
+          "pos": "PG",
+          "rank": 6,
+          "ovr": 99,
+          "isBig": false
+        },
+        {
+          "name": "Franz Wagner",
+          "pos": "SF",
+          "rank": 7,
+          "ovr": 99,
+          "isBig": false
+        },
+        {
+          "name": "Giannis Antetokounmpo",
+          "pos": "PF",
+          "rank": 8,
+          "ovr": 98.2,
+          "isBig": true
+        },
+        {
+          "name": "Alex Caruso",
+          "pos": "SG",
+          "rank": 9,
+          "ovr": 98.2,
+          "isBig": false
+        },
+        {
+          "name": "Kawhi Leonard",
+          "pos": "SF",
+          "rank": 10,
+          "ovr": 96.8,
+          "isBig": false
+        }
+      ],
+      "top10Bigs": [
+        "Nikola Jokić",
+        "Victor Wembanyama",
+        "Chet Holmgren",
+        "Giannis Antetokounmpo"
+      ],
+      "extraBigsStrict": [],
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaGate": true,
+        "gobertGate": true,
+        "jalenSmithGate": true,
+        "rho2kFloor": true,
+        "rhoRapmFloor": true,
+        "wingGuard10of14": true,
+        "herbertJonesGate": true,
+        "carusoGate": true,
+        "marcusSmartGate": true,
+        "big14of16": true,
+        "top10BigsMax5": true,
+        "noMobleyTop10": true,
+        "noGordonTop10": true,
+        "allFourStayTop10": true,
+        "rhoDefFloorE2": true,
+        "hardKeys": [
+          "karloDrop10",
+          "collinsDrop",
+          "stewartDrop",
+          "garzaDrop",
+          "quetaGate",
+          "gobertGate",
+          "jalenSmithGate",
+          "rho2kFloor",
+          "rhoRapmFloor",
+          "wingGuard10of14",
+          "herbertJonesGate",
+          "carusoGate",
+          "marcusSmartGate",
+          "big14of16",
+          "top10BigsMax5",
+          "noMobleyTop10",
+          "noGordonTop10",
+          "allFourStayTop10",
+          "rhoDefFloorE2"
+        ],
+        "pass": 19,
+        "of": 19,
+        "quetaRef": 110.5,
+        "gobertRef": 60.5,
+        "wingGuard14": [
+          {
+            "name": "Alex Caruso",
+            "pos": "SG",
+            "rank": 9,
+            "ref": 94,
+            "pass": true
+          },
+          {
+            "name": "Derrick White",
+            "pos": "PG",
+            "rank": 6,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Franz Wagner",
+            "pos": "SF",
+            "rank": 7,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Herbert Jones",
+            "pos": "SG",
+            "rank": 14,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Ausar Thompson",
+            "pos": "SF",
+            "rank": 28,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Marcus Smart",
+            "pos": "SG",
+            "rank": 30,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Jalen Suggs",
+            "pos": "PG",
+            "rank": 85,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Jrue Holiday",
+            "pos": "PG",
+            "rank": 27,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Matisse Thybulle",
+            "pos": "SG",
+            "rank": 132,
+            "ref": 294.5,
+            "pass": true
+          },
+          {
+            "name": "Shai Gilgeous-Alexander",
+            "pos": "PG",
+            "rank": 1,
+            "ref": 2,
+            "pass": true
+          },
+          {
+            "name": "Ajay Mitchell",
+            "pos": "SG",
+            "rank": 77,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Dillon Brooks",
+            "pos": "SF",
+            "rank": 56,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Ronald Holland II",
+            "pos": "SF",
+            "rank": 142,
+            "ref": 255.5,
+            "pass": true
+          },
+          {
+            "name": "OG Anunoby",
+            "pos": "SF",
+            "rank": 24,
+            "ref": 31,
+            "pass": true
+          }
+        ],
+        "wingGuardPassCount": 14,
+        "big16": [
+          {
+            "name": "Victor Wembanyama",
+            "pos": "C",
+            "rank": 3,
+            "ref": 5,
+            "pass": true
+          },
+          {
+            "name": "Rudy Gobert",
+            "pos": "C",
+            "rank": 29,
+            "ref": 60.5,
+            "pass": true
+          },
+          {
+            "name": "Draymond Green",
+            "pos": "PF",
+            "rank": 46,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Dean Wade",
+            "pos": "PF",
+            "rank": 18,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Chet Holmgren",
+            "pos": "PF",
+            "rank": 5,
+            "ref": 38,
+            "pass": true
+          },
+          {
+            "name": "Joel Embiid",
+            "pos": "C",
+            "rank": 12,
+            "ref": 17.5,
+            "pass": true
+          },
+          {
+            "name": "Jaren Jackson Jr.",
+            "pos": "PF",
+            "rank": 38,
+            "ref": 62,
+            "pass": true
+          },
+          {
+            "name": "Brook Lopez",
+            "pos": "C",
+            "rank": 83,
+            "ref": 194.5,
+            "pass": true
+          },
+          {
+            "name": "Jonathan Isaac",
+            "pos": "PF",
+            "rank": 105,
+            "ref": 380,
+            "pass": true
+          },
+          {
+            "name": "Aaron Gordon",
+            "pos": "PF",
+            "rank": 22,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Toumani Camara",
+            "pos": "PF",
+            "rank": 51,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Wendell Carter Jr.",
+            "pos": "C",
+            "rank": 101,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Christian Koloko",
+            "pos": "C",
+            "rank": 217,
+            "ref": 428,
+            "pass": true
+          },
+          {
+            "name": "Anthony Davis",
+            "pos": "C",
+            "rank": 20,
+            "ref": 32,
+            "pass": true
+          },
+          {
+            "name": "Jusuf Nurkić",
+            "pos": "C",
+            "rank": 48,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Tobias Harris",
+            "pos": "PF",
+            "rank": 26,
+            "ref": 94,
+            "pass": true
+          }
+        ],
+        "bigPassCount": 16,
+        "strictFourBigsTop10": true,
+        "extraBigsBeyondFour": []
+      },
+      "cap": {
+        "direction": "H3",
+        "capMargin": 0,
+        "phi": null,
+        "cap": {
+          "refMode": "consensus",
+          "margin": 0,
+          "iterations": 8,
+          "allowedPlayers": 414,
+          "cappedPlayers": 80,
+          "tieEpsilon": 1e-12,
+          "cappedNames": [
+            "Caleb Houstan",
+            "Shai Gilgeous-Alexander",
+            "Goga Bitadze",
+            "Walker Kessler",
+            "Chet Holmgren",
+            "Day'Ron Sharpe",
+            "OG Anunoby",
+            "Neemias Queta",
+            "Rudy Gobert",
+            "Isaiah Joe",
+            "Jrue Holiday",
+            "Derrick White",
+            "Haywood Highsmith",
+            "Immanuel Quickley",
+            "Ausar Thompson",
+            "Alex Caruso",
+            "Moses Moody",
+            "Matisse Thybulle",
+            "Jonathan Isaac",
+            "Desmond Bane",
+            "Ryan Dunn",
+            "Baylor Scheierman",
+            "Isaiah Hartenstein",
+            "Franz Wagner",
+            "Dyson Daniels",
+            "Javonte Green",
+            "Zach Collins",
+            "Jordan Goodwin",
+            "Ajay Mitchell",
+            "Kon Knueppel",
+            "Garrison Mathews",
+            "Robert Williams III",
+            "Paul George",
+            "Jalen Suggs",
+            "Kenrich Williams",
+            "Kris Murray",
+            "Landry Shamet",
+            "Sam Merrill",
+            "Nickeil Alexander-Walker",
+            "Dru Smith",
+            "Christian Braun",
+            "Jaren Jackson Jr.",
+            "Jae'Sean Tate",
+            "Amen Thompson",
+            "John Konchar",
+            "Collin Murray-Boyles",
+            "Ronald Holland II",
+            "Mikal Bridges",
+            "Cameron Johnson",
+            "Tobias Harris",
+            "Aaron Holiday",
+            "Dylan Harper",
+            "Derrick Jones Jr.",
+            "Wendell Carter Jr.",
+            "Naz Reid",
+            "Caleb Martin",
+            "Oso Ighodaro",
+            "Donte DiVincenzo",
+            "Brandin Podziemski",
+            "Toumani Camara",
+            "Jusuf Nurkić",
+            "Spencer Jones",
+            "Draymond Green",
+            "Dillon Brooks",
+            "Dean Wade",
+            "Vince Williams Jr.",
+            "Davion Mitchell",
+            "Brook Lopez",
+            "Anthony Davis",
+            "Herbert Jones",
+            "Kyle Anderson",
+            "Miles McBride",
+            "Kentavious Caldwell-Pope",
+            "Naji Marshall",
+            "Marcus Smart",
+            "Quenton Jackson",
+            "Jonathan Kuminga",
+            "Cody Martin",
+            "Jaylin Williams",
+            "Jordan McLaughlin"
+          ]
+        }
+      }
+    },
+    {
+      "label": "card-H3-m10",
+      "rho2k": 0.5385336272837755,
+      "rhoRapm": 0.8517148081244337,
+      "rhoDef": 0.6729863269230076,
+      "n": 582,
+      "nRapm": 414,
+      "sevenPlayer": [
+        {
+          "name": "Karlo Matković",
+          "rank": 84,
+          "ovr": 78.3,
+          "rank2k": 294.5,
+          "rapmRank": 212
+        },
+        {
+          "name": "John Collins",
+          "rank": 135,
+          "ovr": 73.9,
+          "rank2k": 142,
+          "rapmRank": 240
+        },
+        {
+          "name": "Isaiah Stewart",
+          "rank": 169,
+          "ovr": 72.9,
+          "rank2k": 194.5,
+          "rapmRank": 261
+        },
+        {
+          "name": "Luka Garza",
+          "rank": 144,
+          "ovr": 73.6,
+          "rank2k": 255.5,
+          "rapmRank": 174
+        },
+        {
+          "name": "Neemias Queta",
+          "rank": 13,
+          "ovr": 88.5,
+          "rank2k": 110.5,
+          "rapmRank": 13
+        },
+        {
+          "name": "Rudy Gobert",
+          "rank": 19,
+          "ovr": 86.6,
+          "rank2k": 60.5,
+          "rapmRank": 29
+        },
+        {
+          "name": "Jalen Smith",
+          "rank": 139,
+          "ovr": 73.7,
+          "rank2k": 220,
+          "rapmRank": 65
+        }
+      ],
+      "wingNamed": [
+        {
+          "name": "Herbert Jones",
+          "rank": 15,
+          "rank2k": 142,
+          "rapmRank": 14,
+          "ref": 142
+        },
+        {
+          "name": "Alex Caruso",
+          "rank": 5,
+          "rank2k": 94,
+          "rapmRank": 9,
+          "ref": 94
+        },
+        {
+          "name": "Marcus Smart",
+          "rank": 29,
+          "rank2k": 142,
+          "rapmRank": 30,
+          "ref": 142
+        }
+      ],
+      "top10": [
+        {
+          "name": "Derrick White",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 105.6,
+          "isBig": false
+        },
+        {
+          "name": "Franz Wagner",
+          "pos": "SF",
+          "rank": 2,
+          "ovr": 103.1,
+          "isBig": false
+        },
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 3,
+          "ovr": 103,
+          "isBig": false
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 4,
+          "ovr": 99.6,
+          "isBig": true
+        },
+        {
+          "name": "Alex Caruso",
+          "pos": "SG",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": false
+        },
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 6,
+          "ovr": 97.9,
+          "isBig": true
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 7,
+          "ovr": 93.3,
+          "isBig": true
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 8,
+          "ovr": 92.6,
+          "isBig": false
+        },
+        {
+          "name": "Giannis Antetokounmpo",
+          "pos": "PF",
+          "rank": 9,
+          "ovr": 91.9,
+          "isBig": true
+        },
+        {
+          "name": "Kawhi Leonard",
+          "pos": "SF",
+          "rank": 10,
+          "ovr": 90.9,
+          "isBig": false
+        }
+      ],
+      "top10Bigs": [
+        "Nikola Jokić",
+        "Victor Wembanyama",
+        "Chet Holmgren",
+        "Giannis Antetokounmpo"
+      ],
+      "extraBigsStrict": [],
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaGate": true,
+        "gobertGate": true,
+        "jalenSmithGate": true,
+        "rho2kFloor": true,
+        "rhoRapmFloor": true,
+        "wingGuard10of14": true,
+        "herbertJonesGate": true,
+        "carusoGate": true,
+        "marcusSmartGate": true,
+        "big14of16": true,
+        "top10BigsMax5": true,
+        "noMobleyTop10": true,
+        "noGordonTop10": true,
+        "allFourStayTop10": true,
+        "rhoDefFloorE2": true,
+        "hardKeys": [
+          "karloDrop10",
+          "collinsDrop",
+          "stewartDrop",
+          "garzaDrop",
+          "quetaGate",
+          "gobertGate",
+          "jalenSmithGate",
+          "rho2kFloor",
+          "rhoRapmFloor",
+          "wingGuard10of14",
+          "herbertJonesGate",
+          "carusoGate",
+          "marcusSmartGate",
+          "big14of16",
+          "top10BigsMax5",
+          "noMobleyTop10",
+          "noGordonTop10",
+          "allFourStayTop10",
+          "rhoDefFloorE2"
+        ],
+        "pass": 19,
+        "of": 19,
+        "quetaRef": 110.5,
+        "gobertRef": 60.5,
+        "wingGuard14": [
+          {
+            "name": "Alex Caruso",
+            "pos": "SG",
+            "rank": 5,
+            "ref": 94,
+            "pass": true
+          },
+          {
+            "name": "Derrick White",
+            "pos": "PG",
+            "rank": 1,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Franz Wagner",
+            "pos": "SF",
+            "rank": 2,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Herbert Jones",
+            "pos": "SG",
+            "rank": 15,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Ausar Thompson",
+            "pos": "SF",
+            "rank": 18,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Marcus Smart",
+            "pos": "SG",
+            "rank": 29,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Jalen Suggs",
+            "pos": "PG",
+            "rank": 75,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Jrue Holiday",
+            "pos": "PG",
+            "rank": 17,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Matisse Thybulle",
+            "pos": "SG",
+            "rank": 122,
+            "ref": 294.5,
+            "pass": true
+          },
+          {
+            "name": "Shai Gilgeous-Alexander",
+            "pos": "PG",
+            "rank": 3,
+            "ref": 2,
+            "pass": false
+          },
+          {
+            "name": "Ajay Mitchell",
+            "pos": "SG",
+            "rank": 67,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Dillon Brooks",
+            "pos": "SF",
+            "rank": 46,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Ronald Holland II",
+            "pos": "SF",
+            "rank": 132,
+            "ref": 255.5,
+            "pass": true
+          },
+          {
+            "name": "OG Anunoby",
+            "pos": "SF",
+            "rank": 14,
+            "ref": 31,
+            "pass": true
+          }
+        ],
+        "wingGuardPassCount": 13,
+        "big16": [
+          {
+            "name": "Victor Wembanyama",
+            "pos": "C",
+            "rank": 6,
+            "ref": 5,
+            "pass": false
+          },
+          {
+            "name": "Rudy Gobert",
+            "pos": "C",
+            "rank": 19,
+            "ref": 60.5,
+            "pass": true
+          },
+          {
+            "name": "Draymond Green",
+            "pos": "PF",
+            "rank": 36,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Dean Wade",
+            "pos": "PF",
+            "rank": 12,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Chet Holmgren",
+            "pos": "PF",
+            "rank": 7,
+            "ref": 38,
+            "pass": true
+          },
+          {
+            "name": "Joel Embiid",
+            "pos": "C",
+            "rank": 16,
+            "ref": 17.5,
+            "pass": true
+          },
+          {
+            "name": "Jaren Jackson Jr.",
+            "pos": "PF",
+            "rank": 28,
+            "ref": 62,
+            "pass": true
+          },
+          {
+            "name": "Brook Lopez",
+            "pos": "C",
+            "rank": 73,
+            "ref": 194.5,
+            "pass": true
+          },
+          {
+            "name": "Jonathan Isaac",
+            "pos": "PF",
+            "rank": 95,
+            "ref": 380,
+            "pass": true
+          },
+          {
+            "name": "Aaron Gordon",
+            "pos": "PF",
+            "rank": 30,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Toumani Camara",
+            "pos": "PF",
+            "rank": 41,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Wendell Carter Jr.",
+            "pos": "C",
+            "rank": 103,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Christian Koloko",
+            "pos": "C",
+            "rank": 218,
+            "ref": 428,
+            "pass": true
+          },
+          {
+            "name": "Anthony Davis",
+            "pos": "C",
+            "rank": 25,
+            "ref": 32,
+            "pass": true
+          },
+          {
+            "name": "Jusuf Nurkić",
+            "pos": "C",
+            "rank": 39,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Tobias Harris",
+            "pos": "PF",
+            "rank": 21,
+            "ref": 94,
+            "pass": true
+          }
+        ],
+        "bigPassCount": 15,
+        "strictFourBigsTop10": true,
+        "extraBigsBeyondFour": []
+      },
+      "cap": {
+        "direction": "H3",
+        "capMargin": 10,
+        "phi": null,
+        "cap": {
+          "refMode": "consensus",
+          "margin": 10,
+          "iterations": 6,
+          "allowedPlayers": 414,
+          "cappedPlayers": 56,
+          "tieEpsilon": 1e-12,
+          "cappedNames": [
+            "Caleb Houstan",
+            "Goga Bitadze",
+            "Walker Kessler",
+            "Day'Ron Sharpe",
+            "OG Anunoby",
+            "Rudy Gobert",
+            "Jrue Holiday",
+            "Derrick White",
+            "Haywood Highsmith",
+            "Immanuel Quickley",
+            "Ausar Thompson",
+            "Moses Moody",
+            "Matisse Thybulle",
+            "Jonathan Isaac",
+            "Ryan Dunn",
+            "Javonte Green",
+            "Zach Collins",
+            "Jordan Goodwin",
+            "Ajay Mitchell",
+            "Garrison Mathews",
+            "Robert Williams III",
+            "Paul George",
+            "Jalen Suggs",
+            "Kris Murray",
+            "Landry Shamet",
+            "Sam Merrill",
+            "Dru Smith",
+            "Christian Braun",
+            "Jaren Jackson Jr.",
+            "Jae'Sean Tate",
+            "Amen Thompson",
+            "John Konchar",
+            "Collin Murray-Boyles",
+            "Ronald Holland II",
+            "Derrick Jones Jr.",
+            "Wendell Carter Jr.",
+            "Naz Reid",
+            "Caleb Martin",
+            "Oso Ighodaro",
+            "Donte DiVincenzo",
+            "Brandin Podziemski",
+            "Toumani Camara",
+            "Spencer Jones",
+            "Draymond Green",
+            "Dillon Brooks",
+            "Vince Williams Jr.",
+            "Davion Mitchell",
+            "Brook Lopez",
+            "Kyle Anderson",
+            "Miles McBride",
+            "Naji Marshall",
+            "Quenton Jackson",
+            "Jonathan Kuminga",
+            "Cody Martin",
+            "Jaylin Williams",
+            "Jordan McLaughlin"
+          ]
+        }
+      }
+    },
+    {
+      "label": "card-H4-phi0.0",
+      "rho2k": 0.5111363719521583,
+      "rhoRapm": 0.7774567516609246,
+      "rhoDef": 0.6405209105482822,
+      "n": 582,
+      "nRapm": 414,
+      "sevenPlayer": [
+        {
+          "name": "Karlo Matković",
+          "rank": 77,
+          "ovr": 79.7,
+          "rank2k": 294.5,
+          "rapmRank": 212
+        },
+        {
+          "name": "John Collins",
+          "rank": 132,
+          "ovr": 74.9,
+          "rank2k": 142,
+          "rapmRank": 240
+        },
+        {
+          "name": "Isaiah Stewart",
+          "rank": 151,
+          "ovr": 73.8,
+          "rank2k": 194.5,
+          "rapmRank": 261
+        },
+        {
+          "name": "Luka Garza",
+          "rank": 138,
+          "ovr": 74.5,
+          "rank2k": 255.5,
+          "rapmRank": 174
+        },
+        {
+          "name": "Neemias Queta",
+          "rank": 22,
+          "ovr": 87.1,
+          "rank2k": 110.5,
+          "rapmRank": 13
+        },
+        {
+          "name": "Rudy Gobert",
+          "rank": 5,
+          "ovr": 99,
+          "rank2k": 60.5,
+          "rapmRank": 29
+        },
+        {
+          "name": "Jalen Smith",
+          "rank": 174,
+          "ovr": 72.8,
+          "rank2k": 220,
+          "rapmRank": 65
+        }
+      ],
+      "wingNamed": [
+        {
+          "name": "Herbert Jones",
+          "rank": 54,
+          "rank2k": 142,
+          "rapmRank": 14,
+          "ref": 142
+        },
+        {
+          "name": "Alex Caruso",
+          "rank": 12,
+          "rank2k": 94,
+          "rapmRank": 9,
+          "ref": 94
+        },
+        {
+          "name": "Marcus Smart",
+          "rank": 53,
+          "rank2k": 142,
+          "rapmRank": 30,
+          "ref": 142
+        }
+      ],
+      "top10": [
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 104.8,
+          "isBig": false
+        },
+        {
+          "name": "Derrick White",
+          "pos": "PG",
+          "rank": 2,
+          "ovr": 103.7,
+          "isBig": false
+        },
+        {
+          "name": "Franz Wagner",
+          "pos": "SF",
+          "rank": 3,
+          "ovr": 100.4,
+          "isBig": false
+        },
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 4,
+          "ovr": 100.1,
+          "isBig": true
+        },
+        {
+          "name": "Rudy Gobert",
+          "pos": "C",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": true
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 6,
+          "ovr": 97.5,
+          "isBig": true
+        },
+        {
+          "name": "Jrue Holiday",
+          "pos": "PG",
+          "rank": 7,
+          "ovr": 96,
+          "isBig": false
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 8,
+          "ovr": 95.5,
+          "isBig": false
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 9,
+          "ovr": 95.4,
+          "isBig": true
+        },
+        {
+          "name": "Jalen Suggs",
+          "pos": "PG",
+          "rank": 10,
+          "ovr": 94.7,
+          "isBig": false
+        }
+      ],
+      "top10Bigs": [
+        "Victor Wembanyama",
+        "Rudy Gobert",
+        "Nikola Jokić",
+        "Chet Holmgren"
+      ],
+      "extraBigsStrict": [
+        {
+          "name": "Rudy Gobert",
+          "rank": 5,
+          "rank2k": 60.5,
+          "rapmNetRank": 29
+        }
+      ],
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaGate": true,
+        "gobertGate": true,
+        "jalenSmithGate": true,
+        "rho2kFloor": true,
+        "rhoRapmFloor": true,
+        "wingGuard10of14": true,
+        "herbertJonesGate": true,
+        "carusoGate": true,
+        "marcusSmartGate": true,
+        "big14of16": true,
+        "top10BigsMax5": true,
+        "noMobleyTop10": true,
+        "noGordonTop10": true,
+        "allFourStayTop10": false,
+        "rhoDefFloorE2": true,
+        "hardKeys": [
+          "karloDrop10",
+          "collinsDrop",
+          "stewartDrop",
+          "garzaDrop",
+          "quetaGate",
+          "gobertGate",
+          "jalenSmithGate",
+          "rho2kFloor",
+          "rhoRapmFloor",
+          "wingGuard10of14",
+          "herbertJonesGate",
+          "carusoGate",
+          "marcusSmartGate",
+          "big14of16",
+          "top10BigsMax5",
+          "noMobleyTop10",
+          "noGordonTop10",
+          "allFourStayTop10",
+          "rhoDefFloorE2"
+        ],
+        "pass": 18,
+        "of": 19,
+        "quetaRef": 110.5,
+        "gobertRef": 60.5,
+        "wingGuard14": [
+          {
+            "name": "Alex Caruso",
+            "pos": "SG",
+            "rank": 12,
+            "ref": 94,
+            "pass": true
+          },
+          {
+            "name": "Derrick White",
+            "pos": "PG",
+            "rank": 2,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Franz Wagner",
+            "pos": "SF",
+            "rank": 3,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Herbert Jones",
+            "pos": "SG",
+            "rank": 54,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Ausar Thompson",
+            "pos": "SF",
+            "rank": 15,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Marcus Smart",
+            "pos": "SG",
+            "rank": 53,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Jalen Suggs",
+            "pos": "PG",
+            "rank": 10,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Jrue Holiday",
+            "pos": "PG",
+            "rank": 7,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Matisse Thybulle",
+            "pos": "SG",
+            "rank": 92,
+            "ref": 294.5,
+            "pass": true
+          },
+          {
+            "name": "Shai Gilgeous-Alexander",
+            "pos": "PG",
+            "rank": 1,
+            "ref": 2,
+            "pass": true
+          },
+          {
+            "name": "Ajay Mitchell",
+            "pos": "SG",
+            "rank": 27,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Dillon Brooks",
+            "pos": "SF",
+            "rank": 31,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Ronald Holland II",
+            "pos": "SF",
+            "rank": 96,
+            "ref": 255.5,
+            "pass": true
+          },
+          {
+            "name": "OG Anunoby",
+            "pos": "SF",
+            "rank": 17,
+            "ref": 31,
+            "pass": true
+          }
+        ],
+        "wingGuardPassCount": 14,
+        "big16": [
+          {
+            "name": "Victor Wembanyama",
+            "pos": "C",
+            "rank": 4,
+            "ref": 5,
+            "pass": true
+          },
+          {
+            "name": "Rudy Gobert",
+            "pos": "C",
+            "rank": 5,
+            "ref": 60.5,
+            "pass": true
+          },
+          {
+            "name": "Draymond Green",
+            "pos": "PF",
+            "rank": 11,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Dean Wade",
+            "pos": "PF",
+            "rank": 25,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Chet Holmgren",
+            "pos": "PF",
+            "rank": 9,
+            "ref": 38,
+            "pass": true
+          },
+          {
+            "name": "Joel Embiid",
+            "pos": "C",
+            "rank": 24,
+            "ref": 17.5,
+            "pass": false
+          },
+          {
+            "name": "Jaren Jackson Jr.",
+            "pos": "PF",
+            "rank": 33,
+            "ref": 62,
+            "pass": true
+          },
+          {
+            "name": "Brook Lopez",
+            "pos": "C",
+            "rank": 90,
+            "ref": 194.5,
+            "pass": true
+          },
+          {
+            "name": "Jonathan Isaac",
+            "pos": "PF",
+            "rank": 50,
+            "ref": 380,
+            "pass": true
+          },
+          {
+            "name": "Aaron Gordon",
+            "pos": "PF",
+            "rank": 32,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Toumani Camara",
+            "pos": "PF",
+            "rank": 43,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Wendell Carter Jr.",
+            "pos": "C",
+            "rank": 21,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Christian Koloko",
+            "pos": "C",
+            "rank": 287,
+            "ref": 428,
+            "pass": true
+          },
+          {
+            "name": "Anthony Davis",
+            "pos": "C",
+            "rank": 30,
+            "ref": 32,
+            "pass": true
+          },
+          {
+            "name": "Jusuf Nurkić",
+            "pos": "C",
+            "rank": 66,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Tobias Harris",
+            "pos": "PF",
+            "rank": 34,
+            "ref": 94,
+            "pass": true
+          }
+        ],
+        "bigPassCount": 15,
+        "strictFourBigsTop10": false,
+        "extraBigsBeyondFour": [
+          {
+            "name": "Rudy Gobert",
+            "rank": 5,
+            "rank2k": 60.5,
+            "rapmNetRank": 29
+          }
+        ]
+      },
+      "cap": {
+        "direction": "H4",
+        "capMargin": null,
+        "phi": 0,
+        "cap": null
+      }
+    },
+    {
+      "label": "card-H4-phi0.5",
+      "rho2k": 0.5215821381294823,
+      "rhoRapm": 0.8116863743011716,
+      "rhoDef": 0.6707062722227584,
+      "n": 582,
+      "nRapm": 414,
+      "sevenPlayer": [
+        {
+          "name": "Karlo Matković",
+          "rank": 84,
+          "ovr": 78.9,
+          "rank2k": 294.5,
+          "rapmRank": 212
+        },
+        {
+          "name": "John Collins",
+          "rank": 138,
+          "ovr": 74.2,
+          "rank2k": 142,
+          "rapmRank": 240
+        },
+        {
+          "name": "Isaiah Stewart",
+          "rank": 160,
+          "ovr": 73.2,
+          "rank2k": 194.5,
+          "rapmRank": 261
+        },
+        {
+          "name": "Luka Garza",
+          "rank": 146,
+          "ovr": 73.8,
+          "rank2k": 255.5,
+          "rapmRank": 174
+        },
+        {
+          "name": "Neemias Queta",
+          "rank": 20,
+          "ovr": 87.9,
+          "rank2k": 110.5,
+          "rapmRank": 13
+        },
+        {
+          "name": "Rudy Gobert",
+          "rank": 5,
+          "ovr": 99,
+          "rank2k": 60.5,
+          "rapmRank": 29
+        },
+        {
+          "name": "Jalen Smith",
+          "rank": 163,
+          "ovr": 73.1,
+          "rank2k": 220,
+          "rapmRank": 65
+        }
+      ],
+      "wingNamed": [
+        {
+          "name": "Herbert Jones",
+          "rank": 38,
+          "rank2k": 142,
+          "rapmRank": 14,
+          "ref": 142
+        },
+        {
+          "name": "Alex Caruso",
+          "rank": 7,
+          "rank2k": 94,
+          "rapmRank": 9,
+          "ref": 94
+        },
+        {
+          "name": "Marcus Smart",
+          "rank": 43,
+          "rank2k": 142,
+          "rapmRank": 30,
+          "ref": 142
+        }
+      ],
+      "top10": [
+        {
+          "name": "Derrick White",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 105.1,
+          "isBig": false
+        },
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 2,
+          "ovr": 104.3,
+          "isBig": false
+        },
+        {
+          "name": "Franz Wagner",
+          "pos": "SF",
+          "rank": 3,
+          "ovr": 102.2,
+          "isBig": false
+        },
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 4,
+          "ovr": 99.3,
+          "isBig": true
+        },
+        {
+          "name": "Rudy Gobert",
+          "pos": "C",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": true
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 6,
+          "ovr": 98.9,
+          "isBig": true
+        },
+        {
+          "name": "Alex Caruso",
+          "pos": "SG",
+          "rank": 7,
+          "ovr": 97,
+          "isBig": false
+        },
+        {
+          "name": "Jrue Holiday",
+          "pos": "PG",
+          "rank": 8,
+          "ovr": 96.3,
+          "isBig": false
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 9,
+          "ovr": 94.5,
+          "isBig": true
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 10,
+          "ovr": 94.2,
+          "isBig": false
+        }
+      ],
+      "top10Bigs": [
+        "Victor Wembanyama",
+        "Rudy Gobert",
+        "Nikola Jokić",
+        "Chet Holmgren"
+      ],
+      "extraBigsStrict": [
+        {
+          "name": "Rudy Gobert",
+          "rank": 5,
+          "rank2k": 60.5,
+          "rapmNetRank": 29
+        }
+      ],
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaGate": true,
+        "gobertGate": true,
+        "jalenSmithGate": true,
+        "rho2kFloor": true,
+        "rhoRapmFloor": true,
+        "wingGuard10of14": true,
+        "herbertJonesGate": true,
+        "carusoGate": true,
+        "marcusSmartGate": true,
+        "big14of16": true,
+        "top10BigsMax5": true,
+        "noMobleyTop10": true,
+        "noGordonTop10": true,
+        "allFourStayTop10": false,
+        "rhoDefFloorE2": true,
+        "hardKeys": [
+          "karloDrop10",
+          "collinsDrop",
+          "stewartDrop",
+          "garzaDrop",
+          "quetaGate",
+          "gobertGate",
+          "jalenSmithGate",
+          "rho2kFloor",
+          "rhoRapmFloor",
+          "wingGuard10of14",
+          "herbertJonesGate",
+          "carusoGate",
+          "marcusSmartGate",
+          "big14of16",
+          "top10BigsMax5",
+          "noMobleyTop10",
+          "noGordonTop10",
+          "allFourStayTop10",
+          "rhoDefFloorE2"
+        ],
+        "pass": 18,
+        "of": 19,
+        "quetaRef": 110.5,
+        "gobertRef": 60.5,
+        "wingGuard14": [
+          {
+            "name": "Alex Caruso",
+            "pos": "SG",
+            "rank": 7,
+            "ref": 94,
+            "pass": true
+          },
+          {
+            "name": "Derrick White",
+            "pos": "PG",
+            "rank": 1,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Franz Wagner",
+            "pos": "SF",
+            "rank": 3,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Herbert Jones",
+            "pos": "SG",
+            "rank": 38,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Ausar Thompson",
+            "pos": "SF",
+            "rank": 15,
+            "ref": 47.5,
+            "pass": true
+          },
+          {
+            "name": "Marcus Smart",
+            "pos": "SG",
+            "rank": 43,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Jalen Suggs",
+            "pos": "PG",
+            "rank": 12,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Jrue Holiday",
+            "pos": "PG",
+            "rank": 8,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Matisse Thybulle",
+            "pos": "SG",
+            "rank": 81,
+            "ref": 294.5,
+            "pass": true
+          },
+          {
+            "name": "Shai Gilgeous-Alexander",
+            "pos": "PG",
+            "rank": 2,
+            "ref": 2,
+            "pass": true
+          },
+          {
+            "name": "Ajay Mitchell",
+            "pos": "SG",
+            "rank": 28,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Dillon Brooks",
+            "pos": "SF",
+            "rank": 26,
+            "ref": 81,
+            "pass": true
+          },
+          {
+            "name": "Ronald Holland II",
+            "pos": "SF",
+            "rank": 85,
+            "ref": 255.5,
+            "pass": true
+          },
+          {
+            "name": "OG Anunoby",
+            "pos": "SF",
+            "rank": 18,
+            "ref": 31,
+            "pass": true
+          }
+        ],
+        "wingGuardPassCount": 14,
+        "big16": [
+          {
+            "name": "Victor Wembanyama",
+            "pos": "C",
+            "rank": 4,
+            "ref": 5,
+            "pass": true
+          },
+          {
+            "name": "Rudy Gobert",
+            "pos": "C",
+            "rank": 5,
+            "ref": 60.5,
+            "pass": true
+          },
+          {
+            "name": "Draymond Green",
+            "pos": "PF",
+            "rank": 11,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Dean Wade",
+            "pos": "PF",
+            "rank": 19,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Chet Holmgren",
+            "pos": "PF",
+            "rank": 9,
+            "ref": 38,
+            "pass": true
+          },
+          {
+            "name": "Joel Embiid",
+            "pos": "C",
+            "rank": 24,
+            "ref": 17.5,
+            "pass": false
+          },
+          {
+            "name": "Jaren Jackson Jr.",
+            "pos": "PF",
+            "rank": 35,
+            "ref": 62,
+            "pass": true
+          },
+          {
+            "name": "Brook Lopez",
+            "pos": "C",
+            "rank": 82,
+            "ref": 194.5,
+            "pass": true
+          },
+          {
+            "name": "Jonathan Isaac",
+            "pos": "PF",
+            "rank": 50,
+            "ref": 380,
+            "pass": true
+          },
+          {
+            "name": "Aaron Gordon",
+            "pos": "PF",
+            "rank": 36,
+            "ref": 70.5,
+            "pass": true
+          },
+          {
+            "name": "Toumani Camara",
+            "pos": "PF",
+            "rank": 40,
+            "ref": 110.5,
+            "pass": true
+          },
+          {
+            "name": "Wendell Carter Jr.",
+            "pos": "C",
+            "rank": 25,
+            "ref": 142,
+            "pass": true
+          },
+          {
+            "name": "Christian Koloko",
+            "pos": "C",
+            "rank": 257,
+            "ref": 428,
+            "pass": true
+          },
+          {
+            "name": "Anthony Davis",
+            "pos": "C",
+            "rank": 29,
+            "ref": 32,
+            "pass": true
+          },
+          {
+            "name": "Jusuf Nurkić",
+            "pos": "C",
+            "rank": 57,
+            "ref": 220,
+            "pass": true
+          },
+          {
+            "name": "Tobias Harris",
+            "pos": "PF",
+            "rank": 30,
+            "ref": 94,
+            "pass": true
+          }
+        ],
+        "bigPassCount": 15,
+        "strictFourBigsTop10": false,
+        "extraBigsBeyondFour": [
+          {
+            "name": "Rudy Gobert",
+            "rank": 5,
+            "rank2k": 60.5,
+            "rapmNetRank": 29
+          }
+        ]
+      },
+      "cap": {
+        "direction": "H4",
+        "capMargin": null,
+        "phi": 0.5,
+        "cap": null
+      }
+    }
+  ],
+  "wembanyamaRank": {
+    "f2": 1,
+    "e2": 2,
+    "g3": 7,
+    "candidates": {
+      "card-H1-m0": 3,
+      "card-H1-m10": 6,
+      "card-H2-m0": 6,
+      "card-H2-m10": 6,
+      "card-H3-m0": 3,
+      "card-H3-m10": 6,
+      "card-H4-phi0.0": 4,
+      "card-H4-phi0.5": 4
+    }
+  },
+  "dataSeasonLeagueSha256": "497725ecb6a2ec181aeb3cf93263f53a81bdfed772a2c4c733ba3a2d65a79bf6"
+}

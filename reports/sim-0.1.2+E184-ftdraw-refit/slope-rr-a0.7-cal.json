@@ -1,0 +1,90 @@
+{
+ "seeds": [
+  20261121,
+  20261120
+ ],
+ "players": 150,
+ "slope": 0.7703612896970711,
+ "intercept": 0.10074545367424133,
+ "stop_rule_in_range": false,
+ "wmean_input": 0.22117890169475624,
+ "wmean_sim": 0.2711331176375954,
+ "sd_input": 0.09559832381621797,
+ "sd_sim": 0.08287656478416362,
+ "sd_real_box": 0.11204928547265829,
+ "r_sim_input": 0.9081163967759608,
+ "top": [
+  {
+   "name": "Zion Williamson",
+   "input": 0.527,
+   "sim": 0.462,
+   "real_box": 0.576
+  },
+  {
+   "name": "Rudy Gobert",
+   "input": 0.482,
+   "sim": 0.554,
+   "real_box": 0.615
+  },
+  {
+   "name": "Deni Avdija",
+   "input": 0.47,
+   "sim": 0.44,
+   "real_box": 0.573
+  },
+  {
+   "name": "Paolo Banchero",
+   "input": 0.467,
+   "sim": 0.432,
+   "real_box": 0.512
+  },
+  {
+   "name": "Jalen Duren",
+   "input": 0.465,
+   "sim": 0.422,
+   "real_box": 0.535
+  },
+  {
+   "name": "Stephon Castle",
+   "input": 0.426,
+   "sim": 0.406,
+   "real_box": 0.471
+  },
+  {
+   "name": "James Harden",
+   "input": 0.395,
+   "sim": 0.355,
+   "real_box": 0.467
+  },
+  {
+   "name": "Moussa Diabaté",
+   "input": 0.382,
+   "sim": 0.446,
+   "real_box": 0.485
+  },
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "input": 0.377,
+   "sim": 0.396,
+   "real_box": 0.465
+  },
+  {
+   "name": "Jarrett Allen",
+   "input": 0.362,
+   "sim": 0.401,
+   "real_box": 0.494
+  },
+  {
+   "name": "Luka Dončić",
+   "input": 0.358,
+   "sim": 0.34,
+   "real_box": 0.443
+  },
+  {
+   "name": "Pelle Larsson",
+   "input": 0.358,
+   "sim": 0.386,
+   "real_box": 0.413
+  }
+ ]
+}

@@ -1,0 +1,178 @@
+{
+ "version": "card 0.2.10",
+ "baseVersion": "card 0.2.9a",
+ "players": 582,
+ "change": "E-175 滑動窗口：8 項屬性（drive、foulDraw、ft、mid、pass、rebound、short、tovSkill）改用四季滑動窗口 U（c=82；過去季依 window_weights 加權、方法 b 收縮）；係數、OVR 錨、H1 cap 參照、用人層 r_repl／WLS 係數、兩段映射錨全凍結用 0.2.9a（lead 2026-11-01 裁定 B＋全凍結）。",
+ "prereg_verdict": "E-175 預註冊 §3：8 項 SD 比皆在 [0.9,1.1]，不重擬合；使用者 R-111 採用。",
+ "version_rule": "PATCH（R-114）：前 300 名移動 ≥10 名 94 人。",
+ "moved10_top300": 94,
+ "moved10_top100": 18,
+ "frozen": {
+  "r_repl": -0.9551191824234517,
+  "anchors": {
+   "PR1": -0.5719110063934824,
+   "PR50": 0.9389139623097191,
+   "PR99": 3.925432098281053
+  },
+  "wls_card": [
+   -0.8719502409296505,
+   0.600155447263929,
+   -0.14389776245479813,
+   1.7008857939776467,
+   0.10986198934306406,
+   0.7855067561524317,
+   -0.07747053701146689,
+   -0.3265012655252132
+  ],
+  "file": "reports/card-0.2.10/frozen.json"
+ },
+ "self_check": "builder 餵 0.2.9a V 屬性（tail-V8.csv）重建 = 0.2.9a ranking.csv 逐位元相同（sha b7972182…）；work/self、work/V8 已驗",
+ "key_players_2025_26": {
+  "Jayson Tatum": {
+   "0.2.9a": [
+    92.8,
+    8
+   ],
+   "0.2.10": [
+    92.7,
+    8
+   ]
+  },
+  "Jalen Williams": {
+   "0.2.9a": [
+    88.2,
+    10
+   ],
+   "0.2.10": [
+    87.3,
+    11
+   ]
+  },
+  "Cooper Flagg": {
+   "0.2.9a": [
+    76.1,
+    82
+   ],
+   "0.2.10": [
+    77.0,
+    68
+   ]
+  },
+  "Anthony Edwards": {
+   "0.2.9a": [
+    87.5,
+    14
+   ],
+   "0.2.10": [
+    86.8,
+    13
+   ]
+  },
+  "Paolo Banchero": {
+   "0.2.9a": [
+    72.7,
+    140
+   ],
+   "0.2.10": [
+    73.2,
+    133
+   ]
+  },
+  "Nikola Jokić": {
+   "0.2.9a": [
+    93.4,
+    7
+   ],
+   "0.2.10": [
+    93.5,
+    7
+   ]
+  },
+  "Anthony Davis": {
+   "0.2.9a": [
+    84.6,
+    21
+   ],
+   "0.2.10": [
+    84.8,
+    21
+   ]
+  },
+  "Joel Embiid": {
+   "0.2.9a": [
+    84.0,
+    23
+   ],
+   "0.2.10": [
+    85.2,
+    18
+   ]
+  },
+  "Alperen Sengun": {
+   "0.2.9a": [
+    76.2,
+    80
+   ],
+   "0.2.10": [
+    76.7,
+    72
+   ]
+  }
+ },
+ "top20": {
+  "out": [
+   "Michael Porter Jr."
+  ],
+  "in": [
+   "Joel Embiid"
+  ]
+ },
+ "part_card_sha256": {
+  "primary": "28c48985206097f3e9d5fd6f6a7805d274c46324fad652fed893821bdfe48e9d",
+  "fitA": "383e238826789d82b5d896160e83b91fd0bbc8d9ec71610590f4ffb76ff354b9",
+  "fitB": "c262c40a6a8491cedefc8554d3041d01c13d475e0f87cdc26818ad817a306b08"
+ },
+ "part_card_pred_csv_sha256": {
+  "primary": "1ca8bb0d4d9e7ebea4edece21dc5e6deeb6fda7dbc18ef25b77c07d805e86765",
+  "fitA": "95c6f8c341bfaa1289ca66025c46bcb496f67683cc83bdd25984f65f2c8ee4ad",
+  "fitB": "1a16c9e496f2c67bfe67648f352be567f77ba2d2ba34eade8b963475688a31df"
+ },
+ "rapm_inputs_sha256": {
+  "primary": "a35ebcacceefc85e1fefbc46afc8e118e87f36b1cd0b326e46e040b7be0dad33",
+  "fitA": "e5932b649aa65d78b73628e12cc9b2fd4814fac7883a17f8e17a4bf1192c1936",
+  "fitB": "2908af9fc86af385cacfcbbe88bfab47404984a0470b1d1ceb9b7967dfa3a90a",
+  "cand_pkl_rows": 504
+ },
+ "sources_sha256": {
+  "reports/card-0.2.10/tail-U.csv": "ff959cd0eee276d2817ba10db3c5fc14ca640e302a8c3810590c071730301dba",
+  "reports/card-0.2.10/tail-V8.csv": "315be3fabbefd25cfc5fa555045cebbf836be5739d2564cb37d1f17a272ffb7b",
+  "reports/card-0.2.10/frozen.json": "b069064574f2dc1afc6d533768a739c36684a6ecf9f6b6915e5b4f777e5f8b35",
+  "reports/card-0.2.10/calibrate_frozen.py": "e6a1bf35f61264c3915db8dd5f0ef15d5bd3e14a4e446f37a5a76d8993f283f6",
+  "reports/card-0.2.10/use_layer.py": "845a2eba61076e7f0d9c1f336a35be084b639009f77c4cf7171f2ddfad233e3d",
+  "reports/card-0.2.10/run_parts.py": "3350e30c145dc9a2cc92dbae33684316e06584481265c83766ffaef93000bd07",
+  "reports/card-0.2.10/make_tail_U.py": "f52c15fb29332aa69b575182009e3a05ff151ed6e8c12c6783c0f34afa64352d",
+  "reports/card-0.2.10/make_frozen.py": "aa72e436e667cf9f7bdcbeab9c5252d90a6c80daade86991b83a2a94ac4986a8",
+  "reports/card-0.2.9a/ranking.csv": "b7972182261683b9b7b75ad99eafeb9211f96825bab4b00783344c3bab7580ef",
+  "reports/card-0.2.9/rapm-T6.csv": "a35ebcacceefc85e1fefbc46afc8e118e87f36b1cd0b326e46e040b7be0dad33",
+  "reports/card-0.2.9/three-value.csv": "1176f259beb1c6a59cadbf066a4eab3b6c4a306a10a2d44d30b9720f4f4e225f",
+  "reports/E175-sliding-window-card/e175_card.py": "1b1e0c00c35d932c1bec17958d6829968ae99ec2c1c8c9419cfe4dbf81b6991d",
+  "reports/E175-sliding-window-card/e175_lib.py": "7175e0d4914e2c8fc2ae9e77c2037935f3754b9c1555bf446d917440b8114b18",
+  "reports/ovr-v61-shrink-history-2025-26/backtest.json": "5ff4991d315de55e935733add4bd4c0ff12dd39473e7ca4ef9a7a4ec7f3d209c"
+ },
+ "frozen_sources_sha256": {
+  "reports/card-0.2.9a/cards/K6/primary/summary.json": "3c59c0dc48c225c76faa2d8dc6a24c067025efad3d33cccf527cbb996b77babd",
+  "reports/card-0.2.9a/cards/K6/primary/pergame-summary.json": "12d8f94f2c2a6d4932774838a563c6ac6e811c67466b22a90c19fe7f27ecfd6d",
+  "reports/card-0.2.9a/cards/K6/primary/pred.csv": "8b8a54062ceb8271c4940ea34dee5ad2c8db1448a69ce1abe284b478231c077f",
+  "reports/card-0.2.9a/cards/K6/fitA/summary.json": "e7ced0173859ce9bc6df02b3a5306a05d4ad89740a594051dd1faf3bc890b6c9",
+  "reports/card-0.2.9a/cards/K6/fitA/pergame-summary.json": "89b61b4fe723d27e32d81bd76c8afdbb5833a190b09cd8f0405f1af761c55035",
+  "reports/card-0.2.9a/cards/K6/fitA/pred.csv": "3b4ce6ddaf02697c0bf53bcdee3d6a17bbecc5cb35fdbdab758932ef8d0cd625",
+  "reports/card-0.2.9a/cards/K6/fitB/summary.json": "c017c76e43a9c2c76cddcd97aad8051ffd6178370c84ccd25fb6d2a8b8b03513",
+  "reports/card-0.2.9a/cards/K6/fitB/pergame-summary.json": "f6e9831028e17ff6d4ba4a34d0a0af0f6c4d9fa32548d8255da6c27e13500ca8",
+  "reports/card-0.2.9a/cards/K6/fitB/pred.csv": "c0f4c464143cd48ab39453c848fa24edfa06967006f0b41993f17dc7f58da4c7",
+  "reports/card-0.2.9a/ranking.csv": "b7972182261683b9b7b75ad99eafeb9211f96825bab4b00783344c3bab7580ef",
+  "reports/card-0.2.10/work/capture/ranking.csv": "b7972182261683b9b7b75ad99eafeb9211f96825bab4b00783344c3bab7580ef"
+ },
+ "build_command": "python -I -X utf8 reports/card-0.2.10/build_card_0210.py --rebuild",
+ "generator": "reports/card-0.2.10/build_card_0210.py",
+ "ranking_csv_sha256": "84e9590b28161a23b589e1918ad410f09d6af51a119af8ee57f7beca1146e6c1"
+}

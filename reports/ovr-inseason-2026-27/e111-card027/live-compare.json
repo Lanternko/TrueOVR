@@ -1,0 +1,395 @@
+{
+ "files": {
+  "025a": {
+   "file": "reports/ovr-inseason-2026-27/live/2026-10-28/ranking.csv",
+   "sha256": "314fcdc979da9867c51322caacfeb4d989bd3894b0d14f548c57590350ce209d"
+  },
+  "027": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/out-027/ranking.csv",
+   "sha256": "cbfd8931e3e799b20af58de6594a35db61564744fbd80a1b76e6b1169e320866"
+  }
+ },
+ "n": 368,
+ "onlyIn025a": 0,
+ "onlyIn027": 0,
+ "absDeltaMedian": 1.1,
+ "absDeltaMax": 7.1,
+ "gt10": 0,
+ "gt5": 13,
+ "medianSigned": -0.9,
+ "largestAbsDelta10": [
+  {
+   "name": "Luka Dončić",
+   "team": "LAL",
+   "rank025a": 2,
+   "ovr025a": 102.1,
+   "rank027": 9,
+   "ovr027": 95.0,
+   "delta": -7.1
+  },
+  {
+   "name": "Amen Thompson",
+   "team": "HOU",
+   "rank025a": 9,
+   "ovr025a": 94.4,
+   "rank027": 12,
+   "ovr027": 87.7,
+   "delta": -6.7
+  },
+  {
+   "name": "Jevon Carter",
+   "team": "ORL",
+   "rank025a": 216,
+   "ovr025a": 64.5,
+   "rank027": 268,
+   "ovr027": 57.9,
+   "delta": -6.6
+  },
+  {
+   "name": "Joel Embiid",
+   "team": "PHI",
+   "rank025a": 12,
+   "ovr025a": 91.3,
+   "rank027": 19,
+   "ovr027": 84.7,
+   "delta": -6.6
+  },
+  {
+   "name": "Dylan Harper",
+   "team": "SAS",
+   "rank025a": 15,
+   "ovr025a": 91.1,
+   "rank027": 20,
+   "ovr027": 84.6,
+   "delta": -6.5
+  },
+  {
+   "name": "Tyler Kolek",
+   "team": "NYK",
+   "rank025a": 289,
+   "ovr025a": 55.5,
+   "rank027": 237,
+   "ovr027": 61.7,
+   "delta": 6.2
+  },
+  {
+   "name": "Zion Williamson",
+   "team": "NOP",
+   "rank025a": 27,
+   "ovr025a": 87.6,
+   "rank027": 38,
+   "ovr027": 81.5,
+   "delta": -6.1
+  },
+  {
+   "name": "Herbert Jones",
+   "team": "NOP",
+   "rank025a": 31,
+   "ovr025a": 87.0,
+   "rank027": 48,
+   "ovr027": 81.0,
+   "delta": -6.0
+  },
+  {
+   "name": "Stephen Curry",
+   "team": "GSW",
+   "rank025a": 30,
+   "ovr025a": 87.2,
+   "rank027": 42,
+   "ovr027": 81.4,
+   "delta": -5.8
+  },
+  {
+   "name": "Kevin Durant",
+   "team": "HOU",
+   "rank025a": 28,
+   "ovr025a": 87.6,
+   "rank027": 35,
+   "ovr027": 81.9,
+   "delta": -5.7
+  }
+ ],
+ "top20_025a": [
+  {
+   "rank": 1,
+   "name": "Shai Gilgeous-Alexander",
+   "ovr": 105.8
+  },
+  {
+   "rank": 2,
+   "name": "Luka Dončić",
+   "ovr": 102.1
+  },
+  {
+   "rank": 3,
+   "name": "Victor Wembanyama",
+   "ovr": 100.8
+  },
+  {
+   "rank": 4,
+   "name": "Nikola Jokić",
+   "ovr": 100.1
+  },
+  {
+   "rank": 5,
+   "name": "Franz Wagner",
+   "ovr": 100.1
+  },
+  {
+   "rank": 6,
+   "name": "Chet Holmgren",
+   "ovr": 96.3
+  },
+  {
+   "rank": 7,
+   "name": "Derrick White",
+   "ovr": 96.1
+  },
+  {
+   "rank": 8,
+   "name": "Kawhi Leonard",
+   "ovr": 95.2
+  },
+  {
+   "rank": 9,
+   "name": "Amen Thompson",
+   "ovr": 94.4
+  },
+  {
+   "rank": 10,
+   "name": "Giannis Antetokounmpo",
+   "ovr": 94.3
+  },
+  {
+   "rank": 11,
+   "name": "Cade Cunningham",
+   "ovr": 91.6
+  },
+  {
+   "rank": 12,
+   "name": "Joel Embiid",
+   "ovr": 91.3
+  },
+  {
+   "rank": 13,
+   "name": "Donovan Mitchell",
+   "ovr": 91.2
+  },
+  {
+   "rank": 14,
+   "name": "Lauri Markkanen",
+   "ovr": 91.1
+  },
+  {
+   "rank": 15,
+   "name": "Dylan Harper",
+   "ovr": 91.1
+  },
+  {
+   "rank": 16,
+   "name": "Ausar Thompson",
+   "ovr": 90.1
+  },
+  {
+   "rank": 17,
+   "name": "OG Anunoby",
+   "ovr": 89.6
+  },
+  {
+   "rank": 18,
+   "name": "Dyson Daniels",
+   "ovr": 89.5
+  },
+  {
+   "rank": 19,
+   "name": "Dean Wade",
+   "ovr": 89.0
+  },
+  {
+   "rank": 20,
+   "name": "Aaron Gordon",
+   "ovr": 89.0
+  }
+ ],
+ "top20_027": [
+  {
+   "rank": 1,
+   "name": "Victor Wembanyama",
+   "ovr": 104.9
+  },
+  {
+   "rank": 2,
+   "name": "Shai Gilgeous-Alexander",
+   "ovr": 103.9
+  },
+  {
+   "rank": 3,
+   "name": "Derrick White",
+   "ovr": 98.6
+  },
+  {
+   "rank": 4,
+   "name": "Nikola Jokić",
+   "ovr": 98.4
+  },
+  {
+   "rank": 5,
+   "name": "Franz Wagner",
+   "ovr": 98.1
+  },
+  {
+   "rank": 6,
+   "name": "Chet Holmgren",
+   "ovr": 97.0
+  },
+  {
+   "rank": 7,
+   "name": "Kawhi Leonard",
+   "ovr": 96.7
+  },
+  {
+   "rank": 8,
+   "name": "Giannis Antetokounmpo",
+   "ovr": 95.5
+  },
+  {
+   "rank": 9,
+   "name": "Luka Dončić",
+   "ovr": 95.0
+  },
+  {
+   "rank": 10,
+   "name": "Lauri Markkanen",
+   "ovr": 88.3
+  },
+  {
+   "rank": 11,
+   "name": "Donovan Mitchell",
+   "ovr": 88.0
+  },
+  {
+   "rank": 12,
+   "name": "Amen Thompson",
+   "ovr": 87.7
+  },
+  {
+   "rank": 13,
+   "name": "Cade Cunningham",
+   "ovr": 87.4
+  },
+  {
+   "rank": 14,
+   "name": "Ausar Thompson",
+   "ovr": 85.6
+  },
+  {
+   "rank": 15,
+   "name": "Aaron Gordon",
+   "ovr": 85.6
+  },
+  {
+   "rank": 16,
+   "name": "OG Anunoby",
+   "ovr": 85.6
+  },
+  {
+   "rank": 17,
+   "name": "Dyson Daniels",
+   "ovr": 85.1
+  },
+  {
+   "rank": 18,
+   "name": "De'Aaron Fox",
+   "ovr": 84.8
+  },
+  {
+   "rank": 19,
+   "name": "Joel Embiid",
+   "ovr": 84.7
+  },
+  {
+   "rank": 20,
+   "name": "Dylan Harper",
+   "ovr": 84.6
+  }
+ ],
+ "enteredTop20": [
+  {
+   "name": "De'Aaron Fox",
+   "team": "SAS",
+   "rank025a": 23,
+   "ovr025a": 88.6,
+   "rank027": 18,
+   "ovr027": 84.8
+  }
+ ],
+ "leftTop20": [
+  {
+   "name": "Dean Wade",
+   "team": "PHI",
+   "rank025a": 19,
+   "ovr025a": 89.0,
+   "rank027": 21,
+   "ovr027": 84.2
+  }
+ ],
+ "players8": {
+  "Joel Embiid": {
+   "name": "Joel Embiid",
+   "team": "PHI",
+   "rank025a": 12,
+   "ovr025a": 91.3,
+   "rank027": 19,
+   "ovr027": 84.7
+  },
+  "Kon Knueppel": null,
+  "Neemias Queta": {
+   "name": "Neemias Queta",
+   "team": "BOS",
+   "rank025a": 39,
+   "ovr025a": 85.3,
+   "rank027": 22,
+   "ovr027": 84.2
+  },
+  "Ryan Rollins": {
+   "name": "Ryan Rollins",
+   "team": "MIL",
+   "rank025a": 34,
+   "ovr025a": 86.2,
+   "rank027": 30,
+   "ovr027": 82.6
+  },
+  "Victor Wembanyama": {
+   "name": "Victor Wembanyama",
+   "team": "SAS",
+   "rank025a": 3,
+   "ovr025a": 100.8,
+   "rank027": 1,
+   "ovr027": 104.9
+  },
+  "Giannis Antetokounmpo": {
+   "name": "Giannis Antetokounmpo",
+   "team": "MIA",
+   "rank025a": 10,
+   "ovr025a": 94.3,
+   "rank027": 8,
+   "ovr027": 95.5
+  },
+  "Luka Dončić": {
+   "name": "Luka Dončić",
+   "team": "LAL",
+   "rank025a": 2,
+   "ovr025a": 102.1,
+   "rank027": 9,
+   "ovr027": 95.0
+  },
+  "Stephen Curry": {
+   "name": "Stephen Curry",
+   "team": "GSW",
+   "rank025a": 30,
+   "ovr025a": 87.2,
+   "rank027": 42,
+   "ovr027": 81.4
+  }
+ }
+}

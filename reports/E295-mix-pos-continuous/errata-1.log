@@ -1,0 +1,5 @@
+A {'literal_near_cap': 0, 'literal_near_cap_with_zero_bonus': 0, 'literal_max_cap_among_hits': 0.0, 'errata_near_cap_cap_ge_1': 0, 'errata_names': [], 'rel95_cap_ge_1': 0, 'n_cap_ge_1': 139, 'max_same_bonus_group': 3, 'G2_errata': True, 'verdict_errata': 'baseline'}
+W1 {'literal_near_cap': 47, 'literal_near_cap_with_zero_bonus': 44, 'literal_max_cap_among_hits': 0.25534667268674305, 'errata_near_cap_cap_ge_1': 0, 'errata_names': [], 'rel95_cap_ge_1': 0, 'n_cap_ge_1': 165, 'max_same_bonus_group': 3, 'G2_errata': True, 'verdict_errata': 'adopt_candidate'}
+W2 {'literal_near_cap': 47, 'literal_near_cap_with_zero_bonus': 46, 'literal_max_cap_among_hits': 0.22808236532887546, 'errata_near_cap_cap_ge_1': 0, 'errata_names': [], 'rel95_cap_ge_1': 0, 'n_cap_ge_1': 165, 'max_same_bonus_group': 3, 'G2_errata': True, 'verdict_errata': 'reject'}
+W3 {'literal_near_cap': 94, 'literal_near_cap_with_zero_bonus': 94, 'literal_max_cap_among_hits': 0.09944172918979091, 'errata_near_cap_cap_ge_1': 0, 'errata_names': [], 'rel95_cap_ge_1': 0, 'n_cap_ge_1': 192, 'max_same_bonus_group': 2, 'G2_errata': True, 'verdict_errata': 'reject'}
+pick_errata W1

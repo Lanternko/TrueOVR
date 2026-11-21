@@ -1,0 +1,226 @@
+{
+ "seeds": [
+  20261100,
+  20261115
+ ],
+ "target_off": {
+  "games": 6960,
+  "foulPer100": 10.741534572346128,
+  "possPerTeamGame": 100.48477011494253,
+  "ptsPerTeamGame": 119.00510057471264
+ },
+ "c": -0.03125,
+ "pace": 0.99875,
+ "converged": true,
+ "foulGapRel": -0.0036808188976935607,
+ "possGap": -0.039583333333339965,
+ "onAtCalibrated": {
+  "foulPer100": 10.701996928902007,
+  "possPerTeamGame": 100.4451867816092,
+  "ptsPerTeamGame": 119.11810344827586
+ },
+ "rounds": [
+  {
+   "round": 1,
+   "c": -0.03125,
+   "pace": 0.99875,
+   "foulGapRel": -0.0036808188976935607,
+   "possGap": -0.039583333333339965,
+   "games": 6960,
+   "foulPer100": 10.701996928902007,
+   "possPerTeamGame": 100.4451867816092,
+   "ptsPerTeamGame": 119.11810344827586
+  }
+ ],
+ "evaluations": [
+  {
+   "c": 0,
+   "pace": 1,
+   "file": "cal-c0.000000-p1.000000",
+   "games": 6960,
+   "foulPer100": 10.476743329832722,
+   "possPerTeamGame": 100.48872126436781,
+   "ptsPerTeamGame": 118.6496408045977
+  },
+  {
+   "c": 0.4,
+   "pace": 1,
+   "file": "cal-c0.400000-p1.000000",
+   "games": 6960,
+   "foulPer100": 7.690863462880713,
+   "possPerTeamGame": 100.24956896551724,
+   "ptsPerTeamGame": 114.89669540229885
+  },
+  {
+   "c": -0.4,
+   "pace": 1,
+   "file": "cal-c-0.400000-p1.000000",
+   "games": 6960,
+   "foulPer100": 13.928841193153477,
+   "possPerTeamGame": 100.8146551724138,
+   "ptsPerTeamGame": 123.45301724137931
+  },
+  {
+   "c": -0.4,
+   "pace": 1,
+   "file": "cal-c-0.400000-p1.000000",
+   "games": 6960,
+   "foulPer100": 13.928841193153477,
+   "possPerTeamGame": 100.8146551724138,
+   "ptsPerTeamGame": 123.45301724137931
+  },
+  {
+   "c": 0,
+   "pace": 1,
+   "file": "cal-c0.000000-p1.000000",
+   "games": 6960,
+   "foulPer100": 10.476743329832722,
+   "possPerTeamGame": 100.48872126436781,
+   "ptsPerTeamGame": 118.6496408045977
+  },
+  {
+   "c": -0.2,
+   "pace": 1,
+   "file": "cal-c-0.200000-p1.000000",
+   "games": 6960,
+   "foulPer100": 12.153728707408568,
+   "possPerTeamGame": 100.59705459770115,
+   "ptsPerTeamGame": 120.93311781609195
+  },
+  {
+   "c": -0.1,
+   "pace": 1,
+   "file": "cal-c-0.100000-p1.000000",
+   "games": 6960,
+   "foulPer100": 11.265673365211203,
+   "possPerTeamGame": 100.53936781609195,
+   "ptsPerTeamGame": 119.63864942528735
+  },
+  {
+   "c": -0.05,
+   "pace": 1,
+   "file": "cal-c-0.050000-p1.000000",
+   "games": 6960,
+   "foulPer100": 10.87141462075513,
+   "possPerTeamGame": 100.4889367816092,
+   "ptsPerTeamGame": 119.15438218390804
+  },
+  {
+   "c": -0.025,
+   "pace": 1,
+   "file": "cal-c-0.025000-p1.000000",
+   "games": 6960,
+   "foulPer100": 10.664852621976156,
+   "possPerTeamGame": 100.48247126436782,
+   "ptsPerTeamGame": 118.92923850574712
+  },
+  {
+   "c": -0.037500000000000006,
+   "pace": 1,
+   "file": "cal-c-0.037500-p1.000000",
+   "games": 6960,
+   "foulPer100": 10.77212641788356,
+   "possPerTeamGame": 100.49683908045976,
+   "ptsPerTeamGame": 119.05560344827586
+  },
+  {
+   "c": -0.03125,
+   "pace": 1,
+   "file": "cal-c-0.031250-p1.000000",
+   "games": 6960,
+   "foulPer100": 10.714898459884363,
+   "possPerTeamGame": 100.49252873563218,
+   "ptsPerTeamGame": 118.99195402298851
+  },
+  {
+   "c": -0.03125,
+   "pace": 1,
+   "file": "cal-c-0.031250-p1.000000",
+   "games": 6960,
+   "foulPer100": 10.714898459884363,
+   "possPerTeamGame": 100.49252873563218,
+   "ptsPerTeamGame": 118.99195402298851
+  },
+  {
+   "c": -0.03125,
+   "pace": 1.02,
+   "file": "cal-c-0.031250-p1.020000",
+   "games": 6960,
+   "foulPer100": 10.754374503924977,
+   "possPerTeamGame": 101.27995689655172,
+   "ptsPerTeamGame": 119.90179597701149
+  },
+  {
+   "c": -0.03125,
+   "pace": 0.98,
+   "file": "cal-c-0.031250-p0.980000",
+   "games": 6960,
+   "foulPer100": 10.727709495676642,
+   "possPerTeamGame": 99.67406609195402,
+   "ptsPerTeamGame": 118.03254310344828
+  },
+  {
+   "c": -0.03125,
+   "pace": 0.98,
+   "file": "cal-c-0.031250-p0.980000",
+   "games": 6960,
+   "foulPer100": 10.727709495676642,
+   "possPerTeamGame": 99.67406609195402,
+   "ptsPerTeamGame": 118.03254310344828
+  },
+  {
+   "c": -0.03125,
+   "pace": 1,
+   "file": "cal-c-0.031250-p1.000000",
+   "games": 6960,
+   "foulPer100": 10.714898459884363,
+   "possPerTeamGame": 100.49252873563218,
+   "ptsPerTeamGame": 118.99195402298851
+  },
+  {
+   "c": -0.03125,
+   "pace": 0.99,
+   "file": "cal-c-0.031250-p0.990000",
+   "games": 6960,
+   "foulPer100": 10.743129798378417,
+   "possPerTeamGame": 100.12212643678161,
+   "ptsPerTeamGame": 118.59798850574713
+  },
+  {
+   "c": -0.03125,
+   "pace": 0.995,
+   "file": "cal-c-0.031250-p0.995000",
+   "games": 6960,
+   "foulPer100": 10.702700611146819,
+   "possPerTeamGame": 100.25668103448275,
+   "ptsPerTeamGame": 118.76472701149426
+  },
+  {
+   "c": -0.03125,
+   "pace": 0.9975,
+   "file": "cal-c-0.031250-p0.997500",
+   "games": 6960,
+   "foulPer100": 10.703141825394043,
+   "possPerTeamGame": 100.40423850574713,
+   "ptsPerTeamGame": 118.84568965517241
+  },
+  {
+   "c": -0.03125,
+   "pace": 0.99875,
+   "file": "cal-c-0.031250-p0.998750",
+   "games": 6960,
+   "foulPer100": 10.701996928902007,
+   "possPerTeamGame": 100.4451867816092,
+   "ptsPerTeamGame": 119.11810344827586
+  },
+  {
+   "c": -0.03125,
+   "pace": 0.99875,
+   "file": "cal-c-0.031250-p0.998750",
+   "games": 6960,
+   "foulPer100": 10.701996928902007,
+   "possPerTeamGame": 100.4451867816092,
+   "ptsPerTeamGame": 119.11810344827586
+  }
+ ]
+}

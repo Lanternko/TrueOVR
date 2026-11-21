@@ -1,0 +1,514 @@
+{
+ "top20": [
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "pos": "PG",
+   "e101": 1,
+   "ovr": "107.3",
+   "c025": "1",
+   "e096": "1",
+   "rank2k": "2",
+   "rapm": "2"
+  },
+  {
+   "name": "Nikola Jokić",
+   "pos": "C",
+   "e101": 2,
+   "ovr": "103.8",
+   "c025": "2",
+   "e096": "2",
+   "rank2k": "2",
+   "rapm": "1"
+  },
+  {
+   "name": "Victor Wembanyama",
+   "pos": "C",
+   "e101": 3,
+   "ovr": "101.7",
+   "c025": "4",
+   "e096": "4",
+   "rank2k": "2",
+   "rapm": "5"
+  },
+  {
+   "name": "Luka Dončić",
+   "pos": "PG",
+   "e101": 4,
+   "ovr": "100.8",
+   "c025": "3",
+   "e096": "3",
+   "rank2k": "5",
+   "rapm": "16"
+  },
+  {
+   "name": "Giannis Antetokounmpo",
+   "pos": "PF",
+   "e101": 5,
+   "ovr": "99.0",
+   "c025": "11",
+   "e096": "6",
+   "rank2k": "5",
+   "rapm": "3"
+  },
+  {
+   "name": "Kawhi Leonard",
+   "pos": "SF",
+   "e101": 6,
+   "ovr": "97.9",
+   "c025": "8",
+   "e096": "5",
+   "rank2k": "11",
+   "rapm": "4"
+  },
+  {
+   "name": "Franz Wagner",
+   "pos": "SF",
+   "e101": 7,
+   "ovr": "97.7",
+   "c025": "5",
+   "e096": "7",
+   "rank2k": "47",
+   "rapm": "7"
+  },
+  {
+   "name": "Derrick White",
+   "pos": "PG",
+   "e101": 8,
+   "ovr": "96.5",
+   "c025": "7",
+   "e096": "8",
+   "rank2k": "70",
+   "rapm": "6"
+  },
+  {
+   "name": "Chet Holmgren",
+   "pos": "PF",
+   "e101": 9,
+   "ovr": "95.3",
+   "c025": "6",
+   "e096": "10",
+   "rank2k": "38",
+   "rapm": "8"
+  },
+  {
+   "name": "Lauri Markkanen",
+   "pos": "PF",
+   "e101": 10,
+   "ovr": "93.8",
+   "c025": "9",
+   "e096": "9",
+   "rank2k": "38",
+   "rapm": "11"
+  },
+  {
+   "name": "Amen Thompson",
+   "pos": "PG",
+   "e101": 11,
+   "ovr": "92.2",
+   "c025": "10",
+   "e096": "11",
+   "rank2k": "38",
+   "rapm": "36"
+  },
+  {
+   "name": "Cade Cunningham",
+   "pos": "PG",
+   "e101": 12,
+   "ovr": "90.9",
+   "c025": "17",
+   "e096": "12",
+   "rank2k": "8",
+   "rapm": "54"
+  },
+  {
+   "name": "Herbert Jones",
+   "pos": "SG",
+   "e101": 13,
+   "ovr": "90.8",
+   "c025": "12",
+   "e096": "15",
+   "rank2k": "142",
+   "rapm": "14"
+  },
+  {
+   "name": "Donovan Mitchell",
+   "pos": "SG",
+   "e101": 14,
+   "ovr": "90.8",
+   "c025": "15",
+   "e096": "14",
+   "rank2k": "11",
+   "rapm": "17"
+  },
+  {
+   "name": "Dyson Daniels",
+   "pos": "SG",
+   "e101": 15,
+   "ovr": "90.2",
+   "c025": "18",
+   "e096": "13",
+   "rank2k": "94",
+   "rapm": "44"
+  },
+  {
+   "name": "Kon Knueppel",
+   "pos": "SF",
+   "e101": 16,
+   "ovr": "89.7",
+   "c025": "16",
+   "e096": "16",
+   "rank2k": "60",
+   "rapm": "42"
+  },
+  {
+   "name": "Joel Embiid",
+   "pos": "C",
+   "e101": 17,
+   "ovr": "89.6",
+   "c025": "13",
+   "e096": "20",
+   "rank2k": "17",
+   "rapm": "10"
+  },
+  {
+   "name": "Jimmy Butler III",
+   "pos": "SF",
+   "e101": 18,
+   "ovr": "88.9",
+   "c025": "27",
+   "e096": "28",
+   "rank2k": "47",
+   "rapm": "12"
+  },
+  {
+   "name": "Ausar Thompson",
+   "pos": "SF",
+   "e101": 19,
+   "ovr": "88.8",
+   "c025": "22",
+   "e096": "18",
+   "rank2k": "47",
+   "rapm": "28"
+  },
+  {
+   "name": "OG Anunoby",
+   "pos": "SF",
+   "e101": 20,
+   "ovr": "88.8",
+   "c025": "24",
+   "e096": "22",
+   "rank2k": "23",
+   "rapm": "31"
+  }
+ ],
+ "bigs10": [
+  {
+   "name": "Nikola Jokić",
+   "pos": "C",
+   "e101": 2,
+   "ovr": "103.8",
+   "c025": "2",
+   "e096": "2",
+   "rank2k": "2",
+   "rapm": "1"
+  },
+  {
+   "name": "Victor Wembanyama",
+   "pos": "C",
+   "e101": 3,
+   "ovr": "101.7",
+   "c025": "4",
+   "e096": "4",
+   "rank2k": "2",
+   "rapm": "5"
+  },
+  {
+   "name": "Joel Embiid",
+   "pos": "C",
+   "e101": 17,
+   "ovr": "89.6",
+   "c025": "13",
+   "e096": "20",
+   "rank2k": "17",
+   "rapm": "10"
+  },
+  {
+   "name": "Neemias Queta",
+   "pos": "C",
+   "e101": 23,
+   "ovr": "88.7",
+   "c025": "25",
+   "e096": "26",
+   "rank2k": "110",
+   "rapm": "13"
+  },
+  {
+   "name": "Jarrett Allen",
+   "pos": "C",
+   "e101": 34,
+   "ovr": "85.9",
+   "c025": "36",
+   "e096": "36",
+   "rank2k": "47",
+   "rapm": "22"
+  },
+  {
+   "name": "Jalen Duren",
+   "pos": "C",
+   "e101": 37,
+   "ovr": "85.5",
+   "c025": "53",
+   "e096": "54",
+   "rank2k": "47",
+   "rapm": "180"
+  },
+  {
+   "name": "Anthony Davis",
+   "pos": "C",
+   "e101": 38,
+   "ovr": "85.2",
+   "c025": "46",
+   "e096": "48",
+   "rank2k": "20",
+   "rapm": "32"
+  },
+  {
+   "name": "Bam Adebayo",
+   "pos": "C",
+   "e101": 46,
+   "ovr": "84.3",
+   "c025": "43",
+   "e096": "41",
+   "rank2k": "30",
+   "rapm": "63"
+  },
+  {
+   "name": "Rudy Gobert",
+   "pos": "C",
+   "e101": 48,
+   "ovr": "84.1",
+   "c025": "45",
+   "e096": "47",
+   "rank2k": "60",
+   "rapm": "29"
+  },
+  {
+   "name": "Walker Kessler",
+   "pos": "C",
+   "e101": 51,
+   "ovr": "83.6",
+   "c025": "58",
+   "e096": "50",
+   "rank2k": "94",
+   "rapm": "149"
+  }
+ ],
+ "watch": [
+  {
+   "name": "Alex Caruso",
+   "pos": "SG",
+   "e101": 36,
+   "ovr": "85.7",
+   "c025": "39",
+   "e096": "49",
+   "rank2k": "94",
+   "rapm": "9"
+  },
+  {
+   "name": "Jared McCain",
+   "pos": "SG",
+   "e101": 272,
+   "ovr": "63.2",
+   "c025": "261",
+   "e096": "263",
+   "rank2k": "175",
+   "rapm": "253"
+  },
+  {
+   "name": "Nikola Topić",
+   "pos": "PG",
+   "e101": 371,
+   "ovr": "55.7",
+   "c025": "376",
+   "e096": "377",
+   "rank2k": "380",
+   "rapm": "—"
+  },
+  {
+   "name": "Cason Wallace",
+   "pos": "SG",
+   "e101": 75,
+   "ovr": "81.5",
+   "c025": "74",
+   "e096": "71",
+   "rank2k": "94",
+   "rapm": "116"
+  },
+  {
+   "name": "Isaiah Joe",
+   "pos": "SG",
+   "e101": 133,
+   "ovr": "75.4",
+   "c025": "122",
+   "e096": "131",
+   "rank2k": "175",
+   "rapm": "103"
+  },
+  {
+   "name": "Kenrich Williams",
+   "pos": "PF",
+   "e101": 178,
+   "ovr": "71.6",
+   "c025": "187",
+   "e096": "177",
+   "rank2k": "220",
+   "rapm": "45"
+  },
+  {
+   "name": "Dyson Daniels",
+   "pos": "SG",
+   "e101": 15,
+   "ovr": "90.2",
+   "c025": "18",
+   "e096": "13",
+   "rank2k": "94",
+   "rapm": "44"
+  },
+  {
+   "name": "Tyrese Maxey",
+   "pos": "PG",
+   "e101": 26,
+   "ovr": "88.1",
+   "c025": "26",
+   "e096": "21",
+   "rank2k": "15",
+   "rapm": "70"
+  },
+  {
+   "name": "Stephen Curry",
+   "pos": "PG",
+   "e101": 32,
+   "ovr": "86.3",
+   "c025": "23",
+   "e096": "24",
+   "rank2k": "11",
+   "rapm": "24"
+  },
+  {
+   "name": "Jalen Brunson",
+   "pos": "PG",
+   "e101": 58,
+   "ovr": "83.2",
+   "c025": "51",
+   "e096": "45",
+   "rank2k": "5",
+   "rapm": "81"
+  },
+  {
+   "name": "Kevin Durant",
+   "pos": "SF",
+   "e101": 21,
+   "ovr": "88.7",
+   "c025": "14",
+   "e096": "23",
+   "rank2k": "11",
+   "rapm": "35"
+  },
+  {
+   "name": "Joel Embiid",
+   "pos": "C",
+   "e101": 17,
+   "ovr": "89.6",
+   "c025": "13",
+   "e096": "20",
+   "rank2k": "17",
+   "rapm": "10"
+  },
+  {
+   "name": "Jalen Duren",
+   "pos": "C",
+   "e101": 37,
+   "ovr": "85.5",
+   "c025": "53",
+   "e096": "54",
+   "rank2k": "47",
+   "rapm": "180"
+  },
+  {
+   "name": "Walker Kessler",
+   "pos": "C",
+   "e101": 51,
+   "ovr": "83.6",
+   "c025": "58",
+   "e096": "50",
+   "rank2k": "94",
+   "rapm": "149"
+  },
+  {
+   "name": "Daniel Gafford",
+   "pos": "C",
+   "e101": 129,
+   "ovr": "75.7",
+   "c025": "130",
+   "e096": "130",
+   "rank2k": "142",
+   "rapm": "133"
+  },
+  {
+   "name": "Andre Drummond",
+   "pos": "C",
+   "e101": 486,
+   "ovr": "51.9",
+   "c025": "423",
+   "e096": "413",
+   "rank2k": "220",
+   "rapm": "273"
+  },
+  {
+   "name": "Zach Edey",
+   "pos": "C",
+   "e101": 93,
+   "ovr": "79.2",
+   "c025": "102",
+   "e096": "90",
+   "rank2k": "110",
+   "rapm": "23"
+  },
+  {
+   "name": "Amen Thompson",
+   "pos": "PG",
+   "e101": 11,
+   "ovr": "92.2",
+   "c025": "10",
+   "e096": "11",
+   "rank2k": "38",
+   "rapm": "36"
+  },
+  {
+   "name": "Anthony Edwards",
+   "pos": "SG",
+   "e101": 35,
+   "ovr": "85.7",
+   "c025": "34",
+   "e096": "33",
+   "rank2k": "7",
+   "rapm": "61"
+  },
+  {
+   "name": "LeBron James",
+   "pos": "SF",
+   "e101": 67,
+   "ovr": "82.2",
+   "c025": "71",
+   "e096": "73",
+   "rank2k": "17",
+   "rapm": "49"
+  }
+ ],
+ "missing": [],
+ "top20_vs_c025_out": [
+  "Kevin Durant",
+  "Jamal Murray",
+  "Ryan Rollins"
+ ]
+}

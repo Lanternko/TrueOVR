@@ -1,0 +1,33 @@
+D sign check {'2023-24': {'corr_net_O+D': 0.9999999999999999, 'corr_net_O-D': 0.0679875533630241, 'n': 419}, '2024-25': {'corr_net_O+D': 1.0, 'corr_net_O-D': 0.13857338243917255, 'n': 437}, '2025-26': {'corr_net_O+D': 0.9999999999999999, 'corr_net_O-D': 0.04367258200758333, 'n': 452}}
+repro {'2022-23': True, '2023-24': True, '2024-25': True, '2025-26': True}
+n {'2022-23': 262, '2023-24': 286, '2024-25': 319, '2025-26': 240} n_def {'2022-23': 262, '2023-24': 286, '2024-25': 319}
+A0 combined {'R2': 0.539, 'rho': 0.702, 'rhoDEF': 0.4221, 'rhoDEF_rbh': 0.4159, 'R2_rapm': 0.199, 'rho_rapm': 0.3988}
+  A0 2022-23 {'R2': 0.5342, 'rho': 0.7014, 'rhoDEF': 0.3245, 'rhoDEF_rbh': 0.3229, 'R2_rapm': 0.2327, 'rho_rapm': 0.4379}
+  A0 2023-24 {'R2': 0.5142, 'rho': 0.6765, 'rhoDEF': 0.4344, 'rhoDEF_rbh': 0.4332, 'R2_rapm': 0.1373, 'rho_rapm': 0.3343}
+  A0 2024-25 {'R2': 0.5651, 'rho': 0.7254, 'rhoDEF': 0.4911, 'rhoDEF_rbh': 0.4766, 'R2_rapm': 0.2265, 'rho_rapm': 0.4244}
+  A0 2025-26 {'R2': 0.574, 'rho': 0.745}
+== A1 pass=False gates={'dR2>=.005': False, 'every_fold_dR2>=0': False, 'dRhoDEF>=0': True} def_only=False ci90=[-0.0122, -0.0001]
+   combined d {'R2': -0.0062, 'rho': -0.0062, 'rhoDEF': 0.0039, 'rhoDEF_rbh': -0.0039, 'R2_rapm': -0.0068, 'rho_rapm': -0.0078}
+    2022-23 {'R2': -0.002, 'rho': -0.0061, 'rhoDEF': 0.0401, 'rhoDEF_rbh': 0.0093, 'R2_rapm': -0.0028, 'rho_rapm': -0.0063} {'n_ovr_diff>=3': 11, 'max_abs_ovr_diff': 18.799999999999997, 'max_abs_pred0_diff': 1.729}
+    2023-24 {'R2': -0.0086, 'rho': -0.0101, 'rhoDEF': -0.0178, 'rhoDEF_rbh': -0.0119, 'R2_rapm': -0.0076, 'rho_rapm': -0.0086} {'n_ovr_diff>=3': 16, 'max_abs_ovr_diff': 7.100000000000001, 'max_abs_pred0_diff': 1.498}
+    2024-25 {'R2': -0.0074, 'rho': -0.0029, 'rhoDEF': -0.0063, 'rhoDEF_rbh': -0.0075, 'R2_rapm': -0.0094, 'rho_rapm': -0.0083} {'n_ovr_diff>=3': 9, 'max_abs_ovr_diff': 3.799999999999997, 'max_abs_pred0_diff': 1.664}
+    2025-26 {'R2': 0.0024, 'rho': 0.0045} {'n_ovr_diff>=3': 0, 'max_abs_ovr_diff': 2.9000000000000057, 'max_abs_pred0_diff': 0.402}
+== A2 pass=False gates={'dR2>=.005': False, 'every_fold_dR2>=0': False, 'dRhoDEF>=0': True} def_only=False ci90=[-0.0154, 0.0035]
+   combined d {'R2': -0.0062, 'rho': -0.0064, 'rhoDEF': 0.0087, 'rhoDEF_rbh': -0.0037, 'R2_rapm': -0.0062, 'rho_rapm': -0.0075}
+    2022-23 {'R2': -0.0055, 'rho': -0.0093, 'rhoDEF': 0.0231, 'rhoDEF_rbh': -0.0027, 'R2_rapm': -0.0016, 'rho_rapm': -0.0006} {'n_ovr_diff>=3': 40, 'max_abs_ovr_diff': 19.4, 'max_abs_pred0_diff': 1.834}
+    2023-24 {'R2': -0.0029, 'rho': -0.0036, 'rhoDEF': -0.0032, 'rhoDEF_rbh': -0.008, 'R2_rapm': -0.0047, 'rho_rapm': -0.0079} {'n_ovr_diff>=3': 62, 'max_abs_ovr_diff': 10.5, 'max_abs_pred0_diff': 1.8519999999999999}
+    2024-25 {'R2': -0.0097, 'rho': -0.0067, 'rhoDEF': 0.0076, 'rhoDEF_rbh': -0.0006, 'R2_rapm': -0.0114, 'rho_rapm': -0.0129} {'n_ovr_diff>=3': 38, 'max_abs_ovr_diff': 10.599999999999994, 'max_abs_pred0_diff': 2.04}
+    2025-26 {'R2': 0.0201, 'rho': 0.0112} {'n_ovr_diff>=3': 18, 'max_abs_ovr_diff': 5.699999999999996, 'max_abs_pred0_diff': 0.679}
+== A3 pass=True gates={'dR2>=.005': True, 'every_fold_dR2>=0': True, 'dRhoDEF>=0': True} def_only=False ci90=[-0.0008, 0.0156]
+   combined d {'R2': 0.0074, 'rho': 0.0042, 'rhoDEF': 0.0015, 'rhoDEF_rbh': -0.0021, 'R2_rapm': -0.0004, 'rho_rapm': -0.0011}
+    2022-23 {'R2': 0.0048, 'rho': 0.0025, 'rhoDEF': 0.0345, 'rhoDEF_rbh': 0.0107, 'R2_rapm': 0.0048, 'rho_rapm': 0.0058} {'n_ovr_diff>=3': 35, 'max_abs_ovr_diff': 15.0, 'max_abs_pred0_diff': 1.409}
+    2023-24 {'R2': 0.0075, 'rho': 0.0065, 'rhoDEF': -0.017, 'rhoDEF_rbh': -0.0098, 'R2_rapm': -0.0026, 'rho_rapm': 0.0008} {'n_ovr_diff>=3': 32, 'max_abs_ovr_diff': 9.200000000000003, 'max_abs_pred0_diff': 1.22}
+    2024-25 {'R2': 0.0094, 'rho': 0.0035, 'rhoDEF': -0.009, 'rhoDEF_rbh': -0.0056, 'R2_rapm': -0.0028, 'rho_rapm': -0.0085} {'n_ovr_diff>=3': 16, 'max_abs_ovr_diff': 9.899999999999991, 'max_abs_pred0_diff': 1.325}
+    2025-26 {'R2': 0.012, 'rho': 0.0057} {'n_ovr_diff>=3': 5, 'max_abs_ovr_diff': 3.799999999999997, 'max_abs_pred0_diff': 0.4920000000000002}
+== A4 pass=False gates={'dR2>=.005': False, 'every_fold_dR2>=0': False, 'dRhoDEF>=0': True} def_only=False ci90=[-0.0122, -0.0001]
+   combined d {'R2': -0.0062, 'rho': -0.0062, 'rhoDEF': 0.0039, 'rhoDEF_rbh': -0.0039, 'R2_rapm': -0.0068, 'rho_rapm': -0.0078}
+    2022-23 {'R2': -0.002, 'rho': -0.0061, 'rhoDEF': 0.0401, 'rhoDEF_rbh': 0.0093, 'R2_rapm': -0.0028, 'rho_rapm': -0.0063} {'n_ovr_diff>=3': 11, 'max_abs_ovr_diff': 18.799999999999997, 'max_abs_pred0_diff': 1.729}
+    2023-24 {'R2': -0.0086, 'rho': -0.0101, 'rhoDEF': -0.0178, 'rhoDEF_rbh': -0.0119, 'R2_rapm': -0.0076, 'rho_rapm': -0.0086} {'n_ovr_diff>=3': 16, 'max_abs_ovr_diff': 7.100000000000001, 'max_abs_pred0_diff': 1.498}
+    2024-25 {'R2': -0.0074, 'rho': -0.0029, 'rhoDEF': -0.0063, 'rhoDEF_rbh': -0.0075, 'R2_rapm': -0.0094, 'rho_rapm': -0.0083} {'n_ovr_diff>=3': 9, 'max_abs_ovr_diff': 3.799999999999997, 'max_abs_pred0_diff': 1.664}
+    2025-26 {'R2': 0.0024, 'rho': 0.0045} {'n_ovr_diff>=3': 0, 'max_abs_ovr_diff': 2.9000000000000057, 'max_abs_pred0_diff': 0.402}
+adopt A3 def_display_only []

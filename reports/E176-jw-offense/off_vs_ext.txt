@@ -1,0 +1,40 @@
+n 290 rho(OFF, ext avg) 0.774
+pass      S(attr,res) all -0.293 PG:+0.041(n56) SG:+0.200(n66) SF:-0.395(n64) PF:-0.513(n46) C:-0.150(n58)
+creation  S(attr,res) all -0.275 PG:+0.029(n56) SG:+0.003(n66) SF:-0.279(n64) PF:-0.457(n46) C:-0.104(n58)
+drive     S(attr,res) all -0.238 PG:+0.252(n56) SG:+0.029(n66) SF:-0.336(n64) PF:-0.324(n46) C:-0.099(n58)
+tovSkill  S(attr,res) all -0.309 PG:-0.045(n56) SG:-0.373(n66) SF:-0.136(n64) PF:-0.198(n46) C:-0.653(n58)
+foulDraw  S(attr,res) all +0.096 PG:+0.189(n56) SG:+0.066(n66) SF:-0.104(n64) PF:-0.249(n46) C:+0.268(n58)
+long      S(attr,res) all -0.172 PG:-0.175(n56) SG:-0.286(n66) SF:-0.126(n64) PF:+0.124(n46) C:-0.267(n58)
+mean res by pos {'PG': -0.078, 'SG': -0.03, 'SF': -0.033, 'PF': 0.067, 'C': 0.093}
+
+Top 30 卡片 OFF：名次 / 外部平均名次
+  1 Shai Gilgeous-Alexander  PG  OFF +4.59  ext名次   1  pass 88.6
+  2 Kawhi Leonard            SF  OFF +3.70  ext名次   6  pass 77.9
+  3 Jamal Murray             PG  OFF +3.69  ext名次  10  pass 90.8
+  4 Luka Dončić              PG  OFF +3.60  ext名次   2  pass 98.0
+  5 Stephen Curry            PG  OFF +3.58  ext名次   5  pass 89.0
+  6 Cam Spencer              PG  OFF +3.31  ext名次  55  pass 96.7
+  7 Giannis Antetokounmpo    PF  OFF +3.12  ext名次   4  pass 95.0
+  8 Jimmy Butler III         SF  OFF +3.09  ext名次  19  pass 87.1
+  9 Tyrese Maxey             PG  OFF +2.86  ext名次  15  pass 87.0
+ 10 Jalen Brunson            PG  OFF +2.70  ext名次  11  pass 92.8
+ 11 Payton Pritchard         SG  OFF +2.42  ext名次  28  pass 84.1
+ 12 Donovan Mitchell         SG  OFF +2.41  ext名次   6  pass 87.9
+ 13 T.J. McConnell           PG  OFF +2.36  ext名次  91  pass 107.5
+ 14 DeMar DeRozan            SF  OFF +2.35  ext名次  74  pass 78.5
+ 15 Jalen Williams           PF  OFF +2.28  ext名次  89  pass 91.7
+ 16 Immanuel Quickley        PG  OFF +2.21  ext名次  58  pass 92.4
+ 17 Anthony Edwards          SG  OFF +2.13  ext名次  11  pass 75.2
+ 18 Andrew Nembhard          PG  OFF +2.12  ext名次 147  pass 97.8
+ 19 Kevin Durant             SF  OFF +2.11  ext名次  16  pass 72.6
+ 20 Luke Kennard             PG  OFF +2.09  ext名次  97  pass 69.6
+ 21 Pascal Siakam            PF  OFF +2.06  ext名次  51  pass 78.4
+ 22 Tyler Herro              SG  OFF +1.93  ext名次  36  pass 84.0
+ 23 Tre Jones                SG  OFF +1.84  ext名次  73  pass 93.3
+ 24 Jalen Johnson            PF  OFF +1.82  ext名次  79  pass 97.1
+ 25 Michael Porter Jr.       SF  OFF +1.79  ext名次  22  pass 56.5
+ 26 Isaiah Joe               SG  OFF +1.72  ext名次  44  pass 50.1
+ 27 De'Aaron Fox             PG  OFF +1.69  ext名次  44  pass 95.0
+ 28 Devin Booker             SG  OFF +1.64  ext名次  15  pass 90.5
+ 29 Franz Wagner             SF  OFF +1.60  ext名次  33  pass 83.5
+ 30 Austin Reaves            SG  OFF +1.59  ext名次  21  pass 86.8

@@ -1,0 +1,24 @@
+{
+  "sim": "0.1.1",
+  "startCommit": "7a2d0b0556b0bc7869f0493adf2d3ffb9b95979d",
+  "node": "v22.12.0",
+  "date": "2026-10-30",
+  "machine": "local (no 5090 used)",
+  "c3ElapsedSeconds": 372,
+  "scripts": ["common.mjs", "c0.mjs", "c0b.mjs", "c1.mjs", "c2.mjs", "c3-run.mjs", "c3-worker.mjs", "memo.mjs"],
+  "howRun": "scratch trees OLDT (start-HEAD src) and NEWT (worktree src) with junctions to main reports/data/scripts; node --preserve-symlinks --preserve-symlinks-main; old mode stamps fatigue:false last in each game's options",
+  "deviations": [
+    "result key fatigue:false and label rotation:'energy-target-minutes-position-heuristic' retained for bit-identity",
+    "test/timed_game.js pinned legacyHash updated to e87f8dce... (old engine fatigue:false)",
+    "test/measurement.js fatigue test replaced by 'fatigue removed' test; test/fixtures/measurement-legacy.json 11 of 20 sha256 regenerated from the old engine with fatigue:false",
+    "test/run_tests.js section 9 (source_rotation_energy) deleted along with test/source_rotation_energy.js",
+    "local inline applyStamina helper added to test/shooting_round_trip.js, source_context_shooting.js, source_rotation_shooting.js (they test other things)",
+    "REGRESSION: memoized:true impact chain (v14-v41 string-patch anchor) throws anchor drift; affects OVR workers and player-impact-diagnostics/wemby-robinson-cade/run.mjs; non-memoized {game:true} runs (c0-c3) unaffected",
+    "strength_benchmark and replay_accounting tests cannot run in the worktree (untracked data missing)",
+    "research/report scripts and protocol.json referencing deleted src/source_rotation_energy.js left unchanged",
+    "defense_a_variance.js, strength_benchmark.js, per36_report.js still pass fatigue:false (accepted and ignored); per36 still outputs a fatigue:false field; season_simulation.js descriptive text and calibration_presets.js comment untouched",
+    "c0 league source: data/season-league.json (tracked) because E-112's reports/sim-0.1.0+E103-stamina-workload/data/season-league.json no longer exists",
+    "c3 first background launch died immediately with an empty worker error; identical rerun after adding error logging passed (cause not identified, no code change in between)",
+    "verification trees needed an extra junction for scripts/"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+ "c0_2025-26": {
+  "got": "84e9590b28161a23b589e1918ad410f09d6af51a119af8ee57f7beca1146e6c1",
+  "want": "84e9590b28161a23b589e1918ad410f09d6af51a119af8ee57f7beca1146e6c1",
+  "same": true
+ },
+ "c0_hist": {
+  "2022-23": {
+   "got": "1513ca6589694899ecaa81b9d7272fabef283b919274b443fa70e8a0a6cc09d5",
+   "want": "1513ca6589694899ecaa81b9d7272fabef283b919274b443fa70e8a0a6cc09d5",
+   "same": true
+  },
+  "2023-24": {
+   "got": "de2a79d8cb86efaad5c20e3fc1f5123bf0a4fbc7fd835aea071600adb4e5f255",
+   "want": "de2a79d8cb86efaad5c20e3fc1f5123bf0a4fbc7fd835aea071600adb4e5f255",
+   "same": true
+  },
+  "2024-25": {
+   "got": "a28c3792c644b8c36ab05c02f5d519f77852729bcf17f61bf49bbf4f0f2df9fa",
+   "want": "a28c3792c644b8c36ab05c02f5d519f77852729bcf17f61bf49bbf4f0f2df9fa",
+   "same": true
+  }
+ },
+ "phase0": {
+  "n_eval_S": {
+   "2022-23": 262,
+   "2023-24": 286,
+   "2024-25": 319
+  },
+  "nF": {
+   "2022-23": 97,
+   "2023-24": 106,
+   "2024-25": 121
+  },
+  "S_F_creation_K6_pooled": -0.3459297994261696,
+  "S_F_creation_K6_per_season": {
+   "2022-23": -0.2653527516831443,
+   "2023-24": -0.3903466345008738,
+   "2024-25": -0.3722870774114587
+  },
+  "h_S_F_creation": 0.08021341788439923,
+  "ci90_S_F_creation": [
+   -0.4201451246458581,
+   -0.25971828887705967
+  ],
+  "n_eval_C": {
+   "2022-23": 271,
+   "2023-24": 303,
+   "2024-25": 346
+  },
+  "C_K6_pooled": 0.7070418037514855,
+  "h_C": 0.04468045972664392,
+  "ci90_C": [
+   0.6583728814553393,
+   0.7477338009086272
+  ],
+  "seed": 20261101,
+  "draws": 2000
+ },
+ "prereg_sha256": "4528c722fc7d310415a0bc026b2dd9152efcdb49eec45a0c4917049879d1a61c",
+ "errata1_sha256": "79c2b5d7f3739cb09c9838a3a1b1fbf3a373eaaa7260cf7ca5c9225a3b4687dd",
+ "cands": {
+  "2022-23": {
+   "n_T6": 491,
+   "n_T0": 860,
+   "n_pop": 491,
+   "T0_file": "reports/card-0.2.7c+E134-rolling-prior/stage1/work/2022-23/rapm-R.csv",
+   "T0_sha256": "b472298d65c27eb1d99f101f610e0b3ad07e4503467c1de15d94529ec0d64337",
+   "corr_T6_T0_O_D": [
+    0.6959283480710826,
+    0.551867949883144
+   ],
+   "sd_T6R_over_sd_T6_net": 0.9050992819872427
+  },
+  "2023-24": {
+   "n_T6": 509,
+   "n_T0": 882,
+   "n_pop": 508,
+   "T0_file": "reports/card-0.2.7c+E134-rolling-prior/stage1/work/2023-24/rapm-R.csv",
+   "T0_sha256": "a496f4c71db1187f636eeca39268cb07b741934d0f799d3f8543c615e0948c70",
+   "corr_T6_T0_O_D": [
+    0.6889010215606638,
+    0.5785062192447378
+   ],
+   "sd_T6R_over_sd_T6_net": 0.9066370684785802
+  },
+  "2024-25": {
+   "n_T6": 511,
+   "n_T0": 923,
+   "n_pop": 511,
+   "T0_file": "reports/card-0.2.7c+E134-rolling-prior/stage1/work/2024-25/rapm-R.csv",
+   "T0_sha256": "543585a85c8cf82b65fe45f3bb4107923f3193494cba9ba4d176e499e4d9a6aa",
+   "corr_T6_T0_O_D": [
+    0.6846060741464945,
+    0.5868454710178644
+   ],
+   "sd_T6R_over_sd_T6_net": 0.9169952451675975
+  },
+  "2025-26": {
+   "n_T6": 504,
+   "n_T0": 877,
+   "n_pop": 504,
+   "T0_file": "reports/impact-rapm/rapm.csv",
+   "T0_sha256": "73e9de4859206e7347f0665d348aaf7af6e2b8287e924138a0b099be86ea4b89",
+   "corr_T6_T0_O_D": [
+    0.6942001357819473,
+    0.6195221968607839
+   ],
+   "sd_T6R_over_sd_T6_net": 0.9305006308615635
+  }
+ }
+}

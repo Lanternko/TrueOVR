@@ -1,0 +1,78 @@
+{
+ "e101": {
+  "players": 582,
+  "cells": 8730,
+  "max": 129.0411949089114,
+  ">140": [],
+  ">120": [
+   [
+    "Giannis Antetokounmpo",
+    "shortValue",
+    129.04
+   ]
+  ],
+  "nan": 0
+ },
+ "e101z": {
+  "players": 582,
+  "cells": 8730,
+  "max": 137.87517589391192,
+  ">140": [],
+  ">120": [
+   [
+    "Giannis Antetokounmpo",
+    "shortValue",
+    137.88
+   ],
+   [
+    "Shai Gilgeous-Alexander",
+    "midValue",
+    131.8
+   ],
+   [
+    "Giannis Antetokounmpo",
+    "foulDraw",
+    121.23
+   ],
+   [
+    "Zach Edey",
+    "physique",
+    120.81
+   ]
+  ],
+  "nan": 0
+ },
+ "e101g": {
+  "players": 582,
+  "cells": 8730,
+  "max": 129.0411949089114,
+  ">140": [],
+  ">120": [
+   [
+    "Giannis Antetokounmpo",
+    "shortValue",
+    129.04
+   ]
+  ],
+  "nan": 0
+ },
+ "e101w": {
+  "players": 582,
+  "cells": 8730,
+  "max": 129.0411949089114,
+  ">140": [],
+  ">120": [
+   [
+    "Giannis Antetokounmpo",
+    "shortValue",
+    129.04
+   ],
+   [
+    "Zach Edey",
+    "physique",
+    120.7
+   ]
+  ],
+  "nan": 0
+ }
+}

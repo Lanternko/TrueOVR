@@ -1,0 +1,7 @@
+B1 R2-abil {'pts': 10000.0, 'tov': 0.001, 'orb': 0.001} 39s
+B1 R2-stats {'pts': 10000.0, 'tov': 0.001, 'orb': 0.001} 160s
+B1 R2-stats-rapm {'pts': 10000.0, 'tov': 0.001, 'orb': 0.001} 42s
+importance R2-abil
+importance R2-stats
+importance R2-stats-rapm
+D:\Projects\CODING\basketball-autochess\reports\E227-lineup-transformer-r2\results\test-results.json

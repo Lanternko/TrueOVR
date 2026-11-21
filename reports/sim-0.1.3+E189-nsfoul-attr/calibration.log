@@ -1,0 +1,8 @@
+base {} -> {"teamGames":13920,"possPerTG":100.42916666666666,"ptsPerTG":118.933908045977,"ftaPerTG":23.630459770114943,"nsFtPerTG":3.8808908045977013,"nsFoulPerTG":7.4808189655172415,"foulPer100":10.682459044302684}
+m0 {"attr":"odd","base":1,"c":-0.05625,"pace":0.998125} -> {"teamGames":13920,"possPerTG":100.46048850574712,"ptsPerTG":118.78318965517241,"ftaPerTG":23.70050287356322,"nsFtPerTG":3.9155172413793102,"nsFoulPerTG":7.509051724137931,"foulPer100":10.694932101458084}
+  nsFT ratio 1.0089
+cp0 {"attr":"odd","base":1,"c":-0.05625,"pace":0.998125} -> {"teamGames":13920,"possPerTG":100.46048850574712,"ptsPerTG":118.78318965517241,"ftaPerTG":23.70050287356322,"nsFtPerTG":3.9155172413793102,"nsFoulPerTG":7.509051724137931,"foulPer100":10.694932101458084}
+  foulPer100 rel 0.117%  poss diff 0.031
+final-odd {"attr":"odd","base":1,"c":-0.05625,"pace":0.998125} -> {"teamGames":13920,"possPerTG":100.46048850574712,"ptsPerTG":118.78318965517241,"ftaPerTG":23.70050287356322,"nsFtPerTG":3.9155172413793102,"nsFoulPerTG":7.509051724137931,"foulPer100":10.694932101458084}
+final-even {"attr":"even","base":1,"c":-0.05625,"pace":0.998125} -> {"teamGames":13920,"possPerTG":100.45897988505747,"ptsPerTG":118.72765804597701,"ftaPerTG":23.63757183908046,"nsFtPerTG":3.8573275862068965,"nsFoulPerTG":7.389942528735633,"foulPer100":10.685510255014878}
+FINAL {"m":1,"c":-0.05625,"pace":0.998125,"ok":{"nsFt":true,"foul":true,"poss":true,"pts":true,"fta":true}}

@@ -11,6 +11,7 @@
 // （見 evaluateLineup / chooseHandler）——這才是「傳球直到找到夠好的出手點」。
 
 import * as C from './constants.js';
+import { shotOriginAdjustment } from './source_shot_origin.js';
 
 // --- 輔助 ---------------------------------------------------------------
 
@@ -78,10 +79,8 @@ export function teammateContext(lineup, handlerIdx) {
  */
 export function doubleThreat(p) {
   const M = C.ATTR_MIDPOINT, w = C.DOUBLE_THREAT_W, c = C.DOUBLE_CREATE_W;
-  // 肉體直接進得分項：包夾是空間決策，夾的是「離籃框最近又擋不住」的那個人。
-  // 投射效率percentile 分不出 Shaq 與 Rick Fox，體格可以。
-  const score = w.long * p.long + w.mid * p.mid + w.short * p.short
-    + w.phys * p.physique;
+  // 體格項已拿掉（sim 0.1.1，R-089）；寫法同 E-086 ch1，逐位元相同。
+  const score = (w.long * p.long + w.mid * p.mid + w.short * p.short) / (w.long + w.mid + w.short);
   const create = c.handle * (p.handle ?? M) + c.drive * p.drive;
   return C.DOUBLE_THREAT_MIX * score + (1 - C.DOUBLE_THREAT_MIX) * create;
 }
@@ -335,9 +334,13 @@ export function possessionProbabilities(
     * (1 + tanhEff(ctx.offBall, C.OFFBALL_CUT_SCALE) * C.OFFBALL_CUT_IMPACT)
     * (1 + physEdge * C.PHYS_MAX_IMPACT)
     * passBoost * gravBoost * createBoost - 1;
+  // 出手來源修正（v55 修正 B）：預設 0，只有掛了 shotOriginMeasurement 的球員才有作用。
+  // 模擬裡「自主出手」就是「出手前沒傳球」(assist === null)，而 centeredMake 把命中率水準
+  // 釘在實測總和上，於是吃餅長人會拿被餵進去的禁區命中率去打自己創造的球。見 source_shot_origin.js。
   let makeShort = interpolate(handler.short, C.CURVE_SHORT)
     + contextScale * ctxShort * C.LEAGUE_TARGETS.shortPct
-    + pmShort;
+    + pmShort
+    + shotOriginAdjustment(handler, assist, putback);
   makeShort = clamp(makeShort, C.CLAMP.makeShort);
 
   // --- L2: 出手區域 ---
@@ -559,24 +562,4 @@ export function creationScore(p) {
   return w.long * p.long + w.mid * p.mid + w.short * p.short
     + w.drive * p.drive + w.pass * (p.pass ?? C.ATTR_MIDPOINT)
     - C.CREATE_OFFBALL_PENALTY * (p.offBall - C.ATTR_MIDPOINT);
-}
-
-/** 體力：削弱屬性而非加減機率（照 Nine_innings 的 pitcherEffectiveness）。 */
-export function applyStamina(player, fatigue) {
-  const eff = C.STAMINA_MAX_EFF
-    - (C.STAMINA_MAX_EFF - C.STAMINA_MIN_EFF) * Math.max(0, Math.min(1, fatigue));
-  return {
-    ...player,
-    long: player.long * eff,
-    mid: player.mid * eff,
-    short: player.short * eff,
-    drive: player.drive * eff,
-    _eff: eff,
-  };
-}
-
-/** 一名球員在該 possession 消耗的體力，體力屬性越高消耗越慢。 */
-export function fatigueRate(player, possessions) {
-  const resist = 0.6 + tanhEff(player.stamina, 45) * 0.4;
-  return possessions / (150 * resist);
 }

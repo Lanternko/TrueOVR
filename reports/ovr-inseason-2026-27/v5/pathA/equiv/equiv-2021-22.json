@@ -1,0 +1,794 @@
+{
+ "season": "2021-22",
+ "reference": "D:\\Projects\\CODING\\basketball-autochess\\data\\defense-seventh\\2021-22",
+ "candidates": {
+  "D:/Projects/temp/nba-old-seasons/equiv-v3": {
+   "pbpZones": {
+    "refN": 596,
+    "candN": 596,
+    "common": 596,
+    "onlyRef": 0,
+    "onlyCand": 0,
+    "fields": {
+     "midM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "midA": {
+      "r": 0.999998,
+      "maxDiff": 2.0,
+      "mismatch": 11
+     },
+     "shortM": {
+      "r": 1.0,
+      "maxDiff": 1.0,
+      "mismatch": 4
+     },
+     "shortA": {
+      "r": 0.999998,
+      "maxDiff": 2.0,
+      "mismatch": 72
+     },
+     "3M": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "3A": {
+      "r": 0.999999,
+      "maxDiff": 2.0,
+      "mismatch": 19
+     }
+    },
+    "rowsAnyMismatch": 89,
+    "exampleMismatch": [
+     "1626149",
+     "1626157",
+     "1626158",
+     "1626162",
+     "1626167"
+    ]
+   },
+   "bio": {
+    "refN": 605,
+    "candN": 605,
+    "common": 605,
+    "onlyRef": 0,
+    "onlyCand": 0,
+    "fields": {
+     "PLAYER_HEIGHT_INCHES": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PLAYER_WEIGHT": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "AGE": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "AST_PCT": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "OREB_PCT": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "DREB_PCT": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "GP": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     }
+    },
+    "rowsAnyMismatch": 0,
+    "exampleMismatch": []
+   },
+   "playerGames": {
+    "refN": 26039,
+    "candN": 26039,
+    "common": 26039,
+    "onlyRef": 0,
+    "onlyCand": 0,
+    "fields": {
+     "MIN": {
+      "r": 0.999989,
+      "maxDiff": 1.0,
+      "mismatch": 64
+     },
+     "FGM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FGA": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FG3M": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FG3A": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FTM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FTA": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "OREB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "DREB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "REB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "AST": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "STL": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "BLK": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "TOV": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PF": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PTS": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PLUS_MINUS": {
+      "r": 0.999479,
+      "maxDiff": 14.0,
+      "mismatch": 393
+     }
+    },
+    "rowsAnyMismatch": 457,
+    "exampleMismatch": [
+     "(1626149, '0022100368')",
+     "(1626149, '0022101217')",
+     "(1626153, '0022100589')",
+     "(1626153, '0022100790')",
+     "(1626153, '0022100968')"
+    ]
+   },
+   "playerSeason": {
+    "refN": 605,
+    "candN": 605,
+    "common": 605,
+    "onlyRef": 0,
+    "onlyCand": 0,
+    "fields": {
+     "MIN": {
+      "r": 1.0,
+      "maxDiff": 2.0,
+      "mismatch": 58
+     },
+     "FGM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FGA": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FG3M": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FG3A": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FTM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FTA": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "OREB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "DREB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "REB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "AST": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "STL": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "BLK": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "TOV": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PF": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PTS": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PLUS_MINUS": {
+      "r": 0.999866,
+      "maxDiff": 14.0,
+      "mismatch": 243
+     }
+    },
+    "rowsAnyMismatch": 263,
+    "exampleMismatch": [
+     "1626149",
+     "1626153",
+     "1626156",
+     "1626157",
+     "1626159"
+    ]
+   },
+   "teamGames": {
+    "refN": 2460,
+    "candN": 2460,
+    "common": 2460,
+    "onlyRef": 0,
+    "onlyCand": 0,
+    "fields": {
+     "FGM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FGA": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FG3M": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FG3A": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FTM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FTA": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "OREB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "DREB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "REB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "AST": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "STL": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "BLK": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "TOV": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PF": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PTS": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PLUS_MINUS": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "MIN": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     }
+    },
+    "rowsAnyMismatch": 0,
+    "exampleMismatch": []
+   }
+  },
+  "D:/Projects/temp/nba-old-seasons/equiv-cdn": {
+   "pbpZones": {
+    "refN": 596,
+    "candN": 596,
+    "common": 596,
+    "onlyRef": 0,
+    "onlyCand": 0,
+    "fields": {
+     "midM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "midA": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "shortM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "shortA": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "3M": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "3A": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     }
+    },
+    "rowsAnyMismatch": 0,
+    "exampleMismatch": []
+   },
+   "bio": {
+    "refN": 605,
+    "candN": 605,
+    "common": 605,
+    "onlyRef": 0,
+    "onlyCand": 0,
+    "fields": {
+     "PLAYER_HEIGHT_INCHES": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PLAYER_WEIGHT": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "AGE": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "AST_PCT": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "OREB_PCT": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "DREB_PCT": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "GP": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     }
+    },
+    "rowsAnyMismatch": 0,
+    "exampleMismatch": []
+   },
+   "playerGames": {
+    "refN": 26039,
+    "candN": 26039,
+    "common": 26039,
+    "onlyRef": 0,
+    "onlyCand": 0,
+    "fields": {
+     "MIN": {
+      "r": 0.999989,
+      "maxDiff": 1.0,
+      "mismatch": 64
+     },
+     "FGM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FGA": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FG3M": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FG3A": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FTM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FTA": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "OREB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "DREB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "REB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "AST": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "STL": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "BLK": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "TOV": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PF": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PTS": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PLUS_MINUS": {
+      "r": 0.999479,
+      "maxDiff": 14.0,
+      "mismatch": 393
+     }
+    },
+    "rowsAnyMismatch": 457,
+    "exampleMismatch": [
+     "(1626149, '0022100368')",
+     "(1626149, '0022101217')",
+     "(1626153, '0022100589')",
+     "(1626153, '0022100790')",
+     "(1626153, '0022100968')"
+    ]
+   },
+   "playerSeason": {
+    "refN": 605,
+    "candN": 605,
+    "common": 605,
+    "onlyRef": 0,
+    "onlyCand": 0,
+    "fields": {
+     "MIN": {
+      "r": 1.0,
+      "maxDiff": 2.0,
+      "mismatch": 58
+     },
+     "FGM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FGA": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FG3M": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FG3A": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FTM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FTA": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "OREB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "DREB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "REB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "AST": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "STL": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "BLK": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "TOV": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PF": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PTS": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PLUS_MINUS": {
+      "r": 0.999866,
+      "maxDiff": 14.0,
+      "mismatch": 243
+     }
+    },
+    "rowsAnyMismatch": 263,
+    "exampleMismatch": [
+     "1626149",
+     "1626153",
+     "1626156",
+     "1626157",
+     "1626159"
+    ]
+   },
+   "teamGames": {
+    "refN": 2460,
+    "candN": 2460,
+    "common": 2460,
+    "onlyRef": 0,
+    "onlyCand": 0,
+    "fields": {
+     "FGM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FGA": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FG3M": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FG3A": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FTM": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "FTA": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "OREB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "DREB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "REB": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "AST": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "STL": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "BLK": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "TOV": {
+      "r": 0.999956,
+      "maxDiff": 1.0,
+      "mismatch": 3
+     },
+     "PF": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PTS": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "PLUS_MINUS": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     },
+     "MIN": {
+      "r": 1.0,
+      "maxDiff": 0,
+      "mismatch": 0
+     }
+    },
+    "rowsAnyMismatch": 3,
+    "exampleMismatch": [
+     "(1610612759, '0022100144')",
+     "(1610612760, '0022100086')",
+     "(1610612762, '0022101135')"
+    ]
+   }
+  }
+ }
+}

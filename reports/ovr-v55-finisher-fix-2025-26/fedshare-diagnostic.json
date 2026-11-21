@@ -1,0 +1,153 @@
+{
+ "season": "2025-26",
+ "seed": 20261012,
+ "sourceFedShareLeague": 0.43975022560602445,
+ "league": {
+  "noB1": {
+   "simFedShare": 0.628550710365881,
+   "rimAttempts": 111703
+  },
+  "withB1": {
+   "simFedShare": 0.6251841008292348,
+   "rimAttempts": 112031
+  }
+ },
+ "b1EffectOnFedShare": -0.003366609536646137,
+ "baselineBiasVsSource": 0.1888004847598565,
+ "focus": [
+  {
+   "name": "Karlo Matković",
+   "sourceFedShare": 0.8208489226876912,
+   "sourceRimAttempts": 109,
+   "rawGap": 0.18880684912193146,
+   "simFedShareNoB1": 0.8104575163398693,
+   "simAttemptsNoB1": 153,
+   "simFedShareB1": 0.7745664739884393,
+   "simAttemptsB1": 173
+  },
+  {
+   "name": "Charles Bassey",
+   "sourceFedShare": 0.6841009761429931,
+   "sourceRimAttempts": 32,
+   "rawGap": 0.19148817468899915,
+   "simFedShareNoB1": 0.7333333333333333,
+   "simAttemptsNoB1": 45,
+   "simFedShareB1": 0.7608695652173914,
+   "simAttemptsB1": 46
+  },
+  {
+   "name": "Jaxson Hayes",
+   "sourceFedShare": 0.878760846927059,
+   "sourceRimAttempts": 206,
+   "rawGap": 0.19524225992477473,
+   "simFedShareNoB1": 0.8352059925093633,
+   "simAttemptsNoB1": 267,
+   "simFedShareB1": 0.8561151079136691,
+   "simAttemptsB1": 278
+  },
+  {
+   "name": "John Collins",
+   "sourceFedShare": 0.6107777148867916,
+   "sourceRimAttempts": 327,
+   "rawGap": 0.20129853160265546,
+   "simFedShareNoB1": 0.7824858757062146,
+   "simAttemptsNoB1": 354,
+   "simFedShareB1": 0.7426900584795322,
+   "simAttemptsB1": 342
+  },
+  {
+   "name": "Isaiah Stewart",
+   "sourceFedShare": 0.7250747236659387,
+   "sourceRimAttempts": 226,
+   "rawGap": 0.2213175407191402,
+   "simFedShareNoB1": 0.7279151943462897,
+   "simAttemptsNoB1": 283,
+   "simFedShareB1": 0.7457627118644068,
+   "simAttemptsB1": 295
+  },
+  {
+   "name": "Luka Garza",
+   "sourceFedShare": 0.8060227614554584,
+   "sourceRimAttempts": 140,
+   "rawGap": 0.18215263268040724,
+   "simFedShareNoB1": 0.7,
+   "simAttemptsNoB1": 210,
+   "simFedShareB1": 0.7121951219512195,
+   "simAttemptsB1": 205
+  },
+  {
+   "name": "Neemias Queta",
+   "sourceFedShare": 0.8507307354232602,
+   "sourceRimAttempts": 377,
+   "rawGap": 0.21357777612810913,
+   "simFedShareNoB1": 0.8232848232848233,
+   "simAttemptsNoB1": 481,
+   "simFedShareB1": 0.8087912087912088,
+   "simAttemptsB1": 455
+  },
+  {
+   "name": "Rudy Gobert",
+   "sourceFedShare": 0.8496929353761578,
+   "sourceRimAttempts": 321,
+   "rawGap": 0.22010297518562913,
+   "simFedShareNoB1": 0.7918781725888325,
+   "simAttemptsNoB1": 394,
+   "simFedShareB1": 0.8057553956834532,
+   "simAttemptsB1": 417
+  },
+  {
+   "name": "Jalen Smith",
+   "sourceFedShare": 0.6402058270740891,
+   "sourceRimAttempts": 139,
+   "rawGap": 0.18921578672941816,
+   "simFedShareNoB1": 0.8083832335329342,
+   "simAttemptsNoB1": 167,
+   "simFedShareB1": 0.8282208588957055,
+   "simAttemptsB1": 163
+  },
+  {
+   "name": "Nikola Jokić",
+   "sourceFedShare": 0.4890527431877353,
+   "sourceRimAttempts": 615,
+   "rawGap": 0.13481596273259358,
+   "simFedShareNoB1": 0.7557980900409277,
+   "simAttemptsNoB1": 733,
+   "simFedShareB1": 0.7178477690288714,
+   "simAttemptsB1": 762
+  },
+  {
+   "name": "Luka Dončić",
+   "sourceFedShare": 0.13842214142103937,
+   "sourceRimAttempts": 524,
+   "rawGap": 0.1680742789832093,
+   "simFedShareNoB1": 0.35693215339233036,
+   "simAttemptsNoB1": 678,
+   "simFedShareB1": 0.3484848484848485,
+   "simAttemptsB1": 660
+  },
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "sourceFedShare": 0.24674423613297347,
+   "sourceRimAttempts": 668,
+   "rawGap": 0.16413803334324856,
+   "simFedShareNoB1": 0.24242424242424243,
+   "simAttemptsNoB1": 825,
+   "simFedShareB1": 0.2653061224489796,
+   "simAttemptsB1": 833
+  },
+  {
+   "name": "Trae Young",
+   "sourceFedShare": 0.23151321726474328,
+   "sourceRimAttempts": 70,
+   "rawGap": 0.17294274288909606,
+   "simFedShareNoB1": 0.6153846153846154,
+   "simAttemptsNoB1": 78,
+   "simFedShareB1": 0.7246376811594203,
+   "simAttemptsB1": 69
+  }
+ ],
+ "seconds": {
+  "noB1": 45.588,
+  "withB1": 45.694
+ }
+}

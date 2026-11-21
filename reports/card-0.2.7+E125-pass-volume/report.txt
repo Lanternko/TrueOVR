@@ -1,0 +1,8 @@
+E-125 pass = 0.5*zs(AST/36 shrunk) + 0.5*zs(AST%-rate). All numbers recomputable from results.json / results-e125.json / evaluation.json.
+c0a true, c0 true (aebcadf1...), c1 npm test exit 0, u1 true (only pass column differs, 575/582 rows).
+m1 dRho_N_W +0.00044 CI90 [-0.00043,+0.00132]; m2 dRho_Q_W +0.00069 [-0.00023,+0.00174]; m3 dRho_N_lin +0.00043 [-0.00046,+0.00129]. All above thresholds.
+p1 (adjacent seasons Spearman, P50): 0.927 / 0.931 / 0.896 (P0: 0.922 / 0.929 / 0.889).
+evaluate.mjs: 18/19 for card 0.2.7, P0, P50 (fail: big14of16, unchanged). rho2k 0.7359->0.7369; rhoRapm 0.7793->0.7790.
+Anchors PR1/PR50/PR99: P0 -0.831/1.252/4.120; P50 -0.826/1.257/4.138.
+simulatedPer36: identical by player for P0 and P50 (pass does not enter the sim).
+Sha: read-only dirs unchanged except 5 new files created by another session in data/_inseason_build/vetdef/.

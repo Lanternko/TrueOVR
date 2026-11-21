@@ -1,0 +1,19 @@
+58a59
+> OUT_ATTRS = list(ATTRS)
+426c427
+<     global ATTRS, DRIVE_COLUMN, DRIVE_MODE, ATTR_SOURCE, DEF_SOURCE, RAPM, BLEND_POSS, BONUS_MIN_POSS, PRESSURE_MODE, PRESSURE_SOURCE, FOULDISC, TAIL_SOURCE
+---
+>     global ATTRS, OUT_ATTRS, DRIVE_COLUMN, DRIVE_MODE, ATTR_SOURCE, DEF_SOURCE, RAPM, BLEND_POSS, BONUS_MIN_POSS, PRESSURE_MODE, PRESSURE_SOURCE, FOULDISC, TAIL_SOURCE
+452a454,457
+>     OUT_ATTRS = list(ATTRS)   # E-131：ranking.csv 的屬性欄照舊全寫（含被 --dropAttr 拿掉的），只有設計矩陣用 ATTRS
+>     for _d in [argv[i + 1] for i, x in enumerate(argv) if x == '--dropAttr']:   # E-131：可重複；解析旗標後、建設計矩陣前把屬性從 ATTRS 移除
+>         assert _d in ATTRS, f'--dropAttr {_d} 不在 ATTRS'
+>         ATTRS = [a for a in ATTRS if a != _d]
+618c623
+<         wr.writerow(['rank', 'ovr', 'name', 'pos', 'MIN', 'predictedPer36', 'simulatedPer36', 'defenseBonus', 'align', 'pred0', 'pr'] + ATTRS)
+---
+>         wr.writerow(['rank', 'ovr', 'name', 'pos', 'MIN', 'predictedPer36', 'simulatedPer36', 'defenseBonus', 'align', 'pred0', 'pr'] + OUT_ATTRS)
+624c629
+<                         + [round(r['card'][a], 1) for a in ATTRS])
+---
+>                         + [round(r['card'][a], 1) for a in OUT_ATTRS])

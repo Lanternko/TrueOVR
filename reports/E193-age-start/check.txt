@@ -1,0 +1,39 @@
+開季日 2026-10-20 有 DOB 592
+
+(1) age_start != 本季 bio AGE：11 人（bio 是 抓取當下年齡）
+  Brice Sensabaugh (1641729) age_start=22 bioAGE=23
+  Charles Bassey (1629646) age_start=25 bioAGE=26
+  Devin Booker (1626164) age_start=29 bioAGE=30
+  Jae'Sean Tate (1630256) age_start=30 bioAGE=31
+  Jalen Pickett (1629618) age_start=26 bioAGE=27
+  Jalen Slawson (1641771) age_start=26 bioAGE=27
+  Jaylen Brown (1627759) age_start=29 bioAGE=30
+  Jock Landale (1629111) age_start=30 bioAGE=31
+  Jonathan Mogbo (1642367) age_start=24 bioAGE=25
+  Jordan Goodwin (1630692) age_start=27 bioAGE=28
+  Nikola Vučević (202696) age_start=35 bioAGE=36
+
+(2) y 或 v 改變：11 人
+  Kristaps Porziņģis bio=30 start=31 y 0->0 v 0->1 OVR 91.0->88.2 名次 23->37
+  1628998 bio=30 start=31 y 0->0 v 0->1 （不在 ranking）
+  Jock Landale bio=31 start=30 y 0->0 v 1->0 OVR 61.6->63.8 名次 278->257
+  Jae'Sean Tate bio=31 start=30 y 0->0 v 1->0 OVR 59.2->59.5 名次 309->308
+  1631113 bio=23 start=24 y 1->0 v 0->0 （不在 ranking）
+  1631120 bio=23 start=24 y 1->0 v 0->0 （不在 ranking）
+  1631207 bio=23 start=24 y 1->0 v 0->0 （不在 ranking）
+  1641780 bio=23 start=24 y 1->0 v 0->0 （不在 ranking）
+  1642354 bio=23 start=24 y 1->0 v 0->0 （不在 ranking）
+  1642362 bio=23 start=24 y 1->0 v 0->0 （不在 ranking）
+  Sean Pedulla bio=23 start=24 y 1->0 v 0->0 OVR 54.5->54.8 名次 369->362
+
+(3) 前 20 名進： [] 出： []
+    前 100 名（舊）移動 >=10 名： 1 [('Kristaps Porziņģis', 23, 37)]
+    名次有變的人 47 / 484
+
+(4) 四人 age_start：
+  Jarrett Allen (1628386) age_start=28 bio=28 y/v 舊=False 新=False
+  Grayson Allen (1628960) age_start=31 bio=31 y/v 舊=True 新=True
+  Aaron Gordon (203932) age_start=31 bio=31 y/v 舊=True 新=True
+  Kyle Kuzma (1628398) age_start=31 bio=31 y/v 舊=True 新=True
+  Caleb Martin (1628997) age_start=31 bio=31 y/v 舊=True 新=True
+  Alijah Martin (1642918) age_start=24 bio=24 y/v 舊=False 新=False

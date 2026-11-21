@@ -1,0 +1,2345 @@
+{
+ "key": "2425",
+ "variant": "Q",
+ "B5": {
+  "teams": [
+   {
+    "name": "B5-T0",
+    "slots": [
+     {
+      "k": 1,
+      "pos": "PG",
+      "target": 84.23320333333332,
+      "pids": [
+       203935,
+       1630631,
+       1629162
+      ],
+      "names": [
+       "Marcus Smart",
+       "Jose Alvarado",
+       "Jordan McLaughlin"
+      ],
+      "ovrs": [
+       84.5125,
+       85.2318,
+       85.2411
+      ],
+      "courtPosition": "PG"
+     },
+     {
+      "k": 2,
+      "pos": "SG",
+      "target": 75.68802000000001,
+      "pids": [
+       1629723,
+       1630256,
+       1629638
+      ],
+      "names": [
+       "John Konchar",
+       "Jae'Sean Tate",
+       "Nickeil Alexander-Walker"
+      ],
+      "ovrs": [
+       75.5772,
+       76.1065,
+       76.1494
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 3,
+      "pos": "SF",
+      "target": 76.89185333333333,
+      "pids": [
+       1630552,
+       201587,
+       1630530
+      ],
+      "names": [
+       "Jalen Johnson",
+       "Nicolas Batum",
+       "Trey Murphy III"
+      ],
+      "ovrs": [
+       76.5593,
+       76.3711,
+       77.5074
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 4,
+      "pos": "PF",
+      "target": 75.85510333333333,
+      "pids": [
+       1631105,
+       1628467,
+       1629048
+      ],
+      "names": [
+       "Jalen Duren",
+       "Maxi Kleber",
+       "Goga Bitadze"
+      ],
+      "ovrs": [
+       76.1494,
+       74.7009,
+       77.1439
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 5,
+      "pos": "C",
+      "target": 72.17264666666667,
+      "pids": [
+       1631117,
+       1641726,
+       1630208
+      ],
+      "names": [
+       "Walker Kessler",
+       "Dereck Lively II",
+       "Nick Richards"
+      ],
+      "ovrs": [
+       72.284,
+       71.6355,
+       70.9692
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 6,
+      "pos": "PG",
+      "target": 71.20366,
+      "pids": [
+       1628975,
+       203471,
+       1628370
+      ],
+      "names": [
+       "Jevon Carter",
+       "Dennis Schröder",
+       "Malik Monk"
+      ],
+      "ovrs": [
+       71.4627,
+       71.6975,
+       71.9034
+      ],
+      "courtPosition": "PG"
+     },
+     {
+      "k": 7,
+      "pos": "SG",
+      "target": 70.33059666666666,
+      "pids": [
+       1630598,
+       202691,
+       1627741
+      ],
+      "names": [
+       "Aaron Wiggins",
+       "Klay Thompson",
+       "Buddy Hield"
+      ],
+      "ovrs": [
+       70.5088,
+       69.84,
+       70.8415
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 8,
+      "pos": "SF",
+      "target": 68.87834333333333,
+      "pids": [
+       203952,
+       1630214,
+       1631200
+      ],
+      "names": [
+       "Andrew Wiggins",
+       "Xavier Tillman",
+       "Kris Murray"
+      ],
+      "ovrs": [
+       68.6367,
+       69.1676,
+       68.3457
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 9,
+      "pos": "PF",
+      "target": 69.45025000000001,
+      "pids": [
+       203967,
+       1628398,
+       1628963
+      ],
+      "names": [
+       "Dario Saric",
+       "Kyle Kuzma",
+       "Marvin Bagley III"
+      ],
+      "ovrs": [
+       69.4997,
+       69.1355,
+       69.8882
+      ],
+      "courtPosition": "PF"
+     }
+    ]
+   },
+   {
+    "name": "B5-T1",
+    "slots": [
+     {
+      "k": 1,
+      "pos": "SG",
+      "target": 84.23320333333332,
+      "pids": [
+       1626164,
+       1629627,
+       1630230
+      ],
+      "names": [
+       "Devin Booker",
+       "Zion Williamson",
+       "Naji Marshall"
+      ],
+      "ovrs": [
+       84.8931,
+       83.1504,
+       83.0229
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 2,
+      "pos": "SF",
+      "target": 75.68802000000001,
+      "pids": [
+       1630228,
+       201587,
+       1630552
+      ],
+      "names": [
+       "Jonathan Kuminga",
+       "Nicolas Batum",
+       "Jalen Johnson"
+      ],
+      "ovrs": [
+       75.5772,
+       76.3711,
+       76.5593
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 3,
+      "pos": "PF",
+      "target": 76.89185333333333,
+      "pids": [
+       1629048,
+       1631105,
+       1628467
+      ],
+      "names": [
+       "Goga Bitadze",
+       "Jalen Duren",
+       "Maxi Kleber"
+      ],
+      "ovrs": [
+       77.1439,
+       76.1494,
+       74.7009
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 4,
+      "pos": "C",
+      "target": 75.85510333333333,
+      "pids": [
+       203482,
+       1629021,
+       1629111
+      ],
+      "names": [
+       "Kelly Olynyk",
+       "Moritz Wagner",
+       "Jock Landale"
+      ],
+      "ovrs": [
+       75.728,
+       75.6549,
+       76.2738
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 5,
+      "pos": "PG",
+      "target": 72.17264666666667,
+      "pids": [
+       1630544,
+       1628370,
+       203471
+      ],
+      "names": [
+       "Tre Mann",
+       "Malik Monk",
+       "Dennis Schröder"
+      ],
+      "ovrs": [
+       72.3884,
+       71.9034,
+       71.6975
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 6,
+      "pos": "SG",
+      "target": 71.20366,
+      "pids": [
+       1631128,
+       1631170,
+       1627747
+      ],
+      "names": [
+       "Christian Braun",
+       "Jaime Jaquez Jr.",
+       "Caris LeVert"
+      ],
+      "ovrs": [
+       71.2384,
+       71.1603,
+       71.136
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 7,
+      "pos": "SF",
+      "target": 70.33059666666666,
+      "pids": [
+       1641708,
+       1628989,
+       1630581
+      ],
+      "names": [
+       "Amen Thompson",
+       "Kevin Huerter",
+       "Josh Giddey"
+      ],
+      "ovrs": [
+       69.6855,
+       69.5826,
+       71.1995
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 8,
+      "pos": "PF",
+      "target": 68.87834333333333,
+      "pids": [
+       1630183,
+       1628398,
+       203967
+      ],
+      "names": [
+       "Jaden McDaniels",
+       "Kyle Kuzma",
+       "Dario Saric"
+      ],
+      "ovrs": [
+       68.7085,
+       69.1355,
+       69.4997
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 9,
+      "pos": "C",
+      "target": 69.45025000000001,
+      "pids": [
+       1631095,
+       203994,
+       1631109
+      ],
+      "names": [
+       "Jabari Smith Jr.",
+       "Jusuf Nurkić",
+       "Mark Williams"
+      ],
+      "ovrs": [
+       69.3989,
+       70.1923,
+       70.38
+      ],
+      "courtPosition": "C"
+     }
+    ]
+   },
+   {
+    "name": "B5-T2",
+    "slots": [
+     {
+      "k": 1,
+      "pos": "SF",
+      "target": 84.23320333333332,
+      "pids": [
+       1630573,
+       1631099,
+       1627783
+      ],
+      "names": [
+       "Sam Hauser",
+       "Keegan Murray",
+       "Pascal Siakam"
+      ],
+      "ovrs": [
+       83.0229,
+       82.7852,
+       81.8709
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 2,
+      "pos": "PF",
+      "target": 75.68802000000001,
+      "pids": [
+       1631105,
+       1628467,
+       203991
+      ],
+      "names": [
+       "Jalen Duren",
+       "Maxi Kleber",
+       "Clint Capela"
+      ],
+      "ovrs": [
+       76.1494,
+       74.7009,
+       74.5196
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 3,
+      "pos": "C",
+      "target": 76.89185333333333,
+      "pids": [
+       1629651,
+       1629111,
+       1627751
+      ],
+      "names": [
+       "Nic Claxton",
+       "Jock Landale",
+       "Jakob Poeltl"
+      ],
+      "ovrs": [
+       77.2041,
+       76.2738,
+       77.9445
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 4,
+      "pos": "PG",
+      "target": 75.85510333333333,
+      "pids": [
+       1630198,
+       1630540,
+       1628988
+      ],
+      "names": [
+       "Isaiah Joe",
+       "Miles McBride",
+       "Aaron Holiday"
+      ],
+      "ovrs": [
+       76.1065,
+       76.1065,
+       75.5772
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 5,
+      "pos": "SG",
+      "target": 72.17264666666667,
+      "pids": [
+       1641709,
+       1629622,
+       1629640
+      ],
+      "names": [
+       "Ausar Thompson",
+       "Max Strus",
+       "Keldon Johnson"
+      ],
+      "ovrs": [
+       72.7263,
+       72.8775,
+       72.9736
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 6,
+      "pos": "SF",
+      "target": 71.20366,
+      "pids": [
+       1630581,
+       1629631,
+       1630163
+      ],
+      "names": [
+       "Josh Giddey",
+       "De'Andre Hunter",
+       "LaMelo Ball"
+      ],
+      "ovrs": [
+       71.1995,
+       71.6838,
+       71.7128
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 7,
+      "pos": "PF",
+      "target": 70.33059666666666,
+      "pids": [
+       1630579,
+       1630194,
+       1628963
+      ],
+      "names": [
+       "Jericho Sims",
+       "Paul Reed",
+       "Marvin Bagley III"
+      ],
+      "ovrs": [
+       70.3124,
+       70.1292,
+       69.8882
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 8,
+      "pos": "C",
+      "target": 68.87834333333333,
+      "pids": [
+       1631095,
+       203994,
+       1631109
+      ],
+      "names": [
+       "Jabari Smith Jr.",
+       "Jusuf Nurkić",
+       "Mark Williams"
+      ],
+      "ovrs": [
+       69.3989,
+       70.1923,
+       70.38
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 9,
+      "pos": "PG",
+      "target": 69.45025000000001,
+      "pids": [
+       1629012,
+       1627739,
+       1629014
+      ],
+      "names": [
+       "Collin Sexton",
+       "Kris Dunn",
+       "Anfernee Simons"
+      ],
+      "ovrs": [
+       69.0643,
+       69.8419,
+       68.105
+      ],
+      "courtPosition": "PG"
+     }
+    ]
+   },
+   {
+    "name": "B5-T3",
+    "slots": [
+     {
+      "k": 1,
+      "pos": "PF",
+      "target": 84.23320333333332,
+      "pids": [
+       1630168,
+       1630543,
+       201143
+      ],
+      "names": [
+       "Onyeka Okongwu",
+       "Isaiah Jackson",
+       "Al Horford"
+      ],
+      "ovrs": [
+       84.2668,
+       84.0374,
+       83.7744
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 2,
+      "pos": "C",
+      "target": 75.68802000000001,
+      "pids": [
+       1629021,
+       203482,
+       1629111
+      ],
+      "names": [
+       "Moritz Wagner",
+       "Kelly Olynyk",
+       "Jock Landale"
+      ],
+      "ovrs": [
+       75.6549,
+       75.728,
+       76.2738
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 3,
+      "pos": "PG",
+      "target": 76.89185333333333,
+      "pids": [
+       1641854,
+       200768,
+       1630198
+      ],
+      "names": [
+       "Craig Porter Jr.",
+       "Kyle Lowry",
+       "Isaiah Joe"
+      ],
+      "ovrs": [
+       77.1688,
+       77.1862,
+       76.1065
+      ],
+      "courtPosition": "PG"
+     },
+     {
+      "k": 4,
+      "pos": "SG",
+      "target": 75.85510333333333,
+      "pids": [
+       1630256,
+       1629723,
+       1629638
+      ],
+      "names": [
+       "Jae'Sean Tate",
+       "John Konchar",
+       "Nickeil Alexander-Walker"
+      ],
+      "ovrs": [
+       76.1065,
+       75.5772,
+       76.1494
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 5,
+      "pos": "SF",
+      "target": 72.17264666666667,
+      "pids": [
+       1627827,
+       1630191,
+       1630163
+      ],
+      "names": [
+       "Dorian Finney-Smith",
+       "Isaiah Stewart",
+       "LaMelo Ball"
+      ],
+      "ovrs": [
+       72.0208,
+       72.4688,
+       71.7128
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 6,
+      "pos": "PF",
+      "target": 71.20366,
+      "pids": [
+       1631094,
+       1629234,
+       1630579
+      ],
+      "names": [
+       "Paolo Banchero",
+       "Drew Eubanks",
+       "Jericho Sims"
+      ],
+      "ovrs": [
+       70.9001,
+       70.7893,
+       70.3124
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 7,
+      "pos": "C",
+      "target": 70.33059666666666,
+      "pids": [
+       1631109,
+       203994,
+       1630208
+      ],
+      "names": [
+       "Mark Williams",
+       "Jusuf Nurkić",
+       "Nick Richards"
+      ],
+      "ovrs": [
+       70.38,
+       70.1923,
+       70.9692
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 8,
+      "pos": "PG",
+      "target": 68.87834333333333,
+      "pids": [
+       1629012,
+       1629014,
+       1627739
+      ],
+      "names": [
+       "Collin Sexton",
+       "Anfernee Simons",
+       "Kris Dunn"
+      ],
+      "ovrs": [
+       69.0643,
+       68.105,
+       69.8419
+      ],
+      "courtPosition": "PG"
+     },
+     {
+      "k": 9,
+      "pos": "SG",
+      "target": 69.45025000000001,
+      "pids": [
+       1630171,
+       1630592,
+       1630170
+      ],
+      "names": [
+       "Isaac Okoro",
+       "Jalen Wilson",
+       "Devin Vassell"
+      ],
+      "ovrs": [
+       69.4293,
+       69.1942,
+       69.1676
+      ],
+      "courtPosition": "SG"
+     }
+    ]
+   },
+   {
+    "name": "B5-T4",
+    "slots": [
+     {
+      "k": 1,
+      "pos": "C",
+      "target": 84.23320333333332,
+      "pids": [
+       201572,
+       1628392,
+       1630596
+      ],
+      "names": [
+       "Brook Lopez",
+       "Isaiah Hartenstein",
+       "Evan Mobley"
+      ],
+      "ovrs": [
+       83.6064,
+       83.6064,
+       85.2411
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 2,
+      "pos": "PG",
+      "target": 75.68802000000001,
+      "pids": [
+       1628988,
+       1630198,
+       1630540
+      ],
+      "names": [
+       "Aaron Holiday",
+       "Isaiah Joe",
+       "Miles McBride"
+      ],
+      "ovrs": [
+       75.5772,
+       76.1065,
+       76.1065
+      ],
+      "courtPosition": "PG"
+     },
+     {
+      "k": 3,
+      "pos": "SG",
+      "target": 76.89185333333333,
+      "pids": [
+       1627750,
+       203484,
+       1626220
+      ],
+      "names": [
+       "Jamal Murray",
+       "Kentavious Caldwell-Pope",
+       "Royce O'Neale"
+      ],
+      "ovrs": [
+       76.8271,
+       77.0138,
+       76.7256
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 4,
+      "pos": "SF",
+      "target": 75.85510333333333,
+      "pids": [
+       1630228,
+       201587,
+       1630552
+      ],
+      "names": [
+       "Jonathan Kuminga",
+       "Nicolas Batum",
+       "Jalen Johnson"
+      ],
+      "ovrs": [
+       75.5772,
+       76.3711,
+       76.5593
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 5,
+      "pos": "PF",
+      "target": 72.17264666666667,
+      "pids": [
+       1626171,
+       1641871,
+       202696
+      ],
+      "names": [
+       "Bobby Portis Jr.",
+       "Duop Reath",
+       "Nikola Vučević"
+      ],
+      "ovrs": [
+       72.4382,
+       72.5625,
+       72.7859
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 6,
+      "pos": "C",
+      "target": 71.20366,
+      "pids": [
+       1630208,
+       1641726,
+       1631109
+      ],
+      "names": [
+       "Nick Richards",
+       "Dereck Lively II",
+       "Mark Williams"
+      ],
+      "ovrs": [
+       70.9692,
+       71.6355,
+       70.38
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 7,
+      "pos": "PG",
+      "target": 70.33059666666666,
+      "pids": [
+       1627739,
+       1628975,
+       1629012
+      ],
+      "names": [
+       "Kris Dunn",
+       "Jevon Carter",
+       "Collin Sexton"
+      ],
+      "ovrs": [
+       69.8419,
+       71.4627,
+       69.0643
+      ],
+      "courtPosition": "PG"
+     },
+     {
+      "k": 8,
+      "pos": "SG",
+      "target": 68.87834333333333,
+      "pids": [
+       1629611,
+       1629684,
+       1631260
+      ],
+      "names": [
+       "Terance Mann",
+       "Grant Williams",
+       "AJ Green"
+      ],
+      "ovrs": [
+       68.7859,
+       68.6422,
+       69.1174
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 9,
+      "pos": "SF",
+      "target": 69.45025000000001,
+      "pids": [
+       1628989,
+       1641708,
+       1630214
+      ],
+      "names": [
+       "Kevin Huerter",
+       "Amen Thompson",
+       "Xavier Tillman"
+      ],
+      "ovrs": [
+       69.5826,
+       69.6855,
+       69.1676
+      ],
+      "courtPosition": "SG"
+     }
+    ]
+   }
+  ],
+  "notes": {
+   "short": [],
+   "noProfile": [
+    201568,
+    201976,
+    202330,
+    202397,
+    202681,
+    202684,
+    202692,
+    202694,
+    202704,
+    202711,
+    202722,
+    203081,
+    203095,
+    203109,
+    203200,
+    203488,
+    203915,
+    203957,
+    203995,
+    1626153,
+    1626158,
+    1626168,
+    1626174,
+    1626179,
+    1626196,
+    1626224,
+    1627736,
+    1627763,
+    1627777,
+    1627832,
+    1627863,
+    1628372,
+    1628426,
+    1628464,
+    1628470,
+    1628966,
+    1628972,
+    1628981,
+    1628995,
+    1629002,
+    1629003,
+    1629022,
+    1629052,
+    1629629,
+    1629659,
+    1629667,
+    1629670,
+    1630169,
+    1630201,
+    1630205,
+    1630215,
+    1630231,
+    1630531,
+    1630537,
+    1630550,
+    1631098,
+    1631367
+   ],
+   "posMismatch": [
+    {
+     "team": 0,
+     "k": 4,
+     "pos": "PF",
+     "pids": [
+      1629048
+     ]
+    },
+    {
+     "team": 0,
+     "k": 8,
+     "pos": "SF",
+     "pids": [
+      203952
+     ]
+    },
+    {
+     "team": 0,
+     "k": 9,
+     "pos": "PF",
+     "pids": [
+      1628398
+     ]
+    },
+    {
+     "team": 1,
+     "k": 3,
+     "pos": "PF",
+     "pids": [
+      1629048
+     ]
+    },
+    {
+     "team": 1,
+     "k": 5,
+     "pos": "PG",
+     "pids": [
+      1630544
+     ]
+    },
+    {
+     "team": 1,
+     "k": 6,
+     "pos": "SG",
+     "pids": [
+      1627747
+     ]
+    },
+    {
+     "team": 1,
+     "k": 7,
+     "pos": "SF",
+     "pids": [
+      1628989
+     ]
+    },
+    {
+     "team": 1,
+     "k": 8,
+     "pos": "PF",
+     "pids": [
+      1628398
+     ]
+    },
+    {
+     "team": 2,
+     "k": 4,
+     "pos": "PG",
+     "pids": [
+      1630198
+     ]
+    },
+    {
+     "team": 2,
+     "k": 5,
+     "pos": "SG",
+     "pids": [
+      1641709
+     ]
+    },
+    {
+     "team": 3,
+     "k": 1,
+     "pos": "PF",
+     "pids": [
+      1630543,
+      201143
+     ]
+    },
+    {
+     "team": 3,
+     "k": 3,
+     "pos": "PG",
+     "pids": [
+      1630198
+     ]
+    },
+    {
+     "team": 4,
+     "k": 2,
+     "pos": "PG",
+     "pids": [
+      1630198
+     ]
+    },
+    {
+     "team": 4,
+     "k": 8,
+     "pos": "SG",
+     "pids": [
+      1629684
+     ]
+    },
+    {
+     "team": 4,
+     "k": 9,
+     "pos": "SF",
+     "pids": [
+      1628989
+     ]
+    }
+   ]
+  }
+ },
+ "A5": {
+  "teams": [
+   {
+    "name": "A5-T0",
+    "slots": [
+     {
+      "k": 1,
+      "pos": "PG",
+      "target": 75.0891556388889,
+      "pids": [
+       1641717,
+       1628988,
+       1630198
+      ],
+      "names": [
+       "Cason Wallace",
+       "Aaron Holiday",
+       "Isaiah Joe"
+      ],
+      "ovrs": [
+       75.2506,
+       75.5772,
+       76.1065
+      ],
+      "courtPosition": "PG"
+     },
+     {
+      "k": 2,
+      "pos": "SG",
+      "target": 75.0891556388889,
+      "pids": [
+       1629723,
+       1629632,
+       203078
+      ],
+      "names": [
+       "John Konchar",
+       "Coby White",
+       "Bradley Beal"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4433,
+       74.4038
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 3,
+      "pos": "SF",
+      "target": 75.0891556388889,
+      "pids": [
+       1630228,
+       203944,
+       203114
+      ],
+      "names": [
+       "Jonathan Kuminga",
+       "Julius Randle",
+       "Khris Middleton"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4747,
+       73.9678
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 4,
+      "pos": "PF",
+      "target": 75.0891556388889,
+      "pids": [
+       1628467,
+       203991,
+       1629675
+      ],
+      "names": [
+       "Maxi Kleber",
+       "Clint Capela",
+       "Naz Reid"
+      ],
+      "ovrs": [
+       74.7009,
+       74.5196,
+       74.1125
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 5,
+      "pos": "C",
+      "target": 75.0891556388889,
+      "pids": [
+       1629021,
+       203482,
+       1630578
+      ],
+      "names": [
+       "Moritz Wagner",
+       "Kelly Olynyk",
+       "Alperen Sengun"
+      ],
+      "ovrs": [
+       75.6549,
+       75.728,
+       74.4494
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 6,
+      "pos": "PG",
+      "target": 75.0891556388889,
+      "pids": [
+       1641717,
+       1628988,
+       1630198
+      ],
+      "names": [
+       "Cason Wallace",
+       "Aaron Holiday",
+       "Isaiah Joe"
+      ],
+      "ovrs": [
+       75.2506,
+       75.5772,
+       76.1065
+      ],
+      "courtPosition": "PG"
+     },
+     {
+      "k": 7,
+      "pos": "SG",
+      "target": 75.0891556388889,
+      "pids": [
+       1629723,
+       1629632,
+       203078
+      ],
+      "names": [
+       "John Konchar",
+       "Coby White",
+       "Bradley Beal"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4433,
+       74.4038
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 8,
+      "pos": "SF",
+      "target": 75.0891556388889,
+      "pids": [
+       1630228,
+       203944,
+       203114
+      ],
+      "names": [
+       "Jonathan Kuminga",
+       "Julius Randle",
+       "Khris Middleton"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4747,
+       73.9678
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 9,
+      "pos": "PF",
+      "target": 75.0891556388889,
+      "pids": [
+       1628467,
+       203991,
+       1629675
+      ],
+      "names": [
+       "Maxi Kleber",
+       "Clint Capela",
+       "Naz Reid"
+      ],
+      "ovrs": [
+       74.7009,
+       74.5196,
+       74.1125
+      ],
+      "courtPosition": "PF"
+     }
+    ]
+   },
+   {
+    "name": "A5-T1",
+    "slots": [
+     {
+      "k": 1,
+      "pos": "SG",
+      "target": 75.0891556388889,
+      "pids": [
+       1629723,
+       1629632,
+       203078
+      ],
+      "names": [
+       "John Konchar",
+       "Coby White",
+       "Bradley Beal"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4433,
+       74.4038
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 2,
+      "pos": "SF",
+      "target": 75.0891556388889,
+      "pids": [
+       1630228,
+       203944,
+       203114
+      ],
+      "names": [
+       "Jonathan Kuminga",
+       "Julius Randle",
+       "Khris Middleton"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4747,
+       73.9678
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 3,
+      "pos": "PF",
+      "target": 75.0891556388889,
+      "pids": [
+       1628467,
+       203991,
+       1629675
+      ],
+      "names": [
+       "Maxi Kleber",
+       "Clint Capela",
+       "Naz Reid"
+      ],
+      "ovrs": [
+       74.7009,
+       74.5196,
+       74.1125
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 4,
+      "pos": "C",
+      "target": 75.0891556388889,
+      "pids": [
+       1629021,
+       203482,
+       1630578
+      ],
+      "names": [
+       "Moritz Wagner",
+       "Kelly Olynyk",
+       "Alperen Sengun"
+      ],
+      "ovrs": [
+       75.6549,
+       75.728,
+       74.4494
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 5,
+      "pos": "PG",
+      "target": 75.0891556388889,
+      "pids": [
+       1641717,
+       1628988,
+       1630198
+      ],
+      "names": [
+       "Cason Wallace",
+       "Aaron Holiday",
+       "Isaiah Joe"
+      ],
+      "ovrs": [
+       75.2506,
+       75.5772,
+       76.1065
+      ],
+      "courtPosition": "PG"
+     },
+     {
+      "k": 6,
+      "pos": "SG",
+      "target": 75.0891556388889,
+      "pids": [
+       1629723,
+       1629632,
+       203078
+      ],
+      "names": [
+       "John Konchar",
+       "Coby White",
+       "Bradley Beal"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4433,
+       74.4038
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 7,
+      "pos": "SF",
+      "target": 75.0891556388889,
+      "pids": [
+       1630228,
+       203944,
+       203114
+      ],
+      "names": [
+       "Jonathan Kuminga",
+       "Julius Randle",
+       "Khris Middleton"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4747,
+       73.9678
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 8,
+      "pos": "PF",
+      "target": 75.0891556388889,
+      "pids": [
+       1628467,
+       203991,
+       1629675
+      ],
+      "names": [
+       "Maxi Kleber",
+       "Clint Capela",
+       "Naz Reid"
+      ],
+      "ovrs": [
+       74.7009,
+       74.5196,
+       74.1125
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 9,
+      "pos": "C",
+      "target": 75.0891556388889,
+      "pids": [
+       1629021,
+       203482,
+       1630578
+      ],
+      "names": [
+       "Moritz Wagner",
+       "Kelly Olynyk",
+       "Alperen Sengun"
+      ],
+      "ovrs": [
+       75.6549,
+       75.728,
+       74.4494
+      ],
+      "courtPosition": "C"
+     }
+    ]
+   },
+   {
+    "name": "A5-T2",
+    "slots": [
+     {
+      "k": 1,
+      "pos": "SF",
+      "target": 75.0891556388889,
+      "pids": [
+       1630228,
+       203944,
+       203114
+      ],
+      "names": [
+       "Jonathan Kuminga",
+       "Julius Randle",
+       "Khris Middleton"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4747,
+       73.9678
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 2,
+      "pos": "PF",
+      "target": 75.0891556388889,
+      "pids": [
+       1628467,
+       203991,
+       1629675
+      ],
+      "names": [
+       "Maxi Kleber",
+       "Clint Capela",
+       "Naz Reid"
+      ],
+      "ovrs": [
+       74.7009,
+       74.5196,
+       74.1125
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 3,
+      "pos": "C",
+      "target": 75.0891556388889,
+      "pids": [
+       1629021,
+       203482,
+       1630578
+      ],
+      "names": [
+       "Moritz Wagner",
+       "Kelly Olynyk",
+       "Alperen Sengun"
+      ],
+      "ovrs": [
+       75.6549,
+       75.728,
+       74.4494
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 4,
+      "pos": "PG",
+      "target": 75.0891556388889,
+      "pids": [
+       1641717,
+       1628988,
+       1630198
+      ],
+      "names": [
+       "Cason Wallace",
+       "Aaron Holiday",
+       "Isaiah Joe"
+      ],
+      "ovrs": [
+       75.2506,
+       75.5772,
+       76.1065
+      ],
+      "courtPosition": "PG"
+     },
+     {
+      "k": 5,
+      "pos": "SG",
+      "target": 75.0891556388889,
+      "pids": [
+       1629723,
+       1629632,
+       203078
+      ],
+      "names": [
+       "John Konchar",
+       "Coby White",
+       "Bradley Beal"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4433,
+       74.4038
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 6,
+      "pos": "SF",
+      "target": 75.0891556388889,
+      "pids": [
+       1630228,
+       203944,
+       203114
+      ],
+      "names": [
+       "Jonathan Kuminga",
+       "Julius Randle",
+       "Khris Middleton"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4747,
+       73.9678
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 7,
+      "pos": "PF",
+      "target": 75.0891556388889,
+      "pids": [
+       1628467,
+       203991,
+       1629675
+      ],
+      "names": [
+       "Maxi Kleber",
+       "Clint Capela",
+       "Naz Reid"
+      ],
+      "ovrs": [
+       74.7009,
+       74.5196,
+       74.1125
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 8,
+      "pos": "C",
+      "target": 75.0891556388889,
+      "pids": [
+       1629021,
+       203482,
+       1630578
+      ],
+      "names": [
+       "Moritz Wagner",
+       "Kelly Olynyk",
+       "Alperen Sengun"
+      ],
+      "ovrs": [
+       75.6549,
+       75.728,
+       74.4494
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 9,
+      "pos": "PG",
+      "target": 75.0891556388889,
+      "pids": [
+       1641717,
+       1628988,
+       1630198
+      ],
+      "names": [
+       "Cason Wallace",
+       "Aaron Holiday",
+       "Isaiah Joe"
+      ],
+      "ovrs": [
+       75.2506,
+       75.5772,
+       76.1065
+      ],
+      "courtPosition": "PG"
+     }
+    ]
+   },
+   {
+    "name": "A5-T3",
+    "slots": [
+     {
+      "k": 1,
+      "pos": "PF",
+      "target": 75.0891556388889,
+      "pids": [
+       1628467,
+       203991,
+       1629675
+      ],
+      "names": [
+       "Maxi Kleber",
+       "Clint Capela",
+       "Naz Reid"
+      ],
+      "ovrs": [
+       74.7009,
+       74.5196,
+       74.1125
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 2,
+      "pos": "C",
+      "target": 75.0891556388889,
+      "pids": [
+       1629021,
+       203482,
+       1630578
+      ],
+      "names": [
+       "Moritz Wagner",
+       "Kelly Olynyk",
+       "Alperen Sengun"
+      ],
+      "ovrs": [
+       75.6549,
+       75.728,
+       74.4494
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 3,
+      "pos": "PG",
+      "target": 75.0891556388889,
+      "pids": [
+       1641717,
+       1628988,
+       1630198
+      ],
+      "names": [
+       "Cason Wallace",
+       "Aaron Holiday",
+       "Isaiah Joe"
+      ],
+      "ovrs": [
+       75.2506,
+       75.5772,
+       76.1065
+      ],
+      "courtPosition": "PG"
+     },
+     {
+      "k": 4,
+      "pos": "SG",
+      "target": 75.0891556388889,
+      "pids": [
+       1629723,
+       1629632,
+       203078
+      ],
+      "names": [
+       "John Konchar",
+       "Coby White",
+       "Bradley Beal"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4433,
+       74.4038
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 5,
+      "pos": "SF",
+      "target": 75.0891556388889,
+      "pids": [
+       1630228,
+       203944,
+       203114
+      ],
+      "names": [
+       "Jonathan Kuminga",
+       "Julius Randle",
+       "Khris Middleton"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4747,
+       73.9678
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 6,
+      "pos": "PF",
+      "target": 75.0891556388889,
+      "pids": [
+       1628467,
+       203991,
+       1629675
+      ],
+      "names": [
+       "Maxi Kleber",
+       "Clint Capela",
+       "Naz Reid"
+      ],
+      "ovrs": [
+       74.7009,
+       74.5196,
+       74.1125
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 7,
+      "pos": "C",
+      "target": 75.0891556388889,
+      "pids": [
+       1629021,
+       203482,
+       1630578
+      ],
+      "names": [
+       "Moritz Wagner",
+       "Kelly Olynyk",
+       "Alperen Sengun"
+      ],
+      "ovrs": [
+       75.6549,
+       75.728,
+       74.4494
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 8,
+      "pos": "PG",
+      "target": 75.0891556388889,
+      "pids": [
+       1641717,
+       1628988,
+       1630198
+      ],
+      "names": [
+       "Cason Wallace",
+       "Aaron Holiday",
+       "Isaiah Joe"
+      ],
+      "ovrs": [
+       75.2506,
+       75.5772,
+       76.1065
+      ],
+      "courtPosition": "PG"
+     },
+     {
+      "k": 9,
+      "pos": "SG",
+      "target": 75.0891556388889,
+      "pids": [
+       1629723,
+       1629632,
+       203078
+      ],
+      "names": [
+       "John Konchar",
+       "Coby White",
+       "Bradley Beal"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4433,
+       74.4038
+      ],
+      "courtPosition": "SG"
+     }
+    ]
+   },
+   {
+    "name": "A5-T4",
+    "slots": [
+     {
+      "k": 1,
+      "pos": "C",
+      "target": 75.0891556388889,
+      "pids": [
+       1629021,
+       203482,
+       1630578
+      ],
+      "names": [
+       "Moritz Wagner",
+       "Kelly Olynyk",
+       "Alperen Sengun"
+      ],
+      "ovrs": [
+       75.6549,
+       75.728,
+       74.4494
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 2,
+      "pos": "PG",
+      "target": 75.0891556388889,
+      "pids": [
+       1641717,
+       1628988,
+       1630198
+      ],
+      "names": [
+       "Cason Wallace",
+       "Aaron Holiday",
+       "Isaiah Joe"
+      ],
+      "ovrs": [
+       75.2506,
+       75.5772,
+       76.1065
+      ],
+      "courtPosition": "PG"
+     },
+     {
+      "k": 3,
+      "pos": "SG",
+      "target": 75.0891556388889,
+      "pids": [
+       1629723,
+       1629632,
+       203078
+      ],
+      "names": [
+       "John Konchar",
+       "Coby White",
+       "Bradley Beal"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4433,
+       74.4038
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 4,
+      "pos": "SF",
+      "target": 75.0891556388889,
+      "pids": [
+       1630228,
+       203944,
+       203114
+      ],
+      "names": [
+       "Jonathan Kuminga",
+       "Julius Randle",
+       "Khris Middleton"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4747,
+       73.9678
+      ],
+      "courtPosition": "SF"
+     },
+     {
+      "k": 5,
+      "pos": "PF",
+      "target": 75.0891556388889,
+      "pids": [
+       1628467,
+       203991,
+       1629675
+      ],
+      "names": [
+       "Maxi Kleber",
+       "Clint Capela",
+       "Naz Reid"
+      ],
+      "ovrs": [
+       74.7009,
+       74.5196,
+       74.1125
+      ],
+      "courtPosition": "PF"
+     },
+     {
+      "k": 6,
+      "pos": "C",
+      "target": 75.0891556388889,
+      "pids": [
+       1629021,
+       203482,
+       1630578
+      ],
+      "names": [
+       "Moritz Wagner",
+       "Kelly Olynyk",
+       "Alperen Sengun"
+      ],
+      "ovrs": [
+       75.6549,
+       75.728,
+       74.4494
+      ],
+      "courtPosition": "C"
+     },
+     {
+      "k": 7,
+      "pos": "PG",
+      "target": 75.0891556388889,
+      "pids": [
+       1641717,
+       1628988,
+       1630198
+      ],
+      "names": [
+       "Cason Wallace",
+       "Aaron Holiday",
+       "Isaiah Joe"
+      ],
+      "ovrs": [
+       75.2506,
+       75.5772,
+       76.1065
+      ],
+      "courtPosition": "PG"
+     },
+     {
+      "k": 8,
+      "pos": "SG",
+      "target": 75.0891556388889,
+      "pids": [
+       1629723,
+       1629632,
+       203078
+      ],
+      "names": [
+       "John Konchar",
+       "Coby White",
+       "Bradley Beal"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4433,
+       74.4038
+      ],
+      "courtPosition": "SG"
+     },
+     {
+      "k": 9,
+      "pos": "SF",
+      "target": 75.0891556388889,
+      "pids": [
+       1630228,
+       203944,
+       203114
+      ],
+      "names": [
+       "Jonathan Kuminga",
+       "Julius Randle",
+       "Khris Middleton"
+      ],
+      "ovrs": [
+       75.5772,
+       74.4747,
+       73.9678
+      ],
+      "courtPosition": "SF"
+     }
+    ]
+   }
+  ],
+  "notes": {
+   "short": [],
+   "noProfile": [
+    201568,
+    201976,
+    202330,
+    202397,
+    202681,
+    202684,
+    202692,
+    202694,
+    202704,
+    202711,
+    202722,
+    203081,
+    203095,
+    203109,
+    203200,
+    203488,
+    203915,
+    203957,
+    203995,
+    1626153,
+    1626158,
+    1626168,
+    1626174,
+    1626179,
+    1626196,
+    1626224,
+    1627736,
+    1627763,
+    1627777,
+    1627832,
+    1627863,
+    1628372,
+    1628426,
+    1628464,
+    1628470,
+    1628966,
+    1628972,
+    1628981,
+    1628995,
+    1629002,
+    1629003,
+    1629022,
+    1629052,
+    1629629,
+    1629659,
+    1629667,
+    1629670,
+    1630169,
+    1630201,
+    1630205,
+    1630215,
+    1630231,
+    1630531,
+    1630537,
+    1630550,
+    1631098,
+    1631367
+   ],
+   "posMismatch": [
+    {
+     "team": 0,
+     "k": 1,
+     "pos": "PG",
+     "pids": [
+      1630198
+     ]
+    },
+    {
+     "team": 0,
+     "k": 3,
+     "pos": "SF",
+     "pids": [
+      203944
+     ]
+    },
+    {
+     "team": 0,
+     "k": 6,
+     "pos": "PG",
+     "pids": [
+      1630198
+     ]
+    },
+    {
+     "team": 0,
+     "k": 8,
+     "pos": "SF",
+     "pids": [
+      203944
+     ]
+    },
+    {
+     "team": 1,
+     "k": 2,
+     "pos": "SF",
+     "pids": [
+      203944
+     ]
+    },
+    {
+     "team": 1,
+     "k": 5,
+     "pos": "PG",
+     "pids": [
+      1630198
+     ]
+    },
+    {
+     "team": 1,
+     "k": 7,
+     "pos": "SF",
+     "pids": [
+      203944
+     ]
+    },
+    {
+     "team": 2,
+     "k": 1,
+     "pos": "SF",
+     "pids": [
+      203944
+     ]
+    },
+    {
+     "team": 2,
+     "k": 4,
+     "pos": "PG",
+     "pids": [
+      1630198
+     ]
+    },
+    {
+     "team": 2,
+     "k": 6,
+     "pos": "SF",
+     "pids": [
+      203944
+     ]
+    },
+    {
+     "team": 2,
+     "k": 9,
+     "pos": "PG",
+     "pids": [
+      1630198
+     ]
+    },
+    {
+     "team": 3,
+     "k": 3,
+     "pos": "PG",
+     "pids": [
+      1630198
+     ]
+    },
+    {
+     "team": 3,
+     "k": 5,
+     "pos": "SF",
+     "pids": [
+      203944
+     ]
+    },
+    {
+     "team": 3,
+     "k": 8,
+     "pos": "PG",
+     "pids": [
+      1630198
+     ]
+    },
+    {
+     "team": 4,
+     "k": 2,
+     "pos": "PG",
+     "pids": [
+      1630198
+     ]
+    },
+    {
+     "team": 4,
+     "k": 4,
+     "pos": "SF",
+     "pids": [
+      203944
+     ]
+    },
+    {
+     "team": 4,
+     "k": 7,
+     "pos": "PG",
+     "pids": [
+      1630198
+     ]
+    },
+    {
+     "team": 4,
+     "k": 9,
+     "pos": "SF",
+     "pids": [
+      203944
+     ]
+    }
+   ]
+  }
+ }
+}

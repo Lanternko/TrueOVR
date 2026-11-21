@@ -1,0 +1,34 @@
+{
+ "n": 582,
+ "nodata70": 6,
+ "maxdiff_vs_defSource": [
+  [
+   0.049776513612357576,
+   "Alijah Martin"
+  ],
+  [
+   0.04967476891474121,
+   "Cole Anthony"
+  ],
+  [
+   0.049427917620135986,
+   "Malik Monk"
+  ]
+ ],
+ "maxdiff_vs_card": [
+  [
+   0.049776513612357576,
+   "Alijah Martin"
+  ],
+  [
+   0.04967476891474121,
+   "Cole Anthony"
+  ],
+  [
+   0.049427917620135986,
+   "Malik Monk"
+  ]
+ ],
+ "matched": 582,
+ "rows2526": 576
+}

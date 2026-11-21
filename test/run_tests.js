@@ -255,20 +255,6 @@ sec('8  中投：必須是「被防守逼出來的」才有存在意義');
   ok(gainStrong > 0.01, `中投對強防守確實有邊際價值 +${gainStrong.toFixed(3)} 分/回合`);
 }
 
-// ---------------------------------------------------------------- 9
-sec('9  體力：疲勞只削弱屬性，不直接加減機率');
-{
-  const p = BASELINE.roster[0];
-  const fresh = M.applyStamina(p, 0), tired = M.applyStamina(p, 1);
-  ok(fresh.long === p.long && fresh._eff === C.STAMINA_MAX_EFF, '零疲勞時屬性不變');
-  ok(tired.ft === p.ft, '疲勞不影響罰球（站定投，不吃體能）');
-  ok(Math.abs(tired.long - p.long * C.STAMINA_MIN_EFF) < 1e-9, '滿疲勞時屬性乘上 MIN_EFF');
-  ok(tired.rebound === p.rebound && tired.onBall === p.onBall, '疲勞不影響籃板與防守屬性');
-  const hi = M.fatigueRate({ stamina: 99 }, 40), lo = M.fatigueRate({ stamina: 40 }, 40);
-  ok(hi < lo, `體力 99 的疲勞累積 ${hi.toFixed(3)} < 體力 40 的 ${lo.toFixed(3)}`);
-}
-
-
 // ---------------------------------------------------------------- 10
 sec('10 罰球：唯一不受防守影響的得分路徑');
 {

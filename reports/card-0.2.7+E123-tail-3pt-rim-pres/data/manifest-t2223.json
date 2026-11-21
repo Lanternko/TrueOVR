@@ -1,0 +1,47 @@
+{
+ "note": "E-123 2022-23 T \u91cd\u6293\uff1bv62 fetch_data.py \u914d\u65b9",
+ "entries": [
+  {
+   "file": "2022-23-full-cs.json",
+   "url": "https://stats.nba.com/stats/leaguedashptstats?LeagueID=00&SeasonType=Regular+Season&PerMode=Totals&PlayerOrTeam=Player&LastNGames=0&Month=0&OpponentTeamID=0&Period=0&PORound=0&Season=2022-23&PtMeasureType=CatchShoot&TeamID=0&DateFrom=&DateTo=&College=&Conference=&Country=&Division=&DraftPick=&DraftYear=&GameScope=&Height=&Location=&Outcome=&PlayerExperience=&PlayerPosition=&SeasonSegment=&StarterBench=&VsConference=&VsDivision=&Weight=",
+   "sha256": "bf733cc9a33cc8c867e307dfcef8c004612e7395d0ac6f59046d229542aaf142",
+   "rows": 539,
+   "fetchedAt": "2026-10-29T23:58:04.375740+00:00"
+  },
+  {
+   "file": "2022-23-full-pu.json",
+   "url": "https://stats.nba.com/stats/leaguedashptstats?LeagueID=00&SeasonType=Regular+Season&PerMode=Totals&PlayerOrTeam=Player&LastNGames=0&Month=0&OpponentTeamID=0&Period=0&PORound=0&Season=2022-23&PtMeasureType=PullUpShot&TeamID=0&DateFrom=&DateTo=&College=&Conference=&Country=&Division=&DraftPick=&DraftYear=&GameScope=&Height=&Location=&Outcome=&PlayerExperience=&PlayerPosition=&SeasonSegment=&StarterBench=&VsConference=&VsDivision=&Weight=",
+   "sha256": "e052f08eb0440c64378baaa0a4d0ffd338452c7895461c6c077f043de9ae5e89",
+   "rows": 539,
+   "fetchedAt": "2026-10-29T23:58:06.006454+00:00"
+  },
+  {
+   "file": "2022-23-full-def0.json",
+   "url": "https://stats.nba.com/stats/leaguedashplayerptshot?LeagueID=00&SeasonType=Regular+Season&PerMode=Totals&PlayerOrTeam=Player&LastNGames=0&Month=0&OpponentTeamID=0&Period=0&PORound=0&Season=2022-23&CloseDefDistRange=0-2+Feet+-+Very+Tight&TeamID=0&DateFrom=&DateTo=&GeneralRange=&DribbleRange=&ShotDistRange=&ShotClockRange=&TouchTimeRange=&Outcome=&Location=&SeasonSegment=&VsConference=&VsDivision=&GameSegment=&PlayerExperience=&PlayerPosition=&StarterBench=&College=&Conference=&Country=&Division=&DraftPick=&DraftYear=&Height=&Weight=",
+   "sha256": "b9f6952a87beb8c9d23c764baae5af566d2132b906f5cad22c768a2c7f1e3529",
+   "rows": 494,
+   "fetchedAt": "2026-10-29T23:58:07.554087+00:00"
+  },
+  {
+   "file": "2022-23-full-def1.json",
+   "url": "https://stats.nba.com/stats/leaguedashplayerptshot?LeagueID=00&SeasonType=Regular+Season&PerMode=Totals&PlayerOrTeam=Player&LastNGames=0&Month=0&OpponentTeamID=0&Period=0&PORound=0&Season=2022-23&CloseDefDistRange=2-4+Feet+-+Tight&TeamID=0&DateFrom=&DateTo=&GeneralRange=&DribbleRange=&ShotDistRange=&ShotClockRange=&TouchTimeRange=&Outcome=&Location=&SeasonSegment=&VsConference=&VsDivision=&GameSegment=&PlayerExperience=&PlayerPosition=&StarterBench=&College=&Conference=&Country=&Division=&DraftPick=&DraftYear=&Height=&Weight=",
+   "sha256": "aceeba2e53ced3924b914313d0babaf07e0ec10cb848f0648acddaf5fe1c24cb",
+   "rows": 532,
+   "fetchedAt": "2026-10-29T23:58:09.093867+00:00"
+  },
+  {
+   "file": "2022-23-full-def2.json",
+   "url": "https://stats.nba.com/stats/leaguedashplayerptshot?LeagueID=00&SeasonType=Regular+Season&PerMode=Totals&PlayerOrTeam=Player&LastNGames=0&Month=0&OpponentTeamID=0&Period=0&PORound=0&Season=2022-23&CloseDefDistRange=4-6+Feet+-+Open&TeamID=0&DateFrom=&DateTo=&GeneralRange=&DribbleRange=&ShotDistRange=&ShotClockRange=&TouchTimeRange=&Outcome=&Location=&SeasonSegment=&VsConference=&VsDivision=&GameSegment=&PlayerExperience=&PlayerPosition=&StarterBench=&College=&Conference=&Country=&Division=&DraftPick=&DraftYear=&Height=&Weight=",
+   "sha256": "4f4045dd8774f3ff5becec6bac108e2fc6e1292ca746eac5c184e00232cd5449",
+   "rows": 526,
+   "fetchedAt": "2026-10-29T23:58:11.094342+00:00"
+  },
+  {
+   "file": "2022-23-full-def3.json",
+   "url": "https://stats.nba.com/stats/leaguedashplayerptshot?LeagueID=00&SeasonType=Regular+Season&PerMode=Totals&PlayerOrTeam=Player&LastNGames=0&Month=0&OpponentTeamID=0&Period=0&PORound=0&Season=2022-23&CloseDefDistRange=6%2B+Feet+-+Wide+Open&TeamID=0&DateFrom=&DateTo=&GeneralRange=&DribbleRange=&ShotDistRange=&ShotClockRange=&TouchTimeRange=&Outcome=&Location=&SeasonSegment=&VsConference=&VsDivision=&GameSegment=&PlayerExperience=&PlayerPosition=&StarterBench=&College=&Conference=&Country=&Division=&DraftPick=&DraftYear=&Height=&Weight=",
+   "sha256": "bcb25b092020a819a46db3ac170079ed379dd796a98ea176bb91ed0b1f292f37",
+   "rows": 532,
+   "fetchedAt": "2026-10-29T23:58:12.354142+00:00"
+  }
+ ]
+}

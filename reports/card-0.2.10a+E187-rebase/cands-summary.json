@@ -1,0 +1,50 @@
+{
+ "2022-23": {
+  "n_T6": 492,
+  "n_T0": 860,
+  "n_pop": 492,
+  "T0_file": "reports/card-0.2.7c+E134-rolling-prior/stage1/work/2022-23/rapm-R.csv",
+  "T0_sha256": "b472298d65c27eb1d99f101f610e0b3ad07e4503467c1de15d94529ec0d64337",
+  "corr_T6_T0_O_D": [
+   0.7034772139931981,
+   0.5517190899920839
+  ],
+  "sd_T6R_over_sd_T6_net": 0.9057895281170486
+ },
+ "2023-24": {
+  "n_T6": 510,
+  "n_T0": 882,
+  "n_pop": 509,
+  "T0_file": "reports/card-0.2.7c+E134-rolling-prior/stage1/work/2023-24/rapm-R.csv",
+  "T0_sha256": "a496f4c71db1187f636eeca39268cb07b741934d0f799d3f8543c615e0948c70",
+  "corr_T6_T0_O_D": [
+   0.6976082328470896,
+   0.5779688573750278
+  ],
+  "sd_T6R_over_sd_T6_net": 0.9075210809826909
+ },
+ "2024-25": {
+  "n_T6": 513,
+  "n_T0": 923,
+  "n_pop": 513,
+  "T0_file": "reports/card-0.2.7c+E134-rolling-prior/stage1/work/2024-25/rapm-R.csv",
+  "T0_sha256": "543585a85c8cf82b65fe45f3bb4107923f3193494cba9ba4d176e499e4d9a6aa",
+  "corr_T6_T0_O_D": [
+   0.6931039237156098,
+   0.589587590065474
+  ],
+  "sd_T6R_over_sd_T6_net": 0.9196319894607737
+ },
+ "2025-26": {
+  "n_T6": 506,
+  "n_T0": 877,
+  "n_pop": 506,
+  "T0_file": "reports/impact-rapm/rapm.csv",
+  "T0_sha256": "73e9de4859206e7347f0665d348aaf7af6e2b8287e924138a0b099be86ea4b89",
+  "corr_T6_T0_O_D": [
+   0.7040266622582386,
+   0.6286330358131003
+  ],
+  "sd_T6R_over_sd_T6_net": 0.9309270344932314
+ }
+}

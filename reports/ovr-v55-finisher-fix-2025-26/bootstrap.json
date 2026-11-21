@@ -1,0 +1,79 @@
+{
+ "mode": "B12",
+ "draws": 4000,
+ "seed": 20261019,
+ "buckets": {
+  "pooled <800": {
+   "players": 101,
+   "delta": 0.1483,
+   "ci95": [
+    0.025,
+    0.2672
+   ],
+   "pDeltaPositive": 0.992
+  },
+  "pooled 800-1300": {
+   "players": 98,
+   "delta": -0.047,
+   "ci95": [
+    -0.1516,
+    0.0641
+   ],
+   "pDeltaPositive": 0.198
+  },
+  "pooled 1300+": {
+   "players": 215,
+   "delta": -0.0038,
+   "ci95": [
+    -0.0589,
+    0.0525
+   ],
+   "pDeltaPositive": 0.451
+  },
+  "pooled all": {
+   "players": 414,
+   "delta": 0.0315,
+   "ci95": [
+    -0.015,
+    0.0737
+   ],
+   "pDeltaPositive": 0.914
+  },
+  "last <800": {
+   "players": 170,
+   "delta": 0.0156,
+   "ci95": [
+    -0.0687,
+    0.1012
+   ],
+   "pDeltaPositive": 0.632
+  },
+  "last 800-1300": {
+   "players": 112,
+   "delta": -0.0143,
+   "ci95": [
+    -0.1137,
+    0.083
+   ],
+   "pDeltaPositive": 0.387
+  },
+  "last 1300+": {
+   "players": 215,
+   "delta": 0.0297,
+   "ci95": [
+    -0.0248,
+    0.0846
+   ],
+   "pDeltaPositive": 0.855
+  },
+  "last all": {
+   "players": 497,
+   "delta": 0.0104,
+   "ci95": [
+    -0.0286,
+    0.0489
+   ],
+   "pDeltaPositive": 0.698
+  }
+ }
+}

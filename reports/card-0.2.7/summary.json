@@ -1,0 +1,160 @@
+{
+  "version": "card 0.2.7",
+  "baseVersion": "card 0.2.6",
+  "change": "E-107 防守 UL：防守加成改成不打折 max(0, centeredD)（原本屬性分前 4% 歸 0）；防守 D 改用 E-104 逐場線性遞減版、回合門檻 × 1/2；RAPM 名次封頂、align、gamma 不動（R-061）",
+  "players": 582,
+  "columns": [
+    "rank",
+    "ovr",
+    "name",
+    "pos",
+    "MIN",
+    "predictedPer36",
+    "simulatedPer36",
+    "defenseBonus",
+    "align",
+    "pred0",
+    "pr",
+    "long",
+    "mid",
+    "short",
+    "ft",
+    "drive",
+    "foulDraw",
+    "tovSkill",
+    "pass",
+    "rebound",
+    "physique",
+    "onBall",
+    "help",
+    "stamina",
+    "heightInches",
+    "creation",
+    "pressure",
+    "mpg",
+    "gRepl",
+    "ovr36",
+    "foulDisc",
+    "presDisplay"
+  ],
+  "columnsDifferentFromCard026": {
+    "rank": 510,
+    "ovr": 541,
+    "predictedPer36": 204,
+    "defenseBonus": 229,
+    "gRepl": 581,
+    "ovr36": 367
+  },
+  "anchors": {
+    "PR1": -0.8313494840642134,
+    "PR50": 1.2520865387175606,
+    "PR99": 4.120111088432906
+  },
+  "top20Changes": {
+    "out": [
+      "Joel Embiid",
+      "Kon Knueppel"
+    ],
+    "in": [
+      "Neemias Queta",
+      "Ryan Rollins"
+    ]
+  },
+  "verdict_E107": "預註冊判定 全過，交使用者 G5；evaluate 18/19（card 0.2.6 19/19）；使用者 2026-10-30「發布2.7」；樣本外只證明不變差，看過 E-106 才選（不算盲測，L-026），版號 PATCH",
+  "gates_E107": {
+    "c0": {
+      "pass": true
+    },
+    "c1": {
+      "value": true,
+      "pass": true
+    },
+    "u1": {
+      "pass": true
+    },
+    "f2": {
+      "pass": true
+    },
+    "m1": {
+      "value": {
+        "point": 0.005911587365394766,
+        "ci90": [
+          0.0008517471288532835,
+          0.011115062421307697
+        ],
+        "rho_cand": 0.4983720328129855,
+        "rho_base": 0.4924604454475907,
+        "per_direction": {
+          "AB": {
+            "cand": 0.47074036397440316,
+            "base": 0.4634517021419733
+          },
+          "BA": {
+            "cand": 0.5260037016515677,
+            "base": 0.5214691887532081
+          }
+        }
+      },
+      "pass": true
+    },
+    "m2": {
+      "value": {
+        "point": 0.0015849595123860194,
+        "ci90": [
+          -0.002621062758952558,
+          0.005904648400438672
+        ],
+        "rho_cand": 0.5907337002303841,
+        "rho_base": 0.589148740717998,
+        "per_direction": {
+          "AB": {
+            "cand": 0.5830727643013971,
+            "base": 0.5759904103529047
+          },
+          "BA": {
+            "cand": 0.598394636159371,
+            "base": 0.6023070710830916
+          }
+        }
+      },
+      "pass": true
+    },
+    "m3": {
+      "value": {
+        "point": 0.006265348779211477,
+        "ci90": [
+          0.0011163827047763588,
+          0.011639508872257742
+        ],
+        "rho_cand": 0.49704122148401686,
+        "rho_base": 0.4907758727048054,
+        "per_direction": {
+          "AB": {
+            "cand": 0.46998770714881277,
+            "base": 0.46235207296612435
+          },
+          "BA": {
+            "cand": 0.524094735819221,
+            "base": 0.5191996724434864
+          }
+        }
+      },
+      "pass": true
+    },
+    "r1p": {
+      "pass": true
+    }
+  },
+  "nextRound": "新賽季頁（inseason）先驗不跟著改，要跟上 0.2.7 另走 inseason 實驗（R-050）",
+  "audit": "未做 role-audit 重算（使用者直接發布）",
+  "sources_sha256": {
+    "reports/card-0.2.6/ranking.csv": "a0a81ecb2d591497bc1d6680573e6fbf71a11124c4d33ba60df3e4d412f16c91",
+    "reports/card-0.2.6+E107-defense-UL/work/UL6/ranking.csv": "aebcadf1c3dfcbe6aaeed8c34fa5183cd35dbda546dd967faa5ebdf6649cc6b6",
+    "reports/card-0.2.6+E107-defense-UL/phase2.json": "32cd46258a5acc4236eda50b70f7e1ad278dbbe2fcb601fa18849003bc477104",
+    "reports/card-0.2.6+E107-defense-UL/preregistration.md": "344f860ab4ea01673e1336a4c18ea2cdfc496c660406be6e1700f3b1013c263c",
+    "reports/card-0.2.6+E107-defense-UL/report.md": "a8779cb847df50b5191a967ffc91e0a22429ea66543165344b2b9c6f986dc579",
+    "reports/card-0.2.6+E107-defense-UL/evaluation.json": "eaae2bdfb0ef8865a5108c296472e575060d7731f4aa32cad9ab0e23f25e226b"
+  },
+  "generator": "reports/card-0.2.7/build_card_027.py",
+  "ranking_csv_sha256": "aebcadf1c3dfcbe6aaeed8c34fa5183cd35dbda546dd967faa5ebdf6649cc6b6"
+}

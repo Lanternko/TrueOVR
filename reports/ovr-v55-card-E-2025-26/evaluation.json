@@ -1,0 +1,943 @@
+{
+  "baseline": {
+    "label": "v53",
+    "rho2k": 0.44647472820473244,
+    "rhoRapm": 0.4995715843031064,
+    "sevenPlayer": [
+      {
+        "name": "Karlo Matković",
+        "rank": 7,
+        "ovr": 95.4,
+        "rank2k": 294.5
+      },
+      {
+        "name": "John Collins",
+        "rank": 29,
+        "ovr": 84.9,
+        "rank2k": 142
+      },
+      {
+        "name": "Isaiah Stewart",
+        "rank": 32,
+        "ovr": 84.6,
+        "rank2k": 194.5
+      },
+      {
+        "name": "Luka Garza",
+        "rank": 33,
+        "ovr": 84.5,
+        "rank2k": 255.5
+      },
+      {
+        "name": "Neemias Queta",
+        "rank": 51,
+        "ovr": 82.7,
+        "rank2k": 110.5
+      },
+      {
+        "name": "Rudy Gobert",
+        "rank": 68,
+        "ovr": 80.4,
+        "rank2k": 60.5
+      },
+      {
+        "name": "Jalen Smith",
+        "rank": 104,
+        "ovr": 78.4,
+        "rank2k": 220
+      }
+    ],
+    "top10": [
+      {
+        "name": "Shai Gilgeous-Alexander",
+        "pos": "PG",
+        "rank": 1,
+        "ovr": 111.6,
+        "isBig": false
+      },
+      {
+        "name": "Luka Dončić",
+        "pos": "PG",
+        "rank": 2,
+        "ovr": 104.3,
+        "isBig": false
+      },
+      {
+        "name": "Victor Wembanyama",
+        "pos": "C",
+        "rank": 3,
+        "ovr": 102.3,
+        "isBig": true
+      },
+      {
+        "name": "Chet Holmgren",
+        "pos": "PF",
+        "rank": 4,
+        "ovr": 100.9,
+        "isBig": true
+      },
+      {
+        "name": "Evan Mobley",
+        "pos": "PF",
+        "rank": 5,
+        "ovr": 99,
+        "isBig": true
+      },
+      {
+        "name": "Giannis Antetokounmpo",
+        "pos": "PF",
+        "rank": 6,
+        "ovr": 96.2,
+        "isBig": true
+      },
+      {
+        "name": "Karlo Matković",
+        "pos": "PF",
+        "rank": 7,
+        "ovr": 95.4,
+        "isBig": true
+      },
+      {
+        "name": "Nikola Jokić",
+        "pos": "C",
+        "rank": 8,
+        "ovr": 95.3,
+        "isBig": true
+      },
+      {
+        "name": "Jamal Murray",
+        "pos": "PG",
+        "rank": 9,
+        "ovr": 94.7,
+        "isBig": false
+      },
+      {
+        "name": "Kawhi Leonard",
+        "pos": "SF",
+        "rank": 10,
+        "ovr": 93.6,
+        "isBig": false
+      }
+    ],
+    "nRapm": 414,
+    "n": 582
+  },
+  "variants": [
+    {
+      "label": "E1-k1000",
+      "rho2k": 0.3721002935047713,
+      "rhoRapm": 0.48856357998342015,
+      "sevenPlayer": [
+        {
+          "name": "Karlo Matković",
+          "rank": 16,
+          "ovr": 88.8,
+          "rank2k": 294.5
+        },
+        {
+          "name": "John Collins",
+          "rank": 34,
+          "ovr": 84.1,
+          "rank2k": 142
+        },
+        {
+          "name": "Isaiah Stewart",
+          "rank": 89,
+          "ovr": 78.5,
+          "rank2k": 194.5
+        },
+        {
+          "name": "Luka Garza",
+          "rank": 47,
+          "ovr": 82.4,
+          "rank2k": 255.5
+        },
+        {
+          "name": "Neemias Queta",
+          "rank": 54,
+          "ovr": 81.6,
+          "rank2k": 110.5
+        },
+        {
+          "name": "Rudy Gobert",
+          "rank": 73,
+          "ovr": 79.8,
+          "rank2k": 60.5
+        },
+        {
+          "name": "Jalen Smith",
+          "rank": 155,
+          "ovr": 74.6,
+          "rank2k": 220
+        }
+      ],
+      "top10": [
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 116.3,
+          "isBig": false
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 2,
+          "ovr": 103.2,
+          "isBig": true
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 3,
+          "ovr": 103.2,
+          "isBig": false
+        },
+        {
+          "name": "Evan Mobley",
+          "pos": "PF",
+          "rank": 4,
+          "ovr": 101,
+          "isBig": true
+        },
+        {
+          "name": "Jamal Murray",
+          "pos": "PG",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": false
+        },
+        {
+          "name": "Giannis Antetokounmpo",
+          "pos": "PF",
+          "rank": 6,
+          "ovr": 97.9,
+          "isBig": true
+        },
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 7,
+          "ovr": 95.3,
+          "isBig": true
+        },
+        {
+          "name": "Kevin Durant",
+          "pos": "SF",
+          "rank": 8,
+          "ovr": 95.3,
+          "isBig": false
+        },
+        {
+          "name": "Kawhi Leonard",
+          "pos": "SF",
+          "rank": 9,
+          "ovr": 94.9,
+          "isBig": false
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 10,
+          "ovr": 94.4,
+          "isBig": true
+        }
+      ],
+      "nRapm": 414,
+      "n": 582,
+      "gates": {
+        "karloDrop10": false,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaDrop15": true,
+        "gobertDrop15": true,
+        "jalenSmithRule": true,
+        "rho2kFloor": false,
+        "rhoRapmFloor": false,
+        "pass": 6,
+        "of": 9
+      }
+    },
+    {
+      "label": "E1-k1500",
+      "rho2k": 0.36870149700889604,
+      "rhoRapm": 0.47664970813340335,
+      "sevenPlayer": [
+        {
+          "name": "Karlo Matković",
+          "rank": 19,
+          "ovr": 87.4,
+          "rank2k": 294.5
+        },
+        {
+          "name": "John Collins",
+          "rank": 33,
+          "ovr": 83.5,
+          "rank2k": 142
+        },
+        {
+          "name": "Isaiah Stewart",
+          "rank": 96,
+          "ovr": 77.2,
+          "rank2k": 194.5
+        },
+        {
+          "name": "Luka Garza",
+          "rank": 50,
+          "ovr": 81.5,
+          "rank2k": 255.5
+        },
+        {
+          "name": "Neemias Queta",
+          "rank": 53,
+          "ovr": 81.1,
+          "rank2k": 110.5
+        },
+        {
+          "name": "Rudy Gobert",
+          "rank": 69,
+          "ovr": 79.6,
+          "rank2k": 60.5
+        },
+        {
+          "name": "Jalen Smith",
+          "rank": 166,
+          "ovr": 73.8,
+          "rank2k": 220
+        }
+      ],
+      "top10": [
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 115.1,
+          "isBig": false
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 2,
+          "ovr": 101.9,
+          "isBig": false
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 3,
+          "ovr": 101.8,
+          "isBig": true
+        },
+        {
+          "name": "Evan Mobley",
+          "pos": "PF",
+          "rank": 4,
+          "ovr": 100.3,
+          "isBig": true
+        },
+        {
+          "name": "Jamal Murray",
+          "pos": "PG",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": false
+        },
+        {
+          "name": "Giannis Antetokounmpo",
+          "pos": "PF",
+          "rank": 6,
+          "ovr": 97.5,
+          "isBig": true
+        },
+        {
+          "name": "Kevin Durant",
+          "pos": "SF",
+          "rank": 7,
+          "ovr": 96,
+          "isBig": false
+        },
+        {
+          "name": "Kawhi Leonard",
+          "pos": "SF",
+          "rank": 8,
+          "ovr": 93.7,
+          "isBig": false
+        },
+        {
+          "name": "Joel Embiid",
+          "pos": "C",
+          "rank": 9,
+          "ovr": 92.5,
+          "isBig": true
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 10,
+          "ovr": 92.2,
+          "isBig": true
+        }
+      ],
+      "nRapm": 414,
+      "n": 582,
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaDrop15": true,
+        "gobertDrop15": true,
+        "jalenSmithRule": true,
+        "rho2kFloor": false,
+        "rhoRapmFloor": false,
+        "pass": 7,
+        "of": 9
+      }
+    },
+    {
+      "label": "E1-k2500",
+      "rho2k": 0.3664204912195879,
+      "rhoRapm": 0.456003738936615,
+      "sevenPlayer": [
+        {
+          "name": "Karlo Matković",
+          "rank": 23,
+          "ovr": 86.3,
+          "rank2k": 294.5
+        },
+        {
+          "name": "John Collins",
+          "rank": 37,
+          "ovr": 83.1,
+          "rank2k": 142
+        },
+        {
+          "name": "Isaiah Stewart",
+          "rank": 121,
+          "ovr": 75.6,
+          "rank2k": 194.5
+        },
+        {
+          "name": "Luka Garza",
+          "rank": 59,
+          "ovr": 80.7,
+          "rank2k": 255.5
+        },
+        {
+          "name": "Neemias Queta",
+          "rank": 56,
+          "ovr": 80.8,
+          "rank2k": 110.5
+        },
+        {
+          "name": "Rudy Gobert",
+          "rank": 69,
+          "ovr": 79.4,
+          "rank2k": 60.5
+        },
+        {
+          "name": "Jalen Smith",
+          "rank": 195,
+          "ovr": 72.8,
+          "rank2k": 220
+        }
+      ],
+      "top10": [
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 114.1,
+          "isBig": false
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 2,
+          "ovr": 100.6,
+          "isBig": false
+        },
+        {
+          "name": "Evan Mobley",
+          "pos": "PF",
+          "rank": 3,
+          "ovr": 100.3,
+          "isBig": true
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 4,
+          "ovr": 100.2,
+          "isBig": true
+        },
+        {
+          "name": "Jamal Murray",
+          "pos": "PG",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": false
+        },
+        {
+          "name": "Kevin Durant",
+          "pos": "SF",
+          "rank": 6,
+          "ovr": 97.8,
+          "isBig": false
+        },
+        {
+          "name": "Giannis Antetokounmpo",
+          "pos": "PF",
+          "rank": 7,
+          "ovr": 97.6,
+          "isBig": true
+        },
+        {
+          "name": "Joel Embiid",
+          "pos": "C",
+          "rank": 8,
+          "ovr": 92.9,
+          "isBig": true
+        },
+        {
+          "name": "Kawhi Leonard",
+          "pos": "SF",
+          "rank": 9,
+          "ovr": 91.8,
+          "isBig": false
+        },
+        {
+          "name": "Scottie Barnes",
+          "pos": "PF",
+          "rank": 10,
+          "ovr": 90.4,
+          "isBig": true
+        }
+      ],
+      "nRapm": 414,
+      "n": 582,
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaDrop15": true,
+        "gobertDrop15": true,
+        "jalenSmithRule": true,
+        "rho2kFloor": false,
+        "rhoRapmFloor": false,
+        "pass": 7,
+        "of": 9
+      }
+    },
+    {
+      "label": "E2-lam0.4",
+      "rho2k": 0.47462952811669523,
+      "rhoRapm": 0.528987150664773,
+      "sevenPlayer": [
+        {
+          "name": "Karlo Matković",
+          "rank": 21,
+          "ovr": 85.9,
+          "rank2k": 294.5
+        },
+        {
+          "name": "John Collins",
+          "rank": 49,
+          "ovr": 81.3,
+          "rank2k": 142
+        },
+        {
+          "name": "Isaiah Stewart",
+          "rank": 81,
+          "ovr": 78.7,
+          "rank2k": 194.5
+        },
+        {
+          "name": "Luka Garza",
+          "rank": 73,
+          "ovr": 79.3,
+          "rank2k": 255.5
+        },
+        {
+          "name": "Neemias Queta",
+          "rank": 59,
+          "ovr": 80.2,
+          "rank2k": 110.5
+        },
+        {
+          "name": "Rudy Gobert",
+          "rank": 91,
+          "ovr": 77.9,
+          "rank2k": 60.5
+        },
+        {
+          "name": "Jalen Smith",
+          "rank": 141,
+          "ovr": 75.1,
+          "rank2k": 220
+        }
+      ],
+      "top10": [
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 108.8,
+          "isBig": false
+        },
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 2,
+          "ovr": 103.9,
+          "isBig": true
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 3,
+          "ovr": 101.1,
+          "isBig": true
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 4,
+          "ovr": 99.2,
+          "isBig": false
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": true
+        },
+        {
+          "name": "Evan Mobley",
+          "pos": "PF",
+          "rank": 6,
+          "ovr": 98.6,
+          "isBig": true
+        },
+        {
+          "name": "Giannis Antetokounmpo",
+          "pos": "PF",
+          "rank": 7,
+          "ovr": 93.9,
+          "isBig": true
+        },
+        {
+          "name": "Jamal Murray",
+          "pos": "PG",
+          "rank": 8,
+          "ovr": 91.6,
+          "isBig": false
+        },
+        {
+          "name": "Kevin Durant",
+          "pos": "SF",
+          "rank": 9,
+          "ovr": 91.1,
+          "isBig": false
+        },
+        {
+          "name": "Kawhi Leonard",
+          "pos": "SF",
+          "rank": 10,
+          "ovr": 90.8,
+          "isBig": false
+        }
+      ],
+      "nRapm": 414,
+      "n": 582,
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaDrop15": true,
+        "gobertDrop15": false,
+        "jalenSmithRule": true,
+        "rho2kFloor": true,
+        "rhoRapmFloor": true,
+        "pass": 8,
+        "of": 9
+      }
+    },
+    {
+      "label": "E2-lam0.6",
+      "rho2k": 0.4771118922024416,
+      "rhoRapm": 0.5283696351581778,
+      "sevenPlayer": [
+        {
+          "name": "Karlo Matković",
+          "rank": 16,
+          "ovr": 88.1,
+          "rank2k": 294.5
+        },
+        {
+          "name": "John Collins",
+          "rank": 47,
+          "ovr": 82.1,
+          "rank2k": 142
+        },
+        {
+          "name": "Isaiah Stewart",
+          "rank": 73,
+          "ovr": 79.6,
+          "rank2k": 194.5
+        },
+        {
+          "name": "Luka Garza",
+          "rank": 66,
+          "ovr": 80.1,
+          "rank2k": 255.5
+        },
+        {
+          "name": "Neemias Queta",
+          "rank": 56,
+          "ovr": 81,
+          "rank2k": 110.5
+        },
+        {
+          "name": "Rudy Gobert",
+          "rank": 85,
+          "ovr": 78.6,
+          "rank2k": 60.5
+        },
+        {
+          "name": "Jalen Smith",
+          "rank": 138,
+          "ovr": 75.5,
+          "rank2k": 220
+        }
+      ],
+      "top10": [
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 110.3,
+          "isBig": false
+        },
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 2,
+          "ovr": 103.7,
+          "isBig": true
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 3,
+          "ovr": 101.2,
+          "isBig": true
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 4,
+          "ovr": 100.2,
+          "isBig": false
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": true
+        },
+        {
+          "name": "Evan Mobley",
+          "pos": "PF",
+          "rank": 6,
+          "ovr": 98.9,
+          "isBig": true
+        },
+        {
+          "name": "Giannis Antetokounmpo",
+          "pos": "PF",
+          "rank": 7,
+          "ovr": 93.8,
+          "isBig": true
+        },
+        {
+          "name": "Jamal Murray",
+          "pos": "PG",
+          "rank": 8,
+          "ovr": 92.3,
+          "isBig": false
+        },
+        {
+          "name": "Kawhi Leonard",
+          "pos": "SF",
+          "rank": 9,
+          "ovr": 91.4,
+          "isBig": false
+        },
+        {
+          "name": "Kevin Durant",
+          "pos": "SF",
+          "rank": 10,
+          "ovr": 91.3,
+          "isBig": false
+        }
+      ],
+      "nRapm": 414,
+      "n": 582,
+      "gates": {
+        "karloDrop10": false,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaDrop15": true,
+        "gobertDrop15": false,
+        "jalenSmithRule": true,
+        "rho2kFloor": true,
+        "rhoRapmFloor": true,
+        "pass": 7,
+        "of": 9
+      }
+    },
+    {
+      "label": "E3",
+      "rho2k": 0.35457361392002473,
+      "rhoRapm": 0.4787454117307531,
+      "sevenPlayer": [
+        {
+          "name": "Karlo Matković",
+          "rank": 39,
+          "ovr": 81.8,
+          "rank2k": 294.5
+        },
+        {
+          "name": "John Collins",
+          "rank": 40,
+          "ovr": 81.8,
+          "rank2k": 142
+        },
+        {
+          "name": "Isaiah Stewart",
+          "rank": 133,
+          "ovr": 74.7,
+          "rank2k": 194.5
+        },
+        {
+          "name": "Luka Garza",
+          "rank": 65,
+          "ovr": 79.1,
+          "rank2k": 255.5
+        },
+        {
+          "name": "Neemias Queta",
+          "rank": 74,
+          "ovr": 78.3,
+          "rank2k": 110.5
+        },
+        {
+          "name": "Rudy Gobert",
+          "rank": 93,
+          "ovr": 76.9,
+          "rank2k": 60.5
+        },
+        {
+          "name": "Jalen Smith",
+          "rank": 192,
+          "ovr": 72.8,
+          "rank2k": 220
+        }
+      ],
+      "top10": [
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "rank": 1,
+          "ovr": 111.6,
+          "isBig": false
+        },
+        {
+          "name": "Nikola Jokić",
+          "pos": "C",
+          "rank": 2,
+          "ovr": 102.4,
+          "isBig": true
+        },
+        {
+          "name": "Evan Mobley",
+          "pos": "PF",
+          "rank": 3,
+          "ovr": 101.5,
+          "isBig": true
+        },
+        {
+          "name": "Luka Dončić",
+          "pos": "PG",
+          "rank": 4,
+          "ovr": 99.9,
+          "isBig": false
+        },
+        {
+          "name": "Giannis Antetokounmpo",
+          "pos": "PF",
+          "rank": 5,
+          "ovr": 99,
+          "isBig": true
+        },
+        {
+          "name": "Jamal Murray",
+          "pos": "PG",
+          "rank": 6,
+          "ovr": 97.3,
+          "isBig": false
+        },
+        {
+          "name": "Kevin Durant",
+          "pos": "SF",
+          "rank": 7,
+          "ovr": 96.5,
+          "isBig": false
+        },
+        {
+          "name": "Chet Holmgren",
+          "pos": "PF",
+          "rank": 8,
+          "ovr": 94.9,
+          "isBig": true
+        },
+        {
+          "name": "Victor Wembanyama",
+          "pos": "C",
+          "rank": 9,
+          "ovr": 94.7,
+          "isBig": true
+        },
+        {
+          "name": "Kawhi Leonard",
+          "pos": "SF",
+          "rank": 10,
+          "ovr": 92.4,
+          "isBig": false
+        }
+      ],
+      "nRapm": 414,
+      "n": 582,
+      "gates": {
+        "karloDrop10": true,
+        "collinsDrop": true,
+        "stewartDrop": true,
+        "garzaDrop": true,
+        "quetaDrop15": false,
+        "gobertDrop15": false,
+        "jalenSmithRule": true,
+        "rho2kFloor": false,
+        "rhoRapmFloor": false,
+        "pass": 5,
+        "of": 9
+      }
+    }
+  ]
+}

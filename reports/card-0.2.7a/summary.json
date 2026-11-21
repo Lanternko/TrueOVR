@@ -1,0 +1,155 @@
+{
+  "version": "card 0.2.7a",
+  "baseVersion": "card 0.2.7",
+  "change": "E-125 pass 量率各半：每季 pass 原始值改成 0.5·zs(AST/36，E-055 (c) 收縮)＋0.5·zs(AST%)，四季池與 S 錨點照 E-101 重算（R-074）；其他屬性、OVR 迴歸、用人回歸、防守 UL 不動；模擬 per36 沿用（新 pass 沒進模擬）",
+  "players": 582,
+  "columns": [
+    "rank",
+    "ovr",
+    "name",
+    "pos",
+    "MIN",
+    "predictedPer36",
+    "simulatedPer36",
+    "defenseBonus",
+    "align",
+    "pred0",
+    "pr",
+    "long",
+    "mid",
+    "short",
+    "ft",
+    "drive",
+    "foulDraw",
+    "tovSkill",
+    "pass",
+    "rebound",
+    "physique",
+    "onBall",
+    "help",
+    "stamina",
+    "heightInches",
+    "creation",
+    "pressure",
+    "mpg",
+    "gRepl",
+    "ovr36",
+    "foulDisc",
+    "presDisplay"
+  ],
+  "columnsDifferentFromCard027": {
+    "rank": 400,
+    "ovr": 397,
+    "predictedPer36": 569,
+    "align": 381,
+    "pred0": 568,
+    "pr": 440,
+    "pass": 568,
+    "gRepl": 581,
+    "ovr36": 432
+  },
+  "anchors": {
+    "PR1": -0.8255902117515846,
+    "PR50": 1.256711733065641,
+    "PR99": 4.137589168675391
+  },
+  "top20Changes": {
+    "out": [
+      "Ausar Thompson"
+    ],
+    "in": [
+      "Kon Knueppel"
+    ]
+  },
+  "verdict_E125": "預註冊判定 全過，交使用者 G5；evaluate 18/19（card 0.2.7 18/19）；使用者 2026-10-30「0,2,7a」；樣本外只證明不變差，看過 Giannis 才選方向（不算盲測，L-026），字母小版本（R-064 影響小）",
+  "gates_E125": {
+    "c0": {
+      "pass": true
+    },
+    "c1": {
+      "value": true,
+      "pass": true
+    },
+    "m1": {
+      "value": {
+        "point": 0.0004428307354497063,
+        "ci90": [
+          -0.00043122553955475816,
+          0.0013156670621468772
+        ],
+        "rho_cand": 0.4988148635484352,
+        "rho_base": 0.4983720328129855,
+        "per_direction": {
+          "AB": {
+            "cand": 0.47066065411015456,
+            "base": 0.47074036397440316
+          },
+          "BA": {
+            "cand": 0.5269690729867158,
+            "base": 0.5260037016515677
+          }
+        }
+      },
+      "pass": true
+    },
+    "m2": {
+      "value": {
+        "point": 0.0006851423066579487,
+        "ci90": [
+          -0.00022729921779504058,
+          0.0017372823259846515
+        ],
+        "rho_cand": 0.591418842537042,
+        "rho_base": 0.5907337002303841,
+        "per_direction": {
+          "AB": {
+            "cand": 0.5832069051982656,
+            "base": 0.5830727643013971
+          },
+          "BA": {
+            "cand": 0.5996307798758185,
+            "base": 0.598394636159371
+          }
+        }
+      },
+      "pass": true
+    },
+    "m3": {
+      "value": {
+        "point": 0.0004265328740727936,
+        "ci90": [
+          -0.0004615614896986614,
+          0.0012899850892322373
+        ],
+        "rho_cand": 0.49746775435808965,
+        "rho_base": 0.49704122148401686,
+        "per_direction": {
+          "AB": {
+            "cand": 0.4698725253756659,
+            "base": 0.46998770714881277
+          },
+          "BA": {
+            "cand": 0.5250629833405135,
+            "base": 0.524094735819221
+          }
+        }
+      },
+      "pass": true
+    },
+    "r1p": {
+      "pass": true
+    }
+  },
+  "nextRound": "新賽季頁（inseason）先驗不跟著改，要跟上 0.2.7a 另走 inseason 實驗（R-050）；pass 進模擬另立實驗",
+  "audit": "未做 role-audit 重算；lead 從 attributes／results.json 重算 c0a、c0、m1–m3、p1",
+  "sources_sha256": {
+    "reports/card-0.2.7/ranking.csv": "aebcadf1c3dfcbe6aaeed8c34fa5183cd35dbda546dd967faa5ebdf6649cc6b6",
+    "reports/card-0.2.7+E125-pass-volume/work/P50/ranking.csv": "04a9c266440511ccca0c96b8851c964577f2687d99f84c4f9f3f2d51394f165f",
+    "reports/card-0.2.7+E125-pass-volume/results-e125.json": "71746f9b1475e883612a0cbe88f62a985e97638454c3c5eb077b662d25ca1af8",
+    "reports/card-0.2.7+E125-pass-volume/preregistration.md": "34f3ed3d7089d79bb3e4422339687319a321d1582b69a65ad1e978f4dfe1ae40",
+    "reports/card-0.2.7+E125-pass-volume/report.txt": "da3371d98d5780239a789c17bbf7d9cc901cb4d12da20fca6ea29f715a09e8fa",
+    "reports/card-0.2.7+E125-pass-volume/evaluation.json": "201bf329f3401120f2130c409a388525b704daaefc47cf52ba9e2a267d67fd68"
+  },
+  "generator": "reports/card-0.2.7a/build_card_027a.py",
+  "ranking_csv_sha256": "04a9c266440511ccca0c96b8851c964577f2687d99f84c4f9f3f2d51394f165f"
+}
