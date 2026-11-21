@@ -435,7 +435,15 @@
 - 合併：L-133、L-149
 - 相關：L-133
 
-下一個新 ID：用 `python memory/claim_id.py L` 取（L-152）。
+### L-152
+- 日期：2026-11-21
+- 規則：功能有「失敗就退回」的 try/except 時，輸出檔要寫明有沒有生效，每日流程要檢查這個旗標；改呼叫端傳入的路徑（例如 live_dir 換成建置暫存夾）後，要確認所有拿「夾名」去另一個根目錄拼路徑的下游都還讀得到。
+- 細節：每日流程把 `data/_inseason_build/build-xxxx` 當 live_dir，`actual_blend.today_margins` 只把夾名傳給 `_rotations`，到 `reports/ovr-inseason-2026-27/live/<夾名>` 找不到 `ranking.csv`，例外被吞，R-171 的 K10 殘差混入自 11-07 後沒生效（`team-ratings.json` 的 `actualBlend.on=false`），兩週沒人發現。修正 `reports/E306-team-model-r3/fix-actual-blend.patch`（未套用）。
+- 由來：E-306 前向檢討對不上線上排行時查到
+- 對應測試或關卡：每日發布後檢查 `team-ratings.json` 的 `actualBlend.on`，`ACTUAL_BLEND` 沒關而 on=false 就報錯
+- 相關：R-171、E-253、E-306
+
+下一個新 ID：用 `python memory/claim_id.py L` 取（L-153）。
 
 ## 舊 ID 對照
 

@@ -16,7 +16,8 @@ POS = torch.tensor(list(range(5)) * 2).unsqueeze(0); SIDE = torch.tensor([0] * 5
 class Ctx:
     def __init__(self, weights, prior, dev='cpu'):
         W = {'T2425': os.path.join(HERE, 'results', 'weights', 'T2425-{}.pt'),
-             'E227-R2-stats': os.path.join(E227, 'results', 'weights', 'R2-stats-{}.pt')}[weights]
+             'E227-R2-stats': os.path.join(E227, 'results', 'weights', 'R2-stats-{}.pt'),
+             'E306-R3': os.path.join(ROOT, 'reports', 'E306-team-model-r3', 'results', 'weights', 'full-{}.pt')}[weights]
         self.dev = dev; self.nets = []
         for sd in range(5):
             n = LineupNet(F); n.load_state_dict(torch.load(W.format(sd), map_location='cpu')); n.eval(); self.nets.append(n.to(dev))

@@ -209,7 +209,7 @@ def build(today_et, ldir=None, names=None, blend=None, snap_dir=None):
 
 def make_ctx(today_et, ldir=None, names=None, blend=None, snap_dir=None):
     """E-228 的 Ctx（E-227 R2-stats 五個 seed、prior 2025-26 的每場回合數），特徵表換成 live 混合表。"""
-    C = Ctx('E227-R2-stats', '2025-26')
+    C = Ctx(os.environ.get('T_WEIGHTS', 'E306-R3'), '2025-26')      # E-306 R3：五季＋2026-27 開季至 11-20；回退 T_WEIGHTS=E227-R2-stats
     B, tab, info = build(today_et, ldir, names, blend, snap_dir)
     C.B = B; C.tab = tab
     hs = [d['heightInches'] for d in tab.values() if d.get('heightInches') is not None]
