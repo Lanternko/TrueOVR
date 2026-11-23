@@ -8,7 +8,15 @@ ranking.csv 的 help、OVR／OFF／DEF、T、模擬、卡片都不動（help 進
   （B0＝只有 help 的臂，經此轉換等於現值）。
 - 以 playerId 對人；沒有窗口資料的人（卡片頁新秀）回傳空，呼叫端維持原 help。
 旗標 RIM_BLK=0 → 回傳空 dict，頁面逐位元等於現行。任何失敗（缺檔、人群太小）也回傳空 dict 並印警告，退回現行 help。
+
+E-307 RG（使用者 2026-11-23「Switch to RG」，R 號見 rulings）：蓋帽項從 blk36 換成「有效蓋帽扣干擾球」＝blk36 × rS − gt36S，
+和 reports/E307-blk-quality/e307_lib.window_metrics 的 AG 逐步相同：
+- rS＝蓋帽後防守方取回率（窗口加權計數，向窗口加權聯盟取回率收縮 K_R 次蓋帽）；gt36S＝每 36 分鐘防守干擾球（向聯盟每分鐘率收縮 K_GT 分鐘）。
+- 過去四季計數讀 reports/E307-blk-quality/data/blk-events-<季>.csv（季已結束、不會變）；本季每天從 pbp 重解析（同 parse_blocks.py）。
+- 收縮強度與過去季聯盟值是 E-307 凍結常數；本季聯盟取回率用本季 pbp，本季每分鐘干擾率用五季平均。
+旗標 RIM_RG=0 → 退回 E-305 D30（只看 blk36）；RG 這一步失敗（缺 pbp、缺計數檔）也印警告退回 D30。
 """
+import importlib.util
 import csv
 import json
 import os
@@ -19,12 +27,25 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
 STATS = ROOT / 'reports/E227-lineup-transformer-r2/data'
+PBP_CUR = ROOT / 'data/defense-seventh/2026-27/pbp'
 PAST = ('2022-23', '2023-24', '2024-25', '2025-26')
 CUR = '2026-27'
 SLOTS, WIN, G_TOTAL = 82, 4 * 82, 1230
 K_MIN = 200.0
 W_HELP, W_BLK = 0.7, 0.3
-TIP = '籃下 6 呎被防命中率差 70%＋每 36 分蓋帽 30%'
+E307 = ROOT / 'reports/E307-blk-quality'
+K_R, K_GT = 156.26410869382727, 310.8705375672102          # E-307 data/priors.json（凍結）
+LEAGUE_R = {'2022-23': 0.5841048034934497, '2023-24': 0.585647598702429, '2024-25': 0.5839799749687109, '2025-26': 0.5826248000673457}
+LEAGUE_GT = {'2022-23': 0.0010183658756686177, '2023-24': 0.0011265205501596325, '2024-25': 0.0009700725870286475,
+             '2025-26': 0.0010375383392312448, CUR: 0.0010019165915866328}   # 每分鐘；本季＝五季平均
+
+
+def rg_enabled():
+    return os.environ.get('RIM_RG', '1') != '0'
+
+
+TIP = ('籃下 6 呎被防命中率差 70%＋每 36 分有效蓋帽（防守方搶回）扣干擾球 30%' if rg_enabled()
+       else '籃下 6 呎被防命中率差 70%＋每 36 分蓋帽 30%')
 
 
 def enabled():
@@ -70,6 +91,69 @@ def _cur_tab(player_games, cutoff):
     return {k: tuple(v) for k, v in out.items()}
 
 
+def _past_events():
+    """{季: {pid: (已知結果蓋帽, 防守方取回, 干擾球)}}（E-307 計數檔）。"""
+    out = {}
+    for s in PAST:
+        out[s] = {int(r['pid']): (float(r['known']), float(r['retained']), float(r['gt']))
+                  for r in csv.DictReader(open(E307 / 'data' / f'blk-events-{s}.csv', encoding='utf-8'))}
+    return out
+
+
+def _cur_events(pbp_dir, cutoff_ids=None):
+    """本季 pbp 逐場解析（同 E-307 parse_blocks.py 的 outcome 規則）；回傳 ({pid: (known, retained, gt)}, 聯盟取回率)。"""
+    spec = importlib.util.spec_from_file_location('e307_parse', E307 / 'parse_blocks.py')
+    PB = importlib.util.module_from_spec(spec); spec.loader.exec_module(PB)
+    agg, files = {}, sorted(Path(pbp_dir).glob('00*.json'))
+    if not files:
+        raise RuntimeError(f'本季 pbp 不存在：{pbp_dir}')
+    for f in files:
+        a = PB.actions(f)
+        for i, x in enumerate(a):
+            t = x['actionType']
+            if t == 'violation' and x.get('subType') == 'defensive goaltending' and x.get('personId'):
+                agg.setdefault(x['personId'], [0, 0, 0])[2] += 1
+            if t != 'block' or not x.get('personId'):
+                continue
+            de = x['teamId']; of = x.get('possession')
+            if of == de or not of:
+                of = next((y['teamId'] for y in reversed(a[max(0, i - 6):i]) if y['actionType'] in ('2pt', '3pt')), None)
+            r, _ = PB.outcome(a, i, de, of)
+            if r is None:
+                continue
+            v = agg.setdefault(x['personId'], [0, 0, 0]); v[0] += 1; v[1] += int(r)
+    n = sum(v[0] for v in agg.values())
+    return {int(k): tuple(map(float, v)) for k, v in agg.items()}, sum(v[1] for v in agg.values()) / n
+
+
+def _rg(win_pids, tabs, ww, blk, pbp_dir):
+    """{pid: blk36 × rS − gt36S}（E-307 AG）。tabs／ww 同 _window；blk＝已收縮的 blk36。"""
+    ev = _past_events(); lr = dict(LEAGUE_R)
+    if ww.get(CUR, 0) > 0:
+        ev[CUR], lr[CUR] = _cur_events(pbp_dir)
+    sw = {s: w for s, w in ww.items() if w > 0}
+    W = sum(sw.values())
+    rbar = sum(w * lr[s] for s, w in sw.items()) / W
+    lbar = sum(w * LEAGUE_GT[s] for s, w in sw.items()) / W
+    out = {}
+    for p in win_pids:
+        m = n = ret = gt = mx = 0.0
+        for s, w in sw.items():
+            if p not in tabs.get(s, {}):
+                continue
+            m += w * tabs[s][p][0]; mx = max(mx, w)
+            e = ev.get(s, {}).get(p)
+            if e:
+                n += w * e[0]; ret += w * e[1]; gt += w * e[2]
+        if mx <= 0:
+            continue
+        m, n, ret, gt = m / mx, n / mx, ret / mx, gt / mx
+        rS = (ret + K_R * rbar) / (n + K_R)
+        gt36 = (gt + K_GT * lbar) / (m + K_GT) * 36
+        out[p] = blk[p] * rS - gt36
+    return out
+
+
 def _window(pids, tabs, ww):
     """{pid: (有效分鐘, 蓋帽)}（每人除以自己有資料那幾季的最大權重）。"""
     out = {}
@@ -107,6 +191,14 @@ def compute(help_by_pid, pool, games_done=None, cutoff=None, player_games=None):
             raise RuntimeError(f'人群太小或蓋帽資料缺太多（pool {len(pp)}，有資料 {len(wp)}）')
         mu = sum(win[p][1] for p in wp) / sum(win[p][0] for p in wp)
         blk = {p: (v[1] + K_MIN * mu) / (v[0] + K_MIN) * 36 for p, v in win.items()}
+        if rg_enabled():
+            try:
+                rg = _rg(list(win), tabs, ww, blk, PBP_CUR)
+                if len(rg) < len(blk):
+                    raise RuntimeError(f'RG 少人（{len(rg)}／{len(blk)}）')
+                blk = rg
+            except Exception as e:  # noqa: BLE001
+                print(f'RIM 有效蓋帽（RG）失敗，退回 D30：{e}', file=sys.stderr)
         h = np.array([help_by_pid[p] for p in pp])
         mu_h, sd_h = h.mean(), h.std()
         b = np.array([blk[p] for p in wp])

@@ -59,8 +59,10 @@ if E064_MODE != 'G1':
     raise SystemExit('E064_MODE 只接受 G1（off／G0 是舊頁重現用，已淘汰）')
 # 預註冊 §4.1：stamina 最小樣本 1 場（本身的能力值與 w 都用；其餘 15 屬性照 C4 現行）。
 SA.SEASON_MIN_SAMPLE['stamina'] = 1
-VERSION = 'inseason 0.2.15a'  # 0.2.15a＝新秀位置改老將規則 S5（E-304，run_c4_live_rookie.ROOKIE_POS5；ROOKIE_POS5=0 重現 0.2.15）； 0.2.15＝CRT＋PNR 合成「持球進攻」（E-303 MRG5，見下方 CRTPNR；CRTPNR=0 重現 0.2.14d）； 0.2.14d＝E-302 臂 MR（R-190）：D<0 時 g 改 E-296 A2-15-R（多上場不再掉分，PR1 換重取值）＋OVR 錨點「近況」（live/game_anchor.py）；NEG_MIN=0 重現 0.2.14c、GAME_ANCHOR=0 只關近況； 0.2.14c＝MIX 加分再乘 min(1, W(MPGhat))（E-300 臂 M，OVR 主體同一條分鐘曲線；mix_live.py mm；MIX_MIN=0 重現 0.2.14b）； 0.2.14b＝MIX 加分位置改 BBRef 上場位置比例 π（E-295 W1：w＝π_C＋0.243·π_PF、位置平均＝π 加權；live/mix_live.py w1、凍結 mix-pool-card0214b.json；MIX_W1=0 重現 0.2.14a）； 0.2.14a＝MIX 加分改 E-294 H-same（z 減半位置平均＋1.5·tanh 軟上限＋位置權重 C=1／PF=0.243，live/mix_live.py h=True、凍結 mix-pool-card0214a.json；MIX_H=0 重現 0.2.14）； 0.2.14＝MIX 籃板／兩分干擾加分＋500 分鐘以下按比例打折（R-183／R-184，live/mix_live.py；MIX_BONUS=0 重現 0.2.13a）； 0.2.13a＝pnr 窗口外的季不帶回合（PNR_FIX=0 重現 0.2.13）； R-050／R-114：先驗卡 card 0.2.13；0.2.13＝加能力值 pnr（擋拆持球，E-258 G50_W05，live/pnr_live.py；PNR=0 重現 0.2.12e）；0.2.12e＝防守 D 改個人場次軸（R-163，defense_bonus.py；DEF_AXIS=calendar 回退）＋復出老將補進用人層（R-164，rv_usage；RV_USAGE=0 回退），兩者都關＝0.2.12d；0.2.12d＝復出老將補卡：2025-26 沒上場的老將（Lillard、Kyrie、Haliburton 等）用 v5 舊季卡進四季窗口，其餘管線不動（live/build_returning_vet_prior.py；RETURNING_VETS=0 重現 0.2.12c）；0.2.12c＝tovSkill 的失誤率分母由持球分鐘改觸球次數（R-144，E-207，live/tov_live.py，檔名用 0212c／card-0.2.12c；TOV_TOUCH=0 重現 0.2.12b）；0.2.12b＝四季窗口由 328 格縮成 246 格（R-140，E-204，live/win_len.py；WIN_LEN=328 重現 0.2.12a）；0.2.12a＝gravity 補值依本季分鐘往進攻 EPM 收縮（gravity_live.EPM_ON；GRAVITY_EPM=0 重現 0.2.12）；0.2.12＝tovSkill 改看持球時間（R-139，E-203，live/tov_live.py，檔名用 0212／card-0.2.12-tov）；0.2.11（原標 0.2.10j，R-137 使用者升為 PATCH；檔名沿用 0210j）＝加能力值 gravity（無球外線引力，R-134／R-135，live/gravity_live.py）；0.2.10i＝drive→drive_D、creation→creationJ（R-130／R-132，live/split_dc.py）；0.2.10h＝賽中端 y、v 改用開季當天年齡（R-129，E-193），卡片端不動。 第一個字面值會被 daily_inseason_update.probe_base_version 以正規式讀取，勿改成括號／條件式開頭
-CARD_VERSION = 'card 0.2.15'   # 0.2.15＝正式卡 reports/card-0.2.15/（係數底 card-0.2.15-w246、base card-0.2.15-base，＋MIX 加分同 0.2.14c）； 0.2.14c＝正式卡 reports/card-0.2.14c/（＝card 0.2.14b，mixBonus×min(1,W(mpg))）； 0.2.14b＝正式卡 reports/card-0.2.14b/（＝card 0.2.13a＋W1 mixBonus＋BBRef 別名 3 人）； 0.2.14a＝正式卡 reports/card-0.2.14a/（＝card 0.2.13a＋H-same mixBonus，＝card-0.2.15-cand）； 0.2.14＝正式卡 reports/card-0.2.14/（＝card 0.2.13a＋mixBonus；係數管線、先驗、formal 核對仍用 card-0.2.13a，加分在寫 ranking 前疊上）； 0.2.13a＝正式卡 reports/card-0.2.13a/； 0.2.13＝加 pnr（係數 reports/card-0.2.13-w246/，正式卡 reports/card-0.2.13/）；PNR=0 回 card 0.2.12c。0.2.12c＝觸球分母（W246，reports/card-0.2.12c/；係數／RAPM 在 328 底 reports/card-0.2.12c-w328/）；TOV_TOUCH=0 回 card 0.2.12b／0.2.12。0.2.12b＝同上窗口 246（reports/card-0.2.12b/）；WIN_LEN=328 時回 card 0.2.12
+VERSION = 'inseason 0.3.0'  # 0.3.0＝OVR 的每 36 預測封頂後再往凍結四季 RAPM 拉 30%（E-310，live/e310_live.py；E310=0 重現 0.2.15a；內部分支仍以 0.2.15a／card 0.2.15 判斷，版號在版號鏈最後才換）； 0.2.15a＝新秀位置改老將規則 S5（E-304，run_c4_live_rookie.ROOKIE_POS5；ROOKIE_POS5=0 重現 0.2.15）； 0.2.15＝CRT＋PNR 合成「持球進攻」（E-303 MRG5，見下方 CRTPNR；CRTPNR=0 重現 0.2.14d）； 0.2.14d＝E-302 臂 MR（R-190）：D<0 時 g 改 E-296 A2-15-R（多上場不再掉分，PR1 換重取值）＋OVR 錨點「近況」（live/game_anchor.py）；NEG_MIN=0 重現 0.2.14c、GAME_ANCHOR=0 只關近況； 0.2.14c＝MIX 加分再乘 min(1, W(MPGhat))（E-300 臂 M，OVR 主體同一條分鐘曲線；mix_live.py mm；MIX_MIN=0 重現 0.2.14b）； 0.2.14b＝MIX 加分位置改 BBRef 上場位置比例 π（E-295 W1：w＝π_C＋0.243·π_PF、位置平均＝π 加權；live/mix_live.py w1、凍結 mix-pool-card0214b.json；MIX_W1=0 重現 0.2.14a）； 0.2.14a＝MIX 加分改 E-294 H-same（z 減半位置平均＋1.5·tanh 軟上限＋位置權重 C=1／PF=0.243，live/mix_live.py h=True、凍結 mix-pool-card0214a.json；MIX_H=0 重現 0.2.14）； 0.2.14＝MIX 籃板／兩分干擾加分＋500 分鐘以下按比例打折（R-183／R-184，live/mix_live.py；MIX_BONUS=0 重現 0.2.13a）； 0.2.13a＝pnr 窗口外的季不帶回合（PNR_FIX=0 重現 0.2.13）； R-050／R-114：先驗卡 card 0.2.13；0.2.13＝加能力值 pnr（擋拆持球，E-258 G50_W05，live/pnr_live.py；PNR=0 重現 0.2.12e）；0.2.12e＝防守 D 改個人場次軸（R-163，defense_bonus.py；DEF_AXIS=calendar 回退）＋復出老將補進用人層（R-164，rv_usage；RV_USAGE=0 回退），兩者都關＝0.2.12d；0.2.12d＝復出老將補卡：2025-26 沒上場的老將（Lillard、Kyrie、Haliburton 等）用 v5 舊季卡進四季窗口，其餘管線不動（live/build_returning_vet_prior.py；RETURNING_VETS=0 重現 0.2.12c）；0.2.12c＝tovSkill 的失誤率分母由持球分鐘改觸球次數（R-144，E-207，live/tov_live.py，檔名用 0212c／card-0.2.12c；TOV_TOUCH=0 重現 0.2.12b）；0.2.12b＝四季窗口由 328 格縮成 246 格（R-140，E-204，live/win_len.py；WIN_LEN=328 重現 0.2.12a）；0.2.12a＝gravity 補值依本季分鐘往進攻 EPM 收縮（gravity_live.EPM_ON；GRAVITY_EPM=0 重現 0.2.12）；0.2.12＝tovSkill 改看持球時間（R-139，E-203，live/tov_live.py，檔名用 0212／card-0.2.12-tov）；0.2.11（原標 0.2.10j，R-137 使用者升為 PATCH；檔名沿用 0210j）＝加能力值 gravity（無球外線引力，R-134／R-135，live/gravity_live.py）；0.2.10i＝drive→drive_D、creation→creationJ（R-130／R-132，live/split_dc.py）；0.2.10h＝賽中端 y、v 改用開季當天年齡（R-129，E-193），卡片端不動。 第一個字面值會被 daily_inseason_update.probe_base_version 以正規式讀取，勿改成括號／條件式開頭
+CARD_VERSION = 'card 0.3.0'   # 0.3.0＝正式卡 reports/card-0.3.0/（＝card 0.2.15＋E-310 RAPM 混合，reports/card-0.3.0/build_card_030.py；底 card-0.3.0-base）； 0.2.15＝正式卡 reports/card-0.2.15/（係數底 card-0.2.15-w246、base card-0.2.15-base，＋MIX 加分同 0.2.14c）； 0.2.14c＝正式卡 reports/card-0.2.14c/（＝card 0.2.14b，mixBonus×min(1,W(mpg))）； 0.2.14b＝正式卡 reports/card-0.2.14b/（＝card 0.2.13a＋W1 mixBonus＋BBRef 別名 3 人）； 0.2.14a＝正式卡 reports/card-0.2.14a/（＝card 0.2.13a＋H-same mixBonus，＝card-0.2.15-cand）； 0.2.14＝正式卡 reports/card-0.2.14/（＝card 0.2.13a＋mixBonus；係數管線、先驗、formal 核對仍用 card-0.2.13a，加分在寫 ranking 前疊上）； 0.2.13a＝正式卡 reports/card-0.2.13a/； 0.2.13＝加 pnr（係數 reports/card-0.2.13-w246/，正式卡 reports/card-0.2.13/）；PNR=0 回 card 0.2.12c。0.2.12c＝觸球分母（W246，reports/card-0.2.12c/；係數／RAPM 在 328 底 reports/card-0.2.12c-w328/）；TOV_TOUCH=0 回 card 0.2.12b／0.2.12。0.2.12b＝同上窗口 246（reports/card-0.2.12b/）；WIN_LEN=328 時回 card 0.2.12
+E310 = os.environ.get('E310', '1') != '0'   # 0.3.0（E-310，使用者 2026-11-23「採用並上線」）
+VERSION, CARD_VERSION = 'inseason 0.2.15a', 'card 0.2.15'   # 0.3.0 疊在 0.2.15a 上：下面的版號鏈與各模組照 0.2.15 判斷；對外版號在 ROOKIE_POS5 之後換（CARD_LABEL）
 PNR = os.environ.get('PNR', '1') != '0'   # 0.2.13：PNR=0 重現 0.2.12e（卡 card 0.2.12c；ATTRS 不加 pnr、新秀不 import pnr_live）
 if not PNR:
     VERSION, CARD_VERSION = 'inseason 0.2.12e', 'card 0.2.12c'
@@ -155,7 +157,15 @@ if PNR and PNR_CARD:
 ROOKIE_POS5 = os.environ.get('ROOKIE_POS5', '1') != '0'   # 0.2.15a（E-304 S5，使用者 2026-11-10「S5 老將規則」）：新秀 OVR 位置改老將規則（先發≥5 次取先發秒數最多的位置，否則五段身高），只在 run_c4_live_rookie 生效；放在版號鏈最後（L-151）
 if not ROOKIE_POS5 and VERSION == 'inseason 0.2.15a':
     VERSION = 'inseason 0.2.15'
-if PNR and not PNR_CARD and (VERSION not in ('inseason 0.2.13', 'inseason 0.2.13a', 'inseason 0.2.14', 'inseason 0.2.14a', 'inseason 0.2.14b', 'inseason 0.2.14c', 'inseason 0.2.14d', 'inseason 0.2.14d-noform', 'inseason 0.2.15', 'inseason 0.2.15a', 'inseason 0.2.15-noform') or not RETURNING_VETS or os.environ.get('DEF_AXIS', 'personal') == 'calendar' or os.environ.get('RV_USAGE', 'hi') == '0'):
+E310 = E310 and VERSION == 'inseason 0.2.15a'   # 0.3.0 只疊在完整 0.2.15a 上；任何回退開關都同時關掉 E-310
+if os.environ.get('E310') == '1' and not E310:
+    raise SystemExit('E310=1 只能配 0.2.15a 的整條開關；要回退請同時設 E310=0')
+CARD_LABEL = CARD_VERSION   # 對外（meta priorCard、說明）的卡片版號
+if E310:
+    VERSION, CARD_LABEL = 'inseason 0.3.0', 'card 0.3.0'
+    import importlib.util as _ilu   # -I 不把本目錄放進 sys.path；直接照路徑載入
+    _sp = _ilu.spec_from_file_location('e310_live', HERE / 'e310_live.py'); E3 = _ilu.module_from_spec(_sp); _sp.loader.exec_module(E3)
+if PNR and not PNR_CARD and (VERSION not in ('inseason 0.2.13', 'inseason 0.2.13a', 'inseason 0.2.14', 'inseason 0.2.14a', 'inseason 0.2.14b', 'inseason 0.2.14c', 'inseason 0.2.14d', 'inseason 0.2.14d-noform', 'inseason 0.2.15', 'inseason 0.2.15a', 'inseason 0.2.15-noform', 'inseason 0.3.0') or not RETURNING_VETS or os.environ.get('DEF_AXIS', 'personal') == 'calendar' or os.environ.get('RV_USAGE', 'hi') == '0'):
     raise SystemExit('重現 0.2.12e 以前的版本要同時設 PNR=0')
 if PNR:   # 0.2.13：卡片 calibrate --offBallCols gravity,pnr，pnr 接在 gravity 後面
     _CV = 'card-0.2.13-w246'
@@ -426,6 +436,7 @@ def m26_window_cards(sd, n, mapping, prior_cards, received, season_min_sample=No
 
 
 # ==== E-111 027 BEGIN ====
+# 0.3.0：本段的 E310／E3 用 globals().get 讀（舊回測 exec 本段時沒有這兩個名字＝不混 E-310）。
 # CARD_MODE=027（E-111，預註冊 reports/ovr-inseason-2026-27/e111-card027/preregistration.md §1）專用；其他模式不呼叫。
 # build_pool_027.py、check_prereq.py、backtest_e111.py 連同上面的 E-107 段一起 exec（命名空間要有 SA、IC、math、json）。
 M27_AREA_PBP = {('defense-seventh', '2022-23'), ('defense-seventh', '2023-24'), ('defense-seventh', '2024-25'),
@@ -520,12 +531,15 @@ def m27_ovr_predict(self, attrs_by_pid):
     import pointwise_pipeline as _PWX
     pool = np.array([p not in _PWX.EXCLUDE_T for p in self.pids]) if _PWX.EXCLUDE_T else None
     pred, iters = OP.cap_total_lift(pred, pred0, lift, self.allowed, pool)
+    e310 = np.array([E3.delta(p, pred[i]) if globals().get('E310') else 0.0 for i, p in enumerate(self.pids)])   # 0.3.0：封頂後再往凍結四季 RAPM 拉（封頂不管這項）
+    pred = pred + e310
     p1, p50, p99 = self.anchors
     ovr = np.where(pred <= p50, 40 + 30 * (pred - p1) / (p50 - p1), 70 + 29 * (pred - p50) / (p99 - p50))
     out = {}
     for i, p in enumerate(self.pids):
         out[p] = {'pred0': float(pred0[i]), 'bonus': float(bonus[i]), 'align': float(align[i]),
-                  'pred': float(pred[i]), 'ovr': float(ovr[i]), 'pr': float(pr[i])}
+                  'pred': float(pred[i]), 'ovr': float(ovr[i]), 'pr': float(pr[i]), 'e310': float(e310[i]),
+                  'predCap': float(pred[i] - e310[i])}   # 0.3.0：逐點封頂門檻 T 要用混合前的封頂值（m27_pw_init）
     out['_capIterations'] = iters
     return out
 
@@ -549,10 +563,30 @@ def m27_pw_predict(self, attrs_by_pid):
         a = P.allowed[i]
         if a is not None and bonus + align > 0:
             pred = min(pred, max(pred0[i], self.T[a]))
+        e310 = E3.delta(p, pred) if globals().get('E310') else 0.0   # 0.3.0：封頂後再往凍結四季 RAPM 拉（封頂不管這項）
+        pred += e310
         ovr = 40 + 30 * (pred - p1) / (p50 - p1) if pred <= p50 else 70 + 29 * (pred - p50) / (p99 - p50)
         out[p] = {'pred0': float(pred0[i]), 'bonus': float(bonus), 'align': float(align),
-                  'pred': float(pred), 'ovr': float(ovr), 'pr': float(self.pr0[i])}
+                  'pred': float(pred), 'ovr': float(ovr), 'pr': float(self.pr0[i]), 'e310': float(e310)}
     return out
+
+
+def m27_pw_init(self, pipe, attrs0):
+    """PointwisePipeline.__init__ 的 0.3.0 版：同原版，只是封頂門檻 T 取混合前的封頂值 predCap（E-310 混合項在封頂之後，不能回頭推動門檻）。
+    E310=0 時 predCap＝pred，逐位元同原版。"""
+    import numpy as np
+    import pointwise_pipeline as PWM
+    self.pipe = pipe
+    ref = pipe.predict(attrs0)
+    self.ref = ref
+    self.pr0 = np.array([ref[p]['pr'] for p in pipe.pids])
+    s = np.sort(np.array([ref[p].get('predCap', ref[p]['pred']) for p in pipe.pids if p not in PWM.EXCLUDE_T]))[::-1]
+    self.T = {a: float(s[min(max(int(a), 1), len(s)) - 1]) - 1e-12
+              for a in set(x for x in pipe.allowed if x is not None)}
+    chk = self.predict(attrs0)
+    self.check = max(abs(chk[p]['ovr'] - ref[p]['ovr']) for p in pipe.pids)
+    if self.check >= 1e-8:
+        raise RuntimeError(f'pointwise A != pipeline A ({self.check})')
 
 
 def m27_install_ul(def_by_rapm):
@@ -562,6 +596,7 @@ def m27_install_ul(def_by_rapm):
     M27_DEF.update({str(__import__('pathlib').Path(k).resolve()): v for k, v in def_by_rapm.items()})
     OP.OVRPipeline.predict = m27_ovr_predict
     PWM.PointwisePipeline.predict = m27_pw_predict
+    PWM.PointwisePipeline.__init__ = m27_pw_init   # 0.3.0：T 用混合前封頂值
     if not getattr(OP.OVRPipeline.__init__, '_m27', False):     # E-111 errata 1：RAPM 名次同分照卡片產生器
         orig_init = OP.OVRPipeline.__init__
 
@@ -1241,7 +1276,7 @@ def main():
         row = {'ovr': r1(p['ovr']), 'name': pc['name'], 'pos': pc['pos'],
                'MINprior': round(float(pc['observed']['MIN'])), 'predictedPer36': round(p.get('predP', p['pred']), 3),
                'simulatedPer36': '', 'defenseBonus': round(p['bonus'], 3), 'align': round(p['align'], 3),
-               'pred0': round(p['pred0'], 3), 'pr': round(p['pr'], 2)}
+               'pred0': round(p['pred0'], 3), 'pr': round(p['pr'], 2), 'rapmBlend': round(p.get('e310', 0.0), 4)}
         for a in ATTRS:
             row[a] = r1(attrs[pid][a])
         row.update({'MPG0': round(mpg0.get(pid, 0.0), 2), 'MPGhat': round(mpg_hat.get(pid, 0.0), 2),
@@ -1267,6 +1302,8 @@ def main():
              'pred0', 'pr'] + list(ATTRS) + ['playerId', 'N', 'team', 'MIN26', 'lastOVR', 'dOVR', 'formalOVR',
              'threeValue', 'fg3a26', 'fg3m26', 'fg3Pct26'])
     head = head + ['MPG0', 'MPGhat', 'g', 'ovrPer36', 'MPGwin', 'wMPG', 'presDisplay', 'foulDisc', 'predNew']
+    if E310:
+        head = head + ['rapmBlend']   # 0.3.0：E-310 加到 predictedPer36 的量（已含在 predictedPer36 內）
     C.write_csv(out_dir / 'ranking.csv', [{k: r[k] for k in head} for r in rows], head)
     nopr.sort(key=lambda r: (-r['N'], -r['MIN26']))
     C.write_csv(out_dir / 'no-prior.csv', nopr, ['playerId', 'name', 'team', 'N', 'MIN26'])
@@ -1370,7 +1407,7 @@ def main():
     games = sorted({r['GAME_ID'] for r in sd26['teamRows']})
     meta = {
         'version': VERSION, 'cardMode': CARD_MODE, 'e064Mode': E064_MODE, 'e064Anchors': anc064, 'e064RRepl': r_repl064, 'negMin': ({'arm': 'A2-15-R', 'ms': NEG_MIN_MS, 'PR1': NEG_MIN_PR1} if NEG_MIN else None), 'gameAnchor': GAME_ANCHOR, 'crtpnr': ({'frozen': 'live/crtpnr-pool-card0215.json', 'a': 0.5, 'note': 'creation 欄＝持球進攻（E-303 MRG5）：z＝(z_crt＋z_pnr)/√(2+2r) → 0–99（PctMapper，頂端尾巴同 3PT）'} if CRTPNR else None),
-        'e064MpgNoDataPlayers': len(mpg_nodata), 'priorCard': CARD_VERSION, 'dataCutoff': cutoff,
+        'e064MpgNoDataPlayers': len(mpg_nodata), 'priorCard': CARD_LABEL, 'dataCutoff': cutoff,
         'dataFirstDate': min(r['GAME_DATE'] for b in sd26['box'].values() for r in b['rows']),
         'games': len(games), 'pbpGames': len(pbp_files), 'missingPbp': sorted(set(games) - set(pbp_files)),
         'gitHead': git_head(), 'start': 'S*', 'prior': PRIOR, 'target': TARGET, 'c': C_PARAM, 'G': G_GAMES,
@@ -1438,7 +1475,7 @@ def main():
     OVR_NOTE += f"\n- E-128：用人層係數、r_repl、錨點取 {rel(USAGE_FILE)}（rebase-027a e123a pipeline 重跑，錨點對 rebase-027a/work/cards-result.json 核對）；分鐘權重 W 同 card 0.2.5。"
     md = f"""# {VERSION} 2026-27 即時結果（資料截至 {cutoff}）
 
-- OVR：賽中 C4（{VERSION}），先驗 {CARD_VERSION}（live/{PRIOR_CARD.name}）；N = 該球員 2026-27 已打場數。
+- OVR：賽中 C4（{VERSION}），先驗 {CARD_LABEL}（live/{PRIOR_CARD.name}）；N = 該球員 2026-27 已打場數。
 - 資料：{meta['dataFirstDate']}..{cutoff}、{len(games)} 場、{len(pbp_files)} 份 PBP；缺 PBP：{', '.join(meta['missingPbp']) or '無'}。
 - git HEAD：`{meta['gitHead'][:12]}`；c={C_PARAM}（凍結）、G={G_GAMES}、f = min(N/{G_GAMES}, 1)。
 - 排名 {len(rows)} 人（有先驗卡且已出賽，加上在現役名單上但還沒出賽的 {len(unplayed)} 人，N=0、OVR＝先驗）；沒有先驗卡 {len(nopr)} 人（`no-prior.csv`，不給 OVR）；有先驗卡、沒出賽也不在現役名單 {len(not_played)} 人（不列入）。

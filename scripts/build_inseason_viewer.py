@@ -284,7 +284,7 @@ def main():
             r['ft'] = repr(round(sn.display_scale(b['ft']), 1))
         if 'threeValue' in b:
             r['threeValue'] = repr(round(sn.display_scale(b['threeValue']), 1))
-    # E-305 D30（R-193）：RIM 欄顯示 0.7·z(help)＋0.3·z(每 36 蓋帽)，每天用當天資料重算；只改顯示，OVR／OFF／DEF 已用原 help 算完。RIM_BLK=0 退回
+    # E-305 D30（R-193）→ E-307 RG：RIM 欄顯示 0.7·z(help)＋0.3·z(每 36 有效蓋帽扣干擾；RIM_RG=0 回 blk36)，每天用當天資料重算；只改顯示，OVR／OFF／DEF 已用原 help 算完。RIM_BLK=0 退回
     rb = RB.compute({int(r['playerId']): float(r['help']) for r in rows if r['help'] != ''}, ipool, meta['window8']['gamesDone'], meta['dataCutoff'], SRC26)
     print(f'RIM 加蓋帽：{RB.apply(rows, rb, lambda r: int(r["playerId"]))} 人', file=sys.stderr)
     for r in rows:
@@ -362,6 +362,9 @@ def main():
                for r in epm_rows}
     # 場均評分格沿用近 5 場表的五色（原本只掛在 .g5 底下）
     er.CSS += '.chip .gv{display:flex;align-items:baseline;gap:4px}.strong .chip .gv i{margin:0}.strong .chip:not(.dim) .gv{margin-top:2px}.chip small.rk5{font:600 .72rem var(--f-disp);color:var(--muted)}.chip i.c5a{color:var(--g-a)}.chip i.c5b{color:var(--g-b)}.chip i.c5c{color:#a3abb5}.chip i.c5d{color:#f09a8c}.chip i.c5f{color:var(--g-f)}\n'
+    # 主卡 On/Off 用本季 stint 重算（使用者 2026-11-23；stints.jsonl 每天隨賽中管線更新）
+    er.ONOFF_STINTS = ROOT / 'reports/defense-seventh/2026-27/stints/stints.jsonl'
+    er.ONOFF_SEASON = '2026-27'
     er.IMPACT_LOADER = lambda: {pid: {k: round(v, 2) for k, v in d.items()} for pid, d in epm_imp.items()}
     add_ovr_chart(live)
     for a, b in [
@@ -372,7 +375,7 @@ def main():
         # 第四格再改成本季場均評分（Z1 0–10，整季每場平均；使用者 2026-11-03）：box 估計開季被收縮約八成，
         # Ty Jerome 場均 25.8 分只排 #53、藍領中鋒反而前 15；評分抓得到開季爆發。
         # 顏色改看全聯盟名次五等分（高綠、中灰、低紅；使用者 2026-11-03），名次人群＝場均 ≥15 分鐘（同能力值，sn.POOL_MPG），旁邊標 #名次
-        ("    chip('在場增益', m.onoff, '2025-26 他在場減不在場的球隊每 100 回合淨效率（扣掉球隊本身強弱；會受替補好壞影響）' + (m.on == null ? '' : '；在場時球隊淨效率 ' + sg(m.on)))}",
+        ("    chip('場均正負值', r.pm, '2025-26 場均正負值：他在場時球隊的得失分差，每場平均（沒有扣掉球隊強弱，強隊的人容易偏高；扣掉強弱的版本見左邊 On/Off）')}",
          "    (() => { const v = r.sd ? r.sd.gc : null;\n"
          "      if (v == null) return `<span class=\"chip\" title=\"本季尚未出賽\">場均評分<i class=\"flat\">—</i></span>`;\n"
          "      if (!window.GC_POOL) window.GC_POOL = Object.values(REAL).filter(x => x.gp > 0 && x.mpg >= %d && x.sd && x.sd.gc != null).map(x => x.sd.gc);\n"
@@ -380,7 +383,7 @@ def main():
          "      const cl = f < 0.2 ? 'c5a' : f < 0.4 ? 'c5b' : f < 0.6 ? 'c5c' : f < 0.8 ? 'c5d' : 'c5f';\n"
          "      const tip = GC_DEF + '。本季每場評分平均；顏色＝全聯盟名次五等分（綠高、灰中、紅低），名次人群＝場均 ≥%d 分鐘共 ' + pool.length + ' 人' + (inPool ? '' : '；他場均不到 %d 分鐘，不列名次') + (r.gc && r.gc.b != null ? '。上季 ' + gcS(r.gc.b) : '');\n"
          "      return `<span class=\"chip\" title=\"${tip}\">場均評分<span class=\"gv\"><i class=\"${cl}\">${gcS(v)}</i>${inPool ? `<small class=\"rk5\">#${rk}</small>` : ''}</span></span>`; })()}" % (sn.POOL_MPG, sn.POOL_MPG, sn.POOL_MPG, sn.POOL_MPG)),
-        ("'在場增益'", "'場均評分'"),
+        ("'場均正負值'", "'場均評分'"),
     ]:
         assert er.JS.count(a) >= 1, a
         er.JS = er.JS.replace(a, b)
