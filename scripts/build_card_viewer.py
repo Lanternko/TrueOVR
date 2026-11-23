@@ -1,4 +1,4 @@
-"""2025-26 正式卡名單頁（card 0.2.15，2026-11-10 CRT＋PNR 合成「持球進攻」E-303 MRG5，檔案在 card-0.2.15/；card 0.2.14c，2026-11-10 長人加分照上場分鐘曲線打折 E-300 M，檔案在 card-0.2.14c/；card 0.2.14b，2026-11-09 中鋒加分位置改看 BBRef 實際上場位置比例 E-295 W1，檔案在 card-0.2.14b/；card 0.2.14a，2026-11-09 中鋒加分改同位置比較＋軟上限＋位置權重 E-294 H-same，檔案在 card-0.2.14a/；card 0.2.14，2026-11-09 加 MIX 籃板／兩分干擾加分 E-290／E-292，ovr 與 mixBonus 在 card-0.2.14/；card 0.2.13a，2026-11-08 修 pnr 窗口外季回合；card 0.2.13，E-258：加擋拆持球 pnr、全部係數重擬合；檔案在 card-0.2.13/。之前 card 0.2.12b，E-204／R-140：四季窗口 328→246 格；檔案在 card-0.2.12b/。card 0.2.12＝R-139 升 PATCH，TO 改看持球時間，檔案在 card-0.2.12-tov/）：以正式卡名單頁為版型，換成 card 0.2.13 的 OVR／能力值（OVR 為每場、含上場時間、相對替補水準，R-028；能力值同 0.1.2），3PT 顯示 threeValue（R-024）。
+"""2025-26 正式卡名單頁（card 0.3.0，2026-11-23 OVR 每 36 預測再往四季 RAPM 拉 30% E-310，檔案在 card-0.3.0/（能力值欄同 card 0.2.15）；card 0.2.15，2026-11-10 CRT＋PNR 合成「持球進攻」E-303 MRG5，檔案在 card-0.2.15/；card 0.2.14c，2026-11-10 長人加分照上場分鐘曲線打折 E-300 M，檔案在 card-0.2.14c/；card 0.2.14b，2026-11-09 中鋒加分位置改看 BBRef 實際上場位置比例 E-295 W1，檔案在 card-0.2.14b/；card 0.2.14a，2026-11-09 中鋒加分改同位置比較＋軟上限＋位置權重 E-294 H-same，檔案在 card-0.2.14a/；card 0.2.14，2026-11-09 加 MIX 籃板／兩分干擾加分 E-290／E-292，ovr 與 mixBonus 在 card-0.2.14/；card 0.2.13a，2026-11-08 修 pnr 窗口外季回合；card 0.2.13，E-258：加擋拆持球 pnr、全部係數重擬合；檔案在 card-0.2.13/。之前 card 0.2.12b，E-204／R-140：四季窗口 328→246 格；檔案在 card-0.2.12b/。card 0.2.12＝R-139 升 PATCH，TO 改看持球時間，檔案在 card-0.2.12-tov/）：以正式卡名單頁為版型，換成 card 0.2.13 的 OVR／能力值（OVR 為每場、含上場時間、相對替補水準，R-028；能力值同 0.1.2），3PT 顯示 threeValue（R-024）。
 OVR 能力估計納入教練用人證據（分鐘、出賽率、年齡、練兵隊），DNP 與輪休分開（E-075）；用人回歸的訓練目標是 2025-26 單季 RAPM（E-084）；分鐘權重為飽和曲線 W(m)（E-089）；補籃改歸近距離、能力值錨點對四季合併池、頂端只壓縮（E-101）；OVR 迴歸不用 physique（E-131），網站不顯示 PHYS。
 PRES 顯示 presDisplay（逼失誤 − 0.25·犯規，E-071），提示卡列逼失誤（卡片 pressure）與五個分量（抄截、干擾球、對位逼失誤、造進攻犯規、犯規，E-071 收縮後值＋PR＋前十名次）；
 提示卡 PR／名次人群＝場均 ≥ sn.POOL_MPG 分鐘的人，其餘註腳改標「*上場時間不足」；
@@ -32,7 +32,7 @@ import lite_cells as LC  # noqa: E402
 
 ROOT = er.ROOT
 BASE = ROOT / 'reports/ovr-v58-card-2025-26/roster-viewer.html'
-CARD = ROOT / 'reports/card-0.2.15/ranking.csv'
+CARD = ROOT / 'reports/card-0.3.0/ranking.csv'   # 0.3.0（E-310）：只改 ovr／predictedPer36／gRepl／rank，其他附檔仍讀 card-0.2.15（內容相同）
 THREE_VALUE = ROOT / 'reports/card-0.2.15/three-value.csv'
 GRAVITY_ATTR = ROOT / 'reports/card-0.2.15/gravity-attr.csv'   # 0.2.10j（R-134）：引力能力值（0–99）與是否推估
 CRT_ATTR = ROOT / 'reports/card-0.2.15/crt-attr.csv'           # 0.2.15（E-303 MRG5）：持球進攻（creation 欄）的兩個分量＝自主創造、擋拆持球（值與凍結池百分位）
@@ -189,7 +189,7 @@ def main(out=None):
     s = base
     s = s.replace('<title>OVR 名單檢視</title>', '<title>球員能力值 · TrueOVR · 2026</title>', 1)
     s = re.sub(r'<div class="src">.*?</div>',
-               f'<div class="src">OVR：正式卡 card 0.2.15（2025-26 整季；長人的籃板與兩分干擾另有加分（看實際打中鋒／大前鋒的上場比例，和同位置平均比、頂端漸緩；上場不到 500 分鐘按比例打折，再照每場上場分鐘打折，和 OVR 本體同一條曲線）；OVR 為每場，含上場時間，相對替補水準；FD 以量為主；PRES＝逼失誤扣犯規；OVR 能力估計納入教練用人證據，DNP 與輪休分開，用人回歸（上場強度、出賽率看近三季窗口）對齊當季 RAPM；分鐘權重遞減；能力值對 2022-23～2025-26 四季比較；切入只算帶球切入的自主兩分；CRT＝持球進攻：自主創造（自主跳投與低位）與擋拆持球（Synergy 擋拆持球的次數與每回合得分）各半；GRV＝引力：沒拿球時防守人也不敢離開他的程度（NBA.com 無球外線引力，沒有資料的人用三分出手、命中率、用球率與位置推估）；SPOT／CUT＝無球兩格（只顯示，不進 OVR）：空檔射手看定點、繞掩護、手遞手的接球投籃量與接球三分準度，切入順下看空切、擋拆順下、補籃、快攻的量與空切效率（Synergy，近三季加權）；防守加成不打折、近期加權；OVR 評分標準為 DARKO 加 BPM；年輕人沒有爛隊折扣；傳球看量也看率；3PT、RIM、PRES 頂端不封在 99；OVR 不看身高體重；OVR 尺頂端另以 PR90、PR95 定位）；3PT 顯示 threeValue；{len(rows)} 人</div>',
+               f'<div class="src">OVR：正式卡 card 0.3.0（2025-26 整季；OVR 另往四季 RAPM（2022-23～2025-26）拉 30%，四季上場越少拉得越少；長人的籃板與兩分干擾另有加分（看實際打中鋒／大前鋒的上場比例，和同位置平均比、頂端漸緩；上場不到 500 分鐘按比例打折，再照每場上場分鐘打折，和 OVR 本體同一條曲線）；OVR 為每場，含上場時間，相對替補水準；FD 以量為主；PRES＝逼失誤扣犯規；OVR 能力估計納入教練用人證據，DNP 與輪休分開，用人回歸（上場強度、出賽率看近三季窗口）對齊當季 RAPM；分鐘權重遞減；能力值對 2022-23～2025-26 四季比較；切入只算帶球切入的自主兩分；CRT＝持球進攻：自主創造（自主跳投與低位）與擋拆持球（Synergy 擋拆持球的次數與每回合得分）各半；GRV＝引力：沒拿球時防守人也不敢離開他的程度（NBA.com 無球外線引力，沒有資料的人用三分出手、命中率、用球率與位置推估）；SPOT／CUT＝無球兩格（只顯示，不進 OVR）：空檔射手看定點、繞掩護、手遞手的接球投籃量與接球三分準度，切入順下看空切、擋拆順下、補籃、快攻的量與空切效率（Synergy，近三季加權）；防守加成不打折、近期加權；OVR 評分標準為 DARKO 加 BPM；年輕人沒有爛隊折扣；傳球看量也看率；3PT、RIM、PRES 頂端不封在 99；OVR 不看身高體重；OVR 尺頂端另以 PR90、PR95 定位）；3PT 顯示 threeValue；{len(rows)} 人</div>',
                s, count=1, flags=re.S)
     LC.augment(cols, data_rows)   # 精簡檢視的 10 個合併能力值（所有成分已是最終顯示值之後；只改顯示，spec reports/roster-lite-view）
     new_data = json.dumps({'cols': cols, 'rows': data_rows}, ensure_ascii=False, separators=(',', ':'))
