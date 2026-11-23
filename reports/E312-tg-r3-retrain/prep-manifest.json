@@ -1,0 +1,23 @@
+{
+ "featCutRebuildIdentical": true,
+ "featCutE306sha": "aa2af5aa8f9728bf288b4eb51522006efb36e0cb9282b314813724b5f13babc1",
+ "featCutTG": {
+  "sha256": "30ace5b402e112dd184ed55112df088b94f97de2453453ecfdbdcfff6dec0e1c",
+  "popN": 490,
+  "mu": 0.3855007351246721,
+  "sd": 0.31840684839274774,
+  "missing": 0
+ },
+ "ag": {
+  "leagueR": 0.5795107033639144,
+  "nCur": 456,
+  "nEvGames": 131,
+  "playedBeforeCut": 132,
+  "pbpMissing": [
+   "0022600101"
+  ]
+ },
+ "corrBlk36VsAG": 0.9905526389792509,
+ "nPids": 644,
+ "blkJ": 31
+}
