@@ -21,7 +21,7 @@
 
 ## 進行中（未稽核，待派 role-audit）
 - **防守三步（R-178、L-137）**：① help 位置係數 E-277 M1 已採用（R-179）→ ② 蓋帽 0.3 已採用（R-180），抄截 0.1 待裁定（E-282），干擾不進；E-287 OFF/DEF 混 0.5 T 已上線（R-181）→ ③ `DEF` 顯示對齊未開。全文 `archive/handoff-2026-11-23-defense-steps.md`
-- **E-309 區域威懾**／**E-311**／**E-312**：TG 照 R3 重訓 10 seed，seed 兩半不一致、F 小輸 → 不採用（1/5），T 維持 E-306 R3；Z2、TG 球隊評分線都停。`reports/E312-tg-r3-retrain/report.md`
+- **E-309 區域威懾**／**E-311**／**E-312**：TG 照 R3 重訓 10 seed，seed 兩半不一致、F 小輸 → 不採用（1/5），使用者確認收線（R-198），T 維持 E-306 R3；Z2、TG 球隊評分線都停。`reports/E312-tg-r3-retrain/report.md`
 - **E-304 新秀五位置**（11-10，4/5）：S5 已上線 inseason 0.2.15a（R-192，`ROOKIE_POS5=0` 回退）；硬標籤跳 2–4 分，W5 連續版為備案。
 - **E-298／E-300 主力權重**（11-10）：E-300 M 已上線（0.2.14c），未稽核；對手籃板修正量太小不上。RW3（live 63）仍高於 Avdija（75）：每 36 分換算＋小樣本防守意識，另案。`reports/E300-mix-minutes-opp/report.md`
 - **E-296／E-299／E-302 單場→OVR**（11-10）：MR 已上線（0.2.14d）；能力值加快無效（F-179）。Yang 剩下的扣分來自卡片中鋒係數，接 E-299 C 非負係數（需卡片鏈重跑）。`reports/E302-attr-anchor/report.md`
