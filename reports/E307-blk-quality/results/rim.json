@@ -1,0 +1,2087 @@
+{
+ "2026-27": {
+  "n_pool": 292,
+  "missing_in_pool": 0,
+  "arms": {
+   "B0": {
+    "first": "Isaiah Stewart",
+    "gap12": 2.5,
+    "top10": [
+     [
+      "Isaiah Stewart",
+      "PF",
+      112.5
+     ],
+     [
+      "Victor Wembanyama",
+      "C",
+      110.0
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      106.9
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      98.4
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      96.7
+     ],
+     [
+      "Walker Kessler",
+      "C",
+      96.1
+     ],
+     [
+      "Jay Huff",
+      "C",
+      95.4
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      95.1
+     ],
+     [
+      "Daniel Gafford",
+      "C",
+      93.7
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      93.2
+     ]
+    ],
+    "pfcTop10": [
+     [
+      "Isaiah Stewart",
+      112.5,
+      1,
+      2.06,
+      0.595,
+      0.142
+     ],
+     [
+      "Victor Wembanyama",
+      110.0,
+      2,
+      3.94,
+      0.624,
+      0.205
+     ],
+     [
+      "Chet Holmgren",
+      106.9,
+      3,
+      2.5,
+      0.61,
+      0.087
+     ],
+     [
+      "Donovan Clingan",
+      98.4,
+      4,
+      2.42,
+      0.583,
+      0.057
+     ],
+     [
+      "Ryan Kalkbrenner",
+      96.7,
+      5,
+      2.23,
+      0.62,
+      0.109
+     ],
+     [
+      "Walker Kessler",
+      96.1,
+      6,
+      2.68,
+      0.593,
+      0.2
+     ],
+     [
+      "Jay Huff",
+      95.4,
+      7,
+      2.71,
+      0.574,
+      0.167
+     ],
+     [
+      "Rudy Gobert",
+      95.1,
+      8,
+      1.75,
+      0.592,
+      0.119
+     ],
+     [
+      "Daniel Gafford",
+      93.7,
+      9,
+      2.5,
+      0.589,
+      0.24
+     ],
+     [
+      "Ivica Zubac",
+      93.2,
+      10,
+      1.23,
+      0.593,
+      0.036
+     ]
+    ],
+    "named": {
+     "Victor Wembanyama": [
+      2,
+      110.0
+     ],
+     "Isaiah Stewart": [
+      1,
+      112.5
+     ],
+     "Chet Holmgren": [
+      3,
+      106.9
+     ],
+     "Evan Mobley": [
+      12,
+      92.2
+     ],
+     "Rudy Gobert": [
+      8,
+      95.1
+     ],
+     "Walker Kessler": [
+      6,
+      96.1
+     ],
+     "Anthony Davis": [
+      18,
+      88.8
+     ],
+     "Jaren Jackson Jr.": [
+      15,
+      90.1
+     ],
+     "Brook Lopez": [
+      13,
+      91.6
+     ],
+     "Myles Turner": [
+      22,
+      87.6
+     ],
+     "Alex Sarr": [
+      16,
+      90.1
+     ],
+     "Bam Adebayo": [
+      54,
+      78.2
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.4193,
+      292
+     ],
+     "EPM_D/PFC": [
+      0.414,
+      103
+     ],
+     "T_DEF/all": [
+      0.6202,
+      292
+     ],
+     "T_DEF/PFC": [
+      0.5761,
+      103
+     ]
+    }
+   },
+   "D30": {
+    "first": "Victor Wembanyama",
+    "gap12": 8.67,
+    "top10": [
+     [
+      "Victor Wembanyama",
+      "C",
+      116.6
+     ],
+     [
+      "Isaiah Stewart",
+      "PF",
+      107.9
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      106.3
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      99.7
+     ],
+     [
+      "Walker Kessler",
+      "C",
+      99.5
+     ],
+     [
+      "Jay Huff",
+      "C",
+      99.2
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      97.4
+     ],
+     [
+      "Daniel Gafford",
+      "C",
+      96.8
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      93.8
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      93.6
+     ]
+    ],
+    "pfcTop10": [
+     [
+      "Victor Wembanyama",
+      116.6,
+      1,
+      3.94,
+      0.624,
+      0.205
+     ],
+     [
+      "Isaiah Stewart",
+      107.9,
+      2,
+      2.06,
+      0.595,
+      0.142
+     ],
+     [
+      "Chet Holmgren",
+      106.3,
+      3,
+      2.5,
+      0.61,
+      0.087
+     ],
+     [
+      "Donovan Clingan",
+      99.7,
+      4,
+      2.42,
+      0.583,
+      0.057
+     ],
+     [
+      "Walker Kessler",
+      99.5,
+      5,
+      2.68,
+      0.593,
+      0.2
+     ],
+     [
+      "Jay Huff",
+      99.2,
+      6,
+      2.71,
+      0.574,
+      0.167
+     ],
+     [
+      "Ryan Kalkbrenner",
+      97.4,
+      7,
+      2.23,
+      0.62,
+      0.109
+     ],
+     [
+      "Daniel Gafford",
+      96.8,
+      8,
+      2.5,
+      0.589,
+      0.24
+     ],
+     [
+      "Robert Williams III",
+      93.8,
+      9,
+      2.6,
+      0.596,
+      0.009
+     ],
+     [
+      "Rudy Gobert",
+      93.6,
+      10,
+      1.75,
+      0.592,
+      0.119
+     ]
+    ],
+    "named": {
+     "Victor Wembanyama": [
+      1,
+      116.6
+     ],
+     "Isaiah Stewart": [
+      2,
+      107.9
+     ],
+     "Chet Holmgren": [
+      3,
+      106.3
+     ],
+     "Evan Mobley": [
+      15,
+      91.6
+     ],
+     "Rudy Gobert": [
+      10,
+      93.6
+     ],
+     "Walker Kessler": [
+      5,
+      99.5
+     ],
+     "Anthony Davis": [
+      19,
+      90.4
+     ],
+     "Jaren Jackson Jr.": [
+      20,
+      90.3
+     ],
+     "Brook Lopez": [
+      11,
+      92.9
+     ],
+     "Myles Turner": [
+      17,
+      91.4
+     ],
+     "Alex Sarr": [
+      14,
+      92.0
+     ],
+     "Bam Adebayo": [
+      67,
+      76.0
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.4393,
+      292
+     ],
+     "EPM_D/PFC": [
+      0.4011,
+      103
+     ],
+     "T_DEF/all": [
+      0.6435,
+      292
+     ],
+     "T_DEF/PFC": [
+      0.5645,
+      103
+     ]
+    }
+   },
+   "RE": {
+    "first": "Victor Wembanyama",
+    "gap12": 9.77,
+    "top10": [
+     [
+      "Victor Wembanyama",
+      "C",
+      117.8
+     ],
+     [
+      "Isaiah Stewart",
+      "PF",
+      108.0
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      106.8
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      99.6
+     ],
+     [
+      "Walker Kessler",
+      "C",
+      99.6
+     ],
+     [
+      "Jay Huff",
+      "C",
+      98.8
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      98.0
+     ],
+     [
+      "Daniel Gafford",
+      "C",
+      96.7
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      93.9
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      93.6
+     ]
+    ],
+    "pfcTop10": [
+     [
+      "Victor Wembanyama",
+      117.8,
+      1,
+      3.94,
+      0.624,
+      0.205
+     ],
+     [
+      "Isaiah Stewart",
+      108.0,
+      2,
+      2.06,
+      0.595,
+      0.142
+     ],
+     [
+      "Chet Holmgren",
+      106.8,
+      3,
+      2.5,
+      0.61,
+      0.087
+     ],
+     [
+      "Donovan Clingan",
+      99.6,
+      4,
+      2.42,
+      0.583,
+      0.057
+     ],
+     [
+      "Walker Kessler",
+      99.6,
+      5,
+      2.68,
+      0.593,
+      0.2
+     ],
+     [
+      "Jay Huff",
+      98.8,
+      6,
+      2.71,
+      0.574,
+      0.167
+     ],
+     [
+      "Ryan Kalkbrenner",
+      98.0,
+      7,
+      2.23,
+      0.62,
+      0.109
+     ],
+     [
+      "Daniel Gafford",
+      96.7,
+      8,
+      2.5,
+      0.589,
+      0.24
+     ],
+     [
+      "Robert Williams III",
+      93.9,
+      9,
+      2.6,
+      0.596,
+      0.009
+     ],
+     [
+      "Rudy Gobert",
+      93.6,
+      10,
+      1.75,
+      0.592,
+      0.119
+     ]
+    ],
+    "named": {
+     "Victor Wembanyama": [
+      1,
+      117.8
+     ],
+     "Isaiah Stewart": [
+      2,
+      108.0
+     ],
+     "Chet Holmgren": [
+      3,
+      106.8
+     ],
+     "Evan Mobley": [
+      15,
+      91.8
+     ],
+     "Rudy Gobert": [
+      10,
+      93.6
+     ],
+     "Walker Kessler": [
+      5,
+      99.6
+     ],
+     "Anthony Davis": [
+      18,
+      90.5
+     ],
+     "Jaren Jackson Jr.": [
+      20,
+      90.1
+     ],
+     "Brook Lopez": [
+      11,
+      93.4
+     ],
+     "Myles Turner": [
+      17,
+      91.1
+     ],
+     "Alex Sarr": [
+      14,
+      91.8
+     ],
+     "Bam Adebayo": [
+      66,
+      76.1
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.4383,
+      292
+     ],
+     "EPM_D/PFC": [
+      0.401,
+      103
+     ],
+     "T_DEF/all": [
+      0.6418,
+      292
+     ],
+     "T_DEF/PFC": [
+      0.5664,
+      103
+     ]
+    }
+   },
+   "RG": {
+    "first": "Victor Wembanyama",
+    "gap12": 10.52,
+    "top10": [
+     [
+      "Victor Wembanyama",
+      "C",
+      118.5
+     ],
+     [
+      "Isaiah Stewart",
+      "PF",
+      107.9
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      107.6
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      100.5
+     ],
+     [
+      "Walker Kessler",
+      "C",
+      99.2
+     ],
+     [
+      "Jay Huff",
+      "C",
+      98.8
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      98.4
+     ],
+     [
+      "Daniel Gafford",
+      "C",
+      95.9
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      95.6
+     ],
+     [
+      "Brook Lopez",
+      "C",
+      94.4
+     ]
+    ],
+    "pfcTop10": [
+     [
+      "Victor Wembanyama",
+      118.5,
+      1,
+      3.94,
+      0.624,
+      0.205
+     ],
+     [
+      "Isaiah Stewart",
+      107.9,
+      2,
+      2.06,
+      0.595,
+      0.142
+     ],
+     [
+      "Chet Holmgren",
+      107.6,
+      3,
+      2.5,
+      0.61,
+      0.087
+     ],
+     [
+      "Donovan Clingan",
+      100.5,
+      4,
+      2.42,
+      0.583,
+      0.057
+     ],
+     [
+      "Walker Kessler",
+      99.2,
+      5,
+      2.68,
+      0.593,
+      0.2
+     ],
+     [
+      "Jay Huff",
+      98.8,
+      6,
+      2.71,
+      0.574,
+      0.167
+     ],
+     [
+      "Ryan Kalkbrenner",
+      98.4,
+      7,
+      2.23,
+      0.62,
+      0.109
+     ],
+     [
+      "Daniel Gafford",
+      95.9,
+      8,
+      2.5,
+      0.589,
+      0.24
+     ],
+     [
+      "Robert Williams III",
+      95.6,
+      9,
+      2.6,
+      0.596,
+      0.009
+     ],
+     [
+      "Brook Lopez",
+      94.4,
+      10,
+      2.08,
+      0.616,
+      0.043
+     ]
+    ],
+    "named": {
+     "Victor Wembanyama": [
+      1,
+      118.5
+     ],
+     "Isaiah Stewart": [
+      2,
+      107.9
+     ],
+     "Chet Holmgren": [
+      3,
+      107.6
+     ],
+     "Evan Mobley": [
+      12,
+      92.4
+     ],
+     "Rudy Gobert": [
+      11,
+      93.5
+     ],
+     "Walker Kessler": [
+      5,
+      99.2
+     ],
+     "Anthony Davis": [
+      15,
+      91.3
+     ],
+     "Jaren Jackson Jr.": [
+      18,
+      90.6
+     ],
+     "Brook Lopez": [
+      10,
+      94.4
+     ],
+     "Myles Turner": [
+      14,
+      91.3
+     ],
+     "Alex Sarr": [
+      16,
+      91.0
+     ],
+     "Bam Adebayo": [
+      68,
+      75.3
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.4409,
+      292
+     ],
+     "EPM_D/PFC": [
+      0.4048,
+      103
+     ],
+     "T_DEF/all": [
+      0.6416,
+      292
+     ],
+     "T_DEF/PFC": [
+      0.5665,
+      103
+     ]
+    }
+   },
+   "RV": {
+    "first": "Victor Wembanyama",
+    "gap12": 10.72,
+    "top10": [
+     [
+      "Victor Wembanyama",
+      "C",
+      118.8
+     ],
+     [
+      "Isaiah Stewart",
+      "PF",
+      108.1
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      107.1
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      99.7
+     ],
+     [
+      "Walker Kessler",
+      "C",
+      98.9
+     ],
+     [
+      "Jay Huff",
+      "C",
+      98.8
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      97.8
+     ],
+     [
+      "Daniel Gafford",
+      "C",
+      96.2
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      95.0
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      94.0
+     ]
+    ],
+    "pfcTop10": [
+     [
+      "Victor Wembanyama",
+      118.8,
+      1,
+      3.94,
+      0.624,
+      0.205
+     ],
+     [
+      "Isaiah Stewart",
+      108.1,
+      2,
+      2.06,
+      0.595,
+      0.142
+     ],
+     [
+      "Chet Holmgren",
+      107.1,
+      3,
+      2.5,
+      0.61,
+      0.087
+     ],
+     [
+      "Donovan Clingan",
+      99.7,
+      4,
+      2.42,
+      0.583,
+      0.057
+     ],
+     [
+      "Walker Kessler",
+      98.9,
+      5,
+      2.68,
+      0.593,
+      0.2
+     ],
+     [
+      "Jay Huff",
+      98.8,
+      6,
+      2.71,
+      0.574,
+      0.167
+     ],
+     [
+      "Ryan Kalkbrenner",
+      97.8,
+      7,
+      2.23,
+      0.62,
+      0.109
+     ],
+     [
+      "Daniel Gafford",
+      96.2,
+      8,
+      2.5,
+      0.589,
+      0.24
+     ],
+     [
+      "Robert Williams III",
+      95.0,
+      9,
+      2.6,
+      0.596,
+      0.009
+     ],
+     [
+      "Rudy Gobert",
+      94.0,
+      10,
+      1.75,
+      0.592,
+      0.119
+     ]
+    ],
+    "named": {
+     "Victor Wembanyama": [
+      1,
+      118.8
+     ],
+     "Isaiah Stewart": [
+      2,
+      108.1
+     ],
+     "Chet Holmgren": [
+      3,
+      107.1
+     ],
+     "Evan Mobley": [
+      13,
+      92.4
+     ],
+     "Rudy Gobert": [
+      10,
+      94.0
+     ],
+     "Walker Kessler": [
+      5,
+      98.9
+     ],
+     "Anthony Davis": [
+      18,
+      90.6
+     ],
+     "Jaren Jackson Jr.": [
+      20,
+      89.6
+     ],
+     "Brook Lopez": [
+      11,
+      93.8
+     ],
+     "Myles Turner": [
+      17,
+      90.7
+     ],
+     "Alex Sarr": [
+      14,
+      91.9
+     ],
+     "Bam Adebayo": [
+      67,
+      75.8
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.4414,
+      292
+     ],
+     "EPM_D/PFC": [
+      0.4042,
+      103
+     ],
+     "T_DEF/all": [
+      0.6432,
+      292
+     ],
+     "T_DEF/PFC": [
+      0.5668,
+      103
+     ]
+    }
+   }
+  },
+  "meta": {
+   "day": "2026-11-21",
+   "cutoff": "2026-11-21",
+   "gamesDone": 241,
+   "weights": {
+    "2026-27": 0.4877540650406504,
+    "2025-26": 0.41300813008130083,
+    "2024-25": 0.28800813008130083,
+    "2023-24": 0.16300813008130083,
+    "2022-23": 0.04040753684975874
+   }
+  }
+ },
+ "2025-26": {
+  "n_pool": 400,
+  "missing_in_pool": 0,
+  "arms": {
+   "B0": {
+    "first": "Isaiah Stewart",
+    "gap12": 1.0,
+    "top10": [
+     [
+      "Isaiah Stewart",
+      "PF",
+      113.5
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      112.5
+     ],
+     [
+      "Victor Wembanyama",
+      "C",
+      108.7
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      99.3
+     ],
+     [
+      "Evan Mobley",
+      "PF",
+      98.6
+     ],
+     [
+      "Brook Lopez",
+      "C",
+      98.3
+     ],
+     [
+      "Jay Huff",
+      "C",
+      98.3
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      97.0
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      96.8
+     ],
+     [
+      "Neemias Queta",
+      "C",
+      96.4
+     ]
+    ],
+    "pfcTop10": [
+     [
+      "Isaiah Stewart",
+      113.5,
+      1,
+      2.05,
+      0.599,
+      0.153
+     ],
+     [
+      "Chet Holmgren",
+      112.5,
+      2,
+      2.49,
+      0.613,
+      0.091
+     ],
+     [
+      "Victor Wembanyama",
+      108.7,
+      3,
+      3.86,
+      0.632,
+      0.208
+     ],
+     [
+      "Ryan Kalkbrenner",
+      99.3,
+      4,
+      2.25,
+      0.615,
+      0.107
+     ],
+     [
+      "Evan Mobley",
+      98.6,
+      5,
+      1.81,
+      0.598,
+      0.055
+     ],
+     [
+      "Brook Lopez",
+      98.3,
+      6,
+      2.19,
+      0.618,
+      0.039
+     ],
+     [
+      "Jay Huff",
+      98.3,
+      7,
+      2.84,
+      0.578,
+      0.186
+     ],
+     [
+      "Donovan Clingan",
+      97.0,
+      8,
+      2.36,
+      0.59,
+      0.066
+     ],
+     [
+      "Ivica Zubac",
+      96.8,
+      9,
+      1.24,
+      0.596,
+      0.03
+     ],
+     [
+      "Neemias Queta",
+      96.4,
+      10,
+      1.78,
+      0.59,
+      0.15
+     ]
+    ],
+    "named": {
+     "Victor Wembanyama": [
+      3,
+      108.7
+     ],
+     "Isaiah Stewart": [
+      1,
+      113.5
+     ],
+     "Chet Holmgren": [
+      2,
+      112.5
+     ],
+     "Evan Mobley": [
+      5,
+      98.6
+     ],
+     "Rudy Gobert": [
+      12,
+      94.3
+     ],
+     "Walker Kessler": [
+      86,
+      75.3
+     ],
+     "Anthony Davis": [
+      43,
+      81.6
+     ],
+     "Jaren Jackson Jr.": [
+      21,
+      87.1
+     ],
+     "Brook Lopez": [
+      6,
+      98.3
+     ],
+     "Myles Turner": [
+      37,
+      83.0
+     ],
+     "Alex Sarr": [
+      16,
+      91.5
+     ],
+     "Bam Adebayo": [
+      65,
+      77.6
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.3464,
+      400
+     ],
+     "EPM_D/PFC": [
+      0.3836,
+      148
+     ]
+    }
+   },
+   "D30": {
+    "first": "Victor Wembanyama",
+    "gap12": 5.59,
+    "top10": [
+     [
+      "Victor Wembanyama",
+      "C",
+      117.6
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      112.0
+     ],
+     [
+      "Isaiah Stewart",
+      "PF",
+      110.0
+     ],
+     [
+      "Jay Huff",
+      "C",
+      103.7
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      100.8
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      100.8
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      99.7
+     ],
+     [
+      "Brook Lopez",
+      "C",
+      99.6
+     ],
+     [
+      "Evan Mobley",
+      "PF",
+      97.6
+     ],
+     [
+      "Adem Bona",
+      "C",
+      97.0
+     ]
+    ],
+    "pfcTop10": [
+     [
+      "Victor Wembanyama",
+      117.6,
+      1,
+      3.86,
+      0.632,
+      0.208
+     ],
+     [
+      "Chet Holmgren",
+      112.0,
+      2,
+      2.49,
+      0.613,
+      0.091
+     ],
+     [
+      "Isaiah Stewart",
+      110.0,
+      3,
+      2.05,
+      0.599,
+      0.153
+     ],
+     [
+      "Jay Huff",
+      103.7,
+      4,
+      2.84,
+      0.578,
+      0.186
+     ],
+     [
+      "Robert Williams III",
+      100.8,
+      5,
+      2.69,
+      0.598,
+      0.01
+     ],
+     [
+      "Ryan Kalkbrenner",
+      100.8,
+      6,
+      2.25,
+      0.615,
+      0.107
+     ],
+     [
+      "Donovan Clingan",
+      99.7,
+      7,
+      2.36,
+      0.59,
+      0.066
+     ],
+     [
+      "Brook Lopez",
+      99.6,
+      8,
+      2.19,
+      0.618,
+      0.039
+     ],
+     [
+      "Evan Mobley",
+      97.6,
+      9,
+      1.81,
+      0.598,
+      0.055
+     ],
+     [
+      "Adem Bona",
+      97.0,
+      10,
+      2.34,
+      0.569,
+      0.34
+     ]
+    ],
+    "named": {
+     "Victor Wembanyama": [
+      1,
+      117.6
+     ],
+     "Isaiah Stewart": [
+      3,
+      110.0
+     ],
+     "Chet Holmgren": [
+      2,
+      112.0
+     ],
+     "Evan Mobley": [
+      9,
+      97.6
+     ],
+     "Rudy Gobert": [
+      16,
+      94.3
+     ],
+     "Walker Kessler": [
+      27,
+      86.4
+     ],
+     "Anthony Davis": [
+      25,
+      87.1
+     ],
+     "Jaren Jackson Jr.": [
+      22,
+      89.3
+     ],
+     "Brook Lopez": [
+      8,
+      99.6
+     ],
+     "Myles Turner": [
+      23,
+      88.8
+     ],
+     "Alex Sarr": [
+      15,
+      94.7
+     ],
+     "Bam Adebayo": [
+      81,
+      75.7
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.3895,
+      400
+     ],
+     "EPM_D/PFC": [
+      0.4052,
+      148
+     ]
+    }
+   },
+   "RE": {
+    "first": "Victor Wembanyama",
+    "gap12": 6.57,
+    "top10": [
+     [
+      "Victor Wembanyama",
+      "C",
+      119.0
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      112.5
+     ],
+     [
+      "Isaiah Stewart",
+      "PF",
+      110.1
+     ],
+     [
+      "Jay Huff",
+      "C",
+      103.2
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      101.2
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      100.9
+     ],
+     [
+      "Brook Lopez",
+      "C",
+      100.2
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      99.6
+     ],
+     [
+      "Evan Mobley",
+      "PF",
+      97.7
+     ],
+     [
+      "Adem Bona",
+      "C",
+      96.4
+     ]
+    ],
+    "pfcTop10": [
+     [
+      "Victor Wembanyama",
+      119.0,
+      1,
+      3.86,
+      0.632,
+      0.208
+     ],
+     [
+      "Chet Holmgren",
+      112.5,
+      2,
+      2.49,
+      0.613,
+      0.091
+     ],
+     [
+      "Isaiah Stewart",
+      110.1,
+      3,
+      2.05,
+      0.599,
+      0.153
+     ],
+     [
+      "Jay Huff",
+      103.2,
+      4,
+      2.84,
+      0.578,
+      0.186
+     ],
+     [
+      "Ryan Kalkbrenner",
+      101.2,
+      5,
+      2.25,
+      0.615,
+      0.107
+     ],
+     [
+      "Robert Williams III",
+      100.9,
+      6,
+      2.69,
+      0.598,
+      0.01
+     ],
+     [
+      "Brook Lopez",
+      100.2,
+      7,
+      2.19,
+      0.618,
+      0.039
+     ],
+     [
+      "Donovan Clingan",
+      99.6,
+      8,
+      2.36,
+      0.59,
+      0.066
+     ],
+     [
+      "Evan Mobley",
+      97.7,
+      9,
+      1.81,
+      0.598,
+      0.055
+     ],
+     [
+      "Adem Bona",
+      96.4,
+      10,
+      2.34,
+      0.569,
+      0.34
+     ]
+    ],
+    "named": {
+     "Victor Wembanyama": [
+      1,
+      119.0
+     ],
+     "Isaiah Stewart": [
+      3,
+      110.1
+     ],
+     "Chet Holmgren": [
+      2,
+      112.5
+     ],
+     "Evan Mobley": [
+      9,
+      97.7
+     ],
+     "Rudy Gobert": [
+      16,
+      94.3
+     ],
+     "Walker Kessler": [
+      27,
+      86.6
+     ],
+     "Anthony Davis": [
+      25,
+      87.5
+     ],
+     "Jaren Jackson Jr.": [
+      22,
+      89.0
+     ],
+     "Brook Lopez": [
+      7,
+      100.2
+     ],
+     "Myles Turner": [
+      24,
+      88.0
+     ],
+     "Alex Sarr": [
+      14,
+      94.7
+     ],
+     "Bam Adebayo": [
+      79,
+      75.9
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.388,
+      400
+     ],
+     "EPM_D/PFC": [
+      0.4039,
+      148
+     ]
+    }
+   },
+   "RG": {
+    "first": "Victor Wembanyama",
+    "gap12": 6.45,
+    "top10": [
+     [
+      "Victor Wembanyama",
+      "C",
+      119.9
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      113.4
+     ],
+     [
+      "Isaiah Stewart",
+      "PF",
+      109.9
+     ],
+     [
+      "Jay Huff",
+      "C",
+      103.1
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      102.9
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      101.8
+     ],
+     [
+      "Brook Lopez",
+      "C",
+      101.5
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      100.7
+     ],
+     [
+      "Evan Mobley",
+      "PF",
+      98.4
+     ],
+     [
+      "Neemias Queta",
+      "C",
+      95.3
+     ]
+    ],
+    "pfcTop10": [
+     [
+      "Victor Wembanyama",
+      119.9,
+      1,
+      3.86,
+      0.632,
+      0.208
+     ],
+     [
+      "Chet Holmgren",
+      113.4,
+      2,
+      2.49,
+      0.613,
+      0.091
+     ],
+     [
+      "Isaiah Stewart",
+      109.9,
+      3,
+      2.05,
+      0.599,
+      0.153
+     ],
+     [
+      "Jay Huff",
+      103.1,
+      4,
+      2.84,
+      0.578,
+      0.186
+     ],
+     [
+      "Robert Williams III",
+      102.9,
+      5,
+      2.69,
+      0.598,
+      0.01
+     ],
+     [
+      "Ryan Kalkbrenner",
+      101.8,
+      6,
+      2.25,
+      0.615,
+      0.107
+     ],
+     [
+      "Brook Lopez",
+      101.5,
+      7,
+      2.19,
+      0.618,
+      0.039
+     ],
+     [
+      "Donovan Clingan",
+      100.7,
+      8,
+      2.36,
+      0.59,
+      0.066
+     ],
+     [
+      "Evan Mobley",
+      98.4,
+      9,
+      1.81,
+      0.598,
+      0.055
+     ],
+     [
+      "Neemias Queta",
+      95.3,
+      10,
+      1.78,
+      0.59,
+      0.15
+     ]
+    ],
+    "named": {
+     "Victor Wembanyama": [
+      1,
+      119.9
+     ],
+     "Isaiah Stewart": [
+      3,
+      109.9
+     ],
+     "Chet Holmgren": [
+      2,
+      113.4
+     ],
+     "Evan Mobley": [
+      9,
+      98.4
+     ],
+     "Rudy Gobert": [
+      12,
+      94.2
+     ],
+     "Walker Kessler": [
+      26,
+      86.5
+     ],
+     "Anthony Davis": [
+      23,
+      88.5
+     ],
+     "Jaren Jackson Jr.": [
+      22,
+      89.5
+     ],
+     "Brook Lopez": [
+      7,
+      101.5
+     ],
+     "Myles Turner": [
+      24,
+      88.2
+     ],
+     "Alex Sarr": [
+      16,
+      93.7
+     ],
+     "Bam Adebayo": [
+      80,
+      75.0
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.3915,
+      400
+     ],
+     "EPM_D/PFC": [
+      0.4044,
+      148
+     ]
+    }
+   },
+   "RV": {
+    "first": "Victor Wembanyama",
+    "gap12": 6.69,
+    "top10": [
+     [
+      "Victor Wembanyama",
+      "C",
+      119.7
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      113.0
+     ],
+     [
+      "Isaiah Stewart",
+      "PF",
+      110.1
+     ],
+     [
+      "Jay Huff",
+      "C",
+      103.2
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      102.2
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      101.0
+     ],
+     [
+      "Brook Lopez",
+      "C",
+      100.7
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      100.0
+     ],
+     [
+      "Evan Mobley",
+      "PF",
+      98.5
+     ],
+     [
+      "Neemias Queta",
+      "C",
+      95.9
+     ]
+    ],
+    "pfcTop10": [
+     [
+      "Victor Wembanyama",
+      119.7,
+      1,
+      3.86,
+      0.632,
+      0.208
+     ],
+     [
+      "Chet Holmgren",
+      113.0,
+      2,
+      2.49,
+      0.613,
+      0.091
+     ],
+     [
+      "Isaiah Stewart",
+      110.1,
+      3,
+      2.05,
+      0.599,
+      0.153
+     ],
+     [
+      "Jay Huff",
+      103.2,
+      4,
+      2.84,
+      0.578,
+      0.186
+     ],
+     [
+      "Robert Williams III",
+      102.2,
+      5,
+      2.69,
+      0.598,
+      0.01
+     ],
+     [
+      "Ryan Kalkbrenner",
+      101.0,
+      6,
+      2.25,
+      0.615,
+      0.107
+     ],
+     [
+      "Brook Lopez",
+      100.7,
+      7,
+      2.19,
+      0.618,
+      0.039
+     ],
+     [
+      "Donovan Clingan",
+      100.0,
+      8,
+      2.36,
+      0.59,
+      0.066
+     ],
+     [
+      "Evan Mobley",
+      98.5,
+      9,
+      1.81,
+      0.598,
+      0.055
+     ],
+     [
+      "Neemias Queta",
+      95.9,
+      10,
+      1.78,
+      0.59,
+      0.15
+     ]
+    ],
+    "named": {
+     "Victor Wembanyama": [
+      1,
+      119.7
+     ],
+     "Isaiah Stewart": [
+      3,
+      110.1
+     ],
+     "Chet Holmgren": [
+      2,
+      113.0
+     ],
+     "Evan Mobley": [
+      9,
+      98.5
+     ],
+     "Rudy Gobert": [
+      13,
+      94.7
+     ],
+     "Walker Kessler": [
+      26,
+      86.3
+     ],
+     "Anthony Davis": [
+      23,
+      87.7
+     ],
+     "Jaren Jackson Jr.": [
+      22,
+      88.3
+     ],
+     "Brook Lopez": [
+      7,
+      100.7
+     ],
+     "Myles Turner": [
+      24,
+      87.6
+     ],
+     "Alex Sarr": [
+      15,
+      94.7
+     ],
+     "Bam Adebayo": [
+      80,
+      75.5
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.3915,
+      400
+     ],
+     "EPM_D/PFC": [
+      0.4088,
+      148
+     ]
+    }
+   }
+  }
+ },
+ "verdict": {
+  "RE": {
+   "c1": true,
+   "delta": {
+    "2026-27:EPM_D/all": -0.001,
+    "2026-27:EPM_D/PFC": -0.0001,
+    "2026-27:T_DEF/all": -0.0017,
+    "2026-27:T_DEF/PFC": 0.0019,
+    "2025-26:EPM_D/all": -0.0015,
+    "2025-26:EPM_D/PFC": -0.0013
+   },
+   "c2": true,
+   "pass": true
+  },
+  "RG": {
+   "c1": true,
+   "delta": {
+    "2026-27:EPM_D/all": 0.0016,
+    "2026-27:EPM_D/PFC": 0.0037,
+    "2026-27:T_DEF/all": -0.0019,
+    "2026-27:T_DEF/PFC": 0.002,
+    "2025-26:EPM_D/all": 0.002,
+    "2025-26:EPM_D/PFC": -0.0008
+   },
+   "c2": true,
+   "pass": true
+  },
+  "RV": {
+   "c1": true,
+   "delta": {
+    "2026-27:EPM_D/all": 0.0021,
+    "2026-27:EPM_D/PFC": 0.0031,
+    "2026-27:T_DEF/all": -0.0003,
+    "2026-27:T_DEF/PFC": 0.0023,
+    "2025-26:EPM_D/all": 0.002,
+    "2025-26:EPM_D/PFC": 0.0036
+   },
+   "c2": true,
+   "pass": true
+  }
+ }
+}

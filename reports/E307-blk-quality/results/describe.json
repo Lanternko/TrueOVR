@@ -1,0 +1,754 @@
+{
+ "2025-26": {
+  "league": {
+   "r": 0.5826,
+   "pa": 0.4622,
+   "sig2pa": 0.8686,
+   "gtPerMin": 0.001,
+   "gtShare": 0.0493
+  },
+  "top": [
+   {
+    "pid": 1641705,
+    "name": "Victor Wembanyama",
+    "blk": 195,
+    "gt": 12,
+    "gtShare": 0.058,
+    "retRaw": 0.626,
+    "retS": 0.607,
+    "ptsAfterRaw": 0.333,
+    "ptsAfterS": 0.395,
+    "effBlk": 122.0
+   },
+   {
+    "pid": 1630643,
+    "name": "Jay Huff",
+    "blk": 154,
+    "gt": 11,
+    "gtShare": 0.067,
+    "retRaw": 0.578,
+    "retS": 0.58,
+    "ptsAfterRaw": 0.468,
+    "ptsAfterS": 0.465,
+    "effBlk": 89.0
+   },
+   {
+    "pid": 1631096,
+    "name": "Chet Holmgren",
+    "blk": 130,
+    "gt": 4,
+    "gtShare": 0.03,
+    "retRaw": 0.592,
+    "retS": 0.587,
+    "ptsAfterRaw": 0.415,
+    "ptsAfterS": 0.442,
+    "effBlk": 77.0
+   },
+   {
+    "pid": 1642270,
+    "name": "Donovan Clingan",
+    "blk": 130,
+    "gt": 3,
+    "gtShare": 0.023,
+    "retRaw": 0.6,
+    "retS": 0.591,
+    "ptsAfterRaw": 0.485,
+    "ptsAfterS": 0.472,
+    "effBlk": 78.0
+   },
+   {
+    "pid": 203497,
+    "name": "Rudy Gobert",
+    "blk": 124,
+    "gt": 11,
+    "gtShare": 0.081,
+    "retRaw": 0.589,
+    "retS": 0.585,
+    "ptsAfterRaw": 0.355,
+    "ptsAfterS": 0.418,
+    "effBlk": 73.0
+   },
+   {
+    "pid": 1630567,
+    "name": "Scottie Barnes",
+    "blk": 116,
+    "gt": 7,
+    "gtShare": 0.057,
+    "retRaw": 0.586,
+    "retS": 0.584,
+    "ptsAfterRaw": 0.345,
+    "ptsAfterS": 0.416,
+    "effBlk": 68.0
+   },
+   {
+    "pid": 1626167,
+    "name": "Myles Turner",
+    "blk": 115,
+    "gt": 4,
+    "gtShare": 0.034,
+    "retRaw": 0.539,
+    "retS": 0.564,
+    "ptsAfterRaw": 0.73,
+    "ptsAfterS": 0.568,
+    "effBlk": 62.0
+   },
+   {
+    "pid": 1641824,
+    "name": "Matas Buzelis",
+    "blk": 115,
+    "gt": 9,
+    "gtShare": 0.073,
+    "retRaw": 0.635,
+    "retS": 0.605,
+    "ptsAfterRaw": 0.461,
+    "ptsAfterS": 0.462,
+    "effBlk": 73.0
+   },
+   {
+    "pid": 1630596,
+    "name": "Evan Mobley",
+    "blk": 112,
+    "gt": 4,
+    "gtShare": 0.034,
+    "retRaw": 0.571,
+    "retS": 0.578,
+    "ptsAfterRaw": 0.411,
+    "ptsAfterS": 0.442,
+    "effBlk": 64.0
+   },
+   {
+    "pid": 1641750,
+    "name": "Ryan Kalkbrenner",
+    "blk": 101,
+    "gt": 5,
+    "gtShare": 0.047,
+    "retRaw": 0.663,
+    "retS": 0.614,
+    "ptsAfterRaw": 0.426,
+    "ptsAfterS": 0.449,
+    "effBlk": 67.0
+   },
+   {
+    "pid": 1642274,
+    "name": "Yves Missi",
+    "blk": 101,
+    "gt": 12,
+    "gtShare": 0.106,
+    "retRaw": 0.535,
+    "retS": 0.564,
+    "ptsAfterRaw": 0.495,
+    "ptsAfterS": 0.474,
+    "effBlk": 54.0
+   },
+   {
+    "pid": 1629674,
+    "name": "Neemias Queta",
+    "blk": 100,
+    "gt": 6,
+    "gtShare": 0.057,
+    "retRaw": 0.58,
+    "retS": 0.582,
+    "ptsAfterRaw": 0.41,
+    "ptsAfterS": 0.443,
+    "effBlk": 58.0
+   },
+   {
+    "pid": 1628401,
+    "name": "Derrick White",
+    "blk": 99,
+    "gt": 1,
+    "gtShare": 0.01,
+    "retRaw": 0.586,
+    "retS": 0.584,
+    "ptsAfterRaw": 0.404,
+    "ptsAfterS": 0.441,
+    "effBlk": 58.0
+   },
+   {
+    "pid": 1630191,
+    "name": "Isaiah Stewart",
+    "blk": 93,
+    "gt": 6,
+    "gtShare": 0.061,
+    "retRaw": 0.581,
+    "retS": 0.582,
+    "ptsAfterRaw": 0.43,
+    "ptsAfterS": 0.451,
+    "effBlk": 54.0
+   },
+   {
+    "pid": 1642259,
+    "name": "Alex Sarr",
+    "blk": 91,
+    "gt": 13,
+    "gtShare": 0.125,
+    "retRaw": 0.56,
+    "retS": 0.574,
+    "ptsAfterRaw": 0.451,
+    "ptsAfterS": 0.458,
+    "effBlk": 51.0
+   },
+   {
+    "pid": 201572,
+    "name": "Brook Lopez",
+    "blk": 87,
+    "gt": 1,
+    "gtShare": 0.011,
+    "retRaw": 0.575,
+    "retS": 0.58,
+    "ptsAfterRaw": 0.425,
+    "ptsAfterS": 0.45,
+    "effBlk": 50.0
+   },
+   {
+    "pid": 1629057,
+    "name": "Robert Williams III",
+    "blk": 87,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.632,
+    "retS": 0.6,
+    "ptsAfterRaw": 0.333,
+    "ptsAfterS": 0.42,
+    "effBlk": 55.0
+   },
+   {
+    "pid": 1642276,
+    "name": "Kel'el Ware",
+    "blk": 84,
+    "gt": 21,
+    "gtShare": 0.2,
+    "retRaw": 0.476,
+    "retS": 0.545,
+    "ptsAfterRaw": 0.655,
+    "ptsAfterS": 0.524,
+    "effBlk": 40.0
+   },
+   {
+    "pid": 1641737,
+    "name": "Adem Bona",
+    "blk": 82,
+    "gt": 9,
+    "gtShare": 0.099,
+    "retRaw": 0.512,
+    "retS": 0.558,
+    "ptsAfterRaw": 0.585,
+    "ptsAfterS": 0.501,
+    "effBlk": 42.0
+   },
+   {
+    "pid": 1630168,
+    "name": "Onyeka Okongwu",
+    "blk": 79,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.709,
+    "retS": 0.625,
+    "ptsAfterRaw": 0.304,
+    "ptsAfterS": 0.413,
+    "effBlk": 56.0
+   },
+   {
+    "pid": 1629675,
+    "name": "Naz Reid",
+    "blk": 78,
+    "gt": 1,
+    "gtShare": 0.013,
+    "retRaw": 0.526,
+    "retS": 0.564,
+    "ptsAfterRaw": 0.449,
+    "ptsAfterS": 0.458,
+    "effBlk": 41.0
+   },
+   {
+    "pid": 1629651,
+    "name": "Nic Claxton",
+    "blk": 77,
+    "gt": 13,
+    "gtShare": 0.144,
+    "retRaw": 0.558,
+    "retS": 0.575,
+    "ptsAfterRaw": 0.584,
+    "ptsAfterS": 0.499,
+    "effBlk": 43.0
+   },
+   {
+    "pid": 1630578,
+    "name": "Alperen Sengun",
+    "blk": 77,
+    "gt": 4,
+    "gtShare": 0.049,
+    "retRaw": 0.584,
+    "retS": 0.583,
+    "ptsAfterRaw": 0.506,
+    "ptsAfterS": 0.476,
+    "effBlk": 45.0
+   },
+   {
+    "pid": 1642852,
+    "name": "Derik Queen",
+    "blk": 75,
+    "gt": 5,
+    "gtShare": 0.062,
+    "retRaw": 0.56,
+    "retS": 0.575,
+    "ptsAfterRaw": 0.333,
+    "ptsAfterS": 0.424,
+    "effBlk": 42.0
+   },
+   {
+    "pid": 1630183,
+    "name": "Jaden McDaniels",
+    "blk": 73,
+    "gt": 8,
+    "gtShare": 0.099,
+    "retRaw": 0.685,
+    "retS": 0.615,
+    "ptsAfterRaw": 0.301,
+    "ptsAfterS": 0.415,
+    "effBlk": 50.0
+   }
+  ]
+ },
+ "2026-27": {
+  "league": {
+   "r": 0.5757,
+   "pa": 0.4652,
+   "gtShare": 0.0439,
+   "gtPerMin": 0.001
+  },
+  "top": [
+   {
+    "pid": 1641705,
+    "name": "Victor Wembanyama",
+    "blk": 67,
+    "gt": 3,
+    "gtShare": 0.043,
+    "retRaw": 0.597,
+    "retS": 0.582,
+    "ptsAfterRaw": 0.254,
+    "ptsAfterS": 0.407,
+    "effBlk": 40.0
+   },
+   {
+    "pid": 1626167,
+    "name": "Myles Turner",
+    "blk": 34,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.765,
+    "retS": 0.609,
+    "ptsAfterRaw": 0.235,
+    "ptsAfterS": 0.428,
+    "effBlk": 26.0
+   },
+   {
+    "pid": 1631117,
+    "name": "Walker Kessler",
+    "blk": 34,
+    "gt": 3,
+    "gtShare": 0.081,
+    "retRaw": 0.529,
+    "retS": 0.567,
+    "ptsAfterRaw": 0.706,
+    "ptsAfterS": 0.504,
+    "effBlk": 18.0
+   },
+   {
+    "pid": 1642270,
+    "name": "Donovan Clingan",
+    "blk": 34,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.529,
+    "retS": 0.567,
+    "ptsAfterRaw": 0.618,
+    "ptsAfterS": 0.49,
+    "effBlk": 18.0
+   },
+   {
+    "pid": 1629655,
+    "name": "Daniel Gafford",
+    "blk": 28,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.571,
+    "retS": 0.575,
+    "ptsAfterRaw": 0.536,
+    "ptsAfterS": 0.475,
+    "effBlk": 16.0
+   },
+   {
+    "pid": 1643530,
+    "name": "1643530",
+    "blk": 27,
+    "gt": 4,
+    "gtShare": 0.129,
+    "retRaw": 0.519,
+    "retS": 0.567,
+    "ptsAfterRaw": 0.519,
+    "ptsAfterS": 0.472,
+    "effBlk": 14.0
+   },
+   {
+    "pid": 1628964,
+    "name": "Mo Bamba",
+    "blk": 22,
+    "gt": 3,
+    "gtShare": 0.12,
+    "retRaw": 0.682,
+    "retS": 0.589,
+    "ptsAfterRaw": 0.364,
+    "ptsAfterS": 0.454,
+    "effBlk": 15.0
+   },
+   {
+    "pid": 1642273,
+    "name": "Kyshawn George",
+    "blk": 21,
+    "gt": 3,
+    "gtShare": 0.125,
+    "retRaw": 0.571,
+    "retS": 0.575,
+    "ptsAfterRaw": 0.381,
+    "ptsAfterS": 0.456,
+    "effBlk": 12.0
+   },
+   {
+    "pid": 1642259,
+    "name": "Alex Sarr",
+    "blk": 20,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.4,
+    "retS": 0.556,
+    "ptsAfterRaw": 0.5,
+    "ptsAfterS": 0.469,
+    "effBlk": 8.0
+   },
+   {
+    "pid": 1642866,
+    "name": "Joan Beringer",
+    "blk": 20,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.6,
+    "retS": 0.578,
+    "ptsAfterRaw": 0.3,
+    "ptsAfterS": 0.448,
+    "effBlk": 12.0
+   },
+   {
+    "pid": 203507,
+    "name": "Giannis Antetokounmpo",
+    "blk": 19,
+    "gt": 1,
+    "gtShare": 0.05,
+    "retRaw": 0.684,
+    "retS": 0.587,
+    "ptsAfterRaw": 0.158,
+    "ptsAfterS": 0.435,
+    "effBlk": 13.0
+   },
+   {
+    "pid": 1629674,
+    "name": "Neemias Queta",
+    "blk": 19,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.632,
+    "retS": 0.582,
+    "ptsAfterRaw": 0.474,
+    "ptsAfterS": 0.466,
+    "effBlk": 12.0
+   },
+   {
+    "pid": 1631212,
+    "name": "Peyton Watson",
+    "blk": 19,
+    "gt": 2,
+    "gtShare": 0.095,
+    "retRaw": 0.632,
+    "retS": 0.582,
+    "ptsAfterRaw": 0.474,
+    "ptsAfterS": 0.466,
+    "effBlk": 12.0
+   },
+   {
+    "pid": 1628386,
+    "name": "Jarrett Allen",
+    "blk": 18,
+    "gt": 2,
+    "gtShare": 0.1,
+    "retRaw": 0.667,
+    "retS": 0.585,
+    "ptsAfterRaw": 0.278,
+    "ptsAfterS": 0.448,
+    "effBlk": 12.0
+   },
+   {
+    "pid": 1629637,
+    "name": "Jaxson Hayes",
+    "blk": 18,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.611,
+    "retS": 0.579,
+    "ptsAfterRaw": 0.444,
+    "ptsAfterS": 0.463,
+    "effBlk": 11.0
+   },
+   {
+    "pid": 1630549,
+    "name": "Day'Ron Sharpe",
+    "blk": 18,
+    "gt": 3,
+    "gtShare": 0.143,
+    "retRaw": 0.556,
+    "retS": 0.574,
+    "ptsAfterRaw": 0.278,
+    "ptsAfterS": 0.448,
+    "effBlk": 10.0
+   },
+   {
+    "pid": 1641731,
+    "name": "Bilal Coulibaly",
+    "blk": 18,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.611,
+    "retS": 0.579,
+    "ptsAfterRaw": 0.444,
+    "ptsAfterS": 0.463,
+    "effBlk": 11.0
+   },
+   {
+    "pid": 1642276,
+    "name": "Kel'el Ware",
+    "blk": 18,
+    "gt": 2,
+    "gtShare": 0.1,
+    "retRaw": 0.5,
+    "retS": 0.568,
+    "ptsAfterRaw": 0.333,
+    "ptsAfterS": 0.453,
+    "effBlk": 9.0
+   },
+   {
+    "pid": 1642846,
+    "name": "Ace Bailey",
+    "blk": 18,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.667,
+    "retS": 0.585,
+    "ptsAfterRaw": 0.222,
+    "ptsAfterS": 0.443,
+    "effBlk": 12.0
+   },
+   {
+    "pid": 203076,
+    "name": "Anthony Davis",
+    "blk": 17,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.412,
+    "retS": 0.56,
+    "ptsAfterRaw": 0.824,
+    "ptsAfterS": 0.497,
+    "effBlk": 7.0
+   },
+   {
+    "pid": 203497,
+    "name": "Rudy Gobert",
+    "blk": 17,
+    "gt": 1,
+    "gtShare": 0.056,
+    "retRaw": 0.647,
+    "retS": 0.583,
+    "ptsAfterRaw": 0.294,
+    "ptsAfterS": 0.45,
+    "effBlk": 11.0
+   },
+   {
+    "pid": 1641750,
+    "name": "Ryan Kalkbrenner",
+    "blk": 17,
+    "gt": 1,
+    "gtShare": 0.056,
+    "retRaw": 0.765,
+    "retS": 0.594,
+    "ptsAfterRaw": 0.118,
+    "ptsAfterS": 0.435,
+    "effBlk": 13.0
+   },
+   {
+    "pid": 201142,
+    "name": "Kevin Durant",
+    "blk": 16,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.625,
+    "retS": 0.58,
+    "ptsAfterRaw": 0.5,
+    "ptsAfterS": 0.468,
+    "effBlk": 10.0
+   },
+   {
+    "pid": 1629023,
+    "name": "P.J. Washington",
+    "blk": 16,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.438,
+    "retS": 0.563,
+    "ptsAfterRaw": 0.688,
+    "ptsAfterS": 0.484,
+    "effBlk": 7.0
+   },
+   {
+    "pid": 1629680,
+    "name": "Matisse Thybulle",
+    "blk": 16,
+    "gt": 0,
+    "gtShare": 0.0,
+    "retRaw": 0.438,
+    "retS": 0.563,
+    "ptsAfterRaw": 1.0,
+    "ptsAfterS": 0.51,
+    "effBlk": 7.0
+   }
+  ]
+ },
+ "fourSeason300": {
+  "byRetention": [
+   [
+    "Clint Capela",
+    300.0,
+    0.66,
+    18.0,
+    0.35
+   ],
+   [
+    "Victor Wembanyama",
+    625.0,
+    0.658,
+    34.0,
+    0.346
+   ],
+   [
+    "Anthony Davis",
+    435.0,
+    0.644,
+    11.0,
+    0.402
+   ],
+   [
+    "Brook Lopez",
+    616.0,
+    0.641,
+    13.0,
+    0.401
+   ],
+   [
+    "Chet Holmgren",
+    391.0,
+    0.639,
+    16.0,
+    0.371
+   ],
+   [
+    "Kristaps Porziņģis",
+    312.0,
+    0.635,
+    10.0,
+    0.407
+   ],
+   [
+    "Derrick White",
+    342.0,
+    0.629,
+    6.0,
+    0.383
+   ],
+   [
+    "Evan Mobley",
+    416.0,
+    0.625,
+    15.0,
+    0.361
+   ],
+   [
+    "Onyeka Okongwu",
+    313.0,
+    0.62,
+    3.0,
+    0.374
+   ],
+   [
+    "Ivica Zubac",
+    313.0,
+    0.617,
+    7.0,
+    0.422
+   ],
+   [
+    "Nic Claxton",
+    511.0,
+    0.607,
+    73.0,
+    0.389
+   ],
+   [
+    "Kevin Durant",
+    307.0,
+    0.606,
+    4.0,
+    0.414
+   ],
+   [
+    "Walker Kessler",
+    474.0,
+    0.595,
+    31.0,
+    0.466
+   ],
+   [
+    "Rudy Gobert",
+    485.0,
+    0.584,
+    34.0,
+    0.388
+   ],
+   [
+    "Scottie Barnes",
+    328.0,
+    0.582,
+    21.0,
+    0.448
+   ],
+   [
+    "Jaren Jackson Jr.",
+    477.0,
+    0.581,
+    26.0,
+    0.528
+   ],
+   [
+    "Daniel Gafford",
+    423.0,
+    0.577,
+    52.0,
+    0.449
+   ],
+   [
+    "Myles Turner",
+    543.0,
+    0.551,
+    37.0,
+    0.516
+   ]
+  ],
+  "n": 18
+ }
+}

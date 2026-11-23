@@ -1,0 +1,5 @@
+fold0 {"games": 904, "mse": {"T0": 10134.15, "TE": 10131.69, "TG": 10128.51, "TV": 10132.49, "TX": 10130.5}, "dBrier": {"TE": 5e-05, "TG": 0.00026, "TV": 0.00013, "TX": 0.0006}}
+test {"games": 1135, "mse": {"T0": 10064.92, "TE": 10061.68, "TG": 10059.2, "TV": 10062.38, "TX": 10062.19}, "dBrier": {"TE": -1e-05, "TG": -0.00034, "TV": -0.00015, "TX": -0.00024}, "importance": {"T0:blk36": 0.481, "TE:blk36": 0.451, "TG:blk36": 1.273, "TV:blk36": 0.933, "TX:new3": 0.493, "TX:blk36": 0.109}}
+forward {"games": 221, "mse": {"T0": 11616.16, "TE": 11612.58, "TG": 11604.63, "TV": 11612.82, "TX": 11608.59}, "dBrier": {"TE": 0.00029, "TG": -0.00402, "TV": -0.00053, "TX": 0.00076}}
+{"TE": {"c1_testMSE": true, "c2_fwdMSE": true, "c3_testBrier": true, "c4_guard": true, "sig_testMSE": true, "pass": true}, "TG": {"c1_testMSE": true, "c2_fwdMSE": true, "c3_testBrier": true, "c4_guard": true, "sig_testMSE": true, "pass": true}, "TV": {"c1_testMSE": true, "c2_fwdMSE": true, "c3_testBrier": true, "c4_guard": true, "sig_testMSE": true, "pass": true}, "TX": {"c1_testMSE": true, "c2_fwdMSE": true, "c3_testBrier": true, "c4_guard": true, "sig_testMSE": true, "pass": true}}
+E307_DONE
