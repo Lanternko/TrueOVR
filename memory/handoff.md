@@ -3,7 +3,7 @@
 只記「目前狀態」，每次收工整份覆寫，不往下追加日期段。每條最多兩行，細節寫進 findings／experiments／rulings 或報告檔，這裡只放 ID 與路徑。UI 小改不進本檔（看 git log）。舊版全文在 `archive/`（最近一份 `handoff-2026-11-09-full.md`）。
 **多個 session 同時改本檔與工作樹**：覆寫前先重讀一次，只改自己負責的條目。
 
-- **更新**：11-23 E-307、E-308、E-310 上線 0.3.0；E-309 區域威懾完成（3/5）；更早見 git log。
+- **更新**：11-23 E-307、E-308、E-310 上線 0.3.0；E-309 區域威懾、E-311 跨季回測完成（皆 3/5）；更早見 git log。
 
 ## 目前基準（線上）
 - **球隊評分 T 權重 E-306 R3＋殘差混入修正**（11-21，R-195、L-152，未稽核）：回退 `T_WEIGHTS=E227-R2-stats`；`reports/E306-team-model-r3/report.md`。
@@ -21,7 +21,7 @@
 
 ## 進行中（未稽核，待派 role-audit）
 - **防守三步（R-178、L-137）**：① help 位置係數 E-277 M1 已採用（R-179）→ ② 蓋帽 0.3 已採用（R-180），抄截 0.1 待裁定（E-282），干擾不進；E-287 OFF/DEF 混 0.5 T 已上線（R-181）→ ③ `DEF` 顯示對齊未開。全文 `archive/handoff-2026-11-23-defense-steps.md`
-- **E-309 區域威懾**（3/5）：T 加 rimDet＋threeDet 樣本外變好，待 E-286 回測（併 E-307 TG）；sim／RIM／DEF 不改。`reports/E309-zone-deterrence/report.md`
+- **E-309 區域威懾**（3/5）／**E-311 跨季回測**（3/5）：TG（有效蓋帽）是候選但換季不一致、靠單一 seed，待裁定是否 R3 重訓 10 seed＋F/M；Z2 球隊評分線停。`reports/E311-zone-blk-team-backtest/report.md`
 - **E-304 新秀五位置**（11-10，4/5）：S5 已上線 inseason 0.2.15a（R-192，`ROOKIE_POS5=0` 回退）；硬標籤跳 2–4 分，W5 連續版為備案。
 - **E-298／E-300 主力權重**（11-10）：E-300 M 已上線（0.2.14c），未稽核；對手籃板修正量太小不上。RW3（live 63）仍高於 Avdija（75）：每 36 分換算＋小樣本防守意識，另案。`reports/E300-mix-minutes-opp/report.md`
 - **E-296／E-299／E-302 單場→OVR**（11-10）：MR 已上線（0.2.14d）；能力值加快無效（F-179）。Yang 剩下的扣分來自卡片中鋒係數，接 E-299 C 非負係數（需卡片鏈重跑）。`reports/E302-attr-anchor/report.md`
