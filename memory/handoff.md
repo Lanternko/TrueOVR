@@ -3,7 +3,7 @@
 只記「目前狀態」，每次收工整份覆寫，不往下追加日期段。每條最多兩行，細節寫進 findings／experiments／rulings 或報告檔，這裡只放 ID 與路徑。UI 小改不進本檔（看 git log）。舊版全文在 `archive/`（最近一份 `handoff-2026-11-09-full.md`）。
 **多個 session 同時改本檔與工作樹**：覆寫前先重讀一次，只改自己負責的條目。
 
-- **更新**：2026-11-21 球隊評分 E-306 R3（R-195）；更早的見 git log 與 `archive/handoff-2026-11-09-full.md`。
+- **更新**：11-23 E-308；11-21 E-306 R3（R-195）；更早見 git log。
 
 ## 目前基準（線上）
 - **球隊評分 T 權重 E-306 R3＋殘差混入修正**（11-21，R-195、L-152，未稽核）：回退 `T_WEIGHTS=E227-R2-stats`；`reports/E306-team-model-r3/report.md`。
@@ -15,7 +15,6 @@
 - **追蹤量格子**（R-166，11-05）：DRV／INS／CRT／PASS／3PT 提示卡加量類追蹤列，不進分數。`scripts/tracking_cells.py`；2026-27 資料是手動快照，重抓 `node scripts/fetch_tracking_cells.mjs <季> data/tracking-cells/<季>` 後重建頁面。
 - **賽中近期加成 b=3、h=20**（R-150）；**card／inseason 0.2.12**（R-139，tovSkill 看持球時間）；**0.2.11**（R-137，引力 gravity）。回退旗標 `RECENT_BOOST=0`、`TOV_POSS=0`、`GRAVITY=0`。
 - **網站**：trueovr.com；首頁 2026-27、`2025-26.html`；排行／賽程用乾淨路徑 `/rank/`、`/games/`。只改 UI 用 `python -I scripts/daily_inseason_update.py --shell` 立刻發布；每日排程 14:30／16:30＋04:30 補對位（2026-11-18 由 22:30 移來；registry `basketball-inseason-daily`）。OVR 折線 `ovr_history.py` 平行＋5090 分攤，歷史日去洩漏（L-134）。能力值說明在 `season_nav.py` 的 `ATTR_TIPS`；新格子提示用 `sn.cell_tip()`。
-- **主卡 On/Off**（11-23）：本季在場減不在場，`onoff_map` 每天由 stint 算。
 - **球隊評分 T 追蹤統計本季混合**（R-169，11-05）：hustle／rimthree／matchup／adv 21 欄照 box 規則 w=min/(min+500) 混本季；`e229_live.BLEND_DEFAULT`，設 `()` 回退。回測 Brier −0.0027（區間跨 0，非劣）。`reports/E246-t-tracking-blend/report.md`
 - **模擬 sim 0.1.3**（R-120）；防守 `nba-defense-v3`（R-010）；賽中 OVR C4（E-033）。
 
@@ -35,6 +34,7 @@
 - **聯盟 3PAr 偏差**（R-146）：δ 暫不進引擎；節奏偏慢下一步未開。**0.2.10 待辦**（R-114）：role-audit 沒做、G5。
 
 ## 等使用者裁定
+- **E-308**（4/5）：OVR 漏的是 RAPM 殘差（樣本外），on/off 無額外訊號；待裁定殘差進 OVR。`reports/E308-onoff-undervalue/`
 - E-196／R-133 得分產量（未上線）、網站品牌名（已用 trueovr.com，舊候選作廢）、0.2.10a 後續（R-121）、R-117 停損、E-162／F-106 產量評價、賽中新秀 d 對不上（R-097）、E-139 換版平滑、正負值沾光（E-148）、小項。全文在 `archive/handoff-2026-11-05-full.md`。
 
 ## 待辦（非決策）
