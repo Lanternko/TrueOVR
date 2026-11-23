@@ -538,7 +538,8 @@ def m27_ovr_predict(self, attrs_by_pid):
     out = {}
     for i, p in enumerate(self.pids):
         out[p] = {'pred0': float(pred0[i]), 'bonus': float(bonus[i]), 'align': float(align[i]),
-                  'pred': float(pred[i]), 'ovr': float(ovr[i]), 'pr': float(pr[i]), 'e310': float(e310[i])}
+                  'pred': float(pred[i]), 'ovr': float(ovr[i]), 'pr': float(pr[i]), 'e310': float(e310[i]),
+                  'predCap': float(pred[i] - e310[i])}   # 0.3.0：逐點封頂門檻 T 要用混合前的封頂值（m27_pw_init）
     out['_capIterations'] = iters
     return out
 
@@ -570,6 +571,24 @@ def m27_pw_predict(self, attrs_by_pid):
     return out
 
 
+def m27_pw_init(self, pipe, attrs0):
+    """PointwisePipeline.__init__ 的 0.3.0 版：同原版，只是封頂門檻 T 取混合前的封頂值 predCap（E-310 混合項在封頂之後，不能回頭推動門檻）。
+    E310=0 時 predCap＝pred，逐位元同原版。"""
+    import numpy as np
+    import pointwise_pipeline as PWM
+    self.pipe = pipe
+    ref = pipe.predict(attrs0)
+    self.ref = ref
+    self.pr0 = np.array([ref[p]['pr'] for p in pipe.pids])
+    s = np.sort(np.array([ref[p].get('predCap', ref[p]['pred']) for p in pipe.pids if p not in PWM.EXCLUDE_T]))[::-1]
+    self.T = {a: float(s[min(max(int(a), 1), len(s)) - 1]) - 1e-12
+              for a in set(x for x in pipe.allowed if x is not None)}
+    chk = self.predict(attrs0)
+    self.check = max(abs(chk[p]['ovr'] - ref[p]['ovr']) for p in pipe.pids)
+    if self.check >= 1e-8:
+        raise RuntimeError(f'pointwise A != pipeline A ({self.check})')
+
+
 def m27_install_ul(def_by_rapm):
     """換掉 OVRPipeline.predict／PointwisePipeline.predict（類別層，只在 027 呼叫）；def_by_rapm＝{rapm.csv 絕對路徑: def-L 檔}。"""
     import ovr_pipeline as OP
@@ -577,6 +596,7 @@ def m27_install_ul(def_by_rapm):
     M27_DEF.update({str(__import__('pathlib').Path(k).resolve()): v for k, v in def_by_rapm.items()})
     OP.OVRPipeline.predict = m27_ovr_predict
     PWM.PointwisePipeline.predict = m27_pw_predict
+    PWM.PointwisePipeline.__init__ = m27_pw_init   # 0.3.0：T 用混合前封頂值
     if not getattr(OP.OVRPipeline.__init__, '_m27', False):     # E-111 errata 1：RAPM 名次同分照卡片產生器
         orig_init = OP.OVRPipeline.__init__
 
