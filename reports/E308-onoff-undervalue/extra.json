@@ -1,0 +1,63 @@
+{
+ "R_OO": {
+  "bottom20": {
+   "n": 50,
+   "y1r_mean": -3.04,
+   "y2r_mean": -0.344,
+   "share_y1_above_ovr": 0.38,
+   "share_y2_above_ovr": 0.34
+  },
+  "middle60": {
+   "n": 152,
+   "y1r_mean": -0.15,
+   "y2r_mean": 0.009,
+   "share_y1_above_ovr": 0.49,
+   "share_y2_above_ovr": 0.49
+  },
+  "top20": {
+   "n": 50,
+   "y1r_mean": 3.29,
+   "y2r_mean": 0.296,
+   "share_y1_above_ovr": 0.6,
+   "share_y2_above_ovr": 0.54
+  }
+ },
+ "R_RAPM": {
+  "bottom20": {
+   "n": 50,
+   "y1r_mean": -2.99,
+   "y2r_mean": -0.485,
+   "share_y1_above_ovr": 0.36,
+   "share_y2_above_ovr": 0.26
+  },
+  "middle60": {
+   "n": 152,
+   "y1r_mean": -0.13,
+   "y2r_mean": 0.008,
+   "share_y1_above_ovr": 0.49,
+   "share_y2_above_ovr": 0.5
+  },
+  "top20": {
+   "n": 50,
+   "y1r_mean": 3.29,
+   "y2r_mean": 0.452,
+   "share_y1_above_ovr": 0.62,
+   "share_y2_above_ovr": 0.6
+  }
+ },
+ "LaMelo": {
+  "pool": 387,
+  "h1": 252,
+  "rank_ovr": 143,
+  "rank_oo4s": 27,
+  "rank_R_OO": 22,
+  "rank_rapm": 32,
+  "rank_R_RAPM": 13,
+  "rank_darko": 86,
+  "rankH1_ovr": 119,
+  "rankH1_y1": 30,
+  "rankH1_y2": 8,
+  "rankH1_y1r": 28,
+  "rankH1_y2r": 7
+ }
+}

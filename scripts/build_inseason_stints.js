@@ -2,6 +2,7 @@
 // 沿用稽核過的整季程式，只在記憶體裡拿掉「必須 1230 場」的檢查：
 //   fetch_defense_seventh_season.js → league.json、boxes/、game-exposure.json、manifest.json（box／pbp 已抓過的不重抓）
 //   prepare_defense_b1.js（同 prepare_defense_seventh_season.js 的路徑替換）→ reports/defense-seventh/<季>/stints/stints.jsonl
+// 投籃分區：pbp 沒有 area 的場次由 src/pbp_area.js 補（見下）。
 // 不跑 validate_defense_stints（要求整季）和 stint-zones（擬合用不到）。
 // 用法：node scripts/build_inseason_stints.js [2026-27]
 import fs from 'node:fs';
@@ -15,6 +16,10 @@ const run=(name,edits,must)=>{
   try{execFileSync(process.execPath,[file,season],{stdio:'inherit',windowsHide:true});}finally{fs.rmSync(file,{force:true});}
 };
 run('fetch_defense_seventh_season',[["if(schedule.length!==1230)throw Error('Expected 1230 regular-season games');",'']],["if(schedule.length!==1230)throw Error('Expected 1230 regular-season games');"]);
-run('prepare_defense_b1',Object.entries({'data/defense-a-source/pbp/':data+'/pbp/','data/defense-a-source/manifest.json':data+'/manifest.json',
+// 2026-27 起 pbp 投籃沒有 area 欄位 → 整季 shortA=0（2026-11-23 修）：整場無 area 時用 pointsinthepaint 補（src/pbp_area.js）；有 area 的場次不動。
+const AREA_IMPORT="import {read,hash,table} from './defense_io.js';",AREA_READ='actions=read(source.file).data.game.actions;';
+run('prepare_defense_b1',[...Object.entries({'data/defense-a-source/pbp/':data+'/pbp/','data/defense-a-source/manifest.json':data+'/manifest.json',
   'data/defense-source/game-exposure.json':data+'/game-exposure.json','data/season-source/team-games.json':data+'/team-games.json',
-  'data/season-league.json':data+'/league.json',"'reports/defense-b1'":`'${report}'`}),["'reports/defense-b1'"]);
+  'data/season-league.json':data+'/league.json',"'reports/defense-b1'":`'${report}'`}),
+  [AREA_IMPORT,AREA_IMPORT+"import {fillMissingAreas} from '../src/pbp_area.js';"],[AREA_READ,'actions=fillMissingAreas(read(source.file).data.game.actions);'],
+  ["'scripts/prepare_defense_b1.js']","'scripts/prepare_defense_b1.js','src/pbp_area.js']"]],["'reports/defense-b1'",AREA_IMPORT,AREA_READ,"'scripts/prepare_defense_b1.js']"]);

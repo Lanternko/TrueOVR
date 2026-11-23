@@ -2888,3 +2888,11 @@
 - 結論：球權去向個人差異多是雜訊，有用的是干擾球。RIM 建議換 RG（未上線，等使用者裁定，回退 D30）；T 的 TG 為候選，需多 seed＋E-286 回測。sim 只給建議（R-154）。`reports/E307-blk-quality/report.md`
 - 狀態：完成；RIM RG 已上線（2026-11-23 使用者「Switch to RG」，R-196，未稽核；回退 `RIM_RG=0`）；T 的 TG 未上
 - 相關：E-305、E-285、E-286、R-193、R-196、R-178、R-154、R-160
+
+## E-308 OVR 是否系統性低估高 On/Off 球員（2026-11-23）
+- 問題：使用者看到 Wemby on/off +43，要主卡改 On/Off 並檢查模型是否低估高 on/off 的人（例 LaMelo 賽中 OVR 73.5、#144）：模型漏掉東西還是 on/off 雜訊？
+- 做法：預註冊 `reports/E308-onoff-undervalue/preregistration.md`（commit 256a9dec，R-165）。人群 card 0.2.15、2025-26 在場每邊 ≥1000 回合 387 人；四季 on/off 經驗貝氏收縮後對 OVR 取殘差 R_OO（比較臂 R_RAPM、R_DARKO）；樣本外 Y1＝2026-27 on/off、Y2＝2026-27 單季 RAPM（至 11-22，252 人），WLS＋球隊群集重抽；H2 三型（創造型低效率持球者／3D 側翼／護框長人）；H3 奇偶場信度、逐年留隊／換隊。
+- 結果：Y2 的 R_OO 係數 0.156 [0.048, 0.268]（規則 1 觸發），Y1 1.74 [0.91, 2.46]；換隊的人 Y2 也成立 0.242 [0.103, 0.432]。加入 R_RAPM 後 R_OO 歸零（−0.095 [−0.26, 0.09]），R_RAPM 0.355 [0.158, 0.529]。R_DARKO 反向。單季 on/off 殘差整季信度 0.148、逐年 0.11。三型都不顯著，創造型低效率持球者反而略負。LaMelo：卡 #143、四季 on/off #27、RAPM #32、本季單季 RAPM #8；扣分來自 short、mid、onBall、help。
+- 結論：OVR 低估的是「RAPM 抓得到、屬性抓不到」的個人影響力（樣本外、換隊也成立），on/off 只是它的帶雜訊版本，沒有額外資訊；類型假說不成立。4/5。`reports/E308-onoff-undervalue/report.md`
+- 狀態：完成，未稽核；等使用者裁定下一步（A：RAPM 殘差收縮進 OVR 的預註冊實驗）。主卡 On/Off 已上線（commit 95577025、gh-pages b49dd1d）。
+- 相關：E-271、E-148、R-178、R-165、R-007

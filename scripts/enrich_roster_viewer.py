@@ -23,6 +23,10 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / 'data' / 'season-source' / 'player-games.json'
 RAPM = ROOT / 'reports' / 'impact-rapm' / 'rapm-prior.csv'  # 2025-26 單季 box-prior RAPM（每 100 回合）
 ONOFF = ROOT / 'reports' / 'impact-rapm' / 'onoff.csv'
+# 主卡 On/Off（使用者 2026-11-23：「正負值」改成 On/Off，平衡強弱隊）：賽中頁換成本季 stints.jsonl，每次建頁從 stint 重算；
+# None＝用 onoff.csv 的 ONOFF_SEASON（2025-26 頁）
+ONOFF_STINTS = None
+ONOFF_SEASON = '2025-26'
 IMPACT_LOADER = None  # 賽中頁（build_inseason_viewer.py）換成自己的載入函式；None＝沿用下面的 2025-26 資料
 GC = ROOT / 'reports' / 'game-contribution' / 'm2'  # 評分 M2（R-066）：box＋hustle＋防守對位 → RAPM 權重、2025-26 基準、五色切點（scripts/fit_rating_m2.py）
 CARD_SUMMARY = ROOT / 'reports' / 'card-0.2.7c' / 'summary.json'  # 正式卡 OVR 錨點（換算 OVR 傾向）
@@ -439,7 +443,7 @@ function realBox(p) {
   if (!r.gp) {
     const cell = l => `<span>${l}<b>—</b></span>`;
     return `<div class="real-h">本季尚未出賽</div>
-      <div class="real rx"><div class="rmain">${['得分', '籃板', '助攻', '正負值'].map(l => `<div class="st"><b>—</b><span>${l}</span></div>`).join('')}</div>
+      <div class="real rx"><div class="rmain">${['得分', '籃板', '助攻', 'On/Off'].map(l => `<div class="st"><b>—</b><span>${l}</span></div>`).join('')}</div>
       <div class="rsub"><div>${['命中率', '三分', '罰球', '真實命中'].map(cell).join('')}</div><div>${['抄截', '阻攻', '失誤'].map(cell).join('')}</div></div>
       <button type="button" class="g5t" style="visibility:hidden" tabindex="-1" aria-hidden="true"><i>▼</i>近 0 場比賽</button></div>`;
   }
@@ -447,13 +451,17 @@ function realBox(p) {
   const f1 = v => v.toFixed(1), pc = v => (v == null ? '—' : (v * 100).toFixed(v >= 1 ? 0 : 1) + '%');
   const pm = v => (v > 0 ? '+' : '') + v.toFixed(1);
   // 主次分明（使用者 2026-10-29：十二格一樣大太雜）：得分／籃板／助攻大格，其餘分三行小字
-  const main = [['得分', f1(r.pts)], ['籃板', f1(r.reb)], ['助攻', f1(r.ast)], ['正負值', pm(r.pm)]];
+  // 第四格「正負值」改成本季 On/Off（使用者 2026-11-23）：在場減不在場的球隊每 100 回合淨效率，扣掉球隊本身強弱；場均正負值移到提示
+  const oo = ONOFF[r.id];
+  const ooTip = (oo ? `${ONOFF_SEASON} 他在場減不在場的球隊每 100 回合淨效率（在場約 ${oo.p} 回合，一個標準誤約 ±${oo.se.toFixed(1)}；在場時球隊淨效率 ${pm(oo.on)}）。`
+    : `${ONOFF_SEASON} 沒有在場／不在場兩邊都有的回合。`) + '會受替補好壞與常同場的隊友影響，回合少時誤差很大，只當旁證。場均正負值 ' + pm(r.pm);
+  const main = [['得分', f1(r.pts)], ['籃板', f1(r.reb)], ['助攻', f1(r.ast)], ['On/Off', oo ? pm(oo.oo) : '—', ooTip]];
   const sub = [[['命中率', pc(r.fg)], ['三分', pc(r.fg3)], ['罰球', pc(r.ft)], ['真實命中', pc(r.ts)]],
     [['抄截', f1(r.stl)], ['阻攻', f1(r.blk)], ['失誤', f1(r.tov)]]];
   // 標題只留場數和場均分鐘（使用者 2026-10-29：「例行賽真實數據」字太多）
   const n = r.g5.length, sv = REAL_VIEW === 'season', lab = sv ? '整季細項' : `近 ${n} 場比賽`;
   return `<div class="real-h">${r.gp} 場 · ${Math.round(r.mpg)} 分鐘${r.teams.length > 1 ? '<span class="rtm"> · ' + r.teams.join('/') + '</span>' : ''}</div>
-      <div class="real rx"><div class="rmain">${main.map(([l, v]) => `<div class="st"><b>${v}</b><span>${l}</span></div>`).join('')}</div>
+      <div class="real rx"><div class="rmain">${main.map(([l, v, t]) => `<div class="st"${t ? ` title="${t}"` : ''}><b>${v}</b><span>${l}</span></div>`).join('')}</div>
       <div class="rsub">${sub.map(g => `<div>${g.map(([l, v]) => `<span>${l}<b>${v}</b></span>`).join('')}</div>`).join('')}</div>
       <button type="button" class="g5t" aria-expanded="${G5_OPEN}" aria-label="${lab}" title="${lab}" onclick="toggleG5(this)"><i>▼</i>${lab}</button></div>
       <div class="g5${sv ? ' sd' : ''}"${G5_OPEN ? '' : ' hidden'}>${sv ? seasonLog(r) : gameLog(r, p)}</div>`;
@@ -571,7 +579,7 @@ function seasonLog(r) {
 function impactChips(p) {
   const r = REAL[p.name], m = r && IMPACT[r.id];
   // 沒有 RAPM（新秀等）也排滿四格「—」，卡片高度才和別人一樣（使用者 2026-10-30）
-  if (!m) return `<div class="strong">${['進攻影響', '防守影響', '淨影響', '在場增益'].map(lab =>
+  if (!m) return `<div class="strong">${['進攻影響', '防守影響', '淨影響', '場均正負值'].map(lab =>
     `<span class="chip" title="無 2025-26 RAPM">${lab}<i class="flat">—</i></span>`).join('')}</div>`;
   const sg = v => (v > 0 ? '+' : '') + v.toFixed(1);
   const cls = v => (v >= 0.5 ? 'up' : v <= -0.5 ? 'dn' : 'flat');
@@ -580,7 +588,7 @@ function impactChips(p) {
   return `<div class="strong">${chip('進攻影響', m.o, '2025-26 RAPM 進攻：在場時球隊每 100 回合多得幾分（控制隊友與對手，對聯盟平均）')}${
     chip('防守影響', m.d, '2025-26 RAPM 防守：在場時對手每 100 回合少得幾分（正值＝少失分）')}${
     chip('淨影響', m.o + m.d, '2025-26 RAPM 淨值＝進攻＋防守')}${
-    chip('在場增益', m.onoff, '2025-26 他在場減不在場的球隊每 100 回合淨效率（扣掉球隊本身強弱；會受替補好壞影響）' + (m.on == null ? '' : '；在場時球隊淨效率 ' + sg(m.on)))}</div>`;
+    chip('場均正負值', r.pm, '2025-26 場均正負值：他在場時球隊的得失分差，每場平均（沒有扣掉球隊強弱，強隊的人容易偏高；扣掉強弱的版本見左邊 On/Off）')}</div>`;
 }
 // 手機位置下拉：按鈕顯示目前位置，點了才展開位置列（#posSeg 每次 render 重建，用 observer 同步）
 (() => {
@@ -871,25 +879,59 @@ def game_row(r, h, keys):
 
 
 def impact():
-    """playerId → {o, d, on, onoff}：2025-26 單季 box-prior RAPM 攻守，與在場淨效率、在場減不在場（交易球員依在場回合加權）。"""
+    """playerId → {o, d}：2025-26 單季 box-prior RAPM 攻守（On/Off 改由 onoff_map() 給主卡第四格）。"""
     if IMPACT_LOADER:
         return IMPACT_LOADER()
     out = {}
     for r in csv.DictReader(RAPM.open(encoding='utf-8')):
         out[int(r['playerId'])] = {'o': float(r['lastSeasonO']), 'd': float(r['lastSeasonD'])}
-    acc = {}
-    for r in csv.DictReader(ONOFF.open(encoding='utf-8')):
-        if r['season'] != '2025-26':
-            continue
-        a = acc.setdefault(int(r['playerId']), [0.0, 0.0, 0.0])
-        w = float(r['onPoss'])
-        a[0] += w
-        a[1] += w * float(r['onNet'])
-        a[2] += w * float(r['onOffNet']) if r['onOffNet'] else 0
-    for pid, (w, on, onoff) in acc.items():
-        if pid in out and w > 0:
-            out[pid].update(on=round(on / w, 2), onoff=round(onoff / w, 2))
     return out
+
+
+def onoff_map():
+    """playerId → {oo, on, p, se}：ONOFF_SEASON 在場減不在場每 100 回合淨效率、在場淨效率、在場回合（攻守平均）、
+    粗估標準誤（每回合得分標準差約 1.15，在場與不在場兩邊獨立）；交易球員依在場回合加權。
+    ONOFF_STINTS 有值時從 stint 重算（同 reports/impact-rapm/rapm.py 的 onoff：不在場＝同隊沒有他的回合），否則讀 onoff.csv。"""
+    rows = []
+    if ONOFF_STINTS:
+        team, on = {}, {}
+        for line in open(ONOFF_STINTS, encoding='utf-8'):
+            st = json.loads(line)
+            if st['seconds'] <= 0 or len(st['teams']) != 2:
+                continue
+            for d in (0, 1):
+                de, of = st['teams'][d], st['teams'][1 - d]
+                poss = de['defensivePossessions']
+                if poss <= 0:
+                    continue
+                pts = de['opponent']['points']
+                for tid, pl, k in ((of['teamId'], of['players'], 0), (de['teamId'], de['players'], 2)):
+                    t = team.setdefault(tid, [0.0] * 4)
+                    t[k] += pts
+                    t[k + 1] += poss
+                    for pid in pl:
+                        o = on.setdefault((tid, pid), [0.0] * 4)
+                        o[k] += pts
+                        o[k + 1] += poss
+        for (tid, pid), o in on.items():
+            off = [a - b for a, b in zip(team[tid], o)]
+            if min(o[1], o[3], off[1], off[3]) <= 0:
+                continue
+            onnet = 100 * (o[0] / o[1] - o[2] / o[3])
+            rows.append((pid, (o[1] + o[3]) / 2, (off[1] + off[3]) / 2, onnet, onnet - 100 * (off[0] / off[1] - off[2] / off[3])))
+    else:
+        for r in csv.DictReader(ONOFF.open(encoding='utf-8')):
+            if r['season'] == ONOFF_SEASON and r['onOffNet'] and float(r['offPoss']) > 0:
+                rows.append((int(r['playerId']), float(r['onPoss']) / 2, float(r['offPoss']) / 2, float(r['onNet']), float(r['onOffNet'])))
+    acc = {}
+    for pid, p, q, onnet, oo in rows:
+        a = acc.setdefault(pid, [0.0, 0.0, 0.0, 0.0])
+        a[0] += p
+        a[1] += p * onnet
+        a[2] += p * oo
+        a[3] += p * p * (2 / p + 2 / q)  # 加權平均的變異數，單位（每回合標準差）²；×115 換成每 100 回合
+    return {pid: {'oo': round(a[2] / a[0], 1), 'on': round(a[1] / a[0], 1), 'p': round(a[0]), 'se': round(115 * a[3] ** 0.5 / a[0], 1)}
+            for pid, a in acc.items() if a[0] > 0}
 
 
 def rookies(view):
@@ -957,6 +999,7 @@ def inject(path, real, view='g5'):
     eye = headshot_eyeline.ensure(ids)
     sub = {n: {**v, 'ey': eye.get(str(v['id']))} for n, v in sub.items()}
     imp = {pid: v for pid, v in impact().items() if pid in ids}
+    oom = {pid: v for pid, v in onoff_map().items() if pid in ids}
     by_key = {}
     for n, v in profiles(view).items():
         by_key.setdefault(pkey(n), {}).update(v)
@@ -965,6 +1008,7 @@ def inject(path, real, view='g5'):
     a = json.loads(CARD_SUMMARY.read_text(encoding='utf-8'))['anchors']
     block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\nconst REAL_VIEW={js_json(view)};\n'
              f'const ROOKIES=new Set({js_json([by_roster[fold(n)] for n in rookies(view) if fold(n) in by_roster])});\nconst IMPACT={js_json(imp)};\n'
+             f'const ONOFF={js_json(oom)};\nconst ONOFF_SEASON={js_json(ONOFF_SEASON)};\n'
              f'const GC_ANC={js_json([a["PR1"], a["PR50"], a["PR99"]])};\nconst GC_CUT={js_json([M6C["cut1"], M6C["cut5"]])};\n'
              f'const PROF={js_json(prof)};\n'
              f'const TEAM_COLORS={js_json(TEAM_COLORS)};\nconst TEAM_IDS={js_json(team_ids())};\nconst EYE_Y={headshot_eyeline.TARGET};{JS}</script>\n{END}\n')

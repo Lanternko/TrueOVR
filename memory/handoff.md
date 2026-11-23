@@ -3,11 +3,11 @@
 只記「目前狀態」，每次收工整份覆寫，不往下追加日期段。每條最多兩行，細節寫進 findings／experiments／rulings 或報告檔，這裡只放 ID 與路徑。UI 小改不進本檔（看 git log）。舊版全文在 `archive/`（最近一份 `handoff-2026-11-09-full.md`）。
 **多個 session 同時改本檔與工作樹**：覆寫前先重讀一次，只改自己負責的條目。
 
-- **更新**：2026-11-23 E-307；更早見 git log 與 `archive/`。
+- **更新**：11-23 E-307、E-308；更早見 git log。
 
 ## 目前基準（線上）
 - **球隊評分 T 權重 E-306 R3＋殘差混入修正**（11-21，R-195、L-152，未稽核）：回退 `T_WEIGHTS=E227-R2-stats`；`reports/E306-team-model-r3/report.md`。
-- **RIM 加蓋帽 RG**（11-23，R-196；D30 R-193）：蓋帽項＝有效蓋帽扣干擾，每天重算（`rim_blk_live.py`），只動顯示；回退 `RIM_RG=0`＝D30、`RIM_BLK=0`。E-307 T 的 TG 需多 seed＋E-286。
+- **RIM 加蓋帽 RG**（11-23，R-196）：有效蓋帽扣干擾，每天重算，只顯示；回退 `RIM_RG=0`＝D30。E-307 TG 待多 seed。
 - **card／inseason 0.2.15**（11-10，R-191，未稽核）：E-303 MRG5，CRT＋PNR 合成「持球進攻」放 creation 欄（`live/crtpnr_live.py`），pnr 不再獨立、係數 W246 重擬合，卡 `reports/card-0.2.15/`；PNR 欄拿掉。回退 `CRTPNR=0`＝0.2.14d。自檢 `check_inseason_0215.py`。
 - **inseason 0.2.14d**（11-10，R-190）：D<0 分鐘修正 A2-15-R＋近況（`live/game_anchor.py`）。回退 `NEG_MIN=0`＝0.2.14c、`GAME_ANCHOR=0` 只關近況。
 - **card／inseason 0.2.14c**（11-10，R-188）：0.2.14b＋MIX 加分×min(1,W(MPG))（OVR 主體分鐘曲線，賽中用 MPGhat）。卡 `reports/card-0.2.14c/`；回退 `MIX_MIN=0`＝0.2.14b、`MIX_W1=0`＝0.2.14a、`MIX_H=0`＝0.2.14、`MIX_BONUS=0`＝0.2.13a（沿革 R-185～R-188）。
@@ -34,6 +34,7 @@
 - **聯盟 3PAr 偏差**（R-146）：δ 暫不進引擎；節奏偏慢下一步未開。**0.2.10 待辦**（R-114）：role-audit 沒做、G5。
 
 ## 等使用者裁定
+- **E-308**（4/5）：OVR 漏的是 RAPM 殘差（樣本外），on/off 無額外訊號；待裁定殘差進 OVR。`reports/E308-onoff-undervalue/`
 - E-196／R-133 得分產量（未上線）、網站品牌名（已用 trueovr.com，舊候選作廢）、0.2.10a 後續（R-121）、R-117 停損、E-162／F-106 產量評價、賽中新秀 d 對不上（R-097）、E-139 換版平滑、正負值沾光（E-148）、小項。全文在 `archive/handoff-2026-11-05-full.md`。
 
 ## 待辦（非決策）
