@@ -1,0 +1,18 @@
+rows 139032 train 111499 val 27533 feat 41 cfg {'lr': 0.001, 'wd': 0.1, 'meanValLoss': 2.00605} dev cuda
+R2-stats 0 2.00605 19 11.6
+R2-stats 1 2.00625 23 12.8
+R2-stats 2 2.00586 15 9.1
+R2-stats 3 2.00627 23 12.9
+R2-stats 4 2.00638 13 8.3
+rows 139032 train 111499 val 27533 feat 42 cfg {'lr': 0.001, 'wd': 0.1, 'meanValLoss': 2.00605} dev cuda
+R2-statsZ 0 2.0062 21 12.2
+R2-statsZ 1 2.00624 17 10.0
+R2-statsZ 2 2.00588 15 9.3
+R2-statsZ 3 2.00735 10 7.4
+R2-statsZ 4 2.00647 13 8.9
+rows 139032 train 111499 val 27533 feat 43 cfg {'lr': 0.001, 'wd': 0.1, 'meanValLoss': 2.00605} dev cuda
+R2-statsZ2 0 2.00603 22 13.7
+R2-statsZ2 1 2.00612 13 9.0
+R2-statsZ2 2 2.00577 15 10.0
+R2-statsZ2 3 2.00612 15 9.8
+R2-statsZ2 4 2.00587 20 14.0

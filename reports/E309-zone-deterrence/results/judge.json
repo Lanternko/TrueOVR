@@ -1,0 +1,200 @@
+{
+ "analytic": {
+  "pps": {
+   "rim": 1.1492,
+   "mid": 0.8927,
+   "three": 1.0789
+  },
+  "fgaPer100": 88.01,
+  "slopeThreeOnRim": -0.839,
+  "toThree": 0.839,
+  "ptsPer100PerPP": 0.0883,
+  "examples_rimDet_pts100": {
+   "Draymond Green": [
+    2.94,
+    0.26
+   ],
+   "Rudy Gobert": [
+    0.87,
+    0.08
+   ],
+   "Nikola Jokić": [
+    4.57,
+    0.4
+   ],
+   "Jarrett Allen": [
+    2.35,
+    0.21
+   ],
+   "Neemias Queta": [
+    4.63,
+    0.41
+   ],
+   "Evan Mobley": [
+    2.08,
+    0.18
+   ],
+   "Walker Kessler": [
+    5.04,
+    0.44
+   ],
+   "Victor Wembanyama": [
+    8.81,
+    0.78
+   ]
+  }
+ },
+ "j2": {
+  "base": 0.4315805995919008,
+  "new": 0.42787745608652844,
+  "delta": -0.003703143505372375,
+  "n": 276
+ },
+ "j2c": {
+  "base": 0.2920118617366324,
+  "new": 0.2850152905198777,
+  "delta": -0.006996571216754732,
+  "n": 109
+ },
+ "j3": {
+  "base": 3.3763156781609194,
+  "new": 3.370568551724139,
+  "delta": -0.0057471264367805475
+ },
+ "league": {
+  "base": {
+   "rimAttPer100": 42.30586471982858,
+   "rimFgPct": 0.5935424929621388,
+   "ptsPer100": 118.31278243555222,
+   "possPerTeamGame": 100.46253591954023
+  },
+  "new": {
+   "rimAttPer100": 42.421060462135344,
+   "rimFgPct": 0.5934610326105284,
+   "ptsPer100": 118.2354910331094,
+   "possPerTeamGame": 100.43333333333334
+  },
+  "rimAttRelChange": 0.002722926078208232
+ },
+ "pass": false,
+ "players": {
+  "Victor Wembanyama": {
+   "pos": "C",
+   "ans": 14,
+   "base": 3,
+   "new": 2,
+   "xBase": 8.411,
+   "xNew": 8.549
+  },
+  "Nikola Jokić": {
+   "pos": "C",
+   "ans": 1,
+   "base": 1,
+   "new": 1,
+   "xBase": 10.059,
+   "xNew": 10.667
+  },
+  "Rudy Gobert": {
+   "pos": "C",
+   "ans": 39,
+   "base": 6,
+   "new": 4,
+   "xBase": 7.243,
+   "xNew": 7.696
+  },
+  "Draymond Green": {
+   "pos": "PF",
+   "ans": 6,
+   "base": 145,
+   "new": 137,
+   "xBase": 0.642,
+   "xNew": 0.695
+  },
+  "Jarrett Allen": {
+   "pos": "C",
+   "ans": 28,
+   "base": 20,
+   "new": 21,
+   "xBase": 4.162,
+   "xNew": 4.086
+  },
+  "Evan Mobley": {
+   "pos": "PF",
+   "ans": 41,
+   "base": 19,
+   "new": 20,
+   "xBase": 4.213,
+   "xNew": 4.148
+  }
+ },
+ "biggestMoves": {
+  "down": [
+   [
+    "De'Anthony Melton",
+    -0.839
+   ],
+   [
+    "Shaedon Sharpe",
+    -0.781
+   ],
+   [
+    "Tari Eason",
+    -0.76
+   ],
+   [
+    "Devin Booker",
+    -0.755
+   ],
+   [
+    "Jalen Wilson",
+    -0.721
+   ],
+   [
+    "Keon Ellis",
+    -0.669
+   ],
+   [
+    "CJ McCollum",
+    -0.66
+   ],
+   [
+    "Jakob Poeltl",
+    -0.619
+   ]
+  ],
+  "up": [
+   [
+    "Bilal Coulibaly",
+    0.866
+   ],
+   [
+    "Nikola Jokić",
+    0.608
+   ],
+   [
+    "Tyrese Maxey",
+    0.575
+   ],
+   [
+    "Isaac Okoro",
+    0.552
+   ],
+   [
+    "Jonathan Kuminga",
+    0.55
+   ],
+   [
+    "Luke Kennard",
+    0.522
+   ],
+   [
+    "Isaiah Stewart",
+    0.492
+   ],
+   [
+    "Rudy Gobert",
+    0.453
+   ]
+  ]
+ }
+}

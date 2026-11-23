@@ -443,7 +443,23 @@
 - 對應測試或關卡：每日發布後檢查 `team-ratings.json` 的 `actualBlend.on`，`ACTUAL_BLEND` 沒關而 on=false 就報錯
 - 相關：R-171、E-253、E-306
 
-下一個新 ID：用 `python memory/claim_id.py L` 取（L-153）。
+### L-153
+- 日期：2026-11-23
+- 規則：預註冊寫「現行 X」當基準前，先 `git fetch` 看 origin/main 有沒有改 X 的函式；基準要寫成可重現的開關或版號（例如 `RIM_RG=0`），不要只寫「現行」。
+- 細節：E-309 工作樹落後 origin/main，預註冊寫 RIM 基準「現行 D30」，但凍結前主線已把 `rim_blk_live` 換成 E-307 RG（R-196）。第一次跑 (c) 用到 RG 還是 D30 不明，只好用 `RIM_RG=0／1` 各跑一次，凍結判定照 D30，RG 只報告。
+- 由來：E-309 (c) RIM 判定
+- 對應測試或關卡：凍結前 `git log HEAD..origin/main -- <基準函式檔>` 要為空
+- 相關：L-047、R-196、E-309
+
+### L-154
+- 日期：2026-11-23
+- 規則：新季資料來源換了（cdn pbp）之後，每個依欄位分類的產物（投籃分區、禁區出手）都要檢查各類別比例是否接近往季；某一類全為 0 就是欄位不存在。
+- 細節：2026-27 pbp 沒有 `area` 欄位，stints 投籃分區全部落進中距、shortA=0，四因子 rimShare 與任何禁區佔比都失真。改用官方 qualifier 補分區（c7c9a94f），往季逐位元不變。5090 另一個坑：e166 實驗目錄是 symlink，`cp -al e166 新目錄` 只複製連結、寫入落回原目錄，要對真實路徑做硬連結複製。
+- 由來：E-309 前置
+- 對應測試或關卡：建 stints 後印本季 shortA／midA／longA 佔比，和上一季差 > 10 pp 就停
+- 相關：E-309
+
+下一個新 ID：用 `python memory/claim_id.py L` 取（L-155）。
 
 ## 舊 ID 對照
 

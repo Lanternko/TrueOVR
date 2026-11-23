@@ -1,0 +1,912 @@
+{
+ "day": "2026-11-21",
+ "pool": 292,
+ "pool2025_26": 400,
+ "offDefBad": 28,
+ "blendT": 465,
+ "rimDetCoverage": {
+  "2026-27": 292,
+  "2025-26": 400
+ },
+ "RIM": {
+  "2026-27": {
+   "R0": {
+    "top10PFC": [
+     [
+      "Victor Wembanyama",
+      "C",
+      116.6
+     ],
+     [
+      "Isaiah Stewart",
+      "PF",
+      107.9
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      106.3
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      99.7
+     ],
+     [
+      "Walker Kessler",
+      "C",
+      99.5
+     ],
+     [
+      "Jay Huff",
+      "C",
+      99.2
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      97.4
+     ],
+     [
+      "Daniel Gafford",
+      "C",
+      96.8
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      93.8
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      93.6
+     ]
+    ],
+    "show": {
+     "Victor Wembanyama": [
+      1,
+      116.6
+     ],
+     "Isaiah Stewart": [
+      2,
+      107.9
+     ],
+     "Rudy Gobert": [
+      10,
+      93.6
+     ],
+     "Nikola Jokić": [
+      141,
+      67.7
+     ],
+     "Neemias Queta": [
+      12,
+      92.4
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.4393,
+      292
+     ],
+     "EPM_D/PFC": [
+      0.4011,
+      103
+     ],
+     "T_DEF/all": [
+      0.6435,
+      292
+     ],
+     "T_DEF/PFC": [
+      0.5645,
+      103
+     ]
+    }
+   },
+   "RZ20": {
+    "top10PFC": [
+     [
+      "Victor Wembanyama",
+      "C",
+      118.2
+     ],
+     [
+      "Isaiah Stewart",
+      "PF",
+      103.8
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      103.3
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      100.8
+     ],
+     [
+      "Walker Kessler",
+      "C",
+      100.1
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      97.8
+     ],
+     [
+      "Daniel Gafford",
+      "C",
+      97.0
+     ],
+     [
+      "Neemias Queta",
+      "C",
+      96.7
+     ],
+     [
+      "Jay Huff",
+      "C",
+      94.7
+     ],
+     [
+      "Brook Lopez",
+      "C",
+      93.4
+     ]
+    ],
+    "show": {
+     "Victor Wembanyama": [
+      1,
+      118.2
+     ],
+     "Isaiah Stewart": [
+      2,
+      103.8
+     ],
+     "Rudy Gobert": [
+      11,
+      93.3
+     ],
+     "Nikola Jokić": [
+      66,
+      75.6
+     ],
+     "Neemias Queta": [
+      8,
+      96.7
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.4522,
+      292
+     ],
+     "EPM_D/PFC": [
+      0.4061,
+      103
+     ],
+     "T_DEF/all": [
+      0.6464,
+      292
+     ],
+     "T_DEF/PFC": [
+      0.606,
+      103
+     ]
+    }
+   },
+   "RZ35": {
+    "top10PFC": [
+     [
+      "Victor Wembanyama",
+      "C",
+      118.3
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      101.0
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      99.9
+     ],
+     [
+      "Walker Kessler",
+      "C",
+      99.8
+     ],
+     [
+      "Neemias Queta",
+      "C",
+      99.7
+     ],
+     [
+      "Isaiah Stewart",
+      "PF",
+      99.6
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      97.4
+     ],
+     [
+      "Daniel Gafford",
+      "C",
+      96.5
+     ],
+     [
+      "Jaren Jackson Jr.",
+      "PF",
+      94.3
+     ],
+     [
+      "Aday Mara",
+      "C",
+      94.1
+     ]
+    ],
+    "show": {
+     "Victor Wembanyama": [
+      1,
+      118.3
+     ],
+     "Isaiah Stewart": [
+      6,
+      99.6
+     ],
+     "Rudy Gobert": [
+      13,
+      92.4
+     ],
+     "Nikola Jokić": [
+      38,
+      82.1
+     ],
+     "Neemias Queta": [
+      5,
+      99.7
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.4433,
+      292
+     ],
+     "EPM_D/PFC": [
+      0.4006,
+      103
+     ],
+     "T_DEF/all": [
+      0.6227,
+      292
+     ],
+     "T_DEF/PFC": [
+      0.6299,
+      103
+     ]
+    }
+   }
+  },
+  "2025-26": {
+   "R0": {
+    "top10PFC": [
+     [
+      "Victor Wembanyama",
+      "C",
+      117.6
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      112.0
+     ],
+     [
+      "Isaiah Stewart",
+      "PF",
+      110.0
+     ],
+     [
+      "Jay Huff",
+      "C",
+      103.7
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      100.8
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      100.8
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      99.7
+     ],
+     [
+      "Brook Lopez",
+      "C",
+      99.6
+     ],
+     [
+      "Evan Mobley",
+      "PF",
+      97.6
+     ],
+     [
+      "Adem Bona",
+      "C",
+      97.0
+     ]
+    ],
+    "show": {
+     "Neemias Queta": [
+      12,
+      95.7
+     ],
+     "Isaiah Stewart": [
+      3,
+      110.0
+     ],
+     "Rudy Gobert": [
+      16,
+      94.3
+     ],
+     "Victor Wembanyama": [
+      1,
+      117.6
+     ],
+     "Nikola Jokić": [
+      177,
+      69.0
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.3895,
+      400
+     ],
+     "EPM_D/PFC": [
+      0.4052,
+      148
+     ]
+    }
+   },
+   "RZ20": {
+    "top10PFC": [
+     [
+      "Victor Wembanyama",
+      "C",
+      119.1
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      108.7
+     ],
+     [
+      "Isaiah Stewart",
+      "PF",
+      106.9
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      100.7
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      100.3
+     ],
+     [
+      "Neemias Queta",
+      "C",
+      99.8
+     ],
+     [
+      "Brook Lopez",
+      "C",
+      99.8
+     ],
+     [
+      "Jay Huff",
+      "C",
+      98.9
+     ],
+     [
+      "Adem Bona",
+      "C",
+      98.4
+     ],
+     [
+      "Evan Mobley",
+      "PF",
+      98.3
+     ]
+    ],
+    "show": {
+     "Neemias Queta": [
+      6,
+      99.8
+     ],
+     "Isaiah Stewart": [
+      3,
+      106.9
+     ],
+     "Rudy Gobert": [
+      14,
+      94.7
+     ],
+     "Victor Wembanyama": [
+      1,
+      119.1
+     ],
+     "Nikola Jokić": [
+      77,
+      76.5
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.4075,
+      400
+     ],
+     "EPM_D/PFC": [
+      0.3955,
+      148
+     ]
+    }
+   },
+   "RZ35": {
+    "top10PFC": [
+     [
+      "Victor Wembanyama",
+      "C",
+      119.0
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      104.7
+     ],
+     [
+      "Isaiah Stewart",
+      "PF",
+      103.1
+     ],
+     [
+      "Neemias Queta",
+      "C",
+      102.4
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      100.7
+     ],
+     [
+      "Brook Lopez",
+      "C",
+      99.0
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      99.0
+     ],
+     [
+      "Adem Bona",
+      "C",
+      98.7
+     ],
+     [
+      "Evan Mobley",
+      "PF",
+      98.0
+     ],
+     [
+      "Yves Missi",
+      "C",
+      96.4
+     ]
+    ],
+    "show": {
+     "Neemias Queta": [
+      4,
+      102.4
+     ],
+     "Isaiah Stewart": [
+      3,
+      103.1
+     ],
+     "Rudy Gobert": [
+      14,
+      94.3
+     ],
+     "Victor Wembanyama": [
+      1,
+      119.0
+     ],
+     "Nikola Jokić": [
+      41,
+      82.7
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.4086,
+      400
+     ],
+     "EPM_D/PFC": [
+      0.3696,
+      148
+     ]
+    }
+   }
+  }
+ },
+ "DEF": {
+  "2026-27": {
+   "D0": {
+    "top10PFC": [
+     [
+      "Victor Wembanyama",
+      "C",
+      4.7
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      2.8
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      2.8
+     ],
+     [
+      "Paul Reed",
+      "C",
+      2.1
+     ],
+     [
+      "Isaiah Hartenstein",
+      "C",
+      2.0
+     ],
+     [
+      "Neemias Queta",
+      "C",
+      1.8
+     ],
+     [
+      "Anthony Davis",
+      "C",
+      1.8
+     ],
+     [
+      "Zach Edey",
+      "C",
+      1.7
+     ],
+     [
+      "Jaylin Williams",
+      "C",
+      1.6
+     ],
+     [
+      "Wendell Carter Jr.",
+      "C",
+      1.6
+     ]
+    ],
+    "show": {
+     "Victor Wembanyama": [
+      1,
+      4.7
+     ],
+     "Isaiah Stewart": [
+      81,
+      0.5
+     ],
+     "Rudy Gobert": [
+      4,
+      2.8
+     ],
+     "Nikola Jokić": [
+      63,
+      0.8
+     ],
+     "Neemias Queta": [
+      14,
+      1.8
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.8204,
+      276
+     ],
+     "EPM_D/PFC": [
+      0.7509,
+      98
+     ],
+     "T_DEF/all": [
+      0.8911,
+      276
+     ],
+     "T_DEF/PFC": [
+      0.9059,
+      98
+     ]
+    }
+   },
+   "DZ10": {
+    "top10PFC": [
+     [
+      "Victor Wembanyama",
+      "C",
+      4.9
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      2.8
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      2.7
+     ],
+     [
+      "Neemias Queta",
+      "C",
+      2.1
+     ],
+     [
+      "Paul Reed",
+      "C",
+      2.1
+     ],
+     [
+      "Isaiah Hartenstein",
+      "C",
+      2.1
+     ],
+     [
+      "Zach Edey",
+      "C",
+      1.8
+     ],
+     [
+      "Anthony Davis",
+      "C",
+      1.8
+     ],
+     [
+      "Wendell Carter Jr.",
+      "C",
+      1.7
+     ],
+     [
+      "Jaylin Williams",
+      "C",
+      1.7
+     ]
+    ],
+    "show": {
+     "Victor Wembanyama": [
+      1,
+      4.9
+     ],
+     "Isaiah Stewart": [
+      79,
+      0.6
+     ],
+     "Rudy Gobert": [
+      4,
+      2.8
+     ],
+     "Nikola Jokić": [
+      44,
+      1.1
+     ],
+     "Neemias Queta": [
+      9,
+      2.1
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.8164,
+      276
+     ],
+     "EPM_D/PFC": [
+      0.7422,
+      98
+     ],
+     "T_DEF/all": [
+      0.8963,
+      276
+     ],
+     "T_DEF/PFC": [
+      0.9194,
+      98
+     ]
+    }
+   },
+   "DZ20": {
+    "top10PFC": [
+     [
+      "Victor Wembanyama",
+      "C",
+      5.0
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      2.8
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      2.7
+     ],
+     [
+      "Neemias Queta",
+      "C",
+      2.3
+     ],
+     [
+      "Isaiah Hartenstein",
+      "C",
+      2.1
+     ],
+     [
+      "Paul Reed",
+      "C",
+      2.0
+     ],
+     [
+      "Zach Edey",
+      "C",
+      2.0
+     ],
+     [
+      "Anthony Davis",
+      "C",
+      1.9
+     ],
+     [
+      "Draymond Green",
+      "PF",
+      1.9
+     ],
+     [
+      "Jaren Jackson Jr.",
+      "PF",
+      1.8
+     ]
+    ],
+    "show": {
+     "Victor Wembanyama": [
+      1,
+      5.0
+     ],
+     "Isaiah Stewart": [
+      80,
+      0.6
+     ],
+     "Rudy Gobert": [
+      3,
+      2.8
+     ],
+     "Nikola Jokić": [
+      31,
+      1.4
+     ],
+     "Neemias Queta": [
+      6,
+      2.3
+     ]
+    },
+    "rho": {
+     "EPM_D/all": [
+      0.8019,
+      276
+     ],
+     "EPM_D/PFC": [
+      0.7192,
+      98
+     ],
+     "T_DEF/all": [
+      0.8909,
+      276
+     ],
+     "T_DEF/PFC": [
+      0.9197,
+      98
+     ]
+    }
+   }
+  }
+ },
+ "verdict": {
+  "RIM": {
+   "RZ20": {
+    "delta": {
+     "2026-27:EPM_D/all": 0.0129,
+     "2026-27:EPM_D/PFC": 0.005,
+     "2026-27:T_DEF/all": 0.0029,
+     "2026-27:T_DEF/PFC": 0.0415,
+     "2025-26:EPM_D/all": 0.018,
+     "2025-26:EPM_D/PFC": -0.0097
+    },
+    "noWorse": true,
+    "failItems": [],
+    "pfcEpmGain": 0.005,
+    "pass": false,
+    "pfcEpm": 0.4061
+   },
+   "RZ35": {
+    "delta": {
+     "2026-27:EPM_D/all": 0.004,
+     "2026-27:EPM_D/PFC": -0.0005,
+     "2026-27:T_DEF/all": -0.0208,
+     "2026-27:T_DEF/PFC": 0.0654,
+     "2025-26:EPM_D/all": 0.0191,
+     "2025-26:EPM_D/PFC": -0.0356
+    },
+    "noWorse": false,
+    "failItems": [
+     "2026-27:T_DEF/all",
+     "2025-26:EPM_D/PFC"
+    ],
+    "pfcEpmGain": -0.0005,
+    "pass": false,
+    "pfcEpm": 0.4006
+   },
+   "_chosen": null
+  },
+  "DEF": {
+   "DZ10": {
+    "delta": {
+     "2026-27:EPM_D/all": -0.004,
+     "2026-27:EPM_D/PFC": -0.0087,
+     "2026-27:T_DEF/all": 0.0052,
+     "2026-27:T_DEF/PFC": 0.0135
+    },
+    "noWorse": true,
+    "failItems": [],
+    "pfcEpmGain": -0.0087,
+    "pass": false,
+    "pfcEpm": 0.7422
+   },
+   "DZ20": {
+    "delta": {
+     "2026-27:EPM_D/all": -0.0185,
+     "2026-27:EPM_D/PFC": -0.0317,
+     "2026-27:T_DEF/all": -0.0002,
+     "2026-27:T_DEF/PFC": 0.0138
+    },
+    "noWorse": false,
+    "failItems": [
+     "2026-27:EPM_D/PFC"
+    ],
+    "pfcEpmGain": -0.0317,
+    "pass": false,
+    "pfcEpm": 0.7192
+   },
+   "_chosen": null
+  }
+ }
+}
