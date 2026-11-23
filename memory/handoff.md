@@ -7,7 +7,7 @@
 
 ## 目前基準（線上）
 - **球隊評分 T 權重 E-306 R3＋殘差混入修正**（11-21，R-195、L-152，未稽核）：回退 `T_WEIGHTS=E227-R2-stats`；`reports/E306-team-model-r3/report.md`。
-- **RIM 加蓋帽 D30**（11-10，R-193）：RIM 欄每天重算（`rim_blk_live.py`），只動顯示；回退 `RIM_BLK=0`。
+- **RIM 加蓋帽 RG**（11-23，R-196；D30 R-193）：蓋帽項＝有效蓋帽扣干擾，每天重算（`rim_blk_live.py`），只動顯示；回退 `RIM_RG=0`＝D30、`RIM_BLK=0`。E-307 T 的 TG 需多 seed＋E-286。
 - **card／inseason 0.2.15**（11-10，R-191，未稽核）：E-303 MRG5，CRT＋PNR 合成「持球進攻」放 creation 欄（`live/crtpnr_live.py`），pnr 不再獨立、係數 W246 重擬合，卡 `reports/card-0.2.15/`；PNR 欄拿掉。回退 `CRTPNR=0`＝0.2.14d。自檢 `check_inseason_0215.py`。
 - **inseason 0.2.14d**（11-10，R-190）：D<0 分鐘修正 A2-15-R＋近況（`live/game_anchor.py`）。回退 `NEG_MIN=0`＝0.2.14c、`GAME_ANCHOR=0` 只關近況。
 - **card／inseason 0.2.14c**（11-10，R-188）：0.2.14b＋MIX 加分×min(1,W(MPG))（OVR 主體分鐘曲線，賽中用 MPGhat）。卡 `reports/card-0.2.14c/`；回退 `MIX_MIN=0`＝0.2.14b、`MIX_W1=0`＝0.2.14a、`MIX_H=0`＝0.2.14、`MIX_BONUS=0`＝0.2.13a（沿革 R-185～R-188）。
@@ -20,7 +20,6 @@
 
 ## 進行中（未稽核，待派 role-audit）
 - **防守三步（R-178、L-137）**：① `help` 位置係數改 PG→C 遞增（現行 U 字形 PG .43／SG .01／SF .03／PF .37／C .29）→ ② 干擾／抄截／蓋帽獨立定係數 → ③ `DEF` 顯示對齊 T／EPM／加權。驗收看結構＋代表球員＋EPM／T 對齊＋OVR 不壞，不拿單季防守 RAPM 單一否決。**第一步 E-277 完成（採用 M1）**：help 斜率變兩層台階 PG≈SG≈SF＜PF≈C，OVR ΔR² −0.004 在雜訊內；Durant 只升 20 名。使用者採用 M1（R-179）。**第二步 E-278 完成（2/5 無候選）**：2025-26 蓋帽係數翻負／歸零 S1 不過；抄截四原點穩定為正、干擾≈0；只加蓋帽臂 DEF 對 EPM 防守 +0.030 但缺 S1。**E-280 蓋帽每 SD 0.3 已採用（R-180）**；E-281 拿掉 pressure 不採用、干擾不進。E-282 抄截只宜 0.1（3/5）；E-283 拆 pressure 分量、E-284 有球／無球犯規，自由擬合都全面變差，保留合成 pressure。E-285 T 加逼失誤／犯規：stint MSE −2.6 但 E-286 跨季球隊評分兩季都變差（Brier +0.0027），X 版不進球隊評分；E-287 OFF/DEF 各混 0.5 T 已上線（R-181，每日 t_swap_live）。待裁定抄截 0.1，之後第三步。`reports/E280-blk-weight/report.md``reports/E276-def-stl-blk-defl/report.md`
-- **E-307 有效蓋帽**（11-23）：RIM 建議換 RG（扣干擾），待裁定；T 的 TG 需多 seed＋E-286。`reports/E307-blk-quality/`
 - **E-304 新秀五位置**（11-10，4/5）：S5 已上線 inseason 0.2.15a（R-192，`ROOKIE_POS5=0` 回退）；硬標籤跳 2–4 分，W5 連續版為備案。
 - **E-298／E-300 主力權重**（11-10）：E-300 M 已上線（0.2.14c），未稽核；對手籃板修正量太小不上。RW3（live 63）仍高於 Avdija（75）：每 36 分換算＋小樣本防守意識，另案。`reports/E300-mix-minutes-opp/report.md`
 - **E-296／E-299／E-302 單場→OVR**（11-10）：MR 已上線（0.2.14d）；能力值加快無效（F-179）。Yang 剩下的扣分來自卡片中鋒係數，接 E-299 C 非負係數（需卡片鏈重跑）。`reports/E302-attr-anchor/report.md`

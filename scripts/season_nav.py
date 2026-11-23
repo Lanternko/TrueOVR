@@ -426,6 +426,9 @@ ATTR_TIPS = {
 }
 if os.environ.get('RIM_BLK') == '0':   # E-305 D30 回退旗標（scripts/rim_blk_live.py）：RIM 欄回到只看 help，提示卡文字一起回舊版
     ATTR_TIPS['help'] = ('護框', 'Rim Protection', '讓對手在<b>籃下 6 呎內</b>命中率降低多少', [], '')
+elif os.environ.get('RIM_RG') != '0':   # E-307 RG（scripts/rim_blk_live.py）：蓋帽項換成有效蓋帽扣干擾球；RIM_RG=0 回 D30 文字
+    ATTR_TIPS['help'] = ('護框', 'Rim Protection', '<b>70%</b> 籃下 6 呎被防命中率差 ＋ <b>30%</b> 每 36 分鐘有效蓋帽',
+                         [('籃下 6 呎被防命中率差 70%', '對手命中率比預期低多少'), ('有效蓋帽 30%', '蓋完由己隊搶回的蓋帽，扣掉干擾球；近四季窗口含本季')], '')
 # 浮動提示卡的規則（使用者 2026-11-01：原生 title 太醜，配色照抄 arammeta docs/assets/site.css 的 .aug-tip／.cf-stage-tip）：
 # - 表頭（能力值說明）和格子（該球員的細項）用同一張卡；有卡的元素不再帶 title，避免兩個提示疊在一起。
 # - 卡：底 #101114、1px rgba(255,255,255,.08) 邊、圓角 10px、雙層陰影；淡入 0.14s 加上移 3px；箭頭 6px 指向元素。

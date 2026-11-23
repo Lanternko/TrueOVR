@@ -284,7 +284,7 @@ def main():
             r['ft'] = repr(round(sn.display_scale(b['ft']), 1))
         if 'threeValue' in b:
             r['threeValue'] = repr(round(sn.display_scale(b['threeValue']), 1))
-    # E-305 D30（R-193）：RIM 欄顯示 0.7·z(help)＋0.3·z(每 36 蓋帽)，每天用當天資料重算；只改顯示，OVR／OFF／DEF 已用原 help 算完。RIM_BLK=0 退回
+    # E-305 D30（R-193）→ E-307 RG：RIM 欄顯示 0.7·z(help)＋0.3·z(每 36 有效蓋帽扣干擾；RIM_RG=0 回 blk36)，每天用當天資料重算；只改顯示，OVR／OFF／DEF 已用原 help 算完。RIM_BLK=0 退回
     rb = RB.compute({int(r['playerId']): float(r['help']) for r in rows if r['help'] != ''}, ipool, meta['window8']['gamesDone'], meta['dataCutoff'], SRC26)
     print(f'RIM 加蓋帽：{RB.apply(rows, rb, lambda r: int(r["playerId"]))} 人', file=sys.stderr)
     for r in rows:
