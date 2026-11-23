@@ -1,0 +1,96 @@
+{
+ "lambda": 300.0,
+ "dataRoot": "D:/Projects/CODING/basketball-autochess",
+ "windows": {
+  "T-2022-23": {
+   "seasons": [
+    "2022-23"
+   ],
+   "dropTest": true,
+   "sides": 44405,
+   "players": 538,
+   "rimIntercept": 46.4122544723974,
+   "threeIntercept": 40.47239778971505,
+   "sdRimDet_fgaW>=2500": 1.4824660643418242
+  },
+  "T-2023-24": {
+   "seasons": [
+    "2022-23",
+    "2023-24"
+   ],
+   "dropTest": true,
+   "sides": 88493,
+   "players": 657,
+   "rimIntercept": 46.7400215762404,
+   "threeIntercept": 40.69240409865786,
+   "sdRimDet_fgaW>=2500": 1.62725136744074
+  },
+  "T-2024-25": {
+   "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+   ],
+   "dropTest": true,
+   "sides": 134154,
+   "players": 767,
+   "rimIntercept": 46.521564117654066,
+   "threeIntercept": 41.94804081018626,
+   "sdRimDet_fgaW>=2500": 1.645467891700954
+  },
+  "T-2025-26": {
+   "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+   ],
+   "dropTest": true,
+   "sides": 187515,
+   "players": 874,
+   "rimIntercept": 46.704990739765584,
+   "threeIntercept": 41.97787139222948,
+   "sdRimDet_fgaW>=2500": 1.7498186482633098
+  },
+  "sim": {
+   "seasons": [
+    "2025-26",
+    "2026-27"
+   ],
+   "dropTest": false,
+   "sides": 79139,
+   "players": 647,
+   "rimIntercept": 46.59578647080663,
+   "threeIntercept": 43.20513958098415,
+   "sdRimDet_fgaW>=2500": 1.821688558939028
+  },
+  "live": {
+   "seasons": [
+    "2023-24",
+    "2024-25",
+    "2025-26",
+    "2026-27"
+   ],
+   "dropTest": false,
+   "sides": 190998,
+   "players": 860,
+   "rimIntercept": 46.96740446616593,
+   "threeIntercept": 42.3997999684419,
+   "sdRimDet_fgaW>=2500": 1.7977817889486434
+  },
+  "card-2025-26": {
+   "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+   ],
+   "dropTest": false,
+   "sides": 234267,
+   "players": 877,
+   "rimIntercept": 46.75202708183989,
+   "threeIntercept": 41.918792437744294,
+   "sdRimDet_fgaW>=2500": 1.7645780938003348
+  }
+ }
+}
