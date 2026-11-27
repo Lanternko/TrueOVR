@@ -50,7 +50,7 @@ def main(ldir: Path, threads: int = 4) -> int:
             o = predict(m, T, C.dev, bs=8192)[:, :, 0].numpy() * 100
             o_.append(0.5 * (o[:N, 0] + o[N:, 1])); d_.append(0.5 * (o[:N, 1] + o[N:, 0]))
         own[x] = round(float(np.mean(o_)), 4); opp[x] = round(float(np.mean(d_)), 4)
-    out = {'dataCutoff': meta['dataCutoff'], 'version': meta.get('version'), 'model': 'E227-R2-stats (e229_live)', 'draws': N, 'seed': SEED,
+    out = {'dataCutoff': meta['dataCutoff'], 'version': meta.get('version'), 'model': f'{getattr(C, "weights_name", "E315-ENS-MD")} (e229_live)', 'draws': N, 'seed': SEED,
            'pool': pool, 'ownPts100': own, 'oppPts100': opp, 'seconds': round(time.time() - t0, 1)}
     (ldir / 't-swap.json').write_text(json.dumps(out, ensure_ascii=False), encoding='utf-8')
     print(f't-swap：{len(ev)} 人（名次人群 {len(pool)}），{out["seconds"]} 秒')

@@ -528,6 +528,21 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
     _, coef, _ = g['load_usage']()
     dl = {int(r['playerId']): r for r in csv.DictReader(open(DEF_L_LIVE, encoding='utf-8'))}
     bad = team_badness(sd26)
+    # 2026-11-27 新秀補齊缺欄（foulDisc／threeValue／fg3a26／fg3m26／fg3Pct26／ovrPer36，ROOKIE_FILL=0 回退舊行為）
+    rk_fill = os.environ.get('ROOKIE_FILL', '1') != '0'
+    pf_pool = ([-v['shr']['pf'] for v in PD_VET.values() if v.get('minW', 0) >= 500 and v.get('shr', {}).get('pf') is not None]
+               if (rk_fill and PD.ON and PD_VET) else [])
+    tv_s26 = g['_gamelog_sums'](g['DATA26'] / 'player-games.json') if rk_fill else {}
+    tv_info = loc.get('tv_info') or {}
+    tv_pool = []
+    if rk_fill and loc.get('tv_cols'):
+        tv_pool = [c['value'] for pid_, c in loc['tv_cols'].items() if pid_ in prior_pids and c.get('ok') and c.get('minAll', 0) >= g['THREE_POOL_MIN']]
+        if g.get('WIN10') and g.get('TV_P1M'):
+            tv_pool = [v for d_ in g['win8_load']()['tvpast'].values() for v in d_.values()] + tv_pool
+    def _rk_pct(x, arr):
+        return 100.0 * (sum(v < x for v in arr) + 0.5 * sum(v == x for v in arr)) / (len(arr) or 1)
+    def _rk_attr(p_):
+        return max(40.0, min(99.0, 40.0 + (p_ - 1.0) * 30.0 / 49.0 if p_ < 50.0 else 70.0 + (p_ - 50.0) * 29.0 / 49.0))
     rk_rows = []
     for rk in rookies:
         pid = rk['playerId']
@@ -541,14 +556,27 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
         tb = bad.get(max(b['rows'], key=lambda r: r['GAME_DATE'])['TEAM_ID']) if gp > 0 else None
         ch = chain_rookie(g, pw, anc, r_repl, dict(cur, pid=pid), p5, gp, dl, coef, tb['d'] if tb else 0.0)
         cur.update(pred=ch['pred'], g=ch['g'], ovr=ch['ovr'])
+        ovr36 = g['r1'](g['e064_map'](g['g_of'](ch['pred'] - r_repl, 36.0), anc)) if rk_fill else ''
         row = {k: '' for k in head}
         row.update({'ovr': g['r1'](cur['ovr']), 'name': rk['name'], 'pos': rk['pos'], 'MINprior': 0,
                     'predictedPer36': round(ch['pred'], 3), 'defenseBonus': round(ch['bonus'], 3), 'align': 0.0,
                     'pred0': round(cur['pred0'], 3), 'playerId': pid, 'N': gp, 'team': team.get(pid, rk['team']),
                     'MIN26': round(mins, 1), 'lastOVR': g['r1'](base['ovr']),
                     'dOVR': round(cur['ovr'] - base['ovr'], 2), 'MPG0': round(rk['mpg0'], 2),
-                    'MPGhat': round(cur['mpgHat'], 2), 'g': round(cur['g'], 3), 'ovrPer36': '',
+                    'MPGhat': round(cur['mpgHat'], 2), 'g': round(cur['g'], 3), 'ovrPer36': ovr36,
                     'predNew': round(ch['predNew'], 4)})
+        if rk_fill and gp > 0:
+            mn26, m26, a26 = tv_s26.get(pid, (mins, 0.0, 0.0))
+            if 'fg3a26' in row: row['fg3a26'] = int(a26)
+            if 'fg3m26' in row: row['fg3m26'] = int(m26)
+            if 'fg3Pct26' in row and a26 > 0: row['fg3Pct26'] = round(m26 / a26, 4)
+            if 'threeValue' in row and mn26 > 0 and tv_pool and 'mu' in tv_info:
+                mu_, rep_, k_ = tv_info['mu'], tv_info['rep'], tv_info.get('k', g['THREE_K'])
+                val_ = (a26 / mn26 * 36.0) * ((k_ * mu_ + m26) / (k_ + a26) - rep_)
+                p_ = _rk_pct(val_, tv_pool)
+                an_ = tv_info.get('topTail')
+                tv_ = g['m26_top_tail'](val_ - an_['r99'], an_['S']) if (an_ is not None and p_ >= 99.0) else _rk_attr(p_)
+                row['threeValue'] = g['r1'](tv_)
         if rec is not None and rec['GP'] > 0:
             row['MPGwin'] = round(rec['MIN'] / rec['GP'], 2)
             if 'stamina' in cur['w']:
@@ -557,6 +585,8 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
             row[a] = g['r1'](cur['x'][a] if a != 'heightInches' else rk['heightInches'])
         if PD.ON and gp > 0 and 'presDisplay' in row and PD_ROOK.get(pid, {}).get('presDisplay') is not None:
             row['presDisplay'] = round(PD_ROOK[pid]['presDisplay'], 1)
+        if rk_fill and PD.ON and gp > 0 and 'foulDisc' in row and pf_pool and PD_ROOK.get(pid, {}).get('shr', {}).get('pf') is not None:
+            row['foulDisc'] = round(_rk_attr(_rk_pct(-PD_ROOK[pid]['shr']['pf'], pf_pool)), 1)
         row['_ovr'] = cur['ovr']
         row['_cur'], row['_base'], row['_pick'], row['_chain'] = cur, base, rk['pick'], dict(ch, d=tb['d'] if tb else None)
         row['_pos5'] = {'pos5': p5, 'starts': n_st} if ROOKIE_POS5 else None

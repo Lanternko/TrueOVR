@@ -15,12 +15,28 @@ POS = torch.tensor(list(range(5)) * 2).unsqueeze(0); SIDE = torch.tensor([0] * 5
 
 class Ctx:
     def __init__(self, weights, prior, dev='cpu'):
-        W = {'T2425': os.path.join(HERE, 'results', 'weights', 'T2425-{}.pt'),
-             'E227-R2-stats': os.path.join(E227, 'results', 'weights', 'R2-stats-{}.pt'),
-             'E306-R3': os.path.join(ROOT, 'reports', 'E306-team-model-r3', 'results', 'weights', 'full-{}.pt')}[weights]
-        self.dev = dev; self.nets = []
-        for sd in range(5):
-            n = LineupNet(F); n.load_state_dict(torch.load(W.format(sd), map_location='cpu')); n.eval(); self.nets.append(n.to(dev))
+        self.dev = dev; self.nets = []; self.weights_name = weights
+        if weights == 'E315-ENS-MD':
+            # E-315 選項 A：M2_full（10 模型 LineupNet）＋ D_add_full（10 模型 AdditiveOnlyNet）50/50 異質集成
+            import glob as _glob
+            e315_dir = os.path.join(ROOT, 'reports', 'E315-multiseason-rapm-ens')
+            if e315_dir not in sys.path:
+                sys.path.insert(0, e315_dir)
+            from e315_lib import AdditiveOnlyNet, LineupNetA1
+            wdir = os.path.join(e315_dir, 'weights_full')
+            m2_files = sorted(_glob.glob(os.path.join(wdir, 'M2_full-f*-s*.pt')))
+            da_files = sorted(_glob.glob(os.path.join(wdir, 'D_add_full-f*-s*.pt')))
+            assert len(m2_files) == 10 and len(da_files) == 10, f'E315-ENS-MD weights missing in {wdir}'
+            for wf in m2_files:
+                n = LineupNetA1(F); n.load_state_dict(torch.load(wf, map_location='cpu')); n.eval(); self.nets.append(n.to(dev))
+            for wf in da_files:
+                n = AdditiveOnlyNet(F); n.load_state_dict(torch.load(wf, map_location='cpu')); n.eval(); self.nets.append(n.to(dev))
+        else:
+            W = {'T2425': os.path.join(HERE, 'results', 'weights', 'T2425-{}.pt'),
+                 'E227-R2-stats': os.path.join(E227, 'results', 'weights', 'R2-stats-{}.pt'),
+                 'E306-R3': os.path.join(ROOT, 'reports', 'E306-team-model-r3', 'results', 'weights', 'full-{}.pt')}[weights]
+            for sd in range(5):
+                n = LineupNet(F); n.load_state_dict(torch.load(W.format(sd), map_location='cpu')); n.eval(); self.nets.append(n.to(dev))
         self.tab = load_player_table(prior); self.B = base_feats(prior, KIND)
         self.med_h = float(np.median([d['heightInches'] for d in self.tab.values() if d.get('heightInches') is not None]))
         poss = 0.0; gids = set()      # 聯盟每隊每場回合數：prior 季 split=train 的 stint（賽前資訊）

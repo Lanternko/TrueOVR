@@ -130,8 +130,9 @@ def nn(name):
     return ''.join(c for c in unicodedata.normalize('NFKD', name or '') if not unicodedata.combining(c)).lower().replace('.', '').replace("'", '').replace('-', ' ').strip()
 
 
-def build(today_et, ldir=None, names=None, blend=None, snap_dir=None):
-    """回傳 (B, tab, info)：B[pid]=(vals[F], mask[F])，tab[pid]={heightInches,pass,creation}（供位置規則）。"""
+def build(today_et, ldir=None, names=None, blend=None, snap_dir=None, multi_prior=False):
+    """回傳 (B, tab, info)：B[pid]=(vals[F], mask[F])，tab[pid]={heightInches,pass,creation}（供位置規則）。
+    multi_prior=True（E-314／E-315）：26 欄統計的賽前底表用 2021-22～2025-26 嚴格因果多季滑動窗口（decay=0.55, k=300），再照 w=min/(min+500) 混本季。"""
     ldir = ldir or live_dir()
     live = {r['playerId']: r for r in read_csv(os.path.join(ldir, 'ranking.csv'))}
     card = {}                                         # live 沒有的人：M0 同一份底卡（BASE_CARDS：24-25 卡、23-24 卡，由近到遠，用 playerId）
@@ -188,30 +189,57 @@ def build(today_et, ldir=None, names=None, blend=None, snap_dir=None):
         v = [mixed[p][c] for p in prior if c in mixed[p]]
         if len(v) >= 10 and np.std(v) > 1e-9:
             smu[c], ssd[c] = float(np.mean(v)), float(np.std(v))
-    pids = set(A) | set(mixed)
+
+    # E-314／E-315 多季滑動窗口底表（2021-22～2025-26，decay=0.55, k=300），再與本季 2026-27 混合 z 值做 w=min/(min+500) 融合
+    multi_z = None
+    if multi_prior:
+        e315_dir = os.path.join(ROOT, 'reports', 'E315-multiseason-rapm-ens')
+        if e315_dir not in sys.path:
+            sys.path.insert(0, e315_dir)
+        import e227_common, e227_model
+        from e315_lib import build_features
+        multi_z = build_features('2025-26', e227_model, e227_common, decay=0.55, k_shrink=300.0, use_rapm=False)
+
+    pids = set(A) | set(mixed) | (set(multi_z) if multi_z else set())
     B = {}; tab = {}
     for p in pids:
         vals = np.zeros(F, np.float32); mask = np.zeros(F, np.float32)
         for j, a in enumerate(ATTRS):
             if p in A and a in A[p] and a in mu:
                 vals[j] = (A[p][a] - mu[a]) / sd[a]; mask[j] = 1.0
+        mc = cur[p]['MIN'] if p in cur else 0.0
+        w_cur = mc / (mc + K_PRIOR_MIN) if mc > 0 else 0.0
+        mz = multi_z.get(p) if multi_z else None
         for j, c in enumerate(STATS):
-            if p in mixed and c in mixed[p] and c in smu:
-                vals[len(ATTRS) + j] = (mixed[p][c] - smu[c]) / ssd[c]; mask[len(ATTRS) + j] = 1.0
+            idx_c = len(ATTRS) + j
+            has_mix = p in mixed and c in mixed[p] and c in smu
+            if multi_prior and mz is not None and mz[1][idx_c] > 0.5:
+                base_z = float(mz[0][idx_c])
+                if has_mix and mc > 0:
+                    cur_z = (mixed[p][c] - smu[c]) / ssd[c]
+                    vals[idx_c] = w_cur * cur_z + (1.0 - w_cur) * base_z
+                else:
+                    vals[idx_c] = base_z
+                mask[idx_c] = 1.0
+            elif has_mix:
+                vals[idx_c] = (mixed[p][c] - smu[c]) / ssd[c]; mask[idx_c] = 1.0
         B[p] = (vals, mask)
         if p in A:
             tab[p] = {'heightInches': A[p].get('heightInches'), 'pass': A[p].get('pass'), 'creation': A[p].get('creation')}
     info = dict(liveDir=os.path.basename(ldir), nLive=len(live), nCardOnly=sum(1 for s in abil_src.values() if s == 'card'),
                 nStatsPrior=len(prior), nCurPlayers=len(cur), nBlendedBox=sum(1 for p in cur if p in mixed), K=K_PRIOR_MIN, todayEt=today_et,
-                blendTrack=list(blend), nBlendedTrack=n_track)
+                blendTrack=list(blend), nBlendedTrack=n_track, multiPrior=bool(multi_prior))
     return B, tab, info
 
 
 def make_ctx(today_et, ldir=None, names=None, blend=None, snap_dir=None):
-    """E-228 的 Ctx（E-227 R2-stats 五個 seed、prior 2025-26 的每場回合數），特徵表換成 live 混合表。"""
-    C = Ctx(os.environ.get('T_WEIGHTS', 'E306-R3'), '2025-26')      # E-306 R3：五季＋2026-27 開季至 11-20；回退 T_WEIGHTS=E227-R2-stats
-    B, tab, info = build(today_et, ldir, names, blend, snap_dir)
+    """預設 E315-ENS-MD（M2_full＋D_add_full 50/50＋多季滑動窗口）；回退 T_WEIGHTS=E306-R3 或 E227-R2-stats。"""
+    wname = os.environ.get('T_WEIGHTS', 'E315-ENS-MD')
+    C = Ctx(wname, '2025-26')
+    multi_prior = (wname == 'E315-ENS-MD') and (os.environ.get('MULTI_PRIOR', '1') != '0')
+    B, tab, info = build(today_et, ldir, names, blend, snap_dir, multi_prior=multi_prior)
     C.B = B; C.tab = tab
     hs = [d['heightInches'] for d in tab.values() if d.get('heightInches') is not None]
     C.med_h = float(np.median(hs))
+    info['weights'] = wname
     return C, info
