@@ -748,3 +748,9 @@
   2. 修補 `run_c4_live_rookie.py` 新秀建列缺欄 bug：補齊 `foulDisc`、`threeValue`、`fg3a26`、`fg3m26`、`fg3Pct26`、`ovrPer36`（回退旗標 `ROOKIE_FILL=0`）。
 - 理由：E-314／E-315 2,460 場跨季賽前盲測 `ENS_MD` 創全系列最低 Brier 0.21201（vs B0 −0.00320）、最低勝場 MAE 6.302，且個人下季 EPM `B50-NET` 0.7745→0.7975；42 位新秀在 `ranking.csv` 與網站原有多欄留空。
 - 影響：`reports/E228-transformer-team-rating/t_lib.py`、`reports/E229-transformer-vs-m0-forward/e229_live.py`、`scripts/actual_blend.py`、`scripts/t_swap_live.py`、`reports/ovr-inseason-2026-27/live/run_c4_live_rookie.py`。
+
+### R-201 定案雙軌固定考場與研究契約（2026-11-28）
+- 狀態：有效
+- 裁決：建立 `memory/research_contract.md` 與 `memory/closed_directions.md`，鎖定雙軌固定考場與自動迴圈契約：(1) 球隊 T1 改採**四季輪換盲測（Leave-One-Season-Out：2022-23～2025-26，遮住 1 季用其餘 3 季訓練）**；(2) 個人 P1 改採**滾動往前（Rolling Forward：遮住未來、資料逐日變多）**，同時評估預測「下一場個人發揮」與「下一場比賽勝負」，並設相鄰場次波動紅線（防四季更新太慢、亦防單場劇烈跳動）；(3) 導入 Fast Gate 自動淘汰與強制換軸機制，僅改線上／主公式時請人類拍板。
+- 理由：使用者指示先訂定明確考場與目標，才能讓雙 5090 進入自我回饋迴圈持續進步。
+- 影響：`memory/research_contract.md`、`memory/closed_directions.md`、後續所有 E-316+ 實驗。

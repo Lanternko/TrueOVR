@@ -204,7 +204,69 @@ def rotation(prior: list, fallback: list, excluded=frozenset(), logs=None, roste
     return norm_table(sorted(items, key=lambda t: (-t[1], -ovr.get(t[0], 0.0), t[0])))
 
 
-def margin_win_prob(d: float, home: bool) -> float:
+CALIB_PATH = ROOT / 'reports/E316-t1-loso-gbdt/calib_c1.json'
+_CALIB_CACHE = None
+
+
+def _load_calib():
+    global _CALIB_CACHE
+    if _CALIB_CACHE is None:
+        if os.environ.get('SCHED_CALIB', '1') != '0' and CALIB_PATH.exists():
+            _CALIB_CACHE = json.loads(CALIB_PATH.read_text(encoding='utf-8'))
+        else:
+            _CALIB_CACHE = False
+    return _CALIB_CACHE or None
+
+
+def build_sched_ctx(played_games: list, remaining: list) -> dict:
+    """從已完賽場次與剩餘賽程計算每場賽程情境 {(homeId, awayId, date): (rest_diff, b2b_diff, g3in4_diff, road_diff)}。"""
+    events = []
+    for g in played_games:
+        d = g.get('date')
+        if d and g.get('home') and g.get('away'):
+            events.append((str(d)[:10], str(g['home']), str(g['away'])))
+    for g in remaining:
+        if len(g) >= 3 and g[2]:
+            events.append((str(g[2])[:10], str(g[0]), str(g[1])))
+    events.sort(key=lambda x: (x[0], x[1], x[2]))
+    hist = {}
+    out = {}
+    for dstr, h, a in events:
+        try:
+            d = dt.date.fromisoformat(dstr)
+        except ValueError:
+            continue
+        st = {}
+        for tid in (h, a):
+            hs = hist.get(tid, [])
+            if not hs:
+                st[tid] = (5, 0, 0, 0)
+            else:
+                gap = (d - hs[-1][0]).days
+                rest = min(5, max(1, gap))
+                b2b = 1 if gap == 1 else 0
+                in4 = 1 if sum(1 for x in hs[-4:] if 1 <= (d - x[0]).days <= 3) >= 2 else 0
+                road = 0
+                for x in reversed(hs):
+                    if x[1]: road += 1
+                    else: break
+                st[tid] = (rest, b2b, in4, road)
+        rh, bh, g3h, rdh = st[h]
+        ra, ba, g3a, rda = st[a]
+        out[(h, a, dstr)] = (rh - ra, ba - bh, g3a - g3h, rda - rdh)
+        hist.setdefault(h, []).append((d, False))
+        hist.setdefault(a, []).append((d, True))
+    return out
+
+
+def margin_win_prob(d: float, home: bool, ctx=None) -> float:
+    cal = _load_calib() if ctx is not None else None
+    if cal is not None:
+        c = cal['coef']
+        d_h = d if home else -d
+        z = cal['intercept'] + c[0] * d_h + c[1] * ctx[0] + c[2] * ctx[1] + c[3] * ctx[2] + c[4] * ctx[3]
+        p_h = 1.0 / (1.0 + math.exp(-max(-20.0, min(20.0, z))))
+        return p_h if home else (1.0 - p_h)
     return Phi((d + (H if home else -H)) / SIGMA)
 
 
@@ -214,21 +276,23 @@ def lineup_out(outs: list, gdate: str, today: str) -> frozenset:
     return frozenset(p for p, rd in outs if rd is None or gdate < rd or gdate <= today)
 
 
-def predict_wins(wins: int, played: int, remaining: list, margin, tid: str, tids=None) -> tuple:
+def predict_wins(wins: int, played: int, remaining: list, margin, tid: str, tids=None, sched_ctx=None) -> tuple:
     """remaining＝[(homeId, awayId[, 日期]), …] 本隊的剩餘賽程；回傳 (預測最終勝場, 逐場加總的場數, 以平均勝率補的場數)。
     margin＝{tid: 對梯度對手每場分差}（陣容全程不變），或 f(tid, 日期|None)→分差（逐場陣容；日期 None＝最後狀態，用在補的場次）；後者要給 tids。
     賽程沒涵蓋到 82 場的部分（賽程抓不到、或盃賽淘汰賽未定）用對其他 29 隊的平均勝率補。"""
     mg = margin if callable(margin) else (lambda t, d: margin[t])
     tids = list(margin) if tids is None else tids
+    zero_ctx = (0, 0, 0, 0) if sched_ctx is not None else None
     exp = 0.0
     for g in remaining:
-        h, a = g[0], g[1]; d = g[2] if len(g) > 2 else None
-        if str(h) == tid:
-            exp += margin_win_prob(mg(tid, d) - mg(str(a), d), True)
+        h, a = str(g[0]), str(g[1]); d = g[2] if len(g) > 2 else None
+        ctx = sched_ctx.get((h, a, str(d)[:10]), zero_ctx) if (sched_ctx is not None and d) else zero_ctx
+        if h == tid:
+            exp += margin_win_prob(mg(tid, d) - mg(a, d), True, ctx)
         else:
-            exp += 1 - margin_win_prob(mg(str(h), d) - mg(tid, d), True)
+            exp += 1 - margin_win_prob(mg(h, d) - mg(tid, d), True, ctx)
     others = [o for o in tids if o != tid]
-    pool = sum(0.5 * (margin_win_prob(mg(tid, None) - mg(o, None), True) + margin_win_prob(mg(tid, None) - mg(o, None), False)) for o in others) / len(others)
+    pool = sum(0.5 * (margin_win_prob(mg(tid, None) - mg(o, None), True, zero_ctx) + margin_win_prob(mg(tid, None) - mg(o, None), False, zero_ctx)) for o in others) / len(others)
     rest = max(0, GAMES - played - len(remaining))
     return wins + exp + rest * pool, len(remaining), rest
 
@@ -768,6 +832,7 @@ def compute(live_dir: Path, seeds: int = SEEDS, workers: int = 8, fetch: bool = 
         """今日陣容版逐場陣容：t 隊在日期 d（None＝全部回歸後）的對梯度對手分差。"""
         return mrg[(t, final_ver[t] if d is None else state_ver[t][lineup_out(outs_of[t], d, today)])] + resid.get(t, zero)['netShr']
     n_noret = 0
+    sched_ctx = build_sched_ctx(lg, remaining) if _load_calib() else None
     out_teams = {}
     for tid in tids:
         W, L = wl[tid]
@@ -784,14 +849,14 @@ def compute(live_dir: Path, seeds: int = SEEDS, workers: int = 8, fetch: bool = 
         for v in ('c', 'today'):
             s_ = st[v][tid]
             if v == 'c':
-                pw, ng, nr = predict_wins(W, W + L, rem_by[tid], {t: st['c'][t]['margin'] for t in tids}, tid)
+                pw, ng, nr = predict_wins(W, W + L, rem_by[tid], {t: st['c'][t]['margin'] for t in tids}, tid, sched_ctx=sched_ctx)
             else:
-                pw, ng, nr = predict_wins(W, W + L, rem_by[tid], margin_dated, tid, tids)
+                pw, ng, nr = predict_wins(W, W + L, rem_by[tid], margin_dated, tid, tids, sched_ctx=sched_ctx)
             rec[v] = {'ortg': s_['ortg'] - mo, 'drtg': s_['drtg'] - md, 'net': (s_['ortg'] - mo) - (s_['drtg'] - md), 'margin': s_['margin'],
                       'predWins': pw, 'schedGames': ng, 'poolGames': nr,
                       'rotation': [{'pid': p, 'name': pname.get(p, str(p)), 'min': m, 'ovr': ovr.get(p), **({'ovrSrc': ovr_src[p]} if p in ovr_src else {})} for p, m in rosters[tid][v]]}
         # 舊算法（傷兵整季缺陣）的預測勝場，只供對照
-        rec['today']['predWinsAllSeason'] = predict_wins(W, W + L, rem_by[tid], {t: st['today'][t]['margin'] for t in tids}, tid)[0]
+        rec['today']['predWinsAllSeason'] = predict_wins(W, W + L, rem_by[tid], {t: st['today'][t]['margin'] for t in tids}, tid, sched_ctx=sched_ctx)[0]
         rec['today']['lineupStates'] = len({state_ver[tid][lineup_out(outs_of[tid], g[2], today)] for g in rem_by[tid]})
         c_min = dict(rosters[tid]['c'])
         rec['restored'] = [{'pid': p, 'name': pname.get(p, str(p)), 'min': c_min[p]} for p in sorted(restored[tid]) if p in c_min]
