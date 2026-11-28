@@ -14,6 +14,8 @@ N_DRAWS, SEED = 3000, 20261108
 
 
 def main(ldir: Path, threads: int = 4) -> int:
+    import os
+    os.environ.setdefault('E333_SEEDS', '1')   # 5-fold × 4 家族 = 20 模型，CPU ~4 分鐘內完跑不逾時
     import numpy as np
     import torch
     import e229_live

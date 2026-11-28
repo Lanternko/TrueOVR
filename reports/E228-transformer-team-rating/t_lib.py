@@ -28,7 +28,7 @@ class Ctx:
             from e321_scaleup_loso import DeepSetPairwiseNet, LinearLineupNet
             self.F = F + 3
             wdir = os.path.join(ROOT, 'reports', 'E333-team-prod-4fam', 'weights_prod')
-            max_seeds = int(os.environ.get('E333_SEEDS', '4'))
+            max_seeds = int(os.environ.get('E333_SEEDS', '2'))
             builders = [
                 ('SetPool_age', lambda: DeepSetPairwiseNet(self.F)),
                 ('Ridge_age', lambda: LinearLineupNet(self.F)),
