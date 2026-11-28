@@ -20,9 +20,10 @@ import torch
 
 ROOT = Path(__file__).resolve().parents[3]
 E334_DIR = ROOT / 'reports/E334-player-super-ens'
+E335_WEIGHTS = ROOT / 'reports/E335-player-structural-fix/weights_prod'
 CACHE_NPZ = E334_DIR / 'e334_live_cache.npz'
 FAM_STATS_JSON = E334_DIR / 'e334_fam_stats.json'
-WEIGHTS_DIR = E334_DIR / 'weights_prod'
+WEIGHTS_DIR = E335_WEIGHTS if E335_WEIGHTS.is_dir() else (E334_DIR / 'weights_prod')
 DOB_JSON = ROOT / 'data/defense-seventh/2026-27/birthdates.json'
 
 ROOK_PRIOR = np.array([9.5, 13.0, 3.0, 1.3, 4.2, 1.0, 0.6, 2.0, 3.0, 1.2, 3.5, -1.5, -1.0, 0.54], dtype=np.float32)
@@ -183,11 +184,12 @@ def apply(merged: list[dict], r1, data26_dir: Path, cutoff: str | None = None) -
 
     ref_ord = (dt.date.fromisoformat(cutoff).toordinal() + 1) if cutoff else (max_d_ord + 1)
 
-    active_rows = [r for r in merged if int(r.get('N') or 0) > 0]
+    pid_to_i = res['pid_to_i']
+    # Fix 1 (E-335): 包含 N>0 現役球員＋有歷史底盤的 N=0 傷缺/復出老將（避免如 KPJ 卡在虛高舊卡）
+    active_rows = [r for r in merged if int(r.get('N') or 0) > 0 or int(r['playerId']) in pid_to_i]
     if not active_rows:
         return None
 
-    pid_to_i = res['pid_to_i']
     dob = res['dob']
     N_act = len(active_rows)
     stat_mat = np.zeros((N_act, 47), dtype=np.float32)
@@ -233,12 +235,13 @@ def apply(merged: list[dict], r1, data26_dir: Path, cutoff: str | None = None) -
             cur_v = prior_vec.copy(); cur_mpg = prior_mpg
 
         age = float(2026 - dob[pid]) if pid in dob else 25.0
-        a_std = (age - 25.5) / 4.0
+        a_raw = (age - 25.5) / 4.0
+        a_soft = min(a_raw, 2.125) + 0.35 * max(0.0, a_raw - 2.125)
         stat_37 = np.concatenate([
             prior_vec, cur_v,
             [prior_mpg / 36.0, cur_mpg / 36.0, has_p, pw / 10.0,
              math.log1p(c_min) / 8.0, float(len(pseq)) / 82.0,
-             a_std, a_std * a_std, 0.0],
+             a_soft, min(a_soft * a_soft, 4.5), 0.0],
         ]).astype(np.float32)
         stat_mat[idx_r, :37] = stat_37
         stat_mat[idx_r, 37:] = epm_pf
@@ -265,10 +268,11 @@ def apply(merged: list[dict], r1, data26_dir: Path, cutoff: str | None = None) -
 
     z_g = np.mean(fam_g, axis=0)
     z_e = np.mean(fam_e, axis=0)
-    # E-332/E-334 verified wE70 balanced impact + performance score
-    z_e334 = 0.30 * z_g + 0.70 * z_e
+    # Fix 2 (E-335): wE60 (0.40*GmSc + 0.60*EPM) 兼顧進攻產量與真實影響力（盲測 GameBrier 0.20055 / NextRho 0.5219）
+    w_epm = float(os.environ.get('E334_WE', '0.60'))
+    z_e334 = (1.0 - w_epm) * z_g + w_epm * z_e
 
-    # Scale-match z_e334 to current active pool OVR distribution so 0-99 scale & top stars stay natural
+    # Scale-match z_e334 to current active pool OVR distribution
     cur_ovrs = np.array([float(r['_ovr']) for r in active_rows], dtype=np.float64)
     ovr_mu = float(cur_ovrs.mean())
     ovr_sd = float(cur_ovrs.std() + 1e-6)
@@ -280,8 +284,16 @@ def apply(merged: list[dict], r1, data26_dir: Path, cutoff: str | None = None) -
     details = {}
     for idx_r, r in enumerate(active_rows):
         old_o = float(r['_ovr'])
+        pid = int(r['playerId'])
+        gp_r = int(r.get('N') or 0)
         mn26 = float(r.get('MIN26') or 0.0)
-        w = w_max * min(1.0, (mn26 + 150.0) / 450.0)
+        has_hist = pid in pid_to_i
+        if has_hist:
+            # Fix 3 (E-335): 有歷史底盤老將用穩定權重（本季有打=0.45，N=0 復出老將=0.35），不再退回偏差舊卡
+            w = w_max if gp_r > 0 else (w_max * 0.78)
+        else:
+            # 純新秀依本季出場分鐘平緩升權
+            w = w_max * min(1.0, (mn26 + 100.0) / 450.0)
         new_o = max(40.0, (1.0 - w) * old_o + w * float(e334_ovr[idx_r]))
         r['_ovr'] = new_o
         r['ovr'] = r1(new_o)

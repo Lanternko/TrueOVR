@@ -16,14 +16,21 @@ import build_e324_seq40 as B324
 
 def main():
     out_dir = ROOT / 'reports/E334-player-super-ens'
-    wdir = out_dir / 'weights_prod'
+    e335_wdir = ROOT / 'reports/E335-player-structural-fix/weights_prod'
+    wdir = e335_wdir if e335_wdir.is_dir() else (out_dir / 'weights_prod')
     epm_dir = ROOT / 'data/external-impact/epm_self'
 
-    # 1. Exact train mu/sd from p1_seq40_rich.npz (s_idx 1..10, matching train_e334_prod.py!)
+    # 1. Exact train mu/sd from p1_seq40_rich.npz (s_idx 1..10, matching E-335 softened age + decay=0.35, k=1000!)
     d = np.load(ROOT / 'reports/E324-player-seq40-rich/data/p1_seq40_rich.npz')
     stat_raw = d['stat'].astype(np.float32); seq = d['seq'].astype(np.float32); meta = d['meta']
+    a_std = stat_raw[:, -3]
+    a_soft = np.minimum(a_std, 2.125) + 0.35 * np.maximum(0.0, a_std - 2.125)
+    stat_raw[:, -3] = a_soft
+    stat_raw[:, -2] = np.minimum(a_soft * a_soft, 4.5)
     by_s = E334.load_epm_all(str(epm_dir))
-    _, _, _, _, _, _, pf = E334.build_multiepm_features(by_s, meta, stat_raw)
+    sys.path.insert(0, str(ROOT / 'reports/E335-player-structural-fix'))
+    import e335_train as E335
+    _, _, _, _, _, _, pf = E335.build_multiepm_features(by_s, meta, stat_raw, decay=0.35)
     stat_full = np.concatenate([stat_raw, pf], axis=1)  # 47 dims
     tr_mask = (meta[:, 0] >= 1) & (meta[:, 0] <= 10)
     va_mask = (meta[:, 0] == 11)
@@ -153,19 +160,20 @@ def main():
                 wg = gp_t * (0.55 ** (s_idx_26 - 1 - si)); mn_n += wg * (m_t / max(1, gp_t)); mn_d += wg
             p_prior_vec[idx_p] = (acc + 300.0 * DEF_PRIOR) / (w_tot + 300.0)
             p_prior_meta[idx_p] = [mn_n / max(1e-6, mn_d), 1.0, math.log1p(w_tot)]
-        # Multi-season decayed EPM prior for s_idx=12 (2025-26 is dt=1!)
-        age_z = (float(2026 - dob[pid]) - 25.5) / 4.0 if pid in dob else -0.125
+        # Multi-season decayed EPM prior for s_idx=12 (E-335: decay=0.35, k=1000, softened age!)
+        a_raw = (float(2026 - dob[pid]) - 25.5) / 4.0 if pid in dob else -0.125
+        age_z = min(a_raw, 2.125) + 0.35 * max(0.0, a_raw - 2.125)
         w_sum = 0.0; ao = 0.0; ad = 0.0; an = 0.0; mx_n = -10.0; prev_vals = []
         for dt_ in range(1, 5):
             rec = by_s.get(s_idx_26 - dt_, {}).get(pid)
             if rec is not None:
-                w = rec[3] * (0.60 ** (dt_ - 1))
+                w = rec[3] * (0.35 ** (dt_ - 1))
                 ao += w * rec[0]; ad += w * rec[1]; an += w * rec[2]; w_sum += w
                 if rec[2] > mx_n: mx_n = rec[2]
                 prev_vals.append((dt_, rec[2]))
         if w_sum > 0:
-            mo = (ao - 0.5 * 1500.0) / (w_sum + 1500.0); md = (ad - 0.5 * 1500.0) / (w_sum + 1500.0)
-            mn_ = (an - 1.0 * 1500.0) / (w_sum + 1500.0)
+            mo = (ao - 0.5 * 1000.0) / (w_sum + 1000.0); md = (ad - 0.5 * 1000.0) / (w_sum + 1000.0)
+            mn_ = (an - 1.0 * 1000.0) / (w_sum + 1000.0)
             last1 = prev_vals[0][1] if prev_vals[0][0] == 1 else mn_
             has_l1 = 1.0 if prev_vals[0][0] == 1 else 0.0
             trend = (prev_vals[0][1] - prev_vals[1][1]) if len(prev_vals) >= 2 else 0.0
