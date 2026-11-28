@@ -608,6 +608,12 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
         import game_anchor as GA
         form, form_meta = GA.apply(merged, g['r1'])
         head = head + ['formBonus']
+    # E-334（2026-11-28 上線）：13 季 L=40 多任務衰減滾動 OVR 融合（E334_OVR=0 回退舊行為）
+    if os.environ.get('E334_OVR', '1') != '0':
+        import e334_ovr_live as E334L
+        _cut = out_dir.name if len(out_dir.name) == 10 and out_dir.name[4] == '-' else None
+        if E334L.apply(merged, g['r1'], g['DATA26'], cutoff=_cut) is not None:
+            head = head + ['e334Bonus']
     merged.sort(key=lambda r: -r['_ovr'])
     for i, r in enumerate(merged, 1):
         r['rank'] = i

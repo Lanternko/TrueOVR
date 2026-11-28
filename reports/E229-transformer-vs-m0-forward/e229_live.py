@@ -232,12 +232,39 @@ def build(today_et, ldir=None, names=None, blend=None, snap_dir=None, multi_prio
     return B, tab, info
 
 
+def _load_dob():
+    dob = {}
+    p = os.path.join(ROOT, 'data', 'defense-seventh', '2026-27', 'birthdates.json')
+    if os.path.exists(p):
+        bd = json.load(open(p, encoding='utf-8'))
+        for pid, s in (bd.get('birthdates', bd) if isinstance(bd, dict) else {}).items():
+            if isinstance(s, str) and len(s) >= 4:
+                try: dob[str(pid)] = int(s[:4])
+                except ValueError: pass
+    return dob
+
+
 def make_ctx(today_et, ldir=None, names=None, blend=None, snap_dir=None):
-    """預設 E315-ENS-MD（M2_full＋D_add_full 50/50＋多季滑動窗口）；回退 T_WEIGHTS=E306-R3 或 E227-R2-stats。"""
-    wname = os.environ.get('T_WEIGHTS', 'E315-ENS-MD')
+    """預設 E333-4FAM（E-321 四異質家族 80 模型＋多季滑動窗口＋年齡曲線 44 欄）；回退 T_WEIGHTS=E315-ENS-MD 或 E306-R3。"""
+    wname = os.environ.get('T_WEIGHTS', 'E333-4FAM')
     C = Ctx(wname, '2025-26')
-    multi_prior = (wname == 'E315-ENS-MD') and (os.environ.get('MULTI_PRIOR', '1') != '0')
+    multi_prior = (wname in ('E333-4FAM', 'E315-ENS-MD')) and (os.environ.get('MULTI_PRIOR', '1') != '0')
     B, tab, info = build(today_et, ldir, names, blend, snap_dir, multi_prior=multi_prior)
+    if wname == 'E333-4FAM':
+        dob = _load_dob()
+        B_age = {}
+        for p, (v, m) in B.items():
+            nv = np.zeros(len(v) + 3, np.float32); nm = np.zeros(len(m) + 3, np.float32)
+            nv[:len(v)] = v; nm[:len(m)] = m
+            if p in dob:
+                age = float(2026 - dob[p])
+                nv[-3] = (age - 26.0) / 4.0
+                nv[-2] = max(0.0, 23.0 - age) / 4.0
+                nv[-1] = max(0.0, age - 31.0) / 4.0
+                nm[-3:] = 1.0
+            B_age[p] = (nv, nm)
+        B = B_age
+        info['ageCols'] = True
     C.B = B; C.tab = tab
     hs = [d['heightInches'] for d in tab.values() if d.get('heightInches') is not None]
     C.med_h = float(np.median(hs))

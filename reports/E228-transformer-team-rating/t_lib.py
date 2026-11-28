@@ -15,8 +15,33 @@ POS = torch.tensor(list(range(5)) * 2).unsqueeze(0); SIDE = torch.tensor([0] * 5
 
 class Ctx:
     def __init__(self, weights, prior, dev='cpu'):
-        self.dev = dev; self.nets = []; self.weights_name = weights
-        if weights == 'E315-ENS-MD':
+        self.dev = dev; self.nets = []; self.weights_name = weights; self.F = F
+        if weights == 'E333-4FAM':
+            # E-333（E-321 四異質家族全 5 季正式權重）：SetPool_age + Ridge_age + D_add_age + M2_age（44 欄含年齡曲線）
+            import glob as _glob
+            e315_dir = os.path.join(ROOT, 'reports', 'E315-multiseason-rapm-ens')
+            e321_dir = os.path.join(ROOT, 'reports', 'E321-team-scaleup-4fam')
+            for d_ in (e315_dir, e321_dir):
+                if d_ not in sys.path:
+                    sys.path.insert(0, d_)
+            from e315_lib import AdditiveOnlyNet, LineupNetA1
+            from e321_scaleup_loso import DeepSetPairwiseNet, LinearLineupNet
+            self.F = F + 3
+            wdir = os.path.join(ROOT, 'reports', 'E333-team-prod-4fam', 'weights_prod')
+            max_seeds = int(os.environ.get('E333_SEEDS', '4'))
+            builders = [
+                ('SetPool_age', lambda: DeepSetPairwiseNet(self.F)),
+                ('Ridge_age', lambda: LinearLineupNet(self.F)),
+                ('D_add_age', lambda: AdditiveOnlyNet(self.F)),
+                ('M2_age', lambda: LineupNetA1(self.F)),
+            ]
+            for fam, ctor in builders:
+                files = [f for f in sorted(_glob.glob(os.path.join(wdir, f'{fam}_f*_s*.pt')))
+                         if int(os.path.basename(f).rsplit('_s', 1)[1].split('.')[0]) < max_seeds]
+                assert len(files) >= 5, f'E333-4FAM weights missing for {fam} in {wdir}'
+                for wf in files:
+                    n = ctor(); n.load_state_dict(torch.load(wf, map_location='cpu')); n.eval(); self.nets.append(n.to(dev))
+        elif weights == 'E315-ENS-MD':
             # E-315 選項 A：M2_full（10 模型 LineupNet）＋ D_add_full（10 模型 AdditiveOnlyNet）50/50 異質集成
             import glob as _glob
             e315_dir = os.path.join(ROOT, 'reports', 'E315-multiseason-rapm-ens')
@@ -48,7 +73,7 @@ class Ctx:
 
     def vec(self, p):
         v = self.B.get(str(p))      # 賽前表沒有的人：全 0、遮罩 0
-        return np.zeros(2 * F, np.float32) if v is None else np.concatenate([v[0], v[1]]).astype(np.float32)
+        return np.zeros(2 * self.F, np.float32) if v is None else np.concatenate([v[0], v[1]]).astype(np.float32)
 
     def hkey(self, p):      # E-225 infer_positions：身高升冪，平手 pass+creation 高者在前，再用 pid；缺身高用中位數
         d = self.tab.get(str(p)) or {}

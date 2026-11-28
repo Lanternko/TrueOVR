@@ -134,7 +134,7 @@ def today_margins(today: str, live_dir, log=None) -> dict:
     """R-172：用「今天的 T」（今天的 live 夾 OVR／特徵、今天的追蹤混合）重算所有比賽日 < today 的已完賽場次預期。
     名單＝該場實際上場的人＋比賽日前自己的平均分鐘（陣容是當天的事實），球員強度一律用今天的。
     同一天同一個 live 夾只算一次（存 today-margins.json，只補缺的場次）。回傳格式同 pregame 快取。"""
-    live_dir = Path(live_dir); key = dict(today=today, folder=live_dir.name, weights=os.environ.get('T_WEIGHTS', 'E315-ENS-MD'))
+    live_dir = Path(live_dir); key = dict(today=today, folder=live_dir.name, weights=os.environ.get('T_WEIGHTS', 'E333-4FAM'))
     doc = json.loads(TODAY_CACHE.read_text(encoding='utf-8')) if TODAY_CACHE.exists() else {}
     if {k: doc.get(k) for k in key} != key:
         doc = dict(note='R-172 今天的 T 對已完賽場次的預期（主場視角）', **key, games={})

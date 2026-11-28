@@ -3,10 +3,10 @@
 只記「目前狀態」，每次收工整份覆寫，不往下追加日期段。每條最多兩行，細節寫進 findings／experiments／rulings 或報告檔，這裡只放 ID 與路徑。UI 小改不進本檔（看 git log）。舊版全文在 `archive/`（最近一份 `handoff-2026-11-09-full.md`）。
 **多個 session 同時改本檔與工作樹**：覆寫前先重讀一次，只改自己負責的條目。
 
-- **更新**：11-28 E-316～E-320、R-201（4 季 LOSO 賽程校準上線＋研究契約／P1 滾動基準）；11-27 E-313～E-315、R-199～R-200（`E315-ENS-MD` 上線＋新秀補欄）；更早見 git log。
+- **更新**：11-28 E-316～E-334、R-201～R-202（`E333-4FAM` 球隊四家族 80 模型＋賽程校準＋`E334` 滾動多任務球員 OVR 全數上線）；11-27 E-313～E-315、R-199～R-200；更早見 git log。
 
 ## 目前基準（線上）
-- **球隊與個人 T 模型 `E315-ENS-MD`＋多季窗口＋賽程校準**（11-27～28，R-200／R-201，未稽核）：`M2_full` 10＋`D_add_full` 10 50/50 集成＋26 欄多季窗口；`team_ratings_daily.py` 加入 E-316 4 季 LOSO 凍結 `calib_c1.json`（B2B/rest/3in4/road＋動態 H/σ，4,910 場 Brier −0.00136，回退 `SCHED_CALIB=0`、`T_WEIGHTS=E306-R3`、`MULTI_PRIOR=0`）。新秀補欄（`ROOKIE_FILL=0`）。研究契約 `memory/research_contract.md`、閉環方向 `memory/closed_directions.md`。`reports/E315-multiseason-rapm-ens/report.md`、`reports/E316-t1-loso-gbdt/report.md`
+- **球隊模型 `E333-4FAM`（80 模型＋多季窗口＋年齡＋賽程校準）＋球員 `E334` 滾動多任務 OVR**（11-28，R-201／R-202，未稽核）：`SetPool_age`／`Ridge_age`／`D_add_age`／`M2_age` 四家族 × 20 全 5 季權重（44 欄含年齡曲線，4 季 LOSO C0 `0.20897`／C2 `0.20302`；回退 `T_WEIGHTS=E315-ENS-MD` 或 `E306-R3`、`SCHED_CALIB=0`、`MULTI_PRIOR=0`）。球員 `e334_ovr_live.py` 13 季 L=40 多季衰減 EPM 15 模型滾動融合（跨季 EPM*W `0.81`、盲測 GameBrier `0.1993`；回退 `E334_OVR=0`）。新秀補欄（`ROOKIE_FILL=0`）。研究契約 `memory/research_contract.md`、閉環方向 `memory/closed_directions.md`。
 - **RIM 加蓋帽 RG**（11-23，R-196）：有效蓋帽扣干擾，只顯示；回退 `RIM_RG=0`＝D30。
 - **card／inseason 0.3.0 / 0.2.15**（R-191、E-310）：CRT＋PNR 合併放 creation 欄，RAPM 殘差加權進 OVR；回退 `E310=0`、`CRTPNR=0`。
 - **inseason 0.2.14d／c**（R-188、R-190）：D<0 分鐘修正＋近況＋MIX×min(1,W(MPG))；回退 `NEG_MIN=0`、`GAME_ANCHOR=0`、`MIX_MIN=0`。

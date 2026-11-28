@@ -754,3 +754,11 @@
 - 裁決：建立 `memory/research_contract.md` 與 `memory/closed_directions.md`，鎖定雙軌固定考場與自動迴圈契約：(1) 球隊 T1 改採**四季輪換盲測（Leave-One-Season-Out：2022-23～2025-26，遮住 1 季用其餘 3 季訓練）**；(2) 個人 P1 改採**滾動往前（Rolling Forward：遮住未來、資料逐日變多）**，同時評估預測「下一場個人發揮」與「下一場比賽勝負」，並設相鄰場次波動紅線（防四季更新太慢、亦防單場劇烈跳動）；(3) 導入 Fast Gate 自動淘汰與強制換軸機制，僅改線上／主公式時請人類拍板。
 - 理由：使用者指示先訂定明確考場與目標，才能讓雙 5090 進入自我回饋迴圈持續進步。
 - 影響：`memory/research_contract.md`、`memory/closed_directions.md`、後續所有 E-316+ 實驗。
+
+### R-202 上線球隊 `E333-4FAM`（四異質家族 80 模型＋年齡曲線）與球員 `E334`（13 季 L=40 多任務滾動 OVR）（2026-11-28）
+- 狀態：有效
+- 裁決：
+  1. 球隊陣容模型預設權重由 `E315-ENS-MD` 升級為 **`E333-4FAM`**（`SetPool_age`、`Ridge_age`、`D_add_age`、`M2_age` 四異質家族 × 20 = 80 全 5 季模型，44 欄含多季滑動窗口與 3 欄年齡曲線；回退旗標 `T_WEIGHTS=E315-ENS-MD` 或 `E306-R3`、`MULTI_PRIOR=0`、`SCHED_CALIB=0`）。
+  2. 賽中球員 OVR（`run_c4_live_rookie.py`）接入 **`e334_ovr_live.py`**（13 季 L=40 豐富序列＋多季衰減 EPM 先驗 15 模型 `DecayResNet/DecaySwiGLU/DecayTCNMix`，嚴格因果截斷至 `dataCutoff`；回退旗標 `E334_OVR=0`）。
+- 理由：使用者裁定上線。4 季 4,910 場 LOSO 球隊 C0 `0.21270→0.20897`／C2 `0.20568→0.20302`（WinMAE `3.475`）；盲測 2025-26 球員跨季 `EPM*W 0.7259→0.81+`、`GameBrier 0.21051→0.1993`、`2K27 0.7707` 全過紅線。
+- 影響：`reports/E228-transformer-team-rating/t_lib.py`、`reports/E229-transformer-vs-m0-forward/e229_live.py`、`scripts/actual_blend.py`、`reports/ovr-inseason-2026-27/live/e334_ovr_live.py`、`reports/ovr-inseason-2026-27/live/run_c4_live_rookie.py`。
