@@ -1,0 +1,117 @@
+{
+ "seeds": [
+  20261012,
+  20261013,
+  20261014
+ ],
+ "unaffectedSeasonsByteIdenticalToV53": {
+  "2022-23-20261012": true,
+  "2022-23-20261013": true,
+  "2022-23-20261014": true,
+  "2023-24-20261012": true,
+  "2023-24-20261013": true,
+  "2023-24-20261014": true,
+  "2024-25-20261012": true,
+  "2024-25-20261013": true,
+  "2024-25-20261014": true
+ },
+ "note": "v53 and v54 share pressure/tovNonSteal coefficients, spread scale, and engine; the only difference is the 2025-26 long/short card values. 2022-23/2023-24/2024-25 run files are expected to be byte-identical between v53 and v54 (see unaffectedSeasonsByteIdenticalToV53).",
+ "cells": [
+  {
+   "season": "2022-23",
+   "variant": "v53",
+   "teamMetrics": {
+    "netRMSE": 1.645905794005765,
+    "winsMAE": 4.022222222222222,
+    "ptsPerGame": 116.47831978319785,
+    "astPerGame": 25.34349593495935,
+    "tovPerGame": 13.923441734417343,
+    "threePct": 36.077044734766275
+   }
+  },
+  {
+   "season": "2022-23",
+   "variant": "v54",
+   "teamMetrics": {
+    "netRMSE": 1.645905794005765,
+    "winsMAE": 4.022222222222222,
+    "ptsPerGame": 116.47831978319785,
+    "astPerGame": 25.34349593495935,
+    "tovPerGame": 13.923441734417343,
+    "threePct": 36.077044734766275
+   }
+  },
+  {
+   "season": "2023-24",
+   "variant": "v53",
+   "teamMetrics": {
+    "netRMSE": 1.382986333874176,
+    "winsMAE": 4.0888888888888895,
+    "ptsPerGame": 116.25582655826557,
+    "astPerGame": 26.775474254742548,
+    "tovPerGame": 13.400677506775066,
+    "threePct": 36.73467055695644
+   }
+  },
+  {
+   "season": "2023-24",
+   "variant": "v54",
+   "teamMetrics": {
+    "netRMSE": 1.382986333874176,
+    "winsMAE": 4.0888888888888895,
+    "ptsPerGame": 116.25582655826557,
+    "astPerGame": 26.775474254742548,
+    "tovPerGame": 13.400677506775066,
+    "threePct": 36.73467055695644
+   }
+  },
+  {
+   "season": "2024-25",
+   "variant": "v53",
+   "teamMetrics": {
+    "netRMSE": 2.1880693188181026,
+    "winsMAE": 4.777777777777777,
+    "ptsPerGame": 115.61341463414634,
+    "astPerGame": 26.649051490514907,
+    "tovPerGame": 13.913414634146342,
+    "threePct": 36.06890071137376
+   }
+  },
+  {
+   "season": "2024-25",
+   "variant": "v54",
+   "teamMetrics": {
+    "netRMSE": 2.1880693188181026,
+    "winsMAE": 4.777777777777777,
+    "ptsPerGame": 115.61341463414634,
+    "astPerGame": 26.649051490514907,
+    "tovPerGame": 13.913414634146342,
+    "threePct": 36.06890071137376
+   }
+  },
+  {
+   "season": "2025-26",
+   "variant": "v53",
+   "teamMetrics": {
+    "netRMSE": 2.01904203142402,
+    "winsMAE": 4.555555555555555,
+    "ptsPerGame": 117.12682926829268,
+    "astPerGame": 26.531571815718156,
+    "tovPerGame": 14.10989159891599,
+    "threePct": 36.00754541423452
+   }
+  },
+  {
+   "season": "2025-26",
+   "variant": "v54",
+   "teamMetrics": {
+    "netRMSE": 2.70321983802171,
+    "winsMAE": 6.288888888888888,
+    "ptsPerGame": 116.75948509485094,
+    "astPerGame": 26.425338753387535,
+    "tovPerGame": 14.215989159891599,
+    "threePct": 35.8710964374247
+   }
+  }
+ ]
+}

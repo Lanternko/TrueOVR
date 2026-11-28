@@ -1,0 +1,522 @@
+{
+  "target": "reports\\card-0.2.9+E164-no-stamina\\work\\base-S-2025-26\\c0\\target-dummy.csv",
+  "alpha": 1.0,
+  "blendPreregistration": "reports/ovr-v58-card-2025-26/preregistration.md",
+  "driveMode": "split",
+  "driveColumn": "drive",
+  "attrSource": "reports/card-0.2.0+E070-foul-volume/attributes-w075/attributes-new.csv",
+  "direction": "H1",
+  "gamma": null,
+  "delta": null,
+  "capMargin": 0.0,
+  "phi": null,
+  "cap": {
+    "refMode": "rapm",
+    "margin": 0.0,
+    "iterations": 6,
+    "allowedPlayers": 393,
+    "cappedPlayers": 95,
+    "tieEpsilon": 1e-12,
+    "cappedNames": [
+      "Shai Gilgeous-Alexander",
+      "Kawhi Leonard",
+      "Ty Jerome",
+      "Giannis Antetokounmpo",
+      "Paul Reed",
+      "Chet Holmgren",
+      "Cam Spencer",
+      "OG Anunoby",
+      "Jimmy Butler III",
+      "Evan Mobley",
+      "Lauri Markkanen",
+      "Neemias Queta",
+      "Rudy Gobert",
+      "Isaiah Joe",
+      "Jrue Holiday",
+      "Scottie Barnes",
+      "Derrick White",
+      "Gary Payton II",
+      "Kevin Durant",
+      "Zion Williamson",
+      "Immanuel Quickley",
+      "Ausar Thompson",
+      "Alex Caruso",
+      "Moses Moody",
+      "Desmond Bane",
+      "Mouhamed Gueye",
+      "Ryan Rollins",
+      "Franz Wagner",
+      "Michael Porter Jr.",
+      "Dyson Daniels",
+      "Javonte Green",
+      "Jordan Goodwin",
+      "Ajay Mitchell",
+      "Austin Reaves",
+      "Aaron Gordon",
+      "Kevin Porter Jr.",
+      "Kon Knueppel",
+      "Paul George",
+      "Jalen Suggs",
+      "Kenrich Williams",
+      "Norman Powell",
+      "Landry Shamet",
+      "Jamal Murray",
+      "D'Angelo Russell",
+      "Sam Merrill",
+      "Nickeil Alexander-Walker",
+      "Jalen Williams",
+      "De'Aaron Fox",
+      "Anthony Black",
+      "Stephon Castle",
+      "Julius Randle",
+      "Jaren Jackson Jr.",
+      "Amen Thompson",
+      "Sandro Mamukelashvili",
+      "Max Strus",
+      "Mikal Bridges",
+      "Saddiq Bey",
+      "Cole Anthony",
+      "Josh Hart",
+      "Trayce Jackson-Davis",
+      "Tristan da Silva",
+      "Tobias Harris",
+      "Aaron Holiday",
+      "Dylan Harper",
+      "Clint Capela",
+      "Derrick Jones Jr.",
+      "Wendell Carter Jr.",
+      "Naz Reid",
+      "Jaylen Clark",
+      "Jamal Cain",
+      "Keon Ellis",
+      "Jabari Smith Jr.",
+      "Brandin Podziemski",
+      "Keegan Murray",
+      "Bam Adebayo",
+      "Jusuf Nurkić",
+      "Spencer Jones",
+      "Brandon Ingram",
+      "Gui Santos",
+      "Cason Wallace",
+      "Dillon Brooks",
+      "Dean Wade",
+      "Pelle Larsson",
+      "Vince Williams Jr.",
+      "Brook Lopez",
+      "Anthony Davis",
+      "Herbert Jones",
+      "Kyle Anderson",
+      "Marcus Smart",
+      "Kris Dunn",
+      "Jonathan Kuminga",
+      "Sion James",
+      "Jaylin Williams",
+      "Chris Boucher",
+      "Brandon Clarke"
+    ]
+  },
+  "restrictPos": null,
+  "prLo": 90.0,
+  "prHi": 96.0,
+  "players": 582,
+  "chosen": {
+    "form": "position-interactions",
+    "ridge": 1.0
+  },
+  "cvR2": {},
+  "noiseCeilingR2": null,
+  "residualTrueVariancePer36": null,
+  "valuePer10AttributePoints": {
+    "long": {
+      "per36": 0.34754407020338657,
+      "bootstrapSE": null
+    },
+    "mid": {
+      "per36": 0.12565115958903114,
+      "bootstrapSE": null
+    },
+    "short": {
+      "per36": 0.3752678410183893,
+      "bootstrapSE": null
+    },
+    "ft": {
+      "per36": 0.16343502863389894,
+      "bootstrapSE": null
+    },
+    "drive": {
+      "per36": -0.06517187715617573,
+      "bootstrapSE": null
+    },
+    "foulDraw": {
+      "per36": 0.1974009456829752,
+      "bootstrapSE": null
+    },
+    "tovSkill": {
+      "per36": 0.3299712368673863,
+      "bootstrapSE": null
+    },
+    "pass": {
+      "per36": 0.3023033443419673,
+      "bootstrapSE": null
+    },
+    "rebound": {
+      "per36": 0.2052880019092957,
+      "bootstrapSE": null
+    },
+    "onBall": {
+      "per36": 0.14492853733241812,
+      "bootstrapSE": null
+    },
+    "help": {
+      "per36": 0.2942286930824225,
+      "bootstrapSE": null
+    },
+    "heightInches": {
+      "per36": -0.06494158660309968,
+      "bootstrapSE": null
+    },
+    "creation": {
+      "per36": 0.23721025339884638,
+      "bootstrapSE": null
+    },
+    "pressure": {
+      "per36": 0.21725512091139965,
+      "bootstrapSE": null
+    }
+  },
+  "scaleAnchorsPer36": {
+    "PR1": -2.805999572260306,
+    "PR50": -0.10646135795695333,
+    "PR99": 4.786014666017938
+  },
+  "frozen": {
+    "anchorsIfRefitOnThisPred": {
+      "PR1": -2.870981079354109,
+      "PR50": -0.09682631126314156,
+      "PR99": 4.687398927359412
+    }
+  },
+  "league": "reports\\ovr-v55-card-E-2025-26\\season-league-E2-lam0.4.json",
+  "creationShrinkage": null,
+  "defenseBonusPosMeanD": {
+    "C": 0.1977857747804183,
+    "PG": -0.1353752141703618,
+    "SG": 0.15947928429296754,
+    "PF": 0.18585740967524322,
+    "SF": -0.09919914438845745
+  },
+  "prRefPoolSize": 378,
+  "e094": {
+    "bonusShape": "none",
+    "defWindow": "season",
+    "defRapm": "reports/card-0.2.9+E164-no-stamina/work/base-S-2025-26/c0/def-L-fitA.csv",
+    "T96": 2.160069530176708,
+    "bonusPositive": 212,
+    "bonusMedianPositive": 0.5404124751534648,
+    "bonusMax": 2.8251894094439174,
+    "f1_violations": [
+      "Evan Mobley",
+      "Isaiah Joe",
+      "Scottie Barnes",
+      "Derrick White",
+      "Ausar Thompson",
+      "Alex Caruso",
+      "Franz Wagner",
+      "De'Aaron Fox",
+      "Brandin Podziemski"
+    ],
+    "f1_pr96_nonzero": [
+      "Shai Gilgeous-Alexander",
+      "Nikola Jokić",
+      "Victor Wembanyama",
+      "Kawhi Leonard",
+      "Luka Dončić",
+      "Ty Jerome",
+      "Giannis Antetokounmpo",
+      "Chet Holmgren",
+      "Jimmy Butler III",
+      "Donovan Mitchell",
+      "Kevin Durant",
+      "Paul George",
+      "Jalen Williams",
+      "Anthony Davis"
+    ],
+    "f2_sample": [
+      {
+        "name": "Caleb Houstan",
+        "centeredD": 0.559202884668329,
+        "Dw": 0.613338320373162,
+        "pos": "SF",
+        "posMeanD": -0.09919914438845745
+      },
+      {
+        "name": "Asa Newell",
+        "centeredD": -0.35531429459829167,
+        "Dw": -0.22594251323073122,
+        "pos": "PF",
+        "posMeanD": 0.18585740967524322
+      },
+      {
+        "name": "Trey Murphy III",
+        "centeredD": -0.5576414382762734,
+        "Dw": -0.5308828719777412,
+        "pos": "SG",
+        "posMeanD": 0.15947928429296754
+      },
+      {
+        "name": "Isaiah Crawford",
+        "centeredD": -0.08669988989989062,
+        "Dw": 0.09703919252410255,
+        "pos": "SG",
+        "posMeanD": 0.15947928429296754
+      },
+      {
+        "name": "Jalen Brunson",
+        "centeredD": -0.8528116693821034,
+        "Dw": -1.3175825114032869,
+        "pos": "PG",
+        "posMeanD": -0.1353752141703618
+      },
+      {
+        "name": "John Konchar",
+        "centeredD": 0.3054043063334468,
+        "Dw": 0.6198447875018858,
+        "pos": "SG",
+        "posMeanD": 0.15947928429296754
+      },
+      {
+        "name": "Darius Garland",
+        "centeredD": -0.6212693961022163,
+        "Dw": -1.0088594803634374,
+        "pos": "PG",
+        "posMeanD": -0.1353752141703618
+      },
+      {
+        "name": "LJ Cryer",
+        "centeredD": 0.15301401730537434,
+        "Dw": 0.41665773546445584,
+        "pos": "SG",
+        "posMeanD": 0.15947928429296754
+      },
+      {
+        "name": "Jase Richardson",
+        "centeredD": -0.13490085265068397,
+        "Dw": -0.3603680890947277,
+        "pos": "PG",
+        "posMeanD": -0.1353752141703618
+      },
+      {
+        "name": "Draymond Green",
+        "centeredD": 0.28771866780971145,
+        "Dw": 0.6314347699799395,
+        "pos": "PF",
+        "posMeanD": 0.18585740967524322
+      }
+    ],
+    "u1_sample": [
+      {
+        "name": "Darius Brown II",
+        "eligible": false,
+        "centeredD": null,
+        "bonusPreCap": 0.0
+      },
+      {
+        "name": "Orlando Robinson",
+        "eligible": true,
+        "centeredD": -0.6979209168122626,
+        "bonusPreCap": 0.0
+      },
+      {
+        "name": "Patrick Baldwin Jr.",
+        "eligible": false,
+        "centeredD": 0.24639386391612572,
+        "bonusPreCap": 0.0
+      },
+      {
+        "name": "De'Aaron Fox",
+        "eligible": true,
+        "centeredD": 0.6320099389820688,
+        "bonusPreCap": 0.6320099389820688
+      },
+      {
+        "name": "Malachi Smith",
+        "eligible": false,
+        "centeredD": -0.15214151281749766,
+        "bonusPreCap": 0.0
+      },
+      {
+        "name": "Ousmane Dieng",
+        "eligible": true,
+        "centeredD": -0.7430126952015544,
+        "bonusPreCap": 0.0
+      },
+      {
+        "name": "Brandon Ingram",
+        "eligible": true,
+        "centeredD": -0.7764532616611296,
+        "bonusPreCap": 0.0
+      },
+      {
+        "name": "Herbert Jones",
+        "eligible": true,
+        "centeredD": 1.9893721234020827,
+        "bonusPreCap": 1.9893721234020827
+      },
+      {
+        "name": "Xavier Tillman",
+        "eligible": true,
+        "centeredD": -0.23225344131978548,
+        "bonusPreCap": 0.0
+      },
+      {
+        "name": "Nigel Hayes-Davis",
+        "eligible": false,
+        "centeredD": -0.20304145227765125,
+        "bonusPreCap": 0.0
+      }
+    ],
+    "pr96_bonus": [
+      {
+        "name": "Shai Gilgeous-Alexander",
+        "pr": 100.0,
+        "bonusPreCap": 1.872380593602554
+      },
+      {
+        "name": "Nikola Jokić",
+        "pr": 98.93899204244032,
+        "bonusPreCap": 0.8624347263229557
+      },
+      {
+        "name": "Victor Wembanyama",
+        "pr": 98.40848806366047,
+        "bonusPreCap": 2.3549446868562196
+      },
+      {
+        "name": "Kawhi Leonard",
+        "pr": 99.46949602122015,
+        "bonusPreCap": 1.5093279824764088
+      },
+      {
+        "name": "Luka Dončić",
+        "pr": 99.20424403183024,
+        "bonusPreCap": 0.5839598424234274
+      },
+      {
+        "name": "Ty Jerome",
+        "pr": 97.34748010610079,
+        "bonusPreCap": 0.0993757582728357
+      },
+      {
+        "name": "Giannis Antetokounmpo",
+        "pr": 99.73474801061008,
+        "bonusPreCap": 0.7213694383565628
+      },
+      {
+        "name": "Chet Holmgren",
+        "pr": 96.81697612732096,
+        "bonusPreCap": 1.5048367380671073
+      },
+      {
+        "name": "Jimmy Butler III",
+        "pr": 98.6737400530504,
+        "bonusPreCap": 2.18807470236803
+      },
+      {
+        "name": "Donovan Mitchell",
+        "pr": 96.55172413793103,
+        "bonusPreCap": 0.6124480322209347
+      },
+      {
+        "name": "Kevin Durant",
+        "pr": 97.34748010610079,
+        "bonusPreCap": 0.10086734753722595
+      },
+      {
+        "name": "Paul George",
+        "pr": 96.0212201591512,
+        "bonusPreCap": 1.2491331618909867
+      },
+      {
+        "name": "Jalen Williams",
+        "pr": 97.87798408488064,
+        "bonusPreCap": 0.8745690357682381
+      },
+      {
+        "name": "Anthony Davis",
+        "pr": 97.61273209549071,
+        "bonusPreCap": 0.7472812574605079
+      }
+    ]
+  },
+  "formula": {
+    "intercept": -0.3194656522672907,
+    "attributeMean": {
+      "long": 65.94443262612039,
+      "mid": 66.08306479394092,
+      "short": 66.91840823852492,
+      "ft": 68.95957782801493,
+      "drive": 66.84608343381268,
+      "foulDraw": 65.62987261722536,
+      "tovSkill": 66.09961406652796,
+      "pass": 66.27962697874663,
+      "rebound": 71.38787560750826,
+      "onBall": 65.04692751365288,
+      "help": 69.92457044673537,
+      "heightInches": 78.56357388316151,
+      "creation": 65.5119959096287,
+      "pressure": 72.52459585014066
+    },
+    "attributeSD": {
+      "long": 11.208352892556972,
+      "mid": 8.701148866250369,
+      "short": 11.315695736133826,
+      "ft": 11.417490299703092,
+      "drive": 14.526269231619507,
+      "foulDraw": 15.76117801227739,
+      "tovSkill": 15.584464341980713,
+      "pass": 16.689724689350506,
+      "rebound": 17.09634943360063,
+      "onBall": 14.884512278978509,
+      "help": 9.2178762008378,
+      "heightInches": 3.2552225462013022,
+      "creation": 15.111288381396601,
+      "pressure": 16.551256266058424
+    },
+    "coefficientsOnStandardized": [
+      0.3895396584555151,
+      0.10933094448011425,
+      0.4246416708519934,
+      0.18660178540592381,
+      -0.09467042339006417,
+      0.31112714447012724,
+      0.5142424974839053,
+      0.5045359589737359,
+      0.35096754151669923,
+      0.21571905934987728,
+      0.27121636675680716,
+      -0.021139931689649453,
+      0.3584552546134131,
+      0.3595845181318084,
+      0.018258429654877936,
+      0.08100795045096103,
+      0.11251241276811226,
+      0.35989255193086406,
+      0.10650211393455758,
+      -0.06394349676602148,
+      -0.004039198239385216,
+      -0.1947805907785528,
+      0.018413135209773942,
+      -0.2620038195096131,
+      -0.006105695679919665,
+      0.08885306931094061,
+      0.1273364335672539,
+      0.10531072482844475,
+      -0.2693832418070927,
+      0.09315637652966267,
+      -0.0004522382873923689,
+      0.37163453212272207,
+      0.07630614047409119,
+      0.1081095840178189
+    ]
+  }
+}

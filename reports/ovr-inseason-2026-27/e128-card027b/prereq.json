@@ -1,0 +1,2011 @@
+{
+ "c0": {
+  "pass": true,
+  "files027": {
+   "ranking.csv": {
+    "post": "9b6c7ea24078f0048083d9bf8223bb8178b38e960efdaec6c24ed296b57f5b7c",
+    "pre": "9b6c7ea24078f0048083d9bf8223bb8178b38e960efdaec6c24ed296b57f5b7c",
+    "published": "9b6c7ea24078f0048083d9bf8223bb8178b38e960efdaec6c24ed296b57f5b7c"
+   },
+   "no-prior.csv": {
+    "post": "44512d95b86dd7bd5579faa45fd1083c8f760975afef1ca0513a112299e40f38",
+    "pre": "44512d95b86dd7bd5579faa45fd1083c8f760975afef1ca0513a112299e40f38",
+    "published": "44512d95b86dd7bd5579faa45fd1083c8f760975afef1ca0513a112299e40f38"
+   }
+  },
+  "files025": {
+   "ranking.csv": {
+    "post": "314fcdc979da9867c51322caacfeb4d989bd3894b0d14f548c57590350ce209d",
+    "head": "314fcdc979da9867c51322caacfeb4d989bd3894b0d14f548c57590350ce209d"
+   },
+   "no-prior.csv": {
+    "post": "e061bff3438e61c02b67b41a12fbec8d7032644536f2261f08d37793bb862137",
+    "head": "e061bff3438e61c02b67b41a12fbec8d7032644536f2261f08d37793bb862137"
+   }
+  },
+  "inputsSameAsPublished": true,
+  "dataCutoff": "2026-10-28",
+  "publishedVersion": "inseason 0.2.7",
+  "postVersion": "inseason 0.2.7",
+  "note": "預註冊 (c0)：CARD_MODE=027 輸出＝線上 inseason 0.2.7 快照（逐位元）。027 走 run_c4_live_rookie.py 包裝（與線上同一入口）；025 包裝在 assert 擋下，改以 plain script 比 patched vs HEAD 原碼（兩者同一路徑）。meta.json 只差 gitHead、dict 鍵序（-I 隨機雜湊序）"
+ },
+ "c1": {
+  "pass": true,
+  "exit": "0",
+  "summary": "===== 57 passed, 0 failed ====="
+ },
+ "u": {
+  "pass": true,
+  "tailMaxAbsDiff": 0.0,
+  "nTopPoints": 70,
+  "W": {
+   "0.0": 0.0,
+   "36.0": 1.0,
+   "5.0": 0.31175001249797585,
+   "20.0": 0.8098728711825767
+  },
+  "WAbsDiff": {
+   "0.0": 0.0,
+   "36.0": 0.0,
+   "5.0": 1.2497975820924268e-08,
+   "20.0": 2.871182576691389e-06
+  },
+  "eightNonPassPoolsEqualPool027": true,
+  "eightDetail": {
+   "long": {
+    "nSorted": [
+     1482,
+     1482
+    ],
+    "maxSortedDiff": 0.0,
+    "maxAnchorDiff": 0.0,
+    "topBotSame": true
+   },
+   "mid": {
+    "nSorted": [
+     1482,
+     1482
+    ],
+    "maxSortedDiff": 0.0,
+    "maxAnchorDiff": 0.0,
+    "topBotSame": true
+   },
+   "short": {
+    "nSorted": [
+     1482,
+     1482
+    ],
+    "maxSortedDiff": 0.0,
+    "maxAnchorDiff": 0.0,
+    "topBotSame": true
+   },
+   "ft": {
+    "nSorted": [
+     1482,
+     1482
+    ],
+    "maxSortedDiff": 0.0,
+    "maxAnchorDiff": 0.0,
+    "topBotSame": true
+   },
+   "foulDraw": {
+    "nSorted": [
+     957,
+     957
+    ],
+    "maxSortedDiff": 0.0,
+    "maxAnchorDiff": 0.0,
+    "topBotSame": true
+   },
+   "tovSkill": {
+    "nSorted": [
+     957,
+     957
+    ],
+    "maxSortedDiff": 0.0,
+    "maxAnchorDiff": 0.0,
+    "topBotSame": true
+   },
+   "rebound": {
+    "nSorted": [
+     957,
+     957
+    ],
+    "maxSortedDiff": 0.0,
+    "maxAnchorDiff": 0.0,
+    "topBotSame": true
+   },
+   "creation": {
+    "nSorted": [
+     957,
+     957
+    ],
+    "maxSortedDiff": 0.0,
+    "maxAnchorDiff": 0.0,
+    "topBotSame": true
+   }
+  },
+  "newKeysIn027b": [
+   "threeValue"
+  ],
+  "passPoolIndependent": {
+   "n": 961,
+   "nPool027b": 961,
+   "maxAbsDiff": 0.0,
+   "perSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "perSeasonPool027b": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "source": "E-125 build_e101_p.py#merged_percentile_pool",
+   "sourceSha256": "46df5e1208d5860c33433b991842d80c59fffbc52952ea4767f609b0e42dac26"
+  },
+  "payloadShaOk": true,
+  "e101TopTailSource": "def top_tail(d, sd):\n    return 99 + (CEIL - 99) * (1 - math.exp(-max(0.0, d) / (K_SD * sd)))",
+  "threshold": "尾巴 |差| < 1e-9；W |差| < 1e-5；8 項池與 pool-027 差 0；pass 池與 E-125 獨立重組 |差| < 1e-9"
+ },
+ "z": {
+  "pass": true,
+  "nPlayersCompared": 582,
+  "nMismatch": 0,
+  "mismatchSample": [],
+  "zonesSource": "e111-card027/zones-027.json（2025-26 pbp 分區計數與 pool-027b 無關；mid／short 池與 pool-027 差 0 見 (u)）",
+  "season2026_27": {
+   "pbpFiles": 67,
+   "twoPtFGA": 6918,
+   "withArea": 0,
+   "noShotDistance": 0,
+   "shotDistLt8": 4764,
+   "shotDistLt8JudgedMid": 0
+  }
+ },
+ "L1": {
+  "pass": true,
+  "ovr_refVsCard027b": {
+   "n": 582,
+   "maxAbs": 0.052265119718761355,
+   "worst": [
+    [
+     "Yanic Konan Niederhäuser",
+     -0.052265119718761355
+    ],
+    [
+     "Ja Morant",
+     0.05166048314157479
+    ],
+    [
+     "Garrison Mathews",
+     -0.051587077888726185
+    ],
+    [
+     "Doug McDermott",
+     -0.050858755763520946
+    ],
+    [
+     "Scoot Henderson",
+     0.05037874353220673
+    ]
+   ]
+  },
+  "anchorsMaxAbsDiff": 0.0,
+  "rReplDiff": 0.0,
+  "anchors": [
+   -0.8234348586707387,
+   1.2757551955805375,
+   4.11501094146304
+  ],
+  "rRepl": -1.2728196381886112,
+  "ulBonus": {
+   "defL": "reports/card-0.2.5+E104-defense-pergame-decay/def-L-primary.csv",
+   "posMeanD": {
+    "SG": 0.19561586377397416,
+    "PG": -0.17827501176091545,
+    "C": 0.4010049522938604,
+    "PF": 0.27972833241347667,
+    "SF": -0.14625789676705478
+   },
+   "vsCard027DefenseBonus3dp": {
+    "n": 582,
+    "maxAbs": 0.0,
+    "nMismatch": 0
+   },
+   "refBonusEqualsUl": 0.0
+  },
+  "columns": {
+   "pass": {
+    "n": 582,
+    "maxAbs": 0.049941599949036686,
+    "worst": [
+     [
+      "Jamal Murray",
+      0.049941599949036686
+     ],
+     [
+      "Karlo Matković",
+      0.04979719255027959
+     ],
+     [
+      "Tim Hardaway Jr.",
+      0.04976958525345765
+     ]
+    ],
+    "nGt0.05": 0,
+    "cardNotInPrior": 0
+   },
+   "help": {
+    "n": 582,
+    "maxAbs": 0.0,
+    "worst": [
+     [
+      "Zyon Pullin",
+      0.0
+     ],
+     [
+      "Zion Williamson",
+      0.0
+     ],
+     [
+      "Ziaire Williams",
+      0.0
+     ]
+    ],
+    "nGt0.05": 0,
+    "cardNotInPrior": 0
+   },
+   "pressure": {
+    "n": 582,
+    "maxAbs": 0.049925439904555446,
+    "worst": [
+     [
+      "Noah Clowney",
+      0.049925439904555446
+     ],
+     [
+      "Micah Peavy",
+      0.04989987644327698
+     ],
+     [
+      "Kennedy Chandler",
+      0.04989987644327698
+     ]
+    ],
+    "nGt0.05": 0,
+    "cardNotInPrior": 0
+   },
+   "presDisplay": {
+    "n": 582,
+    "maxAbs": 0.0,
+    "worst": [
+     [
+      "Zyon Pullin",
+      0.0
+     ],
+     [
+      "Zion Williamson",
+      0.0
+     ],
+     [
+      "Ziaire Williams",
+      0.0
+     ]
+    ],
+    "nGt0.05": 0,
+    "cardNotInPrior": 0
+   },
+   "passFromA0r_vs_priorX0": {
+    "n": 582,
+    "maxAbs": 0.0
+   }
+  },
+  "evidenceRun": "out-027b-plain（plain script 的 N=0；包裝 run_c4_live_rookie.py 會改 bonus／ref，故 L1 不用 out-027b）",
+  "threshold": "ref OVR 對 card 0.2.7b ranking ovr 每人 ≤0.1；錨點、r_repl、UL 加成 ≤1e-9；pass／help／pressure／presDisplay ≤0.05"
+ },
+ "h": {
+  "pass": true,
+  "helpVsCard_fromCardSource": {
+   "n": 576,
+   "maxAbs": 0.049776513612357576,
+   "nGt0.05": 0,
+   "worst": [
+    [
+     "Alijah Martin",
+     67.54978,
+     "67.5",
+     67.5,
+     0.04978
+    ],
+    [
+     "Cole Anthony",
+     65.55033,
+     "65.6",
+     65.6,
+     0.04967
+    ],
+    [
+     "Malik Monk",
+     60.74943,
+     "60.7",
+     60.7,
+     0.04943
+    ],
+    [
+     "Kevin Love",
+     63.24931,
+     "63.2",
+     63.2,
+     0.04931
+    ],
+    [
+     "Jamal Murray",
+     61.85071,
+     "61.9",
+     61.9,
+     0.04929
+    ],
+    [
+     "Garrison Mathews",
+     66.44928,
+     "66.4",
+     66.4,
+     0.04928
+    ],
+    [
+     "Lonzo Ball",
+     68.54925,
+     "68.5",
+     68.5,
+     0.04925
+    ],
+    [
+     "David Jones Garcia",
+     70.54892,
+     "70.5",
+     70.5,
+     0.04892
+    ]
+   ],
+   "cardNotInRaw": [
+    "Alex Morales",
+    "Colby Jones",
+    "Darius Brown II",
+    "Harrison Ingram",
+    "Noa Essengue",
+    "Trentyn Flowers"
+   ],
+   "over99": {
+    "Isaiah Stewart": [
+     113.474,
+     "113.5"
+    ],
+    "Chet Holmgren": [
+     112.494,
+     "112.5"
+    ],
+    "Victor Wembanyama": [
+     108.693,
+     "108.7"
+    ],
+    "Ryan Kalkbrenner": [
+     99.311,
+     "99.3"
+    ]
+   }
+  },
+  "onBallVsCard": {
+   "n": 575,
+   "maxAbs": 0.04990125082291286,
+   "nGt0.05": 0,
+   "worst": [
+    [
+     "Brandon Ingram",
+     0.04990125082291286
+    ],
+    [
+     "Trey Alexander",
+     0.049731359765551986
+    ],
+    [
+     "Alondes Williams",
+     0.049731359765551986
+    ]
+   ]
+  },
+  "onBallVsPrior": {
+   "n": 575,
+   "maxAbs": 1.8474111129762605e-13
+  },
+  "reportOnly_helpVsCard_fromStep4T2": {
+   "n": 576,
+   "maxAbs": 0.15005875440658656,
+   "nGt0.05": 7,
+   "worst": [
+    [
+     "Jose Alvarado",
+     57.45006,
+     "57.3",
+     57.3,
+     0.15006
+    ],
+    [
+     "Ryan Dunn",
+     68.5524,
+     "68.7",
+     68.7,
+     0.1476
+    ],
+    [
+     "Egor Dëmin",
+     71.01841,
+     "70.9",
+     70.9,
+     0.11841
+    ],
+    [
+     "Gary Trent Jr.",
+     63.51062,
+     "63.4",
+     63.4,
+     0.11062
+    ],
+    [
+     "Luka Garza",
+     71.00474,
+     "70.9",
+     70.9,
+     0.10474
+    ],
+    [
+     "Vince Williams Jr.",
+     69.17684,
+     "69.1",
+     69.1,
+     0.07684
+    ],
+    [
+     "Myron Gardner",
+     74.66677,
+     "74.6",
+     74.6,
+     0.06677
+    ],
+    [
+     "Alijah Martin",
+     67.54978,
+     "67.5",
+     67.5,
+     0.04978
+    ]
+   ],
+   "cardNotInRaw": [
+    "Alex Morales",
+    "Colby Jones",
+    "Darius Brown II",
+    "Harrison Ingram",
+    "Noa Essengue",
+    "Trentyn Flowers"
+   ],
+   "over99": {
+    "Isaiah Stewart": [
+     113.474,
+     "113.5"
+    ],
+    "Chet Holmgren": [
+     112.494,
+     "112.5"
+    ],
+    "Victor Wembanyama": [
+     108.693,
+     "108.7"
+    ],
+    "Ryan Kalkbrenner": [
+     99.311,
+     "99.3"
+    ]
+   }
+  },
+  "note": "既有來源不一致，027 也有（errata-3）：step4-t2 raw 的 rim 表與卡片來源 data/benchmark-source/defense-rim.json 不同；PAST_RAW 不改",
+  "threshold": "help 每人 ≤0.05（卡片來源 defense-rim.json），含 4 個 >99；onBall 逐人 ≤0.05"
+ },
+ "s": {
+  "pass": true,
+  "nCommonPool": 252,
+  "attrs": {
+   "long": {
+    "025": {
+     "nAll": 234,
+     "medAll": -0.0014680691200581464,
+     "nTop5": 12,
+     "medTop5": -0.01007768709704493,
+     "top5": [
+      [
+       "Luke Kennard",
+       99.0,
+       99.0
+      ],
+      [
+       "Bobby Portis Jr.",
+       98.5,
+       98.48
+      ],
+      [
+       "Cam Spencer",
+       97.0,
+       97.03
+      ],
+      [
+       "Jaylon Tyson",
+       95.6,
+       95.56
+      ],
+      [
+       "Jamal Murray",
+       95.3,
+       95.26
+      ],
+      [
+       "Rui Hachimura",
+       93.6,
+       93.64
+      ],
+      [
+       "Ayo Dosunmu",
+       93.0,
+       93.05
+      ],
+      [
+       "Kon Knueppel",
+       92.3,
+       92.26
+      ],
+      [
+       "Isaiah Joe",
+       90.0,
+       90.04
+      ],
+      [
+       "Cameron Johnson",
+       89.7,
+       89.67
+      ],
+      [
+       "AJ Green",
+       89.6,
+       89.56
+      ],
+      [
+       "Sam Merrill",
+       89.0,
+       89.0
+      ]
+     ]
+    },
+    "027b": {
+     "nAll": 234,
+     "medAll": 0.0,
+     "nTop5": 12,
+     "medTop5": 0.0,
+     "top5": [
+      [
+       "Luke Kennard",
+       107.99,
+       107.99
+      ],
+      [
+       "Bobby Portis Jr.",
+       98.48,
+       98.48
+      ],
+      [
+       "Cam Spencer",
+       97.03,
+       97.03
+      ],
+      [
+       "Jaylon Tyson",
+       95.56,
+       95.56
+      ],
+      [
+       "Jamal Murray",
+       95.26,
+       95.26
+      ],
+      [
+       "Rui Hachimura",
+       93.64,
+       93.64
+      ],
+      [
+       "Ayo Dosunmu",
+       93.05,
+       93.05
+      ],
+      [
+       "Kon Knueppel",
+       92.26,
+       92.26
+      ],
+      [
+       "Isaiah Joe",
+       90.04,
+       90.04
+      ],
+      [
+       "Cameron Johnson",
+       89.67,
+       89.67
+      ],
+      [
+       "AJ Green",
+       89.56,
+       89.56
+      ],
+      [
+       "Sam Merrill",
+       89.0,
+       89.0
+      ]
+     ]
+    },
+    "passAll": true,
+    "passTop5": true,
+    "judged": true
+   },
+   "mid": {
+    "025": {
+     "nAll": 235,
+     "medAll": 9.910914492695653,
+     "nTop5": 12,
+     "medTop5": -3.9293552132430776,
+     "top5": [
+      [
+       "Jakob Poeltl",
+       99.0,
+       94.69
+      ],
+      [
+       "Nikola Jokić",
+       99.0,
+       99.0
+      ],
+      [
+       "Onyeka Okongwu",
+       99.0,
+       88.87
+      ],
+      [
+       "Luke Kornet",
+       99.0,
+       87.38
+      ],
+      [
+       "Shai Gilgeous-Alexander",
+       99.0,
+       99.0
+      ],
+      [
+       "Daniel Gafford",
+       99.0,
+       95.6
+      ],
+      [
+       "Nic Claxton",
+       98.9,
+       90.15
+      ],
+      [
+       "Ivica Zubac",
+       98.0,
+       94.45
+      ],
+      [
+       "Myles Turner",
+       97.6,
+       77.42
+      ],
+      [
+       "Jusuf Nurkić",
+       95.9,
+       70.67
+      ],
+      [
+       "Rudy Gobert",
+       95.7,
+       99.0
+      ],
+      [
+       "Donovan Clingan",
+       95.2,
+       94.52
+      ]
+     ]
+    },
+    "027b": {
+     "nAll": 212,
+     "medAll": 0.3201925692508567,
+     "nTop5": 11,
+     "medTop5": -3.175687729457792,
+     "top5": [
+      [
+       "Shai Gilgeous-Alexander",
+       99.0,
+       99.0
+      ],
+      [
+       "Nikola Jokić",
+       97.83,
+       94.65
+      ],
+      [
+       "Rui Hachimura",
+       95.39,
+       96.87
+      ],
+      [
+       "Kevin Durant",
+       94.49,
+       88.63
+      ],
+      [
+       "Myles Turner",
+       92.36,
+       69.01
+      ],
+      [
+       "Jalen Brunson",
+       89.68,
+       89.15
+      ],
+      [
+       "Cade Cunningham",
+       88.07,
+       83.4
+      ],
+      [
+       "Khris Middleton",
+       87.42,
+       73.94
+      ],
+      [
+       "Stephen Curry",
+       87.33,
+       84.38
+      ],
+      [
+       "Luke Kennard",
+       87.15,
+       89.68
+      ],
+      [
+       "De'Andre Hunter",
+       86.9,
+       74.7
+      ]
+     ]
+    },
+    "passAll": true,
+    "passTop5": true,
+    "judged": true
+   },
+   "short": {
+    "025": {
+     "nAll": 252,
+     "medAll": 0.01289968662305796,
+     "nTop5": 13,
+     "medTop5": -2.7106587687269155,
+     "top5": [
+      [
+       "Giannis Antetokounmpo",
+       99.0,
+       99.0
+      ],
+      [
+       "Jalen Duren",
+       98.4,
+       94.56
+      ],
+      [
+       "Chet Holmgren",
+       94.9,
+       92.62
+      ],
+      [
+       "Michael Porter Jr.",
+       94.0,
+       89.2
+      ],
+      [
+       "Nikola Jokić",
+       93.5,
+       88.53
+      ],
+      [
+       "Victor Wembanyama",
+       93.0,
+       89.7
+      ],
+      [
+       "Evan Mobley",
+       90.8,
+       88.09
+      ],
+      [
+       "Kevin Durant",
+       90.3,
+       87.49
+      ],
+      [
+       "LeBron James",
+       90.2,
+       87.32
+      ],
+      [
+       "Jay Huff",
+       86.7,
+       99.0
+      ],
+      [
+       "Daniel Gafford",
+       86.0,
+       87.22
+      ],
+      [
+       "Deandre Ayton",
+       85.4,
+       99.0
+      ],
+      [
+       "Luka Dončić",
+       85.3,
+       86.47
+      ]
+     ]
+    },
+    "027b": {
+     "nAll": 252,
+     "medAll": 0.6264160693450549,
+     "nTop5": 13,
+     "medTop5": -1.5367491660107788,
+     "top5": [
+      [
+       "Giannis Antetokounmpo",
+       113.05,
+       109.03
+      ],
+      [
+       "Jalen Duren",
+       97.88,
+       94.87
+      ],
+      [
+       "Jay Huff",
+       94.04,
+       104.32
+      ],
+      [
+       "Chet Holmgren",
+       94.01,
+       94.65
+      ],
+      [
+       "Michael Porter Jr.",
+       93.46,
+       90.04
+      ],
+      [
+       "Nikola Jokić",
+       93.1,
+       90.47
+      ],
+      [
+       "Victor Wembanyama",
+       92.41,
+       91.67
+      ],
+      [
+       "Evan Mobley",
+       90.26,
+       88.69
+      ],
+      [
+       "LeBron James",
+       89.94,
+       87.67
+      ],
+      [
+       "Kevin Durant",
+       89.59,
+       88.05
+      ],
+      [
+       "Ryan Kalkbrenner",
+       89.1,
+       119.94
+      ],
+      [
+       "Rudy Gobert",
+       88.79,
+       103.68
+      ],
+      [
+       "Daniel Gafford",
+       87.91,
+       90.92
+      ]
+     ]
+    },
+    "passAll": true,
+    "passTop5": true,
+    "judged": true
+   },
+   "ft": {
+    "025": {
+     "nAll": 252,
+     "medAll": -0.9888115190793059,
+     "nTop5": 13,
+     "medTop5": -5.62620737823859,
+     "top5": [
+      [
+       "Stephen Curry",
+       99.0,
+       93.23
+      ],
+      [
+       "Cam Spencer",
+       99.0,
+       91.44
+      ],
+      [
+       "Desmond Bane",
+       98.6,
+       93.28
+      ],
+      [
+       "Anfernee Simons",
+       97.0,
+       80.25
+      ],
+      [
+       "Tyler Herro",
+       96.9,
+       85.65
+      ],
+      [
+       "Tyrese Maxey",
+       95.1,
+       90.87
+      ],
+      [
+       "Lauri Markkanen",
+       94.8,
+       89.17
+      ],
+      [
+       "Derrick White",
+       94.3,
+       88.58
+      ],
+      [
+       "Luke Kennard",
+       93.8,
+       81.29
+      ],
+      [
+       "Kawhi Leonard",
+       93.8,
+       90.8
+      ],
+      [
+       "Jamal Murray",
+       93.8,
+       89.45
+      ],
+      [
+       "Shai Gilgeous-Alexander",
+       93.7,
+       89.46
+      ],
+      [
+       "James Harden",
+       93.6,
+       89.88
+      ]
+     ]
+    },
+    "027b": {
+     "nAll": 252,
+     "medAll": -1.0127292414429192,
+     "nTop5": 13,
+     "medTop5": -5.608683358573202,
+     "top5": [
+      [
+       "Stephen Curry",
+       112.76,
+       93.23
+      ],
+      [
+       "Cam Spencer",
+       100.28,
+       91.44
+      ],
+      [
+       "Desmond Bane",
+       98.63,
+       93.28
+      ],
+      [
+       "Anfernee Simons",
+       97.0,
+       80.25
+      ],
+      [
+       "Tyler Herro",
+       96.93,
+       85.65
+      ],
+      [
+       "Tyrese Maxey",
+       95.07,
+       90.87
+      ],
+      [
+       "Lauri Markkanen",
+       94.78,
+       89.17
+      ],
+      [
+       "Derrick White",
+       94.26,
+       88.58
+      ],
+      [
+       "Kawhi Leonard",
+       93.85,
+       90.8
+      ],
+      [
+       "Luke Kennard",
+       93.76,
+       81.29
+      ],
+      [
+       "Jamal Murray",
+       93.76,
+       89.45
+      ],
+      [
+       "Shai Gilgeous-Alexander",
+       93.7,
+       89.46
+      ],
+      [
+       "James Harden",
+       93.64,
+       89.88
+      ]
+     ]
+    },
+    "passAll": true,
+    "passTop5": true,
+    "judged": true
+   },
+   "tovSkill": {
+    "025": {
+     "nAll": 252,
+     "medAll": -0.19266277939747312,
+     "nTop5": 13,
+     "medTop5": -0.46501457725948114,
+     "top5": [
+      [
+       "Tim Hardaway Jr.",
+       99.0,
+       99.0
+      ],
+      [
+       "Sam Hauser",
+       99.0,
+       99.0
+      ],
+      [
+       "Saddiq Bey",
+       99.0,
+       98.53
+      ],
+      [
+       "Miles McBride",
+       98.8,
+       97.6
+      ],
+      [
+       "DeMar DeRozan",
+       98.5,
+       96.66
+      ],
+      [
+       "Dean Wade",
+       98.3,
+       99.0
+      ],
+      [
+       "Gary Trent Jr.",
+       98.1,
+       94.54
+      ],
+      [
+       "Isaiah Joe",
+       97.8,
+       96.19
+      ],
+      [
+       "Rui Hachimura",
+       97.6,
+       98.07
+      ],
+      [
+       "Sam Merrill",
+       97.4,
+       95.95
+      ],
+      [
+       "Devin Vassell",
+       97.1,
+       97.83
+      ],
+      [
+       "Lauri Markkanen",
+       96.9,
+       97.36
+      ],
+      [
+       "Payton Pritchard",
+       96.7,
+       95.25
+      ]
+     ]
+    },
+    "027b": {
+     "nAll": 252,
+     "medAll": 0.030113722490824557,
+     "nTop5": 13,
+     "medTop5": -0.9981099619868843,
+     "top5": [
+      [
+       "Tim Hardaway Jr.",
+       107.89,
+       106.83
+      ],
+      [
+       "Sam Hauser",
+       106.16,
+       102.76
+      ],
+      [
+       "Saddiq Bey",
+       98.64,
+       98.94
+      ],
+      [
+       "Miles McBride",
+       98.45,
+       97.64
+      ],
+      [
+       "DeMar DeRozan",
+       98.33,
+       97.21
+      ],
+      [
+       "Dean Wade",
+       98.21,
+       109.0
+      ],
+      [
+       "Gary Trent Jr.",
+       98.14,
+       94.61
+      ],
+      [
+       "Isaiah Joe",
+       97.9,
+       96.84
+      ],
+      [
+       "Rui Hachimura",
+       97.71,
+       97.89
+      ],
+      [
+       "Sam Merrill",
+       97.53,
+       96.53
+      ],
+      [
+       "Devin Vassell",
+       97.1,
+       97.77
+      ],
+      [
+       "Lauri Markkanen",
+       96.97,
+       97.58
+      ],
+      [
+       "Payton Pritchard",
+       96.6,
+       95.36
+      ]
+     ]
+    },
+    "passAll": true,
+    "passTop5": true,
+    "judged": true
+   },
+   "pass": {
+    "025": {
+     "nAll": 252,
+     "medAll": 0.025024295432459098,
+     "nTop5": 13,
+     "medTop5": 0.0,
+     "top5": [
+      [
+       "Cade Cunningham",
+       99.0,
+       99.0
+      ],
+      [
+       "LaMelo Ball",
+       99.0,
+       99.0
+      ],
+      [
+       "Nikola Jokić",
+       99.0,
+       99.0
+      ],
+      [
+       "Luka Dončić",
+       98.8,
+       98.53
+      ],
+      [
+       "Josh Giddey",
+       98.5,
+       98.77
+      ],
+      [
+       "Isaiah Collier",
+       98.3,
+       98.3
+      ],
+      [
+       "Giannis Antetokounmpo",
+       98.1,
+       97.83
+      ],
+      [
+       "James Harden",
+       97.8,
+       97.6
+      ],
+      [
+       "Andrew Nembhard",
+       97.6,
+       98.07
+      ],
+      [
+       "Shai Gilgeous-Alexander",
+       97.4,
+       97.13
+      ],
+      [
+       "LeBron James",
+       97.1,
+       96.42
+      ],
+      [
+       "Stephon Castle",
+       96.9,
+       97.36
+      ],
+      [
+       "Russell Westbrook",
+       96.7,
+       96.66
+      ]
+     ]
+    },
+    "027b": {
+     "nAll": 252,
+     "medAll": 0.031854573254896934,
+     "nTop5": 13,
+     "medTop5": 0.1539637707320054,
+     "top5": [
+      [
+       "Nikola Jokić",
+       110.45,
+       110.4
+      ],
+      [
+       "Cade Cunningham",
+       105.18,
+       106.02
+      ],
+      [
+       "Josh Giddey",
+       98.95,
+       100.34
+      ],
+      [
+       "LaMelo Ball",
+       98.82,
+       98.91
+      ],
+      [
+       "Isaiah Collier",
+       98.7,
+       98.91
+      ],
+      [
+       "Luka Dončić",
+       98.39,
+       98.48
+      ],
+      [
+       "Andrew Nembhard",
+       97.71,
+       98.18
+      ],
+      [
+       "James Harden",
+       97.53,
+       97.37
+      ],
+      [
+       "Stephon Castle",
+       97.41,
+       97.81
+      ],
+      [
+       "Russell Westbrook",
+       97.1,
+       97.25
+      ],
+      [
+       "LeBron James",
+       96.91,
+       96.7
+      ],
+      [
+       "Jamal Shead",
+       96.79,
+       96.94
+      ],
+      [
+       "Darius Garland",
+       96.73,
+       96.76
+      ]
+     ]
+    },
+    "passAll": true,
+    "passTop5": true,
+    "judged": true
+   },
+   "rebound": {
+    "025": {
+     "nAll": 252,
+     "medAll": 0.0,
+     "nTop5": 13,
+     "medTop5": -0.004437965662447141,
+     "top5": [
+      [
+       "Donovan Clingan",
+       99.0,
+       99.0
+      ],
+      [
+       "Karl-Anthony Towns",
+       99.0,
+       99.0
+      ],
+      [
+       "Steven Adams",
+       99.0,
+       98.3
+      ],
+      [
+       "Jusuf Nurkić",
+       98.8,
+       98.07
+      ],
+      [
+       "Victor Wembanyama",
+       98.5,
+       99.0
+      ],
+      [
+       "Jalen Duren",
+       98.3,
+       97.83
+      ],
+      [
+       "Isaiah Hartenstein",
+       98.1,
+       98.53
+      ],
+      [
+       "Kel'el Ware",
+       97.8,
+       98.77
+      ],
+      [
+       "Nikola Jokić",
+       97.6,
+       97.6
+      ],
+      [
+       "Ivica Zubac",
+       97.4,
+       97.13
+      ],
+      [
+       "Rudy Gobert",
+       97.1,
+       96.89
+      ],
+      [
+       "Giannis Antetokounmpo",
+       96.9,
+       96.66
+      ],
+      [
+       "Dylan Cardwell",
+       96.7,
+       97.36
+      ]
+     ]
+    },
+    "027b": {
+     "nAll": 252,
+     "medAll": -0.009183570283198605,
+     "nTop5": 13,
+     "medTop5": 0.118151508072728,
+     "top5": [
+      [
+       "Donovan Clingan",
+       105.58,
+       105.76
+      ],
+      [
+       "Steven Adams",
+       98.64,
+       98.2
+      ],
+      [
+       "Karl-Anthony Towns",
+       98.58,
+       98.82
+      ],
+      [
+       "Jusuf Nurkić",
+       98.45,
+       98.14
+      ],
+      [
+       "Victor Wembanyama",
+       98.39,
+       98.76
+      ],
+      [
+       "Jalen Duren",
+       98.33,
+       98.01
+      ],
+      [
+       "Isaiah Hartenstein",
+       98.27,
+       98.39
+      ],
+      [
+       "Kel'el Ware",
+       98.14,
+       98.51
+      ],
+      [
+       "Nikola Jokić",
+       98.08,
+       97.89
+      ],
+      [
+       "Ivica Zubac",
+       97.96,
+       97.58
+      ],
+      [
+       "Rudy Gobert",
+       97.65,
+       97.4
+      ],
+      [
+       "Giannis Antetokounmpo",
+       96.36,
+       96.53
+      ],
+      [
+       "Dylan Cardwell",
+       96.24,
+       97.83
+      ]
+     ]
+    },
+    "passAll": true,
+    "passTop5": true,
+    "judged": true
+   },
+   "stamina": {
+    "025": {
+     "nAll": 252,
+     "medAll": 0.0010528020732074594,
+     "nTop5": 13,
+     "medTop5": 0.0,
+     "top5": [
+      [
+       "Tyrese Maxey",
+       99.0,
+       99.0
+      ],
+      [
+       "Kevin Durant",
+       99.0,
+       99.0
+      ],
+      [
+       "Amen Thompson",
+       99.0,
+       99.0
+      ],
+      [
+       "Luka Dončić",
+       98.8,
+       98.77
+      ],
+      [
+       "Trey Murphy III",
+       98.5,
+       98.53
+      ],
+      [
+       "Jamal Murray",
+       98.3,
+       98.3
+      ],
+      [
+       "Jalen Johnson",
+       98.1,
+       98.07
+      ],
+      [
+       "Jabari Smith Jr.",
+       97.8,
+       97.83
+      ],
+      [
+       "Anthony Edwards",
+       97.6,
+       97.13
+      ],
+      [
+       "Jalen Brunson",
+       97.4,
+       97.6
+      ],
+      [
+       "VJ Edgecombe",
+       97.1,
+       97.36
+      ],
+      [
+       "Nikola Jokić",
+       96.9,
+       96.66
+      ],
+      [
+       "James Harden",
+       96.7,
+       96.89
+      ]
+     ]
+    },
+    "027b": {
+     "nAll": 252,
+     "medAll": 0.0,
+     "nTop5": 13,
+     "medTop5": 0.0,
+     "top5": [
+      [
+       "Tyrese Maxey",
+       99.0,
+       99.0
+      ],
+      [
+       "Kevin Durant",
+       99.0,
+       99.0
+      ],
+      [
+       "Amen Thompson",
+       99.0,
+       99.0
+      ],
+      [
+       "Luka Dončić",
+       98.77,
+       98.77
+      ],
+      [
+       "Trey Murphy III",
+       98.53,
+       98.53
+      ],
+      [
+       "Jamal Murray",
+       98.3,
+       98.3
+      ],
+      [
+       "Jalen Johnson",
+       98.07,
+       98.07
+      ],
+      [
+       "Jabari Smith Jr.",
+       97.83,
+       97.83
+      ],
+      [
+       "Anthony Edwards",
+       97.6,
+       97.13
+      ],
+      [
+       "Jalen Brunson",
+       97.36,
+       97.6
+      ],
+      [
+       "VJ Edgecombe",
+       97.13,
+       97.36
+      ],
+      [
+       "Nikola Jokić",
+       96.89,
+       96.66
+      ],
+      [
+       "James Harden",
+       96.66,
+       96.89
+      ]
+     ]
+    },
+    "passAll": true,
+    "passTop5": true,
+    "judged": false
+   },
+   "creation": {
+    "025": {
+     "nAll": 252,
+     "medAll": 0.20006478781989046,
+     "nTop5": 13,
+     "medTop5": 0.0,
+     "top5": [
+      [
+       "Jaylen Brown",
+       99.0,
+       98.77
+      ],
+      [
+       "Shai Gilgeous-Alexander",
+       99.0,
+       99.0
+      ],
+      [
+       "Luka Dončić",
+       99.0,
+       99.0
+      ],
+      [
+       "Jalen Brunson",
+       98.8,
+       99.0
+      ],
+      [
+       "Donovan Mitchell",
+       98.5,
+       98.53
+      ],
+      [
+       "Cade Cunningham",
+       98.3,
+       97.83
+      ],
+      [
+       "Kawhi Leonard",
+       98.1,
+       98.3
+      ],
+      [
+       "Anthony Edwards",
+       97.8,
+       97.36
+      ],
+      [
+       "James Harden",
+       97.6,
+       96.19
+      ],
+      [
+       "Jalen Green",
+       97.4,
+       98.07
+      ],
+      [
+       "LaMelo Ball",
+       97.1,
+       97.6
+      ],
+      [
+       "Devin Booker",
+       96.9,
+       96.42
+      ],
+      [
+       "Tyrese Maxey",
+       96.7,
+       96.89
+      ]
+     ]
+    },
+    "027b": {
+     "nAll": 252,
+     "medAll": 0.3891705723746419,
+     "nTop5": 13,
+     "medTop5": -0.06840689165649394,
+     "top5": [
+      [
+       "Shai Gilgeous-Alexander",
+       108.74,
+       107.9
+      ],
+      [
+       "Luka Dončić",
+       106.97,
+       106.27
+      ],
+      [
+       "Jaylen Brown",
+       98.82,
+       98.63
+      ],
+      [
+       "Jalen Brunson",
+       98.7,
+       98.76
+      ],
+      [
+       "Donovan Mitchell",
+       98.21,
+       98.26
+      ],
+      [
+       "Cade Cunningham",
+       98.02,
+       97.95
+      ],
+      [
+       "Kawhi Leonard",
+       97.96,
+       98.2
+      ],
+      [
+       "Anthony Edwards",
+       97.78,
+       97.46
+      ],
+      [
+       "James Harden",
+       97.28,
+       95.66
+      ],
+      [
+       "Jalen Green",
+       97.22,
+       98.01
+      ],
+      [
+       "LaMelo Ball",
+       96.91,
+       97.71
+      ],
+      [
+       "Devin Booker",
+       96.73,
+       96.1
+      ],
+      [
+       "Tyrese Maxey",
+       96.17,
+       96.35
+      ]
+     ]
+    },
+    "passAll": true,
+    "passTop5": true,
+    "judged": true
+   },
+   "foulDraw": {
+    "025": {
+     "nAll": 252,
+     "medAll": 0.34073534175575304,
+     "nTop5": 13,
+     "medTop5": 0.3129899578879076,
+     "top5": [
+      [
+       "Deni Avdija",
+       99.0,
+       99.0
+      ],
+      [
+       "Joel Embiid",
+       99.0,
+       99.0
+      ],
+      [
+       "Giannis Antetokounmpo",
+       99.0,
+       99.0
+      ],
+      [
+       "Luka Dončić",
+       98.8,
+       99.0
+      ],
+      [
+       "Shai Gilgeous-Alexander",
+       98.5,
+       98.89
+      ],
+      [
+       "Zion Williamson",
+       98.3,
+       98.89
+      ],
+      [
+       "Jimmy Butler III",
+       98.1,
+       98.65
+      ],
+      [
+       "Paolo Banchero",
+       97.8,
+       97.95
+      ],
+      [
+       "Devin Booker",
+       97.6,
+       97.71
+      ],
+      [
+       "Victor Wembanyama",
+       97.4,
+       97.71
+      ],
+      [
+       "Jalen Duren",
+       97.1,
+       97.71
+      ],
+      [
+       "James Harden",
+       96.9,
+       97.24
+      ],
+      [
+       "Bennedict Mathurin",
+       96.7,
+       97.24
+      ]
+     ]
+    },
+    "027b": {
+     "nAll": 252,
+     "medAll": 0.32404511228909527,
+     "nTop5": 13,
+     "medTop5": 0.3361461886807575,
+     "top5": [
+      [
+       "Giannis Antetokounmpo",
+       112.62,
+       115.51
+      ],
+      [
+       "Joel Embiid",
+       99.81,
+       99.7
+      ],
+      [
+       "Deni Avdija",
+       98.88,
+       102.62
+      ],
+      [
+       "Luka Dončić",
+       98.64,
+       98.97
+      ],
+      [
+       "Shai Gilgeous-Alexander",
+       98.58,
+       98.91
+      ],
+      [
+       "Zion Williamson",
+       98.45,
+       98.91
+      ],
+      [
+       "Jimmy Butler III",
+       98.39,
+       98.73
+      ],
+      [
+       "Paolo Banchero",
+       98.08,
+       98.23
+      ],
+      [
+       "Devin Booker",
+       97.78,
+       98.11
+      ],
+      [
+       "Victor Wembanyama",
+       97.34,
+       97.92
+      ],
+      [
+       "Jalen Duren",
+       97.28,
+       97.86
+      ],
+      [
+       "James Harden",
+       97.16,
+       97.24
+      ],
+      [
+       "Bennedict Mathurin",
+       96.67,
+       97.24
+      ]
+     ]
+    },
+    "passAll": true,
+    "passTop5": true,
+    "judged": true
+   }
+  },
+  "definition": "2025-26 池（整季 GP≥30 且 MPG≥20，兩模式都在池內者）；y＝整季視窗映射值；025＝IC.window_cards＋foul_draw_y，x0＝card 0.2.2；027b＝m26_window_cards（pool-027b，pass 量×率、不收縮），x0＝card 0.2.7b 未四捨五入；樣本 < SEASON_MIN_SAMPLE 不計；「x0 前 5%」＝各模式依自己的 x0 取前 ceil(5%)；stamina 只報告",
+  "threshold": "|中位差₀₂₇b| ≤ |中位差₀₂₅| + 2.0（全部、x0 前 5% 兩組；stamina 不判）"
+ },
+ "allPass": true,
+ "failed": []
+}

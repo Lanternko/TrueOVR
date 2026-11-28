@@ -1,0 +1,93 @@
+{
+ "team": "POR",
+ "seeds": 600,
+ "c": 7.155,
+ "today": 8.496666666666666,
+ "marginal": {
+  "c:Deni Avdija": {
+   "min": 32.6,
+   "value_vs_avg_player": -0.56
+  },
+  "c:Damian Lillard": {
+   "min": 30.1,
+   "value_vs_avg_player": 0.08
+  },
+  "c:Toumani Camara": {
+   "min": 27.2,
+   "value_vs_avg_player": 0.91
+  },
+  "c:Ja Morant": {
+   "min": 26.9,
+   "value_vs_avg_player": -4.33
+  },
+  "c:Jrue Holiday": {
+   "min": 25.6,
+   "value_vs_avg_player": 1.99
+  },
+  "c:Donovan Clingan": {
+   "min": 23.1,
+   "value_vs_avg_player": 5.72
+  },
+  "c:Sidy Cissoko": {
+   "min": 22.8,
+   "value_vs_avg_player": -1.13
+  },
+  "c:Scoot Henderson": {
+   "min": 22.0,
+   "value_vs_avg_player": -1.07
+  },
+  "c:Robert Williams III": {
+   "min": 17.8,
+   "value_vs_avg_player": 4.63
+  },
+  "c:Vít Krejčí": {
+   "min": 11.9,
+   "value_vs_avg_player": 0.25
+  },
+  "today:Deni Avdija": {
+   "min": 35.0,
+   "value_vs_avg_player": -1.11
+  },
+  "today:Damian Lillard": {
+   "min": 32.3,
+   "value_vs_avg_player": -0.59
+  },
+  "today:Toumani Camara": {
+   "min": 29.2,
+   "value_vs_avg_player": -0.04
+  },
+  "today:Jrue Holiday": {
+   "min": 27.5,
+   "value_vs_avg_player": 0.5
+  },
+  "today:Donovan Clingan": {
+   "min": 24.9,
+   "value_vs_avg_player": 5.85
+  },
+  "today:Sidy Cissoko": {
+   "min": 24.5,
+   "value_vs_avg_player": -3.52
+  },
+  "today:Scoot Henderson": {
+   "min": 23.7,
+   "value_vs_avg_player": -2.37
+  },
+  "today:Robert Williams III": {
+   "min": 19.1,
+   "value_vs_avg_player": 3.31
+  },
+  "today:Vít Krejčí": {
+   "min": 12.8,
+   "value_vs_avg_player": -0.48
+  },
+  "today:Yang Hansen": {
+   "min": 11.1,
+   "value_vs_avg_player": -1.06
+  },
+  "c:Morant 在沒有 Damian Lillard 時": -3.03,
+  "c:Morant 在沒有 Jrue Holiday 時": -3.75,
+  "c:Morant 在沒有 Scoot Henderson 時": -5.28,
+  "c:Morant 在沒有 Deni Avdija 時": -2.11,
+  "c:Morant 在沒有 Donovan Clingan 時": -4.95
+ }
+}

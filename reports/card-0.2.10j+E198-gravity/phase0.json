@@ -1,0 +1,94 @@
+{
+ "n_pop": 379,
+ "n_group": 29,
+ "group_names": [
+  "Al Horford",
+  "Nicolas Batum",
+  "Harrison Barnes",
+  "Gary Harris",
+  "Myles Turner",
+  "Royce O'Neale",
+  "Taurean Prince",
+  "John Collins",
+  "Duncan Robinson",
+  "Grant Williams",
+  "Aaron Nesmith",
+  "Josh Green",
+  "Sam Merrill",
+  "Vít Krejčí",
+  "Moses Moody",
+  "Davion Mitchell",
+  "Luka Garza",
+  "Sam Hauser",
+  "Micah Potter",
+  "Jaylin Williams",
+  "Keon Ellis",
+  "Josh Minott",
+  "Baylor Scheierman",
+  "Pete Nance",
+  "AJ Green",
+  "Ja'Kobe Walter",
+  "Jaylon Tyson",
+  "Jamison Battle",
+  "Kasparas Jakučionis"
+ ],
+ "KAU_point": {
+  "full": {
+   "rho": 0.587583572106547,
+   "rank_resid": 11.96861886517059,
+   "value_resid": 0.2631197444687681,
+   "grp_pct_ovr": 42.95748950921364,
+   "b": 0.6128942853954756
+  },
+  "odd": {
+   "rho": 0.48916821347696127,
+   "rank_resid": 15.48075168764824,
+   "value_resid": 0.3877187733026848,
+   "grp_pct_ovr": 42.95748950921364,
+   "b": 0.502125748421013
+  },
+  "even": {
+   "rho": 0.5079152714206252,
+   "rank_resid": 9.651523444626893,
+   "value_resid": 0.13192227106464965,
+   "grp_pct_ovr": 42.95748950921364,
+   "b": 0.5316191657223392
+  }
+ },
+ "h": 0.057977187431625554,
+ "MDE_rank": 8.264900670814649,
+ "MDE_value": 0.23351547421028196,
+ "KAU_ci90": {
+  "rho": [
+   0.5247249910416306,
+   0.6406793659048817
+  ],
+  "rank_resid": [
+   3.6061006894340224,
+   20.13590203106332
+  ],
+  "value_resid": [
+   0.03416167415437678,
+   0.5011926225749407
+  ],
+  "grp_pct_ovr": [
+   36.4257310378,
+   49.56949343523418
+  ],
+  "b": [
+   0.5586240332724883,
+   0.6612923253985462
+  ]
+ },
+ "artifact_rule": "S 組在 KAU 上的平均 pct(OVR) 偏離 50 超過 10 點 → 名次殘差有均值回歸假象（L-112），A 以價值殘差判；否則以名次殘差判（價值殘差只報告）",
+ "artifact": false,
+ "A_primary": "rank_resid",
+ "seed": 20261102,
+ "draws": 2000,
+ "kau_ranking_sha256": "8b3e99d682ad6d7e4b5c5068f3d0d88e484ef0754af4fe789aae323e9a1c6c34",
+ "rapm_sha256": {
+  "full": "7b75724173a9ce476cc24ef595f11d7cc4f31011a9bf6d97b2f482fe72fc81b6",
+  "odd": "86ba7115375c1769ef61d79e6943ca8f6322af2c9feafb37521af44dedad06cb",
+  "even": "5165e371f93671bb5def349c2103d38e3b94387510dfc840369a74b9d7397cda"
+ }
+}

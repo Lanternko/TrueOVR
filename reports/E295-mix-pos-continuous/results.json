@@ -1,0 +1,4507 @@
+{
+ "sources_sha256": {
+  "card_0213a": "feb5c8023cd99f12413767160d3b98d119051c55ef6e200f26bca631460daf97",
+  "card_0214a": "ff1abb4722247faf3cd61c6cc28dcc547f2728e08486a3123b33747162b7d35f",
+  "mix_pool": "dee0e6b2ccb4517187cba39cccc291a4984ed3f6e2ff3c580754304df43570c7",
+  "mix_pool_h": "d4c0fb9c3f418f867bd65595658fe0e265cbc87bf85671cc9568e317882ca99f",
+  "t_swap": "606f4d0c84d74ae5be5c8e1dbd49c49182c867902882b482cc39083d2a4da087",
+  "epm": "bc841b47cdc8c7ffe750f606c72c794251f004a59be8da73ccb76788a6b5ae13",
+  "2k27": "a8e071cf899388e58243cb24caa3c904b11f5c6bceeb0580bbc31cf91bc2d25f",
+  "live_rank": "cb362b7b7abe0a14026601d0e6eff5d40d7c98acbf04f30a5c049b8cecd70cb0",
+  "live_mix": "d1098ff40e44f0c16f6edc14a1f5417f42d82fcff55a51f1805faa61504f5f64",
+  "pos_shares_2022-23": "41f529c7ad2c4a9b601468b309e90acd2cb43e2e3ccaab7c5a4eabb41c96db0e",
+  "pos_shares_2023-24": "d91ecdc2d9c3b39ee60425c5e47661018c28f7d2f41d987d022809ad0a58e0f3",
+  "pos_shares_2024-25": "30c811f3aaa4cd60d91bea12e83d1561083022b3577726e23608bcb5a8d16fee",
+  "pos_shares_2025-26": "6d5828e54d95e363712a17663a4c74e2eae37c3899a2c0dafe6d519d84ba4be9"
+ },
+ "repro_A_vs_card0214a_maxabs": 0.0004946370455985449,
+ "n_match": {
+  "T": 265,
+  "EPM": 262,
+  "2K": 575
+ },
+ "share_source_counts": {
+  "2025-26": 463,
+  "2025-26+shrink": 116,
+  "height": 3
+ },
+ "share_source_counts_min500": {
+  "2025-26": 378,
+  "2025-26+shrink": 0,
+  "height": 1
+ },
+ "mpos": {
+  "A": {
+   "reb": [
+    -0.7916,
+    -0.6158,
+    -0.1933,
+    0.5772,
+    1.2303
+   ],
+   "ob": [
+    -0.6456,
+    -0.4773,
+    -0.2973,
+    0.1154,
+    1.4193
+   ],
+   "db": [
+    -0.6078,
+    -0.5728,
+    -0.2743,
+    0.3502,
+    1.2676
+   ],
+   "con": [
+    -0.693,
+    -0.5178,
+    -0.3652,
+    0.2459,
+    1.4725
+   ]
+  },
+  "W1": {
+   "reb": [
+    -0.8487,
+    -0.6489,
+    -0.1785,
+    0.4391,
+    1.1859
+   ],
+   "ob": [
+    -0.6569,
+    -0.4885,
+    -0.2929,
+    0.0759,
+    1.3052
+   ],
+   "db": [
+    -0.6582,
+    -0.5908,
+    -0.2778,
+    0.268,
+    1.2057
+   ],
+   "con": [
+    -0.727,
+    -0.5185,
+    -0.3528,
+    0.0668,
+    1.4667
+   ]
+  },
+  "W2": {
+   "reb": [
+    -0.7916,
+    -0.6158,
+    -0.1933,
+    0.5772,
+    1.2303
+   ],
+   "ob": [
+    -0.6456,
+    -0.4773,
+    -0.2973,
+    0.1154,
+    1.4193
+   ],
+   "db": [
+    -0.6078,
+    -0.5728,
+    -0.2743,
+    0.3502,
+    1.2676
+   ],
+   "con": [
+    -0.693,
+    -0.5178,
+    -0.3652,
+    0.2459,
+    1.4725
+   ]
+  },
+  "W3": {
+   "reb": [
+    -0.8099,
+    -0.5167,
+    -0.1007,
+    0.3513,
+    0.9577
+   ],
+   "ob": [
+    -0.5695,
+    -0.4325,
+    -0.1825,
+    0.1814,
+    0.9005
+   ],
+   "db": [
+    -0.6581,
+    -0.479,
+    -0.1622,
+    0.255,
+    0.9344
+   ],
+   "con": [
+    -0.6581,
+    -0.4845,
+    -0.2206,
+    0.1854,
+    1.0581
+   ]
+  }
+ },
+ "scales": {
+  "A": [
+   1.0523710315802022,
+   1.025575182363618,
+   1.1237715936405568
+  ],
+  "W1": [
+   1.0516019541266914,
+   1.0377173685404817,
+   1.1233494510802133
+  ],
+  "W2": [
+   1.0523710315802022,
+   1.025575182363618,
+   1.1237715936405568
+  ],
+  "W3": [
+   0.9654509333872061,
+   0.933118998307406,
+   1.086423797057889
+  ]
+ },
+ "share_table": {
+  "Chet Holmgren": {
+   "pi": [
+    0.0,
+    0.0,
+    0.01,
+    0.37,
+    0.62
+   ],
+   "c": 0.71,
+   "c_height": 0.928,
+   "label": "PF",
+   "src": "2025-26",
+   "height": 85.0
+  },
+  "Evan Mobley": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.35,
+    0.65
+   ],
+   "c": 0.735,
+   "c_height": 0.803,
+   "label": "PF",
+   "src": "2025-26",
+   "height": 83.0
+  },
+  "Donovan Clingan": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "c": 1.0,
+   "c_height": 0.932,
+   "label": "C",
+   "src": "2025-26",
+   "height": 86.0
+  },
+  "Bam Adebayo": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.21,
+    0.79
+   ],
+   "c": 0.841,
+   "c_height": 0.485,
+   "label": "C",
+   "src": "2025-26",
+   "height": 81.0
+  },
+  "Anthony Davis": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.11,
+    0.89
+   ],
+   "c": 0.917,
+   "c_height": 0.675,
+   "label": "C",
+   "src": "2025-26",
+   "height": 82.0
+  },
+  "Karl-Anthony Towns": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "c": 1.0,
+   "c_height": 0.883,
+   "label": "C",
+   "src": "2025-26",
+   "height": 84.0
+  },
+  "Pascal Siakam": {
+   "pi": [
+    0.0,
+    0.0,
+    0.059,
+    0.832,
+    0.109
+   ],
+   "c": 0.311,
+   "c_height": 0.308,
+   "label": "PF",
+   "src": "2025-26",
+   "height": 80.0
+  },
+  "Jaren Jackson Jr.": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.55,
+    0.45
+   ],
+   "c": 0.584,
+   "c_height": 0.675,
+   "label": "PF",
+   "src": "2025-26",
+   "height": 82.0
+  },
+  "Giannis Antetokounmpo": {
+   "pi": [
+    0.0,
+    0.0,
+    0.09,
+    0.62,
+    0.29
+   ],
+   "c": 0.441,
+   "c_height": 0.803,
+   "label": "PF",
+   "src": "2025-26",
+   "height": 83.0
+  },
+  "Zion Williamson": {
+   "pi": [
+    0.0,
+    0.0,
+    0.07,
+    0.83,
+    0.1
+   ],
+   "c": 0.302,
+   "c_height": 0.085,
+   "label": "PF",
+   "src": "2025-26",
+   "height": 78.0
+  },
+  "Paolo Banchero": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.95,
+    0.05
+   ],
+   "c": 0.281,
+   "c_height": 0.675,
+   "label": "PF",
+   "src": "2025-26",
+   "height": 82.0
+  },
+  "Jayson Tatum": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.95,
+    0.05
+   ],
+   "c": 0.281,
+   "c_height": 0.308,
+   "label": "PF",
+   "src": "2025-26",
+   "height": 80.0
+  },
+  "Joel Embiid": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "c": 1.0,
+   "c_height": 0.883,
+   "label": "C",
+   "src": "2025-26",
+   "height": 84.0
+  },
+  "Victor Wembanyama": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "c": 1.0,
+   "c_height": 0.934,
+   "label": "C",
+   "src": "2025-26",
+   "height": 88.0
+  },
+  "Nikola Jokić": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "c": 1.0,
+   "c_height": 0.803,
+   "label": "C",
+   "src": "2025-26",
+   "height": 83.0
+  },
+  "Rudy Gobert": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "c": 1.0,
+   "c_height": 0.928,
+   "label": "C",
+   "src": "2025-26",
+   "height": 85.0
+  },
+  "Jarrett Allen": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "c": 1.0,
+   "c_height": 0.485,
+   "label": "C",
+   "src": "2025-26",
+   "height": 81.0
+  },
+  "Domantas Sabonis": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.18,
+    0.82
+   ],
+   "c": 0.864,
+   "c_height": 0.675,
+   "label": "C",
+   "src": "2025-26",
+   "height": 82.0
+  },
+  "Alperen Sengun": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.14,
+    0.86
+   ],
+   "c": 0.894,
+   "c_height": 0.803,
+   "label": "C",
+   "src": "2025-26",
+   "height": 83.0
+  },
+  "Ivica Zubac": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.02,
+    0.98
+   ],
+   "c": 0.985,
+   "c_height": 0.883,
+   "label": "C",
+   "src": "2025-26",
+   "height": 84.0
+  },
+  "Isaiah Hartenstein": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "c": 1.0,
+   "c_height": 0.883,
+   "label": "C",
+   "src": "2025-26",
+   "height": 84.0
+  },
+  "Zach Edey": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "c": 1.0,
+   "c_height": 0.934,
+   "label": "C",
+   "src": "2025-26",
+   "height": 87.0
+  },
+  "Kristaps Porziņģis": {
+   "pi": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "c": 1.0,
+   "c_height": 0.932,
+   "label": "C",
+   "src": "2025-26",
+   "height": 86.0
+  },
+  "Jalen Johnson": {
+   "pi": [
+    0.0,
+    0.0,
+    0.08,
+    0.92,
+    0.0
+   ],
+   "c": 0.223,
+   "c_height": 0.308,
+   "label": "PF",
+   "src": "2025-26",
+   "height": 80.0
+  },
+  "Scottie Barnes": {
+   "pi": [
+    0.0,
+    0.0,
+    0.02,
+    0.67,
+    0.31
+   ],
+   "c": 0.473,
+   "c_height": 0.308,
+   "label": "PF",
+   "src": "2025-26",
+   "height": 80.0
+  }
+ },
+ "prereg_sha256": "d7ba937b6dbd5537410e648d96dbb150111379e0e74973ae17d5c4a63f7a0b14",
+ "card": {
+  "A": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Anthony Edwards",
+     "SG"
+    ]
+   ],
+   "rank11_20": [
+    [
+     "Kevin Durant",
+     "SF",
+     11
+    ],
+    [
+     "Evan Mobley",
+     "PF",
+     12
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     13
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     14
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     15
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     16
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     17
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     18
+    ],
+    [
+     "Joel Embiid",
+     "C",
+     19
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops_vs_0214a": [],
+   "top30_drops_vs_0213a": [],
+   "ties50": [
+    4,
+    10
+   ],
+   "rho": {
+    "T": 0.765309327054327,
+    "EPM": 0.7138279548423231,
+    "2K": 0.7793367460714761
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 9,
+     "bonus": 2.15
+    },
+    "Evan Mobley": {
+     "rank": 12,
+     "bonus": 1.95
+    },
+    "Donovan Clingan": {
+     "rank": 127,
+     "bonus": 10.63
+    },
+    "Bam Adebayo": {
+     "rank": 49,
+     "bonus": 2.31
+    },
+    "Anthony Davis": {
+     "rank": 13,
+     "bonus": 6.81
+    },
+    "Karl-Anthony Towns": {
+     "rank": 15,
+     "bonus": 4.46
+    },
+    "Pascal Siakam": {
+     "rank": 95,
+     "bonus": 0.15
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 56,
+     "bonus": 0.97
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 1.11
+    },
+    "Zion Williamson": {
+     "rank": 55,
+     "bonus": 0.1
+    },
+    "Paolo Banchero": {
+     "rank": 131,
+     "bonus": 0.49
+    },
+    "Jayson Tatum": {
+     "rank": 8,
+     "bonus": 0.74
+    },
+    "Joel Embiid": {
+     "rank": 19,
+     "bonus": 2.87
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 7.69
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 4.05
+    },
+    "Rudy Gobert": {
+     "rank": 22,
+     "bonus": 8.57
+    },
+    "Jarrett Allen": {
+     "rank": 27,
+     "bonus": 6.78
+    },
+    "Domantas Sabonis": {
+     "rank": 60,
+     "bonus": 4.6
+    },
+    "Alperen Sengun": {
+     "rank": 110,
+     "bonus": 3.09
+    },
+    "Ivica Zubac": {
+     "rank": 52,
+     "bonus": 8.02
+    },
+    "Isaiah Hartenstein": {
+     "rank": 29,
+     "bonus": 6.94
+    },
+    "Zach Edey": {
+     "rank": 101,
+     "bonus": 5.31
+    },
+    "Kristaps Porziņģis": {
+     "rank": 20,
+     "bonus": 5.13
+    },
+    "Jalen Johnson": {
+     "rank": 33,
+     "bonus": 0.77
+    },
+    "Scottie Barnes": {
+     "rank": 37,
+     "bonus": 0.52
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "max_bonus": 10.631554584152596,
+    "C_sd": 2.591679787982261,
+    "C_iqr": 3.7191519731648848,
+    "C_mean": 4.7948850167628425,
+    "n_pos_bonus_min500": 118,
+    "max_same_bonus_group": 3,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      10.63
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      9.47
+     ],
+     [
+      "Clint Capela",
+      "C",
+      9.21
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      9.08
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      8.67
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      8.57
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      8.02
+     ],
+     [
+      "Mark Williams",
+      "C",
+      7.94
+     ],
+     [
+      "Paul Reed",
+      "C",
+      7.82
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      7.82
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 0.5400118617624409,
+     "C": 4.7948850167628425
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    },
+    "EPM": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    },
+    "2K": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "cliff": {
+    "label_flip_max_abs": 7.923803717821186,
+    "label_flip_n_gt_0.5": 89,
+    "label_flip_named": {
+     "Chet Holmgren": 4.62,
+     "Evan Mobley": 3.41,
+     "Donovan Clingan": 7.92,
+     "Bam Adebayo": 1.24,
+     "Anthony Davis": 4.6,
+     "Karl-Anthony Towns": 2.94,
+     "Pascal Siakam": -0.15,
+     "Jaren Jackson Jr.": 1.44,
+     "Giannis Antetokounmpo": 2.47,
+     "Zion Williamson": -0.1,
+     "Paolo Banchero": -0.27,
+     "Jayson Tatum": 0.7,
+     "Joel Embiid": 1.34,
+     "Victor Wembanyama": 5.36,
+     "Nikola Jokić": 2.87,
+     "Rudy Gobert": 6.13,
+     "Jarrett Allen": 4.6,
+     "Domantas Sabonis": 3.13,
+     "Alperen Sengun": 1.49,
+     "Ivica Zubac": 5.65,
+     "Isaiah Hartenstein": 4.72,
+     "Kristaps Porziņģis": 3.45,
+     "Jalen Johnson": 0.85,
+     "Scottie Barnes": -0.52
+    },
+    "sweep": {
+     "Chet Holmgren": {
+      "pfc_share": 0.99,
+      "C_share_actual": 0.62,
+      "max_step": 4.615319359941379,
+      "at_C0": 2.1509188186434884,
+      "at_C50": 2.1509188186434884,
+      "at_C100": 6.766238178584867
+     },
+     "Evan Mobley": {
+      "pfc_share": 1.0,
+      "C_share_actual": 0.65,
+      "max_step": 3.4120070193911993,
+      "at_C0": 1.9488976403233456,
+      "at_C50": 1.9488976403233456,
+      "at_C100": 5.360904659714545
+     },
+     "Jaren Jackson Jr.": {
+      "pfc_share": 1.0,
+      "C_share_actual": 0.45,
+      "max_step": 1.4368972703039875,
+      "at_C0": 0.9737319751009468,
+      "at_C50": 0.9737319751009468,
+      "at_C100": 2.4106292454049343
+     },
+     "Bam Adebayo": {
+      "pfc_share": 1.0,
+      "C_share_actual": 0.79,
+      "max_step": 1.2351155475015287,
+      "at_C0": 1.0702376236254534,
+      "at_C50": 1.0702376236254534,
+      "at_C100": 2.305353171126982
+     },
+     "Giannis Antetokounmpo": {
+      "pfc_share": 0.9099999999999999,
+      "C_share_actual": 0.29,
+      "max_step": 2.4718741633130348,
+      "at_C0": 1.1093615773373604,
+      "at_C50": 1.1093615773373604,
+      "at_C100": 3.581235740650395
+     },
+     "Donovan Clingan": {
+      "pfc_share": 1.0,
+      "C_share_actual": 1.0,
+      "max_step": 7.923803717821186,
+      "at_C0": 2.70775086633141,
+      "at_C50": 2.70775086633141,
+      "at_C100": 10.631554584152596
+     }
+    },
+    "sweep_max_step": 7.923803717821186
+   },
+   "rookies_live": [
+    {
+     "name": "Aday Mara",
+     "pos": "C",
+     "height": 87.0,
+     "MIN26": 198.0,
+     "c": 0.934,
+     "w": 1.0,
+     "bonus": 2.872,
+     "live_bonus_0214a": 2.872
+    },
+    {
+     "name": "Baba Miller",
+     "pos": "C",
+     "height": 83.0,
+     "MIN26": 77.0,
+     "c": 0.803,
+     "w": 1.0,
+     "bonus": 0.594,
+     "live_bonus_0214a": 0.594
+    },
+    {
+     "name": "Chris Cenac Jr.",
+     "pos": "C",
+     "height": 83.0,
+     "MIN26": 9.0,
+     "c": 0.803,
+     "w": 1.0,
+     "bonus": 0.005,
+     "live_bonus_0214a": 0.005
+    },
+    {
+     "name": "Felix Okpara",
+     "pos": "C",
+     "height": 83.0,
+     "MIN26": 4.0,
+     "c": 0.803,
+     "w": 1.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Caleb Wilson",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 292.0,
+     "c": 0.675,
+     "w": 1.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Morez Johnson Jr.",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 171.0,
+     "c": 0.675,
+     "w": 1.0,
+     "bonus": 0.841,
+     "live_bonus_0214a": 0.841
+    },
+    {
+     "name": "Trevon Brazile",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 169.0,
+     "c": 0.675,
+     "w": 1.0,
+     "bonus": 0.541,
+     "live_bonus_0214a": 0.541
+    },
+    {
+     "name": "Hannes Steinbach",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 50.0,
+     "c": 0.675,
+     "w": 1.0,
+     "bonus": 0.443,
+     "live_bonus_0214a": 0.443
+    },
+    {
+     "name": "Nate Ament",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 131.0,
+     "c": 0.675,
+     "w": 1.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Tarris Reed Jr.",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 32.0,
+     "c": 0.675,
+     "w": 1.0,
+     "bonus": 0.566,
+     "live_bonus_0214a": 0.566
+    },
+    {
+     "name": "Yaxel Lendeborg",
+     "pos": "F",
+     "height": 81.0,
+     "MIN26": 322.0,
+     "c": 0.485,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "AJ Dybantsa",
+     "pos": "F",
+     "height": 81.0,
+     "MIN26": 189.0,
+     "c": 0.485,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Trey Lyles",
+     "pos": "PF",
+     "height": 81.0,
+     "MIN26": 203.0,
+     "c": 0.485,
+     "w": 0.243,
+     "bonus": 0.391,
+     "live_bonus_0214a": 0.391
+    },
+    {
+     "name": "Cameron Boozer",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 288.0,
+     "c": 0.308,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Allen Graves",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 119.0,
+     "c": 0.308,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Zuby Ejiofor",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 74.0,
+     "c": 0.308,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Koa Peat",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 15.0,
+     "c": 0.308,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Joshua Jefferson",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 4.0,
+     "c": 0.308,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Maliq Brown",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 1.0,
+     "c": 0.308,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Georges Niang",
+     "pos": "SF",
+     "height": 79.0,
+     "MIN26": 206.0,
+     "c": 0.171,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Tobi Lawal",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 16.0,
+     "c": 0.171,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Bryce Hopkins",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 97.0,
+     "c": 0.171,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Nick Martinelli",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 21.0,
+     "c": 0.171,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Alex Karaban",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 49.0,
+     "c": 0.171,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Darryn Peterson",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 307.0,
+     "c": 0.085,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Keaton Wagler",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 209.0,
+     "c": 0.085,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Dailyn Swain",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 19.0,
+     "c": 0.085,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Isaiah Evans",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 12.0,
+     "c": 0.085,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Sergio de Larrea",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 47.0,
+     "c": 0.085,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Tyrese Haliburton",
+     "pos": "SG",
+     "height": 77.0,
+     "MIN26": 132.0,
+     "c": 0.037,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Brayden Burries",
+     "pos": "G",
+     "height": 76.0,
+     "MIN26": 210.0,
+     "c": 0.01,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Mikel Brown Jr.",
+     "pos": "G",
+     "height": 76.0,
+     "MIN26": 163.0,
+     "c": 0.01,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Kingston Flemings",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 217.0,
+     "c": 0.004,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Jaden Bradley",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 32.0,
+     "c": 0.004,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Bennett Stirtz",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 180.0,
+     "c": 0.004,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Labaron Philon Jr.",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 39.0,
+     "c": 0.004,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Meleek Thomas",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 157.0,
+     "c": 0.004,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Emanuel Sharp",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 180.0,
+     "c": 0.004,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Kyrie Irving",
+     "pos": "PG",
+     "height": 74.0,
+     "MIN26": 237.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Damian Lillard",
+     "pos": "PG",
+     "height": 74.0,
+     "MIN26": 265.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Darius Acuff Jr.",
+     "pos": "G",
+     "height": 74.0,
+     "MIN26": 370.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Ryan Conwell",
+     "pos": "G",
+     "height": 74.0,
+     "MIN26": 91.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Ebuka Okorie",
+     "pos": "G",
+     "height": 74.0,
+     "MIN26": 15.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Christian Anderson",
+     "pos": "G",
+     "height": 73.0,
+     "MIN26": 108.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Fred VanVleet",
+     "pos": "PG",
+     "height": 72.0,
+     "MIN26": 241.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Bruce Thornton",
+     "pos": "G",
+     "height": 72.0,
+     "MIN26": 19.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Ja'Kobi Gillespie",
+     "pos": "G",
+     "height": 72.0,
+     "MIN26": 4.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Braden Smith",
+     "pos": "G",
+     "height": 71.0,
+     "MIN26": 96.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    }
+   ],
+   "checks": {
+    "G1": false,
+    "G2": true,
+    "G3": true,
+    "G4": true,
+    "G5": false,
+    "new_bigs_top10": []
+   },
+   "verdict": "baseline"
+  },
+  "W1": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ]
+   ],
+   "rank11_20": [
+    [
+     "Anthony Edwards",
+     "SG",
+     11
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     12
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     13
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     14
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     15
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     16
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     17
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     18
+    ],
+    [
+     "Joel Embiid",
+     "C",
+     19
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops_vs_0214a": [],
+   "top30_drops_vs_0213a": [],
+   "ties50": [
+    6,
+    14
+   ],
+   "rho": {
+    "T": 0.7653342095527402,
+    "EPM": 0.7149725309611762,
+    "2K": 0.7795770186914913
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 6,
+     "bonus": 5.6
+    },
+    "Evan Mobley": {
+     "rank": 8,
+     "bonus": 4.89
+    },
+    "Donovan Clingan": {
+     "rank": 128,
+     "bonus": 10.73
+    },
+    "Bam Adebayo": {
+     "rank": 49,
+     "bonus": 2.31
+    },
+    "Anthony Davis": {
+     "rank": 13,
+     "bonus": 6.66
+    },
+    "Karl-Anthony Towns": {
+     "rank": 15,
+     "bonus": 4.52
+    },
+    "Pascal Siakam": {
+     "rank": 95,
+     "bonus": 0.23
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 54,
+     "bonus": 2.07
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 1.95
+    },
+    "Zion Williamson": {
+     "rank": 56,
+     "bonus": 0.14
+    },
+    "Paolo Banchero": {
+     "rank": 132,
+     "bonus": 0.59
+    },
+    "Jayson Tatum": {
+     "rank": 10,
+     "bonus": 0.87
+    },
+    "Joel Embiid": {
+     "rank": 19,
+     "bonus": 3.05
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 7.81
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 4.12
+    },
+    "Rudy Gobert": {
+     "rank": 22,
+     "bonus": 8.7
+    },
+    "Jarrett Allen": {
+     "rank": 27,
+     "bonus": 6.93
+    },
+    "Domantas Sabonis": {
+     "rank": 63,
+     "bonus": 4.13
+    },
+    "Alperen Sengun": {
+     "rank": 109,
+     "bonus": 3.43
+    },
+    "Ivica Zubac": {
+     "rank": 52,
+     "bonus": 8.07
+    },
+    "Isaiah Hartenstein": {
+     "rank": 29,
+     "bonus": 7.04
+    },
+    "Zach Edey": {
+     "rank": 100,
+     "bonus": 5.37
+    },
+    "Kristaps Porziņģis": {
+     "rank": 20,
+     "bonus": 5.19
+    },
+    "Jalen Johnson": {
+     "rank": 33,
+     "bonus": 0.75
+    },
+    "Scottie Barnes": {
+     "rank": 36,
+     "bonus": 0.65
+    }
+   },
+   "disc": {
+    "n_near_cap": 47,
+    "near_cap_names": [
+     "Donovan Mitchell",
+     "Anthony Edwards",
+     "Austin Reaves",
+     "Devin Booker",
+     "Brandin Podziemski",
+     "Ajay Mitchell",
+     "Josh Hart",
+     "Kon Knueppel",
+     "Luke Kennard",
+     "Dyson Daniels",
+     "RJ Barrett",
+     "Cedric Coward",
+     "Jalen Green",
+     "Aaron Nesmith",
+     "Gary Payton II",
+     "Zach LaVine",
+     "Javonte Green",
+     "Herbert Jones",
+     "Keon Ellis",
+     "Terance Mann",
+     "Pelle Larsson",
+     "Jamir Watkins",
+     "Kentavious Caldwell-Pope",
+     "Baylor Scheierman",
+     "Duncan Robinson",
+     "Will Richard",
+     "Sion James",
+     "Josh Green",
+     "Caleb Martin",
+     "Nique Clifford",
+     "Isaac Okoro",
+     "Tim Hardaway Jr.",
+     "Max Christie",
+     "Dalen Terry",
+     "Kobe Sanders",
+     "Russell Westbrook",
+     "Zaccharie Risacher",
+     "Gradey Dick",
+     "Johnny Furphy",
+     "Klay Thompson",
+     "Svi Mykhailiuk",
+     "Tyrese Martin",
+     "Gary Trent Jr.",
+     "Jordan Hawkins",
+     "Kam Jones",
+     "Ben Saraf",
+     "Jahmai Mashack"
+    ],
+    "max_bonus": 10.732486898094207,
+    "C_sd": 2.480741887445895,
+    "C_iqr": 3.6960331889957745,
+    "C_mean": 4.859251613327199,
+    "n_pos_bonus_min500": 150,
+    "max_same_bonus_group": 3,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      10.73
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      9.58
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      8.7
+     ],
+     [
+      "Clint Capela",
+      "C",
+      8.6
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      8.55
+     ],
+     [
+      "Mark Williams",
+      "C",
+      8.08
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      8.07
+     ],
+     [
+      "Victor Wembanyama",
+      "C",
+      7.81
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      7.74
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      7.73
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0017297104719394389,
+     "SG": 0.016466646419669714,
+     "SF": 0.09066499388915393,
+     "PF": 0.8788861836442625,
+     "C": 4.859251613327199
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": 2.4882498413258958e-05,
+     "ci90": [
+      -0.0030143807900124718,
+      0.0029098115008966076
+     ]
+    },
+    "EPM": {
+     "mean": 0.0011445761188531023,
+     "ci90": [
+      -0.0009668250678879053,
+      0.003344754939890421
+     ]
+    },
+    "2K": {
+     "mean": 0.00024027262001524718,
+     "ci90": [
+      -0.0009249924810087629,
+      0.0013816360257814905
+     ]
+    }
+   },
+   "cliff": {
+    "label_flip_max_abs": 0.0,
+    "label_flip_n_gt_0.5": 0,
+    "label_flip_named": {
+     "Chet Holmgren": 0.0,
+     "Evan Mobley": 0.0,
+     "Donovan Clingan": 0.0,
+     "Bam Adebayo": 0.0,
+     "Anthony Davis": 0.0,
+     "Karl-Anthony Towns": 0.0,
+     "Pascal Siakam": 0.0,
+     "Jaren Jackson Jr.": 0.0,
+     "Giannis Antetokounmpo": 0.0,
+     "Zion Williamson": 0.0,
+     "Paolo Banchero": 0.0,
+     "Jayson Tatum": 0.0,
+     "Joel Embiid": 0.0,
+     "Victor Wembanyama": 0.0,
+     "Nikola Jokić": 0.0,
+     "Rudy Gobert": 0.0,
+     "Jarrett Allen": 0.0,
+     "Domantas Sabonis": 0.0,
+     "Alperen Sengun": 0.0,
+     "Ivica Zubac": 0.0,
+     "Isaiah Hartenstein": 0.0,
+     "Kristaps Porziņģis": 0.0,
+     "Jalen Johnson": 0.0,
+     "Scottie Barnes": 0.0
+    },
+    "sweep": {
+     "Chet Holmgren": {
+      "pfc_share": 0.99,
+      "C_share_actual": 0.62,
+      "max_step": 0.06411552681241028,
+      "at_C0": 2.18549919601882,
+      "at_C50": 5.023522230997922,
+      "at_C100": 6.911494621123805
+     },
+     "Evan Mobley": {
+      "pfc_share": 1.0,
+      "C_share_actual": 0.65,
+      "max_step": 0.05752191496984427,
+      "at_C0": 2.0173845878160774,
+      "at_C50": 4.4029173379656035,
+      "at_C100": 5.536569780990331
+     },
+     "Jaren Jackson Jr.": {
+      "pfc_share": 1.0,
+      "C_share_actual": 0.45,
+      "max_step": 0.02873835981559103,
+      "at_C0": 1.0273601644369417,
+      "at_C50": 2.149862157227094,
+      "at_C100": 2.4476205860321474
+     },
+     "Bam Adebayo": {
+      "pfc_share": 1.0,
+      "C_share_actual": 0.79,
+      "max_step": 0.02728305914943774,
+      "at_C0": 1.179273656841847,
+      "at_C50": 1.9702213384998972,
+      "at_C100": 2.4251464079396543
+     },
+     "Giannis Antetokounmpo": {
+      "pfc_share": 0.9099999999999999,
+      "C_share_actual": 0.29,
+      "max_step": 0.030625912670980915,
+      "at_C0": 1.0313760203011793,
+      "at_C50": 2.426830653433513,
+      "at_C100": 3.4829092735034353
+     },
+     "Donovan Clingan": {
+      "pfc_share": 1.0,
+      "C_share_actual": 1.0,
+      "max_step": 0.08422602311024141,
+      "at_C0": 2.7310040575779735,
+      "at_C50": 6.854190721937364,
+      "at_C100": 10.732486898094207
+     }
+    },
+    "sweep_max_step": 0.08422602311024141
+   },
+   "rookies_live": [
+    {
+     "name": "Aday Mara",
+     "pos": "C",
+     "height": 87.0,
+     "MIN26": 198.0,
+     "c": 0.934,
+     "w": 0.934,
+     "bonus": 2.822,
+     "live_bonus_0214a": 2.872
+    },
+    {
+     "name": "Baba Miller",
+     "pos": "C",
+     "height": 83.0,
+     "MIN26": 77.0,
+     "c": 0.803,
+     "w": 0.803,
+     "bonus": 0.621,
+     "live_bonus_0214a": 0.594
+    },
+    {
+     "name": "Chris Cenac Jr.",
+     "pos": "C",
+     "height": 83.0,
+     "MIN26": 9.0,
+     "c": 0.803,
+     "w": 0.803,
+     "bonus": 0.014,
+     "live_bonus_0214a": 0.005
+    },
+    {
+     "name": "Felix Okpara",
+     "pos": "C",
+     "height": 83.0,
+     "MIN26": 4.0,
+     "c": 0.803,
+     "w": 0.803,
+     "bonus": 0.001,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Caleb Wilson",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 292.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Morez Johnson Jr.",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 171.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.747,
+     "live_bonus_0214a": 0.841
+    },
+    {
+     "name": "Trevon Brazile",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 169.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.568,
+     "live_bonus_0214a": 0.541
+    },
+    {
+     "name": "Hannes Steinbach",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 50.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.417,
+     "live_bonus_0214a": 0.443
+    },
+    {
+     "name": "Nate Ament",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 131.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Tarris Reed Jr.",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 32.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.419,
+     "live_bonus_0214a": 0.566
+    },
+    {
+     "name": "Yaxel Lendeborg",
+     "pos": "F",
+     "height": 81.0,
+     "MIN26": 322.0,
+     "c": 0.485,
+     "w": 0.485,
+     "bonus": 0.509,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "AJ Dybantsa",
+     "pos": "F",
+     "height": 81.0,
+     "MIN26": 189.0,
+     "c": 0.485,
+     "w": 0.485,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Trey Lyles",
+     "pos": "PF",
+     "height": 81.0,
+     "MIN26": 203.0,
+     "c": 0.485,
+     "w": 0.485,
+     "bonus": 0.641,
+     "live_bonus_0214a": 0.391
+    },
+    {
+     "name": "Cameron Boozer",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 288.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.627,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Allen Graves",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 119.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.168,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Zuby Ejiofor",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 74.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.372,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Koa Peat",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 15.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.027,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Joshua Jefferson",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 4.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Maliq Brown",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 1.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Georges Niang",
+     "pos": "SF",
+     "height": 79.0,
+     "MIN26": 206.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Tobi Lawal",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 16.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Bryce Hopkins",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 97.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Nick Martinelli",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 21.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.037,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Alex Karaban",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 49.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Darryn Peterson",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 307.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Keaton Wagler",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 209.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.018,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Dailyn Swain",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 19.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Isaiah Evans",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 12.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Sergio de Larrea",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 47.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.008,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Tyrese Haliburton",
+     "pos": "SG",
+     "height": 77.0,
+     "MIN26": 132.0,
+     "c": 0.037,
+     "w": 0.037,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Brayden Burries",
+     "pos": "G",
+     "height": 76.0,
+     "MIN26": 210.0,
+     "c": 0.01,
+     "w": 0.01,
+     "bonus": 0.015,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Mikel Brown Jr.",
+     "pos": "G",
+     "height": 76.0,
+     "MIN26": 163.0,
+     "c": 0.01,
+     "w": 0.01,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Kingston Flemings",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 217.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Jaden Bradley",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 32.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Bennett Stirtz",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 180.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Labaron Philon Jr.",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 39.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Meleek Thomas",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 157.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Emanuel Sharp",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 180.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Kyrie Irving",
+     "pos": "PG",
+     "height": 74.0,
+     "MIN26": 237.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Damian Lillard",
+     "pos": "PG",
+     "height": 74.0,
+     "MIN26": 265.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Darius Acuff Jr.",
+     "pos": "G",
+     "height": 74.0,
+     "MIN26": 370.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Ryan Conwell",
+     "pos": "G",
+     "height": 74.0,
+     "MIN26": 91.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Ebuka Okorie",
+     "pos": "G",
+     "height": 74.0,
+     "MIN26": 15.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Christian Anderson",
+     "pos": "G",
+     "height": 73.0,
+     "MIN26": 108.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Fred VanVleet",
+     "pos": "PG",
+     "height": 72.0,
+     "MIN26": 241.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Bruce Thornton",
+     "pos": "G",
+     "height": 72.0,
+     "MIN26": 19.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Ja'Kobi Gillespie",
+     "pos": "G",
+     "height": 72.0,
+     "MIN26": 4.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Braden Smith",
+     "pos": "G",
+     "height": 71.0,
+     "MIN26": 96.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    }
+   ],
+   "checks": {
+    "G1": true,
+    "G2": false,
+    "G3": true,
+    "G4": true,
+    "G5": true,
+    "new_bigs_top10": [
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "reject"
+  },
+  "W2": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ]
+   ],
+   "rank11_20": [
+    [
+     "Anthony Edwards",
+     "SG",
+     11
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     12
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     13
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     14
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     15
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     16
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     17
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     18
+    ],
+    [
+     "Joel Embiid",
+     "C",
+     19
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops_vs_0214a": [],
+   "top30_drops_vs_0213a": [],
+   "ties50": [
+    8,
+    17
+   ],
+   "rho": {
+    "T": 0.7636840063356646,
+    "EPM": 0.7157445939083844,
+    "2K": 0.7795987184328718
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 6,
+     "bonus": 6.29
+    },
+    "Evan Mobley": {
+     "rank": 7,
+     "bonus": 5.9
+    },
+    "Donovan Clingan": {
+     "rank": 127,
+     "bonus": 10.63
+    },
+    "Bam Adebayo": {
+     "rank": 51,
+     "bonus": 1.94
+    },
+    "Anthony Davis": {
+     "rank": 17,
+     "bonus": 6.24
+    },
+    "Karl-Anthony Towns": {
+     "rank": 14,
+     "bonus": 4.46
+    },
+    "Pascal Siakam": {
+     "rank": 95,
+     "bonus": 0.19
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 52,
+     "bonus": 2.34
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 2.01
+    },
+    "Zion Williamson": {
+     "rank": 56,
+     "bonus": 0.13
+    },
+    "Paolo Banchero": {
+     "rank": 131,
+     "bonus": 0.57
+    },
+    "Jayson Tatum": {
+     "rank": 10,
+     "bonus": 0.86
+    },
+    "Joel Embiid": {
+     "rank": 19,
+     "bonus": 2.87
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 7.69
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 4.05
+    },
+    "Rudy Gobert": {
+     "rank": 23,
+     "bonus": 8.57
+    },
+    "Jarrett Allen": {
+     "rank": 27,
+     "bonus": 6.78
+    },
+    "Domantas Sabonis": {
+     "rank": 62,
+     "bonus": 3.97
+    },
+    "Alperen Sengun": {
+     "rank": 114,
+     "bonus": 2.76
+    },
+    "Ivica Zubac": {
+     "rank": 53,
+     "bonus": 7.9
+    },
+    "Isaiah Hartenstein": {
+     "rank": 29,
+     "bonus": 6.94
+    },
+    "Zach Edey": {
+     "rank": 102,
+     "bonus": 5.31
+    },
+    "Kristaps Porziņģis": {
+     "rank": 20,
+     "bonus": 5.13
+    },
+    "Jalen Johnson": {
+     "rank": 34,
+     "bonus": 0.71
+    },
+    "Scottie Barnes": {
+     "rank": 35,
+     "bonus": 1.01
+    }
+   },
+   "disc": {
+    "n_near_cap": 47,
+    "near_cap_names": [
+     "Donovan Mitchell",
+     "Anthony Edwards",
+     "Austin Reaves",
+     "Devin Booker",
+     "Brandin Podziemski",
+     "Ajay Mitchell",
+     "Kon Knueppel",
+     "Luke Kennard",
+     "Dyson Daniels",
+     "RJ Barrett",
+     "Cedric Coward",
+     "Jalen Green",
+     "Aaron Nesmith",
+     "Gary Payton II",
+     "Zach LaVine",
+     "Javonte Green",
+     "Herbert Jones",
+     "Keon Ellis",
+     "Terance Mann",
+     "Pelle Larsson",
+     "Jamir Watkins",
+     "Kentavious Caldwell-Pope",
+     "Baylor Scheierman",
+     "Duncan Robinson",
+     "Will Richard",
+     "Sion James",
+     "Josh Green",
+     "Caleb Martin",
+     "Nique Clifford",
+     "Bilal Coulibaly",
+     "Isaac Okoro",
+     "Tim Hardaway Jr.",
+     "Max Christie",
+     "Dalen Terry",
+     "Kobe Sanders",
+     "Russell Westbrook",
+     "Zaccharie Risacher",
+     "Gradey Dick",
+     "Johnny Furphy",
+     "Klay Thompson",
+     "Svi Mykhailiuk",
+     "Tyrese Martin",
+     "Gary Trent Jr.",
+     "Jordan Hawkins",
+     "Kam Jones",
+     "Ben Saraf",
+     "Jahmai Mashack"
+    ],
+    "max_bonus": 10.631554584152596,
+    "C_sd": 2.566422665423705,
+    "C_iqr": 4.007423224450581,
+    "C_mean": 4.604147791824302,
+    "n_pos_bonus_min500": 157,
+    "max_same_bonus_group": 3,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      10.63
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      9.47
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      8.57
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      8.34
+     ],
+     [
+      "Clint Capela",
+      "C",
+      8.3
+     ],
+     [
+      "Mark Williams",
+      "C",
+      7.94
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      7.9
+     ],
+     [
+      "Victor Wembanyama",
+      "C",
+      7.69
+     ],
+     [
+      "Trayce Jackson-Davis",
+      "C",
+      7.55
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      7.53
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.002694001151802688,
+     "SG": 0.02686218335023305,
+     "SF": 0.14317167772569017,
+     "PF": 1.0194735270758484,
+     "C": 4.604147791824302
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": -0.001625320718662393,
+     "ci90": [
+      -0.005276740200845303,
+      0.0019040052527712346
+     ]
+    },
+    "EPM": {
+     "mean": 0.0019166390660613208,
+     "ci90": [
+      -0.000694567886416958,
+      0.004888066694392573
+     ]
+    },
+    "2K": {
+     "mean": 0.00026197236139569036,
+     "ci90": [
+      -0.001225011511299051,
+      0.0016502072039828338
+     ]
+    }
+   },
+   "cliff": {
+    "label_flip_max_abs": 3.7344080390112824,
+    "label_flip_n_gt_0.5": 97,
+    "label_flip_named": {
+     "Chet Holmgren": -1.48,
+     "Evan Mobley": -1.96,
+     "Donovan Clingan": -0.52,
+     "Bam Adebayo": -1.77,
+     "Anthony Davis": -2.08,
+     "Karl-Anthony Towns": -1.81,
+     "Pascal Siakam": -0.19,
+     "Jaren Jackson Jr.": -0.93,
+     "Giannis Antetokounmpo": -0.43,
+     "Zion Williamson": -0.13,
+     "Paolo Banchero": -0.51,
+     "Jayson Tatum": -0.45,
+     "Joel Embiid": -3.41,
+     "Victor Wembanyama": -1.9,
+     "Nikola Jokić": -0.81,
+     "Rudy Gobert": -1.48,
+     "Jarrett Allen": -2.21,
+     "Domantas Sabonis": -1.25,
+     "Alperen Sengun": -3.12,
+     "Ivica Zubac": -1.73,
+     "Isaiah Hartenstein": -2.22,
+     "Kristaps Porziņģis": -1.78,
+     "Jalen Johnson": -0.35,
+     "Scottie Barnes": -1.01
+    },
+    "sweep": {
+     "Chet Holmgren": {
+      "pfc_share": 0.99,
+      "C_share_actual": 0.62,
+      "max_step": 0.06638747671425271,
+      "at_C0": 2.1294096304570536,
+      "at_C50": 5.44878346616952,
+      "at_C100": 8.768157301881983
+     },
+     "Evan Mobley": {
+      "pfc_share": 1.0,
+      "C_share_actual": 0.65,
+      "max_step": 0.060759749963024134,
+      "at_C0": 1.9488976403233456,
+      "at_C50": 4.986885138474443,
+      "at_C100": 8.02487263662554
+     },
+     "Jaren Jackson Jr.": {
+      "pfc_share": 1.0,
+      "C_share_actual": 0.45,
+      "max_step": 0.03035752628255972,
+      "at_C0": 0.9737319751009468,
+      "at_C50": 2.491608289228893,
+      "at_C100": 4.00948460335684
+     },
+     "Bam Adebayo": {
+      "pfc_share": 1.0,
+      "C_share_actual": 0.79,
+      "max_step": 0.017454816867104928,
+      "at_C0": 0.5598714844165529,
+      "at_C50": 1.4326123277717675,
+      "at_C100": 2.305353171126982
+     },
+     "Giannis Antetokounmpo": {
+      "pfc_share": 0.9099999999999999,
+      "C_share_actual": 0.29,
+      "max_step": 0.031473240514695355,
+      "at_C0": 1.0095190353769978,
+      "at_C50": 2.5831810611117296,
+      "at_C100": 4.156843086846461
+     },
+     "Donovan Clingan": {
+      "pfc_share": 1.0,
+      "C_share_actual": 1.0,
+      "max_step": 0.08049605613715727,
+      "at_C0": 2.5819489704370593,
+      "at_C50": 6.606751777294828,
+      "at_C100": 10.631554584152596
+     }
+    },
+    "sweep_max_step": 0.08049605613715727
+   },
+   "rookies_live": [
+    {
+     "name": "Aday Mara",
+     "pos": "C",
+     "height": 87.0,
+     "MIN26": 198.0,
+     "c": 0.934,
+     "w": 0.934,
+     "bonus": 2.683,
+     "live_bonus_0214a": 2.872
+    },
+    {
+     "name": "Baba Miller",
+     "pos": "C",
+     "height": 83.0,
+     "MIN26": 77.0,
+     "c": 0.803,
+     "w": 0.803,
+     "bonus": 0.477,
+     "live_bonus_0214a": 0.594
+    },
+    {
+     "name": "Chris Cenac Jr.",
+     "pos": "C",
+     "height": 83.0,
+     "MIN26": 9.0,
+     "c": 0.803,
+     "w": 0.803,
+     "bonus": 0.004,
+     "live_bonus_0214a": 0.005
+    },
+    {
+     "name": "Felix Okpara",
+     "pos": "C",
+     "height": 83.0,
+     "MIN26": 4.0,
+     "c": 0.803,
+     "w": 0.803,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Caleb Wilson",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 292.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Morez Johnson Jr.",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 171.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.568,
+     "live_bonus_0214a": 0.841
+    },
+    {
+     "name": "Trevon Brazile",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 169.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.366,
+     "live_bonus_0214a": 0.541
+    },
+    {
+     "name": "Hannes Steinbach",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 50.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.3,
+     "live_bonus_0214a": 0.443
+    },
+    {
+     "name": "Nate Ament",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 131.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Tarris Reed Jr.",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 32.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.383,
+     "live_bonus_0214a": 0.566
+    },
+    {
+     "name": "Yaxel Lendeborg",
+     "pos": "F",
+     "height": 81.0,
+     "MIN26": 322.0,
+     "c": 0.485,
+     "w": 0.485,
+     "bonus": 0.927,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "AJ Dybantsa",
+     "pos": "F",
+     "height": 81.0,
+     "MIN26": 189.0,
+     "c": 0.485,
+     "w": 0.485,
+     "bonus": 0.089,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Trey Lyles",
+     "pos": "PF",
+     "height": 81.0,
+     "MIN26": 203.0,
+     "c": 0.485,
+     "w": 0.485,
+     "bonus": 0.78,
+     "live_bonus_0214a": 0.391
+    },
+    {
+     "name": "Cameron Boozer",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 288.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.682,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Allen Graves",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 119.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.221,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Zuby Ejiofor",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 74.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.386,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Koa Peat",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 15.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.03,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Joshua Jefferson",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 4.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Maliq Brown",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 1.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Georges Niang",
+     "pos": "SF",
+     "height": 79.0,
+     "MIN26": 206.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Tobi Lawal",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 16.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Bryce Hopkins",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 97.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Nick Martinelli",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 21.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.036,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Alex Karaban",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 49.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Darryn Peterson",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 307.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Keaton Wagler",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 209.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Dailyn Swain",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 19.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Isaiah Evans",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 12.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Sergio de Larrea",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 47.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.005,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Tyrese Haliburton",
+     "pos": "SG",
+     "height": 77.0,
+     "MIN26": 132.0,
+     "c": 0.037,
+     "w": 0.037,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Brayden Burries",
+     "pos": "G",
+     "height": 76.0,
+     "MIN26": 210.0,
+     "c": 0.01,
+     "w": 0.01,
+     "bonus": 0.012,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Mikel Brown Jr.",
+     "pos": "G",
+     "height": 76.0,
+     "MIN26": 163.0,
+     "c": 0.01,
+     "w": 0.01,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Kingston Flemings",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 217.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Jaden Bradley",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 32.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Bennett Stirtz",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 180.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Labaron Philon Jr.",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 39.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Meleek Thomas",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 157.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Emanuel Sharp",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 180.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Kyrie Irving",
+     "pos": "PG",
+     "height": 74.0,
+     "MIN26": 237.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Damian Lillard",
+     "pos": "PG",
+     "height": 74.0,
+     "MIN26": 265.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Darius Acuff Jr.",
+     "pos": "G",
+     "height": 74.0,
+     "MIN26": 370.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Ryan Conwell",
+     "pos": "G",
+     "height": 74.0,
+     "MIN26": 91.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Ebuka Okorie",
+     "pos": "G",
+     "height": 74.0,
+     "MIN26": 15.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Christian Anderson",
+     "pos": "G",
+     "height": 73.0,
+     "MIN26": 108.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Fred VanVleet",
+     "pos": "PG",
+     "height": 72.0,
+     "MIN26": 241.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Bruce Thornton",
+     "pos": "G",
+     "height": 72.0,
+     "MIN26": 19.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Ja'Kobi Gillespie",
+     "pos": "G",
+     "height": 72.0,
+     "MIN26": 4.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Braden Smith",
+     "pos": "G",
+     "height": 71.0,
+     "MIN26": 96.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    }
+   ],
+   "checks": {
+    "G1": false,
+    "G2": false,
+    "G3": true,
+    "G4": true,
+    "G5": true,
+    "new_bigs_top10": [
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "reject"
+  },
+  "W3": {
+   "top10": [
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ]
+   ],
+   "rank11_20": [
+    [
+     "Anthony Edwards",
+     "SG",
+     11
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     12
+    ],
+    [
+     "Joel Embiid",
+     "C",
+     13
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     14
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     15
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     16
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     17
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     18
+    ],
+    [
+     "Kevin Porter Jr.",
+     "SG",
+     19
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops_vs_0214a": [
+    [
+     "Jarrett Allen",
+     27,
+     40
+    ]
+   ],
+   "top30_drops_vs_0213a": [],
+   "ties50": [
+    6,
+    13
+   ],
+   "rho": {
+    "T": 0.7579788010867515,
+    "EPM": 0.7114968160923191,
+    "2K": 0.7817484437592852
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 6,
+     "bonus": 6.39
+    },
+    "Evan Mobley": {
+     "rank": 8,
+     "bonus": 4.95
+    },
+    "Donovan Clingan": {
+     "rank": 139,
+     "bonus": 8.97
+    },
+    "Bam Adebayo": {
+     "rank": 49,
+     "bonus": 1.72
+    },
+    "Anthony Davis": {
+     "rank": 21,
+     "bonus": 5.05
+    },
+    "Karl-Anthony Towns": {
+     "rank": 18,
+     "bonus": 3.79
+    },
+    "Pascal Siakam": {
+     "rank": 91,
+     "bonus": 0.29
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 50,
+     "bonus": 2.1
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 3.0
+    },
+    "Zion Williamson": {
+     "rank": 55,
+     "bonus": 0.11
+    },
+    "Paolo Banchero": {
+     "rank": 127,
+     "bonus": 0.92
+    },
+    "Jayson Tatum": {
+     "rank": 10,
+     "bonus": 0.89
+    },
+    "Joel Embiid": {
+     "rank": 13,
+     "bonus": 3.61
+    },
+    "Victor Wembanyama": {
+     "rank": 2,
+     "bonus": 7.11
+    },
+    "Nikola Jokić": {
+     "rank": 3,
+     "bonus": 3.26
+    },
+    "Rudy Gobert": {
+     "rank": 27,
+     "bonus": 7.63
+    },
+    "Jarrett Allen": {
+     "rank": 40,
+     "bonus": 3.78
+    },
+    "Domantas Sabonis": {
+     "rank": 66,
+     "bonus": 3.06
+    },
+    "Alperen Sengun": {
+     "rank": 104,
+     "bonus": 3.65
+    },
+    "Ivica Zubac": {
+     "rank": 54,
+     "bonus": 7.01
+    },
+    "Isaiah Hartenstein": {
+     "rank": 28,
+     "bonus": 6.34
+    },
+    "Zach Edey": {
+     "rank": 105,
+     "bonus": 4.66
+    },
+    "Kristaps Porziņģis": {
+     "rank": 20,
+     "bonus": 4.69
+    },
+    "Jalen Johnson": {
+     "rank": 32,
+     "bonus": 0.93
+    },
+    "Scottie Barnes": {
+     "rank": 35,
+     "bonus": 0.69
+    }
+   },
+   "disc": {
+    "n_near_cap": 94,
+    "near_cap_names": [
+     "Donovan Mitchell",
+     "Anthony Edwards",
+     "Stephen Curry",
+     "Jamal Murray",
+     "De'Aaron Fox",
+     "Tyrese Maxey",
+     "Derrick White",
+     "Jalen Brunson",
+     "Payton Pritchard",
+     "Isaiah Joe",
+     "Tre Jones",
+     "Javon Small",
+     "Brandin Podziemski",
+     "Ryan Rollins",
+     "Grayson Allen",
+     "Ajay Mitchell",
+     "Ja Morant",
+     "Collin Sexton",
+     "Darius Garland",
+     "Immanuel Quickley",
+     "Cason Wallace",
+     "Ayo Dosunmu",
+     "Donte DiVincenzo",
+     "Collin Gillespie",
+     "Jrue Holiday",
+     "T.J. McConnell",
+     "Norman Powell",
+     "VJ Edgecombe",
+     "Coby White",
+     "Miles McBride",
+     "Jalen Green",
+     "Sam Merrill",
+     "De'Anthony Melton",
+     "Gary Payton II",
+     "Jordan Goodwin",
+     "Cam Spencer",
+     "Kris Dunn",
+     "Keon Ellis",
+     "Dru Smith",
+     "Andrew Nembhard",
+     "Quenton Jackson",
+     "Craig Porter Jr.",
+     "Bones Hyland",
+     "Josh Okogie",
+     "CJ McCollum",
+     "Vince Williams Jr.",
+     "Ja'Kobe Walter",
+     "Marcus Smart",
+     "Tyrese Proctor",
+     "Will Richard",
+     "Buddy Hield",
+     "Keyonte George",
+     "AJ Green",
+     "Jaden Ivey",
+     "Scoot Henderson",
+     "Brandon Williams",
+     "Luguentz Dort",
+     "Malik Monk",
+     "Anfernee Simons",
+     "Reed Sheppard",
+     "Cole Anthony",
+     "Bruce Brown",
+     "Jamaree Bouyea",
+     "Isaac Okoro",
+     "Jordan Poole",
+     "Jared McCain",
+     "Cam Thomas",
+     "Devin Carter",
+     "Daniss Jenkins",
+     "Mike Conley",
+     "Tyler Kolek",
+     "Jeremiah Fears",
+     "Russell Westbrook",
+     "Keaton Wallace",
+     "Jalen Pickett",
+     "Walter Clayton Jr.",
+     "Jamal Shead",
+     "Isaiah Collier",
+     "Gary Harris",
+     "Jase Richardson",
+     "Dennis Schröder",
+     "Daeqwon Plowden",
+     "Tre Mann",
+     "Gabe Vincent",
+     "Pat Spencer",
+     "Ethan Thompson",
+     "Bub Carrington",
+     "Elijah Harkless",
+     "Jaden Hardy",
+     "Kam Jones",
+     "Rob Dillingham",
+     "Caleb Love",
+     "Jahmai Mashack",
+     "Nolan Traore"
+    ],
+    "max_bonus": 8.973128110198497,
+    "C_sd": 1.9417486725065496,
+    "C_iqr": 2.4247975005651634,
+    "C_mean": 4.075742327501361,
+    "n_pos_bonus_min500": 162,
+    "max_same_bonus_group": 2,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      8.97
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      7.63
+     ],
+     [
+      "Mark Williams",
+      "C",
+      7.23
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      7.2
+     ],
+     [
+      "Victor Wembanyama",
+      "C",
+      7.11
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      7.01
+     ],
+     [
+      "Luke Kornet",
+      "C",
+      6.93
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      6.8
+     ],
+     [
+      "Ariel Hukporti",
+      "C",
+      6.49
+     ],
+     [
+      "Kel'el Ware",
+      "C",
+      6.45
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.01987850018941259,
+     "SG": 0.027169467613214995,
+     "SF": 0.13816307484124724,
+     "PF": 0.866327894703088,
+     "C": 4.075742327501361
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": -0.007330525967575441,
+     "ci90": [
+      -0.012837233882141169,
+      -0.0024487656608565465
+     ]
+    },
+    "EPM": {
+     "mean": -0.0023311387500040137,
+     "ci90": [
+      -0.006640546349992793,
+      0.001870325254270444
+     ]
+    },
+    "2K": {
+     "mean": 0.0024116976878091334,
+     "ci90": [
+      0.0006861040629263904,
+      0.004197623942203582
+     ]
+    }
+   },
+   "cliff": {
+    "label_flip_max_abs": 0.0,
+    "label_flip_n_gt_0.5": 0,
+    "label_flip_named": {
+     "Chet Holmgren": 0.0,
+     "Evan Mobley": 0.0,
+     "Donovan Clingan": 0.0,
+     "Bam Adebayo": 0.0,
+     "Anthony Davis": 0.0,
+     "Karl-Anthony Towns": 0.0,
+     "Pascal Siakam": 0.0,
+     "Jaren Jackson Jr.": 0.0,
+     "Giannis Antetokounmpo": 0.0,
+     "Zion Williamson": 0.0,
+     "Paolo Banchero": 0.0,
+     "Jayson Tatum": 0.0,
+     "Joel Embiid": 0.0,
+     "Victor Wembanyama": 0.0,
+     "Nikola Jokić": 0.0,
+     "Rudy Gobert": 0.0,
+     "Jarrett Allen": 0.0,
+     "Domantas Sabonis": 0.0,
+     "Alperen Sengun": 0.0,
+     "Ivica Zubac": 0.0,
+     "Isaiah Hartenstein": 0.0,
+     "Kristaps Porziņģis": 0.0,
+     "Jalen Johnson": 0.0,
+     "Scottie Barnes": 0.0
+    },
+    "sweep": {
+     "Chet Holmgren": {
+      "pfc_share": 0.99,
+      "C_share_actual": 0.62,
+      "max_step": 0.0,
+      "at_C0": 6.387392292243522,
+      "at_C50": 6.387392292243522,
+      "at_C100": 6.387392292243522
+     },
+     "Evan Mobley": {
+      "pfc_share": 1.0,
+      "C_share_actual": 0.65,
+      "max_step": 0.0,
+      "at_C0": 4.952173401977394,
+      "at_C50": 4.952173401977394,
+      "at_C100": 4.952173401977394
+     },
+     "Jaren Jackson Jr.": {
+      "pfc_share": 1.0,
+      "C_share_actual": 0.45,
+      "max_step": 0.0,
+      "at_C0": 2.103468156937663,
+      "at_C50": 2.103468156937663,
+      "at_C100": 2.103468156937663
+     },
+     "Bam Adebayo": {
+      "pfc_share": 1.0,
+      "C_share_actual": 0.79,
+      "max_step": 0.0,
+      "at_C0": 1.721858320638928,
+      "at_C50": 1.721858320638928,
+      "at_C100": 1.721858320638928
+     },
+     "Giannis Antetokounmpo": {
+      "pfc_share": 0.9099999999999999,
+      "C_share_actual": 0.29,
+      "max_step": 0.0,
+      "at_C0": 2.9979918242793597,
+      "at_C50": 2.9979918242793597,
+      "at_C100": 2.9979918242793597
+     },
+     "Donovan Clingan": {
+      "pfc_share": 1.0,
+      "C_share_actual": 1.0,
+      "max_step": 0.0,
+      "at_C0": 8.973128110198497,
+      "at_C50": 8.973128110198497,
+      "at_C100": 8.973128110198497
+     }
+    },
+    "sweep_max_step": 0.0
+   },
+   "rookies_live": [
+    {
+     "name": "Aday Mara",
+     "pos": "C",
+     "height": 87.0,
+     "MIN26": 198.0,
+     "c": 0.934,
+     "w": 0.934,
+     "bonus": 2.648,
+     "live_bonus_0214a": 2.872
+    },
+    {
+     "name": "Baba Miller",
+     "pos": "C",
+     "height": 83.0,
+     "MIN26": 77.0,
+     "c": 0.803,
+     "w": 0.803,
+     "bonus": 0.622,
+     "live_bonus_0214a": 0.594
+    },
+    {
+     "name": "Chris Cenac Jr.",
+     "pos": "C",
+     "height": 83.0,
+     "MIN26": 9.0,
+     "c": 0.803,
+     "w": 0.803,
+     "bonus": 0.018,
+     "live_bonus_0214a": 0.005
+    },
+    {
+     "name": "Felix Okpara",
+     "pos": "C",
+     "height": 83.0,
+     "MIN26": 4.0,
+     "c": 0.803,
+     "w": 0.803,
+     "bonus": 0.004,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Caleb Wilson",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 292.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Morez Johnson Jr.",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 171.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.711,
+     "live_bonus_0214a": 0.841
+    },
+    {
+     "name": "Trevon Brazile",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 169.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.56,
+     "live_bonus_0214a": 0.541
+    },
+    {
+     "name": "Hannes Steinbach",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 50.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.398,
+     "live_bonus_0214a": 0.443
+    },
+    {
+     "name": "Nate Ament",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 131.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.01,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Tarris Reed Jr.",
+     "pos": "C",
+     "height": 82.0,
+     "MIN26": 32.0,
+     "c": 0.675,
+     "w": 0.675,
+     "bonus": 0.378,
+     "live_bonus_0214a": 0.566
+    },
+    {
+     "name": "Yaxel Lendeborg",
+     "pos": "F",
+     "height": 81.0,
+     "MIN26": 322.0,
+     "c": 0.485,
+     "w": 0.485,
+     "bonus": 0.5,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "AJ Dybantsa",
+     "pos": "F",
+     "height": 81.0,
+     "MIN26": 189.0,
+     "c": 0.485,
+     "w": 0.485,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Trey Lyles",
+     "pos": "PF",
+     "height": 81.0,
+     "MIN26": 203.0,
+     "c": 0.485,
+     "w": 0.485,
+     "bonus": 0.62,
+     "live_bonus_0214a": 0.391
+    },
+    {
+     "name": "Cameron Boozer",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 288.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.562,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Allen Graves",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 119.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.151,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Zuby Ejiofor",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 74.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.327,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Koa Peat",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 15.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.025,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Joshua Jefferson",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 4.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Maliq Brown",
+     "pos": "F",
+     "height": 80.0,
+     "MIN26": 1.0,
+     "c": 0.308,
+     "w": 0.308,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Georges Niang",
+     "pos": "SF",
+     "height": 79.0,
+     "MIN26": 206.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Tobi Lawal",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 16.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Bryce Hopkins",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 97.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Nick Martinelli",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 21.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.032,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Alex Karaban",
+     "pos": "F",
+     "height": 79.0,
+     "MIN26": 49.0,
+     "c": 0.171,
+     "w": 0.171,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Darryn Peterson",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 307.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Keaton Wagler",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 209.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.008,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Dailyn Swain",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 19.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Isaiah Evans",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 12.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Sergio de Larrea",
+     "pos": "F",
+     "height": 78.0,
+     "MIN26": 47.0,
+     "c": 0.085,
+     "w": 0.085,
+     "bonus": 0.007,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Tyrese Haliburton",
+     "pos": "SG",
+     "height": 77.0,
+     "MIN26": 132.0,
+     "c": 0.037,
+     "w": 0.037,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Brayden Burries",
+     "pos": "G",
+     "height": 76.0,
+     "MIN26": 210.0,
+     "c": 0.01,
+     "w": 0.01,
+     "bonus": 0.013,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Mikel Brown Jr.",
+     "pos": "G",
+     "height": 76.0,
+     "MIN26": 163.0,
+     "c": 0.01,
+     "w": 0.01,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Kingston Flemings",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 217.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Jaden Bradley",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 32.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Bennett Stirtz",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 180.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Labaron Philon Jr.",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 39.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Meleek Thomas",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 157.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Emanuel Sharp",
+     "pos": "G",
+     "height": 75.0,
+     "MIN26": 180.0,
+     "c": 0.004,
+     "w": 0.004,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Kyrie Irving",
+     "pos": "PG",
+     "height": 74.0,
+     "MIN26": 237.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Damian Lillard",
+     "pos": "PG",
+     "height": 74.0,
+     "MIN26": 265.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Darius Acuff Jr.",
+     "pos": "G",
+     "height": 74.0,
+     "MIN26": 370.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Ryan Conwell",
+     "pos": "G",
+     "height": 74.0,
+     "MIN26": 91.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Ebuka Okorie",
+     "pos": "G",
+     "height": 74.0,
+     "MIN26": 15.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Christian Anderson",
+     "pos": "G",
+     "height": 73.0,
+     "MIN26": 108.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Fred VanVleet",
+     "pos": "PG",
+     "height": 72.0,
+     "MIN26": 241.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Bruce Thornton",
+     "pos": "G",
+     "height": 72.0,
+     "MIN26": 19.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Ja'Kobi Gillespie",
+     "pos": "G",
+     "height": 72.0,
+     "MIN26": 4.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    },
+    {
+     "name": "Braden Smith",
+     "pos": "G",
+     "height": 71.0,
+     "MIN26": 96.0,
+     "c": 0.0,
+     "w": 0.0,
+     "bonus": 0.0,
+     "live_bonus_0214a": 0.0
+    }
+   ],
+   "checks": {
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "G4": true,
+    "G5": true,
+    "new_bigs_top10": [
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "reject"
+  }
+ },
+ "bench": {
+  "n": {
+   "2022-23": 262,
+   "2023-24": 286,
+   "2024-25": 319,
+   "2025-26": 243
+  },
+  "cover": {
+   "2022-23": {
+    "2022-23": 271
+   },
+   "2023-24": {
+    "2023-24": 303
+   },
+   "2024-25": {
+    "height": 1,
+    "2024-25": 345
+   },
+   "2025-26": {
+    "height": 1,
+    "2025-26": 378
+   }
+  },
+  "arms": {
+   "A": {
+    "lofo_lambda": {
+     "2022-23": 1.0,
+     "2023-24": 0.75,
+     "2024-25": 0.75,
+     "2025-26": 1.0
+    },
+    "same05_vs_base": 0.011790122643604562,
+    "same05_vs_A05": 0.0,
+    "per_fold_vs_A05": {
+     "2022-23": 0.0,
+     "2023-24": 0.0,
+     "2024-25": 0.0,
+     "2025-26": 0.0
+    },
+    "n_pos_same05_vs_A05": 0,
+    "gap_C_same05": -0.0018082271680166563,
+    "gap_PF_same05": 0.014974029759231518
+   },
+   "W1": {
+    "lofo_lambda": {
+     "2022-23": 0.75,
+     "2023-24": 0.5,
+     "2024-25": 0.5,
+     "2025-26": 0.5
+    },
+    "same05_vs_base": 0.01394158577605018,
+    "same05_vs_A05": 0.002151463132445617,
+    "per_fold_vs_A05": {
+     "2022-23": 0.00019466571896264995,
+     "2023-24": 0.003749689646565413,
+     "2024-25": 0.0025562162104578734,
+     "2025-26": 0.00184887838927017
+    },
+    "n_pos_same05_vs_A05": 4,
+    "gap_C_same05": 3.265742975206397e-05,
+    "gap_PF_same05": -0.010775242467833762
+   },
+   "W2": {
+    "lofo_lambda": {
+     "2022-23": 0.75,
+     "2023-24": 0.5,
+     "2024-25": 0.5,
+     "2025-26": 0.5
+    },
+    "same05_vs_base": 0.012765516977848558,
+    "same05_vs_A05": 0.0009753943342439958,
+    "per_fold_vs_A05": {
+     "2022-23": -0.0015559735727820323,
+     "2023-24": 0.0012617500947779137,
+     "2024-25": 0.0012980924769259161,
+     "2025-26": 0.0029440360486990835
+    },
+    "n_pos_same05_vs_A05": 3,
+    "gap_C_same05": 0.00757912351245575,
+    "gap_PF_same05": -0.014193117947354766
+   },
+   "W3": {
+    "lofo_lambda": {
+     "2022-23": 1.0,
+     "2023-24": 0.75,
+     "2024-25": 0.75,
+     "2025-26": 0.75
+    },
+    "same05_vs_base": 0.012666314775516952,
+    "same05_vs_A05": 0.0008761921319123897,
+    "per_fold_vs_A05": {
+     "2022-23": 0.0005100050391660949,
+     "2023-24": 0.0010712291701280297,
+     "2024-25": 0.0019209865704216122,
+     "2025-26": -0.00033010005127520614
+    },
+    "n_pos_same05_vs_A05": 3,
+    "gap_C_same05": 0.007293035783217774,
+    "gap_PF_same05": -0.0035462200484916045
+   }
+  }
+ },
+ "pick": null,
+ "ref_ranks": {
+  "Chet Holmgren": {
+   "T": 6,
+   "EPM": null,
+   "2K": 36,
+   "rank_0213a": 15,
+   "rank_0214a": 9
+  },
+  "Evan Mobley": {
+   "T": 15,
+   "EPM": 34,
+   "2K": 26,
+   "rank_0213a": 17,
+   "rank_0214a": 12
+  },
+  "Donovan Clingan": {
+   "T": 68,
+   "EPM": 23,
+   "2K": 80,
+   "rank_0213a": 241,
+   "rank_0214a": 127
+  },
+  "Bam Adebayo": {
+   "T": 25,
+   "EPM": 99,
+   "2K": 33,
+   "rank_0213a": 47,
+   "rank_0214a": 49
+  },
+  "Anthony Davis": {
+   "T": 8,
+   "EPM": 39,
+   "2K": 20,
+   "rank_0213a": 41,
+   "rank_0214a": 13
+  },
+  "Karl-Anthony Towns": {
+   "T": 7,
+   "EPM": 32,
+   "2K": 13,
+   "rank_0213a": 29,
+   "rank_0214a": 15
+  },
+  "Pascal Siakam": {
+   "T": 91,
+   "EPM": 45,
+   "2K": 28,
+   "rank_0213a": 87,
+   "rank_0214a": 95
+  },
+  "Jaren Jackson Jr.": {
+   "T": 131,
+   "EPM": 91,
+   "2K": 39,
+   "rank_0213a": 50,
+   "rank_0214a": 56
+  },
+  "Giannis Antetokounmpo": {
+   "T": 3,
+   "EPM": 10,
+   "2K": 5,
+   "rank_0213a": 5,
+   "rank_0214a": 5
+  },
+  "Zion Williamson": {
+   "T": 11,
+   "EPM": 37,
+   "2K": 46,
+   "rank_0213a": 45,
+   "rank_0214a": 55
+  },
+  "Paolo Banchero": {
+   "T": 158,
+   "EPM": null,
+   "2K": 35,
+   "rank_0213a": 122,
+   "rank_0214a": 131
+  },
+  "Jayson Tatum": {
+   "T": 18,
+   "EPM": 29,
+   "2K": 14,
+   "rank_0213a": 8,
+   "rank_0214a": 8
+  },
+  "Joel Embiid": {
+   "T": 211,
+   "EPM": 15,
+   "2K": 16,
+   "rank_0213a": 23,
+   "rank_0214a": 19
+  },
+  "Victor Wembanyama": {
+   "T": 1,
+   "EPM": 1,
+   "2K": 2,
+   "rank_0213a": 4,
+   "rank_0214a": 1
+  },
+  "Nikola Jokić": {
+   "T": 2,
+   "EPM": 3,
+   "2K": 3,
+   "rank_0213a": 2,
+   "rank_0214a": 2
+  },
+  "Rudy Gobert": {
+   "T": 56,
+   "EPM": 12,
+   "2K": 59,
+   "rank_0213a": 57,
+   "rank_0214a": 22
+  },
+  "Jarrett Allen": {
+   "T": 20,
+   "EPM": 26,
+   "2K": 51,
+   "rank_0213a": 48,
+   "rank_0214a": 27
+  },
+  "Domantas Sabonis": {
+   "T": 67,
+   "EPM": 190,
+   "2K": 54,
+   "rank_0213a": 81,
+   "rank_0214a": 60
+  },
+  "Alperen Sengun": {
+   "T": 16,
+   "EPM": 20,
+   "2K": 34,
+   "rank_0213a": 135,
+   "rank_0214a": 110
+  },
+  "Ivica Zubac": {
+   "T": 93,
+   "EPM": 167,
+   "2K": 61,
+   "rank_0213a": 93,
+   "rank_0214a": 52
+  },
+  "Isaiah Hartenstein": {
+   "T": 44,
+   "EPM": 17,
+   "2K": 87,
+   "rank_0213a": 54,
+   "rank_0214a": 29
+  },
+  "Zach Edey": {
+   "T": 32,
+   "EPM": 18,
+   "2K": 116,
+   "rank_0213a": 151,
+   "rank_0214a": 101
+  },
+  "Kristaps Porziņģis": {
+   "T": null,
+   "EPM": null,
+   "2K": 89,
+   "rank_0213a": 38,
+   "rank_0214a": 20
+  },
+  "Jalen Johnson": {
+   "T": 102,
+   "EPM": 136,
+   "2K": 27,
+   "rank_0213a": 31,
+   "rank_0214a": 33
+  },
+  "Scottie Barnes": {
+   "T": 37,
+   "EPM": 98,
+   "2K": 22,
+   "rank_0213a": 32,
+   "rank_0214a": 37
+  }
+ }
+}

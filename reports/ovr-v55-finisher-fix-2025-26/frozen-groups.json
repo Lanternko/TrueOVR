@@ -1,0 +1,630 @@
+{
+ "frozenAt": "2026-10-19",
+ "pseudoAttemptsFedShare": 25,
+ "seasons": {
+  "2025-26": {
+   "sBar": 0.43975022560602445,
+   "pf": 0.6806,
+   "ps": 0.4921,
+   "dBar": 0.1885,
+   "tau2": {
+    "n": 417,
+    "dBarWeighted": 0.18516566022119374,
+    "varObserved": 0.012577522987653586,
+    "meanSamplingVar": 0.011137722113099898,
+    "tau2": 0.001439800874553688
+   }
+  },
+  "2024-25": {
+   "sBar": 0.4539163553492825,
+   "pf": 0.6659,
+   "ps": 0.4879,
+   "dBar": 0.17800000000000005,
+   "tau2": {
+    "n": 409,
+    "dBarWeighted": 0.17663146987659337,
+    "varObserved": 0.015705600880707462,
+    "meanSamplingVar": 0.011343667078920679,
+    "tau2": 0.004361933801786783
+   }
+  },
+  "2023-24": {
+   "sBar": 0.4485994596900327,
+   "pf": 0.6508,
+   "ps": 0.505,
+   "dBar": 0.14580000000000004,
+   "tau2": {
+    "n": 382,
+    "dBarWeighted": 0.1374211086501848,
+    "varObserved": 0.014665721834400179,
+    "meanSamplingVar": 0.011026405671114651,
+    "tau2": 0.0036393161632855275
+   }
+  },
+  "2022-23": {
+   "sBar": 0.4396988503408282,
+   "pf": 0.6622,
+   "ps": 0.5053,
+   "dBar": 0.15690000000000004,
+   "tau2": {
+    "n": 393,
+    "dBarWeighted": 0.14540551069834198,
+    "varObserved": 0.017943943952469926,
+    "meanSamplingVar": 0.011847292177669397,
+    "tau2": 0.006096651774800529
+   }
+  }
+ },
+ "groups": {
+  "criteria": {
+   "finisher": "rimAttempts>=60 and fedShare>=0.75",
+   "creator": "rimAttempts>=200 and fedShare<=0.25"
+  },
+  "finishers": [
+   {
+    "playerId": 1641750,
+    "name": "Ryan Kalkbrenner",
+    "pos": "C",
+    "rimAttempts": 198,
+    "fedShare": 0.901,
+    "rawGap": 0.326
+   },
+   {
+    "playerId": 1628436,
+    "name": "Luke Kornet",
+    "pos": "C",
+    "rimAttempts": 176,
+    "fedShare": 0.9,
+    "rawGap": 0.276
+   },
+   {
+    "playerId": 1629057,
+    "name": "Robert Williams III",
+    "pos": "C",
+    "rimAttempts": 156,
+    "fedShare": 0.895,
+    "rawGap": 0.162
+   },
+   {
+    "playerId": 1642270,
+    "name": "Donovan Clingan",
+    "pos": "C",
+    "rimAttempts": 270,
+    "fedShare": 0.885,
+    "rawGap": 0.156
+   },
+   {
+    "playerId": 1629637,
+    "name": "Jaxson Hayes",
+    "pos": "C",
+    "rimAttempts": 206,
+    "fedShare": 0.879,
+    "rawGap": 0.328
+   },
+   {
+    "playerId": 1629011,
+    "name": "Mitchell Robinson",
+    "pos": "C",
+    "rimAttempts": 101,
+    "fedShare": 0.873,
+    "rawGap": 0.379
+   },
+   {
+    "playerId": 1631109,
+    "name": "Mark Williams",
+    "pos": "C",
+    "rimAttempts": 309,
+    "fedShare": 0.868,
+    "rawGap": 0.339
+   },
+   {
+    "playerId": 1629048,
+    "name": "Goga Bitadze",
+    "pos": "C",
+    "rimAttempts": 142,
+    "fedShare": 0.868,
+    "rawGap": 0.159
+   },
+   {
+    "playerId": 1627751,
+    "name": "Jakob Poeltl",
+    "pos": "C",
+    "rimAttempts": 229,
+    "fedShare": 0.862,
+    "rawGap": 0.221
+   },
+   {
+    "playerId": 1628392,
+    "name": "Isaiah Hartenstein",
+    "pos": "C",
+    "rimAttempts": 226,
+    "fedShare": 0.861,
+    "rawGap": 0.287
+   },
+   {
+    "playerId": 1629674,
+    "name": "Neemias Queta",
+    "pos": "C",
+    "rimAttempts": 377,
+    "fedShare": 0.851,
+    "rawGap": 0.334
+   },
+   {
+    "playerId": 203497,
+    "name": "Rudy Gobert",
+    "pos": "C",
+    "rimAttempts": 321,
+    "fedShare": 0.85,
+    "rawGap": 0.398
+   },
+   {
+    "playerId": 1642928,
+    "name": "Dylan Cardwell",
+    "pos": "C",
+    "rimAttempts": 133,
+    "fedShare": 0.829,
+    "rawGap": 0.138
+   },
+   {
+    "playerId": 1630579,
+    "name": "Jericho Sims",
+    "pos": "C",
+    "rimAttempts": 155,
+    "fedShare": 0.828,
+    "rawGap": 0.384
+   },
+   {
+    "playerId": 1631255,
+    "name": "Karlo Matković",
+    "pos": "PF",
+    "rimAttempts": 109,
+    "fedShare": 0.821,
+    "rawGap": 0.258
+   },
+   {
+    "playerId": 1628386,
+    "name": "Jarrett Allen",
+    "pos": "C",
+    "rimAttempts": 433,
+    "fedShare": 0.819,
+    "rawGap": 0.12
+   },
+   {
+    "playerId": 203083,
+    "name": "Andre Drummond",
+    "pos": "C",
+    "rimAttempts": 131,
+    "fedShare": 0.808,
+    "rawGap": 0.367
+   },
+   {
+    "playerId": 1628418,
+    "name": "Thomas Bryant",
+    "pos": "C",
+    "rimAttempts": 105,
+    "fedShare": 0.808,
+    "rawGap": 0.258
+   },
+   {
+    "playerId": 1629111,
+    "name": "Jock Landale",
+    "pos": "C",
+    "rimAttempts": 249,
+    "fedShare": 0.807,
+    "rawGap": 0.17
+   },
+   {
+    "playerId": 1630568,
+    "name": "Luka Garza",
+    "pos": "C",
+    "rimAttempts": 140,
+    "fedShare": 0.806,
+    "rawGap": 0.149
+   },
+   {
+    "playerId": 1629234,
+    "name": "Drew Eubanks",
+    "pos": "C",
+    "rimAttempts": 126,
+    "fedShare": 0.801,
+    "rawGap": 0.155
+   },
+   {
+    "playerId": 1642954,
+    "name": "Will Richard",
+    "pos": "SF",
+    "rimAttempts": 105,
+    "fedShare": 0.8,
+    "rawGap": 0.492
+   },
+   {
+    "playerId": 1630619,
+    "name": "Moussa Cisse",
+    "pos": "C",
+    "rimAttempts": 75,
+    "fedShare": 0.8,
+    "rawGap": 0.514
+   },
+   {
+    "playerId": 1631217,
+    "name": "Moussa Diabaté",
+    "pos": "C",
+    "rimAttempts": 264,
+    "fedShare": 0.799,
+    "rawGap": 0.232
+   },
+   {
+    "playerId": 1642867,
+    "name": "Collin Murray-Boyles",
+    "pos": "C",
+    "rimAttempts": 234,
+    "fedShare": 0.795,
+    "rawGap": 0.072
+   },
+   {
+    "playerId": 203991,
+    "name": "Clint Capela",
+    "pos": "C",
+    "rimAttempts": 145,
+    "fedShare": 0.794,
+    "rawGap": 0.168
+   },
+   {
+    "playerId": 1642866,
+    "name": "Joan Beringer",
+    "pos": "C",
+    "rimAttempts": 75,
+    "fedShare": 0.79,
+    "rawGap": 0.149
+   },
+   {
+    "playerId": 1631128,
+    "name": "Christian Braun",
+    "pos": "SG",
+    "rimAttempts": 208,
+    "fedShare": 0.79,
+    "rawGap": 0.111
+   },
+   {
+    "playerId": 1631131,
+    "name": "Oscar Tshiebwe",
+    "pos": "C",
+    "rimAttempts": 112,
+    "fedShare": 0.788,
+    "rawGap": 0.403
+   },
+   {
+    "playerId": 1631218,
+    "name": "Trayce Jackson-Davis",
+    "pos": "C",
+    "rimAttempts": 95,
+    "fedShare": 0.783,
+    "rawGap": 0.364
+   },
+   {
+    "playerId": 1629028,
+    "name": "Deandre Ayton",
+    "pos": "C",
+    "rimAttempts": 481,
+    "fedShare": 0.783,
+    "rawGap": 0.219
+   },
+   {
+    "playerId": 203500,
+    "name": "Steven Adams",
+    "pos": "C",
+    "rimAttempts": 71,
+    "fedShare": 0.781,
+    "rawGap": 0.246
+   },
+   {
+    "playerId": 1641744,
+    "name": "Zach Edey",
+    "pos": "C",
+    "rimAttempts": 75,
+    "fedShare": 0.78,
+    "rawGap": 0.091
+   },
+   {
+    "playerId": 1627826,
+    "name": "Ivica Zubac",
+    "pos": "C",
+    "rimAttempts": 374,
+    "fedShare": 0.777,
+    "rawGap": 0.049
+   },
+   {
+    "playerId": 1642875,
+    "name": "Maxime Raynaud",
+    "pos": "C",
+    "rimAttempts": 493,
+    "fedShare": 0.772,
+    "rawGap": 0.14
+   },
+   {
+    "playerId": 1642276,
+    "name": "Kel'el Ware",
+    "pos": "C",
+    "rimAttempts": 290,
+    "fedShare": 0.771,
+    "rawGap": 0.349
+   },
+   {
+    "playerId": 1627780,
+    "name": "Gary Payton II",
+    "pos": "SF",
+    "rimAttempts": 247,
+    "fedShare": 0.768,
+    "rawGap": 0.247
+   },
+   {
+    "playerId": 1642345,
+    "name": "Oso Ighodaro",
+    "pos": "C",
+    "rimAttempts": 322,
+    "fedShare": 0.761,
+    "rawGap": 0.211
+   },
+   {
+    "playerId": 1630208,
+    "name": "Nick Richards",
+    "pos": "C",
+    "rimAttempts": 139,
+    "fedShare": 0.756,
+    "rawGap": 0.294
+   },
+   {
+    "playerId": 1630574,
+    "name": "Ariel Hukporti",
+    "pos": "C",
+    "rimAttempts": 69,
+    "fedShare": 0.755,
+    "rawGap": 0.172
+   }
+  ],
+  "creators": [
+   {
+    "playerId": 201935,
+    "name": "James Harden",
+    "pos": "PG",
+    "rimAttempts": 448,
+    "fedShare": 0.127,
+    "rawGap": 0.154
+   },
+   {
+    "playerId": 1629029,
+    "name": "Luka Dončić",
+    "pos": "PG",
+    "rimAttempts": 524,
+    "fedShare": 0.138,
+    "rawGap": 0.122
+   },
+   {
+    "playerId": 1628973,
+    "name": "Jalen Brunson",
+    "pos": "PG",
+    "rimAttempts": 622,
+    "fedShare": 0.139,
+    "rawGap": 0.168
+   },
+   {
+    "playerId": 1629636,
+    "name": "Darius Garland",
+    "pos": "PG",
+    "rimAttempts": 288,
+    "fedShare": 0.153,
+    "rawGap": 0.073
+   },
+   {
+    "playerId": 1630163,
+    "name": "LaMelo Ball",
+    "pos": "PG",
+    "rimAttempts": 407,
+    "fedShare": 0.155,
+    "rawGap": -0.029
+   },
+   {
+    "playerId": 1628415,
+    "name": "Dillon Brooks",
+    "pos": "SF",
+    "rimAttempts": 356,
+    "fedShare": 0.163,
+    "rawGap": 0.1
+   },
+   {
+    "playerId": 1630202,
+    "name": "Payton Pritchard",
+    "pos": "SG",
+    "rimAttempts": 377,
+    "fedShare": 0.167,
+    "rawGap": 0.009
+   },
+   {
+    "playerId": 1642849,
+    "name": "Nolan Traore",
+    "pos": "PG",
+    "rimAttempts": 253,
+    "fedShare": 0.169,
+    "rawGap": -0.026
+   },
+   {
+    "playerId": 203471,
+    "name": "Dennis Schröder",
+    "pos": "PG",
+    "rimAttempts": 287,
+    "fedShare": 0.176,
+    "rawGap": 0.004
+   },
+   {
+    "playerId": 1628401,
+    "name": "Derrick White",
+    "pos": "PG",
+    "rimAttempts": 312,
+    "fedShare": 0.184,
+    "rawGap": 0.242
+   },
+   {
+    "playerId": 1630558,
+    "name": "Davion Mitchell",
+    "pos": "PG",
+    "rimAttempts": 268,
+    "fedShare": 0.184,
+    "rawGap": -0.056
+   },
+   {
+    "playerId": 203468,
+    "name": "CJ McCollum",
+    "pos": "PG",
+    "rimAttempts": 429,
+    "fedShare": 0.2,
+    "rawGap": 0.14
+   },
+   {
+    "playerId": 201942,
+    "name": "DeMar DeRozan",
+    "pos": "SF",
+    "rimAttempts": 378,
+    "fedShare": 0.206,
+    "rawGap": 0.156
+   },
+   {
+    "playerId": 1642848,
+    "name": "Tre Johnson",
+    "pos": "SG",
+    "rimAttempts": 208,
+    "fedShare": 0.206,
+    "rawGap": 0.156
+   },
+   {
+    "playerId": 1629639,
+    "name": "Tyler Herro",
+    "pos": "SG",
+    "rimAttempts": 229,
+    "fedShare": 0.213,
+    "rawGap": 0.031
+   },
+   {
+    "playerId": 1630559,
+    "name": "Austin Reaves",
+    "pos": "SG",
+    "rimAttempts": 384,
+    "fedShare": 0.218,
+    "rawGap": 0.156
+   },
+   {
+    "playerId": 1626164,
+    "name": "Devin Booker",
+    "pos": "SG",
+    "rimAttempts": 494,
+    "fedShare": 0.22,
+    "rawGap": 0.075
+   },
+   {
+    "playerId": 1629632,
+    "name": "Coby White",
+    "pos": "SG",
+    "rimAttempts": 245,
+    "fedShare": 0.233,
+    "rawGap": 0.169
+   },
+   {
+    "playerId": 1627750,
+    "name": "Jamal Murray",
+    "pos": "PG",
+    "rimAttempts": 526,
+    "fedShare": 0.238,
+    "rawGap": 0.119
+   },
+   {
+    "playerId": 201950,
+    "name": "Jrue Holiday",
+    "pos": "PG",
+    "rimAttempts": 282,
+    "fedShare": 0.238,
+    "rawGap": 0.081
+   },
+   {
+    "playerId": 204456,
+    "name": "T.J. McConnell",
+    "pos": "PG",
+    "rimAttempts": 239,
+    "fedShare": 0.239,
+    "rawGap": 0.205
+   },
+   {
+    "playerId": 201142,
+    "name": "Kevin Durant",
+    "pos": "SF",
+    "rimAttempts": 511,
+    "fedShare": 0.239,
+    "rawGap": 0.168
+   },
+   {
+    "playerId": 1628378,
+    "name": "Donovan Mitchell",
+    "pos": "SG",
+    "rimAttempts": 603,
+    "fedShare": 0.239,
+    "rawGap": 0.092
+   },
+   {
+    "playerId": 1642349,
+    "name": "Ajay Mitchell",
+    "pos": "SG",
+    "rimAttempts": 355,
+    "fedShare": 0.242,
+    "rawGap": 0.095
+   },
+   {
+    "playerId": 1629614,
+    "name": "Andrew Nembhard",
+    "pos": "PG",
+    "rimAttempts": 276,
+    "fedShare": 0.243,
+    "rawGap": -0.049
+   },
+   {
+    "playerId": 1628983,
+    "name": "Shai Gilgeous-Alexander",
+    "pos": "PG",
+    "rimAttempts": 668,
+    "fedShare": 0.247,
+    "rawGap": 0.137
+   },
+   {
+    "playerId": 1642273,
+    "name": "Kyshawn George",
+    "pos": "SF",
+    "rimAttempts": 211,
+    "fedShare": 0.25,
+    "rawGap": 0.111
+   }
+  ]
+ },
+ "focus": [
+  {
+   "playerId": 1631255,
+   "name": "Karlo Matković",
+   "pos": "PF",
+   "rimAttempts": 109,
+   "fedShare": 0.821,
+   "rawGap": 0.258
+  },
+  {
+   "playerId": 1629646,
+   "name": "Charles Bassey",
+   "pos": "PF",
+   "rimAttempts": 32,
+   "fedShare": 0.684,
+   "rawGap": 0.5
+  },
+  {
+   "playerId": 1629637,
+   "name": "Jaxson Hayes",
+   "pos": "C",
+   "rimAttempts": 206,
+   "fedShare": 0.879,
+   "rawGap": 0.328
+  }
+ ]
+}

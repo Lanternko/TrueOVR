@@ -1,0 +1,541 @@
+{
+ "folds": {
+  "2022-23": {
+   "n": {
+    "OFF": 262,
+    "DEF": 262
+   },
+   "OFF": {
+    "0.0": 0.6332835236809367,
+    "0.25": 0.6912588897551921,
+    "0.5": 0.7147611722249635,
+    "0.75": 0.6897562596520799,
+    "1.0": 0.6341963114167528
+   },
+   "DEF": {
+    "0.0": 0.604534713457714,
+    "0.25": 0.6633007618908453,
+    "0.5": 0.6738805589223501,
+    "0.75": 0.6354627376759479,
+    "1.0": 0.560876369640333
+   }
+  },
+  "2023-24": {
+   "n": {
+    "OFF": 286,
+    "DEF": 286
+   },
+   "OFF": {
+    "0.0": 0.6123491399486264,
+    "0.25": 0.6742815592623037,
+    "0.5": 0.7059700248403714,
+    "0.75": 0.6899034213539991,
+    "1.0": 0.6406956329934507
+   },
+   "DEF": {
+    "0.0": 0.7177672135310131,
+    "0.25": 0.7805819341121009,
+    "0.5": 0.7872540809639653,
+    "0.75": 0.7411923121807589,
+    "1.0": 0.6591413721067122
+   }
+  },
+  "2024-25": {
+   "n": {
+    "OFF": 319,
+    "DEF": 319
+   },
+   "OFF": {
+    "0.0": 0.6721450434731177,
+    "0.25": 0.7129439729106287,
+    "0.5": 0.7170898148695807,
+    "0.75": 0.6757811113739871,
+    "1.0": 0.5990129827881943
+   },
+   "DEF": {
+    "0.0": 0.7746547288105519,
+    "0.25": 0.8036053853433489,
+    "0.5": 0.7823900603300408,
+    "0.75": 0.7050485745549182,
+    "1.0": 0.5946734340805583
+   }
+  }
+ },
+ "combined": {
+  "OFF": {
+   "0.0": 0.6406763622810117,
+   "0.25": 0.6936372346290308,
+   "0.5": 0.7127179990434637,
+   "0.75": 0.6846628524387435,
+   "1.0": 0.6233950705152828
+  },
+  "DEF": {
+   "0.0": 0.7044802496959134,
+   "0.25": 0.753611707838513,
+   "0.5": 0.7512039248427137,
+   "0.75": 0.6959431762835228,
+   "1.0": 0.6057264898961766
+  }
+ },
+ "choice": {
+  "OFF": 0.75,
+  "DEF": 0.5
+ },
+ "lofo": {
+  "OFF": {
+   "2022-23": {
+    "w": 0.75,
+    "heldoutDelta": 0.05647273597114322
+   },
+   "2023-24": {
+    "w": 0.75,
+    "heldoutDelta": 0.07755428140537268
+   },
+   "2024-25": {
+    "w": 1.0,
+    "heldoutDelta": -0.0731320606849234
+   }
+  },
+  "DEF": {
+   "2022-23": {
+    "w": 0.5,
+    "heldoutDelta": 0.06934584546463607
+   },
+   "2023-24": {
+    "w": 0.5,
+    "heldoutDelta": 0.06948686743295218
+   },
+   "2024-25": {
+    "w": 0.75,
+    "heldoutDelta": -0.06960615425563366
+   }
+  }
+ },
+ "k2": {
+  "OFF": {
+   "0.0": 0.6970354058522522,
+   "0.25": 0.6567186350883464,
+   "0.5": 0.5879857536623886,
+   "0.75": 0.5068981151280728,
+   "1.0": 0.4237205919118215
+  },
+  "DEF": {
+   "0.0": 0.6143214356163925,
+   "0.25": 0.6755417731595165,
+   "0.5": 0.7008394081134434,
+   "0.75": 0.680600668028311,
+   "1.0": 0.6274795063722584
+  }
+ },
+ "k2_n": 376,
+ "vsT": {
+  "OFF": {
+   "0.0": 0.5564405515910522,
+   "0.25": 0.7216102274093319,
+   "0.5": 0.8788058473574254,
+   "0.75": 0.9737544119944134,
+   "1.0": 1.0
+  },
+  "DEF": {
+   "0.0": 0.5174023094409437,
+   "0.25": 0.7198666848081217,
+   "0.5": 0.8774458742156716,
+   "0.75": 0.9719939816341727,
+   "1.0": 1.0
+  }
+ },
+ "examples": {
+  "OFF": {
+   "0.0": {
+    "named": {
+     "Kevin Durant": 9,
+     "Fred VanVleet": null,
+     "Stephen Curry": 7,
+     "Victor Wembanyama": 35,
+     "Rudy Gobert": 327,
+     "Alex Caruso": 243,
+     "Amen Thompson": 241,
+     "Jaren Jackson Jr.": 246,
+     "Bam Adebayo": 119,
+     "Draymond Green": 295,
+     "Trae Young": null,
+     "Nikola Jokić": 5,
+     "Shai Gilgeous-Alexander": 1,
+     "Luka Dončić": 6,
+     "Giannis Antetokounmpo": 4
+    },
+    "top10": [
+     "Shai Gilgeous-Alexander",
+     "Jamal Murray",
+     "Kawhi Leonard",
+     "Giannis Antetokounmpo",
+     "Nikola Jokić",
+     "Luka Dončić",
+     "Stephen Curry",
+     "Cam Spencer",
+     "Kevin Durant",
+     "Jimmy Butler III"
+    ]
+   },
+   "0.25": {
+    "named": {
+     "Kevin Durant": 9,
+     "Fred VanVleet": null,
+     "Stephen Curry": 7,
+     "Victor Wembanyama": 29,
+     "Rudy Gobert": 299,
+     "Alex Caruso": 262,
+     "Amen Thompson": 176,
+     "Jaren Jackson Jr.": 242,
+     "Bam Adebayo": 119,
+     "Draymond Green": 323,
+     "Trae Young": null,
+     "Nikola Jokić": 3,
+     "Shai Gilgeous-Alexander": 1,
+     "Luka Dončić": 6,
+     "Giannis Antetokounmpo": 5
+    },
+    "top10": [
+     "Shai Gilgeous-Alexander",
+     "Kawhi Leonard",
+     "Nikola Jokić",
+     "Jamal Murray",
+     "Giannis Antetokounmpo",
+     "Luka Dončić",
+     "Stephen Curry",
+     "Jimmy Butler III",
+     "Kevin Durant",
+     "Donovan Mitchell"
+    ]
+   },
+   "0.5": {
+    "named": {
+     "Kevin Durant": 10,
+     "Fred VanVleet": null,
+     "Stephen Curry": 7,
+     "Victor Wembanyama": 23,
+     "Rudy Gobert": 237,
+     "Alex Caruso": 283,
+     "Amen Thompson": 127,
+     "Jaren Jackson Jr.": 241,
+     "Bam Adebayo": 121,
+     "Draymond Green": 344,
+     "Trae Young": null,
+     "Nikola Jokić": 2,
+     "Shai Gilgeous-Alexander": 1,
+     "Luka Dončić": 5,
+     "Giannis Antetokounmpo": 4
+    },
+    "top10": [
+     "Shai Gilgeous-Alexander",
+     "Nikola Jokić",
+     "Kawhi Leonard",
+     "Giannis Antetokounmpo",
+     "Luka Dončić",
+     "Jamal Murray",
+     "Stephen Curry",
+     "Jimmy Butler III",
+     "Donovan Mitchell",
+     "Kevin Durant"
+    ]
+   },
+   "0.75": {
+    "named": {
+     "Kevin Durant": 10,
+     "Fred VanVleet": null,
+     "Stephen Curry": 7,
+     "Victor Wembanyama": 23,
+     "Rudy Gobert": 175,
+     "Alex Caruso": 301,
+     "Amen Thompson": 91,
+     "Jaren Jackson Jr.": 241,
+     "Bam Adebayo": 133,
+     "Draymond Green": 358,
+     "Trae Young": null,
+     "Nikola Jokić": 1,
+     "Shai Gilgeous-Alexander": 2,
+     "Luka Dončić": 4,
+     "Giannis Antetokounmpo": 5
+    },
+    "top10": [
+     "Nikola Jokić",
+     "Shai Gilgeous-Alexander",
+     "Kawhi Leonard",
+     "Luka Dončić",
+     "Giannis Antetokounmpo",
+     "Jimmy Butler III",
+     "Stephen Curry",
+     "Donovan Mitchell",
+     "Jamal Murray",
+     "Kevin Durant"
+    ]
+   },
+   "1.0": {
+    "named": {
+     "Kevin Durant": 12,
+     "Fred VanVleet": null,
+     "Stephen Curry": 8,
+     "Victor Wembanyama": 29,
+     "Rudy Gobert": 134,
+     "Alex Caruso": 311,
+     "Amen Thompson": 62,
+     "Jaren Jackson Jr.": 240,
+     "Bam Adebayo": 137,
+     "Draymond Green": 362,
+     "Trae Young": null,
+     "Nikola Jokić": 1,
+     "Shai Gilgeous-Alexander": 3,
+     "Luka Dončić": 5,
+     "Giannis Antetokounmpo": 6
+    },
+    "top10": [
+     "Nikola Jokić",
+     "Kawhi Leonard",
+     "Shai Gilgeous-Alexander",
+     "Donovan Mitchell",
+     "Luka Dončić",
+     "Giannis Antetokounmpo",
+     "Jimmy Butler III",
+     "Stephen Curry",
+     "Jamal Murray",
+     "Jalen Duren"
+    ]
+   }
+  },
+  "DEF": {
+   "0.0": {
+    "named": {
+     "Kevin Durant": 300,
+     "Fred VanVleet": null,
+     "Stephen Curry": 225,
+     "Victor Wembanyama": 1,
+     "Rudy Gobert": 6,
+     "Alex Caruso": 2,
+     "Amen Thompson": 17,
+     "Jaren Jackson Jr.": 15,
+     "Bam Adebayo": 81,
+     "Draymond Green": 31,
+     "Trae Young": null,
+     "Nikola Jokić": 206,
+     "Shai Gilgeous-Alexander": 12,
+     "Luka Dončić": 216,
+     "Giannis Antetokounmpo": 91
+    },
+    "top10": [
+     "Victor Wembanyama",
+     "Alex Caruso",
+     "Ausar Thompson",
+     "Derrick White",
+     "Jalen Suggs",
+     "Rudy Gobert",
+     "Marcus Smart",
+     "Chet Holmgren",
+     "Herbert Jones",
+     "Dru Smith"
+    ]
+   },
+   "0.25": {
+    "named": {
+     "Kevin Durant": 262,
+     "Fred VanVleet": null,
+     "Stephen Curry": 233,
+     "Victor Wembanyama": 1,
+     "Rudy Gobert": 5,
+     "Alex Caruso": 2,
+     "Amen Thompson": 15,
+     "Jaren Jackson Jr.": 19,
+     "Bam Adebayo": 53,
+     "Draymond Green": 33,
+     "Trae Young": null,
+     "Nikola Jokić": 184,
+     "Shai Gilgeous-Alexander": 17,
+     "Luka Dončić": 196,
+     "Giannis Antetokounmpo": 75
+    },
+    "top10": [
+     "Victor Wembanyama",
+     "Alex Caruso",
+     "Ausar Thompson",
+     "Derrick White",
+     "Rudy Gobert",
+     "Chet Holmgren",
+     "Jalen Suggs",
+     "Marcus Smart",
+     "Dru Smith",
+     "Neemias Queta"
+    ]
+   },
+   "0.5": {
+    "named": {
+     "Kevin Durant": 219,
+     "Fred VanVleet": null,
+     "Stephen Curry": 238,
+     "Victor Wembanyama": 1,
+     "Rudy Gobert": 4,
+     "Alex Caruso": 3,
+     "Amen Thompson": 20,
+     "Jaren Jackson Jr.": 27,
+     "Bam Adebayo": 41,
+     "Draymond Green": 31,
+     "Trae Young": null,
+     "Nikola Jokić": 170,
+     "Shai Gilgeous-Alexander": 39,
+     "Luka Dončić": 176,
+     "Giannis Antetokounmpo": 59
+    },
+    "top10": [
+     "Victor Wembanyama",
+     "Ausar Thompson",
+     "Alex Caruso",
+     "Rudy Gobert",
+     "Chet Holmgren",
+     "Derrick White",
+     "Jalen Suggs",
+     "Neemias Queta",
+     "Marcus Smart",
+     "Dru Smith"
+    ]
+   },
+   "0.75": {
+    "named": {
+     "Kevin Durant": 178,
+     "Fred VanVleet": null,
+     "Stephen Curry": 246,
+     "Victor Wembanyama": 1,
+     "Rudy Gobert": 2,
+     "Alex Caruso": 7,
+     "Amen Thompson": 22,
+     "Jaren Jackson Jr.": 45,
+     "Bam Adebayo": 26,
+     "Draymond Green": 38,
+     "Trae Young": null,
+     "Nikola Jokić": 140,
+     "Shai Gilgeous-Alexander": 76,
+     "Luka Dončić": 152,
+     "Giannis Antetokounmpo": 60
+    },
+    "top10": [
+     "Victor Wembanyama",
+     "Rudy Gobert",
+     "Ausar Thompson",
+     "Paul Reed",
+     "Chet Holmgren",
+     "Neemias Queta",
+     "Alex Caruso",
+     "Isaiah Hartenstein",
+     "Wendell Carter Jr.",
+     "Dru Smith"
+    ]
+   },
+   "1.0": {
+    "named": {
+     "Kevin Durant": 135,
+     "Fred VanVleet": null,
+     "Stephen Curry": 248,
+     "Victor Wembanyama": 1,
+     "Rudy Gobert": 5,
+     "Alex Caruso": 20,
+     "Amen Thompson": 32,
+     "Jaren Jackson Jr.": 71,
+     "Bam Adebayo": 24,
+     "Draymond Green": 48,
+     "Trae Young": null,
+     "Nikola Jokić": 125,
+     "Shai Gilgeous-Alexander": 133,
+     "Luka Dončić": 127,
+     "Giannis Antetokounmpo": 63
+    },
+    "top10": [
+     "Victor Wembanyama",
+     "Paul Reed",
+     "Isaiah Hartenstein",
+     "Wendell Carter Jr.",
+     "Rudy Gobert",
+     "Neemias Queta",
+     "Clint Capela",
+     "Chet Holmgren",
+     "Mouhamed Gueye",
+     "Evan Mobley"
+    ]
+   }
+  },
+  "bigsDEF": {
+   "Victor Wembanyama": {
+    "0.0": 1,
+    "0.25": 1,
+    "0.5": 1,
+    "0.75": 1,
+    "1.0": 1
+   },
+   "Nikola Jokić": {
+    "0.0": 206,
+    "0.25": 184,
+    "0.5": 170,
+    "0.75": 140,
+    "1.0": 125
+   },
+   "Joel Embiid": {
+    "0.0": 223,
+    "0.25": 176,
+    "0.5": 134,
+    "0.75": 89,
+    "1.0": 68
+   },
+   "Anthony Davis": {
+    "0.0": 86,
+    "0.25": 66,
+    "0.5": 54,
+    "0.75": 56,
+    "1.0": 57
+   },
+   "Isaiah Hartenstein": {
+    "0.0": 32,
+    "0.25": 23,
+    "0.5": 12,
+    "0.75": 8,
+    "1.0": 3
+   },
+   "Kristaps Porziņģis": {
+    "0.0": 168,
+    "0.25": 116,
+    "0.5": 65,
+    "0.75": 46,
+    "1.0": 29
+   },
+   "Jarrett Allen": {
+    "0.0": 105,
+    "0.25": 61,
+    "0.5": 43,
+    "0.75": 23,
+    "1.0": 16
+   },
+   "Luke Kornet": {
+    "0.0": 196,
+    "0.25": 136,
+    "0.5": 78,
+    "0.75": 52,
+    "1.0": 30
+   },
+   "Bam Adebayo": {
+    "0.0": 81,
+    "0.25": 53,
+    "0.5": 41,
+    "0.75": 26,
+    "1.0": 24
+   },
+   "Karl-Anthony Towns": {
+    "0.0": 237,
+    "0.25": 148,
+    "0.5": 67,
+    "0.75": 34,
+    "1.0": 17
+   }
+  }
+ },
+ "n_pop": {
+  "2022-23": 271,
+  "2023-24": 303,
+  "2024-25": 346,
+  "2025-26": 379
+ }
+}

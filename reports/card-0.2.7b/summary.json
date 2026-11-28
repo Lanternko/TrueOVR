@@ -1,0 +1,150 @@
+{
+  "version": "card 0.2.7b",
+  "baseVersion": "card 0.2.7a",
+  "change": "E-123（R-078）疊到 card 0.2.7a：threeValue 顯示值、help、pressure／presDisplay 開尾；pass 沿用 E-125 各半。不改參數、不改 seed、不重擬尾端與錨點。",
+  "players": 582,
+  "columns": [
+    "rank",
+    "ovr",
+    "name",
+    "pos",
+    "MIN",
+    "predictedPer36",
+    "simulatedPer36",
+    "defenseBonus",
+    "align",
+    "pred0",
+    "pr",
+    "long",
+    "mid",
+    "short",
+    "ft",
+    "drive",
+    "foulDraw",
+    "tovSkill",
+    "pass",
+    "rebound",
+    "physique",
+    "onBall",
+    "help",
+    "stamina",
+    "heightInches",
+    "creation",
+    "pressure",
+    "mpg",
+    "gRepl",
+    "ovr36",
+    "foulDisc",
+    "presDisplay"
+  ],
+  "columnsDifferentFromCard027a": {
+    "rank": 399,
+    "ovr": 461,
+    "predictedPer36": 568,
+    "align": 385,
+    "pred0": 573,
+    "pr": 440,
+    "help": 4,
+    "pressure": 553,
+    "gRepl": 577,
+    "ovr36": 460,
+    "presDisplay": 559
+  },
+  "anchors": {
+    "PR1": -0.8234348586707387,
+    "PR50": 1.2757551955805375,
+    "PR99": 4.11501094146304
+  },
+  "top20Changes": {
+    "out": [
+      "OG Anunoby"
+    ],
+    "in": [
+      "Ausar Thompson"
+    ]
+  },
+  "gates": {
+    "c0": "pass（ranking.csv 與 card 0.2.7a 逐位元相同）",
+    "c1": true,
+    "m1_m2_m3": {
+      "m1": {
+        "point": -0.0007540664728654667,
+        "ci90": [
+          -0.0024607613044266953,
+          0.0007315647385704529
+        ],
+        "pass": true
+      },
+      "m2": {
+        "point": 9.364672447198519e-05,
+        "ci90": [
+          -0.0011026466767927068,
+          0.0012362168445657796
+        ],
+        "pass": true
+      },
+      "m3": {
+        "point": -0.0006987638926309048,
+        "ci90": [
+          -0.0024069237395217213,
+          0.0007797814204223097
+        ],
+        "pass": true
+      }
+    },
+    "c3": {
+      "card-0.2.7a": "18/19",
+      "c0a": "18/19",
+      "e123a": "18/19"
+    },
+    "c4": {
+      "n_over140": 0,
+      "pass": true
+    },
+    "help_pressure_presDisplay_equal_E123_e123": {
+      "help": 0,
+      "pressure": 0,
+      "presDisplay": 0
+    },
+    "R061": {
+      "Wagner": 7,
+      "Wembanyama": 2,
+      "pass": true
+    }
+  },
+  "R064": {
+    "top20_swaps": 1,
+    "top300_movers_ge10": 2,
+    "movers_list": [
+      [
+        "Isaiah Stewart",
+        178,
+        151
+      ],
+      [
+        "Dru Smith",
+        276,
+        258
+      ]
+    ],
+    "evaluate_drop": false,
+    "small": true
+  },
+  "audit": "未做 role-audit 重算",
+  "sources_sha256": {
+    "reports/card-0.2.7a/ranking.csv": "04a9c266440511ccca0c96b8851c964577f2687d99f84c4f9f3f2d51394f165f",
+    "reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/e123a/ranking.csv": "361bcac61075dec1150c3b89b406ecd62dcaf4fdb5d738ccff68a0634de81105",
+    "reports/card-0.2.7+E123-tail-3pt-rim-pres/three-value-e123.csv": "de07bc4133fcd479c8a92c9f35e1e131f2b9d06a09a67a4f616f3ce1022b4021",
+    "reports/card-0.2.7+E123-tail-3pt-rim-pres/work/def-new.csv": "de768d6a303cdaf72ce0075d3fa39fa97cea3675f954351fa5ed4e2c164ec304",
+    "reports/card-0.2.7+E123-tail-3pt-rim-pres/work/tail-new.csv": "ef3b59135a89989f9af47748569a64abbd460789abc6b95e12c486e8160938ae",
+    "reports/card-0.2.7+E123-tail-3pt-rim-pres/work/presDisplay-new.csv": "6d8ee65cc21b285964dd835deea33fa42a667b697a7a510498d7ee6190e98fca",
+    "reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/work/tail-c0a.csv": "00ec76eb7190ebeb09e5bfa09e76d4c9d42dd7fcbd5477d6fd7d47f26b057d44",
+    "reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/work/tail-e123a.csv": "14b27b9d6cc67be1df4a4829666837a3a21c29c20513a4148863624713226231",
+    "reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/work/c0-result.json": "66863aadf8c85f2c17026469897c88c0a187bba310ff7e1c783e92ae7582e6cd",
+    "reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/work/cards-result.json": "83096938dd553fb2157c5f481fdb3e88e0b0abc2e6a6d63f8cff34b9e59f8b1b",
+    "reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/work/judge.json": "c14a1f29356f06f088ba7acd8516d2d6975efc995acc56a9e35464a0e39a0164",
+    "reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/evaluation.json": "014827a235bfc419cb779581133978f1eb5abee9ad531ecf6398e730745fa96c"
+  },
+  "generator": "reports/card-0.2.7b/build_card_027b.py",
+  "ranking_csv_sha256": "361bcac61075dec1150c3b89b406ecd62dcaf4fdb5d738ccff68a0634de81105"
+}

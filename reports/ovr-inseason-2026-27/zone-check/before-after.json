@@ -1,0 +1,103 @@
+{
+ "games": 88,
+ "n2pt_total": 8875,
+ "zoned_before": 0,
+ "zoned_after": 8409,
+ "undetermined_share": 0.0525070422535211,
+ "mid_mean_abs_change_day0_to_now_before": 0.11077395675453702,
+ "mid_mean_abs_change_day0_to_now_after": 0.6567237908507906,
+ "mid_max_abs_change_after": 11.365565067177755,
+ "mid_n_players": 582,
+ "mid_top5_moved": [
+  {
+   "pid": 1642844,
+   "name": "Dylan Harper",
+   "day0": 77.24563719058769,
+   "before": 77.17755389551795,
+   "after": 65.88007212340993
+  },
+  {
+   "pid": 1630538,
+   "name": "Bones Hyland",
+   "day0": 70.17990310173472,
+   "before": 70.34699517872951,
+   "after": 77.23758119559426
+  },
+  {
+   "pid": 1642843,
+   "name": "Cooper Flagg",
+   "day0": 54.55660705402448,
+   "before": 54.57481026703704,
+   "after": 61.532108665828424
+  },
+  {
+   "pid": 1630180,
+   "name": "Saddiq Bey",
+   "day0": 44.653713541263244,
+   "before": 45.0229374494177,
+   "after": 51.269016977209226
+  },
+  {
+   "pid": 203897,
+   "name": "Zach LaVine",
+   "day0": 67.47182166073453,
+   "before": 67.44396340309574,
+   "after": 72.54888595937173
+  }
+ ],
+ "short_mean_abs_change_day0_to_now_before": 0.07513919166159395,
+ "short_mean_abs_change_day0_to_now_after": 0.5235626232014203,
+ "short_max_abs_change_after": 4.469057108800797,
+ "short_n_players": 582,
+ "short_top5_moved": [
+  {
+   "pid": 1642285,
+   "name": "Cam Spencer",
+   "day0": 51.20218684747073,
+   "before": 51.23425574835331,
+   "after": 46.73312973866993
+  },
+  {
+   "pid": 1642859,
+   "name": "Jase Richardson",
+   "day0": 58.019351195982054,
+   "before": 57.986946926353845,
+   "after": 53.55693455175796
+  },
+  {
+   "pid": 1642857,
+   "name": "Kasparas Jakučionis",
+   "day0": 53.53425713667933,
+   "before": 53.68060027212985,
+   "after": 57.688884740330074
+  },
+  {
+   "pid": 1641713,
+   "name": "GG Jackson",
+   "day0": 66.43121943258032,
+   "before": 66.65966808267359,
+   "after": 62.42326185288141
+  },
+  {
+   "pid": 1628964,
+   "name": "Mo Bamba",
+   "day0": 77.07327423960928,
+   "before": 77.15812376132713,
+   "after": 80.76731696115316
+  }
+ ],
+ "simons": {
+  "mid": {
+   "name": "Anfernee Simons",
+   "day0": 70.53505045273542,
+   "before": 70.50682553143507,
+   "after": 70.82902779891722
+  },
+  "short": {
+   "name": "Anfernee Simons",
+   "day0": 52.77972103099007,
+   "before": 52.79799608760477,
+   "after": 51.96354882717996
+  }
+ }
+}

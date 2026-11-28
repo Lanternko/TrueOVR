@@ -1,0 +1,577 @@
+{
+ "oldVersion": "inseason 0.2.1",
+ "newVersion": "inseason 0.2.2",
+ "n_old": 368,
+ "n_new": 368,
+ "c2": {
+  "allFinite": true,
+  "sameCount": true,
+  "sameNames": true,
+  "t1_a_f0_kmax_maxAbsOvrDiff": 0.04435506963420721,
+  "spearman_lastOVR_vs_card024": 0.9999942810643271,
+  "nMatched": 368,
+  "maxAbsDiff": 0.10000000000000853,
+  "top10Diff": [
+   [
+    "Tristan da Silva",
+    65.8,
+    65.9,
+    0.1
+   ],
+   [
+    "Scottie Barnes",
+    90.4,
+    90.3,
+    0.1
+   ],
+   [
+    "Myles Turner",
+    77.8,
+    77.9,
+    0.1
+   ],
+   [
+    "Kentavious Caldwell-Pope",
+    71.2,
+    71.1,
+    0.1
+   ],
+   [
+    "Herbert Jones",
+    89.9,
+    89.8,
+    0.1
+   ],
+   [
+    "Domantas Sabonis",
+    74.4,
+    74.3,
+    0.1
+   ],
+   [
+    "Daniel Gafford",
+    74.3,
+    74.4,
+    0.1
+   ],
+   [
+    "Bam Adebayo",
+    86.6,
+    86.7,
+    0.1
+   ],
+   [
+    "Yves Missi",
+    48.0,
+    48.1,
+    0.1
+   ],
+   [
+    "Kyle Filipowski",
+    51.0,
+    50.9,
+    0.1
+   ]
+  ],
+  "nDiffGt0.1": 0
+ },
+ "decompCheckMaxAbs": 0.05325118299981568,
+ "absDelta": {
+  "median": 2.799999999999997,
+  "mean": 3.3913043478260865,
+  "max": 15.799999999999997,
+  "gt5": 67,
+  "gt10": 15,
+  "medianSigned": 1.0999999999999943
+ },
+ "byAge": {
+  "young<=23": {
+   "n": 98,
+   "median": 1.1000000000000014
+  },
+  "old>=31": {
+   "n": 54,
+   "median": -0.5999999999999943
+  },
+  "mid": {
+   "n": 216,
+   "median": 1.6000000000000014
+  },
+  "noAge": {
+   "n": 0,
+   "median": null
+  }
+ },
+ "componentMedians": {
+  "dAnchors": -1.9665930603366277,
+  "dUsage": 1.591451860123616,
+  "dMpg": 0.0
+ },
+ "componentAbsMedians": {
+  "dAnchors": 3.308644703095588,
+  "dUsage": 3.376374025568616,
+  "dMpg": 0.0
+ },
+ "movers": [
+  {
+   "name": "Paolo Banchero",
+   "team": "ORL",
+   "N": 2,
+   "age": 23,
+   "old": 59.8,
+   "new": 75.6,
+   "d": 15.799999999999997,
+   "mpg0Old": 34.75,
+   "mpg0New": 34.75,
+   "hat": 34.0,
+   "dAnchors": -8.933902753483629,
+   "dUsage": 24.775851473807478,
+   "dMpg": 0.0,
+   "has": true,
+   "cause": "用人項"
+  },
+  {
+   "name": "Keyonte George",
+   "team": "UTA",
+   "N": 5,
+   "age": 22,
+   "old": 64.6,
+   "new": 49.0,
+   "d": -15.599999999999994,
+   "mpg0Old": 33.08,
+   "mpg0New": 33.08,
+   "hat": 32.86,
+   "dAnchors": -7.313981377175558,
+   "dUsage": -8.358759368242296,
+   "dMpg": 0.0,
+   "has": true,
+   "cause": "用人項"
+  },
+  {
+   "name": "Jaylen Wells",
+   "team": "MEM",
+   "N": 4,
+   "age": 22,
+   "old": 70.7,
+   "new": 55.7,
+   "d": -15.0,
+   "mpg0Old": 26.39,
+   "mpg0New": 26.39,
+   "hat": 28.36,
+   "dAnchors": -3.367243076050727,
+   "dUsage": -11.632981533779748,
+   "dMpg": 0.0,
+   "has": true,
+   "cause": "用人項"
+  },
+  {
+   "name": "Alex Sarr",
+   "team": "WAS",
+   "N": 5,
+   "age": 21,
+   "old": 69.7,
+   "new": 55.3,
+   "d": -14.400000000000006,
+   "mpg0Old": 27.18,
+   "mpg0New": 27.18,
+   "hat": 25.28,
+   "dAnchors": -3.8090212174025595,
+   "dUsage": -10.558645423896472,
+   "dMpg": 0.0,
+   "has": true,
+   "cause": "用人項"
+  },
+  {
+   "name": "Kyshawn George",
+   "team": "WAS",
+   "N": 5,
+   "age": 22,
+   "old": 75.1,
+   "new": 60.9,
+   "d": -14.199999999999996,
+   "mpg0Old": 28.98,
+   "mpg0New": 28.98,
+   "hat": 31.07,
+   "dAnchors": -0.12920260911359094,
+   "dUsage": -14.034133006982294,
+   "dMpg": 0.0,
+   "has": true,
+   "cause": "用人項"
+  },
+  {
+   "name": "Reed Sheppard",
+   "team": "HOU",
+   "N": 4,
+   "age": 22,
+   "old": 53.0,
+   "new": 66.7,
+   "d": 13.700000000000003,
+   "mpg0Old": 26.18,
+   "mpg0New": 26.18,
+   "hat": 23.97,
+   "dAnchors": -7.884627377955546,
+   "dUsage": 21.571849571604787,
+   "dMpg": 0.0,
+   "has": true,
+   "cause": "用人項"
+  },
+  {
+   "name": "Cooper Flagg",
+   "team": "DAL",
+   "N": 4,
+   "age": 19,
+   "old": 78.0,
+   "new": 64.6,
+   "d": -13.400000000000006,
+   "mpg0Old": 33.48,
+   "mpg0New": 33.48,
+   "hat": 31.42,
+   "dAnchors": 1.5776797691937645,
+   "dUsage": -14.973959141622643,
+   "dMpg": 0.0,
+   "has": true,
+   "cause": "用人項"
+  },
+  {
+   "name": "Cedric Coward",
+   "team": "MEM",
+   "N": 3,
+   "age": 22,
+   "old": 75.1,
+   "new": 61.9,
+   "d": -13.199999999999996,
+   "mpg0Old": 25.77,
+   "mpg0New": 25.77,
+   "hat": 28.94,
+   "dAnchors": 0.2519139711440914,
+   "dUsage": -13.42004245689698,
+   "dMpg": 0.0,
+   "has": true,
+   "cause": "用人項"
+  },
+  {
+   "name": "Egor Dëmin",
+   "team": "BKN",
+   "N": 4,
+   "age": 20,
+   "old": 68.4,
+   "new": 55.5,
+   "d": -12.900000000000006,
+   "mpg0Old": 25.16,
+   "mpg0New": 25.16,
+   "hat": 22.58,
+   "dAnchors": -3.378123776592844,
+   "dUsage": -9.594522470354235,
+   "dMpg": 0.0,
+   "has": true,
+   "cause": "用人項"
+  },
+  {
+   "name": "Ace Bailey",
+   "team": "UTA",
+   "N": 5,
+   "age": 19,
+   "old": 61.0,
+   "new": 48.1,
+   "d": -12.899999999999999,
+   "mpg0Old": 27.61,
+   "mpg0New": 27.61,
+   "hat": 29.35,
+   "dAnchors": -7.26747376190923,
+   "dUsage": -5.648297191872594,
+   "dMpg": 0.0,
+   "has": true,
+   "cause": "錨點"
+  }
+ ],
+ "top20": {
+  "in": [
+   [
+    "Dylan Harper",
+    90.5,
+    20,
+    30,
+    85.7
+   ]
+  ],
+  "out": [
+   [
+    "Lauri Markkanen",
+    88.1,
+    20,
+    21,
+    90.3
+   ]
+  ],
+  "old": [
+   [
+    "Nikola Jokić",
+    106.1
+   ],
+   [
+    "Shai Gilgeous-Alexander",
+    105.0
+   ],
+   [
+    "Luka Dončić",
+    102.8
+   ],
+   [
+    "Franz Wagner",
+    99.2
+   ],
+   [
+    "Derrick White",
+    97.5
+   ],
+   [
+    "Giannis Antetokounmpo",
+    96.0
+   ],
+   [
+    "Joel Embiid",
+    95.2
+   ],
+   [
+    "Victor Wembanyama",
+    95.0
+   ],
+   [
+    "Kawhi Leonard",
+    94.8
+   ],
+   [
+    "Chet Holmgren",
+    93.6
+   ],
+   [
+    "Kevin Durant",
+    91.1
+   ],
+   [
+    "Cade Cunningham",
+    91.0
+   ],
+   [
+    "Donovan Mitchell",
+    90.6
+   ],
+   [
+    "Jamal Murray",
+    89.4
+   ],
+   [
+    "Amen Thompson",
+    89.0
+   ],
+   [
+    "OG Anunoby",
+    88.5
+   ],
+   [
+    "Tyrese Maxey",
+    88.4
+   ],
+   [
+    "Evan Mobley",
+    88.3
+   ],
+   [
+    "Jayson Tatum",
+    88.2
+   ],
+   [
+    "Lauri Markkanen",
+    88.1
+   ]
+  ],
+  "new": [
+   [
+    "Shai Gilgeous-Alexander",
+    105.8
+   ],
+   [
+    "Luka Dončić",
+    104.9
+   ],
+   [
+    "Nikola Jokić",
+    103.9
+   ],
+   [
+    "Franz Wagner",
+    100.1
+   ],
+   [
+    "Victor Wembanyama",
+    99.9
+   ],
+   [
+    "Amen Thompson",
+    96.8
+   ],
+   [
+    "Derrick White",
+    95.4
+   ],
+   [
+    "Chet Holmgren",
+    94.4
+   ],
+   [
+    "Cade Cunningham",
+    94.1
+   ],
+   [
+    "Joel Embiid",
+    93.9
+   ],
+   [
+    "Giannis Antetokounmpo",
+    93.9
+   ],
+   [
+    "Jamal Murray",
+    93.8
+   ],
+   [
+    "Donovan Mitchell",
+    93.7
+   ],
+   [
+    "Tyrese Maxey",
+    93.3
+   ],
+   [
+    "Kawhi Leonard",
+    92.5
+   ],
+   [
+    "Jayson Tatum",
+    91.8
+   ],
+   [
+    "OG Anunoby",
+    91.6
+   ],
+   [
+    "Evan Mobley",
+    91.4
+   ],
+   [
+    "Kevin Durant",
+    90.6
+   ],
+   [
+    "Dylan Harper",
+    90.5
+   ]
+  ]
+ },
+ "rankSpearman_old_new": 0.9421805302214825,
+ "mpg0Shift": {
+  "ranked": {
+   "n": 368,
+   "gt3": 81,
+   "median": 0.0,
+   "top5": [
+    [
+     "Daeqwon Plowden",
+     26.39,
+     10.55,
+     -15.84,
+     -3.8999999999999986
+    ],
+    [
+     "DeAndre Jordan",
+     16.57,
+     2.45,
+     -14.12,
+     -4.200000000000003
+    ],
+    [
+     "Chaney Johnson",
+     20.45,
+     6.56,
+     -13.89,
+     -8.5
+    ],
+    [
+     "Elijah Harkless",
+     20.95,
+     7.26,
+     -13.69,
+     -3.1999999999999957
+    ],
+    [
+     "Bogdan Bogdanović",
+     19.65,
+     7.79,
+     -11.86,
+     -4.300000000000004
+    ]
+   ]
+  },
+  "card582": {
+   "n": 582,
+   "gt3": 205,
+   "top5": [
+    [
+     "Josh Oduro",
+     27.26,
+     4.3
+    ],
+    [
+     "Daeqwon Plowden",
+     26.39,
+     10.55
+    ],
+    [
+     "Keshon Gilbert",
+     18.45,
+     3.21
+    ],
+    [
+     "DeAndre Jordan",
+     16.57,
+     2.45
+    ],
+    [
+     "Chaney Johnson",
+     20.45,
+     6.56
+    ]
+   ]
+  }
+ },
+ "mpg0OldRuleMatchesRun": 0.004999999999999005,
+ "hasFalseRanked": 0,
+ "hasFalseCard": 0,
+ "coef": {
+  "b0": -1.209301632981113,
+  "b1_p": 0.539534380406777,
+  "b2_L": 0.3496988670075263,
+  "b3_a": 0.45890914787242965,
+  "b4_y": 0.4427259639160911,
+  "b5_v": 0.435907772349063,
+  "b6_yL": -0.030267299821228527,
+  "b7_vL": -0.20953218370290155,
+  "b8_ydL": -0.48147069613309273
+ },
+ "rRepl": {
+  "old": -1.759308786877863,
+  "new": -1.2724493885788943
+ },
+ "anchors": {
+  "old": [
+   -0.756425915699913,
+   1.0495269738777855,
+   4.743953075880887
+  ],
+  "new": [
+   -0.5415035599769742,
+   0.8848688008103984,
+   3.1777640824827587
+  ]
+ }
+}

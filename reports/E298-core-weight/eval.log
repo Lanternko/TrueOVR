@@ -1,0 +1,24 @@
+A    S1 True S1b False S2 True S3 True drops []
+     ρ {'T': 0.7653, 'EPM': 0.7138, '2K': 0.7793} {'T': (-0.0, [-0.003, 0.0031]), 'EPM': (-0.0011, [-0.0034, 0.001]), '2K': (-0.0002, [-0.0014, 0.0009])}
+     POR {'Deni Avdija': (73, 82.8, 0.0), 'Donovan Clingan': (127, 77.5, 10.63), 'Robert Williams III': (44, 88.8, 7.82)} live {'Deni Avdija': (79, 82.3), 'Donovan Clingan': (72, 83.1), 'Robert Williams III': (50, 86.8), 'Jrue Holiday': (52, 86.2)}
+W1   S1 True S1b False S2 True S3 True drops []
+     ρ {'T': 0.7653, 'EPM': 0.715, '2K': 0.7796} {'T': (0.0, [0.0, 0.0]), 'EPM': (0.0, [0.0, 0.0]), '2K': (0.0, [0.0, 0.0])}
+     POR {'Deni Avdija': (73, 82.9, 0.06), 'Donovan Clingan': (128, 77.6, 10.73), 'Robert Williams III': (45, 88.7, 7.74)} live {'Deni Avdija': (79, 82.3), 'Donovan Clingan': (72, 83.1), 'Robert Williams III': (50, 86.8), 'Jrue Holiday': (52, 86.2)}
+U30  S1 True S1b False S2 True S3 False drops []
+     ρ {'T': 0.7573, 'EPM': 0.7095, '2K': 0.7817} {'T': (-0.008, [-0.0129, -0.0037]), 'EPM': (-0.0054, [-0.0102, -0.0011]), '2K': (0.0022, [-0.0005, 0.0049])}
+     POR {'Deni Avdija': (69, 82.9, 0.06), 'Donovan Clingan': (132, 76.7, 9.79), 'Robert Williams III': (57, 85.6, 4.6)} live {'Deni Avdija': (74, 82.3), 'Donovan Clingan': (81, 81.7), 'Robert Williams III': (65, 83.3), 'Jrue Holiday': (50, 86.2)}
+U24  S1 True S1b False S2 True S3 True drops []
+     ρ {'T': 0.7609, 'EPM': 0.7125, '2K': 0.7821} {'T': (-0.0044, [-0.0075, -0.0018]), 'EPM': (-0.0025, [-0.0056, 0.0003]), '2K': (0.0025, [0.0006, 0.0046])}
+     POR {'Deni Avdija': (70, 82.9, 0.06), 'Donovan Clingan': (126, 77.6, 10.73), 'Robert Williams III': (54, 86.7, 5.75)} live {'Deni Avdija': (79, 82.3), 'Donovan Clingan': (71, 83.1), 'Robert Williams III': (63, 84.4), 'Jrue Holiday': (51, 86.2)}
+K5   S1 True S1b False S2 False S3 False drops [('Anthony Davis', 13, 25), ('Rudy Gobert', 22, 42)]
+     ρ {'T': 0.7547, 'EPM': 0.7081, '2K': 0.7796} {'T': (-0.0106, [-0.0177, -0.0046]), 'EPM': (-0.0069, [-0.0142, -0.001]), '2K': (-0.0, [-0.0024, 0.0023])}
+     POR {'Deni Avdija': (69, 82.9, 0.06), 'Donovan Clingan': (189, 71.8, 4.87), 'Robert Williams III': (55, 85.6, 4.57)} live {'Deni Avdija': (73, 82.3), 'Donovan Clingan': (119, 77.5), 'Robert Williams III': (62, 83.5), 'Jrue Holiday': (49, 86.2)}
+UK   S1 True S1b False S2 False S3 False drops [('Anthony Davis', 13, 24), ('Isaiah Hartenstein', 29, 42), ('Rudy Gobert', 22, 41)]
+     ρ {'T': 0.751, 'EPM': 0.7048, '2K': 0.7806} {'T': (-0.0143, [-0.0225, -0.0075]), 'EPM': (-0.0102, [-0.0182, -0.0032]), '2K': (0.001, [-0.0024, 0.0044])}
+     POR {'Deni Avdija': (69, 82.9, 0.06), 'Donovan Clingan': (188, 71.7, 4.8), 'Robert Williams III': (59, 84.6, 3.63)} live {'Deni Avdija': (73, 82.3), 'Donovan Clingan': (119, 77.3), 'Robert Williams III': (72, 82.4), 'Jrue Holiday': (48, 86.2)}
+bench W1   Δbase +0.0139 ΔW1 +0.0000 (0/4) gapC +0.000
+bench U30  Δbase +0.0120 ΔW1 -0.0019 (1/4) gapC +0.013
+bench U24  Δbase +0.0132 ΔW1 -0.0007 (2/4) gapC +0.006
+bench K5   Δbase +0.0119 ΔW1 -0.0021 (1/4) gapC +0.018
+bench UK   Δbase +0.0106 ΔW1 -0.0033 (1/4) gapC +0.024
+verdicts {'U30': 'reject', 'U24': 'adopt_candidate', 'K5': 'reject', 'UK': 'reject'} pick U24

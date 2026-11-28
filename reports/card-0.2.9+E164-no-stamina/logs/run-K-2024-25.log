@@ -1,0 +1,5 @@
+K-2024-25 {"sha256": "70070e7af08ea306d2ed754d269db238d7753518b7a2e5a77c3f4cf7aa1e983f", "rows": 417, "ncoef": [8, 8, 8]} swap None 6.1 s
+
+real	0m6.229s
+user	0m0.015s
+sys	0m0.000s

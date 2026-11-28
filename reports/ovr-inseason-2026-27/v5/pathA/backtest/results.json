@@ -1,0 +1,784 @@
+{
+  "spec": "preregistration-v5 §2–§3 + errata-c4 + disclosure-pointwise-ovr",
+  "seed": 20261027,
+  "boot": 2000,
+  "fresh": [
+    "Y5",
+    "Y6"
+  ],
+  "freshCandidates": [
+    "Y3",
+    "Y5",
+    "Y6"
+  ],
+  "gates": {
+    "C3": {
+      "main": {
+        "starts": [
+          "Y5",
+          "Y6"
+        ],
+        "V1": {
+          "3": {
+            "U_pool": 0.085664,
+            "T_s": {
+              "Y5": -0.186196,
+              "Y6": -0.233063
+            },
+            "pass": true
+          },
+          "5": {
+            "U_pool": -0.066787,
+            "T_s": {
+              "Y5": -0.488754,
+              "Y6": -0.426644
+            },
+            "pass": true
+          }
+        },
+        "V2": {
+          "10": {
+            "cells": {
+              "Y5": {
+                "dMAE": -0.321088,
+                "gt10C": 63,
+                "gt10A": 65,
+                "ciHi": -0.009338,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "Y6": {
+                "dMAE": -0.603732,
+                "gt10C": 45,
+                "gt10A": 56,
+                "ciHi": -0.319149,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              }
+            },
+            "pass": true
+          },
+          "20": {
+            "cells": {
+              "Y5": {
+                "dMAE": -0.850811,
+                "gt10C": 53,
+                "gt10A": 65,
+                "ciHi": -0.391878,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "Y6": {
+                "dMAE": -0.902166,
+                "gt10C": 40,
+                "gt10A": 56,
+                "ciHi": -0.499958,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              }
+            },
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "sensitivityAllCandidates": {
+        "starts": [
+          "Y3",
+          "Y5",
+          "Y6"
+        ],
+        "V1": {
+          "3": {
+            "U_pool": 0.05681,
+            "T_s": {
+              "Y3": -0.130102,
+              "Y5": -0.186196,
+              "Y6": -0.233063
+            },
+            "pass": true
+          },
+          "5": {
+            "U_pool": 0.006285,
+            "T_s": {
+              "Y3": -0.0,
+              "Y5": -0.488754,
+              "Y6": -0.426644
+            },
+            "pass": true
+          }
+        },
+        "V2": {
+          "10": {
+            "cells": {
+              "Y3": {
+                "dMAE": -0.60023,
+                "gt10C": 38,
+                "gt10A": 51,
+                "ciHi": -0.289415,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "Y5": {
+                "dMAE": -0.321088,
+                "gt10C": 63,
+                "gt10A": 65,
+                "ciHi": -0.009338,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "Y6": {
+                "dMAE": -0.603732,
+                "gt10C": 45,
+                "gt10A": 56,
+                "ciHi": -0.319149,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              }
+            },
+            "pass": true
+          },
+          "20": {
+            "cells": {
+              "Y3": {
+                "dMAE": -0.971798,
+                "gt10C": 35,
+                "gt10A": 52,
+                "ciHi": -0.542164,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "Y5": {
+                "dMAE": -0.850811,
+                "gt10C": 53,
+                "gt10A": 65,
+                "ciHi": -0.391878,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "Y6": {
+                "dMAE": -0.902166,
+                "gt10C": 40,
+                "gt10A": 56,
+                "ciHi": -0.499958,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              }
+            },
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "secondaryD": {
+        "starts": [
+          "D1",
+          "D2",
+          "D3"
+        ],
+        "V1": {
+          "3": {
+            "U_pool": 0.072583,
+            "T_s": {
+              "D1": -0.267884,
+              "D2": -0.032467,
+              "D3": -0.068599
+            },
+            "pass": true
+          },
+          "5": {
+            "U_pool": 0.027261,
+            "T_s": {
+              "D1": -0.778888,
+              "D2": -0.287534,
+              "D3": -0.007675
+            },
+            "pass": true
+          }
+        },
+        "V2": {
+          "10": {
+            "cells": {
+              "D1": {
+                "dMAE": -0.372732,
+                "gt10C": 48,
+                "gt10A": 53,
+                "ciHi": -0.165676,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "D2": {
+                "dMAE": -0.216133,
+                "gt10C": 37,
+                "gt10A": 42,
+                "ciHi": 0.092378,
+                "pass": true,
+                "strength": "方向一致",
+                "material": true
+              },
+              "D3": {
+                "dMAE": -0.749136,
+                "gt10C": 44,
+                "gt10A": 55,
+                "ciHi": -0.484313,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              }
+            },
+            "pass": true
+          },
+          "20": {
+            "cells": {
+              "D1": {
+                "dMAE": -0.60575,
+                "gt10C": 45,
+                "gt10A": 55,
+                "ciHi": -0.299135,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "D2": {
+                "dMAE": -0.517846,
+                "gt10C": 32,
+                "gt10A": 42,
+                "ciHi": -0.165458,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "D3": {
+                "dMAE": -1.139459,
+                "gt10C": 44,
+                "gt10A": 56,
+                "ciHi": -0.769129,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              }
+            },
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    },
+    "C4": {
+      "main": {
+        "starts": [
+          "Y5",
+          "Y6"
+        ],
+        "V1": {
+          "3": {
+            "U_pool": -0.013785,
+            "T_s": {
+              "Y5": -0.328338,
+              "Y6": -0.324217
+            },
+            "pass": true
+          },
+          "5": {
+            "U_pool": -0.175857,
+            "T_s": {
+              "Y5": -0.650539,
+              "Y6": -0.584629
+            },
+            "pass": true
+          }
+        },
+        "V2": {
+          "10": {
+            "cells": {
+              "Y5": {
+                "dMAE": -0.317489,
+                "gt10C": 62,
+                "gt10A": 65,
+                "ciHi": 0.043555,
+                "pass": true,
+                "strength": "方向一致",
+                "material": true
+              },
+              "Y6": {
+                "dMAE": -0.603099,
+                "gt10C": 46,
+                "gt10A": 56,
+                "ciHi": -0.307862,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              }
+            },
+            "pass": true
+          },
+          "20": {
+            "cells": {
+              "Y5": {
+                "dMAE": -0.825445,
+                "gt10C": 53,
+                "gt10A": 65,
+                "ciHi": -0.394793,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "Y6": {
+                "dMAE": -0.974521,
+                "gt10C": 36,
+                "gt10A": 56,
+                "ciHi": -0.61545,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              }
+            },
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "sensitivityAllCandidates": {
+        "starts": [
+          "Y3",
+          "Y5",
+          "Y6"
+        ],
+        "V1": {
+          "3": {
+            "U_pool": -0.020775,
+            "T_s": {
+              "Y3": -0.201489,
+              "Y5": -0.328338,
+              "Y6": -0.324217
+            },
+            "pass": true
+          },
+          "5": {
+            "U_pool": -0.102752,
+            "T_s": {
+              "Y3": -0.185214,
+              "Y5": -0.650539,
+              "Y6": -0.584629
+            },
+            "pass": true
+          }
+        },
+        "V2": {
+          "10": {
+            "cells": {
+              "Y3": {
+                "dMAE": -0.570587,
+                "gt10C": 41,
+                "gt10A": 51,
+                "ciHi": -0.246391,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "Y5": {
+                "dMAE": -0.317489,
+                "gt10C": 62,
+                "gt10A": 65,
+                "ciHi": 0.043555,
+                "pass": true,
+                "strength": "方向一致",
+                "material": true
+              },
+              "Y6": {
+                "dMAE": -0.603099,
+                "gt10C": 46,
+                "gt10A": 56,
+                "ciHi": -0.307862,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              }
+            },
+            "pass": true
+          },
+          "20": {
+            "cells": {
+              "Y3": {
+                "dMAE": -1.056463,
+                "gt10C": 34,
+                "gt10A": 52,
+                "ciHi": -0.674768,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "Y5": {
+                "dMAE": -0.825445,
+                "gt10C": 53,
+                "gt10A": 65,
+                "ciHi": -0.394793,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "Y6": {
+                "dMAE": -0.974521,
+                "gt10C": 36,
+                "gt10A": 56,
+                "ciHi": -0.61545,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              }
+            },
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "secondaryD": {
+        "starts": [
+          "D1",
+          "D2",
+          "D3"
+        ],
+        "V1": {
+          "3": {
+            "U_pool": 0.077568,
+            "T_s": {
+              "D1": -0.230552,
+              "D2": -0.010961,
+              "D3": -0.052654
+            },
+            "pass": true
+          },
+          "5": {
+            "U_pool": 0.003245,
+            "T_s": {
+              "D1": -0.440452,
+              "D2": -0.288879,
+              "D3": -0.129439
+            },
+            "pass": true
+          }
+        },
+        "V2": {
+          "10": {
+            "cells": {
+              "D1": {
+                "dMAE": -0.386062,
+                "gt10C": 51,
+                "gt10A": 53,
+                "ciHi": -0.181707,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "D2": {
+                "dMAE": -0.18792,
+                "gt10C": 37,
+                "gt10A": 42,
+                "ciHi": 0.102622,
+                "pass": true,
+                "strength": "方向一致",
+                "material": true
+              },
+              "D3": {
+                "dMAE": -0.753223,
+                "gt10C": 46,
+                "gt10A": 55,
+                "ciHi": -0.496726,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              }
+            },
+            "pass": true
+          },
+          "20": {
+            "cells": {
+              "D1": {
+                "dMAE": -0.512816,
+                "gt10C": 46,
+                "gt10A": 55,
+                "ciHi": -0.254112,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "D2": {
+                "dMAE": -0.542473,
+                "gt10C": 32,
+                "gt10A": 42,
+                "ciHi": -0.210286,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              },
+              "D3": {
+                "dMAE": -1.081299,
+                "gt10C": 46,
+                "gt10A": 56,
+                "ciHi": -0.737861,
+                "pass": true,
+                "strength": "強",
+                "material": true
+              }
+            },
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    }
+  },
+  "final": "C4",
+  "monotone": [
+    {
+      "start": "Y3",
+      "cand": "A",
+      "MAE_N3": 6.083778,
+      "MAE_N5": 6.050835,
+      "MAE_N10": 6.050733,
+      "MAE_N20": 6.050384,
+      "MAE_N82": 6.097667
+    },
+    {
+      "start": "Y3",
+      "cand": "C3",
+      "MAE_N3": 6.067343,
+      "MAE_N5": 5.910496,
+      "MAE_N10": 5.450503,
+      "MAE_N20": 5.078586,
+      "MAE_N82": 4.197332
+    },
+    {
+      "start": "Y3",
+      "cand": "C4",
+      "MAE_N3": 6.076397,
+      "MAE_N5": 5.900473,
+      "MAE_N10": 5.480146,
+      "MAE_N20": 4.99392,
+      "MAE_N82": 4.071595,
+      "nonMonotone": false,
+      "rises": []
+    },
+    {
+      "start": "Y5",
+      "cand": "A",
+      "MAE_N3": 6.638476,
+      "MAE_N5": 6.616835,
+      "MAE_N10": 6.630423,
+      "MAE_N20": 6.600564,
+      "MAE_N82": 6.567213
+    },
+    {
+      "start": "Y5",
+      "cand": "C3",
+      "MAE_N3": 6.602985,
+      "MAE_N5": 6.549618,
+      "MAE_N10": 6.309335,
+      "MAE_N20": 5.749754,
+      "MAE_N82": 4.522926
+    },
+    {
+      "start": "Y5",
+      "cand": "C4",
+      "MAE_N3": 6.629621,
+      "MAE_N5": 6.582334,
+      "MAE_N10": 6.312934,
+      "MAE_N20": 5.775119,
+      "MAE_N82": 4.211013,
+      "nonMonotone": false,
+      "rises": []
+    },
+    {
+      "start": "Y6",
+      "cand": "A",
+      "MAE_N3": 6.226175,
+      "MAE_N5": 6.20338,
+      "MAE_N10": 6.19245,
+      "MAE_N20": 6.121518,
+      "MAE_N82": 6.101453
+    },
+    {
+      "start": "Y6",
+      "cand": "C3",
+      "MAE_N3": 6.164711,
+      "MAE_N5": 5.771457,
+      "MAE_N10": 5.588718,
+      "MAE_N20": 5.219352,
+      "MAE_N82": 4.14138
+    },
+    {
+      "start": "Y6",
+      "cand": "C4",
+      "MAE_N3": 6.137911,
+      "MAE_N5": 5.759422,
+      "MAE_N10": 5.589351,
+      "MAE_N20": 5.146997,
+      "MAE_N82": 3.810019,
+      "nonMonotone": false,
+      "rises": []
+    },
+    {
+      "start": "D1",
+      "cand": "A",
+      "MAE_N3": 6.362976,
+      "MAE_N5": 6.316473,
+      "MAE_N10": 6.274562,
+      "MAE_N20": 6.332431,
+      "MAE_N82": 6.328971
+    },
+    {
+      "start": "D1",
+      "cand": "C3",
+      "MAE_N3": 6.277732,
+      "MAE_N5": 6.085149,
+      "MAE_N10": 5.901829,
+      "MAE_N20": 5.726681,
+      "MAE_N82": 5.055898
+    },
+    {
+      "start": "D1",
+      "cand": "C4",
+      "MAE_N3": 6.252145,
+      "MAE_N5": 6.064853,
+      "MAE_N10": 5.8885,
+      "MAE_N20": 5.819615,
+      "MAE_N82": 4.848773,
+      "nonMonotone": false,
+      "rises": []
+    },
+    {
+      "start": "D2",
+      "cand": "A",
+      "MAE_N3": 5.40296,
+      "MAE_N5": 5.446142,
+      "MAE_N10": 5.474645,
+      "MAE_N20": 5.444105,
+      "MAE_N82": 5.380974
+    },
+    {
+      "start": "D2",
+      "cand": "C3",
+      "MAE_N3": 5.420593,
+      "MAE_N5": 5.362771,
+      "MAE_N10": 5.258512,
+      "MAE_N20": 4.926259,
+      "MAE_N82": 4.193363
+    },
+    {
+      "start": "D2",
+      "cand": "C4",
+      "MAE_N3": 5.408299,
+      "MAE_N5": 5.352743,
+      "MAE_N10": 5.286725,
+      "MAE_N20": 4.901631,
+      "MAE_N82": 4.059733,
+      "nonMonotone": false,
+      "rises": []
+    },
+    {
+      "start": "D3",
+      "cand": "A",
+      "MAE_N3": 6.74605,
+      "MAE_N5": 6.709091,
+      "MAE_N10": 6.705555,
+      "MAE_N20": 6.678059,
+      "MAE_N82": 6.745462
+    },
+    {
+      "start": "D3",
+      "cand": "C3",
+      "MAE_N3": 6.650778,
+      "MAE_N5": 6.264506,
+      "MAE_N10": 5.956419,
+      "MAE_N20": 5.538601,
+      "MAE_N82": 5.101041
+    },
+    {
+      "start": "D3",
+      "cand": "C4",
+      "MAE_N3": 6.643822,
+      "MAE_N5": 6.218661,
+      "MAE_N10": 5.952333,
+      "MAE_N20": 5.59676,
+      "MAE_N82": 4.890011,
+      "nonMonotone": false,
+      "rises": []
+    }
+  ],
+  "n82": [
+    {
+      "start": "Y3",
+      "P": 281,
+      "MAE_C4": 4.071595,
+      "medianAbs_C4": 3.345379,
+      "MAE_swapUpdatable": 2.77916,
+      "medianAbs_swapUpdatable": 1.702958,
+      "MAE_swapFrozen": 4.07777,
+      "medianAbs_swapFrozen": 3.392791,
+      "MAE_swapAll": 2.774374,
+      "medianAbs_swapAll": 1.772872
+    },
+    {
+      "start": "Y5",
+      "P": 281,
+      "MAE_C4": 4.211013,
+      "medianAbs_C4": 3.278382,
+      "MAE_swapUpdatable": 2.787429,
+      "medianAbs_swapUpdatable": 1.841915,
+      "MAE_swapFrozen": 4.215086,
+      "medianAbs_swapFrozen": 3.277201,
+      "MAE_swapAll": 2.79436,
+      "medianAbs_swapAll": 1.866187
+    },
+    {
+      "start": "Y6",
+      "P": 307,
+      "MAE_C4": 3.810019,
+      "medianAbs_C4": 2.821626,
+      "MAE_swapUpdatable": 2.663662,
+      "medianAbs_swapUpdatable": 1.699586,
+      "MAE_swapFrozen": 3.817247,
+      "medianAbs_swapFrozen": 2.855767,
+      "MAE_swapAll": 2.666174,
+      "medianAbs_swapAll": 1.706022
+    },
+    {
+      "start": "D1",
+      "P": 293,
+      "MAE_C4": 4.848773,
+      "medianAbs_C4": 3.894822,
+      "MAE_swapUpdatable": 3.465136,
+      "medianAbs_swapUpdatable": 2.906433,
+      "MAE_swapFrozen": 4.536067,
+      "medianAbs_swapFrozen": 3.466101,
+      "MAE_swapAll": 2.971031,
+      "medianAbs_swapAll": 2.307118
+    },
+    {
+      "start": "D2",
+      "P": 288,
+      "MAE_C4": 4.059733,
+      "medianAbs_C4": 3.565108,
+      "MAE_swapUpdatable": 2.879307,
+      "medianAbs_swapUpdatable": 2.106969,
+      "MAE_swapFrozen": 3.739721,
+      "medianAbs_swapFrozen": 3.048045,
+      "MAE_swapAll": 2.451905,
+      "medianAbs_swapAll": 1.571431
+    }
+  ],
+  "pathAFiles": {
+    "equiv": "v5/pathA/backtest/c4-equiv.json"
+  }
+}

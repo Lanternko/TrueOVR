@@ -1,0 +1,172 @@
+fit Y1 nonDeg False pressureOpen False undef ['creation', 'drive', 'ft', 'long', 'mid', 'pass', 'pressure', 'rebound', 'short', 'stamina', 'tovSkill']
+fit Y2 nonDeg True pressureOpen False undef []
+fit Y3 nonDeg True pressureOpen False undef []
+fit Y4 nonDeg True pressureOpen False undef []
+fit Y5 nonDeg True pressureOpen False undef []
+fit Y6 nonDeg True pressureOpen False undef []
+fit D1 nonDeg True pressureOpen False undef ['creation', 'short']
+fit D2 nonDeg True pressureOpen False undef []
+fit D3 nonDeg True pressureOpen False undef []
+grid Y1 {3: 267, 5: 274, 10: 281, 20: 286, 82: 291}
+grid Y2 {3: 255, 5: 260, 10: 267, 20: 271, 82: 277}
+grid Y3 {3: 251, 5: 265, 10: 270, 20: 274, 82: 281}
+grid Y4 {3: 249, 5: 259, 10: 264, 20: 270, 82: 273}
+grid Y5 {3: 260, 5: 267, 10: 276, 20: 279, 82: 281}
+grid Y6 {3: 278, 5: 284, 10: 292, 20: 298, 82: 307}
+grid D1 {3: 270, 5: 275, 10: 286, 20: 292, 82: 293}
+grid D2 {3: 258, 5: 261, 10: 268, 20: 275, 82: 288}
+grid D3 {3: 262, 5: 267, 10: 275, 20: 284, 82: 289}
+sel Y1 Eeff [] lam {3: 1.0, 5: 1.0, 10: 1.0, 20: 1.0, 82: 1.0} c 1.0 judged False
+sel Y2 Eeff [] lam {3: 1.0, 5: 1.0, 10: 1.0, 20: 1.0, 82: 1.0} c 1.0 judged False
+sel Y3 Eeff ['Y2'] lam {3: 0.7, 5: 0.6, 10: 0.75, 20: 1.0, 82: 1.0} c 0.7 judged False
+sel Y4 Eeff ['Y2', 'Y3'] lam {3: 0.7, 5: 0.65, 10: 0.8, 20: 0.95, 82: 0.95} c 1 judged False
+sel Y5 Eeff ['Y2', 'Y3', 'Y4'] lam {3: 0.6, 5: 1.0, 10: 0.7, 20: 0.9, 82: 0.9} c 1 judged True
+sel Y6 Eeff ['Y2', 'Y3', 'Y4', 'Y5'] lam {3: 0.65, 5: 1.0, 10: 0.7, 20: 0.85, 82: 0.85} c 1 judged True
+sel D1 Eeff ['Y2', 'Y3', 'Y4', 'Y5', 'Y6'] lam {3: 0.65, 5: 1.0, 10: 0.75, 20: 0.85, 82: 0.85} c 1 judged False
+sel D2 Eeff ['Y2', 'Y3', 'Y4', 'Y5', 'Y6', 'D1'] lam {3: 0.65, 5: 1.0, 10: 0.75, 20: 0.85, 82: 0.85} c 1 judged False
+sel D3 Eeff ['Y2', 'Y3', 'Y4', 'Y5', 'Y6', 'D1', 'D2'] lam {3: 0.6, 5: 0.65, 10: 0.7, 20: 0.85, 82: 0.85} c 1 judged False
+{
+ "fresh": [
+  "Y5",
+  "Y6"
+ ],
+ "final": "C4",
+ "C4": {
+  "pass": true,
+  "V1": {
+   "3": {
+    "U_pool": -0.013785,
+    "T_s": {
+     "Y5": -0.328338,
+     "Y6": -0.324217
+    },
+    "pass": true
+   },
+   "5": {
+    "U_pool": -0.175857,
+    "T_s": {
+     "Y5": -0.650539,
+     "Y6": -0.584629
+    },
+    "pass": true
+   }
+  },
+  "V2": {
+   "10": {
+    "cells": {
+     "Y5": {
+      "dMAE": -0.317489,
+      "gt10C": 62,
+      "gt10A": 65,
+      "ciHi": 0.043555,
+      "pass": true,
+      "strength": "方向一致",
+      "material": true
+     },
+     "Y6": {
+      "dMAE": -0.603099,
+      "gt10C": 46,
+      "gt10A": 56,
+      "ciHi": -0.307862,
+      "pass": true,
+      "strength": "強",
+      "material": true
+     }
+    },
+    "pass": true
+   },
+   "20": {
+    "cells": {
+     "Y5": {
+      "dMAE": -0.825445,
+      "gt10C": 53,
+      "gt10A": 65,
+      "ciHi": -0.394793,
+      "pass": true,
+      "strength": "強",
+      "material": true
+     },
+     "Y6": {
+      "dMAE": -0.974521,
+      "gt10C": 36,
+      "gt10A": 56,
+      "ciHi": -0.61545,
+      "pass": true,
+      "strength": "強",
+      "material": true
+     }
+    },
+    "pass": true
+   }
+  }
+ },
+ "C3": {
+  "pass": true,
+  "V1": {
+   "3": {
+    "U_pool": 0.085664,
+    "T_s": {
+     "Y5": -0.186196,
+     "Y6": -0.233063
+    },
+    "pass": true
+   },
+   "5": {
+    "U_pool": -0.066787,
+    "T_s": {
+     "Y5": -0.488754,
+     "Y6": -0.426644
+    },
+    "pass": true
+   }
+  },
+  "V2": {
+   "10": {
+    "cells": {
+     "Y5": {
+      "dMAE": -0.321088,
+      "gt10C": 63,
+      "gt10A": 65,
+      "ciHi": -0.009338,
+      "pass": true,
+      "strength": "強",
+      "material": true
+     },
+     "Y6": {
+      "dMAE": -0.603732,
+      "gt10C": 45,
+      "gt10A": 56,
+      "ciHi": -0.319149,
+      "pass": true,
+      "strength": "強",
+      "material": true
+     }
+    },
+    "pass": true
+   },
+   "20": {
+    "cells": {
+     "Y5": {
+      "dMAE": -0.850811,
+      "gt10C": 53,
+      "gt10A": 65,
+      "ciHi": -0.391878,
+      "pass": true,
+      "strength": "強",
+      "material": true
+     },
+     "Y6": {
+      "dMAE": -0.902166,
+      "gt10C": 40,
+      "gt10A": 56,
+      "ciHi": -0.499958,
+      "pass": true,
+      "strength": "強",
+      "material": true
+     }
+    },
+    "pass": true
+   }
+  }
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "stints2627": {
+  "rows": 7713,
+  "games": 221,
+  "played": 234,
+  "missing": [
+   "0022600009",
+   "0022600028",
+   "0022600088",
+   "0022600101",
+   "0022600111",
+   "0022600120",
+   "0022600138",
+   "0022600142",
+   "0022600184",
+   "0022600186",
+   "0022600193",
+   "0022600194",
+   "0022600216"
+  ],
+  "cutGames": 122,
+  "sha256": "fa2e9daab651395fee09aba30332375147a278ca3ef9e5d54822ff01c2ebbe66",
+  "liveRanking": "2026-11-20"
+ },
+ "featFull": {
+  "info": {
+   "liveDir": "2026-11-20",
+   "nLive": 493,
+   "nCardOnly": 1,
+   "nStatsPrior": 582,
+   "nCurPlayers": 473,
+   "nBlendedBox": 473,
+   "K": 500.0,
+   "todayEt": "2026-11-21",
+   "blendTrack": [
+    "hustle",
+    "rimthree",
+    "matchup",
+    "adv"
+   ],
+   "nBlendedTrack": 473
+  },
+  "sha256": "6b019979731b2424773e5d857665554554068ee51903f36928d1033d404c94d9"
+ },
+ "featCut": {
+  "info": {
+   "liveDir": "2026-11-06",
+   "nLive": 492,
+   "nCardOnly": 2,
+   "nStatsPrior": 582,
+   "nCurPlayers": 456,
+   "nBlendedBox": 456,
+   "K": 500.0,
+   "todayEt": "2026-11-07",
+   "blendTrack": [
+    "matchup"
+   ],
+   "nBlendedTrack": 445
+  },
+  "sha256": "aa2af5aa8f9728bf288b4eb51522006efb36e0cb9282b314813724b5f13babc1"
+ },
+ "stints2526first": {
+  "rows": 8038,
+  "games": 234,
+  "lastDate": "2025-11-21",
+  "sha256": "4928a4f22852346530064298fa3cb38c4d9fa9e4380cdf0581ad3145576a096d"
+ }
+}

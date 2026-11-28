@@ -1,0 +1,685 @@
+--- ../card-0.2.2+E073-usage-evidence/e075.py	2026-10-29 04:40:12.155404500 +0800
++++ e084.py	2026-10-29 09:22:43.848934700 +0800
+@@ -1,13 +1,19 @@
+-"""E-075：E-073（把教練用人當成能力的直接證據）移到 card 0.2.2 重跑（預註冊 preregistration.md，凍結；方法本體為 card-0.2.0+E073 的 preregistration.md 與 supplement-1.md）。
+-用法（repo 根目錄）：
+-  PYTHONDONTWRITEBYTECODE=1 python reports/card-0.2.2+E073-usage-evidence/e075.py
+-輸出：ranking.csv（候選）、results.json、work/c0/ranking.csv（開關全關，(c0)）、work/report_data.json（report.md 用的明細）。
++"""E-084：用人回歸的訓練目標改成 2025-26 單季 RAPM（預註冊 preregistration.md，凍結，sha256 見 preregistration.sha256）。
++由 reports/card-0.2.2+E073-usage-evidence/e075.py 複製，加開關 --target {pooled,season}（預設 pooled，必須與 E-075 完全相同），
++再加 season 模式的評估（照 reports/card-0.2.3+E081-age-residual/e081.py 的定義）。差異見 diff-e075.txt、diff-e081.txt。
++用法（repo 根目錄；先跑 pooled 做 (c0)，過了才跑 season）：
++  PYTHONDONTWRITEBYTECODE=1 PYTHONIOENCODING=utf-8 python reports/card-0.2.3+E084-current-target/e084.py --target pooled
++  PYTHONDONTWRITEBYTECODE=1 PYTHONIOENCODING=utf-8 python reports/card-0.2.3+E084-current-target/e084.py --target season
++輸出：pooled → work/pooled/（c0.json、ranking.csv 為 card 0.2.3 格式）；season → ranking.csv（候選，card 0.2.3 格式）、results.json、work/season/。
+ (c1) 讀 npm-test.exit、(c3) 讀 evaluation.json；這兩個檔不存在時 results.json 標 pending，補齊後再跑一次本腳本即可（決定性，ranking.csv 不變）。
+ 全部決定性；bootstrap seed 1。"""
++import argparse
+ import csv
+ import hashlib
+ import json
+ import math
++import os
++import subprocess
+ import sys
+ from collections import defaultdict
+ from pathlib import Path
+@@ -20,7 +26,15 @@
+ E064 = ROOT / 'reports/card-0.1.2+E064-pergame'
+ E072 = ROOT / 'reports/card-0.2.0+E069-fringe-repl'
+ C022 = ROOT / 'reports/card-0.2.2/cards/P1'
++E075D = ROOT / 'reports/card-0.2.2+E073-usage-evidence'
++E081D = ROOT / 'reports/card-0.2.3+E081-age-residual'
++E082D = ROOT / 'reports/card-0.2.3+E082-position-shares'
++C023 = ROOT / 'reports/card-0.2.3/ranking.csv'
++C022_PUB = ROOT / 'reports/card-0.2.2/ranking.csv'
+ W = HERE / 'work'
++TARGET = 'pooled'   # main() 依 --target 改寫；pipeline 預設讀這個
++AGE_GROUPS = [('<=23', lambda a: a <= 23), ('24-27', lambda a: 24 <= a <= 27), ('28-30', lambda a: 28 <= a <= 30), ('>=31', lambda a: a >= 31)]
++NAMED = ['Paolo Banchero', 'Jalen Williams', 'Jalen Johnson']
+ sys.path.insert(0, str(E064))
+ from evaluate_e064 import rho, read, FROZEN, V58, THR, MIN_G  # noqa: E402  (唯讀匯入；呼叫端設 PYTHONDONTWRITEBYTECODE=1)
+ 
+@@ -114,6 +128,12 @@
+     D['e072_rows'] = list(csv.DictReader((E072 / 'ranking.csv').open(encoding='utf-8')))
+     D['e072'] = {r['name']: r for r in D['e072_rows']}
+     D['nm2pid'] = {v['name']: p for p, v in D['prim'].items()}
++    # E-084：fit 半季只用 2025-26 比賽的 RAPM（E-081 的 rapm1，唯讀）與 card 0.2.3 檔
++    D['rapm1'] = {h_: {int(r['playerId']): {k_: float(r[k_]) for k_ in ('net', 'O', 'D', 'poss')} | {'name': r['name']}
++                       for r in csv.DictReader((E081D / f'rapm1-{h_}.csv').open(encoding='utf-8'))} for h_ in 'AB'}
++    D['card023_rows'] = list(csv.DictReader(C023.open(encoding='utf-8')))
++    D['card023'] = {r['name']: r for r in D['card023_rows']}
++    D['card022_pub_rows'] = list(csv.DictReader(C022_PUB.open(encoding='utf-8')))
+     # 每人主要球隊（全季，MIN 最多；同分取 team id 小者）
+     D['main_full'] = {p: max(sorted(v.items()), key=lambda kv: kv[1])[0] for p, v in tmin['full'].items()}
+     # 最後一場所屬球隊（dnp json）
+@@ -311,7 +331,7 @@
+             'median_std': float(np.median(s)), 'median_orig_v15': float(o[15]), 'median_orig_avg': float(np.median(o))}
+ 
+ 
+-def r_metrics(ovr1, names, MIN, mpg_card, Fmask, rows_in_order):
++def r_metrics(ovr1, names, MIN, mpg_card, Fmask, rows_in_order, mpg_alt=None):
+     o = ovr1
+     sand, dru, shep = o['Payton Sandfort'], o['Andre Drummond'], o['Reed Sheppard']
+     big = np.array([o[names[i]] for i in range(len(names)) if MIN[i] >= 1000])
+@@ -321,20 +341,23 @@
+     r2 = {'value': {'F_n': int(Fmask.sum()), 'F_median_ovr': fmed, 'MIN>=1000_n': int(len(big)), 'MIN>=1000_PR10': pr10}, 'threshold': 'F 中位數 < MIN>=1000 的 PR10', 'pass': bool(fmed < pr10)}
+     tr = team_rho(rows_in_order)
+     base = D['_r3_base']
+-    r3 = {'value': {'candidate_median_std': tr['median_std'], 'card022_median_std': base['median_std'], 'n_teams': tr['n_teams'],
+-                    'reportOnly_origScript_v15_candidate': tr['median_orig_v15'], 'reportOnly_origScript_v15_card022': base['median_orig_v15']},
+-          'threshold': '候選中位數(標準 Spearman、第15/16小平均) >= card 0.2.2 同算法中位數', 'pass': bool(tr['median_std'] >= base['median_std'])}
++    r3 = {'value': {'candidate_median_std': tr['median_std'], 'card023_median_std': base['median_std'], 'n_teams': tr['n_teams'],
++                    'reportOnly_origScript_v15_candidate': tr['median_orig_v15'], 'reportOnly_origScript_v15_card023': base['median_orig_v15']},
++          'threshold': '候選中位數(標準 Spearman、第15/16小平均) >= card 0.2.3 同算法中位數', 'pass': bool(tr['median_std'] >= base['median_std'])}
+     g_lo = np.array([o[names[i]] for i in range(len(names)) if MIN[i] < 100])
+     pr90 = float(np.sort(g_lo)[int(round(0.9 * (len(g_lo) - 1)))])
+     gr = np.array([o[names[i]] for i in range(len(names)) if MIN[i] >= 1000 and 12 <= mpg_card[i] <= 22])
+     gmed = float(np.median(gr))
+     r4 = {'value': {'MIN<100_n': int(len(g_lo)), 'MIN<100_PR90': pr90, 'MIN>=1000_and_12<=MPG<=22_n': int(len(gr)), 'group_median': gmed},
+           'threshold': 'MIN<100 組 PR90 < MIN>=1000 且 12<=MPG<=22 組中位數（嚴格小於）', 'pass': bool(pr90 < gmed)}
++    if mpg_alt is not None:   # 只報告：MPG 分組改用 card 0.2.3 的 mpg 欄（預註冊沒寫，E-075 原式用 card 0.2.2 的 mpg）
++        gr2 = np.array([o[names[i]] for i in range(len(names)) if MIN[i] >= 1000 and 12 <= mpg_alt[i] <= 22])
++        r4['reportOnly_mpg_from_card023'] = {'group_n': int(len(gr2)), 'group_median': float(np.median(gr2)), 'pass': bool(pr90 < float(np.median(gr2)))}
+     return {'R1': r1, 'R2': r2, 'R3': r3, 'R4': r4}, tr
+ 
+ 
+ # ================================================================ 整條管線
+-def pipeline(o, pools, full_report=False):
++def pipeline(o, pools, target='pooled', full_report=False):
+     C = classify(o)
+     k = 9 if o['age_terms'] else 4
+     prim, fitpred, rapm, nm2pid = D['prim'], D['fitpred'], D['rapm'], D['nm2pid']
+@@ -342,14 +365,22 @@
+     SFfull = scope_feats('full', prim, C, o)
+ 
+     # 訓練列：方向 fit→ev 的係數用「ev 半季特徵 → RAPM_fit」，人群 = pools[ev+fit]
+-    train = {}
++    train, dropped = {}, {}
+     for fit, ev in (('A', 'B'), ('B', 'A')):
+         names_t = pools[ev + fit]
++        if target == 'season':   # E-084 §2：人群不變，在 rapm1 找不到的人只從訓練列剔除
++            r1 = D['rapm1'][fit]
++            dropped[fit + ev] = [n for n in names_t if nm2pid[n] not in r1]
++            names_t = [n for n in names_t if nm2pid[n] in r1]
+         sf = SF[ev]
+         sel = np.array([sf['idx'][nm2pid[n]] for n in names_t])
+         X = design(sf, sel, k)
+-        yv = np.array([float(rapm[fit][n]['pooledNet']) for n in names_t])
+-        w = np.array([float(rapm[fit][n]['pooledPoss']) for n in names_t])
++        if target == 'season':   # E-084 §2：訓練目標 = fit 半季只用 2025-26 比賽的 RAPM net；權重 = 其 poss
++            yv = np.array([D['rapm1'][fit][nm2pid[n]]['net'] for n in names_t])
++            w = np.array([D['rapm1'][fit][nm2pid[n]]['poss'] for n in names_t])
++        else:
++            yv = np.array([float(rapm[fit][n]['pooledNet']) for n in names_t])
++            w = np.array([float(rapm[fit][n]['pooledPoss']) for n in names_t])
+         train[fit + ev] = {'X': X, 'y': yv, 'w': w, 'pid': [nm2pid[n] for n in names_t], 'L': sf['L'][sel], 'a': sf['a'][sel]}
+     coef = {dn: wls(t['X'], t['y'], t['w']) for dn, t in train.items()}
+     Xc = np.vstack([train['AB']['X'], train['BA']['X']])
+@@ -378,7 +409,13 @@
+         sel = np.array([sf['idx'][nm2pid[n]] for n in names_d])
+         net = np.array([float(rapm[ev][n]['pooledNet']) for n in names_d])
+         ans = np.array([float(rapm[ev][n]['pooledNet']) * D['mpgh'][ev][nm2pid[n]][1] for n in names_d])
+-        dirs[dn] = {'names': names_d, 'ans': ans, 'net': net, 'base': g_b[sel], 'cand': g_c[sel], 'p': sf['p'][sel], 'pn': pn[sel], 'rr': rr}
++        pid_d = [nm2pid[n] for n in names_d]
++        r1e = D['rapm1'][ev]
++        mpg_ev = np.array([D['mpgh'][ev][q][1] for q in pid_d])
++        netN = np.array([r1e[q]['net'] if q in r1e else np.nan for q in pid_d])
++        age_d = np.array([float(D['age'][q]) if D['age'].get(q) is not None else np.nan for q in pid_d])
++        dirs[dn] = {'names': names_d, 'ans': ans, 'net': net, 'base': g_b[sel], 'cand': g_c[sel], 'p': sf['p'][sel], 'pn': pn[sel], 'rr': rr,
++                    'pid': pid_d, 'age': age_d, 'mpg_ev': mpg_ev, 'netN': netN}
+     rho_tab = {dn: {'c2_base': rho(d['base'], d['ans']), 'c2_cand': rho(d['cand'], d['ans']),
+                     'c4_base': rho(d['p'], d['net']), 'c4_cand': rho(d['pn'], d['net'])} for dn, d in dirs.items()}
+     rng = np.random.default_rng(1)
+@@ -456,204 +493,368 @@
+     Fmask = np.array([(sf['ap'][i] >= F_MIN_AP) and (sf['pl'][i] / sf['ap'][i] < F_MAX_RATE) and MIN[i] > 0 if sf['ap'][i] > 0 else False for i in range(N)])
+     # R3 基準（card 0.2.2 的檔案順序、同算法）
+     if '_r3_base' not in D:
+-        D['_r3_base'] = team_rho([(r['name'], float(r['MIN']), float(r['ovr'])) for r in D['card022_rows']])
++        D['_r3_base'] = team_rho([(r['name'], float(r['MIN']), float(r['ovr'])) for r in D['card023_rows']])
+     rows_in_order = [(r['name'], float(r['MIN']), float(r['ovr'])) for r in rows_new]
+     mpg022 = np.array([float(card022[n]['mpg']) for n in names])
+-    R, tr = r_metrics(ovr1, names, MIN, mpg022, Fmask, rows_in_order)
++    mpg023 = np.array([float(D['card023'][n]['mpg']) for n in names])
++    R, tr = r_metrics(ovr1, names, MIN, mpg022, Fmask, rows_in_order, mpg_alt=mpg023)
+     out.update(R)
+     out['card'] = {'r_repl': new['r'], 'anchors': new['anchors'], 'F_n': int(Fmask.sum())}
++    out['train_info'] = {'target': target, 'n_AB': len(train['AB']['y']), 'n_BA': len(train['BA']['y']),
++                         'dropped_from_training_rows': {dn: {'n': len(v), 'names': v} for dn, v in dropped.items()}}
++    # card 0.2.3 格式的 ranking 列（build_card_023.py：rank、ovr、mpg、gRepl 取新值，其餘欄位取 card 0.2.2 依姓名）
++    pub = {r['name']: r for r in D['card022_pub_rows']}
++    cols23 = list(D['card022_pub_rows'][0].keys())
++    rows23 = []
++    for k_, r in enumerate(rows_new, 1):
++        oo = dict(pub[r['name']])
++        oo['rank'] = str(k_)
++        oo['ovr'], oo['mpg'], oo['gRepl'] = r['ovr'], r['mpgAvail'], r['gRepl']
++        rows23.append(oo)
++    out['_aux'] = {'cols23': cols23, 'rows23': rows23, 'pred_new': pred_new, 'names': names, 'MIN': MIN, 'age': sf['age'], 'dirs': dirs,
++                   'ovr1': ovr1, 'coef_raw': coef, 'train': train, 'Xc': Xc, 'yc': yc, 'wc': wc, 'gc': gc}
++    return out
++
+ 
+-    if not full_report:
+-        return out
+-    # ================= 只有主跑才算的明細
+-    (W / 'c0').mkdir(parents=True, exist_ok=True)
+-    for path, rws, cl in ((W / 'c0/ranking.csv', rows_c0, cols), (HERE / 'ranking.csv', rows_new, cols2)):
+-        with open(path, 'w', encoding='utf-8', newline='') as f:
+-            w = csv.DictWriter(f, fieldnames=cl, extrasaction='ignore', lineterminator='\n')
+-            w.writeheader()
+-            for i, oo in enumerate(rws, 1):
+-                oo = dict(oo)
+-                oo['rank'] = i
+-                w.writerow(oo)
+-    maxdiff = max(abs(off['ovr'][idx[n]] - float(D['pgr'][n]['ovr'])) for n in names)
+-    s0 = sha(W / 'c0/ranking.csv')
+-    c022 = sha(C022 / 'card/ranking.csv')
+-    out['c0'] = {'value': {'c0_ranking_sha256': s0, 'card022_sha256': c022, 'byteIdentical': s0 == c022, 'maxAbsOvrDiffVsPergameRepl': float(maxdiff)},
+-                 'threshold': 'sha256 相同，或數值最大差 < 1e-9', 'pass': bool(s0 == c022 or maxdiff < 1e-9)}
+-    rank_new = {r['name']: k_ for k_, r in enumerate(rows_new, 1)}
+-
+-    rep = {}
+-    # ---- 分類
+-    cnt = C['cnt']
+-    old_cnt = D['dnp']['categoryCounts']
+-    rep['class_counts'] = {CLS_NAMES[c]: cnt.get(c, 0) for c in 'PRUSC'}
+-    rep['class_counts_E072_cat'] = {'played': 0, 'coach': 0, 'unavail': 0}
+-    for r in C['rows']:
+-        rep['class_counts_E072_cat'][r[5]] += 1
+-    sus = []
+-    for (pid, tid), (n, avg) in sorted(C['sus'].items(), key=lambda kv: -kv[1][0]):
+-        sus.append({'name': prim[pid]['name'], 'team': D['abbr'][tid], 'games': n, 'avgMIN_with_team': avg})
+-    rep['suspected'] = sus
+-    rep['suspected_total'] = int(sum(s['games'] for s in sus))
+-    rs = []
+-    for pid, cc in C['cls_by_pid'].items():
+-        if pid not in prim:
++
++
++# ================================================================ E-084 評估（照 e081.py 的定義；人群 = E-075 pools[dn]）
++def pct(x):
++    """0-1 百分位名次，同分取平均名次：(avg_rank - 1) / (n - 1)（同 e081.py）。"""
++    return (rankdata(x) - 1.0) / (len(x) - 1.0)
++
++
++def spearman(a, b):
++    ra, rb = rankdata(a), rankdata(b)
++    if ra.std() == 0 or rb.std() == 0:
++        return float('nan')
++    return float(np.corrcoef(ra, rb)[0, 1])
++
++
++DNS = ('AB', 'BA')
++
++
++def season_eval(cdirs, bdirs):
++    """候選（cdirs）對基準（bdirs，card 0.2.3）。答案 N = rapm1 net × mpg_ev；答案 Q = E-064 ans（pooledNet × mpg）。
++    S = Spearman(年齡, u)，u = pct(答案) − pct(卡片)，在「有年齡且有 rapm1」的人群上算一次（重抽內不重排，同 e081 主分析）。
++    rho_N：答案 N，限有 rapm1 的人；rho_Q：答案 Q，全 pools[dn]；c4：rho(pn, netN) − rho(p, netN)，限有 rapm1 的人。
++    bootstrap：master = pools 名單聯集（排序），default_rng(1)，ix 兩方向共用、候選與基準共用。"""
++    E = {}
++    for dn in DNS:
++        c, b = cdirs[dn], bdirs[dn]
++        assert c['names'] == b['names'] and np.array_equal(c['pid'], b['pid']) and np.array_equal(c['p'], b['p']), '候選與基準人群不一致'
++        age, netN = c['age'], c['netN']
++        keep = ~np.isnan(age) & ~np.isnan(netN)
++        hasN = ~np.isnan(netN)
++        ansN = netN * c['mpg_ev']
++        ansQ = c['ans']
++        ik = np.where(keep)[0]
++        e = {'age': age, 'keep': keep, 'hasN': hasN, 'ansN': ansN, 'ansQ': ansQ, 'netN': netN, 'cand_c': c['cand'], 'cand_b': b['cand'],
++             'p': c['p'], 'pn': c['pn'], 'names': c['names']}
++        for tag, g in (('c', c['cand']), ('b', b['cand'])):
++            for ak, ans in (('N', ansN), ('Q', ansQ)):
++                u = np.full(len(age), np.nan)
++                u[ik] = pct(ans[ik]) - pct(g[ik])
++                e['u' + ak + tag] = u
++        e['gm'] = {g: np.array([(not np.isnan(a)) and f(a) for a in age]) for g, f in AGE_GROUPS}
++        e['n_kept'] = int(keep.sum())
++        e['n_hasN'] = int(hasN.sum())
++        E[dn] = e
++
++    def stats(sel):
++        r = defaultdict(list)
++        for dn in DNS:
++            e, s = E[dn], sel[dn]
++            sk = s[e['keep'][s]]
++            sn = s[e['hasN'][s]]
++            for tag in ('c', 'b'):
++                for ak in ('N', 'Q'):
++                    u = e['u' + ak + tag]
++                    r[f'S{ak}_{tag}'].append(spearman(e['age'][sk], u[sk]))
++                    for g, _ in AGE_GROUPS:
++                        m = e['gm'][g][sk]
++                        r[f'g{ak}_{tag}_{g}'].append(float(u[sk][m].mean()) if m.any() else float('nan'))
++                cd = e['cand_' + tag]
++                r[f'rhoN_{tag}'].append(rho(cd[sn], e['ansN'][sn]))
++                r[f'rhoQ_{tag}'].append(rho(cd[s], e['ansQ'][s]))
++            r['c4_c'].append(rho(e['pn'][sn], e['netN'][sn]))
++            r['c4_b'].append(rho(e['p'][sn], e['netN'][sn]))
++        return r
++
++    def red(r):
++        return {k: float(np.nanmean(v)) for k, v in r.items()}
++
++    full = {dn: np.arange(len(E[dn]['age'])) for dn in DNS}
++    raw = stats(full)
++    pt = red(raw)
++    master = sorted(set(E['AB']['names']) | set(E['BA']['names']))
++    NN = len(master)
++    mp_ = {dn: np.array([{n: i for i, n in enumerate(E[dn]['names'])}.get(n, -1) for n in master]) for dn in DNS}
++    rng = np.random.default_rng(1)
++    boots = defaultdict(list)
++    for _ in range(NBOOT):
++        ix = rng.integers(0, NN, NN)
++        sel = {}
++        for dn in DNS:
++            s = mp_[dn][ix]
++            sel[dn] = s[s >= 0]
++        for k_, v in red(stats(sel)).items():
++            boots[k_].append(v)
++
++    def ci(b):
++        b = np.array(b, dtype=float)
++        return [float(np.nanpercentile(b, 5)), float(np.nanpercentile(b, 95))]
++
++    def diff_of(a, b):
++        return {'point': pt[a] - pt[b], 'ci90': ci(np.array(boots[a]) - np.array(boots[b]))}
++    res = {'n': {dn: {'pool': len(E[dn]['age']), 'kept_age_rapm1': E[dn]['n_kept'], 'with_rapm1': E[dn]['n_hasN']} for dn in DNS},
++           'master_size': NN, 'n_boot': NBOOT, 'seed': 1}
++    for tag, nm in (('c', 'cand'), ('b', 'card023')):
++        for ak in ('N', 'Q'):
++            res[f'S_{ak}_{nm}'] = {'point': pt[f'S{ak}_{tag}'], 'ci90': ci(boots[f'S{ak}_{tag}']),
++                                   'per_direction': {dn: raw[f'S{ak}_{tag}'][i] for i, dn in enumerate(DNS)}}
++            res[f'groups_{ak}_{nm}'] = {g: {'mean_u': pt[f'g{ak}_{tag}_{g}'], 'ci90': ci(boots[f'g{ak}_{tag}_{g}']),
++                                            'n': {dn: int(E[dn]['gm'][g][E[dn]['keep']].sum()) for dn in DNS},
++                                            'mean_u_dir': {dn: raw[f'g{ak}_{tag}_{g}'][i] for i, dn in enumerate(DNS)}} for g, _ in AGE_GROUPS}
++        res[f'rho_N_{nm}'] = {'point': pt[f'rhoN_{tag}'], 'per_direction': {dn: raw[f'rhoN_{tag}'][i] for i, dn in enumerate(DNS)}}
++        res[f'rho_Q_{nm}'] = {'point': pt[f'rhoQ_{tag}'], 'per_direction': {dn: raw[f'rhoQ_{tag}'][i] for i, dn in enumerate(DNS)}}
++    res['dS_N'] = diff_of('SN_c', 'SN_b')            # (b)
++    res['dS_Q'] = diff_of('SQ_c', 'SQ_b')            # 只報告
++    res['dRho_N'] = diff_of('rhoN_c', 'rhoN_b')      # (c2N)
++    res['dRho_Q'] = diff_of('rhoQ_c', 'rhoQ_b')      # (c2Q)
++    res['c4'] = {'point': pt['c4_c'] - pt['c4_b'], 'ci90': ci(np.array(boots['c4_c']) - np.array(boots['c4_b'])),
++                 'rho_pn': {dn: raw['c4_c'][i] for i, dn in enumerate(DNS)}, 'rho_p': {dn: raw['c4_b'][i] for i, dn in enumerate(DNS)}}
++    res['checks'] = {
++        'b': {'value': res['dS_N'], 'threshold': 'ΔS_N 下界 > 0', 'pass': bool(res['dS_N']['ci90'][0] > 0)},
++        'c2N': {'value': res['dRho_N'], 'threshold': 'Δρ_N 下界 > -0.02', 'pass': bool(res['dRho_N']['ci90'][0] > -0.02)},
++        'c2Q': {'value': res['dRho_Q'], 'threshold': 'Δρ_Q 下界 > -0.05', 'pass': bool(res['dRho_Q']['ci90'][0] > -0.05)},
++        'c4': {'value': {'delta': res['c4']['point'], 'ci90': res['c4']['ci90'], 'rho_pn': res['c4']['rho_pn'], 'rho_p': res['c4']['rho_p']},
++               'threshold': '下界 > 0', 'pass': bool(res['c4']['ci90'][0] > 0)}}
++    return res
++
++
++# ================================================================ (c0)
++def leaves(x, pre=''):
++    if isinstance(x, dict):
++        for k_, v in x.items():
++            yield from leaves(v, pre + '/' + str(k_))
++    elif isinstance(x, (list, tuple)):
++        for i, v in enumerate(x):
++            yield from leaves(v, pre + f'[{i}]')
++    elif isinstance(x, (int, float)) and not isinstance(x, bool):
++        yield pre, float(x)
++
++
++def write_rank(path, cols, rows):
++    Path(path).parent.mkdir(parents=True, exist_ok=True)
++    with open(path, 'w', encoding='utf-8', newline='') as f:
++        w = csv.DictWriter(f, fieldnames=cols, lineterminator='\n')
++        w.writeheader()
++        w.writerows(rows)
++
++
++def rank_equal(pa, pb, tol=1e-9):
++    """兩個 ranking.csv 共同欄位：字串須相同，兩邊都能轉數字者最大差 < tol。回傳 (ok, maxdiff)。"""
++    ra = list(csv.DictReader(open(pa, encoding='utf-8')))
++    rb = list(csv.DictReader(open(pb, encoding='utf-8')))
++    if len(ra) != len(rb) or list(ra[0].keys()) != list(rb[0].keys()):
++        return False, None
++    md = 0.0
++    for x, y in zip(ra, rb):
++        for c_ in x:
++            if x[c_] == y[c_]:
++                continue
++            try:
++                d_ = abs(float(x[c_]) - float(y[c_]))
++            except ValueError:
++                return False, None
++            md = max(md, d_)
++            if not d_ < tol:
++                return False, None
++    return True, md
++
++
++def run_c0(pools):
++    res = pipeline(BASE_OPTS, pools, 'pooled')
++    e075 = jload(E075D / 'results.json')
++    ok_val, md = True, 0.0
++    for tag in ('c2', 'c4'):
++        a = dict(leaves(res[tag]['value']))
++        b = dict(leaves(e075['checks'][tag]['value']))
++        if set(a) != set(b):
++            ok_val = False
+             continue
+-        if cc.get('R', 0) + cc.get('S', 0) >= 5:
+-            i = sf['idx'][pid]
+-            ap_o, pl_o = C['old_ap'][pid]
+-            rs.append({'name': prim[pid]['name'], 'rest': cc.get('R', 0), 'suspected': cc.get('S', 0), 'Ap072': ap_o,
+-                       'rate072': (pl_o / ap_o if ap_o else None), 'Ap': int(sf['ap'][i]), 'rate': (None if np.isnan(rate[i]) else float(rate[i]))})
+-    rep['rest_players'] = sorted(rs, key=lambda x: -(x['rest'] + x['suspected']))
+-    # 與 player-games 對照
+-    mism = []
+-    for pid in pids:
+-        pl_dnp = sum(1 for _ in ())  # placeholder, 下面實算
+-    pl_by = defaultdict(int)
+-    for r in C['rows']:
+-        if r[3] == 'P':
+-            pl_by[r[0]] += 1
+-    mism = [(prim[q]['name'], pl_by.get(q, 0), D['pg_played_games'].get(q, 0)) for q in pids if pl_by.get(q, 0) != D['pg_played_games'].get(q, 0)]
+-    minmis = [(prim[q]['name'], float(prim[q]['MIN']), D['hm']['A'].get(q, 0.0) + D['hm']['B'].get(q, 0.0)) for q in pids
+-              if abs(prim[q]['MIN'] - D['hm']['A'].get(q, 0.0) - D['hm']['B'].get(q, 0.0)) > 0.5]
+-    rep['crosscheck'] = {'played_games_mismatch_n': len(mism), 'played_games_mismatch_head': mism[:10],
+-                         'MIN_card_vs_playergames_mismatch_n': len(minmis), 'MIN_mismatch_head': minmis[:10],
+-                         'players_without_bio_age': int(sum(1 for x in sf['age'] if x is None)),
+-                         'players_without_bio_age_names_head': [names[i] for i in range(N) if sf['age'][i] is None][:15],
+-                         'players_Ap0': [names[i] for i in range(N) if sf['ap'][i] == 0]}
+-    # ---- 回歸
+-    ci = {}
++        md = max(md, max(abs(a[k_] - b[k_]) for k_ in a))
++    ok_val = bool(ok_val and md < 1e-9)
++    aux = res['_aux']
++    pth = W / 'pooled/ranking.csv'
++    write_rank(pth, aux['cols23'], aux['rows23'])
++    sha_eq = bool(sha(pth) == sha(C023))
++    cols_ok, md_r = (True, 0.0) if sha_eq else rank_equal(pth, C023)
++    coef_ok = bool(all(abs(res['coef'][dn][k_] - e075['coefficients'][dn][k_]) < 1e-9 for dn in ('AB', 'BA', 'card') for k_ in COEF_NAMES))
++    passed = bool(ok_val and (sha_eq or cols_ok))
++    c0 = {'pass': passed, 'c2_c4_equal_E075': ok_val, 'ranking_sha256_equal_card023': sha_eq, 'ranking_shared_cols_equal': bool(cols_ok),
++          'coefficients_equal_E075': coef_ok, 'ranking_sha256': sha(pth), 'card023_sha256': sha(C023)}
++    if passed:   # 只在通過時記數字（預註冊 §4：不過就停，不看誤差數字）
++        c0['max_diff_c2_c4'] = md
++        c0['max_diff_ranking_numeric'] = md_r
++    (W / 'pooled').mkdir(parents=True, exist_ok=True)
++    (W / 'pooled/c0.json').write_text(json.dumps(c0, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
++    print(json.dumps({k_: v for k_, v in c0.items() if isinstance(v, bool)}, ensure_ascii=False))
++    return 0 if passed else 1
++
++
++# ================================================================ season 模式
++def strip_aux(o):
++    return {k_: v for k_, v in o.items() if k_ != '_aux'}
++
++
++def gates_of(res, ev, c1=None, c3=None):
++    """res = pipeline 輸出（R2–R4）；ev = season_eval 輸出。c1、c3 為 None 表示尚未取得。"""
++    return {'c1': c1, 'b': ev['checks']['b']['pass'], 'c2N': ev['checks']['c2N']['pass'], 'c2Q': ev['checks']['c2Q']['pass'], 'c3': c3,
++            'c4': ev['checks']['c4']['pass'], 'R2': res['R2']['pass'], 'R3': res['R3']['pass'], 'R4': res['R4']['pass']}
++
++
++def decide(c0_pass, g, ev):
++    allg = {'c0': c0_pass, **g}
++    fails = [k_ for k_, v in allg.items() if v is False]
++    pend = [k_ for k_, v in allg.items() if v is None]
++    if fails:
++        if g['b'] and (g['c2N'] is False or g['c2Q'] is False):
++            return '偏差有修、準度有損（不採用，交使用者）', fails
++        return '不通過（不採用）', fails
++    if pend:
++        return '待 ' + '、'.join(pend), fails
++    return ('通過（MINOR）' if ev['checks']['c2N']['value']['ci90'][0] > 0 else '通過（PATCH）'), fails
++
++
++def read_c1():
++    p = HERE / 'npm-test.exit'
++    return None if not p.exists() else bool(p.read_text(encoding='utf-8').strip() == '0')
++
++
++def read_c3():
++    p = HERE / 'evaluation.json'
++    if not p.exists():
++        return None, None
++    ev = jload(p)
++    cand = {c['label']: c for c in ev['candidates']}
++    if 'E084' not in cand or 'card-0.2.3' not in cand:
++        return None, None
++    a, b = cand['E084']['gates'], cand['card-0.2.3']['gates']
++    info = {'E084': {'pass': a['pass'], 'of': a['of']}, 'card-0.2.3': {'pass': b['pass'], 'of': b['of']}}
++    return bool(a['pass'] >= b['pass'] and a['of'] == b['of']), info
++
++
++def run_season(pools):
++    c0 = jload(W / 'pooled/c0.json')
++    assert c0.get('pass') is True, '(c0) 未通過：不得跑 season'
++    base = pipeline(BASE_OPTS, pools, 'pooled')
++    main_ = pipeline(BASE_OPTS, pools, 'season')
++    bA, mA = base['_aux'], main_['_aux']
++    ev = season_eval(mA['dirs'], bA['dirs'])
++    # 理智檢查：基準（card 0.2.3 的半季值）在這裡算出的 S_N 應等於 E-081 results.json
++    r81 = jload(E081D / 'results.json')
++    san = {'S_N_point_equal_E081': bool(abs(ev['S_N_card023']['point'] - r81['S_N']['point']) < 1e-9),
++           'S_Q_point_equal_E081': bool(abs(ev['S_Q_card023']['point'] - r81['S_Q']['point']) < 1e-9)}
++    c1 = read_c1()
++    c3, c3info = read_c3()
++    g = gates_of(main_, ev, c1, c3)
++    verdict, fails = decide(True, g, ev)
++    write_rank(HERE / 'ranking.csv', mA['cols23'], mA['rows23'])
++    sens = {}
++    for tag, upd in (('s1', {'inactive_noreason_to_coach': True}), ('s2', {'suspected': False}), ('s3', {'age_terms': False})):
++        o = dict(BASE_OPTS)
++        o.update(upd)
++        sr = pipeline(o, pools, 'season')
++        se = season_eval(sr['_aux']['dirs'], bA['dirs'])
++        s_ = strip_aux(sr)
++        s_['season_eval'] = {k_: se[k_] for k_ in ('S_N_cand', 'S_Q_cand', 'dS_N', 'dS_Q', 'dRho_N', 'dRho_Q', 'c4', 'checks')}
++        s_['gates'] = gates_of(sr, se)
++        sens[tag] = s_
++    names, MIN, age = mA['names'], mA['MIN'], mA['age']
++    rows23 = mA['rows23']
++    old = D['card023']
++    nm_idx = {n: i for i, n in enumerate(names)}
++    named = {}
++    for nm in NAMED:
++        r_, o_ = next(x for x in rows23 if x['name'] == nm), old[nm]
++        named[nm] = {'age': age[nm_idx[nm]], 'ovr_new': float(r_['ovr']), 'rank_new': int(r_['rank']), 'ovr_card023': float(o_['ovr']),
++                     'rank_card023': int(o_['rank']), 'MIN': float(MIN[nm_idx[nm]])}
++    top20 = [{'rank': int(r_['rank']), 'name': r_['name'], 'ovr': float(r_['ovr']), 'rank_card023': int(old[r_['name']]['rank']),
++              'ovr_card023': float(old[r_['name']]['ovr'])} for r_ in rows23[:20]]
++    chg = []
++    for r_ in rows23:
++        o_ = old[r_['name']]
++        chg.append({'name': r_['name'], 'age': age[nm_idx[r_['name']]], 'MIN': float(MIN[nm_idx[r_['name']]]), 'ovr_new': float(r_['ovr']),
++                    'ovr_card023': float(o_['ovr']), 'delta': float(r_['ovr']) - float(o_['ovr']), 'rank_new': int(r_['rank']),
++                    'rank_card023': int(o_['rank'])})
++    chg20 = sorted(chg, key=lambda x: (-abs(x['delta']), x['name']))[:20]
++    big = [i for i in range(len(names)) if MIN[i] >= 1000]
++    ovr_new = {x['name']: float(x['ovr']) for x in rows23}
++    agegrp = {}
++    for gname, f in AGE_GROUPS:
++        ii = [i for i in big if age[i] is not None and f(age[i])]
++        agegrp[gname] = {'n': len(ii), 'median_ovr_new': float(np.median([ovr_new[names[i]] for i in ii])) if ii else None,
++                         'median_ovr_card023': float(np.median([float(old[names[i]]['ovr']) for i in ii])) if ii else None}
++    agegrp['no_age_n'] = int(sum(1 for i in big if age[i] is None))
++    pstd = {'MIN>=1000_n': len(big), 'pred_new_std_new': float(np.std(mA['pred_new'][big])), 'pred_new_std_card023': float(np.std(bA['pred_new'][big])),
++            'ddof': 0, 'pred_new_mean_new': float(np.mean(mA['pred_new'][big])), 'pred_new_mean_card023': float(np.mean(bA['pred_new'][big]))}
++    e075 = jload(E075D / 'results.json')
++    coef_ci = {}
+     for dn in ('AB', 'BA', 'card'):
+         if dn == 'card':
+-            bc = boot_coefs(Xc, yc, wc, gc)
++            bc = boot_coefs(mA['Xc'], mA['yc'], mA['wc'], mA['gc'])
+         else:
+-            t = train[dn]
++            t = mA['train'][dn]
+             bc = boot_coefs(t['X'], t['y'], t['w'], t['pid'])
+-        ci[dn] = {nm: {'coef': float(coef[dn][j]), 'ci90': [float(np.percentile(bc[:, j], 5)), float(np.percentile(bc[:, j], 95))]} for j, nm in enumerate(COEF_NAMES[:k])}
+-    rep['coef_ci'] = ci
+-    Lall = np.concatenate([train['AB']['L'], train['BA']['L']])
+-    aall = np.concatenate([train['AB']['a'], train['BA']['a']])
+-    Lr, ar = (float(Lall.min()), float(Lall.max())), (float(aall.min()), float(aall.max()))
+-    hs = sf['has']
+-    outL = hs & ((sf['L'] < Lr[0]) | (sf['L'] > Lr[1]))
+-    outA = hs & ((sf['a'] < ar[0]) | (sf['a'] > ar[1]))
+-    rep['fit_range'] = {'L': Lr, 'a': ar, 'train_n': int(len(Lall)), 'train_n_AB': len(train['AB']['y']), 'train_n_BA': len(train['BA']['y']),
+-                        'train_y_n': int(np.sum(np.concatenate([[1]] * 0 + [train[d_]['X'][:, 4] for d_ in ('AB', 'BA')]))) if k > 4 else None,
+-                        'card_outside_L': int(outL.sum()), 'card_outside_a': int(outA.sum()), 'card_outside_either': int((outL | outA).sum()),
+-                        'card_players_with_Ap': int(hs.sum()),
+-                        'pred_new_min': float(pred_new.min()), 'pred_new_min_name': names[int(np.argmin(pred_new))],
+-                        'pred_new_PR1_all': float(np.percentile(pred_new, 1)), 'pred_new_PR1_MIN500pool': qf(pred_new, pool, 1),
+-                        'pred_new_PR10_pool(r_repl)': new['r'], 'p_PR10_pool': off['r'],
+-                        'train_d_ones_in_rows': int(np.sum(np.concatenate([train[d_]['X'][:, 8] != 0 for d_ in ('AB', 'BA')]))) if k > 4 else None}
+-    # ---- 分佈
+-    ovr022 = {n: float(card022[n]['ovr']) for n in names}
+-    ovr072 = {n: float(e072[n]['ovr']) for n in names}
+-    grp = {'<100': MIN < 100, '100-300': (MIN >= 100) & (MIN < 300), '300-1000': (MIN >= 300) & (MIN < 1000), '>=1000': MIN >= 1000}
+-    rep['groups'] = {kk: {'n': int(m_.sum()), 'median_E073': float(np.median([ovr1[names[i]] for i in range(N) if m_[i]])),
+-                          'median_card022': float(np.median([ovr022[names[i]] for i in range(N) if m_[i]])),
+-                          'median_E072': float(np.median([ovr072[names[i]] for i in range(N) if m_[i]]))} for kk, m_ in grp.items()}
+-    big = MIN >= 1000
+-    rep['gNeg_MIN1000'] = {'card022': int(((off['g'] < 0) & big).sum()), 'E073': int(((new['g'] < 0) & big).sum())}
+-    top20 = [{'rank': k_, 'name': r['name'], 'pos': r['pos'], 'ovr': r['ovr'], 'rank022': r['rank022'], 'ovr022': r['ovr022']} for k_, r in enumerate(rows_new[:20], 1)]
+-    rep['top20'] = top20
+-    rep['bigsTop10'] = [t['name'] for t in top20[:10] if t['pos'] in ('C', 'PF')]
+-    top10_022 = sorted(card022.values(), key=lambda r: int(r['rank']))[:10]
+-    rep['bigsTop10_card022'] = [r['name'] for r in top10_022 if r['pos'] in ('C', 'PF')]
+-    # ---- R-035
+-    base_tr = D['_r3_base']
+-    rep['r035'] = {'teams': {ab: {'cand': tr['std'][ab], 'card022': base_tr['std'].get(ab)} for ab in sorted(tr['std'])},
+-                   'orig_script': {'cand_v15': tr['median_orig_v15'], 'card022_v15': base_tr['median_orig_v15'],
+-                                   'cand_avg': tr['median_orig_avg'], 'card022_avg': base_tr['median_orig_avg']},
+-                   'within_team': {}}
+-    for ab in TEAM5:
+-        mem = sorted(tr['members'].get(ab, []), key=lambda x: -x[1])
+-        rep['r035']['within_team'][ab] = [{'name': nm, 'MIN': mn, 'ovr': ov, 'ovr022': ovr022[nm], 'rank_in_team': j + 1} for j, (nm, mn, ov) in enumerate(mem)]
+-    old = []
+-    for i in range(N):
+-        a_ = sf['age'][i]
+-        if a_ is not None and a_ >= 33 and MIN[i] >= 500:
+-            old.append({'name': names[i], 'age': a_, 'MIN': float(MIN[i]), 'ovr': ovr1[names[i]], 'rank': rank_new[names[i]],
+-                        'ovr022': ovr022[names[i]], 'rank022': int(card022[names[i]]['rank'])})
+-    rep['age33'] = sorted(old, key=lambda x: x['rank'])
+-    # ---- G5、OKC
+-    g5 = []
+-    for n in G5:
+-        if n not in idx:
+-            g5.append({'name': n, 'missing': True})
+-            continue
+-        i = idx[n]
+-        g5.append({'name': n, 'MIN': float(MIN[i]), 'Ap': int(sf['ap'][i]), 'playRate': None if np.isnan(rate[i]) else float(rate[i]),
+-                   'mpgAvail': float(sf['mp'][i]), 'age': sf['age'][i], 'p': float(sf['p'][i]), 'predNew': float(pred_new[i]),
+-                   'ovr': ovr1[n], 'rank': rank_new[n], 'ovr022': ovr022[n], 'rank022': int(card022[n]['rank'])})
+-    rep['G5'] = g5
+-    okc = [i for i, q in enumerate(pids) if D['last_team'].get(q) == OKC and MIN[i] >= 300]
+-    okc.sort(key=lambda i: -new['ovr'][i])
+-    ord022 = sorted(okc, key=lambda i: -ovr022[names[i]])
+-    rep['OKC'] = [{'name': names[i], 'MIN': float(MIN[i]), 'ovr': ovr1[names[i]], 'ovr022': ovr022[names[i]], 'rank_in_team': j + 1, 'rank022_in_team': ord022.index(i) + 1}
+-                  for j, i in enumerate(okc)]
+-    rep['anchors'] = {'card022': off['anchors'], 'E073': new['anchors']}
+-    out['_report'] = rep
+-    out['_ovr1'] = ovr1
+-    return out
++        coef_ci[dn] = {nm: {'coef': float(mA['coef_raw'][dn][j]), 'ci90': [float(np.percentile(bc[:, j], 5)), float(np.percentile(bc[:, j], 95))]}
++                       for j, nm in enumerate(COEF_NAMES[:len(mA['coef_raw'][dn])])}
++    e082 = jload(E082D / 'results.json')
++    e082_pass = bool(str(e082.get('verdict', '')).startswith('通過'))
++    sec5 = {'baseline': 'card 0.2.3（不等 E-082）', 'e082_verdict_read_only': e082.get('verdict'), 'e082_passed': e082_pass,
++            'merged_version': ('E-082 與 E-084 皆通過，須另跑合併版（未跑）' if e082_pass and verdict.startswith('通過')
++                               else '合併版待 E-082' if not e082_pass else '本版未全過，不跑合併版')}
++    inputs = {}
++    for p in (E081D / 'rapm1-A.csv', E081D / 'rapm1-B.csv', E081D / 'results.json', E082D / 'results.json', C023, C022_PUB, E075D / 'results.json',
++              E075D / 'e075.py', E081D / 'e081.py', HERE / 'preregistration.md', HERE / 'e084.py', HERE / 'evaluate.mjs'):
++        inputs[p.relative_to(ROOT).as_posix()] = sha(p)
++    results = {
++        'experiment': 'E-084', 'version': 'card 0.2.3+E084', 'baseline': 'card 0.2.3（reports/card-0.2.3/ranking.csv）',
++        'target': 'season（fit 半季只用 2025-26 比賽的 rapm1 net／poss）', 'verdict': verdict, 'failed_checks': fails,
++        'verdict_rule': '預註冊 §4：全過=通過（c2N 下界>0 為 MINOR，否則 PATCH）；(b) 過但 c2N／c2Q 沒過=偏差有修、準度有損（不採用）；其他沒過=不採用',
++        'checks': {'c0': c0, 'c1': {'value': c1, 'threshold': 'npm test exit 0', 'pass': c1},
++                   'b': ev['checks']['b'], 'c2N': ev['checks']['c2N'], 'c2Q': ev['checks']['c2Q'],
++                   'c3': {'value': c3info, 'threshold': 'E084 閘數 >= card 0.2.3（18/19）', 'pass': c3},
++                   'c4': ev['checks']['c4'],
++                   'R1_reportOnly': main_['R1'], 'R2': main_['R2'], 'R3': main_['R3'], 'R4': main_['R4']},
++        'season_eval': ev, 'sanity_vs_E081': san,
++        'legacy_e075_style': {'c2': main_['c2'], 'c4': main_['c4'],
++                              'note': '只報告：E-075 原式（c4 的 net 仍是 pooledNet），不是 E-084 判準'},
++        'coefficients': main_['coef'], 'coefficients_E075': e075['coefficients'], 'coefficient_ci': coef_ci, 'coefficient_ci_E075': e075.get('coefficient_ci'),
++        'training': main_['train_info'], 'population': main_['population'],
++        'named_players': named, 'top20': top20, 'largest_ovr_changes': chg20, 'age_group_median_ovr_MIN1000': agegrp, 'pred_new_dispersion': pstd,
++        'card': main_['card'], 'sensitivities': sens, 'section5': sec5,
++        'ranking_csv_sha256': sha(HERE / 'ranking.csv'), 'preregistration_sha256': sha(HERE / 'preregistration.md'), 'inputs_sha256': inputs,
++        'generator': 'reports/card-0.2.3+E084-current-target/e084.py --target season'}
++    (HERE / 'results.json').write_text(json.dumps(results, ensure_ascii=False, indent=1, default=float) + '\n', encoding='utf-8')
++    print(json.dumps({'verdict': verdict, 'failed': fails, 'gates': g, 'sanity': san,
++                      'S_N_cand': ev['S_N_cand']['point'], 'S_N_card023': ev['S_N_card023']['point'], 'dS_N': ev['dS_N'],
++                      'dRho_N': ev['dRho_N'], 'dRho_Q': ev['dRho_Q'], 'c4': ev['c4']['ci90']}, ensure_ascii=False, indent=1, default=float))
++    return 0
+ 
+ 
+ def main():
++    ap = argparse.ArgumentParser()
++    ap.add_argument('--target', choices=['pooled', 'season'], default='pooled')
++    a = ap.parse_args()
++    exp = (HERE / 'preregistration.sha256').read_text(encoding='utf-8').split()[0]
++    assert sha(HERE / 'preregistration.md') == exp, '預註冊 sha256 與凍結值不同'
+     load_data()
+     pools = build_pools()
+-    main_res = pipeline(BASE_OPTS, pools, full_report=True)
+-    sens = {}
+-    for tag, upd in (('s1', {'inactive_noreason_to_coach': True}), ('s2', {'suspected': False}), ('s3', {'age_terms': False})):
+-        r = pipeline({**BASE_OPTS, **upd}, pools)
+-        sens[tag] = {'opts': r['opts'], 'coef': r['coef'], 'F_n': r['card']['F_n'], 'c2': r['c2'], 'c4': r['c4'], 'R1': r['R1'], 'R2': r['R2'], 'R3': r['R3'], 'R4': r['R4']}
+-
+-    # ---- c1、c3（外部步驟的結果）
+-    c1 = {'value': None, 'threshold': 'npm test exit 0', 'pass': None}
+-    ef = HERE / 'npm-test.exit'
+-    if ef.exists():
+-        code = int(ef.read_text().strip())
+-        c1 = {'value': {'exit': code}, 'threshold': 'npm test exit 0', 'pass': code == 0}
+-    c3 = {'value': None, 'threshold': 'evaluate.mjs 通過數 >= 18/19', 'pass': None}
+-    evf = HERE / 'evaluation.json'
+-    if evf.exists():
+-        ev = jload(evf)
+-        cc = {c_['label']: c_['gates'] for c_ in ev['candidates']}
+-        g = cc.get('E075')
+-        c3 = {'value': {'E075': f"{g['pass']}/{g['of']}", 'card-0.2.2': (f"{cc['card-0.2.2']['pass']}/{cc['card-0.2.2']['of']}" if 'card-0.2.2' in cc else None)},
+-              'threshold': 'evaluate.mjs 通過數 >= 18/19', 'pass': bool(g['pass'] >= 18 and g['of'] == 19)}
+-    res = {'c0': main_res['c0'], 'c1': c1, 'c2': main_res['c2'], 'c3': c3, 'c4': main_res['c4'],
+-           'R1': main_res['R1'], 'R2': main_res['R2'], 'R3': main_res['R3'], 'R4': main_res['R4']}
+-    hard = ['c0', 'c1', 'c2', 'c3', 'R2', 'R3', 'R4']   # R1 只報告（預註冊 §3、R-038）
+-    if any(res[k]['pass'] is None for k in hard):
+-        verdict = 'pending（c1／c3 尚未產生）'
+-    elif all(res[k]['pass'] for k in hard) and res['c4']['pass']:
+-        verdict = '通過'
+-    elif all(res[k]['pass'] for k in hard) and not res['c4']['pass']:
+-        verdict = '語意版'
+-    else:
+-        verdict = '不通過'
+-    inputs = {p: sha(ROOT / p) for p in [
+-        'reports/card-0.2.2+E073-usage-evidence/preregistration.md', 'reports/card-0.2.0+E073-usage-evidence/preregistration.md', 'reports/card-0.2.0+E073-usage-evidence/supplement-1.md',
+-        'reports/card-0.2.2/cards/P1/card/ranking.csv', 'reports/card-0.2.2/cards/P1/primary/pred.csv', 'reports/card-0.2.2/cards/P1/primary/pergame-repl.csv',
+-        'reports/card-0.2.2/cards/P1/primary/ranking.csv', 'reports/card-0.2.2/cards/P1/fitA/pred.csv', 'reports/card-0.2.2/cards/P1/fitB/pred.csv',
+-        'reports/card-0.2.2/cards/P1/fitA/pergame-summary.json', 'reports/card-0.2.2/cards/P1/fitB/pergame-summary.json',
+-        'reports/card-0.1.2+E064-pergame/mpg-A.csv', 'reports/card-0.1.2+E064-pergame/mpg-B.csv', 'reports/card-0.1.2+E064-pergame/evaluate_e064.py',
+-        'reports/card-0.2.0+E069-fringe-repl/ranking.csv', 'reports/card-0.2.0+E069-fringe-repl/evaluate.mjs',
+-        'reports/ovr-v58-holdout-2025-26/rapm-A.csv', 'reports/ovr-v58-holdout-2025-26/rapm-B.csv', 'reports/ovr-v55-2k27-compare/merged.csv',
+-        'data/season-source/dnp-2025-26.json', 'data/season-source/player-games.json', 'data/season-source/team-games.json', 'data/benchmark-source/bio.json']}
+-    results = {'experiment': 'E-075', 'version': 'card 0.2.2+E073（候選；版號待使用者定，預註冊記候選版號 0.3.0）', 'baseline': 'card 0.2.2',
+-               'verdict': verdict, 'verdict_rule': '(c0)-(c4)、(R2)-(R4) 全過=通過（R1 依 R-038 只報告）；僅 (c4) 不過、其餘全過=語意版；(c0)-(c3)、(R2)-(R4) 任一不過=不通過',
+-               'checks': res, 'coefficients': main_res['coef'], 'coefficient_ci': main_res['_report']['coef_ci'], 'sensitivities': sens,
+-               'population': main_res['population'], 'ranking_csv_sha256': sha(HERE / 'ranking.csv'), 'inputs_sha256': inputs,
+-               'generator': 'reports/card-0.2.2+E073-usage-evidence/e075.py'}
+-    (HERE / 'results.json').write_text(json.dumps(results, ensure_ascii=False, indent=1, default=float) + '\n', encoding='utf-8')
+-    rep = main_res['_report']
+-    rep['card'] = main_res['card']
+-    (W / 'report_data.json').write_text(json.dumps(rep, ensure_ascii=False, indent=1, default=float) + '\n', encoding='utf-8')
+-    print(json.dumps({'verdict': verdict, 'ranking_sha256': results['ranking_csv_sha256'],
+-                      'checks': {k: {'pass': res[k]['pass'], 'value': res[k]['value']} for k in res}, 'coef': main_res['coef']['card'],
+-                      'sens': {t: {k: sens[t][k]['pass'] for k in ('c2', 'c4', 'R1', 'R2', 'R3', 'R4')} for t in sens}},
+-                     ensure_ascii=False, indent=1, default=float))
++    return run_c0(pools) if a.target == 'pooled' else run_season(pools)
+ 
+ 
+ if __name__ == '__main__':
+-    main()
++    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
++    sys.exit(main())

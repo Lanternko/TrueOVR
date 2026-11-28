@@ -1,0 +1,128 @@
+{
+ "rule": "R-156 (supersedes R-153 weighting)",
+ "close": "|margin| <= 5 or OT",
+ "weighting": "games in team stint (first..last appearance for that team), DNP/absent = 0 min",
+ "sources": {
+  "2024-25": {
+   "dir": "data\\defense-seventh\\2024-25",
+   "team-games.sha256": "b4da45c024c655c64db220568813922ca1e6d37fbc23650ad7ed43f352b1e470",
+   "player-games.sha256": "4c3f33c67ffaa1cf88ea01a7acaeef70af088e22f6020c3a02409989f6ad4ffa"
+  },
+  "2025-26": {
+   "dir": "data\\season-source",
+   "team-games.sha256": "d5cb1a6dbd26a0ed71b24e7e18fcbc862afdf6d8bd8ea3814c5dadbf1989fb8a",
+   "player-games.sha256": "11fc5866b2f61b31e27659e14e4071924b5873ef0d2a4118a585c1a54be04357"
+  }
+ },
+ "games": {
+  "2024-25": {
+   "games": 1230,
+   "closeTeamGames": 330
+  },
+  "2025-26": {
+   "games": 1230,
+   "closeTeamGames": 318
+  }
+ },
+ "multipliers": {
+  "1": {
+   "label": "1",
+   "allMin": 31.0668,
+   "closeMin": 32.8434,
+   "m": 1.0572,
+   "nAll": 3934,
+   "nClose": 1048,
+   "mR153": 1.0624
+  },
+  "2": {
+   "label": "2",
+   "allMin": 29.0328,
+   "closeMin": 30.3806,
+   "m": 1.0464,
+   "nAll": 4311,
+   "nClose": 1134,
+   "mR153": 1.0487
+  },
+  "3": {
+   "label": "3",
+   "allMin": 27.2843,
+   "closeMin": 28.4507,
+   "m": 1.0428,
+   "nAll": 3823,
+   "nClose": 1007,
+   "mR153": 1.0557
+  },
+  "4": {
+   "label": "4",
+   "allMin": 25.1163,
+   "closeMin": 25.9792,
+   "m": 1.0344,
+   "nAll": 4049,
+   "nClose": 1067,
+   "mR153": 1.0494
+  },
+  "5": {
+   "label": "5",
+   "allMin": 23.7847,
+   "closeMin": 24.9854,
+   "m": 1.0505,
+   "nAll": 3994,
+   "nClose": 1082,
+   "mR153": 1.043
+  },
+  "6": {
+   "label": "6",
+   "allMin": 21.6575,
+   "closeMin": 22.0487,
+   "m": 1.0181,
+   "nAll": 3830,
+   "nClose": 1009,
+   "mR153": 1.0296
+  },
+  "7": {
+   "label": "7",
+   "allMin": 20.3137,
+   "closeMin": 21.0013,
+   "m": 1.0338,
+   "nAll": 3724,
+   "nClose": 977,
+   "mR153": 1.0179
+  },
+  "8": {
+   "label": "8",
+   "allMin": 18.7185,
+   "closeMin": 19.0842,
+   "m": 1.0195,
+   "nAll": 3754,
+   "nClose": 978,
+   "mR153": 1.0156
+  },
+  "9": {
+   "label": "9",
+   "allMin": 16.2914,
+   "closeMin": 16.5757,
+   "m": 1.0175,
+   "nAll": 3436,
+   "nClose": 902,
+   "mR153": 1.0254
+  },
+  "10": {
+   "label": "10",
+   "allMin": 14.9726,
+   "closeMin": 14.7776,
+   "m": 0.987,
+   "nAll": 3735,
+   "nClose": 959,
+   "mR153": 1.0368
+  },
+  "11": {
+   "label": "11+",
+   "allMin": 8.0819,
+   "closeMin": 7.2953,
+   "m": 0.9027,
+   "nAll": 36135,
+   "nClose": 9360,
+   "mR153": 1.1088
+  }
+ }
+}

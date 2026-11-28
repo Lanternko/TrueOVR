@@ -316,9 +316,10 @@ export const LEAGUE_DOUBLE_RATE = 0.16;
  * 引力量的是「會不會被拉出三分線」（三分為主）；包夾量的是「不夾住他就會得分」
  * ——低位與禁區才是包夾的主場，而且**必須自己製造得分**：接球才會投的人
  * 沒有人會去包夾（Klay 從來不被包夾，Shaq 每一球都被包夾）。
- * 只用得分效率不行：Rick Fox 的近射 93 是小樣本，算出來會比 Shaq 還高。
+ * sim 0.1.1 拿掉原本的體格項（phys 0.25，R-089）：真實球員的包夾威脅被量測錨點抵銷，
+ * 體格項只動到平均隊友，E-135 量不出效果。三項在 doubleThreat 裡除以權重和。
  */
-export const DOUBLE_THREAT_W = { long: 0.20, mid: 0.10, short: 0.45, phys: 0.25 };
+export const DOUBLE_THREAT_W = { long: 0.20, mid: 0.10, short: 0.45 };
 export const DOUBLE_CREATE_W = { handle: 0.50, drive: 0.50 };
 export const DOUBLE_THREAT_MIX = 0.50;   // 得分能力與自主製造能力各半
 /**
@@ -454,10 +455,6 @@ export function weightedTop(values, weights) {
   const rest = v.slice(weights.length - 1);
   return head + (rest.reduce((s, x) => s + x, 0) / rest.length) * restW;
 }
-
-// --- 體力 ---------------------------------------------------------------
-export const STAMINA_MIN_EFF = 0.70;
-export const STAMINA_MAX_EFF = 1.00;
 
 // --- 夾值 ---------------------------------------------------------------
 export const CLAMP = {

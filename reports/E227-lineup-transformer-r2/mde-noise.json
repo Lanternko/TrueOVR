@@ -1,0 +1,332 @@
+{
+ "seasons": [
+  "2021-22",
+  "2022-23",
+  "2023-24",
+  "2024-25",
+  "2025-26"
+ ],
+ "fitRows": 111499,
+ "evalStints": 27533,
+ "evalGames": 904,
+ "evalPoss": 181696,
+ "mse": {
+  "B1-abil": 10172.81,
+  "R2-abil": 10146.93,
+  "B1-stats": 10147.59,
+  "R2-stats": 10130.02,
+  "B1-stats-rapm": 10146.43,
+  "R2-stats-rapm": 10128.44,
+  "B0": 10249.08
+ },
+ "sideMetrics": {
+  "B1-abil": {
+   "ptsSideMSE": 0.43877,
+   "tovLogLoss": 0.40216,
+   "orbLogLoss": 0.59891
+  },
+  "R2-abil": {
+   "ptsSideMSE": 0.4381,
+   "tovLogLoss": 0.40217,
+   "orbLogLoss": 0.59793
+  },
+  "B1-stats": {
+   "ptsSideMSE": 0.43781,
+   "tovLogLoss": 0.40157,
+   "orbLogLoss": 0.59636
+  },
+  "R2-stats": {
+   "ptsSideMSE": 0.43732,
+   "tovLogLoss": 0.40162,
+   "orbLogLoss": 0.59643
+  },
+  "B1-stats-rapm": {
+   "ptsSideMSE": 0.43775,
+   "tovLogLoss": 0.40158,
+   "orbLogLoss": 0.59635
+  },
+  "R2-stats-rapm": {
+   "ptsSideMSE": 0.43729,
+   "tovLogLoss": 0.40162,
+   "orbLogLoss": 0.59645
+  },
+  "B0": {
+   "ptsSideMSE": 0.44211,
+   "tovLogLoss": 0.40387,
+   "orbLogLoss": 0.60157
+  }
+ },
+ "b1Lambda": {
+  "R2-abil": {
+   "pts": 10000.0,
+   "tov": 0.001,
+   "orb": 0.001
+  },
+  "R2-stats": {
+   "pts": 10000.0,
+   "tov": 0.001,
+   "orb": 0.001
+  },
+  "R2-stats-rapm": {
+   "pts": 10000.0,
+   "tov": 0.001,
+   "orb": 0.001
+  }
+ },
+ "paired": {
+  "R2-abil−B1-abil": {
+   "point": -25.88251,
+   "ci90": [
+    -31.69486,
+    -19.80354
+   ],
+   "halfWidth90": 5.94566,
+   "sd": 3.64693
+  },
+  "B1-abil−B0": {
+   "point": -76.27543,
+   "ci90": [
+    -92.47195,
+    -59.16723
+   ],
+   "halfWidth90": 16.65236,
+   "sd": 10.33088
+  },
+  "R2-abil−B0": {
+   "point": -102.15794,
+   "ci90": [
+    -118.55197,
+    -84.96928
+   ],
+   "halfWidth90": 16.79135,
+   "sd": 10.2394
+  },
+  "R2-stats−B1-stats": {
+   "point": -17.57023,
+   "ci90": [
+    -23.29044,
+    -11.37266
+   ],
+   "halfWidth90": 5.95889,
+   "sd": 3.63334
+  },
+  "B1-stats−B0": {
+   "point": -101.48942,
+   "ci90": [
+    -119.66547,
+    -83.41988
+   ],
+   "halfWidth90": 18.1228,
+   "sd": 10.97561
+  },
+  "R2-stats−B0": {
+   "point": -119.05965,
+   "ci90": [
+    -137.73351,
+    -100.1058
+   ],
+   "halfWidth90": 18.81386,
+   "sd": 11.34769
+  },
+  "R2-stats−R2-abil": {
+   "point": -16.90171,
+   "ci90": [
+    -24.6792,
+    -9.31961
+   ],
+   "halfWidth90": 7.67979,
+   "sd": 4.64287
+  },
+  "R2-stats-rapm−B1-stats-rapm": {
+   "point": -17.9953,
+   "ci90": [
+    -22.94585,
+    -12.62785
+   ],
+   "halfWidth90": 5.159,
+   "sd": 3.1178
+  },
+  "B1-stats-rapm−B0": {
+   "point": -102.64941,
+   "ci90": [
+    -120.60818,
+    -84.67908
+   ],
+   "halfWidth90": 17.96455,
+   "sd": 10.9446
+  },
+  "R2-stats-rapm−B0": {
+   "point": -120.64471,
+   "ci90": [
+    -138.56416,
+    -101.98026
+   ],
+   "halfWidth90": 18.29195,
+   "sd": 11.05177
+  },
+  "R2-stats-rapm−R2-abil": {
+   "point": -18.48678,
+   "ci90": [
+    -25.62389,
+    -11.41629
+   ],
+   "halfWidth90": 7.1038,
+   "sd": 4.32731
+  },
+  "R2-stats-rapm−R2-stats": {
+   "point": -1.58507,
+   "ci90": [
+    -3.89302,
+    0.75834
+   ],
+   "halfWidth90": 2.32568,
+   "sd": 1.44886
+  }
+ },
+ "arms": {
+  "R2-stats": {
+   "mdeVsAbil": 15.36,
+   "mdeVsB1": 11.918,
+   "mde": 15.36,
+   "guard2VsAbil": {
+    "ptsSide": {
+     "point": -0.00079,
+     "ci90": [
+      -0.00103,
+      -0.00054
+     ],
+     "halfWidth90": 0.00025,
+     "sd": 0.00015,
+     "threshold": 0.0005
+    },
+    "tovLL": {
+     "point": -0.00055,
+     "ci90": [
+      -0.00067,
+      -0.00043
+     ],
+     "halfWidth90": 0.00012,
+     "sd": 7e-05,
+     "threshold": 0.00024
+    },
+    "orbLL": {
+     "point": -0.0015,
+     "ci90": [
+      -0.00183,
+      -0.00118
+     ],
+     "halfWidth90": 0.00033,
+     "sd": 0.0002,
+     "threshold": 0.00066
+    }
+   },
+   "guard2VsB1_reportOnly": {
+    "ptsSide": {
+     "point": -0.0005,
+     "ci90": [
+      -0.00072,
+      -0.00027
+     ],
+     "halfWidth90": 0.00022,
+     "sd": 0.00014,
+     "threshold": 0.00044
+    },
+    "tovLL": {
+     "point": 5e-05,
+     "ci90": [
+      -1e-05,
+      0.00011
+     ],
+     "halfWidth90": 6e-05,
+     "sd": 4e-05,
+     "threshold": 0.00012
+    },
+    "orbLL": {
+     "point": 7e-05,
+     "ci90": [
+      -0.00012,
+      0.00027
+     ],
+     "halfWidth90": 0.00019,
+     "sd": 0.00012,
+     "threshold": 0.00038
+    }
+   }
+  },
+  "R2-stats-rapm": {
+   "mdeVsAbil": 14.208,
+   "mdeVsB1": 10.318,
+   "mde": 14.208,
+   "guard2VsAbil": {
+    "ptsSide": {
+     "point": -0.00081,
+     "ci90": [
+      -0.00105,
+      -0.00057
+     ],
+     "halfWidth90": 0.00024,
+     "sd": 0.00014,
+     "threshold": 0.00048
+    },
+    "tovLL": {
+     "point": -0.00055,
+     "ci90": [
+      -0.00067,
+      -0.00043
+     ],
+     "halfWidth90": 0.00012,
+     "sd": 7e-05,
+     "threshold": 0.00024
+    },
+    "orbLL": {
+     "point": -0.00147,
+     "ci90": [
+      -0.0018,
+      -0.00116
+     ],
+     "halfWidth90": 0.00032,
+     "sd": 0.0002,
+     "threshold": 0.00064
+    }
+   },
+   "guard2VsB1_reportOnly": {
+    "ptsSide": {
+     "point": -0.00046,
+     "ci90": [
+      -0.00067,
+      -0.00026
+     ],
+     "halfWidth90": 0.00021,
+     "sd": 0.00013,
+     "threshold": 0.00042
+    },
+    "tovLL": {
+     "point": 4e-05,
+     "ci90": [
+      -3e-05,
+      0.0001
+     ],
+     "halfWidth90": 7e-05,
+     "sd": 4e-05,
+     "threshold": 0.00014
+    },
+    "orbLL": {
+     "point": 0.00011,
+     "ci90": [
+      -8e-05,
+      0.00031
+     ],
+     "halfWidth90": 0.00019,
+     "sd": 0.00012,
+     "threshold": 0.00038
+    }
+   }
+  }
+ },
+ "mde": {
+  "value": 15.36,
+  "valueRapmArm": 14.208,
+  "rule": "2×成對 90% 半寬，取 (臂−R2-abil) 與 (臂−同特徵B1) 兩者較大；R2-stats 臂為主判定"
+ },
+ "note": "MSE 單位：(每 100 回合淨值)²，回合加權；只用訓練季 split=train 的 fold 0 評估（驗證折，不是測試），測試場次不在本目錄。"
+}

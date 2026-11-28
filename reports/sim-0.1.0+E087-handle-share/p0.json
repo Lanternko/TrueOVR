@@ -1,0 +1,203 @@
+{
+ "note": "counts per game; WinImp: SGA (1628983) vs opponents 0, samples 0-1, both variants; v41: 2025-26 schedule indices 0-2, seed 20261012",
+ "paths": {
+  "winimp-off": {
+   "games": 16,
+   "calls": 0,
+   "handleReads": 0,
+   "touches": 3708,
+   "branch": {
+    "volume": 3578,
+    "handling": 0
+   },
+   "callsPerGame": 0,
+   "handleReadsPerGame": 0,
+   "touchesPerGame": 231.75,
+   "volumeBranchPerGame": 223.625,
+   "handlingBranchPerGame": 0
+  },
+  "winimp-measured": {
+   "games": 16,
+   "calls": 0,
+   "handleReads": 0,
+   "touches": 3708,
+   "branch": {
+    "volume": 3578,
+    "handling": 0
+   },
+   "callsPerGame": 0,
+   "handleReadsPerGame": 0,
+   "touchesPerGame": 231.75,
+   "volumeBranchPerGame": 223.625,
+   "handlingBranchPerGame": 0
+  },
+  "v41-off": {
+   "games": 3,
+   "calls": 0,
+   "handleReads": 0,
+   "touches": 722,
+   "branch": {
+    "volume": 686,
+    "handling": 0
+   },
+   "callsPerGame": 0,
+   "handleReadsPerGame": 0,
+   "touchesPerGame": 240.66666666666666,
+   "volumeBranchPerGame": 228.66666666666666,
+   "handlingBranchPerGame": 0
+  },
+  "v41-measured": {
+   "games": 3,
+   "calls": 0,
+   "handleReads": 0,
+   "touches": 722,
+   "branch": {
+    "volume": 686,
+    "handling": 0
+   },
+   "callsPerGame": 0,
+   "handleReadsPerGame": 0,
+   "touchesPerGame": 240.66666666666666,
+   "volumeBranchPerGame": 228.66666666666666,
+   "handlingBranchPerGame": 0
+  }
+ },
+ "winimpMissingHandle": 0,
+ "winimpOptionsShotSelection": "volume",
+ "v41OptionsShotSelection": "volume",
+ "v41MissingHandle": 0,
+ "lineups": [
+  {
+   "team": 1610612737,
+   "players": [
+    {
+     "name": "Nickeil Alexander-Walker",
+     "handle": 82.329932,
+     "off": 0.1998,
+     "measured": 0.2421
+    },
+    {
+     "name": "Dyson Daniels",
+     "handle": 85.148202,
+     "off": 0.2147,
+     "measured": 0.2913
+    },
+    {
+     "name": "Jalen Johnson",
+     "handle": 74.344833,
+     "off": 0.3421,
+     "measured": 0.3067
+    },
+    {
+     "name": "Zaccharie Risacher",
+     "handle": 41.209913,
+     "off": 0.0877,
+     "measured": 0.0799
+    },
+    {
+     "name": "Onyeka Okongwu",
+     "handle": 41.695821,
+     "off": 0.1556,
+     "measured": 0.0799
+    }
+   ],
+   "differs": true
+  },
+  {
+   "team": 1610612738,
+   "players": [
+    {
+     "name": "Payton Pritchard",
+     "handle": 96.421283,
+     "off": 0.2549,
+     "measured": 0.3491
+    },
+    {
+     "name": "Derrick White",
+     "handle": 94.30758,
+     "off": 0.2518,
+     "measured": 0.3339
+    },
+    {
+     "name": "Jaylen Brown",
+     "handle": 71.056851,
+     "off": 0.2837,
+     "measured": 0.157
+    },
+    {
+     "name": "Sam Hauser",
+     "handle": 69.14966,
+     "off": 0.0885,
+     "measured": 0.0799
+    },
+    {
+     "name": "Neemias Queta",
+     "handle": 50.928086,
+     "off": 0.1212,
+     "measured": 0.0799
+    }
+   ],
+   "differs": true
+  },
+  {
+   "team": 1610612739,
+   "players": [
+    {
+     "name": "Donovan Mitchell",
+     "handle": 93.368157,
+     "off": 0.3606,
+     "measured": 0.3815
+    },
+    {
+     "name": "Sam Merrill",
+     "handle": 71.526563,
+     "off": 0.1361,
+     "measured": 0.1805
+    },
+    {
+     "name": "Jaylon Tyson",
+     "handle": 53.114674,
+     "off": 0.098,
+     "measured": 0.1349
+    },
+    {
+     "name": "Jarrett Allen",
+     "handle": 40.966958,
+     "off": 0.1504,
+     "measured": 0.1349
+    },
+    {
+     "name": "Evan Mobley",
+     "handle": 51.413994,
+     "off": 0.2549,
+     "measured": 0.1682
+    }
+   ],
+   "differs": true
+  }
+ ],
+ "p0pass": false,
+ "zeroCallPaths": [
+  "winimp-off",
+  "winimp-measured",
+  "v41-off",
+  "v41-measured"
+ ],
+ "meta": {
+  "srcTreeHEAD": "6f6283a96756445dd90511d2eaa1951a5a7ba514",
+  "gitHead": "d5e193638510d4ca3dfd84e341b49af0f460749a",
+  "srcWorkingTreeStatus": " M src/constants.js; M src/teams.js;",
+  "srcNote": "working-tree src/constants.js has the E-080 RIMD_SCURVE env flag; RIMD_SCURVE was unset for this run",
+  "node": "v22.12.0",
+  "host": "local (Windows)",
+  "preregSha256": "f0814db39dd943f11e16b3bd841beae203711dc23f7e44e528236c32e0b8f4d5",
+  "code": {
+   "handle-share.mjs": "7b2ef3822546e8b28476828775c5986578b9d5b912121fb34737bb499cee437d",
+   "engine-e087.mjs": "6af75808aac56bf9895a20cd535ac487cb81709dc4a26a5d29bc70b19db865ef",
+   "winimp-core-e087.mjs": "b67ed5d88ef24f9deb7c3b3a52eab1826bbe6eaed3f01adf80f21aeddbe61ff6",
+   "p0.mjs": "f7c3bd655c59eb2e3c5510d5773c610f85b038a02cf1c66411a576c5d3a7634a"
+  },
+  "handleCsvSha256": "2ee470e6c92df01c609500a951dfb7332cac831ce53c524e60ffc82e1b5d10bd",
+  "finding": "Both paths run with options.shotSelection=\"volume\", so the first touch is pickWeighted(creationPlan.weights) (player-impact-v11 opportunityPlan: measured self-terminal + pass-opportunity rates); M.handlingWeights/handlingScore is never called. p0 fails -> stop per prereg 3.3."
+ }
+}

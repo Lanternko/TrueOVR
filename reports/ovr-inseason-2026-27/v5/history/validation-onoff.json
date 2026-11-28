@@ -1,0 +1,51 @@
+{
+ "what": "This builder (stats.nba.com playbyplayv2 mirror) vs reports/impact-rapm/onoff.csv (cdn liveData pipeline), player-team rows with >2000 possessions in the repo file. Game sets differ: each pipeline drops games it cannot reconstruct.",
+ "seasons": {
+  "2022-23": {
+   "playerTeams": 374,
+   "onPoss": {
+    "pearson": 0.9883,
+    "meanAbsDiff": 407.947
+   },
+   "onORtg": {
+    "pearson": 0.9648,
+    "meanAbsDiff": 0.845
+   },
+   "onDRtg": {
+    "pearson": 0.9448,
+    "meanAbsDiff": 0.99
+   },
+   "onNet": {
+    "pearson": 0.9655,
+    "meanAbsDiff": 1.144
+   },
+   "onOffNet": {
+    "pearson": 0.9453,
+    "meanAbsDiff": 1.553
+   }
+  },
+  "2023-24": {
+   "playerTeams": 358,
+   "onPoss": {
+    "pearson": 0.9856,
+    "meanAbsDiff": 512.973
+   },
+   "onORtg": {
+    "pearson": 0.9763,
+    "meanAbsDiff": 0.865
+   },
+   "onDRtg": {
+    "pearson": 0.9631,
+    "meanAbsDiff": 0.932
+   },
+   "onNet": {
+    "pearson": 0.9777,
+    "meanAbsDiff": 1.209
+   },
+   "onOffNet": {
+    "pearson": 0.9425,
+    "meanAbsDiff": 1.62
+   }
+  }
+ }
+}

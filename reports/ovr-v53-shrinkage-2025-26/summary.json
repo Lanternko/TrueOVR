@@ -1,0 +1,164 @@
+{
+  "preregistration": "preregistration.md",
+  "players": 582,
+  "fit": {
+    "priorIntercept": -4.1965965096470885,
+    "priorLogMinutesPerGameSlope": 1.2564912837654567,
+    "tau2Per36": 3.730934509387405,
+    "kappa": 96.70563930070723,
+    "sourceNoiseEqualsSignalAtMinutes": 25.919950901680572
+  },
+  "G1splitHalfPrediction": {
+    "mseRaw": 7.876479350056235,
+    "mseShrunk": 6.164592706177311,
+    "meanReduction": 1.711886643878923,
+    "reductionCI95": [
+      0.5236149159205842,
+      3.30052718156768
+    ],
+    "minutes20Plus": {
+      "players": 289,
+      "mseRaw": 1.6520549799554363,
+      "mseShrunk": 1.7309723288204826,
+      "meanReduction": -0.07891734886504681
+    },
+    "minuteWeightedReduction": 0.4092894863262437,
+    "halfFits": {
+      "even": {
+        "priorIntercept": -4.081682520781217,
+        "priorLogMinutesPerGameSlope": 1.216048111592921,
+        "tau2Per36": 3.456139064249129,
+        "kappa": 0.0,
+        "sourceNoiseEqualsSignalAtMinutes": 0.0
+      },
+      "odd": {
+        "priorIntercept": -4.156037054505006,
+        "priorLogMinutesPerGameSlope": 1.2499896047674348,
+        "tau2Per36": 3.086439108780204,
+        "kappa": 257.58636826487947,
+        "sourceNoiseEqualsSignalAtMinutes": 83.45745993566047
+      }
+    },
+    "passed": false
+  },
+  "G2externalRAPM": {
+    "players": 414,
+    "net": {
+      "raw": 0.36256930025608275,
+      "shrunk": 0.41293554045638287
+    },
+    "defense": {
+      "raw": 0.2563725372064107,
+      "shrunk": 0.276852224140271
+    },
+    "passed": true
+  },
+  "G3bench": {
+    "smallWInTop50": {
+      "raw": 24,
+      "shrunk": 9
+    },
+    "remainingSmallInTop50": [
+      "Ty Jerome",
+      "Zach Edey",
+      "Walker Kessler",
+      "Blake Hinson",
+      "Myron Gardner",
+      "Jeremy Sochan",
+      "Charles Bassey",
+      "Matisse Thybulle",
+      "Cormac Ryan"
+    ],
+    "passed": true
+  },
+  "gates": {
+    "G1": false,
+    "G2": true,
+    "G3": true,
+    "adopt": false
+  },
+  "supplementary": {
+    "rapmPoss1000": {
+      "players": 513,
+      "net": {
+        "raw": 0.3629834836564499,
+        "shrunk": 0.4266288618961477
+      },
+      "defense": {
+        "raw": 0.24361064535121854,
+        "shrunk": 0.26512866350376596
+      }
+    },
+    "splitHalfReliability": {
+      "raw": 0.7838137643408702,
+      "shrunk": 0.8819229827137733
+    },
+    "mediaSpearman": {
+      "players": 94,
+      "raw": -0.3893291912003757,
+      "shrunk": -0.39710291514647983
+    },
+    "medianShrinkFactor": {
+      "simMinutesUnder10": 0.35794714066001243,
+      "simMinutes10to20": 0.664114414008882,
+      "simMinutes20Plus": 0.8307202540330052
+    }
+  },
+  "focus": {
+    "Thanasis Antetokounmpo": {
+      "rawRank": 3,
+      "shrunkRank": 231,
+      "B": 0.206
+    },
+    "Nikola Jokić": {
+      "rawRank": 16,
+      "shrunkRank": 6,
+      "B": 0.855
+    },
+    "Alex Caruso": {
+      "rawRank": 78,
+      "shrunkRank": 72,
+      "B": 0.718
+    },
+    "Derrick White": {
+      "rawRank": 142,
+      "shrunkRank": 97,
+      "B": 0.887
+    },
+    "Shai Gilgeous-Alexander": {
+      "rawRank": 2,
+      "shrunkRank": 1,
+      "B": 0.843
+    },
+    "Charles Bassey": {
+      "rawRank": 15,
+      "shrunkRank": 39,
+      "B": 0.494
+    },
+    "Dyson Daniels": {
+      "rawRank": 115,
+      "shrunkRank": 68,
+      "B": 0.871
+    },
+    "Caleb Houstan": {
+      "rawRank": 4,
+      "shrunkRank": 149,
+      "B": 0.308
+    },
+    "Victor Wembanyama": {
+      "rawRank": 11,
+      "shrunkRank": 5,
+      "B": 0.849
+    },
+    "Tosan Evbuomwan": {
+      "rawRank": 1,
+      "shrunkRank": 520,
+      "B": 0.06
+    },
+    "Jonathan Mogbo": {
+      "rawRank": 5,
+      "shrunkRank": 116,
+      "B": 0.308
+    }
+  }
+}

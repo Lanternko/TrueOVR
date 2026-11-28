@@ -1,0 +1,8954 @@
+{
+ "sources_sha256": {
+  "card_0213a": "feb5c8023cd99f12413767160d3b98d119051c55ef6e200f26bca631460daf97",
+  "card_0214": "fbb5507846add6ebad78ba770fa544a065e3b7ae0c0a5926e5ae1d24fd46ae7a",
+  "mix_pool": "dee0e6b2ccb4517187cba39cccc291a4984ed3f6e2ff3c580754304df43570c7",
+  "t_swap": "3fe4f6eb2c1f336fb16a24d5c2c85fc8246251d7844bf07c7d5b57313e094888",
+  "epm": "bc841b47cdc8c7ffe750f606c72c794251f004a59be8da73ccb76788a6b5ae13",
+  "2k27": "a8e071cf899388e58243cb24caa3c904b11f5c6bceeb0580bbc31cf91bc2d25f"
+ },
+ "repro_A_vs_card0214_maxabs": 0.0004989642321431287,
+ "align_c": {
+  "A": 1.0,
+  "K": 0.9832875143450109,
+  "P1": 1.352105914994218,
+  "KW": 1.350121933159897,
+  "S1": 0.8381774783358054,
+  "S4": 0.8231335492806171,
+  "S2": 3.5041075823171504,
+  "S3": 3.416123002279599,
+  "H": 1.5962498787857167,
+  "H1": 0.9269954351609183,
+  "Hq": 1.9492620709494048,
+  "H3q": 1.4340068386496068
+ },
+ "n_match": {
+  "T": 265,
+  "EPM": 262,
+  "2K": 575
+ },
+ "prereg_sha256": "d6c044197e69d5f947af76f31b1a95528a7acc8ed5968839dbfe6a39c63d7b62",
+ "bench": {
+  "n": {
+   "2022-23": 262,
+   "2023-24": 286,
+   "2024-25": 319,
+   "2025-26": 243
+  },
+  "arms": {
+   "A": {
+    "lofo_lambda": {
+     "2022-23": 0.75,
+     "2023-24": 0.5,
+     "2024-25": 0.5,
+     "2025-26": 0.5
+    },
+    "same05_vs_base": 0.01409663766993295,
+    "same05_vs_A05": 0.0,
+    "lofo_vs_base": 0.012263091186022312,
+    "n_pos_same05_vs_A05": 0,
+    "gap_C_same05": -0.005640560136900548,
+    "gap_PF_same05": -0.022310840060719005
+   },
+   "K": {
+    "lofo_lambda": {
+     "2022-23": 0.75,
+     "2023-24": 0.5,
+     "2024-25": 0.5,
+     "2025-26": 0.5
+    },
+    "same05_vs_base": 0.014842126433025335,
+    "same05_vs_A05": 0.0007454887630923848,
+    "lofo_vs_base": 0.013192848063371287,
+    "n_pos_same05_vs_A05": 3,
+    "gap_C_same05": -0.005950066478513296,
+    "gap_PF_same05": -0.022973662043235258
+   },
+   "P1": {
+    "lofo_lambda": {
+     "2022-23": 0.75,
+     "2023-24": 0.5,
+     "2024-25": 0.5,
+     "2025-26": 0.75
+    },
+    "same05_vs_base": 0.010939617731243509,
+    "same05_vs_A05": -0.0031570199386894418,
+    "lofo_vs_base": 0.009405913594957781,
+    "n_pos_same05_vs_A05": 1,
+    "gap_C_same05": -0.017251025750978227,
+    "gap_PF_same05": 0.016922444109707488
+   },
+   "KW": {
+    "lofo_lambda": {
+     "2022-23": 0.75,
+     "2023-24": 0.5,
+     "2024-25": 0.5,
+     "2025-26": 0.75
+    },
+    "same05_vs_base": 0.011477354482175505,
+    "same05_vs_A05": -0.002619283187757444,
+    "lofo_vs_base": 0.010020275082121796,
+    "n_pos_same05_vs_A05": 1,
+    "gap_C_same05": -0.018178396935050734,
+    "gap_PF_same05": 0.016779220991383705
+   },
+   "S1": {
+    "lofo_lambda": {
+     "2022-23": 0.5,
+     "2023-24": 0.5,
+     "2024-25": 0.5,
+     "2025-26": 0.5
+    },
+    "same05_vs_base": 0.0064833510404482585,
+    "same05_vs_A05": -0.007613286629484691,
+    "lofo_vs_base": 0.0064833510404482585,
+    "n_pos_same05_vs_A05": 1,
+    "gap_C_same05": 0.06981852844625577,
+    "gap_PF_same05": 0.008609327646298067
+   },
+   "S4": {
+    "lofo_lambda": {
+     "2022-23": 0.5,
+     "2023-24": 0.5,
+     "2024-25": 0.5,
+     "2025-26": 0.5
+    },
+    "same05_vs_base": 0.006742748652244772,
+    "same05_vs_A05": -0.007353889017688178,
+    "lofo_vs_base": 0.006742748652244772,
+    "n_pos_same05_vs_A05": 1,
+    "gap_C_same05": 0.06932375794430137,
+    "gap_PF_same05": 0.009465313195948937
+   },
+   "S2": {
+    "lofo_lambda": {
+     "2022-23": 1.5,
+     "2023-24": 1.0,
+     "2024-25": 1.0,
+     "2025-26": 1.5
+    },
+    "same05_vs_base": 0.007928310128109151,
+    "same05_vs_A05": -0.006168327541823799,
+    "lofo_vs_base": 0.01138553635827563,
+    "n_pos_same05_vs_A05": 1,
+    "gap_C_same05": 0.04000797638427972,
+    "gap_PF_same05": 0.011133694779082291
+   },
+   "S3": {
+    "lofo_lambda": {
+     "2022-23": 1.5,
+     "2023-24": 1.5,
+     "2024-25": 1.0,
+     "2025-26": 1.5
+    },
+    "same05_vs_base": 0.008197705311596507,
+    "same05_vs_A05": -0.005898932358336444,
+    "lofo_vs_base": 0.011883261703480046,
+    "n_pos_same05_vs_A05": 1,
+    "gap_C_same05": 0.03926219377978431,
+    "gap_PF_same05": 0.011549848618814139
+   },
+   "H": {
+    "lofo_lambda": {
+     "2022-23": 1.0,
+     "2023-24": 0.75,
+     "2024-25": 0.75,
+     "2025-26": 1.0
+    },
+    "same05_vs_base": 0.011790122643604562,
+    "same05_vs_A05": -0.0023065150263283877,
+    "lofo_vs_base": 0.011657324063916029,
+    "n_pos_same05_vs_A05": 1,
+    "gap_C_same05": -0.0018082271680166563,
+    "gap_PF_same05": 0.014974029759231518
+   },
+   "H1": {
+    "lofo_lambda": {
+     "2022-23": 0.75,
+     "2023-24": 0.5,
+     "2024-25": 0.5,
+     "2025-26": 0.5
+    },
+    "same05_vs_base": 0.01383476703673087,
+    "same05_vs_A05": -0.0002618706332020803,
+    "lofo_vs_base": 0.012545520858580218,
+    "n_pos_same05_vs_A05": 1,
+    "gap_C_same05": 0.01469932994676348,
+    "gap_PF_same05": -0.01594937753417568
+   },
+   "Hq": {
+    "lofo_lambda": {
+     "2022-23": 1.0,
+     "2023-24": 0.75,
+     "2024-25": 0.75,
+     "2025-26": 1.0
+    },
+    "same05_vs_base": 0.011095253931354077,
+    "same05_vs_A05": -0.003001383738578874,
+    "lofo_vs_base": 0.012342031386681688,
+    "n_pos_same05_vs_A05": 1,
+    "gap_C_same05": 0.012578673880533292,
+    "gap_PF_same05": 0.012904980513984183
+   },
+   "H3q": {
+    "lofo_lambda": {
+     "2022-23": 0.75,
+     "2023-24": 0.75,
+     "2024-25": 0.75,
+     "2025-26": 0.75
+    },
+    "same05_vs_base": 0.011659139951918371,
+    "same05_vs_A05": -0.002437497718014578,
+    "lofo_vs_base": 0.013071539102822927,
+    "n_pos_same05_vs_A05": 1,
+    "gap_C_same05": -0.011732263168404991,
+    "gap_PF_same05": 0.01599689596035288
+   }
+  },
+  "gap_C_base": 0.07015734798831959,
+  "gap_PF_base": 0.014836335327960803
+ },
+ "card_0213a": {
+  "top10": [
+   [
+    "Shai Gilgeous-Alexander",
+    "PG"
+   ],
+   [
+    "Nikola Jokić",
+    "C"
+   ],
+   [
+    "Luka Dončić",
+    "PG"
+   ],
+   [
+    "Victor Wembanyama",
+    "C"
+   ],
+   [
+    "Giannis Antetokounmpo",
+    "PF"
+   ],
+   [
+    "Kawhi Leonard",
+    "SF"
+   ],
+   [
+    "Donovan Mitchell",
+    "SG"
+   ],
+   [
+    "Jayson Tatum",
+    "PF"
+   ],
+   [
+    "Anthony Edwards",
+    "SG"
+   ],
+   [
+    "Kevin Durant",
+    "SF"
+   ]
+  ],
+  "top10_nPFC": 4,
+  "rank11_20": [
+   [
+    "Stephen Curry",
+    "PG",
+    11
+   ],
+   [
+    "Ty Jerome",
+    "PG",
+    12
+   ],
+   [
+    "Austin Reaves",
+    "SG",
+    13
+   ],
+   [
+    "Cade Cunningham",
+    "PG",
+    14
+   ],
+   [
+    "Chet Holmgren",
+    "PF",
+    15
+   ],
+   [
+    "Kevin Porter Jr.",
+    "SG",
+    16
+   ],
+   [
+    "Evan Mobley",
+    "PF",
+    17
+   ],
+   [
+    "Desmond Bane",
+    "SG",
+    18
+   ],
+   [
+    "Jalen Williams",
+    "PF",
+    19
+   ],
+   [
+    "Jimmy Butler III",
+    "SF",
+    20
+   ]
+  ],
+  "top30_drops": [],
+  "ties50": [
+   4,
+   8
+  ],
+  "rho": {
+   "T": 0.7238440633078045,
+   "EPM": 0.6850657713913136,
+   "2K": 0.7740645529920869
+  },
+  "gap_T": {
+   "PG": -0.03559506531204644,
+   "SG": -0.08829549088583306,
+   "SF": -0.021159029649595686,
+   "PF": 0.013207547169811316,
+   "C": 0.14435742257030976
+  },
+  "gap_EPM": {
+   "PG": -0.023349797934440947,
+   "SG": -0.052544529262086526,
+   "SF": -0.01595131787411781,
+   "PF": 0.010687022900763364,
+   "C": 0.08883047673916175
+  },
+  "show": {
+   "Chet Holmgren": {
+    "rank": 15,
+    "bonus": 0.0
+   },
+   "Evan Mobley": {
+    "rank": 17,
+    "bonus": 0.0
+   },
+   "Joel Embiid": {
+    "rank": 23,
+    "bonus": 0.0
+   },
+   "Anthony Davis": {
+    "rank": 41,
+    "bonus": 0.0
+   },
+   "Karl-Anthony Towns": {
+    "rank": 29,
+    "bonus": 0.0
+   },
+   "Domantas Sabonis": {
+    "rank": 81,
+    "bonus": 0.0
+   },
+   "Ivica Zubac": {
+    "rank": 93,
+    "bonus": 0.0
+   },
+   "Rudy Gobert": {
+    "rank": 57,
+    "bonus": 0.0
+   },
+   "Jarrett Allen": {
+    "rank": 48,
+    "bonus": 0.0
+   },
+   "Isaiah Hartenstein": {
+    "rank": 54,
+    "bonus": 0.0
+   },
+   "Zach Edey": {
+    "rank": 151,
+    "bonus": 0.0
+   },
+   "Victor Wembanyama": {
+    "rank": 4,
+    "bonus": 0.0
+   },
+   "Nikola Jokić": {
+    "rank": 2,
+    "bonus": 0.0
+   },
+   "Giannis Antetokounmpo": {
+    "rank": 5,
+    "bonus": 0.0
+   },
+   "Bam Adebayo": {
+    "rank": 47,
+    "bonus": 0.0
+   },
+   "Alperen Sengun": {
+    "rank": 135,
+    "bonus": 0.0
+   },
+   "Jaren Jackson Jr.": {
+    "rank": 50,
+    "bonus": 0.0
+   },
+   "Devin Booker": {
+    "rank": 30,
+    "bonus": 0.0
+   },
+   "Tyrese Maxey": {
+    "rank": 26,
+    "bonus": 0.0
+   }
+  },
+  "disc": {
+   "n_near_cap": 0,
+   "near_cap_names": [],
+   "cap_C": 0.0,
+   "max_bonus": 0.0,
+   "C_sd": 0.0,
+   "C_iqr": 0.0,
+   "C_p10_p90": [
+    0.0,
+    0.0
+   ],
+   "C_mean": 0.0,
+   "PF_mean": 0.0,
+   "n_pos_bonus_min500": 0,
+   "max_same_bonus_group": 30,
+   "top10_bonus": [
+    [
+     "Shai Gilgeous-Alexander",
+     "PG",
+     0.0
+    ],
+    [
+     "Nikola Jokić",
+     "C",
+     0.0
+    ],
+    [
+     "Luka Dončić",
+     "PG",
+     0.0
+    ],
+    [
+     "Victor Wembanyama",
+     "C",
+     0.0
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF",
+     0.0
+    ],
+    [
+     "Kawhi Leonard",
+     "SF",
+     0.0
+    ],
+    [
+     "Donovan Mitchell",
+     "SG",
+     0.0
+    ],
+    [
+     "Jayson Tatum",
+     "PF",
+     0.0
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     0.0
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     0.0
+    ]
+   ],
+   "pos_mean_min500": {
+    "PG": 0.0,
+    "SG": 0.0,
+    "SF": 0.0,
+    "PF": 0.0,
+    "C": 0.0
+   }
+  }
+ },
+ "card_A": {
+  "top10": [
+   [
+    "Victor Wembanyama",
+    "C"
+   ],
+   [
+    "Nikola Jokić",
+    "C"
+   ],
+   [
+    "Shai Gilgeous-Alexander",
+    "PG"
+   ],
+   [
+    "Giannis Antetokounmpo",
+    "PF"
+   ],
+   [
+    "Luka Dončić",
+    "PG"
+   ],
+   [
+    "Chet Holmgren",
+    "PF"
+   ],
+   [
+    "Evan Mobley",
+    "PF"
+   ],
+   [
+    "Kawhi Leonard",
+    "SF"
+   ],
+   [
+    "Jayson Tatum",
+    "PF"
+   ],
+   [
+    "Donovan Mitchell",
+    "SG"
+   ]
+  ],
+  "top10_nPFC": 6,
+  "rank11_20": [
+   [
+    "Joel Embiid",
+    "C",
+    11
+   ],
+   [
+    "Anthony Davis",
+    "C",
+    12
+   ],
+   [
+    "Anthony Edwards",
+    "SG",
+    13
+   ],
+   [
+    "Kevin Durant",
+    "SF",
+    14
+   ],
+   [
+    "Karl-Anthony Towns",
+    "C",
+    15
+   ],
+   [
+    "Stephen Curry",
+    "PG",
+    16
+   ],
+   [
+    "Ty Jerome",
+    "PG",
+    17
+   ],
+   [
+    "Austin Reaves",
+    "SG",
+    18
+   ],
+   [
+    "Cade Cunningham",
+    "PG",
+    19
+   ],
+   [
+    "Kristaps Porziņģis",
+    "C",
+    20
+   ]
+  ],
+  "top30_drops": [],
+  "ties50": [
+   7,
+   15
+  ],
+  "rho": {
+   "T": 0.7660691903956919,
+   "EPM": 0.7144077975511819,
+   "2K": 0.7838420557671126
+  },
+  "gap_T": {
+   "PG": -0.004027576197387514,
+   "SG": -0.0526702910137512,
+   "SF": 0.0011118598382749265,
+   "PF": 0.005828092243186575,
+   "C": 0.056461374154503384
+  },
+  "gap_EPM": {
+   "PG": 0.008756174225415348,
+   "SG": -0.017843511450381672,
+   "SF": 0.008101685150511306,
+   "PF": 0.0038167938931297734,
+   "C": 0.000432089874693935
+  },
+  "show": {
+   "Chet Holmgren": {
+    "rank": 6,
+    "bonus": 7.01
+   },
+   "Evan Mobley": {
+    "rank": 7,
+    "bonus": 6.7
+   },
+   "Joel Embiid": {
+    "rank": 11,
+    "bonus": 5.48
+   },
+   "Anthony Davis": {
+    "rank": 12,
+    "bonus": 7.64
+   },
+   "Karl-Anthony Towns": {
+    "rank": 15,
+    "bonus": 4.95
+   },
+   "Domantas Sabonis": {
+    "rank": 61,
+    "bonus": 4.74
+   },
+   "Ivica Zubac": {
+    "rank": 54,
+    "bonus": 7.64
+   },
+   "Rudy Gobert": {
+    "rank": 30,
+    "bonus": 7.64
+   },
+   "Jarrett Allen": {
+    "rank": 23,
+    "bonus": 7.54
+   },
+   "Isaiah Hartenstein": {
+    "rank": 29,
+    "bonus": 7.43
+   },
+   "Zach Edey": {
+    "rank": 115,
+    "bonus": 4.34
+   },
+   "Victor Wembanyama": {
+    "rank": 1,
+    "bonus": 7.64
+   },
+   "Nikola Jokić": {
+    "rank": 2,
+    "bonus": 4.1
+   },
+   "Giannis Antetokounmpo": {
+    "rank": 4,
+    "bonus": 3.87
+   },
+   "Bam Adebayo": {
+    "rank": 42,
+    "bonus": 4.04
+   },
+   "Alperen Sengun": {
+    "rank": 90,
+    "bonus": 5.6
+   },
+   "Jaren Jackson Jr.": {
+    "rank": 46,
+    "bonus": 3.58
+   },
+   "Devin Booker": {
+    "rank": 40,
+    "bonus": 0.0
+   },
+   "Tyrese Maxey": {
+    "rank": 36,
+    "bonus": 0.0
+   }
+  },
+  "disc": {
+   "n_near_cap": 20,
+   "near_cap_names": [
+    "Victor Wembanyama",
+    "Anthony Davis",
+    "Jarrett Allen",
+    "Rudy Gobert",
+    "Jalen Duren",
+    "Robert Williams III",
+    "Neemias Queta",
+    "Ivica Zubac",
+    "Paul Reed",
+    "Mark Williams",
+    "Goga Bitadze",
+    "Clint Capela",
+    "Donovan Clingan",
+    "Dylan Cardwell",
+    "Isaiah Jackson",
+    "Jonas Valanciunas",
+    "Kel'el Ware",
+    "Deandre Ayton",
+    "Moussa Cisse",
+    "Nick Richards"
+   ],
+   "cap_C": 7.637659099217943,
+   "max_bonus": 7.637659099217943,
+   "C_sd": 1.8343147521657754,
+   "C_iqr": 2.720579102549735,
+   "C_p10_p90": [
+    3.6265990852774217,
+    7.637659099217943
+   ],
+   "C_mean": 5.779700699006312,
+   "PF_mean": 2.0507463200340474,
+   "n_pos_bonus_min500": 188,
+   "max_same_bonus_group": 18,
+   "top10_bonus": [
+    [
+     "Anthony Davis",
+     "C",
+     7.64
+    ],
+    [
+     "Kel'el Ware",
+     "C",
+     7.64
+    ],
+    [
+     "Rudy Gobert",
+     "C",
+     7.64
+    ],
+    [
+     "Neemias Queta",
+     "C",
+     7.64
+    ],
+    [
+     "Dylan Cardwell",
+     "C",
+     7.64
+    ],
+    [
+     "Isaiah Jackson",
+     "C",
+     7.64
+    ],
+    [
+     "Jonas Valanciunas",
+     "C",
+     7.64
+    ],
+    [
+     "Jalen Duren",
+     "C",
+     7.64
+    ],
+    [
+     "Ivica Zubac",
+     "C",
+     7.64
+    ],
+    [
+     "Robert Williams III",
+     "C",
+     7.64
+    ]
+   ],
+   "pos_mean_min500": {
+    "PG": 0.1172820066549023,
+    "SG": 0.18605042555792237,
+    "SF": 0.5166156075619645,
+    "PF": 2.0507463200340474,
+    "C": 5.779700699006312
+   }
+  }
+ },
+ "card": {
+  "A-same": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Joel Embiid",
+     "C",
+     11
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     12
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     13
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     14
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     15
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     16
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     17
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     18
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     19
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops": [],
+   "ties50": [
+    7,
+    15
+   ],
+   "rho": {
+    "T": 0.7660691903956919,
+    "EPM": 0.7144077975511819,
+    "2K": 0.7838420557671126
+   },
+   "gap_T": {
+    "PG": -0.004027576197387514,
+    "SG": -0.0526702910137512,
+    "SF": 0.0011118598382749265,
+    "PF": 0.005828092243186575,
+    "C": 0.056461374154503384
+   },
+   "gap_EPM": {
+    "PG": 0.008756174225415348,
+    "SG": -0.017843511450381672,
+    "SF": 0.008101685150511306,
+    "PF": 0.0038167938931297734,
+    "C": 0.000432089874693935
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 6,
+     "bonus": 7.01
+    },
+    "Evan Mobley": {
+     "rank": 7,
+     "bonus": 6.7
+    },
+    "Joel Embiid": {
+     "rank": 11,
+     "bonus": 5.48
+    },
+    "Anthony Davis": {
+     "rank": 12,
+     "bonus": 7.64
+    },
+    "Karl-Anthony Towns": {
+     "rank": 15,
+     "bonus": 4.95
+    },
+    "Domantas Sabonis": {
+     "rank": 61,
+     "bonus": 4.74
+    },
+    "Ivica Zubac": {
+     "rank": 54,
+     "bonus": 7.64
+    },
+    "Rudy Gobert": {
+     "rank": 30,
+     "bonus": 7.64
+    },
+    "Jarrett Allen": {
+     "rank": 23,
+     "bonus": 7.54
+    },
+    "Isaiah Hartenstein": {
+     "rank": 29,
+     "bonus": 7.43
+    },
+    "Zach Edey": {
+     "rank": 115,
+     "bonus": 4.34
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 7.64
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 4.1
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 4,
+     "bonus": 3.87
+    },
+    "Bam Adebayo": {
+     "rank": 42,
+     "bonus": 4.04
+    },
+    "Alperen Sengun": {
+     "rank": 90,
+     "bonus": 5.6
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 46,
+     "bonus": 3.58
+    },
+    "Devin Booker": {
+     "rank": 40,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 36,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 20,
+    "near_cap_names": [
+     "Victor Wembanyama",
+     "Anthony Davis",
+     "Jarrett Allen",
+     "Rudy Gobert",
+     "Jalen Duren",
+     "Robert Williams III",
+     "Neemias Queta",
+     "Ivica Zubac",
+     "Paul Reed",
+     "Mark Williams",
+     "Goga Bitadze",
+     "Clint Capela",
+     "Donovan Clingan",
+     "Dylan Cardwell",
+     "Isaiah Jackson",
+     "Jonas Valanciunas",
+     "Kel'el Ware",
+     "Deandre Ayton",
+     "Moussa Cisse",
+     "Nick Richards"
+    ],
+    "cap_C": 7.637659099217943,
+    "max_bonus": 7.637659099217943,
+    "C_sd": 1.8343147521657754,
+    "C_iqr": 2.720579102549735,
+    "C_p10_p90": [
+     3.6265990852774217,
+     7.637659099217943
+    ],
+    "C_mean": 5.779700699006312,
+    "PF_mean": 2.0507463200340474,
+    "n_pos_bonus_min500": 188,
+    "max_same_bonus_group": 18,
+    "top10_bonus": [
+     [
+      "Anthony Davis",
+      "C",
+      7.64
+     ],
+     [
+      "Kel'el Ware",
+      "C",
+      7.64
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      7.64
+     ],
+     [
+      "Neemias Queta",
+      "C",
+      7.64
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      7.64
+     ],
+     [
+      "Isaiah Jackson",
+      "C",
+      7.64
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      7.64
+     ],
+     [
+      "Jalen Duren",
+      "C",
+      7.64
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      7.64
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      7.64
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.1172820066549023,
+     "SG": 0.18605042555792237,
+     "SF": 0.5166156075619645,
+     "PF": 2.0507463200340474,
+     "C": 5.779700699006312
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    },
+    "EPM": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    },
+    "2K": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": true,
+    "G3": false,
+    "G3a": true,
+    "G3b": false,
+    "G4": false,
+    "G5": true,
+    "new_bigs_top10": [
+     "Chet Holmgren",
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.5
+  },
+  "A-aligned": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Joel Embiid",
+     "C",
+     11
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     12
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     13
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     14
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     15
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     16
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     17
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     18
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     19
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops": [],
+   "ties50": [
+    7,
+    15
+   ],
+   "rho": {
+    "T": 0.7660691903956919,
+    "EPM": 0.7144077975511819,
+    "2K": 0.7838420557671126
+   },
+   "gap_T": {
+    "PG": -0.004027576197387514,
+    "SG": -0.0526702910137512,
+    "SF": 0.0011118598382749265,
+    "PF": 0.005828092243186575,
+    "C": 0.056461374154503384
+   },
+   "gap_EPM": {
+    "PG": 0.008756174225415348,
+    "SG": -0.017843511450381672,
+    "SF": 0.008101685150511306,
+    "PF": 0.0038167938931297734,
+    "C": 0.000432089874693935
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 6,
+     "bonus": 7.01
+    },
+    "Evan Mobley": {
+     "rank": 7,
+     "bonus": 6.7
+    },
+    "Joel Embiid": {
+     "rank": 11,
+     "bonus": 5.48
+    },
+    "Anthony Davis": {
+     "rank": 12,
+     "bonus": 7.64
+    },
+    "Karl-Anthony Towns": {
+     "rank": 15,
+     "bonus": 4.95
+    },
+    "Domantas Sabonis": {
+     "rank": 61,
+     "bonus": 4.74
+    },
+    "Ivica Zubac": {
+     "rank": 54,
+     "bonus": 7.64
+    },
+    "Rudy Gobert": {
+     "rank": 30,
+     "bonus": 7.64
+    },
+    "Jarrett Allen": {
+     "rank": 23,
+     "bonus": 7.54
+    },
+    "Isaiah Hartenstein": {
+     "rank": 29,
+     "bonus": 7.43
+    },
+    "Zach Edey": {
+     "rank": 115,
+     "bonus": 4.34
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 7.64
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 4.1
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 4,
+     "bonus": 3.87
+    },
+    "Bam Adebayo": {
+     "rank": 42,
+     "bonus": 4.04
+    },
+    "Alperen Sengun": {
+     "rank": 90,
+     "bonus": 5.6
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 46,
+     "bonus": 3.58
+    },
+    "Devin Booker": {
+     "rank": 40,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 36,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 20,
+    "near_cap_names": [
+     "Victor Wembanyama",
+     "Anthony Davis",
+     "Jarrett Allen",
+     "Rudy Gobert",
+     "Jalen Duren",
+     "Robert Williams III",
+     "Neemias Queta",
+     "Ivica Zubac",
+     "Paul Reed",
+     "Mark Williams",
+     "Goga Bitadze",
+     "Clint Capela",
+     "Donovan Clingan",
+     "Dylan Cardwell",
+     "Isaiah Jackson",
+     "Jonas Valanciunas",
+     "Kel'el Ware",
+     "Deandre Ayton",
+     "Moussa Cisse",
+     "Nick Richards"
+    ],
+    "cap_C": 7.637659099217943,
+    "max_bonus": 7.637659099217943,
+    "C_sd": 1.8343147521657754,
+    "C_iqr": 2.720579102549735,
+    "C_p10_p90": [
+     3.6265990852774217,
+     7.637659099217943
+    ],
+    "C_mean": 5.779700699006312,
+    "PF_mean": 2.0507463200340474,
+    "n_pos_bonus_min500": 188,
+    "max_same_bonus_group": 18,
+    "top10_bonus": [
+     [
+      "Anthony Davis",
+      "C",
+      7.64
+     ],
+     [
+      "Kel'el Ware",
+      "C",
+      7.64
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      7.64
+     ],
+     [
+      "Neemias Queta",
+      "C",
+      7.64
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      7.64
+     ],
+     [
+      "Isaiah Jackson",
+      "C",
+      7.64
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      7.64
+     ],
+     [
+      "Jalen Duren",
+      "C",
+      7.64
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      7.64
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      7.64
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.1172820066549023,
+     "SG": 0.18605042555792237,
+     "SF": 0.5166156075619645,
+     "PF": 2.0507463200340474,
+     "C": 5.779700699006312
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    },
+    "EPM": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    },
+    "2K": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": true,
+    "G3": false,
+    "G3a": true,
+    "G3b": false,
+    "G4": false,
+    "G5": true,
+    "new_bigs_top10": [
+     "Chet Holmgren",
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.5
+  },
+  "K-same": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Joel Embiid",
+     "C",
+     11
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     12
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     13
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     14
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     15
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     16
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     17
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     18
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     19
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     20
+    ]
+   ],
+   "top30_drops": [
+    [
+     "De'Aaron Fox",
+     25,
+     36
+    ],
+    [
+     "Tyrese Maxey",
+     26,
+     38
+    ]
+   ],
+   "ties50": [
+    9,
+    19
+   ],
+   "rho": {
+    "T": 0.7672725878760445,
+    "EPM": 0.7159221062231768,
+    "2K": 0.783927250056819
+   },
+   "gap_T": {
+    "PG": -0.003374455732946295,
+    "SG": -0.051263191557403255,
+    "SF": 0.002190026954177897,
+    "PF": 0.0048637316561844805,
+    "C": 0.05393378426486294
+   },
+   "gap_EPM": {
+    "PG": 0.009317467444993262,
+    "SG": -0.01650763358778626,
+    "SF": 0.008749819962552221,
+    "PF": 0.002459711620016966,
+    "C": -0.0011162321762926712
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 6,
+     "bonus": 7.05
+    },
+    "Evan Mobley": {
+     "rank": 8,
+     "bonus": 6.51
+    },
+    "Joel Embiid": {
+     "rank": 11,
+     "bonus": 5.35
+    },
+    "Anthony Davis": {
+     "rank": 14,
+     "bonus": 7.18
+    },
+    "Karl-Anthony Towns": {
+     "rank": 15,
+     "bonus": 5.2
+    },
+    "Domantas Sabonis": {
+     "rank": 61,
+     "bonus": 5.03
+    },
+    "Ivica Zubac": {
+     "rank": 54,
+     "bonus": 7.64
+    },
+    "Rudy Gobert": {
+     "rank": 30,
+     "bonus": 7.81
+    },
+    "Jarrett Allen": {
+     "rank": 27,
+     "bonus": 7.13
+    },
+    "Isaiah Hartenstein": {
+     "rank": 29,
+     "bonus": 7.22
+    },
+    "Zach Edey": {
+     "rank": 112,
+     "bonus": 4.6
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 7.51
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 4.09
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 3.64
+    },
+    "Bam Adebayo": {
+     "rank": 42,
+     "bonus": 3.97
+    },
+    "Alperen Sengun": {
+     "rank": 93,
+     "bonus": 5.54
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 48,
+     "bonus": 3.29
+    },
+    "Devin Booker": {
+     "rank": 40,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 38,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 8.865665117368104,
+    "max_bonus": 8.506493774677079,
+    "C_sd": 1.7535939188544507,
+    "C_iqr": 2.3186268773118446,
+    "C_p10_p90": [
+     3.8068989200568626,
+     7.579123217575543
+    ],
+    "C_mean": 5.772906474531654,
+    "PF_mean": 2.1275271783001366,
+    "n_pos_bonus_min500": 188,
+    "max_same_bonus_group": 4,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      8.51
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      8.13
+     ],
+     [
+      "Clint Capela",
+      "C",
+      8.03
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      7.99
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      7.87
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      7.81
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      7.64
+     ],
+     [
+      "Mark Williams",
+      "C",
+      7.59
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      7.56
+     ],
+     [
+      "Paul Reed",
+      "C",
+      7.54
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.13168081322970723,
+     "SG": 0.2075122066312926,
+     "SF": 0.5602211382252865,
+     "PF": 2.1275271783001366,
+     "C": 5.772906474531654
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": 0.001203397480352586,
+     "ci90": [
+      -0.0005730418167647245,
+      0.0033715994358180343
+     ]
+    },
+    "EPM": {
+     "mean": 0.0015143086719948684,
+     "ci90": [
+      -0.0002211065040486959,
+      0.0036274080947774233
+     ]
+    },
+    "2K": {
+     "mean": 8.519428970632514e-05,
+     "ci90": [
+      -0.0005990989402052338,
+      0.0007602506326851832
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": true,
+    "G3": false,
+    "G3a": true,
+    "G3b": false,
+    "G4": false,
+    "G5": true,
+    "new_bigs_top10": [
+     "Chet Holmgren",
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.5
+  },
+  "K-aligned": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Joel Embiid",
+     "C",
+     11
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     12
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     13
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     14
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     15
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     16
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     17
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     18
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     19
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops": [
+    [
+     "Tyrese Maxey",
+     26,
+     38
+    ]
+   ],
+   "ties50": [
+    9,
+    21
+   ],
+   "rho": {
+    "T": 0.766956430517507,
+    "EPM": 0.71540598950789,
+    "2K": 0.7838326832821149
+   },
+   "gap_T": {
+    "PG": -0.0034833091436865,
+    "SG": -0.05190278221937959,
+    "SF": 0.0013814016172506735,
+    "PF": 0.005157232704402512,
+    "C": 0.05535777856888572
+   },
+   "gap_EPM": {
+    "PG": 0.00924262834904954,
+    "SG": -0.0171119592875318,
+    "SF": 0.007921647702722174,
+    "PF": 0.002629346904156067,
+    "C": 0.0003240674060204544
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 6,
+     "bonus": 6.94
+    },
+    "Evan Mobley": {
+     "rank": 8,
+     "bonus": 6.4
+    },
+    "Joel Embiid": {
+     "rank": 11,
+     "bonus": 5.26
+    },
+    "Anthony Davis": {
+     "rank": 14,
+     "bonus": 7.06
+    },
+    "Karl-Anthony Towns": {
+     "rank": 15,
+     "bonus": 5.11
+    },
+    "Domantas Sabonis": {
+     "rank": 61,
+     "bonus": 4.94
+    },
+    "Ivica Zubac": {
+     "rank": 55,
+     "bonus": 7.51
+    },
+    "Rudy Gobert": {
+     "rank": 31,
+     "bonus": 7.68
+    },
+    "Jarrett Allen": {
+     "rank": 27,
+     "bonus": 7.01
+    },
+    "Isaiah Hartenstein": {
+     "rank": 30,
+     "bonus": 7.1
+    },
+    "Zach Edey": {
+     "rank": 112,
+     "bonus": 4.52
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 7.38
+    },
+    "Nikola Jokić": {
+     "rank": 3,
+     "bonus": 4.02
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 3.58
+    },
+    "Bam Adebayo": {
+     "rank": 43,
+     "bonus": 3.9
+    },
+    "Alperen Sengun": {
+     "rank": 94,
+     "bonus": 5.44
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 50,
+     "bonus": 3.23
+    },
+    "Devin Booker": {
+     "rank": 40,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 38,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 8.717497816272154,
+    "max_bonus": 8.364329119493535,
+    "C_sd": 1.7242870056409199,
+    "C_iqr": 2.2798768588854985,
+    "C_p10_p90": [
+     3.743276176465419,
+     7.452457229524418
+    ],
+    "C_mean": 5.676426857888452,
+    "PF_mean": 2.091970910852196,
+    "n_pos_bonus_min500": 188,
+    "max_same_bonus_group": 4,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      8.36
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      7.99
+     ],
+     [
+      "Clint Capela",
+      "C",
+      7.9
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      7.86
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      7.74
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      7.68
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      7.51
+     ],
+     [
+      "Mark Williams",
+      "C",
+      7.46
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      7.44
+     ],
+     [
+      "Paul Reed",
+      "C",
+      7.42
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.12948009952756842,
+     "SG": 0.20404416185473198,
+     "SF": 0.5508584504890748,
+     "PF": 2.091970910852196,
+     "C": 5.676426857888452
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": 0.0008872401218150694,
+     "ci90": [
+      -0.0007193041377604736,
+      0.002794575569966473
+     ]
+    },
+    "EPM": {
+     "mean": 0.0009981919567081388,
+     "ci90": [
+      -0.0006262768625411641,
+      0.0029252831113442067
+     ]
+    },
+    "2K": {
+     "mean": -9.372484997771657e-06,
+     "ci90": [
+      -0.0007181932587750517,
+      0.0006622198889527584
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": true,
+    "G3": false,
+    "G3a": true,
+    "G3b": false,
+    "G4": false,
+    "G5": true,
+    "new_bigs_top10": [
+     "Chet Holmgren",
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.49164375717250547
+  },
+  "P1-same": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ],
+    [
+     "Joel Embiid",
+     "C"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ],
+    [
+     "Anthony Davis",
+     "C"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Chet Holmgren",
+     "PF",
+     11
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     12
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     13
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     14
+    ],
+    [
+     "Evan Mobley",
+     "PF",
+     15
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     16
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     17
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     18
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     19
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops": [],
+   "ties50": [
+    6,
+    12
+   ],
+   "rho": {
+    "T": 0.7637542770590737,
+    "EPM": 0.7095379100250964,
+    "2K": 0.7817332883340408
+   },
+   "gap_T": {
+    "PG": -0.009760522496371549,
+    "SG": -0.05785097537575951,
+    "SF": 0.0018867924528301922,
+    "PF": 0.028930817610062883,
+    "C": 0.047419010323958705
+   },
+   "gap_EPM": {
+    "PG": 0.0027690465499176755,
+    "SG": -0.02274173027989823,
+    "SF": 0.00846176004608959,
+    "PF": 0.026547921967769294,
+    "C": -0.007921647702722162
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 11,
+     "bonus": 1.7
+    },
+    "Evan Mobley": {
+     "rank": 15,
+     "bonus": 1.63
+    },
+    "Joel Embiid": {
+     "rank": 8,
+     "bonus": 5.48
+    },
+    "Anthony Davis": {
+     "rank": 10,
+     "bonus": 7.64
+    },
+    "Karl-Anthony Towns": {
+     "rank": 14,
+     "bonus": 4.95
+    },
+    "Domantas Sabonis": {
+     "rank": 60,
+     "bonus": 4.74
+    },
+    "Ivica Zubac": {
+     "rank": 53,
+     "bonus": 7.64
+    },
+    "Rudy Gobert": {
+     "rank": 29,
+     "bonus": 7.64
+    },
+    "Jarrett Allen": {
+     "rank": 22,
+     "bonus": 7.54
+    },
+    "Isaiah Hartenstein": {
+     "rank": 27,
+     "bonus": 7.43
+    },
+    "Zach Edey": {
+     "rank": 112,
+     "bonus": 4.34
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 7.64
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 4.1
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 0.94
+    },
+    "Bam Adebayo": {
+     "rank": 39,
+     "bonus": 4.04
+    },
+    "Alperen Sengun": {
+     "rank": 87,
+     "bonus": 5.6
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 57,
+     "bonus": 0.87
+    },
+    "Devin Booker": {
+     "rank": 37,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 33,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 22,
+    "near_cap_names": [
+     "Victor Wembanyama",
+     "Chet Holmgren",
+     "Anthony Davis",
+     "Jarrett Allen",
+     "Rudy Gobert",
+     "Jalen Duren",
+     "Robert Williams III",
+     "Neemias Queta",
+     "Ivica Zubac",
+     "Paul Reed",
+     "Jalen Smith",
+     "Mark Williams",
+     "Goga Bitadze",
+     "Clint Capela",
+     "Donovan Clingan",
+     "Dylan Cardwell",
+     "Isaiah Jackson",
+     "Jonas Valanciunas",
+     "Kel'el Ware",
+     "Deandre Ayton",
+     "Moussa Cisse",
+     "Nick Richards"
+    ],
+    "cap_C": 7.637659099217943,
+    "max_bonus": 7.637659099217943,
+    "C_sd": 1.8343147521657754,
+    "C_iqr": 2.720579102549735,
+    "C_p10_p90": [
+     3.6265990852774217,
+     7.637659099217943
+    ],
+    "C_mean": 5.779700699006312,
+    "PF_mean": 0.4980383920082687,
+    "n_pos_bonus_min500": 125,
+    "max_same_bonus_group": 18,
+    "top10_bonus": [
+     [
+      "Anthony Davis",
+      "C",
+      7.64
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      7.64
+     ],
+     [
+      "Jalen Duren",
+      "C",
+      7.64
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      7.64
+     ],
+     [
+      "Paul Reed",
+      "C",
+      7.64
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      7.64
+     ],
+     [
+      "Neemias Queta",
+      "C",
+      7.64
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      7.64
+     ],
+     [
+      "Goga Bitadze",
+      "C",
+      7.64
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      7.64
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 0.4980383920082687,
+     "C": 5.779700699006312
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": -0.002314913336618152,
+     "ci90": [
+      -0.008029192032136683,
+      0.0033687128672691686
+     ]
+    },
+    "EPM": {
+     "mean": -0.004869887526085526,
+     "ci90": [
+      -0.010344339656374869,
+      0.00019963585155714474
+     ]
+    },
+    "2K": {
+     "mean": -0.0021087674330718675,
+     "ci90": [
+      -0.005138052741002525,
+      0.0005338801113440856
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": true,
+    "G3": false,
+    "G3a": true,
+    "G3b": false,
+    "G4": false,
+    "G5": true,
+    "new_bigs_top10": [
+     "Joel Embiid",
+     "Anthony Davis"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.5
+  },
+  "P1-aligned": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Joel Embiid",
+     "C"
+    ],
+    [
+     "Anthony Davis",
+     "C"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Jayson Tatum",
+     "PF",
+     11
+    ],
+    [
+     "Chet Holmgren",
+     "PF",
+     12
+    ],
+    [
+     "Jarrett Allen",
+     "C",
+     13
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     14
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     15
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     16
+    ],
+    [
+     "Evan Mobley",
+     "PF",
+     17
+    ],
+    [
+     "Isaiah Hartenstein",
+     "C",
+     18
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     19
+    ],
+    [
+     "Rudy Gobert",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops": [
+    [
+     "Paul George",
+     24,
+     35
+    ],
+    [
+     "De'Aaron Fox",
+     25,
+     36
+    ],
+    [
+     "Tyrese Maxey",
+     26,
+     38
+    ],
+    [
+     "Derrick White",
+     27,
+     40
+    ],
+    [
+     "Jaylen Brown",
+     28,
+     41
+    ],
+    [
+     "Devin Booker",
+     30,
+     43
+    ]
+   ],
+   "ties50": [
+    10,
+    20
+   ],
+   "rho": {
+    "T": 0.7705940276634164,
+    "EPM": 0.7115607921724887,
+    "2K": 0.7801280280724827
+   },
+   "gap_T": {
+    "PG": -0.0006531204644412158,
+    "SG": -0.04736168851934762,
+    "SF": 0.010411051212938007,
+    "PF": 0.03496855345911949,
+    "C": 0.012673549305802778
+   },
+   "gap_EPM": {
+    "PG": 0.011824577159107915,
+    "SG": -0.012913486005089063,
+    "SF": 0.016887512602621352,
+    "PF": 0.03265479219677693,
+    "C": -0.041372605501944416
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 12,
+     "bonus": 2.3
+    },
+    "Evan Mobley": {
+     "rank": 17,
+     "bonus": 2.2
+    },
+    "Joel Embiid": {
+     "rank": 7,
+     "bonus": 7.41
+    },
+    "Anthony Davis": {
+     "rank": 8,
+     "bonus": 10.33
+    },
+    "Karl-Anthony Towns": {
+     "rank": 10,
+     "bonus": 6.69
+    },
+    "Domantas Sabonis": {
+     "rank": 56,
+     "bonus": 6.41
+    },
+    "Ivica Zubac": {
+     "rank": 44,
+     "bonus": 10.33
+    },
+    "Rudy Gobert": {
+     "rank": 20,
+     "bonus": 10.33
+    },
+    "Jarrett Allen": {
+     "rank": 13,
+     "bonus": 10.2
+    },
+    "Isaiah Hartenstein": {
+     "rank": 18,
+     "bonus": 10.04
+    },
+    "Zach Edey": {
+     "rank": 103,
+     "bonus": 5.87
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 10.33
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 5.54
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 1.27
+    },
+    "Bam Adebayo": {
+     "rank": 33,
+     "bonus": 5.46
+    },
+    "Alperen Sengun": {
+     "rank": 77,
+     "bonus": 7.57
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 58,
+     "bonus": 1.18
+    },
+    "Devin Booker": {
+     "rank": 43,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 38,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 21,
+    "near_cap_names": [
+     "Victor Wembanyama",
+     "Anthony Davis",
+     "Jarrett Allen",
+     "Rudy Gobert",
+     "Jalen Duren",
+     "Robert Williams III",
+     "Neemias Queta",
+     "Ivica Zubac",
+     "Paul Reed",
+     "Jalen Smith",
+     "Mark Williams",
+     "Goga Bitadze",
+     "Clint Capela",
+     "Donovan Clingan",
+     "Dylan Cardwell",
+     "Isaiah Jackson",
+     "Jonas Valanciunas",
+     "Kel'el Ware",
+     "Deandre Ayton",
+     "Moussa Cisse",
+     "Nick Richards"
+    ],
+    "cap_C": 10.326924044761993,
+    "max_bonus": 10.326924044761993,
+    "C_sd": 2.4801878263644985,
+    "C_iqr": 3.67851109676716,
+    "C_p10_p90": [
+     4.903546074516223,
+     10.326924044761993
+    ],
+    "C_mean": 7.814767502022651,
+    "PF_mean": 0.6734006557285892,
+    "n_pos_bonus_min500": 125,
+    "max_same_bonus_group": 18,
+    "top10_bonus": [
+     [
+      "Anthony Davis",
+      "C",
+      10.33
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      10.33
+     ],
+     [
+      "Jalen Duren",
+      "C",
+      10.33
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      10.33
+     ],
+     [
+      "Paul Reed",
+      "C",
+      10.33
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      10.33
+     ],
+     [
+      "Neemias Queta",
+      "C",
+      10.33
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      10.33
+     ],
+     [
+      "Goga Bitadze",
+      "C",
+      10.33
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      10.33
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 0.6734006557285892,
+     "C": 7.814767502022651
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": 0.0045248372677245685,
+     "ci90": [
+      -0.00390801804850337,
+      0.013550286679519906
+     ]
+    },
+    "EPM": {
+     "mean": -0.0028470053786932015,
+     "ci90": [
+      -0.010870034690906676,
+      0.005446832789117467
+     ]
+    },
+    "2K": {
+     "mean": -0.0037140276946299178,
+     "ci90": [
+      -0.007512210697016919,
+      -0.00018909653994647065
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": true,
+    "G3": false,
+    "G3a": true,
+    "G3b": false,
+    "G4": false,
+    "G5": false,
+    "new_bigs_top10": [
+     "Joel Embiid",
+     "Anthony Davis",
+     "Karl-Anthony Towns"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.676052957497109
+  },
+  "KW-same": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ],
+    [
+     "Joel Embiid",
+     "C"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Anthony Edwards",
+     "SG",
+     11
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     12
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     13
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     14
+    ],
+    [
+     "Evan Mobley",
+     "PF",
+     15
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     16
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     17
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     18
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     19
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     20
+    ]
+   ],
+   "top30_drops": [],
+   "ties50": [
+    9,
+    18
+   ],
+   "rho": {
+    "T": 0.7654692135832328,
+    "EPM": 0.7110800134617231,
+    "2K": 0.7815914474825271
+   },
+   "gap_T": {
+    "PG": -0.00932510885341074,
+    "SG": -0.05676367125039974,
+    "SF": 0.0032008086253369266,
+    "PF": 0.028637316561844855,
+    "C": 0.04464222143111428
+   },
+   "gap_EPM": {
+    "PG": 0.003105822481664413,
+    "SG": -0.02172391857506362,
+    "SF": 0.009650007201497909,
+    "PF": 0.025911789652247667,
+    "C": -0.010046089586634024
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 10,
+     "bonus": 1.71
+    },
+    "Evan Mobley": {
+     "rank": 15,
+     "bonus": 1.58
+    },
+    "Joel Embiid": {
+     "rank": 9,
+     "bonus": 5.35
+    },
+    "Anthony Davis": {
+     "rank": 13,
+     "bonus": 7.18
+    },
+    "Karl-Anthony Towns": {
+     "rank": 14,
+     "bonus": 5.2
+    },
+    "Domantas Sabonis": {
+     "rank": 59,
+     "bonus": 5.03
+    },
+    "Ivica Zubac": {
+     "rank": 53,
+     "bonus": 7.64
+    },
+    "Rudy Gobert": {
+     "rank": 28,
+     "bonus": 7.81
+    },
+    "Jarrett Allen": {
+     "rank": 25,
+     "bonus": 7.13
+    },
+    "Isaiah Hartenstein": {
+     "rank": 27,
+     "bonus": 7.22
+    },
+    "Zach Edey": {
+     "rank": 109,
+     "bonus": 4.6
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 7.51
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 4.09
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 0.88
+    },
+    "Bam Adebayo": {
+     "rank": 39,
+     "bonus": 3.97
+    },
+    "Alperen Sengun": {
+     "rank": 90,
+     "bonus": 5.54
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 57,
+     "bonus": 0.8
+    },
+    "Devin Booker": {
+     "rank": 38,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 33,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 8.865665117368104,
+    "max_bonus": 8.506493774677079,
+    "C_sd": 1.7535939188544507,
+    "C_iqr": 2.3186268773118446,
+    "C_p10_p90": [
+     3.8068989200568626,
+     7.579123217575543
+    ],
+    "C_mean": 5.772906474531654,
+    "PF_mean": 0.5166851718728904,
+    "n_pos_bonus_min500": 125,
+    "max_same_bonus_group": 4,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      8.51
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      8.13
+     ],
+     [
+      "Clint Capela",
+      "C",
+      8.03
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      7.99
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      7.87
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      7.81
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      7.64
+     ],
+     [
+      "Mark Williams",
+      "C",
+      7.59
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      7.56
+     ],
+     [
+      "Paul Reed",
+      "C",
+      7.54
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 0.5166851718728904,
+     "C": 5.772906474531654
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": -0.0005999768124590465,
+     "ci90": [
+      -0.006516204676843334,
+      0.0056036441933282385
+     ]
+    },
+    "EPM": {
+     "mean": -0.003327784089458774,
+     "ci90": [
+      -0.00878095768940484,
+      0.00210215634574451
+     ]
+    },
+    "2K": {
+     "mean": -0.0022506082845855646,
+     "ci90": [
+      -0.005225712426970413,
+      0.00047796141249805064
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": true,
+    "G3": false,
+    "G3a": true,
+    "G3b": false,
+    "G4": false,
+    "G5": true,
+    "new_bigs_top10": [
+     "Joel Embiid",
+     "Chet Holmgren"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.5
+  },
+  "KW-aligned": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Joel Embiid",
+     "C"
+    ],
+    [
+     "Anthony Davis",
+     "C"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Jayson Tatum",
+     "PF",
+     11
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     12
+    ],
+    [
+     "Chet Holmgren",
+     "PF",
+     13
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     14
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     15
+    ],
+    [
+     "Evan Mobley",
+     "PF",
+     16
+    ],
+    [
+     "Jarrett Allen",
+     "C",
+     17
+    ],
+    [
+     "Rudy Gobert",
+     "C",
+     18
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     19
+    ],
+    [
+     "Isaiah Hartenstein",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops": [
+    [
+     "Paul George",
+     24,
+     35
+    ],
+    [
+     "De'Aaron Fox",
+     25,
+     36
+    ],
+    [
+     "Tyrese Maxey",
+     26,
+     37
+    ],
+    [
+     "Derrick White",
+     27,
+     39
+    ],
+    [
+     "Jaylen Brown",
+     28,
+     42
+    ],
+    [
+     "Devin Booker",
+     30,
+     43
+    ]
+   ],
+   "ties50": [
+    6,
+    12
+   ],
+   "rho": {
+    "T": 0.772199999257585,
+    "EPM": 0.7148382237274086,
+    "2K": 0.7801853321237304
+   },
+   "gap_T": {
+    "PG": -0.0002902757619738719,
+    "SG": -0.04633834346018548,
+    "SF": 0.010680592991913745,
+    "PF": 0.034213836477987425,
+    "C": 0.011534353862584551
+   },
+   "gap_EPM": {
+    "PG": 0.012011674898967229,
+    "SG": -0.012404580152671756,
+    "SF": 0.017139565029526148,
+    "PF": 0.03193384223918575,
+    "C": -0.04176868788708052
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 13,
+     "bonus": 2.31
+    },
+    "Evan Mobley": {
+     "rank": 16,
+     "bonus": 2.13
+    },
+    "Joel Embiid": {
+     "rank": 7,
+     "bonus": 7.22
+    },
+    "Anthony Davis": {
+     "rank": 8,
+     "bonus": 9.69
+    },
+    "Karl-Anthony Towns": {
+     "rank": 10,
+     "bonus": 7.02
+    },
+    "Domantas Sabonis": {
+     "rank": 55,
+     "bonus": 6.78
+    },
+    "Ivica Zubac": {
+     "rank": 44,
+     "bonus": 10.31
+    },
+    "Rudy Gobert": {
+     "rank": 18,
+     "bonus": 10.55
+    },
+    "Jarrett Allen": {
+     "rank": 17,
+     "bonus": 9.63
+    },
+    "Isaiah Hartenstein": {
+     "rank": 20,
+     "bonus": 9.74
+    },
+    "Zach Edey": {
+     "rank": 100,
+     "bonus": 6.21
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 10.14
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 5.52
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 1.19
+    },
+    "Bam Adebayo": {
+     "rank": 34,
+     "bonus": 5.36
+    },
+    "Alperen Sengun": {
+     "rank": 78,
+     "bonus": 7.47
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 60,
+     "bonus": 1.08
+    },
+    "Devin Booker": {
+     "rank": 43,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 37,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 11.96972892700929,
+    "max_bonus": 11.484803819479648,
+    "C_sd": 2.367565611701211,
+    "C_iqr": 3.1304290018727627,
+    "C_p10_p90": [
+     5.139777729291495,
+     10.232740490170151
+    ],
+    "C_mean": 7.794127649345964,
+    "PF_mean": 0.6975879830840803,
+    "n_pos_bonus_min500": 126,
+    "max_same_bonus_group": 4,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      11.48
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      10.97
+     ],
+     [
+      "Clint Capela",
+      "C",
+      10.84
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      10.79
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      10.62
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      10.55
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      10.31
+     ],
+     [
+      "Mark Williams",
+      "C",
+      10.25
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      10.21
+     ],
+     [
+      "Paul Reed",
+      "C",
+      10.19
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 0.6975879830840803,
+     "C": 7.794127649345964
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": 0.0061308088618931,
+     "ci90": [
+      -0.002933793220153258,
+      0.016263397835959714
+     ]
+    },
+    "EPM": {
+     "mean": 0.00043042617622668367,
+     "ci90": [
+      -0.007635185007617257,
+      0.009048769884195795
+     ]
+    },
+    "2K": {
+     "mean": -0.0036567236433822092,
+     "ci90": [
+      -0.0074602164573386144,
+      -0.0002137227826763068
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": true,
+    "G3": false,
+    "G3a": true,
+    "G3b": false,
+    "G4": false,
+    "G5": false,
+    "new_bigs_top10": [
+     "Joel Embiid",
+     "Anthony Davis",
+     "Karl-Anthony Towns"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.6750609665799485
+  },
+  "S1-same": {
+   "top10": [
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Cade Cunningham",
+     "PG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Donovan Mitchell",
+     "SG",
+     11
+    ],
+    [
+     "Kevin Porter Jr.",
+     "SG",
+     12
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     13
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     14
+    ],
+    [
+     "Derrick White",
+     "PG",
+     15
+    ],
+    [
+     "Jimmy Butler III",
+     "SF",
+     16
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     17
+    ],
+    [
+     "Amen Thompson",
+     "PG",
+     18
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     19
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     20
+    ]
+   ],
+   "top30_drops": [],
+   "ties50": [
+    6,
+    13
+   ],
+   "rho": {
+    "T": 0.7358263866759911,
+    "EPM": 0.7037298008409172,
+    "2K": 0.7781833763700797
+   },
+   "gap_T": {
+    "PG": -0.029390420899854865,
+    "SG": -0.08861528621682123,
+    "SF": -0.025539083557951484,
+    "PF": 0.01631027253668762,
+    "C": 0.1406194375222499
+   },
+   "gap_EPM": {
+    "PG": -0.014369106421194438,
+    "SG": -0.059701017811704844,
+    "SF": -0.01814777473714532,
+    "PF": 0.0143765903307888,
+    "C": 0.0873541696672908
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 6,
+     "bonus": 8.55
+    },
+    "Evan Mobley": {
+     "rank": 7,
+     "bonus": 8.15
+    },
+    "Joel Embiid": {
+     "rank": 32,
+     "bonus": 0.0
+    },
+    "Anthony Davis": {
+     "rank": 38,
+     "bonus": 2.38
+    },
+    "Karl-Anthony Towns": {
+     "rank": 22,
+     "bonus": 3.22
+    },
+    "Domantas Sabonis": {
+     "rank": 71,
+     "bonus": 3.52
+    },
+    "Ivica Zubac": {
+     "rank": 77,
+     "bonus": 4.05
+    },
+    "Rudy Gobert": {
+     "rank": 45,
+     "bonus": 4.91
+    },
+    "Jarrett Allen": {
+     "rank": 51,
+     "bonus": 2.22
+    },
+    "Isaiah Hartenstein": {
+     "rank": 48,
+     "bonus": 3.08
+    },
+    "Zach Edey": {
+     "rank": 131,
+     "bonus": 3.59
+    },
+    "Victor Wembanyama": {
+     "rank": 4,
+     "bonus": 3.75
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 2.54
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 4.61
+    },
+    "Bam Adebayo": {
+     "rank": 58,
+     "bonus": 0.09
+    },
+    "Alperen Sengun": {
+     "rank": 158,
+     "bonus": 0.0
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 41,
+     "bonus": 4.19
+    },
+    "Devin Booker": {
+     "rank": 39,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 35,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 7,
+    "near_cap_names": [
+     "Cedric Coward",
+     "Jalen Smith",
+     "Tari Eason",
+     "Craig Porter Jr.",
+     "Danny Wolf",
+     "Donovan Clingan",
+     "Carter Bryant"
+    ],
+    "cap_C": 8.921019739978375,
+    "max_bonus": 8.921019739978375,
+    "C_sd": 2.0215287605637227,
+    "C_iqr": 3.2934545179086028,
+    "C_p10_p90": [
+     0.0,
+     4.491168978859548
+    ],
+    "C_mean": 2.000144404511555,
+    "PF_mean": 1.9012818380341234,
+    "n_pos_bonus_min500": 257,
+    "max_same_bonus_group": 6,
+    "top10_bonus": [
+     [
+      "Carter Bryant",
+      "SG",
+      8.92
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      8.92
+     ],
+     [
+      "Jalen Smith",
+      "PF",
+      8.92
+     ],
+     [
+      "Tari Eason",
+      "SG",
+      8.92
+     ],
+     [
+      "Danny Wolf",
+      "SF",
+      8.87
+     ],
+     [
+      "Craig Porter Jr.",
+      "PG",
+      8.85
+     ],
+     [
+      "Cedric Coward",
+      "SG",
+      8.73
+     ],
+     [
+      "Johnny Furphy",
+      "SF",
+      8.55
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      8.55
+     ],
+     [
+      "Noah Penda",
+      "SF",
+      8.45
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 1.9196976764017386,
+     "SG": 1.9548041291808196,
+     "SF": 2.119802619936933,
+     "PF": 1.9012818380341234,
+     "C": 2.000144404511555
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": -0.030242803719700784,
+     "ci90": [
+      -0.047908004419871995,
+      -0.014334042542416709
+     ]
+    },
+    "EPM": {
+     "mean": -0.010677996710264703,
+     "ci90": [
+      -0.027109066311835996,
+      0.00553173026659386
+     ]
+    },
+    "2K": {
+     "mean": -0.005658679397032906,
+     "ci90": [
+      -0.013661757908674143,
+      0.002028628083285603
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": false,
+    "G3": false,
+    "G3a": false,
+    "G3b": true,
+    "G4": false,
+    "G5": true,
+    "new_bigs_top10": [
+     "Chet Holmgren",
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.5
+  },
+  "S1-aligned": {
+   "top10": [
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ],
+    [
+     "Cade Cunningham",
+     "PG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Donovan Mitchell",
+     "SG",
+     11
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     12
+    ],
+    [
+     "Kevin Porter Jr.",
+     "SG",
+     13
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     14
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     15
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     16
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     17
+    ],
+    [
+     "Jimmy Butler III",
+     "SF",
+     18
+    ],
+    [
+     "Derrick White",
+     "PG",
+     19
+    ],
+    [
+     "Amen Thompson",
+     "PG",
+     20
+    ]
+   ],
+   "top30_drops": [],
+   "ties50": [
+    8,
+    19
+   ],
+   "rho": {
+    "T": 0.7353770990377239,
+    "EPM": 0.7019317111512965,
+    "2K": 0.7787483440144085
+   },
+   "gap_T": {
+    "PG": -0.030878084179970972,
+    "SG": -0.08909497921330346,
+    "SF": -0.023989218328840968,
+    "PF": 0.015807127882599574,
+    "C": 0.14140263438946243
+   },
+   "gap_EPM": {
+    "PG": -0.016202664271815603,
+    "SG": -0.0592239185750636,
+    "SF": -0.01724758749819963,
+    "PF": 0.013740458015267184,
+    "C": 0.08821834941667867
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 6,
+     "bonus": 7.17
+    },
+    "Evan Mobley": {
+     "rank": 8,
+     "bonus": 6.83
+    },
+    "Joel Embiid": {
+     "rank": 32,
+     "bonus": 0.0
+    },
+    "Anthony Davis": {
+     "rank": 37,
+     "bonus": 2.0
+    },
+    "Karl-Anthony Towns": {
+     "rank": 24,
+     "bonus": 2.7
+    },
+    "Domantas Sabonis": {
+     "rank": 73,
+     "bonus": 2.95
+    },
+    "Ivica Zubac": {
+     "rank": 76,
+     "bonus": 3.4
+    },
+    "Rudy Gobert": {
+     "rank": 47,
+     "bonus": 4.12
+    },
+    "Jarrett Allen": {
+     "rank": 48,
+     "bonus": 1.86
+    },
+    "Isaiah Hartenstein": {
+     "rank": 49,
+     "bonus": 2.58
+    },
+    "Zach Edey": {
+     "rank": 136,
+     "bonus": 3.01
+    },
+    "Victor Wembanyama": {
+     "rank": 4,
+     "bonus": 3.14
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 2.13
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 3.87
+    },
+    "Bam Adebayo": {
+     "rank": 57,
+     "bonus": 0.07
+    },
+    "Alperen Sengun": {
+     "rank": 154,
+     "bonus": 0.0
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 44,
+     "bonus": 3.51
+    },
+    "Devin Booker": {
+     "rank": 38,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 34,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 7,
+    "near_cap_names": [
+     "Cedric Coward",
+     "Jalen Smith",
+     "Tari Eason",
+     "Craig Porter Jr.",
+     "Danny Wolf",
+     "Donovan Clingan",
+     "Carter Bryant"
+    ],
+    "cap_C": 7.477397829839016,
+    "max_bonus": 7.477397829839016,
+    "C_sd": 1.6943998789126071,
+    "C_iqr": 2.7604994028342986,
+    "C_p10_p90": [
+     0.0,
+     3.7643966894804897
+    ],
+    "C_mean": 1.6764759932809654,
+    "PF_mean": 1.5936116166091066,
+    "n_pos_bonus_min500": 257,
+    "max_same_bonus_group": 4,
+    "top10_bonus": [
+     [
+      "Carter Bryant",
+      "SG",
+      7.48
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      7.48
+     ],
+     [
+      "Jalen Smith",
+      "PF",
+      7.48
+     ],
+     [
+      "Tari Eason",
+      "SG",
+      7.48
+     ],
+     [
+      "Danny Wolf",
+      "SF",
+      7.44
+     ],
+     [
+      "Craig Porter Jr.",
+      "PG",
+      7.42
+     ],
+     [
+      "Cedric Coward",
+      "SG",
+      7.32
+     ],
+     [
+      "Johnny Furphy",
+      "SF",
+      7.17
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      7.17
+     ],
+     [
+      "Noah Penda",
+      "SF",
+      7.09
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 1.6090473575735142,
+     "SG": 1.638472795637199,
+     "SF": 1.7767708145483725,
+     "PF": 1.5936116166091066,
+     "C": 1.6764759932809654
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": -0.03069209135796802,
+     "ci90": [
+      -0.047415322211738054,
+      -0.016022333141225264
+     ]
+    },
+    "EPM": {
+     "mean": -0.0124760863998854,
+     "ci90": [
+      -0.02782893355700814,
+      0.0027512359367192108
+     ]
+    },
+    "2K": {
+     "mean": -0.005093711752704122,
+     "ci90": [
+      -0.012808408376853809,
+      0.0022402256775031267
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": false,
+    "G3": false,
+    "G3a": false,
+    "G3b": true,
+    "G4": false,
+    "G5": true,
+    "new_bigs_top10": [
+     "Chet Holmgren",
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.4190887391679027
+  },
+  "S4-same": {
+   "top10": [
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ],
+    [
+     "Cade Cunningham",
+     "PG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Donovan Mitchell",
+     "SG",
+     11
+    ],
+    [
+     "Kevin Porter Jr.",
+     "SG",
+     12
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     13
+    ],
+    [
+     "Derrick White",
+     "PG",
+     14
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     15
+    ],
+    [
+     "Amen Thompson",
+     "PG",
+     16
+    ],
+    [
+     "Jimmy Butler III",
+     "SF",
+     17
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     18
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     19
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     20
+    ]
+   ],
+   "top30_drops": [],
+   "ties50": [
+    7,
+    16
+   ],
+   "rho": {
+    "T": 0.7366723914318051,
+    "EPM": 0.7037102033531718,
+    "2K": 0.7789118044997959
+   },
+   "gap_T": {
+    "PG": -0.028592162554426703,
+    "SG": -0.08906299968020466,
+    "SF": -0.025673854447439356,
+    "PF": 0.016436058700209637,
+    "C": 0.14037023851904593
+   },
+   "gap_EPM": {
+    "PG": -0.014107169585391408,
+    "SG": -0.0599554707379135,
+    "SF": -0.017895722310240524,
+    "PF": 0.014418999151823578,
+    "C": 0.08710211724038601
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 6,
+     "bonus": 8.5
+    },
+    "Evan Mobley": {
+     "rank": 8,
+     "bonus": 7.89
+    },
+    "Joel Embiid": {
+     "rank": 32,
+     "bonus": 0.0
+    },
+    "Anthony Davis": {
+     "rank": 37,
+     "bonus": 2.62
+    },
+    "Karl-Anthony Towns": {
+     "rank": 22,
+     "bonus": 3.21
+    },
+    "Domantas Sabonis": {
+     "rank": 73,
+     "bonus": 3.42
+    },
+    "Ivica Zubac": {
+     "rank": 77,
+     "bonus": 4.33
+    },
+    "Rudy Gobert": {
+     "rank": 43,
+     "bonus": 5.12
+    },
+    "Jarrett Allen": {
+     "rank": 48,
+     "bonus": 2.49
+    },
+    "Isaiah Hartenstein": {
+     "rank": 49,
+     "bonus": 3.1
+    },
+    "Zach Edey": {
+     "rank": 135,
+     "bonus": 3.54
+    },
+    "Victor Wembanyama": {
+     "rank": 4,
+     "bonus": 4.05
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 2.66
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 4.71
+    },
+    "Bam Adebayo": {
+     "rank": 58,
+     "bonus": 0.1
+    },
+    "Alperen Sengun": {
+     "rank": 157,
+     "bonus": 0.0
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 45,
+     "bonus": 3.71
+    },
+    "Devin Booker": {
+     "rank": 39,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 35,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 10.268607382000095,
+    "max_bonus": 9.028455692823933,
+    "C_sd": 2.013875524560285,
+    "C_iqr": 3.3643437831122442,
+    "C_p10_p90": [
+     0.0,
+     4.5794606286923365
+    ],
+    "C_mean": 2.0550661316070804,
+    "PF_mean": 1.9338123472242723,
+    "n_pos_bonus_min500": 257,
+    "max_same_bonus_group": 2,
+    "top10_bonus": [
+     [
+      "Tari Eason",
+      "SG",
+      9.03
+     ],
+     [
+      "Carter Bryant",
+      "SG",
+      8.96
+     ],
+     [
+      "Danny Wolf",
+      "SF",
+      8.84
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      8.76
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      8.5
+     ],
+     [
+      "Johnny Furphy",
+      "SF",
+      8.3
+     ],
+     [
+      "Craig Porter Jr.",
+      "PG",
+      8.21
+     ],
+     [
+      "Cedric Coward",
+      "SG",
+      8.21
+     ],
+     [
+      "Jalen Smith",
+      "PF",
+      8.15
+     ],
+     [
+      "Hugo González",
+      "SG",
+      7.96
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 1.9462753043943666,
+     "SG": 1.998390076795482,
+     "SF": 2.141911141953942,
+     "PF": 1.9338123472242723,
+     "C": 2.0550661316070804
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": -0.029396798963886805,
+     "ci90": [
+      -0.04675124387704975,
+      -0.013377815989490135
+     ]
+    },
+    "EPM": {
+     "mean": -0.010697594198010085,
+     "ci90": [
+      -0.02725675203173989,
+      0.005234830337715735
+     ]
+    },
+    "2K": {
+     "mean": -0.004930251267316721,
+     "ci90": [
+      -0.012817073879279762,
+      0.0027747491905820596
+     ]
+    }
+   },
+   "checks": {
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "G3a": false,
+    "G3b": true,
+    "G4": false,
+    "G5": true,
+    "new_bigs_top10": [
+     "Chet Holmgren",
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.5
+  },
+  "S4-aligned": {
+   "top10": [
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ],
+    [
+     "Cade Cunningham",
+     "PG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Donovan Mitchell",
+     "SG",
+     11
+    ],
+    [
+     "Kevin Porter Jr.",
+     "SG",
+     12
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     13
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     14
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     15
+    ],
+    [
+     "Derrick White",
+     "PG",
+     16
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     17
+    ],
+    [
+     "Jimmy Butler III",
+     "SF",
+     18
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     19
+    ],
+    [
+     "Amen Thompson",
+     "PG",
+     20
+    ]
+   ],
+   "top30_drops": [],
+   "ties50": [
+    10,
+    21
+   ],
+   "rho": {
+    "T": 0.73558214545819,
+    "EPM": 0.7020127359304074,
+    "2K": 0.7792975111754341
+   },
+   "gap_T": {
+    "PG": -0.030624092888243835,
+    "SG": -0.08919091781259994,
+    "SF": -0.02375336927223719,
+    "PF": 0.01547169811320754,
+    "C": 0.14129583481666075
+   },
+   "gap_EPM": {
+    "PG": -0.016352342463703044,
+    "SG": -0.059192111959287544,
+    "SF": -0.017139565029526144,
+    "PF": 0.013613231552162852,
+    "C": 0.08832637188535217
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 7,
+     "bonus": 7.0
+    },
+    "Evan Mobley": {
+     "rank": 8,
+     "bonus": 6.5
+    },
+    "Joel Embiid": {
+     "rank": 32,
+     "bonus": 0.0
+    },
+    "Anthony Davis": {
+     "rank": 37,
+     "bonus": 2.16
+    },
+    "Karl-Anthony Towns": {
+     "rank": 24,
+     "bonus": 2.64
+    },
+    "Domantas Sabonis": {
+     "rank": 74,
+     "bonus": 2.81
+    },
+    "Ivica Zubac": {
+     "rank": 75,
+     "bonus": 3.57
+    },
+    "Rudy Gobert": {
+     "rank": 46,
+     "bonus": 4.22
+    },
+    "Jarrett Allen": {
+     "rank": 48,
+     "bonus": 2.05
+    },
+    "Isaiah Hartenstein": {
+     "rank": 49,
+     "bonus": 2.55
+    },
+    "Zach Edey": {
+     "rank": 135,
+     "bonus": 2.92
+    },
+    "Victor Wembanyama": {
+     "rank": 4,
+     "bonus": 3.33
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 2.19
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 3.88
+    },
+    "Bam Adebayo": {
+     "rank": 57,
+     "bonus": 0.08
+    },
+    "Alperen Sengun": {
+     "rank": 154,
+     "bonus": 0.0
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 45,
+     "bonus": 3.06
+    },
+    "Devin Booker": {
+     "rank": 38,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 35,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 8.452435240514884,
+    "max_bonus": 7.431624778956957,
+    "C_sd": 1.6576885083406718,
+    "C_iqr": 2.76930423919336,
+    "C_p10_p90": [
+     0.0,
+     3.7695076810863695
+    ],
+    "C_mean": 1.6915938789161238,
+    "PF_mean": 1.5917858210133966,
+    "n_pos_bonus_min500": 257,
+    "max_same_bonus_group": 3,
+    "top10_bonus": [
+     [
+      "Tari Eason",
+      "SG",
+      7.43
+     ],
+     [
+      "Carter Bryant",
+      "SG",
+      7.38
+     ],
+     [
+      "Danny Wolf",
+      "SF",
+      7.28
+     ],
+     [
+      "Donovan Clingan",
+      "C",
+      7.21
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      7.0
+     ],
+     [
+      "Johnny Furphy",
+      "SF",
+      6.83
+     ],
+     [
+      "Craig Porter Jr.",
+      "PG",
+      6.76
+     ],
+     [
+      "Cedric Coward",
+      "SG",
+      6.76
+     ],
+     [
+      "Jalen Smith",
+      "PF",
+      6.71
+     ],
+     [
+      "Hugo González",
+      "SG",
+      6.55
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 1.602044499183348,
+     "SG": 1.6449419167598296,
+     "SF": 1.7630789205202482,
+     "PF": 1.5917858210133966,
+     "C": 1.6915938789161238
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": -0.030487044937501873,
+     "ci90": [
+      -0.047188365242109453,
+      -0.015680665410800557
+     ]
+    },
+    "EPM": {
+     "mean": -0.012395061620774528,
+     "ci90": [
+      -0.02737848153812781,
+      0.002559939597644716
+     ]
+    },
+    "2K": {
+     "mean": -0.004544544591678523,
+     "ci90": [
+      -0.012271772234013923,
+      0.002741523938486384
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": false,
+    "G3": false,
+    "G3a": false,
+    "G3b": true,
+    "G4": false,
+    "G5": true,
+    "new_bigs_top10": [
+     "Chet Holmgren",
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.41156677464030855
+  },
+  "S2-same": {
+   "top10": [
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Anthony Edwards",
+     "SG"
+    ]
+   ],
+   "top10_nPFC": 5,
+   "rank11_20": [
+    [
+     "Kevin Durant",
+     "SF",
+     11
+    ],
+    [
+     "Evan Mobley",
+     "PF",
+     12
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     13
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     14
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     15
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     16
+    ],
+    [
+     "Kevin Porter Jr.",
+     "SG",
+     17
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     18
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     19
+    ],
+    [
+     "Desmond Bane",
+     "SG",
+     20
+    ]
+   ],
+   "top30_drops": [],
+   "ties50": [
+    6,
+    13
+   ],
+   "rho": {
+    "T": 0.7481367499780389,
+    "EPM": 0.7050996352033501,
+    "2K": 0.7775030773921785
+   },
+   "gap_T": {
+    "PG": -0.024600870827285924,
+    "SG": -0.07467220978573713,
+    "SF": -0.011287061994609169,
+    "PF": 0.014129979035639407,
+    "C": 0.10719117123531506
+   },
+   "gap_EPM": {
+    "PG": -0.01279748540637628,
+    "SG": -0.04017175572519085,
+    "SF": -0.0062653031830620775,
+    "PF": 0.011365564037319767,
+    "C": 0.05440731672187814
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 9,
+     "bonus": 2.08
+    },
+    "Evan Mobley": {
+     "rank": 12,
+     "bonus": 1.98
+    },
+    "Joel Embiid": {
+     "rank": 25,
+     "bonus": 0.0
+    },
+    "Anthony Davis": {
+     "rank": 31,
+     "bonus": 2.38
+    },
+    "Karl-Anthony Towns": {
+     "rank": 18,
+     "bonus": 3.22
+    },
+    "Domantas Sabonis": {
+     "rank": 61,
+     "bonus": 3.52
+    },
+    "Ivica Zubac": {
+     "rank": 65,
+     "bonus": 4.05
+    },
+    "Rudy Gobert": {
+     "rank": 38,
+     "bonus": 4.91
+    },
+    "Jarrett Allen": {
+     "rank": 45,
+     "bonus": 2.22
+    },
+    "Isaiah Hartenstein": {
+     "rank": 44,
+     "bonus": 3.08
+    },
+    "Zach Edey": {
+     "rank": 111,
+     "bonus": 3.59
+    },
+    "Victor Wembanyama": {
+     "rank": 3,
+     "bonus": 3.75
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 2.54
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 1.12
+    },
+    "Bam Adebayo": {
+     "rank": 52,
+     "bonus": 0.09
+    },
+    "Alperen Sengun": {
+     "rank": 140,
+     "bonus": 0.0
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 49,
+     "bonus": 1.02
+    },
+    "Devin Booker": {
+     "rank": 33,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 28,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 4,
+    "near_cap_names": [
+     "Chet Holmgren",
+     "Evan Mobley",
+     "Jalen Smith",
+     "Donovan Clingan"
+    ],
+    "cap_C": 8.921019739978375,
+    "max_bonus": 8.921019739978375,
+    "C_sd": 2.0215287605637227,
+    "C_iqr": 3.2934545179086028,
+    "C_p10_p90": [
+     0.0,
+     4.491168978859548
+    ],
+    "C_mean": 2.000144404511555,
+    "PF_mean": 0.4617398749511443,
+    "n_pos_bonus_min500": 98,
+    "max_same_bonus_group": 4,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      8.92
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      6.71
+     ],
+     [
+      "Clint Capela",
+      "C",
+      6.22
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      5.77
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      5.13
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      4.91
+     ],
+     [
+      "Andre Drummond",
+      "C",
+      4.61
+     ],
+     [
+      "Mitchell Robinson",
+      "C",
+      4.61
+     ],
+     [
+      "Khaman Maluach",
+      "C",
+      4.33
+     ],
+     [
+      "Luke Kornet",
+      "C",
+      4.31
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 0.4617398749511443,
+     "C": 2.000144404511555
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": -0.01793244041765296,
+     "ci90": [
+      -0.030152126906081954,
+      -0.007515290594429826
+     ]
+    },
+    "EPM": {
+     "mean": -0.009308162347831828,
+     "ci90": [
+      -0.020433857671268034,
+      0.0013809935206295517
+     ]
+    },
+    "2K": {
+     "mean": -0.006338978374934134,
+     "ci90": [
+      -0.013054496617661676,
+      -0.00016934894842278727
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": false,
+    "G3": true,
+    "G3a": true,
+    "G3b": true,
+    "G4": true,
+    "G5": true,
+    "new_bigs_top10": [
+     "Chet Holmgren"
+    ]
+   },
+   "verdict": "reject",
+   "lambda": 0.5
+  },
+  "S2-aligned": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Rudy Gobert",
+     "C"
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ]
+   ],
+   "top10_nPFC": 8,
+   "rank11_20": [
+    [
+     "Kawhi Leonard",
+     "SF",
+     11
+    ],
+    [
+     "Donovan Clingan",
+     "C",
+     12
+    ],
+    [
+     "Jayson Tatum",
+     "PF",
+     13
+    ],
+    [
+     "Donovan Mitchell",
+     "SG",
+     14
+    ],
+    [
+     "Luke Kornet",
+     "C",
+     15
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     16
+    ],
+    [
+     "Isaiah Hartenstein",
+     "C",
+     17
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     18
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     19
+    ],
+    [
+     "Robert Williams III",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops": [
+    [
+     "Desmond Bane",
+     18,
+     30
+    ],
+    [
+     "Jalen Williams",
+     19,
+     31
+    ],
+    [
+     "Jimmy Butler III",
+     20,
+     32
+    ],
+    [
+     "Jamal Murray",
+     21,
+     33
+    ],
+    [
+     "LeBron James",
+     22,
+     37
+    ],
+    [
+     "Joel Embiid",
+     23,
+     39
+    ],
+    [
+     "Paul George",
+     24,
+     40
+    ],
+    [
+     "De'Aaron Fox",
+     25,
+     41
+    ],
+    [
+     "Tyrese Maxey",
+     26,
+     42
+    ],
+    [
+     "Derrick White",
+     27,
+     44
+    ],
+    [
+     "Jaylen Brown",
+     28,
+     45
+    ],
+    [
+     "Devin Booker",
+     30,
+     46
+    ]
+   ],
+   "ties50": [
+    7,
+    14
+   ],
+   "rho": {
+    "T": 0.7710034556881092,
+    "EPM": 0.723245750915566,
+    "2K": 0.7693987996481151
+   },
+   "gap_T": {
+    "PG": 0.00032656023222061377,
+    "SG": -0.049120562839782535,
+    "SF": 0.009299191374663068,
+    "PF": 0.015639412997903553,
+    "C": 0.031256674973300105
+   },
+   "gap_EPM": {
+    "PG": 0.011113605747642566,
+    "SG": -0.016539440203562343,
+    "SF": 0.015375198041192577,
+    "PF": 0.012468193384223916,
+    "C": -0.017931729799798353
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 9,
+     "bonus": 7.28
+    },
+    "Evan Mobley": {
+     "rank": 10,
+     "bonus": 6.94
+    },
+    "Joel Embiid": {
+     "rank": 39,
+     "bonus": 0.0
+    },
+    "Anthony Davis": {
+     "rank": 16,
+     "bonus": 8.35
+    },
+    "Karl-Anthony Towns": {
+     "rank": 8,
+     "bonus": 11.29
+    },
+    "Domantas Sabonis": {
+     "rank": 28,
+     "bonus": 12.34
+    },
+    "Ivica Zubac": {
+     "rank": 25,
+     "bonus": 14.21
+    },
+    "Rudy Gobert": {
+     "rank": 7,
+     "bonus": 17.21
+    },
+    "Jarrett Allen": {
+     "rank": 27,
+     "bonus": 7.78
+    },
+    "Isaiah Hartenstein": {
+     "rank": 17,
+     "bonus": 10.8
+    },
+    "Zach Edey": {
+     "rank": 61,
+     "bonus": 12.58
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 13.13
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 8.88
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 3.93
+    },
+    "Bam Adebayo": {
+     "rank": 69,
+     "bonus": 0.31
+    },
+    "Alperen Sengun": {
+     "rank": 149,
+     "bonus": 0.0
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 53,
+     "bonus": 3.56
+    },
+    "Devin Booker": {
+     "rank": 46,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 42,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 2,
+    "near_cap_names": [
+     "Jalen Smith",
+     "Donovan Clingan"
+    ],
+    "cap_C": 31.260212912859195,
+    "max_bonus": 31.260212912859195,
+    "C_sd": 7.0836542577635315,
+    "C_iqr": 11.54061894822021,
+    "C_p10_p90": [
+     0.0,
+     15.737539272289315
+    ],
+    "C_mean": 7.00872117357816,
+    "PF_mean": 1.6179861968744778,
+    "n_pos_bonus_min500": 100,
+    "max_same_bonus_group": 4,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      31.26
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      23.5
+     ],
+     [
+      "Clint Capela",
+      "C",
+      21.8
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      20.21
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      17.98
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      17.21
+     ],
+     [
+      "Andre Drummond",
+      "C",
+      16.17
+     ],
+     [
+      "Mitchell Robinson",
+      "C",
+      16.17
+     ],
+     [
+      "Khaman Maluach",
+      "C",
+      15.17
+     ],
+     [
+      "Luke Kornet",
+      "C",
+      15.09
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 1.6179861968744778,
+     "C": 7.00872117357816
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": 0.004934265292417361,
+     "ci90": [
+      -0.01179536467889305,
+      0.022863092820789847
+     ]
+    },
+    "EPM": {
+     "mean": 0.008837953364384088,
+     "ci90": [
+      -0.005956601090103586,
+      0.025379726303528336
+     ]
+    },
+    "2K": {
+     "mean": -0.01444325611899755,
+     "ci90": [
+      -0.022762320181894963,
+      -0.006930202336193858
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": false,
+    "G3": true,
+    "G3a": true,
+    "G3b": true,
+    "G4": true,
+    "G5": false,
+    "new_bigs_top10": [
+     "Kristaps Porziņģis",
+     "Rudy Gobert",
+     "Karl-Anthony Towns",
+     "Chet Holmgren",
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "reject",
+   "lambda": 1.7520537911585752
+  },
+  "S3-same": {
+   "top10": [
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Anthony Edwards",
+     "SG"
+    ]
+   ],
+   "top10_nPFC": 5,
+   "rank11_20": [
+    [
+     "Kevin Durant",
+     "SF",
+     11
+    ],
+    [
+     "Evan Mobley",
+     "PF",
+     12
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     13
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     14
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     15
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     16
+    ],
+    [
+     "Kevin Porter Jr.",
+     "SG",
+     17
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     18
+    ],
+    [
+     "Desmond Bane",
+     "SG",
+     19
+    ],
+    [
+     "Jalen Williams",
+     "PF",
+     20
+    ]
+   ],
+   "top30_drops": [],
+   "ties50": [
+    7,
+    14
+   ],
+   "rho": {
+    "T": 0.7491550491700861,
+    "EPM": 0.7058065904924078,
+    "2K": 0.7776289524890941
+   },
+   "gap_T": {
+    "PG": -0.024165457184325112,
+    "SG": -0.07470418931883595,
+    "SF": -0.011185983827493265,
+    "PF": 0.014297693920335424,
+    "C": 0.10655037379850481
+   },
+   "gap_EPM": {
+    "PG": -0.012348450830713967,
+    "SG": -0.04020356234096693,
+    "SF": -0.006157280714388593,
+    "PF": 0.011620016963528419,
+    "C": 0.05368716693072158
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 9,
+     "bonus": 2.07
+    },
+    "Evan Mobley": {
+     "rank": 12,
+     "bonus": 1.92
+    },
+    "Joel Embiid": {
+     "rank": 25,
+     "bonus": 0.0
+    },
+    "Anthony Davis": {
+     "rank": 29,
+     "bonus": 2.62
+    },
+    "Karl-Anthony Towns": {
+     "rank": 18,
+     "bonus": 3.21
+    },
+    "Domantas Sabonis": {
+     "rank": 61,
+     "bonus": 3.42
+    },
+    "Ivica Zubac": {
+     "rank": 64,
+     "bonus": 4.33
+    },
+    "Rudy Gobert": {
+     "rank": 37,
+     "bonus": 5.12
+    },
+    "Jarrett Allen": {
+     "rank": 43,
+     "bonus": 2.49
+    },
+    "Isaiah Hartenstein": {
+     "rank": 45,
+     "bonus": 3.1
+    },
+    "Zach Edey": {
+     "rank": 112,
+     "bonus": 3.54
+    },
+    "Victor Wembanyama": {
+     "rank": 3,
+     "bonus": 4.05
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 2.66
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 1.14
+    },
+    "Bam Adebayo": {
+     "rank": 53,
+     "bonus": 0.1
+    },
+    "Alperen Sengun": {
+     "rank": 140,
+     "bonus": 0.0
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 50,
+     "bonus": 0.9
+    },
+    "Devin Booker": {
+     "rank": 33,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 28,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 10.268607382000095,
+    "max_bonus": 8.760059278647555,
+    "C_sd": 2.013875524560285,
+    "C_iqr": 3.3643437831122442,
+    "C_p10_p90": [
+     0.0,
+     4.5794606286923365
+    ],
+    "C_mean": 2.0550661316070804,
+    "PF_mean": 0.46964014146875194,
+    "n_pos_bonus_min500": 98,
+    "max_same_bonus_group": 3,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      8.76
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      6.49
+     ],
+     [
+      "Clint Capela",
+      "C",
+      6.07
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      5.8
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      5.3
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      5.12
+     ],
+     [
+      "Mitchell Robinson",
+      "C",
+      4.63
+     ],
+     [
+      "Luke Kornet",
+      "C",
+      4.63
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      4.51
+     ],
+     [
+      "Andre Drummond",
+      "C",
+      4.46
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 0.46964014146875194,
+     "C": 2.0550661316070804
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": -0.01691414122560575,
+     "ci90": [
+      -0.02896211482264458,
+      -0.006859675290458773
+     ]
+    },
+    "EPM": {
+     "mean": -0.008601207058774096,
+     "ci90": [
+      -0.019477488767321843,
+      0.001709171827678784
+     ]
+    },
+    "2K": {
+     "mean": -0.006213103278018495,
+     "ci90": [
+      -0.012956614177473957,
+      -0.00010343592709180558
+     ]
+    }
+   },
+   "checks": {
+    "G1": true,
+    "G2": false,
+    "G3": true,
+    "G3a": true,
+    "G3b": true,
+    "G4": true,
+    "G5": true,
+    "new_bigs_top10": [
+     "Chet Holmgren"
+    ]
+   },
+   "verdict": "reject",
+   "lambda": 0.5
+  },
+  "S3-aligned": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Rudy Gobert",
+     "C"
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C"
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ]
+   ],
+   "top10_nPFC": 8,
+   "rank11_20": [
+    [
+     "Kawhi Leonard",
+     "SF",
+     11
+    ],
+    [
+     "Jayson Tatum",
+     "PF",
+     12
+    ],
+    [
+     "Luke Kornet",
+     "C",
+     13
+    ],
+    [
+     "Donovan Mitchell",
+     "SG",
+     14
+    ],
+    [
+     "Donovan Clingan",
+     "C",
+     15
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     16
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     17
+    ],
+    [
+     "Isaiah Hartenstein",
+     "C",
+     18
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     19
+    ],
+    [
+     "Robert Williams III",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops": [
+    [
+     "Ty Jerome",
+     12,
+     23
+    ],
+    [
+     "Austin Reaves",
+     13,
+     24
+    ],
+    [
+     "Cade Cunningham",
+     14,
+     25
+    ],
+    [
+     "Kevin Porter Jr.",
+     16,
+     27
+    ],
+    [
+     "Desmond Bane",
+     18,
+     29
+    ],
+    [
+     "Jalen Williams",
+     19,
+     30
+    ],
+    [
+     "Jimmy Butler III",
+     20,
+     31
+    ],
+    [
+     "Jamal Murray",
+     21,
+     33
+    ],
+    [
+     "LeBron James",
+     22,
+     36
+    ],
+    [
+     "Joel Embiid",
+     23,
+     38
+    ],
+    [
+     "Paul George",
+     24,
+     39
+    ],
+    [
+     "De'Aaron Fox",
+     25,
+     40
+    ],
+    [
+     "Tyrese Maxey",
+     26,
+     42
+    ],
+    [
+     "Derrick White",
+     27,
+     43
+    ],
+    [
+     "Jaylen Brown",
+     28,
+     45
+    ],
+    [
+     "Devin Booker",
+     30,
+     47
+    ]
+   ],
+   "ties50": [
+    10,
+    20
+   ],
+   "rho": {
+    "T": 0.7720516271800927,
+    "EPM": 0.7224572249935609,
+    "2K": 0.7701567781791049
+   },
+   "gap_T": {
+    "PG": 0.0008708272859216296,
+    "SG": -0.04876878797569555,
+    "SF": 0.009130727762803234,
+    "PF": 0.014884696016771483,
+    "C": 0.0311498754004984
+   },
+   "gap_EPM": {
+    "PG": 0.011487801227361177,
+    "SG": -0.016475826972010183,
+    "SF": 0.015123145614287778,
+    "PF": 0.011832061068702287,
+    "C": -0.017571654904220083
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 9,
+     "bonus": 7.05
+    },
+    "Evan Mobley": {
+     "rank": 10,
+     "bonus": 6.55
+    },
+    "Joel Embiid": {
+     "rank": 38,
+     "bonus": 0.0
+    },
+    "Anthony Davis": {
+     "rank": 16,
+     "bonus": 8.95
+    },
+    "Karl-Anthony Towns": {
+     "rank": 8,
+     "bonus": 10.95
+    },
+    "Domantas Sabonis": {
+     "rank": 32,
+     "bonus": 11.67
+    },
+    "Ivica Zubac": {
+     "rank": 22,
+     "bonus": 14.8
+    },
+    "Rudy Gobert": {
+     "rank": 6,
+     "bonus": 17.5
+    },
+    "Jarrett Allen": {
+     "rank": 26,
+     "bonus": 8.5
+    },
+    "Isaiah Hartenstein": {
+     "rank": 18,
+     "bonus": 10.59
+    },
+    "Zach Edey": {
+     "rank": 63,
+     "bonus": 12.11
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 13.82
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 9.08
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 4,
+     "bonus": 3.91
+    },
+    "Bam Adebayo": {
+     "rank": 67,
+     "bonus": 0.35
+    },
+    "Alperen Sengun": {
+     "rank": 149,
+     "bonus": 0.0
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 57,
+     "bonus": 3.08
+    },
+    "Devin Booker": {
+     "rank": 47,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 42,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 35.078825879028614,
+    "max_bonus": 29.925440003120745,
+    "C_sd": 6.879646503178282,
+    "C_iqr": 11.493012185066105,
+    "C_p10_p90": [
+     0.0,
+     15.644000791709686
+    ],
+    "C_mean": 7.020358683388699,
+    "PF_mean": 1.6043484900652485,
+    "n_pos_bonus_min500": 100,
+    "max_same_bonus_group": 2,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      29.93
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      22.16
+     ],
+     [
+      "Clint Capela",
+      "C",
+      20.73
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      19.82
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      18.09
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      17.5
+     ],
+     [
+      "Mitchell Robinson",
+      "C",
+      15.82
+     ],
+     [
+      "Luke Kornet",
+      "C",
+      15.81
+     ],
+     [
+      "Ryan Kalkbrenner",
+      "C",
+      15.39
+     ],
+     [
+      "Andre Drummond",
+      "C",
+      15.22
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 1.6043484900652485,
+     "C": 7.020358683388699
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": 0.005982436784400802,
+     "ci90": [
+      -0.01058149962031658,
+      0.02365382837118367
+     ]
+    },
+    "EPM": {
+     "mean": 0.00804942744237902,
+     "ci90": [
+      -0.006462535465042118,
+      0.02412748348885118
+     ]
+    },
+    "2K": {
+     "mean": -0.01368527758800775,
+     "ci90": [
+      -0.02172289359070742,
+      -0.006610997719438816
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": false,
+    "G3": true,
+    "G3a": true,
+    "G3b": true,
+    "G4": true,
+    "G5": false,
+    "new_bigs_top10": [
+     "Rudy Gobert",
+     "Kristaps Porziņģis",
+     "Karl-Anthony Towns",
+     "Chet Holmgren",
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "reject",
+   "lambda": 1.7080615011397995
+  },
+  "H-same": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Anthony Edwards",
+     "SG"
+    ]
+   ],
+   "top10_nPFC": 5,
+   "rank11_20": [
+    [
+     "Kevin Durant",
+     "SF",
+     11
+    ],
+    [
+     "Evan Mobley",
+     "PF",
+     12
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     13
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     14
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     15
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     16
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     17
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     18
+    ],
+    [
+     "Joel Embiid",
+     "C",
+     19
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops": [],
+   "ties50": [
+    4,
+    10
+   ],
+   "rho": {
+    "T": 0.7657929627567694,
+    "EPM": 0.7138279548423231,
+    "2K": 0.7793367460714761
+   },
+   "gap_T": {
+    "PG": -0.012663280116110304,
+    "SG": -0.06053725615606013,
+    "SF": -0.0006738544474393529,
+    "PF": 0.02448637316561845,
+    "C": 0.059736561053755785
+   },
+   "gap_EPM": {
+    "PG": -0.00048645412363419196,
+    "SG": -0.02630407124681934,
+    "SF": 0.00522108598588507,
+    "PF": 0.02171331636980492,
+    "C": 0.006589370589082529
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 9,
+     "bonus": 2.15
+    },
+    "Evan Mobley": {
+     "rank": 12,
+     "bonus": 1.95
+    },
+    "Joel Embiid": {
+     "rank": 19,
+     "bonus": 2.87
+    },
+    "Anthony Davis": {
+     "rank": 13,
+     "bonus": 6.81
+    },
+    "Karl-Anthony Towns": {
+     "rank": 15,
+     "bonus": 4.46
+    },
+    "Domantas Sabonis": {
+     "rank": 60,
+     "bonus": 4.6
+    },
+    "Ivica Zubac": {
+     "rank": 52,
+     "bonus": 8.02
+    },
+    "Rudy Gobert": {
+     "rank": 22,
+     "bonus": 8.57
+    },
+    "Jarrett Allen": {
+     "rank": 27,
+     "bonus": 6.78
+    },
+    "Isaiah Hartenstein": {
+     "rank": 29,
+     "bonus": 6.94
+    },
+    "Zach Edey": {
+     "rank": 101,
+     "bonus": 5.31
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 7.69
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 4.05
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 1.11
+    },
+    "Bam Adebayo": {
+     "rank": 49,
+     "bonus": 2.31
+    },
+    "Alperen Sengun": {
+     "rank": 110,
+     "bonus": 3.09
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 56,
+     "bonus": 0.97
+    },
+    "Devin Booker": {
+     "rank": 36,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 32,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 11.739533509574475,
+    "max_bonus": 10.631554584152598,
+    "C_sd": 2.5916797879822613,
+    "C_iqr": 3.7191519731648848,
+    "C_p10_p90": [
+     0.9687613866053542,
+     7.896041293319707
+    ],
+    "C_mean": 4.794885016762842,
+    "PF_mean": 0.540011861762441,
+    "n_pos_bonus_min500": 118,
+    "max_same_bonus_group": 3,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      10.63
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      9.47
+     ],
+     [
+      "Clint Capela",
+      "C",
+      9.21
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      9.08
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      8.67
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      8.57
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      8.02
+     ],
+     [
+      "Mark Williams",
+      "C",
+      7.94
+     ],
+     [
+      "Paul Reed",
+      "C",
+      7.82
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      7.82
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 0.540011861762441,
+     "C": 4.794885016762842
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": -0.00027622763892243274,
+     "ci90": [
+      -0.00848650720521955,
+      0.007405157697005217
+     ]
+    },
+    "EPM": {
+     "mean": -0.0005798427088588021,
+     "ci90": [
+      -0.008183248611897075,
+      0.007446404619770325
+     ]
+    },
+    "2K": {
+     "mean": -0.004505309695636561,
+     "ci90": [
+      -0.008316779714882766,
+      -0.0009660355012177547
+     ]
+    }
+   },
+   "checks": {
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "G3a": true,
+    "G3b": true,
+    "G4": true,
+    "G5": true,
+    "new_bigs_top10": [
+     "Chet Holmgren"
+    ]
+   },
+   "verdict": "adopt_candidate",
+   "lambda": 0.5
+  },
+  "H-aligned": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Anthony Davis",
+     "C"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Rudy Gobert",
+     "C"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Karl-Anthony Towns",
+     "C",
+     11
+    ],
+    [
+     "Jayson Tatum",
+     "PF",
+     12
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     13
+    ],
+    [
+     "Jarrett Allen",
+     "C",
+     14
+    ],
+    [
+     "Evan Mobley",
+     "PF",
+     15
+    ],
+    [
+     "Isaiah Hartenstein",
+     "C",
+     16
+    ],
+    [
+     "Joel Embiid",
+     "C",
+     17
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     18
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     19
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     20
+    ]
+   ],
+   "top30_drops": [
+    [
+     "Kevin Porter Jr.",
+     16,
+     27
+    ],
+    [
+     "Desmond Bane",
+     18,
+     29
+    ],
+    [
+     "Jalen Williams",
+     19,
+     30
+    ],
+    [
+     "Jimmy Butler III",
+     20,
+     31
+    ],
+    [
+     "Jamal Murray",
+     21,
+     33
+    ],
+    [
+     "LeBron James",
+     22,
+     34
+    ],
+    [
+     "Paul George",
+     24,
+     36
+    ],
+    [
+     "De'Aaron Fox",
+     25,
+     38
+    ],
+    [
+     "Tyrese Maxey",
+     26,
+     39
+    ],
+    [
+     "Derrick White",
+     27,
+     40
+    ],
+    [
+     "Jaylen Brown",
+     28,
+     43
+    ],
+    [
+     "Devin Booker",
+     30,
+     44
+    ]
+   ],
+   "ties50": [
+    6,
+    12
+   ],
+   "rho": {
+    "T": 0.7764805190837949,
+    "EPM": 0.7188672491790757,
+    "2K": 0.7759378527678921
+   },
+   "gap_T": {
+    "PG": -0.00010885341074019997,
+    "SG": -0.046786056923568915,
+    "SF": 0.010343665768194071,
+    "PF": 0.03136268343815512,
+    "C": 0.014631541473834104
+   },
+   "gap_EPM": {
+    "PG": 0.011674898967220479,
+    "SG": -0.012849872773536896,
+    "SF": 0.016887512602621342,
+    "PF": 0.028498727735368958,
+    "C": -0.0377718565461616
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 9,
+     "bonus": 3.43
+    },
+    "Evan Mobley": {
+     "rank": 15,
+     "bonus": 3.11
+    },
+    "Joel Embiid": {
+     "rank": 17,
+     "bonus": 4.58
+    },
+    "Anthony Davis": {
+     "rank": 6,
+     "bonus": 10.87
+    },
+    "Karl-Anthony Towns": {
+     "rank": 11,
+     "bonus": 7.13
+    },
+    "Domantas Sabonis": {
+     "rank": 53,
+     "bonus": 7.34
+    },
+    "Ivica Zubac": {
+     "rank": 32,
+     "bonus": 12.8
+    },
+    "Rudy Gobert": {
+     "rank": 8,
+     "bonus": 13.68
+    },
+    "Jarrett Allen": {
+     "rank": 14,
+     "bonus": 10.82
+    },
+    "Isaiah Hartenstein": {
+     "rank": 16,
+     "bonus": 11.08
+    },
+    "Zach Edey": {
+     "rank": 77,
+     "bonus": 8.47
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 12.27
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 6.47
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 1.77
+    },
+    "Bam Adebayo": {
+     "rank": 46,
+     "bonus": 3.68
+    },
+    "Alperen Sengun": {
+     "rank": 103,
+     "bonus": 4.93
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 59,
+     "bonus": 1.55
+    },
+    "Devin Booker": {
+     "rank": 44,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 39,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 18.739228941659114,
+    "max_bonus": 16.970617716257316,
+    "C_sd": 4.136968547418076,
+    "C_iqr": 5.9366958863501065,
+    "C_p10_p90": [
+     1.5463852459410794,
+     12.604054957348595
+    ],
+    "C_mean": 7.653834626799136,
+    "PF_mean": 0.8619938688811455,
+    "n_pos_bonus_min500": 119,
+    "max_same_bonus_group": 2,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      16.97
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      15.11
+     ],
+     [
+      "Clint Capela",
+      "C",
+      14.7
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      14.49
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      13.84
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      13.68
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      12.8
+     ],
+     [
+      "Mark Williams",
+      "C",
+      12.68
+     ],
+     [
+      "Paul Reed",
+      "C",
+      12.49
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      12.48
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 0.8619938688811455,
+     "C": 7.653834626799136
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": 0.010411328688103016,
+     "ci90": [
+      -0.0015338833284663789,
+      0.023327111921233833
+     ]
+    },
+    "EPM": {
+     "mean": 0.004459451627893851,
+     "ci90": [
+      -0.005563927311748057,
+      0.016138934801996276
+     ]
+    },
+    "2K": {
+     "mean": -0.007904202999220566,
+     "ci90": [
+      -0.012461173770881778,
+      -0.003620673391534019
+     ]
+    }
+   },
+   "checks": {
+    "G1": true,
+    "G2": false,
+    "G3": true,
+    "G3a": true,
+    "G3b": true,
+    "G4": false,
+    "G5": false,
+    "new_bigs_top10": [
+     "Anthony Davis",
+     "Rudy Gobert",
+     "Chet Holmgren"
+    ]
+   },
+   "verdict": "reject",
+   "lambda": 0.7981249393928583
+  },
+  "H1-same": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Anthony Edwards",
+     "SG",
+     11
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     12
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     13
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     14
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     15
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     16
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     17
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     18
+    ],
+    [
+     "Joel Embiid",
+     "C",
+     19
+    ],
+    [
+     "Kevin Porter Jr.",
+     "SG",
+     20
+    ]
+   ],
+   "top30_drops": [
+    [
+     "Paul George",
+     24,
+     36
+    ],
+    [
+     "De'Aaron Fox",
+     25,
+     37
+    ],
+    [
+     "Tyrese Maxey",
+     26,
+     38
+    ]
+   ],
+   "ties50": [
+    6,
+    13
+   ],
+   "rho": {
+    "T": 0.7657349816920616,
+    "EPM": 0.7175286644853924,
+    "2K": 0.7823983006532275
+   },
+   "gap_T": {
+    "PG": -0.0079100145137881,
+    "SG": -0.05877838183562519,
+    "SF": -0.008726415094339617,
+    "PF": 0.00633123689727462,
+    "C": 0.07703809184763262
+   },
+   "gap_EPM": {
+    "PG": 0.005051638976201167,
+    "SG": -0.026844783715012716,
+    "SF": -0.0017283594987757356,
+    "PF": 0.004537743850720962,
+    "C": 0.023404868212588213
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 6,
+     "bonus": 8.86
+    },
+    "Evan Mobley": {
+     "rank": 7,
+     "bonus": 8.02
+    },
+    "Joel Embiid": {
+     "rank": 19,
+     "bonus": 2.87
+    },
+    "Anthony Davis": {
+     "rank": 14,
+     "bonus": 6.81
+    },
+    "Karl-Anthony Towns": {
+     "rank": 16,
+     "bonus": 4.46
+    },
+    "Domantas Sabonis": {
+     "rank": 63,
+     "bonus": 4.6
+    },
+    "Ivica Zubac": {
+     "rank": 54,
+     "bonus": 8.02
+    },
+    "Rudy Gobert": {
+     "rank": 25,
+     "bonus": 8.57
+    },
+    "Jarrett Allen": {
+     "rank": 31,
+     "bonus": 6.78
+    },
+    "Isaiah Hartenstein": {
+     "rank": 32,
+     "bonus": 6.94
+    },
+    "Zach Edey": {
+     "rank": 107,
+     "bonus": 5.31
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 7.69
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 4.05
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 4.57
+    },
+    "Bam Adebayo": {
+     "rank": 50,
+     "bonus": 2.31
+    },
+    "Alperen Sengun": {
+     "rank": 121,
+     "bonus": 3.09
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 44,
+     "bonus": 4.01
+    },
+    "Devin Booker": {
+     "rank": 40,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 38,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 11.739533509574475,
+    "max_bonus": 10.631554584152598,
+    "C_sd": 2.5916797879822613,
+    "C_iqr": 3.7191519731648848,
+    "C_p10_p90": [
+     0.9687613866053542,
+     7.896041293319707
+    ],
+    "C_mean": 4.794885016762842,
+    "PF_mean": 2.223578254315933,
+    "n_pos_bonus_min500": 223,
+    "max_same_bonus_group": 3,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      10.63
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      9.47
+     ],
+     [
+      "Clint Capela",
+      "C",
+      9.21
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      9.08
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      8.86
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      8.67
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      8.57
+     ],
+     [
+      "Jalen Smith",
+      "PF",
+      8.22
+     ],
+     [
+      "Evan Mobley",
+      "PF",
+      8.02
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      8.02
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.5087353708910132,
+     "SG": 0.599101646548867,
+     "SF": 1.1254968041183357,
+     "PF": 2.223578254315933,
+     "C": 4.794885016762842
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": -0.0003342087036303232,
+     "ci90": [
+      -0.008099636424645739,
+      0.007414289542630463
+     ]
+    },
+    "EPM": {
+     "mean": 0.003120866934210542,
+     "ci90": [
+      -0.0052751051094571955,
+      0.011002958356652876
+     ]
+    },
+    "2K": {
+     "mean": -0.00144375511388517,
+     "ci90": [
+      -0.00455672572711085,
+      0.0015899243232470044
+     ]
+    }
+   },
+   "checks": {
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "G3a": true,
+    "G3b": true,
+    "G4": false,
+    "G5": false,
+    "new_bigs_top10": [
+     "Chet Holmgren",
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "reject",
+   "lambda": 0.5
+  },
+  "H1-aligned": {
+   "top10": [
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Evan Mobley",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Anthony Edwards",
+     "SG",
+     11
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     12
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     13
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     14
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     15
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     16
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     17
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     18
+    ],
+    [
+     "Kevin Porter Jr.",
+     "SG",
+     19
+    ],
+    [
+     "Jimmy Butler III",
+     "SF",
+     20
+    ]
+   ],
+   "top30_drops": [
+    [
+     "Paul George",
+     24,
+     36
+    ],
+    [
+     "De'Aaron Fox",
+     25,
+     37
+    ],
+    [
+     "Tyrese Maxey",
+     26,
+     38
+    ]
+   ],
+   "ties50": [
+    7,
+    15
+   ],
+   "rho": {
+    "T": 0.7636294169619742,
+    "EPM": 0.7155098355106382,
+    "2K": 0.7824933242286475
+   },
+   "gap_T": {
+    "PG": -0.010703918722786643,
+    "SG": -0.06015350175887431,
+    "SF": -0.00980458221024259,
+    "PF": 0.006205450733752607,
+    "C": 0.08255606977572091
+   },
+   "gap_EPM": {
+    "PG": 0.0021703337823679,
+    "SG": -0.028276081424936386,
+    "SF": -0.002700561716837103,
+    "PF": 0.004368108566581857,
+    "C": 0.02891401411493591
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 6,
+     "bonus": 8.21
+    },
+    "Evan Mobley": {
+     "rank": 7,
+     "bonus": 7.44
+    },
+    "Joel Embiid": {
+     "rank": 21,
+     "bonus": 2.66
+    },
+    "Anthony Davis": {
+     "rank": 16,
+     "bonus": 6.31
+    },
+    "Karl-Anthony Towns": {
+     "rank": 18,
+     "bonus": 4.14
+    },
+    "Domantas Sabonis": {
+     "rank": 63,
+     "bonus": 4.27
+    },
+    "Ivica Zubac": {
+     "rank": 55,
+     "bonus": 7.44
+    },
+    "Rudy Gobert": {
+     "rank": 30,
+     "bonus": 7.94
+    },
+    "Jarrett Allen": {
+     "rank": 31,
+     "bonus": 6.28
+    },
+    "Isaiah Hartenstein": {
+     "rank": 35,
+     "bonus": 6.44
+    },
+    "Zach Edey": {
+     "rank": 109,
+     "bonus": 4.92
+    },
+    "Victor Wembanyama": {
+     "rank": 2,
+     "bonus": 7.12
+    },
+    "Nikola Jokić": {
+     "rank": 3,
+     "bonus": 3.76
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 4.23
+    },
+    "Bam Adebayo": {
+     "rank": 51,
+     "bonus": 2.14
+    },
+    "Alperen Sengun": {
+     "rank": 123,
+     "bonus": 2.86
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 45,
+     "bonus": 3.72
+    },
+    "Devin Booker": {
+     "rank": 40,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 38,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 10.882493974294173,
+    "max_bonus": 9.855402568173593,
+    "C_sd": 2.4024753328583723,
+    "C_iqr": 3.4476369017935706,
+    "C_p10_p90": [
+     0.8980373831433249,
+     7.319594234749482
+    ],
+    "C_mean": 4.444836522660638,
+    "PF_mean": 2.061246891473953,
+    "n_pos_bonus_min500": 223,
+    "max_same_bonus_group": 4,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      9.86
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      8.77
+     ],
+     [
+      "Clint Capela",
+      "C",
+      8.54
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      8.41
+     ],
+     [
+      "Chet Holmgren",
+      "PF",
+      8.21
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      8.03
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      7.94
+     ],
+     [
+      "Jalen Smith",
+      "PF",
+      7.62
+     ],
+     [
+      "Evan Mobley",
+      "PF",
+      7.44
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      7.44
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.47159536652086587,
+     "SG": 0.5553644915481897,
+     "SF": 1.0433303997058996,
+     "PF": 2.061246891473953,
+     "C": 4.444836522660638
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": -0.002439773433717707,
+     "ci90": [
+      -0.010056032984945272,
+      0.0047361951163356055
+     ]
+    },
+    "EPM": {
+     "mean": 0.0011020379594562923,
+     "ci90": [
+      -0.0069394805321741195,
+      0.008804647116798191
+     ]
+    },
+    "2K": {
+     "mean": -0.0013487315384651533,
+     "ci90": [
+      -0.004670317052527684,
+      0.0018584598197231561
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": true,
+    "G3": true,
+    "G3a": true,
+    "G3b": true,
+    "G4": false,
+    "G5": false,
+    "new_bigs_top10": [
+     "Chet Holmgren",
+     "Evan Mobley"
+    ]
+   },
+   "verdict": "reject",
+   "lambda": 0.46349771758045916
+  },
+  "Hq-same": {
+   "top10": [
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Anthony Edwards",
+     "SG"
+    ]
+   ],
+   "top10_nPFC": 5,
+   "rank11_20": [
+    [
+     "Kevin Durant",
+     "SF",
+     11
+    ],
+    [
+     "Evan Mobley",
+     "PF",
+     12
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     13
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     14
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     15
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     16
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     17
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     18
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     19
+    ],
+    [
+     "Kevin Porter Jr.",
+     "SG",
+     20
+    ]
+   ],
+   "top30_drops": [],
+   "ties50": [
+    9,
+    19
+   ],
+   "rho": {
+    "T": 0.760277413358788,
+    "EPM": 0.7117700782993636,
+    "2K": 0.7778933817368543
+   },
+   "gap_T": {
+    "PG": -0.016908563134978235,
+    "SG": -0.06527022705468499,
+    "SF": -0.004346361185983831,
+    "PF": 0.02092243186582808,
+    "C": 0.07607689569241725
+   },
+   "gap_EPM": {
+    "PG": -0.005201317168088619,
+    "SG": -0.031043256997455467,
+    "SF": 0.0014763070718709533,
+    "PF": 0.017599660729431723,
+    "C": 0.023728935618608667
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 9,
+     "bonus": 2.4
+    },
+    "Evan Mobley": {
+     "rank": 12,
+     "bonus": 2.15
+    },
+    "Joel Embiid": {
+     "rank": 26,
+     "bonus": 1.11
+    },
+    "Anthony Davis": {
+     "rank": 19,
+     "bonus": 5.47
+    },
+    "Karl-Anthony Towns": {
+     "rank": 16,
+     "bonus": 4.33
+    },
+    "Domantas Sabonis": {
+     "rank": 59,
+     "bonus": 4.54
+    },
+    "Ivica Zubac": {
+     "rank": 52,
+     "bonus": 7.27
+    },
+    "Rudy Gobert": {
+     "rank": 25,
+     "bonus": 8.17
+    },
+    "Jarrett Allen": {
+     "rank": 29,
+     "bonus": 5.49
+    },
+    "Isaiah Hartenstein": {
+     "rank": 34,
+     "bonus": 5.74
+    },
+    "Zach Edey": {
+     "rank": 99,
+     "bonus": 5.32
+    },
+    "Victor Wembanyama": {
+     "rank": 3,
+     "bonus": 6.77
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 3.7
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 1.22
+    },
+    "Bam Adebayo": {
+     "rank": 51,
+     "bonus": 1.28
+    },
+    "Alperen Sengun": {
+     "rank": 137,
+     "bonus": 0.78
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 54,
+     "bonus": 1.09
+    },
+    "Devin Booker": {
+     "rank": 36,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 31,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 13.491071087609763,
+    "max_bonus": 11.58902559209393,
+    "C_sd": 2.7972657152141336,
+    "C_iqr": 4.549347170339383,
+    "C_p10_p90": [
+     0.0,
+     7.245385445382533
+    ],
+    "C_mean": 3.839178576550237,
+    "PF_mean": 0.5445796074857778,
+    "n_pos_bonus_min500": 111,
+    "max_same_bonus_group": 3,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      11.59
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      9.6
+     ],
+     [
+      "Clint Capela",
+      "C",
+      9.21
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      8.98
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      8.28
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      8.17
+     ],
+     [
+      "Luke Kornet",
+      "C",
+      7.37
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      7.27
+     ],
+     [
+      "Mark Williams",
+      "C",
+      7.2
+     ],
+     [
+      "Paul Reed",
+      "C",
+      7.02
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 0.5445796074857778,
+     "C": 3.839178576550237
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": -0.005791777036903922,
+     "ci90": [
+      -0.016117072159685282,
+      0.003704867074183745
+     ]
+    },
+    "EPM": {
+     "mean": -0.0026377192518183268,
+     "ci90": [
+      -0.01240486920118446,
+      0.006945618087510063
+     ]
+    },
+    "2K": {
+     "mean": -0.0059486740302583385,
+     "ci90": [
+      -0.01121312621281632,
+      -0.001230282325053657
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": false,
+    "G3": true,
+    "G3a": true,
+    "G3b": true,
+    "G4": true,
+    "G5": true,
+    "new_bigs_top10": [
+     "Chet Holmgren"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.5
+  },
+  "Hq-aligned": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Rudy Gobert",
+     "C"
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C"
+    ],
+    [
+     "Anthony Davis",
+     "C"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ]
+   ],
+   "top10_nPFC": 7,
+   "rank11_20": [
+    [
+     "Karl-Anthony Towns",
+     "C",
+     11
+    ],
+    [
+     "Evan Mobley",
+     "PF",
+     12
+    ],
+    [
+     "Jayson Tatum",
+     "PF",
+     13
+    ],
+    [
+     "Donovan Mitchell",
+     "SG",
+     14
+    ],
+    [
+     "Jarrett Allen",
+     "C",
+     15
+    ],
+    [
+     "Isaiah Hartenstein",
+     "C",
+     16
+    ],
+    [
+     "Luke Kornet",
+     "C",
+     17
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     18
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     19
+    ],
+    [
+     "Robert Williams III",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops": [
+    [
+     "Kevin Porter Jr.",
+     16,
+     27
+    ],
+    [
+     "Desmond Bane",
+     18,
+     29
+    ],
+    [
+     "Jalen Williams",
+     19,
+     30
+    ],
+    [
+     "Jimmy Butler III",
+     20,
+     32
+    ],
+    [
+     "Jamal Murray",
+     21,
+     33
+    ],
+    [
+     "LeBron James",
+     22,
+     34
+    ],
+    [
+     "Paul George",
+     24,
+     38
+    ],
+    [
+     "De'Aaron Fox",
+     25,
+     39
+    ],
+    [
+     "Tyrese Maxey",
+     26,
+     40
+    ],
+    [
+     "Derrick White",
+     27,
+     41
+    ],
+    [
+     "Jaylen Brown",
+     28,
+     43
+    ],
+    [
+     "Devin Booker",
+     30,
+     44
+    ]
+   ],
+   "ties50": [
+    4,
+    9
+   ],
+   "rho": {
+    "T": 0.7742121450840886,
+    "EPM": 0.7196851765725922,
+    "2K": 0.7725988227853109
+   },
+   "gap_T": {
+    "PG": -0.00014513788098693864,
+    "SG": -0.04771346338343461,
+    "SF": 0.00899595687331536,
+    "PF": 0.0261215932914046,
+    "C": 0.021573513705945173
+   },
+   "gap_EPM": {
+    "PG": 0.010926508007783269,
+    "SG": -0.014026717557251904,
+    "SF": 0.015231168082961268,
+    "PF": 0.023112807463952514,
+    "C": -0.02949013394786117
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 10,
+     "bonus": 4.68
+    },
+    "Evan Mobley": {
+     "rank": 12,
+     "bonus": 4.19
+    },
+    "Joel Embiid": {
+     "rank": 28,
+     "bonus": 2.17
+    },
+    "Anthony Davis": {
+     "rank": 8,
+     "bonus": 10.66
+    },
+    "Karl-Anthony Towns": {
+     "rank": 11,
+     "bonus": 8.44
+    },
+    "Domantas Sabonis": {
+     "rank": 45,
+     "bonus": 8.86
+    },
+    "Ivica Zubac": {
+     "rank": 26,
+     "bonus": 14.18
+    },
+    "Rudy Gobert": {
+     "rank": 6,
+     "bonus": 15.93
+    },
+    "Jarrett Allen": {
+     "rank": 15,
+     "bonus": 10.71
+    },
+    "Isaiah Hartenstein": {
+     "rank": 16,
+     "bonus": 11.18
+    },
+    "Zach Edey": {
+     "rank": 69,
+     "bonus": 10.37
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 13.2
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 7.22
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 2.38
+    },
+    "Bam Adebayo": {
+     "rank": 56,
+     "bonus": 2.5
+    },
+    "Alperen Sengun": {
+     "rank": 135,
+     "bonus": 1.53
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 61,
+     "bonus": 2.13
+    },
+    "Devin Booker": {
+     "rank": 44,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 40,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 26.297633167559844,
+    "max_bonus": 22.590048025930667,
+    "C_sd": 5.45260396103407,
+    "C_iqr": 8.867869886723561,
+    "C_p10_p90": [
+     0.0,
+     14.123155038093032
+    ],
+    "C_mean": 7.483565182870902,
+    "PF_mean": 1.0615283734845413,
+    "n_pos_bonus_min500": 111,
+    "max_same_bonus_group": 3,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      22.59
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      18.72
+     ],
+     [
+      "Clint Capela",
+      "C",
+      17.96
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      17.5
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      16.14
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      15.93
+     ],
+     [
+      "Luke Kornet",
+      "C",
+      14.36
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      14.18
+     ],
+     [
+      "Mark Williams",
+      "C",
+      14.04
+     ],
+     [
+      "Paul Reed",
+      "C",
+      13.69
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 1.0615283734845413,
+     "C": 7.483565182870902
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": 0.008142954688396764,
+     "ci90": [
+      -0.007017041398791329,
+      0.023980229067770267
+     ]
+    },
+    "EPM": {
+     "mean": 0.005277379021410344,
+     "ci90": [
+      -0.007112392733133893,
+      0.01928796462111462
+     ]
+    },
+    "2K": {
+     "mean": -0.011243232981801743,
+     "ci90": [
+      -0.017213804234974338,
+      -0.005998127320364416
+     ]
+    }
+   },
+   "checks": {
+    "G1": true,
+    "G2": false,
+    "G3": true,
+    "G3a": true,
+    "G3b": true,
+    "G4": true,
+    "G5": false,
+    "new_bigs_top10": [
+     "Rudy Gobert",
+     "Kristaps Porziņģis",
+     "Anthony Davis",
+     "Chet Holmgren"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.9746310354747024
+  },
+  "H3q-same": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ],
+    [
+     "Chet Holmgren",
+     "PF"
+    ],
+    [
+     "Joel Embiid",
+     "C"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Anthony Edwards",
+     "SG",
+     11
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     12
+    ],
+    [
+     "Anthony Davis",
+     "C",
+     13
+    ],
+    [
+     "Evan Mobley",
+     "PF",
+     14
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     15
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     16
+    ],
+    [
+     "Ty Jerome",
+     "PG",
+     17
+    ],
+    [
+     "Austin Reaves",
+     "SG",
+     18
+    ],
+    [
+     "Cade Cunningham",
+     "PG",
+     19
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     20
+    ]
+   ],
+   "top30_drops": [],
+   "ties50": [
+    8,
+    17
+   ],
+   "rho": {
+    "T": 0.7664013976404555,
+    "EPM": 0.7133065921256212,
+    "2K": 0.7797402707219756
+   },
+   "gap_T": {
+    "PG": -0.010050798258345428,
+    "SG": -0.05788295490885833,
+    "SF": 0.00249326145552561,
+    "PF": 0.026918238993710687,
+    "C": 0.04880740477038093
+   },
+   "gap_EPM": {
+    "PG": 0.002394851070199078,
+    "SG": -0.023155216284987283,
+    "SF": 0.008497767535647415,
+    "PF": 0.02404580152671756,
+    "C": -0.005005041048538096
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 9,
+     "bonus": 1.91
+    },
+    "Evan Mobley": {
+     "rank": 14,
+     "bonus": 1.74
+    },
+    "Joel Embiid": {
+     "rank": 10,
+     "bonus": 4.47
+    },
+    "Anthony Davis": {
+     "rank": 13,
+     "bonus": 7.22
+    },
+    "Karl-Anthony Towns": {
+     "rank": 16,
+     "bonus": 4.47
+    },
+    "Domantas Sabonis": {
+     "rank": 62,
+     "bonus": 4.35
+    },
+    "Ivica Zubac": {
+     "rank": 52,
+     "bonus": 7.98
+    },
+    "Rudy Gobert": {
+     "rank": 26,
+     "bonus": 8.29
+    },
+    "Jarrett Allen": {
+     "rank": 24,
+     "bonus": 7.17
+    },
+    "Isaiah Hartenstein": {
+     "rank": 28,
+     "bonus": 7.29
+    },
+    "Zach Edey": {
+     "rank": 104,
+     "bonus": 4.98
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 7.77
+    },
+    "Nikola Jokić": {
+     "rank": 3,
+     "bonus": 4.01
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 0.99
+    },
+    "Bam Adebayo": {
+     "rank": 47,
+     "bonus": 2.85
+    },
+    "Alperen Sengun": {
+     "rank": 99,
+     "bonus": 4.68
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 56,
+     "bonus": 0.86
+    },
+    "Devin Booker": {
+     "rank": 38,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 33,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 10.122209492475612,
+    "max_bonus": 9.492842740197865,
+    "C_sd": 2.2025441149623344,
+    "C_iqr": 3.07659831929692,
+    "C_p10_p90": [
+     2.514041332760411,
+     7.891493765921034
+    ],
+    "C_mean": 5.401282113468154,
+    "PF_mean": 0.5262194113037444,
+    "n_pos_bonus_min500": 123,
+    "max_same_bonus_group": 3,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      9.49
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      8.83
+     ],
+     [
+      "Clint Capela",
+      "C",
+      8.67
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      8.6
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      8.37
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      8.29
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      7.98
+     ],
+     [
+      "Mark Williams",
+      "C",
+      7.92
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      7.86
+     ],
+     [
+      "Paul Reed",
+      "C",
+      7.84
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 0.5262194113037444,
+     "C": 5.401282113468154
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": 0.00033220724476357155,
+     "ci90": [
+      -0.006329094591951229,
+      0.0069843793078941665
+     ]
+    },
+    "EPM": {
+     "mean": -0.0011012054255606918,
+     "ci90": [
+      -0.0069825972822365355,
+      0.005264167615909604
+     ]
+    },
+    "2K": {
+     "mean": -0.00410178504513703,
+     "ci90": [
+      -0.007408641175072767,
+      -0.0009561815204514829
+     ]
+    }
+   },
+   "checks": {
+    "G1": false,
+    "G2": true,
+    "G3": false,
+    "G3a": true,
+    "G3b": false,
+    "G4": false,
+    "G5": true,
+    "new_bigs_top10": [
+     "Chet Holmgren",
+     "Joel Embiid"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.5
+  },
+  "H3q-aligned": {
+   "top10": [
+    [
+     "Victor Wembanyama",
+     "C"
+    ],
+    [
+     "Nikola Jokić",
+     "C"
+    ],
+    [
+     "Shai Gilgeous-Alexander",
+     "PG"
+    ],
+    [
+     "Luka Dončić",
+     "PG"
+    ],
+    [
+     "Giannis Antetokounmpo",
+     "PF"
+    ],
+    [
+     "Kawhi Leonard",
+     "SF"
+    ],
+    [
+     "Anthony Davis",
+     "C"
+    ],
+    [
+     "Joel Embiid",
+     "C"
+    ],
+    [
+     "Donovan Mitchell",
+     "SG"
+    ],
+    [
+     "Jayson Tatum",
+     "PF"
+    ]
+   ],
+   "top10_nPFC": 6,
+   "rank11_20": [
+    [
+     "Chet Holmgren",
+     "PF",
+     11
+    ],
+    [
+     "Karl-Anthony Towns",
+     "C",
+     12
+    ],
+    [
+     "Kristaps Porziņģis",
+     "C",
+     13
+    ],
+    [
+     "Rudy Gobert",
+     "C",
+     14
+    ],
+    [
+     "Jarrett Allen",
+     "C",
+     15
+    ],
+    [
+     "Evan Mobley",
+     "PF",
+     16
+    ],
+    [
+     "Anthony Edwards",
+     "SG",
+     17
+    ],
+    [
+     "Kevin Durant",
+     "SF",
+     18
+    ],
+    [
+     "Isaiah Hartenstein",
+     "C",
+     19
+    ],
+    [
+     "Stephen Curry",
+     "PG",
+     20
+    ]
+   ],
+   "top30_drops": [
+    [
+     "LeBron James",
+     22,
+     33
+    ],
+    [
+     "Paul George",
+     24,
+     36
+    ],
+    [
+     "De'Aaron Fox",
+     25,
+     37
+    ],
+    [
+     "Tyrese Maxey",
+     26,
+     39
+    ],
+    [
+     "Derrick White",
+     27,
+     40
+    ],
+    [
+     "Jaylen Brown",
+     28,
+     42
+    ],
+    [
+     "Devin Booker",
+     30,
+     43
+    ]
+   ],
+   "ties50": [
+    7,
+    16
+   ],
+   "rho": {
+    "T": 0.7757035200907723,
+    "EPM": 0.7169913926705085,
+    "2K": 0.7771387196151573
+   },
+   "gap_T": {
+    "PG": 8.540177112501205e-18,
+    "SG": -0.04665813879117364,
+    "SF": 0.011623989218328834,
+    "PF": 0.0341299790356394,
+    "C": 0.010679957280170882
+   },
+   "gap_EPM": {
+    "PG": 0.012198772638826525,
+    "SG": -0.012690839694656486,
+    "SF": 0.018075759758029677,
+    "PF": 0.03117048346055981,
+    "C": -0.041912717845311837
+   },
+   "show": {
+    "Chet Holmgren": {
+     "rank": 11,
+     "bonus": 2.73
+    },
+    "Evan Mobley": {
+     "rank": 16,
+     "bonus": 2.5
+    },
+    "Joel Embiid": {
+     "rank": 8,
+     "bonus": 6.41
+    },
+    "Anthony Davis": {
+     "rank": 7,
+     "bonus": 10.36
+    },
+    "Karl-Anthony Towns": {
+     "rank": 12,
+     "bonus": 6.41
+    },
+    "Domantas Sabonis": {
+     "rank": 57,
+     "bonus": 6.24
+    },
+    "Ivica Zubac": {
+     "rank": 35,
+     "bonus": 11.44
+    },
+    "Rudy Gobert": {
+     "rank": 14,
+     "bonus": 11.89
+    },
+    "Jarrett Allen": {
+     "rank": 15,
+     "bonus": 10.29
+    },
+    "Isaiah Hartenstein": {
+     "rank": 19,
+     "bonus": 10.46
+    },
+    "Zach Edey": {
+     "rank": 90,
+     "bonus": 7.14
+    },
+    "Victor Wembanyama": {
+     "rank": 1,
+     "bonus": 11.14
+    },
+    "Nikola Jokić": {
+     "rank": 2,
+     "bonus": 5.76
+    },
+    "Giannis Antetokounmpo": {
+     "rank": 5,
+     "bonus": 1.41
+    },
+    "Bam Adebayo": {
+     "rank": 44,
+     "bonus": 4.09
+    },
+    "Alperen Sengun": {
+     "rank": 86,
+     "bonus": 6.72
+    },
+    "Jaren Jackson Jr.": {
+     "rank": 60,
+     "bonus": 1.24
+    },
+    "Devin Booker": {
+     "rank": 43,
+     "bonus": 0.0
+    },
+    "Tyrese Maxey": {
+     "rank": 39,
+     "bonus": 0.0
+    }
+   },
+   "disc": {
+    "n_near_cap": 0,
+    "near_cap_names": [],
+    "cap_C": 14.515317634453993,
+    "max_bonus": 13.61280140766901,
+    "C_sd": 3.158463323283433,
+    "C_iqr": 4.4118630296496715,
+    "C_p10_p90": [
+     3.605152463826201,
+     11.316456027491501
+    ],
+    "C_mean": 7.745475488189137,
+    "PF_mean": 0.7546022344397396,
+    "n_pos_bonus_min500": 123,
+    "max_same_bonus_group": 3,
+    "top10_bonus": [
+     [
+      "Donovan Clingan",
+      "C",
+      13.61
+     ],
+     [
+      "Moussa Cisse",
+      "C",
+      12.66
+     ],
+     [
+      "Clint Capela",
+      "C",
+      12.43
+     ],
+     [
+      "Dylan Cardwell",
+      "C",
+      12.33
+     ],
+     [
+      "Jonas Valanciunas",
+      "C",
+      12.0
+     ],
+     [
+      "Rudy Gobert",
+      "C",
+      11.89
+     ],
+     [
+      "Ivica Zubac",
+      "C",
+      11.44
+     ],
+     [
+      "Mark Williams",
+      "C",
+      11.35
+     ],
+     [
+      "Robert Williams III",
+      "C",
+      11.26
+     ],
+     [
+      "Paul Reed",
+      "C",
+      11.25
+     ]
+    ],
+    "pos_mean_min500": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0,
+     "PF": 0.7546022344397396,
+     "C": 7.745475488189137
+    }
+   },
+   "drho_vs_A": {
+    "T": {
+     "mean": 0.00963432969508038,
+     "ci90": [
+      -0.00045229873603046527,
+      0.02043210432773036
+     ]
+    },
+    "EPM": {
+     "mean": 0.0025835951193265982,
+     "ci90": [
+      -0.005869821834573252,
+      0.01222717300613899
+     ]
+    },
+    "2K": {
+     "mean": -0.006703336151955286,
+     "ci90": [
+      -0.01092019158617703,
+      -0.0028029331002257466
+     ]
+    }
+   },
+   "checks": {
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "G3a": true,
+    "G3b": false,
+    "G4": false,
+    "G5": false,
+    "new_bigs_top10": [
+     "Anthony Davis",
+     "Joel Embiid"
+    ]
+   },
+   "verdict": "control",
+   "lambda": 0.7170034193248034
+  }
+ },
+ "pick": "H-same",
+ "ref_ranks": {
+  "Chet Holmgren": {
+   "T": 6,
+   "EPM": null,
+   "2K": 36,
+   "pos": "PF",
+   "MIN": 1997.0,
+   "rank_0213a": 15
+  },
+  "Evan Mobley": {
+   "T": 15,
+   "EPM": 34,
+   "2K": 26,
+   "pos": "PF",
+   "MIN": 2074.0,
+   "rank_0213a": 17
+  },
+  "Joel Embiid": {
+   "T": 210,
+   "EPM": 15,
+   "2K": 16,
+   "pos": "C",
+   "MIN": 1201.0,
+   "rank_0213a": 23
+  },
+  "Anthony Davis": {
+   "T": 8,
+   "EPM": 39,
+   "2K": 20,
+   "pos": "C",
+   "MIN": 626.0,
+   "rank_0213a": 41
+  },
+  "Karl-Anthony Towns": {
+   "T": 7,
+   "EPM": 32,
+   "2K": 13,
+   "pos": "C",
+   "MIN": 2322.0,
+   "rank_0213a": 29
+  },
+  "Domantas Sabonis": {
+   "T": 66,
+   "EPM": 190,
+   "2K": 54,
+   "pos": "C",
+   "MIN": 564.0,
+   "rank_0213a": 81
+  },
+  "Ivica Zubac": {
+   "T": 93,
+   "EPM": 167,
+   "2K": 61,
+   "pos": "C",
+   "MIN": 1447.0,
+   "rank_0213a": 93
+  },
+  "Rudy Gobert": {
+   "T": 54,
+   "EPM": 12,
+   "2K": 59,
+   "pos": "C",
+   "MIN": 2380.0,
+   "rank_0213a": 57
+  },
+  "Jarrett Allen": {
+   "T": 20,
+   "EPM": 26,
+   "2K": 51,
+   "pos": "C",
+   "MIN": 1519.0,
+   "rank_0213a": 48
+  },
+  "Isaiah Hartenstein": {
+   "T": 44,
+   "EPM": 17,
+   "2K": 87,
+   "pos": "C",
+   "MIN": 1137.0,
+   "rank_0213a": 54
+  },
+  "Zach Edey": {
+   "T": 32,
+   "EPM": 18,
+   "2K": 116,
+   "pos": "C",
+   "MIN": 284.0,
+   "rank_0213a": 151
+  },
+  "Victor Wembanyama": {
+   "T": 1,
+   "EPM": 1,
+   "2K": 2,
+   "pos": "C",
+   "MIN": 1866.0,
+   "rank_0213a": 4
+  },
+  "Nikola Jokić": {
+   "T": 2,
+   "EPM": 3,
+   "2K": 3,
+   "pos": "C",
+   "MIN": 2265.0,
+   "rank_0213a": 2
+  },
+  "Giannis Antetokounmpo": {
+   "T": 3,
+   "EPM": 10,
+   "2K": 5,
+   "pos": "PF",
+   "MIN": 1039.0,
+   "rank_0213a": 5
+  },
+  "Bam Adebayo": {
+   "T": 25,
+   "EPM": 99,
+   "2K": 33,
+   "pos": "C",
+   "MIN": 2365.0,
+   "rank_0213a": 47
+  },
+  "Alperen Sengun": {
+   "T": 16,
+   "EPM": 20,
+   "2K": 34,
+   "pos": "C",
+   "MIN": 2398.0,
+   "rank_0213a": 135
+  },
+  "Jaren Jackson Jr.": {
+   "T": 131,
+   "EPM": 91,
+   "2K": 39,
+   "pos": "PF",
+   "MIN": 1455.0,
+   "rank_0213a": 50
+  },
+  "Devin Booker": {
+   "T": 110,
+   "EPM": 69,
+   "2K": 18,
+   "pos": "SG",
+   "MIN": 2146.0,
+   "rank_0213a": 30
+  },
+  "Tyrese Maxey": {
+   "T": 38,
+   "EPM": 43,
+   "2K": 15,
+   "pos": "PG",
+   "MIN": 2661.0,
+   "rank_0213a": 26
+  }
+ }
+}

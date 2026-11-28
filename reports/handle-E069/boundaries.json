@@ -1,0 +1,74 @@
+{
+  "2020-21": {
+    "D1": "2021-03-01",
+    "H2From": "2021-03-02",
+    "gamesOnD1": 7,
+    "gamesOnD1InRuleH2": 4,
+    "nGames": 1080,
+    "nH1ByDate": 508,
+    "nH1Rule": 504,
+    "nH2ByDate": 572,
+    "seasonFirst": "2020-12-22",
+    "seasonLast": "2021-05-16"
+  },
+  "2021-22": {
+    "D1": "2022-01-07",
+    "H2From": "2022-01-08",
+    "gamesOnD1": 9,
+    "gamesOnD1InRuleH2": 5,
+    "nGames": 1230,
+    "nH1ByDate": 579,
+    "nH1Rule": 574,
+    "nH2ByDate": 651,
+    "seasonFirst": "2021-10-19",
+    "seasonLast": "2022-04-10"
+  },
+  "2022-23": {
+    "D1": "2023-01-04",
+    "H2From": "2023-01-05",
+    "gamesOnD1": 12,
+    "gamesOnD1InRuleH2": 1,
+    "nGames": 1230,
+    "nH1ByDate": 575,
+    "nH1Rule": 574,
+    "nH2ByDate": 655,
+    "seasonFirst": "2022-10-18",
+    "seasonLast": "2023-04-09"
+  },
+  "2023-24": {
+    "D1": "2024-01-13",
+    "H2From": "2024-01-14",
+    "gamesOnD1": 8,
+    "gamesOnD1InRuleH2": 5,
+    "nGames": 1230,
+    "nH1ByDate": 579,
+    "nH1Rule": 574,
+    "nH2ByDate": 651,
+    "seasonFirst": "2023-10-24",
+    "seasonLast": "2024-04-14"
+  },
+  "2024-25": {
+    "D1": "2025-01-13",
+    "H2From": "2025-01-14",
+    "gamesOnD1": 6,
+    "gamesOnD1InRuleH2": 5,
+    "nGames": 1230,
+    "nH1ByDate": 579,
+    "nH1Rule": 574,
+    "nH2ByDate": 651,
+    "seasonFirst": "2024-10-22",
+    "seasonLast": "2025-04-13"
+  },
+  "2025-26": {
+    "D1": "2026-01-11",
+    "H2From": "2026-01-12",
+    "gamesOnD1": 10,
+    "gamesOnD1InRuleH2": 8,
+    "nGames": 1230,
+    "nH1ByDate": 582,
+    "nH1Rule": 574,
+    "nH2ByDate": 648,
+    "seasonFirst": "2025-10-21",
+    "seasonLast": "2026-04-12"
+  }
+}

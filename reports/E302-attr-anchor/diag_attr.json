@@ -1,0 +1,143 @@
+{
+ "r0": {
+  "long": {
+   "rho_rt": 0.354,
+   "absd_med": 2.0
+  },
+  "mid": {
+   "rho_rt": 0.087,
+   "absd_med": 0.2
+  },
+  "short": {
+   "rho_rt": 0.18,
+   "absd_med": 1.1
+  },
+  "ft": {
+   "rho_rt": 0.068,
+   "absd_med": 0.6
+  },
+  "drive": {
+   "rho_rt": 0.078,
+   "absd_med": 0.5
+  },
+  "foulDraw": {
+   "rho_rt": 0.133,
+   "absd_med": 0.9
+  },
+  "pass": {
+   "rho_rt": 0.213,
+   "absd_med": 0.5
+  },
+  "rebound": {
+   "rho_rt": 0.148,
+   "absd_med": 0.5
+  },
+  "creation": {
+   "rho_rt": 0.094,
+   "absd_med": 0.4
+  },
+  "threeValue": {
+   "rho_rt": 0.387,
+   "absd_med": 2.1
+  },
+  "predNew": {
+   "rho_rt": 0.488,
+   "absd_med": 0.044
+  },
+  "n": 2219
+ },
+ "ra": {
+  "long": {
+   "rho_rt": 0.354,
+   "absd_med": 2.0
+  },
+  "mid": {
+   "rho_rt": 0.087,
+   "absd_med": 0.2
+  },
+  "short": {
+   "rho_rt": 0.182,
+   "absd_med": 1.3
+  },
+  "ft": {
+   "rho_rt": 0.07,
+   "absd_med": 1.1
+  },
+  "drive": {
+   "rho_rt": 0.052,
+   "absd_med": 1.3
+  },
+  "foulDraw": {
+   "rho_rt": 0.134,
+   "absd_med": 2.4
+  },
+  "pass": {
+   "rho_rt": 0.217,
+   "absd_med": 2.4
+  },
+  "rebound": {
+   "rho_rt": 0.141,
+   "absd_med": 1.9
+  },
+  "creation": {
+   "rho_rt": 0.087,
+   "absd_med": 1.8
+  },
+  "threeValue": {
+   "rho_rt": 0.387,
+   "absd_med": 2.1
+  },
+  "predNew": {
+   "rho_rt": 0.473,
+   "absd_med": 0.072
+  },
+  "n": 2219
+ },
+ "rap": {
+  "long": {
+   "rho_rt": 0.316,
+   "absd_med": 0.8
+  },
+  "mid": {
+   "rho_rt": 0.063,
+   "absd_med": 0.1
+  },
+  "short": {
+   "rho_rt": 0.179,
+   "absd_med": 0.9
+  },
+  "ft": {
+   "rho_rt": 0.07,
+   "absd_med": 0.9
+  },
+  "drive": {
+   "rho_rt": 0.035,
+   "absd_med": 1.1
+  },
+  "foulDraw": {
+   "rho_rt": 0.137,
+   "absd_med": 2.3
+  },
+  "pass": {
+   "rho_rt": 0.216,
+   "absd_med": 2.4
+  },
+  "rebound": {
+   "rho_rt": 0.142,
+   "absd_med": 1.9
+  },
+  "creation": {
+   "rho_rt": 0.087,
+   "absd_med": 1.8
+  },
+  "threeValue": {
+   "rho_rt": 0.374,
+   "absd_med": 0.9
+  },
+  "predNew": {
+   "rho_rt": 0.411,
+   "absd_med": 0.059
+  },
+  "n": 2219
+ }
+}

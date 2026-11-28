@@ -1,0 +1,126 @@
+{
+ "version": "card 0.2.9",
+ "baseVersion": "card 0.2.8",
+ "players": 582,
+ "change": "E-158 Y0：用人層設計矩陣拿掉 y·d·L（≤23 歲×E-147 連續爛隊度×時間）一欄後重擬合；rapm1 不換、校準部件卡同 0.2.8。",
+ "prereg_verdict": "E-158 預註冊 Y1、Y0 都過，依規則取 Y0（年輕 C 差 +0.106、下界 +0.035；全體 +0.001）；使用者 2026-11-01 裁定採用（R-104）。",
+ "version_rule": "PATCH：前 20 名換 1 人，但前 300 名移動 ≥10 名 160 人（> 30），不符字母版；全體 C 沒有變準，不升 MINOR。",
+ "key_players_2025_26": {
+  "Cooper Flagg": {
+   "0.2.8": [
+    70.6,
+    195
+   ],
+   "0.2.9": [
+    77.6,
+    79
+   ]
+  },
+  "Kon Knueppel": {
+   "0.2.8": [
+    83.5,
+    33
+   ],
+   "0.2.9": [
+    77.0,
+    87
+   ]
+  },
+  "Paolo Banchero": {
+   "0.2.8": [
+    79.8,
+    65
+   ],
+   "0.2.9": [
+    72.7,
+    158
+   ]
+  },
+  "Stephon Castle": {
+   "0.2.8": [
+    79.1,
+    69
+   ],
+   "0.2.9": [
+    72.7,
+    157
+   ]
+  },
+  "Dylan Harper": {
+   "0.2.8": [
+    77.3,
+    85
+   ],
+   "0.2.9": [
+    72.5,
+    165
+   ]
+  },
+  "Brandin Podziemski": {
+   "0.2.8": [
+    85.0,
+    24
+   ],
+   "0.2.9": [
+    79.2,
+    61
+   ]
+  },
+  "Kyshawn George": {
+   "0.2.8": [
+    55.0,
+    475
+   ],
+   "0.2.9": [
+    72.7,
+    162
+   ]
+  },
+  "Keyonte George": {
+   "0.2.8": [
+    45.8,
+    568
+   ],
+   "0.2.9": [
+    62.5,
+    291
+   ]
+  },
+  "Shai Gilgeous-Alexander": {
+   "0.2.8": [
+    118.5,
+    1
+   ],
+   "0.2.9": [
+    119.4,
+    1
+   ]
+  },
+  "Nikola Jokić": {
+   "0.2.8": [
+    94.8,
+    7
+   ],
+   "0.2.9": [
+    95.2,
+    6
+   ]
+  }
+ },
+ "top20": {
+  "out": [
+   "Amen Thompson"
+  ],
+  "in": [
+   "Ty Jerome"
+  ]
+ },
+ "sources_sha256": {
+  "reports/card-0.2.8/ranking.csv": "e920a840e55d7d32cb378100b2ea47b8d87a1d27587d934ea1cc8b8ec981278e",
+  "reports/card-0.2.8+E158-young-under-T6/ranking-Y0-2025-26.csv": "032889088a08064bf045d479f8bad442d9f288f690bc7f851f6651f66c334eae",
+  "reports/card-0.2.8+E158-young-under-T6/results.json": "fbc451bfd9eaae841a548c5783aa1281150df0f3b8225146eb127436db8fff9a",
+  "reports/card-0.2.8+E158-young-under-T6/preregistration.md": "922e3aa8f7e291cd4f637f42fcbb5c8b336f1db2652e6adad16adb1d9f4b2ce1"
+ },
+ "generator": "reports/card-0.2.9/build_card_029.py",
+ "ranking_csv_sha256": "032889088a08064bf045d479f8bad442d9f288f690bc7f851f6651f66c334eae"
+}

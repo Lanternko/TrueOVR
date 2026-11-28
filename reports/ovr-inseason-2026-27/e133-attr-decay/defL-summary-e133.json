@@ -1,0 +1,114 @@
+{
+ "cache": "C:\\Users\\柯子捷\\AppData\\Local\\Temp\\claude\\C--Users------claude-spares-spare-9JZPnL\\02deedf2-b696-4839-ac60-d61ccb610708\\scratchpad\\obs_cache.pkl",
+ "cacheSha256": "1219e3fa68e09f690d0ab1827ffd0ffbc01e08b257f742c3951e05acfe7e71dd",
+ "stints2021_22": "reports/ovr-inseason-2026-27/v3/data/derived-2021-22/stints/stints.jsonl",
+ "stints2021_22Sha256": "aad3227a7e41565e8eec855b7825fda0bfd50c066c64e2b3f28181d942ea2123",
+ "obs2021_22": 60813,
+ "lambda": 3000,
+ "shape": "L",
+ "reproduceDefLPrimary": {
+  "players": 877,
+  "samePlayers": true,
+  "maxAbsD": 0.0,
+  "maxAbsPossW": 0.0,
+  "pass": true
+ },
+ "windows": {
+  "2021-22_2022-23": {
+   "seasons": [
+    "2021-22",
+    "2022-23"
+   ],
+   "players": 708,
+   "intercept": 111.11857312527049,
+   "seasonShare": {
+    "2021-22": 0.24043529943763572,
+    "2022-23": 0.7595647005623642
+   },
+   "uCheck": {
+    "2021-22": {
+     "games": 1065,
+     "slotsFilled": 82
+    },
+    "2022-23": {
+     "games": 1108,
+     "slotsFilled": 82
+    },
+    "uMin": 0.003048780487804878,
+    "uMax": 0.9969512195121951,
+    "pass": true
+   },
+   "sha256": "5a86b99cb602d57f050355c0f18d0569516b5d408a09e06d068d411a4f83d88a"
+  },
+  "2021-22_2023-24": {
+   "seasons": [
+    "2021-22",
+    "2022-23",
+    "2023-24"
+   ],
+   "players": 815,
+   "intercept": 110.74616909282378,
+   "seasonShare": {
+    "2021-22": 0.1074250480905694,
+    "2022-23": 0.33936894739108564,
+    "2023-24": 0.5532060045183449
+   },
+   "uCheck": {
+    "2021-22": {
+     "games": 1065,
+     "slotsFilled": 82
+    },
+    "2022-23": {
+     "games": 1108,
+     "slotsFilled": 82
+    },
+    "2023-24": {
+     "games": 1093,
+     "slotsFilled": 82
+    },
+    "uMin": 0.0020325203252032522,
+    "uMax": 0.9979674796747967,
+    "pass": true
+   },
+   "sha256": "7d08d63ff66f869db68d69b1d6b48c092e7d34fc771beed82812239f2405e2c5"
+  },
+  "2021-22_2024-25": {
+   "seasons": [
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25"
+   ],
+   "players": 923,
+   "intercept": 110.12461336096283,
+   "seasonShare": {
+    "2021-22": 0.060148966794624316,
+    "2022-23": 0.190017988454082,
+    "2023-24": 0.30974870561199996,
+    "2024-25": 0.44008433913929373
+   },
+   "uCheck": {
+    "2021-22": {
+     "games": 1065,
+     "slotsFilled": 82
+    },
+    "2022-23": {
+     "games": 1108,
+     "slotsFilled": 82
+    },
+    "2023-24": {
+     "games": 1093,
+     "slotsFilled": 82
+    },
+    "2024-25": {
+     "games": 1104,
+     "slotsFilled": 82
+    },
+    "uMin": 0.001524390243902439,
+    "uMax": 0.9984756097560976,
+    "pass": true
+   },
+   "sha256": "ec3dac9ba56811851fbd3bb1bff12be879666b23f2f690e9bfb0f0445c0c63b2"
+  }
+ }
+}

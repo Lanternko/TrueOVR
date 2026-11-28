@@ -1,0 +1,28 @@
+{
+ "origin": "2025-26",
+ "swap": "T0",
+ "splitRows": {
+  "A": {
+   "in": 864,
+   "out": 864
+  },
+  "B": {
+   "in": 863,
+   "out": 863
+  }
+ },
+ "part_card_sha256": {
+  "primary": "6e644ff23f90ad65168effd2b5d99c7661edc67645a560575c2e141deeb91a73",
+  "fitA": "8a0dbc2bba393521728b3b79e1e68fd988186f653887ec0ddd1f353c95e20e56",
+  "fitB": "8b8e8d6ce0c5bfb19f6f3443a5438f307c5843e59d6de27ea7e2822dcd737373"
+ },
+ "part_equal_E131_K1": {
+  "primary": true,
+  "fitA": true,
+  "fitB": true
+ },
+ "ranking_sha256": "99466f369d53316a260f2b6d91ee056e2da8048e65d8283a68cec1322fef1655",
+ "want": "99466f369d53316a260f2b6d91ee056e2da8048e65d8283a68cec1322fef1655",
+ "pass": true,
+ "seconds": 40.7
+}

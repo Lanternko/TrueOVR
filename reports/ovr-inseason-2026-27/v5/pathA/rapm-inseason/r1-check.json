@@ -1,0 +1,155 @@
+{
+ "Y1": {
+  "0": {
+   "ref": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2014-15_2015-16.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "82": {
+   "ref": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2014-15_2016-17.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "pass": true
+ },
+ "Y2": {
+  "0": {
+   "ref": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2014-15_2016-17.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "82": {
+   "ref": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2014-15_2017-18.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "pass": true
+ },
+ "Y3": {
+  "0": {
+   "ref": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2014-15_2017-18.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "82": {
+   "ref": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2015-16_2018-19.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "pass": true
+ },
+ "Y4": {
+  "0": {
+   "ref": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2015-16_2018-19.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "82": {
+   "ref": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2016-17_2019-20.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "pass": true
+ },
+ "Y5": {
+  "0": {
+   "ref": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2016-17_2019-20.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "82": {
+   "ref": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2017-18_2020-21.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "pass": true
+ },
+ "Y6": {
+  "0": {
+   "ref": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2017-18_2020-21.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "82": {
+   "ref": "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2018-19_2021-22.csv",
+   "onlyNew": 0,
+   "onlyRef": 2,
+   "maxAbsNetDiff": 1.268,
+   "pass": false
+  },
+  "pass": false
+ },
+ "D1": {
+  "0": {
+   "ref": "reports/ovr-inseason-2026-27/v3/data/rapm-2021-22_2022-23.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "82": {
+   "ref": "reports/ovr-inseason-2026-27/v3/data/rapm-2021-22_2023-24.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "pass": true
+ },
+ "D2": {
+  "0": {
+   "ref": "reports/ovr-inseason-2026-27/v3/data/rapm-2021-22_2023-24.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "82": {
+   "ref": "reports/ovr-inseason-2026-27/v4/data/rapm-2021-22_2024-25.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "pass": true
+ },
+ "D3": {
+  "0": {
+   "ref": "reports/ovr-inseason-2026-27/v4/data/rapm-2021-22_2024-25.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "82": {
+   "ref": "reports/impact-rapm/rapm.csv",
+   "onlyNew": 0,
+   "onlyRef": 0,
+   "maxAbsNetDiff": 0.0,
+   "pass": true
+  },
+  "pass": true
+ }
+}

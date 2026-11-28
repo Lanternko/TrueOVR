@@ -1,0 +1,2417 @@
+{
+ "n_primary": {
+  "2022-23": 262,
+  "2023-24": 286,
+  "2024-25": 319,
+  "2025-26": 240
+ },
+ "weights": {
+  "2022-23": 0.3021914648212226,
+  "2023-24": 0.32987312572087657,
+  "2024-25": 0.3679354094579008
+ },
+ "arms": {
+  "K0": {
+   "folds": {
+    "2022-23": {
+     "R2": 0.535076906556756,
+     "rhoDEF_epmD": 0.604534713457714,
+     "rhoDEF_T": 0.4598642162892218,
+     "rhoDEF_rapmD": 0.3440492478342143,
+     "R2_rapm": 0.23171931911879626
+    },
+    "2023-24": {
+     "R2": 0.5092340978892078,
+     "rhoDEF_epmD": 0.7177672135310131,
+     "rhoDEF_T": 0.516558448281217,
+     "rhoDEF_rapmD": 0.42965891618009716,
+     "R2_rapm": 0.12986408637658783
+    },
+    "2024-25": {
+     "R2": 0.5589881857919746,
+     "rhoDEF_epmD": 0.7746547288105519,
+     "rhoDEF_T": 0.519486236458989,
+     "rhoDEF_rapmD": 0.4845651948896907,
+     "R2_rapm": 0.21760235895831592
+    },
+    "2025-26": {
+     "R2": 0.5745101768875681
+    }
+   },
+   "combined": {
+    "R2": 0.5353498648002577,
+    "rhoDEF_epmD": 0.7044802496959134,
+    "rhoDEF_T": 0.5005031722106363,
+    "rhoDEF_rapmD": 0.42399036923861966,
+    "R2_rapm": 0.19292588560614937
+   },
+   "missing": {
+    "2022-23": {},
+    "2023-24": {},
+    "2024-25": {},
+    "2025-26": {}
+   }
+  },
+  "K1": {
+   "folds": {
+    "2022-23": {
+     "R2": 0.5405575300781263,
+     "rhoDEF_epmD": 0.6198832926148601,
+     "rhoDEF_T": 0.5001350601741311,
+     "rhoDEF_rapmD": 0.34761098828288817,
+     "R2_rapm": 0.23401806386618462
+    },
+    "2023-24": {
+     "R2": 0.5094353326087611,
+     "rhoDEF_epmD": 0.7437802249098782,
+     "rhoDEF_T": 0.5473618641055461,
+     "rhoDEF_rapmD": 0.441829544011829,
+     "R2_rapm": 0.12877349278112965
+    },
+    "2024-25": {
+     "R2": 0.5574805475556954,
+     "rhoDEF_epmD": 0.790890607440705,
+     "rhoDEF_T": 0.5470212853793656,
+     "rhoDEF_rapmD": 0.48918421363932096,
+     "R2_rapm": 0.21469551358679037
+    },
+    "2025-26": {
+     "R2": 0.5757722660903363
+    }
+   },
+   "combined": {
+    "R2": 0.5365177308844771,
+    "rhoDEF_epmD": 0.7236732073389889,
+    "rhoDEF_T": 0.5329650160736172,
+    "rhoDEF_rapmD": 0.4307809604018953,
+    "R2_rapm": 0.19219125778838475
+   },
+   "missing": {
+    "2022-23": {
+     "blk36": 2
+    },
+    "2023-24": {
+     "blk36": 5
+    },
+    "2024-25": {
+     "blk36": 3
+    },
+    "2025-26": {
+     "blk36": 69
+    }
+   },
+   "fitted_coef": {
+    "2022-23": {
+     "blk36": {
+      "perUnit": 0.15610100856547648,
+      "perSD": 0.100000001,
+      "seSD": 3.3630343423899034e-10
+     }
+    },
+    "2023-24": {
+     "blk36": {
+      "perUnit": 0.15518653817985775,
+      "perSD": 0.100000001,
+      "seSD": 1.4668333249432423e-10
+     }
+    },
+    "2024-25": {
+     "blk36": {
+      "perUnit": 0.15593279114165556,
+      "perSD": 0.100000001,
+      "seSD": 4.163336342344337e-17
+     }
+    },
+    "2025-26": {
+     "blk36": {
+      "perUnit": 0.16810584007867438,
+      "perSD": 0.1,
+      "seSD": 4.641163644524847e-10
+     }
+    }
+   },
+   "delta": {
+    "R2": 0.001167866084219371,
+    "rhoDEF_epmD": 0.019192957643075492,
+    "rhoDEF_T": 0.0324618438629809,
+    "rhoDEF_rapmD": 0.006790591163275628,
+    "R2_rapm": -0.0007346278177646215
+   },
+   "delta_fold": {
+    "2022-23": {
+     "R2": 0.005480623521370354,
+     "rhoDEF_epmD": 0.015348579157146047,
+     "rhoDEF_T": 0.04027084388490931,
+     "rhoDEF_rapmD": 0.0035617404486738558,
+     "R2_rapm": 0.002298744747388365
+    },
+    "2023-24": {
+     "R2": 0.0002012347195532449,
+     "rhoDEF_epmD": 0.026013011378865025,
+     "rhoDEF_T": 0.030803415824329106,
+     "rhoDEF_rapmD": 0.01217062783173184,
+     "R2_rapm": -0.0010905935954581836
+    },
+    "2024-25": {
+     "R2": -0.0015076382362791962,
+     "rhoDEF_epmD": 0.01623587863015319,
+     "rhoDEF_T": 0.027535048920376615,
+     "rhoDEF_rapmD": 0.004619018749630277,
+     "R2_rapm": -0.0029068453715255516
+    },
+    "2025-26": {
+     "R2": 0.0012620892027681574
+    }
+   },
+   "ci90_dR2": [
+    -0.00027762145461980857,
+    0.002568645322195911
+   ],
+   "S2": true,
+   "S3": true,
+   "improved": {
+    "dR2>0": true,
+    "dEPMD>0": true,
+    "dT>0": true
+   },
+   "vs_base": {
+    "2022-23": {
+     "n_ovr_diff>=3": 0,
+     "max_abs_ovr_diff": 2.5
+    },
+    "2023-24": {
+     "n_ovr_diff>=3": 0,
+     "max_abs_ovr_diff": 2.5
+    },
+    "2024-25": {
+     "n_ovr_diff>=3": 0,
+     "max_abs_ovr_diff": 2.1000000000000014
+    },
+    "2025-26": {
+     "n_ovr_diff>=3": 0,
+     "max_abs_ovr_diff": 1.5
+    }
+   }
+  },
+  "K2": {
+   "folds": {
+    "2022-23": {
+     "R2": 0.54453768300429,
+     "rhoDEF_epmD": 0.6296830831674403,
+     "rhoDEF_T": 0.5292176157055688,
+     "rhoDEF_rapmD": 0.3514042618780008,
+     "R2_rapm": 0.2350518297722718
+    },
+    "2023-24": {
+     "R2": 0.5070298983622571,
+     "rhoDEF_epmD": 0.7561878429657632,
+     "rhoDEF_T": 0.5663886578619521,
+     "rhoDEF_rapmD": 0.4479584600252123,
+     "R2_rapm": 0.12804076654305863
+    },
+    "2024-25": {
+     "R2": 0.5557105097206478,
+     "rhoDEF_epmD": 0.8009167800319393,
+     "rhoDEF_T": 0.569645827916446,
+     "rhoDEF_rapmD": 0.4877798397113622,
+     "R2_rapm": 0.2117563184038686
+    },
+    "2025-26": {
+     "R2": 0.5765645513135785
+    }
+   },
+   "combined": {
+    "R2": 0.5362757514182424,
+    "rhoDEF_epmD": 0.7344165440695113,
+    "rhoDEF_T": 0.5563543143814574,
+    "rhoDEF_rapmD": 0.43343230109246994,
+    "R2_rapm": 0.19118051234427227
+   },
+   "missing": {
+    "2022-23": {
+     "blk36": 2
+    },
+    "2023-24": {
+     "blk36": 5
+    },
+    "2024-25": {
+     "blk36": 3
+    },
+    "2025-26": {
+     "blk36": 69
+    }
+   },
+   "fitted_coef": {
+    "2022-23": {
+     "blk36": {
+      "perUnit": 0.31220201556994287,
+      "perSD": 0.200000001,
+      "seSD": 4.750410505674743e-10
+     }
+    },
+    "2023-24": {
+     "blk36": {
+      "perUnit": 0.31037307480785015,
+      "perSD": 0.200000001,
+      "seSD": 3.384907675057804e-10
+     }
+    },
+    "2024-25": {
+     "blk36": {
+      "perUnit": 0.31186558072398324,
+      "perSD": 0.200000001,
+      "seSD": 1.0888526014954272e-10
+     }
+    },
+    "2025-26": {
+     "blk36": {
+      "perUnit": 0.33621168015734876,
+      "perSD": 0.2,
+      "seSD": 2.7436472061975495e-10
+     }
+    }
+   },
+   "delta": {
+    "R2": 0.0009258866179846503,
+    "rhoDEF_epmD": 0.029936294373597905,
+    "rhoDEF_T": 0.0558511421708211,
+    "rhoDEF_rapmD": 0.009441931853850283,
+    "R2_rapm": -0.0017453732618770978
+   },
+   "delta_fold": {
+    "2022-23": {
+     "R2": 0.009460776447533958,
+     "rhoDEF_epmD": 0.025148369709726226,
+     "rhoDEF_T": 0.069353399416347,
+     "rhoDEF_rapmD": 0.0073550140437864675,
+     "R2_rapm": 0.0033325106534755344
+    },
+    "2023-24": {
+     "R2": -0.002204199526950723,
+     "rhoDEF_epmD": 0.03842062943475011,
+     "rhoDEF_T": 0.04983020958073514,
+     "rhoDEF_rapmD": 0.018299543845115118,
+     "R2_rapm": -0.0018233198335292078
+    },
+    "2024-25": {
+     "R2": -0.003277676071326785,
+     "rhoDEF_epmD": 0.026262051221387472,
+     "rhoDEF_T": 0.050159591457457076,
+     "rhoDEF_rapmD": 0.0032146448216714973,
+     "R2_rapm": -0.005846040554447318
+    },
+    "2025-26": {
+     "R2": 0.002054374426010419
+    }
+   },
+   "ci90_dR2": [
+    -0.0019537930713344255,
+    0.003754936568531863
+   ],
+   "S2": true,
+   "S3": true,
+   "improved": {
+    "dR2>0": true,
+    "dEPMD>0": true,
+    "dT>0": true
+   },
+   "vs_base": {
+    "2022-23": {
+     "n_ovr_diff>=3": 3,
+     "max_abs_ovr_diff": 5.099999999999994
+    },
+    "2023-24": {
+     "n_ovr_diff>=3": 2,
+     "max_abs_ovr_diff": 5.299999999999997
+    },
+    "2024-25": {
+     "n_ovr_diff>=3": 3,
+     "max_abs_ovr_diff": 4.100000000000001
+    },
+    "2025-26": {
+     "n_ovr_diff>=3": 0,
+     "max_abs_ovr_diff": 2.700000000000003
+    }
+   }
+  },
+  "K3": {
+   "folds": {
+    "2022-23": {
+     "R2": 0.5471182016447429,
+     "rhoDEF_epmD": 0.6336671881166781,
+     "rhoDEF_T": 0.5521073004847695,
+     "rhoDEF_rapmD": 0.3508751385779261,
+     "R2_rapm": 0.23537249799893448
+    },
+    "2023-24": {
+     "R2": 0.5061663350400731,
+     "rhoDEF_epmD": 0.7601900025520051,
+     "rhoDEF_T": 0.579192391180561,
+     "rhoDEF_rapmD": 0.4481292776543097,
+     "R2_rapm": 0.1266796629951732
+    },
+    "2024-25": {
+     "R2": 0.5533772875492239,
+     "rhoDEF_epmD": 0.8062488909918969,
+     "rhoDEF_T": 0.5896885160058607,
+     "rhoDEF_rapmD": 0.48469790619270126,
+     "R2_rapm": 0.20881162365915515
+    },
+    "2025-26": {
+     "R2": 0.5750326081555129
+    }
+   },
+   "combined": {
+    "R2": 0.5359122207388535,
+    "rhoDEF_epmD": 0.7389025839017973,
+    "rhoDEF_T": 0.574869403933702,
+    "rhoDEF_rapmD": 0.43219480022147744,
+    "R2_rapm": 0.18974496659701368
+   },
+   "missing": {
+    "2022-23": {
+     "blk36": 2
+    },
+    "2023-24": {
+     "blk36": 5
+    },
+    "2024-25": {
+     "blk36": 3
+    },
+    "2025-26": {
+     "blk36": 69
+    }
+   },
+   "fitted_coef": {
+    "2022-23": {
+     "blk36": {
+      "perUnit": 0.46830302101339916,
+      "perSD": 0.3,
+      "seSD": 4.898979618961757e-10
+     }
+    },
+    "2023-24": {
+     "blk36": {
+      "perUnit": 0.4655596114358425,
+      "perSD": 0.300000001,
+      "seSD": 4.687472791854736e-10
+     }
+    },
+    "2024-25": {
+     "blk36": {
+      "perUnit": 0.46779837030631094,
+      "perSD": 0.300000001,
+      "seSD": 3.2260813019484904e-10
+     }
+    },
+    "2025-26": {
+     "blk36": {
+      "perUnit": 0.504317520236023,
+      "perSD": 0.3,
+      "seSD": 7.722694040809933e-11
+     }
+    }
+   },
+   "delta": {
+    "R2": 0.000562355938595771,
+    "rhoDEF_epmD": 0.03442233420588392,
+    "rhoDEF_T": 0.07436623172306567,
+    "rhoDEF_rapmD": 0.00820443098285778,
+    "R2_rapm": -0.0031809190091356965
+   },
+   "delta_fold": {
+    "2022-23": {
+     "R2": 0.012041295087986903,
+     "rhoDEF_epmD": 0.02913247465896407,
+     "rhoDEF_T": 0.09224308419554772,
+     "rhoDEF_rapmD": 0.0068258907437118155,
+     "R2_rapm": 0.0036531788801382192
+    },
+    "2023-24": {
+     "R2": -0.003067762849134681,
+     "rhoDEF_epmD": 0.04242278902099195,
+     "rhoDEF_T": 0.06263394289934399,
+     "rhoDEF_rapmD": 0.01847036147421255,
+     "R2_rapm": -0.0031844233814146417
+    },
+    "2024-25": {
+     "R2": -0.005610898242750739,
+     "rhoDEF_epmD": 0.03159416218134503,
+     "rhoDEF_T": 0.07020227954687175,
+     "rhoDEF_rapmD": 0.00013271130301056866,
+     "R2_rapm": -0.008790735299160773
+    },
+    "2025-26": {
+     "R2": 0.0005224312679448229
+    }
+   },
+   "ci90_dR2": [
+    -0.003714972039594022,
+    0.004630741126231263
+   ],
+   "S2": true,
+   "S3": true,
+   "improved": {
+    "dR2>0": true,
+    "dEPMD>0": true,
+    "dT>0": true
+   },
+   "vs_base": {
+    "2022-23": {
+     "n_ovr_diff>=3": 7,
+     "max_abs_ovr_diff": 7.399999999999999
+    },
+    "2023-24": {
+     "n_ovr_diff>=3": 7,
+     "max_abs_ovr_diff": 7.799999999999997
+    },
+    "2024-25": {
+     "n_ovr_diff>=3": 5,
+     "max_abs_ovr_diff": 6.199999999999996
+    },
+    "2025-26": {
+     "n_ovr_diff>=3": 5,
+     "max_abs_ovr_diff": 4.200000000000003
+    }
+   }
+  },
+  "K4": {
+   "folds": {
+    "2022-23": {
+     "R2": 0.5497766569005115,
+     "rhoDEF_epmD": 0.6343504444335463,
+     "rhoDEF_T": 0.5737326049731085,
+     "rhoDEF_rapmD": 0.3497795263979481,
+     "R2_rapm": 0.23585424704501495
+    },
+    "2023-24": {
+     "R2": 0.5029980810321145,
+     "rhoDEF_epmD": 0.7603490219664802,
+     "rhoDEF_T": 0.5864421314909463,
+     "rhoDEF_rapmD": 0.445670632320183,
+     "R2_rapm": 0.12474655126492704
+    },
+    "2024-25": {
+     "R2": 0.5517354403032866,
+     "rhoDEF_epmD": 0.8074846956881766,
+     "rhoDEF_T": 0.605808303391074,
+     "rhoDEF_rapmD": 0.47862239013426394,
+     "R2_rapm": 0.20647080154371153
+    },
+    "2025-26": {
+     "R2": 0.5730498660326389
+    }
+   },
+   "combined": {
+    "R2": 0.5350663676353716,
+    "rhoDEF_epmD": 0.739616210667279,
+    "rhoDEF_T": 0.5897269214430423,
+    "rhoDEF_rapmD": 0.42881727706189726,
+    "R2_rapm": 0.1883915940945871
+   },
+   "missing": {
+    "2022-23": {
+     "blk36": 2
+    },
+    "2023-24": {
+     "blk36": 5
+    },
+    "2024-25": {
+     "blk36": 3
+    },
+    "2025-26": {
+     "blk36": 69
+    }
+   },
+   "fitted_coef": {
+    "2022-23": {
+     "blk36": {
+      "perUnit": 0.6244040280178657,
+      "perSD": 0.4,
+      "seSD": 3.8418746470711465e-10
+     }
+    },
+    "2023-24": {
+     "blk36": {
+      "perUnit": 0.6207461465119696,
+      "perSD": 0.4,
+      "seSD": 4.928935110072469e-10
+     }
+    },
+    "2024-25": {
+     "blk36": {
+      "perUnit": 0.6237311598886386,
+      "perSD": 0.40000000100000005,
+      "seSD": 4.775939830351332e-10
+     }
+    },
+    "2025-26": {
+     "blk36": {
+      "perUnit": 0.6724233603146975,
+      "perSD": 0.4,
+      "seSD": 0.0
+     }
+    }
+   },
+   "delta": {
+    "R2": -0.0002834971648860707,
+    "rhoDEF_epmD": 0.03513596097136562,
+    "rhoDEF_T": 0.08922374923240595,
+    "rhoDEF_rapmD": 0.004826907823277604,
+    "R2_rapm": -0.004534291511562261
+   },
+   "delta_fold": {
+    "2022-23": {
+     "R2": 0.01469975034375548,
+     "rhoDEF_epmD": 0.029815730975832233,
+     "rhoDEF_T": 0.11386838868388671,
+     "rhoDEF_rapmD": 0.005730278563733815,
+     "R2_rapm": 0.0041349279262186955
+    },
+    "2023-24": {
+     "R2": -0.006236016857093296,
+     "rhoDEF_epmD": 0.042581808435467106,
+     "rhoDEF_T": 0.06988368320972926,
+     "rhoDEF_rapmD": 0.01601171614008584,
+     "R2_rapm": -0.005117535111660798
+    },
+    "2024-25": {
+     "R2": -0.007252745488688039,
+     "rhoDEF_epmD": 0.03282996687762474,
+     "rhoDEF_T": 0.0863220669320851,
+     "rhoDEF_rapmD": -0.005942804755426745,
+     "R2_rapm": -0.011131557414604393
+    },
+    "2025-26": {
+     "R2": -0.0014603108549292587
+    }
+   },
+   "ci90_dR2": [
+    -0.005853181015613995,
+    0.005054061950769876
+   ],
+   "S2": true,
+   "S3": true,
+   "improved": {
+    "dR2>0": false,
+    "dEPMD>0": true,
+    "dT>0": true
+   },
+   "vs_base": {
+    "2022-23": {
+     "n_ovr_diff>=3": 11,
+     "max_abs_ovr_diff": 9.699999999999996
+    },
+    "2023-24": {
+     "n_ovr_diff>=3": 15,
+     "max_abs_ovr_diff": 10.299999999999997
+    },
+    "2024-25": {
+     "n_ovr_diff>=3": 10,
+     "max_abs_ovr_diff": 8.299999999999997
+    },
+    "2025-26": {
+     "n_ovr_diff>=3": 9,
+     "max_abs_ovr_diff": 5.5
+    }
+   }
+  },
+  "K5": {
+   "folds": {
+    "2022-23": {
+     "R2": 0.5505986897951755,
+     "rhoDEF_epmD": 0.6338813729581964,
+     "rhoDEF_T": 0.5889817427586042,
+     "rhoDEF_rapmD": 0.35070165552872135,
+     "R2_rapm": 0.2358403922472107
+    },
+    "2023-24": {
+     "R2": 0.49872947128777295,
+     "rhoDEF_epmD": 0.7550080215035285,
+     "rhoDEF_T": 0.5924344046464597,
+     "rhoDEF_rapmD": 0.4407030709983213,
+     "R2_rapm": 0.12253272155135443
+    },
+    "2024-25": {
+     "R2": 0.5487366078611621,
+     "rhoDEF_epmD": 0.8067919352930738,
+     "rhoDEF_T": 0.6212029581817511,
+     "rhoDEF_rapmD": 0.4726925238067073,
+     "R2_rapm": 0.20339585492178827
+    },
+    "2025-26": {
+     "R2": 0.5716989184759312
+    }
+   },
+   "combined": {
+    "R2": 0.5328033026786041,
+    "rhoDEF_epmD": 0.7374577176742182,
+    "rhoDEF_T": 0.6019760092175552,
+    "rhoDEF_rapmD": 0.42527546383896714,
+    "R2_rapm": 0.18652574262111538
+   },
+   "missing": {
+    "2022-23": {
+     "blk36": 2
+    },
+    "2023-24": {
+     "blk36": 5
+    },
+    "2024-25": {
+     "blk36": 3
+    },
+    "2025-26": {
+     "blk36": 69
+    }
+   },
+   "fitted_coef": {
+    "2022-23": {
+     "blk36": {
+      "perUnit": 0.7805050350223319,
+      "perSD": 0.5,
+      "seSD": 2.48282090630461e-10
+     }
+    },
+    "2023-24": {
+     "blk36": {
+      "perUnit": 0.7759326831399619,
+      "perSD": 0.5,
+      "seSD": 3.9071215927705107e-10
+     }
+    },
+    "2024-25": {
+     "blk36": {
+      "perUnit": 0.7796639479116383,
+      "perSD": 0.5,
+      "seSD": 4.687472536332579e-10
+     }
+    },
+    "2025-26": {
+     "blk36": {
+      "perUnit": 0.8405292003933719,
+      "perSD": 0.5,
+      "seSD": 0.0
+     }
+    }
+   },
+   "delta": {
+    "R2": -0.002546562121653606,
+    "rhoDEF_epmD": 0.03297746797830481,
+    "rhoDEF_T": 0.10147283700691889,
+    "rhoDEF_rapmD": 0.0012850946003474806,
+    "R2_rapm": -0.006400142985033996
+   },
+   "delta_fold": {
+    "2022-23": {
+     "R2": 0.015521783238419462,
+     "rhoDEF_epmD": 0.02934665950048232,
+     "rhoDEF_T": 0.12911752646938235,
+     "rhoDEF_rapmD": 0.006652407694507034,
+     "R2_rapm": 0.004121073128414449
+    },
+    "2023-24": {
+     "R2": -0.010504626601434863,
+     "rhoDEF_epmD": 0.03724080797251539,
+     "rhoDEF_T": 0.07587595636524269,
+     "rhoDEF_rapmD": 0.011044154818224128,
+     "R2_rapm": -0.007331364825233402
+    },
+    "2024-25": {
+     "R2": -0.01025157793081255,
+     "rhoDEF_epmD": 0.03213720648252194,
+     "rhoDEF_T": 0.10171672172276214,
+     "rhoDEF_rapmD": -0.0118726710829834,
+     "R2_rapm": -0.01420650403652765
+    },
+    "2025-26": {
+     "R2": -0.0028112584116368744
+    }
+   },
+   "ci90_dR2": [
+    -0.009698176082570387,
+    0.0042387664945848945
+   ],
+   "S2": false,
+   "S3": true,
+   "improved": {
+    "dR2>0": false,
+    "dEPMD>0": true,
+    "dT>0": true
+   },
+   "vs_base": {
+    "2022-23": {
+     "n_ovr_diff>=3": 17,
+     "max_abs_ovr_diff": 12.099999999999994
+    },
+    "2023-24": {
+     "n_ovr_diff>=3": 25,
+     "max_abs_ovr_diff": 12.799999999999997
+    },
+    "2024-25": {
+     "n_ovr_diff>=3": 14,
+     "max_abs_ovr_diff": 10.299999999999997
+    },
+    "2025-26": {
+     "n_ovr_diff>=3": 15,
+     "max_abs_ovr_diff": 7.299999999999997
+    }
+   }
+  },
+  "KW": {
+   "folds": {
+    "2022-23": {
+     "R2": 0.5448856959394869,
+     "rhoDEF_epmD": 0.632584253544142,
+     "rhoDEF_T": 0.5428749728673757,
+     "rhoDEF_rapmD": 0.351937388633057,
+     "R2_rapm": 0.2348165292213671
+    },
+    "2023-24": {
+     "R2": 0.5035603916072977,
+     "rhoDEF_epmD": 0.7607522131270527,
+     "rhoDEF_T": 0.584569519168717,
+     "rhoDEF_rapmD": 0.4463349231000065,
+     "R2_rapm": 0.12516264172920008
+    },
+    "2024-25": {
+     "R2": 0.5497374388944933,
+     "rhoDEF_epmD": 0.8088990506890638,
+     "rhoDEF_T": 0.6160467816265944,
+     "rhoDEF_rapmD": 0.47717698290648847,
+     "R2_rapm": 0.20464720861881525
+    },
+    "2025-26": {
+     "R2": 0.5752839824299482
+    }
+   },
+   "combined": {
+    "R2": 0.533038716658796,
+    "rhoDEF_epmD": 0.7397358760700272,
+    "rhoDEF_T": 0.5835513825979113,
+    "rhoDEF_rapmD": 0.42915667978735017,
+    "R2_rapm": 0.18754429727791405
+   },
+   "missing": {
+    "2022-23": {
+     "blk36": 2
+    },
+    "2023-24": {
+     "blk36": 5
+    },
+    "2024-25": {
+     "blk36": 3
+    },
+    "2025-26": {
+     "blk36": 69
+    }
+   },
+   "fitted_coef": {
+    "2022-23": {
+     "blk36": {
+      "perUnit": 0.39739508089470776,
+      "perSD": 0.25457560365599524,
+      "seSD": 0.14738367933495702
+     }
+    },
+    "2023-24": {
+     "blk36": {
+      "perUnit": 0.5764462050005135,
+      "perSD": 0.3714537469074071,
+      "seSD": 0.14689746499937018
+     }
+    },
+    "2024-25": {
+     "blk36": {
+      "perUnit": 0.7193492678806233,
+      "perSD": 0.4613200788669462,
+      "seSD": 0.11838108832780399
+     }
+    },
+    "2025-26": {
+     "blk36": {
+      "perUnit": 0.09219631993875996,
+      "perSD": 0.05484420999033206,
+      "seSD": 0.07600438232769662
+     }
+    }
+   },
+   "delta": {
+    "R2": -0.0023111481414617163,
+    "rhoDEF_epmD": 0.035255626374113835,
+    "rhoDEF_T": 0.08304821038727495,
+    "rhoDEF_rapmD": 0.005166310548730513,
+    "R2_rapm": -0.0053815883282353205
+   },
+   "delta_fold": {
+    "2022-23": {
+     "R2": 0.009808789382730887,
+     "rhoDEF_epmD": 0.028049540086428015,
+     "rhoDEF_T": 0.08301075657815393,
+     "rhoDEF_rapmD": 0.007888140798842702,
+     "R2_rapm": 0.00309721010257083
+    },
+    "2023-24": {
+     "R2": -0.005673706281910107,
+     "rhoDEF_epmD": 0.04298499959603952,
+     "rhoDEF_T": 0.06801107088750002,
+     "rhoDEF_rapmD": 0.016676006919909336,
+     "R2_rapm": -0.004701444647387754
+    },
+    "2024-25": {
+     "R2": -0.009250746897481288,
+     "rhoDEF_epmD": 0.034244321878511896,
+     "rhoDEF_T": 0.09656054516760548,
+     "rhoDEF_rapmD": -0.00738821198320222,
+     "R2_rapm": -0.012955150339500676
+    },
+    "2025-26": {
+     "R2": 0.0007738055423800461
+    }
+   },
+   "ci90_dR2": [
+    -0.007789275841773835,
+    0.002837460086124099
+   ],
+   "S2": true,
+   "S3": true,
+   "improved": {
+    "dR2>0": false,
+    "dEPMD>0": true,
+    "dT>0": true
+   },
+   "vs_base": {
+    "2022-23": {
+     "n_ovr_diff>=3": 3,
+     "max_abs_ovr_diff": 6.299999999999997
+    },
+    "2023-24": {
+     "n_ovr_diff>=3": 12,
+     "max_abs_ovr_diff": 9.699999999999996
+    },
+    "2024-25": {
+     "n_ovr_diff>=3": 13,
+     "max_abs_ovr_diff": 9.600000000000001
+    },
+    "2025-26": {
+     "n_ovr_diff>=3": 0,
+     "max_abs_ovr_diff": 0.9000000000000057
+    }
+   }
+  },
+  "KS": {
+   "folds": {
+    "2022-23": {
+     "R2": 0.5423739771533594,
+     "rhoDEF_epmD": 0.6306979590052884,
+     "rhoDEF_T": 0.5241293442346189,
+     "rhoDEF_rapmD": 0.35492596777685814,
+     "R2_rapm": 0.23431460799923323
+    },
+    "2023-24": {
+     "R2": 0.5067565965079165,
+     "rhoDEF_epmD": 0.752148236872242,
+     "rhoDEF_T": 0.5807837449830726,
+     "rhoDEF_rapmD": 0.44659550975340445,
+     "R2_rapm": 0.12777452510332957
+    },
+    "2024-25": {
+     "R2": 0.5539293787727622,
+     "rhoDEF_epmD": 0.8027891553794286,
+     "rhoDEF_T": 0.5919244622162607,
+     "rhoDEF_rapmD": 0.4825375584077601,
+     "R2_rapm": 0.2095004791796821
+    },
+    "2025-26": {
+     "R2": 0.5745101768875681
+    }
+   },
+   "combined": {
+    "R2": 0.5348764018961424,
+    "rhoDEF_epmD": 0.7340795865869486,
+    "rhoDEF_T": 0.5677623329891766,
+    "rhoDEF_rapmD": 0.4321181089724175,
+    "R2_rapm": 0.19003990119223754
+   },
+   "missing": {
+    "2022-23": {
+     "blk36": 9
+    },
+    "2023-24": {
+     "blk36": 13
+    },
+    "2024-25": {
+     "blk36": 16
+    },
+    "2025-26": {
+     "blk36": 117
+    }
+   },
+   "fitted_coef": {
+    "2022-23": {
+     "blk36": {
+      "perUnit": 0.2951853788945444,
+      "perSD": 0.19117765525678723,
+      "seSD": 0.12869816057376265
+     }
+    },
+    "2023-24": {
+     "blk36": {
+      "perUnit": 0.3958173811926881,
+      "perSD": 0.25301863453319473,
+      "seSD": 0.1353176986040585
+     }
+    },
+    "2024-25": {
+     "blk36": {
+      "perUnit": 0.5257991224672801,
+      "perSD": 0.3248675524817216,
+      "seSD": 0.11880703186187158
+     }
+    },
+    "2025-26": {
+     "blk36": {
+      "perUnit": 0.0,
+      "perSD": 0.0,
+      "seSD": 0.0366735803146399
+     }
+    }
+   },
+   "delta": {
+    "R2": -0.0004734629041153182,
+    "rhoDEF_epmD": 0.02959933689103522,
+    "rhoDEF_T": 0.06725916077854022,
+    "rhoDEF_rapmD": 0.008127739733797823,
+    "R2_rapm": -0.0028859844139118296
+   },
+   "delta_fold": {
+    "2022-23": {
+     "R2": 0.00729707059660345,
+     "rhoDEF_epmD": 0.02616324554757432,
+     "rhoDEF_T": 0.06426512794539707,
+     "rhoDEF_rapmD": 0.010876719942643831,
+     "R2_rapm": 0.0025952888804369745
+    },
+    "2023-24": {
+     "R2": -0.002477501381291325,
+     "rhoDEF_epmD": 0.034381023341228834,
+     "rhoDEF_T": 0.06422529670185562,
+     "rhoDEF_rapmD": 0.01693659357330729,
+     "R2_rapm": -0.002089561273258267
+    },
+    "2024-25": {
+     "R2": -0.0050588070192124635,
+     "rhoDEF_epmD": 0.02813442656887677,
+     "rhoDEF_T": 0.07243822575727177,
+     "rhoDEF_rapmD": -0.002027636481930606,
+     "R2_rapm": -0.00810187977863383
+    },
+    "2025-26": {
+     "R2": 0.0
+    }
+   },
+   "ci90_dR2": [
+    -0.004419159059280997,
+    0.0033569969943633483
+   ],
+   "S2": true,
+   "S3": true,
+   "improved": {
+    "dR2>0": false,
+    "dEPMD>0": true,
+    "dT>0": true
+   },
+   "vs_base": {
+    "2022-23": {
+     "n_ovr_diff>=3": 2,
+     "max_abs_ovr_diff": 5.199999999999996
+    },
+    "2023-24": {
+     "n_ovr_diff>=3": 7,
+     "max_abs_ovr_diff": 5.800000000000004
+    },
+    "2024-25": {
+     "n_ovr_diff>=3": 8,
+     "max_abs_ovr_diff": 6.699999999999996
+    },
+    "2025-26": {
+     "n_ovr_diff>=3": 0,
+     "max_abs_ovr_diff": 0.0
+    }
+   }
+  }
+ },
+ "examples": {
+  "2024-25": {
+   "n_pop": 347,
+   "show": [
+    "Kevin Durant",
+    "Stephen Curry",
+    "Victor Wembanyama",
+    "Rudy Gobert",
+    "Anthony Davis",
+    "Bam Adebayo",
+    "Jarrett Allen",
+    "Isaiah Hartenstein",
+    "Alex Caruso",
+    "Amen Thompson",
+    "Trae Young",
+    "Brook Lopez",
+    "Herbert Jones",
+    "Jaren Jackson Jr.",
+    "Nikola Jokić",
+    "Karl-Anthony Towns",
+    "Giannis Antetokounmpo",
+    "Joel Embiid",
+    "Kristaps Porziņģis",
+    "Evan Mobley",
+    "Chet Holmgren"
+   ],
+   "by_arm": {
+    "K0": {
+     "Kevin Durant": {
+      "def_rank": 205,
+      "ovr_rank": 11
+     },
+     "Stephen Curry": {
+      "def_rank": 219,
+      "ovr_rank": 9
+     },
+     "Victor Wembanyama": {
+      "def_rank": 2,
+      "ovr_rank": 10
+     },
+     "Rudy Gobert": {
+      "def_rank": 11,
+      "ovr_rank": 59
+     },
+     "Anthony Davis": {
+      "def_rank": 17,
+      "ovr_rank": 12
+     },
+     "Bam Adebayo": {
+      "def_rank": 71,
+      "ovr_rank": 30
+     },
+     "Jarrett Allen": {
+      "def_rank": 78,
+      "ovr_rank": 23
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 40,
+      "ovr_rank": 50
+     },
+     "Alex Caruso": {
+      "def_rank": 1,
+      "ovr_rank": 44
+     },
+     "Amen Thompson": {
+      "def_rank": 43,
+      "ovr_rank": 81
+     },
+     "Trae Young": {
+      "def_rank": 246,
+      "ovr_rank": 101
+     },
+     "Brook Lopez": {
+      "def_rank": 15,
+      "ovr_rank": 81
+     },
+     "Herbert Jones": {
+      "def_rank": 6,
+      "ovr_rank": 114
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 16,
+      "ovr_rank": 40
+     },
+     "Nikola Jokić": {
+      "def_rank": 277,
+      "ovr_rank": 6
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 191,
+      "ovr_rank": 53
+     },
+     "Giannis Antetokounmpo": {
+      "def_rank": 57,
+      "ovr_rank": 2
+     },
+     "Joel Embiid": {
+      "def_rank": 87,
+      "ovr_rank": 7
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 123,
+      "ovr_rank": 15
+     },
+     "Evan Mobley": {
+      "def_rank": 54,
+      "ovr_rank": 33
+     },
+     "Chet Holmgren": {
+      "def_rank": 30,
+      "ovr_rank": 43
+     }
+    },
+    "K1": {
+     "Kevin Durant": {
+      "def_rank": 198,
+      "ovr_rank": 11
+     },
+     "Stephen Curry": {
+      "def_rank": 223,
+      "ovr_rank": 9
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 10
+     },
+     "Rudy Gobert": {
+      "def_rank": 9,
+      "ovr_rank": 62
+     },
+     "Anthony Davis": {
+      "def_rank": 17,
+      "ovr_rank": 12
+     },
+     "Bam Adebayo": {
+      "def_rank": 68,
+      "ovr_rank": 31
+     },
+     "Jarrett Allen": {
+      "def_rank": 80,
+      "ovr_rank": 24
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 36,
+      "ovr_rank": 51
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 42
+     },
+     "Amen Thompson": {
+      "def_rank": 41,
+      "ovr_rank": 81
+     },
+     "Trae Young": {
+      "def_rank": 257,
+      "ovr_rank": 101
+     },
+     "Brook Lopez": {
+      "def_rank": 15,
+      "ovr_rank": 81
+     },
+     "Herbert Jones": {
+      "def_rank": 5,
+      "ovr_rank": 110
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 13,
+      "ovr_rank": 38
+     },
+     "Nikola Jokić": {
+      "def_rank": 270,
+      "ovr_rank": 6
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 203,
+      "ovr_rank": 57
+     },
+     "Giannis Antetokounmpo": {
+      "def_rank": 63,
+      "ovr_rank": 2
+     },
+     "Joel Embiid": {
+      "def_rank": 83,
+      "ovr_rank": 7
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 112,
+      "ovr_rank": 15
+     },
+     "Evan Mobley": {
+      "def_rank": 49,
+      "ovr_rank": 34
+     },
+     "Chet Holmgren": {
+      "def_rank": 25,
+      "ovr_rank": 43
+     }
+    },
+    "K2": {
+     "Kevin Durant": {
+      "def_rank": 187,
+      "ovr_rank": 11
+     },
+     "Stephen Curry": {
+      "def_rank": 228,
+      "ovr_rank": 9
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 10
+     },
+     "Rudy Gobert": {
+      "def_rank": 8,
+      "ovr_rank": 63
+     },
+     "Anthony Davis": {
+      "def_rank": 12,
+      "ovr_rank": 12
+     },
+     "Bam Adebayo": {
+      "def_rank": 73,
+      "ovr_rank": 32
+     },
+     "Jarrett Allen": {
+      "def_rank": 86,
+      "ovr_rank": 25
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 32,
+      "ovr_rank": 50
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 42
+     },
+     "Amen Thompson": {
+      "def_rank": 35,
+      "ovr_rank": 82
+     },
+     "Trae Young": {
+      "def_rank": 266,
+      "ovr_rank": 102
+     },
+     "Brook Lopez": {
+      "def_rank": 14,
+      "ovr_rank": 82
+     },
+     "Herbert Jones": {
+      "def_rank": 5,
+      "ovr_rank": 112
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 9,
+      "ovr_rank": 37
+     },
+     "Nikola Jokić": {
+      "def_rank": 262,
+      "ovr_rank": 6
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 208,
+      "ovr_rank": 60
+     },
+     "Giannis Antetokounmpo": {
+      "def_rank": 64,
+      "ovr_rank": 2
+     },
+     "Joel Embiid": {
+      "def_rank": 74,
+      "ovr_rank": 7
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 104,
+      "ovr_rank": 14
+     },
+     "Evan Mobley": {
+      "def_rank": 50,
+      "ovr_rank": 34
+     },
+     "Chet Holmgren": {
+      "def_rank": 25,
+      "ovr_rank": 44
+     }
+    },
+    "K3": {
+     "Kevin Durant": {
+      "def_rank": 186,
+      "ovr_rank": 11
+     },
+     "Stephen Curry": {
+      "def_rank": 235,
+      "ovr_rank": 9
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 10
+     },
+     "Rudy Gobert": {
+      "def_rank": 10,
+      "ovr_rank": 69
+     },
+     "Anthony Davis": {
+      "def_rank": 9,
+      "ovr_rank": 12
+     },
+     "Bam Adebayo": {
+      "def_rank": 78,
+      "ovr_rank": 32
+     },
+     "Jarrett Allen": {
+      "def_rank": 84,
+      "ovr_rank": 25
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 31,
+      "ovr_rank": 53
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 42
+     },
+     "Amen Thompson": {
+      "def_rank": 32,
+      "ovr_rank": 82
+     },
+     "Trae Young": {
+      "def_rank": 274,
+      "ovr_rank": 101
+     },
+     "Brook Lopez": {
+      "def_rank": 11,
+      "ovr_rank": 82
+     },
+     "Herbert Jones": {
+      "def_rank": 5,
+      "ovr_rank": 112
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 6,
+      "ovr_rank": 37
+     },
+     "Nikola Jokić": {
+      "def_rank": 257,
+      "ovr_rank": 6
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 212,
+      "ovr_rank": 65
+     },
+     "Giannis Antetokounmpo": {
+      "def_rank": 66,
+      "ovr_rank": 2
+     },
+     "Joel Embiid": {
+      "def_rank": 63,
+      "ovr_rank": 7
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 99,
+      "ovr_rank": 14
+     },
+     "Evan Mobley": {
+      "def_rank": 54,
+      "ovr_rank": 33
+     },
+     "Chet Holmgren": {
+      "def_rank": 25,
+      "ovr_rank": 45
+     }
+    },
+    "K4": {
+     "Kevin Durant": {
+      "def_rank": 179,
+      "ovr_rank": 11
+     },
+     "Stephen Curry": {
+      "def_rank": 240,
+      "ovr_rank": 10
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 9
+     },
+     "Rudy Gobert": {
+      "def_rank": 11,
+      "ovr_rank": 69
+     },
+     "Anthony Davis": {
+      "def_rank": 7,
+      "ovr_rank": 12
+     },
+     "Bam Adebayo": {
+      "def_rank": 83,
+      "ovr_rank": 32
+     },
+     "Jarrett Allen": {
+      "def_rank": 86,
+      "ovr_rank": 31
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 32,
+      "ovr_rank": 49
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 41
+     },
+     "Amen Thompson": {
+      "def_rank": 33,
+      "ovr_rank": 84
+     },
+     "Trae Young": {
+      "def_rank": 282,
+      "ovr_rank": 103
+     },
+     "Brook Lopez": {
+      "def_rank": 10,
+      "ovr_rank": 85
+     },
+     "Herbert Jones": {
+      "def_rank": 8,
+      "ovr_rank": 112
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 6,
+      "ovr_rank": 35
+     },
+     "Nikola Jokić": {
+      "def_rank": 247,
+      "ovr_rank": 6
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 217,
+      "ovr_rank": 69
+     },
+     "Giannis Antetokounmpo": {
+      "def_rank": 67,
+      "ovr_rank": 2
+     },
+     "Joel Embiid": {
+      "def_rank": 52,
+      "ovr_rank": 7
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 92,
+      "ovr_rank": 14
+     },
+     "Evan Mobley": {
+      "def_rank": 53,
+      "ovr_rank": 33
+     },
+     "Chet Holmgren": {
+      "def_rank": 24,
+      "ovr_rank": 46
+     }
+    },
+    "K5": {
+     "Kevin Durant": {
+      "def_rank": 175,
+      "ovr_rank": 11
+     },
+     "Stephen Curry": {
+      "def_rank": 242,
+      "ovr_rank": 10
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 9
+     },
+     "Rudy Gobert": {
+      "def_rank": 10,
+      "ovr_rank": 72
+     },
+     "Anthony Davis": {
+      "def_rank": 7,
+      "ovr_rank": 12
+     },
+     "Bam Adebayo": {
+      "def_rank": 84,
+      "ovr_rank": 32
+     },
+     "Jarrett Allen": {
+      "def_rank": 85,
+      "ovr_rank": 30
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 33,
+      "ovr_rank": 52
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 41
+     },
+     "Amen Thompson": {
+      "def_rank": 35,
+      "ovr_rank": 89
+     },
+     "Trae Young": {
+      "def_rank": 292,
+      "ovr_rank": 103
+     },
+     "Brook Lopez": {
+      "def_rank": 8,
+      "ovr_rank": 84
+     },
+     "Herbert Jones": {
+      "def_rank": 9,
+      "ovr_rank": 111
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 6,
+      "ovr_rank": 37
+     },
+     "Nikola Jokić": {
+      "def_rank": 233,
+      "ovr_rank": 5
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 222,
+      "ovr_rank": 75
+     },
+     "Giannis Antetokounmpo": {
+      "def_rank": 70,
+      "ovr_rank": 3
+     },
+     "Joel Embiid": {
+      "def_rank": 50,
+      "ovr_rank": 7
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 83,
+      "ovr_rank": 13
+     },
+     "Evan Mobley": {
+      "def_rank": 56,
+      "ovr_rank": 33
+     },
+     "Chet Holmgren": {
+      "def_rank": 24,
+      "ovr_rank": 48
+     }
+    },
+    "KW": {
+     "Kevin Durant": {
+      "def_rank": 177,
+      "ovr_rank": 11
+     },
+     "Stephen Curry": {
+      "def_rank": 239,
+      "ovr_rank": 10
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 9
+     },
+     "Rudy Gobert": {
+      "def_rank": 11,
+      "ovr_rank": 70
+     },
+     "Anthony Davis": {
+      "def_rank": 7,
+      "ovr_rank": 12
+     },
+     "Bam Adebayo": {
+      "def_rank": 82,
+      "ovr_rank": 32
+     },
+     "Jarrett Allen": {
+      "def_rank": 86,
+      "ovr_rank": 30
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 33,
+      "ovr_rank": 52
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 41
+     },
+     "Amen Thompson": {
+      "def_rank": 34,
+      "ovr_rank": 86
+     },
+     "Trae Young": {
+      "def_rank": 289,
+      "ovr_rank": 103
+     },
+     "Brook Lopez": {
+      "def_rank": 9,
+      "ovr_rank": 84
+     },
+     "Herbert Jones": {
+      "def_rank": 8,
+      "ovr_rank": 111
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 6,
+      "ovr_rank": 35
+     },
+     "Nikola Jokić": {
+      "def_rank": 234,
+      "ovr_rank": 6
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 218,
+      "ovr_rank": 74
+     },
+     "Giannis Antetokounmpo": {
+      "def_rank": 69,
+      "ovr_rank": 3
+     },
+     "Joel Embiid": {
+      "def_rank": 50,
+      "ovr_rank": 7
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 88,
+      "ovr_rank": 14
+     },
+     "Evan Mobley": {
+      "def_rank": 54,
+      "ovr_rank": 33
+     },
+     "Chet Holmgren": {
+      "def_rank": 24,
+      "ovr_rank": 47
+     }
+    },
+    "KS": {
+     "Kevin Durant": {
+      "def_rank": 183,
+      "ovr_rank": 11
+     },
+     "Stephen Curry": {
+      "def_rank": 225,
+      "ovr_rank": 9
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 10
+     },
+     "Rudy Gobert": {
+      "def_rank": 11,
+      "ovr_rank": 71
+     },
+     "Anthony Davis": {
+      "def_rank": 6,
+      "ovr_rank": 12
+     },
+     "Bam Adebayo": {
+      "def_rank": 88,
+      "ovr_rank": 32
+     },
+     "Jarrett Allen": {
+      "def_rank": 93,
+      "ovr_rank": 27
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 38,
+      "ovr_rank": 52
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 41
+     },
+     "Amen Thompson": {
+      "def_rank": 29,
+      "ovr_rank": 82
+     },
+     "Trae Young": {
+      "def_rank": 271,
+      "ovr_rank": 102
+     },
+     "Brook Lopez": {
+      "def_rank": 15,
+      "ovr_rank": 87
+     },
+     "Herbert Jones": {
+      "def_rank": 9,
+      "ovr_rank": 110
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 12,
+      "ovr_rank": 37
+     },
+     "Nikola Jokić": {
+      "def_rank": 261,
+      "ovr_rank": 6
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 227,
+      "ovr_rank": 69
+     },
+     "Giannis Antetokounmpo": {
+      "def_rank": 64,
+      "ovr_rank": 2
+     },
+     "Joel Embiid": {
+      "def_rank": 91,
+      "ovr_rank": 7
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 101,
+      "ovr_rank": 14
+     },
+     "Evan Mobley": {
+      "def_rank": 54,
+      "ovr_rank": 34
+     },
+     "Chet Holmgren": {
+      "def_rank": 24,
+      "ovr_rank": 44
+     }
+    }
+   }
+  },
+  "2025-26": {
+   "n_pop": 379,
+   "show": [
+    "Kevin Durant",
+    "Stephen Curry",
+    "Victor Wembanyama",
+    "Rudy Gobert",
+    "Anthony Davis",
+    "Bam Adebayo",
+    "Jarrett Allen",
+    "Isaiah Hartenstein",
+    "Alex Caruso",
+    "Amen Thompson",
+    "Trae Young",
+    "Brook Lopez",
+    "Herbert Jones",
+    "Jaren Jackson Jr.",
+    "Nikola Jokić",
+    "Karl-Anthony Towns",
+    "Joel Embiid",
+    "Kristaps Porziņģis",
+    "Luke Kornet"
+   ],
+   "by_arm": {
+    "K0": {
+     "Kevin Durant": {
+      "def_rank": 300,
+      "ovr_rank": 17
+     },
+     "Stephen Curry": {
+      "def_rank": 225,
+      "ovr_rank": 18
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 2
+     },
+     "Rudy Gobert": {
+      "def_rank": 6,
+      "ovr_rank": 60
+     },
+     "Anthony Davis": {
+      "def_rank": 86,
+      "ovr_rank": 22
+     },
+     "Bam Adebayo": {
+      "def_rank": 81,
+      "ovr_rank": 49
+     },
+     "Jarrett Allen": {
+      "def_rank": 105,
+      "ovr_rank": 33
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 32,
+      "ovr_rank": 26
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 75
+     },
+     "Amen Thompson": {
+      "def_rank": 17,
+      "ovr_rank": 28
+     },
+     "Trae Young": null,
+     "Brook Lopez": {
+      "def_rank": 56,
+      "ovr_rank": 183
+     },
+     "Herbert Jones": {
+      "def_rank": 9,
+      "ovr_rank": 116
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 15,
+      "ovr_rank": 52
+     },
+     "Nikola Jokić": {
+      "def_rank": 206,
+      "ovr_rank": 7
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 237,
+      "ovr_rank": 51
+     },
+     "Joel Embiid": {
+      "def_rank": 223,
+      "ovr_rank": 20
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 168,
+      "ovr_rank": 30
+     },
+     "Luke Kornet": {
+      "def_rank": 196,
+      "ovr_rank": 45
+     }
+    },
+    "K1": {
+     "Kevin Durant": {
+      "def_rank": 285,
+      "ovr_rank": 17
+     },
+     "Stephen Curry": {
+      "def_rank": 233,
+      "ovr_rank": 18
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 2
+     },
+     "Rudy Gobert": {
+      "def_rank": 6,
+      "ovr_rank": 61
+     },
+     "Anthony Davis": {
+      "def_rank": 74,
+      "ovr_rank": 20
+     },
+     "Bam Adebayo": {
+      "def_rank": 86,
+      "ovr_rank": 46
+     },
+     "Jarrett Allen": {
+      "def_rank": 105,
+      "ovr_rank": 35
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 31,
+      "ovr_rank": 28
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 78
+     },
+     "Amen Thompson": {
+      "def_rank": 18,
+      "ovr_rank": 30
+     },
+     "Trae Young": null,
+     "Brook Lopez": {
+      "def_rank": 50,
+      "ovr_rank": 180
+     },
+     "Herbert Jones": {
+      "def_rank": 9,
+      "ovr_rank": 115
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 13,
+      "ovr_rank": 50
+     },
+     "Nikola Jokić": {
+      "def_rank": 201,
+      "ovr_rank": 7
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 256,
+      "ovr_rank": 53
+     },
+     "Joel Embiid": {
+      "def_rank": 208,
+      "ovr_rank": 20
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 154,
+      "ovr_rank": 26
+     },
+     "Luke Kornet": {
+      "def_rank": 179,
+      "ovr_rank": 46
+     }
+    },
+    "K2": {
+     "Kevin Durant": {
+      "def_rank": 275,
+      "ovr_rank": 17
+     },
+     "Stephen Curry": {
+      "def_rank": 240,
+      "ovr_rank": 18
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 2
+     },
+     "Rudy Gobert": {
+      "def_rank": 6,
+      "ovr_rank": 62
+     },
+     "Anthony Davis": {
+      "def_rank": 58,
+      "ovr_rank": 21
+     },
+     "Bam Adebayo": {
+      "def_rank": 88,
+      "ovr_rank": 43
+     },
+     "Jarrett Allen": {
+      "def_rank": 109,
+      "ovr_rank": 38
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 32,
+      "ovr_rank": 29
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 78
+     },
+     "Amen Thompson": {
+      "def_rank": 18,
+      "ovr_rank": 30
+     },
+     "Trae Young": null,
+     "Brook Lopez": {
+      "def_rank": 44,
+      "ovr_rank": 177
+     },
+     "Herbert Jones": {
+      "def_rank": 9,
+      "ovr_rank": 114
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 10,
+      "ovr_rank": 50
+     },
+     "Nikola Jokić": {
+      "def_rank": 196,
+      "ovr_rank": 7
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 269,
+      "ovr_rank": 57
+     },
+     "Joel Embiid": {
+      "def_rank": 193,
+      "ovr_rank": 20
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 144,
+      "ovr_rank": 26
+     },
+     "Luke Kornet": {
+      "def_rank": 169,
+      "ovr_rank": 47
+     }
+    },
+    "K3": {
+     "Kevin Durant": {
+      "def_rank": 264,
+      "ovr_rank": 17
+     },
+     "Stephen Curry": {
+      "def_rank": 247,
+      "ovr_rank": 18
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 2
+     },
+     "Rudy Gobert": {
+      "def_rank": 6,
+      "ovr_rank": 61
+     },
+     "Anthony Davis": {
+      "def_rank": 51,
+      "ovr_rank": 21
+     },
+     "Bam Adebayo": {
+      "def_rank": 92,
+      "ovr_rank": 43
+     },
+     "Jarrett Allen": {
+      "def_rank": 109,
+      "ovr_rank": 45
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 33,
+      "ovr_rank": 29
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 79
+     },
+     "Amen Thompson": {
+      "def_rank": 17,
+      "ovr_rank": 29
+     },
+     "Trae Young": null,
+     "Brook Lopez": {
+      "def_rank": 35,
+      "ovr_rank": 173
+     },
+     "Herbert Jones": {
+      "def_rank": 9,
+      "ovr_rank": 114
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 10,
+      "ovr_rank": 49
+     },
+     "Nikola Jokić": {
+      "def_rank": 190,
+      "ovr_rank": 7
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 278,
+      "ovr_rank": 61
+     },
+     "Joel Embiid": {
+      "def_rank": 171,
+      "ovr_rank": 20
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 139,
+      "ovr_rank": 26
+     },
+     "Luke Kornet": {
+      "def_rank": 162,
+      "ovr_rank": 45
+     }
+    },
+    "K4": {
+     "Kevin Durant": {
+      "def_rank": 251,
+      "ovr_rank": 17
+     },
+     "Stephen Curry": {
+      "def_rank": 250,
+      "ovr_rank": 18
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 2
+     },
+     "Rudy Gobert": {
+      "def_rank": 6,
+      "ovr_rank": 60
+     },
+     "Anthony Davis": {
+      "def_rank": 38,
+      "ovr_rank": 21
+     },
+     "Bam Adebayo": {
+      "def_rank": 94,
+      "ovr_rank": 40
+     },
+     "Jarrett Allen": {
+      "def_rank": 112,
+      "ovr_rank": 49
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 35,
+      "ovr_rank": 32
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 79
+     },
+     "Amen Thompson": {
+      "def_rank": 17,
+      "ovr_rank": 34
+     },
+     "Trae Young": null,
+     "Brook Lopez": {
+      "def_rank": 28,
+      "ovr_rank": 166
+     },
+     "Herbert Jones": {
+      "def_rank": 11,
+      "ovr_rank": 116
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 9,
+      "ovr_rank": 46
+     },
+     "Nikola Jokić": {
+      "def_rank": 184,
+      "ovr_rank": 7
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 283,
+      "ovr_rank": 65
+     },
+     "Joel Embiid": {
+      "def_rank": 158,
+      "ovr_rank": 20
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 132,
+      "ovr_rank": 25
+     },
+     "Luke Kornet": {
+      "def_rank": 149,
+      "ovr_rank": 47
+     }
+    },
+    "K5": {
+     "Kevin Durant": {
+      "def_rank": 244,
+      "ovr_rank": 17
+     },
+     "Stephen Curry": {
+      "def_rank": 260,
+      "ovr_rank": 19
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 2
+     },
+     "Rudy Gobert": {
+      "def_rank": 5,
+      "ovr_rank": 60
+     },
+     "Anthony Davis": {
+      "def_rank": 30,
+      "ovr_rank": 21
+     },
+     "Bam Adebayo": {
+      "def_rank": 101,
+      "ovr_rank": 43
+     },
+     "Jarrett Allen": {
+      "def_rank": 114,
+      "ovr_rank": 50
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 38,
+      "ovr_rank": 34
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 83
+     },
+     "Amen Thompson": {
+      "def_rank": 18,
+      "ovr_rank": 32
+     },
+     "Trae Young": null,
+     "Brook Lopez": {
+      "def_rank": 24,
+      "ovr_rank": 166
+     },
+     "Herbert Jones": {
+      "def_rank": 10,
+      "ovr_rank": 113
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 9,
+      "ovr_rank": 47
+     },
+     "Nikola Jokić": {
+      "def_rank": 177,
+      "ovr_rank": 7
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 295,
+      "ovr_rank": 73
+     },
+     "Joel Embiid": {
+      "def_rank": 149,
+      "ovr_rank": 20
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 117,
+      "ovr_rank": 25
+     },
+     "Luke Kornet": {
+      "def_rank": 140,
+      "ovr_rank": 45
+     }
+    },
+    "KW": {
+     "Kevin Durant": {
+      "def_rank": 292,
+      "ovr_rank": 17
+     },
+     "Stephen Curry": {
+      "def_rank": 231,
+      "ovr_rank": 18
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 2
+     },
+     "Rudy Gobert": {
+      "def_rank": 6,
+      "ovr_rank": 60
+     },
+     "Anthony Davis": {
+      "def_rank": 79,
+      "ovr_rank": 20
+     },
+     "Bam Adebayo": {
+      "def_rank": 84,
+      "ovr_rank": 48
+     },
+     "Jarrett Allen": {
+      "def_rank": 104,
+      "ovr_rank": 34
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 32,
+      "ovr_rank": 27
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 77
+     },
+     "Amen Thompson": {
+      "def_rank": 17,
+      "ovr_rank": 28
+     },
+     "Trae Young": null,
+     "Brook Lopez": {
+      "def_rank": 52,
+      "ovr_rank": 181
+     },
+     "Herbert Jones": {
+      "def_rank": 9,
+      "ovr_rank": 115
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 14,
+      "ovr_rank": 51
+     },
+     "Nikola Jokić": {
+      "def_rank": 202,
+      "ovr_rank": 7
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 248,
+      "ovr_rank": 52
+     },
+     "Joel Embiid": {
+      "def_rank": 213,
+      "ovr_rank": 20
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 159,
+      "ovr_rank": 28
+     },
+     "Luke Kornet": {
+      "def_rank": 183,
+      "ovr_rank": 45
+     }
+    },
+    "KS": {
+     "Kevin Durant": {
+      "def_rank": 300,
+      "ovr_rank": 17
+     },
+     "Stephen Curry": {
+      "def_rank": 224,
+      "ovr_rank": 18
+     },
+     "Victor Wembanyama": {
+      "def_rank": 1,
+      "ovr_rank": 2
+     },
+     "Rudy Gobert": {
+      "def_rank": 6,
+      "ovr_rank": 60
+     },
+     "Anthony Davis": {
+      "def_rank": 86,
+      "ovr_rank": 22
+     },
+     "Bam Adebayo": {
+      "def_rank": 81,
+      "ovr_rank": 49
+     },
+     "Jarrett Allen": {
+      "def_rank": 105,
+      "ovr_rank": 33
+     },
+     "Isaiah Hartenstein": {
+      "def_rank": 32,
+      "ovr_rank": 26
+     },
+     "Alex Caruso": {
+      "def_rank": 2,
+      "ovr_rank": 75
+     },
+     "Amen Thompson": {
+      "def_rank": 17,
+      "ovr_rank": 28
+     },
+     "Trae Young": null,
+     "Brook Lopez": {
+      "def_rank": 56,
+      "ovr_rank": 183
+     },
+     "Herbert Jones": {
+      "def_rank": 9,
+      "ovr_rank": 116
+     },
+     "Jaren Jackson Jr.": {
+      "def_rank": 15,
+      "ovr_rank": 52
+     },
+     "Nikola Jokić": {
+      "def_rank": 206,
+      "ovr_rank": 7
+     },
+     "Karl-Anthony Towns": {
+      "def_rank": 237,
+      "ovr_rank": 51
+     },
+     "Joel Embiid": {
+      "def_rank": 223,
+      "ovr_rank": 20
+     },
+     "Kristaps Porziņģis": {
+      "def_rank": 168,
+      "ovr_rank": 30
+     },
+     "Luke Kornet": {
+      "def_rank": 196,
+      "ovr_rank": 45
+     }
+    }
+   }
+  }
+ },
+ "choice": "K3",
+ "choice_w": 0.3,
+ "choice_scores": {
+  "K1": 0.01919295764307558,
+  "K2": 0.029936294373597933,
+  "K3": 0.034422334205883906,
+  "K4": 0.035135960971365544
+ },
+ "lofo": {
+  "2022-23": {
+   "picked": "K3",
+   "w": 0.3,
+   "heldout_dRhoEPMD": 0.02913247465896407,
+   "heldout_dR2": 0.012041295087986903
+  },
+  "2023-24": {
+   "picked": "K3",
+   "w": 0.3,
+   "heldout_dRhoEPMD": 0.04242278902099195,
+   "heldout_dR2": -0.003067762849134681
+  },
+  "2024-25": {
+   "picked": "K3",
+   "w": 0.3,
+   "heldout_dRhoEPMD": 0.03159416218134503,
+   "heldout_dR2": -0.005610898242750739
+  }
+ },
+ "lofo_holds": true,
+ "KW_stable": true
+}

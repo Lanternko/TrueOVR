@@ -1,0 +1,716 @@
+{
+ "2022-23": {
+  "edition": "2K24",
+  "pop": 367,
+  "rows": 719,
+  "uniqueNames": 652,
+  "cov_old": 0.7248,
+  "cov_new": 0.951,
+  "cov_union": 0.97,
+  "missing_new_only": [
+   "Aleksej Pokusevski",
+   "Cam Thomas",
+   "Danuel House Jr.",
+   "Deandre Ayton",
+   "Doug McDermott",
+   "Ish Wainright",
+   "James Harden",
+   "Jeremiah Robinson-Earl",
+   "KJ Martin",
+   "Kai Jones",
+   "Kevin Porter Jr.",
+   "Malcolm Brogdon",
+   "Montrezl Harrell",
+   "Nic Claxton",
+   "P.J. Tucker",
+   "Patrick Beverley",
+   "Robert Williams III",
+   "Tre Mann"
+  ],
+  "missing_union": [
+   "Aleksej Pokusevski",
+   "Cam Thomas",
+   "Danuel House Jr.",
+   "Ish Wainright",
+   "KJ Martin",
+   "Kai Jones",
+   "Malcolm Brogdon",
+   "Montrezl Harrell",
+   "Nic Claxton",
+   "P.J. Tucker",
+   "Patrick Beverley"
+  ],
+  "overlap": 359,
+  "diff_exact": 268,
+  "diff_within2": 341,
+  "diff_ge3": [
+   {
+    "name": "Chet Holmgren",
+    "old": 77,
+    "new": 86
+   },
+   {
+    "name": "Craig Porter",
+    "old": 67,
+    "new": 73
+   },
+   {
+    "name": "Ausar Thompson",
+    "old": 76,
+    "new": 82
+   },
+   {
+    "name": "Marcus Sasser",
+    "old": 70,
+    "new": 76
+   },
+   {
+    "name": "Jaime Jaquez Jr.",
+    "old": 72,
+    "new": 77
+   },
+   {
+    "name": "Victor Wembanyama",
+    "old": 84,
+    "new": 89
+   },
+   {
+    "name": "Dominick Barlow",
+    "old": 68,
+    "new": 73
+   },
+   {
+    "name": "Julian Champagnie",
+    "old": 68,
+    "new": 73
+   },
+   {
+    "name": "Jalen Johnson",
+    "old": 75,
+    "new": 79
+   },
+   {
+    "name": "Jalen Duren",
+    "old": 79,
+    "new": 83
+   },
+   {
+    "name": "James Wiseman",
+    "old": 78,
+    "new": 74
+   },
+   {
+    "name": "Dru Smith",
+    "old": 67,
+    "new": 71
+   },
+   {
+    "name": "Cason Wallace",
+    "old": 72,
+    "new": 76
+   },
+   {
+    "name": "Mark Williams",
+    "old": 77,
+    "new": 80
+   },
+   {
+    "name": "P.J. Washington",
+    "old": 77,
+    "new": 80
+   },
+   {
+    "name": "Gabe Vincent",
+    "old": 79,
+    "new": 76
+   },
+   {
+    "name": "Josh Giddey",
+    "old": 83,
+    "new": 80
+   },
+   {
+    "name": "Aaron Wiggins",
+    "old": 74,
+    "new": 77
+   }
+  ],
+  "snapshot_dates": {
+   "min": "2023-09-07",
+   "max": "2024-03-04",
+   "distinct": 15
+  }
+ },
+ "2023-24": {
+  "edition": "2K25",
+  "pop": 360,
+  "rows": 707,
+  "uniqueNames": 667,
+  "cov_old": 0.8306,
+  "cov_new": 0.9472,
+  "cov_union": 0.975,
+  "missing_new_only": [
+   "De'Aaron Fox",
+   "DeMar DeRozan",
+   "Domantas Sabonis",
+   "Gordon Hayward",
+   "Jalen McDaniels",
+   "Jordan Goodwin",
+   "Jordan McLaughlin",
+   "KJ Martin",
+   "Keegan Murray",
+   "Keita Bates-Diop",
+   "Keon Ellis",
+   "Kevin Huerter",
+   "Kevin Knox II",
+   "Killian Hayes",
+   "Lonnie Walker IV",
+   "Malik Monk",
+   "Mike Muscala",
+   "Sasha Vezenkov",
+   "Trey Lyles"
+  ],
+  "missing_union": [
+   "Gordon Hayward",
+   "Jalen McDaniels",
+   "KJ Martin",
+   "Keita Bates-Diop",
+   "Kevin Knox II",
+   "Lonnie Walker IV",
+   "Mike Muscala",
+   "Sasha Vezenkov",
+   "Trey Lyles"
+  ],
+  "overlap": 425,
+  "diff_exact": 280,
+  "diff_within2": 376,
+  "diff_ge3": [
+   {
+    "name": "Jared McCain",
+    "old": 70,
+    "new": 82
+   },
+   {
+    "name": "Dyson Daniels",
+    "old": 74,
+    "new": 83
+   },
+   {
+    "name": "Yves Missi",
+    "old": 70,
+    "new": 77
+   },
+   {
+    "name": "Gradey Dick",
+    "old": 76,
+    "new": 82
+   },
+   {
+    "name": "Kyle Filipowski",
+    "old": 70,
+    "new": 76
+   },
+   {
+    "name": "Ajay Mitchell",
+    "old": 68,
+    "new": 74
+   },
+   {
+    "name": "Dennis Schroder",
+    "old": 78,
+    "new": 83
+   },
+   {
+    "name": "Norman Powell",
+    "old": 79,
+    "new": 84
+   },
+   {
+    "name": "Goga Bitadze",
+    "old": 73,
+    "new": 78
+   },
+   {
+    "name": "Andrew Wiggins",
+    "old": 78,
+    "new": 83
+   },
+   {
+    "name": "Guerschon Yabusele",
+    "old": 74,
+    "new": 79
+   },
+   {
+    "name": "Karl-Anthony Towns",
+    "old": 88,
+    "new": 93
+   },
+   {
+    "name": "Davion Mitchell",
+    "old": 72,
+    "new": 76
+   },
+   {
+    "name": "Jonathan Mogbo",
+    "old": 69,
+    "new": 73
+   },
+   {
+    "name": "Darius Garland",
+    "old": 82,
+    "new": 86
+   },
+   {
+    "name": "Jalen Johnson",
+    "old": 80,
+    "new": 84
+   },
+   {
+    "name": "Keaton Wallace",
+    "old": 67,
+    "new": 71
+   },
+   {
+    "name": "Jordan Hawkins",
+    "old": 73,
+    "new": 77
+   },
+   {
+    "name": "Antonio Reeves",
+    "old": 68,
+    "new": 72
+   },
+   {
+    "name": "Jordan Poole",
+    "old": 79,
+    "new": 83
+   },
+   {
+    "name": "Bub Carrington",
+    "old": 70,
+    "new": 74
+   },
+   {
+    "name": "KyShawn George",
+    "old": 70,
+    "new": 74
+   },
+   {
+    "name": "Cole Anthony",
+    "old": 78,
+    "new": 74
+   },
+   {
+    "name": "John Collins",
+    "old": 80,
+    "new": 84
+   },
+   {
+    "name": "Isaiah Hartenstein",
+    "old": 81,
+    "new": 85
+   },
+   {
+    "name": "Branden Carlson",
+    "old": 71,
+    "new": 67
+   },
+   {
+    "name": "Tyler Kolek",
+    "old": 70,
+    "new": 74
+   },
+   {
+    "name": "R.J. Barrett",
+    "old": 81,
+    "new": 84
+   },
+   {
+    "name": "Ochai Agbaji",
+    "old": 73,
+    "new": 76
+   },
+   {
+    "name": "Ben Sheppard",
+    "old": 71,
+    "new": 74
+   },
+   {
+    "name": "Jalen Wilson",
+    "old": 71,
+    "new": 74
+   },
+   {
+    "name": "Luka Garza",
+    "old": 74,
+    "new": 71
+   },
+   {
+    "name": "Jarrett Allen",
+    "old": 84,
+    "new": 87
+   },
+   {
+    "name": "Dean Wade",
+    "old": 72,
+    "new": 75
+   },
+   {
+    "name": "Ty Jerome",
+    "old": 72,
+    "new": 75
+   },
+   {
+    "name": "Neemias Queta",
+    "old": 71,
+    "new": 74
+   },
+   {
+    "name": "Zaccharie Risacher",
+    "old": 75,
+    "new": 78
+   },
+   {
+    "name": "Garrison Mathews",
+    "old": 72,
+    "new": 75
+   },
+   {
+    "name": "Jose Alvarado",
+    "old": 76,
+    "new": 79
+   },
+   {
+    "name": "Jeremiah Robinson-Earl",
+    "old": 72,
+    "new": 75
+   },
+   {
+    "name": "Bilal Coulibaly",
+    "old": 77,
+    "new": 80
+   },
+   {
+    "name": "Anthony Black",
+    "old": 74,
+    "new": 77
+   },
+   {
+    "name": "Tristan da Silva",
+    "old": 70,
+    "new": 73
+   },
+   {
+    "name": "Jaden Ivey",
+    "old": 78,
+    "new": 81
+   },
+   {
+    "name": "Brandin Podziemski",
+    "old": 79,
+    "new": 76
+   },
+   {
+    "name": "Kenrich Williams",
+    "old": 73,
+    "new": 76
+   },
+   {
+    "name": "Paul George",
+    "old": 89,
+    "new": 86
+   },
+   {
+    "name": "Eric Gordon",
+    "old": 76,
+    "new": 73
+   },
+   {
+    "name": "Miles McBride",
+    "old": 76,
+    "new": 79
+   }
+  ],
+  "snapshot_dates": {
+   "min": "2024-09-10",
+   "max": "2025-01-20",
+   "distinct": 22
+  }
+ },
+ "2024-25": {
+  "edition": "2K26",
+  "pop": 375,
+  "rows": 736,
+  "uniqueNames": 676,
+  "cov_old": 0.912,
+  "cov_new": 0.952,
+  "cov_union": 0.9867,
+  "missing_new_only": [
+   "AJ Johnson",
+   "Alex Sarr",
+   "CJ McCollum",
+   "Cam Thomas",
+   "Colby Jones",
+   "Collin Sexton",
+   "Corey Kispert",
+   "DaQuan Jeffries",
+   "Dillon Jones",
+   "Jared Butler",
+   "KJ Martin",
+   "Khris Middleton",
+   "Mason Plumlee",
+   "Nick Smith Jr.",
+   "Pat Connaughton",
+   "Ronald Holland II",
+   "Spencer Dinwiddie",
+   "Vasilije Micic"
+  ],
+  "missing_union": [
+   "Cam Thomas",
+   "Jared Butler",
+   "KJ Martin",
+   "Spencer Dinwiddie",
+   "Vasilije Micic"
+  ],
+  "overlap": 508,
+  "diff_exact": 389,
+  "diff_within2": 462,
+  "diff_ge3": [
+   {
+    "name": "Jaylin Williams",
+    "old": 90,
+    "new": 76
+   },
+   {
+    "name": "Daniss Jenkins",
+    "old": 67,
+    "new": 78
+   },
+   {
+    "name": "Kon Knueppel",
+    "old": 75,
+    "new": 85
+   },
+   {
+    "name": "Ryan Kalkbrenner",
+    "old": 70,
+    "new": 79
+   },
+   {
+    "name": "Derik Queen",
+    "old": 73,
+    "new": 82
+   },
+   {
+    "name": "Collin Gillespie",
+    "old": 72,
+    "new": 80
+   },
+   {
+    "name": "Jeremiah Fears",
+    "old": 73,
+    "new": 80
+   },
+   {
+    "name": "Ajay Mitchell",
+    "old": 73,
+    "new": 80
+   },
+   {
+    "name": "Moussa Diabate",
+    "old": 73,
+    "new": 79
+   },
+   {
+    "name": "Sion James",
+    "old": 70,
+    "new": 76
+   },
+   {
+    "name": "Mohamed Diawara",
+    "old": 74,
+    "new": 68
+   },
+   {
+    "name": "Julian Champagnie",
+    "old": 72,
+    "new": 78
+   },
+   {
+    "name": "Jalen Duren",
+    "old": 82,
+    "new": 87
+   },
+   {
+    "name": "Isaiah Stewart",
+    "old": 74,
+    "new": 79
+   },
+   {
+    "name": "Saddiq Bey",
+    "old": 75,
+    "new": 80
+   },
+   {
+    "name": "Bryce McGowens",
+    "old": 70,
+    "new": 75
+   },
+   {
+    "name": "Keyonte George",
+    "old": 78,
+    "new": 83
+   },
+   {
+    "name": "KyShawn George",
+    "old": 77,
+    "new": 82
+   },
+   {
+    "name": "Day’Ron Sharpe",
+    "old": 78,
+    "new": 74
+   },
+   {
+    "name": "Brandon Miller",
+    "old": 82,
+    "new": 86
+   },
+   {
+    "name": "Tidjane Salaun",
+    "old": 72,
+    "new": 76
+   },
+   {
+    "name": "Tyler Kolek",
+    "old": 71,
+    "new": 75
+   },
+   {
+    "name": "Dillon Brooks",
+    "old": 79,
+    "new": 83
+   },
+   {
+    "name": "Mark Williams",
+    "old": 79,
+    "new": 83
+   },
+   {
+    "name": "Grayson Allen",
+    "old": 76,
+    "new": 80
+   },
+   {
+    "name": "Collin Murray-Boyles",
+    "old": 72,
+    "new": 76
+   },
+   {
+    "name": "Tre Johnson",
+    "old": 75,
+    "new": 79
+   },
+   {
+    "name": "Will Riley",
+    "old": 70,
+    "new": 74
+   },
+   {
+    "name": "Larry Nance Jr.",
+    "old": 74,
+    "new": 77
+   },
+   {
+    "name": "Monte Morris",
+    "old": 70,
+    "new": 73
+   },
+   {
+    "name": "Thomas Bryant",
+    "old": 76,
+    "new": 73
+   },
+   {
+    "name": "Tre Jones",
+    "old": 76,
+    "new": 79
+   },
+   {
+    "name": "Paul Reed",
+    "old": 72,
+    "new": 75
+   },
+   {
+    "name": "Yves Missi",
+    "old": 79,
+    "new": 76
+   },
+   {
+    "name": "Micah Peavy",
+    "old": 69,
+    "new": 72
+   },
+   {
+    "name": "Guerschon Yabusele",
+    "old": 77,
+    "new": 74
+   },
+   {
+    "name": "Branden Carlson",
+    "old": 70,
+    "new": 73
+   },
+   {
+    "name": "Oso Ighodaro",
+    "old": 72,
+    "new": 75
+   },
+   {
+    "name": "David Jones-Garcia",
+    "old": 68,
+    "new": 71
+   },
+   {
+    "name": "Scottie Barnes",
+    "old": 85,
+    "new": 88
+   },
+   {
+    "name": "Jamison Battle",
+    "old": 71,
+    "new": 74
+   },
+   {
+    "name": "Lauri Markkanen",
+    "old": 84,
+    "new": 87
+   },
+   {
+    "name": "Walter Clayton Jr.",
+    "old": 72,
+    "new": 75
+   },
+   {
+    "name": "Justin Champagnie",
+    "old": 74,
+    "new": 77
+   },
+   {
+    "name": "Tristan Vukcevic",
+    "old": 71,
+    "new": 74
+   },
+   {
+    "name": "Sharife Cooper",
+    "old": 74,
+    "new": 71
+   }
+  ],
+  "snapshot_dates": {
+   "min": "2025-09-06",
+   "max": "2025-12-24",
+   "distinct": 10
+  }
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "2018-19": {
+  "pop": 361,
+  "covered": 361,
+  "coverage": 1.0
+ },
+ "2019-20": {
+  "pop": 339,
+  "covered": 339,
+  "coverage": 1.0
+ },
+ "2020-21": {
+  "pop": 364,
+  "covered": 364,
+  "coverage": 1.0
+ },
+ "2022-23": {
+  "pop": 367,
+  "covered": 367,
+  "coverage": 1.0
+ },
+ "2023-24": {
+  "pop": 360,
+  "covered": 360,
+  "coverage": 1.0
+ },
+ "2024-25": {
+  "pop": 375,
+  "covered": 375,
+  "coverage": 1.0
+ },
+ "2025-26": {
+  "pop": 380,
+  "covered": 380,
+  "coverage": 1.0
+ }
+}

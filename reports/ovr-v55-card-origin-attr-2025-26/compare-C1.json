@@ -1,0 +1,355 @@
+{
+ "variants": [
+  "v53",
+  "v54",
+  "B12",
+  "C1"
+ ],
+ "down": [
+  {
+   "name": "Karlo Matković",
+   "archetype": "吃餅長人",
+   "rank2k": 294.5,
+   "rapmPooledRank": 212.0,
+   "rapmLastRank": 230.0,
+   "v53": 7,
+   "v54": 8,
+   "B12": 11,
+   "C1": 12,
+   "delta_v54_vs_v53": 1,
+   "delta_B12_vs_v53": 4,
+   "delta_C1_vs_v53": 5
+  },
+  {
+   "name": "John Collins",
+   "archetype": "吃餅長人",
+   "rank2k": 142.0,
+   "rapmPooledRank": 240.0,
+   "rapmLastRank": 328.0,
+   "v53": 29,
+   "v54": 28,
+   "B12": 45,
+   "C1": 46,
+   "delta_v54_vs_v53": -1,
+   "delta_B12_vs_v53": 16,
+   "delta_C1_vs_v53": 17
+  },
+  {
+   "name": "Isaiah Stewart",
+   "archetype": "吃餅長人",
+   "rank2k": 194.5,
+   "rapmPooledRank": 261.0,
+   "rapmLastRank": 411.0,
+   "v53": 32,
+   "v54": 31,
+   "B12": 60,
+   "C1": 61,
+   "delta_v54_vs_v53": -1,
+   "delta_B12_vs_v53": 28,
+   "delta_C1_vs_v53": 29
+  },
+  {
+   "name": "Luka Garza",
+   "archetype": "吃餅長人",
+   "rank2k": 255.5,
+   "rapmPooledRank": 174.5,
+   "rapmLastRank": 178.0,
+   "v53": 33,
+   "v54": 49,
+   "B12": 61,
+   "C1": 64,
+   "delta_v54_vs_v53": 16,
+   "delta_B12_vs_v53": 28,
+   "delta_C1_vs_v53": 31
+  }
+ ],
+ "keep": [
+  {
+   "name": "Neemias Queta",
+   "archetype": "吃餅長人",
+   "rank2k": 110.5,
+   "rapmPooledRank": 13.0,
+   "rapmLastRank": 7.0,
+   "v53": 51,
+   "v54": 43,
+   "B12": 53,
+   "C1": 51,
+   "delta_v54_vs_v53": -8,
+   "delta_B12_vs_v53": 2,
+   "delta_C1_vs_v53": 0
+  },
+  {
+   "name": "Rudy Gobert",
+   "archetype": "吃餅長人",
+   "rank2k": 60.5,
+   "rapmPooledRank": 29.0,
+   "rapmLastRank": 57.0,
+   "v53": 68,
+   "v54": 65,
+   "B12": 79,
+   "C1": 76,
+   "delta_v54_vs_v53": -3,
+   "delta_B12_vs_v53": 11,
+   "delta_C1_vs_v53": 8
+  },
+  {
+   "name": "Jalen Smith",
+   "archetype": "吃餅長人",
+   "rank2k": 220.0,
+   "rapmPooledRank": 65.0,
+   "rapmLastRank": 23.0,
+   "v53": 104,
+   "v54": 97,
+   "B12": 134,
+   "C1": 129,
+   "delta_v54_vs_v53": -7,
+   "delta_B12_vs_v53": 30,
+   "delta_C1_vs_v53": 25
+  }
+ ],
+ "archetypeDelta": {
+  "吃餅長人": {
+   "players": 40,
+   "v54": {
+    "meanDelta": 0.1,
+    "medianDelta": 0.0
+   },
+   "B12": {
+    "meanDelta": 16.5,
+    "medianDelta": 22.0
+   },
+   "C1": {
+    "meanDelta": 16.725,
+    "medianDelta": 20.5
+   }
+  },
+  "持球創造": {
+   "players": 172,
+   "v54": {
+    "meanDelta": 1.872093023255814,
+    "medianDelta": 1.0
+   },
+   "B12": {
+    "meanDelta": -11.86046511627907,
+    "medianDelta": -6.0
+   },
+   "C1": {
+    "meanDelta": -12.156976744186046,
+    "medianDelta": -6.0
+   }
+  },
+  "3D": {
+   "players": 109,
+   "v54": {
+    "meanDelta": 7.10091743119266,
+    "medianDelta": 6.0
+   },
+   "B12": {
+    "meanDelta": 12.064220183486238,
+    "medianDelta": 11.0
+   },
+   "C1": {
+    "meanDelta": 11.917431192660551,
+    "medianDelta": 12.0
+   }
+  },
+  "其他": {
+   "players": 261,
+   "v54": {
+    "meanDelta": -4.21455938697318,
+    "medianDelta": -2.0
+   },
+   "B12": {
+    "meanDelta": 0.24904214559386972,
+    "medianDelta": 1.0
+   },
+   "C1": {
+    "meanDelta": 0.47126436781609193,
+    "medianDelta": 1.0
+   }
+  }
+ },
+ "agreement": {
+  "rank2k": {
+   "players": 575,
+   "buckets": {
+    "<800": {
+     "players": 251,
+     "v53": -0.0205,
+     "v54": -0.0228,
+     "B12": -0.0173,
+     "C1": -0.0167
+    },
+    "800-1300": {
+     "players": 110,
+     "v53": 0.4657,
+     "v54": 0.461,
+     "B12": 0.4683,
+     "C1": 0.4695
+    },
+    "1300+": {
+     "players": 214,
+     "v53": 0.6625,
+     "v54": 0.6761,
+     "B12": 0.692,
+     "C1": 0.6923
+    },
+    "all": {
+     "players": 575,
+     "v53": 0.4461,
+     "v54": 0.4553,
+     "B12": 0.4803,
+     "C1": 0.4805
+    }
+   }
+  },
+  "rapmPooledRank": {
+   "players": 414,
+   "buckets": {
+    "<800": {
+     "players": 101,
+     "v53": 0.1995,
+     "v54": 0.2104,
+     "B12": 0.2595,
+     "C1": 0.2551
+    },
+    "800-1300": {
+     "players": 98,
+     "v53": 0.5333,
+     "v54": 0.5422,
+     "B12": 0.5576,
+     "C1": 0.5581
+    },
+    "1300+": {
+     "players": 215,
+     "v53": 0.5188,
+     "v54": 0.5315,
+     "B12": 0.5398,
+     "C1": 0.5433
+    },
+    "all": {
+     "players": 414,
+     "v53": 0.4997,
+     "v54": 0.5134,
+     "B12": 0.5297,
+     "C1": 0.5311
+    }
+   }
+  },
+  "rapmLastRank": {
+   "players": 497,
+   "buckets": {
+    "<800": {
+     "players": 170,
+     "v53": 0.3623,
+     "v54": 0.3587,
+     "B12": 0.3247,
+     "C1": 0.3282
+    },
+    "800-1300": {
+     "players": 112,
+     "v53": 0.4407,
+     "v54": 0.443,
+     "B12": 0.438,
+     "C1": 0.4369
+    },
+    "1300+": {
+     "players": 215,
+     "v53": 0.4691,
+     "v54": 0.4787,
+     "B12": 0.4884,
+     "C1": 0.4908
+    },
+    "all": {
+     "players": 497,
+     "v53": 0.5015,
+     "v54": 0.5066,
+     "B12": 0.5019,
+     "C1": 0.5033
+    }
+   }
+  }
+ },
+ "verdict": {
+  "down": {
+   "Karlo Matković": {
+    "v53": 7,
+    "C1": 12,
+    "B12": 11,
+    "deltaC1vsV53": 5,
+    "requireMinDrop": 10,
+    "pass": false
+   },
+   "John Collins": {
+    "v53": 29,
+    "C1": 46,
+    "B12": 45,
+    "deltaC1vsV53": 17,
+    "requireMinDrop": 1,
+    "pass": true
+   },
+   "Isaiah Stewart": {
+    "v53": 32,
+    "C1": 61,
+    "B12": 60,
+    "deltaC1vsV53": 29,
+    "requireMinDrop": 1,
+    "pass": true
+   },
+   "Luka Garza": {
+    "v53": 33,
+    "C1": 64,
+    "B12": 61,
+    "deltaC1vsV53": 31,
+    "requireMinDrop": 1,
+    "pass": true
+   }
+  },
+  "keep": {
+   "Neemias Queta": {
+    "v53": 51,
+    "C1": 51,
+    "B12": 53,
+    "deltaC1vsV53": 0,
+    "tolerance": 15,
+    "pass": true
+   },
+   "Rudy Gobert": {
+    "v53": 68,
+    "C1": 76,
+    "B12": 79,
+    "deltaC1vsV53": 8,
+    "tolerance": 15,
+    "pass": true
+   },
+   "Jalen Smith": {
+    "v53": 104,
+    "C1": 129,
+    "B12": 134,
+    "deltaC1vsV53": 25,
+    "tolerance": 15,
+    "pass": false
+   }
+  },
+  "overallRho": {
+   "multiSeasonRAPM": {
+    "C1": 0.5311,
+    "B12": 0.5297,
+    "pass": true
+   },
+   "rank2k": {
+    "C1": 0.4805,
+    "B12": 0.4803,
+    "pass": true
+   }
+  },
+  "archetype": {
+   "finishersMedianMovesDown": true,
+   "finishersMedianDeltaC1": 20.5,
+   "creatorsNotWorse": true,
+   "creatorsMedianDeltaC1": -6.0,
+   "creatorsMedianDeltaB12": -6.0
+  },
+  "allPass": false
+ }
+}

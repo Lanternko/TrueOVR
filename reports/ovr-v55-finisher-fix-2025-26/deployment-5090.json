@@ -1,0 +1,35 @@
+{
+ "why": "預先登錄 §6 的四個模擬板（582 人 x 30 對手 x 8 樣本）是重度運算，依派工限制一律在 5090 上跑；本機只跑輕量校正與評估。",
+ "host": "kojiek@140.122.184.29",
+ "remoteDir": "/home/kojiek/side_projects/basketball-v55fix-20261019",
+ "clonedFrom": "/home/kojiek/side_projects/basketball-v55-20261018 (cp -al 硬連結複製，95M)",
+ "localCommitAtDeploy": "c85ea85a693cb6f7832dd41b3931499a8719f8c5",
+ "node": "/home/kojiek/.nvm/versions/node/v22.13.1/bin/node",
+ "cores": 20,
+ "workersPerBoard": 19,
+ "syncedPaths": ["src/", "reports/ovr-v55-finisher-fix-2025-26/"],
+ "syncMethod": "tar czf - ... | ssh ... tar xzf -（本機沒有 rsync）",
+ "sha256": {
+  "src/probability_model.js": "30fac2bc6ebf86c24aa7f5483b9f0425891768b36880efcbcd86871f85f1296e",
+  "src/source_shot_origin.js": "958aeadbaf95a7ddff41f05bb6354a09cfdcb710d79407169b8a34a6f22e1dfd",
+  "reports/ovr-v55-finisher-fix-2025-26/input.mjs": "942d39a884ba3a9751ec567fa47c25803c24fb275daf52cd017577d0fb699d12",
+  "reports/ovr-v55-finisher-fix-2025-26/rates-reliability.mjs": "4db944d15fdfe3bb04c2bbe8a2977065afed38b81af61f4e0a3d48d42c6f858c",
+  "reports/ovr-v55-finisher-fix-2025-26/center.json": "b788ada52baa3843eb7a85fda7948579ece9273f715abd0cdc60970d181a3a7a",
+  "reports/ovr-v55-finisher-fix-2025-26/run.mjs": "346f3fb15d7f0ab50ec60777dd9179293c3e609ba4348889bdbe575e28697990",
+  "reports/ovr-v55-finisher-fix-2025-26/worker.mjs": "266da55e2149b2de97bd5949e716097e6b91334ac66167b47b8a2b5ea7bfd2be"
+ },
+ "sha256Verified": "本機與遠端對上述七個檔案逐檔 sha256 相同（見報告驗證證據段）",
+ "boards": {
+  "script": "run-boards.sh（nohup -> boards.log，依序跑 B12 -> B1 -> B2 -> B12_oos）",
+  "command": "node reports/ovr-v55-finisher-fix-2025-26/run.mjs --mode $M --variant both --samples 8 --workers 19",
+  "seed": 20261016,
+  "players": 582,
+  "startedAt": "2026-10-19T14:30:18+08:00"
+ },
+ "parityGate": {
+  "ratesK100MatchesV54": true,
+  "v54BoxReproduced": true,
+  "B12ActuallyChangesBox": true,
+  "note": "預先登錄 §6 要求的兩個事前平行性檢查都在遠端這份樹上跑過。"
+ }
+}

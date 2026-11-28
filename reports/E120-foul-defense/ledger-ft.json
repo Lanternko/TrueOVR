@@ -1,0 +1,3800 @@
+{
+ "meta": {
+  "base100": 113.08423047066596,
+  "maxDiffBase": 0,
+  "maxDiffDef": 0,
+  "n": 379
+ },
+ "players": [
+  {
+   "playerId": 2544,
+   "name": "LeBron James",
+   "pos": "PF",
+   "beta": -0.027217494322228277,
+   "inTable": true,
+   "ft": 0.28484333541494156,
+   "defFull": 0.31576164446238675,
+   "defFullWithFt": 0.6006049798773283
+  },
+  {
+   "playerId": 201142,
+   "name": "Kevin Durant",
+   "pos": "C",
+   "beta": -0.02105198649586324,
+   "inTable": true,
+   "ft": 0.2207087415685427,
+   "defFull": -0.049479979444733146,
+   "defFullWithFt": 0.17122876212380955
+  },
+  {
+   "playerId": 201143,
+   "name": "Al Horford",
+   "pos": "SF",
+   "beta": -0.034060572103421116,
+   "inTable": true,
+   "ft": 0.35575872900910355,
+   "defFull": 1.7457110124181163,
+   "defFullWithFt": 2.10146974142722
+  },
+  {
+   "playerId": 201144,
+   "name": "Mike Conley",
+   "pos": "PG",
+   "beta": 0.0019069343503302603,
+   "inTable": true,
+   "ft": -0.020123990364395716,
+   "defFull": -2.207451165529739,
+   "defFullWithFt": -2.227575155894135
+  },
+  {
+   "playerId": 201566,
+   "name": "Russell Westbrook",
+   "pos": "SG",
+   "beta": -0.0023340126790342823,
+   "inTable": true,
+   "ft": 0.024601180958527813,
+   "defFull": -1.21984520006031,
+   "defFullWithFt": -1.1952440191017821
+  },
+  {
+   "playerId": 201567,
+   "name": "Kevin Love",
+   "pos": "PF",
+   "beta": 0.006355569262353239,
+   "inTable": true,
+   "ft": -0.06715580917462383,
+   "defFull": 0.5252853402402335,
+   "defFullWithFt": 0.4581295310656097
+  },
+  {
+   "playerId": 201572,
+   "name": "Brook Lopez",
+   "pos": "C",
+   "beta": -0.019059784046747498,
+   "inTable": true,
+   "ft": 0.19993669819238225,
+   "defFull": 5.017995999487934,
+   "defFullWithFt": 5.217932697680316
+  },
+  {
+   "playerId": 201587,
+   "name": "Nicolas Batum",
+   "pos": "SF",
+   "beta": 0.03187454930088306,
+   "inTable": true,
+   "ft": -0.3392508583070164,
+   "defFull": 0.6412955986857538,
+   "defFullWithFt": 0.3020447403787374
+  },
+  {
+   "playerId": 201935,
+   "name": "James Harden",
+   "pos": "SG",
+   "beta": 0.02719805390385412,
+   "inTable": true,
+   "ft": -0.28909420251725937,
+   "defFull": -2.4638084799862847,
+   "defFullWithFt": -2.752902682503544
+  },
+  {
+   "playerId": 201939,
+   "name": "Stephen Curry",
+   "pos": "PG",
+   "beta": -0.001848776074795643,
+   "inTable": true,
+   "ft": 0.01948934410016534,
+   "defFull": -3.3426876514324633,
+   "defFullWithFt": -3.323198307332298
+  },
+  {
+   "playerId": 201942,
+   "name": "DeMar DeRozan",
+   "pos": "SG",
+   "beta": -0.010825524178296986,
+   "inTable": true,
+   "ft": 0.11382761513094586,
+   "defFull": -2.8130345324266504,
+   "defFullWithFt": -2.6992069172957045
+  },
+  {
+   "playerId": 201950,
+   "name": "Jrue Holiday",
+   "pos": "SG",
+   "beta": -0.055175200314960274,
+   "inTable": true,
+   "ft": 0.572800006164087,
+   "defFull": -0.3523483256004267,
+   "defFullWithFt": 0.22045168056366027
+  },
+  {
+   "playerId": 202331,
+   "name": "Paul George",
+   "pos": "SF",
+   "beta": -0.0326001582631823,
+   "inTable": true,
+   "ft": 0.3406479415855701,
+   "defFull": 1.172481577641049,
+   "defFullWithFt": 1.5131295192266192
+  },
+  {
+   "playerId": 202685,
+   "name": "Jonas Valanciunas",
+   "pos": "C",
+   "beta": 0.006017850339299034,
+   "inTable": true,
+   "ft": -0.06358120029492653,
+   "defFull": 2.6229155465637755,
+   "defFullWithFt": 2.559334346268849
+  },
+  {
+   "playerId": 202691,
+   "name": "Klay Thompson",
+   "pos": "SG",
+   "beta": 0.001700108572215982,
+   "inTable": true,
+   "ft": -0.01794028735266906,
+   "defFull": -1.4056945055133996,
+   "defFullWithFt": -1.4236347928660686
+  },
+  {
+   "playerId": 202695,
+   "name": "Kawhi Leonard",
+   "pos": "SG",
+   "beta": -0.06495664560581448,
+   "inTable": true,
+   "ft": 0.6724395726423582,
+   "defFull": 0.2525261581496352,
+   "defFullWithFt": 0.9249657307919934
+  },
+  {
+   "playerId": 202696,
+   "name": "Nikola Vučević",
+   "pos": "PF",
+   "beta": -0.06514080461093756,
+   "inTable": true,
+   "ft": 0.6743100300319993,
+   "defFull": 0.56898558426286,
+   "defFullWithFt": 1.2432956142948592
+  },
+  {
+   "playerId": 202699,
+   "name": "Tobias Harris",
+   "pos": "SF",
+   "beta": 0.03927220117559263,
+   "inTable": true,
+   "ft": -0.41886193621267775,
+   "defFull": 1.1501132240638423,
+   "defFullWithFt": 0.7312512878511646
+  },
+  {
+   "playerId": 202710,
+   "name": "Jimmy Butler III",
+   "pos": "SG",
+   "beta": -0.02843095194148749,
+   "inTable": true,
+   "ft": 0.29743901470808964,
+   "defFull": -1.1039439543697682,
+   "defFullWithFt": -0.8065049396616786
+  },
+  {
+   "playerId": 203076,
+   "name": "Anthony Davis",
+   "pos": "PF",
+   "beta": -0.02505844165280933,
+   "inTable": true,
+   "ft": 0.26241051524267256,
+   "defFull": 2.507478216616299,
+   "defFullWithFt": 2.7698887318589716
+  },
+  {
+   "playerId": 203083,
+   "name": "Andre Drummond",
+   "pos": "C",
+   "beta": -0.011452466344097478,
+   "inTable": true,
+   "ft": 0.1203981516161301,
+   "defFull": 2.295637407219986,
+   "defFullWithFt": 2.416035558836116
+  },
+  {
+   "playerId": 203084,
+   "name": "Harrison Barnes",
+   "pos": "SF",
+   "beta": -0.03178420202815568,
+   "inTable": true,
+   "ft": 0.3321997297323076,
+   "defFull": -2.5701290101180607,
+   "defFullWithFt": -2.237929280385753
+  },
+  {
+   "playerId": 203110,
+   "name": "Draymond Green",
+   "pos": "SG",
+   "beta": -0.04806890981975623,
+   "inTable": true,
+   "ft": 0.5000516214606066,
+   "defFull": 2.0218063479540804,
+   "defFullWithFt": 2.521857969414687
+  },
+  {
+   "playerId": 203114,
+   "name": "Khris Middleton",
+   "pos": "SF",
+   "beta": 0.020691465467001256,
+   "inTable": true,
+   "ft": -0.21952863340226614,
+   "defFull": -1.9631220665250693,
+   "defFullWithFt": -2.1826506999273354
+  },
+  {
+   "playerId": 203468,
+   "name": "CJ McCollum",
+   "pos": "PG",
+   "beta": -0.01518994849633577,
+   "inTable": true,
+   "ft": 0.1595189988413681,
+   "defFull": -0.8397324197325862,
+   "defFullWithFt": -0.6802134208912181
+  },
+  {
+   "playerId": 203471,
+   "name": "Dennis Schröder",
+   "pos": "PG",
+   "beta": -0.024232166800845282,
+   "inTable": true,
+   "ft": 0.2538180083329733,
+   "defFull": -2.0841018710705317,
+   "defFullWithFt": -1.8302838627375584
+  },
+  {
+   "playerId": 203484,
+   "name": "Kentavious Caldwell-Pope",
+   "pos": "SG",
+   "beta": 0.00007183626584682644,
+   "inTable": true,
+   "ft": -0.0007576955488364234,
+   "defFull": -0.4366745619077239,
+   "defFullWithFt": -0.43743225745656034
+  },
+  {
+   "playerId": 203497,
+   "name": "Rudy Gobert",
+   "pos": "C",
+   "beta": -0.06069485830866866,
+   "inTable": true,
+   "ft": 0.6290969365151611,
+   "defFull": 6.888074596474114,
+   "defFullWithFt": 7.517171532989275
+  },
+  {
+   "playerId": 203500,
+   "name": "Steven Adams",
+   "pos": "C",
+   "beta": -0.030578784711785354,
+   "inTable": true,
+   "ft": 0.31971181645915614,
+   "defFull": 0.9878867657672208,
+   "defFullWithFt": 1.307598582226377
+  },
+  {
+   "playerId": 203501,
+   "name": "Tim Hardaway Jr.",
+   "pos": "SG",
+   "beta": 0.010625203282282681,
+   "inTable": true,
+   "ft": -0.11240727628591962,
+   "defFull": -1.9241849294437063,
+   "defFullWithFt": -2.036592205729626
+  },
+  {
+   "playerId": 203507,
+   "name": "Giannis Antetokounmpo",
+   "pos": "C",
+   "beta": 0.0023874956991661723,
+   "inTable": true,
+   "ft": -0.025198836130502222,
+   "defFull": 1.186955832059966,
+   "defFullWithFt": 1.1617569959294638
+  },
+  {
+   "playerId": 203897,
+   "name": "Zach LaVine",
+   "pos": "SG",
+   "beta": 0.031037437600548518,
+   "inTable": true,
+   "ft": -0.33026292395226253,
+   "defFull": -2.8273480276849394,
+   "defFullWithFt": -3.157610951637202
+  },
+  {
+   "playerId": 203903,
+   "name": "Jordan Clarkson",
+   "pos": "SG",
+   "beta": -0.0039169646765892015,
+   "inTable": true,
+   "ft": 0.04126730172311355,
+   "defFull": -0.7799049386951751,
+   "defFullWithFt": -0.7386376369720615
+  },
+  {
+   "playerId": 203914,
+   "name": "Gary Harris",
+   "pos": "SG",
+   "beta": 0.016983119568214397,
+   "inTable": true,
+   "ft": -0.17999478853338857,
+   "defFull": -1.5855230794986408,
+   "defFullWithFt": -1.7655178680320294
+  },
+  {
+   "playerId": 203924,
+   "name": "Jerami Grant",
+   "pos": "SF",
+   "beta": 0.0266826003104307,
+   "inTable": true,
+   "ft": -0.2835738929766407,
+   "defFull": -0.7884004602311645,
+   "defFullWithFt": -1.0719743532078052
+  },
+  {
+   "playerId": 203932,
+   "name": "Aaron Gordon",
+   "pos": "SF",
+   "beta": -0.024954535707288086,
+   "inTable": true,
+   "ft": 0.2613302134261364,
+   "defFull": -0.9792861995110202,
+   "defFullWithFt": -0.7179559860848839
+  },
+  {
+   "playerId": 203935,
+   "name": "Marcus Smart",
+   "pos": "PG",
+   "beta": -0.0232246451584726,
+   "inTable": true,
+   "ft": 0.24333514844974147,
+   "defFull": -0.7519868355475801,
+   "defFullWithFt": -0.5086516870978386
+  },
+  {
+   "playerId": 203937,
+   "name": "Kyle Anderson",
+   "pos": "SF",
+   "beta": 0.013479320425990635,
+   "inTable": true,
+   "ft": -0.14271770322376032,
+   "defFull": 1.7047413058847605,
+   "defFullWithFt": 1.5620236026610002
+  },
+  {
+   "playerId": 203939,
+   "name": "Dwight Powell",
+   "pos": "PF",
+   "beta": -0.005562659345475994,
+   "inTable": true,
+   "ft": 0.058578020982813506,
+   "defFull": 3.788389069631526,
+   "defFullWithFt": 3.8469670906143394
+  },
+  {
+   "playerId": 203944,
+   "name": "Julius Randle",
+   "pos": "PF",
+   "beta": -0.024229595327110654,
+   "inTable": true,
+   "ft": 0.25379126094147164,
+   "defFull": 0.16675791001647955,
+   "defFullWithFt": 0.4205491709579512
+  },
+  {
+   "playerId": 203952,
+   "name": "Andrew Wiggins",
+   "pos": "SG",
+   "beta": -0.04177134316274037,
+   "inTable": true,
+   "ft": 0.43532921424613846,
+   "defFull": 0.01834188438551987,
+   "defFullWithFt": 0.45367109863165833
+  },
+  {
+   "playerId": 203954,
+   "name": "Joel Embiid",
+   "pos": "C",
+   "beta": -0.004485390054482659,
+   "inTable": true,
+   "ft": 0.047248292303936346,
+   "defFull": 3.3510923226280687,
+   "defFullWithFt": 3.398340614932005
+  },
+  {
+   "playerId": 203991,
+   "name": "Clint Capela",
+   "pos": "PF",
+   "beta": 0.006221017257369384,
+   "inTable": true,
+   "ft": -0.06573155202966863,
+   "defFull": 6.223862801721669,
+   "defFullWithFt": 6.158131249692
+  },
+  {
+   "playerId": 203994,
+   "name": "Jusuf Nurkić",
+   "pos": "C",
+   "beta": -0.0058547938903428295,
+   "inTable": true,
+   "ft": 0.061649220073767275,
+   "defFull": 3.535979089396002,
+   "defFullWithFt": 3.597628309469769
+  },
+  {
+   "playerId": 203999,
+   "name": "Nikola Jokić",
+   "pos": "C",
+   "beta": -0.05373871571878475,
+   "inTable": true,
+   "ft": 0.5581188615747967,
+   "defFull": 2.6951126737433606,
+   "defFullWithFt": 3.2532315353181573
+  },
+  {
+   "playerId": 204001,
+   "name": "Kristaps Porziņģis",
+   "pos": "C",
+   "beta": -0.022947345876078613,
+   "inTable": true,
+   "ft": 0.2404488897523649,
+   "defFull": 2.0822217272883137,
+   "defFullWithFt": 2.3226706170406786
+  },
+  {
+   "playerId": 204456,
+   "name": "T.J. McConnell",
+   "pos": "PG",
+   "beta": 0.05845104904514958,
+   "inTable": true,
+   "ft": -0.6267956498512417,
+   "defFull": -0.03986619345246467,
+   "defFullWithFt": -0.6666618433037064
+  },
+  {
+   "playerId": 1626145,
+   "name": "Tyus Jones",
+   "pos": "PG",
+   "beta": -0.031759265865562526,
+   "inTable": true,
+   "ft": 0.3319414838262258,
+   "defFull": -3.7043444261459335,
+   "defFullWithFt": -3.3724029423197077
+  },
+  {
+   "playerId": 1626157,
+   "name": "Karl-Anthony Towns",
+   "pos": "C",
+   "beta": 0.012280760546727975,
+   "inTable": true,
+   "ft": -0.12998314545527023,
+   "defFull": 1.8578027024810595,
+   "defFullWithFt": 1.7278195570257893
+  },
+  {
+   "playerId": 1626162,
+   "name": "Kelly Oubre Jr.",
+   "pos": "SF",
+   "beta": -0.029589672908591335,
+   "inTable": true,
+   "ft": 0.30945827227799594,
+   "defFull": -0.8904044573908809,
+   "defFullWithFt": -0.580946185112885
+  },
+  {
+   "playerId": 1626164,
+   "name": "Devin Booker",
+   "pos": "SG",
+   "beta": 0.009404949593725736,
+   "inTable": true,
+   "ft": -0.09946328321486231,
+   "defFull": 1.1837393685256936,
+   "defFullWithFt": 1.0842760853108313
+  },
+  {
+   "playerId": 1626167,
+   "name": "Myles Turner",
+   "pos": "C",
+   "beta": 0.022898758734863994,
+   "inTable": true,
+   "ft": -0.24309943807827583,
+   "defFull": 4.09422553845884,
+   "defFullWithFt": 3.851126100380564
+  },
+  {
+   "playerId": 1626171,
+   "name": "Bobby Portis Jr.",
+   "pos": "PF",
+   "beta": -0.0039048285507560306,
+   "inTable": true,
+   "ft": 0.04113958380591587,
+   "defFull": -1.1505501853611433,
+   "defFullWithFt": -1.1094106015552274
+  },
+  {
+   "playerId": 1626181,
+   "name": "Norman Powell",
+   "pos": "PG",
+   "beta": -0.004318413586442457,
+   "inTable": true,
+   "ft": 0.0454915620975882,
+   "defFull": -0.9535757320913829,
+   "defFullWithFt": -0.9080841699937947
+  },
+  {
+   "playerId": 1626220,
+   "name": "Royce O'Neale",
+   "pos": "SG",
+   "beta": -0.01242245423993172,
+   "inTable": true,
+   "ft": 0.13055924870135627,
+   "defFull": -0.6123696366793441,
+   "defFullWithFt": -0.4818103879779878
+  },
+  {
+   "playerId": 1627734,
+   "name": "Domantas Sabonis",
+   "pos": "PF",
+   "beta": 0.015012494467901769,
+   "inTable": true,
+   "ft": -0.15902011297610485,
+   "defFull": -0.059827688561853165,
+   "defFullWithFt": -0.21884780153795802
+  },
+  {
+   "playerId": 1627739,
+   "name": "Kris Dunn",
+   "pos": "PG",
+   "beta": -0.02309295853853863,
+   "inTable": true,
+   "ft": 0.24196455105292003,
+   "defFull": -0.6217436342141003,
+   "defFullWithFt": -0.37977908316118025
+  },
+  {
+   "playerId": 1627741,
+   "name": "Buddy Hield",
+   "pos": "SG",
+   "beta": -0.010674773479354655,
+   "inTable": true,
+   "ft": 0.11224735130008767,
+   "defFull": 0.838499485585853,
+   "defFullWithFt": 0.9507468368859406
+  },
+  {
+   "playerId": 1627742,
+   "name": "Brandon Ingram",
+   "pos": "SF",
+   "beta": 0.02003292067961468,
+   "inTable": true,
+   "ft": -0.21250198334012982,
+   "defFull": -2.563098822276766,
+   "defFullWithFt": -2.7756008056168957
+  },
+  {
+   "playerId": 1627747,
+   "name": "Caris LeVert",
+   "pos": "SF",
+   "beta": 0.005566795427238486,
+   "inTable": true,
+   "ft": -0.05880805016795776,
+   "defFull": 1.7910493772088643,
+   "defFullWithFt": 1.7322413270409065
+  },
+  {
+   "playerId": 1627750,
+   "name": "Jamal Murray",
+   "pos": "SG",
+   "beta": 0.01683813806922852,
+   "inTable": true,
+   "ft": -0.17845085646670533,
+   "defFull": -5.03027479855509,
+   "defFullWithFt": -5.208725655021795
+  },
+  {
+   "playerId": 1627751,
+   "name": "Jakob Poeltl",
+   "pos": "C",
+   "beta": -0.003592966974703868,
+   "inTable": true,
+   "ft": 0.03785731717380614,
+   "defFull": 1.0343698776702714,
+   "defFullWithFt": 1.0722271948440776
+  },
+  {
+   "playerId": 1627752,
+   "name": "Taurean Prince",
+   "pos": "SG",
+   "beta": 0.010442118514028686,
+   "inTable": true,
+   "ft": -0.11046460990864482,
+   "defFull": -1.6898939099870836,
+   "defFullWithFt": -1.8003585198957284
+  },
+  {
+   "playerId": 1627759,
+   "name": "Jaylen Brown",
+   "pos": "SG",
+   "beta": 0.008909665476658245,
+   "inTable": true,
+   "ft": -0.094212054080689,
+   "defFull": -0.584713238836776,
+   "defFullWithFt": -0.678925292917465
+  },
+  {
+   "playerId": 1627780,
+   "name": "Gary Payton II",
+   "pos": "PG",
+   "beta": -0.044337849492147724,
+   "inTable": true,
+   "ft": 0.46173486236982253,
+   "defFull": 1.7354078925714722,
+   "defFullWithFt": 2.1971427549412947
+  },
+  {
+   "playerId": 1627783,
+   "name": "Pascal Siakam",
+   "pos": "SF",
+   "beta": -0.007553517097250823,
+   "inTable": true,
+   "ft": 0.0794976562842109,
+   "defFull": -0.1930265523504504,
+   "defFullWithFt": -0.1135288960662395
+  },
+  {
+   "playerId": 1627824,
+   "name": "Guerschon Yabusele",
+   "pos": "SF",
+   "beta": -0.007370524808860915,
+   "inTable": true,
+   "ft": 0.07757579597822417,
+   "defFull": 0.895670325236031,
+   "defFullWithFt": 0.9732461212142551
+  },
+  {
+   "playerId": 1627826,
+   "name": "Ivica Zubac",
+   "pos": "C",
+   "beta": 0.0048092335612524495,
+   "inTable": true,
+   "ft": -0.05079414102340252,
+   "defFull": 2.3393888612396108,
+   "defFullWithFt": 2.2885947202162082
+  },
+  {
+   "playerId": 1627827,
+   "name": "Dorian Finney-Smith",
+   "pos": "SF",
+   "beta": -0.010687923574434403,
+   "inTable": true,
+   "ft": 0.11238520432619303,
+   "defFull": -2.6967693134936965,
+   "defFullWithFt": -2.5843841091675035
+  },
+  {
+   "playerId": 1627884,
+   "name": "Derrick Jones Jr.",
+   "pos": "SG",
+   "beta": 0.009030353419691916,
+   "inTable": true,
+   "ft": -0.09549150680210339,
+   "defFull": 0.6561735606074315,
+   "defFullWithFt": 0.5606820538053281
+  },
+  {
+   "playerId": 1627936,
+   "name": "Alex Caruso",
+   "pos": "SG",
+   "beta": -0.023361299931187712,
+   "inTable": true,
+   "ft": 0.24475734430977614,
+   "defFull": 4.2979615395353665,
+   "defFullWithFt": 4.542718883845143
+  },
+  {
+   "playerId": 1628366,
+   "name": "Lonzo Ball",
+   "pos": "SG",
+   "beta": 0.0051993567640112115,
+   "inTable": true,
+   "ft": -0.05492064882526293,
+   "defFull": 0.1985584726541978,
+   "defFullWithFt": 0.14363782382893486
+  },
+  {
+   "playerId": 1628368,
+   "name": "De'Aaron Fox",
+   "pos": "PG",
+   "beta": -0.0507633236906737,
+   "inTable": true,
+   "ft": 0.5276704542566124,
+   "defFull": -2.214618476395769,
+   "defFullWithFt": -1.6869480221391564
+  },
+  {
+   "playerId": 1628369,
+   "name": "Jayson Tatum",
+   "pos": "SF",
+   "beta": -0.024090432134659903,
+   "inTable": true,
+   "ft": 0.2523436845029092,
+   "defFull": -0.5171660920439081,
+   "defFullWithFt": -0.26482240754099884
+  },
+  {
+   "playerId": 1628370,
+   "name": "Malik Monk",
+   "pos": "PG",
+   "beta": 0.07547845388045327,
+   "inTable": true,
+   "ft": -0.8132639237429684,
+   "defFull": 0.14161962186471921,
+   "defFullWithFt": -0.6716443018782492
+  },
+  {
+   "playerId": 1628371,
+   "name": "Jonathan Isaac",
+   "pos": "PF",
+   "beta": 0.006939628947325115,
+   "inTable": true,
+   "ft": -0.07333944962570893,
+   "defFull": 3.55864358681266,
+   "defFullWithFt": 3.485304137186951
+  },
+  {
+   "playerId": 1628374,
+   "name": "Lauri Markkanen",
+   "pos": "C",
+   "beta": -0.0014990879585155931,
+   "inTable": true,
+   "ft": 0.0158045953854824,
+   "defFull": 1.8480859891617074,
+   "defFullWithFt": 1.8638905845471898
+  },
+  {
+   "playerId": 1628378,
+   "name": "Donovan Mitchell",
+   "pos": "PG",
+   "beta": 0.011186854565021762,
+   "inTable": true,
+   "ft": -0.11836807639058478,
+   "defFull": -1.6537088788583176,
+   "defFullWithFt": -1.7720769552489024
+  },
+  {
+   "playerId": 1628379,
+   "name": "Luke Kennard",
+   "pos": "SG",
+   "beta": 0.015551490793408217,
+   "inTable": true,
+   "ft": -0.16475468525092296,
+   "defFull": -1.3782686139166556,
+   "defFullWithFt": -1.5430232991675785
+  },
+  {
+   "playerId": 1628381,
+   "name": "John Collins",
+   "pos": "PF",
+   "beta": -0.04070434785384776,
+   "inTable": true,
+   "ft": 0.4243397413943528,
+   "defFull": 0.5790415495667833,
+   "defFullWithFt": 1.0033812909611362
+  },
+  {
+   "playerId": 1628384,
+   "name": "OG Anunoby",
+   "pos": "SF",
+   "beta": -0.03751025910131693,
+   "inTable": true,
+   "ft": 0.3914015226668788,
+   "defFull": 2.670258128075398,
+   "defFullWithFt": 3.0616596507422766
+  },
+  {
+   "playerId": 1628386,
+   "name": "Jarrett Allen",
+   "pos": "PF",
+   "beta": -0.07778772465205981,
+   "inTable": true,
+   "ft": 0.8022762149828555,
+   "defFull": 2.559786717070711,
+   "defFullWithFt": 3.3620629320535667
+  },
+  {
+   "playerId": 1628389,
+   "name": "Bam Adebayo",
+   "pos": "PF",
+   "beta": -0.02814253672913723,
+   "inTable": true,
+   "ft": 0.29444606873050283,
+   "defFull": 2.8239793087176945,
+   "defFullWithFt": 3.1184253774481974
+  },
+  {
+   "playerId": 1628392,
+   "name": "Isaiah Hartenstein",
+   "pos": "C",
+   "beta": -0.042609947669300284,
+   "inTable": true,
+   "ft": 0.44396159158812676,
+   "defFull": 4.243505906294742,
+   "defFullWithFt": 4.687467497882869
+  },
+  {
+   "playerId": 1628398,
+   "name": "Kyle Kuzma",
+   "pos": "SF",
+   "beta": 0.001176768281867409,
+   "inTable": true,
+   "ft": -0.012415918586938801,
+   "defFull": -0.8317825859916805,
+   "defFullWithFt": -0.8441985045786193
+  },
+  {
+   "playerId": 1628401,
+   "name": "Derrick White",
+   "pos": "SG",
+   "beta": -0.04462676219609727,
+   "inTable": true,
+   "ft": 0.46470488288663514,
+   "defFull": 2.6203231073523625,
+   "defFullWithFt": 3.0850279902389977
+  },
+  {
+   "playerId": 1628404,
+   "name": "Josh Hart",
+   "pos": "SG",
+   "beta": 0.03045770452482342,
+   "inTable": true,
+   "ft": -0.3240408989865218,
+   "defFull": -0.5979037535395193,
+   "defFullWithFt": -0.9219446525260411
+  },
+  {
+   "playerId": 1628415,
+   "name": "Dillon Brooks",
+   "pos": "SF",
+   "beta": -0.043542371937595116,
+   "inTable": true,
+   "ft": 0.45355477160446966,
+   "defFull": -2.078872102842255,
+   "defFullWithFt": -1.6253173312377855
+  },
+  {
+   "playerId": 1628418,
+   "name": "Thomas Bryant",
+   "pos": "PF",
+   "beta": 0.013631595040619074,
+   "inTable": true,
+   "ft": -0.1443362226888567,
+   "defFull": 2.9131372721302506,
+   "defFullWithFt": 2.768801049441394
+  },
+  {
+   "playerId": 1628436,
+   "name": "Luke Kornet",
+   "pos": "C",
+   "beta": -0.028021753488231108,
+   "inTable": true,
+   "ft": 0.2931925269105795,
+   "defFull": 4.5440791501127675,
+   "defFullWithFt": 4.837271677023347
+  },
+  {
+   "playerId": 1628960,
+   "name": "Grayson Allen",
+   "pos": "PG",
+   "beta": 0.009550218441059868,
+   "inTable": true,
+   "ft": -0.10100377031976304,
+   "defFull": -2.1547366615594976,
+   "defFullWithFt": -2.2557404318792607
+  },
+  {
+   "playerId": 1628963,
+   "name": "Marvin Bagley III",
+   "pos": "PF",
+   "beta": 0.023061518955130034,
+   "inTable": true,
+   "ft": -0.24483865204840694,
+   "defFull": 2.245726670175019,
+   "defFullWithFt": 2.000888018126612
+  },
+  {
+   "playerId": 1628969,
+   "name": "Mikal Bridges",
+   "pos": "SG",
+   "beta": -0.034003745451030125,
+   "inTable": true,
+   "ft": 0.3551709875545983,
+   "defFull": -0.5016773778325767,
+   "defFullWithFt": -0.1465063902779784
+  },
+  {
+   "playerId": 1628970,
+   "name": "Miles Bridges",
+   "pos": "SF",
+   "beta": -0.04051164881065282,
+   "inTable": true,
+   "ft": 0.4223543175114308,
+   "defFull": -0.7639804749352663,
+   "defFullWithFt": -0.3416261574238355
+  },
+  {
+   "playerId": 1628971,
+   "name": "Bruce Brown",
+   "pos": "SG",
+   "beta": 0.013795172561113955,
+   "inTable": true,
+   "ft": -0.14607503582075854,
+   "defFull": -1.175923798956946,
+   "defFullWithFt": -1.3219988347777045
+  },
+  {
+   "playerId": 1628973,
+   "name": "Jalen Brunson",
+   "pos": "PG",
+   "beta": 0.009641180470952495,
+   "inTable": true,
+   "ft": -0.10196843161718316,
+   "defFull": -3.03173384155333,
+   "defFullWithFt": -3.1337022731705133
+  },
+  {
+   "playerId": 1628975,
+   "name": "Jevon Carter",
+   "pos": "PG",
+   "beta": 0.0502067979507482,
+   "inTable": true,
+   "ft": -0.5371409782597425,
+   "defFull": -2.442776572066796,
+   "defFullWithFt": -2.9799175503265385
+  },
+  {
+   "playerId": 1628976,
+   "name": "Wendell Carter Jr.",
+   "pos": "PF",
+   "beta": -0.01284161469417209,
+   "inTable": true,
+   "ft": 0.13494840815069242,
+   "defFull": 2.2093340178579224,
+   "defFullWithFt": 2.344282426008615
+  },
+  {
+   "playerId": 1628978,
+   "name": "Donte DiVincenzo",
+   "pos": "SG",
+   "beta": -0.014850735664697327,
+   "inTable": true,
+   "ft": 0.1559718679557731,
+   "defFull": -0.04764963497780883,
+   "defFullWithFt": 0.10832223297796428
+  },
+  {
+   "playerId": 1628983,
+   "name": "Shai Gilgeous-Alexander",
+   "pos": "SG",
+   "beta": -0.0001803674638685301,
+   "inTable": true,
+   "ft": 0.0019022952755687328,
+   "defFull": 3.1001112043758994,
+   "defFullWithFt": 3.102013499651468
+  },
+  {
+   "playerId": 1628988,
+   "name": "Aaron Holiday",
+   "pos": "PG",
+   "beta": 0.009900172524000257,
+   "inTable": true,
+   "ft": -0.10471534083560385,
+   "defFull": -0.6530970779748291,
+   "defFullWithFt": -0.7578124188104329
+  },
+  {
+   "playerId": 1628989,
+   "name": "Kevin Huerter",
+   "pos": "SG",
+   "beta": 0.006855871625566651,
+   "inTable": true,
+   "ft": -0.07245255592289723,
+   "defFull": 0.3207527775121122,
+   "defFullWithFt": 0.24830022158921494
+  },
+  {
+   "playerId": 1628991,
+   "name": "Jaren Jackson Jr.",
+   "pos": "PF",
+   "beta": -0.05898190929360801,
+   "inTable": true,
+   "ft": 0.6116454981325736,
+   "defFull": 3.8415320458091484,
+   "defFullWithFt": 4.453177543941722
+  },
+  {
+   "playerId": 1628997,
+   "name": "Caleb Martin",
+   "pos": "SG",
+   "beta": -0.036207250354741524,
+   "inTable": true,
+   "ft": 0.37794699507851526,
+   "defFull": 0.35477877577503314,
+   "defFullWithFt": 0.7327257708535484
+  },
+  {
+   "playerId": 1629001,
+   "name": "De'Anthony Melton",
+   "pos": "PG",
+   "beta": -0.017381031262006068,
+   "inTable": true,
+   "ft": 0.18241436860912952,
+   "defFull": -0.48698774553683766,
+   "defFullWithFt": -0.30457337692770814
+  },
+  {
+   "playerId": 1629004,
+   "name": "Svi Mykhailiuk",
+   "pos": "SF",
+   "beta": -0.00431037176958509,
+   "inTable": true,
+   "ft": 0.04540695131443062,
+   "defFull": -2.353426291166816,
+   "defFullWithFt": -2.308019339852385
+  },
+  {
+   "playerId": 1629006,
+   "name": "Josh Okogie",
+   "pos": "SG",
+   "beta": 0.0015067228199276206,
+   "inTable": true,
+   "ft": -0.015898719472184908,
+   "defFull": 1.154026673004327,
+   "defFullWithFt": 1.138127953532142
+  },
+  {
+   "playerId": 1629008,
+   "name": "Michael Porter Jr.",
+   "pos": "PF",
+   "beta": 0.018587324209491076,
+   "inTable": true,
+   "ft": -0.19708668442244281,
+   "defFull": -1.5321087155383717,
+   "defFullWithFt": -1.7291953999608145
+  },
+  {
+   "playerId": 1629011,
+   "name": "Mitchell Robinson",
+   "pos": "C",
+   "beta": -0.015969602189337143,
+   "inTable": true,
+   "ft": 0.16766917407238235,
+   "defFull": 4.503928134003887,
+   "defFullWithFt": 4.67159730807627
+  },
+  {
+   "playerId": 1629012,
+   "name": "Collin Sexton",
+   "pos": "PG",
+   "beta": -0.006510271069053387,
+   "inTable": true,
+   "ft": 0.06853835734716984,
+   "defFull": -0.3820867064888267,
+   "defFullWithFt": -0.31354834914165686
+  },
+  {
+   "playerId": 1629013,
+   "name": "Landry Shamet",
+   "pos": "SG",
+   "beta": -0.008687566607520167,
+   "inTable": true,
+   "ft": 0.09140341777416072,
+   "defFull": -1.1764500893643781,
+   "defFullWithFt": -1.0850466715902174
+  },
+  {
+   "playerId": 1629014,
+   "name": "Anfernee Simons",
+   "pos": "PG",
+   "beta": 0.02385037972704575,
+   "inTable": true,
+   "ft": -0.2532704783068995,
+   "defFull": -3.5369146307651755,
+   "defFullWithFt": -3.790185109072075
+  },
+  {
+   "playerId": 1629018,
+   "name": "Gary Trent Jr.",
+   "pos": "SG",
+   "beta": 0.031121597071736826,
+   "inTable": true,
+   "ft": -0.3311663396851072,
+   "defFull": -4.5261319991575455,
+   "defFullWithFt": -4.857298338842653
+  },
+  {
+   "playerId": 1629020,
+   "name": "Jarred Vanderbilt",
+   "pos": "SF",
+   "beta": 0.03355279754166541,
+   "inTable": true,
+   "ft": -0.3572826680638963,
+   "defFull": -0.15775706255007904,
+   "defFullWithFt": -0.5150397306139753
+  },
+  {
+   "playerId": 1629023,
+   "name": "P.J. Washington",
+   "pos": "SF",
+   "beta": -0.007593939824835655,
+   "inTable": true,
+   "ft": 0.07992216523322604,
+   "defFull": 2.150916180881013,
+   "defFullWithFt": 2.230838346114239
+  },
+  {
+   "playerId": 1629026,
+   "name": "Kenrich Williams",
+   "pos": "SF",
+   "beta": -0.024962342531061804,
+   "inTable": true,
+   "ft": 0.2614113826033826,
+   "defFull": 1.0282522136563,
+   "defFullWithFt": 1.2896635962596825
+  },
+  {
+   "playerId": 1629028,
+   "name": "Deandre Ayton",
+   "pos": "C",
+   "beta": -0.042566188267435266,
+   "inTable": true,
+   "ft": 0.44351124799211217,
+   "defFull": 1.138242591529659,
+   "defFullWithFt": 1.5817538395217712
+  },
+  {
+   "playerId": 1629029,
+   "name": "Luka Dončić",
+   "pos": "SF",
+   "beta": -0.051362566740151466,
+   "inTable": true,
+   "ft": 0.533807021692434,
+   "defFull": 0.0872521071574095,
+   "defFullWithFt": 0.6210591288498435
+  },
+  {
+   "playerId": 1629048,
+   "name": "Goga Bitadze",
+   "pos": "C",
+   "beta": 0.015082415697038401,
+   "inTable": true,
+   "ft": -0.1597639308239529,
+   "defFull": 4.251974220123178,
+   "defFullWithFt": 4.092210289299225
+  },
+  {
+   "playerId": 1629057,
+   "name": "Robert Williams III",
+   "pos": "PF",
+   "beta": 0.010370638874550758,
+   "inTable": true,
+   "ft": -0.10970621225343535,
+   "defFull": 5.825573201822198,
+   "defFullWithFt": 5.715866989568763
+  },
+  {
+   "playerId": 1629060,
+   "name": "Rui Hachimura",
+   "pos": "SF",
+   "beta": -0.0190034522912472,
+   "inTable": true,
+   "ft": 0.19934899855920118,
+   "defFull": -1.607769625295985,
+   "defFullWithFt": -1.4084206267367838
+  },
+  {
+   "playerId": 1629111,
+   "name": "Jock Landale",
+   "pos": "C",
+   "beta": -0.01308915495107593,
+   "inTable": true,
+   "ft": 0.13753998285777058,
+   "defFull": -0.19552023776843175,
+   "defFullWithFt": -0.057980254910661166
+  },
+  {
+   "playerId": 1629130,
+   "name": "Duncan Robinson",
+   "pos": "SF",
+   "beta": 0.0493945574232402,
+   "inTable": true,
+   "ft": -0.5283302088574304,
+   "defFull": -1.9450935396083446,
+   "defFullWithFt": -2.473423748465775
+  },
+  {
+   "playerId": 1629216,
+   "name": "Gabe Vincent",
+   "pos": "PG",
+   "beta": 0.022158386370478043,
+   "inTable": true,
+   "ft": -0.23519002394603028,
+   "defFull": -1.2756518865396194,
+   "defFullWithFt": -1.5108419104856496
+  },
+  {
+   "playerId": 1629234,
+   "name": "Drew Eubanks",
+   "pos": "PF",
+   "beta": -0.008784884481013631,
+   "inTable": true,
+   "ft": 0.0924247440746484,
+   "defFull": 2.9473349183842146,
+   "defFullWithFt": 3.039759662458863
+  },
+  {
+   "playerId": 1629611,
+   "name": "Terance Mann",
+   "pos": "SG",
+   "beta": -0.006180396513788619,
+   "inTable": true,
+   "ft": 0.06507166262024189,
+   "defFull": -1.2697648526242888,
+   "defFullWithFt": -1.204693190004047
+  },
+  {
+   "playerId": 1629614,
+   "name": "Andrew Nembhard",
+   "pos": "SG",
+   "beta": 0.03821008777515459,
+   "inTable": true,
+   "ft": -0.40741153310948075,
+   "defFull": -3.1347153442552456,
+   "defFullWithFt": -3.5421268773647263
+  },
+  {
+   "playerId": 1629618,
+   "name": "Jalen Pickett",
+   "pos": "PG",
+   "beta": 0.019719950141651076,
+   "inTable": true,
+   "ft": -0.20916351473847516,
+   "defFull": -1.469562793745527,
+   "defFullWithFt": -1.678726308484002
+  },
+  {
+   "playerId": 1629627,
+   "name": "Zion Williamson",
+   "pos": "SG",
+   "beta": 0.012155546307885406,
+   "inTable": true,
+   "ft": -0.1286532581585842,
+   "defFull": 0.4883492751629248,
+   "defFullWithFt": 0.3596960170043406
+  },
+  {
+   "playerId": 1629628,
+   "name": "RJ Barrett",
+   "pos": "SG",
+   "beta": -0.003273589922760088,
+   "inTable": true,
+   "ft": 0.03449534535417964,
+   "defFull": -2.5203584429235315,
+   "defFullWithFt": -2.485863097569352
+  },
+  {
+   "playerId": 1629630,
+   "name": "Ja Morant",
+   "pos": "PG",
+   "beta": 0.004791795835176973,
+   "inTable": true,
+   "ft": -0.05060971578367823,
+   "defFull": 0.1184305140182973,
+   "defFullWithFt": 0.06782079823461906
+  },
+  {
+   "playerId": 1629631,
+   "name": "De'Andre Hunter",
+   "pos": "SF",
+   "beta": 0.025889417360707254,
+   "inTable": true,
+   "ft": -0.27508233761228684,
+   "defFull": -0.9318953002249941,
+   "defFullWithFt": -1.206977637837281
+  },
+  {
+   "playerId": 1629632,
+   "name": "Coby White",
+   "pos": "SG",
+   "beta": 0.016051718664331506,
+   "inTable": true,
+   "ft": -0.17007835230755664,
+   "defFull": -1.7295430565851033,
+   "defFullWithFt": -1.89962140889266
+  },
+  {
+   "playerId": 1629636,
+   "name": "Darius Garland",
+   "pos": "PG",
+   "beta": -0.007694520064667205,
+   "inTable": true,
+   "ft": 0.08097839003207152,
+   "defFull": -1.8380045434936765,
+   "defFullWithFt": -1.757026153461605
+  },
+  {
+   "playerId": 1629637,
+   "name": "Jaxson Hayes",
+   "pos": "C",
+   "beta": 0.0019278093334847493,
+   "inTable": true,
+   "ft": -0.02034440642311175,
+   "defFull": 2.411775286279294,
+   "defFullWithFt": 2.3914308798561823
+  },
+  {
+   "playerId": 1629638,
+   "name": "Nickeil Alexander-Walker",
+   "pos": "SG",
+   "beta": -0.02961185341352882,
+   "inTable": true,
+   "ft": 0.3096882690223346,
+   "defFull": 1.0070626561301532,
+   "defFullWithFt": 1.3167509251524878
+  },
+  {
+   "playerId": 1629639,
+   "name": "Tyler Herro",
+   "pos": "SG",
+   "beta": -0.009018107838019165,
+   "inTable": true,
+   "ft": 0.09487213192693744,
+   "defFull": -2.0611081253152364,
+   "defFullWithFt": -1.966235993388299
+  },
+  {
+   "playerId": 1629640,
+   "name": "Keldon Johnson",
+   "pos": "SG",
+   "beta": 0.005365715444292731,
+   "inTable": true,
+   "ft": -0.056680577800860554,
+   "defFull": 0.4058819720974105,
+   "defFullWithFt": 0.34920139429654995
+  },
+  {
+   "playerId": 1629645,
+   "name": "Kevin Porter Jr.",
+   "pos": "SG",
+   "beta": 0.011010847693424418,
+   "inTable": true,
+   "ft": -0.11649991258839698,
+   "defFull": 1.8540021828902464,
+   "defFullWithFt": 1.7375022703018494
+  },
+  {
+   "playerId": 1629651,
+   "name": "Nic Claxton",
+   "pos": "C",
+   "beta": 0.011371603794355338,
+   "inTable": true,
+   "ft": -0.12032923364866388,
+   "defFull": 1.6536414556201917,
+   "defFullWithFt": 1.5333122219715278
+  },
+  {
+   "playerId": 1629652,
+   "name": "Luguentz Dort",
+   "pos": "SG",
+   "beta": -0.02463347371039651,
+   "inTable": true,
+   "ft": 0.25799174756500065,
+   "defFull": -0.1610920094527124,
+   "defFullWithFt": 0.09689973811228825
+  },
+  {
+   "playerId": 1629655,
+   "name": "Daniel Gafford",
+   "pos": "PF",
+   "beta": -0.03848221604227664,
+   "inTable": true,
+   "ft": 0.4014310597560078,
+   "defFull": 3.5941309272474298,
+   "defFullWithFt": 3.9955619870034376
+  },
+  {
+   "playerId": 1629656,
+   "name": "Quentin Grimes",
+   "pos": "SG",
+   "beta": 0.02296828139880242,
+   "inTable": true,
+   "ft": -0.2438423198995121,
+   "defFull": -0.48877856422933075,
+   "defFullWithFt": -0.7326208841288429
+  },
+  {
+   "playerId": 1629661,
+   "name": "Cameron Johnson",
+   "pos": "SF",
+   "beta": -0.014211665889058334,
+   "inTable": true,
+   "ft": 0.14928726885137245,
+   "defFull": -1.5309516167198334,
+   "defFullWithFt": -1.381664347868461
+  },
+  {
+   "playerId": 1629673,
+   "name": "Jordan Poole",
+   "pos": "SG",
+   "beta": 0.020492252706533647,
+   "inTable": true,
+   "ft": -0.21740276442134832,
+   "defFull": -2.861985655941246,
+   "defFullWithFt": -3.0793884203625943
+  },
+  {
+   "playerId": 1629674,
+   "name": "Neemias Queta",
+   "pos": "C",
+   "beta": -0.06728140856078987,
+   "inTable": true,
+   "ft": 0.6960367211034546,
+   "defFull": 7.110371463945686,
+   "defFullWithFt": 7.806408185049141
+  },
+  {
+   "playerId": 1629675,
+   "name": "Naz Reid",
+   "pos": "PF",
+   "beta": 0.03795040117619163,
+   "inTable": true,
+   "ft": -0.4046129460434589,
+   "defFull": 3.8366581596300797,
+   "defFullWithFt": 3.432045213586621
+  },
+  {
+   "playerId": 1629684,
+   "name": "Grant Williams",
+   "pos": "SF",
+   "beta": 0.02625173314117802,
+   "inTable": true,
+   "ft": -0.27896070046835586,
+   "defFull": 0.058809209096422066,
+   "defFullWithFt": -0.2201514913719338
+  },
+  {
+   "playerId": 1629723,
+   "name": "John Konchar",
+   "pos": "SG",
+   "beta": -0.013960307115011639,
+   "inTable": true,
+   "ft": 0.14665741091774986,
+   "defFull": 2.7829326340378824,
+   "defFullWithFt": 2.9295900449556322
+  },
+  {
+   "playerId": 1629731,
+   "name": "Dean Wade",
+   "pos": "PF",
+   "beta": -0.010040302347827736,
+   "inTable": true,
+   "ft": 0.10559492662043368,
+   "defFull": 0.3039648486040214,
+   "defFullWithFt": 0.4095597752244551
+  },
+  {
+   "playerId": 1629750,
+   "name": "Javonte Green",
+   "pos": "SG",
+   "beta": -0.007321143931483805,
+   "inTable": true,
+   "ft": 0.07705714316597057,
+   "defFull": 0.7606090000142007,
+   "defFullWithFt": 0.8376661431801713
+  },
+  {
+   "playerId": 1630162,
+   "name": "Anthony Edwards",
+   "pos": "SG",
+   "beta": -0.022007620834667903,
+   "inTable": true,
+   "ft": 0.23066436191410133,
+   "defFull": -2.7228311371591207,
+   "defFullWithFt": -2.4921667752450194
+  },
+  {
+   "playerId": 1630163,
+   "name": "LaMelo Ball",
+   "pos": "SF",
+   "beta": 0.00630497365898089,
+   "inTable": true,
+   "ft": -0.06662023283336982,
+   "defFull": -2.267530718998967,
+   "defFullWithFt": -2.3341509518323367
+  },
+  {
+   "playerId": 1630166,
+   "name": "Deni Avdija",
+   "pos": "SF",
+   "beta": 0.054187766085209754,
+   "inTable": true,
+   "ft": -0.5803820483613276,
+   "defFull": 0.6431987260206551,
+   "defFullWithFt": 0.06281667765932752
+  },
+  {
+   "playerId": 1630168,
+   "name": "Onyeka Okongwu",
+   "pos": "PF",
+   "beta": -0.02455027593917564,
+   "inTable": true,
+   "ft": 0.2571265397082634,
+   "defFull": 1.410590941776868,
+   "defFullWithFt": 1.6677174814851314
+  },
+  {
+   "playerId": 1630170,
+   "name": "Devin Vassell",
+   "pos": "SG",
+   "beta": -0.036055444890460676,
+   "inTable": true,
+   "ft": 0.37637882869496764,
+   "defFull": 0.10841729067632144,
+   "defFullWithFt": 0.4847961193712891
+  },
+  {
+   "playerId": 1630171,
+   "name": "Isaac Okoro",
+   "pos": "SG",
+   "beta": 0.01852301960940397,
+   "inTable": true,
+   "ft": -0.19640125682034437,
+   "defFull": -1.3983190659532463,
+   "defFullWithFt": -1.5947203227735907
+  },
+  {
+   "playerId": 1630172,
+   "name": "Patrick Williams",
+   "pos": "SG",
+   "beta": -0.011123702697547597,
+   "inTable": true,
+   "ft": 0.11695290768363176,
+   "defFull": -0.7227110584616447,
+   "defFullWithFt": -0.605758150778013
+  },
+  {
+   "playerId": 1630173,
+   "name": "Precious Achiuwa",
+   "pos": "SF",
+   "beta": -0.033201052073089835,
+   "inTable": true,
+   "ft": 0.3468668933071184,
+   "defFull": 0.48925764707028474,
+   "defFullWithFt": 0.8361245403774031
+  },
+  {
+   "playerId": 1630174,
+   "name": "Aaron Nesmith",
+   "pos": "SG",
+   "beta": 0.03218374992345871,
+   "inTable": true,
+   "ft": -0.34257176448040383,
+   "defFull": -1.3329716066095232,
+   "defFullWithFt": -1.675543371089927
+  },
+  {
+   "playerId": 1630175,
+   "name": "Cole Anthony",
+   "pos": "PG",
+   "beta": 0.010972370548340648,
+   "inTable": true,
+   "ft": -0.11609153515259596,
+   "defFull": 0.41756597313951094,
+   "defFullWithFt": 0.301474437986915
+  },
+  {
+   "playerId": 1630178,
+   "name": "Tyrese Maxey",
+   "pos": "PG",
+   "beta": 0.0073589885472522786,
+   "inTable": true,
+   "ft": -0.07778062076220227,
+   "defFull": -0.25483275490383317,
+   "defFullWithFt": -0.33261337566603544
+  },
+  {
+   "playerId": 1630180,
+   "name": "Saddiq Bey",
+   "pos": "SF",
+   "beta": -0.03250273544553917,
+   "inTable": true,
+   "ft": 0.3396394596741459,
+   "defFull": -2.7634592416442505,
+   "defFullWithFt": -2.4238197819701046
+  },
+  {
+   "playerId": 1630182,
+   "name": "Josh Green",
+   "pos": "SG",
+   "beta": -0.004539150830748533,
+   "inTable": true,
+   "ft": 0.047813864317980403,
+   "defFull": -0.3727225337605278,
+   "defFullWithFt": -0.32490866944254737
+  },
+  {
+   "playerId": 1630183,
+   "name": "Jaden McDaniels",
+   "pos": "PF",
+   "beta": -0.03625615254303284,
+   "inTable": true,
+   "ft": 0.3784521303576316,
+   "defFull": 0.05502762071776246,
+   "defFullWithFt": 0.43347975107539405
+  },
+  {
+   "playerId": 1630188,
+   "name": "Jalen Smith",
+   "pos": "SF",
+   "beta": 0.008976451177054595,
+   "inTable": true,
+   "ft": -0.09492006049467427,
+   "defFull": 2.941557860661126,
+   "defFullWithFt": 2.8466378001664516
+  },
+  {
+   "playerId": 1630191,
+   "name": "Isaiah Stewart",
+   "pos": "SF",
+   "beta": 0.016215159287996196,
+   "inTable": true,
+   "ft": -0.17181809328921105,
+   "defFull": 4.651698357038936,
+   "defFullWithFt": 4.479880263749725
+  },
+  {
+   "playerId": 1630192,
+   "name": "Zeke Nnaji",
+   "pos": "PF",
+   "beta": 0.027917774698625282,
+   "inTable": true,
+   "ft": -0.29680481475085063,
+   "defFull": 1.8000132296286164,
+   "defFullWithFt": 1.5032084148777658
+  },
+  {
+   "playerId": 1630193,
+   "name": "Immanuel Quickley",
+   "pos": "PG",
+   "beta": -0.057299518118354716,
+   "inTable": true,
+   "ft": 0.5944882738141644,
+   "defFull": 0.12186378302823098,
+   "defFullWithFt": 0.7163520568423953
+  },
+  {
+   "playerId": 1630194,
+   "name": "Paul Reed",
+   "pos": "PF",
+   "beta": -0.0055426017889907255,
+   "inTable": true,
+   "ft": 0.05836713783287095,
+   "defFull": 5.4960270043376,
+   "defFullWithFt": 5.554394142170471
+  },
+  {
+   "playerId": 1630198,
+   "name": "Isaiah Joe",
+   "pos": "SG",
+   "beta": 0.00825727591038851,
+   "inTable": true,
+   "ft": -0.08729737573971441,
+   "defFull": -1.4756022380671086,
+   "defFullWithFt": -1.562899613806823
+  },
+  {
+   "playerId": 1630200,
+   "name": "Tre Jones",
+   "pos": "PG",
+   "beta": -0.017508472689938805,
+   "inTable": true,
+   "ft": 0.18374515918089251,
+   "defFull": -1.8965149891987165,
+   "defFullWithFt": -1.712769830017824
+  },
+  {
+   "playerId": 1630202,
+   "name": "Payton Pritchard",
+   "pos": "PG",
+   "beta": 0.02158863516364021,
+   "inTable": true,
+   "ft": -0.2291056088093324,
+   "defFull": -3.165928132972229,
+   "defFullWithFt": -3.3950337417815613
+  },
+  {
+   "playerId": 1630208,
+   "name": "Nick Richards",
+   "pos": "C",
+   "beta": -0.028841820042503883,
+   "inTable": true,
+   "ft": 0.30170181739825885,
+   "defFull": 1.0612710308690598,
+   "defFullWithFt": 1.3629728482673187
+  },
+  {
+   "playerId": 1630217,
+   "name": "Desmond Bane",
+   "pos": "SG",
+   "beta": -0.009966068771156342,
+   "inTable": true,
+   "ft": 0.10481642993331874,
+   "defFull": -0.8868340518215945,
+   "defFullWithFt": -0.7820176218882757
+  },
+  {
+   "playerId": 1630224,
+   "name": "Jalen Green",
+   "pos": "SG",
+   "beta": -0.05265675639529009,
+   "inTable": true,
+   "ft": 0.5470528674597963,
+   "defFull": -1.5379016781057686,
+   "defFullWithFt": -0.9908488106459723
+  },
+  {
+   "playerId": 1630228,
+   "name": "Jonathan Kuminga",
+   "pos": "SF",
+   "beta": -0.010808603556775683,
+   "inTable": true,
+   "ft": 0.11365024932337153,
+   "defFull": 1.7017494822686219,
+   "defFullWithFt": 1.8153997315919934
+  },
+  {
+   "playerId": 1630230,
+   "name": "Naji Marshall",
+   "pos": "SG",
+   "beta": 0.009454602304258741,
+   "inTable": true,
+   "ft": -0.09998980548520109,
+   "defFull": -1.621864812226348,
+   "defFullWithFt": -1.721854617711549
+  },
+  {
+   "playerId": 1630241,
+   "name": "Sam Merrill",
+   "pos": "SG",
+   "beta": 0.008782955547843361,
+   "inTable": true,
+   "ft": -0.09286885470194406,
+   "defFull": -1.3929017301490765,
+   "defFullWithFt": -1.4857705848510205
+  },
+  {
+   "playerId": 1630245,
+   "name": "Ayo Dosunmu",
+   "pos": "SG",
+   "beta": 0.02554662930892865,
+   "inTable": true,
+   "ft": -0.27141373532864055,
+   "defFull": -0.7310435675381921,
+   "defFullWithFt": -1.0024573028668327
+  },
+  {
+   "playerId": 1630249,
+   "name": "Vít Krejčí",
+   "pos": "SF",
+   "beta": 0.033964834529689604,
+   "inTable": true,
+   "ft": -0.36171236467859025,
+   "defFull": -0.6983838686573707,
+   "defFullWithFt": -1.060096233335961
+  },
+  {
+   "playerId": 1630264,
+   "name": "Anthony Gill",
+   "pos": "SF",
+   "beta": 0.025568434371862077,
+   "inTable": true,
+   "ft": -0.27164707739530947,
+   "defFull": 0.2004883844756833,
+   "defFullWithFt": -0.07115869291962618
+  },
+  {
+   "playerId": 1630311,
+   "name": "Pat Spencer",
+   "pos": "PG",
+   "beta": -0.005765346175620707,
+   "inTable": true,
+   "ft": 0.06070891428007208,
+   "defFull": -2.8260653106669364,
+   "defFullWithFt": -2.7653563963868644
+  },
+  {
+   "playerId": 1630314,
+   "name": "Brandon Williams",
+   "pos": "PG",
+   "beta": 0.025463535823289956,
+   "inTable": true,
+   "ft": -0.27052455500946593,
+   "defFull": -1.18752910675608,
+   "defFullWithFt": -1.458053661765546
+  },
+  {
+   "playerId": 1630529,
+   "name": "Herbert Jones",
+   "pos": "SF",
+   "beta": -0.016565244123554475,
+   "inTable": true,
+   "ft": 0.17389330408406067,
+   "defFull": 1.0808387020655008,
+   "defFullWithFt": 1.2547320061495615
+  },
+  {
+   "playerId": 1630530,
+   "name": "Trey Murphy III",
+   "pos": "SF",
+   "beta": -0.030770232825798213,
+   "inTable": true,
+   "ft": 0.32169576846945436,
+   "defFull": -1.1849432964076367,
+   "defFullWithFt": -0.8632475279381824
+  },
+  {
+   "playerId": 1630532,
+   "name": "Franz Wagner",
+   "pos": "PF",
+   "beta": 0.04784127806492483,
+   "inTable": true,
+   "ft": -0.5114921137223449,
+   "defFull": 0.3224697212871108,
+   "defFullWithFt": -0.1890223924352341
+  },
+  {
+   "playerId": 1630533,
+   "name": "Ziaire Williams",
+   "pos": "PF",
+   "beta": 0.009075175139856288,
+   "inTable": true,
+   "ft": -0.09596669899283317,
+   "defFull": 0.5503841416493183,
+   "defFullWithFt": 0.4544174426564851
+  },
+  {
+   "playerId": 1630534,
+   "name": "Ochai Agbaji",
+   "pos": "SG",
+   "beta": 0.013325498947931684,
+   "inTable": true,
+   "ft": -0.14108288404965919,
+   "defFull": -0.22181411251422922,
+   "defFullWithFt": -0.3628969965638884
+  },
+  {
+   "playerId": 1630536,
+   "name": "Sharife Cooper",
+   "pos": "PG",
+   "beta": -0.007703527646016668,
+   "inTable": true,
+   "ft": 0.08107297851329687,
+   "defFull": -2.2178245601117474,
+   "defFullWithFt": -2.1367515815984506
+  },
+  {
+   "playerId": 1630538,
+   "name": "Bones Hyland",
+   "pos": "PG",
+   "beta": 0.03008146920767145,
+   "inTable": true,
+   "ft": -0.32000401194474115,
+   "defFull": -0.7264425778495731,
+   "defFullWithFt": -1.0464465897943143
+  },
+  {
+   "playerId": 1630540,
+   "name": "Miles McBride",
+   "pos": "PG",
+   "beta": 0.01403478205316513,
+   "inTable": true,
+   "ft": -0.14862235242147914,
+   "defFull": -2.147309293506461,
+   "defFullWithFt": -2.29593164592794
+  },
+  {
+   "playerId": 1630541,
+   "name": "Moses Moody",
+   "pos": "SG",
+   "beta": -0.011459223191827905,
+   "inTable": true,
+   "ft": 0.12046895247050937,
+   "defFull": 1.5057785818186842,
+   "defFullWithFt": 1.6262475342891936
+  },
+  {
+   "playerId": 1630543,
+   "name": "Isaiah Jackson",
+   "pos": "SF",
+   "beta": 0.012280921126096182,
+   "inTable": true,
+   "ft": -0.12998485101254342,
+   "defFull": 2.002242509497587,
+   "defFullWithFt": 1.8722576584850437
+  },
+  {
+   "playerId": 1630544,
+   "name": "Tre Mann",
+   "pos": "SG",
+   "beta": -0.0407736624591478,
+   "inTable": true,
+   "ft": 0.4250538517004854,
+   "defFull": -3.129883686130963,
+   "defFullWithFt": -2.7048298344304778
+  },
+  {
+   "playerId": 1630545,
+   "name": "Terrence Shannon Jr",
+   "pos": "SG",
+   "beta": 0.03399652070528724,
+   "inTable": true,
+   "ft": -0.3620530564508506,
+   "defFull": -3.060910247832238,
+   "defFullWithFt": -3.4229633042830887
+  },
+  {
+   "playerId": 1630549,
+   "name": "Day'Ron Sharpe",
+   "pos": "PF",
+   "beta": -0.010202202700992159,
+   "inTable": true,
+   "ft": 0.10729268063247588,
+   "defFull": 3.9074273672515147,
+   "defFullWithFt": 4.014720047883991
+  },
+  {
+   "playerId": 1630551,
+   "name": "Justin Champagnie",
+   "pos": "SG",
+   "beta": 0.0032656269649704857,
+   "inTable": true,
+   "ft": -0.03447570938495126,
+   "defFull": 0.33716562943229,
+   "defFullWithFt": 0.30268992004733875
+  },
+  {
+   "playerId": 1630552,
+   "name": "Jalen Johnson",
+   "pos": "SF",
+   "beta": 0.011838842260941881,
+   "inTable": true,
+   "ft": -0.12528999924386053,
+   "defFull": -0.8129282734441468,
+   "defFullWithFt": -0.9382182726880073
+  },
+  {
+   "playerId": 1630557,
+   "name": "Corey Kispert",
+   "pos": "SG",
+   "beta": 0.009463258835915929,
+   "inTable": true,
+   "ft": -0.10008160172609859,
+   "defFull": -3.0154531544687835,
+   "defFullWithFt": -3.115534756194882
+  },
+  {
+   "playerId": 1630558,
+   "name": "Davion Mitchell",
+   "pos": "PG",
+   "beta": -0.00076465091266348,
+   "inTable": true,
+   "ft": 0.00806325737288116,
+   "defFull": -1.1241593737251865,
+   "defFullWithFt": -1.1160961163523053
+  },
+  {
+   "playerId": 1630559,
+   "name": "Austin Reaves",
+   "pos": "SG",
+   "beta": -0.0006972179918363347,
+   "inTable": true,
+   "ft": 0.007352317535658237,
+   "defFull": -0.9658220788663963,
+   "defFullWithFt": -0.958469761330738
+  },
+  {
+   "playerId": 1630560,
+   "name": "Cam Thomas",
+   "pos": "PG",
+   "beta": 0.01549262828237447,
+   "inTable": true,
+   "ft": -0.16412834106738217,
+   "defFull": -5.3891495488582075,
+   "defFullWithFt": -5.55327788992559
+  },
+  {
+   "playerId": 1630567,
+   "name": "Scottie Barnes",
+   "pos": "SF",
+   "beta": -0.0077236064406465115,
+   "inTable": true,
+   "ft": 0.08128382388772337,
+   "defFull": 4.487499773247117,
+   "defFullWithFt": 4.56878359713484
+  },
+  {
+   "playerId": 1630568,
+   "name": "Luka Garza",
+   "pos": "PF",
+   "beta": 0.006609297011340649,
+   "inTable": true,
+   "ft": -0.06984185961509404,
+   "defFull": 1.0982729686425774,
+   "defFullWithFt": 1.0284311090274834
+  },
+  {
+   "playerId": 1630570,
+   "name": "Trendon Watford",
+   "pos": "SF",
+   "beta": 0.006772830496584955,
+   "inTable": true,
+   "ft": -0.07157328758464754,
+   "defFull": 0.38003570097076,
+   "defFullWithFt": 0.30846241338611247
+  },
+  {
+   "playerId": 1630572,
+   "name": "Sandro Mamukelashvili",
+   "pos": "PF",
+   "beta": 0.025160170858220286,
+   "inTable": true,
+   "ft": -0.2672786110832659,
+   "defFull": 1.516922179084701,
+   "defFullWithFt": 1.249643568001435
+  },
+  {
+   "playerId": 1630573,
+   "name": "Sam Hauser",
+   "pos": "SF",
+   "beta": -0.030172427856119115,
+   "inTable": true,
+   "ft": 0.3155000634997407,
+   "defFull": -2.226797108567369,
+   "defFullWithFt": -1.911297045067628
+  },
+  {
+   "playerId": 1630577,
+   "name": "Julian Champagnie",
+   "pos": "SF",
+   "beta": -0.06454241602560709,
+   "inTable": true,
+   "ft": 0.6682316035437674,
+   "defFull": -1.006473685235676,
+   "defFullWithFt": -0.3382420816919085
+  },
+  {
+   "playerId": 1630578,
+   "name": "Alperen Sengun",
+   "pos": "C",
+   "beta": 0.006522825999891216,
+   "inTable": true,
+   "ft": -0.06892640378253212,
+   "defFull": 1.3903684358045343,
+   "defFullWithFt": 1.3214420320220022
+  },
+  {
+   "playerId": 1630579,
+   "name": "Jericho Sims",
+   "pos": "PF",
+   "beta": 0.011105894349527514,
+   "inTable": true,
+   "ft": -0.11750872912905663,
+   "defFull": -0.3627034300571319,
+   "defFullWithFt": -0.48021215918618854
+  },
+  {
+   "playerId": 1630581,
+   "name": "Josh Giddey",
+   "pos": "SF",
+   "beta": -0.012278421441146523,
+   "inTable": true,
+   "ft": 0.1290507925369111,
+   "defFull": 0.5290499057650555,
+   "defFullWithFt": 0.6581006983019666
+  },
+  {
+   "playerId": 1630583,
+   "name": "Santi Aldama",
+   "pos": "C",
+   "beta": 0.02353851340901332,
+   "inTable": true,
+   "ft": -0.2499366120997326,
+   "defFull": -0.411501446087037,
+   "defFullWithFt": -0.6614380581867696
+  },
+  {
+   "playerId": 1630591,
+   "name": "Jalen Suggs",
+   "pos": "SG",
+   "beta": 0.015527516941368466,
+   "inTable": true,
+   "ft": -0.1644995817761341,
+   "defFull": 2.3065541526021915,
+   "defFullWithFt": 2.1420545708260574
+  },
+  {
+   "playerId": 1630592,
+   "name": "Jalen Wilson",
+   "pos": "SG",
+   "beta": 0.02577818560408441,
+   "inTable": true,
+   "ft": -0.2738918302851223,
+   "defFull": -2.6742478102870892,
+   "defFullWithFt": -2.9481396405722116
+  },
+  {
+   "playerId": 1630595,
+   "name": "Cade Cunningham",
+   "pos": "SG",
+   "beta": 0.009637534446922972,
+   "inTable": true,
+   "ft": -0.1019297642140149,
+   "defFull": -0.0327058650751777,
+   "defFullWithFt": -0.1346356292891926
+  },
+  {
+   "playerId": 1630596,
+   "name": "Evan Mobley",
+   "pos": "C",
+   "beta": -0.03917876276136788,
+   "inTable": true,
+   "ft": 0.4086151756638401,
+   "defFull": 5.119731910826797,
+   "defFullWithFt": 5.528347086490637
+  },
+  {
+   "playerId": 1630598,
+   "name": "Aaron Wiggins",
+   "pos": "SG",
+   "beta": -0.008906034039627754,
+   "inTable": true,
+   "ft": 0.09369609822704739,
+   "defFull": 0.033414764348038695,
+   "defFullWithFt": 0.12711086257508608
+  },
+  {
+   "playerId": 1630611,
+   "name": "Gui Santos",
+   "pos": "SF",
+   "beta": -0.010042995599927895,
+   "inTable": true,
+   "ft": 0.10562317046467484,
+   "defFull": 0.003528921985007649,
+   "defFullWithFt": 0.10915209244968249
+  },
+  {
+   "playerId": 1630619,
+   "name": "Moussa Cisse",
+   "pos": "C",
+   "beta": 0.018523366420650306,
+   "inTable": true,
+   "ft": -0.19640495344088738,
+   "defFull": 4.574710712627139,
+   "defFullWithFt": 4.378305759186252
+  },
+  {
+   "playerId": 1630631,
+   "name": "Jose Alvarado",
+   "pos": "PG",
+   "beta": -0.029146442606864394,
+   "inTable": true,
+   "ft": 0.30486165610381644,
+   "defFull": -0.09838057565285663,
+   "defFullWithFt": 0.2064810804509598
+  },
+  {
+   "playerId": 1630643,
+   "name": "Jay Huff",
+   "pos": "C",
+   "beta": -0.023023398636863517,
+   "inTable": true,
+   "ft": 0.24124052791818507,
+   "defFull": 5.662293089358084,
+   "defFullWithFt": 5.903533617276269
+  },
+  {
+   "playerId": 1630679,
+   "name": "Ethan Thompson",
+   "pos": "SG",
+   "beta": 0.03934536761118095,
+   "inTable": true,
+   "ft": -0.41965097741452073,
+   "defFull": -1.2685738662023383,
+   "defFullWithFt": -1.688224843616859
+  },
+  {
+   "playerId": 1630692,
+   "name": "Jordan Goodwin",
+   "pos": "PG",
+   "beta": 0.02674804419983265,
+   "inTable": true,
+   "ft": -0.28427468306764236,
+   "defFull": 0.6577545696635045,
+   "defFullWithFt": 0.3734798865958622
+  },
+  {
+   "playerId": 1630695,
+   "name": "Micah Potter",
+   "pos": "PF",
+   "beta": -0.010355173369386121,
+   "inTable": true,
+   "ft": 0.10889664940827437,
+   "defFull": 0.10968329070435434,
+   "defFullWithFt": 0.2185799401126287
+  },
+  {
+   "playerId": 1630696,
+   "name": "Dru Smith",
+   "pos": "PG",
+   "beta": -0.00014479118533809843,
+   "inTable": true,
+   "ft": 0.0015270957316682043,
+   "defFull": 3.428946241071862,
+   "defFullWithFt": 3.43047333680353
+  },
+  {
+   "playerId": 1630700,
+   "name": "Dyson Daniels",
+   "pos": "SF",
+   "beta": -0.025877421139664188,
+   "inTable": true,
+   "ft": 0.27092310883654047,
+   "defFull": 1.8717982964882252,
+   "defFullWithFt": 2.1427214053247656
+  },
+  {
+   "playerId": 1630702,
+   "name": "Jaden Hardy",
+   "pos": "PG",
+   "beta": 0.036673869574971193,
+   "inTable": true,
+   "ft": -0.39086195087252307,
+   "defFull": -2.7107677936601737,
+   "defFullWithFt": -3.101629744532697
+  },
+  {
+   "playerId": 1630703,
+   "name": "Scoot Henderson",
+   "pos": "PG",
+   "beta": -0.004552798064292934,
+   "inTable": true,
+   "ft": 0.04795743264205399,
+   "defFull": -1.6869732157846595,
+   "defFullWithFt": -1.6390157831426055
+  },
+  {
+   "playerId": 1630811,
+   "name": "Keaton Wallace",
+   "pos": "PG",
+   "beta": -0.0018616701510634317,
+   "inTable": true,
+   "ft": 0.01962519804747931,
+   "defFull": -1.6247595590554331,
+   "defFullWithFt": -1.6051343610079538
+  },
+  {
+   "playerId": 1631093,
+   "name": "Jaden Ivey",
+   "pos": "PG",
+   "beta": 0.008245130230090023,
+   "inTable": true,
+   "ft": -0.08716866795488443,
+   "defFull": -1.1686982238900745,
+   "defFullWithFt": -1.255866891844959
+  },
+  {
+   "playerId": 1631094,
+   "name": "Paolo Banchero",
+   "pos": "PF",
+   "beta": 0.05074958598297868,
+   "inTable": true,
+   "ft": -0.543031083730372,
+   "defFull": -0.49869743854162873,
+   "defFullWithFt": -1.0417285222720007
+  },
+  {
+   "playerId": 1631095,
+   "name": "Jabari Smith Jr.",
+   "pos": "C",
+   "beta": -0.015067222948781659,
+   "inTable": true,
+   "ft": 0.15823574407587415,
+   "defFull": 1.500855822653735,
+   "defFullWithFt": 1.6590915667296091
+  },
+  {
+   "playerId": 1631096,
+   "name": "Chet Holmgren",
+   "pos": "C",
+   "beta": -0.05999869635196294,
+   "inTable": true,
+   "ft": 0.6220065932528884,
+   "defFull": 4.593144797628224,
+   "defFullWithFt": 5.215151390881112
+  },
+  {
+   "playerId": 1631097,
+   "name": "Bennedict Mathurin",
+   "pos": "SG",
+   "beta": 0.0378866545019135,
+   "inTable": true,
+   "ft": -0.4039260239109277,
+   "defFull": 0.6432359703175905,
+   "defFullWithFt": 0.2393099464066628
+  },
+  {
+   "playerId": 1631099,
+   "name": "Keegan Murray",
+   "pos": "SF",
+   "beta": 0.0030528159399746124,
+   "inTable": true,
+   "ft": -0.0322270761016874,
+   "defFull": 0.1627240267699559,
+   "defFullWithFt": 0.1304969506682685
+  },
+  {
+   "playerId": 1631101,
+   "name": "Shaedon Sharpe",
+   "pos": "SG",
+   "beta": -0.019179806977869647,
+   "inTable": true,
+   "ft": 0.20118881341630868,
+   "defFull": -0.8290517540735953,
+   "defFullWithFt": -0.6278629406572867
+  },
+  {
+   "playerId": 1631105,
+   "name": "Jalen Duren",
+   "pos": "PF",
+   "beta": -0.006244532844355523,
+   "inTable": true,
+   "ft": 0.06574573095985414,
+   "defFull": 2.867514023959883,
+   "defFullWithFt": 2.933259754919737
+  },
+  {
+   "playerId": 1631106,
+   "name": "Tari Eason",
+   "pos": "SF",
+   "beta": -0.018102616479266538,
+   "inTable": true,
+   "ft": 0.18994813980095504,
+   "defFull": 0.44562120603155453,
+   "defFullWithFt": 0.6355693458325096
+  },
+  {
+   "playerId": 1631107,
+   "name": "Nikola Jović",
+   "pos": "PF",
+   "beta": 0.01587851419462137,
+   "inTable": true,
+   "ft": -0.16823485589108067,
+   "defFull": 0.8054154615856124,
+   "defFullWithFt": 0.6371806056945317
+  },
+  {
+   "playerId": 1631108,
+   "name": "Max Christie",
+   "pos": "SG",
+   "beta": -0.034707446696975404,
+   "inTable": true,
+   "ft": 0.3624477973007245,
+   "defFull": -2.30988922930635,
+   "defFullWithFt": -1.9474414320056255
+  },
+  {
+   "playerId": 1631109,
+   "name": "Mark Williams",
+   "pos": "C",
+   "beta": -0.07132228685472387,
+   "inTable": true,
+   "ft": 0.7369760707601536,
+   "defFull": 2.459736470121654,
+   "defFullWithFt": 3.1967125408818076
+  },
+  {
+   "playerId": 1631114,
+   "name": "Jalen Williams",
+   "pos": "SG",
+   "beta": -0.014101047645436826,
+   "inTable": true,
+   "ft": 0.1481299649145562,
+   "defFull": 0.7042754313087762,
+   "defFullWithFt": 0.8524053962233324
+  },
+  {
+   "playerId": 1631119,
+   "name": "Jaylin Williams",
+   "pos": "PF",
+   "beta": -0.022702112294885765,
+   "inTable": true,
+   "ft": 0.2378960005968045,
+   "defFull": 2.8318712595684303,
+   "defFullWithFt": 3.069767260165235
+  },
+  {
+   "playerId": 1631121,
+   "name": "Bryce McGowens",
+   "pos": "SG",
+   "beta": 0.0350082835369777,
+   "inTable": true,
+   "ft": -0.3729347778187675,
+   "defFull": -2.445774943929835,
+   "defFullWithFt": -2.8187097217486023
+  },
+  {
+   "playerId": 1631123,
+   "name": "Jamaree Bouyea",
+   "pos": "PG",
+   "beta": -0.013682572038996003,
+   "inTable": true,
+   "ft": 0.14375114730313943,
+   "defFull": 0.8144044047747601,
+   "defFullWithFt": 0.9581555520778995
+  },
+  {
+   "playerId": 1631124,
+   "name": "Julian Strawther",
+   "pos": "SG",
+   "beta": 0.015557613912073987,
+   "inTable": true,
+   "ft": -0.16481984132825644,
+   "defFull": -1.5069606357600795,
+   "defFullWithFt": -1.671780477088336
+  },
+  {
+   "playerId": 1631126,
+   "name": "Caleb Love",
+   "pos": "PG",
+   "beta": 0.007683593074989165,
+   "inTable": true,
+   "ft": -0.08121902829711924,
+   "defFull": -3.8896492408780903,
+   "defFullWithFt": -3.9708682691752095
+  },
+  {
+   "playerId": 1631128,
+   "name": "Christian Braun",
+   "pos": "SG",
+   "beta": -0.04721688290618463,
+   "inTable": true,
+   "ft": 0.491308941740054,
+   "defFull": -0.5540633501529335,
+   "defFullWithFt": -0.06275440841287949
+  },
+  {
+   "playerId": 1631133,
+   "name": "Jabari Walker",
+   "pos": "SF",
+   "beta": 0.002683303020114103,
+   "inTable": true,
+   "ft": -0.02832332534754567,
+   "defFull": -0.4478224104259354,
+   "defFullWithFt": -0.47614573577348107
+  },
+  {
+   "playerId": 1631157,
+   "name": "Ryan Rollins",
+   "pos": "PG",
+   "beta": -0.001637270909368016,
+   "inTable": true,
+   "ft": 0.017260750697078997,
+   "defFull": -0.013280648080393753,
+   "defFullWithFt": 0.003980102616685244
+  },
+  {
+   "playerId": 1631159,
+   "name": "Leonard Miller",
+   "pos": "PF",
+   "beta": 0.011245255638127134,
+   "inTable": true,
+   "ft": -0.11898799552612083,
+   "defFull": -0.6416589565796382,
+   "defFullWithFt": -0.760646952105759
+  },
+  {
+   "playerId": 1631165,
+   "name": "Keon Ellis",
+   "pos": "SG",
+   "beta": -0.0055272150514413965,
+   "inTable": true,
+   "ft": 0.05820536156682099,
+   "defFull": -0.019212956836356376,
+   "defFullWithFt": 0.038992404730464614
+  },
+  {
+   "playerId": 1631169,
+   "name": "Josh Minott",
+   "pos": "SF",
+   "beta": 0.03370048659114396,
+   "inTable": true,
+   "ft": -0.35887031480381637,
+   "defFull": 2.361866285374159,
+   "defFullWithFt": 2.0029959705703426
+  },
+  {
+   "playerId": 1631170,
+   "name": "Jaime Jaquez Jr.",
+   "pos": "SG",
+   "beta": -0.024645653251599488,
+   "inTable": true,
+   "ft": 0.2581184041353657,
+   "defFull": -1.5928058153340752,
+   "defFullWithFt": -1.3346874111987095
+  },
+  {
+   "playerId": 1631172,
+   "name": "Ousmane Dieng",
+   "pos": "PF",
+   "beta": 0.008099870200252024,
+   "inTable": true,
+   "ft": -0.08562941614369546,
+   "defFull": -2.3567598301964754,
+   "defFullWithFt": -2.442389246340171
+  },
+  {
+   "playerId": 1631200,
+   "name": "Kris Murray",
+   "pos": "SF",
+   "beta": 0.0018975041935640482,
+   "inTable": true,
+   "ft": -0.020024419504149904,
+   "defFull": 0.7624387098311702,
+   "defFullWithFt": 0.7424142903270203
+  },
+  {
+   "playerId": 1631207,
+   "name": "Dalen Terry",
+   "pos": "SG",
+   "beta": 0.051216281247672,
+   "inTable": true,
+   "ft": -0.5480968840370304,
+   "defFull": 0.23529973544966776,
+   "defFullWithFt": -0.31279714858736263
+  },
+  {
+   "playerId": 1631212,
+   "name": "Peyton Watson",
+   "pos": "SF",
+   "beta": -0.011336036520840736,
+   "inTable": true,
+   "ft": 0.11917811192430072,
+   "defFull": 1.5052386067151424,
+   "defFullWithFt": 1.6244167186394431
+  },
+  {
+   "playerId": 1631213,
+   "name": "Tyrese Martin",
+   "pos": "SG",
+   "beta": -0.015934025365087107,
+   "inTable": true,
+   "ft": 0.16729734834697307,
+   "defFull": -1.7222382325025265,
+   "defFullWithFt": -1.5549408841555534
+  },
+  {
+   "playerId": 1631217,
+   "name": "Moussa Diabaté",
+   "pos": "PF",
+   "beta": -0.03918675824540447,
+   "inTable": true,
+   "ft": 0.4086976234139117,
+   "defFull": 3.659174316456304,
+   "defFullWithFt": 4.067871939870216
+  },
+  {
+   "playerId": 1631221,
+   "name": "Collin Gillespie",
+   "pos": "PG",
+   "beta": -0.010391600440376613,
+   "inTable": true,
+   "ft": 0.10927858347971053,
+   "defFull": -1.7497921880205825,
+   "defFullWithFt": -1.640513604540872
+  },
+  {
+   "playerId": 1631222,
+   "name": "Jake LaRavia",
+   "pos": "SF",
+   "beta": 0.009151369000405918,
+   "inTable": true,
+   "ft": -0.09677452100356199,
+   "defFull": 1.6163808896725085,
+   "defFullWithFt": 1.5196063686689465
+  },
+  {
+   "playerId": 1631230,
+   "name": "Dominick Barlow",
+   "pos": "PF",
+   "beta": -0.01580901174244452,
+   "inTable": true,
+   "ft": 0.16599072727356834,
+   "defFull": 1.1397735752079141,
+   "defFullWithFt": 1.3057643024814825
+  },
+  {
+   "playerId": 1631243,
+   "name": "Mouhamed Gueye",
+   "pos": "C",
+   "beta": 0.016254922224825163,
+   "inTable": true,
+   "ft": -0.17224137354650004,
+   "defFull": 2.5358709847675964,
+   "defFullWithFt": 2.3636296112210964
+  },
+  {
+   "playerId": 1631245,
+   "name": "Quenton Jackson",
+   "pos": "SG",
+   "beta": -0.02960070304700835,
+   "inTable": true,
+   "ft": 0.30957264767768056,
+   "defFull": -1.4167537194894164,
+   "defFullWithFt": -1.1071810718117359
+  },
+  {
+   "playerId": 1631246,
+   "name": "Vince Williams Jr.",
+   "pos": "SG",
+   "beta": -0.01706875827919009,
+   "inTable": true,
+   "ft": 0.17915308573190902,
+   "defFull": 0.8462774747100221,
+   "defFullWithFt": 1.0254305604419311
+  },
+  {
+   "playerId": 1631248,
+   "name": "Baylor Scheierman",
+   "pos": "SG",
+   "beta": 0.006974933269363264,
+   "inTable": true,
+   "ft": -0.07371329444720853,
+   "defFull": 0.15599813971782783,
+   "defFullWithFt": 0.0822848452706193
+  },
+  {
+   "playerId": 1631250,
+   "name": "Pete Nance",
+   "pos": "PF",
+   "beta": -0.013757328211492708,
+   "inTable": true,
+   "ft": 0.14453345330345257,
+   "defFull": 0.1948266992925607,
+   "defFullWithFt": 0.33936015259601326
+  },
+  {
+   "playerId": 1631255,
+   "name": "Karlo Matković",
+   "pos": "PF",
+   "beta": 0.018605722568677447,
+   "inTable": true,
+   "ft": -0.19728279851096708,
+   "defFull": 5.312607653506984,
+   "defFullWithFt": 5.115324854996017
+  },
+  {
+   "playerId": 1631260,
+   "name": "AJ Green",
+   "pos": "SG",
+   "beta": 0.007980639694280882,
+   "inTable": true,
+   "ft": -0.08436608184423378,
+   "defFull": -2.0774984138147934,
+   "defFullWithFt": -2.161864495659027
+  },
+  {
+   "playerId": 1631321,
+   "name": "Sidy Cissoko",
+   "pos": "SG",
+   "beta": 0.0007113763249815177,
+   "inTable": true,
+   "ft": -0.00750463623804265,
+   "defFull": -0.4335256282312461,
+   "defFullWithFt": -0.4410302644692887
+  },
+  {
+   "playerId": 1631323,
+   "name": "Simone Fontecchio",
+   "pos": "SF",
+   "beta": 0.025196976955127362,
+   "inTable": true,
+   "ft": -0.26767239932490305,
+   "defFull": -0.286995887656305,
+   "defFullWithFt": -0.5546682869812081
+  },
+  {
+   "playerId": 1631342,
+   "name": "Daeqwon Plowden",
+   "pos": "SG",
+   "beta": 0.021649005763737152,
+   "inTable": true,
+   "ft": -0.22975021822844166,
+   "defFull": -2.828365014141121,
+   "defFullWithFt": -3.0581152323695626
+  },
+  {
+   "playerId": 1641705,
+   "name": "Victor Wembanyama",
+   "pos": "C",
+   "beta": -0.05230745498708252,
+   "inTable": true,
+   "ft": 0.5434788067350871,
+   "defFull": 9.725722759181,
+   "defFullWithFt": 10.269201565916088
+  },
+  {
+   "playerId": 1641706,
+   "name": "Brandon Miller",
+   "pos": "SF",
+   "beta": -0.008869337187070364,
+   "inTable": true,
+   "ft": 0.09331100754235155,
+   "defFull": 1.9055747725680972,
+   "defFullWithFt": 1.9988857801104487
+  },
+  {
+   "playerId": 1641707,
+   "name": "Taylor Hendricks",
+   "pos": "PF",
+   "beta": 0.024048007637518545,
+   "inTable": true,
+   "ft": -0.25538343380244743,
+   "defFull": 0.912360804639123,
+   "defFullWithFt": 0.6569773708366755
+  },
+  {
+   "playerId": 1641708,
+   "name": "Amen Thompson",
+   "pos": "SF",
+   "beta": -0.024799871429674564,
+   "inTable": true,
+   "ft": 0.2597220611349371,
+   "defFull": -0.16545342886200576,
+   "defFullWithFt": 0.09426863227293136
+  },
+  {
+   "playerId": 1641709,
+   "name": "Ausar Thompson",
+   "pos": "SF",
+   "beta": -0.037841044405865505,
+   "inTable": true,
+   "ft": 0.39481550324746983,
+   "defFull": 3.137389147108105,
+   "defFullWithFt": 3.532204650355575
+  },
+  {
+   "playerId": 1641710,
+   "name": "Anthony Black",
+   "pos": "SF",
+   "beta": -0.006710905133993206,
+   "inTable": true,
+   "ft": 0.07064652668211657,
+   "defFull": 0.6528392006863282,
+   "defFullWithFt": 0.7234857273684447
+  },
+  {
+   "playerId": 1641711,
+   "name": "Gradey Dick",
+   "pos": "SF",
+   "beta": 0.014233695070131376,
+   "inTable": true,
+   "ft": -0.15073728278012233,
+   "defFull": -1.6525370506926818,
+   "defFullWithFt": -1.803274333472804
+  },
+  {
+   "playerId": 1641712,
+   "name": "Rayan Rupert",
+   "pos": "SF",
+   "beta": 0.010200287739899004,
+   "inTable": true,
+   "ft": -0.10789891392937179,
+   "defFull": -0.5394731697436761,
+   "defFullWithFt": -0.6473720836730479
+  },
+  {
+   "playerId": 1641713,
+   "name": "GG Jackson",
+   "pos": "PF",
+   "beta": -0.010816220345043405,
+   "inTable": true,
+   "ft": 0.11373009044539639,
+   "defFull": 0.5693236766967091,
+   "defFullWithFt": 0.6830537671421055
+  },
+  {
+   "playerId": 1641716,
+   "name": "Jarace Walker",
+   "pos": "SF",
+   "beta": 0.036464519270599065,
+   "inTable": true,
+   "ft": -0.3886077351396011,
+   "defFull": -0.8314922152853121,
+   "defFullWithFt": -1.2200999504249133
+  },
+  {
+   "playerId": 1641717,
+   "name": "Cason Wallace",
+   "pos": "PG",
+   "beta": -0.024393849618611047,
+   "inTable": true,
+   "ft": 0.25549968541678236,
+   "defFull": 0.21109173347009236,
+   "defFullWithFt": 0.4665914188868747
+  },
+  {
+   "playerId": 1641718,
+   "name": "Keyonte George",
+   "pos": "SG",
+   "beta": -0.004301260159235036,
+   "inTable": true,
+   "ft": 0.045311084387411604,
+   "defFull": -2.5720463313973596,
+   "defFullWithFt": -2.526735247009948
+  },
+  {
+   "playerId": 1641722,
+   "name": "Jordan Hawkins",
+   "pos": "SG",
+   "beta": 0.02378120671006068,
+   "inTable": true,
+   "ft": -0.2525309647744667,
+   "defFull": -2.1948974086756445,
+   "defFullWithFt": -2.447428373450111
+  },
+  {
+   "playerId": 1641724,
+   "name": "Jett Howard",
+   "pos": "SF",
+   "beta": 0.03428102777042276,
+   "inTable": true,
+   "ft": -0.3651123657200106,
+   "defFull": -2.628474663125324,
+   "defFullWithFt": -2.993587028845335
+  },
+  {
+   "playerId": 1641729,
+   "name": "Brice Sensabaugh",
+   "pos": "SG",
+   "beta": 0.04651701057356567,
+   "inTable": true,
+   "ft": -0.497148082819332,
+   "defFull": -2.338213385462451,
+   "defFullWithFt": -2.835361468281783
+  },
+  {
+   "playerId": 1641730,
+   "name": "Noah Clowney",
+   "pos": "PF",
+   "beta": -0.02094066828341692,
+   "inTable": true,
+   "ft": 0.21954869225160323,
+   "defFull": 1.5412530545569014,
+   "defFullWithFt": 1.7608017468085047
+  },
+  {
+   "playerId": 1641731,
+   "name": "Bilal Coulibaly",
+   "pos": "SF",
+   "beta": 0.04036579051941589,
+   "inTable": true,
+   "ft": -0.4306587836667486,
+   "defFull": 0.781220532897775,
+   "defFullWithFt": 0.35056174923102645
+  },
+  {
+   "playerId": 1641737,
+   "name": "Adem Bona",
+   "pos": "PF",
+   "beta": 0.0034767903489428984,
+   "inTable": true,
+   "ft": -0.03670720265289695,
+   "defFull": 4.867295858070109,
+   "defFullWithFt": 4.830588655417212
+  },
+  {
+   "playerId": 1641738,
+   "name": "Kobe Brown",
+   "pos": "SF",
+   "beta": 0.006793511696293975,
+   "inTable": true,
+   "ft": -0.0717922634325241,
+   "defFull": -1.5163702336495888,
+   "defFullWithFt": -1.5881624970821129
+  },
+  {
+   "playerId": 1641739,
+   "name": "Toumani Camara",
+   "pos": "SF",
+   "beta": -0.029831791174546735,
+   "inTable": true,
+   "ft": 0.3119687140319405,
+   "defFull": -0.022156100632075848,
+   "defFullWithFt": 0.28981261339986464
+  },
+  {
+   "playerId": 1641740,
+   "name": "Jaylen Clark",
+   "pos": "SG",
+   "beta": -0.015084841099501837,
+   "inTable": true,
+   "ft": 0.15841997025889398,
+   "defFull": 0.2472182832487846,
+   "defFullWithFt": 0.40563825350767857
+  },
+  {
+   "playerId": 1641750,
+   "name": "Ryan Kalkbrenner",
+   "pos": "C",
+   "beta": -0.0173419996635562,
+   "inTable": true,
+   "ft": 0.18200676667474713,
+   "defFull": 5.683819462120443,
+   "defFullWithFt": 5.86582622879519
+  },
+  {
+   "playerId": 1641757,
+   "name": "Jordan Miller",
+   "pos": "SG",
+   "beta": -0.03545080479911863,
+   "inTable": true,
+   "ft": 0.3701314602158057,
+   "defFull": -3.784056556293769,
+   "defFullWithFt": -3.4139250960779632
+  },
+  {
+   "playerId": 1641764,
+   "name": "Brandin Podziemski",
+   "pos": "SG",
+   "beta": -0.018567578644555546,
+   "inTable": true,
+   "ft": 0.194800958000374,
+   "defFull": 0.13586553307847193,
+   "defFullWithFt": 0.33066649107884594
+  },
+  {
+   "playerId": 1641765,
+   "name": "Olivier-Maxence Prosper",
+   "pos": "SF",
+   "beta": 0.011084233509749243,
+   "inTable": true,
+   "ft": -0.11727881816330221,
+   "defFull": 0.20769560855697922,
+   "defFullWithFt": 0.090416790393677
+  },
+  {
+   "playerId": 1641767,
+   "name": "Ben Sheppard",
+   "pos": "SG",
+   "beta": 0.04344705733841146,
+   "inTable": true,
+   "ft": -0.4639360476674792,
+   "defFull": -2.2856886281458433,
+   "defFullWithFt": -2.7496246758133225
+  },
+  {
+   "playerId": 1641772,
+   "name": "Nae'Qwan Tomlin",
+   "pos": "SF",
+   "beta": -0.0017253735915588276,
+   "inTable": true,
+   "ft": 0.018189106164112623,
+   "defFull": 2.8074683725684,
+   "defFullWithFt": 2.825657478732513
+  },
+  {
+   "playerId": 1641774,
+   "name": "Tristan Vukcevic",
+   "pos": "C",
+   "beta": -0.004286217078827534,
+   "inTable": true,
+   "ft": 0.04515280897856577,
+   "defFull": 2.3651837839233636,
+   "defFullWithFt": 2.4103365929019294
+  },
+  {
+   "playerId": 1641775,
+   "name": "Jordan Walsh",
+   "pos": "SG",
+   "beta": -0.008306613165399202,
+   "inTable": true,
+   "ft": 0.08740486033722572,
+   "defFull": 1.5045272277238508,
+   "defFullWithFt": 1.5919320880610766
+  },
+  {
+   "playerId": 1641783,
+   "name": "Tristan da Silva",
+   "pos": "SF",
+   "beta": -0.019888467441853935,
+   "inTable": true,
+   "ft": 0.20858000685579636,
+   "defFull": 0.13848011806283367,
+   "defFullWithFt": 0.34706012491863003
+  },
+  {
+   "playerId": 1641796,
+   "name": "Pelle Larsson",
+   "pos": "SG",
+   "beta": 0.008351982977854945,
+   "inTable": true,
+   "ft": -0.08830101709080829,
+   "defFull": -2.101494740831056,
+   "defFullWithFt": -2.189795757921864
+  },
+  {
+   "playerId": 1641824,
+   "name": "Matas Buzelis",
+   "pos": "SF",
+   "beta": -0.016469126729605633,
+   "inTable": true,
+   "ft": 0.17288907462478242,
+   "defFull": 0.45486311389129064,
+   "defFullWithFt": 0.6277521885160731
+  },
+  {
+   "playerId": 1641842,
+   "name": "Ronald Holland II",
+   "pos": "SF",
+   "beta": 0.004240224943243368,
+   "inTable": true,
+   "ft": -0.04477712518669019,
+   "defFull": 2.9594001537623704,
+   "defFullWithFt": 2.9146230285756802
+  },
+  {
+   "playerId": 1641854,
+   "name": "Craig Porter Jr.",
+   "pos": "PG",
+   "beta": -0.014952157860893222,
+   "inTable": true,
+   "ft": 0.15703250708414274,
+   "defFull": 0.6144117010839834,
+   "defFullWithFt": 0.7714442081681261
+  },
+  {
+   "playerId": 1641989,
+   "name": "Elijah Harkless",
+   "pos": "PG",
+   "beta": 0.03145659585127722,
+   "inTable": true,
+   "ft": -0.3347628308515427,
+   "defFull": -1.0326164596938803,
+   "defFullWithFt": -1.367379290545423
+  },
+  {
+   "playerId": 1642258,
+   "name": "Zaccharie Risacher",
+   "pos": "SF",
+   "beta": 0.011035354964192109,
+   "inTable": true,
+   "ft": -0.11676002531895158,
+   "defFull": -0.30880763493716934,
+   "defFullWithFt": -0.4255676602561209
+  },
+  {
+   "playerId": 1642259,
+   "name": "Alex Sarr",
+   "pos": "C",
+   "beta": -0.04355554362548769,
+   "inTable": true,
+   "ft": 0.45369025020793874,
+   "defFull": 3.269770508239067,
+   "defFullWithFt": 3.723460758447006
+  },
+  {
+   "playerId": 1642261,
+   "name": "Dalton Knecht",
+   "pos": "SG",
+   "beta": 0.01935619058725675,
+   "inTable": true,
+   "ft": -0.20528401951642739,
+   "defFull": -0.7923382712340388,
+   "defFullWithFt": -0.9976222907504662
+  },
+  {
+   "playerId": 1642262,
+   "name": "Cody Williams",
+   "pos": "SF",
+   "beta": 0.017060961994562248,
+   "inTable": true,
+   "ft": -0.18082379771933166,
+   "defFull": -2.080692131706563,
+   "defFullWithFt": -2.2615159294258946
+  },
+  {
+   "playerId": 1642263,
+   "name": "Reed Sheppard",
+   "pos": "PG",
+   "beta": -0.003822723266052708,
+   "inTable": true,
+   "ft": 0.04027550257708068,
+   "defFull": 0.15934535510186976,
+   "defFullWithFt": 0.19962085767895044
+  },
+  {
+   "playerId": 1642264,
+   "name": "Stephon Castle",
+   "pos": "SG",
+   "beta": -0.035013292116023144,
+   "inTable": true,
+   "ft": 0.36560954624287323,
+   "defFull": -0.33271088252457837,
+   "defFullWithFt": 0.03289866371829486
+  },
+  {
+   "playerId": 1642265,
+   "name": "Rob Dillingham",
+   "pos": "PG",
+   "beta": 0.008715182815226222,
+   "inTable": true,
+   "ft": -0.0921504637772852,
+   "defFull": -1.1871222579788565,
+   "defFullWithFt": -1.2792727217561417
+  },
+  {
+   "playerId": 1642266,
+   "name": "Ja'Kobe Walter",
+   "pos": "SG",
+   "beta": 0.033496617232593014,
+   "inTable": true,
+   "ft": -0.3566787682841355,
+   "defFull": -0.31051191206323825,
+   "defFullWithFt": -0.6671906803473737
+  },
+  {
+   "playerId": 1642267,
+   "name": "Bub Carrington",
+   "pos": "SG",
+   "beta": 0.03906424927540444,
+   "inTable": true,
+   "ft": -0.4166195184006849,
+   "defFull": -3.4252787721650746,
+   "defFullWithFt": -3.8418982905657595
+  },
+  {
+   "playerId": 1642268,
+   "name": "Isaiah Collier",
+   "pos": "SG",
+   "beta": 0.029725395550649458,
+   "inTable": true,
+   "ft": -0.3161842392763514,
+   "defFull": -1.7417829303652654,
+   "defFullWithFt": -2.057967169641617
+  },
+  {
+   "playerId": 1642269,
+   "name": "Devin Carter",
+   "pos": "PG",
+   "beta": -0.015844607295983734,
+   "inTable": true,
+   "ft": 0.1663627755007724,
+   "defFull": -1.1864087626025865,
+   "defFullWithFt": -1.0200459871018142
+  },
+  {
+   "playerId": 1642270,
+   "name": "Donovan Clingan",
+   "pos": "C",
+   "beta": -0.08103846515067396,
+   "inTable": true,
+   "ft": 0.8350138957492259,
+   "defFull": 4.261661132501993,
+   "defFullWithFt": 5.0966750282512185
+  },
+  {
+   "playerId": 1642271,
+   "name": "Kyle Filipowski",
+   "pos": "C",
+   "beta": 0.0077327969023698795,
+   "inTable": true,
+   "ft": -0.08174028038827608,
+   "defFull": 0.11382787705771502,
+   "defFullWithFt": 0.032087596669438945
+  },
+  {
+   "playerId": 1642272,
+   "name": "Jared McCain",
+   "pos": "PG",
+   "beta": 0.011165626256821985,
+   "inTable": true,
+   "ft": -0.11814274599104557,
+   "defFull": -2.3989059695109116,
+   "defFullWithFt": -2.517048715501957
+  },
+  {
+   "playerId": 1642273,
+   "name": "Kyshawn George",
+   "pos": "SF",
+   "beta": 0.00029075901735113515,
+   "inTable": true,
+   "ft": -0.0030669825828111286,
+   "defFull": 0.7983125227268184,
+   "defFullWithFt": 0.7952455401440073
+  },
+  {
+   "playerId": 1642274,
+   "name": "Yves Missi",
+   "pos": "C",
+   "beta": -0.025576984097951855,
+   "inTable": true,
+   "ft": 0.26780078993677847,
+   "defFull": 3.951243912480007,
+   "defFullWithFt": 4.219044702416785
+  },
+  {
+   "playerId": 1642275,
+   "name": "Tidjane Salaün",
+   "pos": "PF",
+   "beta": 0.0020183326973329933,
+   "inTable": true,
+   "ft": -0.021300260451817543,
+   "defFull": 0.2358997551954678,
+   "defFullWithFt": 0.21459949474365025
+  },
+  {
+   "playerId": 1642276,
+   "name": "Kel'el Ware",
+   "pos": "C",
+   "beta": -0.03331162904476855,
+   "inTable": true,
+   "ft": 0.3480110737020148,
+   "defFull": 3.8790442237098155,
+   "defFullWithFt": 4.22705529741183
+  },
+  {
+   "playerId": 1642277,
+   "name": "Johnny Furphy",
+   "pos": "SF",
+   "beta": -0.027481924791180685,
+   "inTable": true,
+   "ft": 0.2875888751135314,
+   "defFull": -0.9728742671385238,
+   "defFullWithFt": -0.6852853920249924
+  },
+  {
+   "playerId": 1642278,
+   "name": "Tyler Kolek",
+   "pos": "PG",
+   "beta": 0.008957308531787146,
+   "inTable": true,
+   "ft": -0.09471712335431537,
+   "defFull": -0.1178602879010393,
+   "defFullWithFt": -0.21257741125535468
+  },
+  {
+   "playerId": 1642281,
+   "name": "Jaylon Tyson",
+   "pos": "SG",
+   "beta": -0.023921445817425082,
+   "inTable": true,
+   "ft": 0.25058573126699457,
+   "defFull": -0.4620235626566327,
+   "defFullWithFt": -0.21143783138963812
+  },
+  {
+   "playerId": 1642285,
+   "name": "Cam Spencer",
+   "pos": "PG",
+   "beta": 0.017603194321250477,
+   "inTable": true,
+   "ft": -0.18659949682544585,
+   "defFull": -0.8567201605707897,
+   "defFullWithFt": -1.0433196573962356
+  },
+  {
+   "playerId": 1642345,
+   "name": "Oso Ighodaro",
+   "pos": "C",
+   "beta": 0.03279156045576772,
+   "inTable": true,
+   "ft": -0.34910150984395205,
+   "defFull": 4.188129875180757,
+   "defFullWithFt": 3.839028365336805
+  },
+  {
+   "playerId": 1642346,
+   "name": "Ryan Dunn",
+   "pos": "SF",
+   "beta": -0.016904316580702336,
+   "inTable": true,
+   "ft": 0.17743547160453677,
+   "defFull": 2.1779629002409706,
+   "defFullWithFt": 2.3553983718455074
+  },
+  {
+   "playerId": 1642347,
+   "name": "Jamal Shead",
+   "pos": "PG",
+   "beta": 0.05387502509358555,
+   "inTable": true,
+   "ft": -0.5769816108207149,
+   "defFull": -0.9030968389362126,
+   "defFullWithFt": -1.4800784497569275
+  },
+  {
+   "playerId": 1642348,
+   "name": "Justin Edwards",
+   "pos": "SF",
+   "beta": 0.042355554350306523,
+   "inTable": true,
+   "ft": -0.4521414131259949,
+   "defFull": -1.2277310121930674,
+   "defFullWithFt": -1.6798724253190622
+  },
+  {
+   "playerId": 1642349,
+   "name": "Ajay Mitchell",
+   "pos": "SG",
+   "beta": 0.0372516889120111,
+   "inTable": true,
+   "ft": -0.3970850923984415,
+   "defFull": 1.8556954832671613,
+   "defFullWithFt": 1.4586103908687198
+  },
+  {
+   "playerId": 1642363,
+   "name": "Nique Clifford",
+   "pos": "SG",
+   "beta": 0.0059072573989757664,
+   "inTable": true,
+   "ft": -0.06241077108919413,
+   "defFull": 0.09394080504296909,
+   "defFullWithFt": 0.03153003395377496
+  },
+  {
+   "playerId": 1642364,
+   "name": "Jamir Watkins",
+   "pos": "SG",
+   "beta": 0.0005214983596735259,
+   "inTable": true,
+   "ft": -0.005501228154747295,
+   "defFull": 0.7110137589012799,
+   "defFullWithFt": 0.7055125307465326
+  },
+  {
+   "playerId": 1642366,
+   "name": "Quinten Post",
+   "pos": "C",
+   "beta": -0.0044526317737411895,
+   "inTable": true,
+   "ft": 0.04690366139319391,
+   "defFull": 2.4885458132356097,
+   "defFullWithFt": 2.5354494746288037
+  },
+  {
+   "playerId": 1642377,
+   "name": "Jaylen Wells",
+   "pos": "SF",
+   "beta": -0.023415428848621928,
+   "inTable": true,
+   "ft": 0.2453206446640266,
+   "defFull": -3.0284386036121935,
+   "defFullWithFt": -2.783117958948167
+  },
+  {
+   "playerId": 1642383,
+   "name": "Walter Clayton Jr.",
+   "pos": "SG",
+   "beta": 0.019092158251430576,
+   "inTable": true,
+   "ft": -0.20246861441208797,
+   "defFull": -2.710861942899734,
+   "defFullWithFt": -2.9133305573118218
+  },
+  {
+   "playerId": 1642419,
+   "name": "Jamison Battle",
+   "pos": "SF",
+   "beta": 0.018595818807689166,
+   "inTable": true,
+   "ft": -0.19717723085117544,
+   "defFull": 0.14357665662125818,
+   "defFullWithFt": -0.053600574229917264
+  },
+  {
+   "playerId": 1642450,
+   "name": "Daniss Jenkins",
+   "pos": "SG",
+   "beta": 0.054401258039279955,
+   "inTable": true,
+   "ft": -0.5827036885682313,
+   "defFull": 0.1103339037791029,
+   "defFullWithFt": -0.4723697847891284
+  },
+  {
+   "playerId": 1642461,
+   "name": "Spencer Jones",
+   "pos": "SF",
+   "beta": 0.017748205274448564,
+   "inTable": true,
+   "ft": -0.18814441105912127,
+   "defFull": -0.41937797263920107,
+   "defFullWithFt": -0.6075223836983223
+  },
+  {
+   "playerId": 1642843,
+   "name": "Cooper Flagg",
+   "pos": "PF",
+   "beta": -0.007869368047528193,
+   "inTable": true,
+   "ft": 0.08281437893533639,
+   "defFull": 0.5474271632034844,
+   "defFullWithFt": 0.6302415421388208
+  },
+  {
+   "playerId": 1642844,
+   "name": "Dylan Harper",
+   "pos": "SG",
+   "beta": 0.02093855863597603,
+   "inTable": true,
+   "ft": -0.2221657832609969,
+   "defFull": -1.023306167178184,
+   "defFullWithFt": -1.245471950439181
+  },
+  {
+   "playerId": 1642845,
+   "name": "VJ Edgecombe",
+   "pos": "SG",
+   "beta": -0.01318340378304456,
+   "inTable": true,
+   "ft": 0.13852660585420562,
+   "defFull": -0.5352137126286127,
+   "defFullWithFt": -0.3966871067744071
+  },
+  {
+   "playerId": 1642846,
+   "name": "Ace Bailey",
+   "pos": "PF",
+   "beta": 0.055769532879771565,
+   "inTable": true,
+   "ft": -0.5975896638998446,
+   "defFull": -0.9365261285283033,
+   "defFullWithFt": -1.5341157924281479
+  },
+  {
+   "playerId": 1642847,
+   "name": "Jeremiah Fears",
+   "pos": "PG",
+   "beta": -0.00944337975099684,
+   "inTable": true,
+   "ft": 0.09933398716399644,
+   "defFull": -2.1644062652955487,
+   "defFullWithFt": -2.0650722781315523
+  },
+  {
+   "playerId": 1642848,
+   "name": "Tre Johnson",
+   "pos": "SG",
+   "beta": 0.06826463549290565,
+   "inTable": true,
+   "ft": -0.7340512621997197,
+   "defFull": -2.27351500428703,
+   "defFullWithFt": -3.0075662664867497
+  },
+  {
+   "playerId": 1642849,
+   "name": "Nolan Traore",
+   "pos": "PG",
+   "beta": 0.014069675641616382,
+   "inTable": true,
+   "ft": -0.14899333910389778,
+   "defFull": -2.167342222122093,
+   "defFullWithFt": -2.3163355612259906
+  },
+  {
+   "playerId": 1642851,
+   "name": "Kon Knueppel",
+   "pos": "SG",
+   "beta": -0.03607855129933654,
+   "inTable": true,
+   "ft": 0.3766175292504004,
+   "defFull": -1.5069137431782842,
+   "defFullWithFt": -1.1302962139278838
+  },
+  {
+   "playerId": 1642852,
+   "name": "Derik Queen",
+   "pos": "PF",
+   "beta": -0.033374910935860445,
+   "inTable": true,
+   "ft": 0.34866584155772706,
+   "defFull": 1.6662232762847617,
+   "defFullWithFt": 2.014889117842489
+  },
+  {
+   "playerId": 1642853,
+   "name": "Rasheer Fleming",
+   "pos": "PF",
+   "beta": -0.00444622257671874,
+   "inTable": true,
+   "ft": 0.04683623318570973,
+   "defFull": 0.8477088266940935,
+   "defFullWithFt": 0.8945450598798033
+  },
+  {
+   "playerId": 1642854,
+   "name": "Asa Newell",
+   "pos": "PF",
+   "beta": 0.059576862146278074,
+   "inTable": true,
+   "ft": -0.6390704825772087,
+   "defFull": 0.47595447560788706,
+   "defFullWithFt": -0.1631160069693216
+  },
+  {
+   "playerId": 1642856,
+   "name": "Egor Dëmin",
+   "pos": "SF",
+   "beta": -0.018791700599554786,
+   "inTable": true,
+   "ft": 0.1971396585100038,
+   "defFull": -1.1258838084688083,
+   "defFullWithFt": -0.9287441499588045
+  },
+  {
+   "playerId": 1642857,
+   "name": "Kasparas Jakučionis",
+   "pos": "SG",
+   "beta": -0.005756620912534737,
+   "inTable": true,
+   "ft": 0.060617188672762445,
+   "defFull": -2.1758943673462428,
+   "defFullWithFt": -2.1152771786734803
+  },
+  {
+   "playerId": 1642859,
+   "name": "Jase Richardson",
+   "pos": "PG",
+   "beta": 0.039269275230930864,
+   "inTable": true,
+   "ft": -0.4188303829225637,
+   "defFull": -1.6178786946589252,
+   "defFullWithFt": -2.036709077581489
+  },
+  {
+   "playerId": 1642860,
+   "name": "Will Riley",
+   "pos": "PF",
+   "beta": 0.011167330753165984,
+   "inTable": true,
+   "ft": -0.11816083846976078,
+   "defFull": -3.492823579005888,
+   "defFullWithFt": -3.610984417475649
+  },
+  {
+   "playerId": 1642864,
+   "name": "Hugo González",
+   "pos": "SG",
+   "beta": -0.020451854021525082,
+   "inTable": true,
+   "ft": 0.21445386742304784,
+   "defFull": 2.449567841296618,
+   "defFullWithFt": 2.664021708719666
+  },
+  {
+   "playerId": 1642867,
+   "name": "Collin Murray-Boyles",
+   "pos": "SF",
+   "beta": -0.0011203053342211705,
+   "inTable": true,
+   "ft": 0.011812440340364105,
+   "defFull": 3.6511150257906966,
+   "defFullWithFt": 3.6629274661310607
+  },
+  {
+   "playerId": 1642868,
+   "name": "Carter Bryant",
+   "pos": "SG",
+   "beta": -0.0026313913809886263,
+   "inTable": true,
+   "ft": 0.02773328506187056,
+   "defFull": 2.0387923338470504,
+   "defFullWithFt": 2.066525618908921
+  },
+  {
+   "playerId": 1642869,
+   "name": "Noah Penda",
+   "pos": "SF",
+   "beta": 0.009615868805314513,
+   "inTable": true,
+   "ft": -0.10169999390254869,
+   "defFull": 1.1046352910957902,
+   "defFullWithFt": 1.0029352971932415
+  },
+  {
+   "playerId": 1642874,
+   "name": "Danny Wolf",
+   "pos": "C",
+   "beta": 0.0013557005983472468,
+   "inTable": true,
+   "ft": -0.014304538744358553,
+   "defFull": 2.6096330150376934,
+   "defFullWithFt": 2.595328476293335
+  },
+  {
+   "playerId": 1642875,
+   "name": "Maxime Raynaud",
+   "pos": "C",
+   "beta": 0.013718081565640057,
+   "inTable": true,
+   "ft": -0.14525554595381518,
+   "defFull": -0.6735159371777932,
+   "defFullWithFt": -0.8187714831316084
+  },
+  {
+   "playerId": 1642877,
+   "name": "Micah Peavy",
+   "pos": "SF",
+   "beta": 0.004387177789161381,
+   "inTable": true,
+   "ft": -0.046330900162394606,
+   "defFull": 0.012656328739146794,
+   "defFullWithFt": -0.03367457142324781
+  },
+  {
+   "playerId": 1642878,
+   "name": "Tyrese Proctor",
+   "pos": "SG",
+   "beta": 0.0011202325551546665,
+   "inTable": true,
+   "ft": -0.011819227361886675,
+   "defFull": -0.8028962829030428,
+   "defFullWithFt": -0.8147155102649295
+  },
+  {
+   "playerId": 1642879,
+   "name": "Ben Saraf",
+   "pos": "SG",
+   "beta": 0.040455154458615236,
+   "inTable": true,
+   "ft": -0.43162309573629987,
+   "defFull": -1.984101958153195,
+   "defFullWithFt": -2.4157250538894948
+  },
+  {
+   "playerId": 1642880,
+   "name": "Kam Jones",
+   "pos": "SG",
+   "beta": -0.005188676830877764,
+   "inTable": true,
+   "ft": 0.05464560785342076,
+   "defFull": -3.081417722174584,
+   "defFullWithFt": -3.0267721143211634
+  },
+  {
+   "playerId": 1642883,
+   "name": "Sion James",
+   "pos": "SG",
+   "beta": -0.05821100055572353,
+   "inTable": true,
+   "ft": 0.6037857841850292,
+   "defFull": -0.8232654133656592,
+   "defFullWithFt": -0.21947962918063002
+  },
+  {
+   "playerId": 1642885,
+   "name": "Mohamed Diawara",
+   "pos": "PF",
+   "beta": 0.004599741061499192,
+   "inTable": true,
+   "ft": -0.04857862324039175,
+   "defFull": -0.6765124077845242,
+   "defFullWithFt": -0.7250910310249159
+  },
+  {
+   "playerId": 1642907,
+   "name": "Cedric Coward",
+   "pos": "SG",
+   "beta": -0.06819117441011491,
+   "inTable": true,
+   "ft": 0.7052623537347591,
+   "defFull": 1.0583668456631168,
+   "defFullWithFt": 1.7636291993978759
+  },
+  {
+   "playerId": 1642914,
+   "name": "Javon Small",
+   "pos": "PG",
+   "beta": 0.0027615299289085317,
+   "inTable": true,
+   "ft": -0.02914969160174863,
+   "defFull": -0.5366690197913915,
+   "defFullWithFt": -0.5658187113931401
+  },
+  {
+   "playerId": 1642920,
+   "name": "Kobe Sanders",
+   "pos": "SF",
+   "beta": 0.03696468118315809,
+   "inTable": true,
+   "ft": -0.39399375393116554,
+   "defFull": -1.4500458508318381,
+   "defFullWithFt": -1.8440396047630037
+  },
+  {
+   "playerId": 1642928,
+   "name": "Dylan Cardwell",
+   "pos": "PF",
+   "beta": 0.030388895206297315,
+   "inTable": true,
+   "ft": -0.32330253279233556,
+   "defFull": 5.9672727220073885,
+   "defFullWithFt": 5.643970189215053
+  },
+  {
+   "playerId": 1642942,
+   "name": "Jahmai Mashack",
+   "pos": "SG",
+   "beta": 0.022136935811910254,
+   "inTable": true,
+   "ft": -0.23496091640688999,
+   "defFull": -1.4559975991673246,
+   "defFullWithFt": -1.6909585155742146
+  },
+  {
+   "playerId": 1642948,
+   "name": "Ryan Nembhard",
+   "pos": "PG",
+   "beta": -0.025454787661275832,
+   "inTable": true,
+   "ft": 0.2665306973594017,
+   "defFull": -2.5373565598390213,
+   "defFullWithFt": -2.2708258624796196
+  },
+  {
+   "playerId": 1642954,
+   "name": "Will Richard",
+   "pos": "PG",
+   "beta": -0.042918155905615374,
+   "inTable": true,
+   "ft": 0.44713314695383755,
+   "defFull": -1.5213233923882408,
+   "defFullWithFt": -1.0741902454344032
+  },
+  {
+   "playerId": 1642962,
+   "name": "Drake Powell",
+   "pos": "SG",
+   "beta": -0.013508958669706122,
+   "inTable": true,
+   "ft": 0.14193419401253848,
+   "defFull": -3.1248118005891667,
+   "defFullWithFt": -2.9828776065766283
+  }
+ ]
+}

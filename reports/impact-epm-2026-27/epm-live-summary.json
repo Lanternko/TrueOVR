@@ -1,0 +1,59 @@
+{
+  "season": "2026-27",
+  "dataCutoff": "2026-10-29",
+  "players": 416,
+  "rookiesNoCareer": 49,
+  "lambda": 3000,
+  "cvWeightedMSE": {
+    "100": 5055.6699864574175,
+    "300": 4940.383558935619,
+    "1000": 4905.8858997052885,
+    "3000": 4902.356982639302,
+    "10000": 4904.544940759502,
+    "30000": 4905.979633643316
+  },
+  "intercept": 105.77137509468054,
+  "cCareerNoise": {
+    "O": {
+      "c": 2437.86803311844,
+      "players": 389
+    },
+    "D": {
+      "c": 2508.677400546269,
+      "players": 389
+    }
+  },
+  "boxModelErrorVar": {
+    "O": 1.026325770150923,
+    "D": 1.7053956867530402
+  },
+  "shrinkageFrozen2025_26": {
+    "O": {
+      "priorIntercept": -3.825228404142095,
+      "priorLogMpgSlope": 1.404620306151122,
+      "tau2": 0.7871090380603701
+    },
+    "D": {
+      "priorIntercept": -2.002675206937287,
+      "priorLogMpgSlope": 0.6872143863756747,
+      "tau2": 0.8169349437192842
+    }
+  },
+  "inputsNotes": {
+    "heightFromBio": 424,
+    "heightFromRanking": 0,
+    "heightLeagueMean": 1,
+    "receivedRookieLeagueMean": 57,
+    "onoffSavedZero": 425
+  },
+  "disclosure": [
+    "onoffSaved 特徵在 2026-27 一律設 0（沒有當季 on/off 抽樣的 v45 特徵）",
+    "receivedFgm 用 2025-26 的接球出手占比乘當季 FGM 每 100 回合；2025-26 沒有的人（新秀）用聯盟平均占比",
+    "height 取 2026-27 bio，新秀缺的用 ranking.csv heightInches，仍缺才用訓練平均",
+    "回合數 poss2627 ＝ MIN × 球隊回合 ÷ (球隊分鐘/5)（同 fit.py）；onPoss 是 stints 在場回合（攻防合計）",
+    "角色先驗的 mpg 下限＝2025-26 出賽≥10 場者的 5 百分位（低於此不外推，否則上場一兩分鐘的人會被推到很低）",
+    "角色先驗收縮用 2025-26 凍結的 priorIntercept/priorLogMpgSlope/tau2，不用當季小樣本重估",
+    "box 變異＝B×Poisson 變異＋box 模型誤差（訓練殘差扣掉生涯噪音與 Poisson 變異，下限 0.05）；這一項是為了避免 Poisson 單獨讓當季 box 在中等回合數就壓過生涯",
+    "c（生涯噪音）＝Σ(單季−四季)² ÷ Σ(1/Lposs−1/Pposs)，限 2025-26 回合 ≥1000；含真實能力變動，所以是偏保守的上界"
+  ]
+}

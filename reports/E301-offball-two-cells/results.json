@@ -1,0 +1,429 @@
+{
+ "N25": 276,
+ "N24": 270,
+ "arms": {
+  "V": {
+   "cells": {
+    "SHOOT": {
+     "yoy": 0.845,
+     "nYoy": 245,
+     "rhoDT": 0.469,
+     "named": {
+      "SHOOT": {
+       "Klay Thompson": 99.3,
+       "Buddy Hield": null,
+       "Duncan Robinson": 95.3,
+       "Sam Hauser": 82.6,
+       "Derrick White": 82.2
+      },
+      "CUTROLL": {
+       "Aaron Gordon": 26.4,
+       "Jarrett Allen": 4.3,
+       "Rudy Gobert": 0.7,
+       "Dereck Lively II": null,
+       "Josh Hart": 44.2
+      },
+      "ONBALL": {
+       "Luka Dončić": 72.5,
+       "Trae Young": null,
+       "Shai Gilgeous-Alexander": 24.3,
+       "James Harden": 24.6
+      }
+     },
+     "C2": {
+      "hit": 4,
+      "n": 4,
+      "pass": true
+     },
+     "top10": [
+      "Michael Porter Jr. 100",
+      "Klay Thompson 99",
+      "Stephen Curry 99",
+      "Lauri Markkanen 99",
+      "Ace Bailey 98",
+      "Tim Hardaway Jr. 98",
+      "Norman Powell 97",
+      "Isaiah Joe 97",
+      "Aaron Nesmith 97",
+      "Kon Knueppel 96"
+     ]
+    },
+    "CUTROLL": {
+     "yoy": 0.795,
+     "nYoy": 245,
+     "rhoDT": 0.324,
+     "named": {
+      "SHOOT": {
+       "Klay Thompson": 24.3,
+       "Buddy Hield": null,
+       "Duncan Robinson": 21.0,
+       "Sam Hauser": 30.4,
+       "Derrick White": 15.2
+      },
+      "CUTROLL": {
+       "Aaron Gordon": 83.3,
+       "Jarrett Allen": 99.3,
+       "Rudy Gobert": 88.0,
+       "Dereck Lively II": null,
+       "Josh Hart": 44.6
+      },
+      "ONBALL": {
+       "Luka Dončić": 51.4,
+       "Trae Young": null,
+       "Shai Gilgeous-Alexander": 34.8,
+       "James Harden": 3.3
+      }
+     },
+     "C2": {
+      "hit": 3,
+      "n": 4,
+      "pass": true
+     },
+     "top10": [
+      "Jalen Duren 100",
+      "Jarrett Allen 99",
+      "Giannis Antetokounmpo 99",
+      "Mark Williams 99",
+      "Victor Wembanyama 98",
+      "Joel Embiid 98",
+      "Luka Garza 97",
+      "Deandre Ayton 97",
+      "Day'Ron Sharpe 97",
+      "Alex Sarr 96"
+     ]
+    }
+   },
+   "fit25": {
+    "OBPM": {
+     "dR2": 0.0698,
+     "n": 275
+    },
+    "2K": {
+     "dR2": 0.0644,
+     "n": 274
+    },
+    "mean": 0.0671
+   },
+   "fit24": {
+    "OBPM": {
+     "dR2": 0.1188,
+     "n": 256
+    },
+    "2K": {
+     "dR2": 0.0711,
+     "n": 254
+    },
+    "mean": 0.095
+   },
+   "cellCorr25": -0.344,
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "pass": true
+  },
+  "P": {
+   "cells": {
+    "SHOOT": {
+     "yoy": 0.477,
+     "nYoy": 245,
+     "rhoDT": 0.212,
+     "named": {
+      "SHOOT": {
+       "Klay Thompson": 71.7,
+       "Buddy Hield": null,
+       "Duncan Robinson": 96.7,
+       "Sam Hauser": 92.0,
+       "Derrick White": 17.0
+      },
+      "CUTROLL": {
+       "Aaron Gordon": 84.1,
+       "Jarrett Allen": 39.9,
+       "Rudy Gobert": 42.8,
+       "Dereck Lively II": null,
+       "Josh Hart": 59.1
+      },
+      "ONBALL": {
+       "Luka Dončić": 61.6,
+       "Trae Young": null,
+       "Shai Gilgeous-Alexander": 60.5,
+       "James Harden": 53.3
+      }
+     },
+     "C2": {
+      "hit": 3,
+      "n": 4,
+      "pass": true
+     },
+     "top10": [
+      "Isaiah Joe 100",
+      "Sam Merrill 99",
+      "Moses Moody 99",
+      "Jaylon Tyson 99",
+      "Bobby Portis Jr. 98",
+      "Tim Hardaway Jr. 98",
+      "Luke Kennard 97",
+      "Kon Knueppel 97",
+      "Duncan Robinson 97",
+      "Rui Hachimura 96"
+     ]
+    },
+    "CUTROLL": {
+     "yoy": 0.513,
+     "nYoy": 245,
+     "rhoDT": 0.191,
+     "named": {
+      "SHOOT": {
+       "Klay Thompson": 58.7,
+       "Buddy Hield": null,
+       "Duncan Robinson": 72.1,
+       "Sam Hauser": 37.3,
+       "Derrick White": 60.9
+      },
+      "CUTROLL": {
+       "Aaron Gordon": 85.5,
+       "Jarrett Allen": 89.9,
+       "Rudy Gobert": 81.9,
+       "Dereck Lively II": null,
+       "Josh Hart": 29.7
+      },
+      "ONBALL": {
+       "Luka Dončić": 23.6,
+       "Trae Young": null,
+       "Shai Gilgeous-Alexander": 89.1,
+       "James Harden": 46.0
+      }
+     },
+     "C2": {
+      "hit": 3,
+      "n": 4,
+      "pass": true
+     },
+     "top10": [
+      "Jalen Duren 100",
+      "Jaxson Hayes 99",
+      "Victor Wembanyama 99",
+      "Ryan Kalkbrenner 99",
+      "Giannis Antetokounmpo 98",
+      "Zion Williamson 98",
+      "Gary Payton II 97",
+      "Mark Williams 97",
+      "Luka Garza 97",
+      "Deandre Ayton 96"
+     ]
+    }
+   },
+   "fit25": {
+    "OBPM": {
+     "dR2": 0.0699,
+     "n": 275
+    },
+    "2K": {
+     "dR2": 0.0002,
+     "n": 274
+    },
+    "mean": 0.0351
+   },
+   "fit24": {
+    "OBPM": {
+     "dR2": 0.0715,
+     "n": 256
+    },
+    "2K": {
+     "dR2": 0.0005,
+     "n": 254
+    },
+    "mean": 0.036
+   },
+   "cellCorr25": 0.123,
+   "C1": false,
+   "C2": true,
+   "C3": true,
+   "pass": false
+  },
+  "VP": {
+   "cells": {
+    "SHOOT": {
+     "yoy": 0.689,
+     "nYoy": 245,
+     "rhoDT": 0.398,
+     "named": {
+      "SHOOT": {
+       "Klay Thompson": 97.8,
+       "Buddy Hield": null,
+       "Duncan Robinson": 97.1,
+       "Sam Hauser": 89.1,
+       "Derrick White": 53.6
+      },
+      "CUTROLL": {
+       "Aaron Gordon": 63.0,
+       "Jarrett Allen": 12.7,
+       "Rudy Gobert": 11.6,
+       "Dereck Lively II": null,
+       "Josh Hart": 54.3
+      },
+      "ONBALL": {
+       "Luka Dončić": 69.2,
+       "Trae Young": null,
+       "Shai Gilgeous-Alexander": 44.9,
+       "James Harden": 40.2
+      }
+     },
+     "C2": {
+      "hit": 3,
+      "n": 4,
+      "pass": true
+     },
+     "top10": [
+      "Stephen Curry 100",
+      "Isaiah Joe 99",
+      "Tim Hardaway Jr. 99",
+      "Moses Moody 99",
+      "Sam Merrill 98",
+      "Klay Thompson 98",
+      "Kon Knueppel 97",
+      "Duncan Robinson 97",
+      "Michael Porter Jr. 97",
+      "Nickeil Alexander-Walker 96"
+     ]
+    },
+    "CUTROLL": {
+     "yoy": 0.65,
+     "nYoy": 245,
+     "rhoDT": 0.296,
+     "named": {
+      "SHOOT": {
+       "Klay Thompson": 43.8,
+       "Buddy Hield": null,
+       "Duncan Robinson": 49.6,
+       "Sam Hauser": 35.5,
+       "Derrick White": 39.9
+      },
+      "CUTROLL": {
+       "Aaron Gordon": 87.7,
+       "Jarrett Allen": 95.7,
+       "Rudy Gobert": 89.9,
+       "Dereck Lively II": null,
+       "Josh Hart": 35.1
+      },
+      "ONBALL": {
+       "Luka Dončić": 34.4,
+       "Trae Young": null,
+       "Shai Gilgeous-Alexander": 75.0,
+       "James Harden": 21.7
+      }
+     },
+     "C2": {
+      "hit": 3,
+      "n": 4,
+      "pass": true
+     },
+     "top10": [
+      "Jalen Duren 100",
+      "Giannis Antetokounmpo 99",
+      "Victor Wembanyama 99",
+      "Mark Williams 99",
+      "Jaxson Hayes 98",
+      "Ryan Kalkbrenner 98",
+      "Luka Garza 97",
+      "Deandre Ayton 97",
+      "Gary Payton II 97",
+      "Zion Williamson 96"
+     ]
+    }
+   },
+   "fit25": {
+    "OBPM": {
+     "dR2": 0.1037,
+     "n": 275
+    },
+    "2K": {
+     "dR2": 0.016,
+     "n": 274
+    },
+    "mean": 0.0599
+   },
+   "fit24": {
+    "OBPM": {
+     "dR2": 0.1236,
+     "n": 256
+    },
+    "2K": {
+     "dR2": 0.0154,
+     "n": 254
+    },
+    "mean": 0.0695
+   },
+   "cellCorr25": -0.114,
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "pass": true
+  },
+  "W-eq": {
+   "cells": {
+    "ONE": {
+     "yoy": 0.711,
+     "nYoy": 245,
+     "rhoDT": 0.52,
+     "named": {
+      "SHOOT": {
+       "Klay Thompson": 98.2,
+       "Buddy Hield": null,
+       "Duncan Robinson": 92.4,
+       "Sam Hauser": 95.7,
+       "Derrick White": 55.1
+      },
+      "CUTROLL": {
+       "Aaron Gordon": 26.4,
+       "Jarrett Allen": 57.2,
+       "Rudy Gobert": 18.5,
+       "Dereck Lively II": null,
+       "Josh Hart": 35.5
+      },
+      "ONBALL": {
+       "Luka Dončić": 22.8,
+       "Trae Young": null,
+       "Shai Gilgeous-Alexander": 4.0,
+       "James Harden": 0.0
+      }
+     },
+     "top10": [
+      "Lauri Markkanen 100",
+      "Stephen Curry 99",
+      "Kon Knueppel 99",
+      "Michael Porter Jr. 99",
+      "Klay Thompson 98",
+      "Nickeil Alexander-Walker 98",
+      "Simone Fontecchio 97",
+      "Victor Wembanyama 97",
+      "Isaiah Joe 97",
+      "Aaron Nesmith 96"
+     ]
+    }
+   },
+   "fit25": {
+    "OBPM": {
+     "dR2": 0.0353,
+     "n": 275
+    },
+    "2K": {
+     "dR2": 0.0136,
+     "n": 274
+    },
+    "mean": 0.0244
+   },
+   "fit24": {
+    "OBPM": {
+     "dR2": 0.0512,
+     "n": 256
+    },
+    "2K": {
+     "dR2": 0.0051,
+     "n": 254
+    },
+    "mean": 0.0282
+   }
+  }
+ },
+ "recommended": "V"
+}

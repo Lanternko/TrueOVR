@@ -1,0 +1,19 @@
+{
+ "n020": 362,
+ "n022": 362,
+ "spearman_lastOVR_vs_card022": 0.9999931697714797,
+ "spearman_n": 362,
+ "finite022": true,
+ "top20_in": [
+  "Tyrese Maxey",
+  "Jayson Tatum"
+ ],
+ "top20_out": [
+  "Lauri Markkanen",
+  "Anthony Davis"
+ ],
+ "absdelta_median": 1.1999999999999993,
+ "absdelta_max": 8.5,
+ "foulDrawY_n": 42,
+ "foulDrawY_medianAbsDiff": 4.814544865565274
+}

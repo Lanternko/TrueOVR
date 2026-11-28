@@ -1,0 +1,33 @@
+
+== 近況版輪替差最多的 5 隊（Σ|Δ分鐘|）
+ORL Σ93.0　進：Jevon Carter 15.2　出：Nikola Vučević 9.0　最大變動：Paolo Banchero 12.3→29.1、Jalen Suggs 18.1→28.8、Franz Wagner 38.6→30.6
+OKC Σ91.4　進：Josh Dix 18.2　出：Bennett Stirtz 17.9　最大變動：Jalen Williams 19.1→31.4、Chet Holmgren 18.1→29.7、Shai Gilgeous-Alexander 39.1→32.5
+NOP Σ89.1　進：Yves Missi 19.5、Trendon Watford 17.5　出：Karlo Matković 11.8、Jordan Poole 10.2　最大變動：Dejounte Murray 23.7→31.3、Trey Murphy III 35.2→31.1、Zion Williamson 35.1→31.0
+IND Σ71.3　進：Ivica Zubac 20.9　出：Larry Nance Jr. 18.4　最大變動：Tyrese Haliburton 21.6→32.1、Pascal Siakam 36.7→31.3、Kelly Oubre Jr. 26.5→22.6
+DEN Σ67.6　進：Alpha Diallo 20.6　出：Tyus Jones 10.2　最大變動：Cameron Johnson 9.3→20.9、Jamal Murray 39.1→34.6、Nikola Jokić 38.0→33.7
+（近況版 30 隊平均 Σ|Δ| 39.0 分鐘）
+
+== 今日陣容版輪替差最多的 5 隊（Σ|Δ分鐘|）
+DAL Σ63.2　進：Caleb Martin 18.3　出：Walter Clayton Jr. 10.0　最大變動：Naji Marshall 15.1→26.0、P.J. Washington 36.4→31.5、Zaccharie Risacher 32.0→27.7
+MEM Σ52.3　進：Javon Small 20.1　出：Quinten Post 10.6　最大變動：Cameron Boozer 35.8→31.8、Jaylen Wells 31.3→27.8、Jerami Grant 28.2→25.0
+HOU Σ46.1　進：—　出：—　最大變動：Marcus Smart 15.4→22.7、Reed Sheppard 14.2→21.0、Jabari Smith Jr. 36.4→30.8
+NOP Σ45.8　進：—　出：—　最大變動：Trendon Watford 6.6→17.8、Dejounte Murray 24.1→31.8、Trey Murphy III 35.7→31.6
+BKN Σ44.4　進：Danny Wolf 14.4　出：Josh Minott 6.3　最大變動：Mikel Brown Jr. 16.6→23.1、Julius Randle 38.0→35.0、Michael Porter Jr. 35.5→32.7
+（今日陣容版 30 隊平均 Σ|Δ| 28.0 分鐘）
+
+== 15 分鐘門檻補回的人（近況版輪替內）
+共 0 人
+
+== 今日陣容預測勝場變最多的 5 隊（整季缺陣 → 逐場回歸日；同一份新資料內對照）
+POR 52.4 → 41.9（-10.5；陣容 2 種狀態）
+DET 46.4 → 54.1（+7.7；陣容 3 種狀態）
+CLE 60.1 → 53.1（-7.0；陣容 2 種狀態）
+GSW 29.1 → 35.8（+6.7；陣容 2 種狀態）
+UTA 33.9 → 40.2（+6.3；陣容 2 種狀態）
+
+== 與上一版網站（舊分鐘規則＋整季缺陣）相比，今日陣容預測勝場變最多的 5 隊
+UTA 24.1 → 40.2（+16.1）
+TOR 38.1 → 47.3（+9.1）
+ORL 39.3 → 30.6（-8.7）
+BKN 39.2 → 30.5（-8.7）
+HOU 55.3 → 46.9（-8.3）

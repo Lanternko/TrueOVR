@@ -1,0 +1,1761 @@
+{
+ "generatedBy": "reports/ovr-inseason-2026-27/v5/pathA/d0_gate.py",
+ "spec": "preregistration-v5 §5.1（D0）、§5.6（缺層）；§5.2（Path A 鏈）",
+ "scope": "只掃本機檔案；不下載、不補值、不讀 2026-27",
+ "seasons": {
+  "2014-15": {
+   "expectedGames": 1230,
+   "layers": {
+    "expectedGames": {
+     "games": 1230,
+     "source": "v5/history/stints/preparation-2014-15.json"
+    },
+    "pbp": {
+     "expectedPath": "data/defense-seventh/2014-15/pbp",
+     "files": 1230
+    },
+    "box": {
+     "expectedPath": "data/defense-seventh/2014-15/boxes",
+     "boxesFiles": 0,
+     "playerGamesPath": "data/defense-seventh/2014-15/player-games.json",
+     "present": true,
+     "historyBoxGames": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-games-2014-15.csv.gz",
+      "sha256": "292a99d9fc1897418a5ee0fb23478bef71c7ecaa3bc0c46d4c2de073491f4a6f",
+      "games": 1230,
+      "playerGameRows": 25981,
+      "bubbleGames": 0,
+      "dateRange": [
+       "2014-10-28",
+       "2015-04-15"
+      ]
+     },
+     "historyBoxTotals": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-totals-2014-15.csv",
+      "sha256": "fca0dd1eeab57ce1c355bdd23d4f0dc29bd6c2e30fe6b5b07c3781407246fab0",
+      "players": 492
+     }
+    },
+    "bio": {
+     "expectedPath": "data/defense-seventh/2014-15/bio.json",
+     "present": false,
+     "backfillUpperBound": {
+      "source": "data/defense-seventh/{2021-22,2022-23,2023-24,2024-25}/bio.json 聯集",
+      "minuteWeightedCoverage": 0.4375,
+      "playersCovered": 152,
+      "players": 492,
+      "note": "§5.6 禁止用未來球季身高回填；此列只證明上限也不足"
+     }
+    },
+    "stints": {
+     "expectedPath": {
+      "file": "reports/defense-seventh/2014-15/stints/stints.jsonl",
+      "present": true,
+      "lines": 37384
+     },
+     "historyGz": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/stints-2014-15.jsonl.gz",
+      "present": true,
+      "lines": 37384,
+      "sha256": "c349f7ee8ce0e3735ac446b0e15ae0f24e3ae45e78824186953702cf6ce7e14e"
+     },
+     "preparation": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/preparation-2014-15.json",
+      "present": true,
+      "boxGames": 1230,
+      "pbpGames": 1230,
+      "validLineupGames": 1218,
+      "failedGames": 12,
+      "stints": 37384
+     },
+     "alternateLocal": {
+      "file": null,
+      "present": false
+     }
+    },
+    "shotCoords": {
+     "present": true,
+     "path": "data/defense-seventh/2014-15/pbp",
+     "files": 1230,
+     "twoPointers": 150433,
+     "xyPresent": 150433,
+     "xyCoverage": 1.0,
+     "areaPresent": 0,
+     "areaCoverage": 0.0
+    },
+    "seasonAttrsInputs": {
+     "boxPlayerGames": {
+      "file": "data/defense-seventh/2014-15/player-games.json",
+      "present": true
+     },
+     "bio": {
+      "file": "data/defense-seventh/2014-15/bio.json",
+      "present": false,
+      "players": 0
+     },
+     "pbpDir": {
+      "file": "data/defense-seventh/2014-15/pbp",
+      "present": true,
+      "files": 1230
+     },
+     "teamGames": {
+      "file": "data/defense-seventh/2014-15/team-games.json",
+      "present": true
+     },
+     "v3League": {
+      "file": "reports/defense-seventh/2014-15/calendar-55/v3-league.json",
+      "present": false
+     },
+     "dependence": {
+      "file": "reports/player-impact-v30/dependence-audit.json",
+      "seasonCovered": false
+     },
+     "shotOrigin": {
+      "file": "reports/ovr-v55-finisher-fix-2025-26/shot-origin.json",
+      "seasonCovered": false
+     },
+     "fourFactors": {
+      "file": "data/defense-seventh/2014-15/four-factors.csv",
+      "present": true
+     }
+    },
+    "possession": {
+     "file": "reports/player-impact-v21/raw/2014-15/Possessions.json",
+     "present": false,
+     "neededByCardPipeline": false
+    },
+    "prior": {
+     "file": "reports/ovr-inseason-2026-27/v5/data/prior-2014-15-v5.json",
+     "present": false
+    },
+    "gameCount": {
+     "expected": 1230,
+     "got": 1230,
+     "match": true,
+     "bubbleGames": 0
+    },
+    "card": {
+     "buildable": false,
+     "fatal": [
+      "bio 缺：physique/heightInches/pass/rebound/pos 無來源（§5.6 只有「不進 H」，沒有建卡規則）"
+     ],
+     "fallback": [
+      "tracking 缺 → onBall/help=70（v4 §3.4）",
+      "dependence 缺 → creation=x0／received=0.5（v4 P0 先例）",
+      "shot-origin 缺 → short=shortBase（v4 §3.5）"
+     ]
+    },
+    "gate51": {
+     "pbp": {
+      "pass": true,
+      "status": "present"
+     },
+     "box": {
+      "pass": true,
+      "status": "history-box-games"
+     },
+     "bio": {
+      "pass": false,
+      "status": "missing"
+     },
+     "stints": {
+      "pass": true,
+      "status": "present"
+     },
+     "shotCoords": {
+      "pass": true,
+      "status": "present"
+     },
+     "card": {
+      "pass": false,
+      "status": "not-buildable"
+     },
+     "allPass": false
+    },
+    "entersChain": false
+   }
+  },
+  "2015-16": {
+   "expectedGames": 1230,
+   "layers": {
+    "expectedGames": {
+     "games": 1230,
+     "source": "v5/history/stints/preparation-2015-16.json"
+    },
+    "pbp": {
+     "expectedPath": "data/defense-seventh/2015-16/pbp",
+     "files": 1230
+    },
+    "box": {
+     "expectedPath": "data/defense-seventh/2015-16/boxes",
+     "boxesFiles": 0,
+     "playerGamesPath": "data/defense-seventh/2015-16/player-games.json",
+     "present": true,
+     "historyBoxGames": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-games-2015-16.csv.gz",
+      "sha256": "668d908407c1f90a03169757f2bb044a39fbb41049033eccec75fdb0fb7536e2",
+      "games": 1230,
+      "playerGameRows": 26078,
+      "bubbleGames": 0,
+      "dateRange": [
+       "2015-10-27",
+       "2016-04-13"
+      ]
+     },
+     "historyBoxTotals": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-totals-2015-16.csv",
+      "sha256": "256dd69111a754fa32daf4f95f780b9afc12161b116fbb23b8036f72f4f35ce9",
+      "players": 476
+     }
+    },
+    "bio": {
+     "expectedPath": "data/defense-seventh/2015-16/bio.json",
+     "present": true,
+     "backfillUpperBound": {
+      "source": "data/defense-seventh/{2021-22,2022-23,2023-24,2024-25}/bio.json 聯集",
+      "minuteWeightedCoverage": 0.5579,
+      "playersCovered": 185,
+      "players": 476,
+      "note": "§5.6 禁止用未來球季身高回填；此列只證明上限也不足"
+     }
+    },
+    "stints": {
+     "expectedPath": {
+      "file": "reports/defense-seventh/2015-16/stints/stints.jsonl",
+      "present": true,
+      "lines": 37729
+     },
+     "historyGz": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/stints-2015-16.jsonl.gz",
+      "present": true,
+      "lines": 37729,
+      "sha256": "0f987832e535307cbd1ff71cd4d8d13f11c33e61c4b0f90dcde3682cf43e846b"
+     },
+     "preparation": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/preparation-2015-16.json",
+      "present": true,
+      "boxGames": 1230,
+      "pbpGames": 1230,
+      "validLineupGames": 1222,
+      "failedGames": 8,
+      "stints": 37729
+     },
+     "alternateLocal": {
+      "file": null,
+      "present": false
+     }
+    },
+    "shotCoords": {
+     "present": true,
+     "path": "data/defense-seventh/2015-16/pbp",
+     "files": 1230,
+     "twoPointers": 148808,
+     "xyPresent": 148808,
+     "xyCoverage": 1.0,
+     "areaPresent": 0,
+     "areaCoverage": 0.0
+    },
+    "seasonAttrsInputs": {
+     "boxPlayerGames": {
+      "file": "data/defense-seventh/2015-16/player-games.json",
+      "present": true
+     },
+     "bio": {
+      "file": "data/defense-seventh/2015-16/bio.json",
+      "present": true,
+      "players": 476
+     },
+     "pbpDir": {
+      "file": "data/defense-seventh/2015-16/pbp",
+      "present": true,
+      "files": 1230
+     },
+     "teamGames": {
+      "file": "data/defense-seventh/2015-16/team-games.json",
+      "present": true
+     },
+     "v3League": {
+      "file": "reports/defense-seventh/2015-16/calendar-55/v3-league.json",
+      "present": false
+     },
+     "dependence": {
+      "file": "reports/player-impact-v30/dependence-audit.json",
+      "seasonCovered": false
+     },
+     "shotOrigin": {
+      "file": "reports/ovr-v55-finisher-fix-2025-26/shot-origin.json",
+      "seasonCovered": false
+     },
+     "fourFactors": {
+      "file": "data/defense-seventh/2015-16/four-factors.csv",
+      "present": true
+     }
+    },
+    "possession": {
+     "file": "reports/player-impact-v21/raw/2015-16/Possessions.json",
+     "present": false,
+     "neededByCardPipeline": false
+    },
+    "prior": {
+     "file": "reports/ovr-inseason-2026-27/v5/data/prior-2015-16-v5.json",
+     "present": false
+    },
+    "gameCount": {
+     "expected": 1230,
+     "got": 1230,
+     "match": true,
+     "bubbleGames": 0
+    },
+    "card": {
+     "buildable": true,
+     "fatal": [],
+     "fallback": [
+      "tracking 缺 → onBall/help=70（v4 §3.4）",
+      "dependence 缺 → creation=x0／received=0.5（v4 P0 先例）",
+      "shot-origin 缺 → short=shortBase（v4 §3.5）"
+     ]
+    },
+    "gate51": {
+     "pbp": {
+      "pass": true,
+      "status": "present"
+     },
+     "box": {
+      "pass": true,
+      "status": "history-box-games"
+     },
+     "bio": {
+      "pass": true,
+      "status": "present"
+     },
+     "stints": {
+      "pass": true,
+      "status": "present"
+     },
+     "shotCoords": {
+      "pass": true,
+      "status": "present"
+     },
+     "card": {
+      "pass": true,
+      "status": "buildable"
+     },
+     "allPass": true
+    },
+    "entersChain": true
+   }
+  },
+  "2016-17": {
+   "expectedGames": 1230,
+   "layers": {
+    "expectedGames": {
+     "games": 1230,
+     "source": "v5/history/stints/preparation-2016-17.json"
+    },
+    "pbp": {
+     "expectedPath": "data/defense-seventh/2016-17/pbp",
+     "files": 1230
+    },
+    "box": {
+     "expectedPath": "data/defense-seventh/2016-17/boxes",
+     "boxesFiles": 0,
+     "playerGamesPath": "data/defense-seventh/2016-17/player-games.json",
+     "present": true,
+     "historyBoxGames": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-games-2016-17.csv.gz",
+      "sha256": "44ddef7d0f6cdcabdfc00eee58a2dbaa3dfa174767ffc594e55b31b3731bb94a",
+      "games": 1230,
+      "playerGameRows": 26139,
+      "bubbleGames": 0,
+      "dateRange": [
+       "2016-10-25",
+       "2017-04-12"
+      ]
+     },
+     "historyBoxTotals": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-totals-2016-17.csv",
+      "sha256": "bec53b3d67b1650da243954e408306036138d62898ce1cf424dabfc5f9962612",
+      "players": 486
+     }
+    },
+    "bio": {
+     "expectedPath": "data/defense-seventh/2016-17/bio.json",
+     "present": true,
+     "backfillUpperBound": {
+      "source": "data/defense-seventh/{2021-22,2022-23,2023-24,2024-25}/bio.json 聯集",
+      "minuteWeightedCoverage": 0.6404,
+      "playersCovered": 223,
+      "players": 486,
+      "note": "§5.6 禁止用未來球季身高回填；此列只證明上限也不足"
+     }
+    },
+    "stints": {
+     "expectedPath": {
+      "file": "reports/defense-seventh/2016-17/stints/stints.jsonl",
+      "present": true,
+      "lines": 37327
+     },
+     "historyGz": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/stints-2016-17.jsonl.gz",
+      "present": true,
+      "lines": 37327,
+      "sha256": "59096d417d1f5668e75ac31e7eeffe7ad023d4a5df84f53abba6c3c554ef718d"
+     },
+     "preparation": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/preparation-2016-17.json",
+      "present": true,
+      "boxGames": 1230,
+      "pbpGames": 1230,
+      "validLineupGames": 1221,
+      "failedGames": 9,
+      "stints": 37327
+     },
+     "alternateLocal": {
+      "file": null,
+      "present": false
+     }
+    },
+    "shotCoords": {
+     "present": true,
+     "path": "data/defense-seventh/2016-17/pbp",
+     "files": 1230,
+     "twoPointers": 143693,
+     "xyPresent": 143693,
+     "xyCoverage": 1.0,
+     "areaPresent": 0,
+     "areaCoverage": 0.0
+    },
+    "seasonAttrsInputs": {
+     "boxPlayerGames": {
+      "file": "data/defense-seventh/2016-17/player-games.json",
+      "present": true
+     },
+     "bio": {
+      "file": "data/defense-seventh/2016-17/bio.json",
+      "present": true,
+      "players": 486
+     },
+     "pbpDir": {
+      "file": "data/defense-seventh/2016-17/pbp",
+      "present": true,
+      "files": 1230
+     },
+     "teamGames": {
+      "file": "data/defense-seventh/2016-17/team-games.json",
+      "present": true
+     },
+     "v3League": {
+      "file": "reports/defense-seventh/2016-17/calendar-55/v3-league.json",
+      "present": false
+     },
+     "dependence": {
+      "file": "reports/player-impact-v30/dependence-audit.json",
+      "seasonCovered": false
+     },
+     "shotOrigin": {
+      "file": "reports/ovr-v55-finisher-fix-2025-26/shot-origin.json",
+      "seasonCovered": false
+     },
+     "fourFactors": {
+      "file": "data/defense-seventh/2016-17/four-factors.csv",
+      "present": true
+     }
+    },
+    "possession": {
+     "file": "reports/player-impact-v21/raw/2016-17/Possessions.json",
+     "present": false,
+     "neededByCardPipeline": false
+    },
+    "prior": {
+     "file": "reports/ovr-inseason-2026-27/v5/data/prior-2016-17-v5.json",
+     "present": false
+    },
+    "gameCount": {
+     "expected": 1230,
+     "got": 1230,
+     "match": true,
+     "bubbleGames": 0
+    },
+    "card": {
+     "buildable": true,
+     "fatal": [],
+     "fallback": [
+      "tracking 缺 → onBall/help=70（v4 §3.4）",
+      "dependence 缺 → creation=x0／received=0.5（v4 P0 先例）",
+      "shot-origin 缺 → short=shortBase（v4 §3.5）"
+     ]
+    },
+    "gate51": {
+     "pbp": {
+      "pass": true,
+      "status": "present"
+     },
+     "box": {
+      "pass": true,
+      "status": "history-box-games"
+     },
+     "bio": {
+      "pass": true,
+      "status": "present"
+     },
+     "stints": {
+      "pass": true,
+      "status": "present"
+     },
+     "shotCoords": {
+      "pass": true,
+      "status": "present"
+     },
+     "card": {
+      "pass": true,
+      "status": "buildable"
+     },
+     "allPass": true
+    },
+    "entersChain": true
+   }
+  },
+  "2017-18": {
+   "expectedGames": 1230,
+   "layers": {
+    "expectedGames": {
+     "games": 1230,
+     "source": "v5/history/stints/preparation-2017-18.json"
+    },
+    "pbp": {
+     "expectedPath": "data/defense-seventh/2017-18/pbp",
+     "files": 1230
+    },
+    "box": {
+     "expectedPath": "data/defense-seventh/2017-18/boxes",
+     "boxesFiles": 0,
+     "playerGamesPath": "data/defense-seventh/2017-18/player-games.json",
+     "present": true,
+     "historyBoxGames": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-games-2017-18.csv.gz",
+      "sha256": "e5ecff7fcc4e7a570ce385f8a8e4f0bcade3063706dc11ccabeebc151e9bc979",
+      "games": 1230,
+      "playerGameRows": 26107,
+      "bubbleGames": 0,
+      "dateRange": [
+       "2017-10-17",
+       "2018-04-11"
+      ]
+     },
+     "historyBoxTotals": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-totals-2017-18.csv",
+      "sha256": "e6b978c676763a06281077fa8431266be61948986e8c5cc17ec60db5982da787",
+      "players": 540
+     }
+    },
+    "bio": {
+     "expectedPath": "data/defense-seventh/2017-18/bio.json",
+     "present": true,
+     "backfillUpperBound": {
+      "source": "data/defense-seventh/{2021-22,2022-23,2023-24,2024-25}/bio.json 聯集",
+      "minuteWeightedCoverage": 0.7004,
+      "playersCovered": 278,
+      "players": 540,
+      "note": "§5.6 禁止用未來球季身高回填；此列只證明上限也不足"
+     }
+    },
+    "stints": {
+     "expectedPath": {
+      "file": "reports/defense-seventh/2017-18/stints/stints.jsonl",
+      "present": true,
+      "lines": 36760
+     },
+     "historyGz": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/stints-2017-18.jsonl.gz",
+      "present": true,
+      "lines": 36760,
+      "sha256": "5b879db102b2e30859c4b6d753375cba0658dbd343045cc806dc5423fbf3a6eb"
+     },
+     "preparation": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/preparation-2017-18.json",
+      "present": true,
+      "boxGames": 1230,
+      "pbpGames": 1230,
+      "validLineupGames": 1210,
+      "failedGames": 20,
+      "stints": 36760
+     },
+     "alternateLocal": {
+      "file": null,
+      "present": false
+     }
+    },
+    "shotCoords": {
+     "present": true,
+     "path": "data/defense-seventh/2017-18/pbp",
+     "files": 1230,
+     "twoPointers": 140368,
+     "xyPresent": 140368,
+     "xyCoverage": 1.0,
+     "areaPresent": 0,
+     "areaCoverage": 0.0
+    },
+    "seasonAttrsInputs": {
+     "boxPlayerGames": {
+      "file": "data/defense-seventh/2017-18/player-games.json",
+      "present": true
+     },
+     "bio": {
+      "file": "data/defense-seventh/2017-18/bio.json",
+      "present": true,
+      "players": 540
+     },
+     "pbpDir": {
+      "file": "data/defense-seventh/2017-18/pbp",
+      "present": true,
+      "files": 1230
+     },
+     "teamGames": {
+      "file": "data/defense-seventh/2017-18/team-games.json",
+      "present": true
+     },
+     "v3League": {
+      "file": "reports/defense-seventh/2017-18/calendar-55/v3-league.json",
+      "present": false
+     },
+     "dependence": {
+      "file": "reports/player-impact-v30/dependence-audit.json",
+      "seasonCovered": false
+     },
+     "shotOrigin": {
+      "file": "reports/ovr-v55-finisher-fix-2025-26/shot-origin.json",
+      "seasonCovered": false
+     },
+     "fourFactors": {
+      "file": "data/defense-seventh/2017-18/four-factors.csv",
+      "present": true
+     }
+    },
+    "possession": {
+     "file": "reports/player-impact-v21/raw/2017-18/Possessions.json",
+     "present": false,
+     "neededByCardPipeline": false
+    },
+    "prior": {
+     "file": "reports/ovr-inseason-2026-27/v5/data/prior-2017-18-v5.json",
+     "present": false
+    },
+    "gameCount": {
+     "expected": 1230,
+     "got": 1230,
+     "match": true,
+     "bubbleGames": 0
+    },
+    "card": {
+     "buildable": true,
+     "fatal": [],
+     "fallback": [
+      "tracking 缺 → onBall/help=70（v4 §3.4）",
+      "dependence 缺 → creation=x0／received=0.5（v4 P0 先例）",
+      "shot-origin 缺 → short=shortBase（v4 §3.5）"
+     ]
+    },
+    "gate51": {
+     "pbp": {
+      "pass": true,
+      "status": "present"
+     },
+     "box": {
+      "pass": true,
+      "status": "history-box-games"
+     },
+     "bio": {
+      "pass": true,
+      "status": "present"
+     },
+     "stints": {
+      "pass": true,
+      "status": "present"
+     },
+     "shotCoords": {
+      "pass": true,
+      "status": "present"
+     },
+     "card": {
+      "pass": true,
+      "status": "buildable"
+     },
+     "allPass": true
+    },
+    "entersChain": true
+   }
+  },
+  "2018-19": {
+   "expectedGames": 1230,
+   "layers": {
+    "expectedGames": {
+     "games": 1230,
+     "source": "v5/history/stints/preparation-2018-19.json"
+    },
+    "pbp": {
+     "expectedPath": "data/defense-seventh/2018-19/pbp",
+     "files": 1230
+    },
+    "box": {
+     "expectedPath": "data/defense-seventh/2018-19/boxes",
+     "boxesFiles": 0,
+     "playerGamesPath": "data/defense-seventh/2018-19/player-games.json",
+     "present": true,
+     "historyBoxGames": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-games-2018-19.csv.gz",
+      "sha256": "17d34d3a02f5536d39a66b34b1c6e4051e80065280043d5891cd0a6789b15266",
+      "games": 1230,
+      "playerGameRows": 26101,
+      "bubbleGames": 0,
+      "dateRange": [
+       "2018-10-16",
+       "2019-04-10"
+      ]
+     },
+     "historyBoxTotals": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-totals-2018-19.csv",
+      "sha256": "51c33a61db3592cdba1488cf3e369a1c7ae8b123e7fd920ae4c39051061f6945",
+      "players": 530
+     }
+    },
+    "bio": {
+     "expectedPath": "data/defense-seventh/2018-19/bio.json",
+     "present": true,
+     "backfillUpperBound": {
+      "source": "data/defense-seventh/{2021-22,2022-23,2023-24,2024-25}/bio.json 聯集",
+      "minuteWeightedCoverage": 0.8217,
+      "playersCovered": 334,
+      "players": 530,
+      "note": "§5.6 禁止用未來球季身高回填；此列只證明上限也不足"
+     }
+    },
+    "stints": {
+     "expectedPath": {
+      "file": "reports/defense-seventh/2018-19/stints/stints.jsonl",
+      "present": true,
+      "lines": 37630
+     },
+     "historyGz": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/stints-2018-19.jsonl.gz",
+      "present": true,
+      "lines": 37630,
+      "sha256": "c024712a8d5623062397b5762505d79e973a397286228dbbfb4d94fec8e0cf28"
+     },
+     "preparation": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/preparation-2018-19.json",
+      "present": true,
+      "boxGames": 1230,
+      "pbpGames": 1230,
+      "validLineupGames": 1219,
+      "failedGames": 11,
+      "stints": 37630
+     },
+     "alternateLocal": {
+      "file": null,
+      "present": false
+     }
+    },
+    "shotCoords": {
+     "present": true,
+     "path": "data/defense-seventh/2018-19/pbp",
+     "files": 1230,
+     "twoPointers": 140716,
+     "xyPresent": 140716,
+     "xyCoverage": 1.0,
+     "areaPresent": 0,
+     "areaCoverage": 0.0
+    },
+    "seasonAttrsInputs": {
+     "boxPlayerGames": {
+      "file": "data/defense-seventh/2018-19/player-games.json",
+      "present": true
+     },
+     "bio": {
+      "file": "data/defense-seventh/2018-19/bio.json",
+      "present": true,
+      "players": 530
+     },
+     "pbpDir": {
+      "file": "data/defense-seventh/2018-19/pbp",
+      "present": true,
+      "files": 1230
+     },
+     "teamGames": {
+      "file": "data/defense-seventh/2018-19/team-games.json",
+      "present": true
+     },
+     "v3League": {
+      "file": "reports/defense-seventh/2018-19/calendar-55/v3-league.json",
+      "present": false
+     },
+     "dependence": {
+      "file": "reports/player-impact-v30/dependence-audit.json",
+      "seasonCovered": false
+     },
+     "shotOrigin": {
+      "file": "reports/ovr-v55-finisher-fix-2025-26/shot-origin.json",
+      "seasonCovered": false
+     },
+     "fourFactors": {
+      "file": "data/defense-seventh/2018-19/four-factors.csv",
+      "present": true
+     }
+    },
+    "possession": {
+     "file": "reports/player-impact-v21/raw/2018-19/Possessions.json",
+     "present": false,
+     "neededByCardPipeline": false
+    },
+    "prior": {
+     "file": "reports/ovr-inseason-2026-27/v5/data/prior-2018-19-v5.json",
+     "present": false
+    },
+    "gameCount": {
+     "expected": 1230,
+     "got": 1230,
+     "match": true,
+     "bubbleGames": 0
+    },
+    "card": {
+     "buildable": true,
+     "fatal": [],
+     "fallback": [
+      "tracking 缺 → onBall/help=70（v4 §3.4）",
+      "dependence 缺 → creation=x0／received=0.5（v4 P0 先例）",
+      "shot-origin 缺 → short=shortBase（v4 §3.5）"
+     ]
+    },
+    "gate51": {
+     "pbp": {
+      "pass": true,
+      "status": "present"
+     },
+     "box": {
+      "pass": true,
+      "status": "history-box-games"
+     },
+     "bio": {
+      "pass": true,
+      "status": "present"
+     },
+     "stints": {
+      "pass": true,
+      "status": "present"
+     },
+     "shotCoords": {
+      "pass": true,
+      "status": "present"
+     },
+     "card": {
+      "pass": true,
+      "status": "buildable"
+     },
+     "allPass": true
+    },
+    "entersChain": true
+   }
+  },
+  "2019-20": {
+   "expectedGames": 1059,
+   "layers": {
+    "expectedGames": {
+     "games": 1059,
+     "source": "v5/history/stints/preparation-2019-20.json"
+    },
+    "pbp": {
+     "expectedPath": "data/defense-seventh/2019-20/pbp",
+     "files": 1059
+    },
+    "box": {
+     "expectedPath": "data/defense-seventh/2019-20/boxes",
+     "boxesFiles": 0,
+     "playerGamesPath": "data/defense-seventh/2019-20/player-games.json",
+     "present": true,
+     "historyBoxGames": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-games-2019-20.csv.gz",
+      "sha256": "19c82ce02a0d74d4e515a3c8bd00887f038e30e3a4fcc9f2d308433a7811657e",
+      "games": 1059,
+      "playerGameRows": 22393,
+      "bubbleGames": 88,
+      "dateRange": [
+       "2019-10-22",
+       "2020-08-14"
+      ]
+     },
+     "historyBoxTotals": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-totals-2019-20.csv",
+      "sha256": "11adbfbe6a361cc844ea5c121e04a37011c30ea0597dd4ee450922ecc05aa924",
+      "players": 529
+     }
+    },
+    "bio": {
+     "expectedPath": "data/defense-seventh/2019-20/bio.json",
+     "present": true,
+     "backfillUpperBound": {
+      "source": "data/defense-seventh/{2021-22,2022-23,2023-24,2024-25}/bio.json 聯集",
+      "minuteWeightedCoverage": 0.9123,
+      "playersCovered": 408,
+      "players": 529,
+      "note": "§5.6 禁止用未來球季身高回填；此列只證明上限也不足"
+     }
+    },
+    "stints": {
+     "expectedPath": {
+      "file": "reports/defense-seventh/2019-20/stints/stints.jsonl",
+      "present": true,
+      "lines": 33397
+     },
+     "historyGz": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/stints-2019-20.jsonl.gz",
+      "present": true,
+      "lines": 33397,
+      "sha256": "19a91c90a181a3f0064d45ccb5dde4e59c11f8d0ba8792a0c69fd5559b7f134a"
+     },
+     "preparation": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/preparation-2019-20.json",
+      "present": true,
+      "boxGames": 1059,
+      "pbpGames": 1056,
+      "validLineupGames": 1046,
+      "failedGames": 13,
+      "stints": 33397
+     },
+     "alternateLocal": {
+      "file": null,
+      "present": false
+     }
+    },
+    "shotCoords": {
+     "present": true,
+     "path": "data/defense-seventh/2019-20/pbp",
+     "files": 1059,
+     "twoPointers": 115864,
+     "xyPresent": 115864,
+     "xyCoverage": 1.0,
+     "areaPresent": 0,
+     "areaCoverage": 0.0
+    },
+    "seasonAttrsInputs": {
+     "boxPlayerGames": {
+      "file": "data/defense-seventh/2019-20/player-games.json",
+      "present": true
+     },
+     "bio": {
+      "file": "data/defense-seventh/2019-20/bio.json",
+      "present": true,
+      "players": 529
+     },
+     "pbpDir": {
+      "file": "data/defense-seventh/2019-20/pbp",
+      "present": true,
+      "files": 1059
+     },
+     "teamGames": {
+      "file": "data/defense-seventh/2019-20/team-games.json",
+      "present": true
+     },
+     "v3League": {
+      "file": "reports/defense-seventh/2019-20/calendar-55/v3-league.json",
+      "present": false
+     },
+     "dependence": {
+      "file": "reports/player-impact-v30/dependence-audit.json",
+      "seasonCovered": false
+     },
+     "shotOrigin": {
+      "file": "reports/ovr-v55-finisher-fix-2025-26/shot-origin.json",
+      "seasonCovered": false
+     },
+     "fourFactors": {
+      "file": "data/defense-seventh/2019-20/four-factors.csv",
+      "present": true
+     }
+    },
+    "possession": {
+     "file": "reports/player-impact-v21/raw/2019-20/Possessions.json",
+     "present": false,
+     "neededByCardPipeline": false
+    },
+    "prior": {
+     "file": "reports/ovr-inseason-2026-27/v5/data/prior-2019-20-v5.json",
+     "present": false
+    },
+    "gameCount": {
+     "expected": 1059,
+     "got": 1059,
+     "match": true,
+     "bubbleGames": 88
+    },
+    "card": {
+     "buildable": true,
+     "fatal": [],
+     "fallback": [
+      "tracking 缺 → onBall/help=70（v4 §3.4）",
+      "dependence 缺 → creation=x0／received=0.5（v4 P0 先例）",
+      "shot-origin 缺 → short=shortBase（v4 §3.5）"
+     ]
+    },
+    "gate51": {
+     "pbp": {
+      "pass": true,
+      "status": "present"
+     },
+     "box": {
+      "pass": true,
+      "status": "history-box-games"
+     },
+     "bio": {
+      "pass": true,
+      "status": "present"
+     },
+     "stints": {
+      "pass": true,
+      "status": "present"
+     },
+     "shotCoords": {
+      "pass": true,
+      "status": "present"
+     },
+     "card": {
+      "pass": true,
+      "status": "buildable"
+     },
+     "allPass": true
+    },
+    "entersChain": true
+   }
+  },
+  "2020-21": {
+   "expectedGames": 1080,
+   "layers": {
+    "expectedGames": {
+     "games": 1080,
+     "source": "v5/history/stints/preparation-2020-21.json"
+    },
+    "pbp": {
+     "expectedPath": "data/defense-seventh/2020-21/pbp",
+     "files": 1080
+    },
+    "box": {
+     "expectedPath": "data/defense-seventh/2020-21/boxes",
+     "boxesFiles": 0,
+     "playerGamesPath": "data/defense-seventh/2020-21/player-games.json",
+     "present": true,
+     "historyBoxGames": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-games-2020-21.csv.gz",
+      "sha256": "9d1382b57c60728d0ab6fbb68c7639c1daf98d9c1995b7b67d6be1ce331b8c08",
+      "games": 1080,
+      "playerGameRows": 23054,
+      "bubbleGames": 0,
+      "dateRange": [
+       "2020-12-22",
+       "2021-05-16"
+      ]
+     },
+     "historyBoxTotals": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-totals-2020-21.csv",
+      "sha256": "44aeded5eaea8815351240c93e06329aad424e43b13eab3aac9f7b2764117a9e",
+      "players": 540
+     }
+    },
+    "bio": {
+     "expectedPath": "data/defense-seventh/2020-21/bio.json",
+     "present": true,
+     "backfillUpperBound": {
+      "source": "data/defense-seventh/{2021-22,2022-23,2023-24,2024-25}/bio.json 聯集",
+      "minuteWeightedCoverage": 0.9713,
+      "playersCovered": 474,
+      "players": 540,
+      "note": "§5.6 禁止用未來球季身高回填；此列只證明上限也不足"
+     }
+    },
+    "stints": {
+     "expectedPath": {
+      "file": "reports/defense-seventh/2020-21/stints/stints.jsonl",
+      "present": true,
+      "lines": 31911
+     },
+     "historyGz": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/stints-2020-21.jsonl.gz",
+      "present": true,
+      "lines": 31911,
+      "sha256": "13de14a18951e673cd8cb3b6a931cfaf9ac3f0441301d404a90dde57cba83404"
+     },
+     "preparation": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/preparation-2020-21.json",
+      "present": true,
+      "boxGames": 1080,
+      "pbpGames": 1080,
+      "validLineupGames": 1066,
+      "failedGames": 14,
+      "stints": 31911
+     },
+     "alternateLocal": {
+      "file": null,
+      "present": false
+     }
+    },
+    "shotCoords": {
+     "present": true,
+     "path": "data/defense-seventh/2020-21/pbp",
+     "files": 1080,
+     "twoPointers": 116144,
+     "xyPresent": 116144,
+     "xyCoverage": 1.0,
+     "areaPresent": 0,
+     "areaCoverage": 0.0
+    },
+    "seasonAttrsInputs": {
+     "boxPlayerGames": {
+      "file": "data/defense-seventh/2020-21/player-games.json",
+      "present": true
+     },
+     "bio": {
+      "file": "data/defense-seventh/2020-21/bio.json",
+      "present": true,
+      "players": 540
+     },
+     "pbpDir": {
+      "file": "data/defense-seventh/2020-21/pbp",
+      "present": true,
+      "files": 1080
+     },
+     "teamGames": {
+      "file": "data/defense-seventh/2020-21/team-games.json",
+      "present": true
+     },
+     "v3League": {
+      "file": "reports/defense-seventh/2020-21/calendar-55/v3-league.json",
+      "present": false
+     },
+     "dependence": {
+      "file": "reports/player-impact-v30/dependence-audit.json",
+      "seasonCovered": false
+     },
+     "shotOrigin": {
+      "file": "reports/ovr-v55-finisher-fix-2025-26/shot-origin.json",
+      "seasonCovered": false
+     },
+     "fourFactors": {
+      "file": "data/defense-seventh/2020-21/four-factors.csv",
+      "present": true
+     }
+    },
+    "possession": {
+     "file": "reports/player-impact-v21/raw/2020-21/Possessions.json",
+     "present": false,
+     "neededByCardPipeline": false
+    },
+    "prior": {
+     "file": "reports/ovr-inseason-2026-27/v5/data/prior-2020-21-v5.json",
+     "present": false
+    },
+    "gameCount": {
+     "expected": 1080,
+     "got": 1080,
+     "match": true,
+     "bubbleGames": 0
+    },
+    "card": {
+     "buildable": true,
+     "fatal": [],
+     "fallback": [
+      "tracking 缺 → onBall/help=70（v4 §3.4）",
+      "dependence 缺 → creation=x0／received=0.5（v4 P0 先例）",
+      "shot-origin 缺 → short=shortBase（v4 §3.5）"
+     ]
+    },
+    "gate51": {
+     "pbp": {
+      "pass": true,
+      "status": "present"
+     },
+     "box": {
+      "pass": true,
+      "status": "history-box-games"
+     },
+     "bio": {
+      "pass": true,
+      "status": "present"
+     },
+     "stints": {
+      "pass": true,
+      "status": "present"
+     },
+     "shotCoords": {
+      "pass": true,
+      "status": "present"
+     },
+     "card": {
+      "pass": true,
+      "status": "buildable"
+     },
+     "allPass": true
+    },
+    "entersChain": true
+   }
+  },
+  "2021-22": {
+   "expectedGames": 1230,
+   "layers": {
+    "expectedGames": {
+     "games": 1230,
+     "source": "data/defense-seventh/2021-22/pbp + boxes（本機 1230 場）"
+    },
+    "pbp": {
+     "expectedPath": "data/defense-seventh/2021-22/pbp",
+     "files": 1230
+    },
+    "box": {
+     "expectedPath": "data/defense-seventh/2021-22/boxes",
+     "boxesFiles": 1230,
+     "playerGamesPath": "data/defense-seventh/2021-22/player-games.json",
+     "present": true,
+     "historyBoxGames": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-games-2021-22.csv.gz",
+      "sha256": "298a5c9e74a5adf69d33a75889e2240ed0c8cacfeb356b70d0f315af82a0c18e",
+      "games": 1230,
+      "playerGameRows": 26039,
+      "bubbleGames": 0,
+      "dateRange": [
+       "2021-10-19",
+       "2022-04-10"
+      ]
+     },
+     "historyBoxTotals": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/box-totals-2021-22.csv",
+      "sha256": "eaa49d3c82e9c6f9833904abf76fc87653cffb3aed90a86fb0a9a8ea21abd7ec",
+      "players": 605
+     }
+    },
+    "bio": {
+     "expectedPath": "data/defense-seventh/2021-22/bio.json",
+     "present": true,
+     "backfillUpperBound": null
+    },
+    "stints": {
+     "expectedPath": {
+      "file": "reports/defense-seventh/2021-22/stints/stints.jsonl",
+      "present": false
+     },
+     "historyGz": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/stints-2021-22.jsonl.gz",
+      "present": false
+     },
+     "preparation": {
+      "file": "reports/ovr-inseason-2026-27/v5/history/stints/preparation-2021-22.json",
+      "present": false
+     },
+     "alternateLocal": {
+      "file": "reports/ovr-inseason-2026-27/v3/data/derived-2021-22/stints/stints.jsonl",
+      "present": true,
+      "lines": 31954,
+      "sha256": "aad3227a7e41565e8eec855b7825fda0bfd50c066c64e2b3f28181d942ea2123"
+     }
+    },
+    "shotCoords": {
+     "present": true,
+     "path": "data/defense-seventh/2021-22/pbp",
+     "files": 1230,
+     "twoPointers": 130182,
+     "xyPresent": 130182,
+     "xyCoverage": 1.0,
+     "areaPresent": 0,
+     "areaCoverage": 0.0
+    },
+    "seasonAttrsInputs": {
+     "boxPlayerGames": {
+      "file": "data/defense-seventh/2021-22/player-games.json",
+      "present": true
+     },
+     "bio": {
+      "file": "data/defense-seventh/2021-22/bio.json",
+      "present": true,
+      "players": 605
+     },
+     "pbpDir": {
+      "file": "data/defense-seventh/2021-22/pbp",
+      "present": true,
+      "files": 1230
+     },
+     "teamGames": {
+      "file": "data/defense-seventh/2021-22/team-games.json",
+      "present": true
+     },
+     "v3League": {
+      "file": "reports/defense-seventh/2021-22/calendar-55/v3-league.json",
+      "present": false
+     },
+     "dependence": {
+      "file": "reports/player-impact-v30/dependence-audit.json",
+      "seasonCovered": false
+     },
+     "shotOrigin": {
+      "file": "reports/ovr-v55-finisher-fix-2025-26/shot-origin.json",
+      "seasonCovered": false
+     },
+     "fourFactors": {
+      "file": "reports/ovr-inseason-2026-27/v3/data/four-factors-2021-22.csv",
+      "present": true
+     }
+    },
+    "possession": {
+     "file": "reports/player-impact-v21/raw/2021-22/Possessions.json",
+     "present": false,
+     "neededByCardPipeline": false
+    },
+    "prior": {
+     "file": "reports/ovr-inseason-2026-27/v5/data/prior-2021-22-v5.json",
+     "present": true
+    },
+    "gameCount": {
+     "expected": 1230,
+     "got": 1230,
+     "match": true,
+     "bubbleGames": 0
+    },
+    "card": {
+     "buildable": true,
+     "fatal": [],
+     "fallback": [
+      "tracking 缺 → onBall/help=70（v4 §3.4）",
+      "dependence 缺 → creation=x0／received=0.5（v4 P0 先例）",
+      "shot-origin 缺 → short=shortBase（v4 §3.5）"
+     ]
+    },
+    "gate51": {
+     "pbp": {
+      "pass": true,
+      "status": "present"
+     },
+     "box": {
+      "pass": true,
+      "status": "present"
+     },
+     "bio": {
+      "pass": true,
+      "status": "present"
+     },
+     "stints": {
+      "pass": true,
+      "status": "alternate"
+     },
+     "shotCoords": {
+      "pass": true,
+      "status": "present"
+     },
+     "card": {
+      "pass": true,
+      "status": "buildable"
+     },
+     "allPass": true
+    },
+    "entersChain": true
+   }
+  }
+ },
+ "rapm": {
+  "starts": {
+   "Y0": {
+    "pred": {
+     "tag": "2014-15"
+    },
+    "ans": {
+     "tag": "2014-15_2015-16"
+    }
+   },
+   "Y1": {
+    "pred": {
+     "tag": "2014-15_2015-16"
+    },
+    "ans": {
+     "tag": "2014-15_2016-17"
+    }
+   },
+   "Y2": {
+    "pred": {
+     "tag": "2014-15_2016-17"
+    },
+    "ans": {
+     "tag": "2014-15_2017-18"
+    }
+   },
+   "Y3": {
+    "pred": {
+     "tag": "2014-15_2017-18"
+    },
+    "ans": {
+     "tag": "2015-16_2018-19"
+    }
+   },
+   "Y4": {
+    "pred": {
+     "tag": "2015-16_2018-19"
+    },
+    "ans": {
+     "tag": "2016-17_2019-20"
+    }
+   },
+   "Y5": {
+    "pred": {
+     "tag": "2016-17_2019-20"
+    },
+    "ans": {
+     "tag": "2017-18_2020-21"
+    }
+   },
+   "Y6": {
+    "pred": {
+     "tag": "2017-18_2020-21"
+    },
+    "ans": {
+     "tag": "2018-19_2021-22"
+    }
+   },
+   "W": {
+    "pred": null,
+    "ans": {
+     "tag": "2021-22_2022-23"
+    }
+   },
+   "D1": {
+    "pred": {
+     "tag": "2021-22_2022-23"
+    },
+    "ans": {
+     "tag": "2021-22_2023-24"
+    }
+   },
+   "D2": {
+    "pred": {
+     "tag": "2021-22_2023-24"
+    },
+    "ans": {
+     "tag": "2021-22_2024-25"
+    }
+   },
+   "D3": {
+    "pred": {
+     "tag": "2021-22_2024-25"
+    },
+    "ans": {
+     "tag": "formal-card-H1-m0",
+     "kind": "formal-card",
+     "present": true
+    }
+   }
+  },
+  "windows": {
+   "2014-15": {
+    "tag": "2014-15",
+    "seasons": [
+     "2014-15"
+    ],
+    "kind": "single",
+    "present": false,
+    "expectedName": "rapm-2014-15.csv"
+   },
+   "2014-15_2015-16": {
+    "tag": "2014-15_2015-16",
+    "seasons": [
+     "2014-15",
+     "2015-16"
+    ],
+    "kind": "window",
+    "present": false,
+    "expectedName": "rapm-2014-15_2015-16.csv"
+   },
+   "2014-15_2016-17": {
+    "tag": "2014-15_2016-17",
+    "seasons": [
+     "2014-15",
+     "2015-16",
+     "2016-17"
+    ],
+    "kind": "window",
+    "present": false,
+    "expectedName": "rapm-2014-15_2016-17.csv"
+   },
+   "2014-15_2017-18": {
+    "tag": "2014-15_2017-18",
+    "seasons": [
+     "2014-15",
+     "2015-16",
+     "2016-17",
+     "2017-18"
+    ],
+    "kind": "window",
+    "present": true,
+    "expectedName": "rapm-2014-15_2017-18.csv",
+    "file": "reports/ovr-inseason-2026-27/v5/history/rapm-2014-15_2017-18.csv",
+    "sha256": "623cd29335430f3b75c8bbfeb75f7dcdbc5918dd0ee3bc375f943959da2e88a9",
+    "players": 792,
+    "seasonSetMatches": true,
+    "lambda": 3000,
+    "leaguePlayers": 792,
+    "playerCoverage": 1.0,
+    "coveragePass90": true
+   },
+   "2015-16_2018-19": {
+    "tag": "2015-16_2018-19",
+    "seasons": [
+     "2015-16",
+     "2016-17",
+     "2017-18",
+     "2018-19"
+    ],
+    "kind": "window",
+    "present": true,
+    "expectedName": "rapm-2015-16_2018-19.csv",
+    "file": "reports/ovr-inseason-2026-27/v5/history/rapm-2015-16_2018-19.csv",
+    "sha256": "b0f5aac68997a429d724badb0e4b82aee3e2238e3c56876bd0f12536c1a7587e",
+    "players": 822,
+    "seasonSetMatches": true,
+    "lambda": 3000,
+    "leaguePlayers": 822,
+    "playerCoverage": 1.0,
+    "coveragePass90": true
+   },
+   "2016-17_2019-20": {
+    "tag": "2016-17_2019-20",
+    "seasons": [
+     "2016-17",
+     "2017-18",
+     "2018-19",
+     "2019-20"
+    ],
+    "kind": "window",
+    "present": true,
+    "expectedName": "rapm-2016-17_2019-20.csv",
+    "file": "reports/ovr-inseason-2026-27/v5/history/rapm-2016-17_2019-20.csv",
+    "sha256": "d196e6271aa76fa15ef45fd8cb11521234003e3f3685bf51c3de543a338734bf",
+    "players": 864,
+    "seasonSetMatches": true,
+    "lambda": 3000,
+    "leaguePlayers": 864,
+    "playerCoverage": 1.0,
+    "coveragePass90": true
+   },
+   "2017-18_2020-21": {
+    "tag": "2017-18_2020-21",
+    "seasons": [
+     "2017-18",
+     "2018-19",
+     "2019-20",
+     "2020-21"
+    ],
+    "kind": "window",
+    "present": true,
+    "expectedName": "rapm-2017-18_2020-21.csv",
+    "file": "reports/ovr-inseason-2026-27/v5/history/rapm-2017-18_2020-21.csv",
+    "sha256": "7f0ce211c46473996ab758d68472b378c4d988c80f512cb0ef391385f21e2d27",
+    "players": 875,
+    "seasonSetMatches": true,
+    "lambda": 3000,
+    "leaguePlayers": 875,
+    "playerCoverage": 1.0,
+    "coveragePass90": true
+   },
+   "2018-19_2021-22": {
+    "tag": "2018-19_2021-22",
+    "seasons": [
+     "2018-19",
+     "2019-20",
+     "2020-21",
+     "2021-22"
+    ],
+    "kind": "window",
+    "present": true,
+    "expectedName": "rapm-2018-19_2021-22.csv",
+    "file": "reports/ovr-inseason-2026-27/v5/history/rapm-2018-19_2021-22.csv",
+    "sha256": "522a77d45fb2ad4e99525aa219adf98fa8610720d887d96b75ced9bceef99b3c",
+    "players": 884,
+    "seasonSetMatches": true,
+    "lambda": 3000,
+    "leaguePlayers": 884,
+    "playerCoverage": 1.0,
+    "coveragePass90": true
+   },
+   "2021-22_2022-23": {
+    "tag": "2021-22_2022-23",
+    "seasons": [
+     "2021-22",
+     "2022-23"
+    ],
+    "kind": "window",
+    "present": true,
+    "expectedName": "rapm-2021-22_2022-23.csv",
+    "file": "reports/ovr-inseason-2026-27/v3/data/rapm-2021-22_2022-23.csv",
+    "sha256": "3da578f317922a7eeddb32e2380b53e6082fedbc7799c20909fd6bb9723961c6",
+    "players": 708,
+    "seasonSetMatches": null,
+    "leaguePlayers": 711,
+    "playerCoverage": 0.9958,
+    "coveragePass90": true
+   },
+   "2021-22_2023-24": {
+    "tag": "2021-22_2023-24",
+    "seasons": [
+     "2021-22",
+     "2022-23",
+     "2023-24"
+    ],
+    "kind": "window",
+    "present": true,
+    "expectedName": "rapm-2021-22_2023-24.csv",
+    "file": "reports/ovr-inseason-2026-27/v3/data/rapm-2021-22_2023-24.csv",
+    "sha256": "b8c9f273f4d01c7a03be923b98f82a06812a551da158fabcb679801474e6e1d2",
+    "players": 815,
+    "seasonSetMatches": null,
+    "leaguePlayers": 818,
+    "playerCoverage": 0.9963,
+    "coveragePass90": true
+   },
+   "2021-22_2024-25": {
+    "tag": "2021-22_2024-25",
+    "seasons": [
+     "2021-22",
+     "2022-23",
+     "2023-24",
+     "2024-25"
+    ],
+    "kind": "window",
+    "present": true,
+    "expectedName": "rapm-2021-22_2024-25.csv",
+    "file": "reports/ovr-inseason-2026-27/v4/data/rapm-2021-22_2024-25.csv",
+    "sha256": "681b9c11d66ab3471ca38ab1e4a27bab3b88b1f97cced6133fae049ae9a50615",
+    "players": 923,
+    "seasonSetMatches": null,
+    "leaguePlayers": 925,
+    "playerCoverage": 0.9978,
+    "coveragePass90": true
+   }
+  }
+ },
+ "consequences": {
+  "Y0": {
+   "gateScope": true,
+   "prior": "2014-15",
+   "priorCardBuildable": false,
+   "target": "2015-16",
+   "targetAnswerCardBuildable": true,
+   "judgePerPrereg": false,
+   "rapmWindowsPresent": false,
+   "canJudge": null
+  },
+  "Y1": {
+   "gateScope": true,
+   "prior": "2015-16",
+   "priorCardBuildable": true,
+   "target": "2016-17",
+   "targetAnswerCardBuildable": true,
+   "judgePerPrereg": false,
+   "rapmWindowsPresent": false,
+   "canJudge": null
+  },
+  "Y2": {
+   "gateScope": true,
+   "prior": "2016-17",
+   "priorCardBuildable": true,
+   "target": "2017-18",
+   "targetAnswerCardBuildable": true,
+   "judgePerPrereg": false,
+   "rapmWindowsPresent": false,
+   "canJudge": null
+  },
+  "Y3": {
+   "gateScope": true,
+   "prior": "2017-18",
+   "priorCardBuildable": true,
+   "target": "2018-19",
+   "targetAnswerCardBuildable": true,
+   "judgePerPrereg": true,
+   "rapmWindowsPresent": true,
+   "canJudge": true
+  },
+  "Y4": {
+   "gateScope": true,
+   "prior": "2018-19",
+   "priorCardBuildable": true,
+   "target": "2019-20",
+   "targetAnswerCardBuildable": true,
+   "judgePerPrereg": false,
+   "rapmWindowsPresent": true,
+   "canJudge": null
+  },
+  "Y5": {
+   "gateScope": true,
+   "prior": "2019-20",
+   "priorCardBuildable": true,
+   "target": "2020-21",
+   "targetAnswerCardBuildable": true,
+   "judgePerPrereg": true,
+   "rapmWindowsPresent": true,
+   "canJudge": true
+  },
+  "Y6": {
+   "gateScope": true,
+   "prior": "2020-21",
+   "priorCardBuildable": true,
+   "target": "2021-22",
+   "targetAnswerCardBuildable": true,
+   "judgePerPrereg": true,
+   "rapmWindowsPresent": true,
+   "canJudge": true
+  },
+  "W": {
+   "gateScope": false,
+   "prior": "2021-22",
+   "priorCardBuildable": true,
+   "target": "2022-23",
+   "targetAnswerCardBuildable": null,
+   "judgePerPrereg": false,
+   "rapmWindowsPresent": true,
+   "canJudge": null,
+   "note": "不在 D0 掃描範圍（2014-15..2021-22）；D1–D3 用 v5/backtest 上一輪結果"
+  },
+  "D1": {
+   "gateScope": false,
+   "prior": "2022-23",
+   "priorCardBuildable": null,
+   "target": "2023-24",
+   "targetAnswerCardBuildable": null,
+   "judgePerPrereg": true,
+   "rapmWindowsPresent": true,
+   "canJudge": null,
+   "note": "不在 D0 掃描範圍（2014-15..2021-22）；D1–D3 用 v5/backtest 上一輪結果"
+  },
+  "D2": {
+   "gateScope": false,
+   "prior": "2023-24",
+   "priorCardBuildable": null,
+   "target": "2024-25",
+   "targetAnswerCardBuildable": null,
+   "judgePerPrereg": true,
+   "rapmWindowsPresent": true,
+   "canJudge": null,
+   "note": "不在 D0 掃描範圍（2014-15..2021-22）；D1–D3 用 v5/backtest 上一輪結果"
+  },
+  "D3": {
+   "gateScope": false,
+   "prior": "2024-25",
+   "priorCardBuildable": null,
+   "target": "2025-26",
+   "targetAnswerCardBuildable": null,
+   "judgePerPrereg": true,
+   "rapmWindowsPresent": true,
+   "canJudge": null,
+   "note": "不在 D0 掃描範圍（2014-15..2021-22）；D1–D3 用 v5/backtest 上一輪結果"
+  }
+ },
+ "decision": {
+  "d0Pass": false,
+  "seasonsNotEntering": [
+   "2014-15"
+  ],
+  "freshJudgmentsLost": [],
+  "v1v2": "可判定",
+  "note": "D0 不通過即停止；不建 RAPM、不建卡、不跑回測（§5.1 停止條件）",
+  "pass": false
+ }
+}

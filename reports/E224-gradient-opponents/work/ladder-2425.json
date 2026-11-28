@@ -1,0 +1,2552 @@
+{
+ "key": "2425",
+ "card": "2023-24-v5-min.csv",
+ "games": 1093,
+ "teams": 30,
+ "ladder": [
+  84.23320333333332,
+  75.68802000000001,
+  76.89185333333333,
+  75.85510333333333,
+  72.17264666666667,
+  71.20366,
+  70.33059666666666,
+  68.87834333333333,
+  69.45025000000001
+ ],
+ "flat": 75.0891556388889,
+ "mins": [
+  36,
+  36,
+  34,
+  32,
+  30,
+  26,
+  22,
+  14,
+  10
+ ],
+ "candidates": [
+  {
+   "pid": 2544,
+   "name": "LeBron James",
+   "pos": "PF",
+   "ovr": 98.3578,
+   "min": 2503.8
+  },
+  {
+   "pid": 101108,
+   "name": "Chris Paul",
+   "pos": "PG",
+   "ovr": 82.8228,
+   "min": 1530.9
+  },
+  {
+   "pid": 200768,
+   "name": "Kyle Lowry",
+   "pos": "PG",
+   "ovr": 77.1862,
+   "min": 1689.8
+  },
+  {
+   "pid": 201142,
+   "name": "Kevin Durant",
+   "pos": "C",
+   "ovr": 96.4338,
+   "min": 2790.6
+  },
+  {
+   "pid": 201143,
+   "name": "Al Horford",
+   "pos": "PF",
+   "ovr": 83.7744,
+   "min": 1739.8
+  },
+  {
+   "pid": 201144,
+   "name": "Mike Conley",
+   "pos": "PG",
+   "ovr": 87.3608,
+   "min": 2193.5
+  },
+  {
+   "pid": 201145,
+   "name": "Jeff Green",
+   "pos": "SF",
+   "ovr": 61.757,
+   "min": 1307.4
+  },
+  {
+   "pid": 201566,
+   "name": "Russell Westbrook",
+   "pos": "SG",
+   "ovr": 57.2419,
+   "min": 1528.8
+  },
+  {
+   "pid": 201567,
+   "name": "Kevin Love",
+   "pos": "SF",
+   "ovr": 86.6254,
+   "min": 924.3
+  },
+  {
+   "pid": 201568,
+   "name": "Danilo Gallinari",
+   "pos": "PF",
+   "ovr": 69.7149,
+   "min": 629.3
+  },
+  {
+   "pid": 201569,
+   "name": "Eric Gordon",
+   "pos": "PG",
+   "ovr": 55.8015,
+   "min": 1892.7
+  },
+  {
+   "pid": 201572,
+   "name": "Brook Lopez",
+   "pos": "C",
+   "ovr": 83.6064,
+   "min": 2411.1
+  },
+  {
+   "pid": 201587,
+   "name": "Nicolas Batum",
+   "pos": "SF",
+   "ovr": 76.3711,
+   "min": 1529.6
+  },
+  {
+   "pid": 201935,
+   "name": "James Harden",
+   "pos": "SG",
+   "ovr": 79.7723,
+   "min": 2469.7
+  },
+  {
+   "pid": 201939,
+   "name": "Stephen Curry",
+   "pos": "PG",
+   "ovr": 92.9449,
+   "min": 2421.6
+  },
+  {
+   "pid": 201942,
+   "name": "DeMar DeRozan",
+   "pos": "SG",
+   "ovr": 79.3499,
+   "min": 2988.6
+  },
+  {
+   "pid": 201950,
+   "name": "Jrue Holiday",
+   "pos": "SG",
+   "ovr": 94.3416,
+   "min": 2263.3
+  },
+  {
+   "pid": 201976,
+   "name": "Patrick Beverley",
+   "pos": "PG",
+   "ovr": 76.1065,
+   "min": 1462.5
+  },
+  {
+   "pid": 202330,
+   "name": "Gordon Hayward",
+   "pos": "SF",
+   "ovr": 76.5593,
+   "min": 1245.3
+  },
+  {
+   "pid": 202331,
+   "name": "Paul George",
+   "pos": "SF",
+   "ovr": 97.6194,
+   "min": 2501.8
+  },
+  {
+   "pid": 202397,
+   "name": "Ish Smith",
+   "pos": "PG",
+   "ovr": 50.4955,
+   "min": 740.9
+  },
+  {
+   "pid": 202681,
+   "name": "Kyrie Irving",
+   "pos": "PG",
+   "ovr": 94.5726,
+   "min": 2029.6
+  },
+  {
+   "pid": 202684,
+   "name": "Tristan Thompson",
+   "pos": "PF",
+   "ovr": 68.2678,
+   "min": 548.9
+  },
+  {
+   "pid": 202685,
+   "name": "Jonas Valanciunas",
+   "pos": "C",
+   "ovr": 64.9386,
+   "min": 1924.8
+  },
+  {
+   "pid": 202687,
+   "name": "Bismack Biyombo",
+   "pos": "SF",
+   "ovr": 64.5137,
+   "min": 791.5
+  },
+  {
+   "pid": 202691,
+   "name": "Klay Thompson",
+   "pos": "SG",
+   "ovr": 69.84,
+   "min": 2284.2
+  },
+  {
+   "pid": 202692,
+   "name": "Alec Burks",
+   "pos": "SG",
+   "ovr": 68.1001,
+   "min": 1211.6
+  },
+  {
+   "pid": 202694,
+   "name": "Marcus Morris Sr.",
+   "pos": "SF",
+   "ovr": 61.6592,
+   "min": 817.0
+  },
+  {
+   "pid": 202695,
+   "name": "Kawhi Leonard",
+   "pos": "SF",
+   "ovr": 96.3542,
+   "min": 2330.1
+  },
+  {
+   "pid": 202696,
+   "name": "Nikola Vučević",
+   "pos": "PF",
+   "ovr": 72.7859,
+   "min": 2609.5
+  },
+  {
+   "pid": 202699,
+   "name": "Tobias Harris",
+   "pos": "SF",
+   "ovr": 79.0804,
+   "min": 2367.8
+  },
+  {
+   "pid": 202704,
+   "name": "Reggie Jackson",
+   "pos": "PG",
+   "ovr": 58.2939,
+   "min": 1816.8
+  },
+  {
+   "pid": 202710,
+   "name": "Jimmy Butler III",
+   "pos": "SF",
+   "ovr": 87.7398,
+   "min": 2042.1
+  },
+  {
+   "pid": 202711,
+   "name": "Bojan Bogdanovic",
+   "pos": "SF",
+   "ovr": 53.4939,
+   "min": 1478.1
+  },
+  {
+   "pid": 202722,
+   "name": "Davis Bertans",
+   "pos": "PF",
+   "ovr": 57.4374,
+   "min": 674.1
+  },
+  {
+   "pid": 203076,
+   "name": "Anthony Davis",
+   "pos": "PF",
+   "ovr": 92.9746,
+   "min": 2700.3
+  },
+  {
+   "pid": 203078,
+   "name": "Bradley Beal",
+   "pos": "SG",
+   "ovr": 74.4038,
+   "min": 1766.8
+  },
+  {
+   "pid": 203081,
+   "name": "Damian Lillard",
+   "pos": "PG",
+   "ovr": 86.9259,
+   "min": 2578.4
+  },
+  {
+   "pid": 203083,
+   "name": "Andre Drummond",
+   "pos": "C",
+   "ovr": 59.2403,
+   "min": 1351.3
+  },
+  {
+   "pid": 203084,
+   "name": "Harrison Barnes",
+   "pos": "SF",
+   "ovr": 58.9355,
+   "min": 2380.9
+  },
+  {
+   "pid": 203095,
+   "name": "Evan Fournier",
+   "pos": "SG",
+   "ovr": 66.8411,
+   "min": 579.7
+  },
+  {
+   "pid": 203109,
+   "name": "Jae Crowder",
+   "pos": "SG",
+   "ovr": 77.5074,
+   "min": 1155.7
+  },
+  {
+   "pid": 203110,
+   "name": "Draymond Green",
+   "pos": "SG",
+   "ovr": 97.6194,
+   "min": 1490.2
+  },
+  {
+   "pid": 203114,
+   "name": "Khris Middleton",
+   "pos": "SF",
+   "ovr": 73.9678,
+   "min": 1487.3
+  },
+  {
+   "pid": 203200,
+   "name": "Justin Holiday",
+   "pos": "SG",
+   "ovr": 60.2422,
+   "min": 862.0
+  },
+  {
+   "pid": 203468,
+   "name": "CJ McCollum",
+   "pos": "PG",
+   "ovr": 79.634,
+   "min": 2158.5
+  },
+  {
+   "pid": 203471,
+   "name": "Dennis Schröder",
+   "pos": "PG",
+   "ovr": 71.6975,
+   "min": 2486.0
+  },
+  {
+   "pid": 203482,
+   "name": "Kelly Olynyk",
+   "pos": "C",
+   "ovr": 75.728,
+   "min": 1758.8
+  },
+  {
+   "pid": 203484,
+   "name": "Kentavious Caldwell-Pope",
+   "pos": "SG",
+   "ovr": 77.0138,
+   "min": 2401.8
+  },
+  {
+   "pid": 203486,
+   "name": "Mason Plumlee",
+   "pos": "PF",
+   "ovr": 67.9702,
+   "min": 673.9
+  },
+  {
+   "pid": 203488,
+   "name": "Mike Muscala",
+   "pos": "PF",
+   "ovr": 53.6742,
+   "min": 600.2
+  },
+  {
+   "pid": 203497,
+   "name": "Rudy Gobert",
+   "pos": "C",
+   "ovr": 89.6909,
+   "min": 2593.2
+  },
+  {
+   "pid": 203501,
+   "name": "Tim Hardaway Jr.",
+   "pos": "SG",
+   "ovr": 68.0979,
+   "min": 2120.3
+  },
+  {
+   "pid": 203507,
+   "name": "Giannis Antetokounmpo",
+   "pos": "C",
+   "ovr": 96.0709,
+   "min": 2567.2
+  },
+  {
+   "pid": 203552,
+   "name": "Seth Curry",
+   "pos": "PG",
+   "ovr": 58.7591,
+   "min": 615.4
+  },
+  {
+   "pid": 203897,
+   "name": "Zach LaVine",
+   "pos": "SG",
+   "ovr": 81.7744,
+   "min": 871.9
+  },
+  {
+   "pid": 203903,
+   "name": "Jordan Clarkson",
+   "pos": "PG",
+   "ovr": 59.5987,
+   "min": 1682.4
+  },
+  {
+   "pid": 203914,
+   "name": "Gary Harris",
+   "pos": "SG",
+   "ovr": 65.1337,
+   "min": 1297.3
+  },
+  {
+   "pid": 203915,
+   "name": "Spencer Dinwiddie",
+   "pos": "SG",
+   "ovr": 67.8588,
+   "min": 2152.4
+  },
+  {
+   "pid": 203924,
+   "name": "Jerami Grant",
+   "pos": "SF",
+   "ovr": 67.2273,
+   "min": 1830.2
+  },
+  {
+   "pid": 203926,
+   "name": "Doug McDermott",
+   "pos": "SG",
+   "ovr": 49.9898,
+   "min": 904.5
+  },
+  {
+   "pid": 203932,
+   "name": "Aaron Gordon",
+   "pos": "SF",
+   "ovr": 95.0771,
+   "min": 2296.8
+  },
+  {
+   "pid": 203935,
+   "name": "Marcus Smart",
+   "pos": "PG",
+   "ovr": 84.5125,
+   "min": 604.8
+  },
+  {
+   "pid": 203937,
+   "name": "Kyle Anderson",
+   "pos": "PF",
+   "ovr": 63.3271,
+   "min": 1781.9
+  },
+  {
+   "pid": 203939,
+   "name": "Dwight Powell",
+   "pos": "PF",
+   "ovr": 81.0976,
+   "min": 836.3
+  },
+  {
+   "pid": 203944,
+   "name": "Julius Randle",
+   "pos": "SF",
+   "ovr": 74.4747,
+   "min": 1630.1
+  },
+  {
+   "pid": 203952,
+   "name": "Andrew Wiggins",
+   "pos": "SF",
+   "ovr": 68.6367,
+   "min": 1920.4
+  },
+  {
+   "pid": 203954,
+   "name": "Joel Embiid",
+   "pos": "C",
+   "ovr": 102.8152,
+   "min": 1309.4
+  },
+  {
+   "pid": 203957,
+   "name": "Dante Exum",
+   "pos": "SG",
+   "ovr": 75.1949,
+   "min": 1087.7
+  },
+  {
+   "pid": 203967,
+   "name": "Dario Saric",
+   "pos": "PF",
+   "ovr": 69.4997,
+   "min": 1097.8
+  },
+  {
+   "pid": 203991,
+   "name": "Clint Capela",
+   "pos": "PF",
+   "ovr": 74.5196,
+   "min": 1883.1
+  },
+  {
+   "pid": 203992,
+   "name": "Bogdan Bogdanović",
+   "pos": "SG",
+   "ovr": 79.0909,
+   "min": 2401.4
+  },
+  {
+   "pid": 203994,
+   "name": "Jusuf Nurkić",
+   "pos": "C",
+   "ovr": 70.1923,
+   "min": 2078.1
+  },
+  {
+   "pid": 203995,
+   "name": "Vasilije Micic",
+   "pos": "PG",
+   "ovr": 53.9838,
+   "min": 1175.7
+  },
+  {
+   "pid": 203999,
+   "name": "Nikola Jokić",
+   "pos": "C",
+   "ovr": 104.7692,
+   "min": 2736.5
+  },
+  {
+   "pid": 204001,
+   "name": "Kristaps Porziņģis",
+   "pos": "C",
+   "ovr": 87.8811,
+   "min": 1690.0
+  },
+  {
+   "pid": 204060,
+   "name": "Joe Ingles",
+   "pos": "PF",
+   "ovr": 62.8249,
+   "min": 1169.0
+  },
+  {
+   "pid": 204456,
+   "name": "T.J. McConnell",
+   "pos": "PG",
+   "ovr": 82.6554,
+   "min": 1291.0
+  },
+  {
+   "pid": 1626145,
+   "name": "Tyus Jones",
+   "pos": "PG",
+   "ovr": 73.9673,
+   "min": 1932.7
+  },
+  {
+   "pid": 1626153,
+   "name": "Delon Wright",
+   "pos": "SG",
+   "ovr": 77.8194,
+   "min": 741.6
+  },
+  {
+   "pid": 1626156,
+   "name": "D'Angelo Russell",
+   "pos": "PG",
+   "ovr": 72.735,
+   "min": 2484.1
+  },
+  {
+   "pid": 1626157,
+   "name": "Karl-Anthony Towns",
+   "pos": "C",
+   "ovr": 82.5204,
+   "min": 2025.6
+  },
+  {
+   "pid": 1626158,
+   "name": "Richaun Holmes",
+   "pos": "PF",
+   "ovr": 56.6741,
+   "min": 554.1
+  },
+  {
+   "pid": 1626162,
+   "name": "Kelly Oubre Jr.",
+   "pos": "SF",
+   "ovr": 66.4582,
+   "min": 2055.3
+  },
+  {
+   "pid": 1626164,
+   "name": "Devin Booker",
+   "pos": "SG",
+   "ovr": 84.8931,
+   "min": 2446.7
+  },
+  {
+   "pid": 1626166,
+   "name": "Cameron Payne",
+   "pos": "PG",
+   "ovr": 73.7272,
+   "min": 1304.1
+  },
+  {
+   "pid": 1626167,
+   "name": "Myles Turner",
+   "pos": "C",
+   "ovr": 82.8228,
+   "min": 2076.4
+  },
+  {
+   "pid": 1626168,
+   "name": "Trey Lyles",
+   "pos": "PF",
+   "ovr": 73.9739,
+   "min": 1158.2
+  },
+  {
+   "pid": 1626171,
+   "name": "Bobby Portis Jr.",
+   "pos": "PF",
+   "ovr": 72.4382,
+   "min": 2008.2
+  },
+  {
+   "pid": 1626172,
+   "name": "Kevon Looney",
+   "pos": "PF",
+   "ovr": 81.9774,
+   "min": 1194.5
+  },
+  {
+   "pid": 1626174,
+   "name": "Christian Wood",
+   "pos": "SF",
+   "ovr": 63.9978,
+   "min": 871.9
+  },
+  {
+   "pid": 1626179,
+   "name": "Terry Rozier",
+   "pos": "PG",
+   "ovr": 75.514,
+   "min": 2040.4
+  },
+  {
+   "pid": 1626181,
+   "name": "Norman Powell",
+   "pos": "SG",
+   "ovr": 64.1865,
+   "min": 1990.4
+  },
+  {
+   "pid": 1626192,
+   "name": "Pat Connaughton",
+   "pos": "SG",
+   "ovr": 56.8362,
+   "min": 1676.3
+  },
+  {
+   "pid": 1626196,
+   "name": "Josh Richardson",
+   "pos": "SG",
+   "ovr": 69.5313,
+   "min": 1102.8
+  },
+  {
+   "pid": 1626204,
+   "name": "Larry Nance Jr.",
+   "pos": "SF",
+   "ovr": 81.4801,
+   "min": 1216.2
+  },
+  {
+   "pid": 1626220,
+   "name": "Royce O'Neale",
+   "pos": "SG",
+   "ovr": 76.7256,
+   "min": 1954.3
+  },
+  {
+   "pid": 1626224,
+   "name": "Cedi Osman",
+   "pos": "SF",
+   "ovr": 61.7,
+   "min": 1268.8
+  },
+  {
+   "pid": 1627734,
+   "name": "Domantas Sabonis",
+   "pos": "PF",
+   "ovr": 90.6454,
+   "min": 2928.0
+  },
+  {
+   "pid": 1627736,
+   "name": "Malik Beasley",
+   "pos": "SG",
+   "ovr": 64.7594,
+   "min": 2337.4
+  },
+  {
+   "pid": 1627739,
+   "name": "Kris Dunn",
+   "pos": "PG",
+   "ovr": 69.8419,
+   "min": 1249.2
+  },
+  {
+   "pid": 1627741,
+   "name": "Buddy Hield",
+   "pos": "SG",
+   "ovr": 70.8415,
+   "min": 2159.9
+  },
+  {
+   "pid": 1627742,
+   "name": "Brandon Ingram",
+   "pos": "SF",
+   "ovr": 81.5201,
+   "min": 2102.7
+  },
+  {
+   "pid": 1627747,
+   "name": "Caris LeVert",
+   "pos": "SG",
+   "ovr": 71.136,
+   "min": 1958.1
+  },
+  {
+   "pid": 1627749,
+   "name": "Dejounte Murray",
+   "pos": "SG",
+   "ovr": 81.0319,
+   "min": 2783.3
+  },
+  {
+   "pid": 1627750,
+   "name": "Jamal Murray",
+   "pos": "SG",
+   "ovr": 76.8271,
+   "min": 1861.4
+  },
+  {
+   "pid": 1627751,
+   "name": "Jakob Poeltl",
+   "pos": "C",
+   "ovr": 77.9445,
+   "min": 1319.1
+  },
+  {
+   "pid": 1627752,
+   "name": "Taurean Prince",
+   "pos": "SG",
+   "ovr": 56.4114,
+   "min": 2107.6
+  },
+  {
+   "pid": 1627759,
+   "name": "Jaylen Brown",
+   "pos": "SG",
+   "ovr": 79.7488,
+   "min": 2342.6
+  },
+  {
+   "pid": 1627763,
+   "name": "Malcolm Brogdon",
+   "pos": "SG",
+   "ovr": 73.5161,
+   "min": 1120.8
+  },
+  {
+   "pid": 1627777,
+   "name": "Georges Niang",
+   "pos": "SF",
+   "ovr": 65.5998,
+   "min": 1831.2
+  },
+  {
+   "pid": 1627780,
+   "name": "Gary Payton II",
+   "pos": "PG",
+   "ovr": 87.021,
+   "min": 679.9
+  },
+  {
+   "pid": 1627783,
+   "name": "Pascal Siakam",
+   "pos": "SF",
+   "ovr": 81.8709,
+   "min": 2657.9
+  },
+  {
+   "pid": 1627826,
+   "name": "Ivica Zubac",
+   "pos": "C",
+   "ovr": 74.2712,
+   "min": 1794.5
+  },
+  {
+   "pid": 1627827,
+   "name": "Dorian Finney-Smith",
+   "pos": "SF",
+   "ovr": 72.0208,
+   "min": 1934.6
+  },
+  {
+   "pid": 1627832,
+   "name": "Fred VanVleet",
+   "pos": "PG",
+   "ovr": 90.4614,
+   "min": 2684.4
+  },
+  {
+   "pid": 1627863,
+   "name": "Danuel House Jr.",
+   "pos": "SG",
+   "ovr": 62.1079,
+   "min": 509.1
+  },
+  {
+   "pid": 1627884,
+   "name": "Derrick Jones Jr.",
+   "pos": "SG",
+   "ovr": 82.8846,
+   "min": 1782.9
+  },
+  {
+   "pid": 1627936,
+   "name": "Alex Caruso",
+   "pos": "SG",
+   "ovr": 87.3608,
+   "min": 2040.4
+  },
+  {
+   "pid": 1628365,
+   "name": "Markelle Fultz",
+   "pos": "SG",
+   "ovr": 63.5104,
+   "min": 909.9
+  },
+  {
+   "pid": 1628368,
+   "name": "De'Aaron Fox",
+   "pos": "PG",
+   "ovr": 81.0319,
+   "min": 2658.8
+  },
+  {
+   "pid": 1628369,
+   "name": "Jayson Tatum",
+   "pos": "SF",
+   "ovr": 97.6194,
+   "min": 2645.2
+  },
+  {
+   "pid": 1628370,
+   "name": "Malik Monk",
+   "pos": "PG",
+   "ovr": 71.9034,
+   "min": 1872.4
+  },
+  {
+   "pid": 1628371,
+   "name": "Jonathan Isaac",
+   "pos": "PF",
+   "ovr": 89.6643,
+   "min": 914.6
+  },
+  {
+   "pid": 1628372,
+   "name": "Dennis Smith Jr.",
+   "pos": "PG",
+   "ovr": 73.5161,
+   "min": 1058.7
+  },
+  {
+   "pid": 1628374,
+   "name": "Lauri Markkanen",
+   "pos": "C",
+   "ovr": 83.1504,
+   "min": 1819.8
+  },
+  {
+   "pid": 1628378,
+   "name": "Donovan Mitchell",
+   "pos": "PG",
+   "ovr": 92.4976,
+   "min": 1942.7
+  },
+  {
+   "pid": 1628379,
+   "name": "Luke Kennard",
+   "pos": "SG",
+   "ovr": 68.0743,
+   "min": 999.0
+  },
+  {
+   "pid": 1628380,
+   "name": "Zach Collins",
+   "pos": "C",
+   "ovr": 57.1481,
+   "min": 1525.8
+  },
+  {
+   "pid": 1628381,
+   "name": "John Collins",
+   "pos": "PF",
+   "ovr": 73.8044,
+   "min": 1901.1
+  },
+  {
+   "pid": 1628384,
+   "name": "OG Anunoby",
+   "pos": "SF",
+   "ovr": 93.1188,
+   "min": 1702.0
+  },
+  {
+   "pid": 1628386,
+   "name": "Jarrett Allen",
+   "pos": "PF",
+   "ovr": 92.9746,
+   "min": 2442.1
+  },
+  {
+   "pid": 1628389,
+   "name": "Bam Adebayo",
+   "pos": "PF",
+   "ovr": 83.0229,
+   "min": 2416.4
+  },
+  {
+   "pid": 1628392,
+   "name": "Isaiah Hartenstein",
+   "pos": "C",
+   "ovr": 83.6064,
+   "min": 1896.4
+  },
+  {
+   "pid": 1628398,
+   "name": "Kyle Kuzma",
+   "pos": "PF",
+   "ovr": 69.1355,
+   "min": 2281.2
+  },
+  {
+   "pid": 1628401,
+   "name": "Derrick White",
+   "pos": "SG",
+   "ovr": 95.0771,
+   "min": 2381.0
+  },
+  {
+   "pid": 1628404,
+   "name": "Josh Hart",
+   "pos": "SG",
+   "ovr": 82.8846,
+   "min": 2706.8
+  },
+  {
+   "pid": 1628415,
+   "name": "Dillon Brooks",
+   "pos": "SG",
+   "ovr": 94.5761,
+   "min": 2226.8
+  },
+  {
+   "pid": 1628426,
+   "name": "Sasha Vezenkov",
+   "pos": "SF",
+   "ovr": 71.8389,
+   "min": 511.1
+  },
+  {
+   "pid": 1628436,
+   "name": "Luke Kornet",
+   "pos": "C",
+   "ovr": 80.1777,
+   "min": 983.3
+  },
+  {
+   "pid": 1628449,
+   "name": "Chris Boucher",
+   "pos": "PF",
+   "ovr": 81.1413,
+   "min": 704.9
+  },
+  {
+   "pid": 1628464,
+   "name": "Daniel Theis",
+   "pos": "SF",
+   "ovr": 73.4812,
+   "min": 1014.9
+  },
+  {
+   "pid": 1628467,
+   "name": "Maxi Kleber",
+   "pos": "PF",
+   "ovr": 74.7009,
+   "min": 871.4
+  },
+  {
+   "pid": 1628470,
+   "name": "Torrey Craig",
+   "pos": "SG",
+   "ovr": 52.2682,
+   "min": 1048.6
+  },
+  {
+   "pid": 1628960,
+   "name": "Grayson Allen",
+   "pos": "SG",
+   "ovr": 73.2751,
+   "min": 2513.3
+  },
+  {
+   "pid": 1628963,
+   "name": "Marvin Bagley III",
+   "pos": "PF",
+   "ovr": 69.8882,
+   "min": 1053.4
+  },
+  {
+   "pid": 1628964,
+   "name": "Mo Bamba",
+   "pos": "C",
+   "ovr": 56.2593,
+   "min": 740.4
+  },
+  {
+   "pid": 1628966,
+   "name": "Keita Bates-Diop",
+   "pos": "SF",
+   "ovr": 64.3082,
+   "min": 664.6
+  },
+  {
+   "pid": 1628969,
+   "name": "Mikal Bridges",
+   "pos": "SG",
+   "ovr": 87.7235,
+   "min": 2854.3
+  },
+  {
+   "pid": 1628970,
+   "name": "Miles Bridges",
+   "pos": "SF",
+   "ovr": 78.9477,
+   "min": 2581.1
+  },
+  {
+   "pid": 1628971,
+   "name": "Bruce Brown",
+   "pos": "SG",
+   "ovr": 60.4093,
+   "min": 1865.4
+  },
+  {
+   "pid": 1628972,
+   "name": "Troy Brown Jr.",
+   "pos": "SF",
+   "ovr": 53.9014,
+   "min": 826.5
+  },
+  {
+   "pid": 1628973,
+   "name": "Jalen Brunson",
+   "pos": "PG",
+   "ovr": 86.5056,
+   "min": 2726.4
+  },
+  {
+   "pid": 1628975,
+   "name": "Jevon Carter",
+   "pos": "PG",
+   "ovr": 71.4627,
+   "min": 1003.6
+  },
+  {
+   "pid": 1628976,
+   "name": "Wendell Carter Jr.",
+   "pos": "PF",
+   "ovr": 81.9578,
+   "min": 1406.3
+  },
+  {
+   "pid": 1628978,
+   "name": "Donte DiVincenzo",
+   "pos": "SG",
+   "ovr": 67.4305,
+   "min": 2360.4
+  },
+  {
+   "pid": 1628981,
+   "name": "Bruno Fernando",
+   "pos": "PF",
+   "ovr": 69.9127,
+   "min": 682.3
+  },
+  {
+   "pid": 1628983,
+   "name": "Shai Gilgeous-Alexander",
+   "pos": "SG",
+   "ovr": 94.5761,
+   "min": 2552.7
+  },
+  {
+   "pid": 1628988,
+   "name": "Aaron Holiday",
+   "pos": "PG",
+   "ovr": 75.5772,
+   "min": 1269.3
+  },
+  {
+   "pid": 1628989,
+   "name": "Kevin Huerter",
+   "pos": "SF",
+   "ovr": 69.5826,
+   "min": 1562.2
+  },
+  {
+   "pid": 1628991,
+   "name": "Jaren Jackson Jr.",
+   "pos": "PF",
+   "ovr": 79.4736,
+   "min": 2124.2
+  },
+  {
+   "pid": 1628995,
+   "name": "Kevin Knox II",
+   "pos": "SF",
+   "ovr": 53.9734,
+   "min": 560.2
+  },
+  {
+   "pid": 1628997,
+   "name": "Caleb Martin",
+   "pos": "SG",
+   "ovr": 77.1862,
+   "min": 1756.6
+  },
+  {
+   "pid": 1628998,
+   "name": "Cody Martin",
+   "pos": "SG",
+   "ovr": 66.1255,
+   "min": 753.0
+  },
+  {
+   "pid": 1629001,
+   "name": "De'Anthony Melton",
+   "pos": "PG",
+   "ovr": 72.9188,
+   "min": 1023.4
+  },
+  {
+   "pid": 1629002,
+   "name": "Chimezie Metu",
+   "pos": "PF",
+   "ovr": 71.6079,
+   "min": 858.9
+  },
+  {
+   "pid": 1629003,
+   "name": "Shake Milton",
+   "pos": "SG",
+   "ovr": 60.6411,
+   "min": 581.2
+  },
+  {
+   "pid": 1629006,
+   "name": "Josh Okogie",
+   "pos": "SG",
+   "ovr": 76.5593,
+   "min": 959.7
+  },
+  {
+   "pid": 1629008,
+   "name": "Michael Porter Jr.",
+   "pos": "PF",
+   "ovr": 80.5678,
+   "min": 2564.7
+  },
+  {
+   "pid": 1629011,
+   "name": "Mitchell Robinson",
+   "pos": "C",
+   "ovr": 58.1571,
+   "min": 768.1
+  },
+  {
+   "pid": 1629012,
+   "name": "Collin Sexton",
+   "pos": "PG",
+   "ovr": 69.0643,
+   "min": 2074.8
+  },
+  {
+   "pid": 1629013,
+   "name": "Landry Shamet",
+   "pos": "SG",
+   "ovr": 66.5842,
+   "min": 726.5
+  },
+  {
+   "pid": 1629014,
+   "name": "Anfernee Simons",
+   "pos": "PG",
+   "ovr": 68.105,
+   "min": 1581.7
+  },
+  {
+   "pid": 1629018,
+   "name": "Gary Trent Jr.",
+   "pos": "SG",
+   "ovr": 58.6523,
+   "min": 1993.6
+  },
+  {
+   "pid": 1629020,
+   "name": "Jarred Vanderbilt",
+   "pos": "SF",
+   "ovr": 65.087,
+   "min": 581.3
+  },
+  {
+   "pid": 1629021,
+   "name": "Moritz Wagner",
+   "pos": "C",
+   "ovr": 75.6549,
+   "min": 1414.8
+  },
+  {
+   "pid": 1629022,
+   "name": "Lonnie Walker IV",
+   "pos": "SG",
+   "ovr": 55.5898,
+   "min": 1011.1
+  },
+  {
+   "pid": 1629023,
+   "name": "P.J. Washington",
+   "pos": "SF",
+   "ovr": 65.5445,
+   "min": 2220.7
+  },
+  {
+   "pid": 1629026,
+   "name": "Kenrich Williams",
+   "pos": "SG",
+   "ovr": 94.5726,
+   "min": 1029.0
+  },
+  {
+   "pid": 1629027,
+   "name": "Trae Young",
+   "pos": "PG",
+   "ovr": 73.7759,
+   "min": 1941.7
+  },
+  {
+   "pid": 1629028,
+   "name": "Deandre Ayton",
+   "pos": "C",
+   "ovr": 66.6808,
+   "min": 1783.5
+  },
+  {
+   "pid": 1629029,
+   "name": "Luka Dončić",
+   "pos": "SF",
+   "ovr": 97.1109,
+   "min": 2624.1
+  },
+  {
+   "pid": 1629048,
+   "name": "Goga Bitadze",
+   "pos": "PF",
+   "ovr": 77.1439,
+   "min": 957.1
+  },
+  {
+   "pid": 1629052,
+   "name": "Oshae Brissett",
+   "pos": "SF",
+   "ovr": 63.0382,
+   "min": 630.2
+  },
+  {
+   "pid": 1629060,
+   "name": "Rui Hachimura",
+   "pos": "SF",
+   "ovr": 78.4915,
+   "min": 1825.5
+  },
+  {
+   "pid": 1629111,
+   "name": "Jock Landale",
+   "pos": "C",
+   "ovr": 76.2738,
+   "min": 763.5
+  },
+  {
+   "pid": 1629130,
+   "name": "Duncan Robinson",
+   "pos": "SF",
+   "ovr": 64.7431,
+   "min": 1905.5
+  },
+  {
+   "pid": 1629162,
+   "name": "Jordan McLaughlin",
+   "pos": "PG",
+   "ovr": 85.2411,
+   "min": 626.1
+  },
+  {
+   "pid": 1629234,
+   "name": "Drew Eubanks",
+   "pos": "PF",
+   "ovr": 70.7893,
+   "min": 1168.8
+  },
+  {
+   "pid": 1629312,
+   "name": "Haywood Highsmith",
+   "pos": "SG",
+   "ovr": 68.3483,
+   "min": 1365.8
+  },
+  {
+   "pid": 1629599,
+   "name": "Amir Coffey",
+   "pos": "SF",
+   "ovr": 54.4658,
+   "min": 1460.6
+  },
+  {
+   "pid": 1629611,
+   "name": "Terance Mann",
+   "pos": "SG",
+   "ovr": 68.7859,
+   "min": 1872.9
+  },
+  {
+   "pid": 1629614,
+   "name": "Andrew Nembhard",
+   "pos": "SG",
+   "ovr": 63.8604,
+   "min": 1696.7
+  },
+  {
+   "pid": 1629622,
+   "name": "Max Strus",
+   "pos": "SG",
+   "ovr": 72.8775,
+   "min": 2239.2
+  },
+  {
+   "pid": 1629627,
+   "name": "Zion Williamson",
+   "pos": "SG",
+   "ovr": 83.1504,
+   "min": 2206.9
+  },
+  {
+   "pid": 1629628,
+   "name": "RJ Barrett",
+   "pos": "SG",
+   "ovr": 68.1378,
+   "min": 1838.1
+  },
+  {
+   "pid": 1629629,
+   "name": "Cam Reddish",
+   "pos": "SF",
+   "ovr": 37.6502,
+   "min": 984.0
+  },
+  {
+   "pid": 1629631,
+   "name": "De'Andre Hunter",
+   "pos": "SF",
+   "ovr": 71.6838,
+   "min": 1681.1
+  },
+  {
+   "pid": 1629632,
+   "name": "Coby White",
+   "pos": "SG",
+   "ovr": 74.4433,
+   "min": 2881.4
+  },
+  {
+   "pid": 1629636,
+   "name": "Darius Garland",
+   "pos": "PG",
+   "ovr": 81.8026,
+   "min": 1900.4
+  },
+  {
+   "pid": 1629637,
+   "name": "Jaxson Hayes",
+   "pos": "C",
+   "ovr": 59.0114,
+   "min": 877.1
+  },
+  {
+   "pid": 1629638,
+   "name": "Nickeil Alexander-Walker",
+   "pos": "SG",
+   "ovr": 76.1494,
+   "min": 1921.0
+  },
+  {
+   "pid": 1629639,
+   "name": "Tyler Herro",
+   "pos": "SG",
+   "ovr": 79.4901,
+   "min": 1407.1
+  },
+  {
+   "pid": 1629640,
+   "name": "Keldon Johnson",
+   "pos": "SG",
+   "ovr": 72.9736,
+   "min": 2038.4
+  },
+  {
+   "pid": 1629651,
+   "name": "Nic Claxton",
+   "pos": "C",
+   "ovr": 77.2041,
+   "min": 2115.7
+  },
+  {
+   "pid": 1629652,
+   "name": "Luguentz Dort",
+   "pos": "SG",
+   "ovr": 77.1439,
+   "min": 2246.0
+  },
+  {
+   "pid": 1629655,
+   "name": "Daniel Gafford",
+   "pos": "PF",
+   "ovr": 85.668,
+   "min": 1814.3
+  },
+  {
+   "pid": 1629656,
+   "name": "Quentin Grimes",
+   "pos": "SG",
+   "ovr": 68.3792,
+   "min": 1024.9
+  },
+  {
+   "pid": 1629659,
+   "name": "Talen Horton-Tucker",
+   "pos": "SG",
+   "ovr": 55.5035,
+   "min": 1008.7
+  },
+  {
+   "pid": 1629661,
+   "name": "Cameron Johnson",
+   "pos": "SF",
+   "ovr": 79.0804,
+   "min": 1599.0
+  },
+  {
+   "pid": 1629667,
+   "name": "Jalen McDaniels",
+   "pos": "PF",
+   "ovr": 45.4279,
+   "min": 538.0
+  },
+  {
+   "pid": 1629670,
+   "name": "Jordan Nwora",
+   "pos": "SF",
+   "ovr": 56.902,
+   "min": 711.4
+  },
+  {
+   "pid": 1629673,
+   "name": "Jordan Poole",
+   "pos": "SG",
+   "ovr": 58.0706,
+   "min": 2345.6
+  },
+  {
+   "pid": 1629675,
+   "name": "Naz Reid",
+   "pos": "PF",
+   "ovr": 74.1125,
+   "min": 1963.8
+  },
+  {
+   "pid": 1629680,
+   "name": "Matisse Thybulle",
+   "pos": "SG",
+   "ovr": 74.369,
+   "min": 1487.4
+  },
+  {
+   "pid": 1629684,
+   "name": "Grant Williams",
+   "pos": "SG",
+   "ovr": 68.6422,
+   "min": 2129.6
+  },
+  {
+   "pid": 1629723,
+   "name": "John Konchar",
+   "pos": "SG",
+   "ovr": 75.5772,
+   "min": 1173.6
+  },
+  {
+   "pid": 1629726,
+   "name": "Garrison Mathews",
+   "pos": "SG",
+   "ovr": 66.4388,
+   "min": 992.1
+  },
+  {
+   "pid": 1629731,
+   "name": "Dean Wade",
+   "pos": "PF",
+   "ovr": 82.5204,
+   "min": 1108.1
+  },
+  {
+   "pid": 1630162,
+   "name": "Anthony Edwards",
+   "pos": "SG",
+   "ovr": 93.1188,
+   "min": 2770.4
+  },
+  {
+   "pid": 1630163,
+   "name": "LaMelo Ball",
+   "pos": "SF",
+   "ovr": 71.7128,
+   "min": 711.4
+  },
+  {
+   "pid": 1630164,
+   "name": "James Wiseman",
+   "pos": "C",
+   "ovr": 54.9508,
+   "min": 1091.0
+  },
+  {
+   "pid": 1630165,
+   "name": "Killian Hayes",
+   "pos": "SG",
+   "ovr": 52.4556,
+   "min": 1007.7
+  },
+  {
+   "pid": 1630166,
+   "name": "Deni Avdija",
+   "pos": "PF",
+   "ovr": 79.7596,
+   "min": 2256.7
+  },
+  {
+   "pid": 1630167,
+   "name": "Obi Toppin",
+   "pos": "PF",
+   "ovr": 86.991,
+   "min": 1730.6
+  },
+  {
+   "pid": 1630168,
+   "name": "Onyeka Okongwu",
+   "pos": "PF",
+   "ovr": 84.2668,
+   "min": 1404.8
+  },
+  {
+   "pid": 1630169,
+   "name": "Tyrese Haliburton",
+   "pos": "SG",
+   "ovr": 76.7476,
+   "min": 2223.5
+  },
+  {
+   "pid": 1630170,
+   "name": "Devin Vassell",
+   "pos": "SG",
+   "ovr": 69.1676,
+   "min": 2247.8
+  },
+  {
+   "pid": 1630171,
+   "name": "Isaac Okoro",
+   "pos": "SG",
+   "ovr": 69.4293,
+   "min": 1887.1
+  },
+  {
+   "pid": 1630172,
+   "name": "Patrick Williams",
+   "pos": "SF",
+   "ovr": 60.4191,
+   "min": 1174.1
+  },
+  {
+   "pid": 1630173,
+   "name": "Precious Achiuwa",
+   "pos": "SF",
+   "ovr": 62.1399,
+   "min": 1623.7
+  },
+  {
+   "pid": 1630174,
+   "name": "Aaron Nesmith",
+   "pos": "SG",
+   "ovr": 78.3131,
+   "min": 1994.7
+  },
+  {
+   "pid": 1630175,
+   "name": "Cole Anthony",
+   "pos": "PG",
+   "ovr": 73.16,
+   "min": 1817.3
+  },
+  {
+   "pid": 1630178,
+   "name": "Tyrese Maxey",
+   "pos": "PG",
+   "ovr": 79.6272,
+   "min": 2625.8
+  },
+  {
+   "pid": 1630180,
+   "name": "Saddiq Bey",
+   "pos": "SF",
+   "ovr": 68.1821,
+   "min": 2061.7
+  },
+  {
+   "pid": 1630182,
+   "name": "Josh Green",
+   "pos": "SG",
+   "ovr": 61.4421,
+   "min": 1504.7
+  },
+  {
+   "pid": 1630183,
+   "name": "Jaden McDaniels",
+   "pos": "PF",
+   "ovr": 68.7085,
+   "min": 2105.5
+  },
+  {
+   "pid": 1630188,
+   "name": "Jalen Smith",
+   "pos": "PF",
+   "ovr": 91.1977,
+   "min": 1046.6
+  },
+  {
+   "pid": 1630191,
+   "name": "Isaiah Stewart",
+   "pos": "SF",
+   "ovr": 72.4688,
+   "min": 1422.8
+  },
+  {
+   "pid": 1630192,
+   "name": "Zeke Nnaji",
+   "pos": "PF",
+   "ovr": 56.0818,
+   "min": 576.1
+  },
+  {
+   "pid": 1630193,
+   "name": "Immanuel Quickley",
+   "pos": "PG",
+   "ovr": 89.6643,
+   "min": 1985.4
+  },
+  {
+   "pid": 1630194,
+   "name": "Paul Reed",
+   "pos": "PF",
+   "ovr": 70.1292,
+   "min": 1589.5
+  },
+  {
+   "pid": 1630198,
+   "name": "Isaiah Joe",
+   "pos": "PG",
+   "ovr": 76.1065,
+   "min": 1444.9
+  },
+  {
+   "pid": 1630200,
+   "name": "Tre Jones",
+   "pos": "PG",
+   "ovr": 77.8159,
+   "min": 2138.2
+  },
+  {
+   "pid": 1630201,
+   "name": "Malachi Flynn",
+   "pos": "PG",
+   "ovr": 55.9437,
+   "min": 876.9
+  },
+  {
+   "pid": 1630202,
+   "name": "Payton Pritchard",
+   "pos": "PG",
+   "ovr": 73.2108,
+   "min": 1825.7
+  },
+  {
+   "pid": 1630205,
+   "name": "Lamar Stevens",
+   "pos": "SF",
+   "ovr": 64.8278,
+   "min": 559.0
+  },
+  {
+   "pid": 1630208,
+   "name": "Nick Richards",
+   "pos": "C",
+   "ovr": 70.9692,
+   "min": 1758.7
+  },
+  {
+   "pid": 1630209,
+   "name": "Omer Yurtseven",
+   "pos": "C",
+   "ovr": 52.7876,
+   "min": 545.1
+  },
+  {
+   "pid": 1630214,
+   "name": "Xavier Tillman",
+   "pos": "SF",
+   "ovr": 69.1676,
+   "min": 974.5
+  },
+  {
+   "pid": 1630215,
+   "name": "Jared Butler",
+   "pos": "PG",
+   "ovr": 68.774,
+   "min": 565.6
+  },
+  {
+   "pid": 1630217,
+   "name": "Desmond Bane",
+   "pos": "SG",
+   "ovr": 82.9683,
+   "min": 1442.9
+  },
+  {
+   "pid": 1630224,
+   "name": "Jalen Green",
+   "pos": "SG",
+   "ovr": 63.4667,
+   "min": 2601.4
+  },
+  {
+   "pid": 1630228,
+   "name": "Jonathan Kuminga",
+   "pos": "SF",
+   "ovr": 75.5772,
+   "min": 1949.5
+  },
+  {
+   "pid": 1630230,
+   "name": "Naji Marshall",
+   "pos": "SG",
+   "ovr": 83.0229,
+   "min": 1257.1
+  },
+  {
+   "pid": 1630231,
+   "name": "KJ Martin",
+   "pos": "SG",
+   "ovr": 63.7365,
+   "min": 746.5
+  },
+  {
+   "pid": 1630241,
+   "name": "Sam Merrill",
+   "pos": "SG",
+   "ovr": 65.2429,
+   "min": 1068.9
+  },
+  {
+   "pid": 1630245,
+   "name": "Ayo Dosunmu",
+   "pos": "SG",
+   "ovr": 63.4151,
+   "min": 2212.5
+  },
+  {
+   "pid": 1630249,
+   "name": "Vít Krejčí",
+   "pos": "SF",
+   "ovr": 54.0652,
+   "min": 541.3
+  },
+  {
+   "pid": 1630256,
+   "name": "Jae'Sean Tate",
+   "pos": "SG",
+   "ovr": 76.1065,
+   "min": 1031.4
+  },
+  {
+   "pid": 1630529,
+   "name": "Herbert Jones",
+   "pos": "SF",
+   "ovr": 94.5726,
+   "min": 2321.5
+  },
+  {
+   "pid": 1630530,
+   "name": "Trey Murphy III",
+   "pos": "SF",
+   "ovr": 77.5074,
+   "min": 1690.3
+  },
+  {
+   "pid": 1630531,
+   "name": "Jaden Springer",
+   "pos": "SG",
+   "ovr": 57.37,
+   "min": 507.0
+  },
+  {
+   "pid": 1630532,
+   "name": "Franz Wagner",
+   "pos": "PF",
+   "ovr": 95.0771,
+   "min": 2337.4
+  },
+  {
+   "pid": 1630533,
+   "name": "Ziaire Williams",
+   "pos": "PF",
+   "ovr": 50.6197,
+   "min": 1037.7
+  },
+  {
+   "pid": 1630534,
+   "name": "Ochai Agbaji",
+   "pos": "SG",
+   "ovr": 54.2766,
+   "min": 1641.6
+  },
+  {
+   "pid": 1630537,
+   "name": "Chris Duarte",
+   "pos": "SG",
+   "ovr": 60.1875,
+   "min": 719.6
+  },
+  {
+   "pid": 1630538,
+   "name": "Bones Hyland",
+   "pos": "PG",
+   "ovr": 51.5545,
+   "min": 540.2
+  },
+  {
+   "pid": 1630540,
+   "name": "Miles McBride",
+   "pos": "PG",
+   "ovr": 76.1065,
+   "min": 1327.7
+  },
+  {
+   "pid": 1630541,
+   "name": "Moses Moody",
+   "pos": "SG",
+   "ovr": 66.0018,
+   "min": 1155.9
+  },
+  {
+   "pid": 1630543,
+   "name": "Isaiah Jackson",
+   "pos": "PF",
+   "ovr": 84.0374,
+   "min": 770.9
+  },
+  {
+   "pid": 1630544,
+   "name": "Tre Mann",
+   "pos": "PG",
+   "ovr": 72.3884,
+   "min": 987.1
+  },
+  {
+   "pid": 1630549,
+   "name": "Day'Ron Sharpe",
+   "pos": "PF",
+   "ovr": 73.583,
+   "min": 920.6
+  },
+  {
+   "pid": 1630550,
+   "name": "JT Thor",
+   "pos": "PF",
+   "ovr": 67.6237,
+   "min": 780.6
+  },
+  {
+   "pid": 1630552,
+   "name": "Jalen Johnson",
+   "pos": "SF",
+   "ovr": 76.5593,
+   "min": 1888.9
+  },
+  {
+   "pid": 1630557,
+   "name": "Corey Kispert",
+   "pos": "SG",
+   "ovr": 59.6207,
+   "min": 2067.4
+  },
+  {
+   "pid": 1630558,
+   "name": "Davion Mitchell",
+   "pos": "PG",
+   "ovr": 61.2547,
+   "min": 1101.1
+  },
+  {
+   "pid": 1630559,
+   "name": "Austin Reaves",
+   "pos": "SG",
+   "ovr": 81.0839,
+   "min": 2629.0
+  },
+  {
+   "pid": 1630560,
+   "name": "Cam Thomas",
+   "pos": "PG",
+   "ovr": 58.4485,
+   "min": 2074.9
+  },
+  {
+   "pid": 1630567,
+   "name": "Scottie Barnes",
+   "pos": "SF",
+   "ovr": 79.7596,
+   "min": 2094.3
+  },
+  {
+   "pid": 1630570,
+   "name": "Trendon Watford",
+   "pos": "SF",
+   "ovr": 62.9669,
+   "min": 856.5
+  },
+  {
+   "pid": 1630573,
+   "name": "Sam Hauser",
+   "pos": "SF",
+   "ovr": 83.0229,
+   "min": 1740.6
+  },
+  {
+   "pid": 1630577,
+   "name": "Julian Champagnie",
+   "pos": "SF",
+   "ovr": 58.9966,
+   "min": 1467.9
+  },
+  {
+   "pid": 1630578,
+   "name": "Alperen Sengun",
+   "pos": "C",
+   "ovr": 74.4494,
+   "min": 2045.7
+  },
+  {
+   "pid": 1630579,
+   "name": "Jericho Sims",
+   "pos": "PF",
+   "ovr": 70.3124,
+   "min": 584.8
+  },
+  {
+   "pid": 1630581,
+   "name": "Josh Giddey",
+   "pos": "SF",
+   "ovr": 71.1995,
+   "min": 2011.5
+  },
+  {
+   "pid": 1630583,
+   "name": "Santi Aldama",
+   "pos": "C",
+   "ovr": 62.4621,
+   "min": 1618.1
+  },
+  {
+   "pid": 1630590,
+   "name": "Scotty Pippen Jr.",
+   "pos": "PG",
+   "ovr": 81.1413,
+   "min": 526.8
+  },
+  {
+   "pid": 1630591,
+   "name": "Jalen Suggs",
+   "pos": "SG",
+   "ovr": 73.2751,
+   "min": 2024.6
+  },
+  {
+   "pid": 1630592,
+   "name": "Jalen Wilson",
+   "pos": "SG",
+   "ovr": 69.1942,
+   "min": 664.6
+  },
+  {
+   "pid": 1630595,
+   "name": "Cade Cunningham",
+   "pos": "SG",
+   "ovr": 76.6456,
+   "min": 2074.2
+  },
+  {
+   "pid": 1630596,
+   "name": "Evan Mobley",
+   "pos": "C",
+   "ovr": 85.2411,
+   "min": 1532.3
+  },
+  {
+   "pid": 1630598,
+   "name": "Aaron Wiggins",
+   "pos": "SG",
+   "ovr": 70.5088,
+   "min": 1228.0
+  },
+  {
+   "pid": 1630625,
+   "name": "Dalano Banton",
+   "pos": "SF",
+   "ovr": 51.5424,
+   "min": 1046.8
+  },
+  {
+   "pid": 1630631,
+   "name": "Jose Alvarado",
+   "pos": "PG",
+   "ovr": 85.2318,
+   "min": 1028.4
+  },
+  {
+   "pid": 1630692,
+   "name": "Jordan Goodwin",
+   "pos": "SG",
+   "ovr": 63.5688,
+   "min": 1055.8
+  },
+  {
+   "pid": 1630699,
+   "name": "MarJon Beauchamp",
+   "pos": "SF",
+   "ovr": 56.7554,
+   "min": 607.7
+  },
+  {
+   "pid": 1630700,
+   "name": "Dyson Daniels",
+   "pos": "SF",
+   "ovr": 67.6356,
+   "min": 1358.5
+  },
+  {
+   "pid": 1630702,
+   "name": "Jaden Hardy",
+   "pos": "PG",
+   "ovr": 56.7616,
+   "min": 989.2
+  },
+  {
+   "pid": 1630703,
+   "name": "Scoot Henderson",
+   "pos": "PG",
+   "ovr": 48.6726,
+   "min": 1765.4
+  },
+  {
+   "pid": 1631093,
+   "name": "Jaden Ivey",
+   "pos": "SG",
+   "ovr": 55.5184,
+   "min": 2217.5
+  },
+  {
+   "pid": 1631094,
+   "name": "Paolo Banchero",
+   "pos": "PF",
+   "ovr": 70.9001,
+   "min": 2798.7
+  },
+  {
+   "pid": 1631095,
+   "name": "Jabari Smith Jr.",
+   "pos": "C",
+   "ovr": 69.3989,
+   "min": 2423.9
+  },
+  {
+   "pid": 1631096,
+   "name": "Chet Holmgren",
+   "pos": "C",
+   "ovr": 95.0771,
+   "min": 2412.8
+  },
+  {
+   "pid": 1631097,
+   "name": "Bennedict Mathurin",
+   "pos": "SG",
+   "ovr": 65.4972,
+   "min": 1538.4
+  },
+  {
+   "pid": 1631098,
+   "name": "Johnny Davis",
+   "pos": "SG",
+   "ovr": 58.7195,
+   "min": 613.5
+  },
+  {
+   "pid": 1631099,
+   "name": "Keegan Murray",
+   "pos": "SF",
+   "ovr": 82.7852,
+   "min": 2588.6
+  },
+  {
+   "pid": 1631101,
+   "name": "Shaedon Sharpe",
+   "pos": "SG",
+   "ovr": 65.8056,
+   "min": 1059.0
+  },
+  {
+   "pid": 1631103,
+   "name": "Malaki Branham",
+   "pos": "SG",
+   "ovr": 52.2049,
+   "min": 1594.3
+  },
+  {
+   "pid": 1631104,
+   "name": "Blake Wesley",
+   "pos": "PG",
+   "ovr": 50.7475,
+   "min": 875.9
+  },
+  {
+   "pid": 1631105,
+   "name": "Jalen Duren",
+   "pos": "PF",
+   "ovr": 76.1494,
+   "min": 1777.5
+  },
+  {
+   "pid": 1631107,
+   "name": "Nikola Jović",
+   "pos": "PF",
+   "ovr": 61.7617,
+   "min": 896.2
+  },
+  {
+   "pid": 1631108,
+   "name": "Max Christie",
+   "pos": "SG",
+   "ovr": 62.6246,
+   "min": 944.3
+  },
+  {
+   "pid": 1631109,
+   "name": "Mark Williams",
+   "pos": "C",
+   "ovr": 70.38,
+   "min": 508.4
+  },
+  {
+   "pid": 1631110,
+   "name": "Jeremy Sochan",
+   "pos": "SF",
+   "ovr": 59.7633,
+   "min": 2193.1
+  },
+  {
+   "pid": 1631114,
+   "name": "Jalen Williams",
+   "pos": "SG",
+   "ovr": 88.2409,
+   "min": 2223.7
+  },
+  {
+   "pid": 1631117,
+   "name": "Walker Kessler",
+   "pos": "C",
+   "ovr": 72.284,
+   "min": 1493.1
+  },
+  {
+   "pid": 1631119,
+   "name": "Jaylin Williams",
+   "pos": "PF",
+   "ovr": 67.4731,
+   "min": 897.0
+  },
+  {
+   "pid": 1631121,
+   "name": "Bryce McGowens",
+   "pos": "SG",
+   "ovr": 60.0682,
+   "min": 881.6
+  },
+  {
+   "pid": 1631124,
+   "name": "Julian Strawther",
+   "pos": "SG",
+   "ovr": 52.5118,
+   "min": 545.4
+  },
+  {
+   "pid": 1631128,
+   "name": "Christian Braun",
+   "pos": "SG",
+   "ovr": 71.2384,
+   "min": 1655.6
+  },
+  {
+   "pid": 1631133,
+   "name": "Jabari Walker",
+   "pos": "SF",
+   "ovr": 62.2555,
+   "min": 1700.6
+  },
+  {
+   "pid": 1631165,
+   "name": "Keon Ellis",
+   "pos": "PG",
+   "ovr": 67.1079,
+   "min": 978.5
+  },
+  {
+   "pid": 1631170,
+   "name": "Jaime Jaquez Jr.",
+   "pos": "SG",
+   "ovr": 71.1603,
+   "min": 2113.2
+  },
+  {
+   "pid": 1631200,
+   "name": "Kris Murray",
+   "pos": "SF",
+   "ovr": 68.3457,
+   "min": 1348.3
+  },
+  {
+   "pid": 1631204,
+   "name": "Marcus Sasser",
+   "pos": "PG",
+   "ovr": 57.0451,
+   "min": 1351.1
+  },
+  {
+   "pid": 1631207,
+   "name": "Dalen Terry",
+   "pos": "SF",
+   "ovr": 61.291,
+   "min": 680.7
+  },
+  {
+   "pid": 1631212,
+   "name": "Peyton Watson",
+   "pos": "SF",
+   "ovr": 59.3994,
+   "min": 1487.9
+  },
+  {
+   "pid": 1631216,
+   "name": "Caleb Houstan",
+   "pos": "SF",
+   "ovr": 59.0354,
+   "min": 815.4
+  },
+  {
+   "pid": 1631218,
+   "name": "Trayce Jackson-Davis",
+   "pos": "PF",
+   "ovr": 87.7235,
+   "min": 1130.5
+  },
+  {
+   "pid": 1631222,
+   "name": "Jake LaRavia",
+   "pos": "SF",
+   "ovr": 60.9428,
+   "min": 805.5
+  },
+  {
+   "pid": 1631223,
+   "name": "David Roddy",
+   "pos": "SG",
+   "ovr": 58.0529,
+   "min": 1177.0
+  },
+  {
+   "pid": 1631246,
+   "name": "Vince Williams Jr.",
+   "pos": "SG",
+   "ovr": 77.2641,
+   "min": 1436.5
+  },
+  {
+   "pid": 1631260,
+   "name": "AJ Green",
+   "pos": "SG",
+   "ovr": 69.1174,
+   "min": 614.3
+  },
+  {
+   "pid": 1631323,
+   "name": "Simone Fontecchio",
+   "pos": "SF",
+   "ovr": 62.1892,
+   "min": 1643.9
+  },
+  {
+   "pid": 1631367,
+   "name": "Jacob Gilyard",
+   "pos": "PG",
+   "ovr": 65.6174,
+   "min": 698.4
+  },
+  {
+   "pid": 1641705,
+   "name": "Victor Wembanyama",
+   "pos": "C",
+   "ovr": 87.7235,
+   "min": 2106.2
+  },
+  {
+   "pid": 1641706,
+   "name": "Brandon Miller",
+   "pos": "SF",
+   "ovr": 63.0584,
+   "min": 2383.0
+  },
+  {
+   "pid": 1641707,
+   "name": "Taylor Hendricks",
+   "pos": "PF",
+   "ovr": 63.4735,
+   "min": 856.4
+  },
+  {
+   "pid": 1641708,
+   "name": "Amen Thompson",
+   "pos": "SF",
+   "ovr": 69.6855,
+   "min": 1388.6
+  },
+  {
+   "pid": 1641709,
+   "name": "Ausar Thompson",
+   "pos": "SG",
+   "ovr": 72.7263,
+   "min": 1582.9
+  },
+  {
+   "pid": 1641710,
+   "name": "Anthony Black",
+   "pos": "SF",
+   "ovr": 56.3434,
+   "min": 1164.2
+  },
+  {
+   "pid": 1641711,
+   "name": "Gradey Dick",
+   "pos": "SG",
+   "ovr": 57.4394,
+   "min": 1267.7
+  },
+  {
+   "pid": 1641712,
+   "name": "Rayan Rupert",
+   "pos": "SG",
+   "ovr": 57.1725,
+   "min": 633.2
+  },
+  {
+   "pid": 1641713,
+   "name": "GG Jackson",
+   "pos": "PF",
+   "ovr": 59.5756,
+   "min": 1233.2
+  },
+  {
+   "pid": 1641715,
+   "name": "Cam Whitmore",
+   "pos": "SF",
+   "ovr": 60.6493,
+   "min": 880.4
+  },
+  {
+   "pid": 1641717,
+   "name": "Cason Wallace",
+   "pos": "PG",
+   "ovr": 75.2506,
+   "min": 1691.9
+  },
+  {
+   "pid": 1641718,
+   "name": "Keyonte George",
+   "pos": "SG",
+   "ovr": 51.1367,
+   "min": 2022.6
+  },
+  {
+   "pid": 1641722,
+   "name": "Jordan Hawkins",
+   "pos": "SG",
+   "ovr": 61.2635,
+   "min": 1160.6
+  },
+  {
+   "pid": 1641726,
+   "name": "Dereck Lively II",
+   "pos": "C",
+   "ovr": 71.6355,
+   "min": 1294.3
+  },
+  {
+   "pid": 1641729,
+   "name": "Brice Sensabaugh",
+   "pos": "SG",
+   "ovr": 61.7738,
+   "min": 584.4
+  },
+  {
+   "pid": 1641731,
+   "name": "Bilal Coulibaly",
+   "pos": "SF",
+   "ovr": 52.7584,
+   "min": 1715.2
+  },
+  {
+   "pid": 1641733,
+   "name": "Nick Smith Jr.",
+   "pos": "PG",
+   "ovr": 58.0942,
+   "min": 728.7
+  },
+  {
+   "pid": 1641739,
+   "name": "Toumani Camara",
+   "pos": "SF",
+   "ovr": 79.4901,
+   "min": 1739.3
+  },
+  {
+   "pid": 1641748,
+   "name": "Andre Jackson Jr.",
+   "pos": "SG",
+   "ovr": 64.369,
+   "min": 572.4
+  },
+  {
+   "pid": 1641764,
+   "name": "Brandin Podziemski",
+   "pos": "SG",
+   "ovr": 70.852,
+   "min": 1968.3
+  },
+  {
+   "pid": 1641767,
+   "name": "Ben Sheppard",
+   "pos": "SG",
+   "ovr": 54.2742,
+   "min": 814.3
+  },
+  {
+   "pid": 1641854,
+   "name": "Craig Porter Jr.",
+   "pos": "PG",
+   "ovr": 77.1688,
+   "min": 649.4
+  },
+  {
+   "pid": 1641871,
+   "name": "Duop Reath",
+   "pos": "PF",
+   "ovr": 72.5625,
+   "min": 1214.1
+  },
+  {
+   "pid": 1641998,
+   "name": "Trey Jemison III",
+   "pos": "PF",
+   "ovr": 57.7193,
+   "min": 574.0
+  }
+ ],
+ "no_box_players": []
+}

@@ -1,0 +1,224 @@
+{
+ "top20_in": [],
+ "top20_out": [],
+ "top20_changes": 0,
+ "moved10_both_in_top100": 3,
+ "moved10_any_top100": 5,
+ "top100_enter": [
+  [
+   "Alperen Sengun",
+   101,
+   96
+  ],
+  [
+   "Derrick Jones Jr.",
+   102,
+   97
+  ],
+  [
+   "Jaden McDaniels",
+   104,
+   99
+  ]
+ ],
+ "top100_exit": [
+  [
+   "Sandro Mamukelashvili",
+   88,
+   117
+  ],
+  [
+   "Cam Spencer",
+   96,
+   126
+  ],
+  [
+   "Jrue Holiday",
+   99,
+   101
+  ]
+ ],
+ "rep": {
+  "Nikola Jokić": {
+   "rank_old": 2,
+   "rank_new": 2,
+   "ovr_old": 107.0,
+   "ovr_new": 107.4
+  },
+  "Victor Wembanyama": {
+   "rank_old": 3,
+   "rank_new": 3,
+   "ovr_old": 102.0,
+   "ovr_new": 102.4
+  },
+  "Shai Gilgeous-Alexander": {
+   "rank_old": 1,
+   "rank_new": 1,
+   "ovr_old": 109.9,
+   "ovr_new": 110.4
+  },
+  "Jalen Williams": {
+   "rank_old": 9,
+   "rank_new": 9,
+   "ovr_old": 94.7,
+   "ovr_new": 94.7
+  },
+  "Franz Wagner": {
+   "rank_old": 43,
+   "rank_new": 43,
+   "ovr_old": 87.1,
+   "ovr_new": 87.0
+  },
+  "Cooper Flagg": {
+   "rank_old": 65,
+   "rank_new": 62,
+   "ovr_old": 82.9,
+   "ovr_new": 83.2
+  }
+ },
+ "top20_new": [
+  [
+   "Shai Gilgeous-Alexander",
+   1,
+   110.4,
+   1,
+   109.9
+  ],
+  [
+   "Nikola Jokić",
+   2,
+   107.4,
+   2,
+   107.0
+  ],
+  [
+   "Victor Wembanyama",
+   3,
+   102.4,
+   3,
+   102.0
+  ],
+  [
+   "Luka Dončić",
+   4,
+   102.0,
+   4,
+   101.5
+  ],
+  [
+   "Giannis Antetokounmpo",
+   5,
+   99.0,
+   5,
+   99.0
+  ],
+  [
+   "Kawhi Leonard",
+   6,
+   98.4,
+   6,
+   98.2
+  ],
+  [
+   "Donovan Mitchell",
+   7,
+   96.2,
+   7,
+   96.0
+  ],
+  [
+   "Jayson Tatum",
+   8,
+   96.0,
+   8,
+   96.0
+  ],
+  [
+   "Jalen Williams",
+   9,
+   94.7,
+   9,
+   94.7
+  ],
+  [
+   "Anthony Edwards",
+   10,
+   93.9,
+   10,
+   93.9
+  ],
+  [
+   "Jimmy Butler III",
+   11,
+   93.5,
+   12,
+   93.6
+  ],
+  [
+   "Cade Cunningham",
+   12,
+   93.5,
+   13,
+   93.4
+  ],
+  [
+   "Ty Jerome",
+   13,
+   93.4,
+   11,
+   93.7
+  ],
+  [
+   "Stephen Curry",
+   14,
+   93.2,
+   14,
+   93.3
+  ],
+  [
+   "Chet Holmgren",
+   15,
+   93.2,
+   15,
+   93.2
+  ],
+  [
+   "Kevin Durant",
+   16,
+   93.0,
+   17,
+   93.0
+  ],
+  [
+   "Joel Embiid",
+   17,
+   93.0,
+   16,
+   93.0
+  ],
+  [
+   "Jamal Murray",
+   18,
+   92.7,
+   18,
+   92.7
+  ],
+  [
+   "Evan Mobley",
+   19,
+   92.5,
+   19,
+   92.5
+  ],
+  [
+   "Desmond Bane",
+   20,
+   92.1,
+   20,
+   92.1
+  ]
+ ],
+ "ovr_diff_players_ge1": 187,
+ "rank_changed": 540,
+ "n": 582
+}

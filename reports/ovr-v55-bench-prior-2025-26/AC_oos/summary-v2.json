@@ -1,0 +1,572 @@
+{
+  "variant": "AC_oos",
+  "players": 582,
+  "fit": {
+    "priorIntercept": -7.006823268565817,
+    "priorLogMinutesPerGameSlope": 2.12908199682997,
+    "tau2Per36": 3.363869532346688,
+    "kappa": 60.47746279006476,
+    "sourceNoiseEqualsSignalAtMinutes": 17.978539954810536
+  },
+  "G1splitHalfPrediction": {
+    "all": {
+      "mseRaw": 5.289872456922283,
+      "mseV2": 4.620498542715589,
+      "meanReduction": 0.6693739142066941,
+      "ci95": [
+        -0.3810128500026861,
+        1.7386646006184996
+      ]
+    },
+    "minutesUnder20": {
+      "players": 293,
+      "mseRaw": 8.966684429610643,
+      "mseV2": 7.637074811630111,
+      "meanReduction": 1.3296096179805326,
+      "ci95": [
+        -0.8155767743050448,
+        3.3699857987541106
+      ]
+    },
+    "minutes20Plus": {
+      "players": 289,
+      "meanReduction": 2.4291380854130244e-19
+    },
+    "v1ForReference": {
+      "all": 0.6196575886716705,
+      "minutesUnder20": 1.2392791325807577,
+      "minutes20Plus": -0.008540031969722504
+    },
+    "passed": false
+  },
+  "G2externalRAPM": {
+    "players": 414,
+    "net": {
+      "raw": 0.45391334788570015,
+      "v1": 0.5088463761351333,
+      "v2": 0.49799864792362425
+    },
+    "defense": {
+      "raw": 0.3173336783284311,
+      "v1": 0.32500119437641084,
+      "v2": 0.33037973559677175
+    },
+    "passed": true
+  },
+  "G3bench": {
+    "smallWInTop50": {
+      "raw": 13,
+      "v1": 3,
+      "v2": 3
+    },
+    "remainingSmallInTop50": [
+      "Ty Jerome",
+      "Zach Edey",
+      "Walker Kessler"
+    ],
+    "passed": true
+  },
+  "G4starterOrder": {
+    "starterSpearman": 1.0,
+    "passed": true
+  },
+  "gates": {
+    "G1": false,
+    "G2": true,
+    "G3": true,
+    "G4": true,
+    "adopt": false
+  },
+  "supplementary": {
+    "rapmPoss1000": {
+      "players": 513,
+      "net": {
+        "raw": 0.474931895948529,
+        "v1": 0.5307301088527091,
+        "v2": 0.5193838778813117
+      },
+      "defense": {
+        "raw": 0.3178572165051085,
+        "v1": 0.3213534378057661,
+        "v2": 0.3295033470714725
+      }
+    },
+    "splitHalfReliability": {
+      "raw": 0.8079435500972824,
+      "v1": 0.9190798134452894,
+      "v2": 0.8977646208142246
+    },
+    "mediaSpearman": {
+      "raw": -0.44406314344543585,
+      "v1": -0.4524581873351877,
+      "v2": -0.44485785500126435
+    },
+    "starterRankChange": {
+      "median": 25.0,
+      "max": 41
+    },
+    "nonStartersEnteringTop50": []
+  },
+  "bucketSpearmanVsPooledRAPM": {
+    "<800": {
+      "players": 101,
+      "raw": 0.2446359930110658,
+      "v2": 0.33606290040768777
+    },
+    "800-1300": {
+      "players": 98,
+      "raw": 0.5295602777193351,
+      "v2": 0.5290629841439856
+    },
+    "1300-1800": {
+      "players": 101,
+      "raw": 0.36703552708211995,
+      "v2": 0.36397204426324986
+    },
+    "1800+": {
+      "players": 114,
+      "raw": 0.5265223466515461,
+      "v2": 0.5265223466515461
+    },
+    "all": {
+      "players": 414,
+      "raw": 0.45391334788570015,
+      "v2": 0.49799864792362425
+    }
+  },
+  "bucketSpearmanVsLastSeasonRAPM": {
+    "<800": {
+      "players": 0,
+      "raw": null,
+      "v2": null
+    },
+    "800-1300": {
+      "players": 15,
+      "raw": 0.23928571428571427,
+      "v2": 0.24285714285714283
+    },
+    "1300-1800": {
+      "players": 101,
+      "raw": 0.3903785672684915,
+      "v2": 0.3870471753057658
+    },
+    "1800+": {
+      "players": 114,
+      "raw": 0.537206617929973,
+      "v2": 0.537206617929973
+    },
+    "all": {
+      "players": 230,
+      "raw": 0.45769666065849846,
+      "v2": 0.4574057042255257
+    }
+  },
+  "benchMoversUpTop20": [
+    {
+      "name": "Dalano Banton",
+      "playerId": 1630625,
+      "rawRank": 537,
+      "v2Rank": 478,
+      "rankGain": 59
+    },
+    {
+      "name": "Brandon Clarke",
+      "playerId": 1629634,
+      "rawRank": 502,
+      "v2Rank": 447,
+      "rankGain": 55
+    },
+    {
+      "name": "Zyon Pullin",
+      "playerId": 1642389,
+      "rawRank": 553,
+      "v2Rank": 500,
+      "rankGain": 53
+    },
+    {
+      "name": "Chucky Hepburn",
+      "playerId": 1642935,
+      "rawRank": 566,
+      "v2Rank": 515,
+      "rankGain": 51
+    },
+    {
+      "name": "Colby Jones",
+      "playerId": 1641732,
+      "rawRank": 579,
+      "v2Rank": 534,
+      "rankGain": 45
+    },
+    {
+      "name": "Wendell Moore Jr.",
+      "playerId": 1631111,
+      "rawRank": 513,
+      "v2Rank": 469,
+      "rankGain": 44
+    },
+    {
+      "name": "Isaiah Stevens",
+      "playerId": 1641815,
+      "rawRank": 449,
+      "v2Rank": 409,
+      "rankGain": 40
+    },
+    {
+      "name": "Yuki Kawamura",
+      "playerId": 1642530,
+      "rawRank": 477,
+      "v2Rank": 438,
+      "rankGain": 39
+    },
+    {
+      "name": "Maxi Kleber",
+      "playerId": 1628467,
+      "rawRank": 481,
+      "v2Rank": 443,
+      "rankGain": 38
+    },
+    {
+      "name": "Will Richard",
+      "playerId": 1642954,
+      "rawRank": 279,
+      "v2Rank": 241,
+      "rankGain": 38
+    },
+    {
+      "name": "PJ Hall",
+      "playerId": 1641790,
+      "rawRank": 508,
+      "v2Rank": 471,
+      "rankGain": 37
+    },
+    {
+      "name": "Tyler Smith",
+      "playerId": 1641890,
+      "rawRank": 458,
+      "v2Rank": 421,
+      "rankGain": 37
+    },
+    {
+      "name": "Moritz Wagner",
+      "playerId": 1629021,
+      "rawRank": 475,
+      "v2Rank": 439,
+      "rankGain": 36
+    },
+    {
+      "name": "Kobe Bufkin",
+      "playerId": 1641723,
+      "rawRank": 565,
+      "v2Rank": 529,
+      "rankGain": 36
+    },
+    {
+      "name": "Alijah Martin",
+      "playerId": 1642918,
+      "rawRank": 561,
+      "v2Rank": 525,
+      "rankGain": 36
+    },
+    {
+      "name": "CJ Huntley",
+      "playerId": 1643047,
+      "rawRank": 455,
+      "v2Rank": 419,
+      "rankGain": 36
+    },
+    {
+      "name": "Monte Morris",
+      "playerId": 1628420,
+      "rawRank": 552,
+      "v2Rank": 517,
+      "rankGain": 35
+    },
+    {
+      "name": "Lachlan Olbrich",
+      "playerId": 1642950,
+      "rawRank": 510,
+      "v2Rank": 475,
+      "rankGain": 35
+    },
+    {
+      "name": "Chris Paul",
+      "playerId": 101108,
+      "rawRank": 441,
+      "v2Rank": 407,
+      "rankGain": 34
+    },
+    {
+      "name": "Seth Curry",
+      "playerId": 203552,
+      "rawRank": 495,
+      "v2Rank": 461,
+      "rankGain": 34
+    }
+  ],
+  "benchMoversDownTop20": [
+    {
+      "name": "Trentyn Flowers",
+      "playerId": 1642280,
+      "rawRank": 22,
+      "v2Rank": 526,
+      "rankGain": -504
+    },
+    {
+      "name": "Vladislav Goldin",
+      "playerId": 1642884,
+      "rawRank": 1,
+      "v2Rank": 504,
+      "rankGain": -503
+    },
+    {
+      "name": "Mark Sears",
+      "playerId": 1641813,
+      "rawRank": 86,
+      "v2Rank": 496,
+      "rankGain": -410
+    },
+    {
+      "name": "N'Faly Dante",
+      "playerId": 1642368,
+      "rawRank": 157,
+      "v2Rank": 499,
+      "rankGain": -342
+    },
+    {
+      "name": "Caleb Houstan",
+      "playerId": 1631216,
+      "rawRank": 100,
+      "v2Rank": 436,
+      "rankGain": -336
+    },
+    {
+      "name": "Orlando Robinson",
+      "playerId": 1631115,
+      "rawRank": 50,
+      "v2Rank": 367,
+      "rankGain": -317
+    },
+    {
+      "name": "Chris Youngblood",
+      "playerId": 1642959,
+      "rawRank": 97,
+      "v2Rank": 376,
+      "rankGain": -279
+    },
+    {
+      "name": "Alex Antetokounmpo",
+      "playerId": 1630828,
+      "rawRank": 282,
+      "v2Rank": 531,
+      "rankGain": -249
+    },
+    {
+      "name": "Colin Castleton",
+      "playerId": 1630658,
+      "rawRank": 211,
+      "v2Rank": 446,
+      "rankGain": -235
+    },
+    {
+      "name": "Buddy Boeheim",
+      "playerId": 1631205,
+      "rawRank": 280,
+      "v2Rank": 510,
+      "rankGain": -230
+    },
+    {
+      "name": "Rocco Zikarsky",
+      "playerId": 1642911,
+      "rawRank": 68,
+      "v2Rank": 286,
+      "rankGain": -218
+    },
+    {
+      "name": "Johni Broome",
+      "playerId": 1641780,
+      "rawRank": 237,
+      "v2Rank": 452,
+      "rankGain": -215
+    },
+    {
+      "name": "Jeff Green",
+      "playerId": 201145,
+      "rawRank": 193,
+      "v2Rank": 399,
+      "rankGain": -206
+    },
+    {
+      "name": "Grant Nelson",
+      "playerId": 1641761,
+      "rawRank": 32,
+      "v2Rank": 224,
+      "rankGain": -192
+    },
+    {
+      "name": "Joan Beringer",
+      "playerId": 1642866,
+      "rawRank": 18,
+      "v2Rank": 194,
+      "rankGain": -176
+    },
+    {
+      "name": "Pacôme Dadiet",
+      "playerId": 1642359,
+      "rawRank": 296,
+      "v2Rank": 463,
+      "rankGain": -167
+    },
+    {
+      "name": "Jayson Kent",
+      "playerId": 1643257,
+      "rawRank": 325,
+      "v2Rank": 490,
+      "rankGain": -165
+    },
+    {
+      "name": "Dario Saric",
+      "playerId": 203967,
+      "rawRank": 137,
+      "v2Rank": 301,
+      "rankGain": -164
+    },
+    {
+      "name": "Duop Reath",
+      "playerId": 1641871,
+      "rawRank": 114,
+      "v2Rank": 269,
+      "rankGain": -155
+    },
+    {
+      "name": "Jonathan Mogbo",
+      "playerId": 1642367,
+      "rawRank": 3,
+      "v2Rank": 155,
+      "rankGain": -152
+    }
+  ],
+  "top30": [
+    "Shai Gilgeous-Alexander",
+    "Giannis Antetokounmpo",
+    "Victor Wembanyama",
+    "Luka Dončić",
+    "Kawhi Leonard",
+    "Nikola Jokić",
+    "Ty Jerome",
+    "Zach Edey",
+    "Jalen Smith",
+    "Lauri Markkanen",
+    "Chet Holmgren",
+    "Mitchell Robinson",
+    "Derrick White",
+    "Evan Mobley",
+    "Rudy Gobert",
+    "Tyrese Maxey",
+    "Isaiah Stewart",
+    "Devin Booker",
+    "Cade Cunningham",
+    "Robert Williams III",
+    "Walker Kessler",
+    "Luke Kornet",
+    "Scottie Barnes",
+    "Ronald Holland II",
+    "Jalen Duren",
+    "Daniel Gafford",
+    "Deni Avdija",
+    "Donovan Clingan",
+    "Dylan Cardwell",
+    "Austin Reaves"
+  ],
+  "focus": {
+    "Thanasis Antetokounmpo": {
+      "rawRank": 471,
+      "v1Rank": 538,
+      "v2Rank": 519,
+      "sourceMinutes": 148
+    },
+    "Nikola Jokić": {
+      "rawRank": 8,
+      "v1Rank": 6,
+      "v2Rank": 6,
+      "sourceMinutes": 2265
+    },
+    "Kevon Looney": {
+      "rawRank": 264,
+      "v1Rank": 275,
+      "v2Rank": 255,
+      "sourceMinutes": 307
+    },
+    "Alex Caruso": {
+      "rawRank": 88,
+      "v1Rank": 88,
+      "v2Rank": 74,
+      "sourceMinutes": 1020
+    },
+    "Derrick White": {
+      "rawRank": 16,
+      "v1Rank": 8,
+      "v2Rank": 13,
+      "sourceMinutes": 2625
+    },
+    "Shai Gilgeous-Alexander": {
+      "rawRank": 2,
+      "v1Rank": 1,
+      "v2Rank": 1,
+      "sourceMinutes": 2259
+    },
+    "Charles Bassey": {
+      "rawRank": 57,
+      "v1Rank": 134,
+      "v2Rank": 119,
+      "sourceMinutes": 153
+    },
+    "Dyson Daniels": {
+      "rawRank": 83,
+      "v1Rank": 55,
+      "v2Rank": 67,
+      "sourceMinutes": 2520
+    },
+    "Jeremy Sochan": {
+      "rawRank": 84,
+      "v1Rank": 179,
+      "v2Rank": 177,
+      "sourceMinutes": 469
+    },
+    "Caleb Houstan": {
+      "rawRank": 100,
+      "v1Rank": 454,
+      "v2Rank": 436,
+      "sourceMinutes": 75
+    },
+    "David Roddy": {
+      "rawRank": 122,
+      "v1Rank": 163,
+      "v2Rank": 137,
+      "sourceMinutes": 73
+    },
+    "Karlo Matković": {
+      "rawRank": 29,
+      "v1Rank": 57,
+      "v2Rank": 45,
+      "sourceMinutes": 912
+    },
+    "Victor Wembanyama": {
+      "rawRank": 5,
+      "v1Rank": 3,
+      "v2Rank": 3,
+      "sourceMinutes": 1866
+    },
+    "Tosan Evbuomwan": {
+      "rawRank": 573,
+      "v1Rank": 582,
+      "v2Rank": 582,
+      "sourceMinutes": 8
+    },
+    "Jonathan Mogbo": {
+      "rawRank": 3,
+      "v1Rank": 146,
+      "v2Rank": 155,
+      "sourceMinutes": 249
+    }
+  }
+}

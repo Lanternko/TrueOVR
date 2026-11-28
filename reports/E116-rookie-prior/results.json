@@ -1,0 +1,217 @@
+{
+ "experiment": "E-116",
+ "date": "2026-10-30",
+ "fit": {
+  "nRookies": 282,
+  "perSeason": {
+   "2017-18": 53,
+   "2018-19": 64,
+   "2019-20": 57,
+   "2020-21": 55,
+   "2021-22": 53
+  }
+ },
+ "backtest": {
+  "seed": 20261116,
+  "nPlayers": 37,
+  "mappingForWindows": "2024-25",
+  "mae": {
+   "N5": {
+    "e116": 10.787300056512649,
+    "frozen": 11.229188546292251,
+    "own": 10.689931736918739
+   },
+   "N10": {
+    "e116": 10.609708106782348,
+    "frozen": 11.046252498937612,
+    "own": 9.993991314379947
+   },
+   "N20": {
+    "e116": 10.447830607808292,
+    "frozen": 10.964299022939878,
+    "own": 10.44538133747392
+   }
+  },
+  "medianAbsErr": {
+   "N5": {
+    "e116": 8.499792113025926,
+    "frozen": 8.777060207087352,
+    "own": 9.967449565048511
+   },
+   "N10": {
+    "e116": 9.752230797931688,
+    "frozen": 8.439726295946244,
+    "own": 9.74118304584833
+   },
+   "N20": {
+    "e116": 7.059214353506945,
+    "frozen": 8.882035710309786,
+    "own": 7.249702595814242
+   }
+  },
+  "maeStartOnly(x0,no data)": 11.316373229579925,
+  "answerKey": "card 0.2.7 季末 OVR（D6）",
+  "scaleCheck": {
+   "long": {
+    "n": 37,
+    "mean": -0.21124758822540285,
+    "median": -0.4850377535282817
+   },
+   "mid": {
+    "n": 37,
+    "mean": 4.728696394878696,
+    "median": 3.675926507610363
+   },
+   "short": {
+    "n": 37,
+    "mean": 4.625096993990168,
+    "median": 5.386174960986821
+   },
+   "ft": {
+    "n": 37,
+    "mean": 6.528731850360887,
+    "median": 5.437233336912314
+   },
+   "drive": {
+    "n": 37,
+    "mean": 4.496840899638326,
+    "median": 2.5791387908561063
+   },
+   "tovSkill": {
+    "n": 37,
+    "mean": -4.428210369440769,
+    "median": -3.4528556811500337
+   },
+   "pass": {
+    "n": 37,
+    "mean": 13.907888477804363,
+    "median": 14.974363748906029
+   },
+   "rebound": {
+    "n": 37,
+    "mean": -4.153371156066214,
+    "median": -1.087480906561865
+   },
+   "physique": {
+    "n": 37,
+    "mean": -8.10261719285785,
+    "median": -7.690166483619237
+   },
+   "onBall": {
+    "n": 37,
+    "mean": -2.0621621621621826,
+    "median": -2.6000000000000085
+   },
+   "help": {
+    "n": 37,
+    "mean": 0.27297297297295114,
+    "median": 0.8999999999999915
+   },
+   "stamina": {
+    "n": 37,
+    "mean": 1.9210549561429662,
+    "median": 0.7943622928188105
+   },
+   "creation": {
+    "n": 37,
+    "mean": 24.653791995391654,
+    "median": 23.446981202602103
+   },
+   "pressure": {
+    "n": 37,
+    "mean": -0.5737995875911122,
+    "median": -1.1777443431077188
+   },
+   "foulDraw": {
+    "n": 37,
+    "mean": -3.4092179340579105,
+    "median": -3.338372489513368
+   }
+  },
+  "e116_vs_own_N10": 0.6157167924024005,
+  "flag_e116_worse_than_own_by_gt1_at_N10": false
+ },
+ "acceptance": {
+  "c1_veteran_rows_identical_ex_rank": true,
+  "c1_counts_orig_vs_rookieVets": [
+   368,
+   368
+  ],
+  "c1_relative_order_same": true,
+  "c2_rookies": {
+   "rookiesInPrior": 42,
+   "rookiesInRanking": 42,
+   "withOvr": 42,
+   "playedN>0": 42,
+   "allPlayedHaveOvr": true
+  },
+  "c3_no_prior": {
+   "origNoPrior": 57,
+   "rookieNoPrior": 15,
+   "rookiesLeftInNoPrior": 0,
+   "removed": 42,
+   "restIdentical": true
+  }
+ },
+ "sha256_before": {
+  "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2017-18-027.json": "2e844edf4df34e23726b806a9ed5931bbafde54d6d74d6fde0fdfd192ea5c7a3",
+  "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2018-19-027.json": "3b32db530fbd23e570d3f2fe681967c837b2dbec958754200ebb25e5161c1d79",
+  "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2019-20-027.json": "4cecd432f108b1eeceb9aa04c03bd6ed1abbfd5f92ad253f2a74bb6e8617bbfe",
+  "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2020-21-027.json": "65c30011f42bb710d294c4226f41888da34e5ba7c64444792cc088c1a7bd44c2",
+  "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2021-22-027.json": "fd02292d025654a3c7e26d893ffb34143ec6fac7c6711f78ca83934976e514f0",
+  "data/defense-seventh/2017-18/bio.json": "4b882c54bbe916270b3a97fb45d13e27b26e32069294bd728a7f122fbdb06bf1",
+  "data/defense-seventh/2018-19/bio.json": "d318592af485aa66eccfa4a3bba80041701a39c15e83c36c0767c89f829434a7",
+  "data/defense-seventh/2019-20/bio.json": "1d7ec83c040e2dcb23b90b3ac6f2770041a4c0aa3e1f624fcd3f59e8721f39bd",
+  "data/defense-seventh/2020-21/bio.json": "f8f690ac19da7145df6bb1d7bbfb204be844fa3dd468c6770116862a452fe20f",
+  "data/defense-seventh/2021-22/bio.json": "f313f8c6ffa41777ea915cd6891565e9204b1404a27a79d79946ad3a323c6c52",
+  "data/defense-seventh/2026-27/bio.json": "28175b138571fc0b9dd490737162699937084c133143fb6eaa570803b54827ad",
+  "data/defense-seventh/2026-27/player-games.json": "5a2e0cc700655c9197d7a894399577cdd3969262f6b7b5251d4d24a38ac5496d",
+  "data/defense-seventh/2026-27/team-games.json": "ae71200166059951ed530e3d1d6a1c34ad0f02d57b3349cabfa57f03d552fef5",
+  "data/benchmark-source/bio.json": "d319d00ed383c8a30793907fd0edd56fd26e8cdb19a74bbb0c2667790644196e",
+  "reports/ovr-inseason-2026-27/live/prior-2025-26-card027.json": "5901af897a5afec60d24231006756a07f2195e49071e565e129288fafbae2864",
+  "reports/ovr-inseason-2026-27/live/pool-027.json": "d1462993b4040836599f9904417ae168a1664d9fa83a12dff55209c7a3266fea",
+  "reports/ovr-inseason-2026-27/live/usage-2025-26-card027.json": "c4ed45d71a2a30fb4ae31ef4912ab94f14d3695b3716570b817948ba0d4ade2c",
+  "reports/ovr-inseason-2026-27/live/run_c4_live.py": "a07966280d4d02e5c16c147f7d62adf22c5e5a8b1de53bf29775629d9a8033b6",
+  "reports/ovr-inseason-2026-27/live/2026-10-28/no-prior.csv": "e061bff3438e61c02b67b41a12fbec8d7032644536f2261f08d37793bb862137",
+  "reports/E116-rookie-prior/preregistration.md": "af3911d2118241c8d05e5b490cfa632d05664319b88a6d50ba297f3057f85038",
+  "reports/impact-rapm/rapm.csv": "73e9de4859206e7347f0665d348aaf7af6e2b8287e924138a0b099be86ea4b89"
+ },
+ "sha256_after": {
+  "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2017-18-027.json": "2e844edf4df34e23726b806a9ed5931bbafde54d6d74d6fde0fdfd192ea5c7a3",
+  "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2018-19-027.json": "3b32db530fbd23e570d3f2fe681967c837b2dbec958754200ebb25e5161c1d79",
+  "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2019-20-027.json": "4cecd432f108b1eeceb9aa04c03bd6ed1abbfd5f92ad253f2a74bb6e8617bbfe",
+  "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2020-21-027.json": "65c30011f42bb710d294c4226f41888da34e5ba7c64444792cc088c1a7bd44c2",
+  "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2021-22-027.json": "fd02292d025654a3c7e26d893ffb34143ec6fac7c6711f78ca83934976e514f0",
+  "data/defense-seventh/2017-18/bio.json": "4b882c54bbe916270b3a97fb45d13e27b26e32069294bd728a7f122fbdb06bf1",
+  "data/defense-seventh/2018-19/bio.json": "d318592af485aa66eccfa4a3bba80041701a39c15e83c36c0767c89f829434a7",
+  "data/defense-seventh/2019-20/bio.json": "1d7ec83c040e2dcb23b90b3ac6f2770041a4c0aa3e1f624fcd3f59e8721f39bd",
+  "data/defense-seventh/2020-21/bio.json": "f8f690ac19da7145df6bb1d7bbfb204be844fa3dd468c6770116862a452fe20f",
+  "data/defense-seventh/2021-22/bio.json": "f313f8c6ffa41777ea915cd6891565e9204b1404a27a79d79946ad3a323c6c52",
+  "data/defense-seventh/2026-27/bio.json": "1a0b1c27b3900ed8a49e8f49458b50f9f7c5ec86ea984ca51f7138e977df4239",
+  "data/defense-seventh/2026-27/player-games.json": "687cfbb6009b436a02fae8a3a31b2a4a993acf2bae1b14cc2e7703e82a5f22d1",
+  "data/defense-seventh/2026-27/team-games.json": "aa20ed71e167c47f2c125a2ed03a66a52728e4aeac3bdcfce3dc7b74b1564094",
+  "data/benchmark-source/bio.json": "d319d00ed383c8a30793907fd0edd56fd26e8cdb19a74bbb0c2667790644196e",
+  "reports/ovr-inseason-2026-27/live/prior-2025-26-card027.json": "5901af897a5afec60d24231006756a07f2195e49071e565e129288fafbae2864",
+  "reports/ovr-inseason-2026-27/live/pool-027.json": "d1462993b4040836599f9904417ae168a1664d9fa83a12dff55209c7a3266fea",
+  "reports/ovr-inseason-2026-27/live/usage-2025-26-card027.json": "c4ed45d71a2a30fb4ae31ef4912ab94f14d3695b3716570b817948ba0d4ade2c",
+  "reports/ovr-inseason-2026-27/live/run_c4_live.py": "a07966280d4d02e5c16c147f7d62adf22c5e5a8b1de53bf29775629d9a8033b6",
+  "reports/ovr-inseason-2026-27/live/2026-10-28/no-prior.csv": "e061bff3438e61c02b67b41a12fbec8d7032644536f2261f08d37793bb862137",
+  "reports/E116-rookie-prior/preregistration.md": "af3911d2118241c8d05e5b490cfa632d05664319b88a6d50ba297f3057f85038",
+  "reports/impact-rapm/rapm.csv": "73e9de4859206e7347f0665d348aaf7af6e2b8287e924138a0b099be86ea4b89"
+ },
+ "sha256_changed_inputs": {
+  "data/defense-seventh/2026-27/team-games.json": [
+   "ae71200166059951ed530e3d1d6a1c34ad0f02d57b3349cabfa57f03d552fef5",
+   "aa20ed71e167c47f2c125a2ed03a66a52728e4aeac3bdcfce3dc7b74b1564094"
+  ],
+  "data/defense-seventh/2026-27/bio.json": [
+   "28175b138571fc0b9dd490737162699937084c133143fb6eaa570803b54827ad",
+   "1a0b1c27b3900ed8a49e8f49458b50f9f7c5ec86ea984ca51f7138e977df4239"
+  ],
+  "data/defense-seventh/2026-27/player-games.json": [
+   "5a2e0cc700655c9197d7a894399577cdd3969262f6b7b5251d4d24a38ac5496d",
+   "687cfbb6009b436a02fae8a3a31b2a4a993acf2bae1b14cc2e7703e82a5f22d1"
+  ]
+ },
+ "inputsUnchanged": false
+}

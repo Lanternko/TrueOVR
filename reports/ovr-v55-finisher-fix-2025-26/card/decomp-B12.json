@@ -1,0 +1,474 @@
+{
+ "mode": "B12",
+ "players": {
+  "Karlo Matković": {
+   "pos": "PF",
+   "rank": {
+    "v53": 7,
+    "v54": 8,
+    "B12": 11
+   },
+   "ovr": {
+    "v53": 95.4,
+    "v54": 94.2,
+    "B12": 91.4
+   },
+   "predictedPer36": {
+    "v53": 2.701,
+    "v54": 2.615,
+    "B12": 2.193
+   },
+   "simulatedPer36": {
+    "v53": 3.161,
+    "v54": 3.705,
+    "B12": 5.015
+   },
+   "interceptDelta": -0.06830605225942599,
+   "deltaPredictedFromCoefficients": -0.508363777404462,
+   "topTerms": [
+    {
+     "feature": "long",
+     "contribution": -0.2803,
+     "z": 1.388
+    },
+    {
+     "feature": "pass",
+     "contribution": -0.21,
+     "z": -1.051
+    },
+    {
+     "feature": "help",
+     "contribution": -0.1935,
+     "z": 1.528
+    },
+    {
+     "feature": "rebound",
+     "contribution": 0.1639,
+     "z": 0.99
+    },
+    {
+     "feature": "pass×PF",
+     "contribution": 0.1585,
+     "z": -1.051
+    },
+    {
+     "feature": "rebound×PF",
+     "contribution": -0.1369,
+     "z": 0.99
+    },
+    {
+     "feature": "creation",
+     "contribution": 0.1121,
+     "z": -1.172
+    },
+    {
+     "feature": "heightInches",
+     "contribution": 0.1089,
+     "z": 1.056
+    }
+   ]
+  },
+  "John Collins": {
+   "pos": "PF",
+   "rank": {
+    "v53": 29,
+    "v54": 28,
+    "B12": 45
+   },
+   "ovr": {
+    "v53": 84.9,
+    "v54": 85.0,
+    "B12": 83.3
+   },
+   "predictedPer36": {
+    "v53": 1.454,
+    "v54": 1.515,
+    "B12": 1.231
+   },
+   "simulatedPer36": {
+    "v53": 1.553,
+    "v54": 0.975,
+    "B12": 0.71
+   },
+   "interceptDelta": -0.06830605225942599,
+   "deltaPredictedFromCoefficients": -0.22305587634384222,
+   "topTerms": [
+    {
+     "feature": "long",
+     "contribution": -0.3002,
+     "z": 1.486
+    },
+    {
+     "feature": "pass",
+     "contribution": -0.263,
+     "z": -1.317
+    },
+    {
+     "feature": "pass×PF",
+     "contribution": 0.1985,
+     "z": -1.317
+    },
+    {
+     "feature": "rebound",
+     "contribution": 0.1182,
+     "z": 0.714
+    },
+    {
+     "feature": "rebound×PF",
+     "contribution": -0.0987,
+     "z": 0.714
+    },
+    {
+     "feature": "creation",
+     "contribution": 0.0946,
+     "z": -0.989
+    },
+    {
+     "feature": "mid",
+     "contribution": 0.0806,
+     "z": 1.806
+    },
+    {
+     "feature": "heightInches",
+     "contribution": 0.0772,
+     "z": 0.748
+    }
+   ]
+  },
+  "Isaiah Stewart": {
+   "pos": "PF",
+   "rank": {
+    "v53": 32,
+    "v54": 31,
+    "B12": 60
+   },
+   "ovr": {
+    "v53": 84.6,
+    "v54": 84.7,
+    "B12": 81.2
+   },
+   "predictedPer36": {
+    "v53": 1.424,
+    "v54": 1.478,
+    "B12": 0.978
+   },
+   "simulatedPer36": {
+    "v53": 2.541,
+    "v54": 2.469,
+    "B12": 1.821
+   },
+   "interceptDelta": -0.06830605225942599,
+   "deltaPredictedFromCoefficients": -0.4459678629490858,
+   "topTerms": [
+    {
+     "feature": "help",
+     "contribution": -0.4117,
+     "z": 3.251
+    },
+    {
+     "feature": "pass",
+     "contribution": -0.2312,
+     "z": -1.158
+    },
+    {
+     "feature": "pass×PF",
+     "contribution": 0.1745,
+     "z": -1.158
+    },
+    {
+     "feature": "rebound",
+     "contribution": 0.1309,
+     "z": 0.791
+    },
+    {
+     "feature": "rebound×PF",
+     "contribution": -0.1093,
+     "z": 0.791
+    },
+    {
+     "feature": "creation",
+     "contribution": 0.1083,
+     "z": -1.132
+    },
+    {
+     "feature": "physique",
+     "contribution": -0.0927,
+     "z": 1.032
+    },
+    {
+     "feature": "long",
+     "contribution": 0.0867,
+     "z": -0.429
+    }
+   ]
+  },
+  "Luka Garza": {
+   "pos": "C",
+   "rank": {
+    "v53": 33,
+    "v54": 49,
+    "B12": 61
+   },
+   "ovr": {
+    "v53": 84.5,
+    "v54": 82.0,
+    "B12": 81.1
+   },
+   "predictedPer36": {
+    "v53": 1.405,
+    "v54": 1.149,
+    "B12": 0.971
+   },
+   "simulatedPer36": {
+    "v53": 1.36,
+    "v54": 0.607,
+    "B12": 0.546
+   },
+   "interceptDelta": -0.06830605225942599,
+   "deltaPredictedFromCoefficients": -0.4335733357819264,
+   "topTerms": [
+    {
+     "feature": "long",
+     "contribution": -0.3721,
+     "z": 1.842
+    },
+    {
+     "feature": "pass",
+     "contribution": -0.1795,
+     "z": -0.899
+    },
+    {
+     "feature": "rebound",
+     "contribution": 0.1767,
+     "z": 1.067
+    },
+    {
+     "feature": "heightInches",
+     "contribution": 0.1089,
+     "z": 1.056
+    },
+    {
+     "feature": "physique",
+     "contribution": -0.1065,
+     "z": 1.186
+    },
+    {
+     "feature": "creation",
+     "contribution": 0.0908,
+     "z": -0.949
+    },
+    {
+     "feature": "stamina",
+     "contribution": -0.0541,
+     "z": -0.766
+    },
+    {
+     "feature": "tovSkill",
+     "contribution": 0.0225,
+     "z": 0.575
+    }
+   ]
+  },
+  "Neemias Queta": {
+   "pos": "C",
+   "rank": {
+    "v53": 51,
+    "v54": 43,
+    "B12": 53
+   },
+   "ovr": {
+    "v53": 82.7,
+    "v54": 82.6,
+    "B12": 81.9
+   },
+   "predictedPer36": {
+    "v53": 1.196,
+    "v54": 1.22,
+    "B12": 1.063
+   },
+   "simulatedPer36": {
+    "v53": 2.274,
+    "v54": 2.405,
+    "B12": 2.998
+   },
+   "interceptDelta": -0.06830605225942599,
+   "deltaPredictedFromCoefficients": -0.13331501489031988,
+   "topTerms": [
+    {
+     "feature": "help",
+     "contribution": -0.3755,
+     "z": 2.966
+    },
+    {
+     "feature": "rebound",
+     "contribution": 0.231,
+     "z": 1.395
+    },
+    {
+     "feature": "heightInches",
+     "contribution": 0.1723,
+     "z": 1.67
+    },
+    {
+     "feature": "pass",
+     "contribution": -0.1596,
+     "z": -0.799
+    },
+    {
+     "feature": "creation",
+     "contribution": 0.1464,
+     "z": -1.531
+    },
+    {
+     "feature": "physique",
+     "contribution": -0.1294,
+     "z": 1.44
+    },
+    {
+     "feature": "long",
+     "contribution": 0.1128,
+     "z": -0.559
+    },
+    {
+     "feature": "mid",
+     "contribution": -0.0428,
+     "z": -0.96
+    }
+   ]
+  },
+  "Rudy Gobert": {
+   "pos": "C",
+   "rank": {
+    "v53": 68,
+    "v54": 65,
+    "B12": 79
+   },
+   "ovr": {
+    "v53": 80.4,
+    "v54": 80.5,
+    "B12": 79.6
+   },
+   "predictedPer36": {
+    "v53": 0.914,
+    "v54": 0.971,
+    "B12": 0.79
+   },
+   "simulatedPer36": {
+    "v53": 3.238,
+    "v54": 3.484,
+    "B12": 2.827
+   },
+   "interceptDelta": -0.06830605225942599,
+   "deltaPredictedFromCoefficients": -0.1239429318291167,
+   "topTerms": [
+    {
+     "feature": "help",
+     "contribution": -0.3452,
+     "z": 2.726
+    },
+    {
+     "feature": "rebound",
+     "contribution": 0.2395,
+     "z": 1.447
+    },
+    {
+     "feature": "pass",
+     "contribution": -0.2246,
+     "z": -1.125
+    },
+    {
+     "feature": "heightInches",
+     "contribution": 0.204,
+     "z": 1.977
+    },
+    {
+     "feature": "creation",
+     "contribution": 0.1571,
+     "z": -1.642
+    },
+    {
+     "feature": "physique",
+     "contribution": -0.1456,
+     "z": 1.621
+    },
+    {
+     "feature": "stamina",
+     "contribution": 0.1188,
+     "z": 1.681
+    },
+    {
+     "feature": "long",
+     "contribution": 0.1106,
+     "z": -0.548
+    }
+   ]
+  },
+  "Jalen Smith": {
+   "pos": "PF",
+   "rank": {
+    "v53": 104,
+    "v54": 97,
+    "B12": 134
+   },
+   "ovr": {
+    "v53": 78.4,
+    "v54": 78.4,
+    "B12": 76.1
+   },
+   "predictedPer36": {
+    "v53": 0.682,
+    "v54": 0.708,
+    "B12": 0.38
+   },
+   "simulatedPer36": {
+    "v53": 3.859,
+    "v54": 4.316,
+    "B12": 3.602
+   },
+   "interceptDelta": -0.06830605225942599,
+   "deltaPredictedFromCoefficients": -0.30281842392087016,
+   "topTerms": [
+    {
+     "feature": "rebound",
+     "contribution": 0.2257,
+     "z": 1.363
+    },
+    {
+     "feature": "pass",
+     "contribution": -0.2047,
+     "z": -1.025
+    },
+    {
+     "feature": "rebound×PF",
+     "contribution": -0.1885,
+     "z": 1.363
+    },
+    {
+     "feature": "pass×PF",
+     "contribution": 0.1545,
+     "z": -1.025
+    },
+    {
+     "feature": "help",
+     "contribution": -0.148,
+     "z": 1.169
+    },
+    {
+     "feature": "long",
+     "contribution": -0.1124,
+     "z": 0.556
+    },
+    {
+     "feature": "creation",
+     "contribution": 0.1098,
+     "z": -1.148
+    },
+    {
+     "feature": "physique",
+     "contribution": -0.0855,
+     "z": 0.952
+    }
+   ]
+  }
+ }
+}

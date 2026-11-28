@@ -1,0 +1,889 @@
+{
+ "p1": {
+  "P0": {
+   "2022-23->2023-24": {
+    "n": 183,
+    "spearman": 0.922409201632295
+   },
+   "2023-24->2024-25": {
+    "n": 183,
+    "spearman": 0.9294506277756458
+   },
+   "2024-25->2025-26": {
+    "n": 178,
+    "spearman": 0.8888724573877389
+   }
+  },
+  "P50": {
+   "2022-23->2023-24": {
+    "n": 183,
+    "spearman": 0.9271224142927637
+   },
+   "2023-24->2024-25": {
+    "n": 183,
+    "spearman": 0.9306862061673182
+   },
+   "2024-25->2025-26": {
+    "n": 178,
+    "spearman": 0.8961900313747103
+   }
+  }
+ },
+ "p1Min": {
+  "P0": 0.8888724573877389,
+  "P50": 0.8961900313747103
+ },
+ "named": [
+  {
+   "name": "Giannis Antetokounmpo",
+   "passRank": [
+    10.0,
+    25.5
+   ],
+   "passVal": [
+    97.7,
+    96.2
+   ],
+   "ovrRank": [
+    6,
+    6
+   ],
+   "ovr": [
+    97.6,
+    97.6
+   ],
+   "ast36": 6.789642331341474,
+   "astPctApprox": 38.070224231906465,
+   "MIN": 1039.0
+  },
+  {
+   "name": "Joel Embiid",
+   "passRank": [
+    95.5,
+    121.0
+   ],
+   "passVal": [
+    84.7,
+    82.5
+   ],
+   "ovrRank": [
+    24,
+    24
+   ],
+   "ovr": [
+    85.1,
+    85.1
+   ],
+   "ast36": 4.497607522665027,
+   "astPctApprox": 21.868994815363173,
+   "MIN": 1201.0
+  },
+  {
+   "name": "Nikola Jokić",
+   "passRank": [
+    1.0,
+    1.0
+   ],
+   "passVal": [
+    107.8,
+    110.4
+   ],
+   "ovrRank": [
+    3,
+    3
+   ],
+   "ovr": [
+    101.0,
+    101.7
+   ],
+   "ast36": 11.07885493773332,
+   "astPctApprox": 52.397809876739025,
+   "MIN": 2265.0
+  },
+  {
+   "name": "Luka Dončić",
+   "passRank": [
+    7.5,
+    9.0
+   ],
+   "passVal": [
+    98.5,
+    98.4
+   ],
+   "ovrRank": [
+    9,
+    9
+   ],
+   "ovr": [
+    95.2,
+    95.1
+   ],
+   "ast36": 8.336968498231453,
+   "astPctApprox": 40.168336435619445,
+   "MIN": 2289.0
+  },
+  {
+   "name": "James Harden",
+   "passRank": [
+    11.5,
+    12.0
+   ],
+   "passVal": [
+    97.5,
+    97.5
+   ],
+   "ovrRank": [
+    125,
+    127
+   ],
+   "ovr": [
+    74.7,
+    74.7
+   ],
+   "ast36": 8.223104824902245,
+   "astPctApprox": 33.262478779967964,
+   "MIN": 2438.0
+  },
+  {
+   "name": "Tyrese Haliburton",
+   "missing": true
+  },
+  {
+   "name": "Trae Young",
+   "passRank": [
+    3.0,
+    2.0
+   ],
+   "passVal": [
+    104.4,
+    109.5
+   ],
+   "ovrRank": [
+    208,
+    201
+   ],
+   "ovr": [
+    69.4,
+    70.1
+   ],
+   "ast36": 11.257231207546514,
+   "astPctApprox": 46.917820168155465,
+   "MIN": 384.0
+  },
+  {
+   "name": "Cade Cunningham",
+   "passRank": [
+    4.0,
+    4.0
+   ],
+   "passVal": [
+    102.3,
+    105.2
+   ],
+   "ovrRank": [
+    14,
+    14
+   ],
+   "ovr": [
+    87.3,
+    87.4
+   ],
+   "ast36": 10.50987603251873,
+   "astPctApprox": 45.22653679110582,
+   "MIN": 2172.0
+  },
+  {
+   "name": "Josh Giddey",
+   "passRank": [
+    7.5,
+    6.0
+   ],
+   "passVal": [
+    98.5,
+    98.9
+   ],
+   "ovrRank": [
+    49,
+    50
+   ],
+   "ovr": [
+    81.1,
+    81.0
+   ],
+   "ast36": 10.271713704281998,
+   "astPctApprox": 42.01926271804972,
+   "MIN": 1731.0
+  },
+  {
+   "name": "LaMelo Ball",
+   "passRank": [
+    6.0,
+    7.0
+   ],
+   "passVal": [
+    98.9,
+    98.8
+   ],
+   "ovrRank": [
+    106,
+    110
+   ],
+   "ovr": [
+    76.0,
+    75.8
+   ],
+   "ast36": 9.171989676720079,
+   "astPctApprox": 42.557724929399505,
+   "MIN": 2017.0
+  },
+  {
+   "name": "Isaiah Collier",
+   "passRank": [
+    9.0,
+    8.0
+   ],
+   "passVal": [
+    98.2,
+    98.7
+   ],
+   "ovrRank": [
+    571,
+    571
+   ],
+   "ovr": [
+    43.5,
+    43.3
+   ],
+   "ast36": 10.038762756111065,
+   "astPctApprox": 38.13998871138984,
+   "MIN": 1517.0
+  },
+  {
+   "name": "Stephon Castle",
+   "passRank": [
+    17.0,
+    13.5
+   ],
+   "passVal": [
+    96.8,
+    97.4
+   ],
+   "ovrRank": [
+    74,
+    73
+   ],
+   "ovr": [
+    79.4,
+    79.5
+   ],
+   "ast36": 8.868634093597002,
+   "astPctApprox": 34.494723171811884,
+   "MIN": 2038.0
+  },
+  {
+   "name": "Draymond Green",
+   "passRank": [
+    45.0,
+    38.0
+   ],
+   "passVal": [
+    91.7,
+    93.5
+   ],
+   "ovrRank": [
+    89,
+    89
+   ],
+   "ovr": [
+    77.8,
+    77.8
+   ],
+   "ast36": 7.242808336149922,
+   "astPctApprox": 26.976573651893876,
+   "MIN": 1869.0
+  },
+  {
+   "name": "Domantas Sabonis",
+   "passRank": [
+    81.0,
+    89.5
+   ],
+   "passVal": [
+    86.1,
+    85.8
+   ],
+   "ovrRank": [
+    153,
+    153
+   ],
+   "ovr": [
+    72.7,
+    72.9
+   ],
+   "ast36": 4.982360055951004,
+   "astPctApprox": 20.715622791695964,
+   "MIN": 564.0
+  },
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "passRank": [
+    14.0,
+    25.5
+   ],
+   "passVal": [
+    97.1,
+    96.2
+   ],
+   "ovrRank": [
+    1,
+    1
+   ],
+   "ovr": [
+    104.0,
+    104.8
+   ],
+   "ast36": 7.139610792050572,
+   "astPctApprox": 34.95322012266809,
+   "MIN": 2259.0
+  },
+  {
+   "name": "Cam Spencer",
+   "passRank": [
+    24.5,
+    19.5
+   ],
+   "passVal": [
+    95.7,
+    96.7
+   ],
+   "ovrRank": [
+    141,
+    143
+   ],
+   "ovr": [
+    73.8,
+    73.8
+   ],
+   "ast36": 8.399186912044765,
+   "astPctApprox": 34.67139659155671,
+   "MIN": 1714.0
+  }
+ ],
+ "passTop20": {
+  "P0": [
+   "Nikola Jokić",
+   "T.J. McConnell",
+   "Trae Young",
+   "Cade Cunningham",
+   "Ja Morant",
+   "LaMelo Ball",
+   "Luka Dončić",
+   "Josh Giddey",
+   "Isaiah Collier",
+   "Giannis Antetokounmpo",
+   "Ty Jerome",
+   "James Harden",
+   "Andrew Nembhard",
+   "Shai Gilgeous-Alexander",
+   "Ryan Nembhard",
+   "LeBron James",
+   "Stephon Castle",
+   "Russell Westbrook",
+   "Dejounte Murray",
+   "Kevin Porter Jr."
+  ],
+  "P50": [
+   "Nikola Jokić",
+   "Trae Young",
+   "T.J. McConnell",
+   "Cade Cunningham",
+   "Ja Morant",
+   "Josh Giddey",
+   "LaMelo Ball",
+   "Isaiah Collier",
+   "Luka Dončić",
+   "Ryan Nembhard",
+   "Andrew Nembhard",
+   "James Harden",
+   "Stephon Castle",
+   "Chris Paul",
+   "Ty Jerome",
+   "Russell Westbrook",
+   "LeBron James",
+   "Jamal Shead",
+   "Cam Spencer",
+   "Darius Garland"
+  ]
+ },
+ "ovrTop20": {
+  "P0": [
+   "Shai Gilgeous-Alexander",
+   "Victor Wembanyama",
+   "Nikola Jokić",
+   "Derrick White",
+   "Kawhi Leonard",
+   "Giannis Antetokounmpo",
+   "Franz Wagner",
+   "Chet Holmgren",
+   "Luka Dončić",
+   "Lauri Markkanen",
+   "Amen Thompson",
+   "Donovan Mitchell",
+   "Neemias Queta",
+   "Cade Cunningham",
+   "Jimmy Butler III",
+   "Herbert Jones",
+   "Dyson Daniels",
+   "Ryan Rollins",
+   "OG Anunoby",
+   "Ausar Thompson"
+  ],
+  "P50": [
+   "Shai Gilgeous-Alexander",
+   "Victor Wembanyama",
+   "Nikola Jokić",
+   "Derrick White",
+   "Kawhi Leonard",
+   "Giannis Antetokounmpo",
+   "Franz Wagner",
+   "Chet Holmgren",
+   "Luka Dončić",
+   "Lauri Markkanen",
+   "Amen Thompson",
+   "Donovan Mitchell",
+   "Neemias Queta",
+   "Cade Cunningham",
+   "Jimmy Butler III",
+   "Herbert Jones",
+   "Dyson Daniels",
+   "Ryan Rollins",
+   "Kon Knueppel",
+   "OG Anunoby"
+  ]
+ },
+ "passMovers30_MIN1000": [
+  {
+   "name": "Craig Porter Jr.",
+   "passRank": [
+    99.0,
+    69.0
+   ],
+   "MIN": 1148.0
+  },
+  {
+   "name": "Zach LaVine",
+   "passRank": [
+    314.0,
+    346.5
+   ],
+   "MIN": 1224.0
+  },
+  {
+   "name": "Shaedon Sharpe",
+   "passRank": [
+    227.0,
+    261.5
+   ],
+   "MIN": 1471.0
+  },
+  {
+   "name": "Jaren Jackson Jr.",
+   "passRank": [
+    395.5,
+    431.0
+   ],
+   "MIN": 1455.0
+  },
+  {
+   "name": "Kawhi Leonard",
+   "passRank": [
+    121.0,
+    157.5
+   ],
+   "MIN": 2085.0
+  },
+  {
+   "name": "Ivica Zubac",
+   "passRank": [
+    345.0,
+    382.0
+   ],
+   "MIN": 1447.0
+  },
+  {
+   "name": "Bobby Portis Jr.",
+   "passRank": [
+    384.0,
+    423.0
+   ],
+   "MIN": 1619.0
+  },
+  {
+   "name": "Lauri Markkanen",
+   "passRank": [
+    407.0,
+    449.0
+   ],
+   "MIN": 1443.0
+  },
+  {
+   "name": "Michael Porter Jr.",
+   "passRank": [
+    189.0,
+    243.0
+   ],
+   "MIN": 1689.0
+  }
+ ],
+ "ovrMovers10": {
+  "count": 4,
+  "N": 582
+ },
+ "simulatedPer36Delta": {
+  "median": 0.0,
+  "meanAbs": 0.0,
+  "top10AbsChange": [
+   [
+    "Shai Gilgeous-Alexander",
+    0.0
+   ],
+   [
+    "Victor Wembanyama",
+    0.0
+   ],
+   [
+    "Nikola Jokić",
+    0.0
+   ],
+   [
+    "Derrick White",
+    0.0
+   ],
+   [
+    "Kawhi Leonard",
+    0.0
+   ],
+   [
+    "Giannis Antetokounmpo",
+    0.0
+   ],
+   [
+    "Franz Wagner",
+    0.0
+   ],
+   [
+    "Chet Holmgren",
+    0.0
+   ],
+   [
+    "Luka Dončić",
+    0.0
+   ],
+   [
+    "Lauri Markkanen",
+    0.0
+   ]
+  ]
+ },
+ "topBigsP0": [
+  [
+   "Victor Wembanyama",
+   2
+  ],
+  [
+   "Nikola Jokić",
+   3
+  ],
+  [
+   "Giannis Antetokounmpo",
+   6
+  ],
+  [
+   "Franz Wagner",
+   7
+  ],
+  [
+   "Chet Holmgren",
+   8
+  ],
+  [
+   "Lauri Markkanen",
+   10
+  ],
+  [
+   "Neemias Queta",
+   13
+  ],
+  [
+   "Evan Mobley",
+   22
+  ],
+  [
+   "Joel Embiid",
+   24
+  ],
+  [
+   "Kevin Durant",
+   27
+  ]
+ ],
+ "topBigsP50": [
+  [
+   "Victor Wembanyama",
+   2
+  ],
+  [
+   "Nikola Jokić",
+   3
+  ],
+  [
+   "Giannis Antetokounmpo",
+   6
+  ],
+  [
+   "Franz Wagner",
+   7
+  ],
+  [
+   "Chet Holmgren",
+   8
+  ],
+  [
+   "Lauri Markkanen",
+   10
+  ],
+  [
+   "Neemias Queta",
+   13
+  ],
+  [
+   "Evan Mobley",
+   22
+  ],
+  [
+   "Joel Embiid",
+   24
+  ],
+  [
+   "Kevin Durant",
+   25
+  ]
+ ],
+ "astvolFit": {
+  "trainN": 3424,
+  "trainA": 0.7127507035334888,
+  "shrinkCheck2025_26": {
+   "n": 372,
+   "shrunk": 0.6236548911865432,
+   "k0": 0.7472664172725821,
+   "firstHalfOnly": 0.7824332320565488
+  }
+ },
+ "results": {
+  "checks": {
+   "c0": {
+    "pass": true
+   },
+   "c1": {
+    "value": true,
+    "pass": true
+   },
+   "m1": {
+    "value": {
+     "point": 0.0004428307354497063,
+     "ci90": [
+      -0.00043122553955475816,
+      0.0013156670621468772
+     ],
+     "rho_cand": 0.4988148635484352,
+     "rho_base": 0.4983720328129855,
+     "per_direction": {
+      "AB": {
+       "cand": 0.47066065411015456,
+       "base": 0.47074036397440316
+      },
+      "BA": {
+       "cand": 0.5269690729867158,
+       "base": 0.5260037016515677
+      }
+     }
+    },
+    "threshold": "Δρ_{N_W} 下界 > -0.02",
+    "pass": true
+   },
+   "m2": {
+    "value": {
+     "point": 0.0006851423066579487,
+     "ci90": [
+      -0.00022729921779504058,
+      0.0017372823259846515
+     ],
+     "rho_cand": 0.591418842537042,
+     "rho_base": 0.5907337002303841,
+     "per_direction": {
+      "AB": {
+       "cand": 0.5832069051982656,
+       "base": 0.5830727643013971
+      },
+      "BA": {
+       "cand": 0.5996307798758185,
+       "base": 0.598394636159371
+      }
+     }
+    },
+    "threshold": "Δρ_{Q_W} 下界 > -0.05",
+    "pass": true
+   },
+   "m3": {
+    "value": {
+     "point": 0.0004265328740727936,
+     "ci90": [
+      -0.0004615614896986614,
+      0.0012899850892322373
+     ],
+     "rho_cand": 0.49746775435808965,
+     "rho_base": 0.49704122148401686,
+     "per_direction": {
+      "AB": {
+       "cand": 0.4698725253756659,
+       "base": 0.46998770714881277
+      },
+      "BA": {
+       "cand": 0.5250629833405135,
+       "base": 0.524094735819221
+      }
+     }
+    },
+    "threshold": "Δρ_{N_lin} 下界 > -0.05",
+    "pass": true
+   },
+   "r1p": {
+    "Wagner": 7,
+    "Wembanyama": 2,
+    "Cade_reportOnly": 14,
+    "Tatum_reportOnly": 33,
+    "gap": 5,
+    "pass": true
+   }
+  },
+  "eval": {
+   "dRho_N_W": {
+    "point": 0.0004428307354497063,
+    "ci90": [
+     -0.00043122553955475816,
+     0.0013156670621468772
+    ],
+    "rho_cand": 0.4988148635484352,
+    "rho_base": 0.4983720328129855,
+    "per_direction": {
+     "AB": {
+      "cand": 0.47066065411015456,
+      "base": 0.47074036397440316
+     },
+     "BA": {
+      "cand": 0.5269690729867158,
+      "base": 0.5260037016515677
+     }
+    }
+   },
+   "dRho_Q_W": {
+    "point": 0.0006851423066579487,
+    "ci90": [
+     -0.00022729921779504058,
+     0.0017372823259846515
+    ],
+    "rho_cand": 0.591418842537042,
+    "rho_base": 0.5907337002303841,
+    "per_direction": {
+     "AB": {
+      "cand": 0.5832069051982656,
+      "base": 0.5830727643013971
+     },
+     "BA": {
+      "cand": 0.5996307798758185,
+      "base": 0.598394636159371
+     }
+    }
+   },
+   "dRho_N_lin": {
+    "point": 0.0004265328740727936,
+    "ci90": [
+     -0.0004615614896986614,
+     0.0012899850892322373
+    ],
+    "rho_cand": 0.49746775435808965,
+    "rho_base": 0.49704122148401686,
+    "per_direction": {
+     "AB": {
+      "cand": 0.4698725253756659,
+      "base": 0.46998770714881277
+     },
+     "BA": {
+      "cand": 0.5250629833405135,
+      "base": 0.524094735819221
+     }
+    }
+   },
+   "dRho_Q_lin": {
+    "point": 0.0006221862266999612,
+    "ci90": [
+     -0.0002820660858112889,
+     0.0016280278537418693
+    ],
+    "rho_cand": 0.5929468907013391,
+    "rho_base": 0.5923247044746391,
+    "per_direction": {
+     "AB": {
+      "cand": 0.5820216541733516,
+      "base": 0.5819700772023673
+     },
+     "BA": {
+      "cand": 0.6038721272293267,
+      "base": 0.6026793317469111
+     }
+    }
+   }
+  },
+  "anchors": {
+   "P0": {
+    "PR1": -0.8313494840642134,
+    "PR50": 1.2520865387175606,
+    "PR99": 4.120111088432906
+   },
+   "P50": {
+    "PR1": -0.8255902117515846,
+    "PR50": 1.256711733065641,
+    "PR99": 4.137589168675391
+   }
+  },
+  "evaluate_gates": {
+   "card-0.2.7": {
+    "pass": 18,
+    "of": 19,
+    "failed": [
+     "big14of16"
+    ],
+    "rho2k": 0.7358940806363692,
+    "rhoRapm": 0.7792522323601216
+   },
+   "E125-P0": {
+    "pass": 18,
+    "of": 19,
+    "failed": [
+     "big14of16"
+    ],
+    "rho2k": 0.7358940806363692,
+    "rhoRapm": 0.7792522323601216
+   },
+   "E125-P50": {
+    "pass": 18,
+    "of": 19,
+    "failed": [
+     "big14of16"
+    ],
+    "rho2k": 0.7368567110852529,
+    "rhoRapm": 0.7789538092214117
+   }
+  }
+ }
+}

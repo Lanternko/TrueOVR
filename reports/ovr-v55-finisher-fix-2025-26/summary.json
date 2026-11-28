@@ -1,0 +1,865 @@
+{
+ "variants": {
+  "v54": {
+   "bucketSpearmanVsPooledRAPM": {
+    "<800": {
+     "players": 101,
+     "raw": 0.12015142690739661,
+     "v2": 0.1691322073383809
+    },
+    "800-1300": {
+     "players": 98,
+     "raw": 0.4420111062231828,
+     "v2": 0.43518925845877243
+    },
+    "1300+": {
+     "players": 215,
+     "raw": 0.44577145065082474,
+     "v2": 0.4461300683426308
+    },
+    "all": {
+     "players": 414,
+     "raw": 0.3892575460278846,
+     "v2": 0.42441254649083765
+    }
+   },
+   "bucketSpearmanVsLastSeasonRAPM": {
+    "<800": {
+     "players": 170,
+     "raw": 0.4171090796954098,
+     "v2": 0.43391650026563106
+    },
+    "800-1300": {
+     "players": 112,
+     "raw": 0.39677794102572866,
+     "v2": 0.39670960467420646
+    },
+    "1300+": {
+     "players": 215,
+     "raw": 0.5004069163708372,
+     "v2": 0.5001618005747543
+    },
+    "all": {
+     "players": 497,
+     "raw": 0.49056122588621515,
+     "v2": 0.514904037516979
+    }
+   },
+   "defenseSpearman": {
+    "raw": 0.28895377277083917,
+    "v1": 0.3011004751715569,
+    "v2": 0.3025496236974427
+   },
+   "focus": {
+    "Rudy Gobert": {
+     "rawRank": 25,
+     "v1Rank": 11,
+     "v2Rank": 12,
+     "sourceMinutes": 2380
+    },
+    "Nikola Jokić": {
+     "rawRank": 7,
+     "v1Rank": 5,
+     "v2Rank": 6,
+     "sourceMinutes": 2265
+    },
+    "John Collins": {
+     "rawRank": 151,
+     "v1Rank": 112,
+     "v2Rank": 119,
+     "sourceMinutes": 1871
+    },
+    "Shai Gilgeous-Alexander": {
+     "rawRank": 1,
+     "v1Rank": 1,
+     "v2Rank": 1,
+     "sourceMinutes": 2259
+    },
+    "Trae Young": {
+     "rawRank": 237,
+     "v1Rank": 194,
+     "v2Rank": 200,
+     "sourceMinutes": 384
+    },
+    "Luka Dončić": {
+     "rawRank": 9,
+     "v1Rank": 4,
+     "v2Rank": 7,
+     "sourceMinutes": 2289
+    },
+    "Robert Williams III": {
+     "rawRank": 23,
+     "v1Rank": 23,
+     "v2Rank": 15,
+     "sourceMinutes": 1008
+    },
+    "Jaxson Hayes": {
+     "rawRank": 191,
+     "v1Rank": 170,
+     "v2Rank": 154,
+     "sourceMinutes": 1207
+    },
+    "Charles Bassey": {
+     "rawRank": 8,
+     "v1Rank": 36,
+     "v2Rank": 35,
+     "sourceMinutes": 153
+    },
+    "Neemias Queta": {
+     "rawRank": 56,
+     "v1Rank": 35,
+     "v2Rank": 36,
+     "sourceMinutes": 1926
+    },
+    "Jalen Smith": {
+     "rawRank": 16,
+     "v1Rank": 10,
+     "v2Rank": 9,
+     "sourceMinutes": 1095
+    },
+    "Isaiah Stewart": {
+     "rawRank": 53,
+     "v1Rank": 37,
+     "v2Rank": 34,
+     "sourceMinutes": 1317
+    },
+    "Luka Garza": {
+     "rawRank": 189,
+     "v1Rank": 181,
+     "v2Rank": 164,
+     "sourceMinutes": 1118
+    },
+    "Josh Minott": {
+     "rawRank": 33,
+     "v1Rank": 24,
+     "v2Rank": 22,
+     "sourceMinutes": 834
+    },
+    "Karlo Matković": {
+     "rawRank": 24,
+     "v1Rank": 26,
+     "v2Rank": 20,
+     "sourceMinutes": 912
+    },
+    "Victor Wembanyama": {
+     "rawRank": 6,
+     "v1Rank": 6,
+     "v2Rank": 5,
+     "sourceMinutes": 1866
+    },
+    "Jordan Walsh": {
+     "rawRank": 259,
+     "v1Rank": 236,
+     "v2Rank": 231,
+     "sourceMinutes": 1212
+    }
+   }
+  },
+  "B1": {
+   "bucketSpearmanVsPooledRAPM": {
+    "<800": {
+     "players": 101,
+     "raw": 0.25185789167152006,
+     "v2": 0.317472335468841
+    },
+    "800-1300": {
+     "players": 98,
+     "raw": 0.39385013611817726,
+     "v2": 0.3881886400295826
+    },
+    "1300+": {
+     "players": 215,
+     "raw": 0.4427551981453307,
+     "v2": 0.4423253399019536
+    },
+    "all": {
+     "players": 414,
+     "raw": 0.42194667711798883,
+     "v2": 0.45594053231559784
+    }
+   },
+   "bucketSpearmanVsLastSeasonRAPM": {
+    "<800": {
+     "players": 170,
+     "raw": 0.4197592833458516,
+     "v2": 0.44954415275920395
+    },
+    "800-1300": {
+     "players": 112,
+     "raw": 0.38200020500905457,
+     "v2": 0.3824529333378891
+    },
+    "1300+": {
+     "players": 215,
+     "raw": 0.5306104953029536,
+     "v2": 0.5298268492356734
+    },
+    "all": {
+     "players": 497,
+     "raw": 0.5017962418897373,
+     "v2": 0.5253056426393573
+    }
+   },
+   "defenseSpearman": {
+    "raw": 0.3027273638188928,
+    "v1": 0.3079898919818658,
+    "v2": 0.3090066128288288
+   },
+   "focus": {
+    "Rudy Gobert": {
+     "rawRank": 36,
+     "v1Rank": 19,
+     "v2Rank": 24,
+     "sourceMinutes": 2380
+    },
+    "Nikola Jokić": {
+     "rawRank": 4,
+     "v1Rank": 2,
+     "v2Rank": 2,
+     "sourceMinutes": 2265
+    },
+    "John Collins": {
+     "rawRank": 163,
+     "v1Rank": 111,
+     "v2Rank": 121,
+     "sourceMinutes": 1871
+    },
+    "Shai Gilgeous-Alexander": {
+     "rawRank": 3,
+     "v1Rank": 1,
+     "v2Rank": 1,
+     "sourceMinutes": 2259
+    },
+    "Trae Young": {
+     "rawRank": 108,
+     "v1Rank": 82,
+     "v2Rank": 75,
+     "sourceMinutes": 384
+    },
+    "Luka Dončić": {
+     "rawRank": 13,
+     "v1Rank": 6,
+     "v2Rank": 7,
+     "sourceMinutes": 2289
+    },
+    "Robert Williams III": {
+     "rawRank": 128,
+     "v1Rank": 120,
+     "v2Rank": 100,
+     "sourceMinutes": 1008
+    },
+    "Jaxson Hayes": {
+     "rawRank": 161,
+     "v1Rank": 137,
+     "v2Rank": 122,
+     "sourceMinutes": 1207
+    },
+    "Charles Bassey": {
+     "rawRank": 22,
+     "v1Rank": 96,
+     "v2Rank": 87,
+     "sourceMinutes": 153
+    },
+    "Neemias Queta": {
+     "rawRank": 34,
+     "v1Rank": 20,
+     "v2Rank": 23,
+     "sourceMinutes": 1926
+    },
+    "Jalen Smith": {
+     "rawRank": 21,
+     "v1Rank": 21,
+     "v2Rank": 13,
+     "sourceMinutes": 1095
+    },
+    "Isaiah Stewart": {
+     "rawRank": 82,
+     "v1Rank": 63,
+     "v2Rank": 56,
+     "sourceMinutes": 1317
+    },
+    "Luka Garza": {
+     "rawRank": 178,
+     "v1Rank": 158,
+     "v2Rank": 147,
+     "sourceMinutes": 1118
+    },
+    "Josh Minott": {
+     "rawRank": 40,
+     "v1Rank": 42,
+     "v2Rank": 35,
+     "sourceMinutes": 834
+    },
+    "Karlo Matković": {
+     "rawRank": 12,
+     "v1Rank": 15,
+     "v2Rank": 11,
+     "sourceMinutes": 912
+    },
+    "Victor Wembanyama": {
+     "rawRank": 8,
+     "v1Rank": 3,
+     "v2Rank": 4,
+     "sourceMinutes": 1866
+    },
+    "Jordan Walsh": {
+     "rawRank": 141,
+     "v1Rank": 119,
+     "v2Rank": 113,
+     "sourceMinutes": 1212
+    }
+   }
+  },
+  "B2": {
+   "bucketSpearmanVsPooledRAPM": {
+    "<800": {
+     "players": 101,
+     "raw": 0.12015142690739661,
+     "v2": 0.1691322073383809
+    },
+    "800-1300": {
+     "players": 98,
+     "raw": 0.4420111062231828,
+     "v2": 0.43518925845877243
+    },
+    "1300+": {
+     "players": 215,
+     "raw": 0.44577145065082474,
+     "v2": 0.4461300683426308
+    },
+    "all": {
+     "players": 414,
+     "raw": 0.3892575460278846,
+     "v2": 0.42441254649083765
+    }
+   },
+   "bucketSpearmanVsLastSeasonRAPM": {
+    "<800": {
+     "players": 170,
+     "raw": 0.4171090796954098,
+     "v2": 0.43391650026563106
+    },
+    "800-1300": {
+     "players": 112,
+     "raw": 0.39677794102572866,
+     "v2": 0.39670960467420646
+    },
+    "1300+": {
+     "players": 215,
+     "raw": 0.5004069163708372,
+     "v2": 0.5001618005747543
+    },
+    "all": {
+     "players": 497,
+     "raw": 0.49056122588621515,
+     "v2": 0.514904037516979
+    }
+   },
+   "defenseSpearman": {
+    "raw": 0.28895377277083917,
+    "v1": 0.3011004751715569,
+    "v2": 0.3025496236974427
+   },
+   "focus": {
+    "Rudy Gobert": {
+     "rawRank": 25,
+     "v1Rank": 11,
+     "v2Rank": 12,
+     "sourceMinutes": 2380
+    },
+    "Nikola Jokić": {
+     "rawRank": 7,
+     "v1Rank": 5,
+     "v2Rank": 6,
+     "sourceMinutes": 2265
+    },
+    "John Collins": {
+     "rawRank": 151,
+     "v1Rank": 112,
+     "v2Rank": 119,
+     "sourceMinutes": 1871
+    },
+    "Shai Gilgeous-Alexander": {
+     "rawRank": 1,
+     "v1Rank": 1,
+     "v2Rank": 1,
+     "sourceMinutes": 2259
+    },
+    "Trae Young": {
+     "rawRank": 237,
+     "v1Rank": 194,
+     "v2Rank": 200,
+     "sourceMinutes": 384
+    },
+    "Luka Dončić": {
+     "rawRank": 9,
+     "v1Rank": 4,
+     "v2Rank": 7,
+     "sourceMinutes": 2289
+    },
+    "Robert Williams III": {
+     "rawRank": 23,
+     "v1Rank": 23,
+     "v2Rank": 15,
+     "sourceMinutes": 1008
+    },
+    "Jaxson Hayes": {
+     "rawRank": 191,
+     "v1Rank": 170,
+     "v2Rank": 154,
+     "sourceMinutes": 1207
+    },
+    "Charles Bassey": {
+     "rawRank": 8,
+     "v1Rank": 36,
+     "v2Rank": 35,
+     "sourceMinutes": 153
+    },
+    "Neemias Queta": {
+     "rawRank": 56,
+     "v1Rank": 35,
+     "v2Rank": 36,
+     "sourceMinutes": 1926
+    },
+    "Jalen Smith": {
+     "rawRank": 16,
+     "v1Rank": 10,
+     "v2Rank": 9,
+     "sourceMinutes": 1095
+    },
+    "Isaiah Stewart": {
+     "rawRank": 53,
+     "v1Rank": 37,
+     "v2Rank": 34,
+     "sourceMinutes": 1317
+    },
+    "Luka Garza": {
+     "rawRank": 189,
+     "v1Rank": 181,
+     "v2Rank": 164,
+     "sourceMinutes": 1118
+    },
+    "Josh Minott": {
+     "rawRank": 33,
+     "v1Rank": 24,
+     "v2Rank": 22,
+     "sourceMinutes": 834
+    },
+    "Karlo Matković": {
+     "rawRank": 24,
+     "v1Rank": 26,
+     "v2Rank": 20,
+     "sourceMinutes": 912
+    },
+    "Victor Wembanyama": {
+     "rawRank": 6,
+     "v1Rank": 6,
+     "v2Rank": 5,
+     "sourceMinutes": 1866
+    },
+    "Jordan Walsh": {
+     "rawRank": 259,
+     "v1Rank": 236,
+     "v2Rank": 231,
+     "sourceMinutes": 1212
+    }
+   }
+  },
+  "B12": {
+   "bucketSpearmanVsPooledRAPM": {
+    "<800": {
+     "players": 101,
+     "raw": 0.25185789167152006,
+     "v2": 0.317472335468841
+    },
+    "800-1300": {
+     "players": 98,
+     "raw": 0.39385013611817726,
+     "v2": 0.3881886400295826
+    },
+    "1300+": {
+     "players": 215,
+     "raw": 0.4427551981453307,
+     "v2": 0.4423253399019536
+    },
+    "all": {
+     "players": 414,
+     "raw": 0.42194667711798883,
+     "v2": 0.45594053231559784
+    }
+   },
+   "bucketSpearmanVsLastSeasonRAPM": {
+    "<800": {
+     "players": 170,
+     "raw": 0.4197592833458516,
+     "v2": 0.44954415275920395
+    },
+    "800-1300": {
+     "players": 112,
+     "raw": 0.38200020500905457,
+     "v2": 0.3824529333378891
+    },
+    "1300+": {
+     "players": 215,
+     "raw": 0.5306104953029536,
+     "v2": 0.5298268492356734
+    },
+    "all": {
+     "players": 497,
+     "raw": 0.5017962418897373,
+     "v2": 0.5253056426393573
+    }
+   },
+   "defenseSpearman": {
+    "raw": 0.3027273638188928,
+    "v1": 0.3079898919818658,
+    "v2": 0.3090066128288288
+   },
+   "focus": {
+    "Rudy Gobert": {
+     "rawRank": 36,
+     "v1Rank": 19,
+     "v2Rank": 24,
+     "sourceMinutes": 2380
+    },
+    "Nikola Jokić": {
+     "rawRank": 4,
+     "v1Rank": 2,
+     "v2Rank": 2,
+     "sourceMinutes": 2265
+    },
+    "John Collins": {
+     "rawRank": 163,
+     "v1Rank": 111,
+     "v2Rank": 121,
+     "sourceMinutes": 1871
+    },
+    "Shai Gilgeous-Alexander": {
+     "rawRank": 3,
+     "v1Rank": 1,
+     "v2Rank": 1,
+     "sourceMinutes": 2259
+    },
+    "Trae Young": {
+     "rawRank": 108,
+     "v1Rank": 82,
+     "v2Rank": 75,
+     "sourceMinutes": 384
+    },
+    "Luka Dončić": {
+     "rawRank": 13,
+     "v1Rank": 6,
+     "v2Rank": 7,
+     "sourceMinutes": 2289
+    },
+    "Robert Williams III": {
+     "rawRank": 128,
+     "v1Rank": 120,
+     "v2Rank": 100,
+     "sourceMinutes": 1008
+    },
+    "Jaxson Hayes": {
+     "rawRank": 161,
+     "v1Rank": 137,
+     "v2Rank": 122,
+     "sourceMinutes": 1207
+    },
+    "Charles Bassey": {
+     "rawRank": 22,
+     "v1Rank": 96,
+     "v2Rank": 87,
+     "sourceMinutes": 153
+    },
+    "Neemias Queta": {
+     "rawRank": 34,
+     "v1Rank": 20,
+     "v2Rank": 23,
+     "sourceMinutes": 1926
+    },
+    "Jalen Smith": {
+     "rawRank": 21,
+     "v1Rank": 21,
+     "v2Rank": 13,
+     "sourceMinutes": 1095
+    },
+    "Isaiah Stewart": {
+     "rawRank": 82,
+     "v1Rank": 63,
+     "v2Rank": 56,
+     "sourceMinutes": 1317
+    },
+    "Luka Garza": {
+     "rawRank": 178,
+     "v1Rank": 158,
+     "v2Rank": 147,
+     "sourceMinutes": 1118
+    },
+    "Josh Minott": {
+     "rawRank": 40,
+     "v1Rank": 42,
+     "v2Rank": 35,
+     "sourceMinutes": 834
+    },
+    "Karlo Matković": {
+     "rawRank": 12,
+     "v1Rank": 15,
+     "v2Rank": 11,
+     "sourceMinutes": 912
+    },
+    "Victor Wembanyama": {
+     "rawRank": 8,
+     "v1Rank": 3,
+     "v2Rank": 4,
+     "sourceMinutes": 1866
+    },
+    "Jordan Walsh": {
+     "rawRank": 141,
+     "v1Rank": 119,
+     "v2Rank": 113,
+     "sourceMinutes": 1212
+    }
+   }
+  },
+  "B12_oos": {
+   "bucketSpearmanVsPooledRAPM": {
+    "<800": {
+     "players": 101,
+     "raw": 0.18196854979615606,
+     "v2": 0.23785672684915551
+    },
+    "800-1300": {
+     "players": 98,
+     "raw": 0.3672130520436853,
+     "v2": 0.376126083048027
+    },
+    "1300+": {
+     "players": 215,
+     "raw": 0.4654628220918158,
+     "v2": 0.4654471250211306
+    },
+    "all": {
+     "players": 414,
+     "raw": 0.39846384168107324,
+     "v2": 0.433059578032099
+    }
+   },
+   "bucketSpearmanVsLastSeasonRAPM": {
+    "<800": {
+     "players": 170,
+     "raw": 0.45723584980550935,
+     "v2": 0.47594360073521785
+    },
+    "800-1300": {
+     "players": 112,
+     "raw": 0.3672310110363208,
+     "v2": 0.3747907199234633
+    },
+    "1300+": {
+     "players": 215,
+     "raw": 0.5309775652635901,
+     "v2": 0.5307227897317008
+    },
+    "all": {
+     "players": 497,
+     "raw": 0.4974124771950788,
+     "v2": 0.5171346774780045
+    }
+   },
+   "defenseSpearman": {
+    "raw": 0.30533884141683065,
+    "v1": 0.3072427408338481,
+    "v2": 0.3063195407168204
+   },
+   "focus": {
+    "Rudy Gobert": {
+     "rawRank": 54,
+     "v1Rank": 29,
+     "v2Rank": 35,
+     "sourceMinutes": 2380
+    },
+    "Nikola Jokić": {
+     "rawRank": 7,
+     "v1Rank": 3,
+     "v2Rank": 4,
+     "sourceMinutes": 2265
+    },
+    "John Collins": {
+     "rawRank": 337,
+     "v1Rank": 302,
+     "v2Rank": 314,
+     "sourceMinutes": 1871
+    },
+    "Shai Gilgeous-Alexander": {
+     "rawRank": 2,
+     "v1Rank": 1,
+     "v2Rank": 1,
+     "sourceMinutes": 2259
+    },
+    "Trae Young": {
+     "rawRank": 253,
+     "v1Rank": 201,
+     "v2Rank": 208,
+     "sourceMinutes": 384
+    },
+    "Luka Dončić": {
+     "rawRank": 9,
+     "v1Rank": 4,
+     "v2Rank": 6,
+     "sourceMinutes": 2289
+    },
+    "Robert Williams III": {
+     "rawRank": 41,
+     "v1Rank": 36,
+     "v2Rank": 29,
+     "sourceMinutes": 1008
+    },
+    "Jaxson Hayes": {
+     "rawRank": 178,
+     "v1Rank": 148,
+     "v2Rank": 138,
+     "sourceMinutes": 1207
+    },
+    "Charles Bassey": {
+     "rawRank": 19,
+     "v1Rank": 59,
+     "v2Rank": 59,
+     "sourceMinutes": 153
+    },
+    "Neemias Queta": {
+     "rawRank": 50,
+     "v1Rank": 30,
+     "v2Rank": 33,
+     "sourceMinutes": 1926
+    },
+    "Jalen Smith": {
+     "rawRank": 27,
+     "v1Rank": 20,
+     "v2Rank": 15,
+     "sourceMinutes": 1095
+    },
+    "Isaiah Stewart": {
+     "rawRank": 102,
+     "v1Rank": 72,
+     "v2Rank": 70,
+     "sourceMinutes": 1317
+    },
+    "Luka Garza": {
+     "rawRank": 110,
+     "v1Rank": 103,
+     "v2Rank": 93,
+     "sourceMinutes": 1118
+    },
+    "Josh Minott": {
+     "rawRank": 20,
+     "v1Rank": 22,
+     "v2Rank": 16,
+     "sourceMinutes": 834
+    },
+    "Karlo Matković": {
+     "rawRank": 11,
+     "v1Rank": 14,
+     "v2Rank": 12,
+     "sourceMinutes": 912
+    },
+    "Victor Wembanyama": {
+     "rawRank": 10,
+     "v1Rank": 5,
+     "v2Rank": 7,
+     "sourceMinutes": 1866
+    },
+    "Jordan Walsh": {
+     "rawRank": 125,
+     "v1Rank": 93,
+     "v2Rank": 91,
+     "sourceMinutes": 1212
+    }
+   }
+  }
+ },
+ "a4": {
+  "B1": {
+   "finishers": {
+    "players": 40,
+    "meanRankChange": -10.5,
+    "medianRankChange": -4.5
+   },
+   "creators": {
+    "players": 27,
+    "meanRankChange": 7.62962962962963,
+    "medianRankChange": 7.0
+   },
+   "karlo": {
+    "v54Rank": 20,
+    "rank": 11,
+    "change": 9
+   },
+   "finisherMinusCreator": -18.12962962962963,
+   "karloDropsAtLeast10": false,
+   "gapAtMostMinus10": true,
+   "passed": false
+  },
+  "B2": {
+   "finishers": {
+    "players": 40,
+    "meanRankChange": 0.0,
+    "medianRankChange": 0.0
+   },
+   "creators": {
+    "players": 27,
+    "meanRankChange": 0.0,
+    "medianRankChange": 0.0
+   },
+   "karlo": {
+    "v54Rank": 20,
+    "rank": 20,
+    "change": 0
+   },
+   "finisherMinusCreator": 0.0,
+   "karloDropsAtLeast10": false,
+   "gapAtMostMinus10": false,
+   "passed": false
+  },
+  "B12": {
+   "finishers": {
+    "players": 40,
+    "meanRankChange": -10.5,
+    "medianRankChange": -4.5
+   },
+   "creators": {
+    "players": 27,
+    "meanRankChange": 7.62962962962963,
+    "medianRankChange": 7.0
+   },
+   "karlo": {
+    "v54Rank": 20,
+    "rank": 11,
+    "change": 9
+   },
+   "finisherMinusCreator": -18.12962962962963,
+   "karloDropsAtLeast10": false,
+   "gapAtMostMinus10": true,
+   "passed": false
+  },
+  "B12_oos": {
+   "finishers": {
+    "players": 40,
+    "meanRankChange": -23.775,
+    "medianRankChange": -14.0
+   },
+   "creators": {
+    "players": 27,
+    "meanRankChange": 14.0,
+    "medianRankChange": 14.0
+   },
+   "karlo": {
+    "v54Rank": 20,
+    "rank": 12,
+    "change": 8
+   },
+   "finisherMinusCreator": -37.775,
+   "karloDropsAtLeast10": false,
+   "gapAtMostMinus10": true,
+   "passed": false
+  }
+ }
+}

@@ -1,0 +1,436 @@
+{
+  "2015-16": {
+    "prior": {
+      "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\data\\prior-2015-16.json",
+      "sha256": "6427ac7d838b1af2de2191381c7d36c40a8d533f14aff5174b29e92c60665a8e"
+    },
+    "seasonCards": {
+      "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\data\\season-cards-2015-16.json",
+      "sha256": "ccca01210f654f87ef8eb164e736a12772283e3ba20c8f3bab2ad4f720f3b206"
+    },
+    "validation": {
+      "uniquePlayers": 476,
+      "uniquePlayersPass500": false,
+      "poolPlayers": 225,
+      "coverage": {
+        "long": 1.0,
+        "mid": 1.0,
+        "short": 1.0,
+        "ft": 1.0,
+        "drive": 1.0,
+        "tovSkill": 1.0,
+        "pass": 1.0,
+        "rebound": 1.0,
+        "physique": 1.0,
+        "onBall": 1.0,
+        "help": 1.0,
+        "stamina": 1.0,
+        "heightInches": 1.0,
+        "creation": 1.0,
+        "pressure": 1.0
+      },
+      "coveragePass": true,
+      "missingCounts": {
+        "no bio (skipped, no card)": 0,
+        "shot (no PBP attempts)": 3,
+        "bio weight": 0,
+        "four-factors (pressure=0)": 0
+      },
+      "fallbackAllPlayers": [
+        "onBall=70",
+        "help=70",
+        "short=shortBase",
+        "creation received=v3 default"
+      ]
+    },
+    "priorVsSeasonCardsMaxAttrDiff": 0.0,
+    "midDistinct": 385,
+    "answer": {
+      "card": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\cards\\2015-16.csv",
+        "sha256": "042d5892c3497cb84585318794cdd346f68497f4c423ee5f640798ee3a5bbc16"
+      },
+      "rapm": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\rapm\\pipe-2014-15_2015-16.csv",
+        "sha256": "ce42f8a61d80322a6639f45beb8850045931bc1f47ab2bab0846160e6f8b4ae0"
+      },
+      "rows": 476,
+      "ovrMedian": 57.009,
+      "ovrMin": 25.5002,
+      "ovrMax": 103.8876
+    },
+    "answerRowsMatchPrior": true
+  },
+  "2016-17": {
+    "prior": {
+      "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\data\\prior-2016-17.json",
+      "sha256": "0c1527131fd11d585c4293bb659c96f4818f239781240f2241b849495ded9a03"
+    },
+    "seasonCards": {
+      "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\data\\season-cards-2016-17.json",
+      "sha256": "0635ec4218f93251825b93171a1614b5d93e84ff59ddb2a629aa490ef944e66f"
+    },
+    "validation": {
+      "uniquePlayers": 486,
+      "uniquePlayersPass500": false,
+      "poolPlayers": 225,
+      "coverage": {
+        "long": 1.0,
+        "mid": 1.0,
+        "short": 1.0,
+        "ft": 1.0,
+        "drive": 1.0,
+        "tovSkill": 1.0,
+        "pass": 1.0,
+        "rebound": 1.0,
+        "physique": 1.0,
+        "onBall": 1.0,
+        "help": 1.0,
+        "stamina": 1.0,
+        "heightInches": 1.0,
+        "creation": 1.0,
+        "pressure": 1.0
+      },
+      "coveragePass": true,
+      "missingCounts": {
+        "no bio (skipped, no card)": 0,
+        "shot (no PBP attempts)": 2,
+        "bio weight": 0,
+        "four-factors (pressure=0)": 0
+      },
+      "fallbackAllPlayers": [
+        "onBall=70",
+        "help=70",
+        "short=shortBase",
+        "creation received=v3 default"
+      ]
+    },
+    "priorVsSeasonCardsMaxAttrDiff": 0.0,
+    "midDistinct": 388,
+    "answer": {
+      "card": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\cards\\2016-17.csv",
+        "sha256": "f3829b898a32e3daf8e404ca020d180d207c461c3082a3b13e4dba645d29515f"
+      },
+      "rapm": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\rapm\\pipe-2014-15_2016-17.csv",
+        "sha256": "060c89c8423b81e61dc8b88e26d263c5302472e076a52404a8068cbf7035824a"
+      },
+      "rows": 486,
+      "ovrMedian": 59.0828,
+      "ovrMin": 22.0943,
+      "ovrMax": 101.6805
+    },
+    "answerRowsMatchPrior": true
+  },
+  "2017-18": {
+    "prior": {
+      "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\data\\prior-2017-18.json",
+      "sha256": "30ab0a33a9730bcb2782ad2130c66c2869ca6e1abc6d21176c12162b9bc887ce"
+    },
+    "seasonCards": {
+      "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\data\\season-cards-2017-18.json",
+      "sha256": "2ea264e218c481f35ee76a5239972098210acdbcd31b9bcfe92366d715777c4c"
+    },
+    "validation": {
+      "uniquePlayers": 540,
+      "uniquePlayersPass500": true,
+      "poolPlayers": 233,
+      "coverage": {
+        "long": 1.0,
+        "mid": 1.0,
+        "short": 1.0,
+        "ft": 1.0,
+        "drive": 1.0,
+        "tovSkill": 1.0,
+        "pass": 1.0,
+        "rebound": 1.0,
+        "physique": 1.0,
+        "onBall": 1.0,
+        "help": 1.0,
+        "stamina": 1.0,
+        "heightInches": 1.0,
+        "creation": 1.0,
+        "pressure": 1.0
+      },
+      "coveragePass": true,
+      "missingCounts": {
+        "no bio (skipped, no card)": 0,
+        "shot (no PBP attempts)": 13,
+        "bio weight": 0,
+        "four-factors (pressure=0)": 0
+      },
+      "fallbackAllPlayers": [
+        "onBall=70",
+        "help=70",
+        "short=shortBase",
+        "creation received=v3 default"
+      ]
+    },
+    "priorVsSeasonCardsMaxAttrDiff": 0.0,
+    "midDistinct": 374,
+    "answer": {
+      "card": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\cards\\2017-18.csv",
+        "sha256": "c2ea66d590369832dc7b06b9f56ce59d88c172790236be89cc733b77b9092c79"
+      },
+      "rapm": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\rapm\\pipe-2014-15_2017-18.csv",
+        "sha256": "9989f07e11cf0f1804229375cdff512656893943483fcf03e581c2ab77e3369a"
+      },
+      "rows": 540,
+      "ovrMedian": 60.6443,
+      "ovrMin": 27.9125,
+      "ovrMax": 111.3519
+    },
+    "answerRowsMatchPrior": true
+  },
+  "2018-19": {
+    "prior": {
+      "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\data\\prior-2018-19.json",
+      "sha256": "91318fcdf69b95ae397dc64234e7bd598eec046e63067d25472f03394d630025"
+    },
+    "seasonCards": {
+      "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\data\\season-cards-2018-19.json",
+      "sha256": "d0fc7609316931e88409f4179011b9808629b3289780bcee8590efb1deb25a2d"
+    },
+    "validation": {
+      "uniquePlayers": 530,
+      "uniquePlayersPass500": true,
+      "poolPlayers": 238,
+      "coverage": {
+        "long": 1.0,
+        "mid": 1.0,
+        "short": 1.0,
+        "ft": 1.0,
+        "drive": 1.0,
+        "tovSkill": 1.0,
+        "pass": 1.0,
+        "rebound": 1.0,
+        "physique": 1.0,
+        "onBall": 1.0,
+        "help": 1.0,
+        "stamina": 1.0,
+        "heightInches": 1.0,
+        "creation": 1.0,
+        "pressure": 1.0
+      },
+      "coveragePass": true,
+      "missingCounts": {
+        "no bio (skipped, no card)": 0,
+        "shot (no PBP attempts)": 10,
+        "bio weight": 0,
+        "four-factors (pressure=0)": 0
+      },
+      "fallbackAllPlayers": [
+        "onBall=70",
+        "help=70",
+        "short=shortBase",
+        "creation received=v3 default"
+      ]
+    },
+    "priorVsSeasonCardsMaxAttrDiff": 0.0,
+    "midDistinct": 360,
+    "answer": {
+      "card": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\cards\\2018-19.csv",
+        "sha256": "73c6b598440ecec9fc36510bb40f545b4ff2ff66f0ea14c9070b962129fa6793"
+      },
+      "rapm": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\rapm\\pipe-2015-16_2018-19.csv",
+        "sha256": "a7656492159e0d08f06b7d9cc17dfcb5bfc0241964eae2ae2b14838a7c333704"
+      },
+      "rows": 530,
+      "ovrMedian": 59.7246,
+      "ovrMin": 27.6537,
+      "ovrMax": 105.0372
+    },
+    "answerRowsMatchPrior": true
+  },
+  "2019-20": {
+    "prior": {
+      "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\data\\prior-2019-20.json",
+      "sha256": "83c1833cc455436e1e9cd42cd7a9282e12ce51c32752ca745ec961d42b1d8f47"
+    },
+    "seasonCards": {
+      "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\data\\season-cards-2019-20.json",
+      "sha256": "7c73d034b2adbfd1d71084a7fdedc7fba79f8f07daa7fd4d97d660d00c353dd6"
+    },
+    "validation": {
+      "uniquePlayers": 529,
+      "uniquePlayersPass500": true,
+      "poolPlayers": 225,
+      "coverage": {
+        "long": 1.0,
+        "mid": 1.0,
+        "short": 1.0,
+        "ft": 1.0,
+        "drive": 1.0,
+        "tovSkill": 1.0,
+        "pass": 1.0,
+        "rebound": 1.0,
+        "physique": 1.0,
+        "onBall": 1.0,
+        "help": 1.0,
+        "stamina": 1.0,
+        "heightInches": 1.0,
+        "creation": 1.0,
+        "pressure": 1.0
+      },
+      "coveragePass": true,
+      "missingCounts": {
+        "no bio (skipped, no card)": 0,
+        "shot (no PBP attempts)": 3,
+        "bio weight": 0,
+        "four-factors (pressure=0)": 0
+      },
+      "fallbackAllPlayers": [
+        "onBall=70",
+        "help=70",
+        "short=shortBase",
+        "creation received=v3 default"
+      ]
+    },
+    "priorVsSeasonCardsMaxAttrDiff": 0.0,
+    "midDistinct": 313,
+    "answer": {
+      "card": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\cards\\2019-20.csv",
+        "sha256": "29ff41469887e7a177ad03e7d4fa85d510a8c1b53d0608d5901fa558453df4a3"
+      },
+      "rapm": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\rapm\\pipe-2016-17_2019-20.csv",
+        "sha256": "90be6a503ed18cc711e35571f03860289e3416d9649bb9868eb8a9ebb649eabb"
+      },
+      "rows": 529,
+      "ovrMedian": 61.6054,
+      "ovrMin": 28.116,
+      "ovrMax": 92.8941
+    },
+    "answerRowsMatchPrior": true
+  },
+  "2020-21": {
+    "prior": {
+      "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\data\\prior-2020-21.json",
+      "sha256": "afbdf7666367e5fc82d5666a3266230a2112f1c78e09b32ccfa7b4bda04e531d"
+    },
+    "seasonCards": {
+      "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\data\\season-cards-2020-21.json",
+      "sha256": "7b7825479a0e1358a53de555520f7582b6ad0049dbce303ca66013b164225226"
+    },
+    "validation": {
+      "uniquePlayers": 540,
+      "uniquePlayersPass500": true,
+      "poolPlayers": 240,
+      "coverage": {
+        "long": 1.0,
+        "mid": 1.0,
+        "short": 1.0,
+        "ft": 1.0,
+        "drive": 1.0,
+        "tovSkill": 1.0,
+        "pass": 1.0,
+        "rebound": 1.0,
+        "physique": 1.0,
+        "onBall": 1.0,
+        "help": 1.0,
+        "stamina": 1.0,
+        "heightInches": 1.0,
+        "creation": 1.0,
+        "pressure": 1.0
+      },
+      "coveragePass": true,
+      "missingCounts": {
+        "no bio (skipped, no card)": 0,
+        "shot (no PBP attempts)": 5,
+        "bio weight": 0,
+        "four-factors (pressure=0)": 0
+      },
+      "fallbackAllPlayers": [
+        "onBall=70",
+        "help=70",
+        "short=shortBase",
+        "creation received=v3 default"
+      ]
+    },
+    "priorVsSeasonCardsMaxAttrDiff": 0.0,
+    "midDistinct": 320,
+    "answer": {
+      "card": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\cards\\2020-21.csv",
+        "sha256": "2d5f2ef8e510e5ab2d5bec53628941399a3b7ccf906f483055e0f2988dc64e73"
+      },
+      "rapm": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\rapm\\pipe-2017-18_2020-21.csv",
+        "sha256": "37b818ca6a4700570973cba2344bb52d2e5aa2fa79b5cc257175d59ae547b3ec"
+      },
+      "rows": 540,
+      "ovrMedian": 63.6538,
+      "ovrMin": 28.8793,
+      "ovrMax": 106.987
+    },
+    "answerRowsMatchPrior": true
+  },
+  "2021-22": {
+    "prior": {
+      "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\data\\prior-2021-22.json",
+      "sha256": "4c74073cd437b570f2a4863ca7c26224dde963b274002cd5e1e9dba71a2cc99c"
+    },
+    "seasonCards": {
+      "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\data\\season-cards-2021-22.json",
+      "sha256": "9ea76e4a585ecba92c66142d850a78eae806062e24c8c50f8244516491a94a01"
+    },
+    "validation": {
+      "uniquePlayers": 605,
+      "uniquePlayersPass500": true,
+      "poolPlayers": 246,
+      "coverage": {
+        "long": 1.0,
+        "mid": 1.0,
+        "short": 1.0,
+        "ft": 1.0,
+        "drive": 1.0,
+        "tovSkill": 1.0,
+        "pass": 1.0,
+        "rebound": 1.0,
+        "physique": 1.0,
+        "onBall": 1.0,
+        "help": 1.0,
+        "stamina": 1.0,
+        "heightInches": 1.0,
+        "creation": 1.0,
+        "pressure": 1.0
+      },
+      "coveragePass": true,
+      "missingCounts": {
+        "no bio (skipped, no card)": 0,
+        "shot (no PBP attempts)": 16,
+        "bio weight": 0,
+        "four-factors (pressure=0)": 0
+      },
+      "fallbackAllPlayers": [
+        "onBall=70",
+        "help=70",
+        "short=shortBase",
+        "creation received=v3 default"
+      ]
+    },
+    "priorVsSeasonCardsMaxAttrDiff": 0.0,
+    "midDistinct": 329,
+    "answer": {
+      "card": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\cards\\2021-22.csv",
+        "sha256": "094456ebd73513b1b5ad39d756b45b77b7a53dbd6495f825a5ce5c7587cdaf88"
+      },
+      "rapm": {
+        "file": "reports\\ovr-inseason-2026-27\\v5\\pathA\\rapm\\pipe-2018-19_2021-22.csv",
+        "sha256": "fd397885f8e86126da439e01c4cb5f9478991f328f6142821101748638435bb5"
+      },
+      "rows": 605,
+      "ovrMedian": 62.5834,
+      "ovrMin": 34.4368,
+      "ovrMax": 97.6732
+    },
+    "answerRowsMatchPrior": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+ "ft": {
+  "n": 305,
+  "mae_mine": 0.05342,
+  "mae_backtest_json_c": 0.05351,
+  "n_json": 309
+ },
+ "foulDraw": {
+  "n": 367,
+  "mae_mine": 0.05438,
+  "mae_backtest_json_c": 0.05163,
+  "n_json": 367
+ },
+ "tovSkill": {
+  "n": 371,
+  "mae_mine": 0.01531,
+  "mae_backtest_json_c": 0.0155,
+  "n_json": 374
+ },
+ "pass": {
+  "n": 414,
+  "mae_mine": 0.02756,
+  "mae_backtest_json_c": 0.02734,
+  "n_json": 416
+ },
+ "rebound": {
+  "n": 411,
+  "mae_mine": 0.01211,
+  "mae_backtest_json_c": 0.01199,
+  "n_json": 412
+ },
+ "mid": {
+  "n": 124,
+  "mae_mine": 0.06022,
+  "mae_backtest_json_c": 0.06095,
+  "n_json": 128
+ },
+ "short": {
+  "n": 367,
+  "mae_mine": 0.04403,
+  "mae_backtest_json_c": 0.04389,
+  "n_json": 367
+ }
+}

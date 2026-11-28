@@ -1,0 +1,540 @@
+{
+ "A": {
+  "n": 64,
+  "rho": {
+   "K0": -0.025060103060047443,
+   "K12": 0.7117328563371671,
+   "KC": 0.22252240979028914
+  },
+  "diff_K12_minus_KC": 0.48921044654687795,
+  "diff_ci90": [
+   0.338972178069781,
+   0.6481094626971486
+  ],
+  "MDE_A": 0.11128766193379969,
+  "pass": true,
+  "vif_KC": 1.7992529101826253,
+  "vif_K12": 5.372982719081184
+ },
+ "keepE202": {
+  "n": 376,
+  "rho": {
+   "K0": 0.0797545752463673,
+   "K12": 0.7947476076866452,
+   "KC": 0.5021806887466268
+  },
+  "diff_KC_minus_K0": 0.4224261135002595,
+  "diff_ci90": [
+   0.33539599209640963,
+   0.503818334580931
+  ],
+  "MDE_E202": 0.0879,
+  "pass": true
+ },
+ "notBroken": {
+  "rho_diff": 0.005610388735247773,
+  "threshold": -0.11625683917166951,
+  "pass_rho": true,
+  "c0_bitwise": true,
+  "split_direction_same": true
+ },
+ "B": {
+  "K0": {
+   "median": 2.8605252842022737,
+   "n_below": 19,
+   "n_nodata": 0,
+   "top30_mean_poss36": 3.1949456851100964,
+   "top5": [
+    "Sam Hauser",
+    "Tim Hardaway Jr.",
+    "Saddiq Bey",
+    "Miles McBride",
+    "Gary Trent Jr."
+   ]
+  },
+  "K12": {
+   "median": 2.8605252842022737,
+   "n_below": 0,
+   "n_nodata": 0,
+   "top30_mean_poss36": 7.686580763801786,
+   "top5": [
+    "Jalen Brunson",
+    "Shai Gilgeous-Alexander",
+    "T.J. McConnell",
+    "Tyrese Maxey",
+    "Tyus Jones"
+   ]
+  },
+  "KC": {
+   "median": 2.8605252842022737,
+   "n_below": 1,
+   "n_nodata": 0,
+   "top30_mean_poss36": 6.628840660253776,
+   "top5": [
+    "Tyus Jones",
+    "Jalen Brunson",
+    "Tyrese Maxey",
+    "T.J. McConnell",
+    "Immanuel Quickley"
+   ]
+  },
+  "threshold_le": 10,
+  "pass": true
+ },
+ "tov_per10": {
+  "ovr_per_per36_slope": 8.592006262834108,
+  "K0": {
+   "per36": 0.3265022577140233,
+   "SE": 0.03794637239764496,
+   "ovr": 2.805309443108364,
+   "ovr_SE": 0.3260354692924008,
+   "fitA": {
+    "per36": 0.33580314774687314,
+    "bootstrapSE": 0.03820234967109931
+   },
+   "fitB": {
+    "per36": 0.31457015244975783,
+    "bootstrapSE": 0.03861138955992107
+   }
+  },
+  "K12": {
+   "per36": 0.2634577771299449,
+   "SE": 0.06294795583471816,
+   "ovr": 2.2636308710928392,
+   "ovr_SE": 0.5408492307645032,
+   "fitA": {
+    "per36": 0.27018915921606595,
+    "bootstrapSE": 0.06265018064364394
+   },
+   "fitB": {
+    "per36": 0.2501374886523782,
+    "bootstrapSE": 0.0632564906620126
+   }
+  },
+  "KC": {
+   "per36": 0.18170988421459752,
+   "SE": 0.03620675692144013,
+   "ovr": 1.5612524631906826,
+   "ovr_SE": 0.3110886822259258,
+   "fitA": {
+    "per36": 0.18957694964604646,
+    "bootstrapSE": 0.03634854538733745
+   },
+   "fitB": {
+    "per36": 0.1715690903235118,
+    "bootstrapSE": 0.036699006487325624
+   }
+  }
+ },
+ "vif_tovSkill": {
+  "attrs_used": [
+   "long",
+   "mid",
+   "short",
+   "ft",
+   "drive",
+   "foulDraw",
+   "tovSkill",
+   "pass",
+   "rebound",
+   "onBall",
+   "help",
+   "heightInches",
+   "creation",
+   "pressure"
+  ],
+  "K0": {
+   "vif": 1.543597920772487,
+   "corr": {
+    "creation": 0.06820164070906758,
+    "pass": -0.2170355836196748,
+    "gravity": 0.20392255321293257
+   }
+  },
+  "K12": {
+   "vif": 5.372982719081184,
+   "corr": {
+    "creation": 0.7241236703265533,
+    "pass": 0.7760158220849773,
+    "gravity": 0.5829338252075387
+   }
+  },
+  "KC": {
+   "vif": 1.7992529101826253,
+   "corr": {
+    "creation": 0.41009617946372307,
+    "pass": 0.545340487865252,
+    "gravity": 0.3460938579428357
+   }
+  }
+ },
+ "external": {
+  "K0": {
+   "salary_wspearman": 0.6308282564236619,
+   "n_sal": 262,
+   "twok27_ovr_spearman": 0.7648197191465512,
+   "n_2k": 376,
+   "epm_spearman": 0.7925717733853653,
+   "n_epm": 379
+  },
+  "K12": {
+   "salary_wspearman": 0.6428786786708721,
+   "n_sal": 262,
+   "twok27_ovr_spearman": 0.7657800534099771,
+   "n_2k": 376,
+   "epm_spearman": 0.7694724543166691,
+   "n_epm": 379
+  },
+  "KC": {
+   "salary_wspearman": 0.636340007522648,
+   "n_sal": 262,
+   "twok27_ovr_spearman": 0.7651827149753965,
+   "n_2k": 376,
+   "epm_spearman": 0.7774731492934057,
+   "n_epm": 379
+  }
+ },
+ "moves": {
+  "top100_moved_ge10": 8,
+  "list": [
+   [
+    "Jaylin Williams",
+    84,
+    62
+   ],
+   [
+    "Pascal Siakam",
+    85,
+    68
+   ],
+   [
+    "Luke Kornet",
+    99,
+    88
+   ],
+   [
+    "Robert Williams III",
+    64,
+    74
+   ],
+   [
+    "Kon Knueppel",
+    72,
+    83
+   ],
+   [
+    "Jrue Holiday",
+    93,
+    105
+   ],
+   [
+    "Josh Hart",
+    82,
+    97
+   ],
+   [
+    "Luke Kennard",
+    73,
+    89
+   ]
+  ],
+  "top20_in": [
+   "Jalen Williams"
+  ],
+  "top20_out": [
+   "Paul George"
+  ]
+ },
+ "topMissing": [],
+ "table": [
+  {
+   "name": "Austin Reaves",
+   "TO_K0": 58.0,
+   "TO_K12": 97.4,
+   "TO_KC": 95.2,
+   "TOrank_K0": 250,
+   "TOrank_K12": 13,
+   "TOrank_KC": 27,
+   "ovr_K0": 90.8,
+   "ovr_K12": 93.7,
+   "ovr_KC": 93.8,
+   "rank_K0": 26,
+   "rank_K12": 12,
+   "rank_KC": 12,
+   "poss36": 8.080590238365494,
+   "MIN": "1762"
+  },
+  {
+   "name": "Kevin Porter Jr.",
+   "TO_K0": 47.2,
+   "TO_K12": 97.1,
+   "TO_KC": 93.1,
+   "TOrank_K0": 324,
+   "TOrank_K12": 14,
+   "TOrank_KC": 39,
+   "ovr_K0": 89.6,
+   "ovr_K12": 92.7,
+   "ovr_KC": 92.9,
+   "rank_K0": 32,
+   "rank_K12": 17,
+   "rank_KC": 16,
+   "poss36": 8.775892149088024,
+   "MIN": "1261"
+  },
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "TO_K0": 94.9,
+   "TO_K12": 104.4,
+   "TO_KC": 98.3,
+   "TOrank_K0": 18,
+   "TOrank_K12": 2,
+   "TOrank_KC": 9,
+   "ovr_K0": 108.5,
+   "ovr_K12": 106.3,
+   "ovr_KC": 107.0,
+   "rank_K0": 1,
+   "rank_K12": 1,
+   "rank_KC": 1,
+   "poss36": 8.199203187250996,
+   "MIN": "2259"
+  },
+  {
+   "name": "Jalen Brunson",
+   "TO_K0": 90.8,
+   "TO_K12": 114.6,
+   "TO_KC": 112.2,
+   "TOrank_K0": 36,
+   "TOrank_K12": 1,
+   "TOrank_KC": 2,
+   "ovr_K0": 90.7,
+   "ovr_K12": 89.3,
+   "ovr_KC": 89.6,
+   "rank_K0": 27,
+   "rank_K12": 31,
+   "rank_KC": 29,
+   "poss36": 9.678301158301158,
+   "MIN": "2590"
+  },
+  {
+   "name": "Luka Dončić",
+   "TO_K0": 64.9,
+   "TO_K12": 96.0,
+   "TO_KC": 84.7,
+   "TOrank_K0": 200,
+   "TOrank_K12": 19,
+   "TOrank_KC": 88,
+   "ovr_K0": 101.7,
+   "ovr_K12": 101.6,
+   "ovr_KC": 101.8,
+   "rank_K0": 4,
+   "rank_K12": 3,
+   "rank_KC": 3,
+   "poss36": 8.149934469200526,
+   "MIN": "2289"
+  },
+  {
+   "name": "Nikola Jokić",
+   "TO_K0": 64.5,
+   "TO_K12": 80.5,
+   "TO_KC": 89.6,
+   "TOrank_K0": 205,
+   "TOrank_K12": 113,
+   "TOrank_KC": 62,
+   "ovr_K0": 105.7,
+   "ovr_K12": 103.2,
+   "ovr_KC": 104.0,
+   "rank_K0": 2,
+   "rank_K12": 2,
+   "rank_KC": 2,
+   "poss36": 5.114701986754967,
+   "MIN": "2265"
+  },
+  {
+   "name": "Cade Cunningham",
+   "TO_K0": 49.9,
+   "TO_K12": 98.5,
+   "TO_KC": 90.8,
+   "TOrank_K0": 308,
+   "TOrank_K12": 7,
+   "TOrank_KC": 52,
+   "ovr_K0": 93.4,
+   "ovr_K12": 93.7,
+   "ovr_KC": 93.6,
+   "rank_K0": 11,
+   "rank_K12": 13,
+   "rank_KC": 13,
+   "poss36": 8.867403314917127,
+   "MIN": "2172"
+  },
+  {
+   "name": "James Harden",
+   "TO_K0": 45.6,
+   "TO_K12": 98.1,
+   "TO_KC": 85.4,
+   "TOrank_K0": 336,
+   "TOrank_K12": 9,
+   "TOrank_KC": 85,
+   "ovr_K0": 73.7,
+   "ovr_K12": 75.8,
+   "ovr_KC": 76.0,
+   "rank_K0": 159,
+   "rank_K12": 137,
+   "rank_KC": 131,
+   "poss36": 8.334044298605415,
+   "MIN": "2438"
+  },
+  {
+   "name": "LaMelo Ball",
+   "TO_K0": 62.5,
+   "TO_K12": 98.8,
+   "TO_KC": 95.7,
+   "TOrank_K0": 221,
+   "TOrank_K12": 6,
+   "TOrank_KC": 25,
+   "ovr_K0": 75.7,
+   "ovr_K12": 74.7,
+   "ovr_KC": 74.9,
+   "rank_K0": 129,
+   "rank_K12": 155,
+   "rank_KC": 148,
+   "poss36": 8.87416955875062,
+   "MIN": "2017"
+  },
+  {
+   "name": "Tyrese Maxey",
+   "TO_K0": 95.3,
+   "TO_K12": 99.0,
+   "TO_KC": 103.4,
+   "TOrank_K0": 17,
+   "TOrank_K12": 4,
+   "TOrank_KC": 3,
+   "ovr_K0": 91.8,
+   "ovr_K12": 88.4,
+   "ovr_KC": 89.7,
+   "rank_K0": 22,
+   "rank_K12": 35,
+   "rank_KC": 28,
+   "poss36": 7.965727170236752,
+   "MIN": "2661"
+  },
+  {
+   "name": "Ty Jerome",
+   "TO_K0": 79.5,
+   "TO_K12": 97.5,
+   "TO_KC": 96.8,
+   "TOrank_K0": null,
+   "TOrank_K12": null,
+   "TOrank_KC": null,
+   "ovr_K0": 93.1,
+   "ovr_K12": 93.3,
+   "ovr_KC": 93.6,
+   "rank_K0": 14,
+   "rank_K12": 14,
+   "rank_KC": 14,
+   "poss36": 8.049557522123893,
+   "MIN": "339"
+  },
+  {
+   "name": "Trae Young",
+   "TO_K0": 45.7,
+   "TO_K12": 103.7,
+   "TO_KC": 90.4,
+   "TOrank_K0": null,
+   "TOrank_K12": null,
+   "TOrank_KC": null,
+   "ovr_K0": 73.9,
+   "ovr_K12": 76.7,
+   "ovr_KC": 76.8,
+   "rank_K0": 156,
+   "rank_K12": 126,
+   "rank_KC": 119,
+   "poss36": 8.653125,
+   "MIN": "384"
+  },
+  {
+   "name": "Sam Hauser",
+   "TO_K0": 103.3,
+   "TO_K12": 64.0,
+   "TO_KC": 93.8,
+   "TOrank_K0": 1,
+   "TOrank_K12": 202,
+   "TOrank_KC": 36,
+   "ovr_K0": 73.6,
+   "ovr_K12": 73.2,
+   "ovr_KC": 73.9,
+   "rank_K0": 160,
+   "rank_K12": 169,
+   "rank_KC": 157,
+   "poss36": 1.5971044467425024,
+   "MIN": "1934"
+  },
+  {
+   "name": "Tim Hardaway Jr.",
+   "TO_K0": 102.0,
+   "TO_K12": 67.0,
+   "TO_KC": 87.3,
+   "TOrank_K0": 2,
+   "TOrank_K12": 184,
+   "TOrank_KC": 74,
+   "ovr_K0": 60.8,
+   "ovr_K12": 58.4,
+   "ovr_KC": 60.7,
+   "rank_K0": 317,
+   "rank_K12": 341,
+   "rank_KC": 317,
+   "poss36": 1.2338504936530326,
+   "MIN": "2127"
+  },
+  {
+   "name": "Luke Kornet",
+   "TO_K0": 93.8,
+   "TO_K12": 55.8,
+   "TO_KC": 86.1,
+   "TOrank_K0": 22,
+   "TOrank_K12": 253,
+   "TOrank_KC": 81,
+   "ovr_K0": 82.5,
+   "ovr_K12": 77.9,
+   "ovr_KC": 79.2,
+   "rank_K0": 62,
+   "rank_K12": 99,
+   "rank_KC": 88,
+   "poss36": 1.5759440559440558,
+   "MIN": "1430"
+  },
+  {
+   "name": "Jarrett Allen",
+   "TO_K0": 71.0,
+   "TO_K12": 46.6,
+   "TO_KC": 61.4,
+   "TOrank_K0": 156,
+   "TOrank_K12": 316,
+   "TOrank_KC": 225,
+   "ovr_K0": 86.4,
+   "ovr_K12": 83.6,
+   "ovr_KC": 84.6,
+   "rank_K0": 44,
+   "rank_K12": 54,
+   "rank_KC": 47,
+   "poss36": 1.5144173798551679,
+   "MIN": "1519"
+  },
+  {
+   "name": "Rudy Gobert",
+   "TO_K0": 46.6,
+   "TO_K12": 44.6,
+   "TO_KC": 58.7,
+   "TOrank_K0": 326,
+   "TOrank_K12": 333,
+   "TOrank_KC": 244,
+   "ovr_K0": 82.5,
+   "ovr_K12": 82.8,
+   "ovr_KC": 83.3,
+   "rank_K0": 61,
+   "rank_K12": 58,
+   "rank_KC": 56,
+   "poss36": 1.6835294117647057,
+   "MIN": "2380"
+  }
+ ]
+}

@@ -32,14 +32,14 @@ for (const k of keys) {
 }
 
 console.log('\n=== 防守否決：中距離是被逼出來的嗎 ===');
-console.log('同一支 PR50 進攻，只改對手的盯防與協防\n');
+console.log('同一支 PR50 進攻，只改對手的盯防與護框\n');
 const mk = (onBall, help) => ({
   name: `D${onBall}/${help}`, season: 'synthetic',
   roster: Array.from({ length: 5 }, (_, i) =>
     ({ name: `d${i}`, pos: 'C', long: 70, mid: 70, short: 70, drive: 70, tovSkill: 70,
        rebound: 70, onBall, help, stamina: 70, physique: 70, offBall: 70, screen: 70 })),
 });
-console.log('對手盯防/協防      近射    中投    三分    每回合得分');
+console.log('對手盯防/護框      近射    中投    三分    每回合得分');
 for (const [ob, hp] of [[40, 40], [55, 55], [70, 70], [85, 85], [99, 99]]) {
   const r = monteCarlo(BASELINE, mk(ob, hp), 3000, OPTS);
   const s = r.statA;

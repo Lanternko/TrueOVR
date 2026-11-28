@@ -1,0 +1,1764 @@
+{
+ "experiment": "E-133 phase 0",
+ "preregistrationSha256": "b01a42296235624bafb53fdabfbec25f62344bd427658f843d5a7c82738c5bdc",
+ "checks": {
+  "c0d": {
+   "minPairs": 30,
+   "perStart": {
+    "Y2": {
+     "long": {
+      "young_m": 8,
+      "vet_m": 88,
+      "pooled_m_recomp": 96
+     },
+     "mid": {
+      "young_m": 15,
+      "vet_m": 110,
+      "pooled_m_recomp": 125
+     },
+     "short": {
+      "young_m": 36,
+      "vet_m": 203,
+      "pooled_m_recomp": 239
+     },
+     "ft": {
+      "young_m": 25,
+      "vet_m": 129,
+      "pooled_m_recomp": 154
+     },
+     "drive": {
+      "young_m": 30,
+      "vet_m": 185,
+      "pooled_m_recomp": 215
+     },
+     "tovSkill": {
+      "young_m": 38,
+      "vet_m": 225,
+      "pooled_m_recomp": 263
+     },
+     "pass": {
+      "young_m": 42,
+      "vet_m": 249,
+      "pooled_m_recomp": 291
+     },
+     "rebound": {
+      "young_m": 42,
+      "vet_m": 249,
+      "pooled_m_recomp": 291
+     },
+     "stamina": {
+      "young_m": 39,
+      "vet_m": 232,
+      "pooled_m_recomp": 271
+     },
+     "creation": {
+      "young_m": 42,
+      "vet_m": 249,
+      "pooled_m_recomp": 291
+     },
+     "pressure": {
+      "young_m": 41,
+      "vet_m": 250,
+      "pooled_m_recomp": 291
+     }
+    },
+    "Y3": {
+     "long": {
+      "young_m": 17,
+      "vet_m": 179,
+      "pooled_m_recomp": 196
+     },
+     "mid": {
+      "young_m": 30,
+      "vet_m": 202,
+      "pooled_m_recomp": 232
+     },
+     "short": {
+      "young_m": 71,
+      "vet_m": 405,
+      "pooled_m_recomp": 476
+     },
+     "ft": {
+      "young_m": 45,
+      "vet_m": 247,
+      "pooled_m_recomp": 292
+     },
+     "drive": {
+      "young_m": 59,
+      "vet_m": 362,
+      "pooled_m_recomp": 421
+     },
+     "tovSkill": {
+      "young_m": 74,
+      "vet_m": 439,
+      "pooled_m_recomp": 513
+     },
+     "pass": {
+      "young_m": 81,
+      "vet_m": 487,
+      "pooled_m_recomp": 568
+     },
+     "rebound": {
+      "young_m": 81,
+      "vet_m": 487,
+      "pooled_m_recomp": 568
+     },
+     "stamina": {
+      "young_m": 75,
+      "vet_m": 456,
+      "pooled_m_recomp": 531
+     },
+     "creation": {
+      "young_m": 81,
+      "vet_m": 487,
+      "pooled_m_recomp": 568
+     },
+     "pressure": {
+      "young_m": 80,
+      "vet_m": 488,
+      "pooled_m_recomp": 568
+     }
+    },
+    "Y5": {
+     "long": {
+      "young_m": 50,
+      "vet_m": 362,
+      "pooled_m_recomp": 412
+     },
+     "mid": {
+      "young_m": 56,
+      "vet_m": 321,
+      "pooled_m_recomp": 377
+     },
+     "short": {
+      "young_m": 157,
+      "vet_m": 785,
+      "pooled_m_recomp": 942
+     },
+     "ft": {
+      "young_m": 95,
+      "vet_m": 456,
+      "pooled_m_recomp": 551
+     },
+     "drive": {
+      "young_m": 125,
+      "vet_m": 695,
+      "pooled_m_recomp": 820
+     },
+     "tovSkill": {
+      "young_m": 160,
+      "vet_m": 847,
+      "pooled_m_recomp": 1007
+     },
+     "pass": {
+      "young_m": 176,
+      "vet_m": 946,
+      "pooled_m_recomp": 1122
+     },
+     "rebound": {
+      "young_m": 176,
+      "vet_m": 946,
+      "pooled_m_recomp": 1122
+     },
+     "stamina": {
+      "young_m": 172,
+      "vet_m": 866,
+      "pooled_m_recomp": 1038
+     },
+     "creation": {
+      "young_m": 176,
+      "vet_m": 946,
+      "pooled_m_recomp": 1122
+     },
+     "pressure": {
+      "young_m": 178,
+      "vet_m": 954,
+      "pooled_m_recomp": 1132
+     }
+    },
+    "Y6": {
+     "long": {
+      "young_m": 68,
+      "vet_m": 457,
+      "pooled_m_recomp": 525
+     },
+     "mid": {
+      "young_m": 64,
+      "vet_m": 368,
+      "pooled_m_recomp": 432
+     },
+     "short": {
+      "young_m": 205,
+      "vet_m": 962,
+      "pooled_m_recomp": 1167
+     },
+     "ft": {
+      "young_m": 118,
+      "vet_m": 556,
+      "pooled_m_recomp": 674
+     },
+     "drive": {
+      "young_m": 159,
+      "vet_m": 844,
+      "pooled_m_recomp": 1003
+     },
+     "tovSkill": {
+      "young_m": 205,
+      "vet_m": 1055,
+      "pooled_m_recomp": 1260
+     },
+     "pass": {
+      "young_m": 227,
+      "vet_m": 1176,
+      "pooled_m_recomp": 1403
+     },
+     "rebound": {
+      "young_m": 227,
+      "vet_m": 1176,
+      "pooled_m_recomp": 1403
+     },
+     "stamina": {
+      "young_m": 215,
+      "vet_m": 1055,
+      "pooled_m_recomp": 1270
+     },
+     "creation": {
+      "young_m": 227,
+      "vet_m": 1176,
+      "pooled_m_recomp": 1403
+     },
+     "pressure": {
+      "young_m": 231,
+      "vet_m": 1184,
+      "pooled_m_recomp": 1415
+     }
+    },
+    "D1": {
+     "long": {
+      "young_m": 89,
+      "vet_m": 557,
+      "pooled_m_recomp": 646
+     },
+     "mid": {
+      "young_m": 71,
+      "vet_m": 418,
+      "pooled_m_recomp": 489
+     },
+     "short": {
+      "young_m": 0,
+      "vet_m": 0,
+      "pooled_m_recomp": 0
+     },
+     "ft": {
+      "young_m": 147,
+      "vet_m": 654,
+      "pooled_m_recomp": 801
+     },
+     "drive": {
+      "young_m": 202,
+      "vet_m": 997,
+      "pooled_m_recomp": 1199
+     },
+     "tovSkill": {
+      "young_m": 257,
+      "vet_m": 1273,
+      "pooled_m_recomp": 1530
+     },
+     "pass": {
+      "young_m": 286,
+      "vet_m": 1424,
+      "pooled_m_recomp": 1710
+     },
+     "rebound": {
+      "young_m": 286,
+      "vet_m": 1424,
+      "pooled_m_recomp": 1710
+     },
+     "stamina": {
+      "young_m": 270,
+      "vet_m": 1257,
+      "pooled_m_recomp": 1527
+     },
+     "creation": {
+      "young_m": 0,
+      "vet_m": 0,
+      "pooled_m_recomp": 0
+     },
+     "pressure": {
+      "young_m": 290,
+      "vet_m": 1429,
+      "pooled_m_recomp": 1719
+     }
+    },
+    "D2": {
+     "long": {
+      "young_m": 107,
+      "vet_m": 670,
+      "pooled_m_recomp": 777
+     },
+     "mid": {
+      "young_m": 79,
+      "vet_m": 474,
+      "pooled_m_recomp": 553
+     },
+     "short": {
+      "young_m": 53,
+      "vet_m": 196,
+      "pooled_m_recomp": 249
+     },
+     "ft": {
+      "young_m": 174,
+      "vet_m": 773,
+      "pooled_m_recomp": 947
+     },
+     "drive": {
+      "young_m": 242,
+      "vet_m": 1168,
+      "pooled_m_recomp": 1410
+     },
+     "tovSkill": {
+      "young_m": 308,
+      "vet_m": 1484,
+      "pooled_m_recomp": 1792
+     },
+     "pass": {
+      "young_m": 346,
+      "vet_m": 1657,
+      "pooled_m_recomp": 2003
+     },
+     "rebound": {
+      "young_m": 346,
+      "vet_m": 1657,
+      "pooled_m_recomp": 2003
+     },
+     "stamina": {
+      "young_m": 322,
+      "vet_m": 1483,
+      "pooled_m_recomp": 1805
+     },
+     "creation": {
+      "young_m": 60,
+      "vet_m": 233,
+      "pooled_m_recomp": 293
+     },
+     "pressure": {
+      "young_m": 348,
+      "vet_m": 1661,
+      "pooled_m_recomp": 2009
+     }
+    },
+    "D3": {
+     "long": {
+      "young_m": 125,
+      "vet_m": 790,
+      "pooled_m_recomp": 915
+     },
+     "mid": {
+      "young_m": 85,
+      "vet_m": 527,
+      "pooled_m_recomp": 612
+     },
+     "short": {
+      "young_m": 98,
+      "vet_m": 394,
+      "pooled_m_recomp": 492
+     },
+     "ft": {
+      "young_m": 201,
+      "vet_m": 883,
+      "pooled_m_recomp": 1084
+     },
+     "drive": {
+      "young_m": 281,
+      "vet_m": 1344,
+      "pooled_m_recomp": 1625
+     },
+     "tovSkill": {
+      "young_m": 359,
+      "vet_m": 1691,
+      "pooled_m_recomp": 2050
+     },
+     "pass": {
+      "young_m": 401,
+      "vet_m": 1890,
+      "pooled_m_recomp": 2291
+     },
+     "rebound": {
+      "young_m": 401,
+      "vet_m": 1890,
+      "pooled_m_recomp": 2291
+     },
+     "stamina": {
+      "young_m": 370,
+      "vet_m": 1700,
+      "pooled_m_recomp": 2070
+     },
+     "creation": {
+      "young_m": 115,
+      "vet_m": 466,
+      "pooled_m_recomp": 581
+     },
+     "pressure": {
+      "young_m": 402,
+      "vet_m": 1889,
+      "pooled_m_recomp": 2291
+     }
+    }
+   },
+   "fallback": [
+    {
+     "start": "Y2",
+     "attr": "long",
+     "group": "young",
+     "m": 8
+    },
+    {
+     "start": "Y2",
+     "attr": "mid",
+     "group": "young",
+     "m": 15
+    },
+    {
+     "start": "Y2",
+     "attr": "ft",
+     "group": "young",
+     "m": 25
+    },
+    {
+     "start": "Y3",
+     "attr": "long",
+     "group": "young",
+     "m": 17
+    },
+    {
+     "start": "D1",
+     "attr": "short",
+     "group": "young",
+     "m": 0
+    },
+    {
+     "start": "D1",
+     "attr": "short",
+     "group": "vet",
+     "m": 0
+    },
+    {
+     "start": "D1",
+     "attr": "creation",
+     "group": "young",
+     "m": 0
+    },
+    {
+     "start": "D1",
+     "attr": "creation",
+     "group": "vet",
+     "m": 0
+    }
+   ],
+   "nFallbackCells": 8,
+   "nCells": 154,
+   "pass": true
+  },
+  "c0D": {
+   "pass": true,
+   "detail": {
+    "Y2": {
+     "P_s(N)": {
+      "3": 255,
+      "5": 260,
+      "10": 267,
+      "20": 271,
+      "82": 277
+     },
+     "n095": {
+      "3": 255,
+      "5": 260,
+      "10": 267,
+      "20": 271,
+      "82": 277
+     },
+     "sameAsE095": true,
+     "ge200": true,
+     "answerPlayers": 540
+    },
+    "Y3": {
+     "P_s(N)": {
+      "3": 251,
+      "5": 265,
+      "10": 270,
+      "20": 274,
+      "82": 281
+     },
+     "n095": {
+      "3": 251,
+      "5": 265,
+      "10": 270,
+      "20": 274,
+      "82": 281
+     },
+     "sameAsE095": true,
+     "ge200": true,
+     "answerPlayers": 530
+    },
+    "Y5": {
+     "P_s(N)": {
+      "3": 260,
+      "5": 267,
+      "10": 276,
+      "20": 279,
+      "82": 281
+     },
+     "n095": {
+      "3": 260,
+      "5": 267,
+      "10": 276,
+      "20": 279,
+      "82": 281
+     },
+     "sameAsE095": true,
+     "ge200": true,
+     "answerPlayers": 540
+    },
+    "Y6": {
+     "P_s(N)": {
+      "3": 278,
+      "5": 284,
+      "10": 292,
+      "20": 298,
+      "82": 307
+     },
+     "n095": {
+      "3": 278,
+      "5": 284,
+      "10": 292,
+      "20": 298,
+      "82": 307
+     },
+     "sameAsE095": true,
+     "ge200": true,
+     "answerPlayers": 605
+    },
+    "D1": {
+     "P_s(N)": {
+      "3": 270,
+      "5": 275,
+      "10": 286,
+      "20": 292,
+      "82": 293
+     },
+     "n095": {
+      "3": 270,
+      "5": 275,
+      "10": 286,
+      "20": 292,
+      "82": 293
+     },
+     "sameAsE095": true,
+     "ge200": true,
+     "answerPlayers": 572
+    },
+    "D2": {
+     "P_s(N)": {
+      "3": 258,
+      "5": 261,
+      "10": 268,
+      "20": 275,
+      "82": 288
+     },
+     "n095": {
+      "3": 258,
+      "5": 261,
+      "10": 268,
+      "20": 275,
+      "82": 288
+     },
+     "sameAsE095": true,
+     "ge200": true,
+     "answerPlayers": 569
+    },
+    "D3": {
+     "P_s(N)": {
+      "3": 262,
+      "5": 267,
+      "10": 275,
+      "20": 284,
+      "82": 289
+     },
+     "n095": {
+      "3": 262,
+      "5": 267,
+      "10": 275,
+      "20": 284,
+      "82": 289
+     },
+     "sameAsE095": true,
+     "ge200": true,
+     "answerPlayers": 464
+    }
+   },
+   "note": "先驗卡、答案卡（OVRPipeline）、PW.for_start、P_s(N) 在 027 下建得出來"
+  },
+  "c0r": {
+   "cells": [
+    {
+     "start": "Y3",
+     "N": 3,
+     "n": 251,
+     "n095": 251,
+     "MAE_mine": 5.486865,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y3",
+     "N": 5,
+     "n": 265,
+     "n095": 265,
+     "MAE_mine": 5.501746,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y3",
+     "N": 10,
+     "n": 270,
+     "n095": 270,
+     "MAE_mine": 5.121426,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y3",
+     "N": 20,
+     "n": 274,
+     "n095": 274,
+     "MAE_mine": 4.850442,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y3",
+     "N": 82,
+     "n": 281,
+     "n095": 281,
+     "MAE_mine": 4.017782,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y5",
+     "N": 3,
+     "n": 260,
+     "n095": 260,
+     "MAE_mine": 6.15859,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y5",
+     "N": 5,
+     "n": 267,
+     "n095": 267,
+     "MAE_mine": 6.115287,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y5",
+     "N": 10,
+     "n": 276,
+     "n095": 276,
+     "MAE_mine": 5.984165,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y5",
+     "N": 20,
+     "n": 279,
+     "n095": 279,
+     "MAE_mine": 5.451902,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y5",
+     "N": 82,
+     "n": 281,
+     "n095": 281,
+     "MAE_mine": 3.994223,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y6",
+     "N": 3,
+     "n": 278,
+     "n095": 278,
+     "MAE_mine": 5.144387,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y6",
+     "N": 5,
+     "n": 284,
+     "n095": 284,
+     "MAE_mine": 4.970593,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y6",
+     "N": 10,
+     "n": 292,
+     "n095": 292,
+     "MAE_mine": 4.827135,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y6",
+     "N": 20,
+     "n": 298,
+     "n095": 298,
+     "MAE_mine": 4.405296,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    },
+    {
+     "start": "Y6",
+     "N": 82,
+     "n": 307,
+     "n095": 307,
+     "MAE_mine": 3.419938,
+     "maxAbsErrDiff": 0.0,
+     "absDiff_vs_results_json": 0.0,
+     "A_absDiff": 0.0,
+     "pass": true
+    }
+   ],
+   "gateBaselineReproduces": true,
+   "pass": true
+  },
+  "c0e": {
+   "e1_M1pooled_vs_B0": {
+    "maxAbsDiff": 0.0,
+    "pass": true
+   },
+   "e2_M2s0zero_vs_M1": {
+    "maxAbsDiff": 0.0,
+    "pass": true
+   },
+   "e3_w1_neff_y": {
+    "perAttr": {
+     "long": {
+      "n": 3689,
+      "maxDn": 0.0,
+      "maxDy": 0.0
+     },
+     "mid": {
+      "n": 1654,
+      "maxDn": 0.0,
+      "maxDy": 0.0
+     },
+     "short": {
+      "n": 4269,
+      "maxDn": 0.0,
+      "maxDy": 0.0
+     },
+     "ft": {
+      "n": 4357,
+      "maxDn": 0.0,
+      "maxDy": 0.0
+     },
+     "drive": {
+      "n": 3937,
+      "maxDn": 0.0,
+      "maxDy": 0.0
+     },
+     "tovSkill": {
+      "n": 5127,
+      "maxDn": 0.0,
+      "maxDy": 0.0
+     },
+     "pass": {
+      "n": 4979,
+      "maxDn": 0.0,
+      "maxDy": 0.0
+     },
+     "rebound": {
+      "n": 4979,
+      "maxDn": 0.0,
+      "maxDy": 0.0
+     },
+     "stamina": {
+      "n": 7620,
+      "maxDn": 0.0,
+      "maxDy": 0.0
+     },
+     "creation": {
+      "n": 4247,
+      "maxDn": 0.0,
+      "maxDy": 0.0
+     },
+     "pressure": {
+      "n": 0,
+      "maxDn": 0.0,
+      "maxDy": 0.0
+     }
+    },
+    "tWeightedWindows": 3.5,
+    "pass": true
+   },
+   "pass": true
+  },
+  "c0g": {
+   "splittable": [
+    "long",
+    "mid",
+    "ft",
+    "drive",
+    "tovSkill",
+    "pass",
+    "rebound",
+    "stamina"
+   ],
+   "unsplittable_s_a_zero": [
+    "pressure"
+   ],
+   "undefinedInSomeStart_notUpdatedThere": {
+    "D1": [
+     "creation",
+     "short"
+    ]
+   },
+   "note": "pressure 在所有起點凍結（樣本 0，pressureOpen=False），沒有逐場資料，s_a=0；undefined 屬性（若有）也不更新",
+   "nUPD": 11,
+   "pass": true
+  },
+  "c0x": {
+   "perStart": {
+    "Y2": {
+     "3": {
+      "n": 255,
+      "nDiff": 255,
+      "frac": 1.0
+     },
+     "5": {
+      "n": 260,
+      "nDiff": 260,
+      "frac": 1.0
+     },
+     "10": {
+      "n": 267,
+      "nDiff": 267,
+      "frac": 1.0
+     },
+     "20": {
+      "n": 271,
+      "nDiff": 271,
+      "frac": 1.0
+     }
+    },
+    "Y3": {
+     "3": {
+      "n": 251,
+      "nDiff": 251,
+      "frac": 1.0
+     },
+     "5": {
+      "n": 265,
+      "nDiff": 264,
+      "frac": 0.996226
+     },
+     "10": {
+      "n": 270,
+      "nDiff": 270,
+      "frac": 1.0
+     },
+     "20": {
+      "n": 274,
+      "nDiff": 274,
+      "frac": 1.0
+     }
+    },
+    "Y5": {
+     "3": {
+      "n": 260,
+      "nDiff": 253,
+      "frac": 0.973077
+     },
+     "5": {
+      "n": 267,
+      "nDiff": 265,
+      "frac": 0.992509
+     },
+     "10": {
+      "n": 276,
+      "nDiff": 276,
+      "frac": 1.0
+     },
+     "20": {
+      "n": 279,
+      "nDiff": 279,
+      "frac": 1.0
+     }
+    },
+    "Y6": {
+     "3": {
+      "n": 278,
+      "nDiff": 277,
+      "frac": 0.996403
+     },
+     "5": {
+      "n": 284,
+      "nDiff": 284,
+      "frac": 1.0
+     },
+     "10": {
+      "n": 292,
+      "nDiff": 292,
+      "frac": 1.0
+     },
+     "20": {
+      "n": 298,
+      "nDiff": 298,
+      "frac": 1.0
+     }
+    }
+   },
+   "dropped": [],
+   "criterionN": 20,
+   "trainUsed": [
+    "Y2",
+    "Y3",
+    "Y5",
+    "Y6"
+   ],
+   "pass": true
+  }
+ },
+ "cards": {
+  "2015-16": {
+   "file": "reports/ovr-inseason-2026-27/e133-attr-decay/cards/prior-2015-16-027.json",
+   "sha256": "c7050868e933b9d8cb97624bebc3a7e00ef25d35ff585e59eb1bccc1a96eceb6",
+   "inWindow": 476,
+   "sampleMismatch": 0
+  },
+  "2016-17": {
+   "file": "reports/ovr-inseason-2026-27/e133-attr-decay/cards/prior-2016-17-027.json",
+   "sha256": "07055425291ce3149da90fb6dca2a5e05e9f983fc5551d88f422ac602f8b8e46",
+   "inWindow": 486,
+   "sampleMismatch": 0
+  },
+  "2017-18": {
+   "file": "reports/ovr-inseason-2026-27/e133-attr-decay/cards/prior-2017-18-027.json",
+   "sha256": "2e844edf4df34e23726b806a9ed5931bbafde54d6d74d6fde0fdfd192ea5c7a3",
+   "inWindow": 540,
+   "sampleMismatch": 0
+  },
+  "2018-19": {
+   "file": "reports/ovr-inseason-2026-27/e133-attr-decay/cards/prior-2018-19-027.json",
+   "sha256": "3b32db530fbd23e570d3f2fe681967c837b2dbec958754200ebb25e5161c1d79",
+   "inWindow": 530,
+   "sampleMismatch": 0
+  },
+  "2019-20": {
+   "file": "reports/ovr-inseason-2026-27/e133-attr-decay/cards/prior-2019-20-027.json",
+   "sha256": "4cecd432f108b1eeceb9aa04c03bd6ed1abbfd5f92ad253f2a74bb6e8617bbfe",
+   "inWindow": 529,
+   "sampleMismatch": 0
+  },
+  "2020-21": {
+   "file": "reports/ovr-inseason-2026-27/e133-attr-decay/cards/prior-2020-21-027.json",
+   "sha256": "65c30011f42bb710d294c4226f41888da34e5ba7c64444792cc088c1a7bd44c2",
+   "inWindow": 540,
+   "sampleMismatch": 0
+  },
+  "2021-22": {
+   "file": "reports/ovr-inseason-2026-27/e133-attr-decay/cards/prior-2021-22-027.json",
+   "sha256": "fd02292d025654a3c7e26d893ffb34143ec6fac7c6711f78ca83934976e514f0",
+   "inWindow": 605,
+   "sampleMismatch": 0
+  },
+  "2022-23": {
+   "file": "reports/ovr-inseason-2026-27/e133-attr-decay/cards/prior-2022-23-027.json",
+   "sha256": "9bcc3c4c0300c53d006155d0048d536f609d25f10013352599a436f6a3ddd0d8",
+   "inWindow": 539,
+   "sampleMismatch": 539
+  },
+  "2023-24": {
+   "file": "reports/ovr-inseason-2026-27/e133-attr-decay/cards/prior-2023-24-027.json",
+   "sha256": "cd483f2a5721cedbd48b8a6f687776f98358da9d9b8f6f5388d81330d5dbaa0a",
+   "inWindow": 572,
+   "sampleMismatch": 570
+  },
+  "2024-25": {
+   "file": "reports/ovr-inseason-2026-27/e133-attr-decay/cards/prior-2024-25-027.json",
+   "sha256": "787602efab6b5303eb81679247625fa2525978ba86084bcef2c3fcfe51cbcbde",
+   "inWindow": 569,
+   "sampleMismatch": 375
+  },
+  "2025-26": {
+   "file": "reports/ovr-inseason-2026-27/live/prior-2025-26-card027.json",
+   "sha256": "5901af897a5afec60d24231006756a07f2195e49071e565e129288fafbae2864",
+   "note": "live 正式 card027 先驗卡，非 build_card027 重建"
+  }
+ },
+ "defL": {
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2014-15_2016-17.csv": {
+   "file": "reports/ovr-inseason-2026-27/e129-tl-season-step/defL/def-L-2014-15_2016-17.csv",
+   "sha256": "93ce27404f5459d105d8d313c3d840fd06db94ec51d4eb52b1a833d730caf835"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2014-15_2017-18.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2014-15_2017-18.csv",
+   "sha256": "4b985b69f32570759364bf7feb3aaf77a0625683a7f981e9049c88dac9c15340"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2015-16_2018-19.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2015-16_2018-19.csv",
+   "sha256": "273773c9b0060dfcbe72d4e4c119fea020f39c7e9be8e653f94bc2d689d30481"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2016-17_2019-20.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2016-17_2019-20.csv",
+   "sha256": "5c7bb4f6d6b19929497a2b3cc52845926f21c655dee506ed191e1e1d950b7feb"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2017-18_2020-21.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2017-18_2020-21.csv",
+   "sha256": "29304a9580e96f7aeab6f51774bb48677e285c558d67afaabc6b88969d372343"
+  },
+  "reports/ovr-inseason-2026-27/v5/pathA/rapm/pipe-2018-19_2021-22.csv": {
+   "file": "reports/ovr-inseason-2026-27/e111-card027/defL/def-L-2018-19_2021-22.csv",
+   "sha256": "9f7ffe505f79f2b0e556dbe36bc6321dad689c252504427ade77cd9847170083"
+  },
+  "reports/ovr-inseason-2026-27/v3/data/rapm-2021-22_2022-23.csv": {
+   "file": "reports/ovr-inseason-2026-27/e133-attr-decay/defL/def-L-2021-22_2022-23.csv",
+   "sha256": "5a86b99cb602d57f050355c0f18d0569516b5d408a09e06d068d411a4f83d88a"
+  },
+  "reports/ovr-inseason-2026-27/v3/data/rapm-2021-22_2023-24.csv": {
+   "file": "reports/ovr-inseason-2026-27/e133-attr-decay/defL/def-L-2021-22_2023-24.csv",
+   "sha256": "7d08d63ff66f869db68d69b1d6b48c092e7d34fc771beed82812239f2405e2c5"
+  },
+  "reports/ovr-inseason-2026-27/v4/data/rapm-2021-22_2024-25.csv": {
+   "file": "reports/ovr-inseason-2026-27/e133-attr-decay/defL/def-L-2021-22_2024-25.csv",
+   "sha256": "ec3dac9ba56811851fbd3bb1bff12be879666b23f2f690e9bfb0f0445c0c63b2"
+  },
+  "reports/ovr-inseason-2026-27/v3/data/rapm-formal-card-H1-m0.csv": {
+   "file": "reports/card-0.2.5+E104-defense-pergame-decay/def-L-primary.csv",
+   "sha256": "c43396ea951fb7b12060c667e92b7acf26569209f2bc595c642e7a1d5f6aecc9"
+  }
+ },
+ "delta2": {
+  "Y2": {
+   "pooled_pickle": {
+    "long": 44.275919,
+    "mid": 67.400342,
+    "short": 99.244964,
+    "ft": 27.214302,
+    "drive": 64.767326,
+    "tovSkill": 5.411161,
+    "pass": 50.766867,
+    "rebound": 33.497761,
+    "stamina": 170.207985,
+    "creation": 87.631601,
+    "pressure": 297.98157
+   },
+   "pooled_recomp": {
+    "long": 54.148842,
+    "mid": 67.400342,
+    "short": 99.768197,
+    "ft": 34.445951,
+    "drive": 64.767326,
+    "tovSkill": 16.626727,
+    "pass": 52.630675,
+    "rebound": 47.154986,
+    "stamina": 170.207985,
+    "creation": 23.631791,
+    "pressure": 297.98157
+   },
+   "young": {
+    "long": 0.0,
+    "mid": 34.466502,
+    "short": 69.109657,
+    "ft": 31.233286,
+    "drive": 28.760449,
+    "tovSkill": 0.0,
+    "pass": 54.72645,
+    "rebound": 36.224036,
+    "stamina": 269.531255,
+    "creation": 30.490558,
+    "pressure": 423.704368
+   },
+   "vet": {
+    "long": 61.765715,
+    "mid": 70.577789,
+    "short": 104.965898,
+    "ft": 34.029397,
+    "drive": 70.218489,
+    "tovSkill": 30.733331,
+    "pass": 51.09047,
+    "rebound": 49.179577,
+    "stamina": 149.868912,
+    "creation": 21.93397,
+    "pressure": 275.964103
+   },
+   "used_young": {
+    "long": 44.275919,
+    "mid": 67.400342,
+    "short": 69.109657,
+    "ft": 27.214302,
+    "drive": 28.760449,
+    "tovSkill": 0.0,
+    "pass": 54.72645,
+    "rebound": 36.224036,
+    "stamina": 269.531255,
+    "creation": 30.490558,
+    "pressure": 423.704368
+   },
+   "used_vet": {
+    "long": 61.765715,
+    "mid": 70.577789,
+    "short": 104.965898,
+    "ft": 34.029397,
+    "drive": 70.218489,
+    "tovSkill": 30.733331,
+    "pass": 51.09047,
+    "rebound": 49.179577,
+    "stamina": 149.868912,
+    "creation": 21.93397,
+    "pressure": 275.964103
+   }
+  },
+  "Y3": {
+   "pooled_pickle": {
+    "long": 34.986022,
+    "mid": 81.451939,
+    "short": 106.843086,
+    "ft": 26.908501,
+    "drive": 72.134473,
+    "tovSkill": 7.9029,
+    "pass": 50.560949,
+    "rebound": 32.272843,
+    "stamina": 174.254939,
+    "creation": 80.961204,
+    "pressure": 273.882241
+   },
+   "pooled_recomp": {
+    "long": 39.773227,
+    "mid": 81.451939,
+    "short": 108.26037,
+    "ft": 37.038223,
+    "drive": 72.134473,
+    "tovSkill": 22.463114,
+    "pass": 51.190673,
+    "rebound": 42.384696,
+    "stamina": 174.254939,
+    "creation": 23.820504,
+    "pressure": 273.882241
+   },
+   "young": {
+    "long": 0.0,
+    "mid": 28.431236,
+    "short": 132.086532,
+    "ft": 29.429617,
+    "drive": 89.913227,
+    "tovSkill": 0.0,
+    "pass": 50.344143,
+    "rebound": 38.745875,
+    "stamina": 226.248033,
+    "creation": 42.675912,
+    "pressure": 301.741293
+   },
+   "vet": {
+    "long": 42.945465,
+    "mid": 87.972279,
+    "short": 104.475431,
+    "ft": 38.021607,
+    "drive": 67.208264,
+    "tovSkill": 30.344047,
+    "pass": 50.534406,
+    "rebound": 42.942352,
+    "stamina": 159.784477,
+    "creation": 19.724605,
+    "pressure": 268.821297
+   },
+   "used_young": {
+    "long": 34.986022,
+    "mid": 28.431236,
+    "short": 132.086532,
+    "ft": 29.429617,
+    "drive": 89.913227,
+    "tovSkill": 0.0,
+    "pass": 50.344143,
+    "rebound": 38.745875,
+    "stamina": 226.248033,
+    "creation": 42.675912,
+    "pressure": 301.741293
+   },
+   "used_vet": {
+    "long": 42.945465,
+    "mid": 87.972279,
+    "short": 104.475431,
+    "ft": 38.021607,
+    "drive": 67.208264,
+    "tovSkill": 30.344047,
+    "pass": 50.534406,
+    "rebound": 42.942352,
+    "stamina": 159.784477,
+    "creation": 19.724605,
+    "pressure": 268.821297
+   }
+  },
+  "Y5": {
+   "pooled_pickle": {
+    "long": 50.326809,
+    "mid": 92.247772,
+    "short": 107.640484,
+    "ft": 27.603036,
+    "drive": 65.569263,
+    "tovSkill": 25.108632,
+    "pass": 50.213142,
+    "rebound": 26.952932,
+    "stamina": 181.491652,
+    "creation": 74.306003,
+    "pressure": 257.104588
+   },
+   "pooled_recomp": {
+    "long": 57.618816,
+    "mid": 92.247772,
+    "short": 109.418987,
+    "ft": 34.229904,
+    "drive": 65.569263,
+    "tovSkill": 31.884259,
+    "pass": 48.842839,
+    "rebound": 36.041733,
+    "stamina": 181.491652,
+    "creation": 21.323175,
+    "pressure": 257.104588
+   },
+   "young": {
+    "long": 75.397248,
+    "mid": 35.413071,
+    "short": 122.473067,
+    "ft": 30.65567,
+    "drive": 68.58767,
+    "tovSkill": 12.016267,
+    "pass": 39.861965,
+    "rebound": 38.885238,
+    "stamina": 184.812737,
+    "creation": 37.150346,
+    "pressure": 290.110085
+   },
+   "vet": {
+    "long": 55.510847,
+    "mid": 101.24498,
+    "short": 106.773621,
+    "ft": 34.715491,
+    "drive": 64.378981,
+    "tovSkill": 35.816629,
+    "pass": 48.980127,
+    "rebound": 35.304418,
+    "stamina": 174.345088,
+    "creation": 17.522167,
+    "pressure": 251.034151
+   },
+   "used_young": {
+    "long": 75.397248,
+    "mid": 35.413071,
+    "short": 122.473067,
+    "ft": 30.65567,
+    "drive": 68.58767,
+    "tovSkill": 12.016267,
+    "pass": 39.861965,
+    "rebound": 38.885238,
+    "stamina": 184.812737,
+    "creation": 37.150346,
+    "pressure": 290.110085
+   },
+   "used_vet": {
+    "long": 55.510847,
+    "mid": 101.24498,
+    "short": 106.773621,
+    "ft": 34.715491,
+    "drive": 64.378981,
+    "tovSkill": 35.816629,
+    "pass": 48.980127,
+    "rebound": 35.304418,
+    "stamina": 174.345088,
+    "creation": 17.522167,
+    "pressure": 251.034151
+   }
+  },
+  "Y6": {
+   "pooled_pickle": {
+    "long": 54.534825,
+    "mid": 93.346798,
+    "short": 112.420395,
+    "ft": 28.526532,
+    "drive": 62.600541,
+    "tovSkill": 23.163463,
+    "pass": 52.613804,
+    "rebound": 25.664457,
+    "stamina": 178.269716,
+    "creation": 71.237032,
+    "pressure": 255.719455
+   },
+   "pooled_recomp": {
+    "long": 62.583711,
+    "mid": 93.346798,
+    "short": 115.581653,
+    "ft": 33.903737,
+    "drive": 62.600541,
+    "tovSkill": 33.617766,
+    "pass": 50.925203,
+    "rebound": 34.024462,
+    "stamina": 178.269716,
+    "creation": 21.565235,
+    "pressure": 255.719455
+   },
+   "young": {
+    "long": 86.719123,
+    "mid": 34.544015,
+    "short": 127.369272,
+    "ft": 32.667904,
+    "drive": 64.857117,
+    "tovSkill": 12.135204,
+    "pass": 48.747866,
+    "rebound": 37.767702,
+    "stamina": 178.046715,
+    "creation": 32.128731,
+    "pressure": 292.64573
+   },
+   "vet": {
+    "long": 59.055771,
+    "mid": 102.544327,
+    "short": 112.625734,
+    "ft": 33.718058,
+    "drive": 61.413841,
+    "tovSkill": 37.871052,
+    "pass": 49.725468,
+    "rebound": 33.21678,
+    "stamina": 172.292061,
+    "creation": 18.633953,
+    "pressure": 248.579285
+   },
+   "used_young": {
+    "long": 86.719123,
+    "mid": 34.544015,
+    "short": 127.369272,
+    "ft": 32.667904,
+    "drive": 64.857117,
+    "tovSkill": 12.135204,
+    "pass": 48.747866,
+    "rebound": 37.767702,
+    "stamina": 178.046715,
+    "creation": 32.128731,
+    "pressure": 292.64573
+   },
+   "used_vet": {
+    "long": 59.055771,
+    "mid": 102.544327,
+    "short": 112.625734,
+    "ft": 33.718058,
+    "drive": 61.413841,
+    "tovSkill": 37.871052,
+    "pass": 49.725468,
+    "rebound": 33.21678,
+    "stamina": 172.292061,
+    "creation": 18.633953,
+    "pressure": 248.579285
+   }
+  },
+  "D1": {
+   "pooled_pickle": {
+    "long": 67.119879,
+    "mid": 91.153736,
+    "short": 0.0,
+    "ft": 28.553108,
+    "drive": 60.541665,
+    "tovSkill": 16.452914,
+    "pass": 51.767932,
+    "rebound": 24.015715,
+    "stamina": 173.898389,
+    "creation": 0.0,
+    "pressure": 242.80464
+   },
+   "pooled_recomp": {
+    "long": 75.048286,
+    "mid": 91.153736,
+    "short": 0.0,
+    "ft": 33.763629,
+    "drive": 60.541665,
+    "tovSkill": 28.895846,
+    "pass": 50.212187,
+    "rebound": 31.565653,
+    "stamina": 173.898389,
+    "creation": 0.0,
+    "pressure": 242.80464
+   },
+   "young": {
+    "long": 75.342535,
+    "mid": 43.994259,
+    "short": 0.0,
+    "ft": 29.083764,
+    "drive": 60.116816,
+    "tovSkill": 14.717829,
+    "pass": 45.83956,
+    "rebound": 34.799823,
+    "stamina": 181.274682,
+    "creation": 0.0,
+    "pressure": 284.081656
+   },
+   "vet": {
+    "long": 74.556325,
+    "mid": 98.080028,
+    "short": 0.0,
+    "ft": 33.711386,
+    "drive": 60.030757,
+    "tovSkill": 31.694123,
+    "pass": 49.436456,
+    "rebound": 30.863681,
+    "stamina": 165.974414,
+    "creation": 0.0,
+    "pressure": 234.70087
+   },
+   "used_young": {
+    "long": 75.342535,
+    "mid": 43.994259,
+    "short": 0.0,
+    "ft": 29.083764,
+    "drive": 60.116816,
+    "tovSkill": 14.717829,
+    "pass": 45.83956,
+    "rebound": 34.799823,
+    "stamina": 181.274682,
+    "creation": 0.0,
+    "pressure": 284.081656
+   },
+   "used_vet": {
+    "long": 74.556325,
+    "mid": 98.080028,
+    "short": 0.0,
+    "ft": 33.711386,
+    "drive": 60.030757,
+    "tovSkill": 31.694123,
+    "pass": 49.436456,
+    "rebound": 30.863681,
+    "stamina": 165.974414,
+    "creation": 0.0,
+    "pressure": 234.70087
+   }
+  },
+  "D2": {
+   "pooled_pickle": {
+    "long": 68.021748,
+    "mid": 87.411133,
+    "short": 55.295694,
+    "ft": 28.249031,
+    "drive": 59.554578,
+    "tovSkill": 20.47161,
+    "pass": 50.336943,
+    "rebound": 24.028598,
+    "stamina": 165.319608,
+    "creation": 57.14355,
+    "pressure": 235.376012
+   },
+   "pooled_recomp": {
+    "long": 75.745154,
+    "mid": 88.696408,
+    "short": 56.576087,
+    "ft": 32.665068,
+    "drive": 59.554578,
+    "tovSkill": 31.705903,
+    "pass": 49.927244,
+    "rebound": 30.425306,
+    "stamina": 165.319608,
+    "creation": 23.73841,
+    "pressure": 235.376012
+   },
+   "young": {
+    "long": 92.806791,
+    "mid": 46.149198,
+    "short": 87.008498,
+    "ft": 26.259125,
+    "drive": 60.027346,
+    "tovSkill": 14.928818,
+    "pass": 42.762338,
+    "rebound": 33.004581,
+    "stamina": 176.377949,
+    "creation": 16.73412,
+    "pressure": 275.087002
+   },
+   "vet": {
+    "long": 72.572048,
+    "mid": 94.880101,
+    "short": 48.023843,
+    "ft": 32.787191,
+    "drive": 58.875552,
+    "tovSkill": 35.017817,
+    "pass": 49.494066,
+    "rebound": 29.811461,
+    "stamina": 156.849875,
+    "creation": 24.493576,
+    "pressure": 227.343759
+   },
+   "used_young": {
+    "long": 92.806791,
+    "mid": 46.149198,
+    "short": 87.008498,
+    "ft": 26.259125,
+    "drive": 60.027346,
+    "tovSkill": 14.928818,
+    "pass": 42.762338,
+    "rebound": 33.004581,
+    "stamina": 176.377949,
+    "creation": 16.73412,
+    "pressure": 275.087002
+   },
+   "used_vet": {
+    "long": 72.572048,
+    "mid": 94.880101,
+    "short": 48.023843,
+    "ft": 32.787191,
+    "drive": 58.875552,
+    "tovSkill": 35.017817,
+    "pass": 49.494066,
+    "rebound": 29.811461,
+    "stamina": 156.849875,
+    "creation": 24.493576,
+    "pressure": 227.343759
+   }
+  },
+  "D3": {
+   "pooled_pickle": {
+    "long": 67.367159,
+    "mid": 85.794856,
+    "short": 48.36104,
+    "ft": 28.216421,
+    "drive": 59.391472,
+    "tovSkill": 17.003075,
+    "pass": 49.770512,
+    "rebound": 25.084133,
+    "stamina": 163.145477,
+    "creation": 53.892921,
+    "pressure": 230.796881
+   },
+   "pooled_recomp": {
+    "long": 74.30469,
+    "mid": 87.313855,
+    "short": 50.612649,
+    "ft": 32.10048,
+    "drive": 59.391472,
+    "tovSkill": 27.083292,
+    "pass": 49.6888,
+    "rebound": 30.748201,
+    "stamina": 163.145477,
+    "creation": 23.904459,
+    "pressure": 230.796881
+   },
+   "young": {
+    "long": 83.59802,
+    "mid": 45.113109,
+    "short": 73.625055,
+    "ft": 26.562651,
+    "drive": 58.42018,
+    "tovSkill": 6.072561,
+    "pass": 43.586334,
+    "rebound": 33.597566,
+    "stamina": 175.320776,
+    "creation": 15.656384,
+    "pressure": 265.711223
+   },
+   "vet": {
+    "long": 72.484466,
+    "mid": 93.225115,
+    "short": 44.714694,
+    "ft": 32.568216,
+    "drive": 58.884997,
+    "tovSkill": 31.5018,
+    "pass": 49.066546,
+    "rebound": 30.135342,
+    "stamina": 154.230796,
+    "creation": 24.965123,
+    "pressure": 223.603816
+   },
+   "used_young": {
+    "long": 83.59802,
+    "mid": 45.113109,
+    "short": 73.625055,
+    "ft": 26.562651,
+    "drive": 58.42018,
+    "tovSkill": 6.072561,
+    "pass": 43.586334,
+    "rebound": 33.597566,
+    "stamina": 175.320776,
+    "creation": 15.656384,
+    "pressure": 265.711223
+   },
+   "used_vet": {
+    "long": 72.484466,
+    "mid": 93.225115,
+    "short": 44.714694,
+    "ft": 32.568216,
+    "drive": 58.884997,
+    "tovSkill": 31.5018,
+    "pass": 49.066546,
+    "rebound": 30.135342,
+    "stamina": 154.230796,
+    "creation": 24.965123,
+    "pressure": 223.603816
+   }
+  }
+ },
+ "u_a": {
+  "Y2": {
+   "median": 0.004975,
+   "u": {
+    "long": 0.573917,
+    "mid": 2.020281,
+    "short": 3.804576,
+    "ft": 3.469321,
+    "drive": 0.907653,
+    "tovSkill": 0.017117,
+    "pass": 0.687139,
+    "rebound": 0.413772,
+    "stamina": 147.167292,
+    "creation": 1.092347,
+    "pressure": 0.0
+   }
+  },
+  "Y3": {
+   "median": 0.005025,
+   "u": {
+    "long": 0.448988,
+    "mid": 2.417181,
+    "short": 4.055107,
+    "ft": 3.396212,
+    "drive": 1.00084,
+    "tovSkill": 0.02475,
+    "pass": 0.677544,
+    "rebound": 0.394675,
+    "stamina": 149.167607,
+    "creation": 0.99916,
+    "pressure": 0.0
+   }
+  },
+  "Y5": {
+   "median": 0.00459,
+   "u": {
+    "long": 0.707105,
+    "mid": 2.997147,
+    "short": 4.472764,
+    "ft": 3.814228,
+    "drive": 0.996017,
+    "tovSkill": 0.086092,
+    "pass": 0.736689,
+    "rebound": 0.360872,
+    "stamina": 170.094628,
+    "creation": 1.003983,
+    "pressure": 0.0
+   }
+  },
+  "Y6": {
+   "median": 0.004391,
+   "u": {
+    "long": 0.800892,
+    "mid": 3.170058,
+    "short": 4.882712,
+    "ft": 4.120163,
+    "drive": 0.99394,
+    "tovSkill": 0.083015,
+    "pass": 0.80683,
+    "rebound": 0.359166,
+    "stamina": 174.63333,
+    "creation": 1.00606,
+    "pressure": 0.0
+   }
+  },
+  "D1": {
+   "median": 0.004275,
+   "u": {
+    "long": 1.012565,
+    "mid": 3.179905,
+    "short": 0.0,
+    "ft": 4.236339,
+    "drive": 0.987435,
+    "tovSkill": 0.060571,
+    "pass": 0.815483,
+    "rebound": 0.345247,
+    "stamina": 174.991538,
+    "creation": 0.0,
+    "pressure": 0.0
+   }
+  },
+  "D2": {
+   "median": 0.004269,
+   "u": {
+    "long": 1.027452,
+    "mid": 3.053151,
+    "short": 2.470137,
+    "ft": 4.196457,
+    "drive": 0.972548,
+    "tovSkill": 0.07546,
+    "pass": 0.793931,
+    "rebound": 0.345864,
+    "stamina": 166.566527,
+    "creation": 0.83004,
+    "pressure": 0.0
+   }
+  },
+  "D3": {
+   "median": 0.004242,
+   "u": {
+    "long": 1.023991,
+    "mid": 3.015622,
+    "short": 2.174,
+    "ft": 4.218083,
+    "drive": 0.976009,
+    "tovSkill": 0.063071,
+    "pass": 0.789954,
+    "rebound": 0.363337,
+    "stamina": 165.414052,
+    "creation": 0.787767,
+    "pressure": 0.0
+   }
+  }
+ },
+ "hardConditions": {
+  "c0r": true,
+  "c0D": true,
+  "c0e": true,
+  "c0g": true,
+  "c0x": true
+ },
+ "pass": true,
+ "elapsedSec": 111.1
+}

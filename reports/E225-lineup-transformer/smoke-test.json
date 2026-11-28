@@ -1,0 +1,35 @@
+{
+ "season": "2023-24",
+ "trainStints": 20425,
+ "valStints": 5294,
+ "arms": {
+  "T-min": {
+   "featDim": 16,
+   "params": 9987,
+   "valLoss": [
+    3.8066,
+    2.0841,
+    2.0712,
+    2.0705,
+    2.0714,
+    2.0698
+   ],
+   "decreased": true
+  },
+  "T-nomin": {
+   "featDim": 15,
+   "params": 9923,
+   "valLoss": [
+    2.721,
+    2.0739,
+    2.0709,
+    2.0697,
+    2.0745,
+    2.0698
+   ],
+   "decreased": true
+  }
+ },
+ "seconds": 118.2,
+ "note": "只確認管線；不是準度結論。test／前向季未讀。"
+}

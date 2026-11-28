@@ -1,0 +1,26 @@
+{
+ "version": "card 0.2.12b",
+ "base": "reports/card-0.2.12-tov（card 0.2.12）",
+ "players": 582,
+ "change": "E-204／R-140：四季窗口的逐場線性遞減由 328 格縮成 246 格（約三季）；形狀、每人正規化與下限、係數、錨點、r_repl 都不動；MPG 窗口（一季）不動。",
+ "anchors": {
+  "PR1": -0.6029,
+  "PR50": 1.0129,
+  "PR90": 2.2597,
+  "PR95": 2.6276,
+  "PR99": 4.1353
+ },
+ "ovr_map": {
+  "function": "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py:ovr_map",
+  "A_PR90": 88.0,
+  "B_PR95": 92.0
+ },
+ "ovr_changed": null,
+ "pool_90_99": 23,
+ "pool_ge99": 5,
+ "build_command": "WIN_LEN=246 reports/E204-window-246/card_route.py → make_card.py（線上管線卡片路線；WIN_LEN=328 逐位元重現 card 0.2.12）",
+ "ranking_csv_sha256": "9a8ea84eb61fae855162915543a315c1efeac192cfd69cec6a21f9f5f71c2d8b",
+ "three_value_csv_sha256": "873bc130ebfe63ae7de784bdcd1f750ea0b0f3353c8b6721bb6ea7b552ceb463",
+ "three_value_source": "reports/card-0.2.10j/three-value.csv",
+ "win_len": 246
+}

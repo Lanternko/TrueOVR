@@ -1,0 +1,196 @@
+{
+ "version": "card 0.2.14b",
+ "base": "card 0.2.13a（reports/card-0.2.13a/）＋MIX 加分 E-295 W1（候選 reports/card-0.2.14b-cand/＋BBRef 手動別名 3 人）；取代 card 0.2.14a",
+ "players": 582,
+ "change": "E-295 臂 W1（使用者裁定採用，字母版 0.2.14b＝修 0.2.14a 的 PF／C 標籤斷崖；role-audit 4/5 reports/audit-0.2.14b/）：MIX 加分的位置權重 w 與位置平均 m 都改 BBRef 2025-26 上場位置比例 π 加權（w＝c＝π_C＋0.243·π_PF；m_i＝Σ_p π_ip·m_p，m_p＝算尺人群以 π 加權的 z_L 平均），取代硬標籤；MP<200 往身高帶 π̂ 收縮、沒有 BBRef 用身高帶。z_H＝z_L−0.5·m_i、1.5·tanh、λ＝0.5、sd＝13.41、500 分鐘打折同 0.2.14a；三個均方根縮放在 W1 下重算（s_reb 1.05193、s_con 1.03870、s_mix 1.12362）。BBRef 對名補手動別名（Ronald Holland II、Trevon Scott、Adama Bal；audit 必修 1）。能力值、係數、錨點與 0.2.13a 相同。",
+ "anchors": {
+  "PR1": -0.7541,
+  "PR50": 1.0023,
+  "PR90": 2.1176,
+  "PR95": 2.5903,
+  "PR99": 4.0078
+ },
+ "ovr_map": {
+  "function": "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py:ovr_map",
+  "A_PR90": 88.0,
+  "B_PR95": 92.0
+ },
+ "ovr_changed": "ovr = round(ovr_0213a + mixBonus, 1)；rank 依新 ovr 重排、同分依原名次；欄 mixBonus、cShare（＝w）",
+ "pool_90_99": 22,
+ "pool_ge99": 5,
+ "build_command": "python -I -X utf8 reports/ovr-inseason-2026-27/live/mix_live.py freeze_w1 → python -I -B -X utf8 reports/card-0.2.14b/build_card_0214b.py",
+ "ranking_csv_sha256": "4e9593183c1612f6205bdc0a93698e15827b92e58755bf659e7d40513046c875",
+ "three_value_csv_sha256": "0e3ef0c040deb5104c36e99e7e4cb43e8338128bf7d33724b13a4e1f666ff623",
+ "three_value_source": "reports/card-0.2.10j/three-value.csv",
+ "win_len": 246,
+ "anchor_source": "reports/card-0.2.13-w246/work/pre-W246/ranking.csv gRepl, MIN>=500, qf（gRepl 4 位小數）",
+ "change_0213a": "0.2.13a（2026-11-08 role-audit）：pnr 窗口外的季（win_len 1e-12 佔位權重）不帶擋拆回合，7 人 pnr≈51→43.5，其他人 ≤0.5；凍結池 live/pnr-pool-card0213a.json；係數與錨點沿用 card-0.2.13-w246，不重擬合。",
+ "pnr_attr_csv_sha256": "6f0f8523de765e642dc495e693bfbddd45a3505e76c30e7866953dd776e5f4db",
+ "pnr": {
+  "attr_csv": "reports/card-0.2.13-w246/gravity-pnr-attr.csv",
+  "attr_sha256": "c9d65541a92418ddcde666950549d06adbf61a96cbe316d12df9a147f61c8cd7",
+  "frozen": "reports/ovr-inseason-2026-27/live/pnr-pool-card0213.json"
+ },
+ "mix": {
+  "config": {
+   "lambda": 0.5,
+   "sd": 13.406247107921262,
+   "ref": 0.444847369395445,
+   "clip": [
+    0.0,
+    1.5
+   ],
+   "rampMin": 500.0,
+   "blendK": 500.0,
+   "conMinPrior": 200.0,
+   "z": {
+    "rebound": {
+     "mu": 70.94300791556729,
+     "sd": 17.317021456168316
+    },
+    "orebPct": {
+     "mu": 0.04652242744063325,
+     "sd": 0.033799211531870585
+    },
+    "drebPct": {
+     "mu": 0.12901055408970977,
+     "sd": 0.04881989834445755
+    },
+    "con2_36": {
+     "mu": 3.8409042086225194,
+     "sd": 2.362990623973127
+    }
+   },
+   "scales": {
+    "reb": 1.0519290949264455,
+    "con": 1.0387012877560997,
+    "mix": 1.1236193476061815
+   }
+  },
+  "w1": {
+   "alpha": 0.5,
+   "hi": 1.5,
+   "posOrder": [
+    "PG",
+    "SG",
+    "SF",
+    "PF",
+    "C"
+   ],
+   "posWeight": [
+    0.0,
+    0.0,
+    0.0,
+    0.24285714285714288,
+    1.0
+   ],
+   "mpos": {
+    "rebound": [
+     -0.8494663481589968,
+     -0.6502967014315024,
+     -0.1786149023184556,
+     0.43986574645020077,
+     1.187425283488879
+    ],
+    "orebPct": [
+     -0.6573071458266629,
+     -0.48923812786013576,
+     -0.29292295458878354,
+     0.07628207290475192,
+     1.3082798558415036
+    ],
+    "drebPct": [
+     -0.6587212710096716,
+     -0.5917662803810545,
+     -0.27781717757985347,
+     0.2678619042301851,
+     1.2081994698179324
+    ],
+    "con2_36": [
+     -0.726954644880939,
+     -0.518113552542023,
+     -0.35271058046370213,
+     0.06279245199876683,
+     1.4727874101424026
+    ]
+   },
+   "heightRange": [
+    70,
+    91
+   ],
+   "heightPriorRule": "卡片 2025-26 BBRef MP≥200 的人（含別名），|身高−h|≤1 吋 π 平均（不足 15 人放寬到 ±2、±3…）；賽中身高四捨五入到整數吋、超出 70–91 取端點",
+   "mposPool": "card 0.2.13a MIN>=500 且姓名在 stats-2025-26 唯一（同 epN），以 π 加權的 z_L 平均",
+   "shrinkMP": 200.0
+  },
+  "frozen": "reports/ovr-inseason-2026-27/live/mix-pool-card0214b.json",
+  "frozen_sha256": "6c854891f9cdeffc7713fe9ea04e655be248334eb2a3ddf88c0d95ec2643778f",
+  "base_frozen_sha256": {
+   "mix-pool-card0214a.json": "d4c0fb9c3f418f867bd65595658fe0e265cbc87bf85671cc9568e317882ca99f"
+  },
+  "bonus_population": {
+   "MIN>=500 非零": 193,
+   "MIN<500 非零": 108,
+   "零": 281
+  },
+  "bonus_max": 10.74,
+  "share_source_counts": {
+   "2025-26": 465,
+   "2025-26+shrink": 117
+  },
+  "aliases": [
+   {
+    "bbref_id": "hollaro01",
+    "bbref_name": "Ron Holland",
+    "card_name": "Ronald Holland II",
+    "playerId": "1641842",
+    "note": "audit-0.2.14b 必修 1：BBRef 名字寫法不同（E177 對名 none）"
+   },
+   {
+    "bbref_id": "scotttr01",
+    "bbref_name": "Tre Scott",
+    "card_name": "Trevon Scott",
+    "playerId": "1630286",
+    "note": "同上"
+   },
+   {
+    "bbref_id": "balad01",
+    "bbref_name": "Adama-Alpha Bal",
+    "card_name": "Adama Bal",
+    "playerId": "1642380",
+    "note": "同上"
+   }
+  ],
+  "aliasBonusChange": {
+   "Adama Bal": {
+    "cand": 0.0,
+    "new": 0.0
+   },
+   "Ronald Holland II": {
+    "cand": 0.28,
+    "new": 0.19704448201811697
+   },
+   "Trevon Scott": {
+    "cand": 0.095,
+    "new": 1.2752404258103458
+   }
+  },
+  "cand_max_abs_except_alias": 0.014000000000000234,
+  "cand_worst_except_alias": "Nic Claxton"
+ },
+ "source_cand": {
+  "summary": "reports/card-0.2.14b-cand/summary.json",
+  "ranking_csv_sha256": "5cbd7e190d2ce6311234a67a4d00201275dd198c806801a247a926ccbed4feab",
+  "sources_sha256": {
+   "card_0213a_ranking": "feb5c8023cd99f12413767160d3b98d119051c55ef6e200f26bca631460daf97",
+   "card_0214a_ranking": "ff1abb4722247faf3cd61c6cc28dcc547f2728e08486a3123b33747162b7d35f",
+   "E295_bonus_pick": "446cc0ebee135b1525921419f7aa6b814810248b5dc459f1114a51172e2c6465",
+   "E295_preregistration": "d7ba937b6dbd5537410e648d96dbb150111379e0e74973ae17d5c4a63f7a0b14",
+   "E295_results": "5d109f6883d36c0d30883d1a13ea275314afb8d65c51a80b5deb3d18343c199e",
+   "E295_errata1": "a336f2197f67d099e784cab0fd636408840a31891a40b9025504c98463254aef",
+   "mix_pool_cand": "13c1d3d012b7db1e834b8d4d42d767e630642e52535dfc006aaf4b82a6967876"
+  }
+ },
+ "audit": "reports/audit-0.2.14b/report.md（4/5 建議採用）",
+ "card_0213a_ranking_csv_sha256": "feb5c8023cd99f12413767160d3b98d119051c55ef6e200f26bca631460daf97",
+ "card_0214a_ranking_csv_sha256": "ff1abb4722247faf3cd61c6cc28dcc547f2728e08486a3123b33747162b7d35f"
+}

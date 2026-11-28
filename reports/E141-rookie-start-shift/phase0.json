@@ -1,0 +1,312 @@
+{
+ "c0k_old": {
+  "players": 42,
+  "cells": 630,
+  "maxAbsDiff": 0.09502192452194436,
+  "pass": false
+ },
+ "c0k2": {
+  "players": 42,
+  "shape_within_player_spread_max": 1.4210854715202004e-14,
+  "shape_vs_stored_delta_max": 0.0004903683249208868,
+  "target_vs_stored_max": 0.004871655650518392,
+  "delta_old_new_maxdiff": 0.09546146125430977,
+  "shape_pass": true,
+  "target_pass": true,
+  "solve_opening_ovr_minus_T_max": 2.1316282072803006e-14,
+  "solve_pass": true,
+  "ovr_old_vs_new_maxdiff_listed_only": 0.20770287511595598,
+  "pass": true
+ },
+ "c0a": {
+  "perSeason": {
+   "Y2": {
+    "n": 42,
+    "bitIdenticalAcrossCandidates": true
+   },
+   "Y3": {
+    "n": 34,
+    "bitIdenticalAcrossCandidates": true
+   },
+   "Y5": {
+    "n": 32,
+    "bitIdenticalAcrossCandidates": true
+   },
+   "Y6": {
+    "n": 40,
+    "bitIdenticalAcrossCandidates": true
+   },
+   "D1": {
+    "n": 30,
+    "bitIdenticalAcrossCandidates": true
+   },
+   "D2": {
+    "n": 35,
+    "bitIdenticalAcrossCandidates": true
+   },
+   "D3": {
+    "n": 33,
+    "bitIdenticalAcrossCandidates": true
+   }
+  },
+  "pass": true
+ },
+ "c0s": {
+  "perSeason": {
+   "Y2": {
+    "n": 42,
+    "maxAbsDiffVsShift": 2.1316282072803006e-14,
+    "maxAbsOpenMinusT": 2.1316282072803006e-14,
+    "pass": true
+   },
+   "Y3": {
+    "n": 34,
+    "maxAbsDiffVsShift": 3.552713678800501e-14,
+    "maxAbsOpenMinusT": 2.1316282072803006e-14,
+    "pass": true
+   },
+   "Y5": {
+    "n": 32,
+    "maxAbsDiffVsShift": 2.842170943040401e-14,
+    "maxAbsOpenMinusT": 2.1316282072803006e-14,
+    "pass": true
+   },
+   "Y6": {
+    "n": 40,
+    "maxAbsDiffVsShift": 2.1316282072803006e-14,
+    "maxAbsOpenMinusT": 2.1316282072803006e-14,
+    "pass": true
+   },
+   "D1": {
+    "n": 30,
+    "maxAbsDiffVsShift": 2.1316282072803006e-14,
+    "maxAbsOpenMinusT": 1.4210854715202004e-14,
+    "pass": true
+   },
+   "D2": {
+    "n": 35,
+    "maxAbsDiffVsShift": 2.1316282072803006e-14,
+    "maxAbsOpenMinusT": 2.1316282072803006e-14,
+    "pass": true
+   },
+   "D3": {
+    "n": 33,
+    "maxAbsDiffVsShift": 2.842170943040401e-14,
+    "maxAbsOpenMinusT": 2.1316282072803006e-14,
+    "pass": true
+   }
+  },
+  "pass": true
+ },
+ "c0n": {
+  "perSeason": {
+   "Y2": {
+    "prior": "2016-17",
+    "target": "2017-18",
+    "drafted": 53,
+    "undrafted": 57,
+    "qualified": 42,
+    "qualifiedDrafted": 30,
+    "qualifiedUndrafted": 12,
+    "othersNoPriorCard": {
+     "draftedEarlier": 38
+    },
+    "othersQualifiedByMinutes": 9,
+    "undefinedAttrs": [],
+    "pressureOpen": false
+   },
+   "Y3": {
+    "prior": "2017-18",
+    "target": "2018-19",
+    "drafted": 64,
+    "undrafted": 35,
+    "qualified": 34,
+    "qualifiedDrafted": 30,
+    "qualifiedUndrafted": 4,
+    "othersNoPriorCard": {
+     "draftedEarlier": 19
+    },
+    "othersQualifiedByMinutes": 5,
+    "undefinedAttrs": [],
+    "pressureOpen": false
+   },
+   "Y5": {
+    "prior": "2019-20",
+    "target": "2020-21",
+    "drafted": 55,
+    "undrafted": 35,
+    "qualified": 32,
+    "qualifiedDrafted": 28,
+    "qualifiedUndrafted": 4,
+    "othersNoPriorCard": {
+     "draftedEarlier": 15
+    },
+    "othersQualifiedByMinutes": 5,
+    "undefinedAttrs": [],
+    "pressureOpen": false
+   },
+   "Y6": {
+    "prior": "2020-21",
+    "target": "2021-22",
+    "drafted": 53,
+    "undrafted": 70,
+    "qualified": 40,
+    "qualifiedDrafted": 32,
+    "qualifiedUndrafted": 8,
+    "othersNoPriorCard": {
+     "draftedEarlier": 32
+    },
+    "othersQualifiedByMinutes": 3,
+    "undefinedAttrs": [],
+    "pressureOpen": false
+   },
+   "D1": {
+    "prior": "2022-23",
+    "target": "2023-24",
+    "drafted": 54,
+    "undrafted": 50,
+    "qualified": 30,
+    "qualifiedDrafted": 28,
+    "qualifiedUndrafted": 2,
+    "othersNoPriorCard": {
+     "draftedEarlier": 18
+    },
+    "othersQualifiedByMinutes": 7,
+    "undefinedAttrs": [
+     "creation",
+     "short"
+    ],
+    "pressureOpen": false
+   },
+   "D2": {
+    "prior": "2023-24",
+    "target": "2024-25",
+    "drafted": 53,
+    "undrafted": 53,
+    "qualified": 35,
+    "qualifiedDrafted": 32,
+    "qualifiedUndrafted": 3,
+    "othersNoPriorCard": {
+     "draftedEarlier": 16
+    },
+    "othersQualifiedByMinutes": 7,
+    "undefinedAttrs": [],
+    "pressureOpen": false
+   },
+   "D3": {
+    "prior": "2024-25",
+    "target": "2025-26",
+    "drafted": 39,
+    "undrafted": 18,
+    "qualified": 33,
+    "qualifiedDrafted": 30,
+    "qualifiedUndrafted": 3,
+    "othersNoPriorCard": {
+     "noBio": 53,
+     "draftedEarlier": 8
+    },
+    "othersQualifiedByMinutes": 11,
+    "undefinedAttrs": [],
+    "pressureOpen": false
+   }
+  },
+  "trainTotal": 148,
+  "testTotal": 65,
+  "rowsWithAllThreeCheckpointsPerSeason": {
+   "Y2": 42,
+   "Y3": 34,
+   "Y5": 32,
+   "Y6": 40,
+   "D1": 30,
+   "D2": 35,
+   "D3": 33
+  },
+  "mode": "照預註冊判定"
+ },
+ "c0d": {
+  "perSeason": {
+   "Y2": {
+    "qualifiedTraded(多隊)": 1,
+    "qualifiedMidSeasonStart(首場在球隊第21場後)": 0,
+    "qualifiedUndrafted": 12,
+    "qualifiedUndraftedWithOlderSeasonGames(早於上季)": 1,
+    "olderSeasonsCheckable": 1,
+    "othersNoBio": 0,
+    "othersDraftedEarlier(上季無卡)": 38,
+    "othersUndraftedWithPriorGames": 0
+   },
+   "Y3": {
+    "qualifiedTraded(多隊)": 1,
+    "qualifiedMidSeasonStart(首場在球隊第21場後)": 1,
+    "qualifiedUndrafted": 4,
+    "qualifiedUndraftedWithOlderSeasonGames(早於上季)": 1,
+    "olderSeasonsCheckable": 2,
+    "othersNoBio": 0,
+    "othersDraftedEarlier(上季無卡)": 19,
+    "othersUndraftedWithPriorGames": 0
+   },
+   "Y5": {
+    "qualifiedTraded(多隊)": 1,
+    "qualifiedMidSeasonStart(首場在球隊第21場後)": 0,
+    "qualifiedUndrafted": 4,
+    "qualifiedUndraftedWithOlderSeasonGames(早於上季)": 0,
+    "olderSeasonsCheckable": 4,
+    "othersNoBio": 0,
+    "othersDraftedEarlier(上季無卡)": 15,
+    "othersUndraftedWithPriorGames": 0
+   },
+   "Y6": {
+    "qualifiedTraded(多隊)": 1,
+    "qualifiedMidSeasonStart(首場在球隊第21場後)": 2,
+    "qualifiedUndrafted": 8,
+    "qualifiedUndraftedWithOlderSeasonGames(早於上季)": 0,
+    "olderSeasonsCheckable": 5,
+    "othersNoBio": 0,
+    "othersDraftedEarlier(上季無卡)": 32,
+    "othersUndraftedWithPriorGames": 0
+   },
+   "D1": {
+    "qualifiedTraded(多隊)": 0,
+    "qualifiedMidSeasonStart(首場在球隊第21場後)": 0,
+    "qualifiedUndrafted": 2,
+    "qualifiedUndraftedWithOlderSeasonGames(早於上季)": 0,
+    "olderSeasonsCheckable": 7,
+    "othersNoBio": 0,
+    "othersDraftedEarlier(上季無卡)": 18,
+    "othersUndraftedWithPriorGames": 0
+   },
+   "D2": {
+    "qualifiedTraded(多隊)": 0,
+    "qualifiedMidSeasonStart(首場在球隊第21場後)": 1,
+    "qualifiedUndrafted": 3,
+    "qualifiedUndraftedWithOlderSeasonGames(早於上季)": 0,
+    "olderSeasonsCheckable": 8,
+    "othersNoBio": 0,
+    "othersDraftedEarlier(上季無卡)": 16,
+    "othersUndraftedWithPriorGames": 0
+   },
+   "D3": {
+    "qualifiedTraded(多隊)": 1,
+    "qualifiedMidSeasonStart(首場在球隊第21場後)": 1,
+    "qualifiedUndrafted": 3,
+    "qualifiedUndraftedWithOlderSeasonGames(早於上季)": 0,
+    "olderSeasonsCheckable": 9,
+    "othersNoBio": 53,
+    "othersDraftedEarlier(上季無卡)": 8,
+    "othersUndraftedWithPriorGames": 0
+   }
+  },
+  "definition": "真新秀＝DRAFT_YEAR 等於目標季起年且無上季卡列；未選秀＝bio 無選秀年且上季完全沒出賽（MIN>0 列）；其餘沒有上季卡的人列為 others 只計數。母體門檻 季總 MIN>=500 且自己出賽>=30 場。未選秀者早於上季有出賽紀錄者因上季沒出賽而照字面納入，數量見 qualifiedUndraftedWithOlderSeasonGames。",
+  "versusE139": "E-139 §0.5 與 c0b 的文字做法：自己實作，未 import e139-prior-weight；E-139 無新秀輸出，差異只能以文字比對。"
+ },
+ "c0r": "無法比對（E-139 沒有新秀輸出；errata-1）",
+ "interpretations": [
+  "N=0 的預測即開季 OVR（無資料）；N=5／10 的預測用自己前 N 場視窗經 RW.eval_rookie（e116 臂）。",
+  "fit[s][\"undefined\"] 內的屬性（歷史季沒有該資料）在預測與答案兩側都不更新，維持 x0。",
+  "答案＝自己第 N+1..N+20 場視窗卡覆蓋 B0r x0 的可觀測屬性，再經 RW.ovr_of（mpg＝視窗平均分鐘）；card 欄＝三個檢查點答案平均（僅供顯示）。",
+  "歷史季無防守資料，onBall／help 維持 x0（RW.eval_rookie dfn=None）。",
+  "E-116 x0 擬合用 2017-2021 新秀，訓練季（Y2、Y3、Y5、Y6）形狀部分為樣本內；凍結如此，報告註明。",
+  "各季 δ 在該季自己的 pw／anchor／r_repl 上對 B0r 以外的候選各自求解，求解括號 [-80,80] 失敗即中止。"
+ ],
+ "elapsedSec": 59
+}

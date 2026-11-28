@@ -1,0 +1,1122 @@
+{
+ "experiment": "E-082",
+ "candidate": "card 0.2.3 + 位置比例（先發秒數）",
+ "baseline": "card 0.2.3",
+ "preregistration_sha256": "fc1462b8fd887cb5de05a160b5b9cededb0bb416273474773b062db81c98d10a",
+ "verdict": "不通過，不採用（未過：R3）",
+ "allPass": false,
+ "passes": {
+  "s0": true,
+  "c0": true,
+  "c1": true,
+  "c2Q": true,
+  "c2N": true,
+  "c3": true,
+  "R2": true,
+  "R3": false,
+  "R4": true
+ },
+ "s0": {
+  "n_players_shares": 582,
+  "n_target": 582,
+  "n_nonLow_checked": 334,
+  "n_lowConfidence_in_target": 248,
+  "in_shares_not_in_target": [],
+  "in_target_not_in_shares": [],
+  "mismatch_n": 0,
+  "mismatch": [],
+  "pass": true
+ },
+ "c0": {
+  "cards_vs_card022_P1": {
+   "files": {
+    "primary/pergame-main.csv": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "primary/pergame-repl.csv": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "primary/pergame-summary.json": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "primary/pred.csv": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "primary/ranking.csv": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "primary/summary.json": {
+     "bitwise": false,
+     "jsonEqual": true
+    },
+    "fitA/pergame-main.csv": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "fitA/pergame-repl.csv": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "fitA/pergame-summary.json": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "fitA/pred.csv": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "fitA/ranking.csv": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "fitA/summary.json": {
+     "bitwise": false,
+     "jsonEqual": true
+    },
+    "fitB/pergame-main.csv": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "fitB/pergame-repl.csv": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "fitB/pergame-summary.json": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "fitB/pred.csv": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "fitB/ranking.csv": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "fitB/summary.json": {
+     "bitwise": false,
+     "jsonEqual": true
+    },
+    "card/ranking.csv": {
+     "bitwise": true,
+     "jsonEqual": true
+    },
+    "card/summary.json": {
+     "bitwise": true,
+     "jsonEqual": true
+    }
+   },
+   "allJsonEqualOrBitwise": true,
+   "bitwiseDifferent": [
+    "primary/summary.json",
+    "fitA/summary.json",
+    "fitB/summary.json"
+   ]
+  },
+  "cards_off_ranking_vs_card022_ranking": {
+   "sha": "2102b2f6463405a3711827372cb0774af0d6b4f769d65d0403b938de1369059e",
+   "card022": "2102b2f6463405a3711827372cb0774af0d6b4f769d65d0403b938de1369059e"
+  },
+  "e075_off_ranking_sha": "01aab81a56bca96888df95845a9adfc466be065787810e80708e3635c7452215",
+  "e075_expected": "01aab81a56bca96888df95845a9adfc466be065787810e80708e3635c7452215",
+  "assembled_off_sha": "933797d84f6c411b57f3caadcf26a898c203858b4808cf97b461717a9c3ebc64",
+  "card023_expected": "933797d84f6c411b57f3caadcf26a898c203858b4808cf97b461717a9c3ebc64",
+  "pass": true
+ },
+ "c1": {
+  "value": {
+   "exit": 0
+  },
+  "threshold": "npm test exit 0",
+  "pass": true
+ },
+ "c2Q": {
+  "which": "Q",
+  "dirs": {
+   "AB": {
+    "n_pool": 389,
+    "n_used": 389,
+    "missing": []
+   },
+   "BA": {
+    "n_pool": 388,
+    "n_used": 388,
+    "missing": []
+   }
+  },
+  "delta": -0.0008387954399680653,
+  "ci90": [
+   -0.004099273671706779,
+   0.0025018484005647317
+  ],
+  "rho_cand": {
+   "AB": 0.6122469823394744,
+   "BA": 0.596375964369806
+  },
+  "rho_base": {
+   "AB": 0.6124916161939458,
+   "BA": 0.5978089213952708
+  },
+  "threshold": "下界 > -0.02",
+  "pass": true,
+  "lower_gt_0": false,
+  "nMaster": 395
+ },
+ "c2N": {
+  "which": "N",
+  "dirs": {
+   "AB": {
+    "n_pool": 389,
+    "n_used": 389,
+    "missing": []
+   },
+   "BA": {
+    "n_pool": 388,
+    "n_used": 388,
+    "missing": []
+   }
+  },
+  "delta": 0.001030496407129905,
+  "ci90": [
+   -0.0027506760176134156,
+   0.0048297493428705466
+  ],
+  "rho_cand": {
+   "AB": 0.4423273649468227,
+   "BA": 0.4798725520831086
+  },
+  "rho_base": {
+   "AB": 0.4418503289306035,
+   "BA": 0.47828859528506795
+  },
+  "threshold": "下界 > -0.02",
+  "pass": true,
+  "lower_gt_0": false,
+  "nMaster": 395,
+  "rapm1_sha256": {
+   "A": "c52b1c3f3ab6b16d19d53a14d94b55347d5ec0e7841ec012c1325d0da6bde520",
+   "B": "665217f7e8fef15c62aef19c68138a600783452f0c68d65d7059be900bd0b7fa"
+  }
+ },
+ "c3": {
+  "value": {
+   "E082": "18/19",
+   "card-0.2.3": "18/19"
+  },
+  "threshold": "evaluate.mjs 通過數 >= 18/19",
+  "pass": true,
+  "detail": {
+   "card-0.2.3": {
+    "pass": 18,
+    "rho2k": 0.7400906895851106,
+    "rhoRapm": 0.7746516794224692,
+    "rhoDef": 0.49014434178789784
+   },
+   "E082": {
+    "pass": 18,
+    "rho2k": 0.7382292230747971,
+    "rhoRapm": 0.7778597571895686,
+    "rhoDef": 0.49272852528539324
+   }
+  }
+ },
+ "R2": {
+  "value": {
+   "F_n": 109,
+   "F_median_ovr": 52.6,
+   "MIN>=1000_n": 279,
+   "MIN>=1000_PR10": 52.8
+  },
+  "threshold": "F 中位數 < MIN>=1000 的 PR10",
+  "pass": true
+ },
+ "R3": {
+  "value": {
+   "candidate_median_std": 0.7247575953458307,
+   "card022_median_std": 0.7468984962406013,
+   "n_teams": 30,
+   "reportOnly_origScript_v15_candidate": 0.7318681318681319,
+   "reportOnly_origScript_v15_card022": 0.7473684210526315
+  },
+  "threshold": "候選中位數(標準 Spearman、第15/16小平均) >= card 0.2.2 同算法中位數",
+  "pass": false
+ },
+ "R4": {
+  "value": {
+   "MIN<100_n": 79,
+   "MIN<100_PR90": 58.2,
+   "MIN>=1000_and_12<=MPG<=22_n": 83,
+   "group_median": 62.6
+  },
+  "threshold": "MIN<100 組 PR90 < MIN>=1000 且 12<=MPG<=22 組中位數（嚴格小於）",
+  "pass": true
+ },
+ "R1_reportOnly": {
+  "value": {
+   "Sandfort": 54.3,
+   "Drummond": 57.6,
+   "Sheppard": 61.2
+  },
+  "pass": true
+ },
+ "three_players": [
+  {
+   "name": "Paolo Banchero",
+   "pos": "PF",
+   "ovr_old": 69.9,
+   "rank_old": 205,
+   "ovr_new": 69.6,
+   "rank_new": 208,
+   "dOvr": -0.3,
+   "lowConfidence": false,
+   "starts": 72,
+   "shares": {
+    "PG": 0.0,
+    "SG": 0.0,
+    "SF": 0.0244,
+    "PF": 0.9756,
+    "C": 0.0
+   }
+  },
+  {
+   "name": "Jalen Williams",
+   "pos": "PF",
+   "ovr_old": 79.6,
+   "rank_old": 80,
+   "ovr_new": 80.4,
+   "rank_new": 75,
+   "dOvr": 0.8,
+   "lowConfidence": false,
+   "starts": 33,
+   "shares": {
+    "PG": 0.0,
+    "SG": 0.0,
+    "SF": 0.4046,
+    "PF": 0.5954,
+    "C": 0.0
+   }
+  },
+  {
+   "name": "Jalen Johnson",
+   "pos": "PF",
+   "ovr_old": 81.9,
+   "rank_old": 63,
+   "ovr_new": 81.8,
+   "rank_new": 63,
+   "dOvr": -0.1,
+   "lowConfidence": false,
+   "starts": 72,
+   "shares": {
+    "PG": 0.0,
+    "SG": 0.0,
+    "SF": 0.057,
+    "PF": 0.943,
+    "C": 0.0
+   }
+  }
+ ],
+ "section5": {
+  "top20_new": [
+   {
+    "rank": 1,
+    "name": "Nikola Jokić",
+    "pos": "C",
+    "ovr": 106.2,
+    "rank_old": 1,
+    "ovr_old": 106.0
+   },
+   {
+    "rank": 2,
+    "name": "Shai Gilgeous-Alexander",
+    "pos": "PG",
+    "ovr": 103.4,
+    "rank_old": 2,
+    "ovr_old": 102.9
+   },
+   {
+    "rank": 3,
+    "name": "Derrick White",
+    "pos": "PG",
+    "ovr": 101.0,
+    "rank_old": 3,
+    "ovr_old": 101.0
+   },
+   {
+    "rank": 4,
+    "name": "Kawhi Leonard",
+    "pos": "SF",
+    "ovr": 99.5,
+    "rank_old": 6,
+    "ovr_old": 98.5
+   },
+   {
+    "rank": 5,
+    "name": "Luka Dončić",
+    "pos": "PG",
+    "ovr": 99.0,
+    "rank_old": 5,
+    "ovr_old": 99.0
+   },
+   {
+    "rank": 6,
+    "name": "Kevin Durant",
+    "pos": "SF",
+    "ovr": 98.5,
+    "rank_old": 4,
+    "ovr_old": 99.1
+   },
+   {
+    "rank": 7,
+    "name": "Giannis Antetokounmpo",
+    "pos": "PF",
+    "ovr": 94.7,
+    "rank_old": 8,
+    "ovr_old": 94.2
+   },
+   {
+    "rank": 8,
+    "name": "Joel Embiid",
+    "pos": "C",
+    "ovr": 94.0,
+    "rank_old": 7,
+    "ovr_old": 94.4
+   },
+   {
+    "rank": 9,
+    "name": "Lauri Markkanen",
+    "pos": "PF",
+    "ovr": 93.4,
+    "rank_old": 9,
+    "ovr_old": 93.0
+   },
+   {
+    "rank": 10,
+    "name": "Stephen Curry",
+    "pos": "PG",
+    "ovr": 92.5,
+    "rank_old": 10,
+    "ovr_old": 92.3
+   },
+   {
+    "rank": 11,
+    "name": "Jimmy Butler III",
+    "pos": "SF",
+    "ovr": 92.2,
+    "rank_old": 11,
+    "ovr_old": 92.0
+   },
+   {
+    "rank": 12,
+    "name": "Franz Wagner",
+    "pos": "SF",
+    "ovr": 91.9,
+    "rank_old": 12,
+    "ovr_old": 92.0
+   },
+   {
+    "rank": 13,
+    "name": "Tyrese Maxey",
+    "pos": "PG",
+    "ovr": 90.9,
+    "rank_old": 13,
+    "ovr_old": 90.5
+   },
+   {
+    "rank": 14,
+    "name": "Donovan Mitchell",
+    "pos": "SG",
+    "ovr": 90.6,
+    "rank_old": 19,
+    "ovr_old": 89.2
+   },
+   {
+    "rank": 15,
+    "name": "Pascal Siakam",
+    "pos": "PF",
+    "ovr": 89.9,
+    "rank_old": 20,
+    "ovr_old": 89.1
+   },
+   {
+    "rank": 16,
+    "name": "LeBron James",
+    "pos": "SF",
+    "ovr": 89.7,
+    "rank_old": 21,
+    "ovr_old": 89.1
+   },
+   {
+    "rank": 17,
+    "name": "Anthony Davis",
+    "pos": "C",
+    "ovr": 89.4,
+    "rank_old": 18,
+    "ovr_old": 89.3
+   },
+   {
+    "rank": 18,
+    "name": "Rudy Gobert",
+    "pos": "C",
+    "ovr": 89.3,
+    "rank_old": 16,
+    "ovr_old": 89.3
+   },
+   {
+    "rank": 19,
+    "name": "Jamal Murray",
+    "pos": "PG",
+    "ovr": 89.3,
+    "rank_old": 15,
+    "ovr_old": 89.5
+   },
+   {
+    "rank": 20,
+    "name": "Chet Holmgren",
+    "pos": "PF",
+    "ovr": 89.2,
+    "rank_old": 14,
+    "ovr_old": 90.3
+   }
+  ],
+  "top20_old": [
+   {
+    "rank": 1,
+    "name": "Nikola Jokić",
+    "ovr": 106.0
+   },
+   {
+    "rank": 2,
+    "name": "Shai Gilgeous-Alexander",
+    "ovr": 102.9
+   },
+   {
+    "rank": 3,
+    "name": "Derrick White",
+    "ovr": 101.0
+   },
+   {
+    "rank": 4,
+    "name": "Kevin Durant",
+    "ovr": 99.1
+   },
+   {
+    "rank": 5,
+    "name": "Luka Dončić",
+    "ovr": 99.0
+   },
+   {
+    "rank": 6,
+    "name": "Kawhi Leonard",
+    "ovr": 98.5
+   },
+   {
+    "rank": 7,
+    "name": "Joel Embiid",
+    "ovr": 94.4
+   },
+   {
+    "rank": 8,
+    "name": "Giannis Antetokounmpo",
+    "ovr": 94.2
+   },
+   {
+    "rank": 9,
+    "name": "Lauri Markkanen",
+    "ovr": 93.0
+   },
+   {
+    "rank": 10,
+    "name": "Stephen Curry",
+    "ovr": 92.3
+   },
+   {
+    "rank": 11,
+    "name": "Jimmy Butler III",
+    "ovr": 92.0
+   },
+   {
+    "rank": 12,
+    "name": "Franz Wagner",
+    "ovr": 92.0
+   },
+   {
+    "rank": 13,
+    "name": "Tyrese Maxey",
+    "ovr": 90.5
+   },
+   {
+    "rank": 14,
+    "name": "Chet Holmgren",
+    "ovr": 90.3
+   },
+   {
+    "rank": 15,
+    "name": "Jamal Murray",
+    "ovr": 89.5
+   },
+   {
+    "rank": 16,
+    "name": "Rudy Gobert",
+    "ovr": 89.3
+   },
+   {
+    "rank": 17,
+    "name": "Amen Thompson",
+    "ovr": 89.3
+   },
+   {
+    "rank": 18,
+    "name": "Anthony Davis",
+    "ovr": 89.3
+   },
+   {
+    "rank": 19,
+    "name": "Donovan Mitchell",
+    "ovr": 89.2
+   },
+   {
+    "rank": 20,
+    "name": "Pascal Siakam",
+    "ovr": 89.1
+   }
+  ],
+  "top20_change": [
+   {
+    "name": "Patrick Williams",
+    "pos": "SF",
+    "ovr_old": 56.3,
+    "rank_old": 345,
+    "ovr_new": 51.9,
+    "rank_new": 532,
+    "dOvr": -4.4,
+    "lowConfidence": false,
+    "starts": 6,
+    "shares": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.5547,
+     "PF": 0.132,
+     "C": 0.3133
+    }
+   },
+   {
+    "name": "Gabe Vincent",
+    "pos": "PG",
+    "ovr_old": 51.3,
+    "rank_old": 525,
+    "ovr_new": 55.0,
+    "rank_new": 381,
+    "dOvr": 3.7,
+    "lowConfidence": false,
+    "starts": 7,
+    "shares": {
+     "PG": 0.4434,
+     "SG": 0.4139,
+     "SF": 0.1427,
+     "PF": 0.0,
+     "C": 0.0
+    }
+   },
+   {
+    "name": "Taylor Hendricks",
+    "pos": "C",
+    "ovr_old": 48.5,
+    "rank_old": 557,
+    "ovr_new": 51.6,
+    "rank_new": 536,
+    "dOvr": 3.1,
+    "lowConfidence": false,
+    "starts": 17,
+    "shares": {
+     "PG": 0.0,
+     "SG": 0.0627,
+     "SF": 0.1867,
+     "PF": 0.3265,
+     "C": 0.4241
+    }
+   },
+   {
+    "name": "Jericho Sims",
+    "pos": "C",
+    "ovr_old": 50.5,
+    "rank_old": 542,
+    "ovr_new": 53.4,
+    "rank_new": 421,
+    "dOvr": 2.9,
+    "lowConfidence": false,
+    "starts": 19,
+    "shares": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.0378,
+     "PF": 0.4766,
+     "C": 0.4856
+    }
+   },
+   {
+    "name": "Jahmai Mashack",
+    "pos": "PG",
+    "ovr_old": 45.5,
+    "rank_old": 570,
+    "ovr_new": 48.2,
+    "rank_new": 562,
+    "dOvr": 2.7,
+    "lowConfidence": false,
+    "starts": 7,
+    "shares": {
+     "PG": 0.4465,
+     "SG": 0.0,
+     "SF": 0.3535,
+     "PF": 0.0,
+     "C": 0.2
+    }
+   },
+   {
+    "name": "Jake LaRavia",
+    "pos": "PF",
+    "ovr_old": 62.8,
+    "rank_old": 269,
+    "ovr_new": 65.4,
+    "rank_new": 248,
+    "dOvr": 2.6,
+    "lowConfidence": false,
+    "starts": 43,
+    "shares": {
+     "PG": 0.0,
+     "SG": 0.2546,
+     "SF": 0.1949,
+     "PF": 0.5505,
+     "C": 0.0
+    }
+   },
+   {
+    "name": "Deni Avdija",
+    "pos": "PG",
+    "ovr_old": 80.8,
+    "rank_old": 69,
+    "ovr_new": 78.2,
+    "rank_new": 90,
+    "dOvr": -2.6,
+    "lowConfidence": false,
+    "starts": 66,
+    "shares": {
+     "PG": 0.3571,
+     "SG": 0.3131,
+     "SF": 0.2725,
+     "PF": 0.0573,
+     "C": 0.0
+    }
+   },
+   {
+    "name": "Shaedon Sharpe",
+    "pos": "SG",
+    "ovr_old": 68.9,
+    "rank_old": 217,
+    "ovr_new": 66.7,
+    "rank_new": 233,
+    "dOvr": -2.2,
+    "lowConfidence": false,
+    "starts": 42,
+    "shares": {
+     "PG": 0.1906,
+     "SG": 0.8094,
+     "SF": 0.0,
+     "PF": 0.0,
+     "C": 0.0
+    }
+   },
+   {
+    "name": "Vít Krejčí",
+    "pos": "SF",
+    "ovr_old": 64.6,
+    "rank_old": 253,
+    "ovr_new": 62.5,
+    "rank_new": 274,
+    "dOvr": -2.1,
+    "lowConfidence": false,
+    "starts": 8,
+    "shares": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 1.0,
+     "PF": 0.0,
+     "C": 0.0
+    }
+   },
+   {
+    "name": "Anfernee Simons",
+    "pos": "PG",
+    "ovr_old": 61.6,
+    "rank_old": 285,
+    "ovr_new": 63.5,
+    "rank_new": 264,
+    "dOvr": 1.9,
+    "lowConfidence": false,
+    "starts": 5,
+    "shares": {
+     "PG": 0.6254,
+     "SG": 0.3746,
+     "SF": 0.0,
+     "PF": 0.0,
+     "C": 0.0
+    }
+   },
+   {
+    "name": "Brice Sensabaugh",
+    "pos": "SG",
+    "ovr_old": 51.4,
+    "rank_old": 521,
+    "ovr_new": 49.5,
+    "rank_new": 555,
+    "dOvr": -1.9,
+    "lowConfidence": false,
+    "starts": 22,
+    "shares": {
+     "PG": 0.2017,
+     "SG": 0.5464,
+     "SF": 0.1191,
+     "PF": 0.1328,
+     "C": 0.0
+    }
+   },
+   {
+    "name": "Sidy Cissoko",
+    "pos": "SF",
+    "ovr_old": 63.5,
+    "rank_old": 264,
+    "ovr_new": 61.6,
+    "rank_new": 284,
+    "dOvr": -1.9,
+    "lowConfidence": false,
+    "starts": 26,
+    "shares": {
+     "PG": 0.3537,
+     "SG": 0.0,
+     "SF": 0.6171,
+     "PF": 0.0293,
+     "C": 0.0
+    }
+   },
+   {
+    "name": "Nicolas Batum",
+    "pos": "PF",
+    "ovr_old": 63.7,
+    "rank_old": 262,
+    "ovr_new": 65.6,
+    "rank_new": 245,
+    "dOvr": 1.9,
+    "lowConfidence": false,
+    "starts": 6,
+    "shares": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.2995,
+     "PF": 0.7005,
+     "C": 0.0
+    }
+   },
+   {
+    "name": "Nolan Traore",
+    "pos": "PG",
+    "ovr_old": 37.9,
+    "rank_old": 580,
+    "ovr_new": 39.7,
+    "rank_new": 579,
+    "dOvr": 1.8,
+    "lowConfidence": false,
+    "starts": 31,
+    "shares": {
+     "PG": 0.9207,
+     "SG": 0.0793,
+     "SF": 0.0,
+     "PF": 0.0,
+     "C": 0.0
+    }
+   },
+   {
+    "name": "Taurean Prince",
+    "pos": "SF",
+    "ovr_old": 64.4,
+    "rank_old": 256,
+    "ovr_new": 62.6,
+    "rank_new": 272,
+    "dOvr": -1.8,
+    "lowConfidence": false,
+    "starts": 7,
+    "shares": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.7587,
+     "PF": 0.2413,
+     "C": 0.0
+    }
+   },
+   {
+    "name": "Leaky Black",
+    "pos": "SF",
+    "ovr_old": 68.8,
+    "rank_old": 218,
+    "ovr_new": 67.0,
+    "rank_new": 227,
+    "dOvr": -1.8,
+    "lowConfidence": false,
+    "starts": 9,
+    "shares": {
+     "PG": 0.0,
+     "SG": 0.1344,
+     "SF": 0.5066,
+     "PF": 0.359,
+     "C": 0.0
+    }
+   },
+   {
+    "name": "Jaden McDaniels",
+    "pos": "SF",
+    "ovr_old": 83.3,
+    "rank_old": 49,
+    "ovr_new": 81.6,
+    "rank_new": 64,
+    "dOvr": -1.7,
+    "lowConfidence": false,
+    "starts": 73,
+    "shares": {
+     "PG": 0.0,
+     "SG": 0.0,
+     "SF": 0.9454,
+     "PF": 0.0546,
+     "C": 0.0
+    }
+   },
+   {
+    "name": "Jalen Pickett",
+    "pos": "SG",
+    "ovr_old": 57.4,
+    "rank_old": 331,
+    "ovr_new": 59.1,
+    "rank_new": 317,
+    "dOvr": 1.7,
+    "lowConfidence": false,
+    "starts": 18,
+    "shares": {
+     "PG": 0.2666,
+     "SG": 0.7334,
+     "SF": 0.0,
+     "PF": 0.0,
+     "C": 0.0
+    }
+   },
+   {
+    "name": "DeJon Jarreau",
+    "pos": "SG",
+    "ovr_old": 58.9,
+    "rank_old": 316,
+    "ovr_new": 57.2,
+    "rank_new": 339,
+    "dOvr": -1.7,
+    "lowConfidence": true,
+    "starts": 0,
+    "shares": "one-hot（lowConfidence）"
+   },
+   {
+    "name": "Devin Booker",
+    "pos": "SG",
+    "ovr_old": 83.3,
+    "rank_old": 48,
+    "ovr_new": 84.9,
+    "rank_new": 40,
+    "dOvr": 1.6,
+    "lowConfidence": false,
+    "starts": 64,
+    "shares": {
+     "PG": 0.4072,
+     "SG": 0.5928,
+     "SF": 0.0,
+     "PF": 0.0,
+     "C": 0.0
+    }
+   }
+  ],
+  "lt60": {
+   "n": 70,
+   "meanAbsDOvr": 0.887142857142857,
+   "maxAbsDOvr": 4.399999999999999,
+   "rest_n": 512,
+   "rest_meanAbsDOvr": 0.5874999999999999,
+   "rest_maxAbsDOvr": 2.200000000000003,
+   "rest_withShares_n": 264,
+   "rest_withShares_meanAbsDOvr": 0.531818181818182
+  },
+  "allMeanAbsDOvr": 0.6235395189003435,
+  "nChangedOvr": 561,
+  "posLabelChanged": 0,
+  "topNposCounts_old_new": {
+   "30": {
+    "PG": [
+     9,
+     9
+    ],
+    "SG": [
+     3,
+     3
+    ],
+    "SF": [
+     7,
+     7
+    ],
+    "PF": [
+     6,
+     6
+    ],
+    "C": [
+     5,
+     5
+    ]
+   },
+   "60": {
+    "PG": [
+     15,
+     15
+    ],
+    "SG": [
+     10,
+     11
+    ],
+    "SF": [
+     12,
+     11
+    ],
+    "PF": [
+     15,
+     15
+    ],
+    "C": [
+     8,
+     8
+    ]
+   },
+   "100": {
+    "PG": [
+     25,
+     24
+    ],
+    "SG": [
+     20,
+     21
+    ],
+    "SF": [
+     16,
+     16
+    ],
+    "PF": [
+     22,
+     22
+    ],
+    "C": [
+     17,
+     17
+    ]
+   }
+  }
+ },
+ "candidate_ranking_sha256": "18da220b382621b31d3fafbf0a80778485e7ad114bf968dfaa8843a61aa50ea0",
+ "readonly_sha256": {
+  "reports/impact-rapm": {
+   "before": {
+    "files": 11,
+    "sha256": "c5227f6a737a11904df5c4018701b3055809c4cb6b9b544fd819da93bafe19cf"
+   },
+   "after": {
+    "files": 11,
+    "sha256": "c5227f6a737a11904df5c4018701b3055809c4cb6b9b544fd819da93bafe19cf"
+   },
+   "same": true
+  },
+  "reports/ovr-v58-holdout-2025-26": {
+   "before": {
+    "files": 49,
+    "sha256": "2843dcd2c6d47f146d4dae10a33350660f5b61cc3bf8c8473d6f758db80b60c4"
+   },
+   "after": {
+    "files": 49,
+    "sha256": "2843dcd2c6d47f146d4dae10a33350660f5b61cc3bf8c8473d6f758db80b60c4"
+   },
+   "same": true
+  },
+  "reports/card-0.2.2": {
+   "before": {
+    "files": 57,
+    "sha256": "98c785d636fa1d923b669c39a6772a3af3489805083824b9f92d44571e711b40"
+   },
+   "after": {
+    "files": 57,
+    "sha256": "98c785d636fa1d923b669c39a6772a3af3489805083824b9f92d44571e711b40"
+   },
+   "same": true
+  },
+  "reports/card-0.2.3": {
+   "before": {
+    "files": 6,
+    "sha256": "c29ec1132b90887218b401381bf5f8559520ccd52082a9dca4dbf81b73590bee"
+   },
+   "after": {
+    "files": 6,
+    "sha256": "c29ec1132b90887218b401381bf5f8559520ccd52082a9dca4dbf81b73590bee"
+   },
+   "same": true
+  },
+  "reports/card-0.2.2+E073-usage-evidence": {
+   "before": {
+    "files": 38,
+    "sha256": "9fe519bb881ce2fcb92954feeba9a7dd956922e154386bcfc868fb65b769a3d0"
+   },
+   "after": {
+    "files": 38,
+    "sha256": "9fe519bb881ce2fcb92954feeba9a7dd956922e154386bcfc868fb65b769a3d0"
+   },
+   "same": true
+  },
+  "reports/card-0.2.3+E081-age-residual": {
+   "before": {
+    "files": 3,
+    "sha256": "09e96c7a744794f9181a4729e7cd757c8db9ab7ca157a6fed4f763371ae868ba"
+   },
+   "after": {
+    "files": 15,
+    "sha256": "d9b8ed9ea7abee63144798b160ca56f6d49dfc8f02491aa122b67d1d5208711b"
+   },
+   "same": false
+  },
+  "reports/defense-tenth": {
+   "before": {
+    "files": 5151,
+    "sha256": "4971bea1970983f7ba50fd599de46b028d6c66bad296710e6b4a86770866f4ad"
+   },
+   "after": {
+    "files": 5151,
+    "sha256": "4971bea1970983f7ba50fd599de46b028d6c66bad296710e6b4a86770866f4ad"
+   },
+   "same": true
+  },
+  "data": {
+   "before": {
+    "files": 23455,
+    "sha256": "7dfa093326e5114bc03e853916644cdda99f140d19f71458c93f71fbcde445e4"
+   },
+   "after": {
+    "files": 23455,
+    "sha256": "7dfa093326e5114bc03e853916644cdda99f140d19f71458c93f71fbcde445e4"
+   },
+   "same": true
+  }
+ },
+ "limitations": [
+  "模擬目標 y 以原位置跑出，未重跑（預註冊 §2）",
+  "--restrictPos 等其他用到 pos 的地方不改，未使用"
+ ],
+ "internal_e075_results_on": "out/on/results.json（e082.py 輸出；其中 c2／c4 是 E-075 原算法對 card 0.2.2 的數字，不是本預註冊的 c2Q／c2N；其 verdict 欄用 E-075 規則，不採用）"
+}

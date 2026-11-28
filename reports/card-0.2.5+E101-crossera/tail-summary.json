@@ -1,0 +1,5100 @@
+{
+ "_synthetic": {
+  "normal_n20000_seed20261030": {
+   "r90": 1.2737176901373843,
+   "r99": 2.367854876630879,
+   "SD_pool": 0.9997092597637294,
+   "gapScale": 1.0480241249937687,
+   "ratio": 1.0483289163906095
+  }
+ },
+ "_rules": {
+  "S": "max((r99 − r90)/1.044, SD_pool)；e101g = (r99 − r90)/1.044；insuranceActive = SD_pool > (r99 − r90)/1.044（保險生效、取 SD）",
+  "ratio": "(r99 − r90)/1.044 ÷ SD_pool",
+  "pools": "百分位型 GP>=30 且 MPG>=20（drive 前 41 場 GP41>=15 且 MPG41>=20）；命中率型、量價型 MIN>=500；2025-26 為卡片本身的池",
+  "switches": "mid、short：本實驗 h1-results.json；midValue、shortValue：本實驗 h1v-results.json；其他：E-090 h1-results.json"
+ },
+ "e101": {
+  "long": {
+   "type": "curve",
+   "topTail": true,
+   "botTail": true,
+   "r90": 0.3936414317085194,
+   "r99": 0.422064674063713,
+   "r1": 0.29004549474337205,
+   "SD_pool": 0.027315161873793493,
+   "gapScale": 0.027225327926430662,
+   "ratio": 0.9967112057480055,
+   "S": 0.027315161873793493,
+   "insuranceActive": true,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "curve": "CURVE_3PT",
+   "a99": 0.433,
+   "lo": 0.0,
+   "hi": 150.0,
+   "count": {
+    ">99": 1,
+    "==99": 0,
+    ">=99": 1,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 8
+   },
+   "above99": [
+    [
+     "Luke Kennard",
+     107.99
+    ]
+   ],
+   "below40": [
+    [
+     "Dyson Daniels",
+     20.14
+    ],
+    [
+     "Cody Williams",
+     26.27
+    ],
+    [
+     "Brandon Williams",
+     29.6
+    ],
+    [
+     "Amen Thompson",
+     29.62
+    ],
+    [
+     "Ronald Holland II",
+     33.52
+    ],
+    [
+     "Yang Hansen",
+     33.53
+    ],
+    [
+     "Ben Saraf",
+     34.04
+    ],
+    [
+     "Nae'Qwan Tomlin",
+     36.27
+    ]
+   ]
+  },
+  "mid": {
+   "type": "curve",
+   "topTail": false,
+   "botTail": false,
+   "r90": 0.4418779950856606,
+   "r99": 0.4871208876360678,
+   "r1": 0.35470069604030596,
+   "SD_pool": 0.023886162618017882,
+   "gapScale": 0.04333610397548582,
+   "ratio": 1.814276519360058,
+   "S": 0.04333610397548582,
+   "insuranceActive": false,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "curve": "CURVE_MID",
+   "a99": 0.5073,
+   "lo": 40.0,
+   "hi": 99.0,
+   "count": {
+    ">99": 0,
+    "==99": 1,
+    ">=99": 1,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [],
+   "below40": []
+  },
+  "short": {
+   "type": "curve",
+   "topTail": true,
+   "botTail": false,
+   "r90": 0.63057079915141,
+   "r99": 0.6912050093597578,
+   "r1": 0.479112206729571,
+   "SD_pool": 0.043609077744212264,
+   "gapScale": 0.05807874541029483,
+   "ratio": 1.331804028302409,
+   "S": 0.05807874541029483,
+   "insuranceActive": false,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "curve": "CURVE_SHORT",
+   "a99": 0.6664,
+   "lo": 40.0,
+   "hi": 150.0,
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Giannis Antetokounmpo",
+     113.05
+    ],
+    [
+     "Obi Toppin",
+     112.46
+    ]
+   ],
+   "below40": []
+  },
+  "ft": {
+   "type": "curve",
+   "topTail": true,
+   "botTail": true,
+   "r90": 0.8562168657492406,
+   "r99": 0.8984834635118985,
+   "r1": 0.561549482883018,
+   "SD_pool": 0.06807962925681212,
+   "gapScale": 0.04048524689909755,
+   "ratio": 0.5946749026258329,
+   "S": 0.06807962925681212,
+   "insuranceActive": true,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "curve": "CURVE_FT",
+   "a99": 0.9,
+   "lo": 0.0,
+   "hi": 150.0,
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 2
+   },
+   "above99": [
+    [
+     "Stephen Curry",
+     112.76
+    ],
+    [
+     "Cam Spencer",
+     100.28
+    ]
+   ],
+   "below40": [
+    [
+     "Mitchell Robinson",
+     23.36
+    ],
+    [
+     "Steven Adams",
+     37.45
+    ]
+   ]
+  },
+  "drive": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 1.2193602699862107,
+   "r99": 2.432097388121605,
+   "r1": -1.592946051425875,
+   "SD_pool": 0.9177115880298543,
+   "gapScale": 1.1616255920837109,
+   "ratio": 1.2657850322861148,
+   "S": 1.1616255920837109,
+   "insuranceActive": false,
+   "poolN": 913,
+   "poolPerSeason": {
+    "2025-26": 231,
+    "2022-23": 229,
+    "2023-24": 226,
+    "2024-25": 227
+   },
+   "count": {
+    ">99": 1,
+    "==99": 0,
+    ">=99": 1,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 6
+   },
+   "above99": [
+    [
+     "Zion Williamson",
+     103.92
+    ]
+   ],
+   "below40": [
+    [
+     "Gradey Dick",
+     35.13
+    ],
+    [
+     "Dorian Finney-Smith",
+     37.05
+    ],
+    [
+     "Julian Champagnie",
+     39.23
+    ],
+    [
+     "Clint Capela",
+     39.53
+    ],
+    [
+     "Taurean Prince",
+     39.93
+    ],
+    [
+     "Deandre Ayton",
+     39.95
+    ]
+   ]
+  },
+  "foulDraw": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 1.2820307661484238,
+   "r99": 2.9510951702260106,
+   "r1": -1.5259863966399028,
+   "SD_pool": 0.9687791201598256,
+   "gapScale": 1.5987206935609068,
+   "ratio": 1.6502427233332153,
+   "S": 1.5987206935609068,
+   "insuranceActive": false,
+   "poolN": 961,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 8
+   },
+   "above99": [
+    [
+     "Giannis Antetokounmpo",
+     112.62
+    ],
+    [
+     "Joel Embiid",
+     99.81
+    ]
+   ],
+   "below40": [
+    [
+     "Sam Hauser",
+     36.1
+    ],
+    [
+     "Nicolas Batum",
+     37.23
+    ],
+    [
+     "Tyus Jones",
+     37.42
+    ],
+    [
+     "Royce O'Neale",
+     38.07
+    ],
+    [
+     "Taurean Prince",
+     38.21
+    ],
+    [
+     "Lindy Waters III",
+     38.25
+    ],
+    [
+     "Jevon Carter",
+     39.24
+    ],
+    [
+     "Dorian Finney-Smith",
+     39.34
+    ]
+   ]
+  },
+  "tovSkill": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": -0.07277342208299967,
+   "r99": -0.056388502605356446,
+   "r1": -0.1404797656625341,
+   "SD_pool": 0.017938390471704736,
+   "gapScale": 0.01569436731575021,
+   "ratio": 0.8749038739292607,
+   "S": 0.017938390471704736,
+   "insuranceActive": true,
+   "poolN": 961,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 8
+   },
+   "above99": [
+    [
+     "Tim Hardaway Jr.",
+     107.89
+    ],
+    [
+     "Sam Hauser",
+     106.16
+    ]
+   ],
+   "below40": [
+    [
+     "Jericho Sims",
+     29.47
+    ],
+    [
+     "Draymond Green",
+     30.33
+    ],
+    [
+     "Ariel Hukporti",
+     32.22
+    ],
+    [
+     "Adem Bona",
+     33.22
+    ],
+    [
+     "Nick Richards",
+     35.55
+    ],
+    [
+     "Trey Jemison III",
+     38.42
+    ],
+    [
+     "Jusuf Nurkić",
+     38.78
+    ],
+    [
+     "Andre Jackson Jr.",
+     39.17
+    ]
+   ]
+  },
+  "pass": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 0.29191132869769487,
+   "r99": 0.4312200066330156,
+   "r1": 0.0490531158572233,
+   "SD_pool": 0.08789689255200936,
+   "gapScale": 0.1334374309725294,
+   "ratio": 1.5181131789565065,
+   "S": 0.1334374309725294,
+   "insuranceActive": false,
+   "poolN": 961,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 4,
+    "==99": 0,
+    ">=99": 4,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 6
+   },
+   "above99": [
+    [
+     "Nikola Jokić",
+     107.77
+    ],
+    [
+     "T.J. McConnell",
+     105.81
+    ],
+    [
+     "Trae Young",
+     104.39
+    ],
+    [
+     "Cade Cunningham",
+     102.32
+    ]
+   ],
+   "below40": [
+    [
+     "Nick Richards",
+     38.04
+    ],
+    [
+     "Adem Bona",
+     38.06
+    ],
+    [
+     "Julian Phillips",
+     38.53
+    ],
+    [
+     "Rui Hachimura",
+     38.97
+    ],
+    [
+     "Chris Boucher",
+     39.81
+    ],
+    [
+     "Kel'el Ware",
+     39.88
+    ]
+   ]
+  },
+  "rebound": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 0.16735831876946777,
+   "r99": 0.2154841907407299,
+   "r1": 0.044335185823744946,
+   "SD_pool": 0.042377906788910735,
+   "gapScale": 0.046097578516534586,
+   "ratio": 1.0877738427750092,
+   "S": 0.046097578516534586,
+   "insuranceActive": false,
+   "poolN": 961,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 4,
+    "==99": 0,
+    ">=99": 4,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 6
+   },
+   "above99": [
+    [
+     "Mitchell Robinson",
+     110.62
+    ],
+    [
+     "Andre Drummond",
+     109.87
+    ],
+    [
+     "Donovan Clingan",
+     105.58
+    ],
+    [
+     "Zach Edey",
+     99.02
+    ]
+   ],
+   "below40": [
+    [
+     "Gary Trent Jr.",
+     36.14
+    ],
+    [
+     "Eric Gordon",
+     36.61
+    ],
+    [
+     "Gabe Vincent",
+     37.6
+    ],
+    [
+     "Aaron Holiday",
+     39.85
+    ],
+    [
+     "Nick Smith Jr.",
+     39.85
+    ],
+    [
+     "Jamal Shead",
+     39.99
+    ]
+   ]
+  },
+  "physique": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 108.0,
+   "r99": 113.0,
+   "r1": 89.9,
+   "SD_pool": 5.064994418184136,
+   "gapScale": 4.7892720306513406,
+   "ratio": 0.9455631408905589,
+   "S": 5.064994418184136,
+   "insuranceActive": true,
+   "poolN": 959,
+   "poolPerSeason": {
+    "2025-26": 251,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 243
+   },
+   "count": {
+    ">99": 3,
+    "==99": 0,
+    ">=99": 3,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 7
+   },
+   "above99": [
+    [
+     "Zach Edey",
+     117.59
+    ],
+    [
+     "Donovan Clingan",
+     103.89
+    ],
+    [
+     "Brook Lopez",
+     100.02
+    ]
+   ],
+   "below40": [
+    [
+     "Yuki Kawamura",
+     28.77
+    ],
+    [
+     "Kennedy Chandler",
+     37.56
+    ],
+    [
+     "Ryan Nembhard",
+     37.56
+    ],
+    [
+     "Chris Paul",
+     38.86
+    ],
+    [
+     "Jordan McLaughlin",
+     38.86
+    ],
+    [
+     "Isaiah Stevens",
+     38.86
+    ],
+    [
+     "Sharife Cooper",
+     39.14
+    ]
+   ]
+  },
+  "onBall": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 2.666133480698936,
+   "r99": 4.900568378450304,
+   "r1": -4.161847870735135,
+   "SD_pool": 1.8396562374127519,
+   "gapScale": 2.1402633120223826,
+   "ratio": 1.1634039384621104,
+   "S": 2.1402633120223826,
+   "insuranceActive": false,
+   "poolN": 961,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 4
+   },
+   "above99": [
+    [
+     "Luguentz Dort",
+     113.46
+    ],
+    [
+     "Dyson Daniels",
+     105.38
+    ]
+   ],
+   "below40": [
+    [
+     "Thomas Bryant",
+     36.4
+    ],
+    [
+     "Jock Landale",
+     38.95
+    ],
+    [
+     "Nikola Jokić",
+     38.96
+    ],
+    [
+     "Jonas Valanciunas",
+     39.34
+    ]
+   ]
+  },
+  "creation": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 9.87564923415718,
+   "r99": 14.409609632119107,
+   "r1": 1.0237238299896425,
+   "SD_pool": 3.2578842396967245,
+   "gapScale": 4.342873944407976,
+   "ratio": 1.3330350696598885,
+   "S": 4.342873944407976,
+   "insuranceActive": false,
+   "poolN": 961,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 7
+   },
+   "above99": [
+    [
+     "Shai Gilgeous-Alexander",
+     108.74
+    ],
+    [
+     "Luka Dončić",
+     106.97
+    ]
+   ],
+   "below40": [
+    [
+     "Jericho Sims",
+     38.76
+    ],
+    [
+     "Nicolas Batum",
+     38.89
+    ],
+    [
+     "Dwight Powell",
+     38.97
+    ],
+    [
+     "Mason Plumlee",
+     39.25
+    ],
+    [
+     "Spencer Jones",
+     39.79
+    ],
+    [
+     "Jaxson Hayes",
+     39.82
+    ],
+    [
+     "Deandre Ayton",
+     39.95
+    ]
+   ]
+  },
+  "pressure": {
+   "type": "percentile",
+   "topTail": false,
+   "botTail": false,
+   "r99": 2.4281012708134733,
+   "r1": -1.2294801684368504,
+   "SD": 0.7648932544013439,
+   "poolN": 252,
+   "count": {
+    ">99": 0,
+    "==99": 7,
+    ">=99": 7,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [],
+   "below40": []
+  },
+  "midValue": {
+   "type": "value",
+   "topTail": true,
+   "botTail": false,
+   "muPerMin": 0.03711039143754452,
+   "leagueRate": 0.4167536889897843,
+   "rep": 0.38675368898978435,
+   "r90": 0.11509104462650675,
+   "r99": 0.4397214960249821,
+   "r1": -0.04331697518683094,
+   "SD_pool": 0.08309885174054002,
+   "gapScale": 0.3109487082360875,
+   "ratio": 3.7419134166494175,
+   "S": 0.3109487082360875,
+   "insuranceActive": false,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "count": {
+    ">99": 4,
+    "==99": 0,
+    ">=99": 4,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Shai Gilgeous-Alexander",
+     117.74
+    ],
+    [
+     "DeMar DeRozan",
+     108.66
+    ],
+    [
+     "T.J. McConnell",
+     108.03
+    ],
+    [
+     "Kevin Durant",
+     106.68
+    ]
+   ],
+   "below40": []
+  },
+  "shortValue": {
+   "type": "value",
+   "topTail": true,
+   "botTail": true,
+   "muPerMin": 0.17887292918961015,
+   "leagueRate": 0.5777357033185445,
+   "rep": 0.5477357033185445,
+   "r90": 0.6585402983405754,
+   "r99": 1.2558985257746238,
+   "r1": -0.3967275524181964,
+   "SD_pool": 0.337484590067442,
+   "gapScale": 0.5721822101858701,
+   "ratio": 1.6954321086824342,
+   "S": 0.5721822101858701,
+   "insuranceActive": false,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 1,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Giannis Antetokounmpo",
+     129.04
+    ],
+    [
+     "Jalen Duren",
+     110.17
+    ]
+   ],
+   "below40": []
+  },
+  "_season99": {
+   "long": {
+    "2025-26": {
+     "min500": 1,
+     "min500N": 379,
+     "all": 1,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 1,
+     "min500N": 367,
+     "all": 1,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 2,
+     "min500N": 360,
+     "all": 2,
+     "allN": 572,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 0,
+     "min500N": 375,
+     "all": 0,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "mid": {
+    "2025-26": {
+     "min500": 1,
+     "min500N": 379,
+     "all": 1,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 1,
+     "min500N": 367,
+     "all": 1,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 2,
+     "min500N": 360,
+     "all": 2,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 2,
+     "min500N": 375,
+     "all": 2,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "short": {
+    "2025-26": {
+     "min500": 14,
+     "min500N": 379,
+     "all": 17,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 6,
+     "min500N": 367,
+     "all": 6,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 12,
+     "min500N": 360,
+     "all": 14,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 11,
+     "min500N": 375,
+     "all": 13,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "ft": {
+    "2025-26": {
+     "min500": 2,
+     "min500N": 379,
+     "all": 2,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 4,
+     "min500N": 367,
+     "all": 4,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 3,
+     "min500N": 360,
+     "all": 3,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 3,
+     "min500N": 375,
+     "all": 3,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "drive": {
+    "2025-26": {
+     "pool": 1,
+     "poolN": 231,
+     "all": 1,
+     "allN": 509
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 490
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 226,
+     "all": 4,
+     "allN": 523
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 227,
+     "all": 5,
+     "allN": 519
+    }
+   },
+   "foulDraw": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 2,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 244,
+     "all": 4,
+     "allN": 569
+    }
+   },
+   "tovSkill": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 2,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 244,
+     "all": 3,
+     "allN": 569
+    }
+   },
+   "pass": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 4,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 2,
+     "poolN": 244,
+     "all": 2,
+     "allN": 569
+    }
+   },
+   "rebound": {
+    "2025-26": {
+     "pool": 1,
+     "poolN": 252,
+     "all": 4,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 5,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 4,
+     "poolN": 229,
+     "all": 7,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 244,
+     "all": 7,
+     "allN": 569
+    }
+   },
+   "physique": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 251,
+     "all": 3,
+     "allN": 576
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 4,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 4,
+     "allN": 572
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 243,
+     "all": 4,
+     "allN": 567
+    }
+   },
+   "onBall": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 575
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 529
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 561
+    },
+    "2024-25": {
+     "pool": 2,
+     "poolN": 244,
+     "all": 2,
+     "allN": 563
+    }
+   },
+   "creation": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 5,
+     "poolN": 236,
+     "all": 5,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 3,
+     "allN": 572
+    },
+    "2024-25": {
+     "pool": 1,
+     "poolN": 244,
+     "all": 1,
+     "allN": 569
+    }
+   },
+   "midValue": {
+    "2025-26": {
+     "min500": 4,
+     "min500N": 379,
+     "all": 4,
+     "allN": 582,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 2,
+     "min500N": 367,
+     "all": 2,
+     "allN": 539,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 4,
+     "min500N": 360,
+     "all": 4,
+     "allN": 571,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 5,
+     "min500N": 375,
+     "all": 5,
+     "allN": 569,
+     "rule": "pct >= 99（short 為折扣前）"
+    }
+   },
+   "shortValue": {
+    "2025-26": {
+     "min500": 4,
+     "min500N": 379,
+     "all": 4,
+     "allN": 582,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 2,
+     "min500N": 367,
+     "all": 2,
+     "allN": 539,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 3,
+     "min500N": 360,
+     "all": 3,
+     "allN": 571,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 6,
+     "min500N": 375,
+     "all": 6,
+     "allN": 569,
+     "rule": "pct >= 99（short 為折扣前）"
+    }
+   }
+  }
+ },
+ "e101z": {
+  "long": {
+   "type": "curve",
+   "topTail": true,
+   "botTail": true,
+   "SDp": 0.027494158728832978,
+   "singleSeasonAnchors": {
+    "r90": 0.39253243705712604,
+    "r99": 0.42453418018972516,
+    "r1": 0.28224353571995653,
+    "SD_pool": 0.027494158728832978,
+    "gapScale": 0.030653010663409124,
+    "ratio": 1.1148917472155087,
+    "S": 0.030653010663409124,
+    "insuranceActive": false,
+    "poolN": 379
+   },
+   "curve": "CURVE_3PT",
+   "a99": 0.433,
+   "lo": 0.0,
+   "hi": 150.0,
+   "count": {
+    ">99": 1,
+    "==99": 0,
+    ">=99": 1,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 8
+   },
+   "above99": [
+    [
+     "Luke Kennard",
+     107.93
+    ]
+   ],
+   "below40": [
+    [
+     "Dyson Daniels",
+     20.14
+    ],
+    [
+     "Cody Williams",
+     26.27
+    ],
+    [
+     "Brandon Williams",
+     29.6
+    ],
+    [
+     "Amen Thompson",
+     29.62
+    ],
+    [
+     "Ronald Holland II",
+     33.52
+    ],
+    [
+     "Yang Hansen",
+     33.53
+    ],
+    [
+     "Ben Saraf",
+     34.04
+    ],
+    [
+     "Nae'Qwan Tomlin",
+     36.27
+    ]
+   ]
+  },
+  "mid": {
+   "type": "curve",
+   "topTail": false,
+   "botTail": false,
+   "SDp": 0.026616773629056335,
+   "singleSeasonAnchors": {
+    "r90": 0.44552105386677215,
+    "r99": 0.49512094969576337,
+    "r1": 0.348842342533528,
+    "SD_pool": 0.026616773629056335,
+    "gapScale": 0.047509478763401544,
+    "ratio": 1.7849450660517916,
+    "S": 0.047509478763401544,
+    "insuranceActive": false,
+    "poolN": 379
+   },
+   "curve": "CURVE_MID",
+   "a99": 0.5073,
+   "lo": 40.0,
+   "hi": 99.0,
+   "count": {
+    ">99": 0,
+    "==99": 1,
+    ">=99": 1,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [],
+   "below40": []
+  },
+  "short": {
+   "type": "curve",
+   "topTail": true,
+   "botTail": false,
+   "SDp": 0.04598624163838743,
+   "singleSeasonAnchors": {
+    "r90": 0.6356964436683943,
+    "r99": 0.6973952777128214,
+    "r1": 0.4761024891418402,
+    "SD_pool": 0.04598624163838743,
+    "gapScale": 0.0590985000425547,
+    "ratio": 1.285134377957552,
+    "S": 0.0590985000425547,
+    "insuranceActive": false,
+    "poolN": 379
+   },
+   "curve": "CURVE_SHORT",
+   "a99": 0.6664,
+   "lo": 40.0,
+   "hi": 150.0,
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Giannis Antetokounmpo",
+     115.58
+    ],
+    [
+     "Obi Toppin",
+     114.92
+    ]
+   ],
+   "below40": []
+  },
+  "ft": {
+   "type": "curve",
+   "topTail": true,
+   "botTail": true,
+   "SDp": 0.06581082160582158,
+   "singleSeasonAnchors": {
+    "r90": 0.8554143861237231,
+    "r99": 0.8928407055784573,
+    "r1": 0.5675193509867371,
+    "SD_pool": 0.06581082160582158,
+    "gapScale": 0.03584896499495611,
+    "ratio": 0.5447275101605012,
+    "S": 0.06581082160582158,
+    "insuranceActive": true,
+    "poolN": 379
+   },
+   "curve": "CURVE_FT",
+   "a99": 0.9,
+   "lo": 0.0,
+   "hi": 150.0,
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 2
+   },
+   "above99": [
+    [
+     "Stephen Curry",
+     112.88
+    ],
+    [
+     "Cam Spencer",
+     100.3
+    ]
+   ],
+   "below40": [
+    [
+     "Mitchell Robinson",
+     23.36
+    ],
+    [
+     "Steven Adams",
+     37.45
+    ]
+   ]
+  },
+  "drive": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r99": 2.2300676212757313,
+   "r1": -1.5958880813119358,
+   "SD": 0.9119851179086456,
+   "poolN": 231,
+   "singleSeasonAnchors": {
+    "r90": 1.2259139889047976,
+    "r99": 2.2300676212757313,
+    "r1": -1.5958880813119358,
+    "SD_pool": 0.9119851179086456,
+    "gapScale": 0.9618329811982124,
+    "ratio": 1.0546586367592021,
+    "S": 0.9618329811982124,
+    "insuranceActive": false,
+    "poolN": 231
+   },
+   "count": {
+    ">99": 1,
+    "==99": 1,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 5
+   },
+   "above99": [
+    [
+     "Zion Williamson",
+     109.98
+    ]
+   ],
+   "below40": [
+    [
+     "Gradey Dick",
+     35.14
+    ],
+    [
+     "Dorian Finney-Smith",
+     37.08
+    ],
+    [
+     "Julian Champagnie",
+     39.27
+    ],
+    [
+     "Clint Capela",
+     39.58
+    ],
+    [
+     "Taurean Prince",
+     39.98
+    ]
+   ]
+  },
+  "foulDraw": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r99": 2.834821258268275,
+   "r1": -1.4953923630302206,
+   "SD": 0.9711707368200665,
+   "poolN": 252,
+   "singleSeasonAnchors": {
+    "r90": 1.328484472926922,
+    "r99": 2.834821258268275,
+    "r1": -1.4953923630302206,
+    "SD_pool": 0.9711707368200665,
+    "gapScale": 1.442851326955319,
+    "ratio": 1.485682457525121,
+    "S": 1.442851326955319,
+    "insuranceActive": false,
+    "poolN": 252
+   },
+   "count": {
+    ">99": 2,
+    "==99": 1,
+    ">=99": 3,
+    ">120": 1,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 10
+   },
+   "above99": [
+    [
+     "Giannis Antetokounmpo",
+     121.23
+    ],
+    [
+     "Joel Embiid",
+     103.28
+    ]
+   ],
+   "below40": [
+    [
+     "Sam Hauser",
+     35.76
+    ],
+    [
+     "Nicolas Batum",
+     36.85
+    ],
+    [
+     "Tyus Jones",
+     37.04
+    ],
+    [
+     "Royce O'Neale",
+     37.67
+    ],
+    [
+     "Taurean Prince",
+     37.8
+    ],
+    [
+     "Lindy Waters III",
+     37.84
+    ],
+    [
+     "Jevon Carter",
+     38.8
+    ],
+    [
+     "Dorian Finney-Smith",
+     38.9
+    ],
+    [
+     "Jalen Pickett",
+     39.64
+    ],
+    [
+     "Gary Harris",
+     39.79
+    ]
+   ]
+  },
+  "tovSkill": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r99": -0.05846697815873295,
+   "r1": -0.13737675685534612,
+   "SD": 0.01755675248356996,
+   "poolN": 252,
+   "singleSeasonAnchors": {
+    "r90": -0.07309048137113948,
+    "r99": -0.05846697815873295,
+    "r1": -0.13737675685534612,
+    "SD_pool": 0.01755675248356996,
+    "gapScale": 0.014007186985063721,
+    "ratio": 0.7978233445036028,
+    "S": 0.01755675248356996,
+    "insuranceActive": true,
+    "poolN": 252
+   },
+   "count": {
+    ">99": 2,
+    "==99": 1,
+    ">=99": 3,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 9
+   },
+   "above99": [
+    [
+     "Tim Hardaway Jr.",
+     110.53
+    ],
+    [
+     "Sam Hauser",
+     108.86
+    ]
+   ],
+   "below40": [
+    [
+     "Jericho Sims",
+     28.65
+    ],
+    [
+     "Draymond Green",
+     29.37
+    ],
+    [
+     "Ariel Hukporti",
+     30.96
+    ],
+    [
+     "Adem Bona",
+     31.79
+    ],
+    [
+     "Nick Richards",
+     33.77
+    ],
+    [
+     "Trey Jemison III",
+     36.22
+    ],
+    [
+     "Jusuf Nurkić",
+     36.53
+    ],
+    [
+     "Andre Jackson Jr.",
+     36.86
+    ],
+    [
+     "Day'Ron Sharpe",
+     38.82
+    ]
+   ]
+  },
+  "pass": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r99": 0.42057299372601414,
+   "r1": 0.0490531158572233,
+   "SD": 0.08434641607670831,
+   "poolN": 252,
+   "singleSeasonAnchors": {
+    "r90": 0.28808431462490275,
+    "r99": 0.42057299372601414,
+    "r1": 0.0490531158572233,
+    "SD_pool": 0.08434641607670831,
+    "gapScale": 0.12690486503937873,
+    "ratio": 1.5045673656598035,
+    "S": 0.12690486503937873,
+    "insuranceActive": false,
+    "poolN": 252
+   },
+   "count": {
+    ">99": 5,
+    "==99": 1,
+    ">=99": 6,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 6
+   },
+   "above99": [
+    [
+     "Nikola Jokić",
+     114.52
+    ],
+    [
+     "T.J. McConnell",
+     111.88
+    ],
+    [
+     "Trae Young",
+     109.92
+    ],
+    [
+     "Cade Cunningham",
+     107.01
+    ],
+    [
+     "Ja Morant",
+     101.25
+    ]
+   ],
+   "below40": [
+    [
+     "Nick Richards",
+     37.96
+    ],
+    [
+     "Adem Bona",
+     37.98
+    ],
+    [
+     "Julian Phillips",
+     38.47
+    ],
+    [
+     "Rui Hachimura",
+     38.93
+    ],
+    [
+     "Chris Boucher",
+     39.8
+    ],
+    [
+     "Kel'el Ware",
+     39.88
+    ]
+   ]
+  },
+  "rebound": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r99": 0.21043281305277348,
+   "r1": 0.044620875092674685,
+   "SD": 0.040977531783268246,
+   "poolN": 252,
+   "singleSeasonAnchors": {
+    "r90": 0.16169075844675193,
+    "r99": 0.21043281305277348,
+    "r1": 0.044620875092674685,
+    "SD_pool": 0.040977531783268246,
+    "gapScale": 0.04668779176821987,
+    "ratio": 1.139350998863314,
+    "S": 0.04668779176821987,
+    "insuranceActive": false,
+    "poolN": 252
+   },
+   "count": {
+    ">99": 8,
+    "==99": 1,
+    ">=99": 9,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 8
+   },
+   "above99": [
+    [
+     "Mitchell Robinson",
+     114.19
+    ],
+    [
+     "Andre Drummond",
+     113.42
+    ],
+    [
+     "Donovan Clingan",
+     109.01
+    ],
+    [
+     "Zach Edey",
+     102.13
+    ],
+    [
+     "Domantas Sabonis",
+     101.93
+    ],
+    [
+     "Robert Williams III",
+     101.69
+    ],
+    [
+     "Jonas Valanciunas",
+     100.12
+    ],
+    [
+     "Steven Adams",
+     99.86
+    ]
+   ],
+   "below40": [
+    [
+     "Gary Trent Jr.",
+     35.95
+    ],
+    [
+     "Eric Gordon",
+     36.43
+    ],
+    [
+     "Gabe Vincent",
+     37.44
+    ],
+    [
+     "Aaron Holiday",
+     39.74
+    ],
+    [
+     "Nick Smith Jr.",
+     39.75
+    ],
+    [
+     "Jamal Shead",
+     39.89
+    ],
+    [
+     "Tyus Jones",
+     39.94
+    ],
+    [
+     "Trae Young",
+     39.98
+    ]
+   ]
+  },
+  "physique": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r99": 112.0,
+   "r1": 92.0,
+   "SD": 5.029666880400212,
+   "poolN": 251,
+   "singleSeasonAnchors": {
+    "r90": 108.0,
+    "r99": 112.0,
+    "r1": 92.0,
+    "SD_pool": 5.029666880400212,
+    "gapScale": 3.8314176245210727,
+    "ratio": 0.7617636944210917,
+    "S": 5.029666880400212,
+    "insuranceActive": true,
+    "poolN": 251
+   },
+   "count": {
+    ">99": 3,
+    "==99": 2,
+    ">=99": 5,
+    ">120": 1,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 26
+   },
+   "above99": [
+    [
+     "Zach Edey",
+     120.81
+    ],
+    [
+     "Donovan Clingan",
+     108.36
+    ],
+    [
+     "Brook Lopez",
+     104.85
+    ]
+   ],
+   "below40": [
+    [
+     "Yuki Kawamura",
+     27.46
+    ],
+    [
+     "Kennedy Chandler",
+     33.26
+    ],
+    [
+     "Ryan Nembhard",
+     33.26
+    ],
+    [
+     "Chris Paul",
+     34.12
+    ],
+    [
+     "Jordan McLaughlin",
+     34.12
+    ],
+    [
+     "Isaiah Stevens",
+     34.12
+    ],
+    [
+     "Sharife Cooper",
+     34.31
+    ],
+    [
+     "Jose Alvarado",
+     34.88
+    ],
+    [
+     "Trae Young",
+     35.91
+    ],
+    [
+     "Mike Conley",
+     36.13
+    ],
+    [
+     "Dennis Schröder",
+     36.13
+    ],
+    [
+     "Aaron Holiday",
+     36.13
+    ],
+    [
+     "Mark Sears",
+     36.13
+    ],
+    [
+     "Jahmir Young",
+     36.13
+    ],
+    [
+     "Bones Hyland",
+     37.05
+    ],
+    [
+     "Jevon Carter",
+     37.3
+    ],
+    [
+     "Scotty Pippen Jr.",
+     37.3
+    ],
+    [
+     "Craig Porter Jr.",
+     37.3
+    ],
+    [
+     "RayJ Dennis",
+     37.3
+    ],
+    [
+     "Jase Richardson",
+     37.3
+    ],
+    [
+     "Chucky Hepburn",
+     37.3
+    ],
+    [
+     "Ja Morant",
+     38.31
+    ],
+    [
+     "Seth Curry",
+     38.58
+    ],
+    [
+     "Rob Dillingham",
+     38.58
+    ],
+    [
+     "Kyle Lowry",
+     38.85
+    ],
+    [
+     "Tyus Jones",
+     38.85
+    ]
+   ]
+  },
+  "onBall": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r99": 4.77168493789482,
+   "r1": -3.9057457249817285,
+   "SD": 1.850139164756584,
+   "poolN": 252,
+   "singleSeasonAnchors": {
+    "r90": 2.685591544347411,
+    "r99": 4.77168493789482,
+    "r1": -3.9057457249817285,
+    "SD_pool": 1.850139164756584,
+    "gapScale": 1.998173748608629,
+    "ratio": 1.0800126750851855,
+    "S": 1.998173748608629,
+    "insuranceActive": false,
+    "poolN": 252
+   },
+   "count": {
+    ">99": 2,
+    "==99": 1,
+    ">=99": 3,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 5
+   },
+   "above99": [
+    [
+     "Luguentz Dort",
+     116.53
+    ],
+    [
+     "Dyson Daniels",
+     107.84
+    ]
+   ],
+   "below40": [
+    [
+     "Thomas Bryant",
+     34.94
+    ],
+    [
+     "Jock Landale",
+     37.15
+    ],
+    [
+     "Nikola Jokić",
+     37.16
+    ],
+    [
+     "Jonas Valanciunas",
+     37.49
+    ],
+    [
+     "Luka Garza",
+     38.33
+    ]
+   ]
+  },
+  "creation": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r99": 13.914032418837229,
+   "r1": 1.0237238299896425,
+   "SD": 3.077528172683706,
+   "poolN": 252,
+   "singleSeasonAnchors": {
+    "r90": 9.024250894221977,
+    "r99": 13.914032418837229,
+    "r1": 1.0237238299896425,
+    "SD_pool": 3.077528172683706,
+    "gapScale": 4.683698778367099,
+    "ratio": 1.5219028114640327,
+    "S": 4.683698778367099,
+    "insuranceActive": false,
+    "poolN": 252
+   },
+   "count": {
+    ">99": 2,
+    "==99": 1,
+    ">=99": 3,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 7
+   },
+   "above99": [
+    [
+     "Shai Gilgeous-Alexander",
+     115.16
+    ],
+    [
+     "Luka Dončić",
+     113.04
+    ]
+   ],
+   "below40": [
+    [
+     "Jericho Sims",
+     38.69
+    ],
+    [
+     "Nicolas Batum",
+     38.83
+    ],
+    [
+     "Dwight Powell",
+     38.91
+    ],
+    [
+     "Mason Plumlee",
+     39.2
+    ],
+    [
+     "Spencer Jones",
+     39.78
+    ],
+    [
+     "Jaxson Hayes",
+     39.81
+    ],
+    [
+     "Deandre Ayton",
+     39.94
+    ]
+   ]
+  },
+  "pressure": {
+   "type": "percentile",
+   "topTail": false,
+   "botTail": false,
+   "r99": 2.4281012708134733,
+   "r1": -1.2294801684368504,
+   "SD": 0.7648932544013439,
+   "poolN": 252,
+   "count": {
+    ">99": 0,
+    "==99": 7,
+    ">=99": 7,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [],
+   "below40": []
+  },
+  "midValue": {
+   "type": "value",
+   "topTail": true,
+   "botTail": false,
+   "muPerMin": 0.03711039143754452,
+   "leagueRate": 0.4167536889897843,
+   "rep": 0.38675368898978435,
+   "r99": 0.5392049969377114,
+   "r1": -0.04834553150720498,
+   "SD": 0.08892897737533295,
+   "poolN": 379,
+   "count": {
+    ">99": 3,
+    "==99": 1,
+    ">=99": 4,
+    ">120": 1,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Shai Gilgeous-Alexander",
+     131.8
+    ],
+    [
+     "DeMar DeRozan",
+     106.7
+    ],
+    [
+     "T.J. McConnell",
+     104.34
+    ]
+   ],
+   "below40": []
+  },
+  "shortValue": {
+   "type": "value",
+   "topTail": true,
+   "botTail": true,
+   "muPerMin": 0.17887292918961015,
+   "leagueRate": 0.5777357033185445,
+   "rep": 0.5477357033185445,
+   "r99": 1.2747106351286726,
+   "r1": -0.4019194699738516,
+   "SD": 0.3475113462499979,
+   "poolN": 379,
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 1,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Giannis Antetokounmpo",
+     137.88
+    ],
+    [
+     "Jalen Duren",
+     115.1
+    ]
+   ],
+   "below40": []
+  }
+ },
+ "e101g": {
+  "long": {
+   "type": "curve",
+   "topTail": true,
+   "botTail": true,
+   "r90": 0.3936414317085194,
+   "r99": 0.422064674063713,
+   "r1": 0.29004549474337205,
+   "SD_pool": 0.027315161873793493,
+   "gapScale": 0.027225327926430662,
+   "ratio": 0.9967112057480055,
+   "S": 0.027225327926430662,
+   "insuranceActive": false,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "curve": "CURVE_3PT",
+   "a99": 0.433,
+   "lo": 0.0,
+   "hi": 150.0,
+   "count": {
+    ">99": 1,
+    "==99": 0,
+    ">=99": 1,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 8
+   },
+   "above99": [
+    [
+     "Luke Kennard",
+     108.01
+    ]
+   ],
+   "below40": [
+    [
+     "Dyson Daniels",
+     20.14
+    ],
+    [
+     "Cody Williams",
+     26.27
+    ],
+    [
+     "Brandon Williams",
+     29.6
+    ],
+    [
+     "Amen Thompson",
+     29.62
+    ],
+    [
+     "Ronald Holland II",
+     33.52
+    ],
+    [
+     "Yang Hansen",
+     33.53
+    ],
+    [
+     "Ben Saraf",
+     34.04
+    ],
+    [
+     "Nae'Qwan Tomlin",
+     36.27
+    ]
+   ]
+  },
+  "mid": {
+   "type": "curve",
+   "topTail": false,
+   "botTail": false,
+   "r90": 0.4418779950856606,
+   "r99": 0.4871208876360678,
+   "r1": 0.35470069604030596,
+   "SD_pool": 0.023886162618017882,
+   "gapScale": 0.04333610397548582,
+   "ratio": 1.814276519360058,
+   "S": 0.04333610397548582,
+   "insuranceActive": false,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "curve": "CURVE_MID",
+   "a99": 0.5073,
+   "lo": 40.0,
+   "hi": 99.0,
+   "count": {
+    ">99": 0,
+    "==99": 1,
+    ">=99": 1,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [],
+   "below40": []
+  },
+  "short": {
+   "type": "curve",
+   "topTail": true,
+   "botTail": false,
+   "r90": 0.63057079915141,
+   "r99": 0.6912050093597578,
+   "r1": 0.479112206729571,
+   "SD_pool": 0.043609077744212264,
+   "gapScale": 0.05807874541029483,
+   "ratio": 1.331804028302409,
+   "S": 0.05807874541029483,
+   "insuranceActive": false,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "curve": "CURVE_SHORT",
+   "a99": 0.6664,
+   "lo": 40.0,
+   "hi": 150.0,
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Giannis Antetokounmpo",
+     113.05
+    ],
+    [
+     "Obi Toppin",
+     112.46
+    ]
+   ],
+   "below40": []
+  },
+  "ft": {
+   "type": "curve",
+   "topTail": true,
+   "botTail": true,
+   "r90": 0.8562168657492406,
+   "r99": 0.8984834635118985,
+   "r1": 0.561549482883018,
+   "SD_pool": 0.06807962925681212,
+   "gapScale": 0.04048524689909755,
+   "ratio": 0.5946749026258329,
+   "S": 0.04048524689909755,
+   "insuranceActive": false,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "curve": "CURVE_FT",
+   "a99": 0.9,
+   "lo": 0.0,
+   "hi": 150.0,
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 2
+   },
+   "above99": [
+    [
+     "Stephen Curry",
+     115.2
+    ],
+    [
+     "Cam Spencer",
+     100.58
+    ]
+   ],
+   "below40": [
+    [
+     "Mitchell Robinson",
+     23.36
+    ],
+    [
+     "Steven Adams",
+     37.45
+    ]
+   ]
+  },
+  "drive": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 1.2193602699862107,
+   "r99": 2.432097388121605,
+   "r1": -1.592946051425875,
+   "SD_pool": 0.9177115880298543,
+   "gapScale": 1.1616255920837109,
+   "ratio": 1.2657850322861148,
+   "S": 1.1616255920837109,
+   "insuranceActive": false,
+   "poolN": 913,
+   "poolPerSeason": {
+    "2025-26": 231,
+    "2022-23": 229,
+    "2023-24": 226,
+    "2024-25": 227
+   },
+   "count": {
+    ">99": 1,
+    "==99": 0,
+    ">=99": 1,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 6
+   },
+   "above99": [
+    [
+     "Zion Williamson",
+     103.92
+    ]
+   ],
+   "below40": [
+    [
+     "Gradey Dick",
+     35.13
+    ],
+    [
+     "Dorian Finney-Smith",
+     37.05
+    ],
+    [
+     "Julian Champagnie",
+     39.23
+    ],
+    [
+     "Clint Capela",
+     39.53
+    ],
+    [
+     "Taurean Prince",
+     39.93
+    ],
+    [
+     "Deandre Ayton",
+     39.95
+    ]
+   ]
+  },
+  "foulDraw": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 1.2820307661484238,
+   "r99": 2.9510951702260106,
+   "r1": -1.5259863966399028,
+   "SD_pool": 0.9687791201598256,
+   "gapScale": 1.5987206935609068,
+   "ratio": 1.6502427233332153,
+   "S": 1.5987206935609068,
+   "insuranceActive": false,
+   "poolN": 961,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 8
+   },
+   "above99": [
+    [
+     "Giannis Antetokounmpo",
+     112.62
+    ],
+    [
+     "Joel Embiid",
+     99.81
+    ]
+   ],
+   "below40": [
+    [
+     "Sam Hauser",
+     36.1
+    ],
+    [
+     "Nicolas Batum",
+     37.23
+    ],
+    [
+     "Tyus Jones",
+     37.42
+    ],
+    [
+     "Royce O'Neale",
+     38.07
+    ],
+    [
+     "Taurean Prince",
+     38.21
+    ],
+    [
+     "Lindy Waters III",
+     38.25
+    ],
+    [
+     "Jevon Carter",
+     39.24
+    ],
+    [
+     "Dorian Finney-Smith",
+     39.34
+    ]
+   ]
+  },
+  "tovSkill": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": -0.07277342208299967,
+   "r99": -0.056388502605356446,
+   "r1": -0.1404797656625341,
+   "SD_pool": 0.017938390471704736,
+   "gapScale": 0.01569436731575021,
+   "ratio": 0.8749038739292607,
+   "S": 0.01569436731575021,
+   "insuranceActive": false,
+   "poolN": 961,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 8
+   },
+   "above99": [
+    [
+     "Tim Hardaway Jr.",
+     109.03
+    ],
+    [
+     "Sam Hauser",
+     107.09
+    ]
+   ],
+   "below40": [
+    [
+     "Jericho Sims",
+     29.47
+    ],
+    [
+     "Draymond Green",
+     30.33
+    ],
+    [
+     "Ariel Hukporti",
+     32.22
+    ],
+    [
+     "Adem Bona",
+     33.22
+    ],
+    [
+     "Nick Richards",
+     35.55
+    ],
+    [
+     "Trey Jemison III",
+     38.42
+    ],
+    [
+     "Jusuf Nurkić",
+     38.78
+    ],
+    [
+     "Andre Jackson Jr.",
+     39.17
+    ]
+   ]
+  },
+  "pass": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 0.29191132869769487,
+   "r99": 0.4312200066330156,
+   "r1": 0.0490531158572233,
+   "SD_pool": 0.08789689255200936,
+   "gapScale": 0.1334374309725294,
+   "ratio": 1.5181131789565065,
+   "S": 0.1334374309725294,
+   "insuranceActive": false,
+   "poolN": 961,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 4,
+    "==99": 0,
+    ">=99": 4,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 6
+   },
+   "above99": [
+    [
+     "Nikola Jokić",
+     107.77
+    ],
+    [
+     "T.J. McConnell",
+     105.81
+    ],
+    [
+     "Trae Young",
+     104.39
+    ],
+    [
+     "Cade Cunningham",
+     102.32
+    ]
+   ],
+   "below40": [
+    [
+     "Nick Richards",
+     38.04
+    ],
+    [
+     "Adem Bona",
+     38.06
+    ],
+    [
+     "Julian Phillips",
+     38.53
+    ],
+    [
+     "Rui Hachimura",
+     38.97
+    ],
+    [
+     "Chris Boucher",
+     39.81
+    ],
+    [
+     "Kel'el Ware",
+     39.88
+    ]
+   ]
+  },
+  "rebound": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 0.16735831876946777,
+   "r99": 0.2154841907407299,
+   "r1": 0.044335185823744946,
+   "SD_pool": 0.042377906788910735,
+   "gapScale": 0.046097578516534586,
+   "ratio": 1.0877738427750092,
+   "S": 0.046097578516534586,
+   "insuranceActive": false,
+   "poolN": 961,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 4,
+    "==99": 0,
+    ">=99": 4,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 6
+   },
+   "above99": [
+    [
+     "Mitchell Robinson",
+     110.62
+    ],
+    [
+     "Andre Drummond",
+     109.87
+    ],
+    [
+     "Donovan Clingan",
+     105.58
+    ],
+    [
+     "Zach Edey",
+     99.02
+    ]
+   ],
+   "below40": [
+    [
+     "Gary Trent Jr.",
+     36.14
+    ],
+    [
+     "Eric Gordon",
+     36.61
+    ],
+    [
+     "Gabe Vincent",
+     37.6
+    ],
+    [
+     "Aaron Holiday",
+     39.85
+    ],
+    [
+     "Nick Smith Jr.",
+     39.85
+    ],
+    [
+     "Jamal Shead",
+     39.99
+    ]
+   ]
+  },
+  "physique": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 108.0,
+   "r99": 113.0,
+   "r1": 89.9,
+   "SD_pool": 5.064994418184136,
+   "gapScale": 4.7892720306513406,
+   "ratio": 0.9455631408905589,
+   "S": 4.7892720306513406,
+   "insuranceActive": false,
+   "poolN": 959,
+   "poolPerSeason": {
+    "2025-26": 251,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 243
+   },
+   "count": {
+    ">99": 3,
+    "==99": 0,
+    ">=99": 3,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 7
+   },
+   "above99": [
+    [
+     "Zach Edey",
+     118.42
+    ],
+    [
+     "Donovan Clingan",
+     104.15
+    ],
+    [
+     "Brook Lopez",
+     100.08
+    ]
+   ],
+   "below40": [
+    [
+     "Yuki Kawamura",
+     28.77
+    ],
+    [
+     "Kennedy Chandler",
+     37.56
+    ],
+    [
+     "Ryan Nembhard",
+     37.56
+    ],
+    [
+     "Chris Paul",
+     38.86
+    ],
+    [
+     "Jordan McLaughlin",
+     38.86
+    ],
+    [
+     "Isaiah Stevens",
+     38.86
+    ],
+    [
+     "Sharife Cooper",
+     39.14
+    ]
+   ]
+  },
+  "onBall": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 2.666133480698936,
+   "r99": 4.900568378450304,
+   "r1": -4.161847870735135,
+   "SD_pool": 1.8396562374127519,
+   "gapScale": 2.1402633120223826,
+   "ratio": 1.1634039384621104,
+   "S": 2.1402633120223826,
+   "insuranceActive": false,
+   "poolN": 961,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 4
+   },
+   "above99": [
+    [
+     "Luguentz Dort",
+     113.46
+    ],
+    [
+     "Dyson Daniels",
+     105.38
+    ]
+   ],
+   "below40": [
+    [
+     "Thomas Bryant",
+     36.4
+    ],
+    [
+     "Jock Landale",
+     38.95
+    ],
+    [
+     "Nikola Jokić",
+     38.96
+    ],
+    [
+     "Jonas Valanciunas",
+     39.34
+    ]
+   ]
+  },
+  "creation": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 9.87564923415718,
+   "r99": 14.409609632119107,
+   "r1": 1.0237238299896425,
+   "SD_pool": 3.2578842396967245,
+   "gapScale": 4.342873944407976,
+   "ratio": 1.3330350696598885,
+   "S": 4.342873944407976,
+   "insuranceActive": false,
+   "poolN": 961,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 7
+   },
+   "above99": [
+    [
+     "Shai Gilgeous-Alexander",
+     108.74
+    ],
+    [
+     "Luka Dončić",
+     106.97
+    ]
+   ],
+   "below40": [
+    [
+     "Jericho Sims",
+     38.76
+    ],
+    [
+     "Nicolas Batum",
+     38.89
+    ],
+    [
+     "Dwight Powell",
+     38.97
+    ],
+    [
+     "Mason Plumlee",
+     39.25
+    ],
+    [
+     "Spencer Jones",
+     39.79
+    ],
+    [
+     "Jaxson Hayes",
+     39.82
+    ],
+    [
+     "Deandre Ayton",
+     39.95
+    ]
+   ]
+  },
+  "pressure": {
+   "type": "percentile",
+   "topTail": false,
+   "botTail": false,
+   "r99": 2.4281012708134733,
+   "r1": -1.2294801684368504,
+   "SD": 0.7648932544013439,
+   "poolN": 252,
+   "count": {
+    ">99": 0,
+    "==99": 7,
+    ">=99": 7,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [],
+   "below40": []
+  },
+  "midValue": {
+   "type": "value",
+   "topTail": true,
+   "botTail": false,
+   "muPerMin": 0.03711039143754452,
+   "leagueRate": 0.4167536889897843,
+   "rep": 0.38675368898978435,
+   "r90": 0.11509104462650675,
+   "r99": 0.4397214960249821,
+   "r1": -0.04331697518683094,
+   "SD_pool": 0.08309885174054002,
+   "gapScale": 0.3109487082360875,
+   "ratio": 3.7419134166494175,
+   "S": 0.3109487082360875,
+   "insuranceActive": false,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "count": {
+    ">99": 4,
+    "==99": 0,
+    ">=99": 4,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Shai Gilgeous-Alexander",
+     117.74
+    ],
+    [
+     "DeMar DeRozan",
+     108.66
+    ],
+    [
+     "T.J. McConnell",
+     108.03
+    ],
+    [
+     "Kevin Durant",
+     106.68
+    ]
+   ],
+   "below40": []
+  },
+  "shortValue": {
+   "type": "value",
+   "topTail": true,
+   "botTail": true,
+   "muPerMin": 0.17887292918961015,
+   "leagueRate": 0.5777357033185445,
+   "rep": 0.5477357033185445,
+   "r90": 0.6585402983405754,
+   "r99": 1.2558985257746238,
+   "r1": -0.3967275524181964,
+   "SD_pool": 0.337484590067442,
+   "gapScale": 0.5721822101858701,
+   "ratio": 1.6954321086824342,
+   "S": 0.5721822101858701,
+   "insuranceActive": false,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 1,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Giannis Antetokounmpo",
+     129.04
+    ],
+    [
+     "Jalen Duren",
+     110.17
+    ]
+   ],
+   "below40": []
+  },
+  "_season99": {
+   "long": {
+    "2025-26": {
+     "min500": 1,
+     "min500N": 379,
+     "all": 1,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 1,
+     "min500N": 367,
+     "all": 1,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 2,
+     "min500N": 360,
+     "all": 2,
+     "allN": 572,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 0,
+     "min500N": 375,
+     "all": 0,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "mid": {
+    "2025-26": {
+     "min500": 1,
+     "min500N": 379,
+     "all": 1,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 1,
+     "min500N": 367,
+     "all": 1,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 2,
+     "min500N": 360,
+     "all": 2,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 2,
+     "min500N": 375,
+     "all": 2,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "short": {
+    "2025-26": {
+     "min500": 14,
+     "min500N": 379,
+     "all": 17,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 6,
+     "min500N": 367,
+     "all": 6,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 12,
+     "min500N": 360,
+     "all": 14,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 11,
+     "min500N": 375,
+     "all": 13,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "ft": {
+    "2025-26": {
+     "min500": 2,
+     "min500N": 379,
+     "all": 2,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 4,
+     "min500N": 367,
+     "all": 4,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 3,
+     "min500N": 360,
+     "all": 3,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 3,
+     "min500N": 375,
+     "all": 3,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "drive": {
+    "2025-26": {
+     "pool": 1,
+     "poolN": 231,
+     "all": 1,
+     "allN": 509
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 490
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 226,
+     "all": 4,
+     "allN": 523
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 227,
+     "all": 5,
+     "allN": 519
+    }
+   },
+   "foulDraw": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 2,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 244,
+     "all": 4,
+     "allN": 569
+    }
+   },
+   "tovSkill": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 2,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 244,
+     "all": 3,
+     "allN": 569
+    }
+   },
+   "pass": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 4,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 2,
+     "poolN": 244,
+     "all": 2,
+     "allN": 569
+    }
+   },
+   "rebound": {
+    "2025-26": {
+     "pool": 1,
+     "poolN": 252,
+     "all": 4,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 5,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 4,
+     "poolN": 229,
+     "all": 7,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 244,
+     "all": 7,
+     "allN": 569
+    }
+   },
+   "physique": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 251,
+     "all": 3,
+     "allN": 576
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 4,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 4,
+     "allN": 572
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 243,
+     "all": 4,
+     "allN": 567
+    }
+   },
+   "onBall": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 575
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 529
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 561
+    },
+    "2024-25": {
+     "pool": 2,
+     "poolN": 244,
+     "all": 2,
+     "allN": 563
+    }
+   },
+   "creation": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 5,
+     "poolN": 236,
+     "all": 5,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 3,
+     "allN": 572
+    },
+    "2024-25": {
+     "pool": 1,
+     "poolN": 244,
+     "all": 1,
+     "allN": 569
+    }
+   },
+   "midValue": {
+    "2025-26": {
+     "min500": 4,
+     "min500N": 379,
+     "all": 4,
+     "allN": 582,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 2,
+     "min500N": 367,
+     "all": 2,
+     "allN": 539,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 4,
+     "min500N": 360,
+     "all": 4,
+     "allN": 571,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 5,
+     "min500N": 375,
+     "all": 5,
+     "allN": 569,
+     "rule": "pct >= 99（short 為折扣前）"
+    }
+   },
+   "shortValue": {
+    "2025-26": {
+     "min500": 4,
+     "min500N": 379,
+     "all": 4,
+     "allN": 582,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 2,
+     "min500N": 367,
+     "all": 2,
+     "allN": 539,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 3,
+     "min500N": 360,
+     "all": 3,
+     "allN": 571,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 6,
+     "min500N": 375,
+     "all": 6,
+     "allN": 569,
+     "rule": "pct >= 99（short 為折扣前）"
+    }
+   }
+  }
+ },
+ "e101w": {
+  "long": {
+   "type": "curve",
+   "topTail": true,
+   "botTail": true,
+   "r90": 0.3917487698124827,
+   "r99": 0.4227272925409615,
+   "r1": 0.293117374156893,
+   "SD_pool": 0.02719087626128962,
+   "gapScale": 0.02967291449088006,
+   "ratio": 1.091282024372418,
+   "S": 0.02967291449088006,
+   "insuranceActive": false,
+   "poolN": 3980,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2015-16": 351,
+    "2016-17": 355,
+    "2017-18": 354,
+    "2018-19": 361,
+    "2019-20": 339,
+    "2020-21": 364,
+    "2021-22": 375,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "curve": "CURVE_3PT",
+   "a99": 0.433,
+   "lo": 0.0,
+   "hi": 150.0,
+   "count": {
+    ">99": 1,
+    "==99": 0,
+    ">=99": 1,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 8
+   },
+   "above99": [
+    [
+     "Luke Kennard",
+     107.33
+    ]
+   ],
+   "below40": [
+    [
+     "Dyson Daniels",
+     20.14
+    ],
+    [
+     "Cody Williams",
+     26.27
+    ],
+    [
+     "Brandon Williams",
+     29.6
+    ],
+    [
+     "Amen Thompson",
+     29.62
+    ],
+    [
+     "Ronald Holland II",
+     33.52
+    ],
+    [
+     "Yang Hansen",
+     33.53
+    ],
+    [
+     "Ben Saraf",
+     34.04
+    ],
+    [
+     "Nae'Qwan Tomlin",
+     36.27
+    ]
+   ]
+  },
+  "mid": {
+   "type": "curve",
+   "topTail": false,
+   "botTail": false,
+   "r90": 0.4418779950856606,
+   "r99": 0.4871208876360678,
+   "r1": 0.35470069604030596,
+   "SD_pool": 0.023886162618017882,
+   "gapScale": 0.04333610397548582,
+   "ratio": 1.814276519360058,
+   "S": 0.04333610397548582,
+   "insuranceActive": false,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "curve": "CURVE_MID",
+   "a99": 0.5073,
+   "lo": 40.0,
+   "hi": 99.0,
+   "count": {
+    ">99": 0,
+    "==99": 1,
+    ">=99": 1,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [],
+   "below40": []
+  },
+  "short": {
+   "type": "curve",
+   "topTail": true,
+   "botTail": false,
+   "r90": 0.63057079915141,
+   "r99": 0.6912050093597578,
+   "r1": 0.479112206729571,
+   "SD_pool": 0.043609077744212264,
+   "gapScale": 0.05807874541029483,
+   "ratio": 1.331804028302409,
+   "S": 0.05807874541029483,
+   "insuranceActive": false,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "curve": "CURVE_SHORT",
+   "a99": 0.6664,
+   "lo": 40.0,
+   "hi": 150.0,
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Giannis Antetokounmpo",
+     113.05
+    ],
+    [
+     "Obi Toppin",
+     112.46
+    ]
+   ],
+   "below40": []
+  },
+  "ft": {
+   "type": "curve",
+   "topTail": true,
+   "botTail": true,
+   "r90": 0.8517010255848455,
+   "r99": 0.8961122364415535,
+   "r1": 0.5486663688118084,
+   "SD_pool": 0.07139427050008193,
+   "gapScale": 0.042539474000678125,
+   "ratio": 0.5958387655299218,
+   "S": 0.07139427050008193,
+   "insuranceActive": true,
+   "poolN": 3980,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2015-16": 351,
+    "2016-17": 355,
+    "2017-18": 354,
+    "2018-19": 361,
+    "2019-20": 339,
+    "2020-21": 364,
+    "2021-22": 375,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "curve": "CURVE_FT",
+   "a99": 0.9,
+   "lo": 0.0,
+   "hi": 150.0,
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 2
+   },
+   "above99": [
+    [
+     "Stephen Curry",
+     112.6
+    ],
+    [
+     "Cam Spencer",
+     100.26
+    ]
+   ],
+   "below40": [
+    [
+     "Mitchell Robinson",
+     23.36
+    ],
+    [
+     "Steven Adams",
+     37.45
+    ]
+   ]
+  },
+  "drive": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 1.2503025966496901,
+   "r99": 2.400300881730968,
+   "r1": -1.5916342274058743,
+   "SD_pool": 0.9142018446447077,
+   "gapScale": 1.1015309244073541,
+   "ratio": 1.204909977878517,
+   "S": 1.1015309244073541,
+   "insuranceActive": false,
+   "poolN": 1368,
+   "poolPerSeason": {
+    "2025-26": 231,
+    "2020-21": 225,
+    "2021-22": 230,
+    "2022-23": 229,
+    "2023-24": 226,
+    "2024-25": 227
+   },
+   "count": {
+    ">99": 1,
+    "==99": 0,
+    ">=99": 1,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 6
+   },
+   "above99": [
+    [
+     "Zion Williamson",
+     104.85
+    ]
+   ],
+   "below40": [
+    [
+     "Gradey Dick",
+     35.1
+    ],
+    [
+     "Dorian Finney-Smith",
+     37.03
+    ],
+    [
+     "Julian Champagnie",
+     39.21
+    ],
+    [
+     "Clint Capela",
+     39.51
+    ],
+    [
+     "Taurean Prince",
+     39.91
+    ],
+    [
+     "Deandre Ayton",
+     39.93
+    ]
+   ]
+  },
+  "foulDraw": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 1.2974100424876365,
+   "r99": 3.0530689602868164,
+   "r1": -1.4745751693485039,
+   "SD_pool": 0.9653525988948548,
+   "gapScale": 1.6816656300758428,
+   "ratio": 1.7420221709674064,
+   "S": 1.6816656300758428,
+   "insuranceActive": false,
+   "poolN": 2593,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2015-16": 225,
+    "2016-17": 225,
+    "2017-18": 233,
+    "2018-19": 238,
+    "2019-20": 225,
+    "2020-21": 241,
+    "2021-22": 245,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 1,
+    "==99": 0,
+    ">=99": 1,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 13
+   },
+   "above99": [
+    [
+     "Giannis Antetokounmpo",
+     110.85
+    ]
+   ],
+   "below40": [
+    [
+     "Sam Hauser",
+     35.51
+    ],
+    [
+     "Nicolas Batum",
+     36.58
+    ],
+    [
+     "Tyus Jones",
+     36.76
+    ],
+    [
+     "Royce O'Neale",
+     37.39
+    ],
+    [
+     "Taurean Prince",
+     37.52
+    ],
+    [
+     "Lindy Waters III",
+     37.55
+    ],
+    [
+     "Jevon Carter",
+     38.5
+    ],
+    [
+     "Dorian Finney-Smith",
+     38.59
+    ],
+    [
+     "Jalen Pickett",
+     39.33
+    ],
+    [
+     "Gary Harris",
+     39.47
+    ],
+    [
+     "Al Horford",
+     39.68
+    ],
+    [
+     "Doug McDermott",
+     39.85
+    ],
+    [
+     "Gabe Vincent",
+     39.97
+    ]
+   ]
+  },
+  "tovSkill": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": -0.07497703212485728,
+   "r99": -0.0582229864127154,
+   "r1": -0.14361839397098897,
+   "SD_pool": 0.01812973904108579,
+   "gapScale": 0.01604793650588302,
+   "ratio": 0.8851719525314199,
+   "S": 0.01812973904108579,
+   "insuranceActive": true,
+   "poolN": 2593,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2015-16": 225,
+    "2016-17": 225,
+    "2017-18": 233,
+    "2018-19": 238,
+    "2019-20": 225,
+    "2020-21": 241,
+    "2021-22": 245,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 5
+   },
+   "above99": [
+    [
+     "Tim Hardaway Jr.",
+     109.93
+    ],
+    [
+     "Sam Hauser",
+     108.3
+    ]
+   ],
+   "below40": [
+    [
+     "Jericho Sims",
+     30.39
+    ],
+    [
+     "Draymond Green",
+     31.4
+    ],
+    [
+     "Ariel Hukporti",
+     33.66
+    ],
+    [
+     "Adem Bona",
+     34.83
+    ],
+    [
+     "Nick Richards",
+     37.59
+    ]
+   ]
+  },
+  "pass": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 0.29509873849092444,
+   "r99": 0.43979545922829655,
+   "r1": 0.04390199436533889,
+   "SD_pool": 0.09157243712996861,
+   "gapScale": 0.13859839151089282,
+   "ratio": 1.5135383075387667,
+   "S": 0.13859839151089282,
+   "insuranceActive": false,
+   "poolN": 2593,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2015-16": 225,
+    "2016-17": 225,
+    "2017-18": 233,
+    "2018-19": 238,
+    "2019-20": 225,
+    "2020-21": 241,
+    "2021-22": 245,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 4,
+    "==99": 0,
+    ">=99": 4,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 4
+   },
+   "above99": [
+    [
+     "Nikola Jokić",
+     106.11
+    ],
+    [
+     "T.J. McConnell",
+     104.15
+    ],
+    [
+     "Trae Young",
+     102.73
+    ],
+    [
+     "Cade Cunningham",
+     100.67
+    ]
+   ],
+   "below40": [
+    [
+     "Nick Richards",
+     38.87
+    ],
+    [
+     "Adem Bona",
+     38.89
+    ],
+    [
+     "Julian Phillips",
+     39.38
+    ],
+    [
+     "Rui Hachimura",
+     39.83
+    ]
+   ]
+  },
+  "rebound": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 0.16693874888945973,
+   "r99": 0.2279747513625026,
+   "r1": 0.0412313807170806,
+   "SD_pool": 0.043987031499005354,
+   "gapScale": 0.05846360390138205,
+   "ratio": 1.3291100105880989,
+   "S": 0.05846360390138205,
+   "insuranceActive": false,
+   "poolN": 2593,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2015-16": 225,
+    "2016-17": 225,
+    "2017-18": 233,
+    "2018-19": 238,
+    "2019-20": 225,
+    "2020-21": 241,
+    "2021-22": 245,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 2,
+    "==99": 1,
+    ">=99": 3,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 3
+   },
+   "above99": [
+    [
+     "Mitchell Robinson",
+     103.61
+    ],
+    [
+     "Andre Drummond",
+     102.92
+    ]
+   ],
+   "below40": [
+    [
+     "Gary Trent Jr.",
+     37.08
+    ],
+    [
+     "Eric Gordon",
+     37.57
+    ],
+    [
+     "Gabe Vincent",
+     38.61
+    ]
+   ]
+  },
+  "physique": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 108.0,
+   "r99": 111.7,
+   "r1": 89.5,
+   "SD_pool": 5.338831331163551,
+   "gapScale": 3.5440613026819947,
+   "ratio": 0.6638271716873284,
+   "S": 5.338831331163551,
+   "insuranceActive": true,
+   "poolN": 2591,
+   "poolPerSeason": {
+    "2025-26": 251,
+    "2015-16": 225,
+    "2016-17": 225,
+    "2017-18": 233,
+    "2018-19": 238,
+    "2019-20": 225,
+    "2020-21": 241,
+    "2021-22": 245,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 243
+   },
+   "count": {
+    ">99": 5,
+    "==99": 0,
+    ">=99": 5,
+    ">120": 1,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 3
+   },
+   "above99": [
+    [
+     "Zach Edey",
+     120.7
+    ],
+    [
+     "Donovan Clingan",
+     109.06
+    ],
+    [
+     "Brook Lopez",
+     105.81
+    ],
+    [
+     "Jusuf Nurkić",
+     100.44
+    ],
+    [
+     "Yang Hansen",
+     100.44
+    ]
+   ],
+   "below40": [
+    [
+     "Yuki Kawamura",
+     29.36
+    ],
+    [
+     "Kennedy Chandler",
+     38.66
+    ],
+    [
+     "Ryan Nembhard",
+     38.66
+    ]
+   ]
+  },
+  "onBall": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 2.666133480698936,
+   "r99": 4.900568378450304,
+   "r1": -4.161847870735135,
+   "SD_pool": 1.8396562374127519,
+   "gapScale": 2.1402633120223826,
+   "ratio": 1.1634039384621104,
+   "S": 2.1402633120223826,
+   "insuranceActive": false,
+   "poolN": 961,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 4
+   },
+   "above99": [
+    [
+     "Luguentz Dort",
+     113.46
+    ],
+    [
+     "Dyson Daniels",
+     105.38
+    ]
+   ],
+   "below40": [
+    [
+     "Thomas Bryant",
+     36.4
+    ],
+    [
+     "Jock Landale",
+     38.95
+    ],
+    [
+     "Nikola Jokić",
+     38.96
+    ],
+    [
+     "Jonas Valanciunas",
+     39.34
+    ]
+   ]
+  },
+  "creation": {
+   "type": "percentile",
+   "topTail": true,
+   "botTail": true,
+   "r90": 9.87564923415718,
+   "r99": 14.409609632119107,
+   "r1": 1.0237238299896425,
+   "SD_pool": 3.2578842396967245,
+   "gapScale": 4.342873944407976,
+   "ratio": 1.3330350696598885,
+   "S": 4.342873944407976,
+   "insuranceActive": false,
+   "poolN": 961,
+   "poolPerSeason": {
+    "2025-26": 252,
+    "2022-23": 236,
+    "2023-24": 229,
+    "2024-25": 244
+   },
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 7
+   },
+   "above99": [
+    [
+     "Shai Gilgeous-Alexander",
+     108.74
+    ],
+    [
+     "Luka Dončić",
+     106.97
+    ]
+   ],
+   "below40": [
+    [
+     "Jericho Sims",
+     38.76
+    ],
+    [
+     "Nicolas Batum",
+     38.89
+    ],
+    [
+     "Dwight Powell",
+     38.97
+    ],
+    [
+     "Mason Plumlee",
+     39.25
+    ],
+    [
+     "Spencer Jones",
+     39.79
+    ],
+    [
+     "Jaxson Hayes",
+     39.82
+    ],
+    [
+     "Deandre Ayton",
+     39.95
+    ]
+   ]
+  },
+  "pressure": {
+   "type": "percentile",
+   "topTail": false,
+   "botTail": false,
+   "r99": 2.4281012708134733,
+   "r1": -1.2294801684368504,
+   "SD": 0.7648932544013439,
+   "poolN": 252,
+   "count": {
+    ">99": 0,
+    "==99": 7,
+    ">=99": 7,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [],
+   "below40": []
+  },
+  "midValue": {
+   "type": "value",
+   "topTail": true,
+   "botTail": false,
+   "muPerMin": 0.03711039143754452,
+   "leagueRate": 0.4167536889897843,
+   "rep": 0.38675368898978435,
+   "r90": 0.11509104462650675,
+   "r99": 0.4397214960249821,
+   "r1": -0.04331697518683094,
+   "SD_pool": 0.08309885174054002,
+   "gapScale": 0.3109487082360875,
+   "ratio": 3.7419134166494175,
+   "S": 0.3109487082360875,
+   "insuranceActive": false,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "count": {
+    ">99": 4,
+    "==99": 0,
+    ">=99": 4,
+    ">120": 0,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Shai Gilgeous-Alexander",
+     117.74
+    ],
+    [
+     "DeMar DeRozan",
+     108.66
+    ],
+    [
+     "T.J. McConnell",
+     108.03
+    ],
+    [
+     "Kevin Durant",
+     106.68
+    ]
+   ],
+   "below40": []
+  },
+  "shortValue": {
+   "type": "value",
+   "topTail": true,
+   "botTail": true,
+   "muPerMin": 0.17887292918961015,
+   "leagueRate": 0.5777357033185445,
+   "rep": 0.5477357033185445,
+   "r90": 0.6585402983405754,
+   "r99": 1.2558985257746238,
+   "r1": -0.3967275524181964,
+   "SD_pool": 0.337484590067442,
+   "gapScale": 0.5721822101858701,
+   "ratio": 1.6954321086824342,
+   "S": 0.5721822101858701,
+   "insuranceActive": false,
+   "poolN": 1481,
+   "poolPerSeason": {
+    "2025-26": 379,
+    "2022-23": 367,
+    "2023-24": 360,
+    "2024-25": 375
+   },
+   "count": {
+    ">99": 2,
+    "==99": 0,
+    ">=99": 2,
+    ">120": 1,
+    ">140": 0,
+    ">=150": 0,
+    "<40": 0
+   },
+   "above99": [
+    [
+     "Giannis Antetokounmpo",
+     129.04
+    ],
+    [
+     "Jalen Duren",
+     110.17
+    ]
+   ],
+   "below40": []
+  },
+  "_season99": {
+   "long": {
+    "2025-26": {
+     "min500": 1,
+     "min500N": 379,
+     "all": 1,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2015-16": {
+     "min500": 2,
+     "min500N": 351,
+     "all": 2,
+     "allN": 476,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2016-17": {
+     "min500": 1,
+     "min500N": 355,
+     "all": 1,
+     "allN": 486,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2017-18": {
+     "min500": 1,
+     "min500N": 354,
+     "all": 1,
+     "allN": 540,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2018-19": {
+     "min500": 2,
+     "min500N": 361,
+     "all": 2,
+     "allN": 530,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2019-20": {
+     "min500": 2,
+     "min500N": 339,
+     "all": 2,
+     "allN": 529,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2020-21": {
+     "min500": 4,
+     "min500N": 364,
+     "all": 4,
+     "allN": 540,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2021-22": {
+     "min500": 0,
+     "min500N": 375,
+     "all": 0,
+     "allN": 605,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 1,
+     "min500N": 367,
+     "all": 1,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 2,
+     "min500N": 360,
+     "all": 2,
+     "allN": 572,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 0,
+     "min500N": 375,
+     "all": 0,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "mid": {
+    "2025-26": {
+     "min500": 1,
+     "min500N": 379,
+     "all": 1,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 1,
+     "min500N": 367,
+     "all": 1,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 2,
+     "min500N": 360,
+     "all": 2,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 2,
+     "min500N": 375,
+     "all": 2,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "short": {
+    "2025-26": {
+     "min500": 14,
+     "min500N": 379,
+     "all": 17,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 6,
+     "min500N": 367,
+     "all": 6,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 12,
+     "min500N": 360,
+     "all": 14,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 11,
+     "min500N": 375,
+     "all": 13,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "ft": {
+    "2025-26": {
+     "min500": 2,
+     "min500N": 379,
+     "all": 2,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2015-16": {
+     "min500": 1,
+     "min500N": 351,
+     "all": 1,
+     "allN": 476,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2016-17": {
+     "min500": 1,
+     "min500N": 355,
+     "all": 1,
+     "allN": 486,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2017-18": {
+     "min500": 3,
+     "min500N": 354,
+     "all": 3,
+     "allN": 540,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2018-19": {
+     "min500": 2,
+     "min500N": 361,
+     "all": 2,
+     "allN": 530,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2019-20": {
+     "min500": 1,
+     "min500N": 339,
+     "all": 2,
+     "allN": 529,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2020-21": {
+     "min500": 6,
+     "min500N": 364,
+     "all": 6,
+     "allN": 540,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2021-22": {
+     "min500": 2,
+     "min500N": 375,
+     "all": 2,
+     "allN": 605,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 4,
+     "min500N": 367,
+     "all": 4,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 3,
+     "min500N": 360,
+     "all": 3,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 3,
+     "min500N": 375,
+     "all": 3,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "drive": {
+    "2025-26": {
+     "pool": 1,
+     "poolN": 231,
+     "all": 1,
+     "allN": 509
+    },
+    "2020-21": {
+     "pool": 2,
+     "poolN": 225,
+     "all": 2,
+     "allN": 492
+    },
+    "2021-22": {
+     "pool": 2,
+     "poolN": 230,
+     "all": 2,
+     "allN": 584
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 490
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 226,
+     "all": 5,
+     "allN": 523
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 227,
+     "all": 5,
+     "allN": 519
+    }
+   },
+   "foulDraw": {
+    "2025-26": {
+     "pool": 1,
+     "poolN": 252,
+     "all": 1,
+     "allN": 582
+    },
+    "2015-16": {
+     "pool": 3,
+     "poolN": 225,
+     "all": 3,
+     "allN": 476
+    },
+    "2016-17": {
+     "pool": 2,
+     "poolN": 225,
+     "all": 2,
+     "allN": 486
+    },
+    "2017-18": {
+     "pool": 2,
+     "poolN": 233,
+     "all": 3,
+     "allN": 540
+    },
+    "2018-19": {
+     "pool": 3,
+     "poolN": 238,
+     "all": 3,
+     "allN": 530
+    },
+    "2019-20": {
+     "pool": 4,
+     "poolN": 225,
+     "all": 4,
+     "allN": 529
+    },
+    "2020-21": {
+     "pool": 2,
+     "poolN": 241,
+     "all": 2,
+     "allN": 540
+    },
+    "2021-22": {
+     "pool": 2,
+     "poolN": 245,
+     "all": 2,
+     "allN": 605
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 2,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 2,
+     "poolN": 244,
+     "all": 3,
+     "allN": 569
+    }
+   },
+   "tovSkill": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2015-16": {
+     "pool": 1,
+     "poolN": 225,
+     "all": 2,
+     "allN": 476
+    },
+    "2016-17": {
+     "pool": 1,
+     "poolN": 225,
+     "all": 2,
+     "allN": 486
+    },
+    "2017-18": {
+     "pool": 1,
+     "poolN": 233,
+     "all": 1,
+     "allN": 540
+    },
+    "2018-19": {
+     "pool": 1,
+     "poolN": 238,
+     "all": 2,
+     "allN": 530
+    },
+    "2019-20": {
+     "pool": 2,
+     "poolN": 225,
+     "all": 3,
+     "allN": 529
+    },
+    "2020-21": {
+     "pool": 1,
+     "poolN": 241,
+     "all": 1,
+     "allN": 540
+    },
+    "2021-22": {
+     "pool": 4,
+     "poolN": 245,
+     "all": 4,
+     "allN": 605
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 2,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 6,
+     "poolN": 229,
+     "all": 6,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 5,
+     "poolN": 244,
+     "all": 6,
+     "allN": 569
+    }
+   },
+   "pass": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 4,
+     "allN": 582
+    },
+    "2015-16": {
+     "pool": 4,
+     "poolN": 225,
+     "all": 4,
+     "allN": 476
+    },
+    "2016-17": {
+     "pool": 4,
+     "poolN": 225,
+     "all": 4,
+     "allN": 486
+    },
+    "2017-18": {
+     "pool": 3,
+     "poolN": 233,
+     "all": 3,
+     "allN": 540
+    },
+    "2018-19": {
+     "pool": 1,
+     "poolN": 238,
+     "all": 2,
+     "allN": 530
+    },
+    "2019-20": {
+     "pool": 3,
+     "poolN": 225,
+     "all": 3,
+     "allN": 529
+    },
+    "2020-21": {
+     "pool": 2,
+     "poolN": 241,
+     "all": 2,
+     "allN": 540
+    },
+    "2021-22": {
+     "pool": 3,
+     "poolN": 245,
+     "all": 3,
+     "allN": 605
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 2,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 1,
+     "poolN": 229,
+     "all": 1,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 1,
+     "poolN": 244,
+     "all": 1,
+     "allN": 569
+    }
+   },
+   "rebound": {
+    "2025-26": {
+     "pool": 1,
+     "poolN": 252,
+     "all": 3,
+     "allN": 582
+    },
+    "2015-16": {
+     "pool": 2,
+     "poolN": 225,
+     "all": 2,
+     "allN": 476
+    },
+    "2016-17": {
+     "pool": 4,
+     "poolN": 225,
+     "all": 4,
+     "allN": 486
+    },
+    "2017-18": {
+     "pool": 4,
+     "poolN": 233,
+     "all": 4,
+     "allN": 540
+    },
+    "2018-19": {
+     "pool": 3,
+     "poolN": 238,
+     "all": 4,
+     "allN": 530
+    },
+    "2019-20": {
+     "pool": 3,
+     "poolN": 225,
+     "all": 5,
+     "allN": 529
+    },
+    "2020-21": {
+     "pool": 5,
+     "poolN": 241,
+     "all": 7,
+     "allN": 540
+    },
+    "2021-22": {
+     "pool": 2,
+     "poolN": 245,
+     "all": 4,
+     "allN": 605
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 4,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 0,
+     "poolN": 229,
+     "all": 1,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 0,
+     "poolN": 244,
+     "all": 1,
+     "allN": 569
+    }
+   },
+   "physique": {
+    "2025-26": {
+     "pool": 3,
+     "poolN": 251,
+     "all": 5,
+     "allN": 576
+    },
+    "2015-16": {
+     "pool": 1,
+     "poolN": 225,
+     "all": 7,
+     "allN": 476
+    },
+    "2016-17": {
+     "pool": 2,
+     "poolN": 225,
+     "all": 5,
+     "allN": 486
+    },
+    "2017-18": {
+     "pool": 2,
+     "poolN": 233,
+     "all": 4,
+     "allN": 540
+    },
+    "2018-19": {
+     "pool": 0,
+     "poolN": 238,
+     "all": 1,
+     "allN": 530
+    },
+    "2019-20": {
+     "pool": 3,
+     "poolN": 225,
+     "all": 7,
+     "allN": 529
+    },
+    "2020-21": {
+     "pool": 3,
+     "poolN": 241,
+     "all": 6,
+     "allN": 540
+    },
+    "2021-22": {
+     "pool": 2,
+     "poolN": 245,
+     "all": 6,
+     "allN": 605
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 5,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 6,
+     "allN": 572
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 243,
+     "all": 6,
+     "allN": 567
+    }
+   },
+   "onBall": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 575
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 529
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 561
+    },
+    "2024-25": {
+     "pool": 2,
+     "poolN": 244,
+     "all": 2,
+     "allN": 563
+    }
+   },
+   "creation": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 5,
+     "poolN": 236,
+     "all": 5,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 3,
+     "allN": 572
+    },
+    "2024-25": {
+     "pool": 1,
+     "poolN": 244,
+     "all": 1,
+     "allN": 569
+    }
+   },
+   "midValue": {
+    "2025-26": {
+     "min500": 4,
+     "min500N": 379,
+     "all": 4,
+     "allN": 582,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 2,
+     "min500N": 367,
+     "all": 2,
+     "allN": 539,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 4,
+     "min500N": 360,
+     "all": 4,
+     "allN": 571,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 5,
+     "min500N": 375,
+     "all": 5,
+     "allN": 569,
+     "rule": "pct >= 99（short 為折扣前）"
+    }
+   },
+   "shortValue": {
+    "2025-26": {
+     "min500": 4,
+     "min500N": 379,
+     "all": 4,
+     "allN": 582,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 2,
+     "min500N": 367,
+     "all": 2,
+     "allN": 539,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 3,
+     "min500N": 360,
+     "all": 3,
+     "allN": 571,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 6,
+     "min500N": 375,
+     "all": 6,
+     "allN": 569,
+     "rule": "pct >= 99（short 為折扣前）"
+    }
+   }
+  }
+ },
+ "_e101zControl": {
+  "vsE096attributes": "11 項（mid、short 以外）582 人逐字串相同",
+  "mismatch": 0
+ }
+}

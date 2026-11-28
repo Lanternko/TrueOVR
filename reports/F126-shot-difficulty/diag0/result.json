@@ -1,0 +1,158 @@
+{
+ "N_pool_card": 303,
+ "N_with_data": 303,
+ "coverage_pool": 1.0,
+ "reliability_r": 0.5559892526256933,
+ "FGA_half_mean": 304.5754385964912,
+ "n_reliability": 285,
+ "k": 243.23270186326593,
+ "no_signal": false,
+ "slope_AB": -0.11782485659988486,
+ "slope_BA": -0.33837037127930436,
+ "slope_mean": -0.2280976139395946,
+ "boot_se": 0.053637752459825744,
+ "lo90": -0.3168659344873816,
+ "hi90": -0.1419200310570318,
+ "MDE": 0.13355800362496612,
+ "z_p90": 1.303223646231295,
+ "p90_card_underpays_per100": -0.29726220413501675,
+ "sd_SM_full": 0.02501943606059124,
+ "boot_n": 2000,
+ "verdict": "卡片高估難球命中者",
+ "report_only": {
+  "spearman_SM_vs_ovr": 0.44239841478532776,
+  "spearman_SM_vs_long": 0.5887284034683871,
+  "spearman_SM_vs_mid": 0.3854954361603602,
+  "spearman_SM_vs_short": 0.2514619088679771,
+  "top15": [
+   {
+    "name": "Nikola Jokić",
+    "SM_shrunk": 0.09628205537154129,
+    "FGA": 1039,
+    "raw_pp": 11.882194417709332,
+    "card_rank": 7
+   },
+   {
+    "name": "Kevin Durant",
+    "SM_shrunk": 0.08236275199091074,
+    "FGA": 1281,
+    "raw_pp": 9.800156128024978,
+    "card_rank": 17
+   },
+   {
+    "name": "Luka Dončić",
+    "SM_shrunk": 0.07452601767391269,
+    "FGA": 1435,
+    "raw_pp": 8.71581881533101,
+    "card_rank": 5
+   },
+   {
+    "name": "Shai Gilgeous-Alexander",
+    "SM_shrunk": 0.07399852224100906,
+    "FGA": 1259,
+    "raw_pp": 8.829467831612392,
+    "card_rank": 1
+   },
+   {
+    "name": "Luke Kennard",
+    "SM_shrunk": 0.06563484293275738,
+    "FGA": 415,
+    "raw_pp": 10.410361445783126,
+    "card_rank": 173
+   },
+   {
+    "name": "Jakob Poeltl",
+    "SM_shrunk": 0.06064960060848704,
+    "FGA": 291,
+    "raw_pp": 11.13436426116839,
+    "card_rank": 116
+   },
+   {
+    "name": "Zion Williamson",
+    "SM_shrunk": 0.060246196365137346,
+    "FGA": 748,
+    "raw_pp": 7.983689839572187,
+    "card_rank": 26
+   },
+   {
+    "name": "Stephen Curry",
+    "SM_shrunk": 0.05998430829861576,
+    "FGA": 774,
+    "raw_pp": 7.883462532299745,
+    "card_rank": 18
+   },
+   {
+    "name": "Jamal Murray",
+    "SM_shrunk": 0.05757441709471793,
+    "FGA": 1297,
+    "raw_pp": 6.8371626831148795,
+    "card_rank": 14
+   },
+   {
+    "name": "Cam Spencer",
+    "SM_shrunk": 0.054472746577058265,
+    "FGA": 534,
+    "raw_pp": 7.928464419475649,
+    "card_rank": 93
+   },
+   {
+    "name": "Donovan Mitchell",
+    "SM_shrunk": 0.05401645720408562,
+    "FGA": 1363,
+    "raw_pp": 6.365590608950838,
+    "card_rank": 6
+   },
+   {
+    "name": "DeMar DeRozan",
+    "SM_shrunk": 0.05395524570450499,
+    "FGA": 976,
+    "raw_pp": 6.740163934426229,
+    "card_rank": 78
+   },
+   {
+    "name": "Ryan Kalkbrenner",
+    "SM_shrunk": 0.052741217515365514,
+    "FGA": 272,
+    "raw_pp": 9.990441176470581,
+    "card_rank": 295
+   },
+   {
+    "name": "Kawhi Leonard",
+    "SM_shrunk": 0.05198889033012491,
+    "FGA": 1206,
+    "raw_pp": 6.247429519071305,
+    "card_rank": 3
+   },
+   {
+    "name": "Bobby Portis Jr.",
+    "SM_shrunk": 0.05025526067346768,
+    "FGA": 718,
+    "raw_pp": 6.727994428969369,
+    "card_rank": 171
+   }
+  ],
+  "SGA": {
+   "SM_shrunk": 0.07399852224100906,
+   "SM_rank": 4,
+   "of": 303,
+   "FGA": 1259,
+   "raw_pp": 8.829467831612392,
+   "card_rank": 1
+  },
+  "gravity": {
+   "n": 224,
+   "slope_without": -0.24860017884413932,
+   "slope_with": -0.22683414009484032,
+   "by_dir_without": [
+    -0.13566538888585658,
+    -0.3615349688024221
+   ],
+   "by_dir_with": [
+    -0.10258138548564523,
+    -0.3510868947040354
+   ],
+   "spearman_SM_vs_gravity": 0.3827450352338245
+  }
+ },
+ "seed": 20261101
+}

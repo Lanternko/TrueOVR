@@ -1,0 +1,30 @@
+{
+ "n_2k_pool": 376,
+ "K0_tov_vs_2K_BallHandle_rho": 0.0797545752463673,
+ "MDE": 0.08794460396314678,
+ "ci90": [
+  -0.009835914117940634,
+  0.16605329380835293
+ ],
+ "n_rapm_pop": 379,
+ "K0_ovr_vs_rapm_rho": 0.5905336274034345,
+ "h": 0.05693156409536515,
+ "notBroken_threshold": -0.1138631281907303,
+ "F143": {
+  "median": 2.8605252842022737,
+  "n_below": 19,
+  "n_nodata": 0,
+  "top30_mean_poss36": 3.1949456851100964,
+  "top5": [
+   "Sam Hauser",
+   "Tim Hardaway Jr.",
+   "Saddiq Bey",
+   "Miles McBride",
+   "Gary Trent Jr."
+  ]
+ },
+ "seed": 20261102,
+ "draws": 2000,
+ "K0_ranking_sha256": "4519d61545f783a245fc0aebd1f0a31e95ab5530117293f8aa76c84f0a64426d",
+ "pop_def": "2K 池＝卡片 MIN≥500 且 2K27 有 Ball Handle（姓名正規化比對）；RAPM 人群＝MIN≥500 且本季 RAPM poss≥1000（同 E-198）；F-143＝MIN≥500，持球/36＝handle.csv TIME_OF_POSS÷卡片 MIN×36，中位數取同人群"
+}

@@ -1,0 +1,30 @@
+{
+  "season": "2025-26",
+  "lambda": 3000,
+  "split": "int(gameId) % 2 (0 = A, 1 = B)",
+  "observationsTotal": 74746,
+  "A": {
+    "observations": 37581,
+    "games": 613,
+    "players": 575,
+    "intercept": 112.37237112816793
+  },
+  "B": {
+    "observations": 37165,
+    "games": 607,
+    "players": 579,
+    "intercept": 112.67628913215695
+  },
+  "k1": {
+    "maxAbsDiff": 0.0,
+    "pass": true,
+    "threshold": "< 1e-6（兩邊都四捨五入到 3 位小數後比）",
+    "players_fit": 582,
+    "players_in_ref": 877,
+    "compared_present": 582,
+    "ref_players_absent_in_season(csv=0)": 295,
+    "fit_players_not_in_ref": 0,
+    "intercept": 112.14309785743575,
+    "poss_maxAbsDiff_rounded": 0.0
+  }
+}

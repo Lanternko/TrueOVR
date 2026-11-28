@@ -1,0 +1,879 @@
+{
+ "2014-15": {
+  "stints": 37475,
+  "games": 1217,
+  "possessions": 233287,
+  "possPerStint": 3.11,
+  "splits": {
+   "train": {
+    "stints": 29345,
+    "games": 953,
+    "poss": 182828
+   },
+   "test": {
+    "stints": 8130,
+    "games": 264,
+    "poss": 50459
+   }
+  },
+  "hasBoxFields": true,
+  "players": 492,
+  "abilitySource": null,
+  "hasOvr": false,
+  "pidCoverageBySeconds": 0.0,
+  "ovrCoverageBySeconds": 0.0,
+  "prevSeasonCoverageBySeconds": 0.0,
+  "attrDiscrimination500min": {}
+ },
+ "2015-16": {
+  "stints": 37628,
+  "games": 1216,
+  "possessions": 237709,
+  "possPerStint": 3.16,
+  "splits": {
+   "train": {
+    "stints": 30440,
+    "games": 984,
+    "poss": 192394
+   },
+   "test": {
+    "stints": 7188,
+    "games": 232,
+    "poss": 45315
+   }
+  },
+  "hasBoxFields": true,
+  "players": 476,
+  "abilitySource": null,
+  "hasOvr": false,
+  "pidCoverageBySeconds": 0.0,
+  "ovrCoverageBySeconds": 0.0,
+  "prevSeasonCoverageBySeconds": 0.0,
+  "attrDiscrimination500min": {}
+ },
+ "2016-17": {
+  "stints": 37516,
+  "games": 1223,
+  "possessions": 239991,
+  "possPerStint": 3.2,
+  "splits": {
+   "train": {
+    "stints": 29594,
+    "games": 964,
+    "poss": 189264
+   },
+   "test": {
+    "stints": 7922,
+    "games": 259,
+    "poss": 50727
+   }
+  },
+  "hasBoxFields": true,
+  "players": 486,
+  "abilitySource": null,
+  "hasOvr": false,
+  "pidCoverageBySeconds": 0.0,
+  "ovrCoverageBySeconds": 0.0,
+  "prevSeasonCoverageBySeconds": 0.0,
+  "attrDiscrimination500min": {}
+ },
+ "2017-18": {
+  "stints": 37021,
+  "games": 1219,
+  "possessions": 240663,
+  "possPerStint": 3.25,
+  "splits": {
+   "train": {
+    "stints": 29860,
+    "games": 982,
+    "poss": 194075
+   },
+   "test": {
+    "stints": 7161,
+    "games": 237,
+    "poss": 46588
+   }
+  },
+  "hasBoxFields": true,
+  "players": 540,
+  "abilitySource": "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2017-18-027.json",
+  "hasOvr": false,
+  "pidCoverageBySeconds": 1.0,
+  "ovrCoverageBySeconds": 0.0,
+  "prevSeasonCoverageBySeconds": 0.0,
+  "attrDiscrimination500min": {
+   "long": {
+    "sd": 11.78,
+    "modeShare": 0.037
+   },
+   "mid": {
+    "sd": 11.09,
+    "modeShare": 0.034
+   },
+   "short": {
+    "sd": 14.65,
+    "modeShare": 0.167
+   },
+   "ft": {
+    "sd": 9.02,
+    "modeShare": 0.006
+   },
+   "drive": {
+    "sd": 17.82,
+    "modeShare": 0.023
+   },
+   "tovSkill": {
+    "sd": 18.22,
+    "modeShare": 0.017
+   },
+   "pass": {
+    "sd": 18.23,
+    "modeShare": 0.017
+   },
+   "rebound": {
+    "sd": 19.25,
+    "modeShare": 0.011
+   },
+   "physique": {
+    "sd": 17.33,
+    "modeShare": 0.054
+   },
+   "onBall": {
+    "sd": 0.0,
+    "modeShare": 1.0
+   },
+   "help": {
+    "sd": 0.0,
+    "modeShare": 1.0
+   },
+   "stamina": {
+    "sd": 19.89,
+    "modeShare": 0.334
+   },
+   "creation": {
+    "sd": 11.62,
+    "modeShare": 0.017
+   },
+   "pressure": {
+    "sd": 17.06,
+    "modeShare": 0.014
+   },
+   "heightInches": {
+    "sd": 3.38,
+    "modeShare": 0.113
+   }
+  }
+ },
+ "2018-19": {
+  "stints": 37557,
+  "games": 1215,
+  "possessions": 246974,
+  "possPerStint": 3.29,
+  "splits": {
+   "train": {
+    "stints": 30697,
+    "games": 994,
+    "poss": 202051
+   },
+   "test": {
+    "stints": 6860,
+    "games": 221,
+    "poss": 44923
+   }
+  },
+  "hasBoxFields": true,
+  "players": 530,
+  "abilitySource": "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2018-19-027.json",
+  "hasOvr": false,
+  "pidCoverageBySeconds": 1.0,
+  "ovrCoverageBySeconds": 0.0,
+  "prevSeasonCoverageBySeconds": 0.8957,
+  "attrDiscrimination500min": {
+   "long": {
+    "sd": 11.7,
+    "modeShare": 0.036
+   },
+   "mid": {
+    "sd": 10.24,
+    "modeShare": 0.019
+   },
+   "short": {
+    "sd": 15.54,
+    "modeShare": 0.178
+   },
+   "ft": {
+    "sd": 8.78,
+    "modeShare": 0.006
+   },
+   "drive": {
+    "sd": 17.62,
+    "modeShare": 0.014
+   },
+   "tovSkill": {
+    "sd": 18.05,
+    "modeShare": 0.014
+   },
+   "pass": {
+    "sd": 18.02,
+    "modeShare": 0.014
+   },
+   "rebound": {
+    "sd": 19.01,
+    "modeShare": 0.017
+   },
+   "physique": {
+    "sd": 17.6,
+    "modeShare": 0.031
+   },
+   "onBall": {
+    "sd": 0.0,
+    "modeShare": 1.0
+   },
+   "help": {
+    "sd": 0.0,
+    "modeShare": 1.0
+   },
+   "stamina": {
+    "sd": 19.91,
+    "modeShare": 0.337
+   },
+   "creation": {
+    "sd": 12.32,
+    "modeShare": 0.019
+   },
+   "pressure": {
+    "sd": 16.59,
+    "modeShare": 0.019
+   },
+   "heightInches": {
+    "sd": 3.33,
+    "modeShare": 0.111
+   }
+  }
+ },
+ "2019-20": {
+  "stints": 33460,
+  "games": 1047,
+  "possessions": 213444,
+  "possPerStint": 3.19,
+  "splits": {
+   "test": {
+    "stints": 7336,
+    "games": 232,
+    "poss": 47424
+   },
+   "train": {
+    "stints": 26124,
+    "games": 815,
+    "poss": 166020
+   }
+  },
+  "hasBoxFields": true,
+  "players": 529,
+  "abilitySource": "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2019-20-027.json",
+  "hasOvr": false,
+  "pidCoverageBySeconds": 1.0,
+  "ovrCoverageBySeconds": 0.0,
+  "prevSeasonCoverageBySeconds": 0.8877,
+  "attrDiscrimination500min": {
+   "long": {
+    "sd": 12.22,
+    "modeShare": 0.024
+   },
+   "mid": {
+    "sd": 9.65,
+    "modeShare": 0.012
+   },
+   "short": {
+    "sd": 16.03,
+    "modeShare": 0.154
+   },
+   "ft": {
+    "sd": 8.8,
+    "modeShare": 0.006
+   },
+   "drive": {
+    "sd": 17.84,
+    "modeShare": 0.024
+   },
+   "tovSkill": {
+    "sd": 18.23,
+    "modeShare": 0.015
+   },
+   "pass": {
+    "sd": 18.11,
+    "modeShare": 0.018
+   },
+   "rebound": {
+    "sd": 18.34,
+    "modeShare": 0.012
+   },
+   "physique": {
+    "sd": 17.11,
+    "modeShare": 0.036
+   },
+   "onBall": {
+    "sd": 0.0,
+    "modeShare": 1.0
+   },
+   "help": {
+    "sd": 0.0,
+    "modeShare": 1.0
+   },
+   "stamina": {
+    "sd": 19.87,
+    "modeShare": 0.317
+   },
+   "creation": {
+    "sd": 12.88,
+    "modeShare": 0.024
+   },
+   "pressure": {
+    "sd": 17.14,
+    "modeShare": 0.024
+   },
+   "heightInches": {
+    "sd": 3.33,
+    "modeShare": 0.115
+   }
+  }
+ },
+ "2020-21": {
+  "stints": 31337,
+  "games": 1045,
+  "possessions": 210386,
+  "possPerStint": 3.36,
+  "splits": {
+   "train": {
+    "stints": 25666,
+    "games": 852,
+    "poss": 171733
+   },
+   "test": {
+    "stints": 5671,
+    "games": 193,
+    "poss": 38653
+   }
+  },
+  "hasBoxFields": true,
+  "players": 540,
+  "abilitySource": "reports/ovr-inseason-2026-27/e111-card027/cards/prior-2020-21-027.json",
+  "hasOvr": false,
+  "pidCoverageBySeconds": 1.0,
+  "ovrCoverageBySeconds": 0.0,
+  "prevSeasonCoverageBySeconds": 0.8932,
+  "attrDiscrimination500min": {
+   "long": {
+    "sd": 12.97,
+    "modeShare": 0.014
+   },
+   "mid": {
+    "sd": 9.43,
+    "modeShare": 0.011
+   },
+   "short": {
+    "sd": 16.24,
+    "modeShare": 0.12
+   },
+   "ft": {
+    "sd": 9.34,
+    "modeShare": 0.006
+   },
+   "drive": {
+    "sd": 18.25,
+    "modeShare": 0.034
+   },
+   "tovSkill": {
+    "sd": 19.1,
+    "modeShare": 0.014
+   },
+   "pass": {
+    "sd": 17.96,
+    "modeShare": 0.017
+   },
+   "rebound": {
+    "sd": 18.48,
+    "modeShare": 0.017
+   },
+   "physique": {
+    "sd": 17.87,
+    "modeShare": 0.034
+   },
+   "onBall": {
+    "sd": 0.0,
+    "modeShare": 1.0
+   },
+   "help": {
+    "sd": 0.0,
+    "modeShare": 1.0
+   },
+   "stamina": {
+    "sd": 19.76,
+    "modeShare": 0.305
+   },
+   "creation": {
+    "sd": 12.96,
+    "modeShare": 0.02
+   },
+   "pressure": {
+    "sd": 16.86,
+    "modeShare": 0.014
+   },
+   "heightInches": {
+    "sd": 3.28,
+    "modeShare": 0.118
+   }
+  }
+ },
+ "2021-22": {
+  "stints": 35406,
+  "games": 1167,
+  "possessions": 232831,
+  "possPerStint": 3.29,
+  "splits": {
+   "train": {
+    "stints": 28416,
+    "games": 940,
+    "poss": 187288
+   },
+   "test": {
+    "stints": 6990,
+    "games": 227,
+    "poss": 45543
+   }
+  },
+  "hasBoxFields": true,
+  "players": 605,
+  "abilitySource": "reports/ovr-inseason-2026-27/v4/cards/2021-22.csv",
+  "hasOvr": true,
+  "pidCoverageBySeconds": 1.0,
+  "ovrCoverageBySeconds": 1.0,
+  "prevSeasonCoverageBySeconds": 0.8879,
+  "attrDiscrimination500min": {
+   "long": {
+    "sd": 12.07,
+    "modeShare": 0.025
+   },
+   "mid": {
+    "sd": 10.0,
+    "modeShare": 0.014
+   },
+   "short": {
+    "sd": 16.19,
+    "modeShare": 0.096
+   },
+   "ft": {
+    "sd": 8.89,
+    "modeShare": 0.005
+   },
+   "drive": {
+    "sd": 17.6,
+    "modeShare": 0.016
+   },
+   "tovSkill": {
+    "sd": 18.12,
+    "modeShare": 0.033
+   },
+   "pass": {
+    "sd": 17.65,
+    "modeShare": 0.022
+   },
+   "rebound": {
+    "sd": 17.05,
+    "modeShare": 0.014
+   },
+   "physique": {
+    "sd": 18.2,
+    "modeShare": 0.033
+   },
+   "onBall": {
+    "sd": 0.0,
+    "modeShare": 1.0
+   },
+   "help": {
+    "sd": 0.0,
+    "modeShare": 1.0
+   },
+   "stamina": {
+    "sd": 19.99,
+    "modeShare": 0.317
+   },
+   "creation": {
+    "sd": 16.95,
+    "modeShare": 0.016
+   },
+   "pressure": {
+    "sd": 16.81,
+    "modeShare": 0.011
+   },
+   "heightInches": {
+    "sd": 3.16,
+    "modeShare": 0.139
+   }
+  }
+ },
+ "2022-23": {
+  "stints": 33132,
+  "games": 1108,
+  "possessions": 223612,
+  "possPerStint": 3.37,
+  "splits": {
+   "train": {
+    "stints": 26156,
+    "games": 877,
+    "poss": 177223
+   },
+   "test": {
+    "stints": 6976,
+    "games": 231,
+    "poss": 46389
+   }
+  },
+  "hasBoxFields": true,
+  "players": 539,
+  "abilitySource": "reports/ovr-inseason-2026-27/v4/cards/2022-23.csv",
+  "hasOvr": true,
+  "pidCoverageBySeconds": 1.0,
+  "ovrCoverageBySeconds": 1.0,
+  "prevSeasonCoverageBySeconds": 0.8965,
+  "attrDiscrimination500min": {
+   "long": {
+    "sd": 11.85,
+    "modeShare": 0.017
+   },
+   "mid": {
+    "sd": 9.28,
+    "modeShare": 0.036
+   },
+   "short": {
+    "sd": 11.74,
+    "modeShare": 0.006
+   },
+   "ft": {
+    "sd": 9.28,
+    "modeShare": 0.006
+   },
+   "drive": {
+    "sd": 17.56,
+    "modeShare": 0.014
+   },
+   "tovSkill": {
+    "sd": 17.74,
+    "modeShare": 0.022
+   },
+   "pass": {
+    "sd": 16.95,
+    "modeShare": 0.019
+   },
+   "rebound": {
+    "sd": 17.56,
+    "modeShare": 0.017
+   },
+   "physique": {
+    "sd": 17.51,
+    "modeShare": 0.033
+   },
+   "onBall": {
+    "sd": 5.6,
+    "modeShare": 0.064
+   },
+   "help": {
+    "sd": 7.07,
+    "modeShare": 0.064
+   },
+   "stamina": {
+    "sd": 19.93,
+    "modeShare": 0.346
+   },
+   "creation": {
+    "sd": 16.87,
+    "modeShare": 0.014
+   },
+   "pressure": {
+    "sd": 16.8,
+    "modeShare": 0.014
+   },
+   "heightInches": {
+    "sd": 3.14,
+    "modeShare": 0.15
+   }
+  }
+ },
+ "2023-24": {
+  "stints": 32053,
+  "games": 1093,
+  "possessions": 218804,
+  "possPerStint": 3.41,
+  "splits": {
+   "train": {
+    "stints": 25719,
+    "games": 874,
+    "poss": 175018
+   },
+   "test": {
+    "stints": 6334,
+    "games": 219,
+    "poss": 43786
+   }
+  },
+  "hasBoxFields": true,
+  "players": 571,
+  "abilitySource": "reports/ovr-inseason-2026-27/v4/cards/2023-24.csv",
+  "hasOvr": true,
+  "pidCoverageBySeconds": 1.0,
+  "ovrCoverageBySeconds": 1.0,
+  "prevSeasonCoverageBySeconds": 0.9015,
+  "attrDiscrimination500min": {
+   "long": {
+    "sd": 11.74,
+    "modeShare": 0.017
+   },
+   "mid": {
+    "sd": 9.95,
+    "modeShare": 0.038
+   },
+   "short": {
+    "sd": 10.79,
+    "modeShare": 0.003
+   },
+   "ft": {
+    "sd": 8.65,
+    "modeShare": 0.006
+   },
+   "drive": {
+    "sd": 17.92,
+    "modeShare": 0.023
+   },
+   "tovSkill": {
+    "sd": 18.34,
+    "modeShare": 0.02
+   },
+   "pass": {
+    "sd": 16.93,
+    "modeShare": 0.02
+   },
+   "rebound": {
+    "sd": 17.67,
+    "modeShare": 0.023
+   },
+   "physique": {
+    "sd": 17.74,
+    "modeShare": 0.032
+   },
+   "onBall": {
+    "sd": 5.96,
+    "modeShare": 0.012
+   },
+   "help": {
+    "sd": 7.63,
+    "modeShare": 0.009
+   },
+   "stamina": {
+    "sd": 19.98,
+    "modeShare": 0.338
+   },
+   "creation": {
+    "sd": 17.39,
+    "modeShare": 0.014
+   },
+   "pressure": {
+    "sd": 16.83,
+    "modeShare": 0.017
+   },
+   "heightInches": {
+    "sd": 3.17,
+    "modeShare": 0.133
+   }
+  }
+ },
+ "2024-25": {
+  "stints": 33396,
+  "games": 1104,
+  "possessions": 221881,
+  "possPerStint": 3.32,
+  "splits": {
+   "train": {
+    "stints": 26818,
+    "games": 883,
+    "poss": 177362
+   },
+   "test": {
+    "stints": 6578,
+    "games": 221,
+    "poss": 44519
+   }
+  },
+  "hasBoxFields": true,
+  "players": 569,
+  "abilitySource": "reports/ovr-inseason-2026-27/v4/cards/2024-25.csv",
+  "hasOvr": true,
+  "pidCoverageBySeconds": 1.0,
+  "ovrCoverageBySeconds": 1.0,
+  "prevSeasonCoverageBySeconds": 0.8912,
+  "attrDiscrimination500min": {
+   "long": {
+    "sd": 12.31,
+    "modeShare": 0.022
+   },
+   "mid": {
+    "sd": 9.07,
+    "modeShare": 0.022
+   },
+   "short": {
+    "sd": 10.92,
+    "modeShare": 0.006
+   },
+   "ft": {
+    "sd": 8.81,
+    "modeShare": 0.006
+   },
+   "drive": {
+    "sd": 17.55,
+    "modeShare": 0.014
+   },
+   "tovSkill": {
+    "sd": 18.49,
+    "modeShare": 0.017
+   },
+   "pass": {
+    "sd": 17.2,
+    "modeShare": 0.019
+   },
+   "rebound": {
+    "sd": 17.93,
+    "modeShare": 0.022
+   },
+   "physique": {
+    "sd": 17.51,
+    "modeShare": 0.039
+   },
+   "onBall": {
+    "sd": 5.86,
+    "modeShare": 0.011
+   },
+   "help": {
+    "sd": 8.97,
+    "modeShare": 0.008
+   },
+   "stamina": {
+    "sd": 19.93,
+    "modeShare": 0.314
+   },
+   "creation": {
+    "sd": 17.89,
+    "modeShare": 0.058
+   },
+   "pressure": {
+    "sd": 17.1,
+    "modeShare": 0.014
+   },
+   "heightInches": {
+    "sd": 3.17,
+    "modeShare": 0.144
+   }
+  }
+ },
+ "2025-26": {
+  "stints": 39669,
+  "games": 1220,
+  "possessions": 246883,
+  "possPerStint": 3.11,
+  "splits": {
+   "forward": {
+    "stints": 39669,
+    "games": 1220,
+    "poss": 246883
+   }
+  },
+  "hasBoxFields": true,
+  "players": 582,
+  "abilitySource": "reports/ovr-inseason-2026-27/v4/cards/2025-26.csv",
+  "hasOvr": true,
+  "pidCoverageBySeconds": 1.0,
+  "ovrCoverageBySeconds": 1.0,
+  "prevSeasonCoverageBySeconds": 0.8846,
+  "attrDiscrimination500min": {
+   "long": {
+    "sd": 11.92,
+    "modeShare": 0.034
+   },
+   "mid": {
+    "sd": 8.86,
+    "modeShare": 0.029
+   },
+   "short": {
+    "sd": 11.58,
+    "modeShare": 0.013
+   },
+   "ft": {
+    "sd": 8.9,
+    "modeShare": 0.016
+   },
+   "drive": {
+    "sd": 18.0,
+    "modeShare": 0.027
+   },
+   "tovSkill": {
+    "sd": 17.35,
+    "modeShare": 0.027
+   },
+   "pass": {
+    "sd": 17.74,
+    "modeShare": 0.021
+   },
+   "rebound": {
+    "sd": 17.5,
+    "modeShare": 0.029
+   },
+   "physique": {
+    "sd": 17.64,
+    "modeShare": 0.048
+   },
+   "onBall": {
+    "sd": 6.53,
+    "modeShare": 0.024
+   },
+   "help": {
+    "sd": 10.62,
+    "modeShare": 0.013
+   },
+   "stamina": {
+    "sd": 20.01,
+    "modeShare": 0.321
+   },
+   "creation": {
+    "sd": 16.9,
+    "modeShare": 0.021
+   },
+   "pressure": {
+    "sd": 17.24,
+    "modeShare": 0.011
+   },
+   "heightInches": {
+    "sd": 3.15,
+    "modeShare": 0.125
+   }
+  }
+ },
+ "2026-27": {
+  "stints": 3571,
+  "games": 100,
+  "possessions": 20338,
+  "possPerStint": 2.85,
+  "splits": {
+   "forward": {
+    "stints": 3571,
+    "games": 100,
+    "poss": 20338
+   }
+  },
+  "hasBoxFields": true,
+  "players": 446,
+  "abilitySource": "reports/ovr-inseason-2026-27/live/2026-11-02/ranking.csv",
+  "hasOvr": true,
+  "pidCoverageBySeconds": 0.9779,
+  "ovrCoverageBySeconds": 0.9779,
+  "prevSeasonCoverageBySeconds": 0.9159,
+  "attrDiscrimination500min": {}
+ }
+}

@@ -1,0 +1,43 @@
+{
+  "rRepl_PR10_of_pred": -2.0345671585001224,
+  "anchors": {
+    "PR1": -0.669646449518181,
+    "PR50": 1.2562192267495718,
+    "PR99": 4.765048506925231
+  },
+  "poolSize": 378,
+  "players": 582,
+  "columns": [
+    "rank",
+    "ovr",
+    "name",
+    "pos",
+    "MIN",
+    "predictedPer36",
+    "simulatedPer36",
+    "defenseBonus",
+    "align",
+    "pred0",
+    "pr",
+    "long",
+    "mid",
+    "short",
+    "ft",
+    "drive",
+    "foulDraw",
+    "tovSkill",
+    "pass",
+    "rebound",
+    "physique",
+    "onBall",
+    "help",
+    "stamina",
+    "heightInches",
+    "creation",
+    "pressure",
+    "mpg",
+    "gRepl",
+    "ovr36"
+  ],
+  "ranking_csv_sha256": "1ac8f99f13ea6eb56b58eb78da75de9aaa2d96040840e27fdf239c61ad7a682d"
+}

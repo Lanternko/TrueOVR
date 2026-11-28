@@ -1,0 +1,28 @@
+{
+ "selected": [],
+ "fold0MSE": 10127.447,
+ "rule": "gain>=1.0, max 6, seeds [0, 1, 2]",
+ "log": [
+  {
+   "step": 1,
+   "current": [],
+   "currentMSE": 10127.447,
+   "candidates": {
+    "spotup36": 10127.216,
+    "handoff36": 10127.356,
+    "offScr36": 10127.389,
+    "putback36": 10127.487,
+    "cs3a36": 10127.573,
+    "cut36": 10128.027,
+    "distOff36": 10128.223,
+    "trans36": 10128.252,
+    "cs3pct": 10132.331,
+    "cutPPP": 10132.5,
+    "roll36": 10132.93,
+    "speedOff": 10133.368
+   },
+   "best": "spotup36",
+   "gain": 0.231
+  }
+ ]
+}

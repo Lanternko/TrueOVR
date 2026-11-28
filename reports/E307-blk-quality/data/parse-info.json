@@ -1,0 +1,74 @@
+{
+ "2021-22": {
+  "games": 1230,
+  "paint2pa_nb": 92246,
+  "paint2pm_nb": 58074,
+  "blk": 11603,
+  "out_rebound": 11603,
+  "retained": 6664,
+  "known": 11603,
+  "ptsAfter": 5199,
+  "gt": 509,
+  "files": 1230
+ },
+ "2022-23": {
+  "games": 1230,
+  "blk": 11450,
+  "out_rebound": 11450,
+  "retained": 6688,
+  "known": 11450,
+  "ptsAfter": 5223,
+  "paint2pa_nb": 97056,
+  "paint2pm_nb": 62068,
+  "gt": 606,
+  "files": 1230
+ },
+ "2023-24": {
+  "games": 1230,
+  "paint2pa_nb": 96377,
+  "paint2pm_nb": 61811,
+  "blk": 12639,
+  "out_rebound": 12639,
+  "retained": 7402,
+  "known": 12639,
+  "ptsAfter": 5653,
+  "gt": 669,
+  "files": 1230
+ },
+ "2024-25": {
+  "games": 1229,
+  "blk": 11985,
+  "out_rebound": 11985,
+  "retained": 6999,
+  "known": 11985,
+  "ptsAfter": 5244,
+  "paint2pa_nb": 94790,
+  "paint2pm_nb": 60225,
+  "gt": 576,
+  "files": 1229
+ },
+ "2025-26": {
+  "games": 1227,
+  "paint2pa_nb": 95238,
+  "paint2pm_nb": 61109,
+  "blk": 11879,
+  "out_rebound": 11879,
+  "retained": 6921,
+  "known": 11879,
+  "ptsAfter": 5491,
+  "gt": 616,
+  "files": 1227
+ },
+ "2026-27": {
+  "games": 240,
+  "paint2pa_nb": 17628,
+  "paint2pm_nb": 11264,
+  "blk": 2397,
+  "out_rebound": 2397,
+  "retained": 1380,
+  "known": 2397,
+  "ptsAfter": 1115,
+  "gt": 110,
+  "files": 240
+ }
+}

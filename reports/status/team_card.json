@@ -1,0 +1,83 @@
+[
+ {
+  "version": "舊版 sim-only",
+  "order": 1,
+  "adopted": true,
+  "teams": 30,
+  "pearsonR": 0.791,
+  "spearmanRho": 0.742,
+  "source": "data/season-league.json 球隊 observed.PLUS_MINUS / GP（每場分差）；名單 observed.MIN 為權重"
+ },
+ {
+  "version": "v53",
+  "order": 2,
+  "adopted": true,
+  "teams": 30,
+  "pearsonR": 0.864,
+  "spearmanRho": 0.833,
+  "source": "data/season-league.json 球隊 observed.PLUS_MINUS / GP（每場分差）；名單 observed.MIN 為權重"
+ },
+ {
+  "version": "E2 (v55)",
+  "order": 3,
+  "adopted": true,
+  "teams": 30,
+  "pearsonR": 0.876,
+  "spearmanRho": 0.852,
+  "source": "data/season-league.json 球隊 observed.PLUS_MINUS / GP（每場分差）；名單 observed.MIN 為權重"
+ },
+ {
+  "version": "F2 (v56)",
+  "order": 4,
+  "adopted": true,
+  "teams": 30,
+  "pearsonR": 0.878,
+  "spearmanRho": 0.832,
+  "source": "data/season-league.json 球隊 observed.PLUS_MINUS / GP（每場分差）；名單 observed.MIN 為權重"
+ },
+ {
+  "version": "G3 (v57)",
+  "order": 5,
+  "adopted": true,
+  "teams": 30,
+  "pearsonR": 0.953,
+  "spearmanRho": 0.907,
+  "source": "data/season-league.json 球隊 observed.PLUS_MINUS / GP（每場分差）；名單 observed.MIN 為權重"
+ },
+ {
+  "version": "H1 (v58)",
+  "order": 6,
+  "adopted": true,
+  "teams": 30,
+  "pearsonR": 0.965,
+  "spearmanRho": 0.947,
+  "source": "data/season-league.json 球隊 observed.PLUS_MINUS / GP（每場分差）；名單 observed.MIN 為權重"
+ },
+ {
+  "version": "B12",
+  "order": 23,
+  "adopted": false,
+  "teams": 30,
+  "pearsonR": 0.869,
+  "spearmanRho": 0.821,
+  "source": "data/season-league.json 球隊 observed.PLUS_MINUS / GP（每場分差）；名單 observed.MIN 為權重"
+ },
+ {
+  "version": "C1",
+  "order": 24,
+  "adopted": false,
+  "teams": 30,
+  "pearsonR": 0.872,
+  "spearmanRho": 0.82,
+  "source": "data/season-league.json 球隊 observed.PLUS_MINUS / GP（每場分差）；名單 observed.MIN 為權重"
+ },
+ {
+  "version": "D1",
+  "order": 25,
+  "adopted": false,
+  "teams": 30,
+  "pearsonR": 0.865,
+  "spearmanRho": 0.812,
+  "source": "data/season-league.json 球隊 observed.PLUS_MINUS / GP（每場分差）；名單 observed.MIN 為權重"
+ }
+]

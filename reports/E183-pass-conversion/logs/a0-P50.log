@@ -1,0 +1,57 @@
+{
+ "reproduceOld": {
+  "maxAbsDiffVsE2League": {
+   "ft": 0.0,
+   "mid": 0.0,
+   "short": 0.0,
+   "foulDraw": 0.0,
+   "tovSkill": 0.0,
+   "pass": 0.0,
+   "rebound": 0.0
+  },
+  "players": 582,
+  "poolSize": 252,
+  "drive": {
+   "maxAbsDiffAttr": 0.0,
+   "maxAbsDiff_nW": 0.0,
+   "maxAbsDiff_pts": 0.0,
+   "maxAbsDiff_min41": 0.0,
+   "poolSize": 231
+  }
+ },
+ "changed": {
+  "rebound": {
+   "meanAbsChange": 3.2482403205104657,
+   "maxAbsChange": 45.735341755749914
+  },
+  "pass": {
+   "meanAbsChange": 3.5125651635224537,
+   "maxAbsChange": 45.03077421444769
+  },
+  "tovSkill": {
+   "meanAbsChange": 8.597455296960872,
+   "maxAbsChange": 54.75315840621963
+  },
+  "foulDraw": {
+   "meanAbsChange": 5.977423893792503,
+   "maxAbsChange": 43.62163913184321
+  },
+  "drive": {
+   "meanAbsChange": 5.950560870688642,
+   "maxAbsChange": 29.273787189239336
+  },
+  "mid": {
+   "meanAbsChange": 7.436491212764112,
+   "maxAbsChange": 37.070347570212995
+  },
+  "short": {
+   "meanAbsChange": 4.350444292700163,
+   "maxAbsChange": 22.82974186764892
+  },
+  "ft": {
+   "meanAbsChange": 4.835946342000839,
+   "maxAbsChange": 24.659778064305534
+  }
+ }
+}
+P50 {'rateReproducesE090a0raw': True, 'n': 582, 'poolN': 252, 'wVol': 0.5, 'volRawMeanPool': 4.132872352356162, 'zsPoolN': 252}

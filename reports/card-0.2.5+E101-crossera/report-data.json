@@ -1,0 +1,6349 @@
+{
+ "ovrShift_vs_card025": {
+  "n": 582,
+  "up": 146,
+  "down": 378,
+  "median": -0.29999999999999716,
+  "maxUp": 3.799999999999997,
+  "maxDown": -3.8999999999999986,
+  "rankMove>=5": 303,
+  "rankMove>=10": 133
+ },
+ "ovrShift_vs_E096": {
+  "n": 582,
+  "up": 202,
+  "down": 331,
+  "median": -0.10000000000000142,
+  "maxUp": 2.8999999999999986,
+  "maxDown": -3.1999999999999957,
+  "rankMove>=5": 277,
+  "rankMove>=10": 118
+ },
+ "ovrShift_e101z_vs_card025": {
+  "n": 582,
+  "up": 109,
+  "down": 441,
+  "median": -0.3999999999999915,
+  "maxUp": 3.799999999999997,
+  "maxDown": -4.100000000000001,
+  "rankMove>=5": 304,
+  "rankMove>=10": 138
+ },
+ "ovrShift_e101g_vs_card025": {
+  "n": 582,
+  "up": 146,
+  "down": 374,
+  "median": -0.29999999999999716,
+  "maxUp": 3.799999999999997,
+  "maxDown": -3.8999999999999986,
+  "rankMove>=5": 303,
+  "rankMove>=10": 135
+ },
+ "ovrShift_e101w_vs_card025": {
+  "n": 582,
+  "up": 112,
+  "down": 446,
+  "median": -0.3999999999999915,
+  "maxUp": 3.799999999999997,
+  "maxDown": -3.799999999999997,
+  "rankMove>=5": 303,
+  "rankMove>=10": 131
+ },
+ "ovrShift_e101z_vs_E096": {
+  "n": 582,
+  "up": 153,
+  "down": 392,
+  "median": -0.20000000000000284,
+  "maxUp": 3.200000000000003,
+  "maxDown": -3.3999999999999986,
+  "rankMove>=5": 271,
+  "rankMove>=10": 105
+ },
+ "ovrShift_e101g_vs_E096": {
+  "n": 582,
+  "up": 205,
+  "down": 331,
+  "median": -0.10000000000000142,
+  "maxUp": 2.8999999999999986,
+  "maxDown": -3.1999999999999957,
+  "rankMove>=5": 274,
+  "rankMove>=10": 117
+ },
+ "ovrShift_e101w_vs_E096": {
+  "n": 582,
+  "up": 175,
+  "down": 370,
+  "median": -0.20000000000000284,
+  "maxUp": 3.0,
+  "maxDown": -3.0999999999999943,
+  "rankMove>=5": 264,
+  "rankMove>=10": 116
+ },
+ "top10": {
+  "card025": [
+   "Shai Gilgeous-Alexander",
+   "Nikola Jokić",
+   "Luka Dončić",
+   "Victor Wembanyama",
+   "Franz Wagner",
+   "Chet Holmgren",
+   "Derrick White",
+   "Kawhi Leonard",
+   "Lauri Markkanen",
+   "Amen Thompson"
+  ],
+  "E096": [
+   "Shai Gilgeous-Alexander",
+   "Nikola Jokić",
+   "Luka Dončić",
+   "Victor Wembanyama",
+   "Kawhi Leonard",
+   "Giannis Antetokounmpo",
+   "Franz Wagner",
+   "Derrick White",
+   "Lauri Markkanen",
+   "Chet Holmgren"
+  ],
+  "e101": [
+   "Shai Gilgeous-Alexander",
+   "Nikola Jokić",
+   "Victor Wembanyama",
+   "Luka Dončić",
+   "Giannis Antetokounmpo",
+   "Kawhi Leonard",
+   "Franz Wagner",
+   "Derrick White",
+   "Chet Holmgren",
+   "Lauri Markkanen"
+  ],
+  "e101z": [
+   "Shai Gilgeous-Alexander",
+   "Nikola Jokić",
+   "Victor Wembanyama",
+   "Luka Dončić",
+   "Giannis Antetokounmpo",
+   "Franz Wagner",
+   "Kawhi Leonard",
+   "Derrick White",
+   "Lauri Markkanen",
+   "Chet Holmgren"
+  ],
+  "e101g": [
+   "Shai Gilgeous-Alexander",
+   "Nikola Jokić",
+   "Victor Wembanyama",
+   "Luka Dončić",
+   "Giannis Antetokounmpo",
+   "Kawhi Leonard",
+   "Franz Wagner",
+   "Derrick White",
+   "Chet Holmgren",
+   "Lauri Markkanen"
+  ],
+  "e101w": [
+   "Shai Gilgeous-Alexander",
+   "Nikola Jokić",
+   "Victor Wembanyama",
+   "Luka Dončić",
+   "Giannis Antetokounmpo",
+   "Kawhi Leonard",
+   "Franz Wagner",
+   "Derrick White",
+   "Chet Holmgren",
+   "Lauri Markkanen"
+  ]
+ },
+ "movers20_vs_E096": [
+  {
+   "name": "Adama Bal",
+   "ovr": [
+    51.2,
+    52.4
+   ],
+   "rank": [
+    528,
+    447
+   ],
+   "attrsChanged": {
+    "mid": [
+     60.9,
+     65.5
+    ],
+    "short": [
+     64.4,
+     66.6
+    ],
+    "foulDraw": [
+     57.6,
+     58.0
+    ],
+    "tovSkill": [
+     75.6,
+     72.2
+    ],
+    "pass": [
+     62.0,
+     62.8
+    ],
+    "rebound": [
+     64.9,
+     65.9
+    ],
+    "physique": [
+     62.2,
+     61.6
+    ],
+    "onBall": [
+     57.6,
+     57.3
+    ],
+    "creation": [
+     60.3,
+     60.8
+    ]
+   }
+  },
+  {
+   "name": "Patrick Baldwin Jr.",
+   "ovr": [
+    52.4,
+    51.1
+   ],
+   "rank": [
+    454,
+    528
+   ],
+   "attrsChanged": {
+    "mid": [
+     79.3,
+     62.2
+    ],
+    "short": [
+     70.9,
+     58.8
+    ],
+    "foulDraw": [
+     56.6,
+     57.4
+    ],
+    "tovSkill": [
+     69.3,
+     66.1
+    ],
+    "pass": [
+     45.0,
+     48.4
+    ],
+    "rebound": [
+     88.6,
+     87.7
+    ],
+    "physique": [
+     89.6,
+     90.0
+    ],
+    "onBall": [
+     59.6,
+     58.4
+    ],
+    "creation": [
+     61.5,
+     61.7
+    ]
+   }
+  },
+  {
+   "name": "Andre Drummond",
+   "ovr": [
+    53.6,
+    51.9
+   ],
+   "rank": [
+    413,
+    486
+   ],
+   "attrsChanged": {
+    "mid": [
+     99.0,
+     66.2
+    ],
+    "short": [
+     57.7,
+     57.2
+    ],
+    "drive": [
+     48.5,
+     46.9
+    ],
+    "foulDraw": [
+     67.1,
+     67.5
+    ],
+    "tovSkill": [
+     43.0,
+     42.7
+    ],
+    "pass": [
+     47.9,
+     51.5
+    ],
+    "rebound": [
+     113.4,
+     109.9
+    ],
+    "physique": [
+     98.2,
+     98.4
+    ],
+    "onBall": [
+     43.5,
+     42.6
+    ],
+    "creation": [
+     59.8,
+     60.2
+    ]
+   }
+  },
+  {
+   "name": "Bryce McGowens",
+   "ovr": [
+    51.4,
+    52.1
+   ],
+   "rank": [
+    524,
+    457
+   ],
+   "attrsChanged": {
+    "mid": [
+     54.1,
+     57.1
+    ],
+    "short": [
+     58.2,
+     59.4
+    ],
+    "drive": [
+     71.5,
+     71.9
+    ],
+    "foulDraw": [
+     81.6,
+     81.0
+    ],
+    "tovSkill": [
+     84.7,
+     83.3
+    ],
+    "pass": [
+     50.7,
+     54.5
+    ],
+    "rebound": [
+     46.1,
+     45.9
+    ],
+    "physique": [
+     56.8,
+     56.4
+    ],
+    "onBall": [
+     90.5,
+     90.9
+    ],
+    "creation": [
+     60.9,
+     61.3
+    ]
+   }
+  },
+  {
+   "name": "Moussa Cisse",
+   "ovr": [
+    52.3,
+    51.5
+   ],
+   "rank": [
+    458,
+    521
+   ],
+   "attrsChanged": {
+    "mid": [
+     85.4,
+     68.1
+    ],
+    "short": [
+     74.7,
+     69.6
+    ],
+    "drive": [
+     60.9,
+     61.6
+    ],
+    "foulDraw": [
+     90.9,
+     91.2
+    ],
+    "tovSkill": [
+     50.8,
+     50.2
+    ],
+    "rebound": [
+     97.0,
+     97.1
+    ],
+    "physique": [
+     87.7,
+     88.0
+    ],
+    "onBall": [
+     45.2,
+     44.0
+    ],
+    "creation": [
+     49.6,
+     49.8
+    ]
+   }
+  },
+  {
+   "name": "Jericho Sims",
+   "ovr": [
+    52.2,
+    53.6
+   ],
+   "rank": [
+    470,
+    410
+   ],
+   "attrsChanged": {
+    "mid": [
+     73.9,
+     64.4
+    ],
+    "short": [
+     95.5,
+     93.3
+    ],
+    "drive": [
+     56.4,
+     56.2
+    ],
+    "foulDraw": [
+     56.6,
+     57.5
+    ],
+    "tovSkill": [
+     28.7,
+     29.5
+    ],
+    "pass": [
+     56.2,
+     58.2
+    ],
+    "rebound": [
+     93.5,
+     92.5
+    ],
+    "physique": [
+     91.6,
+     92.1
+    ],
+    "onBall": [
+     48.6,
+     48.8
+    ],
+    "creation": [
+     38.7,
+     38.8
+    ]
+   }
+  },
+  {
+   "name": "Maxi Kleber",
+   "ovr": [
+    51.7,
+    52.1
+   ],
+   "rank": [
+    517,
+    461
+   ],
+   "attrsChanged": {
+    "mid": [
+     77.5,
+     75.3
+    ],
+    "short": [
+     71.7,
+     68.7
+    ],
+    "drive": [
+     42.0,
+     42.4
+    ],
+    "foulDraw": [
+     55.4,
+     56.7
+    ],
+    "tovSkill": [
+     46.7,
+     47.0
+    ],
+    "pass": [
+     45.0,
+     48.3
+    ],
+    "rebound": [
+     78.2,
+     79.0
+    ],
+    "physique": [
+     89.6,
+     90.0
+    ],
+    "onBall": [
+     47.6,
+     47.8
+    ],
+    "creation": [
+     40.1,
+     40.5
+    ]
+   }
+  },
+  {
+   "name": "Tolu Smith",
+   "ovr": [
+    52.3,
+    51.6
+   ],
+   "rank": [
+    463,
+    515
+   ],
+   "attrsChanged": {
+    "mid": [
+     86.7,
+     68.1
+    ],
+    "short": [
+     78.1,
+     66.6
+    ],
+    "drive": [
+     62.2,
+     63.0
+    ],
+    "foulDraw": [
+     90.9,
+     91.4
+    ],
+    "tovSkill": [
+     64.2,
+     62.4
+    ],
+    "pass": [
+     62.7,
+     63.4
+    ],
+    "rebound": [
+     96.1,
+     95.3
+    ],
+    "onBall": [
+     52.5,
+     53.7
+    ],
+    "creation": [
+     63.0,
+     64.0
+    ]
+   }
+  },
+  {
+   "name": "Patrick Williams",
+   "ovr": [
+    56.0,
+    58.9
+   ],
+   "rank": [
+    366,
+    316
+   ],
+   "attrsChanged": {
+    "mid": [
+     66.7,
+     70.2
+    ],
+    "short": [
+     21.8,
+     45.8
+    ],
+    "drive": [
+     56.4,
+     55.8
+    ],
+    "foulDraw": [
+     49.5,
+     48.7
+    ],
+    "tovSkill": [
+     53.4,
+     52.3
+    ],
+    "pass": [
+     50.9,
+     54.8
+    ],
+    "rebound": [
+     63.3,
+     63.7
+    ],
+    "physique": [
+     78.6,
+     78.3
+    ],
+    "onBall": [
+     81.4,
+     79.4
+    ],
+    "creation": [
+     66.0,
+     66.8
+    ]
+   }
+  },
+  {
+   "name": "KJ Simpson",
+   "ovr": [
+    52.0,
+    52.7
+   ],
+   "rank": [
+    490,
+    440
+   ],
+   "attrsChanged": {
+    "mid": [
+     49.1,
+     53.4
+    ],
+    "short": [
+     29.2,
+     45.2
+    ],
+    "drive": [
+     81.1,
+     80.0
+    ],
+    "foulDraw": [
+     54.0,
+     54.4
+    ],
+    "tovSkill": [
+     45.9,
+     46.5
+    ],
+    "pass": [
+     85.3,
+     84.9
+    ],
+    "rebound": [
+     60.3,
+     60.7
+    ],
+    "physique": [
+     42.3,
+     43.3
+    ],
+    "onBall": [
+     63.2,
+     62.3
+    ],
+    "creation": [
+     80.3,
+     80.4
+    ]
+   }
+  },
+  {
+   "name": "Mike Conley",
+   "ovr": [
+    53.1,
+    55.3
+   ],
+   "rank": [
+    427,
+    383
+   ],
+   "attrsChanged": {
+    "mid": [
+     44.1,
+     51.4
+    ],
+    "short": [
+     27.7,
+     45.0
+    ],
+    "drive": [
+     57.9,
+     58.2
+    ],
+    "foulDraw": [
+     51.5,
+     52.0
+    ],
+    "tovSkill": [
+     85.3,
+     84.5
+    ],
+    "pass": [
+     83.4,
+     82.5
+    ],
+    "rebound": [
+     42.1,
+     42.8
+    ],
+    "physique": [
+     36.1,
+     40.3
+    ],
+    "onBall": [
+     63.7,
+     62.8
+    ],
+    "creation": [
+     45.9,
+     45.2
+    ]
+   }
+  },
+  {
+   "name": "Hayden Gray",
+   "ovr": [
+    52.0,
+    52.2
+   ],
+   "rank": [
+    496,
+    453
+   ],
+   "attrsChanged": {
+    "mid": [
+     67.3,
+     69.4
+    ],
+    "short": [
+     65.5,
+     70.5
+    ],
+    "foulDraw": [
+     69.8,
+     70.0
+    ],
+    "tovSkill": [
+     68.5,
+     65.6
+    ],
+    "pass": [
+     69.8,
+     71.4
+    ],
+    "rebound": [
+     59.6,
+     59.4
+    ],
+    "physique": [
+     47.8,
+     48.7
+    ],
+    "onBall": [
+     68.5,
+     68.4
+    ],
+    "creation": [
+     45.9,
+     45.4
+    ]
+   }
+  },
+  {
+   "name": "Lawson Lovering",
+   "ovr": [
+    55.1,
+    53.0
+   ],
+   "rank": [
+    388,
+    429
+   ],
+   "attrsChanged": {
+    "mid": [
+     85.4,
+     68.1
+    ],
+    "short": [
+     78.7,
+     70.1
+    ],
+    "foulDraw": [
+     82.9,
+     82.0
+    ],
+    "tovSkill": [
+     69.3,
+     65.8
+    ],
+    "pass": [
+     61.3,
+     62.3
+    ],
+    "rebound": [
+     94.2,
+     92.9
+    ],
+    "onBall": [
+     62.0,
+     60.9
+    ],
+    "creation": [
+     54.5,
+     54.0
+    ]
+   }
+  },
+  {
+   "name": "Danny Wolf",
+   "ovr": [
+    51.8,
+    48.6
+   ],
+   "rank": [
+    508,
+    549
+   ],
+   "attrsChanged": {
+    "mid": [
+     77.4,
+     60.5
+    ],
+    "short": [
+     61.5,
+     52.4
+    ],
+    "drive": [
+     69.1,
+     69.8
+    ],
+    "foulDraw": [
+     72.0,
+     71.5
+    ],
+    "tovSkill": [
+     63.1,
+     61.2
+    ],
+    "pass": [
+     74.3,
+     74.9
+    ],
+    "rebound": [
+     90.8,
+     90.0
+    ],
+    "physique": [
+     93.7,
+     94.6
+    ],
+    "onBall": [
+     48.3,
+     48.7
+    ],
+    "creation": [
+     63.8,
+     65.2
+    ]
+   }
+  },
+  {
+   "name": "Jeff Green",
+   "ovr": [
+    51.8,
+    52.0
+   ],
+   "rank": [
+    507,
+    472
+   ],
+   "attrsChanged": {
+    "mid": [
+     63.8,
+     68.7
+    ],
+    "short": [
+     76.6,
+     77.1
+    ],
+    "drive": [
+     58.5,
+     58.8
+    ],
+    "foulDraw": [
+     59.8,
+     60.2
+    ],
+    "tovSkill": [
+     87.6,
+     87.4
+    ],
+    "pass": [
+     41.6,
+     44.0
+    ],
+    "rebound": [
+     62.0,
+     62.8
+    ],
+    "physique": [
+     84.3,
+     84.8
+    ],
+    "onBall": [
+     79.4,
+     78.1
+    ],
+    "creation": [
+     71.4,
+     72.1
+    ]
+   }
+  },
+  {
+   "name": "TyTy Washington Jr.",
+   "ovr": [
+    51.8,
+    51.9
+   ],
+   "rank": [
+    509,
+    474
+   ],
+   "attrsChanged": {
+    "mid": [
+     49.5,
+     55.3
+    ],
+    "short": [
+     54.4,
+     64.2
+    ],
+    "foulDraw": [
+     45.7,
+     45.6
+    ],
+    "tovSkill": [
+     84.1,
+     82.5
+    ],
+    "pass": [
+     84.6,
+     83.4
+    ],
+    "rebound": [
+     44.7,
+     44.9
+    ],
+    "physique": [
+     46.1,
+     47.1
+    ],
+    "onBall": [
+     65.9,
+     65.2
+    ],
+    "creation": [
+     59.6,
+     59.7
+    ]
+   }
+  },
+  {
+   "name": "Hunter Dickinson",
+   "ovr": [
+    52.0,
+    51.6
+   ],
+   "rank": [
+    483,
+    512
+   ],
+   "attrsChanged": {
+    "mid": [
+     84.7,
+     67.6
+    ],
+    "short": [
+     85.1,
+     69.7
+    ],
+    "drive": [
+     63.8,
+     64.9
+    ],
+    "foulDraw": [
+     79.2,
+     78.6
+    ],
+    "tovSkill": [
+     66.8,
+     64.5
+    ],
+    "pass": [
+     59.6,
+     61.2
+    ],
+    "rebound": [
+     91.4,
+     90.7
+    ],
+    "physique": [
+     97.7,
+     98.1
+    ],
+    "onBall": [
+     57.4,
+     57.0
+    ],
+    "creation": [
+     69.0,
+     68.6
+    ]
+   }
+  },
+  {
+   "name": "CJ Huntley",
+   "ovr": [
+    52.5,
+    51.9
+   ],
+   "rank": [
+    447,
+    475
+   ],
+   "attrsChanged": {
+    "mid": [
+     86.4,
+     69.4
+    ],
+    "short": [
+     83.8,
+     71.3
+    ],
+    "foulDraw": [
+     78.5,
+     76.9
+    ],
+    "tovSkill": [
+     71.4,
+     68.8
+    ],
+    "pass": [
+     59.6,
+     61.2
+    ],
+    "rebound": [
+     92.1,
+     91.1
+    ],
+    "physique": [
+     89.6,
+     90.0
+    ],
+    "onBall": [
+     62.0,
+     60.9
+    ],
+    "creation": [
+     60.8,
+     61.2
+    ]
+   }
+  },
+  {
+   "name": "Mouhamadou Gueye",
+   "ovr": [
+    68.1,
+    65.4
+   ],
+   "rank": [
+    224,
+    251
+   ],
+   "attrsChanged": {
+    "mid": [
+     68.0,
+     65.6
+    ],
+    "short": [
+     70.6,
+     63.2
+    ],
+    "foulDraw": [
+     75.9,
+     73.7
+    ],
+    "tovSkill": [
+     56.2,
+     54.4
+    ],
+    "pass": [
+     61.5,
+     62.6
+    ],
+    "rebound": [
+     84.6,
+     83.8
+    ],
+    "onBall": [
+     60.0,
+     59.0
+    ],
+    "creation": [
+     59.8,
+     59.9
+    ]
+   }
+  },
+  {
+   "name": "Oscar Tshiebwe",
+   "ovr": [
+    52.7,
+    53.6
+   ],
+   "rank": [
+    438,
+    411
+   ],
+   "attrsChanged": {
+    "mid": [
+     67.9,
+     69.3
+    ],
+    "short": [
+     74.4,
+     75.2
+    ],
+    "drive": [
+     62.7,
+     63.8
+    ],
+    "foulDraw": [
+     81.3,
+     80.7
+    ],
+    "tovSkill": [
+     72.1,
+     69.9
+    ],
+    "pass": [
+     53.5,
+     56.5
+    ],
+    "rebound": [
+     97.0,
+     97.6
+    ],
+    "physique": [
+     88.5,
+     89.0
+    ],
+    "onBall": [
+     45.5,
+     44.2
+    ],
+    "creation": [
+     56.2,
+     55.9
+    ]
+   }
+  }
+ ],
+ "watch": [
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "card025": [
+    1,
+    110.3
+   ],
+   "E096": [
+    1,
+    108.2
+   ],
+   "e101": [
+    1,
+    107.3
+   ],
+   "e101z": [
+    1,
+    107.5
+   ],
+   "e101g": [
+    1,
+    107.3
+   ],
+   "e101w": [
+    1,
+    106.5
+   ]
+  },
+  {
+   "name": "Nikola Jokić",
+   "card025": [
+    2,
+    102.6
+   ],
+   "E096": [
+    2,
+    104.9
+   ],
+   "e101": [
+    2,
+    103.8
+   ],
+   "e101z": [
+    2,
+    104.1
+   ],
+   "e101g": [
+    2,
+    103.8
+   ],
+   "e101w": [
+    2,
+    103.0
+   ]
+  },
+  {
+   "name": "Giannis Antetokounmpo",
+   "card025": [
+    11,
+    95.2
+   ],
+   "E096": [
+    6,
+    98.4
+   ],
+   "e101": [
+    5,
+    99.0
+   ],
+   "e101z": [
+    5,
+    99.0
+   ],
+   "e101g": [
+    5,
+    99.0
+   ],
+   "e101w": [
+    5,
+    99.0
+   ]
+  },
+  {
+   "name": "Kevin Durant",
+   "card025": [
+    14,
+    91.6
+   ],
+   "E096": [
+    23,
+    88.7
+   ],
+   "e101": [
+    21,
+    88.7
+   ],
+   "e101z": [
+    23,
+    88.1
+   ],
+   "e101g": [
+    21,
+    88.7
+   ],
+   "e101w": [
+    18,
+    89.2
+   ]
+  },
+  {
+   "name": "Chet Holmgren",
+   "card025": [
+    6,
+    97.6
+   ],
+   "E096": [
+    10,
+    95.4
+   ],
+   "e101": [
+    9,
+    95.3
+   ],
+   "e101z": [
+    10,
+    94.6
+   ],
+   "e101g": [
+    9,
+    95.3
+   ],
+   "e101w": [
+    9,
+    95.4
+   ]
+  },
+  {
+   "name": "Kawhi Leonard",
+   "card025": [
+    8,
+    96.7
+   ],
+   "E096": [
+    5,
+    99.0
+   ],
+   "e101": [
+    6,
+    97.9
+   ],
+   "e101z": [
+    7,
+    97.5
+   ],
+   "e101g": [
+    6,
+    97.9
+   ],
+   "e101w": [
+    6,
+    97.8
+   ]
+  },
+  {
+   "name": "Dyson Daniels",
+   "card025": [
+    18,
+    90.8
+   ],
+   "E096": [
+    13,
+    91.3
+   ],
+   "e101": [
+    15,
+    90.2
+   ],
+   "e101z": [
+    14,
+    89.9
+   ],
+   "e101g": [
+    15,
+    90.3
+   ],
+   "e101w": [
+    15,
+    90.4
+   ]
+  },
+  {
+   "name": "Luguentz Dort",
+   "card025": [
+    174,
+    71.9
+   ],
+   "E096": [
+    151,
+    73.8
+   ],
+   "e101": [
+    161,
+    72.8
+   ],
+   "e101z": [
+    158,
+    73.0
+   ],
+   "e101g": [
+    161,
+    72.9
+   ],
+   "e101w": [
+    161,
+    72.9
+   ]
+  },
+  {
+   "name": "Stephen Curry",
+   "card025": [
+    23,
+    89.6
+   ],
+   "E096": [
+    24,
+    88.6
+   ],
+   "e101": [
+    32,
+    86.3
+   ],
+   "e101z": [
+    31,
+    86.4
+   ],
+   "e101g": [
+    31,
+    86.5
+   ],
+   "e101w": [
+    31,
+    86.4
+   ]
+  },
+  {
+   "name": "Zach Edey",
+   "card025": [
+    102,
+    78.7
+   ],
+   "E096": [
+    90,
+    80.1
+   ],
+   "e101": [
+    93,
+    79.2
+   ],
+   "e101z": [
+    91,
+    79.7
+   ],
+   "e101g": [
+    92,
+    79.3
+   ],
+   "e101w": [
+    90,
+    79.7
+   ]
+  },
+  {
+   "name": "Joel Embiid",
+   "card025": [
+    13,
+    91.6
+   ],
+   "E096": [
+    20,
+    89.0
+   ],
+   "e101": [
+    17,
+    89.6
+   ],
+   "e101z": [
+    17,
+    88.6
+   ],
+   "e101g": [
+    17,
+    89.6
+   ],
+   "e101w": [
+    16,
+    89.9
+   ]
+  },
+  {
+   "name": "Jalen Duren",
+   "card025": [
+    53,
+    84.3
+   ],
+   "E096": [
+    54,
+    83.6
+   ],
+   "e101": [
+    37,
+    85.5
+   ],
+   "e101z": [
+    39,
+    84.8
+   ],
+   "e101g": [
+    37,
+    85.5
+   ],
+   "e101w": [
+    36,
+    85.7
+   ]
+  },
+  {
+   "name": "Victor Wembanyama",
+   "card025": [
+    4,
+    101.2
+   ],
+   "E096": [
+    4,
+    99.7
+   ],
+   "e101": [
+    3,
+    101.7
+   ],
+   "e101z": [
+    3,
+    101.1
+   ],
+   "e101g": [
+    3,
+    101.7
+   ],
+   "e101w": [
+    3,
+    101.4
+   ]
+  },
+  {
+   "name": "Walker Kessler",
+   "card025": [
+    58,
+    83.9
+   ],
+   "E096": [
+    50,
+    83.9
+   ],
+   "e101": [
+    51,
+    83.6
+   ],
+   "e101z": [
+    52,
+    83.5
+   ],
+   "e101g": [
+    51,
+    83.6
+   ],
+   "e101w": [
+    53,
+    83.5
+   ]
+  },
+  {
+   "name": "Luke Kennard",
+   "card025": [
+    195,
+    70.6
+   ],
+   "E096": [
+    188,
+    70.8
+   ],
+   "e101": [
+    201,
+    70.0
+   ],
+   "e101z": [
+    199,
+    70.2
+   ],
+   "e101g": [
+    201,
+    70.0
+   ],
+   "e101w": [
+    201,
+    70.0
+   ]
+  }
+ ],
+ "anchors": {
+  "e101": {
+   "long": {
+    "type": "curve",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.3936414317085194,
+    "r99": 0.422064674063713,
+    "r1": 0.29004549474337205,
+    "SD_pool": 0.027315161873793493,
+    "gapScale": 0.027225327926430662,
+    "ratio": 0.9967112057480055,
+    "S": 0.027315161873793493,
+    "insuranceActive": true,
+    "poolN": 1481,
+    "a99": 0.433
+   },
+   "mid": {
+    "type": "curve",
+    "topTail": false,
+    "botTail": false,
+    "r90": 0.4418779950856606,
+    "r99": 0.4871208876360678,
+    "r1": 0.35470069604030596,
+    "SD_pool": 0.023886162618017882,
+    "gapScale": 0.04333610397548582,
+    "ratio": 1.814276519360058,
+    "S": 0.04333610397548582,
+    "insuranceActive": false,
+    "poolN": 1481,
+    "a99": 0.5073
+   },
+   "short": {
+    "type": "curve",
+    "topTail": true,
+    "botTail": false,
+    "r90": 0.63057079915141,
+    "r99": 0.6912050093597578,
+    "r1": 0.479112206729571,
+    "SD_pool": 0.043609077744212264,
+    "gapScale": 0.05807874541029483,
+    "ratio": 1.331804028302409,
+    "S": 0.05807874541029483,
+    "insuranceActive": false,
+    "poolN": 1481,
+    "a99": 0.6664
+   },
+   "ft": {
+    "type": "curve",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.8562168657492406,
+    "r99": 0.8984834635118985,
+    "r1": 0.561549482883018,
+    "SD_pool": 0.06807962925681212,
+    "gapScale": 0.04048524689909755,
+    "ratio": 0.5946749026258329,
+    "S": 0.06807962925681212,
+    "insuranceActive": true,
+    "poolN": 1481,
+    "a99": 0.9
+   },
+   "drive": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 1.2193602699862107,
+    "r99": 2.432097388121605,
+    "r1": -1.592946051425875,
+    "SD_pool": 0.9177115880298543,
+    "gapScale": 1.1616255920837109,
+    "ratio": 1.2657850322861148,
+    "S": 1.1616255920837109,
+    "insuranceActive": false,
+    "poolN": 913
+   },
+   "foulDraw": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 1.2820307661484238,
+    "r99": 2.9510951702260106,
+    "r1": -1.5259863966399028,
+    "SD_pool": 0.9687791201598256,
+    "gapScale": 1.5987206935609068,
+    "ratio": 1.6502427233332153,
+    "S": 1.5987206935609068,
+    "insuranceActive": false,
+    "poolN": 961
+   },
+   "tovSkill": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": -0.07277342208299967,
+    "r99": -0.056388502605356446,
+    "r1": -0.1404797656625341,
+    "SD_pool": 0.017938390471704736,
+    "gapScale": 0.01569436731575021,
+    "ratio": 0.8749038739292607,
+    "S": 0.017938390471704736,
+    "insuranceActive": true,
+    "poolN": 961
+   },
+   "pass": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.29191132869769487,
+    "r99": 0.4312200066330156,
+    "r1": 0.0490531158572233,
+    "SD_pool": 0.08789689255200936,
+    "gapScale": 0.1334374309725294,
+    "ratio": 1.5181131789565065,
+    "S": 0.1334374309725294,
+    "insuranceActive": false,
+    "poolN": 961
+   },
+   "rebound": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.16735831876946777,
+    "r99": 0.2154841907407299,
+    "r1": 0.044335185823744946,
+    "SD_pool": 0.042377906788910735,
+    "gapScale": 0.046097578516534586,
+    "ratio": 1.0877738427750092,
+    "S": 0.046097578516534586,
+    "insuranceActive": false,
+    "poolN": 961
+   },
+   "physique": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 108.0,
+    "r99": 113.0,
+    "r1": 89.9,
+    "SD_pool": 5.064994418184136,
+    "gapScale": 4.7892720306513406,
+    "ratio": 0.9455631408905589,
+    "S": 5.064994418184136,
+    "insuranceActive": true,
+    "poolN": 959
+   },
+   "onBall": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 2.666133480698936,
+    "r99": 4.900568378450304,
+    "r1": -4.161847870735135,
+    "SD_pool": 1.8396562374127519,
+    "gapScale": 2.1402633120223826,
+    "ratio": 1.1634039384621104,
+    "S": 2.1402633120223826,
+    "insuranceActive": false,
+    "poolN": 961
+   },
+   "creation": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 9.87564923415718,
+    "r99": 14.409609632119107,
+    "r1": 1.0237238299896425,
+    "SD_pool": 3.2578842396967245,
+    "gapScale": 4.342873944407976,
+    "ratio": 1.3330350696598885,
+    "S": 4.342873944407976,
+    "insuranceActive": false,
+    "poolN": 961
+   },
+   "pressure": {
+    "type": "percentile",
+    "topTail": false,
+    "botTail": false,
+    "r99": 2.4281012708134733,
+    "r1": -1.2294801684368504,
+    "poolN": 252
+   },
+   "midValue": {
+    "type": "value",
+    "topTail": true,
+    "botTail": false,
+    "r90": 0.11509104462650675,
+    "r99": 0.4397214960249821,
+    "r1": -0.04331697518683094,
+    "SD_pool": 0.08309885174054002,
+    "gapScale": 0.3109487082360875,
+    "ratio": 3.7419134166494175,
+    "S": 0.3109487082360875,
+    "insuranceActive": false,
+    "poolN": 1481
+   },
+   "shortValue": {
+    "type": "value",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.6585402983405754,
+    "r99": 1.2558985257746238,
+    "r1": -0.3967275524181964,
+    "SD_pool": 0.337484590067442,
+    "gapScale": 0.5721822101858701,
+    "ratio": 1.6954321086824342,
+    "S": 0.5721822101858701,
+    "insuranceActive": false,
+    "poolN": 1481
+   }
+  },
+  "e101z": {
+   "long": {
+    "type": "curve",
+    "topTail": true,
+    "botTail": true,
+    "a99": 0.433
+   },
+   "mid": {
+    "type": "curve",
+    "topTail": false,
+    "botTail": false,
+    "a99": 0.5073
+   },
+   "short": {
+    "type": "curve",
+    "topTail": true,
+    "botTail": false,
+    "a99": 0.6664
+   },
+   "ft": {
+    "type": "curve",
+    "topTail": true,
+    "botTail": true,
+    "a99": 0.9
+   },
+   "drive": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r99": 2.2300676212757313,
+    "r1": -1.5958880813119358,
+    "poolN": 231
+   },
+   "foulDraw": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r99": 2.834821258268275,
+    "r1": -1.4953923630302206,
+    "poolN": 252
+   },
+   "tovSkill": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r99": -0.05846697815873295,
+    "r1": -0.13737675685534612,
+    "poolN": 252
+   },
+   "pass": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r99": 0.42057299372601414,
+    "r1": 0.0490531158572233,
+    "poolN": 252
+   },
+   "rebound": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r99": 0.21043281305277348,
+    "r1": 0.044620875092674685,
+    "poolN": 252
+   },
+   "physique": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r99": 112.0,
+    "r1": 92.0,
+    "poolN": 251
+   },
+   "onBall": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r99": 4.77168493789482,
+    "r1": -3.9057457249817285,
+    "poolN": 252
+   },
+   "creation": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r99": 13.914032418837229,
+    "r1": 1.0237238299896425,
+    "poolN": 252
+   },
+   "pressure": {
+    "type": "percentile",
+    "topTail": false,
+    "botTail": false,
+    "r99": 2.4281012708134733,
+    "r1": -1.2294801684368504,
+    "poolN": 252
+   },
+   "midValue": {
+    "type": "value",
+    "topTail": true,
+    "botTail": false,
+    "r99": 0.5392049969377114,
+    "r1": -0.04834553150720498,
+    "poolN": 379
+   },
+   "shortValue": {
+    "type": "value",
+    "topTail": true,
+    "botTail": true,
+    "r99": 1.2747106351286726,
+    "r1": -0.4019194699738516,
+    "poolN": 379
+   }
+  },
+  "e101g": {
+   "long": {
+    "type": "curve",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.3936414317085194,
+    "r99": 0.422064674063713,
+    "r1": 0.29004549474337205,
+    "SD_pool": 0.027315161873793493,
+    "gapScale": 0.027225327926430662,
+    "ratio": 0.9967112057480055,
+    "S": 0.027225327926430662,
+    "insuranceActive": false,
+    "poolN": 1481,
+    "a99": 0.433
+   },
+   "mid": {
+    "type": "curve",
+    "topTail": false,
+    "botTail": false,
+    "r90": 0.4418779950856606,
+    "r99": 0.4871208876360678,
+    "r1": 0.35470069604030596,
+    "SD_pool": 0.023886162618017882,
+    "gapScale": 0.04333610397548582,
+    "ratio": 1.814276519360058,
+    "S": 0.04333610397548582,
+    "insuranceActive": false,
+    "poolN": 1481,
+    "a99": 0.5073
+   },
+   "short": {
+    "type": "curve",
+    "topTail": true,
+    "botTail": false,
+    "r90": 0.63057079915141,
+    "r99": 0.6912050093597578,
+    "r1": 0.479112206729571,
+    "SD_pool": 0.043609077744212264,
+    "gapScale": 0.05807874541029483,
+    "ratio": 1.331804028302409,
+    "S": 0.05807874541029483,
+    "insuranceActive": false,
+    "poolN": 1481,
+    "a99": 0.6664
+   },
+   "ft": {
+    "type": "curve",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.8562168657492406,
+    "r99": 0.8984834635118985,
+    "r1": 0.561549482883018,
+    "SD_pool": 0.06807962925681212,
+    "gapScale": 0.04048524689909755,
+    "ratio": 0.5946749026258329,
+    "S": 0.04048524689909755,
+    "insuranceActive": false,
+    "poolN": 1481,
+    "a99": 0.9
+   },
+   "drive": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 1.2193602699862107,
+    "r99": 2.432097388121605,
+    "r1": -1.592946051425875,
+    "SD_pool": 0.9177115880298543,
+    "gapScale": 1.1616255920837109,
+    "ratio": 1.2657850322861148,
+    "S": 1.1616255920837109,
+    "insuranceActive": false,
+    "poolN": 913
+   },
+   "foulDraw": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 1.2820307661484238,
+    "r99": 2.9510951702260106,
+    "r1": -1.5259863966399028,
+    "SD_pool": 0.9687791201598256,
+    "gapScale": 1.5987206935609068,
+    "ratio": 1.6502427233332153,
+    "S": 1.5987206935609068,
+    "insuranceActive": false,
+    "poolN": 961
+   },
+   "tovSkill": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": -0.07277342208299967,
+    "r99": -0.056388502605356446,
+    "r1": -0.1404797656625341,
+    "SD_pool": 0.017938390471704736,
+    "gapScale": 0.01569436731575021,
+    "ratio": 0.8749038739292607,
+    "S": 0.01569436731575021,
+    "insuranceActive": false,
+    "poolN": 961
+   },
+   "pass": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.29191132869769487,
+    "r99": 0.4312200066330156,
+    "r1": 0.0490531158572233,
+    "SD_pool": 0.08789689255200936,
+    "gapScale": 0.1334374309725294,
+    "ratio": 1.5181131789565065,
+    "S": 0.1334374309725294,
+    "insuranceActive": false,
+    "poolN": 961
+   },
+   "rebound": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.16735831876946777,
+    "r99": 0.2154841907407299,
+    "r1": 0.044335185823744946,
+    "SD_pool": 0.042377906788910735,
+    "gapScale": 0.046097578516534586,
+    "ratio": 1.0877738427750092,
+    "S": 0.046097578516534586,
+    "insuranceActive": false,
+    "poolN": 961
+   },
+   "physique": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 108.0,
+    "r99": 113.0,
+    "r1": 89.9,
+    "SD_pool": 5.064994418184136,
+    "gapScale": 4.7892720306513406,
+    "ratio": 0.9455631408905589,
+    "S": 4.7892720306513406,
+    "insuranceActive": false,
+    "poolN": 959
+   },
+   "onBall": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 2.666133480698936,
+    "r99": 4.900568378450304,
+    "r1": -4.161847870735135,
+    "SD_pool": 1.8396562374127519,
+    "gapScale": 2.1402633120223826,
+    "ratio": 1.1634039384621104,
+    "S": 2.1402633120223826,
+    "insuranceActive": false,
+    "poolN": 961
+   },
+   "creation": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 9.87564923415718,
+    "r99": 14.409609632119107,
+    "r1": 1.0237238299896425,
+    "SD_pool": 3.2578842396967245,
+    "gapScale": 4.342873944407976,
+    "ratio": 1.3330350696598885,
+    "S": 4.342873944407976,
+    "insuranceActive": false,
+    "poolN": 961
+   },
+   "pressure": {
+    "type": "percentile",
+    "topTail": false,
+    "botTail": false,
+    "r99": 2.4281012708134733,
+    "r1": -1.2294801684368504,
+    "poolN": 252
+   },
+   "midValue": {
+    "type": "value",
+    "topTail": true,
+    "botTail": false,
+    "r90": 0.11509104462650675,
+    "r99": 0.4397214960249821,
+    "r1": -0.04331697518683094,
+    "SD_pool": 0.08309885174054002,
+    "gapScale": 0.3109487082360875,
+    "ratio": 3.7419134166494175,
+    "S": 0.3109487082360875,
+    "insuranceActive": false,
+    "poolN": 1481
+   },
+   "shortValue": {
+    "type": "value",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.6585402983405754,
+    "r99": 1.2558985257746238,
+    "r1": -0.3967275524181964,
+    "SD_pool": 0.337484590067442,
+    "gapScale": 0.5721822101858701,
+    "ratio": 1.6954321086824342,
+    "S": 0.5721822101858701,
+    "insuranceActive": false,
+    "poolN": 1481
+   }
+  },
+  "e101w": {
+   "long": {
+    "type": "curve",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.3917487698124827,
+    "r99": 0.4227272925409615,
+    "r1": 0.293117374156893,
+    "SD_pool": 0.02719087626128962,
+    "gapScale": 0.02967291449088006,
+    "ratio": 1.091282024372418,
+    "S": 0.02967291449088006,
+    "insuranceActive": false,
+    "poolN": 3980,
+    "a99": 0.433
+   },
+   "mid": {
+    "type": "curve",
+    "topTail": false,
+    "botTail": false,
+    "r90": 0.4418779950856606,
+    "r99": 0.4871208876360678,
+    "r1": 0.35470069604030596,
+    "SD_pool": 0.023886162618017882,
+    "gapScale": 0.04333610397548582,
+    "ratio": 1.814276519360058,
+    "S": 0.04333610397548582,
+    "insuranceActive": false,
+    "poolN": 1481,
+    "a99": 0.5073
+   },
+   "short": {
+    "type": "curve",
+    "topTail": true,
+    "botTail": false,
+    "r90": 0.63057079915141,
+    "r99": 0.6912050093597578,
+    "r1": 0.479112206729571,
+    "SD_pool": 0.043609077744212264,
+    "gapScale": 0.05807874541029483,
+    "ratio": 1.331804028302409,
+    "S": 0.05807874541029483,
+    "insuranceActive": false,
+    "poolN": 1481,
+    "a99": 0.6664
+   },
+   "ft": {
+    "type": "curve",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.8517010255848455,
+    "r99": 0.8961122364415535,
+    "r1": 0.5486663688118084,
+    "SD_pool": 0.07139427050008193,
+    "gapScale": 0.042539474000678125,
+    "ratio": 0.5958387655299218,
+    "S": 0.07139427050008193,
+    "insuranceActive": true,
+    "poolN": 3980,
+    "a99": 0.9
+   },
+   "drive": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 1.2503025966496901,
+    "r99": 2.400300881730968,
+    "r1": -1.5916342274058743,
+    "SD_pool": 0.9142018446447077,
+    "gapScale": 1.1015309244073541,
+    "ratio": 1.204909977878517,
+    "S": 1.1015309244073541,
+    "insuranceActive": false,
+    "poolN": 1368
+   },
+   "foulDraw": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 1.2974100424876365,
+    "r99": 3.0530689602868164,
+    "r1": -1.4745751693485039,
+    "SD_pool": 0.9653525988948548,
+    "gapScale": 1.6816656300758428,
+    "ratio": 1.7420221709674064,
+    "S": 1.6816656300758428,
+    "insuranceActive": false,
+    "poolN": 2593
+   },
+   "tovSkill": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": -0.07497703212485728,
+    "r99": -0.0582229864127154,
+    "r1": -0.14361839397098897,
+    "SD_pool": 0.01812973904108579,
+    "gapScale": 0.01604793650588302,
+    "ratio": 0.8851719525314199,
+    "S": 0.01812973904108579,
+    "insuranceActive": true,
+    "poolN": 2593
+   },
+   "pass": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.29509873849092444,
+    "r99": 0.43979545922829655,
+    "r1": 0.04390199436533889,
+    "SD_pool": 0.09157243712996861,
+    "gapScale": 0.13859839151089282,
+    "ratio": 1.5135383075387667,
+    "S": 0.13859839151089282,
+    "insuranceActive": false,
+    "poolN": 2593
+   },
+   "rebound": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.16693874888945973,
+    "r99": 0.2279747513625026,
+    "r1": 0.0412313807170806,
+    "SD_pool": 0.043987031499005354,
+    "gapScale": 0.05846360390138205,
+    "ratio": 1.3291100105880989,
+    "S": 0.05846360390138205,
+    "insuranceActive": false,
+    "poolN": 2593
+   },
+   "physique": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 108.0,
+    "r99": 111.7,
+    "r1": 89.5,
+    "SD_pool": 5.338831331163551,
+    "gapScale": 3.5440613026819947,
+    "ratio": 0.6638271716873284,
+    "S": 5.338831331163551,
+    "insuranceActive": true,
+    "poolN": 2591
+   },
+   "onBall": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 2.666133480698936,
+    "r99": 4.900568378450304,
+    "r1": -4.161847870735135,
+    "SD_pool": 1.8396562374127519,
+    "gapScale": 2.1402633120223826,
+    "ratio": 1.1634039384621104,
+    "S": 2.1402633120223826,
+    "insuranceActive": false,
+    "poolN": 961
+   },
+   "creation": {
+    "type": "percentile",
+    "topTail": true,
+    "botTail": true,
+    "r90": 9.87564923415718,
+    "r99": 14.409609632119107,
+    "r1": 1.0237238299896425,
+    "SD_pool": 3.2578842396967245,
+    "gapScale": 4.342873944407976,
+    "ratio": 1.3330350696598885,
+    "S": 4.342873944407976,
+    "insuranceActive": false,
+    "poolN": 961
+   },
+   "pressure": {
+    "type": "percentile",
+    "topTail": false,
+    "botTail": false,
+    "r99": 2.4281012708134733,
+    "r1": -1.2294801684368504,
+    "poolN": 252
+   },
+   "midValue": {
+    "type": "value",
+    "topTail": true,
+    "botTail": false,
+    "r90": 0.11509104462650675,
+    "r99": 0.4397214960249821,
+    "r1": -0.04331697518683094,
+    "SD_pool": 0.08309885174054002,
+    "gapScale": 0.3109487082360875,
+    "ratio": 3.7419134166494175,
+    "S": 0.3109487082360875,
+    "insuranceActive": false,
+    "poolN": 1481
+   },
+   "shortValue": {
+    "type": "value",
+    "topTail": true,
+    "botTail": true,
+    "r90": 0.6585402983405754,
+    "r99": 1.2558985257746238,
+    "r1": -0.3967275524181964,
+    "SD_pool": 0.337484590067442,
+    "gapScale": 0.5721822101858701,
+    "ratio": 1.6954321086824342,
+    "S": 0.5721822101858701,
+    "insuranceActive": false,
+    "poolN": 1481
+   }
+  }
+ },
+ "top2025": {
+  "long": {
+   "E096": {
+    ">99": [
+     [
+      "Luke Kennard",
+      107.93
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 1,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [
+     [
+      "Luke Kennard",
+      107.99
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 1,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [
+     [
+      "Luke Kennard",
+      107.93
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 1,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [
+     [
+      "Luke Kennard",
+      108.01
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 1,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [
+     [
+      "Luke Kennard",
+      107.33
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 1,
+     ">120": 0,
+     ">140": 0
+    }
+   }
+  },
+  "mid": {
+   "E096": {
+    ">99": [],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 0,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 0,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 0,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 0,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 0,
+     ">120": 0,
+     ">140": 0
+    }
+   }
+  },
+  "short": {
+   "E096": {
+    ">99": [
+     [
+      "Obi Toppin",
+      115.39
+     ],
+     [
+      "Giannis Antetokounmpo",
+      115.25
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [
+     [
+      "Giannis Antetokounmpo",
+      113.05
+     ],
+     [
+      "Obi Toppin",
+      112.46
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [
+     [
+      "Giannis Antetokounmpo",
+      115.58
+     ],
+     [
+      "Obi Toppin",
+      114.92
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [
+     [
+      "Giannis Antetokounmpo",
+      113.05
+     ],
+     [
+      "Obi Toppin",
+      112.46
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [
+     [
+      "Giannis Antetokounmpo",
+      113.05
+     ],
+     [
+      "Obi Toppin",
+      112.46
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   }
+  },
+  "ft": {
+   "E096": {
+    ">99": [
+     [
+      "Stephen Curry",
+      112.88
+     ],
+     [
+      "Cam Spencer",
+      100.3
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [
+     [
+      "Stephen Curry",
+      112.76
+     ],
+     [
+      "Cam Spencer",
+      100.28
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [
+     [
+      "Stephen Curry",
+      112.88
+     ],
+     [
+      "Cam Spencer",
+      100.3
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [
+     [
+      "Stephen Curry",
+      115.2
+     ],
+     [
+      "Cam Spencer",
+      100.58
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [
+     [
+      "Stephen Curry",
+      112.6
+     ],
+     [
+      "Cam Spencer",
+      100.26
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   }
+  },
+  "drive": {
+   "E096": {
+    ">99": [
+     [
+      "Zion Williamson",
+      109.98
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 1,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [
+     [
+      "Zion Williamson",
+      103.92
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 1,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [
+     [
+      "Zion Williamson",
+      109.98
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 1,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [
+     [
+      "Zion Williamson",
+      103.92
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 1,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [
+     [
+      "Zion Williamson",
+      104.85
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 1,
+     ">120": 0,
+     ">140": 0
+    }
+   }
+  },
+  "foulDraw": {
+   "E096": {
+    ">99": [
+     [
+      "Giannis Antetokounmpo",
+      121.23
+     ],
+     [
+      "Joel Embiid",
+      103.28
+     ]
+    ],
+    ">120": [
+     [
+      "Giannis Antetokounmpo",
+      121.23
+     ]
+    ],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 1,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [
+     [
+      "Giannis Antetokounmpo",
+      112.62
+     ],
+     [
+      "Joel Embiid",
+      99.81
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [
+     [
+      "Giannis Antetokounmpo",
+      121.23
+     ],
+     [
+      "Joel Embiid",
+      103.28
+     ]
+    ],
+    ">120": [
+     [
+      "Giannis Antetokounmpo",
+      121.23
+     ]
+    ],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 1,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [
+     [
+      "Giannis Antetokounmpo",
+      112.62
+     ],
+     [
+      "Joel Embiid",
+      99.81
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [
+     [
+      "Giannis Antetokounmpo",
+      110.85
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 1,
+     ">120": 0,
+     ">140": 0
+    }
+   }
+  },
+  "tovSkill": {
+   "E096": {
+    ">99": [
+     [
+      "Tim Hardaway Jr.",
+      110.53
+     ],
+     [
+      "Sam Hauser",
+      108.86
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [
+     [
+      "Tim Hardaway Jr.",
+      107.89
+     ],
+     [
+      "Sam Hauser",
+      106.16
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [
+     [
+      "Tim Hardaway Jr.",
+      110.53
+     ],
+     [
+      "Sam Hauser",
+      108.86
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [
+     [
+      "Tim Hardaway Jr.",
+      109.03
+     ],
+     [
+      "Sam Hauser",
+      107.09
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [
+     [
+      "Tim Hardaway Jr.",
+      109.93
+     ],
+     [
+      "Sam Hauser",
+      108.3
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   }
+  },
+  "pass": {
+   "E096": {
+    ">99": [
+     [
+      "Nikola Jokić",
+      114.52
+     ],
+     [
+      "T.J. McConnell",
+      111.88
+     ],
+     [
+      "Trae Young",
+      109.92
+     ],
+     [
+      "Cade Cunningham",
+      107.01
+     ],
+     [
+      "Ja Morant",
+      101.25
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 5,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [
+     [
+      "Nikola Jokić",
+      107.77
+     ],
+     [
+      "T.J. McConnell",
+      105.81
+     ],
+     [
+      "Trae Young",
+      104.39
+     ],
+     [
+      "Cade Cunningham",
+      102.32
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 4,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [
+     [
+      "Nikola Jokić",
+      114.52
+     ],
+     [
+      "T.J. McConnell",
+      111.88
+     ],
+     [
+      "Trae Young",
+      109.92
+     ],
+     [
+      "Cade Cunningham",
+      107.01
+     ],
+     [
+      "Ja Morant",
+      101.25
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 5,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [
+     [
+      "Nikola Jokić",
+      107.77
+     ],
+     [
+      "T.J. McConnell",
+      105.81
+     ],
+     [
+      "Trae Young",
+      104.39
+     ],
+     [
+      "Cade Cunningham",
+      102.32
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 4,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [
+     [
+      "Nikola Jokić",
+      106.11
+     ],
+     [
+      "T.J. McConnell",
+      104.15
+     ],
+     [
+      "Trae Young",
+      102.73
+     ],
+     [
+      "Cade Cunningham",
+      100.67
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 4,
+     ">120": 0,
+     ">140": 0
+    }
+   }
+  },
+  "rebound": {
+   "E096": {
+    ">99": [
+     [
+      "Mitchell Robinson",
+      114.19
+     ],
+     [
+      "Andre Drummond",
+      113.42
+     ],
+     [
+      "Donovan Clingan",
+      109.01
+     ],
+     [
+      "Zach Edey",
+      102.13
+     ],
+     [
+      "Domantas Sabonis",
+      101.93
+     ],
+     [
+      "Robert Williams III",
+      101.69
+     ],
+     [
+      "Jonas Valanciunas",
+      100.12
+     ],
+     [
+      "Steven Adams",
+      99.86
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 8,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [
+     [
+      "Mitchell Robinson",
+      110.62
+     ],
+     [
+      "Andre Drummond",
+      109.87
+     ],
+     [
+      "Donovan Clingan",
+      105.58
+     ],
+     [
+      "Zach Edey",
+      99.02
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 4,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [
+     [
+      "Mitchell Robinson",
+      114.19
+     ],
+     [
+      "Andre Drummond",
+      113.42
+     ],
+     [
+      "Donovan Clingan",
+      109.01
+     ],
+     [
+      "Zach Edey",
+      102.13
+     ],
+     [
+      "Domantas Sabonis",
+      101.93
+     ],
+     [
+      "Robert Williams III",
+      101.69
+     ],
+     [
+      "Jonas Valanciunas",
+      100.12
+     ],
+     [
+      "Steven Adams",
+      99.86
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 8,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [
+     [
+      "Mitchell Robinson",
+      110.62
+     ],
+     [
+      "Andre Drummond",
+      109.87
+     ],
+     [
+      "Donovan Clingan",
+      105.58
+     ],
+     [
+      "Zach Edey",
+      99.02
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 4,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [
+     [
+      "Mitchell Robinson",
+      103.61
+     ],
+     [
+      "Andre Drummond",
+      102.92
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   }
+  },
+  "physique": {
+   "E096": {
+    ">99": [
+     [
+      "Zach Edey",
+      120.81
+     ],
+     [
+      "Donovan Clingan",
+      108.36
+     ],
+     [
+      "Brook Lopez",
+      104.85
+     ]
+    ],
+    ">120": [
+     [
+      "Zach Edey",
+      120.81
+     ]
+    ],
+    ">140": [],
+    "counts": {
+     ">99": 3,
+     ">120": 1,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [
+     [
+      "Zach Edey",
+      117.59
+     ],
+     [
+      "Donovan Clingan",
+      103.89
+     ],
+     [
+      "Brook Lopez",
+      100.02
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 3,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [
+     [
+      "Zach Edey",
+      120.81
+     ],
+     [
+      "Donovan Clingan",
+      108.36
+     ],
+     [
+      "Brook Lopez",
+      104.85
+     ]
+    ],
+    ">120": [
+     [
+      "Zach Edey",
+      120.81
+     ]
+    ],
+    ">140": [],
+    "counts": {
+     ">99": 3,
+     ">120": 1,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [
+     [
+      "Zach Edey",
+      118.42
+     ],
+     [
+      "Donovan Clingan",
+      104.15
+     ],
+     [
+      "Brook Lopez",
+      100.08
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 3,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [
+     [
+      "Zach Edey",
+      120.7
+     ],
+     [
+      "Donovan Clingan",
+      109.06
+     ],
+     [
+      "Brook Lopez",
+      105.81
+     ],
+     [
+      "Jusuf Nurkić",
+      100.44
+     ],
+     [
+      "Yang Hansen",
+      100.44
+     ]
+    ],
+    ">120": [
+     [
+      "Zach Edey",
+      120.7
+     ]
+    ],
+    ">140": [],
+    "counts": {
+     ">99": 5,
+     ">120": 1,
+     ">140": 0
+    }
+   }
+  },
+  "onBall": {
+   "E096": {
+    ">99": [
+     [
+      "Luguentz Dort",
+      116.53
+     ],
+     [
+      "Dyson Daniels",
+      107.84
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [
+     [
+      "Luguentz Dort",
+      113.46
+     ],
+     [
+      "Dyson Daniels",
+      105.38
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [
+     [
+      "Luguentz Dort",
+      116.53
+     ],
+     [
+      "Dyson Daniels",
+      107.84
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [
+     [
+      "Luguentz Dort",
+      113.46
+     ],
+     [
+      "Dyson Daniels",
+      105.38
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [
+     [
+      "Luguentz Dort",
+      113.46
+     ],
+     [
+      "Dyson Daniels",
+      105.38
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   }
+  },
+  "creation": {
+   "E096": {
+    ">99": [
+     [
+      "Shai Gilgeous-Alexander",
+      115.16
+     ],
+     [
+      "Luka Dončić",
+      113.04
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [
+     [
+      "Shai Gilgeous-Alexander",
+      108.74
+     ],
+     [
+      "Luka Dončić",
+      106.97
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [
+     [
+      "Shai Gilgeous-Alexander",
+      115.16
+     ],
+     [
+      "Luka Dončić",
+      113.04
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [
+     [
+      "Shai Gilgeous-Alexander",
+      108.74
+     ],
+     [
+      "Luka Dončić",
+      106.97
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [
+     [
+      "Shai Gilgeous-Alexander",
+      108.74
+     ],
+     [
+      "Luka Dončić",
+      106.97
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 0,
+     ">140": 0
+    }
+   }
+  },
+  "pressure": {
+   "E096": {
+    ">99": [],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 0,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 0,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 0,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 0,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 0,
+     ">120": 0,
+     ">140": 0
+    }
+   }
+  },
+  "midValue": {
+   "E096": {
+    ">99": [
+     [
+      "Shai Gilgeous-Alexander",
+      133.66
+     ],
+     [
+      "DeMar DeRozan",
+      105.65
+     ],
+     [
+      "Kevin Durant",
+      103.36
+     ]
+    ],
+    ">120": [
+     [
+      "Shai Gilgeous-Alexander",
+      133.66
+     ]
+    ],
+    ">140": [],
+    "counts": {
+     ">99": 3,
+     ">120": 1,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [
+     [
+      "Shai Gilgeous-Alexander",
+      117.74
+     ],
+     [
+      "DeMar DeRozan",
+      108.66
+     ],
+     [
+      "T.J. McConnell",
+      108.03
+     ],
+     [
+      "Kevin Durant",
+      106.68
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 4,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [
+     [
+      "Shai Gilgeous-Alexander",
+      131.8
+     ],
+     [
+      "DeMar DeRozan",
+      106.7
+     ],
+     [
+      "T.J. McConnell",
+      104.34
+     ]
+    ],
+    ">120": [
+     [
+      "Shai Gilgeous-Alexander",
+      131.8
+     ]
+    ],
+    ">140": [],
+    "counts": {
+     ">99": 3,
+     ">120": 1,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [
+     [
+      "Shai Gilgeous-Alexander",
+      117.74
+     ],
+     [
+      "DeMar DeRozan",
+      108.66
+     ],
+     [
+      "T.J. McConnell",
+      108.03
+     ],
+     [
+      "Kevin Durant",
+      106.68
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 4,
+     ">120": 0,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [
+     [
+      "Shai Gilgeous-Alexander",
+      117.74
+     ],
+     [
+      "DeMar DeRozan",
+      108.66
+     ],
+     [
+      "T.J. McConnell",
+      108.03
+     ],
+     [
+      "Kevin Durant",
+      106.68
+     ]
+    ],
+    ">120": [],
+    ">140": [],
+    "counts": {
+     ">99": 4,
+     ">120": 0,
+     ">140": 0
+    }
+   }
+  },
+  "shortValue": {
+   "E096": {
+    ">99": [
+     [
+      "Giannis Antetokounmpo",
+      137.19
+     ],
+     [
+      "Jalen Duren",
+      115.09
+     ]
+    ],
+    ">120": [
+     [
+      "Giannis Antetokounmpo",
+      137.19
+     ]
+    ],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 1,
+     ">140": 0
+    }
+   },
+   "e101": {
+    ">99": [
+     [
+      "Giannis Antetokounmpo",
+      129.04
+     ],
+     [
+      "Jalen Duren",
+      110.17
+     ]
+    ],
+    ">120": [
+     [
+      "Giannis Antetokounmpo",
+      129.04
+     ]
+    ],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 1,
+     ">140": 0
+    }
+   },
+   "e101z": {
+    ">99": [
+     [
+      "Giannis Antetokounmpo",
+      137.88
+     ],
+     [
+      "Jalen Duren",
+      115.1
+     ]
+    ],
+    ">120": [
+     [
+      "Giannis Antetokounmpo",
+      137.88
+     ]
+    ],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 1,
+     ">140": 0
+    }
+   },
+   "e101g": {
+    ">99": [
+     [
+      "Giannis Antetokounmpo",
+      129.04
+     ],
+     [
+      "Jalen Duren",
+      110.17
+     ]
+    ],
+    ">120": [
+     [
+      "Giannis Antetokounmpo",
+      129.04
+     ]
+    ],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 1,
+     ">140": 0
+    }
+   },
+   "e101w": {
+    ">99": [
+     [
+      "Giannis Antetokounmpo",
+      129.04
+     ],
+     [
+      "Jalen Duren",
+      110.17
+     ]
+    ],
+    ">120": [
+     [
+      "Giannis Antetokounmpo",
+      129.04
+     ]
+    ],
+    ">140": [],
+    "counts": {
+     ">99": 2,
+     ">120": 1,
+     ">140": 0
+    }
+   }
+  }
+ },
+ "top2025_countTable": {
+  "long": {
+   "E096": {
+    ">99": 1,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 1,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 1,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 1,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 1,
+    ">120": 0,
+    ">140": 0
+   }
+  },
+  "mid": {
+   "E096": {
+    ">99": 0,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 0,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 0,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 0,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 0,
+    ">120": 0,
+    ">140": 0
+   }
+  },
+  "short": {
+   "E096": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   }
+  },
+  "ft": {
+   "E096": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   }
+  },
+  "drive": {
+   "E096": {
+    ">99": 1,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 1,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 1,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 1,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 1,
+    ">120": 0,
+    ">140": 0
+   }
+  },
+  "foulDraw": {
+   "E096": {
+    ">99": 2,
+    ">120": 1,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 2,
+    ">120": 1,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 1,
+    ">120": 0,
+    ">140": 0
+   }
+  },
+  "tovSkill": {
+   "E096": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   }
+  },
+  "pass": {
+   "E096": {
+    ">99": 5,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 4,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 5,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 4,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 4,
+    ">120": 0,
+    ">140": 0
+   }
+  },
+  "rebound": {
+   "E096": {
+    ">99": 8,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 4,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 8,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 4,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   }
+  },
+  "physique": {
+   "E096": {
+    ">99": 3,
+    ">120": 1,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 3,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 3,
+    ">120": 1,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 3,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 5,
+    ">120": 1,
+    ">140": 0
+   }
+  },
+  "onBall": {
+   "E096": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   }
+  },
+  "creation": {
+   "E096": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 2,
+    ">120": 0,
+    ">140": 0
+   }
+  },
+  "pressure": {
+   "E096": {
+    ">99": 0,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 0,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 0,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 0,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 0,
+    ">120": 0,
+    ">140": 0
+   }
+  },
+  "midValue": {
+   "E096": {
+    ">99": 3,
+    ">120": 1,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 4,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 3,
+    ">120": 1,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 4,
+    ">120": 0,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 4,
+    ">120": 0,
+    ">140": 0
+   }
+  },
+  "shortValue": {
+   "E096": {
+    ">99": 2,
+    ">120": 1,
+    ">140": 0
+   },
+   "e101": {
+    ">99": 2,
+    ">120": 1,
+    ">140": 0
+   },
+   "e101z": {
+    ">99": 2,
+    ">120": 1,
+    ">140": 0
+   },
+   "e101g": {
+    ">99": 2,
+    ">120": 1,
+    ">140": 0
+   },
+   "e101w": {
+    ">99": 2,
+    ">120": 1,
+    ">140": 0
+   }
+  }
+ },
+ "season99": {
+  "e101": {
+   "long": {
+    "2025-26": {
+     "min500": 1,
+     "min500N": 379,
+     "all": 1,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 1,
+     "min500N": 367,
+     "all": 1,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 2,
+     "min500N": 360,
+     "all": 2,
+     "allN": 572,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 0,
+     "min500N": 375,
+     "all": 0,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "mid": {
+    "2025-26": {
+     "min500": 1,
+     "min500N": 379,
+     "all": 1,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 1,
+     "min500N": 367,
+     "all": 1,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 2,
+     "min500N": 360,
+     "all": 2,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 2,
+     "min500N": 375,
+     "all": 2,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "short": {
+    "2025-26": {
+     "min500": 14,
+     "min500N": 379,
+     "all": 17,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 6,
+     "min500N": 367,
+     "all": 6,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 12,
+     "min500N": 360,
+     "all": 14,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 11,
+     "min500N": 375,
+     "all": 13,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "ft": {
+    "2025-26": {
+     "min500": 2,
+     "min500N": 379,
+     "all": 2,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 4,
+     "min500N": 367,
+     "all": 4,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 3,
+     "min500N": 360,
+     "all": 3,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 3,
+     "min500N": 375,
+     "all": 3,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "drive": {
+    "2025-26": {
+     "pool": 1,
+     "poolN": 231,
+     "all": 1,
+     "allN": 509
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 490
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 226,
+     "all": 4,
+     "allN": 523
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 227,
+     "all": 5,
+     "allN": 519
+    }
+   },
+   "foulDraw": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 2,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 244,
+     "all": 4,
+     "allN": 569
+    }
+   },
+   "tovSkill": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 2,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 244,
+     "all": 3,
+     "allN": 569
+    }
+   },
+   "pass": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 4,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 2,
+     "poolN": 244,
+     "all": 2,
+     "allN": 569
+    }
+   },
+   "rebound": {
+    "2025-26": {
+     "pool": 1,
+     "poolN": 252,
+     "all": 4,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 5,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 4,
+     "poolN": 229,
+     "all": 7,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 244,
+     "all": 7,
+     "allN": 569
+    }
+   },
+   "physique": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 251,
+     "all": 3,
+     "allN": 576
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 4,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 4,
+     "allN": 572
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 243,
+     "all": 4,
+     "allN": 567
+    }
+   },
+   "onBall": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 575
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 529
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 561
+    },
+    "2024-25": {
+     "pool": 2,
+     "poolN": 244,
+     "all": 2,
+     "allN": 563
+    }
+   },
+   "creation": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 5,
+     "poolN": 236,
+     "all": 5,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 3,
+     "allN": 572
+    },
+    "2024-25": {
+     "pool": 1,
+     "poolN": 244,
+     "all": 1,
+     "allN": 569
+    }
+   },
+   "midValue": {
+    "2025-26": {
+     "min500": 4,
+     "min500N": 379,
+     "all": 4,
+     "allN": 582,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 2,
+     "min500N": 367,
+     "all": 2,
+     "allN": 539,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 4,
+     "min500N": 360,
+     "all": 4,
+     "allN": 571,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 5,
+     "min500N": 375,
+     "all": 5,
+     "allN": 569,
+     "rule": "pct >= 99（short 為折扣前）"
+    }
+   },
+   "shortValue": {
+    "2025-26": {
+     "min500": 4,
+     "min500N": 379,
+     "all": 4,
+     "allN": 582,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 2,
+     "min500N": 367,
+     "all": 2,
+     "allN": 539,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 3,
+     "min500N": 360,
+     "all": 3,
+     "allN": 571,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 6,
+     "min500N": 375,
+     "all": 6,
+     "allN": 569,
+     "rule": "pct >= 99（short 為折扣前）"
+    }
+   }
+  },
+  "e101g": {
+   "long": {
+    "2025-26": {
+     "min500": 1,
+     "min500N": 379,
+     "all": 1,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 1,
+     "min500N": 367,
+     "all": 1,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 2,
+     "min500N": 360,
+     "all": 2,
+     "allN": 572,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 0,
+     "min500N": 375,
+     "all": 0,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "mid": {
+    "2025-26": {
+     "min500": 1,
+     "min500N": 379,
+     "all": 1,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 1,
+     "min500N": 367,
+     "all": 1,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 2,
+     "min500N": 360,
+     "all": 2,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 2,
+     "min500N": 375,
+     "all": 2,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "short": {
+    "2025-26": {
+     "min500": 14,
+     "min500N": 379,
+     "all": 17,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 6,
+     "min500N": 367,
+     "all": 6,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 12,
+     "min500N": 360,
+     "all": 14,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 11,
+     "min500N": 375,
+     "all": 13,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "ft": {
+    "2025-26": {
+     "min500": 2,
+     "min500N": 379,
+     "all": 2,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 4,
+     "min500N": 367,
+     "all": 4,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 3,
+     "min500N": 360,
+     "all": 3,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 3,
+     "min500N": 375,
+     "all": 3,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "drive": {
+    "2025-26": {
+     "pool": 1,
+     "poolN": 231,
+     "all": 1,
+     "allN": 509
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 490
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 226,
+     "all": 4,
+     "allN": 523
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 227,
+     "all": 5,
+     "allN": 519
+    }
+   },
+   "foulDraw": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 2,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 244,
+     "all": 4,
+     "allN": 569
+    }
+   },
+   "tovSkill": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 2,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 244,
+     "all": 3,
+     "allN": 569
+    }
+   },
+   "pass": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 4,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 2,
+     "poolN": 244,
+     "all": 2,
+     "allN": 569
+    }
+   },
+   "rebound": {
+    "2025-26": {
+     "pool": 1,
+     "poolN": 252,
+     "all": 4,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 5,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 4,
+     "poolN": 229,
+     "all": 7,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 244,
+     "all": 7,
+     "allN": 569
+    }
+   },
+   "physique": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 251,
+     "all": 3,
+     "allN": 576
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 4,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 4,
+     "allN": 572
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 243,
+     "all": 4,
+     "allN": 567
+    }
+   },
+   "onBall": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 575
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 529
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 561
+    },
+    "2024-25": {
+     "pool": 2,
+     "poolN": 244,
+     "all": 2,
+     "allN": 563
+    }
+   },
+   "creation": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 5,
+     "poolN": 236,
+     "all": 5,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 3,
+     "allN": 572
+    },
+    "2024-25": {
+     "pool": 1,
+     "poolN": 244,
+     "all": 1,
+     "allN": 569
+    }
+   },
+   "midValue": {
+    "2025-26": {
+     "min500": 4,
+     "min500N": 379,
+     "all": 4,
+     "allN": 582,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 2,
+     "min500N": 367,
+     "all": 2,
+     "allN": 539,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 4,
+     "min500N": 360,
+     "all": 4,
+     "allN": 571,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 5,
+     "min500N": 375,
+     "all": 5,
+     "allN": 569,
+     "rule": "pct >= 99（short 為折扣前）"
+    }
+   },
+   "shortValue": {
+    "2025-26": {
+     "min500": 4,
+     "min500N": 379,
+     "all": 4,
+     "allN": 582,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 2,
+     "min500N": 367,
+     "all": 2,
+     "allN": 539,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 3,
+     "min500N": 360,
+     "all": 3,
+     "allN": 571,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 6,
+     "min500N": 375,
+     "all": 6,
+     "allN": 569,
+     "rule": "pct >= 99（short 為折扣前）"
+    }
+   }
+  },
+  "e101w": {
+   "long": {
+    "2025-26": {
+     "min500": 1,
+     "min500N": 379,
+     "all": 1,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2015-16": {
+     "min500": 2,
+     "min500N": 351,
+     "all": 2,
+     "allN": 476,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2016-17": {
+     "min500": 1,
+     "min500N": 355,
+     "all": 1,
+     "allN": 486,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2017-18": {
+     "min500": 1,
+     "min500N": 354,
+     "all": 1,
+     "allN": 540,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2018-19": {
+     "min500": 2,
+     "min500N": 361,
+     "all": 2,
+     "allN": 530,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2019-20": {
+     "min500": 2,
+     "min500N": 339,
+     "all": 2,
+     "allN": 529,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2020-21": {
+     "min500": 4,
+     "min500N": 364,
+     "all": 4,
+     "allN": 540,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2021-22": {
+     "min500": 0,
+     "min500N": 375,
+     "all": 0,
+     "allN": 605,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 1,
+     "min500N": 367,
+     "all": 1,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 2,
+     "min500N": 360,
+     "all": 2,
+     "allN": 572,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 0,
+     "min500N": 375,
+     "all": 0,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "mid": {
+    "2025-26": {
+     "min500": 1,
+     "min500N": 379,
+     "all": 1,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 1,
+     "min500N": 367,
+     "all": 1,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 2,
+     "min500N": 360,
+     "all": 2,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 2,
+     "min500N": 375,
+     "all": 2,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "short": {
+    "2025-26": {
+     "min500": 14,
+     "min500N": 379,
+     "all": 17,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 6,
+     "min500N": 367,
+     "all": 6,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 12,
+     "min500N": 360,
+     "all": 14,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 11,
+     "min500N": 375,
+     "all": 13,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "ft": {
+    "2025-26": {
+     "min500": 2,
+     "min500N": 379,
+     "all": 2,
+     "allN": 582,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2015-16": {
+     "min500": 1,
+     "min500N": 351,
+     "all": 1,
+     "allN": 476,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2016-17": {
+     "min500": 1,
+     "min500N": 355,
+     "all": 1,
+     "allN": 486,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2017-18": {
+     "min500": 3,
+     "min500N": 354,
+     "all": 3,
+     "allN": 540,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2018-19": {
+     "min500": 2,
+     "min500N": 361,
+     "all": 2,
+     "allN": 530,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2019-20": {
+     "min500": 1,
+     "min500N": 339,
+     "all": 2,
+     "allN": 529,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2020-21": {
+     "min500": 6,
+     "min500N": 364,
+     "all": 6,
+     "allN": 540,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2021-22": {
+     "min500": 2,
+     "min500N": 375,
+     "all": 2,
+     "allN": 605,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 4,
+     "min500N": 367,
+     "all": 4,
+     "allN": 539,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 3,
+     "min500N": 360,
+     "all": 3,
+     "allN": 571,
+     "rule": "p >= a99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 3,
+     "min500N": 375,
+     "all": 3,
+     "allN": 569,
+     "rule": "p >= a99（short 為折扣前）"
+    }
+   },
+   "drive": {
+    "2025-26": {
+     "pool": 1,
+     "poolN": 231,
+     "all": 1,
+     "allN": 509
+    },
+    "2020-21": {
+     "pool": 2,
+     "poolN": 225,
+     "all": 2,
+     "allN": 492
+    },
+    "2021-22": {
+     "pool": 2,
+     "poolN": 230,
+     "all": 2,
+     "allN": 584
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 490
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 226,
+     "all": 5,
+     "allN": 523
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 227,
+     "all": 5,
+     "allN": 519
+    }
+   },
+   "foulDraw": {
+    "2025-26": {
+     "pool": 1,
+     "poolN": 252,
+     "all": 1,
+     "allN": 582
+    },
+    "2015-16": {
+     "pool": 3,
+     "poolN": 225,
+     "all": 3,
+     "allN": 476
+    },
+    "2016-17": {
+     "pool": 2,
+     "poolN": 225,
+     "all": 2,
+     "allN": 486
+    },
+    "2017-18": {
+     "pool": 2,
+     "poolN": 233,
+     "all": 3,
+     "allN": 540
+    },
+    "2018-19": {
+     "pool": 3,
+     "poolN": 238,
+     "all": 3,
+     "allN": 530
+    },
+    "2019-20": {
+     "pool": 4,
+     "poolN": 225,
+     "all": 4,
+     "allN": 529
+    },
+    "2020-21": {
+     "pool": 2,
+     "poolN": 241,
+     "all": 2,
+     "allN": 540
+    },
+    "2021-22": {
+     "pool": 2,
+     "poolN": 245,
+     "all": 2,
+     "allN": 605
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 2,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 2,
+     "poolN": 244,
+     "all": 3,
+     "allN": 569
+    }
+   },
+   "tovSkill": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2015-16": {
+     "pool": 1,
+     "poolN": 225,
+     "all": 2,
+     "allN": 476
+    },
+    "2016-17": {
+     "pool": 1,
+     "poolN": 225,
+     "all": 2,
+     "allN": 486
+    },
+    "2017-18": {
+     "pool": 1,
+     "poolN": 233,
+     "all": 1,
+     "allN": 540
+    },
+    "2018-19": {
+     "pool": 1,
+     "poolN": 238,
+     "all": 2,
+     "allN": 530
+    },
+    "2019-20": {
+     "pool": 2,
+     "poolN": 225,
+     "all": 3,
+     "allN": 529
+    },
+    "2020-21": {
+     "pool": 1,
+     "poolN": 241,
+     "all": 1,
+     "allN": 540
+    },
+    "2021-22": {
+     "pool": 4,
+     "poolN": 245,
+     "all": 4,
+     "allN": 605
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 2,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 6,
+     "poolN": 229,
+     "all": 6,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 5,
+     "poolN": 244,
+     "all": 6,
+     "allN": 569
+    }
+   },
+   "pass": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 4,
+     "allN": 582
+    },
+    "2015-16": {
+     "pool": 4,
+     "poolN": 225,
+     "all": 4,
+     "allN": 476
+    },
+    "2016-17": {
+     "pool": 4,
+     "poolN": 225,
+     "all": 4,
+     "allN": 486
+    },
+    "2017-18": {
+     "pool": 3,
+     "poolN": 233,
+     "all": 3,
+     "allN": 540
+    },
+    "2018-19": {
+     "pool": 1,
+     "poolN": 238,
+     "all": 2,
+     "allN": 530
+    },
+    "2019-20": {
+     "pool": 3,
+     "poolN": 225,
+     "all": 3,
+     "allN": 529
+    },
+    "2020-21": {
+     "pool": 2,
+     "poolN": 241,
+     "all": 2,
+     "allN": 540
+    },
+    "2021-22": {
+     "pool": 3,
+     "poolN": 245,
+     "all": 3,
+     "allN": 605
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 2,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 1,
+     "poolN": 229,
+     "all": 1,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 1,
+     "poolN": 244,
+     "all": 1,
+     "allN": 569
+    }
+   },
+   "rebound": {
+    "2025-26": {
+     "pool": 1,
+     "poolN": 252,
+     "all": 3,
+     "allN": 582
+    },
+    "2015-16": {
+     "pool": 2,
+     "poolN": 225,
+     "all": 2,
+     "allN": 476
+    },
+    "2016-17": {
+     "pool": 4,
+     "poolN": 225,
+     "all": 4,
+     "allN": 486
+    },
+    "2017-18": {
+     "pool": 4,
+     "poolN": 233,
+     "all": 4,
+     "allN": 540
+    },
+    "2018-19": {
+     "pool": 3,
+     "poolN": 238,
+     "all": 4,
+     "allN": 530
+    },
+    "2019-20": {
+     "pool": 3,
+     "poolN": 225,
+     "all": 5,
+     "allN": 529
+    },
+    "2020-21": {
+     "pool": 5,
+     "poolN": 241,
+     "all": 7,
+     "allN": 540
+    },
+    "2021-22": {
+     "pool": 2,
+     "poolN": 245,
+     "all": 4,
+     "allN": 605
+    },
+    "2022-23": {
+     "pool": 2,
+     "poolN": 236,
+     "all": 4,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 0,
+     "poolN": 229,
+     "all": 1,
+     "allN": 571
+    },
+    "2024-25": {
+     "pool": 0,
+     "poolN": 244,
+     "all": 1,
+     "allN": 569
+    }
+   },
+   "physique": {
+    "2025-26": {
+     "pool": 3,
+     "poolN": 251,
+     "all": 5,
+     "allN": 576
+    },
+    "2015-16": {
+     "pool": 1,
+     "poolN": 225,
+     "all": 7,
+     "allN": 476
+    },
+    "2016-17": {
+     "pool": 2,
+     "poolN": 225,
+     "all": 5,
+     "allN": 486
+    },
+    "2017-18": {
+     "pool": 2,
+     "poolN": 233,
+     "all": 4,
+     "allN": 540
+    },
+    "2018-19": {
+     "pool": 0,
+     "poolN": 238,
+     "all": 1,
+     "allN": 530
+    },
+    "2019-20": {
+     "pool": 3,
+     "poolN": 225,
+     "all": 7,
+     "allN": 529
+    },
+    "2020-21": {
+     "pool": 3,
+     "poolN": 241,
+     "all": 6,
+     "allN": 540
+    },
+    "2021-22": {
+     "pool": 2,
+     "poolN": 245,
+     "all": 6,
+     "allN": 605
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 5,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 6,
+     "allN": 572
+    },
+    "2024-25": {
+     "pool": 3,
+     "poolN": 243,
+     "all": 6,
+     "allN": 567
+    }
+   },
+   "onBall": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 575
+    },
+    "2022-23": {
+     "pool": 3,
+     "poolN": 236,
+     "all": 3,
+     "allN": 529
+    },
+    "2023-24": {
+     "pool": 3,
+     "poolN": 229,
+     "all": 3,
+     "allN": 561
+    },
+    "2024-25": {
+     "pool": 2,
+     "poolN": 244,
+     "all": 2,
+     "allN": 563
+    }
+   },
+   "creation": {
+    "2025-26": {
+     "pool": 2,
+     "poolN": 252,
+     "all": 2,
+     "allN": 582
+    },
+    "2022-23": {
+     "pool": 5,
+     "poolN": 236,
+     "all": 5,
+     "allN": 539
+    },
+    "2023-24": {
+     "pool": 2,
+     "poolN": 229,
+     "all": 3,
+     "allN": 572
+    },
+    "2024-25": {
+     "pool": 1,
+     "poolN": 244,
+     "all": 1,
+     "allN": 569
+    }
+   },
+   "midValue": {
+    "2025-26": {
+     "min500": 4,
+     "min500N": 379,
+     "all": 4,
+     "allN": 582,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 2,
+     "min500N": 367,
+     "all": 2,
+     "allN": 539,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 4,
+     "min500N": 360,
+     "all": 4,
+     "allN": 571,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 5,
+     "min500N": 375,
+     "all": 5,
+     "allN": 569,
+     "rule": "pct >= 99（short 為折扣前）"
+    }
+   },
+   "shortValue": {
+    "2025-26": {
+     "min500": 4,
+     "min500N": 379,
+     "all": 4,
+     "allN": 582,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2022-23": {
+     "min500": 2,
+     "min500N": 367,
+     "all": 2,
+     "allN": 539,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2023-24": {
+     "min500": 3,
+     "min500N": 360,
+     "all": 3,
+     "allN": 571,
+     "rule": "pct >= 99（short 為折扣前）"
+    },
+    "2024-25": {
+     "min500": 6,
+     "min500N": 375,
+     "all": 6,
+     "allN": 569,
+     "rule": "pct >= 99（short 為折扣前）"
+    }
+   }
+  }
+ },
+ "season99_rule": "命中率型 p >= a99（short 為折扣前）；百分位型 r >= r99；量價型 value >= r99；min500 = 池內（MIN>=500 或 GP/MPG 門檻），all = 該季所有有值球員",
+ "midWatch": [
+  {
+   "name": "Walker Kessler",
+   "A": 0.0,
+   "M": 0.0,
+   "acc_shrunkP": {
+    "E096": 0.612,
+    "e101": 0.398,
+    "e101z": 0.398,
+    "e101g": 0.398,
+    "e101w": 0.398
+   },
+   "attr": {
+    "E096": 99.0,
+    "e101": 60.93,
+    "e101z": 60.93,
+    "e101g": 60.93,
+    "e101w": 60.93
+   },
+   "value": {
+    "E096": 96.78,
+    "e101": 56.67,
+    "e101z": 62.0,
+    "e101g": 56.67,
+    "e101w": 56.67
+   }
+  },
+  {
+   "name": "Daniel Gafford",
+   "A": 6.0,
+   "M": 2.0,
+   "acc_shrunkP": {
+    "E096": 0.546,
+    "e101": 0.432,
+    "e101z": 0.432,
+    "e101g": 0.432,
+    "e101w": 0.432
+   },
+   "attr": {
+    "E096": 99.0,
+    "e101": 73.64,
+    "e101z": 73.64,
+    "e101g": 73.64,
+    "e101w": 73.64
+   },
+   "value": {
+    "E096": 86.87,
+    "e101": 66.44,
+    "e101z": 70.47,
+    "e101g": 66.44,
+    "e101w": 66.44
+   }
+  },
+  {
+   "name": "Jakob Poeltl",
+   "A": 21.0,
+   "M": 11.0,
+   "acc_shrunkP": {
+    "E096": 0.546,
+    "e101": 0.446,
+    "e101z": 0.446,
+    "e101g": 0.446,
+    "e101w": 0.446
+   },
+   "attr": {
+    "E096": 99.0,
+    "e101": 78.36,
+    "e101z": 78.36,
+    "e101g": 78.36,
+    "e101w": 78.36
+   },
+   "value": {
+    "E096": 94.36,
+    "e101": 84.11,
+    "e101z": 84.99,
+    "e101g": 84.11,
+    "e101w": 84.11
+   }
+  },
+  {
+   "name": "Dereck Lively II",
+   "A": 0.0,
+   "M": 0.0,
+   "acc_shrunkP": {
+    "E096": 0.512,
+    "e101": 0.418,
+    "e101z": 0.418,
+    "e101g": 0.418,
+    "e101w": 0.418
+   },
+   "attr": {
+    "E096": 99.0,
+    "e101": 68.62,
+    "e101z": 68.62,
+    "e101g": 68.62,
+    "e101w": 68.62
+   },
+   "value": {
+    "E096": 93.81,
+    "e101": 76.57,
+    "e101z": 79.14,
+    "e101g": 76.57,
+    "e101w": 76.57
+   }
+  },
+  {
+   "name": "Mason Plumlee",
+   "A": 0.0,
+   "M": 0.0,
+   "acc_shrunkP": {
+    "E096": 0.509,
+    "e101": 0.413,
+    "e101z": 0.413,
+    "e101g": 0.413,
+    "e101w": 0.413
+   },
+   "attr": {
+    "E096": 99.0,
+    "e101": 66.62,
+    "e101z": 66.62,
+    "e101g": 66.62,
+    "e101w": 66.62
+   },
+   "value": {
+    "E096": 92.41,
+    "e101": 70.18,
+    "e101z": 74.29,
+    "e101g": 70.18,
+    "e101w": 70.18
+   }
+  },
+  {
+   "name": "Andre Drummond",
+   "A": 4.0,
+   "M": 0.0,
+   "acc_shrunkP": {
+    "E096": 0.511,
+    "e101": 0.412,
+    "e101z": 0.412,
+    "e101g": 0.412,
+    "e101w": 0.412
+   },
+   "attr": {
+    "E096": 99.0,
+    "e101": 66.2,
+    "e101z": 66.2,
+    "e101g": 66.2,
+    "e101w": 66.2
+   },
+   "value": {
+    "E096": 81.4,
+    "e101": 53.71,
+    "e101z": 58.85,
+    "e101g": 53.71,
+    "e101w": 53.71
+   }
+  },
+  {
+   "name": "Clint Capela",
+   "A": 2.0,
+   "M": 0.0,
+   "acc_shrunkP": {
+    "E096": 0.512,
+    "e101": 0.408,
+    "e101z": 0.408,
+    "e101g": 0.408,
+    "e101w": 0.408
+   },
+   "attr": {
+    "E096": 99.0,
+    "e101": 64.75,
+    "e101z": 64.75,
+    "e101g": 64.75,
+    "e101w": 64.75
+   },
+   "value": {
+    "E096": 82.34,
+    "e101": 51.69,
+    "e101z": 56.59,
+    "e101g": 51.69,
+    "e101w": 51.69
+   }
+  },
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "A": 355.0,
+   "M": 195.0,
+   "acc_shrunkP": {
+    "E096": 0.514,
+    "e101": 0.522,
+    "e101z": 0.522,
+    "e101g": 0.522,
+    "e101w": 0.522
+   },
+   "attr": {
+    "E096": 99.0,
+    "e101": 99.0,
+    "e101z": 99.0,
+    "e101g": 99.0,
+    "e101w": 99.0
+   },
+   "value": {
+    "E096": 133.66,
+    "e101": 117.74,
+    "e101z": 131.8,
+    "e101g": 117.74,
+    "e101w": 117.74
+   }
+  },
+  {
+   "name": "Kevin Durant",
+   "A": 419.0,
+   "M": 202.0,
+   "acc_shrunkP": {
+    "E096": 0.487,
+    "e101": 0.494,
+    "e101z": 0.494,
+    "e101g": 0.494,
+    "e101w": 0.494
+   },
+   "attr": {
+    "E096": 92.47,
+    "e101": 94.49,
+    "e101z": 94.49,
+    "e101g": 94.49,
+    "e101w": 94.49
+   },
+   "value": {
+    "E096": 103.36,
+    "e101": 106.68,
+    "e101z": 99.0,
+    "e101g": 106.68,
+    "e101w": 106.68
+   }
+  }
+ ],
+ "shortWatch": [
+  {
+   "name": "Giannis Antetokounmpo",
+   "A": 471.0,
+   "M": 336.0,
+   "acc_shrunkP": {
+    "E096": 0.702,
+    "e101": 0.701,
+    "e101z": 0.701,
+    "e101g": 0.701,
+    "e101w": 0.701
+   },
+   "attr": {
+    "E096": 115.25,
+    "e101": 113.05,
+    "e101z": 115.58,
+    "e101g": 113.05,
+    "e101w": 113.05
+   },
+   "value": {
+    "E096": 137.19,
+    "e101": 129.04,
+    "e101z": 137.88,
+    "e101g": 129.04,
+    "e101w": 129.04
+   }
+  },
+  {
+   "name": "Obi Toppin",
+   "A": 78.0,
+   "M": 57.0,
+   "acc_shrunkP": {
+    "E096": 0.702,
+    "e101": 0.699,
+    "e101z": 0.699,
+    "e101g": 0.699,
+    "e101w": 0.699
+   },
+   "attr": {
+    "E096": 115.39,
+    "e101": 112.46,
+    "e101z": 114.92,
+    "e101g": 112.46,
+    "e101w": 112.46
+   },
+   "value": {
+    "E096": 97.41,
+    "e101": 97.75,
+    "e101z": 97.56,
+    "e101g": 97.75,
+    "e101w": 97.75
+   }
+  },
+  {
+   "name": "Jalen Duren",
+   "A": 769.0,
+   "M": 510.0,
+   "acc_shrunkP": {
+    "E096": 0.664,
+    "e101": 0.663,
+    "e101z": 0.663,
+    "e101g": 0.663,
+    "e101w": 0.663
+   },
+   "attr": {
+    "E096": 98.39,
+    "e101": 97.88,
+    "e101z": 97.88,
+    "e101g": 97.88,
+    "e101w": 97.88
+   },
+   "value": {
+    "E096": 115.09,
+    "e101": 110.17,
+    "e101z": 115.1,
+    "e101g": 110.17,
+    "e101w": 110.17
+   }
+  },
+  {
+   "name": "Jaxson Hayes",
+   "A": 259.0,
+   "M": 195.0,
+   "acc_shrunkP": {
+    "E096": 0.734,
+    "e101": 0.727,
+    "e101z": 0.727,
+    "e101g": 0.727,
+    "e101w": 0.727
+   },
+   "attr": {
+    "E096": 96.33,
+    "e101": 94.23,
+    "e101z": 95.82,
+    "e101g": 94.23,
+    "e101w": 94.23
+   },
+   "value": {
+    "E096": 87.39,
+    "e101": 85.71,
+    "e101z": 86.32,
+    "e101g": 85.71,
+    "e101w": 85.71
+   }
+  }
+ ],
+ "otherTop": [
+  {
+   "name": "Stephen Curry",
+   "attr": "ft",
+   "E096": 112.88,
+   "e101": 112.76,
+   "e101z": 112.88,
+   "e101g": 115.2,
+   "e101w": 112.6
+  },
+  {
+   "name": "Zach Edey",
+   "attr": "physique",
+   "E096": 120.81,
+   "e101": 117.59,
+   "e101z": 120.81,
+   "e101g": 118.42,
+   "e101w": 120.7
+  },
+  {
+   "name": "Luke Kennard",
+   "attr": "long",
+   "E096": 107.93,
+   "e101": 107.99,
+   "e101z": 107.93,
+   "e101g": 108.01,
+   "e101w": 107.33
+  },
+  {
+   "name": "Nikola Jokić",
+   "attr": "pass",
+   "E096": 114.52,
+   "e101": 107.77,
+   "e101z": 114.52,
+   "e101g": 107.77,
+   "e101w": 106.11
+  }
+ ],
+ "missingWatch": [],
+ "mid==99": {
+  "E096": 13,
+  "e101": 1,
+  "e101z": 1,
+  "e101g": 1,
+  "e101w": 1
+ },
+ "mid==99_names_e101": [
+  [
+   "Shai Gilgeous-Alexander",
+   355.0
+  ]
+ ],
+ "mid>=98.5_e101": [
+  [
+   "Shai Gilgeous-Alexander",
+   99.0,
+   355.0
+  ]
+ ],
+ "rho": {
+  "card-0.2.5": {
+   "rho2k": 0.7382609006100155,
+   "rhoRapm_inSample_R007": 0.778984035332651,
+   "rhoDef": 0.5377306068522191,
+   "gates": "18/19"
+  },
+  "E090": {
+   "rho2k": 0.7359681626380628,
+   "rhoRapm_inSample_R007": 0.7786305642839192,
+   "rhoDef": 0.5359397926813089,
+   "gates": "19/19"
+  },
+  "E096": {
+   "rho2k": 0.736181831322821,
+   "rhoRapm_inSample_R007": 0.779421033822991,
+   "rhoDef": 0.5362657000800534,
+   "gates": "19/19"
+  },
+  "E096v": {
+   "rho2k": 0.7421510707508328,
+   "rhoRapm_inSample_R007": 0.7726657121851493,
+   "rhoDef": 0.5329735251935758,
+   "gates": "19/19"
+  },
+  "E097": {
+   "rho2k": 0.738672564036899,
+   "rhoRapm_inSample_R007": 0.7783587085124288,
+   "rhoDef": 0.5343778361648516,
+   "gates": "19/19"
+  },
+  "E101": {
+   "rho2k": 0.7371454991144253,
+   "rhoRapm_inSample_R007": 0.7802030005017228,
+   "rhoDef": 0.5368523573403511,
+   "gates": "19/19"
+  },
+  "E101z": {
+   "rho2k": 0.737729969551871,
+   "rhoRapm_inSample_R007": 0.7778999978024785,
+   "rhoDef": 0.535529538887621,
+   "gates": "19/19"
+  },
+  "E101g": {
+   "rho2k": 0.7371503744207664,
+   "rhoRapm_inSample_R007": 0.7803355779858231,
+   "rhoDef": 0.537037443410164,
+   "gates": "19/19"
+  },
+  "E101w": {
+   "rho2k": 0.7364590945018386,
+   "rhoRapm_inSample_R007": 0.7797849955735865,
+   "rhoDef": 0.5370615253751687,
+   "gates": "19/19"
+  }
+ },
+ "variantGates": {
+  "e101": {
+   "c2N": {
+    "point": -0.0026543974254910063,
+    "ci90": [
+     -0.006879255164348808,
+     0.0014949802883165216
+    ],
+    "threshold": "下界 > -0.02",
+    "pass": true
+   },
+   "c2Q": {
+    "point": -0.003178684281062827,
+    "ci90": [
+     -0.006709407035329851,
+     0.0003973005561405557
+    ],
+    "threshold": "下界 > -0.02",
+    "pass": true
+   },
+   "c3": "19/19",
+   "c3pass": true,
+   "c4": {
+    "count>140": 0,
+    "values": [],
+    "pass": true
+   }
+  },
+  "e101z": {
+   "c2N": {
+    "point": -0.004372892571397502,
+    "ci90": [
+     -0.008616715650552612,
+     -0.00010645527978195398
+    ],
+    "threshold": "下界 > -0.02",
+    "pass": true
+   },
+   "c2Q": {
+    "point": -0.005063160652648557,
+    "ci90": [
+     -0.008730332956929205,
+     -0.0015528944165834617
+    ],
+    "threshold": "下界 > -0.02",
+    "pass": true
+   },
+   "c3": "19/19",
+   "c3pass": true,
+   "c4": {
+    "count>140": 0,
+    "values": [],
+    "pass": true
+   }
+  },
+  "e101g": {
+   "c2N": {
+    "point": -0.00267183944003746,
+    "ci90": [
+     -0.006890670084601794,
+     0.0014553254789512163
+    ],
+    "threshold": "下界 > -0.02",
+    "pass": true
+   },
+   "c2Q": {
+    "point": -0.00331004776191568,
+    "ci90": [
+     -0.006874256932201306,
+     0.00031730651306375224
+    ],
+    "threshold": "下界 > -0.02",
+    "pass": true
+   },
+   "c3": "19/19",
+   "c3pass": true,
+   "c4": {
+    "count>140": 0,
+    "values": [],
+    "pass": true
+   }
+  },
+  "e101w": {
+   "c2N": {
+    "point": -0.003232148946744562,
+    "ci90": [
+     -0.007240083556468935,
+     0.0008477833263308586
+    ],
+    "threshold": "下界 > -0.02",
+    "pass": true
+   },
+   "c2Q": {
+    "point": -0.0038779562472353035,
+    "ci90": [
+     -0.007435004258502476,
+     -0.00046190850135954256
+    ],
+    "threshold": "下界 > -0.02",
+    "pass": true
+   },
+   "c3": "19/19",
+   "c3pass": true,
+   "c4": {
+    "count>140": 0,
+    "values": [],
+    "pass": true
+   }
+  }
+ }
+}

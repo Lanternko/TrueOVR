@@ -1,0 +1,11 @@
+2015-16 {'foulDraw': 476, 'ft': 476, 'long': 476, 'pass': 476, 'physique': 476, 'rebound': 476, 'tovSkill': 476}
+2016-17 {'foulDraw': 486, 'ft': 486, 'long': 486, 'pass': 486, 'physique': 486, 'rebound': 486, 'tovSkill': 486}
+2017-18 {'foulDraw': 540, 'ft': 540, 'long': 540, 'pass': 540, 'physique': 540, 'rebound': 540, 'tovSkill': 540}
+2018-19 {'foulDraw': 530, 'ft': 530, 'long': 530, 'pass': 530, 'physique': 530, 'rebound': 530, 'tovSkill': 530}
+2019-20 {'foulDraw': 529, 'ft': 529, 'long': 529, 'pass': 529, 'physique': 529, 'rebound': 529, 'tovSkill': 529}
+2020-21 {'drive': 492, 'foulDraw': 540, 'ft': 540, 'long': 540, 'pass': 540, 'physique': 540, 'rebound': 540, 'tovSkill': 540}
+2021-22 {'drive': 584, 'foulDraw': 605, 'ft': 605, 'long': 605, 'pass': 605, 'physique': 605, 'rebound': 605, 'tovSkill': 605}
+2022-23 {'creation': 539, 'drive': 490, 'foulDraw': 539, 'ft': 539, 'long': 539, 'mid': 539, 'onBall': 529, 'pass': 539, 'physique': 539, 'rebound': 539, 'short': 539, 'tovSkill': 539}
+2023-24 {'creation': 572, 'drive': 523, 'foulDraw': 571, 'ft': 571, 'long': 572, 'mid': 571, 'onBall': 561, 'pass': 571, 'physique': 572, 'rebound': 571, 'short': 571, 'tovSkill': 571}
+2024-25 {'creation': 569, 'drive': 519, 'foulDraw': 569, 'ft': 569, 'long': 569, 'mid': 569, 'onBall': 563, 'pass': 569, 'physique': 567, 'rebound': 569, 'short': 569, 'tovSkill': 569}
+{"2022-23": {"checked": 2378, "mismatch": 0, "examples": []}, "2023-24": {"checked": 4702, "mismatch": 0, "examples": []}, "2024-25": {"checked": 4657, "mismatch": 0, "examples": []}}

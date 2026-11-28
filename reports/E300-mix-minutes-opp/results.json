@@ -1,0 +1,2307 @@
+{
+ "prereg_sha256": "e5fb7017fb70979c6bc60a409b6bf16d0b66d3d1cb0657096b2f34467b99518e",
+ "coef": {
+  "b_def_dreb": -0.3109347578801769,
+  "b_opp_oreb": 0.8686392717965951,
+  "Obar": 0.30473536226387093,
+  "n_seg": 54601,
+  "pool_n": 377,
+  "m2": 38.931079280163324
+ },
+ "exposure_by_mpg": {
+  "0-16": {
+   "n": 52,
+   "oppOVR": 68.8789164674005,
+   "opp2PA36": 38.15935778475952,
+   "oppOB": 0.22770487322136715
+  },
+  "16-24": {
+   "n": 138,
+   "oppOVR": 70.19464644521368,
+   "opp2PA36": 38.637085951779,
+   "oppOB": 0.22617335677559
+  },
+  "24-30": {
+   "n": 117,
+   "oppOVR": 71.95124628839407,
+   "opp2PA36": 39.21090712101818,
+   "oppOB": 0.22594976326483662
+  },
+  "30-99": {
+   "n": 72,
+   "oppOVR": 72.70670636812497,
+   "opp2PA36": 39.09397920610915,
+   "oppOB": 0.22463787382227662
+  }
+ },
+ "exposure": {
+  "Deni Avdija": {
+   "pos": "PG",
+   "mpg": 32.54,
+   "oppOVR": 72.5,
+   "oppOB": 0.2256,
+   "oppDB": 0.6465,
+   "opp2PA36": 42.05,
+   "ob": [
+    0.031,
+    0.031
+   ],
+   "db": [
+    0.167,
+    0.167
+   ],
+   "con": [
+    2.996,
+    2.774
+   ],
+   "bonus": {
+    "A": 0.0,
+    "W1": 0.06,
+    "M": 0.06,
+    "O": 0.06,
+    "MO": 0.06
+   }
+  },
+  "Donovan Clingan": {
+   "pos": "C",
+   "mpg": 27.36,
+   "oppOVR": 71.92,
+   "oppOB": 0.2281,
+   "oppDB": 0.6439,
+   "opp2PA36": 39.94,
+   "ob": [
+    0.149,
+    0.1484
+   ],
+   "db": [
+    0.254,
+    0.2548
+   ],
+   "con": [
+    13.032,
+    12.701
+   ],
+   "bonus": {
+    "A": 10.63,
+    "W1": 10.73,
+    "M": 9.9,
+    "O": 10.7,
+    "MO": 9.87
+   }
+  },
+  "Robert Williams III": {
+   "pos": "C",
+   "mpg": 17.81,
+   "oppOVR": 70.63,
+   "oppOB": 0.2272,
+   "oppDB": 0.6332,
+   "opp2PA36": 41.88,
+   "ob": [
+    0.133,
+    0.131
+   ],
+   "db": [
+    0.25,
+    0.2505
+   ],
+   "con": [
+    7.786,
+    7.237
+   ],
+   "bonus": {
+    "A": 7.82,
+    "W1": 7.74,
+    "M": 5.92,
+    "O": 7.06,
+    "MO": 5.4
+   }
+  },
+  "Jrue Holiday": {
+   "pos": "PG",
+   "mpg": 29.12,
+   "oppOVR": 71.14,
+   "oppOB": 0.2235,
+   "oppDB": 0.6411,
+   "opp2PA36": 39.22,
+   "ob": [
+    0.042,
+    0.0417
+   ],
+   "db": [
+    0.108,
+    0.1077
+   ],
+   "con": [
+    1.194,
+    1.185
+   ],
+   "bonus": {
+    "A": 0.0,
+    "W1": 0.0,
+    "M": 0.0,
+    "O": 0.0,
+    "MO": 0.0
+   }
+  },
+  "Rudy Gobert": {
+   "pos": "C",
+   "mpg": 31.09,
+   "oppOVR": 72.18,
+   "oppOB": 0.2279,
+   "oppDB": 0.6573,
+   "opp2PA36": 41.29,
+   "ob": [
+    0.121,
+    0.1222
+   ],
+   "db": [
+    0.222,
+    0.2226
+   ],
+   "con": [
+    9.363,
+    8.827
+   ],
+   "bonus": {
+    "A": 8.57,
+    "W1": 8.7,
+    "M": 8.36,
+    "O": 8.35,
+    "MO": 8.03
+   }
+  },
+  "Nikola Jokić": {
+   "pos": "C",
+   "mpg": 34.99,
+   "oppOVR": 72.65,
+   "oppOB": 0.2223,
+   "oppDB": 0.6447,
+   "opp2PA36": 39.05,
+   "ob": [
+    0.089,
+    0.0887
+   ],
+   "db": [
+    0.27,
+    0.2689
+   ],
+   "con": [
+    4.053,
+    4.04
+   ],
+   "bonus": {
+    "A": 4.05,
+    "W1": 4.12,
+    "M": 4.09,
+    "O": 4.09,
+    "MO": 4.06
+   }
+  },
+  "Victor Wembanyama": {
+   "pos": "C",
+   "mpg": 28.69,
+   "oppOVR": 72.7,
+   "oppOB": 0.2231,
+   "oppDB": 0.6442,
+   "opp2PA36": 37.93,
+   "ob": [
+    0.071,
+    0.0707
+   ],
+   "db": [
+    0.285,
+    0.2841
+   ],
+   "con": [
+    8.373,
+    8.594
+   ],
+   "bonus": {
+    "A": 7.69,
+    "W1": 7.81,
+    "M": 7.32,
+    "O": 7.99,
+    "MO": 7.49
+   }
+  },
+  "Anthony Davis": {
+   "pos": "C",
+   "mpg": 31.99,
+   "oppOVR": 73.79,
+   "oppOB": 0.2268,
+   "oppDB": 0.6634,
+   "opp2PA36": 45.0,
+   "ob": [
+    0.099,
+    0.1006
+   ],
+   "db": [
+    0.24,
+    0.2403
+   ],
+   "con": [
+    7.649,
+    6.617
+   ],
+   "bonus": {
+    "A": 6.81,
+    "W1": 6.66,
+    "M": 6.46,
+    "O": 5.44,
+    "MO": 5.27
+   }
+  },
+  "Karl-Anthony Towns": {
+   "pos": "C",
+   "mpg": 30.19,
+   "oppOVR": 73.02,
+   "oppOB": 0.2245,
+   "oppDB": 0.6606,
+   "opp2PA36": 35.55,
+   "ob": [
+    0.101,
+    0.1023
+   ],
+   "db": [
+    0.283,
+    0.2826
+   ],
+   "con": [
+    4.853,
+    5.314
+   ],
+   "bonus": {
+    "A": 4.46,
+    "W1": 4.52,
+    "M": 4.31,
+    "O": 4.53,
+    "MO": 4.31
+   }
+  },
+  "Joel Embiid": {
+   "pos": "C",
+   "mpg": 33.26,
+   "oppOVR": 72.94,
+   "oppOB": 0.2235,
+   "oppDB": 0.6605,
+   "opp2PA36": 40.13,
+   "ob": [
+    0.063,
+    0.0638
+   ],
+   "db": [
+    0.169,
+    0.1685
+   ],
+   "con": [
+    7.044,
+    6.833
+   ],
+   "bonus": {
+    "A": 2.87,
+    "W1": 3.05,
+    "M": 2.99,
+    "O": 2.75,
+    "MO": 2.7
+   }
+  },
+  "Chet Holmgren": {
+   "pos": "PF",
+   "mpg": 28.65,
+   "oppOVR": 72.37,
+   "oppOB": 0.2269,
+   "oppDB": 0.6558,
+   "opp2PA36": 36.81,
+   "ob": [
+    0.067,
+    0.0676
+   ],
+   "db": [
+    0.221,
+    0.2213
+   ],
+   "con": [
+    9.248,
+    9.781
+   ],
+   "bonus": {
+    "A": 2.15,
+    "W1": 5.6,
+    "M": 5.25,
+    "O": 5.79,
+    "MO": 5.42
+   }
+  },
+  "Evan Mobley": {
+   "pos": "PF",
+   "mpg": 30.84,
+   "oppOVR": 72.85,
+   "oppOB": 0.2223,
+   "oppDB": 0.66,
+   "opp2PA36": 38.46,
+   "ob": [
+    0.073,
+    0.0739
+   ],
+   "db": [
+    0.196,
+    0.1952
+   ],
+   "con": [
+    8.071,
+    8.171
+   ],
+   "bonus": {
+    "A": 1.95,
+    "W1": 4.89,
+    "M": 4.69,
+    "O": 4.96,
+    "MO": 4.76
+   }
+  },
+  "Ivica Zubac": {
+   "pos": "C",
+   "mpg": 28.65,
+   "oppOVR": 74.15,
+   "oppOB": 0.2297,
+   "oppDB": 0.649,
+   "opp2PA36": 38.6,
+   "ob": [
+    0.117,
+    0.1172
+   ],
+   "db": [
+    0.234,
+    0.2352
+   ],
+   "con": [
+    8.459,
+    8.532
+   ],
+   "bonus": {
+    "A": 8.02,
+    "W1": 8.07,
+    "M": 7.56,
+    "O": 8.14,
+    "MO": 7.63
+   }
+  },
+  "Jarrett Allen": {
+   "pos": "C",
+   "mpg": 27.36,
+   "oppOVR": 73.17,
+   "oppOB": 0.224,
+   "oppDB": 0.6592,
+   "opp2PA36": 40.05,
+   "ob": [
+    0.097,
+    0.0981
+   ],
+   "db": [
+    0.202,
+    0.2016
+   ],
+   "con": [
+    8.413,
+    8.179
+   ],
+   "bonus": {
+    "A": 6.78,
+    "W1": 6.93,
+    "M": 6.39,
+    "O": 6.72,
+    "MO": 6.2
+   }
+  },
+  "Clint Capela": {
+   "pos": "C",
+   "mpg": 12.81,
+   "oppOVR": 69.36,
+   "oppOB": 0.2331,
+   "oppDB": 0.6527,
+   "opp2PA36": 39.67,
+   "ob": [
+    0.158,
+    0.1588
+   ],
+   "db": [
+    0.181,
+    0.1827
+   ],
+   "con": [
+    10.185,
+    9.996
+   ],
+   "bonus": {
+    "A": 9.21,
+    "W1": 8.6,
+    "M": 5.43,
+    "O": 8.56,
+    "MO": 5.41
+   }
+  },
+  "Mitchell Robinson": {
+   "pos": "C",
+   "mpg": 19.94,
+   "oppOVR": 71.45,
+   "oppOB": 0.2257,
+   "oppDB": 0.6484,
+   "opp2PA36": 34.13,
+   "ob": [
+    0.201,
+    0.2011
+   ],
+   "db": [
+    0.227,
+    0.227
+   ],
+   "con": [
+    4.933,
+    5.626
+   ],
+   "bonus": {
+    "A": 5.39,
+    "W1": 4.48,
+    "M": 3.63,
+    "O": 5.06,
+    "MO": 4.09
+   }
+  },
+  "Isaiah Hartenstein": {
+   "pos": "C",
+   "mpg": 21.94,
+   "oppOVR": 72.16,
+   "oppOB": 0.2247,
+   "oppDB": 0.6515,
+   "opp2PA36": 35.16,
+   "ob": [
+    0.13,
+    0.1305
+   ],
+   "db": [
+    0.243,
+    0.2427
+   ],
+   "con": [
+    7.187,
+    7.959
+   ],
+   "bonus": {
+    "A": 6.94,
+    "W1": 7.04,
+    "M": 5.95,
+    "O": 7.97,
+    "MO": 6.74
+   }
+  },
+  "Domantas Sabonis": {
+   "pos": "C",
+   "mpg": 26.45,
+   "oppOVR": 75.17,
+   "oppOB": 0.2275,
+   "oppDB": 0.6625,
+   "opp2PA36": 39.35,
+   "ob": [
+    0.108,
+    0.1097
+   ],
+   "db": [
+    0.283,
+    0.2836
+   ],
+   "con": [
+    4.66,
+    4.61
+   ],
+   "bonus": {
+    "A": 4.6,
+    "W1": 4.13,
+    "M": 3.76,
+    "O": 4.14,
+    "MO": 3.77
+   }
+  },
+  "Alperen Sengun": {
+   "pos": "C",
+   "mpg": 32.53,
+   "oppOVR": 72.68,
+   "oppOB": 0.2244,
+   "oppDB": 0.659,
+   "opp2PA36": 38.33,
+   "ob": [
+    0.089,
+    0.09
+   ],
+   "db": [
+    0.177,
+    0.1767
+   ],
+   "con": [
+    6.308,
+    6.406
+   ],
+   "bonus": {
+    "A": 3.09,
+    "W1": 3.43,
+    "M": 3.34,
+    "O": 3.57,
+    "MO": 3.47
+   }
+  },
+  "Bam Adebayo": {
+   "pos": "C",
+   "mpg": 33.19,
+   "oppOVR": 72.85,
+   "oppOB": 0.2173,
+   "oppDB": 0.6473,
+   "opp2PA36": 39.95,
+   "ob": [
+    0.059,
+    0.059
+   ],
+   "db": [
+    0.236,
+    0.2335
+   ],
+   "con": [
+    4.567,
+    4.45
+   ],
+   "bonus": {
+    "A": 2.31,
+    "W1": 2.31,
+    "M": 2.27,
+    "O": 2.26,
+    "MO": 2.22
+   }
+  },
+  "Jalen Duren": {
+   "pos": "C",
+   "mpg": 28.38,
+   "oppOVR": 71.74,
+   "oppOB": 0.2263,
+   "oppDB": 0.6666,
+   "opp2PA36": 36.59,
+   "ob": [
+    0.132,
+    0.1346
+   ],
+   "db": [
+    0.23,
+    0.2302
+   ],
+   "con": [
+    7.561,
+    8.045
+   ],
+   "bonus": {
+    "A": 7.31,
+    "W1": 7.41,
+    "M": 6.92,
+    "O": 8.0,
+    "MO": 7.47
+   }
+  },
+  "Walker Kessler": {
+   "pos": "C",
+   "mpg": 31.27,
+   "oppOVR": 72.05,
+   "oppOB": 0.2361,
+   "oppDB": 0.6575,
+   "opp2PA36": 35.54,
+   "ob": [
+    0.0,
+    0.0
+   ],
+   "db": [
+    0.0,
+    0.0
+   ],
+   "con": [
+    0.0,
+    0.0
+   ],
+   "bonus": {
+    "A": 1.67,
+    "W1": 1.62,
+    "M": 1.56,
+    "O": 1.62,
+    "MO": 1.56
+   }
+  },
+  "Daniel Gafford": {
+   "pos": "C",
+   "mpg": 21.92,
+   "oppOVR": 72.58,
+   "oppOB": 0.2331,
+   "oppDB": 0.6545,
+   "opp2PA36": 42.58,
+   "ob": [
+    0.108,
+    0.1087
+   ],
+   "db": [
+    0.181,
+    0.1827
+   ],
+   "con": [
+    9.339,
+    8.538
+   ],
+   "bonus": {
+    "A": 7.28,
+    "W1": 7.45,
+    "M": 6.29,
+    "O": 6.9,
+    "MO": 5.83
+   }
+  },
+  "Dereck Lively II": {
+   "pos": "C",
+   "mpg": 16.61,
+   "oppOVR": 71.89,
+   "oppOB": 0.2382,
+   "oppDB": 0.6657,
+   "opp2PA36": 41.22,
+   "ob": [
+    0.0,
+    0.0
+   ],
+   "db": [
+    0.0,
+    0.0
+   ],
+   "con": [
+    0.0,
+    0.0
+   ],
+   "bonus": {
+    "A": 1.19,
+    "W1": 1.12,
+    "M": 0.82,
+    "O": 1.12,
+    "MO": 0.82
+   }
+  },
+  "Nic Claxton": {
+   "pos": "C",
+   "mpg": 26.42,
+   "oppOVR": 72.96,
+   "oppOB": 0.2279,
+   "oppDB": 0.6595,
+   "opp2PA36": 41.24,
+   "ob": [
+    0.084,
+    0.085
+   ],
+   "db": [
+    0.167,
+    0.1675
+   ],
+   "con": [
+    6.113,
+    5.771
+   ],
+   "bonus": {
+    "A": 2.31,
+    "W1": 2.46,
+    "M": 2.24,
+    "O": 1.92,
+    "MO": 1.75
+   }
+  },
+  "Onyeka Okongwu": {
+   "pos": "C",
+   "mpg": 30.77,
+   "oppOVR": 72.33,
+   "oppOB": 0.2248,
+   "oppDB": 0.6533,
+   "opp2PA36": 38.9,
+   "ob": [
+    0.058,
+    0.0583
+   ],
+   "db": [
+    0.178,
+    0.1778
+   ],
+   "con": [
+    6.128,
+    6.133
+   ],
+   "bonus": {
+    "A": 1.56,
+    "W1": 1.82,
+    "M": 1.75,
+    "O": 1.81,
+    "MO": 1.74
+   }
+  },
+  "Zach Edey": {
+   "pos": "C",
+   "mpg": 26.05,
+   "oppOVR": 71.41,
+   "oppOB": 0.2296,
+   "oppDB": 0.6372,
+   "opp2PA36": 35.51,
+   "ob": [
+    0.148,
+    0.1464
+   ],
+   "db": [
+    0.243,
+    0.2442
+   ],
+   "con": [
+    9.38,
+    10.284
+   ],
+   "bonus": {
+    "A": 5.31,
+    "W1": 5.37,
+    "M": 4.86,
+    "O": 5.62,
+    "MO": 5.09
+   }
+  },
+  "Goga Bitadze": {
+   "pos": "C",
+   "mpg": 14.29,
+   "oppOVR": 69.41,
+   "oppOB": 0.2312,
+   "oppDB": 0.6346,
+   "opp2PA36": 38.91,
+   "ob": [
+    0.131,
+    0.1293
+   ],
+   "db": [
+    0.183,
+    0.1843
+   ],
+   "con": [
+    7.593,
+    7.596
+   ],
+   "bonus": {
+    "A": 6.51,
+    "W1": 6.64,
+    "M": 4.48,
+    "O": 6.61,
+    "MO": 4.46
+   }
+  },
+  "Luke Kornet": {
+   "pos": "C",
+   "mpg": 19.59,
+   "oppOVR": 72.33,
+   "oppOB": 0.2248,
+   "oppDB": 0.6542,
+   "opp2PA36": 42.49,
+   "ob": [
+    0.116,
+    0.1168
+   ],
+   "db": [
+    0.147,
+    0.1468
+   ],
+   "con": [
+    12.839,
+    11.765
+   ],
+   "bonus": {
+    "A": 7.69,
+    "W1": 7.54,
+    "M": 6.05,
+    "O": 7.44,
+    "MO": 5.96
+   }
+  },
+  "Scottie Barnes": {
+   "pos": "PF",
+   "mpg": 32.93,
+   "oppOVR": 72.36,
+   "oppOB": 0.2259,
+   "oppDB": 0.6597,
+   "opp2PA36": 37.88,
+   "ob": [
+    0.055,
+    0.0557
+   ],
+   "db": [
+    0.166,
+    0.1661
+   ],
+   "con": [
+    4.364,
+    4.485
+   ],
+   "bonus": {
+    "A": 0.52,
+    "W1": 0.65,
+    "M": 0.63,
+    "O": 0.69,
+    "MO": 0.68
+   }
+  },
+  "Toumani Camara": {
+   "pos": "PF",
+   "mpg": 33.1,
+   "oppOVR": 72.26,
+   "oppOB": 0.2242,
+   "oppDB": 0.6412,
+   "opp2PA36": 40.58,
+   "ob": [
+    0.043,
+    0.0427
+   ],
+   "db": [
+    0.103,
+    0.1028
+   ],
+   "con": [
+    3.335,
+    3.199
+   ],
+   "bonus": {
+    "A": 0.0,
+    "W1": 0.0,
+    "M": 0.0,
+    "O": 0.0,
+    "MO": 0.0
+   }
+  }
+ },
+ "arms": {
+  "W1": {
+   "S1": false,
+   "S1b_avdija_over_rw3_live": false,
+   "S2": true,
+   "S3": true,
+   "drops_vs_0214a": [],
+   "rho_W": {
+    "TW": 0.7820921596261295,
+    "EPMW": 0.7394440864155712,
+    "2K": 0.7795770186914913
+   },
+   "drho_W_vs_W1": {
+    "TW": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    },
+    "EPMW": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    },
+    "2K": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "rho_raw": {
+    "T": 0.7653342095527402,
+    "EPM": 0.7149725309611762,
+    "2K": 0.7795770186914913
+   },
+   "drho_raw_vs_W1": {
+    "T": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    },
+    "EPM": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    },
+    "2K": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "live": {
+    "Deni Avdija": [
+     79,
+     82.3,
+     0.0
+    ],
+    "Donovan Clingan": [
+     72,
+     83.1,
+     10.5
+    ],
+    "Robert Williams III": [
+     50,
+     86.8,
+     7.92
+    ],
+    "Jrue Holiday": [
+     52,
+     86.2,
+     0.0
+    ],
+    "Rudy Gobert": [
+     26,
+     91.7,
+     7.86
+    ],
+    "Nikola Jokić": [
+     4,
+     105.2,
+     3.41
+    ],
+    "Victor Wembanyama": [
+     1,
+     110.3,
+     8.49
+    ],
+    "Anthony Davis": [
+     10,
+     95.7,
+     4.47
+    ],
+    "Karl-Anthony Towns": [
+     15,
+     94.5,
+     4.63
+    ],
+    "Joel Embiid": [
+     41,
+     88.1,
+     2.88
+    ],
+    "Chet Holmgren": [
+     11,
+     95.7,
+     2.13
+    ],
+    "Evan Mobley": [
+     13,
+     94.7,
+     1.72
+    ],
+    "Ivica Zubac": [
+     70,
+     83.2,
+     8.38
+    ],
+    "Jarrett Allen": [
+     18,
+     93.8,
+     6.88
+    ],
+    "Clint Capela": [
+     174,
+     73.0,
+     9.23
+    ],
+    "Mitchell Robinson": [
+     136,
+     76.2,
+     4.94
+    ],
+    "Isaiah Hartenstein": [
+     54,
+     85.5,
+     6.5
+    ],
+    "Domantas Sabonis": [
+     51,
+     86.7,
+     4.72
+    ],
+    "Alperen Sengun": [
+     74,
+     83.0,
+     3.1
+    ],
+    "Bam Adebayo": [
+     55,
+     85.5,
+     2.08
+    ],
+    "Jalen Duren": [
+     53,
+     85.6,
+     7.06
+    ],
+    "Walker Kessler": [
+     66,
+     83.8,
+     9.6
+    ],
+    "Daniel Gafford": [
+     73,
+     83.1,
+     6.91
+    ],
+    "Dereck Lively II": [
+     148,
+     75.3,
+     1.19
+    ],
+    "Nic Claxton": [
+     186,
+     71.6,
+     2.42
+    ],
+    "Onyeka Okongwu": [
+     102,
+     79.8,
+     2.67
+    ],
+    "Zach Edey": [
+     67,
+     83.5,
+     8.22
+    ],
+    "Goga Bitadze": [
+     126,
+     77.0,
+     6.73
+    ],
+    "Luke Kornet": [
+     118,
+     78.1,
+     7.66
+    ],
+    "Scottie Barnes": [
+     32,
+     89.8,
+     0.48
+    ],
+    "Toumani Camara": [
+     112,
+     78.8,
+     0.0
+    ]
+   },
+   "card_rank": {
+    "Deni Avdija": 73,
+    "Donovan Clingan": 128,
+    "Robert Williams III": 45,
+    "Jrue Holiday": 111,
+    "Rudy Gobert": 22,
+    "Nikola Jokić": 2,
+    "Victor Wembanyama": 1,
+    "Anthony Davis": 13,
+    "Karl-Anthony Towns": 15,
+    "Joel Embiid": 19,
+    "Chet Holmgren": 6,
+    "Evan Mobley": 8,
+    "Ivica Zubac": 52,
+    "Jarrett Allen": 27,
+    "Clint Capela": 122,
+    "Mitchell Robinson": 98,
+    "Isaiah Hartenstein": 29,
+    "Domantas Sabonis": 63,
+    "Alperen Sengun": 109,
+    "Bam Adebayo": 49,
+    "Jalen Duren": 42,
+    "Walker Kessler": 121,
+    "Daniel Gafford": 68,
+    "Dereck Lively II": 156,
+    "Nic Claxton": 194,
+    "Onyeka Okongwu": 103,
+    "Zach Edey": 100,
+    "Goga Bitadze": 117,
+    "Luke Kornet": 44,
+    "Scottie Barnes": 36,
+    "Toumani Camara": 106
+   },
+   "top20": [
+    "Victor Wembanyama",
+    "Nikola Jokić",
+    "Shai Gilgeous-Alexander",
+    "Luka Dončić",
+    "Giannis Antetokounmpo",
+    "Chet Holmgren",
+    "Kawhi Leonard",
+    "Evan Mobley",
+    "Donovan Mitchell",
+    "Jayson Tatum",
+    "Anthony Edwards",
+    "Kevin Durant",
+    "Anthony Davis",
+    "Stephen Curry",
+    "Karl-Anthony Towns",
+    "Ty Jerome",
+    "Austin Reaves",
+    "Cade Cunningham",
+    "Joel Embiid",
+    "Kristaps Porziņģis"
+   ],
+   "top_bonus": [
+    [
+     "Donovan Clingan",
+     10.73,
+     27.36
+    ],
+    [
+     "Moussa Cisse",
+     9.58,
+     17.24
+    ],
+    [
+     "Rudy Gobert",
+     8.7,
+     31.09
+    ],
+    [
+     "Clint Capela",
+     8.6,
+     12.81
+    ],
+    [
+     "Jonas Valanciunas",
+     8.55,
+     13.32
+    ],
+    [
+     "Mark Williams",
+     8.08,
+     23.1
+    ],
+    [
+     "Ivica Zubac",
+     8.07,
+     28.65
+    ],
+    [
+     "Victor Wembanyama",
+     7.81,
+     28.69
+    ],
+    [
+     "Robert Williams III",
+     7.74,
+     17.81
+    ],
+    [
+     "Dylan Cardwell",
+     7.73,
+     21.23
+    ],
+    [
+     "Trayce Jackson-Davis",
+     7.72,
+     7.78
+    ],
+    [
+     "Paul Reed",
+     7.7,
+     14.97
+    ]
+   ]
+  },
+  "M": {
+   "S1": true,
+   "S1b_avdija_over_rw3_live": false,
+   "S2": true,
+   "S3": true,
+   "drops_vs_0214a": [],
+   "rho_W": {
+    "TW": 0.7782794883153801,
+    "EPMW": 0.7381003696902887,
+    "2K": 0.781562716051407
+   },
+   "drho_W_vs_W1": {
+    "TW": {
+     "mean": -0.0038126713107494714,
+     "ci90": [
+      -0.0065581436624335245,
+      -0.0014106323538585265
+     ]
+    },
+    "EPMW": {
+     "mean": -0.001343716725282551,
+     "ci90": [
+      -0.00400650530090702,
+      0.0013077925524387348
+     ]
+    },
+    "2K": {
+     "mean": 0.001985697359915717,
+     "ci90": [
+      0.0002590839651279653,
+      0.003742871930910213
+     ]
+    }
+   },
+   "rho_raw": {
+    "T": 0.76037719163428,
+    "EPM": 0.7124625379380592,
+    "2K": 0.781562716051407
+   },
+   "drho_raw_vs_W1": {
+    "T": {
+     "mean": -0.00495701791846026,
+     "ci90": [
+      -0.008036563395762914,
+      -0.002302295938480687
+     ]
+    },
+    "EPM": {
+     "mean": -0.002509993023116941,
+     "ci90": [
+      -0.005453740126248191,
+      0.00030116138815230445
+     ]
+    },
+    "2K": {
+     "mean": 0.001985697359915717,
+     "ci90": [
+      0.0002590839651279653,
+      0.003742871930910213
+     ]
+    }
+   },
+   "live": {
+    "Deni Avdija": [
+     75,
+     82.3,
+     0.0
+    ],
+    "Donovan Clingan": [
+     80,
+     82.1,
+     9.52
+    ],
+    "Robert Williams III": [
+     60,
+     84.7,
+     5.85
+    ],
+    "Jrue Holiday": [
+     51,
+     86.2,
+     0.0
+    ],
+    "Rudy Gobert": [
+     27,
+     91.4,
+     7.52
+    ],
+    "Nikola Jokić": [
+     4,
+     105.2,
+     3.4
+    ],
+    "Victor Wembanyama": [
+     1,
+     109.9,
+     8.04
+    ],
+    "Anthony Davis": [
+     10,
+     95.6,
+     4.36
+    ],
+    "Karl-Anthony Towns": [
+     15,
+     94.3,
+     4.46
+    ],
+    "Joel Embiid": [
+     42,
+     88.0,
+     2.77
+    ],
+    "Chet Holmgren": [
+     11,
+     95.6,
+     2.01
+    ],
+    "Evan Mobley": [
+     13,
+     94.7,
+     1.67
+    ],
+    "Ivica Zubac": [
+     74,
+     82.4,
+     7.55
+    ],
+    "Jarrett Allen": [
+     20,
+     93.1,
+     6.21
+    ],
+    "Clint Capela": [
+     209,
+     69.7,
+     5.93
+    ],
+    "Mitchell Robinson": [
+     145,
+     75.2,
+     3.9
+    ],
+    "Isaiah Hartenstein": [
+     61,
+     84.7,
+     5.73
+    ],
+    "Domantas Sabonis": [
+     49,
+     86.6,
+     4.66
+    ],
+    "Alperen Sengun": [
+     70,
+     83.0,
+     3.06
+    ],
+    "Bam Adebayo": [
+     53,
+     85.4,
+     2.03
+    ],
+    "Jalen Duren": [
+     58,
+     85.0,
+     6.46
+    ],
+    "Walker Kessler": [
+     65,
+     83.4,
+     9.22
+    ],
+    "Daniel Gafford": [
+     82,
+     82.0,
+     5.84
+    ],
+    "Dereck Lively II": [
+     151,
+     75.0,
+     0.87
+    ],
+    "Nic Claxton": [
+     186,
+     71.4,
+     2.21
+    ],
+    "Onyeka Okongwu": [
+     102,
+     79.7,
+     2.55
+    ],
+    "Zach Edey": [
+     79,
+     82.1,
+     6.87
+    ],
+    "Goga Bitadze": [
+     161,
+     74.3,
+     4.07
+    ],
+    "Luke Kornet": [
+     130,
+     76.3,
+     5.86
+    ],
+    "Scottie Barnes": [
+     32,
+     89.8,
+     0.47
+    ],
+    "Toumani Camara": [
+     112,
+     78.8,
+     0.0
+    ]
+   },
+   "card_rank": {
+    "Deni Avdija": 69,
+    "Donovan Clingan": 131,
+    "Robert Williams III": 53,
+    "Jrue Holiday": 111,
+    "Rudy Gobert": 25,
+    "Nikola Jokić": 2,
+    "Victor Wembanyama": 1,
+    "Anthony Davis": 13,
+    "Karl-Anthony Towns": 17,
+    "Joel Embiid": 19,
+    "Chet Holmgren": 6,
+    "Evan Mobley": 8,
+    "Ivica Zubac": 52,
+    "Jarrett Allen": 28,
+    "Clint Capela": 159,
+    "Mitchell Robinson": 104,
+    "Isaiah Hartenstein": 32,
+    "Domantas Sabonis": 63,
+    "Alperen Sengun": 110,
+    "Bam Adebayo": 47,
+    "Jalen Duren": 43,
+    "Walker Kessler": 120,
+    "Daniel Gafford": 74,
+    "Dereck Lively II": 157,
+    "Nic Claxton": 192,
+    "Onyeka Okongwu": 101,
+    "Zach Edey": 103,
+    "Goga Bitadze": 137,
+    "Luke Kornet": 50,
+    "Scottie Barnes": 36,
+    "Toumani Camara": 105
+   },
+   "top20": [
+    "Victor Wembanyama",
+    "Nikola Jokić",
+    "Shai Gilgeous-Alexander",
+    "Luka Dončić",
+    "Giannis Antetokounmpo",
+    "Chet Holmgren",
+    "Kawhi Leonard",
+    "Evan Mobley",
+    "Donovan Mitchell",
+    "Jayson Tatum",
+    "Anthony Edwards",
+    "Kevin Durant",
+    "Anthony Davis",
+    "Stephen Curry",
+    "Ty Jerome",
+    "Austin Reaves",
+    "Karl-Anthony Towns",
+    "Cade Cunningham",
+    "Joel Embiid",
+    "Kevin Porter Jr."
+   ],
+   "top_bonus": [
+    [
+     "Donovan Clingan",
+     9.9,
+     27.36
+    ],
+    [
+     "Rudy Gobert",
+     8.36,
+     31.09
+    ],
+    [
+     "Ivica Zubac",
+     7.56,
+     28.65
+    ],
+    [
+     "Victor Wembanyama",
+     7.32,
+     28.69
+    ],
+    [
+     "Moussa Cisse",
+     7.2,
+     17.24
+    ],
+    [
+     "Mark Williams",
+     6.98,
+     23.1
+    ],
+    [
+     "Jalen Duren",
+     6.92,
+     28.38
+    ],
+    [
+     "Anthony Davis",
+     6.46,
+     31.99
+    ],
+    [
+     "Dylan Cardwell",
+     6.43,
+     21.23
+    ],
+    [
+     "Jarrett Allen",
+     6.39,
+     27.36
+    ],
+    [
+     "Neemias Queta",
+     6.33,
+     25.82
+    ],
+    [
+     "Daniel Gafford",
+     6.29,
+     21.92
+    ]
+   ],
+   "S4": true,
+   "verdict": "adopt_candidate"
+  },
+  "O": {
+   "S1": false,
+   "S1b_avdija_over_rw3_live": false,
+   "S2": true,
+   "S3": true,
+   "drops_vs_0214a": [],
+   "rho_W": {
+    "TW": 0.7825338933612914,
+    "EPMW": 0.740378496321721,
+    "2K": 0.7794171649491916
+   },
+   "drho_W_vs_W1": {
+    "TW": {
+     "mean": 0.00044173373516187553,
+     "ci90": [
+      -0.0007711804881712802,
+      0.0018447964226996792
+     ]
+    },
+    "EPMW": {
+     "mean": 0.0009344099061497912,
+     "ci90": [
+      -0.00020052396191297395,
+      0.002267852682165261
+     ]
+    },
+    "2K": {
+     "mean": -0.0001598537422997648,
+     "ci90": [
+      -0.0008214319136812364,
+      0.0005305150688378613
+     ]
+    }
+   },
+   "rho_raw": {
+    "T": 0.7659242097986079,
+    "EPM": 0.7160676643312036,
+    "2K": 0.7794171649491916
+   },
+   "drho_raw_vs_W1": {
+    "T": {
+     "mean": 0.000590000245867639,
+     "ci90": [
+      -0.0007532172402741344,
+      0.0021946398287714048
+     ]
+    },
+    "EPM": {
+     "mean": 0.0010951333700274235,
+     "ci90": [
+      -0.00019502894552577698,
+      0.002595924187545545
+     ]
+    },
+    "2K": {
+     "mean": -0.0001598537422997648,
+     "ci90": [
+      -0.0008214319136812364,
+      0.0005305150688378613
+     ]
+    }
+   },
+   "live": {
+    "Deni Avdija": [
+     79,
+     82.3,
+     0.0
+    ],
+    "Donovan Clingan": [
+     72,
+     83.1,
+     10.47
+    ],
+    "Robert Williams III": [
+     54,
+     86.1,
+     7.22
+    ],
+    "Jrue Holiday": [
+     52,
+     86.2,
+     0.0
+    ],
+    "Rudy Gobert": [
+     27,
+     91.4,
+     7.55
+    ],
+    "Nikola Jokić": [
+     4,
+     105.2,
+     3.38
+    ],
+    "Victor Wembanyama": [
+     1,
+     110.5,
+     8.67
+    ],
+    "Anthony Davis": [
+     12,
+     94.9,
+     3.65
+    ],
+    "Karl-Anthony Towns": [
+     15,
+     94.5,
+     4.63
+    ],
+    "Joel Embiid": [
+     45,
+     87.8,
+     2.59
+    ],
+    "Chet Holmgren": [
+     10,
+     95.8,
+     2.2
+    ],
+    "Evan Mobley": [
+     13,
+     94.7,
+     1.75
+    ],
+    "Ivica Zubac": [
+     69,
+     83.3,
+     8.46
+    ],
+    "Jarrett Allen": [
+     18,
+     93.6,
+     6.67
+    ],
+    "Clint Capela": [
+     174,
+     73.0,
+     9.2
+    ],
+    "Mitchell Robinson": [
+     130,
+     76.8,
+     5.57
+    ],
+    "Isaiah Hartenstein": [
+     51,
+     86.4,
+     7.36
+    ],
+    "Domantas Sabonis": [
+     50,
+     86.7,
+     4.73
+    ],
+    "Alperen Sengun": [
+     73,
+     83.1,
+     3.23
+    ],
+    "Bam Adebayo": [
+     55,
+     85.5,
+     2.04
+    ],
+    "Jalen Duren": [
+     53,
+     86.2,
+     7.62
+    ],
+    "Walker Kessler": [
+     67,
+     83.8,
+     9.62
+    ],
+    "Daniel Gafford": [
+     76,
+     82.6,
+     6.4
+    ],
+    "Dereck Lively II": [
+     149,
+     75.3,
+     1.19
+    ],
+    "Nic Claxton": [
+     194,
+     71.1,
+     1.89
+    ],
+    "Onyeka Okongwu": [
+     102,
+     79.8,
+     2.66
+    ],
+    "Zach Edey": [
+     66,
+     83.9,
+     8.61
+    ],
+    "Goga Bitadze": [
+     125,
+     77.0,
+     6.7
+    ],
+    "Luke Kornet": [
+     119,
+     78.0,
+     7.55
+    ],
+    "Scottie Barnes": [
+     32,
+     89.8,
+     0.51
+    ],
+    "Toumani Camara": [
+     112,
+     78.8,
+     0.0
+    ]
+   },
+   "card_rank": {
+    "Deni Avdija": 73,
+    "Donovan Clingan": 128,
+    "Robert Williams III": 48,
+    "Jrue Holiday": 111,
+    "Rudy Gobert": 26,
+    "Nikola Jokić": 2,
+    "Victor Wembanyama": 1,
+    "Anthony Davis": 20,
+    "Karl-Anthony Towns": 14,
+    "Joel Embiid": 19,
+    "Chet Holmgren": 6,
+    "Evan Mobley": 8,
+    "Ivica Zubac": 52,
+    "Jarrett Allen": 28,
+    "Clint Capela": 122,
+    "Mitchell Robinson": 92,
+    "Isaiah Hartenstein": 22,
+    "Domantas Sabonis": 63,
+    "Alperen Sengun": 108,
+    "Bam Adebayo": 50,
+    "Jalen Duren": 38,
+    "Walker Kessler": 121,
+    "Daniel Gafford": 70,
+    "Dereck Lively II": 156,
+    "Nic Claxton": 203,
+    "Onyeka Okongwu": 104,
+    "Zach Edey": 99,
+    "Goga Bitadze": 117,
+    "Luke Kornet": 45,
+    "Scottie Barnes": 36,
+    "Toumani Camara": 106
+   },
+   "top20": [
+    "Victor Wembanyama",
+    "Nikola Jokić",
+    "Shai Gilgeous-Alexander",
+    "Luka Dončić",
+    "Giannis Antetokounmpo",
+    "Chet Holmgren",
+    "Kawhi Leonard",
+    "Evan Mobley",
+    "Donovan Mitchell",
+    "Jayson Tatum",
+    "Anthony Edwards",
+    "Kevin Durant",
+    "Stephen Curry",
+    "Karl-Anthony Towns",
+    "Ty Jerome",
+    "Austin Reaves",
+    "Cade Cunningham",
+    "Kristaps Porziņģis",
+    "Joel Embiid",
+    "Anthony Davis"
+   ],
+   "top_bonus": [
+    [
+     "Donovan Clingan",
+     10.7,
+     27.36
+    ],
+    [
+     "Moussa Cisse",
+     9.22,
+     17.24
+    ],
+    [
+     "Jonas Valanciunas",
+     8.96,
+     13.32
+    ],
+    [
+     "Clint Capela",
+     8.56,
+     12.81
+    ],
+    [
+     "Rudy Gobert",
+     8.35,
+     31.09
+    ],
+    [
+     "Paul Reed",
+     8.23,
+     14.97
+    ],
+    [
+     "Mark Williams",
+     8.14,
+     23.1
+    ],
+    [
+     "Ivica Zubac",
+     8.14,
+     28.65
+    ],
+    [
+     "Jalen Duren",
+     8.0,
+     28.38
+    ],
+    [
+     "Victor Wembanyama",
+     7.99,
+     28.69
+    ],
+    [
+     "Isaiah Hartenstein",
+     7.97,
+     21.94
+    ],
+    [
+     "Dylan Cardwell",
+     7.91,
+     21.23
+    ]
+   ],
+   "S4": true,
+   "verdict": "reject"
+  },
+  "MO": {
+   "S1": true,
+   "S1b_avdija_over_rw3_live": false,
+   "S2": true,
+   "S3": true,
+   "drops_vs_0214a": [],
+   "rho_W": {
+    "TW": 0.7787878231937417,
+    "EPMW": 0.7387999786453857,
+    "2K": 0.7814021897971559
+   },
+   "drho_W_vs_W1": {
+    "TW": {
+     "mean": -0.003304336432387811,
+     "ci90": [
+      -0.006154754069080765,
+      -0.0006980110060536954
+     ]
+    },
+    "EPMW": {
+     "mean": -0.0006441077701855313,
+     "ci90": [
+      -0.0034275454330630673,
+      0.0022617310894083808
+     ]
+    },
+    "2K": {
+     "mean": 0.0018251711056646025,
+     "ci90": [
+      -2.5928237448685717e-05,
+      0.003690574620779817
+     ]
+    }
+   },
+   "rho_raw": {
+    "T": 0.7609503884701814,
+    "EPM": 0.7133405519403203,
+    "2K": 0.7814021897971559
+   },
+   "drho_raw_vs_W1": {
+    "T": {
+     "mean": -0.004383821082558859,
+     "ci90": [
+      -0.007444252366131543,
+      -0.0015143049334325257
+     ]
+    },
+    "EPM": {
+     "mean": -0.0016319790208558782,
+     "ci90": [
+      -0.004648282439929663,
+      0.001443001062311516
+     ]
+    },
+    "2K": {
+     "mean": 0.0018251711056646025,
+     "ci90": [
+      -2.5928237448685717e-05,
+      0.003690574620779817
+     ]
+    }
+   },
+   "live": {
+    "Deni Avdija": [
+     76,
+     82.3,
+     0.0
+    ],
+    "Donovan Clingan": [
+     79,
+     82.1,
+     9.49
+    ],
+    "Robert Williams III": [
+     63,
+     84.2,
+     5.34
+    ],
+    "Jrue Holiday": [
+     51,
+     86.2,
+     0.0
+    ],
+    "Rudy Gobert": [
+     27,
+     91.1,
+     7.22
+    ],
+    "Nikola Jokić": [
+     4,
+     105.2,
+     3.37
+    ],
+    "Victor Wembanyama": [
+     1,
+     110.0,
+     8.22
+    ],
+    "Anthony Davis": [
+     12,
+     94.8,
+     3.56
+    ],
+    "Karl-Anthony Towns": [
+     15,
+     94.3,
+     4.46
+    ],
+    "Joel Embiid": [
+     44,
+     87.7,
+     2.5
+    ],
+    "Chet Holmgren": [
+     10,
+     95.6,
+     2.08
+    ],
+    "Evan Mobley": [
+     13,
+     94.7,
+     1.7
+    ],
+    "Ivica Zubac": [
+     75,
+     82.4,
+     7.62
+    ],
+    "Jarrett Allen": [
+     20,
+     92.9,
+     6.03
+    ],
+    "Clint Capela": [
+     208,
+     69.7,
+     5.91
+    ],
+    "Mitchell Robinson": [
+     139,
+     75.7,
+     4.4
+    ],
+    "Isaiah Hartenstein": [
+     53,
+     85.5,
+     6.49
+    ],
+    "Domantas Sabonis": [
+     50,
+     86.7,
+     4.67
+    ],
+    "Alperen Sengun": [
+     70,
+     83.1,
+     3.19
+    ],
+    "Bam Adebayo": [
+     55,
+     85.4,
+     1.99
+    ],
+    "Jalen Duren": [
+     52,
+     85.5,
+     6.97
+    ],
+    "Walker Kessler": [
+     65,
+     83.4,
+     9.25
+    ],
+    "Daniel Gafford": [
+     83,
+     81.6,
+     5.41
+    ],
+    "Dereck Lively II": [
+     152,
+     75.0,
+     0.87
+    ],
+    "Nic Claxton": [
+     192,
+     70.9,
+     1.73
+    ],
+    "Onyeka Okongwu": [
+     102,
+     79.7,
+     2.54
+    ],
+    "Zach Edey": [
+     73,
+     82.5,
+     7.19
+    ],
+    "Goga Bitadze": [
+     161,
+     74.3,
+     4.05
+    ],
+    "Luke Kornet": [
+     132,
+     76.2,
+     5.78
+    ],
+    "Scottie Barnes": [
+     32,
+     89.8,
+     0.5
+    ],
+    "Toumani Camara": [
+     112,
+     78.8,
+     0.0
+    ]
+   },
+   "card_rank": {
+    "Deni Avdija": 70,
+    "Donovan Clingan": 131,
+    "Robert Williams III": 55,
+    "Jrue Holiday": 111,
+    "Rudy Gobert": 26,
+    "Nikola Jokić": 2,
+    "Victor Wembanyama": 1,
+    "Anthony Davis": 19,
+    "Karl-Anthony Towns": 16,
+    "Joel Embiid": 18,
+    "Chet Holmgren": 6,
+    "Evan Mobley": 8,
+    "Ivica Zubac": 53,
+    "Jarrett Allen": 28,
+    "Clint Capela": 158,
+    "Mitchell Robinson": 101,
+    "Isaiah Hartenstein": 29,
+    "Domantas Sabonis": 64,
+    "Alperen Sengun": 108,
+    "Bam Adebayo": 48,
+    "Jalen Duren": 41,
+    "Walker Kessler": 120,
+    "Daniel Gafford": 78,
+    "Dereck Lively II": 157,
+    "Nic Claxton": 201,
+    "Onyeka Okongwu": 102,
+    "Zach Edey": 103,
+    "Goga Bitadze": 137,
+    "Luke Kornet": 52,
+    "Scottie Barnes": 36,
+    "Toumani Camara": 106
+   },
+   "top20": [
+    "Victor Wembanyama",
+    "Nikola Jokić",
+    "Shai Gilgeous-Alexander",
+    "Luka Dončić",
+    "Giannis Antetokounmpo",
+    "Chet Holmgren",
+    "Kawhi Leonard",
+    "Evan Mobley",
+    "Donovan Mitchell",
+    "Jayson Tatum",
+    "Anthony Edwards",
+    "Kevin Durant",
+    "Stephen Curry",
+    "Ty Jerome",
+    "Austin Reaves",
+    "Karl-Anthony Towns",
+    "Cade Cunningham",
+    "Joel Embiid",
+    "Anthony Davis",
+    "Kevin Porter Jr."
+   ],
+   "top_bonus": [
+    [
+     "Donovan Clingan",
+     9.87,
+     27.36
+    ],
+    [
+     "Rudy Gobert",
+     8.03,
+     31.09
+    ],
+    [
+     "Ivica Zubac",
+     7.63,
+     28.65
+    ],
+    [
+     "Victor Wembanyama",
+     7.49,
+     28.69
+    ],
+    [
+     "Jalen Duren",
+     7.47,
+     28.38
+    ],
+    [
+     "Mark Williams",
+     7.04,
+     23.1
+    ],
+    [
+     "Neemias Queta",
+     6.96,
+     25.82
+    ],
+    [
+     "Moussa Cisse",
+     6.93,
+     17.24
+    ],
+    [
+     "Isaiah Hartenstein",
+     6.74,
+     21.94
+    ],
+    [
+     "Dylan Cardwell",
+     6.58,
+     21.23
+    ],
+    [
+     "Jarrett Allen",
+     6.2,
+     27.36
+    ],
+    [
+     "Andre Drummond",
+     5.99,
+     19.08
+    ]
+   ],
+   "S4": true,
+   "verdict": "adopt_candidate"
+  }
+ },
+ "bench": {
+  "n": {
+   "2022-23": 262,
+   "2023-24": 286,
+   "2024-25": 319,
+   "2025-26": 243
+  },
+  "fold_coef": {
+   "2022-23": {
+    "b_def_dreb": -0.18667499253537714,
+    "b_opp_oreb": 0.6609373897851132,
+    "n_seg": 46632
+   },
+   "2023-24": {
+    "b_def_dreb": -0.25078036031458173,
+    "b_opp_oreb": 0.7272591770228374,
+    "n_seg": 45724
+   },
+   "2024-25": {
+    "b_def_dreb": -0.26840369865857616,
+    "b_opp_oreb": 0.8063807909359035,
+    "n_seg": 47444
+   },
+   "2025-26": {
+    "b_def_dreb": -0.2931823033750381,
+    "b_opp_oreb": 0.8223789621058124,
+    "n_seg": 54601
+   }
+  },
+  "W1": {
+   "vs_base": 0.01394158577605018,
+   "vs_W1": 0.0,
+   "per_fold_vs_W1": {
+    "2022-23": 0.0,
+    "2023-24": 0.0,
+    "2024-25": 0.0,
+    "2025-26": 0.0
+   },
+   "n_pos_vs_W1": 0
+  },
+  "M": {
+   "vs_base": 0.012989972607750722,
+   "vs_W1": -0.0009516131682994582,
+   "per_fold_vs_W1": {
+    "2022-23": 0.0007866842842315647,
+    "2023-24": -0.0010828746654714116,
+    "2024-25": -0.0021111862465746922,
+    "2025-26": -0.0011491001329173578
+   },
+   "n_pos_vs_W1": 1
+  },
+  "O": {
+   "vs_base": 0.01415263776818792,
+   "vs_W1": 0.00021105199213774075,
+   "per_fold_vs_W1": {
+    "2022-23": 0.00047094205098519026,
+    "2023-24": -0.0012772893969796861,
+    "2024-25": 0.0008365635573451824,
+    "2025-26": 0.0008614069409788039
+   },
+   "n_pos_vs_W1": 3
+  },
+  "MO": {
+   "vs_base": 0.01311762805752989,
+   "vs_W1": -0.0008239577185202889,
+   "per_fold_vs_W1": {
+    "2022-23": 0.0008065670984286344,
+    "2023-24": -0.0019467121532280585,
+    "2024-25": -0.001674605795304318,
+    "2025-26": -0.00014384659596922145
+   },
+   "n_pos_vs_W1": 1
+  }
+ },
+ "pick": "M"
+}

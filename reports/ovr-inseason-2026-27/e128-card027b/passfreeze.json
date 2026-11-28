@@ -1,0 +1,20 @@
+{
+ "wVol": 0.5,
+ "wRate": 0.5,
+ "vol": {
+  "mean": 4.112455523259657,
+  "std": 1.9414260933527647
+ },
+ "rate": {
+  "mean": 0.16871153185239185,
+  "std": 0.08434641607670831
+ },
+ "pool": "GP>=30, MPG>=20, 在 LEAGUE 名單（a0_p.py pool_pids）",
+ "poolSize": 252,
+ "reproducesA0PassP50BitIdentical": true,
+ "source": {
+  "file": "reports/card-0.2.7+E125-pass-volume/work/a0_p.py",
+  "sha256": "f0754cc004015e1d3ee882149c773690315ed41e671edd169fa5a827a66a52f3",
+  "a0-pass-P50.json": "ff260cd816f25390f6c36dd6bbd8ab226c30d8304fa6ca452f41d4b2848c4b15"
+ }
+}

@@ -1,0 +1,5917 @@
+{
+ "version": "card／inseason 0.2.14a",
+ "note": "E-294 臂 H-same：z_H＝z_L−(1−α)·m_pos、1.5·tanh 軟飽和、位置權重 C=1／PF=0.243；z 尺／sd／λ／ref／打折／混合規則同 mix-pool-card0214.json；m_pos（5 位置×4 特徵）與縮放凍結，不每天重算；players＝0.2.14 凍結檔的 2025-26 原始特徵＋pos（card 0.2.13a，F-033）＋cardBonus（card 0.2.14a mixBonus）",
+ "config": {
+  "lambda": 0.5,
+  "sd": 13.406247107921262,
+  "ref": 0.444847369395445,
+  "clip": [
+   0.0,
+   1.5
+  ],
+  "rampMin": 500.0,
+  "blendK": 500.0,
+  "conMinPrior": 200.0,
+  "z": {
+   "rebound": {
+    "mu": 70.94300791556729,
+    "sd": 17.317021456168316
+   },
+   "orebPct": {
+    "mu": 0.04652242744063325,
+    "sd": 0.033799211531870585
+   },
+   "drebPct": {
+    "mu": 0.12901055408970977,
+    "sd": 0.04881989834445755
+   },
+   "con2_36": {
+    "mu": 3.8409042086225194,
+    "sd": 2.362990623973127
+   }
+  },
+  "h": {
+   "alpha": 0.5,
+   "mpos": {
+    "PG": {
+     "rebound": -0.7915878036646767,
+     "orebPct": -0.645610585287132,
+     "drebPct": -0.6078032269277788,
+     "con2_36": -0.6930217354553149
+    },
+    "SG": {
+     "rebound": -0.6157928254423511,
+     "orebPct": -0.47727808170083996,
+     "drebPct": -0.5728110468585252,
+     "con2_36": -0.5178260161214404
+    },
+    "SF": {
+     "rebound": -0.1932754597815759,
+     "orebPct": -0.29730703098300343,
+     "drebPct": -0.2743171020674314,
+     "con2_36": -0.3652444047010483
+    },
+    "PF": {
+     "rebound": 0.5772386787031505,
+     "orebPct": 0.11537096229862667,
+     "drebPct": 0.3502428618274957,
+     "con2_36": 0.24586997915490333
+    },
+    "C": {
+     "rebound": 1.2302919493608342,
+     "orebPct": 1.419290679235711,
+     "drebPct": 1.2675728820039425,
+     "con2_36": 1.4724857749865392
+    }
+   },
+   "posWeight": {
+    "PG": 0.0,
+    "SG": 0.0,
+    "SF": 0.0,
+    "PF": 0.24285714285714288,
+    "C": 1.0
+   },
+   "sat": "tanh",
+   "hi": 1.5,
+   "mposPool": "card 0.2.13a MIN>=500 且姓名在 stats-2025-26 唯一（同 epN），z_L 平均，有值的人"
+  },
+  "scales": {
+   "reb": 1.0523710315802024,
+   "con": 1.025575182363618,
+   "mix": 1.123771593640557
+  }
+ },
+ "epN": 379,
+ "reproduceCandMaxAbs": 0.0004946370455985449,
+ "reproduceCandWorst": "Paolo Banchero",
+ "reproduceBonusPickMaxAbs": 3.552713678800501e-15,
+ "sources_sha256": {
+  "mix-pool-card0214.json": "dee0e6b2ccb4517187cba39cccc291a4984ed3f6e2ff3c580754304df43570c7",
+  "card_0213a_ranking": "feb5c8023cd99f12413767160d3b98d119051c55ef6e200f26bca631460daf97",
+  "card_0215cand_ranking": "ff1abb4722247faf3cd61c6cc28dcc547f2728e08486a3123b33747162b7d35f",
+  "E294_bonus_pick": "55b43250e6946298bdf6a51fa0f5b0e2d3663b4d2be03f2d69a2b97849c95e37",
+  "stats-2025-26.csv": "4538b2e3d0644fb8719273dec60f5f40aa9e8856273fb36c5196452d73e76ff6"
+ },
+ "players": {
+  "1628983": {
+   "name": "Shai Gilgeous-Alexander",
+   "MIN": 2259.0,
+   "orebPct": 0.017,
+   "drebPct": 0.1,
+   "con2_36": 2.5179282868525896,
+   "cardRebound": 61.6,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "203999": {
+   "name": "Nikola Jokić",
+   "MIN": 2265.0,
+   "orebPct": 0.089,
+   "drebPct": 0.27,
+   "con2_36": 4.052980132450331,
+   "cardRebound": 97.9,
+   "cardBonus": 4.051,
+   "pos": "C"
+  },
+  "1629029": {
+   "name": "Luka Dončić",
+   "MIN": 2289.0,
+   "orebPct": 0.019,
+   "drebPct": 0.194,
+   "con2_36": 2.343381389252949,
+   "cardRebound": 86.4,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1641705": {
+   "name": "Victor Wembanyama",
+   "MIN": 1866.0,
+   "orebPct": 0.071,
+   "drebPct": 0.285,
+   "con2_36": 8.37299035369775,
+   "cardRebound": 97.7,
+   "cardBonus": 7.685,
+   "pos": "C"
+  },
+  "203507": {
+   "name": "Giannis Antetokounmpo",
+   "MIN": 1039.0,
+   "orebPct": 0.098,
+   "drebPct": 0.233,
+   "con2_36": 2.945139557266603,
+   "cardRebound": 95.9,
+   "cardBonus": 1.109,
+   "pos": "PF"
+  },
+  "202695": {
+   "name": "Kawhi Leonard",
+   "MIN": 2085.0,
+   "orebPct": 0.036,
+   "drebPct": 0.162,
+   "con2_36": 1.8129496402877698,
+   "cardRebound": 82.3,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1628378": {
+   "name": "Donovan Mitchell",
+   "MIN": 2342.0,
+   "orebPct": 0.021,
+   "drebPct": 0.108,
+   "con2_36": 1.4602903501280955,
+   "cardRebound": 61.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1628369": {
+   "name": "Jayson Tatum",
+   "MIN": 522.0,
+   "orebPct": 0.015,
+   "drebPct": 0.274,
+   "con2_36": 1.1724137931034482,
+   "cardRebound": 88.9,
+   "cardBonus": 0.741,
+   "pos": "PF"
+  },
+  "1630162": {
+   "name": "Anthony Edwards",
+   "MIN": 2137.0,
+   "orebPct": 0.017,
+   "drebPct": 0.12,
+   "con2_36": 2.4932147870846983,
+   "cardRebound": 68.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "201142": {
+   "name": "Kevin Durant",
+   "MIN": 2840.0,
+   "orebPct": 0.014,
+   "drebPct": 0.131,
+   "con2_36": 3.0295774647887326,
+   "cardRebound": 72.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "201939": {
+   "name": "Stephen Curry",
+   "MIN": 1329.0,
+   "orebPct": 0.013,
+   "drebPct": 0.1,
+   "con2_36": 1.5981941309255079,
+   "cardRebound": 57.1,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1629660": {
+   "name": "Ty Jerome",
+   "MIN": 339.0,
+   "orebPct": 0.035,
+   "drebPct": 0.093,
+   "con2_36": 1.2743362831858407,
+   "cardRebound": 56.0,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630559": {
+   "name": "Austin Reaves",
+   "MIN": 1762.0,
+   "orebPct": 0.02,
+   "drebPct": 0.117,
+   "con2_36": 1.7162315550510783,
+   "cardRebound": 62.1,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630595": {
+   "name": "Cade Cunningham",
+   "MIN": 2172.0,
+   "orebPct": 0.025,
+   "drebPct": 0.132,
+   "con2_36": 2.9337016574585637,
+   "cardRebound": 73.2,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1631096": {
+   "name": "Chet Holmgren",
+   "MIN": 1997.0,
+   "orebPct": 0.067,
+   "drebPct": 0.221,
+   "con2_36": 9.247871807711567,
+   "cardRebound": 93.1,
+   "cardBonus": 2.151,
+   "pos": "PF"
+  },
+  "1629645": {
+   "name": "Kevin Porter Jr.",
+   "MIN": 1261.0,
+   "orebPct": 0.027,
+   "drebPct": 0.123,
+   "con2_36": 2.9405233941316418,
+   "cardRebound": 75.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630596": {
+   "name": "Evan Mobley",
+   "MIN": 2074.0,
+   "orebPct": 0.073,
+   "drebPct": 0.196,
+   "con2_36": 8.07135969141755,
+   "cardRebound": 92.6,
+   "cardBonus": 1.949,
+   "pos": "PF"
+  },
+  "1630217": {
+   "name": "Desmond Bane",
+   "MIN": 2756.0,
+   "orebPct": 0.034,
+   "drebPct": 0.084,
+   "con2_36": 2.5079825834542815,
+   "cardRebound": 63.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631114": {
+   "name": "Jalen Williams",
+   "MIN": 936.0,
+   "orebPct": 0.029,
+   "drebPct": 0.124,
+   "con2_36": 2.5,
+   "cardRebound": 69.9,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "202710": {
+   "name": "Jimmy Butler III",
+   "MIN": 1182.0,
+   "orebPct": 0.073,
+   "drebPct": 0.101,
+   "con2_36": 1.2791878172588833,
+   "cardRebound": 76.0,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1627750": {
+   "name": "Jamal Murray",
+   "MIN": 2652.0,
+   "orebPct": 0.013,
+   "drebPct": 0.109,
+   "con2_36": 2.2126696832579182,
+   "cardRebound": 54.1,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "2544": {
+   "name": "LeBron James",
+   "MIN": 1989.0,
+   "orebPct": 0.023,
+   "drebPct": 0.16,
+   "con2_36": 1.4117647058823528,
+   "cardRebound": 83.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "203954": {
+   "name": "Joel Embiid",
+   "MIN": 1201.0,
+   "orebPct": 0.063,
+   "drebPct": 0.169,
+   "con2_36": 7.044129891756869,
+   "cardRebound": 90.2,
+   "cardBonus": 2.871,
+   "pos": "C"
+  },
+  "202331": {
+   "name": "Paul George",
+   "MIN": 1135.0,
+   "orebPct": 0.017,
+   "drebPct": 0.147,
+   "con2_36": 3.3303964757709252,
+   "cardRebound": 74.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1628368": {
+   "name": "De'Aaron Fox",
+   "MIN": 2231.0,
+   "orebPct": 0.018,
+   "drebPct": 0.092,
+   "con2_36": 1.823397579560735,
+   "cardRebound": 54.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630178": {
+   "name": "Tyrese Maxey",
+   "MIN": 2661.0,
+   "orebPct": 0.008,
+   "drebPct": 0.096,
+   "con2_36": 1.5693348365276212,
+   "cardRebound": 45.4,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1628401": {
+   "name": "Derrick White",
+   "MIN": 2625.0,
+   "orebPct": 0.032,
+   "drebPct": 0.09,
+   "con2_36": 4.443428571428571,
+   "cardRebound": 58.1,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1627759": {
+   "name": "Jaylen Brown",
+   "MIN": 2443.0,
+   "orebPct": 0.032,
+   "drebPct": 0.155,
+   "con2_36": 1.871469504707327,
+   "cardRebound": 79.2,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1626157": {
+   "name": "Karl-Anthony Towns",
+   "MIN": 2322.0,
+   "orebPct": 0.101,
+   "drebPct": 0.283,
+   "con2_36": 4.852713178294574,
+   "cardRebound": 98.3,
+   "cardBonus": 4.464,
+   "pos": "C"
+  },
+  "1626164": {
+   "name": "Devin Booker",
+   "MIN": 2146.0,
+   "orebPct": 0.021,
+   "drebPct": 0.091,
+   "con2_36": 1.5936626281453867,
+   "cardRebound": 51.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630552": {
+   "name": "Jalen Johnson",
+   "MIN": 2532.0,
+   "orebPct": 0.038,
+   "drebPct": 0.241,
+   "con2_36": 2.8720379146919433,
+   "cardRebound": 91.3,
+   "cardBonus": 0.775,
+   "pos": "PF"
+  },
+  "1630567": {
+   "name": "Scottie Barnes",
+   "MIN": 2681.0,
+   "orebPct": 0.055,
+   "drebPct": 0.166,
+   "con2_36": 4.364043267437523,
+   "cardRebound": 86.1,
+   "cardBonus": 0.516,
+   "pos": "PF"
+  },
+  "1628973": {
+   "name": "Jalen Brunson",
+   "MIN": 2590.0,
+   "orebPct": 0.012,
+   "drebPct": 0.083,
+   "con2_36": 1.1397683397683398,
+   "cardRebound": 42.7,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1641708": {
+   "name": "Amen Thompson",
+   "MIN": 2953.0,
+   "orebPct": 0.078,
+   "drebPct": 0.123,
+   "con2_36": 2.4260074500507955,
+   "cardRebound": 85.4,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1628384": {
+   "name": "OG Anunoby",
+   "MIN": 2224.0,
+   "orebPct": 0.039,
+   "drebPct": 0.116,
+   "con2_36": 4.241007194244604,
+   "cardRebound": 67.3,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "203932": {
+   "name": "Aaron Gordon",
+   "MIN": 1005.0,
+   "orebPct": 0.052,
+   "drebPct": 0.148,
+   "con2_36": 2.4,
+   "cardRebound": 81.2,
+   "cardBonus": 0.198,
+   "pos": "PF"
+  },
+  "1629008": {
+   "name": "Michael Porter Jr.",
+   "MIN": 1689.0,
+   "orebPct": 0.04,
+   "drebPct": 0.188,
+   "con2_36": 2.0461811722912966,
+   "cardRebound": 84.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "204001": {
+   "name": "Kristaps Porziņģis",
+   "MIN": 769.0,
+   "orebPct": 0.05,
+   "drebPct": 0.158,
+   "con2_36": 10.533159947984396,
+   "cardRebound": 86.8,
+   "cardBonus": 5.126,
+   "pos": "C"
+  },
+  "1630530": {
+   "name": "Trey Murphy III",
+   "MIN": 2341.0,
+   "orebPct": 0.026,
+   "drebPct": 0.131,
+   "con2_36": 2.691157624946604,
+   "cardRebound": 69.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630532": {
+   "name": "Franz Wagner",
+   "MIN": 1019.0,
+   "orebPct": 0.041,
+   "drebPct": 0.128,
+   "con2_36": 2.967615309126595,
+   "cardRebound": 77.1,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "203076": {
+   "name": "Anthony Davis",
+   "MIN": 626.0,
+   "orebPct": 0.099,
+   "drebPct": 0.24,
+   "con2_36": 7.648562300319489,
+   "cardRebound": 96.8,
+   "cardBonus": 6.808,
+   "pos": "C"
+  },
+  "1629639": {
+   "name": "Tyler Herro",
+   "MIN": 1033.0,
+   "orebPct": 0.013,
+   "drebPct": 0.129,
+   "con2_36": 2.892545982575024,
+   "cardRebound": 67.3,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630591": {
+   "name": "Jalen Suggs",
+   "MIN": 1574.0,
+   "orebPct": 0.022,
+   "drebPct": 0.112,
+   "con2_36": 2.264294790343075,
+   "cardRebound": 62.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630202": {
+   "name": "Payton Pritchard",
+   "MIN": 2556.0,
+   "orebPct": 0.026,
+   "drebPct": 0.09,
+   "con2_36": 0.6133874239350913,
+   "cardRebound": 56.2,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629627": {
+   "name": "Zion Williamson",
+   "MIN": 1841.0,
+   "orebPct": 0.064,
+   "drebPct": 0.116,
+   "con2_36": 2.307441607821836,
+   "cardRebound": 81.1,
+   "cardBonus": 0.101,
+   "pos": "PF"
+  },
+  "1630198": {
+   "name": "Isaiah Joe",
+   "MIN": 1507.0,
+   "orebPct": 0.022,
+   "drebPct": 0.09,
+   "con2_36": 1.528865295288653,
+   "cardRebound": 52.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1628389": {
+   "name": "Bam Adebayo",
+   "MIN": 2365.0,
+   "orebPct": 0.059,
+   "drebPct": 0.236,
+   "con2_36": 4.5665961945031714,
+   "cardRebound": 92.4,
+   "cardBonus": 2.305,
+   "pos": "C"
+  },
+  "1628386": {
+   "name": "Jarrett Allen",
+   "MIN": 1519.0,
+   "orebPct": 0.097,
+   "drebPct": 0.202,
+   "con2_36": 8.413429888084266,
+   "cardRebound": 95.2,
+   "cardBonus": 6.777,
+   "pos": "C"
+  },
+  "1628374": {
+   "name": "Lauri Markkanen",
+   "MIN": 1443.0,
+   "orebPct": 0.054,
+   "drebPct": 0.134,
+   "con2_36": 4.54054054054054,
+   "cardRebound": 82.7,
+   "cardBonus": 0.315,
+   "pos": "PF"
+  },
+  "1628991": {
+   "name": "Jaren Jackson Jr.",
+   "MIN": 1455.0,
+   "orebPct": 0.027,
+   "drebPct": 0.14,
+   "con2_36": 7.150515463917525,
+   "cardRebound": 78.4,
+   "cardBonus": 0.974,
+   "pos": "PF"
+  },
+  "1630200": {
+   "name": "Tre Jones",
+   "MIN": 1752.0,
+   "orebPct": 0.02,
+   "drebPct": 0.088,
+   "con2_36": 2.0753424657534247,
+   "cardRebound": 51.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631119": {
+   "name": "Jaylin Williams",
+   "MIN": 1277.0,
+   "orebPct": 0.025,
+   "drebPct": 0.225,
+   "con2_36": 8.823805794831637,
+   "cardRebound": 92.0,
+   "cardBonus": 4.963,
+   "pos": "C"
+  },
+  "1641709": {
+   "name": "Ausar Thompson",
+   "MIN": 1896.0,
+   "orebPct": 0.08,
+   "drebPct": 0.135,
+   "con2_36": 3.0379746835443036,
+   "cardRebound": 86.0,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1628392": {
+   "name": "Isaiah Hartenstein",
+   "MIN": 1137.0,
+   "orebPct": 0.13,
+   "drebPct": 0.243,
+   "con2_36": 7.1873350923482855,
+   "cardRebound": 98.2,
+   "cardBonus": 6.943,
+   "pos": "C"
+  },
+  "1630590": {
+   "name": "Scotty Pippen Jr.",
+   "MIN": 212.0,
+   "orebPct": 0.035,
+   "drebPct": 0.065,
+   "con2_36": 1.5283018867924527,
+   "cardRebound": 62.3,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642914": {
+   "name": "Javon Small",
+   "MIN": 830.0,
+   "orebPct": 0.04,
+   "drebPct": 0.109,
+   "con2_36": 1.7142857142857142,
+   "cardRebound": 67.7,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "203497": {
+   "name": "Rudy Gobert",
+   "MIN": 2380.0,
+   "orebPct": 0.121,
+   "drebPct": 0.222,
+   "con2_36": 9.363025210084034,
+   "cardRebound": 97.3,
+   "cardBonus": 8.568,
+   "pos": "C"
+  },
+  "1628969": {
+   "name": "Mikal Bridges",
+   "MIN": 2692.0,
+   "orebPct": 0.029,
+   "drebPct": 0.085,
+   "con2_36": 3.704309063893016,
+   "cardRebound": 47.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641764": {
+   "name": "Brandin Podziemski",
+   "MIN": 2333.0,
+   "orebPct": 0.029,
+   "drebPct": 0.147,
+   "con2_36": 1.7682033606204224,
+   "cardRebound": 79.2,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1631157": {
+   "name": "Ryan Rollins",
+   "MIN": 2375.0,
+   "orebPct": 0.023,
+   "drebPct": 0.115,
+   "con2_36": 2.3343157894736843,
+   "cardRebound": 63.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1627742": {
+   "name": "Brandon Ingram",
+   "MIN": 2604.0,
+   "orebPct": 0.024,
+   "drebPct": 0.144,
+   "con2_36": 3.042056074766355,
+   "cardRebound": 74.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630166": {
+   "name": "Deni Avdija",
+   "MIN": 2199.0,
+   "orebPct": 0.031,
+   "drebPct": 0.167,
+   "con2_36": 2.9959072305593453,
+   "cardRebound": 84.2,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1628960": {
+   "name": "Grayson Allen",
+   "MIN": 1467.0,
+   "orebPct": 0.023,
+   "drebPct": 0.081,
+   "con2_36": 1.9958419958419957,
+   "cardRebound": 51.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642349": {
+   "name": "Ajay Mitchell",
+   "MIN": 1473.0,
+   "orebPct": 0.027,
+   "drebPct": 0.093,
+   "con2_36": 3.016348773841962,
+   "cardRebound": 55.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629630": {
+   "name": "Ja Morant",
+   "MIN": 568.0,
+   "orebPct": 0.013,
+   "drebPct": 0.096,
+   "con2_36": 1.0123022847100176,
+   "cardRebound": 55.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1629012": {
+   "name": "Collin Sexton",
+   "MIN": 1613.0,
+   "orebPct": 0.024,
+   "drebPct": 0.065,
+   "con2_36": 2.0309981401115933,
+   "cardRebound": 43.7,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1627749": {
+   "name": "Dejounte Murray",
+   "MIN": 389.0,
+   "orebPct": 0.011,
+   "drebPct": 0.188,
+   "con2_36": 2.03598971722365,
+   "cardRebound": 76.6,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630167": {
+   "name": "Obi Toppin",
+   "MIN": 424.0,
+   "orebPct": 0.03,
+   "drebPct": 0.206,
+   "con2_36": 2.325581395348837,
+   "cardRebound": 84.4,
+   "cardBonus": 0.355,
+   "pos": "PF"
+  },
+  "1628404": {
+   "name": "Josh Hart",
+   "MIN": 1994.0,
+   "orebPct": 0.047,
+   "drebPct": 0.2,
+   "con2_36": 2.7081243731193583,
+   "cardRebound": 89.4,
+   "cardBonus": 0.606,
+   "pos": "PF"
+  },
+  "1631105": {
+   "name": "Jalen Duren",
+   "MIN": 1976.0,
+   "orebPct": 0.132,
+   "drebPct": 0.23,
+   "con2_36": 7.560728744939271,
+   "cardRebound": 98.5,
+   "cardBonus": 7.309,
+   "pos": "C"
+  },
+  "1642851": {
+   "name": "Kon Knueppel",
+   "MIN": 2551.0,
+   "orebPct": 0.036,
+   "drebPct": 0.128,
+   "con2_36": 4.163073304586437,
+   "cardRebound": 76.3,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1628436": {
+   "name": "Luke Kornet",
+   "MIN": 1430.0,
+   "orebPct": 0.116,
+   "drebPct": 0.147,
+   "con2_36": 12.83916083916084,
+   "cardRebound": 91.5,
+   "cardBonus": 7.695,
+   "pos": "C"
+  },
+  "1629675": {
+   "name": "Naz Reid",
+   "MIN": 2007.0,
+   "orebPct": 0.042,
+   "drebPct": 0.187,
+   "con2_36": 4.8551448551448555,
+   "cardRebound": 86.3,
+   "cardBonus": 0.0,
+   "pos": "C"
+  },
+  "1629636": {
+   "name": "Darius Garland",
+   "MIN": 1344.0,
+   "orebPct": 0.013,
+   "drebPct": 0.063,
+   "con2_36": 1.9285714285714284,
+   "cardRebound": 40.9,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642844": {
+   "name": "Dylan Harper",
+   "MIN": 1558.0,
+   "orebPct": 0.033,
+   "drebPct": 0.106,
+   "con2_36": 3.096277278562259,
+   "cardRebound": 66.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629661": {
+   "name": "Cameron Johnson",
+   "MIN": 1647.0,
+   "orebPct": 0.027,
+   "drebPct": 0.095,
+   "con2_36": 2.5573770491803276,
+   "cardRebound": 62.0,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1629057": {
+   "name": "Robert Williams III",
+   "MIN": 1008.0,
+   "orebPct": 0.133,
+   "drebPct": 0.25,
+   "con2_36": 7.7857142857142865,
+   "cardRebound": 98.5,
+   "cardBonus": 7.821,
+   "pos": "C"
+  },
+  "1629638": {
+   "name": "Nickeil Alexander-Walker",
+   "MIN": 2603.0,
+   "orebPct": 0.019,
+   "drebPct": 0.079,
+   "con2_36": 2.434114483288513,
+   "cardRebound": 47.7,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630183": {
+   "name": "Jaden McDaniels",
+   "MIN": 2316.0,
+   "orebPct": 0.033,
+   "drebPct": 0.094,
+   "con2_36": 4.274611398963731,
+   "cardRebound": 68.4,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630193": {
+   "name": "Immanuel Quickley",
+   "MIN": 2231.0,
+   "orebPct": 0.017,
+   "drebPct": 0.108,
+   "con2_36": 2.03316898251905,
+   "cardRebound": 57.1,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1627734": {
+   "name": "Domantas Sabonis",
+   "MIN": 564.0,
+   "orebPct": 0.108,
+   "drebPct": 0.283,
+   "con2_36": 4.659574468085106,
+   "cardRebound": 99.0,
+   "cardBonus": 4.601,
+   "pos": "C"
+  },
+  "1641717": {
+   "name": "Cason Wallace",
+   "MIN": 2046.0,
+   "orebPct": 0.031,
+   "drebPct": 0.079,
+   "con2_36": 2.3401759530791786,
+   "cardRebound": 51.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1627936": {
+   "name": "Alex Caruso",
+   "MIN": 1020.0,
+   "orebPct": 0.028,
+   "drebPct": 0.113,
+   "con2_36": 1.9411764705882355,
+   "cardRebound": 67.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629674": {
+   "name": "Neemias Queta",
+   "MIN": 1926.0,
+   "orebPct": 0.118,
+   "drebPct": 0.194,
+   "con2_36": 8.093457943925234,
+   "cardRebound": 94.6,
+   "cardBonus": 6.869,
+   "pos": "C"
+  },
+  "1630245": {
+   "name": "Ayo Dosunmu",
+   "MIN": 1881.0,
+   "orebPct": 0.024,
+   "drebPct": 0.093,
+   "con2_36": 2.879216539717084,
+   "cardRebound": 52.4,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629680": {
+   "name": "Matisse Thybulle",
+   "MIN": 480.0,
+   "orebPct": 0.033,
+   "drebPct": 0.087,
+   "con2_36": 1.5,
+   "cardRebound": 55.4,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1627783": {
+   "name": "Pascal Siakam",
+   "MIN": 2057.0,
+   "orebPct": 0.041,
+   "drebPct": 0.151,
+   "con2_36": 4.147788040836169,
+   "cardRebound": 82.8,
+   "cardBonus": 0.151,
+   "pos": "PF"
+  },
+  "201942": {
+   "name": "DeMar DeRozan",
+   "MIN": 2406.0,
+   "orebPct": 0.015,
+   "drebPct": 0.081,
+   "con2_36": 1.8403990024937655,
+   "cardRebound": 45.5,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1628379": {
+   "name": "Luke Kennard",
+   "MIN": 1680.0,
+   "orebPct": 0.019,
+   "drebPct": 0.086,
+   "con2_36": 1.9401197604790419,
+   "cardRebound": 50.7,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1628978": {
+   "name": "Donte DiVincenzo",
+   "MIN": 2494.0,
+   "orebPct": 0.026,
+   "drebPct": 0.1,
+   "con2_36": 2.012062726176116,
+   "cardRebound": 60.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1627751": {
+   "name": "Jakob Poeltl",
+   "MIN": 1149.0,
+   "orebPct": 0.102,
+   "drebPct": 0.188,
+   "con2_36": 6.924281984334204,
+   "cardRebound": 93.9,
+   "cardBonus": 4.81,
+   "pos": "C"
+  },
+  "1631221": {
+   "name": "Collin Gillespie",
+   "MIN": 2282.0,
+   "orebPct": 0.036,
+   "drebPct": 0.107,
+   "con2_36": 1.467134092900964,
+   "cardRebound": 65.7,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1627826": {
+   "name": "Ivica Zubac",
+   "MIN": 1447.0,
+   "orebPct": 0.117,
+   "drebPct": 0.234,
+   "con2_36": 8.458880442294403,
+   "cardRebound": 98.4,
+   "cardBonus": 8.021,
+   "pos": "C"
+  },
+  "1641739": {
+   "name": "Toumani Camara",
+   "MIN": 2731.0,
+   "orebPct": 0.043,
+   "drebPct": 0.103,
+   "con2_36": 3.335042109117539,
+   "cardRebound": 72.9,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1627884": {
+   "name": "Derrick Jones Jr.",
+   "MIN": 1350.0,
+   "orebPct": 0.047,
+   "drebPct": 0.082,
+   "con2_36": 3.2800000000000002,
+   "cardRebound": 63.2,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1630549": {
+   "name": "Day'Ron Sharpe",
+   "MIN": 1160.0,
+   "orebPct": 0.143,
+   "drebPct": 0.222,
+   "con2_36": 5.058620689655172,
+   "cardRebound": 98.2,
+   "cardBonus": 4.457,
+   "pos": "C"
+  },
+  "1631128": {
+   "name": "Christian Braun",
+   "MIN": 1399.0,
+   "orebPct": 0.046,
+   "drebPct": 0.101,
+   "con2_36": 2.4960686204431735,
+   "cardRebound": 70.4,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630541": {
+   "name": "Moses Moody",
+   "MIN": 1540.0,
+   "orebPct": 0.031,
+   "drebPct": 0.092,
+   "con2_36": 3.3289299867899604,
+   "cardRebound": 56.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "201950": {
+   "name": "Jrue Holiday",
+   "MIN": 1560.0,
+   "orebPct": 0.042,
+   "drebPct": 0.108,
+   "con2_36": 1.1937581274382314,
+   "cardRebound": 67.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "204456": {
+   "name": "T.J. McConnell",
+   "MIN": 963.0,
+   "orebPct": 0.022,
+   "drebPct": 0.104,
+   "con2_36": 1.3875802997858673,
+   "cardRebound": 60.7,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630700": {
+   "name": "Dyson Daniels",
+   "MIN": 2520.0,
+   "orebPct": 0.071,
+   "drebPct": 0.129,
+   "con2_36": 3.2285714285714286,
+   "cardRebound": 80.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629628": {
+   "name": "RJ Barrett",
+   "MIN": 1726.0,
+   "orebPct": 0.033,
+   "drebPct": 0.141,
+   "con2_36": 3.149478563151796,
+   "cardRebound": 78.4,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "202699": {
+   "name": "Tobias Harris",
+   "MIN": 1745.0,
+   "orebPct": 0.03,
+   "drebPct": 0.145,
+   "con2_36": 2.668965517241379,
+   "cardRebound": 80.3,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1642843": {
+   "name": "Cooper Flagg",
+   "MIN": 2344.0,
+   "orebPct": 0.035,
+   "drebPct": 0.151,
+   "con2_36": 3.839590443686007,
+   "cardRebound": 81.2,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1626181": {
+   "name": "Norman Powell",
+   "MIN": 1717.0,
+   "orebPct": 0.012,
+   "drebPct": 0.097,
+   "con2_36": 1.328646748681898,
+   "cardRebound": 45.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642845": {
+   "name": "VJ Edgecombe",
+   "MIN": 2623.0,
+   "orebPct": 0.044,
+   "drebPct": 0.111,
+   "con2_36": 2.7037743042317954,
+   "cardRebound": 71.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630168": {
+   "name": "Onyeka Okongwu",
+   "MIN": 2297.0,
+   "orebPct": 0.058,
+   "drebPct": 0.178,
+   "con2_36": 6.127993034392686,
+   "cardRebound": 90.5,
+   "cardBonus": 1.564,
+   "pos": "C"
+  },
+  "1629632": {
+   "name": "Coby White",
+   "MIN": 1250.0,
+   "orebPct": 0.013,
+   "drebPct": 0.113,
+   "con2_36": 2.808298755186722,
+   "cardRebound": 54.3,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630540": {
+   "name": "Miles McBride",
+   "MIN": 1080.0,
+   "orebPct": 0.02,
+   "drebPct": 0.068,
+   "con2_36": 3.433333333333333,
+   "cardRebound": 43.4,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1629027": {
+   "name": "Trae Young",
+   "MIN": 384.0,
+   "orebPct": 0.009,
+   "drebPct": 0.067,
+   "con2_36": 0.65625,
+   "cardRebound": 40.6,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1641706": {
+   "name": "Brandon Miller",
+   "MIN": 1968.0,
+   "orebPct": 0.034,
+   "drebPct": 0.122,
+   "con2_36": 3.1097560975609757,
+   "cardRebound": 71.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1628976": {
+   "name": "Wendell Carter Jr.",
+   "MIN": 2288.0,
+   "orebPct": 0.07,
+   "drebPct": 0.177,
+   "con2_36": 6.986013986013987,
+   "cardRebound": 90.4,
+   "cardBonus": 3.284,
+   "pos": "C"
+  },
+  "1630581": {
+   "name": "Josh Giddey",
+   "MIN": 1731.0,
+   "orebPct": 0.037,
+   "drebPct": 0.201,
+   "con2_36": 2.2876949740034664,
+   "cardRebound": 89.0,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630194": {
+   "name": "Paul Reed",
+   "MIN": 901.0,
+   "orebPct": 0.142,
+   "drebPct": 0.176,
+   "con2_36": 8.838565022421523,
+   "cardRebound": 94.4,
+   "cardBonus": 7.825,
+   "pos": "C"
+  },
+  "1642907": {
+   "name": "Cedric Coward",
+   "MIN": 1598.0,
+   "orebPct": 0.05,
+   "drebPct": 0.16,
+   "con2_36": 3.874843554443054,
+   "cardRebound": 84.2,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630224": {
+   "name": "Jalen Green",
+   "MIN": 828.0,
+   "orebPct": 0.017,
+   "drebPct": 0.122,
+   "con2_36": 2.0597014925373136,
+   "cardRebound": 63.5,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630241": {
+   "name": "Sam Merrill",
+   "MIN": 1377.0,
+   "orebPct": 0.02,
+   "drebPct": 0.072,
+   "con2_36": 2.5359477124183005,
+   "cardRebound": 46.3,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630583": {
+   "name": "Santi Aldama",
+   "MIN": 1198.0,
+   "orebPct": 0.052,
+   "drebPct": 0.171,
+   "con2_36": 5.529215358931553,
+   "cardRebound": 87.6,
+   "cardBonus": 0.034,
+   "pos": "C"
+  },
+  "203994": {
+   "name": "Jusuf Nurkić",
+   "MIN": 1083.0,
+   "orebPct": 0.089,
+   "drebPct": 0.279,
+   "con2_36": 5.8171745152354575,
+   "cardRebound": 98.4,
+   "cardBonus": 4.583,
+   "pos": "C"
+  },
+  "1630174": {
+   "name": "Aaron Nesmith",
+   "MIN": 1335.0,
+   "orebPct": 0.034,
+   "drebPct": 0.102,
+   "con2_36": 4.044943820224719,
+   "cardRebound": 64.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629001": {
+   "name": "De'Anthony Melton",
+   "MIN": 1125.0,
+   "orebPct": 0.033,
+   "drebPct": 0.108,
+   "con2_36": 2.144,
+   "cardRebound": 64.7,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631094": {
+   "name": "Paolo Banchero",
+   "MIN": 2502.0,
+   "orebPct": 0.034,
+   "drebPct": 0.204,
+   "con2_36": 3.870503597122302,
+   "cardRebound": 87.6,
+   "cardBonus": 0.494,
+   "pos": "PF"
+  },
+  "1631117": {
+   "name": "Walker Kessler",
+   "MIN": 154.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 98.2,
+   "cardBonus": 1.675,
+   "pos": "C"
+  },
+  "1629731": {
+   "name": "Dean Wade",
+   "MIN": 1318.0,
+   "orebPct": 0.039,
+   "drebPct": 0.139,
+   "con2_36": 5.599393019726858,
+   "cardRebound": 81.1,
+   "cardBonus": 0.567,
+   "pos": "PF"
+  },
+  "1627780": {
+   "name": "Gary Payton II",
+   "MIN": 1142.0,
+   "orebPct": 0.084,
+   "drebPct": 0.143,
+   "con2_36": 2.4705882352941178,
+   "cardRebound": 83.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630188": {
+   "name": "Jalen Smith",
+   "MIN": 1095.0,
+   "orebPct": 0.085,
+   "drebPct": 0.218,
+   "con2_36": 7.298630136986302,
+   "cardRebound": 94.5,
+   "cardBonus": 1.997,
+   "pos": "PF"
+  },
+  "1629655": {
+   "name": "Daniel Gafford",
+   "MIN": 1194.0,
+   "orebPct": 0.108,
+   "drebPct": 0.181,
+   "con2_36": 9.338912133891213,
+   "cardRebound": 93.6,
+   "cardBonus": 7.283,
+   "pos": "C"
+  },
+  "1628366": {
+   "name": "Lonzo Ball",
+   "MIN": 728.0,
+   "orebPct": 0.032,
+   "drebPct": 0.148,
+   "con2_36": 2.3241758241758244,
+   "cardRebound": 74.6,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630692": {
+   "name": "Jordan Goodwin",
+   "MIN": 1572.0,
+   "orebPct": 0.08,
+   "drebPct": 0.134,
+   "con2_36": 1.946564885496183,
+   "cardRebound": 83.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1626167": {
+   "name": "Myles Turner",
+   "MIN": 1912.0,
+   "orebPct": 0.039,
+   "drebPct": 0.152,
+   "con2_36": 8.171548117154812,
+   "cardRebound": 84.6,
+   "cardBonus": 3.614,
+   "pos": "C"
+  },
+  "1642285": {
+   "name": "Cam Spencer",
+   "MIN": 1714.0,
+   "orebPct": 0.022,
+   "drebPct": 0.082,
+   "con2_36": 1.1411483253588517,
+   "cardRebound": 46.4,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1629011": {
+   "name": "Mitchell Robinson",
+   "MIN": 1175.0,
+   "orebPct": 0.201,
+   "drebPct": 0.227,
+   "con2_36": 4.932765957446808,
+   "cardRebound": 108.1,
+   "cardBonus": 5.385,
+   "pos": "C"
+  },
+  "1629622": {
+   "name": "Max Strus",
+   "MIN": 288.0,
+   "orebPct": 0.031,
+   "drebPct": 0.18,
+   "con2_36": 2.25,
+   "cardRebound": 76.5,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "201935": {
+   "name": "James Harden",
+   "MIN": 2438.0,
+   "orebPct": 0.017,
+   "drebPct": 0.119,
+   "con2_36": 1.3437243642329777,
+   "cardRebound": 69.3,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630578": {
+   "name": "Alperen Sengun",
+   "MIN": 2398.0,
+   "orebPct": 0.089,
+   "drebPct": 0.177,
+   "con2_36": 6.307884856070087,
+   "cardRebound": 92.1,
+   "cardBonus": 3.087,
+   "pos": "C"
+  },
+  "1628989": {
+   "name": "Kevin Huerter",
+   "MIN": 1549.0,
+   "orebPct": 0.021,
+   "drebPct": 0.125,
+   "con2_36": 3.2072304712717883,
+   "cardRebound": 63.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641842": {
+   "name": "Ronald Holland II",
+   "MIN": 1550.0,
+   "orebPct": 0.052,
+   "drebPct": 0.141,
+   "con2_36": 1.8670212765957446,
+   "cardRebound": 81.7,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1629013": {
+   "name": "Landry Shamet",
+   "MIN": 1171.0,
+   "orebPct": 0.019,
+   "drebPct": 0.058,
+   "con2_36": 3.1746575342465757,
+   "cardRebound": 40.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630577": {
+   "name": "Julian Champagnie",
+   "MIN": 2266.0,
+   "orebPct": 0.032,
+   "drebPct": 0.161,
+   "con2_36": 3.2091791703442185,
+   "cardRebound": 79.0,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1629656": {
+   "name": "Quentin Grimes",
+   "MIN": 2206.0,
+   "orebPct": 0.02,
+   "drebPct": 0.096,
+   "con2_36": 2.2250922509225095,
+   "cardRebound": 59.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "203897": {
+   "name": "Zach LaVine",
+   "MIN": 1224.0,
+   "orebPct": 0.006,
+   "drebPct": 0.083,
+   "con2_36": 2.205882352941176,
+   "cardRebound": 48.4,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "203110": {
+   "name": "Draymond Green",
+   "MIN": 1869.0,
+   "orebPct": 0.029,
+   "drebPct": 0.168,
+   "con2_36": 6.260032102728732,
+   "cardRebound": 83.1,
+   "cardBonus": 0.904,
+   "pos": "PF"
+  },
+  "1627739": {
+   "name": "Kris Dunn",
+   "MIN": 2230.0,
+   "orebPct": 0.028,
+   "drebPct": 0.097,
+   "con2_36": 1.7434977578475337,
+   "cardRebound": 60.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629750": {
+   "name": "Javonte Green",
+   "MIN": 1446.0,
+   "orebPct": 0.042,
+   "drebPct": 0.112,
+   "con2_36": 1.7647058823529411,
+   "cardRebound": 74.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630163": {
+   "name": "LaMelo Ball",
+   "MIN": 2017.0,
+   "orebPct": 0.03,
+   "drebPct": 0.14,
+   "con2_36": 1.3761467889908257,
+   "cardRebound": 74.6,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630170": {
+   "name": "Devin Vassell",
+   "MIN": 2044.0,
+   "orebPct": 0.019,
+   "drebPct": 0.102,
+   "con2_36": 2.430528375733855,
+   "cardRebound": 57.0,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642264": {
+   "name": "Stephon Castle",
+   "MIN": 2038.0,
+   "orebPct": 0.047,
+   "drebPct": 0.119,
+   "con2_36": 3.0382728164867516,
+   "cardRebound": 70.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631106": {
+   "name": "Tari Eason",
+   "MIN": 1549.0,
+   "orebPct": 0.077,
+   "drebPct": 0.156,
+   "con2_36": 4.136862491930278,
+   "cardRebound": 88.7,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631109": {
+   "name": "Mark Williams",
+   "MIN": 1416.0,
+   "orebPct": 0.124,
+   "drebPct": 0.201,
+   "con2_36": 8.898305084745763,
+   "cardRebound": 96.3,
+   "cardBonus": 7.944,
+   "pos": "C"
+  },
+  "1631217": {
+   "name": "Moussa Diabaté",
+   "MIN": 1899.0,
+   "orebPct": 0.139,
+   "drebPct": 0.191,
+   "con2_36": 7.184834123222749,
+   "cardRebound": 95.8,
+   "cardBonus": 6.317,
+   "pos": "C"
+  },
+  "1641744": {
+   "name": "Zach Edey",
+   "MIN": 284.0,
+   "orebPct": 0.148,
+   "drebPct": 0.243,
+   "con2_36": 9.380281690140844,
+   "cardRebound": 98.4,
+   "cardBonus": 5.308,
+   "pos": "C"
+  },
+  "1630529": {
+   "name": "Herbert Jones",
+   "MIN": 1588.0,
+   "orebPct": 0.029,
+   "drebPct": 0.09,
+   "con2_36": 2.3576826196473553,
+   "cardRebound": 52.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630572": {
+   "name": "Sandro Mamukelashvili",
+   "MIN": 1751.0,
+   "orebPct": 0.06,
+   "drebPct": 0.163,
+   "con2_36": 6.579097658480868,
+   "cardRebound": 88.6,
+   "cardBonus": 1.796,
+   "pos": "C"
+  },
+  "1631165": {
+   "name": "Keon Ellis",
+   "MIN": 1479.0,
+   "orebPct": 0.025,
+   "drebPct": 0.066,
+   "con2_36": 2.339261285909713,
+   "cardRebound": 46.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631095": {
+   "name": "Jabari Smith Jr.",
+   "MIN": 2705.0,
+   "orebPct": 0.039,
+   "drebPct": 0.152,
+   "con2_36": 4.178927911275416,
+   "cardRebound": 83.6,
+   "cardBonus": 0.165,
+   "pos": "PF"
+  },
+  "1629723": {
+   "name": "John Konchar",
+   "MIN": 1115.0,
+   "orebPct": 0.059,
+   "drebPct": 0.14,
+   "con2_36": 3.1504102096627165,
+   "cardRebound": 83.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630696": {
+   "name": "Dru Smith",
+   "MIN": 1141.0,
+   "orebPct": 0.047,
+   "drebPct": 0.085,
+   "con2_36": 2.6054721977052075,
+   "cardRebound": 62.0,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1641726": {
+   "name": "Dereck Lively II",
+   "MIN": 115.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 93.9,
+   "cardBonus": 1.19,
+   "pos": "C"
+  },
+  "1630610": {
+   "name": "DeJon Jarreau",
+   "MIN": 231.0,
+   "orebPct": 0.046,
+   "drebPct": 0.174,
+   "con2_36": 1.8701298701298703,
+   "cardRebound": 83.1,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629614": {
+   "name": "Andrew Nembhard",
+   "MIN": 1786.0,
+   "orebPct": 0.013,
+   "drebPct": 0.075,
+   "con2_36": 1.8141097424412094,
+   "cardRebound": 44.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "203952": {
+   "name": "Andrew Wiggins",
+   "MIN": 2063.0,
+   "orebPct": 0.051,
+   "drebPct": 0.098,
+   "con2_36": 4.7639360155113915,
+   "cardRebound": 67.4,
+   "cardBonus": 0.248,
+   "pos": "PF"
+  },
+  "1630573": {
+   "name": "Sam Hauser",
+   "MIN": 1934.0,
+   "orebPct": 0.028,
+   "drebPct": 0.118,
+   "con2_36": 3.4935132330046703,
+   "cardRebound": 69.3,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1642273": {
+   "name": "Kyshawn George",
+   "MIN": 1391.0,
+   "orebPct": 0.028,
+   "drebPct": 0.135,
+   "con2_36": 4.787922358015816,
+   "cardRebound": 71.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1629611": {
+   "name": "Terance Mann",
+   "MIN": 1529.0,
+   "orebPct": 0.044,
+   "drebPct": 0.089,
+   "con2_36": 2.307390451275343,
+   "cardRebound": 62.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630558": {
+   "name": "Davion Mitchell",
+   "MIN": 2000.0,
+   "orebPct": 0.015,
+   "drebPct": 0.072,
+   "con2_36": 1.08,
+   "cardRebound": 41.2,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1629631": {
+   "name": "De'Andre Hunter",
+   "MIN": 1175.0,
+   "orebPct": 0.023,
+   "drebPct": 0.127,
+   "con2_36": 2.2059574468085104,
+   "cardRebound": 67.0,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1641796": {
+   "name": "Pelle Larsson",
+   "MIN": 1849.0,
+   "orebPct": 0.035,
+   "drebPct": 0.088,
+   "con2_36": 3.7966468361276364,
+   "cardRebound": 55.5,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1628381": {
+   "name": "John Collins",
+   "MIN": 1871.0,
+   "orebPct": 0.061,
+   "drebPct": 0.135,
+   "con2_36": 3.7520042757883485,
+   "cardRebound": 87.6,
+   "cardBonus": 0.313,
+   "pos": "PF"
+  },
+  "1631099": {
+   "name": "Keegan Murray",
+   "MIN": 793.0,
+   "orebPct": 0.039,
+   "drebPct": 0.122,
+   "con2_36": 5.9470365699873895,
+   "cardRebound": 78.8,
+   "cardBonus": 0.664,
+   "pos": "PF"
+  },
+  "1641869": {
+   "name": "Malachi Smith",
+   "MIN": 359.0,
+   "orebPct": 0.032,
+   "drebPct": 0.123,
+   "con2_36": 2.306406685236769,
+   "cardRebound": 67.0,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630611": {
+   "name": "Gui Santos",
+   "MIN": 1395.0,
+   "orebPct": 0.052,
+   "drebPct": 0.138,
+   "con2_36": 4.8,
+   "cardRebound": 82.2,
+   "cardBonus": 0.414,
+   "pos": "PF"
+  },
+  "1642345": {
+   "name": "Oso Ighodaro",
+   "MIN": 1808.0,
+   "orebPct": 0.071,
+   "drebPct": 0.158,
+   "con2_36": 6.331858407079646,
+   "cardRebound": 87.2,
+   "cardBonus": 1.603,
+   "pos": "C"
+  },
+  "1628970": {
+   "name": "Miles Bridges",
+   "MIN": 2387.0,
+   "orebPct": 0.03,
+   "drebPct": 0.155,
+   "con2_36": 3.7704231252618348,
+   "cardRebound": 82.7,
+   "cardBonus": 0.064,
+   "pos": "PF"
+  },
+  "1630180": {
+   "name": "Saddiq Bey",
+   "MIN": 2246.0,
+   "orebPct": 0.051,
+   "drebPct": 0.12,
+   "con2_36": 1.5906221821460775,
+   "cardRebound": 76.7,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1641710": {
+   "name": "Anthony Black",
+   "MIN": 1910.0,
+   "orebPct": 0.024,
+   "drebPct": 0.101,
+   "con2_36": 2.6764397905759165,
+   "cardRebound": 58.2,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630551": {
+   "name": "Justin Champagnie",
+   "MIN": 1377.0,
+   "orebPct": 0.098,
+   "drebPct": 0.171,
+   "con2_36": 3.649890590809628,
+   "cardRebound": 89.4,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1629637": {
+   "name": "Jaxson Hayes",
+   "MIN": 1207.0,
+   "orebPct": 0.083,
+   "drebPct": 0.139,
+   "con2_36": 7.367025683512842,
+   "cardRebound": 88.9,
+   "cardBonus": 3.173,
+   "pos": "C"
+  },
+  "203944": {
+   "name": "Julius Randle",
+   "MIN": 2610.0,
+   "orebPct": 0.05,
+   "drebPct": 0.146,
+   "con2_36": 3.075862068965517,
+   "cardRebound": 83.9,
+   "cardBonus": 0.216,
+   "pos": "PF"
+  },
+  "1629048": {
+   "name": "Goga Bitadze",
+   "MIN": 972.0,
+   "orebPct": 0.131,
+   "drebPct": 0.183,
+   "con2_36": 7.5925925925925934,
+   "cardRebound": 95.7,
+   "cardBonus": 6.507,
+   "pos": "C"
+  },
+  "1626162": {
+   "name": "Kelly Oubre Jr.",
+   "MIN": 1574.0,
+   "orebPct": 0.031,
+   "drebPct": 0.121,
+   "con2_36": 2.1041931385006354,
+   "cardRebound": 75.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1629684": {
+   "name": "Grant Williams",
+   "MIN": 711.0,
+   "orebPct": 0.06,
+   "drebPct": 0.127,
+   "con2_36": 4.911392405063291,
+   "cardRebound": 78.1,
+   "cardBonus": 0.385,
+   "pos": "PF"
+  },
+  "1631245": {
+   "name": "Quenton Jackson",
+   "MIN": 897.0,
+   "orebPct": 0.03,
+   "drebPct": 0.092,
+   "con2_36": 1.6893854748603352,
+   "cardRebound": 55.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630631": {
+   "name": "Jose Alvarado",
+   "MIN": 1370.0,
+   "orebPct": 0.018,
+   "drebPct": 0.1,
+   "con2_36": 0.7488855869242199,
+   "cardRebound": 51.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1628415": {
+   "name": "Dillon Brooks",
+   "MIN": 1702.0,
+   "orebPct": 0.024,
+   "drebPct": 0.094,
+   "con2_36": 1.7132784958871914,
+   "cardRebound": 51.5,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1631170": {
+   "name": "Jaime Jaquez Jr.",
+   "MIN": 2121.0,
+   "orebPct": 0.042,
+   "drebPct": 0.117,
+   "con2_36": 3.8698727015558703,
+   "cardRebound": 75.5,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "201572": {
+   "name": "Brook Lopez",
+   "MIN": 1635.0,
+   "orebPct": 0.03,
+   "drebPct": 0.135,
+   "con2_36": 11.207339449541283,
+   "cardRebound": 75.6,
+   "cardBonus": 5.329,
+   "pos": "C"
+  },
+  "1642364": {
+   "name": "Jamir Watkins",
+   "MIN": 1032.0,
+   "orebPct": 0.046,
+   "drebPct": 0.14,
+   "con2_36": 4.046511627906977,
+   "cardRebound": 78.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630536": {
+   "name": "Sharife Cooper",
+   "MIN": 700.0,
+   "orebPct": 0.025,
+   "drebPct": 0.098,
+   "con2_36": 1.857359635811836,
+   "cardRebound": 54.3,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630598": {
+   "name": "Aaron Wiggins",
+   "MIN": 1414.0,
+   "orebPct": 0.028,
+   "drebPct": 0.101,
+   "con2_36": 3.7619738751814222,
+   "cardRebound": 67.3,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630643": {
+   "name": "Jay Huff",
+   "MIN": 1719.0,
+   "orebPct": 0.041,
+   "drebPct": 0.135,
+   "con2_36": 11.175305765870705,
+   "cardRebound": 79.7,
+   "cardBonus": 5.321,
+   "pos": "C"
+  },
+  "203484": {
+   "name": "Kentavious Caldwell-Pope",
+   "MIN": 1088.0,
+   "orebPct": 0.017,
+   "drebPct": 0.094,
+   "con2_36": 0.7941176470588236,
+   "cardRebound": 42.0,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1629026": {
+   "name": "Kenrich Williams",
+   "MIN": 855.0,
+   "orebPct": 0.068,
+   "drebPct": 0.143,
+   "con2_36": 2.308788598574822,
+   "cardRebound": 83.2,
+   "cardBonus": 0.349,
+   "pos": "PF"
+  },
+  "1631248": {
+   "name": "Baylor Scheierman",
+   "MIN": 1429.0,
+   "orebPct": 0.038,
+   "drebPct": 0.138,
+   "con2_36": 2.3356840620592383,
+   "cardRebound": 78.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641854": {
+   "name": "Craig Porter Jr.",
+   "MIN": 1148.0,
+   "orebPct": 0.07,
+   "drebPct": 0.115,
+   "con2_36": 3.375985977212971,
+   "cardRebound": 76.6,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "203939": {
+   "name": "Dwight Powell",
+   "MIN": 904.0,
+   "orebPct": 0.101,
+   "drebPct": 0.17,
+   "con2_36": 7.737193763919822,
+   "cardRebound": 89.9,
+   "cardBonus": 5.161,
+   "pos": "C"
+  },
+  "1627747": {
+   "name": "Caris LeVert",
+   "MIN": 1154.0,
+   "orebPct": 0.018,
+   "drebPct": 0.074,
+   "con2_36": 3.3309608540925266,
+   "cardRebound": 54.7,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630538": {
+   "name": "Bones Hyland",
+   "MIN": 1177.0,
+   "orebPct": 0.018,
+   "drebPct": 0.085,
+   "con2_36": 2.6096069868995633,
+   "cardRebound": 46.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642867": {
+   "name": "Collin Murray-Boyles",
+   "MIN": 1246.0,
+   "orebPct": 0.102,
+   "drebPct": 0.121,
+   "con2_36": 5.229534510433387,
+   "cardRebound": 86.8,
+   "cardBonus": 0.572,
+   "pos": "C"
+  },
+  "1641774": {
+   "name": "Tristan Vukcevic",
+   "MIN": 671.0,
+   "orebPct": 0.046,
+   "drebPct": 0.162,
+   "con2_36": 7.741353383458647,
+   "cardRebound": 86.8,
+   "cardBonus": 3.151,
+   "pos": "C"
+  },
+  "1630249": {
+   "name": "Vít Krejčí",
+   "MIN": 1392.0,
+   "orebPct": 0.02,
+   "drebPct": 0.081,
+   "con2_36": 4.025974025974026,
+   "cardRebound": 52.4,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1631101": {
+   "name": "Shaedon Sharpe",
+   "MIN": 1471.0,
+   "orebPct": 0.032,
+   "drebPct": 0.104,
+   "con2_36": 1.2726036709721278,
+   "cardRebound": 64.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629006": {
+   "name": "Josh Okogie",
+   "MIN": 1354.0,
+   "orebPct": 0.059,
+   "drebPct": 0.085,
+   "con2_36": 2.3748125937031483,
+   "cardRebound": 70.3,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631097": {
+   "name": "Bennedict Mathurin",
+   "MIN": 1620.0,
+   "orebPct": 0.034,
+   "drebPct": 0.142,
+   "con2_36": 1.8444444444444446,
+   "cardRebound": 77.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "203468": {
+   "name": "CJ McCollum",
+   "MIN": 2263.0,
+   "orebPct": 0.025,
+   "drebPct": 0.077,
+   "con2_36": 2.596774193548387,
+   "cardRebound": 49.0,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630533": {
+   "name": "Ziaire Williams",
+   "MIN": 1281.0,
+   "orebPct": 0.022,
+   "drebPct": 0.084,
+   "con2_36": 2.6445497630331753,
+   "cardRebound": 68.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1629130": {
+   "name": "Duncan Robinson",
+   "MIN": 2113.0,
+   "orebPct": 0.014,
+   "drebPct": 0.08,
+   "con2_36": 2.4193090392806433,
+   "cardRebound": 44.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642874": {
+   "name": "Danny Wolf",
+   "MIN": 1187.0,
+   "orebPct": 0.046,
+   "drebPct": 0.195,
+   "con2_36": 6.609735269000854,
+   "cardRebound": 89.4,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642856": {
+   "name": "Egor Dëmin",
+   "MIN": 1308.0,
+   "orebPct": 0.015,
+   "drebPct": 0.116,
+   "con2_36": 3.6330275229357802,
+   "cardRebound": 61.4,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1631246": {
+   "name": "Vince Williams Jr.",
+   "MIN": 819.0,
+   "orebPct": 0.044,
+   "drebPct": 0.123,
+   "con2_36": 2.8571428571428568,
+   "cardRebound": 78.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "203991": {
+   "name": "Clint Capela",
+   "MIN": 926.0,
+   "orebPct": 0.158,
+   "drebPct": 0.181,
+   "con2_36": 10.184983677910774,
+   "cardRebound": 98.3,
+   "cardBonus": 9.207,
+   "pos": "C"
+  },
+  "203078": {
+   "name": "Bradley Beal",
+   "MIN": 121.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 49.1,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629651": {
+   "name": "Nic Claxton",
+   "MIN": 1920.0,
+   "orebPct": 0.084,
+   "drebPct": 0.167,
+   "con2_36": 6.112500000000001,
+   "cardRebound": 91.5,
+   "cardBonus": 2.307,
+   "pos": "C"
+  },
+  "1631200": {
+   "name": "Kris Murray",
+   "MIN": 1333.0,
+   "orebPct": 0.062,
+   "drebPct": 0.084,
+   "con2_36": 3.8735891647855527,
+   "cardRebound": 71.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1626171": {
+   "name": "Bobby Portis Jr.",
+   "MIN": 1619.0,
+   "orebPct": 0.055,
+   "drebPct": 0.198,
+   "con2_36": 4.024706609017912,
+   "cardRebound": 92.0,
+   "cardBonus": 0.694,
+   "pos": "PF"
+  },
+  "1642955": {
+   "name": "Kadary Richmond",
+   "MIN": 67.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 64.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642504": {
+   "name": "Cormac Ryan",
+   "MIN": 271.0,
+   "orebPct": 0.032,
+   "drebPct": 0.078,
+   "con2_36": 2.6568265682656826,
+   "cardRebound": 53.7,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1626166": {
+   "name": "Cameron Payne",
+   "MIN": 374.0,
+   "orebPct": 0.007,
+   "drebPct": 0.103,
+   "con2_36": 1.251336898395722,
+   "cardRebound": 45.6,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1628963": {
+   "name": "Marvin Bagley III",
+   "MIN": 1201.0,
+   "orebPct": 0.116,
+   "drebPct": 0.171,
+   "con2_36": 7.463780183180683,
+   "cardRebound": 92.8,
+   "cardBonus": 5.534,
+   "pos": "C"
+  },
+  "1629640": {
+   "name": "Keldon Johnson",
+   "MIN": 1911.0,
+   "orebPct": 0.067,
+   "drebPct": 0.143,
+   "con2_36": 2.6562009419152277,
+   "cardRebound": 83.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642266": {
+   "name": "Ja'Kobe Walter",
+   "MIN": 1474.0,
+   "orebPct": 0.037,
+   "drebPct": 0.088,
+   "con2_36": 2.1736770691994574,
+   "cardRebound": 60.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "201143": {
+   "name": "Al Horford",
+   "MIN": 969.0,
+   "orebPct": 0.043,
+   "drebPct": 0.184,
+   "con2_36": 6.947368421052631,
+   "cardRebound": 85.4,
+   "cardBonus": 2.13,
+   "pos": "C"
+  },
+  "1628380": {
+   "name": "Zach Collins",
+   "MIN": 184.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 90.7,
+   "cardBonus": 0.168,
+   "pos": "PF"
+  },
+  "1629312": {
+   "name": "Haywood Highsmith",
+   "MIN": 91.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 64.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "203935": {
+   "name": "Marcus Smart",
+   "MIN": 1769.0,
+   "orebPct": 0.022,
+   "drebPct": 0.077,
+   "con2_36": 1.5466365178066706,
+   "cardRebound": 45.1,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "203500": {
+   "name": "Steven Adams",
+   "MIN": 730.0,
+   "orebPct": 0.189,
+   "drebPct": 0.165,
+   "con2_36": 6.263013698630138,
+   "cardRebound": 98.4,
+   "cardBonus": 5.673,
+   "pos": "C"
+  },
+  "1641824": {
+   "name": "Matas Buzelis",
+   "MIN": 2248.0,
+   "orebPct": 0.033,
+   "drebPct": 0.152,
+   "con2_36": 6.3736654804270465,
+   "cardRebound": 80.3,
+   "cardBonus": 0.817,
+   "pos": "PF"
+  },
+  "1628371": {
+   "name": "Jonathan Isaac",
+   "MIN": 521.0,
+   "orebPct": 0.071,
+   "drebPct": 0.165,
+   "con2_36": 6.837209302325581,
+   "cardRebound": 91.6,
+   "cardBonus": 1.542,
+   "pos": "PF"
+  },
+  "1641729": {
+   "name": "Brice Sensabaugh",
+   "MIN": 1762.0,
+   "orebPct": 0.03,
+   "drebPct": 0.097,
+   "con2_36": 1.9666474985623923,
+   "cardRebound": 60.3,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642864": {
+   "name": "Hugo González",
+   "MIN": 1084.0,
+   "orebPct": 0.055,
+   "drebPct": 0.158,
+   "con2_36": 3.6974789915966384,
+   "cardRebound": 84.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "203114": {
+   "name": "Khris Middleton",
+   "MIN": 1439.0,
+   "orebPct": 0.033,
+   "drebPct": 0.118,
+   "con2_36": 1.8590369853454292,
+   "cardRebound": 70.8,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1630230": {
+   "name": "Naji Marshall",
+   "MIN": 2184.0,
+   "orebPct": 0.028,
+   "drebPct": 0.12,
+   "con2_36": 2.39010989010989,
+   "cardRebound": 72.3,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642878": {
+   "name": "Tyrese Proctor",
+   "MIN": 545.0,
+   "orebPct": 0.019,
+   "drebPct": 0.092,
+   "con2_36": 1.1451292246520874,
+   "cardRebound": 55.3,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630191": {
+   "name": "Isaiah Stewart",
+   "MIN": 1317.0,
+   "orebPct": 0.07,
+   "drebPct": 0.135,
+   "con2_36": 10.496583143507973,
+   "cardRebound": 87.8,
+   "cardBonus": 1.728,
+   "pos": "PF"
+  },
+  "1629060": {
+   "name": "Rui Hachimura",
+   "MIN": 1927.0,
+   "orebPct": 0.023,
+   "drebPct": 0.094,
+   "con2_36": 2.8784850078905837,
+   "cardRebound": 64.5,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1642954": {
+   "name": "Will Richard",
+   "MIN": 1377.0,
+   "orebPct": 0.045,
+   "drebPct": 0.078,
+   "con2_36": 2.0357142857142856,
+   "cardRebound": 55.5,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1631169": {
+   "name": "Josh Minott",
+   "MIN": 834.0,
+   "orebPct": 0.055,
+   "drebPct": 0.128,
+   "con2_36": 4.057553956834532,
+   "cardRebound": 79.3,
+   "cardBonus": 0.061,
+   "pos": "PF"
+  },
+  "1626156": {
+   "name": "D'Angelo Russell",
+   "MIN": 495.0,
+   "orebPct": 0.016,
+   "drebPct": 0.092,
+   "con2_36": 1.8118161925601752,
+   "cardRebound": 47.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1627741": {
+   "name": "Buddy Hield",
+   "MIN": 819.0,
+   "orebPct": 0.032,
+   "drebPct": 0.106,
+   "con2_36": 3.650190114068441,
+   "cardRebound": 61.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641718": {
+   "name": "Keyonte George",
+   "MIN": 1786.0,
+   "orebPct": 0.012,
+   "drebPct": 0.096,
+   "con2_36": 1.3401015228426396,
+   "cardRebound": 49.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1631260": {
+   "name": "AJ Green",
+   "MIN": 2270.0,
+   "orebPct": 0.013,
+   "drebPct": 0.08,
+   "con2_36": 2.7277533039647577,
+   "cardRebound": 44.7,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642270": {
+   "name": "Donovan Clingan",
+   "MIN": 2094.0,
+   "orebPct": 0.149,
+   "drebPct": 0.254,
+   "con2_36": 13.031518624641834,
+   "cardRebound": 103.8,
+   "cardBonus": 10.632,
+   "pos": "C"
+  },
+  "1631255": {
+   "name": "Karlo Matković",
+   "MIN": 912.0,
+   "orebPct": 0.074,
+   "drebPct": 0.155,
+   "con2_36": 7.973684210526316,
+   "cardRebound": 89.2,
+   "cardBonus": 1.688,
+   "pos": "PF"
+  },
+  "203937": {
+   "name": "Kyle Anderson",
+   "MIN": 853.0,
+   "orebPct": 0.047,
+   "drebPct": 0.121,
+   "con2_36": 3.798358733880422,
+   "cardRebound": 78.4,
+   "cardBonus": 0.0,
+   "pos": "C"
+  },
+  "202696": {
+   "name": "Nikola Vučević",
+   "MIN": 1818.0,
+   "orebPct": 0.067,
+   "drebPct": 0.211,
+   "con2_36": 6.633663366336633,
+   "cardRebound": 93.0,
+   "cardBonus": 3.702,
+   "pos": "C"
+  },
+  "1642857": {
+   "name": "Kasparas Jakučionis",
+   "MIN": 945.0,
+   "orebPct": 0.04,
+   "drebPct": 0.096,
+   "con2_36": 3.1220556745182013,
+   "cardRebound": 62.1,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630568": {
+   "name": "Luka Garza",
+   "MIN": 1118.0,
+   "orebPct": 0.129,
+   "drebPct": 0.11,
+   "con2_36": 7.483870967741935,
+   "cardRebound": 88.9,
+   "cardBonus": 4.304,
+   "pos": "C"
+  },
+  "1642281": {
+   "name": "Jaylon Tyson",
+   "MIN": 1777.0,
+   "orebPct": 0.064,
+   "drebPct": 0.118,
+   "con2_36": 3.482564679415073,
+   "cardRebound": 79.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1629023": {
+   "name": "P.J. Washington",
+   "MIN": 1736.0,
+   "orebPct": 0.045,
+   "drebPct": 0.162,
+   "con2_36": 4.6036866359447,
+   "cardRebound": 84.6,
+   "cardBonus": 0.471,
+   "pos": "PF"
+  },
+  "1631222": {
+   "name": "Jake LaRavia",
+   "MIN": 2061.0,
+   "orebPct": 0.059,
+   "drebPct": 0.103,
+   "con2_36": 3.248908296943232,
+   "cardRebound": 76.6,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1631093": {
+   "name": "Jaden Ivey",
+   "MIN": 670.0,
+   "orebPct": 0.034,
+   "drebPct": 0.096,
+   "con2_36": 2.2943854324734447,
+   "cardRebound": 60.2,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629021": {
+   "name": "Moritz Wagner",
+   "MIN": 427.0,
+   "orebPct": 0.056,
+   "drebPct": 0.207,
+   "con2_36": 4.0,
+   "cardRebound": 91.2,
+   "cardBonus": 1.205,
+   "pos": "C"
+  },
+  "1642883": {
+   "name": "Sion James",
+   "MIN": 1843.0,
+   "orebPct": 0.026,
+   "drebPct": 0.124,
+   "con2_36": 3.37927292457949,
+   "cardRebound": 72.7,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630228": {
+   "name": "Jonathan Kuminga",
+   "MIN": 830.0,
+   "orebPct": 0.056,
+   "drebPct": 0.182,
+   "con2_36": 3.552346570397112,
+   "cardRebound": 82.8,
+   "cardBonus": 0.473,
+   "pos": "PF"
+  },
+  "1631204": {
+   "name": "Marcus Sasser",
+   "MIN": 457.0,
+   "orebPct": 0.016,
+   "drebPct": 0.07,
+   "con2_36": 1.4963325183374083,
+   "cardRebound": 41.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630182": {
+   "name": "Josh Green",
+   "MIN": 908.0,
+   "orebPct": 0.048,
+   "drebPct": 0.06,
+   "con2_36": 2.389016018306636,
+   "cardRebound": 45.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642346": {
+   "name": "Ryan Dunn",
+   "MIN": 1355.0,
+   "orebPct": 0.068,
+   "drebPct": 0.142,
+   "con2_36": 3.4769687964338782,
+   "cardRebound": 83.1,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1631351": {
+   "name": "Lucas Williamson",
+   "MIN": 224.0,
+   "orebPct": 0.042,
+   "drebPct": 0.127,
+   "con2_36": 1.0,
+   "cardRebound": 70.3,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642928": {
+   "name": "Dylan Cardwell",
+   "MIN": 907.0,
+   "orebPct": 0.148,
+   "drebPct": 0.202,
+   "con2_36": 9.78912319644839,
+   "cardRebound": 97.4,
+   "cardBonus": 9.077,
+   "pos": "C"
+  },
+  "1631243": {
+   "name": "Mouhamed Gueye",
+   "MIN": 1179.0,
+   "orebPct": 0.071,
+   "drebPct": 0.151,
+   "con2_36": 5.244827586206897,
+   "cardRebound": 88.5,
+   "cardBonus": 0.94,
+   "pos": "PF"
+  },
+  "1642271": {
+   "name": "Kyle Filipowski",
+   "MIN": 1801.0,
+   "orebPct": 0.076,
+   "drebPct": 0.225,
+   "con2_36": 5.188647746243739,
+   "cardRebound": 93.1,
+   "cardBonus": 2.652,
+   "pos": "C"
+  },
+  "1630703": {
+   "name": "Scoot Henderson",
+   "MIN": 748.0,
+   "orebPct": 0.022,
+   "drebPct": 0.078,
+   "con2_36": 1.2032085561497328,
+   "cardRebound": 47.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630543": {
+   "name": "Isaiah Jackson",
+   "MIN": 908.0,
+   "orebPct": 0.12,
+   "drebPct": 0.19,
+   "con2_36": 7.668874172185431,
+   "cardRebound": 93.8,
+   "cardBonus": 6.338,
+   "pos": "C"
+  },
+  "1643060": {
+   "name": "Hayden Gray",
+   "MIN": 25.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 50.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630165": {
+   "name": "Killian Hayes",
+   "MIN": 406.0,
+   "orebPct": 0.009,
+   "drebPct": 0.117,
+   "con2_36": 2.1386138613861387,
+   "cardRebound": 57.9,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1628997": {
+   "name": "Caleb Martin",
+   "MIN": 856.0,
+   "orebPct": 0.03,
+   "drebPct": 0.125,
+   "con2_36": 2.5186972255729794,
+   "cardRebound": 70.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "101108": {
+   "name": "Chris Paul",
+   "MIN": 228.0,
+   "orebPct": 0.026,
+   "drebPct": 0.101,
+   "con2_36": 0.6956521739130435,
+   "cardRebound": 57.1,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1641761": {
+   "name": "Grant Nelson",
+   "MIN": 35.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 91.2,
+   "cardBonus": 0.35,
+   "pos": "C"
+  },
+  "203482": {
+   "name": "Kelly Olynyk",
+   "MIN": 360.0,
+   "orebPct": 0.063,
+   "drebPct": 0.138,
+   "con2_36": 4.0813953488372094,
+   "cardRebound": 86.8,
+   "cardBonus": 0.0,
+   "pos": "C"
+  },
+  "1630314": {
+   "name": "Brandon Williams",
+   "MIN": 1463.0,
+   "orebPct": 0.019,
+   "drebPct": 0.105,
+   "con2_36": 2.434782608695652,
+   "cardRebound": 55.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1641750": {
+   "name": "Ryan Kalkbrenner",
+   "MIN": 1479.0,
+   "orebPct": 0.109,
+   "drebPct": 0.133,
+   "con2_36": 12.2920892494929,
+   "cardRebound": 89.9,
+   "cardBonus": 6.92,
+   "pos": "C"
+  },
+  "202685": {
+   "name": "Jonas Valanciunas",
+   "MIN": 871.0,
+   "orebPct": 0.124,
+   "drebPct": 0.246,
+   "con2_36": 8.875,
+   "cardRebound": 98.8,
+   "cardBonus": 8.668,
+   "pos": "C"
+  },
+  "1628988": {
+   "name": "Aaron Holiday",
+   "MIN": 781.0,
+   "orebPct": 0.016,
+   "drebPct": 0.054,
+   "con2_36": 2.3902439024390243,
+   "cardRebound": 41.1,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629652": {
+   "name": "Luguentz Dort",
+   "MIN": 1849.0,
+   "orebPct": 0.03,
+   "drebPct": 0.094,
+   "con2_36": 1.7717685235262306,
+   "cardRebound": 59.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642363": {
+   "name": "Nique Clifford",
+   "MIN": 1882.0,
+   "orebPct": 0.034,
+   "drebPct": 0.115,
+   "con2_36": 3.1753453772582363,
+   "cardRebound": 68.4,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641783": {
+   "name": "Tristan da Silva",
+   "MIN": 1899.0,
+   "orebPct": 0.03,
+   "drebPct": 0.115,
+   "con2_36": 3.6777251184834125,
+   "cardRebound": 69.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1628998": {
+   "name": "Cody Martin",
+   "MIN": 55.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 77.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642377": {
+   "name": "Jaylen Wells",
+   "MIN": 1821.0,
+   "orebPct": 0.031,
+   "drebPct": 0.086,
+   "con2_36": 2.57001647446458,
+   "cardRebound": 54.9,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1641803": {
+   "name": "Tristen Newton",
+   "MIN": 12.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 71.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641757": {
+   "name": "Jordan Miller",
+   "MIN": 1325.0,
+   "orebPct": 0.041,
+   "drebPct": 0.097,
+   "con2_36": 2.5928733889310083,
+   "cardRebound": 65.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1628370": {
+   "name": "Malik Monk",
+   "MIN": 1364.0,
+   "orebPct": 0.01,
+   "drebPct": 0.071,
+   "con2_36": 2.3431952662721893,
+   "cardRebound": 45.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1629014": {
+   "name": "Anfernee Simons",
+   "MIN": 1372.0,
+   "orebPct": 0.021,
+   "drebPct": 0.075,
+   "con2_36": 2.211695040710585,
+   "cardRebound": 42.4,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1631113": {
+   "name": "Kennedy Chandler",
+   "MIN": 355.0,
+   "orebPct": 0.015,
+   "drebPct": 0.085,
+   "con2_36": 1.3183098591549296,
+   "cardRebound": 44.9,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630570": {
+   "name": "Trendon Watford",
+   "MIN": 864.0,
+   "orebPct": 0.041,
+   "drebPct": 0.146,
+   "con2_36": 4.178194607268464,
+   "cardRebound": 81.1,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642276": {
+   "name": "Kel'el Ware",
+   "MIN": 1704.0,
+   "orebPct": 0.113,
+   "drebPct": 0.247,
+   "con2_36": 7.531914893617021,
+   "cardRebound": 97.9,
+   "cardBonus": 7.117,
+   "pos": "C"
+  },
+  "1629726": {
+   "name": "Garrison Mathews",
+   "MIN": 196.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 45.3,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "203084": {
+   "name": "Harrison Barnes",
+   "MIN": 1986.0,
+   "orebPct": 0.03,
+   "drebPct": 0.071,
+   "con2_36": 2.574018126888218,
+   "cardRebound": 51.6,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1642263": {
+   "name": "Reed Sheppard",
+   "MIN": 2147.0,
+   "orebPct": 0.012,
+   "drebPct": 0.092,
+   "con2_36": 2.615742897065673,
+   "cardRebound": 49.3,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1631212": {
+   "name": "Peyton Watson",
+   "MIN": 1598.0,
+   "orebPct": 0.033,
+   "drebPct": 0.127,
+   "con2_36": 4.640801001251565,
+   "cardRebound": 72.3,
+   "cardBonus": 0.201,
+   "pos": "PF"
+  },
+  "1630175": {
+   "name": "Cole Anthony",
+   "MIN": 527.0,
+   "orebPct": 0.029,
+   "drebPct": 0.126,
+   "con2_36": 1.728,
+   "cardRebound": 74.6,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1629634": {
+   "name": "Brandon Clarke",
+   "MIN": 20.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 89.0,
+   "cardBonus": 0.194,
+   "pos": "C"
+  },
+  "1631323": {
+   "name": "Simone Fontecchio",
+   "MIN": 1172.0,
+   "orebPct": 0.042,
+   "drebPct": 0.118,
+   "con2_36": 2.5780845556514236,
+   "cardRebound": 74.8,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1642066": {
+   "name": "Myron Gardner",
+   "MIN": 411.0,
+   "orebPct": 0.079,
+   "drebPct": 0.193,
+   "con2_36": 3.7653061224489797,
+   "cardRebound": 88.9,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1643016": {
+   "name": "Bez Mbeng",
+   "MIN": 492.0,
+   "orebPct": 0.032,
+   "drebPct": 0.078,
+   "con2_36": 2.268292682926829,
+   "cardRebound": 50.7,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1643133": {
+   "name": "Lawson Lovering",
+   "MIN": 49.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 93.0,
+   "cardBonus": 0.502,
+   "pos": "C"
+  },
+  "1628418": {
+   "name": "Thomas Bryant",
+   "MIN": 732.0,
+   "orebPct": 0.074,
+   "drebPct": 0.184,
+   "con2_36": 7.938973647711512,
+   "cardRebound": 90.9,
+   "cardBonus": 4.838,
+   "pos": "C"
+  },
+  "1641775": {
+   "name": "Jordan Walsh",
+   "MIN": 1212.0,
+   "orebPct": 0.069,
+   "drebPct": 0.146,
+   "con2_36": 3.2754590984974956,
+   "cardRebound": 83.3,
+   "cardBonus": 0.378,
+   "pos": "PF"
+  },
+  "1630557": {
+   "name": "Corey Kispert",
+   "MIN": 1080.0,
+   "orebPct": 0.022,
+   "drebPct": 0.091,
+   "con2_36": 4.15648854961832,
+   "cardRebound": 49.5,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1641731": {
+   "name": "Bilal Coulibaly",
+   "MIN": 1468.0,
+   "orebPct": 0.03,
+   "drebPct": 0.128,
+   "con2_36": 3.0899182561307903,
+   "cardRebound": 69.3,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1628971": {
+   "name": "Bruce Brown",
+   "MIN": 1998.0,
+   "orebPct": 0.043,
+   "drebPct": 0.109,
+   "con2_36": 1.6216216216216215,
+   "cardRebound": 72.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631123": {
+   "name": "Jamaree Bouyea",
+   "MIN": 644.0,
+   "orebPct": 0.026,
+   "drebPct": 0.1,
+   "con2_36": 2.728171334431631,
+   "cardRebound": 57.1,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630171": {
+   "name": "Isaac Okoro",
+   "MIN": 1695.0,
+   "orebPct": 0.04,
+   "drebPct": 0.058,
+   "con2_36": 4.778761061946903,
+   "cardRebound": 46.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1631174": {
+   "name": "Tyler Burton",
+   "MIN": 307.0,
+   "orebPct": 0.023,
+   "drebPct": 0.137,
+   "con2_36": 3.1661237785016287,
+   "cardRebound": 74.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1629028": {
+   "name": "Deandre Ayton",
+   "MIN": 1958.0,
+   "orebPct": 0.103,
+   "drebPct": 0.2,
+   "con2_36": 7.77732379979571,
+   "cardRebound": 94.6,
+   "cardBonus": 6.225,
+   "pos": "C"
+  },
+  "203501": {
+   "name": "Tim Hardaway Jr.",
+   "MIN": 2127.0,
+   "orebPct": 0.008,
+   "drebPct": 0.082,
+   "con2_36": 2.091639111950874,
+   "cardRebound": 43.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629673": {
+   "name": "Jordan Poole",
+   "MIN": 933.0,
+   "orebPct": 0.009,
+   "drebPct": 0.067,
+   "con2_36": 1.6205787781350482,
+   "cardRebound": 41.7,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631108": {
+   "name": "Max Christie",
+   "MIN": 2244.0,
+   "orebPct": 0.006,
+   "drebPct": 0.097,
+   "con2_36": 3.7844097995545654,
+   "cardRebound": 50.4,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631338": {
+   "name": "Mouhamadou Gueye",
+   "MIN": 45.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 82.3,
+   "cardBonus": 0.028,
+   "pos": "PF"
+  },
+  "1642846": {
+   "name": "Ace Bailey",
+   "MIN": 1988.0,
+   "orebPct": 0.048,
+   "drebPct": 0.097,
+   "con2_36": 3.4406438631790746,
+   "cardRebound": 69.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642272": {
+   "name": "Jared McCain",
+   "MIN": 1160.0,
+   "orebPct": 0.019,
+   "drebPct": 0.092,
+   "con2_36": 2.376449598572703,
+   "cardRebound": 49.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1643158": {
+   "name": "Andersson Garcia",
+   "MIN": 169.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 85.4,
+   "cardBonus": 0.123,
+   "pos": "PF"
+  },
+  "203486": {
+   "name": "Mason Plumlee",
+   "MIN": 171.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 96.3,
+   "cardBonus": 1.82,
+   "pos": "C"
+  },
+  "1627746": {
+   "name": "Skal Labissiere",
+   "MIN": 38.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 88.7,
+   "cardBonus": 0.032,
+   "pos": "PF"
+  },
+  "1641767": {
+   "name": "Ben Sheppard",
+   "MIN": 1390.0,
+   "orebPct": 0.028,
+   "drebPct": 0.106,
+   "con2_36": 2.9784172661870505,
+   "cardRebound": 62.1,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631230": {
+   "name": "Dominick Barlow",
+   "MIN": 1689.0,
+   "orebPct": 0.075,
+   "drebPct": 0.118,
+   "con2_36": 7.50266429840142,
+   "cardRebound": 83.1,
+   "cardBonus": 1.295,
+   "pos": "PF"
+  },
+  "1642259": {
+   "name": "Alex Sarr",
+   "MIN": 1305.0,
+   "orebPct": 0.073,
+   "drebPct": 0.179,
+   "con2_36": 9.627586206896552,
+   "cardRebound": 88.7,
+   "cardBonus": 5.863,
+   "pos": "C"
+  },
+  "1631207": {
+   "name": "Dalen Terry",
+   "MIN": 551.0,
+   "orebPct": 0.041,
+   "drebPct": 0.099,
+   "con2_36": 4.91881188118812,
+   "cardRebound": 62.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630699": {
+   "name": "MarJon Beauchamp",
+   "MIN": 196.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 79.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629020": {
+   "name": "Jarred Vanderbilt",
+   "MIN": 1128.0,
+   "orebPct": 0.073,
+   "drebPct": 0.194,
+   "con2_36": 3.0866425992779782,
+   "cardRebound": 91.0,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642920": {
+   "name": "Kobe Sanders",
+   "MIN": 1351.0,
+   "orebPct": 0.022,
+   "drebPct": 0.088,
+   "con2_36": 3.5272999252056843,
+   "cardRebound": 54.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642949": {
+   "name": "Yanic Konan Niederhäuser",
+   "MIN": 424.0,
+   "orebPct": 0.096,
+   "drebPct": 0.176,
+   "con2_36": 10.285714285714285,
+   "cardRebound": 92.9,
+   "cardBonus": 6.122,
+   "pos": "C"
+  },
+  "203552": {
+   "name": "Seth Curry",
+   "MIN": 133.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 45.7,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642366": {
+   "name": "Quinten Post",
+   "MIN": 1159.0,
+   "orebPct": 0.057,
+   "drebPct": 0.165,
+   "con2_36": 9.818181818181817,
+   "cardRebound": 86.5,
+   "cardBonus": 4.822,
+   "pos": "C"
+  },
+  "1631218": {
+   "name": "Trayce Jackson-Davis",
+   "MIN": 496.0,
+   "orebPct": 0.124,
+   "drebPct": 0.158,
+   "con2_36": 10.044806517311608,
+   "cardRebound": 92.8,
+   "cardBonus": 7.554,
+   "pos": "C"
+  },
+  "1630560": {
+   "name": "Cam Thomas",
+   "MIN": 881.0,
+   "orebPct": 0.012,
+   "drebPct": 0.071,
+   "con2_36": 2.1454112038140645,
+   "cardRebound": 43.7,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642269": {
+   "name": "Devin Carter",
+   "MIN": 700.0,
+   "orebPct": 0.048,
+   "drebPct": 0.13,
+   "con2_36": 1.897510980966325,
+   "cardRebound": 77.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1629111": {
+   "name": "Jock Landale",
+   "MIN": 1506.0,
+   "orebPct": 0.111,
+   "drebPct": 0.136,
+   "con2_36": 6.788844621513944,
+   "cardRebound": 89.2,
+   "cardBonus": 3.385,
+   "pos": "C"
+  },
+  "1641737": {
+   "name": "Adem Bona",
+   "MIN": 1234.0,
+   "orebPct": 0.099,
+   "drebPct": 0.138,
+   "con2_36": 7.6764705882352935,
+   "cardRebound": 89.7,
+   "cardBonus": 4.2,
+   "pos": "C"
+  },
+  "1626192": {
+   "name": "Pat Connaughton",
+   "MIN": 297.0,
+   "orebPct": 0.047,
+   "drebPct": 0.153,
+   "con2_36": 2.571428571428571,
+   "cardRebound": 76.4,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641755": {
+   "name": "Kevin McCullar Jr.",
+   "MIN": 155.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 75.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1627824": {
+   "name": "Guerschon Yabusele",
+   "MIN": 1007.0,
+   "orebPct": 0.052,
+   "drebPct": 0.17,
+   "con2_36": 3.9340206185567013,
+   "cardRebound": 84.6,
+   "cardBonus": 0.0,
+   "pos": "C"
+  },
+  "1631107": {
+   "name": "Nikola Jović",
+   "MIN": 808.0,
+   "orebPct": 0.028,
+   "drebPct": 0.137,
+   "con2_36": 5.70566037735849,
+   "cardRebound": 76.9,
+   "cardBonus": 0.587,
+   "pos": "PF"
+  },
+  "1628449": {
+   "name": "Chris Boucher",
+   "MIN": 94.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 88.9,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1643052": {
+   "name": "Chaney Johnson",
+   "MIN": 348.0,
+   "orebPct": 0.096,
+   "drebPct": 0.146,
+   "con2_36": 3.8275862068965516,
+   "cardRebound": 86.9,
+   "cardBonus": 0.705,
+   "pos": "C"
+  },
+  "1642461": {
+   "name": "Spencer Jones",
+   "MIN": 1417.0,
+   "orebPct": 0.055,
+   "drebPct": 0.09,
+   "con2_36": 4.7542372881355925,
+   "cardRebound": 69.3,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1631288": {
+   "name": "Jamal Cain",
+   "MIN": 486.0,
+   "orebPct": 0.055,
+   "drebPct": 0.109,
+   "con2_36": 4.150943396226415,
+   "cardRebound": 74.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630545": {
+   "name": "Terrence Shannon Jr",
+   "MIN": 538.0,
+   "orebPct": 0.018,
+   "drebPct": 0.074,
+   "con2_36": 2.9021113243762,
+   "cardRebound": 47.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642450": {
+   "name": "Daniss Jenkins",
+   "MIN": 1455.0,
+   "orebPct": 0.034,
+   "drebPct": 0.077,
+   "con2_36": 2.6835443037974684,
+   "cardRebound": 53.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630695": {
+   "name": "Micah Potter",
+   "MIN": 908.0,
+   "orebPct": 0.061,
+   "drebPct": 0.193,
+   "con2_36": 8.563876651982378,
+   "cardRebound": 89.0,
+   "cardBonus": 5.054,
+   "pos": "C"
+  },
+  "1642852": {
+   "name": "Derik Queen",
+   "MIN": 2023.0,
+   "orebPct": 0.065,
+   "drebPct": 0.207,
+   "con2_36": 6.37073652990608,
+   "cardRebound": 91.1,
+   "cardBonus": 3.002,
+   "pos": "C"
+  },
+  "1630173": {
+   "name": "Precious Achiuwa",
+   "MIN": 1745.0,
+   "orebPct": 0.098,
+   "drebPct": 0.18,
+   "con2_36": 5.260744985673353,
+   "cardRebound": 91.7,
+   "cardBonus": 1.325,
+   "pos": "PF"
+  },
+  "1631223": {
+   "name": "David Roddy",
+   "MIN": 73.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 80.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1626220": {
+   "name": "Royce O'Neale",
+   "MIN": 2213.0,
+   "orebPct": 0.025,
+   "drebPct": 0.139,
+   "con2_36": 1.4152733845458654,
+   "cardRebound": 77.1,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1641771": {
+   "name": "Jalen Slawson",
+   "MIN": 311.0,
+   "orebPct": 0.022,
+   "drebPct": 0.148,
+   "con2_36": 6.250803858520901,
+   "cardRebound": 78.4,
+   "cardBonus": 0.469,
+   "pos": "PF"
+  },
+  "201587": {
+   "name": "Nicolas Batum",
+   "MIN": 1295.0,
+   "orebPct": 0.018,
+   "drebPct": 0.119,
+   "con2_36": 3.602882305844676,
+   "cardRebound": 71.0,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1641716": {
+   "name": "Jarace Walker",
+   "MIN": 1953.0,
+   "orebPct": 0.023,
+   "drebPct": 0.17,
+   "con2_36": 2.323180175529169,
+   "cardRebound": 81.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "203992": {
+   "name": "Bogdan Bogdanović",
+   "MIN": 452.0,
+   "orebPct": 0.014,
+   "drebPct": 0.112,
+   "con2_36": 3.4400000000000004,
+   "cardRebound": 54.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642357": {
+   "name": "David Jones Garcia",
+   "MIN": 68.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 70.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631172": {
+   "name": "Ousmane Dieng",
+   "MIN": 1099.0,
+   "orebPct": 0.026,
+   "drebPct": 0.136,
+   "con2_36": 4.549450549450549,
+   "cardRebound": 76.9,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642348": {
+   "name": "Justin Edwards",
+   "MIN": 977.0,
+   "orebPct": 0.025,
+   "drebPct": 0.07,
+   "con2_36": 1.5110178384050366,
+   "cardRebound": 49.9,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "201144": {
+   "name": "Mike Conley",
+   "MIN": 991.0,
+   "orebPct": 0.017,
+   "drebPct": 0.074,
+   "con2_36": 2.3322884012539187,
+   "cardRebound": 44.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1626172": {
+   "name": "Kevon Looney",
+   "MIN": 307.0,
+   "orebPct": 0.132,
+   "drebPct": 0.214,
+   "con2_36": 7.246753246753247,
+   "cardRebound": 98.2,
+   "cardBonus": 4.107,
+   "pos": "C"
+  },
+  "1642389": {
+   "name": "Zyon Pullin",
+   "MIN": 43.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 51.7,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641772": {
+   "name": "Nae'Qwan Tomlin",
+   "MIN": 1004.0,
+   "orebPct": 0.081,
+   "drebPct": 0.094,
+   "con2_36": 3.309090909090909,
+   "cardRebound": 80.4,
+   "cardBonus": 0.105,
+   "pos": "PF"
+  },
+  "1642261": {
+   "name": "Dalton Knecht",
+   "MIN": 553.0,
+   "orebPct": 0.026,
+   "drebPct": 0.108,
+   "con2_36": 3.629032258064516,
+   "cardRebound": 66.9,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1628365": {
+   "name": "Markelle Fultz",
+   "MIN": 36.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 60.3,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641765": {
+   "name": "Olivier-Maxence Prosper",
+   "MIN": 984.0,
+   "orebPct": 0.057,
+   "drebPct": 0.127,
+   "con2_36": 4.964249233912156,
+   "cardRebound": 81.5,
+   "cardBonus": 0.0,
+   "pos": "C"
+  },
+  "1642274": {
+   "name": "Yves Missi",
+   "MIN": 1297.0,
+   "orebPct": 0.128,
+   "drebPct": 0.147,
+   "con2_36": 7.966075558982267,
+   "cardRebound": 93.0,
+   "cardBonus": 5.984,
+   "pos": "C"
+  },
+  "1641732": {
+   "name": "Colby Jones",
+   "MIN": 7.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 73.7,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630639": {
+   "name": "A.J. Lawson",
+   "MIN": 226.0,
+   "orebPct": 0.039,
+   "drebPct": 0.156,
+   "con2_36": null,
+   "cardRebound": 75.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "203648": {
+   "name": "Thanasis Antetokounmpo",
+   "MIN": 148.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 79.1,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642352": {
+   "name": "Keshad Johnson",
+   "MIN": 280.0,
+   "orebPct": 0.08,
+   "drebPct": 0.12,
+   "con2_36": 5.318181818181818,
+   "cardRebound": 82.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631110": {
+   "name": "Jeremy Sochan",
+   "MIN": 469.0,
+   "orebPct": 0.076,
+   "drebPct": 0.149,
+   "con2_36": 5.154362416107382,
+   "cardRebound": 87.2,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642530": {
+   "name": "Yuki Kawamura",
+   "MIN": 209.0,
+   "orebPct": 0.032,
+   "drebPct": 0.118,
+   "con2_36": null,
+   "cardRebound": 60.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630264": {
+   "name": "Anthony Gill",
+   "MIN": 951.0,
+   "orebPct": 0.059,
+   "drebPct": 0.112,
+   "con2_36": 4.766415500538214,
+   "cardRebound": 74.6,
+   "cardBonus": 0.249,
+   "pos": "PF"
+  },
+  "1626204": {
+   "name": "Larry Nance Jr.",
+   "MIN": 449.0,
+   "orebPct": 0.058,
+   "drebPct": 0.143,
+   "con2_36": 2.618181818181818,
+   "cardRebound": 84.4,
+   "cardBonus": 0.251,
+   "pos": "PF"
+  },
+  "1629646": {
+   "name": "Charles Bassey",
+   "MIN": 153.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 97.1,
+   "cardBonus": 0.173,
+   "pos": "PF"
+  },
+  "1629162": {
+   "name": "Jordan McLaughlin",
+   "MIN": 282.0,
+   "orebPct": 0.024,
+   "drebPct": 0.093,
+   "con2_36": 2.6614785992217898,
+   "cardRebound": 48.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642278": {
+   "name": "Tyler Kolek",
+   "MIN": 727.0,
+   "orebPct": 0.021,
+   "drebPct": 0.108,
+   "con2_36": 2.25,
+   "cardRebound": 56.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642847": {
+   "name": "Jeremiah Fears",
+   "MIN": 2112.0,
+   "orebPct": 0.026,
+   "drebPct": 0.109,
+   "con2_36": 2.1647727272727275,
+   "cardRebound": 62.2,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1631124": {
+   "name": "Julian Strawther",
+   "MIN": 861.0,
+   "orebPct": 0.014,
+   "drebPct": 0.112,
+   "con2_36": 2.080402010050251,
+   "cardRebound": 52.3,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642866": {
+   "name": "Joan Beringer",
+   "MIN": 314.0,
+   "orebPct": 0.141,
+   "drebPct": 0.135,
+   "con2_36": 11.845161290322581,
+   "cardRebound": 93.0,
+   "cardBonus": 5.147,
+   "pos": "C"
+  },
+  "1628964": {
+   "name": "Mo Bamba",
+   "MIN": 44.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 96.9,
+   "cardBonus": 0.472,
+   "pos": "C"
+  },
+  "1630209": {
+   "name": "Omer Yurtseven",
+   "MIN": 104.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 95.2,
+   "cardBonus": 1.093,
+   "pos": "C"
+  },
+  "1641723": {
+   "name": "Kobe Bufkin",
+   "MIN": 119.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 63.3,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "201566": {
+   "name": "Russell Westbrook",
+   "MIN": 1853.0,
+   "orebPct": 0.042,
+   "drebPct": 0.147,
+   "con2_36": 1.0085763293310464,
+   "cardRebound": 78.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642502": {
+   "name": "Malevy Leons",
+   "MIN": 276.0,
+   "orebPct": 0.106,
+   "drebPct": 0.089,
+   "con2_36": 5.486988847583643,
+   "cardRebound": 83.1,
+   "cardBonus": 0.478,
+   "pos": "PF"
+  },
+  "1642258": {
+   "name": "Zaccharie Risacher",
+   "MIN": 1503.0,
+   "orebPct": 0.044,
+   "drebPct": 0.121,
+   "con2_36": 4.574850299401198,
+   "cardRebound": 72.9,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630256": {
+   "name": "Jae'Sean Tate",
+   "MIN": 405.0,
+   "orebPct": 0.076,
+   "drebPct": 0.094,
+   "con2_36": 3.75,
+   "cardRebound": 78.7,
+   "cardBonus": 0.021,
+   "pos": "PF"
+  },
+  "1641763": {
+   "name": "Julian Phillips",
+   "MIN": 427.0,
+   "orebPct": 0.053,
+   "drebPct": 0.054,
+   "con2_36": 2.953846153846154,
+   "cardRebound": 58.0,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630286": {
+   "name": "Trevon Scott",
+   "MIN": 182.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 77.1,
+   "cardBonus": 1.471,
+   "pos": "C"
+  },
+  "1641715": {
+   "name": "Cam Whitmore",
+   "MIN": 354.0,
+   "orebPct": 0.049,
+   "drebPct": 0.102,
+   "con2_36": 2.6440677966101696,
+   "cardRebound": 75.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630625": {
+   "name": "Dalano Banton",
+   "MIN": 62.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 59.1,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1631166": {
+   "name": "Drew Timme",
+   "MIN": 235.0,
+   "orebPct": 0.047,
+   "drebPct": 0.093,
+   "con2_36": 5.575221238938052,
+   "cardRebound": 82.5,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630534": {
+   "name": "Ochai Agbaji",
+   "MIN": 973.0,
+   "orebPct": 0.046,
+   "drebPct": 0.096,
+   "con2_36": 4.698947368421052,
+   "cardRebound": 62.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "204060": {
+   "name": "Joe Ingles",
+   "MIN": 153.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 61.5,
+   "cardBonus": 0.035,
+   "pos": "PF"
+  },
+  "1641813": {
+   "name": "Mark Sears",
+   "MIN": 26.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 49.1,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1641711": {
+   "name": "Gradey Dick",
+   "MIN": 1067.0,
+   "orebPct": 0.038,
+   "drebPct": 0.095,
+   "con2_36": 1.119533527696793,
+   "cardRebound": 58.9,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1628975": {
+   "name": "Jevon Carter",
+   "MIN": 867.0,
+   "orebPct": 0.015,
+   "drebPct": 0.085,
+   "con2_36": 1.691566265060241,
+   "cardRebound": 44.3,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630574": {
+   "name": "Ariel Hukporti",
+   "MIN": 498.0,
+   "orebPct": 0.104,
+   "drebPct": 0.192,
+   "con2_36": 9.225,
+   "cardRebound": 93.3,
+   "cardBonus": 7.274,
+   "pos": "C"
+  },
+  "1631116": {
+   "name": "Patrick Baldwin Jr.",
+   "MIN": 102.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 89.2,
+   "cardBonus": 0.088,
+   "pos": "PF"
+  },
+  "1630619": {
+   "name": "Moussa Cisse",
+   "MIN": 530.0,
+   "orebPct": 0.15,
+   "drebPct": 0.215,
+   "con2_36": 10.139886578449907,
+   "cardRebound": 98.2,
+   "cardBonus": 9.466,
+   "pos": "C"
+  },
+  "1641871": {
+   "name": "Duop Reath",
+   "MIN": 258.0,
+   "orebPct": 0.037,
+   "drebPct": 0.095,
+   "con2_36": 7.2,
+   "cardRebound": 80.7,
+   "cardBonus": 0.508,
+   "pos": "PF"
+  },
+  "201599": {
+   "name": "DeAndre Jordan",
+   "MIN": 199.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 98.4,
+   "cardBonus": 2.169,
+   "pos": "C"
+  },
+  "1642277": {
+   "name": "Johnny Furphy",
+   "MIN": 643.0,
+   "orebPct": 0.049,
+   "drebPct": 0.191,
+   "con2_36": 5.45625,
+   "cardRebound": 84.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1628398": {
+   "name": "Kyle Kuzma",
+   "MIN": 1806.0,
+   "orebPct": 0.032,
+   "drebPct": 0.134,
+   "con2_36": 3.120805369127517,
+   "cardRebound": 78.4,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "202691": {
+   "name": "Klay Thompson",
+   "MIN": 1497.0,
+   "orebPct": 0.011,
+   "drebPct": 0.074,
+   "con2_36": 2.213427561837456,
+   "cardRebound": 46.3,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1641713": {
+   "name": "GG Jackson",
+   "MIN": 1178.0,
+   "orebPct": 0.04,
+   "drebPct": 0.154,
+   "con2_36": 5.094629156010231,
+   "cardRebound": 81.5,
+   "cardBonus": 0.504,
+   "pos": "PF"
+  },
+  "1627827": {
+   "name": "Dorian Finney-Smith",
+   "MIN": 620.0,
+   "orebPct": 0.054,
+   "drebPct": 0.087,
+   "con2_36": 2.5033112582781456,
+   "cardRebound": 67.7,
+   "cardBonus": 0.0,
+   "pos": "C"
+  },
+  "1630811": {
+   "name": "Keaton Wallace",
+   "MIN": 536.0,
+   "orebPct": 0.005,
+   "drebPct": 0.097,
+   "con2_36": 2.730538922155689,
+   "cardRebound": 45.4,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642434": {
+   "name": "Riley Minix",
+   "MIN": 58.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 70.0,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642380": {
+   "name": "Adama Bal",
+   "MIN": 241.0,
+   "orebPct": 0.022,
+   "drebPct": 0.08,
+   "con2_36": 2.688796680497925,
+   "cardRebound": 56.3,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1629618": {
+   "name": "Jalen Pickett",
+   "MIN": 806.0,
+   "orebPct": 0.022,
+   "drebPct": 0.107,
+   "con2_36": 2.1176470588235294,
+   "cardRebound": 57.2,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631199": {
+   "name": "Ron Harper Jr.",
+   "MIN": 318.0,
+   "orebPct": 0.043,
+   "drebPct": 0.101,
+   "con2_36": 3.261324041811847,
+   "cardRebound": 68.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642419": {
+   "name": "Jamison Battle",
+   "MIN": 517.0,
+   "orebPct": 0.04,
+   "drebPct": 0.124,
+   "con2_36": 3.7358490566037736,
+   "cardRebound": 71.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631214": {
+   "name": "Alondes Williams",
+   "MIN": 101.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 79.1,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629004": {
+   "name": "Svi Mykhailiuk",
+   "MIN": 1156.0,
+   "orebPct": 0.029,
+   "drebPct": 0.074,
+   "con2_36": 2.0418848167539267,
+   "cardRebound": 50.4,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1631133": {
+   "name": "Jabari Walker",
+   "MIN": 762.0,
+   "orebPct": 0.087,
+   "drebPct": 0.156,
+   "con2_36": 2.925619834710744,
+   "cardRebound": 90.2,
+   "cardBonus": 0.69,
+   "pos": "PF"
+  },
+  "1643047": {
+   "name": "CJ Huntley",
+   "MIN": 40.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 88.9,
+   "cardBonus": 0.388,
+   "pos": "C"
+  },
+  "1631321": {
+   "name": "Sidy Cissoko",
+   "MIN": 1435.0,
+   "orebPct": 0.041,
+   "drebPct": 0.071,
+   "con2_36": 2.6580645161290324,
+   "cardRebound": 52.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642382": {
+   "name": "Branden Carlson",
+   "MIN": 488.0,
+   "orebPct": 0.057,
+   "drebPct": 0.182,
+   "con2_36": 10.403326403326403,
+   "cardRebound": 89.0,
+   "cardBonus": 5.573,
+   "pos": "C"
+  },
+  "202066": {
+   "name": "Garrett Temple",
+   "MIN": 73.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 60.2,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631205": {
+   "name": "Buddy Boeheim",
+   "MIN": 15.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 56.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1628420": {
+   "name": "Monte Morris",
+   "MIN": 65.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 50.9,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642886": {
+   "name": "Koby Brea",
+   "MIN": 84.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 54.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642951": {
+   "name": "Sean Pedulla",
+   "MIN": 31.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 50.9,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642383": {
+   "name": "Walter Clayton Jr.",
+   "MIN": 1411.0,
+   "orebPct": 0.017,
+   "drebPct": 0.081,
+   "con2_36": 3.4088952654232427,
+   "cardRebound": 44.9,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642876": {
+   "name": "Adou Thiero",
+   "MIN": 149.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 80.7,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630828": {
+   "name": "Alex Antetokounmpo",
+   "MIN": 21.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 82.3,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1631104": {
+   "name": "Blake Wesley",
+   "MIN": 361.0,
+   "orebPct": 0.02,
+   "drebPct": 0.087,
+   "con2_36": 1.267605633802817,
+   "cardRebound": 45.4,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631451": {
+   "name": "Javonte Cooke",
+   "MIN": 94.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 75.1,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641753": {
+   "name": "Chris Livingston",
+   "MIN": 17.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 83.1,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630846": {
+   "name": "Olivier Sarr",
+   "MIN": 39.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 90.6,
+   "cardBonus": 0.035,
+   "pos": "PF"
+  },
+  "1642280": {
+   "name": "Trentyn Flowers",
+   "MIN": 6.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 87.0,
+   "cardBonus": 0.005,
+   "pos": "PF"
+  },
+  "1630548": {
+   "name": "Johnny Juzang",
+   "MIN": 88.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 66.9,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1629234": {
+   "name": "Drew Eubanks",
+   "MIN": 552.0,
+   "orebPct": 0.069,
+   "drebPct": 0.154,
+   "con2_36": 7.434782608695652,
+   "cardRebound": 90.7,
+   "cardBonus": 3.255,
+   "pos": "C"
+  },
+  "1642917": {
+   "name": "Max Shulga",
+   "MIN": 36.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 66.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "201567": {
+   "name": "Kevin Love",
+   "MIN": 613.0,
+   "orebPct": 0.083,
+   "drebPct": 0.256,
+   "con2_36": 2.305418719211823,
+   "cardRebound": 96.6,
+   "cardBonus": 3.638,
+   "pos": "C"
+  },
+  "1630322": {
+   "name": "Lindy Waters III",
+   "MIN": 285.0,
+   "orebPct": 0.01,
+   "drebPct": 0.087,
+   "con2_36": 2.0240963855421685,
+   "cardRebound": 56.3,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641794": {
+   "name": "Dillon Jones",
+   "MIN": 39.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 80.7,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1629599": {
+   "name": "Amir Coffey",
+   "MIN": 491.0,
+   "orebPct": 0.039,
+   "drebPct": 0.073,
+   "con2_36": 2.146788990825688,
+   "cardRebound": 46.9,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1643024": {
+   "name": "Chris Mañon",
+   "MIN": 46.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 73.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641752": {
+   "name": "Bobi Klintman",
+   "MIN": 71.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 88.0,
+   "cardBonus": 0.058,
+   "pos": "PF"
+  },
+  "203924": {
+   "name": "Jerami Grant",
+   "MIN": 1695.0,
+   "orebPct": 0.03,
+   "drebPct": 0.082,
+   "con2_36": 2.145132743362832,
+   "cardRebound": 49.1,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1627752": {
+   "name": "Taurean Prince",
+   "MIN": 611.0,
+   "orebPct": 0.007,
+   "drebPct": 0.125,
+   "con2_36": 1.3551554828150572,
+   "cardRebound": 58.9,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642449": {
+   "name": "Tolu Smith",
+   "MIN": 137.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 96.0,
+   "cardBonus": 1.454,
+   "pos": "C"
+  },
+  "1642347": {
+   "name": "Jamal Shead",
+   "MIN": 1852.0,
+   "orebPct": 0.014,
+   "drebPct": 0.064,
+   "con2_36": 1.263498920086393,
+   "cardRebound": 39.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642400": {
+   "name": "Tristan Enaruna",
+   "MIN": 85.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 76.4,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642268": {
+   "name": "Isaiah Collier",
+   "MIN": 1517.0,
+   "orebPct": 0.013,
+   "drebPct": 0.085,
+   "con2_36": 1.1525885558583107,
+   "cardRebound": 48.4,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1641738": {
+   "name": "Kobe Brown",
+   "MIN": 962.0,
+   "orebPct": 0.072,
+   "drebPct": 0.119,
+   "con2_36": 2.990033222591362,
+   "cardRebound": 82.1,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642910": {
+   "name": "John Tonje",
+   "MIN": 42.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 63.3,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641740": {
+   "name": "Jaylen Clark",
+   "MIN": 888.0,
+   "orebPct": 0.056,
+   "drebPct": 0.069,
+   "con2_36": 4.036994219653179,
+   "cardRebound": 56.3,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631159": {
+   "name": "Leonard Miller",
+   "MIN": 719.0,
+   "orebPct": 0.073,
+   "drebPct": 0.158,
+   "con2_36": 5.75792507204611,
+   "cardRebound": 88.2,
+   "cardBonus": 1.167,
+   "pos": "PF"
+  },
+  "1642873": {
+   "name": "Amari Williams",
+   "MIN": 146.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 91.5,
+   "cardBonus": 1.467,
+   "pos": "C"
+  },
+  "1642368": {
+   "name": "N'Faly Dante",
+   "MIN": 15.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 95.2,
+   "cardBonus": 0.158,
+   "pos": "C"
+  },
+  "1631457": {
+   "name": "Alex Morales",
+   "MIN": 24.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 64.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631211": {
+   "name": "Trevor Keels",
+   "MIN": 15.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 52.6,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1643257": {
+   "name": "Jayson Kent",
+   "MIN": 22.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 79.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642355": {
+   "name": "Bronny James",
+   "MIN": 375.0,
+   "orebPct": 0.014,
+   "drebPct": 0.05,
+   "con2_36": 1.4693877551020407,
+   "cardRebound": 40.1,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642967": {
+   "name": "John Poulakidas",
+   "MIN": 253.0,
+   "orebPct": 0.014,
+   "drebPct": 0.096,
+   "con2_36": 3.4150197628458496,
+   "cardRebound": 51.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642884": {
+   "name": "Vladislav Goldin",
+   "MIN": 24.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 94.2,
+   "cardBonus": 0.249,
+   "pos": "C"
+  },
+  "1642868": {
+   "name": "Carter Bryant",
+   "MIN": 818.0,
+   "orebPct": 0.044,
+   "drebPct": 0.154,
+   "con2_36": 5.051833122629583,
+   "cardRebound": 82.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "203914": {
+   "name": "Gary Harris",
+   "MIN": 661.0,
+   "orebPct": 0.025,
+   "drebPct": 0.072,
+   "con2_36": 1.4586709886547813,
+   "cardRebound": 42.7,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641807": {
+   "name": "Norchad Omier",
+   "MIN": 24.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 82.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "201959": {
+   "name": "Taj Gibson",
+   "MIN": 97.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 90.4,
+   "cardBonus": 0.961,
+   "pos": "C"
+  },
+  "1643018": {
+   "name": "LJ Cryer",
+   "MIN": 292.0,
+   "orebPct": 0.014,
+   "drebPct": 0.084,
+   "con2_36": 0.8089887640449438,
+   "cardRebound": 45.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641707": {
+   "name": "Taylor Hendricks",
+   "MIN": 1118.0,
+   "orebPct": 0.054,
+   "drebPct": 0.141,
+   "con2_36": 4.21824686940966,
+   "cardRebound": 82.6,
+   "cardBonus": 0.0,
+   "pos": "C"
+  },
+  "1631111": {
+   "name": "Wendell Moore Jr.",
+   "MIN": 60.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 72.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642859": {
+   "name": "Jase Richardson",
+   "MIN": 587.0,
+   "orebPct": 0.034,
+   "drebPct": 0.074,
+   "con2_36": 3.5209580838323356,
+   "cardRebound": 48.0,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642855": {
+   "name": "Noa Essengue",
+   "MIN": 6.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 76.1,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1631210": {
+   "name": "Jacob Toppin",
+   "MIN": 17.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 84.4,
+   "cardBonus": 0.012,
+   "pos": "PF"
+  },
+  "1642882": {
+   "name": "Julian Reese",
+   "MIN": 402.0,
+   "orebPct": 0.133,
+   "drebPct": 0.219,
+   "con2_36": 3.671641791044776,
+   "cardRebound": 95.0,
+   "cardBonus": 3.308,
+   "pos": "C"
+  },
+  "1641801": {
+   "name": "Emanuel Miller",
+   "MIN": 33.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 67.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630604": {
+   "name": "E.J. Liddell",
+   "MIN": 349.0,
+   "orebPct": 0.039,
+   "drebPct": 0.174,
+   "con2_36": 4.924012158054711,
+   "cardRebound": 80.3,
+   "cardBonus": 0.375,
+   "pos": "PF"
+  },
+  "1631103": {
+   "name": "Malaki Branham",
+   "MIN": 275.0,
+   "orebPct": 0.039,
+   "drebPct": 0.113,
+   "con2_36": 3.4482758620689657,
+   "cardRebound": 53.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1628396": {
+   "name": "Tony Bradley",
+   "MIN": 451.0,
+   "orebPct": 0.111,
+   "drebPct": 0.133,
+   "con2_36": 6.582392776523702,
+   "cardRebound": 89.9,
+   "cardBonus": 2.753,
+   "pos": "C"
+  },
+  "1641780": {
+   "name": "Johni Broome",
+   "MIN": 55.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 89.7,
+   "cardBonus": 0.048,
+   "pos": "PF"
+  },
+  "1642367": {
+   "name": "Jonathan Mogbo",
+   "MIN": 249.0,
+   "orebPct": 0.071,
+   "drebPct": 0.193,
+   "con2_36": 5.361702127659575,
+   "cardRebound": 88.9,
+   "cardBonus": 0.603,
+   "pos": "PF"
+  },
+  "1642282": {
+   "name": "Hunter Sallis",
+   "MIN": 26.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 56.1,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642359": {
+   "name": "Pacôme Dadiet",
+   "MIN": 136.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 83.3,
+   "cardBonus": 0.088,
+   "pos": "PF"
+  },
+  "1642468": {
+   "name": "Darius Brown II",
+   "MIN": 3.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 54.7,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1631216": {
+   "name": "Caleb Houstan",
+   "MIN": 75.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 51.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642443": {
+   "name": "Jahmir Young",
+   "MIN": 58.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 43.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642848": {
+   "name": "Tre Johnson",
+   "MIN": 1443.0,
+   "orebPct": 0.018,
+   "drebPct": 0.093,
+   "con2_36": 2.0556745182012848,
+   "cardRebound": 51.2,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630192": {
+   "name": "Zeke Nnaji",
+   "MIN": 626.0,
+   "orebPct": 0.053,
+   "drebPct": 0.147,
+   "con2_36": 6.640776699029126,
+   "cardRebound": 82.3,
+   "cardBonus": 1.079,
+   "pos": "PF"
+  },
+  "1642911": {
+   "name": "Rocco Zikarsky",
+   "MIN": 36.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 94.5,
+   "cardBonus": 0.375,
+   "pos": "C"
+  },
+  "1642885": {
+   "name": "Mohamed Diawara",
+   "MIN": 634.0,
+   "orebPct": 0.024,
+   "drebPct": 0.125,
+   "con2_36": 2.9189189189189193,
+   "cardRebound": 73.3,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1631121": {
+   "name": "Bryce McGowens",
+   "MIN": 880.0,
+   "orebPct": 0.013,
+   "drebPct": 0.082,
+   "con2_36": 2.645235361653272,
+   "cardRebound": 46.1,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642935": {
+   "name": "Chucky Hepburn",
+   "MIN": 13.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 49.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1641725": {
+   "name": "Trey Alexander",
+   "MIN": 111.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 49.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642959": {
+   "name": "Chris Youngblood",
+   "MIN": 185.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 66.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1643141": {
+   "name": "Jahmyl Telfort",
+   "MIN": 32.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 73.1,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1628502": {
+   "name": "Nigel Hayes-Davis",
+   "MIN": 195.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 78.5,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1641747": {
+   "name": "DaRon Holmes II",
+   "MIN": 210.0,
+   "orebPct": 0.04,
+   "drebPct": 0.113,
+   "con2_36": null,
+   "cardRebound": 82.1,
+   "cardBonus": 1.107,
+   "pos": "C"
+  },
+  "1630621": {
+   "name": "Hunter Dickinson",
+   "MIN": 42.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 87.7,
+   "cardBonus": 0.401,
+   "pos": "C"
+  },
+  "1642869": {
+   "name": "Noah Penda",
+   "MIN": 757.0,
+   "orebPct": 0.081,
+   "drebPct": 0.159,
+   "con2_36": 4.5,
+   "cardRebound": 87.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630526": {
+   "name": "Jeremiah Robinson-Earl",
+   "MIN": 361.0,
+   "orebPct": 0.088,
+   "drebPct": 0.183,
+   "con2_36": 3.8319327731092434,
+   "cardRebound": 89.7,
+   "cardBonus": 0.591,
+   "pos": "PF"
+  },
+  "1642396": {
+   "name": "Blake Hinson",
+   "MIN": 285.0,
+   "orebPct": 0.035,
+   "drebPct": 0.071,
+   "con2_36": 3.28421052631579,
+   "cardRebound": 56.7,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1630649": {
+   "name": "Stanley Umude",
+   "MIN": 7.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 70.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "203471": {
+   "name": "Dennis Schröder",
+   "MIN": 1696.0,
+   "orebPct": 0.019,
+   "drebPct": 0.089,
+   "con2_36": 1.6718938480096501,
+   "cardRebound": 46.1,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642964": {
+   "name": "Brooks Barnhizer",
+   "MIN": 348.0,
+   "orebPct": 0.049,
+   "drebPct": 0.159,
+   "con2_36": 3.5337423312883436,
+   "cardRebound": 81.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "201145": {
+   "name": "Jeff Green",
+   "MIN": 175.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 64.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1641787": {
+   "name": "Tosan Evbuomwan",
+   "MIN": 8.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 78.0,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642950": {
+   "name": "Lachlan Olbrich",
+   "MIN": 344.0,
+   "orebPct": 0.112,
+   "drebPct": 0.174,
+   "con2_36": 7.370919881305638,
+   "cardRebound": 91.7,
+   "cardBonus": 3.639,
+   "pos": "C"
+  },
+  "1642384": {
+   "name": "Isaiah Crawford",
+   "MIN": 92.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 71.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630164": {
+   "name": "James Wiseman",
+   "MIN": 58.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 91.5,
+   "cardBonus": 0.583,
+   "pos": "C"
+  },
+  "1642860": {
+   "name": "Will Riley",
+   "MIN": 1632.0,
+   "orebPct": 0.033,
+   "drebPct": 0.097,
+   "con2_36": 3.512740832815413,
+   "cardRebound": 61.2,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "201569": {
+   "name": "Eric Gordon",
+   "MIN": 74.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 37.9,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642854": {
+   "name": "Asa Newell",
+   "MIN": 500.0,
+   "orebPct": 0.078,
+   "drebPct": 0.106,
+   "con2_36": 5.937369519832985,
+   "cardRebound": 81.8,
+   "cardBonus": 0.841,
+   "pos": "PF"
+  },
+  "1631115": {
+   "name": "Orlando Robinson",
+   "MIN": 25.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 90.2,
+   "cardBonus": 0.247,
+   "pos": "C"
+  },
+  "1641809": {
+   "name": "Drew Peterson",
+   "MIN": 64.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 78.3,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630658": {
+   "name": "Colin Castleton",
+   "MIN": 21.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 89.9,
+   "cardBonus": 0.019,
+   "pos": "PF"
+  },
+  "1641816": {
+   "name": "Hunter Tyson",
+   "MIN": 162.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 82.1,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1631120": {
+   "name": "JD Davison",
+   "MIN": 218.0,
+   "orebPct": 0.014,
+   "drebPct": 0.131,
+   "con2_36": null,
+   "cardRebound": 66.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1631102": {
+   "name": "TyTy Washington Jr.",
+   "MIN": 88.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 44.9,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1631466": {
+   "name": "Nate Williams",
+   "MIN": 239.0,
+   "orebPct": 0.079,
+   "drebPct": 0.046,
+   "con2_36": 1.506276150627615,
+   "cardRebound": 56.7,
+   "cardBonus": 0.0,
+   "pos": "PF"
+  },
+  "1629610": {
+   "name": "DaQuan Jeffries",
+   "MIN": 60.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 54.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642863": {
+   "name": "Khaman Maluach",
+   "MIN": 411.0,
+   "orebPct": 0.107,
+   "drebPct": 0.198,
+   "con2_36": 10.729064039408868,
+   "cardRebound": 95.2,
+   "cardBonus": 6.85,
+   "pos": "C"
+  },
+  "1630172": {
+   "name": "Patrick Williams",
+   "MIN": 1474.0,
+   "orebPct": 0.03,
+   "drebPct": 0.106,
+   "con2_36": 3.5552486187845305,
+   "cardRebound": 63.4,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1631247": {
+   "name": "Luke Travers",
+   "MIN": 103.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 79.0,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642938": {
+   "name": "Curtis Jones",
+   "MIN": 88.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 50.9,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642353": {
+   "name": "Cam Christie",
+   "MIN": 480.0,
+   "orebPct": 0.044,
+   "drebPct": 0.118,
+   "con2_36": 3.153284671532847,
+   "cardRebound": 74.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631127": {
+   "name": "Harrison Ingram",
+   "MIN": 26.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 68.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631250": {
+   "name": "Pete Nance",
+   "MIN": 737.0,
+   "orebPct": 0.038,
+   "drebPct": 0.135,
+   "con2_36": 4.606397774687066,
+   "cardRebound": 78.8,
+   "cardBonus": 0.187,
+   "pos": "PF"
+  },
+  "1642853": {
+   "name": "Rasheer Fleming",
+   "MIN": 673.0,
+   "orebPct": 0.08,
+   "drebPct": 0.099,
+   "con2_36": 3.343653250773994,
+   "cardRebound": 81.2,
+   "cardBonus": 0.143,
+   "pos": "PF"
+  },
+  "1631213": {
+   "name": "Tyrese Martin",
+   "MIN": 777.0,
+   "orebPct": 0.04,
+   "drebPct": 0.112,
+   "con2_36": 2.5081967213114753,
+   "cardRebound": 72.2,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1631342": {
+   "name": "Daeqwon Plowden",
+   "MIN": 844.0,
+   "orebPct": 0.037,
+   "drebPct": 0.08,
+   "con2_36": 2.4739336492890995,
+   "cardRebound": 52.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642402": {
+   "name": "Enrique Freeman",
+   "MIN": 37.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 84.1,
+   "cardBonus": 0.025,
+   "pos": "PF"
+  },
+  "203967": {
+   "name": "Dario Saric",
+   "MIN": 41.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 88.0,
+   "cardBonus": 0.034,
+   "pos": "PF"
+  },
+  "1630592": {
+   "name": "Jalen Wilson",
+   "MIN": 859.0,
+   "orebPct": 0.019,
+   "drebPct": 0.122,
+   "con2_36": 2.2608695652173916,
+   "cardRebound": 64.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641810": {
+   "name": "Antonio Reeves",
+   "MIN": 68.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 46.3,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630544": {
+   "name": "Tre Mann",
+   "MIN": 668.0,
+   "orebPct": 0.028,
+   "drebPct": 0.114,
+   "con2_36": 2.437795275590551,
+   "cardRebound": 62.6,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642918": {
+   "name": "Alijah Martin",
+   "MIN": 146.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 62.9,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1629018": {
+   "name": "Gary Trent Jr.",
+   "MIN": 1377.0,
+   "orebPct": 0.006,
+   "drebPct": 0.044,
+   "con2_36": 0.6403712296983759,
+   "cardRebound": 38.9,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1641730": {
+   "name": "Noah Clowney",
+   "MIN": 1780.0,
+   "orebPct": 0.029,
+   "drebPct": 0.128,
+   "con2_36": 5.298876404494382,
+   "cardRebound": 76.3,
+   "cardBonus": 0.447,
+   "pos": "PF"
+  },
+  "1642939": {
+   "name": "Miles Kelly",
+   "MIN": 134.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 71.6,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1630579": {
+   "name": "Jericho Sims",
+   "MIN": 1318.0,
+   "orebPct": 0.115,
+   "drebPct": 0.171,
+   "con2_36": 4.586339217191098,
+   "cardRebound": 92.7,
+   "cardBonus": 2.678,
+   "pos": "C"
+  },
+  "203083": {
+   "name": "Andre Drummond",
+   "MIN": 1231.0,
+   "orebPct": 0.145,
+   "drebPct": 0.264,
+   "con2_36": 6.8123980424143555,
+   "cardRebound": 108.8,
+   "cardBonus": 7.078,
+   "pos": "C"
+  },
+  "1642260": {
+   "name": "Nikola Topić",
+   "MIN": 160.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 55.7,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642403": {
+   "name": "Isaac Jones",
+   "MIN": 36.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 79.0,
+   "cardBonus": 0.018,
+   "pos": "PF"
+  },
+  "1629216": {
+   "name": "Gabe Vincent",
+   "MIN": 879.0,
+   "orebPct": 0.02,
+   "drebPct": 0.041,
+   "con2_36": 2.2736842105263158,
+   "cardRebound": 37.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642875": {
+   "name": "Maxime Raynaud",
+   "MIN": 1964.0,
+   "orebPct": 0.07,
+   "drebPct": 0.211,
+   "con2_36": 6.855397148676171,
+   "cardRebound": 92.1,
+   "cardBonus": 4.071,
+   "pos": "C"
+  },
+  "1626145": {
+   "name": "Tyus Jones",
+   "MIN": 979.0,
+   "orebPct": 0.011,
+   "drebPct": 0.065,
+   "con2_36": 0.6057692307692307,
+   "cardRebound": 41.1,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642862": {
+   "name": "Liam McNeeley",
+   "MIN": 368.0,
+   "orebPct": 0.034,
+   "drebPct": 0.167,
+   "con2_36": 4.571428571428571,
+   "cardRebound": 82.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1641748": {
+   "name": "Andre Jackson Jr.",
+   "MIN": 408.0,
+   "orebPct": 0.059,
+   "drebPct": 0.126,
+   "con2_36": 2.048780487804878,
+   "cardRebound": 78.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642877": {
+   "name": "Micah Peavy",
+   "MIN": 913.0,
+   "orebPct": 0.046,
+   "drebPct": 0.073,
+   "con2_36": 2.5299539170506913,
+   "cardRebound": 58.1,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630623": {
+   "name": "Tyson Etienne",
+   "MIN": 380.0,
+   "orebPct": 0.013,
+   "drebPct": 0.06,
+   "con2_36": 1.894736842105263,
+   "cardRebound": 40.1,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631131": {
+   "name": "Oscar Tshiebwe",
+   "MIN": 448.0,
+   "orebPct": 0.151,
+   "drebPct": 0.224,
+   "con2_36": 3.9375,
+   "cardRebound": 98.2,
+   "cardBonus": 4.131,
+   "pos": "C"
+  },
+  "1630311": {
+   "name": "Pat Spencer",
+   "MIN": 1229.0,
+   "orebPct": 0.041,
+   "drebPct": 0.091,
+   "con2_36": 2.0606060606060606,
+   "cardRebound": 59.7,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630214": {
+   "name": "Xavier Tillman",
+   "MIN": 184.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 82.9,
+   "cardBonus": 1.638,
+   "pos": "C"
+  },
+  "1641890": {
+   "name": "Tyler Smith",
+   "MIN": 166.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 82.6,
+   "cardBonus": 0.104,
+   "pos": "PF"
+  },
+  "1642362": {
+   "name": "Payton Sandfort",
+   "MIN": 63.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 74.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1630644": {
+   "name": "Mac McClung",
+   "MIN": 135.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 41.2,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1628467": {
+   "name": "Maxi Kleber",
+   "MIN": 461.0,
+   "orebPct": 0.084,
+   "drebPct": 0.107,
+   "con2_36": 7.860262008733625,
+   "cardRebound": 78.2,
+   "cardBonus": 3.029,
+   "pos": "C"
+  },
+  "1630587": {
+   "name": "Isaiah Livers",
+   "MIN": 347.0,
+   "orebPct": 0.05,
+   "drebPct": 0.116,
+   "con2_36": 4.672566371681416,
+   "cardRebound": 68.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641724": {
+   "name": "Jett Howard",
+   "MIN": 695.0,
+   "orebPct": 0.03,
+   "drebPct": 0.096,
+   "con2_36": 3.772455089820359,
+   "cardRebound": 54.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642905": {
+   "name": "Yang Hansen",
+   "MIN": 300.0,
+   "orebPct": 0.063,
+   "drebPct": 0.139,
+   "con2_36": 9.78397212543554,
+   "cardRebound": 87.6,
+   "cardBonus": 2.883,
+   "pos": "C"
+  },
+  "1641998": {
+   "name": "Trey Jemison III",
+   "MIN": 82.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 88.7,
+   "cardBonus": 0.069,
+   "pos": "PF"
+  },
+  "1641790": {
+   "name": "PJ Hall",
+   "MIN": 213.0,
+   "orebPct": 0.146,
+   "drebPct": 0.18,
+   "con2_36": 8.95774647887324,
+   "cardRebound": 93.1,
+   "cardBonus": 3.415,
+   "pos": "C"
+  },
+  "1641815": {
+   "name": "Isaiah Stevens",
+   "MIN": 43.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 47.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642484": {
+   "name": "RayJ Dennis",
+   "MIN": 206.0,
+   "orebPct": 0.03,
+   "drebPct": 0.081,
+   "con2_36": null,
+   "cardRebound": 53.6,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642275": {
+   "name": "Tidjane Salaün",
+   "MIN": 575.0,
+   "orebPct": 0.044,
+   "drebPct": 0.205,
+   "con2_36": 3.4407079646017698,
+   "cardRebound": 87.6,
+   "cardBonus": 0.582,
+   "pos": "PF"
+  },
+  "1641778": {
+   "name": "Leaky Black",
+   "MIN": 433.0,
+   "orebPct": 0.032,
+   "drebPct": 0.14,
+   "con2_36": 1.912240184757506,
+   "cardRebound": 74.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "202687": {
+   "name": "Bismack Biyombo",
+   "MIN": 141.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 89.0,
+   "cardBonus": 1.371,
+   "pos": "C"
+  },
+  "1630679": {
+   "name": "Ethan Thompson",
+   "MIN": 653.0,
+   "orebPct": 0.025,
+   "drebPct": 0.078,
+   "con2_36": 4.098461538461539,
+   "cardRebound": 47.7,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1631132": {
+   "name": "Christian Koloko",
+   "MIN": 357.0,
+   "orebPct": 0.08,
+   "drebPct": 0.125,
+   "con2_36": 12.302521008403362,
+   "cardRebound": 88.9,
+   "cardBonus": 3.955,
+   "pos": "C"
+  },
+  "1642267": {
+   "name": "Bub Carrington",
+   "MIN": 2271.0,
+   "orebPct": 0.013,
+   "drebPct": 0.104,
+   "con2_36": 2.0106382978723403,
+   "cardRebound": 54.6,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630208": {
+   "name": "Nick Richards",
+   "MIN": 701.0,
+   "orebPct": 0.103,
+   "drebPct": 0.221,
+   "con2_36": 7.29243937232525,
+   "cardRebound": 96.3,
+   "cardBonus": 6.117,
+   "pos": "C"
+  },
+  "1642354": {
+   "name": "KJ Simpson",
+   "MIN": 258.0,
+   "orebPct": 0.034,
+   "drebPct": 0.112,
+   "con2_36": 1.7419354838709677,
+   "cardRebound": 58.1,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1643007": {
+   "name": "Taelon Peter",
+   "MIN": 492.0,
+   "orebPct": 0.019,
+   "drebPct": 0.096,
+   "con2_36": 4.189655172413793,
+   "cardRebound": 51.0,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1641712": {
+   "name": "Rayan Rupert",
+   "MIN": 1073.0,
+   "orebPct": 0.04,
+   "drebPct": 0.129,
+   "con2_36": 2.8448780487804877,
+   "cardRebound": 74.6,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1641989": {
+   "name": "Elijah Harkless",
+   "MIN": 545.0,
+   "orebPct": 0.018,
+   "drebPct": 0.077,
+   "con2_36": 2.3823529411764706,
+   "cardRebound": 45.7,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642490": {
+   "name": "Josh Oduro",
+   "MIN": 82.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 89.6,
+   "cardBonus": 0.072,
+   "pos": "PF"
+  },
+  "203903": {
+   "name": "Jordan Clarkson",
+   "MIN": 1279.0,
+   "orebPct": 0.047,
+   "drebPct": 0.049,
+   "con2_36": 2.2482213438735177,
+   "cardRebound": 48.6,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642962": {
+   "name": "Drake Powell",
+   "MIN": 1320.0,
+   "orebPct": 0.016,
+   "drebPct": 0.07,
+   "con2_36": 2.541826554105909,
+   "cardRebound": 42.4,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1641727": {
+   "name": "Dariq Whitehead",
+   "MIN": 183.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 55.8,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642933": {
+   "name": "Keshon Gilbert",
+   "MIN": 74.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 48.9,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642404": {
+   "name": "Chaz Lanier",
+   "MIN": 262.0,
+   "orebPct": 0.029,
+   "drebPct": 0.055,
+   "con2_36": null,
+   "cardRebound": 43.7,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1641722": {
+   "name": "Jordan Hawkins",
+   "MIN": 692.0,
+   "orebPct": 0.026,
+   "drebPct": 0.089,
+   "con2_36": 3.2321981424148607,
+   "cardRebound": 55.5,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "200768": {
+   "name": "Kyle Lowry",
+   "MIN": 118.0,
+   "orebPct": null,
+   "drebPct": null,
+   "con2_36": null,
+   "cardRebound": 46.9,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1630702": {
+   "name": "Jaden Hardy",
+   "MIN": 898.0,
+   "orebPct": 0.017,
+   "drebPct": 0.078,
+   "con2_36": 1.6754176610978522,
+   "cardRebound": 44.5,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642880": {
+   "name": "Kam Jones",
+   "MIN": 616.0,
+   "orebPct": 0.024,
+   "drebPct": 0.071,
+   "con2_36": 2.6068965517241383,
+   "cardRebound": 45.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1641733": {
+   "name": "Nick Smith Jr.",
+   "MIN": 375.0,
+   "orebPct": 0.009,
+   "drebPct": 0.054,
+   "con2_36": 1.6044568245125348,
+   "cardRebound": 41.1,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642948": {
+   "name": "Ryan Nembhard",
+   "MIN": 1171.0,
+   "orebPct": 0.011,
+   "drebPct": 0.095,
+   "con2_36": 1.712775330396476,
+   "cardRebound": 49.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642358": {
+   "name": "AJ Johnson",
+   "MIN": 453.0,
+   "orebPct": 0.027,
+   "drebPct": 0.089,
+   "con2_36": 3.2210526315789476,
+   "cardRebound": 46.4,
+   "cardBonus": 0.0,
+   "pos": "SG"
+  },
+  "1642262": {
+   "name": "Cody Williams",
+   "MIN": 1631.0,
+   "orebPct": 0.036,
+   "drebPct": 0.084,
+   "con2_36": 3.86189889025894,
+   "cardRebound": 51.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "203926": {
+   "name": "Doug McDermott",
+   "MIN": 439.0,
+   "orebPct": 0.014,
+   "drebPct": 0.068,
+   "con2_36": 2.962593516209476,
+   "cardRebound": 41.4,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642265": {
+   "name": "Rob Dillingham",
+   "MIN": 970.0,
+   "orebPct": 0.018,
+   "drebPct": 0.105,
+   "con2_36": 2.445859872611465,
+   "cardRebound": 54.6,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642879": {
+   "name": "Ben Saraf",
+   "MIN": 916.0,
+   "orebPct": 0.021,
+   "drebPct": 0.085,
+   "con2_36": 3.8726673984632276,
+   "cardRebound": 48.9,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1631126": {
+   "name": "Caleb Love",
+   "MIN": 1013.0,
+   "orebPct": 0.023,
+   "drebPct": 0.083,
+   "con2_36": 1.3760330578512396,
+   "cardRebound": 47.8,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1643253": {
+   "name": "Toby Okani",
+   "MIN": 217.0,
+   "orebPct": 0.034,
+   "drebPct": 0.053,
+   "con2_36": 3.317972350230415,
+   "cardRebound": 51.8,
+   "cardBonus": 0.0,
+   "pos": "SF"
+  },
+  "1642942": {
+   "name": "Jahmai Mashack",
+   "MIN": 673.0,
+   "orebPct": 0.031,
+   "drebPct": 0.086,
+   "con2_36": 3.8628912071535026,
+   "cardRebound": 54.9,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  },
+  "1642849": {
+   "name": "Nolan Traore",
+   "MIN": 1243.0,
+   "orebPct": 0.011,
+   "drebPct": 0.073,
+   "con2_36": 4.4016194331983804,
+   "cardRebound": 41.4,
+   "cardBonus": 0.0,
+   "pos": "PG"
+  }
+ }
+}

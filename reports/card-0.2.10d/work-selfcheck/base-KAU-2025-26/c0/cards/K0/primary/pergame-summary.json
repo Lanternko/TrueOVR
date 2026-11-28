@@ -1,0 +1,19 @@
+{
+  "definition": "g = pred*MPG/36 (main); g_r = (pred - r_repl)*MPG/36 (repl, r_repl = PR10 of pred in MIN>=500 pool); anchors PR1/PR50/PR99 of g in MIN>=500 pool",
+  "rRepl_PR10_of_pred": -1.7467836781913766,
+  "anchors": {
+    "main": {
+      "PR1": -1.7921221203204527,
+      "PR50": 0.004233256190120998,
+      "PR99": 4.434574583992755
+    },
+    "repl": {
+      "PR1": -0.690911305368908,
+      "PR50": 1.0427699512299096,
+      "PR99": 5.8352767459424655
+    }
+  },
+  "poolSize": 378,
+  "mpgSource": "league observed MIN/GP",
+  "playersWithoutMpg": 0
+}

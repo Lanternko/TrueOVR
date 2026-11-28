@@ -1,0 +1,256 @@
+{
+ "note": "探索性，測試集已被 E-227 讀過；不改 E-227 判定",
+ "games": 1135,
+ "stints": 34624,
+ "mse": {
+  "B0": 10176.7,
+  "R2-abil": 10077.24,
+  "R2-stats": 10059.61,
+  "R2-stats-nost": 10065.58
+ },
+ "frozenMse": {
+  "B0": 10176.7,
+  "R2-abil": 10077.24,
+  "R2-stats": 10059.61
+ },
+ "seedMSE": {
+  "R2-abil": [
+   10075.74,
+   10080.82,
+   10093.44,
+   10083.22,
+   10078.96
+  ],
+  "R2-stats": [
+   10058.02,
+   10064.05,
+   10060.9,
+   10049.5,
+   10082.47
+  ],
+  "R2-stats-nost": [
+   10071.43,
+   10067.36,
+   10072.76,
+   10065.59,
+   10078.76
+  ]
+ },
+ "side": {
+  "B0": {
+   "ptsSide": 0.43257,
+   "tovLL": 0.40182,
+   "orbLL": 0.60007
+  },
+  "R2-abil": {
+   "ptsSide": 0.42915,
+   "tovLL": 0.39978,
+   "orbLL": 0.59668
+  },
+  "R2-stats": {
+   "ptsSide": 0.42851,
+   "tovLL": 0.39936,
+   "orbLL": 0.59534
+  },
+  "R2-stats-nost": {
+   "ptsSide": 0.42865,
+   "tovLL": 0.39939,
+   "orbLL": 0.59554
+  }
+ },
+ "paired": {
+  "R2-stats-nost−R2-abil": {
+   "point": -11.65837,
+   "ci90": [
+    -19.37481,
+    -3.93346
+   ],
+   "halfWidth90": 7.72068,
+   "guard": {
+    "ptsSide": {
+     "point": -0.0005,
+     "ci90": [
+      -0.00073,
+      -0.00026
+     ],
+     "halfWidth90": 0.00024
+    },
+    "tovLL": {
+     "point": -0.00039,
+     "ci90": [
+      -0.0005,
+      -0.00029
+     ],
+     "halfWidth90": 0.00011
+    },
+    "orbLL": {
+     "point": -0.00115,
+     "ci90": [
+      -0.00146,
+      -0.00085
+     ],
+     "halfWidth90": 0.0003
+    }
+   }
+  },
+  "R2-stats-nost−R2-stats": {
+   "point": 5.96663,
+   "ci90": [
+    2.32153,
+    9.90785
+   ],
+   "halfWidth90": 3.79316,
+   "guard": {
+    "ptsSide": {
+     "point": 0.00014,
+     "ci90": [
+      4e-05,
+      0.00025
+     ],
+     "halfWidth90": 0.00011
+    },
+    "tovLL": {
+     "point": 2e-05,
+     "ci90": [
+      -1e-05,
+      6e-05
+     ],
+     "halfWidth90": 3e-05
+    },
+    "orbLL": {
+     "point": 0.00019,
+     "ci90": [
+      6e-05,
+      0.00032
+     ],
+     "halfWidth90": 0.00013
+    }
+   }
+  },
+  "R2-stats−R2-abil": {
+   "point": -17.625,
+   "ci90": [
+    -24.73337,
+    -10.26735
+   ],
+   "halfWidth90": 7.23301,
+   "guard": {
+    "ptsSide": {
+     "point": -0.00064,
+     "ci90": [
+      -0.00085,
+      -0.00042
+     ],
+     "halfWidth90": 0.00022
+    },
+    "tovLL": {
+     "point": -0.00042,
+     "ci90": [
+      -0.00052,
+      -0.00032
+     ],
+     "halfWidth90": 0.0001
+    },
+    "orbLL": {
+     "point": -0.00134,
+     "ci90": [
+      -0.00164,
+      -0.00103
+     ],
+     "halfWidth90": 0.0003
+    }
+   }
+  },
+  "R2-stats-nost−B0": {
+   "point": -111.12464,
+   "ci90": [
+    -128.28915,
+    -94.73625
+   ],
+   "halfWidth90": 16.77645
+  },
+  "R2-abil−B0": {
+   "point": -99.46627,
+   "ci90": [
+    -115.48701,
+    -83.56309
+   ],
+   "halfWidth90": 15.96196
+  }
+ },
+ "verdictLike": {
+  "thresholdsFrom": "R2-stats（mde-noise.json）",
+  "judge1": {
+   "point": -11.65837,
+   "ci90": [
+    -19.37481,
+    -3.93346
+   ],
+   "needAtMost": -15.36,
+   "pass": false
+  },
+  "judge2": {
+   "ptsSide": {
+    "point": -0.0005,
+    "threshold": 0.0005,
+    "ok": true
+   },
+   "tovLL": {
+    "point": -0.00039,
+    "threshold": 0.00024,
+    "ok": true
+   },
+   "orbLL": {
+    "point": -0.00115,
+    "threshold": 0.00066,
+    "ok": true
+   }
+  }
+ },
+ "judge2pass": true,
+ "importance": {
+  "baseMSE": 10065.58,
+  "features": {
+   "oppFGpct": 11.272,
+   "long": 11.067,
+   "stl36": 11.017,
+   "rebound": 8.856,
+   "oreb36": 7.716,
+   "dreb36": 6.591,
+   "short": 5.934,
+   "drive": 5.46,
+   "boxoutD36": 4.04,
+   "pressure": 3.773,
+   "pass": 3.485,
+   "tovSkill": 3.312,
+   "ft": 3.183,
+   "cont2pt36": 2.67,
+   "physique": 2.388,
+   "boxoutO36": 2.099,
+   "deflections36": 1.94,
+   "looseO36": 1.647,
+   "rimFGA36": 1.526,
+   "threeFGA36": 1.486,
+   "drebPct": 1.413,
+   "heightInches": 1.206,
+   "charges36": 1.139,
+   "blk36": 0.743,
+   "ts": 0.563,
+   "looseD36": 0.51,
+   "screenAst36": 0.492,
+   "mid": 0.348,
+   "oppPtsPerPoss": -0.132,
+   "rimDiff": -0.175,
+   "help": -0.187,
+   "tovPct": -0.229,
+   "creation": -0.231,
+   "onBall": -0.28,
+   "threeDiff": -0.459,
+   "cont3pt36": -0.646,
+   "pf36": -0.839,
+   "orebPct": -1.102,
+   "astPct": -1.618,
+   "usg": -2.976
+  }
+ }
+}

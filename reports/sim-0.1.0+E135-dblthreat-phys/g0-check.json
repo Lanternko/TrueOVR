@@ -1,0 +1,99 @@
+{
+ "reference": "../sim-0.1.0+E102-winimp-240/merged-legacy.jsonl",
+ "cells": "30 opponents x i=0..15, avg",
+ "legacy": {
+  "2544": {
+   "name": "LeBron James",
+   "n": 480,
+   "identical": true
+  },
+  "201142": {
+   "name": "Kevin Durant",
+   "n": 480,
+   "identical": true
+  },
+  "201143": {
+   "name": "Al Horford",
+   "n": 480,
+   "identical": true
+  },
+  "201144": {
+   "name": "Mike Conley",
+   "n": 480,
+   "identical": true
+  },
+  "201566": {
+   "name": "Russell Westbrook",
+   "n": 480,
+   "identical": true
+  },
+  "201567": {
+   "name": "Kevin Love",
+   "n": 480,
+   "identical": true
+  },
+  "201572": {
+   "name": "Brook Lopez",
+   "n": 480,
+   "identical": true
+  },
+  "201587": {
+   "name": "Nicolas Batum",
+   "n": 480,
+   "identical": true
+  },
+  "201935": {
+   "name": "James Harden",
+   "n": 480,
+   "identical": true
+  },
+  "201939": {
+   "name": "Stephen Curry",
+   "n": 480,
+   "identical": true
+  }
+ },
+ "ch1_reportOnly": {
+  "2544": {
+   "n": 480,
+   "cellsDifferentFromLegacy": 480
+  },
+  "201142": {
+   "n": 480,
+   "cellsDifferentFromLegacy": 480
+  },
+  "201143": {
+   "n": 480,
+   "cellsDifferentFromLegacy": 480
+  },
+  "201144": {
+   "n": 480,
+   "cellsDifferentFromLegacy": 480
+  },
+  "201566": {
+   "n": 480,
+   "cellsDifferentFromLegacy": 480
+  },
+  "201567": {
+   "n": 480,
+   "cellsDifferentFromLegacy": 480
+  },
+  "201572": {
+   "n": 480,
+   "cellsDifferentFromLegacy": 480
+  },
+  "201587": {
+   "n": 480,
+   "cellsDifferentFromLegacy": 480
+  },
+  "201935": {
+   "n": 480,
+   "cellsDifferentFromLegacy": 480
+  },
+  "201939": {
+   "n": 480,
+   "cellsDifferentFromLegacy": 480
+  }
+ },
+ "pass": true
+}

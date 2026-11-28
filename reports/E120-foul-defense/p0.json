@@ -1,0 +1,132 @@
+{
+ "player": "Nikola Jokić",
+ "identical_beta0": true,
+ "idrows": [
+  {
+   "seed": 20261028,
+   "same": true,
+   "sA": 114,
+   "sB": 127
+  },
+  {
+   "seed": 20261029,
+   "same": true,
+   "sA": 121,
+   "sB": 127
+  },
+  {
+   "seed": 20261030,
+   "same": true,
+   "sA": 121,
+   "sB": 114
+  },
+  {
+   "seed": 20261031,
+   "same": true,
+   "sA": 133,
+   "sB": 103
+  },
+  {
+   "seed": 20261032,
+   "same": true,
+   "sA": 134,
+   "sB": 116
+  },
+  {
+   "seed": 20261033,
+   "same": true,
+   "sA": 124,
+   "sB": 96
+  },
+  {
+   "seed": 20261034,
+   "same": true,
+   "sA": 145,
+   "sB": 120
+  },
+  {
+   "seed": 20261035,
+   "same": true,
+   "sA": 121,
+   "sB": 128
+  },
+  {
+   "seed": 20261036,
+   "same": true,
+   "sA": 112,
+   "sB": 129
+  },
+  {
+   "seed": 20261037,
+   "same": true,
+   "sA": 107,
+   "sB": 117
+  },
+  {
+   "seed": 20261038,
+   "same": true,
+   "sA": 111,
+   "sB": 132
+  },
+  {
+   "seed": 20261039,
+   "same": true,
+   "sA": 120,
+   "sB": 127
+  }
+ ],
+ "N": 300,
+ "base": {
+  "ftaB": 22.383333333333333,
+  "margin": -0.013333333333333334
+ },
+ "plus1": {
+  "ftaB": 35.54666666666667,
+  "margin": -7.2
+ },
+ "minus1": {
+  "ftaB": 13.606666666666667,
+  "margin": 8.153333333333334
+ },
+ "oppFTAdirectionOK": true,
+ "marginDirectionOK": true,
+ "pass": true,
+ "eventSample": [
+  {
+   "type": "FOUL",
+   "period": 1,
+   "clock": 703.1,
+   "off": 1,
+   "player": 4,
+   "playerId": 1630168,
+   "kind": "shooting",
+   "shooter": 4,
+   "drawnPlayerId": 203999,
+   "teamFouls": 1
+  },
+  {
+   "type": "FOUL",
+   "period": 1,
+   "clock": 565.2,
+   "off": 1,
+   "player": 0,
+   "playerId": 1629638,
+   "kind": "shooting",
+   "shooter": 0,
+   "drawnPlayerId": -1000,
+   "teamFouls": 2
+  },
+  {
+   "type": "FOUL",
+   "period": 1,
+   "clock": 508.1,
+   "off": 0,
+   "player": 1,
+   "playerId": -1001,
+   "kind": "shooting",
+   "shooter": 1,
+   "drawnPlayerId": 1630700,
+   "teamFouls": 1
+  }
+ ]
+}

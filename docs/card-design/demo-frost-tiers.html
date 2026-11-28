@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>霧鑽 五階</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@1,600;1,700&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0d12; --ink:#e9eaf0; --mute:#8b8fa3;
+  --num:'Bebas Neue','Impact','Arial Narrow',sans-serif;
+  --sport:'Barlow Condensed','Oswald','Arial Narrow',sans-serif;
+  --tc:'Noto Sans TC','Microsoft JhengHei',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+body{background:radial-gradient(1200px 700px at 50% -10%,#1b1d2b,var(--bg));color:var(--ink);font-family:var(--tc);min-height:100vh;padding:32px 16px 64px}
+h1{font-size:20px;font-weight:700;text-align:center;letter-spacing:.08em}
+.lead{color:var(--mute);font-size:13px;text-align:center;margin:6px 0 28px}
+.ladder-h{max-width:1400px;margin:0 auto 14px;display:flex;align-items:center;gap:12px;color:var(--mute);font-size:12px;letter-spacing:.12em}
+.ladder-h::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,#ffffff33,transparent)}
+.row{display:flex;flex-wrap:wrap;gap:28px 24px;justify-content:center;max-width:1400px;margin:0 auto 44px}
+.slot{display:flex;flex-direction:column;align-items:center;gap:12px;width:300px}
+.cap{text-align:center}
+.cap b{display:block;font-size:15px;letter-spacing:.06em}
+.cap span{font-size:12px;color:var(--mute);line-height:1.5}
+.stage{perspective:900px}
+footer{max-width:760px;margin:0 auto;color:var(--mute);font-size:12px;line-height:1.9;text-align:center}
+footer b{color:var(--ink)}
+
+/* ===== 共用骨架 ===== */
+.card{
+  --mx:50%;--my:30%;--rx:0deg;--ry:0deg;
+  position:relative;width:300px;height:430px;border-radius:18px;overflow:hidden;isolation:isolate;
+  transform:rotateX(var(--rx)) rotateY(var(--ry));
+  transition:transform .15s ease-out, box-shadow .3s;
+  font-family:var(--tc);user-select:none;
+}
+.card.live{transition:transform .04s linear}
+.card>*{position:absolute}
+.card .bg,.card .fx,.card .fx2{inset:0;pointer-events:none}
+.portrait{left:0;right:0;top:0;height:300px;overflow:hidden;z-index:2}
+.portrait img{position:absolute;left:50%;transform:translateX(-50%);bottom:-8px;height:274px;width:auto;max-width:none;filter:drop-shadow(0 8px 14px rgba(0,0,0,.45))}
+.portrait svg{position:absolute;left:50%;transform:translateX(-50%);bottom:0;height:80%;opacity:.0}
+.noimg .portrait img{display:none}
+.noimg .portrait svg{opacity:.55}
+.ovr{left:16px;top:8px;z-index:4;line-height:.8}
+.ovr b{display:block;font:400 112px/0.86 var(--num);letter-spacing:-.01em}
+.ovr small{display:block;font:700 12px/1 var(--tc);letter-spacing:.32em;margin:4px 0 0 4px}
+.plate{left:0;right:0;top:282px;z-index:5;height:50px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1px}
+.plate .name{font:400 30px/1 var(--num);letter-spacing:.09em}
+.plate .zh{font:500 11px/1 var(--tc);letter-spacing:.3em;opacity:.8}
+/* 流星：一個週期裡只飛 0.8 秒左右，其餘時間隱形；起點、角度、週期各自不同，不會同時出現 */
+.mt{position:absolute;width:var(--len,110px);height:2px;border-radius:2px;transform-origin:100% 50%;opacity:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.8) 60%,#fff);filter:drop-shadow(0 0 3px var(--glow)) drop-shadow(0 0 1px rgba(60,30,60,.35))}
+.mt::after{content:"";position:absolute;right:-1px;top:50%;width:4px;height:4px;margin-top:-2px;border-radius:50%;background:#fff;box-shadow:0 0 6px 2px #fff,0 0 12px 4px var(--glow)}
+
+/* ===== 霧鑽：低飽和、切面淡、整體像磨砂玻璃；顏色全靠變數 ===== */
+.mist{
+  --fs:46px; --fa:.12; --hue:0;
+  color:#fff;
+  box-shadow:0 18px 48px -14px var(--glow),0 0 40px -8px var(--glow);
+}
+/* 邊框改畫在最上層的覆蓋層：不會被內容蓋住，也不會在 3D 傾斜時出現鋸齒 */
+.mist::after{content:"";position:absolute;inset:0;border-radius:inherit;z-index:7;pointer-events:none;box-shadow:0 0 0 1px rgba(255,255,255,.85) inset,0 0 0 5px rgba(255,255,255,.14) inset,0 0 0 6px var(--rim) inset}
+.mist .bg{background:
+  repeating-linear-gradient(0deg,rgba(255,255,255,0) 0 calc(var(--fs) + 8px),rgba(255,255,255,calc(var(--fa) * .55)) calc(var(--fs) + 8px) calc(var(--fs) + 9px)),
+  repeating-linear-gradient(60deg,rgba(255,255,255,0) 0 var(--fs),rgba(255,255,255,var(--fa)) var(--fs) calc(var(--fs) + 1px)),
+  repeating-linear-gradient(-60deg,rgba(255,255,255,0) 0 var(--fs),rgba(255,255,255,calc(var(--fa) * .7)) var(--fs) calc(var(--fs) + 1px)),
+  conic-gradient(from 200deg at 62% 34%,var(--k0) 0deg,var(--k1) 40deg,var(--k2) 95deg,var(--k3) 150deg,var(--k4) 200deg,var(--k5) 255deg,var(--k6) 310deg,var(--k0) 360deg)}
+/* 霧面：整張罩一層白霧（不跟滑鼠） */
+.mist .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 40%)}
+.mist .portrait img{filter:drop-shadow(0 0 1px #fff) drop-shadow(0 0 12px var(--glow)) drop-shadow(0 8px 12px rgba(20,20,30,.4))}
+.mist .ovr b{background:linear-gradient(180deg,#fff 5%,#fff 40%,var(--num1) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 0 #fff) drop-shadow(0 3px 0 var(--num2)) drop-shadow(0 7px 10px var(--glow))}
+.mist .ovr small{color:#fff;text-shadow:0 0 3px var(--num2),0 1px 6px var(--stdk)}
+/* 底部：不是框，是一層從卡面往下漸深的同色調，名牌與數值都落在上面 */
+.fade{left:0;right:0;bottom:0;top:262px;z-index:4;background:linear-gradient(180deg,transparent 0,var(--plate) 22%,var(--plate2) 100%);pointer-events:none}
+.mist .plate .name{text-shadow:0 2px 8px var(--stdk)}
+
+/* ===== 數值：沒有外框，只有字。數字大、標籤小，欄與欄之間一條細線 ===== */
+.stats{left:16px;right:16px;bottom:15px;z-index:5;display:grid;grid-template-columns:repeat(4,1fr)}
+.st{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px}
+.st+.st::before{content:"";position:absolute;left:0;top:10%;bottom:6%;width:1px;background:rgba(255,255,255,.26)}
+.st b{font:400 38px/.9 var(--num);letter-spacing:.02em;text-shadow:0 1px 6px var(--stdk)}
+.st em{font:italic 700 11px/1 var(--sport);letter-spacing:.16em;text-transform:uppercase;text-shadow:0 1px 4px var(--stdk)}
+.st.free b,.st.free em{opacity:.58}
+.mist .portrait{height:310px;-webkit-mask-image:linear-gradient(180deg,#000 74%,transparent 96%);mask-image:linear-gradient(180deg,#000 74%,transparent 96%)}
+.mist .portrait img{bottom:-22px;height:302px}
+/* 2×2：標籤在左、數字在右，列與列之間一條細線 */
+.stats.m-grid{grid-template-columns:1fr 1fr;column-gap:26px;row-gap:0;left:22px;right:22px;bottom:14px}
+.m-grid .st{flex-direction:row-reverse;justify-content:space-between;align-items:center;height:34px;border-bottom:1px solid rgba(255,255,255,.22)}
+.m-grid .st:nth-last-child(-n+2){border-bottom:0}
+.m-grid .st::before{display:none}
+.m-grid .st b{font-size:30px}
+.m-grid .st em{font-size:12px}
+.ovr small.tm{font:300 11px/1 var(--tc);letter-spacing:.34em;margin:5px 0 0 5px}
+
+/* ===== 霧鑽 6 色 ===== */
+.c-pink{--k0:#f8f3f6;--k1:#efd9e6;--k2:#e3c0d4;--k3:#f4e6ee;--k4:#fffafd;--k5:#ebd0df;--k6:#d4a9c2;
+  --glow:#ffb8dc88;--rim:rgba(255,255,255,.45);--plate:rgba(122,66,102,.5);--plate2:rgba(98,44,80,.88);--stdk:#5e2f4c;--num1:#f0cfe1;--num2:#b07a98}
+.c-ice{--k0:#f1f6fb;--k1:#d6e6f4;--k2:#b8d2ea;--k3:#e6f0f9;--k4:#fafdff;--k5:#c4dcf0;--k6:#94b9d9;
+  --glow:#8fc8ff88;--rim:rgba(255,255,255,.45);--plate:rgba(52,96,140,.5);--plate2:rgba(24,60,104,.88);--stdk:#1c426f;--num1:#cfe4f6;--num2:#5f8fba}
+.c-mint{--k0:#f2faf6;--k1:#d3ede1;--k2:#b0dcc8;--k3:#e4f5ec;--k4:#fafffc;--k5:#bfe5d3;--k6:#86bfa3;
+  --glow:#7fe3b788;--rim:rgba(255,255,255,.45);--plate:rgba(44,110,86,.5);--plate2:rgba(18,76,56,.88);--stdk:#164c39;--num1:#cdeedd;--num2:#5a9c82}
+.c-gold{--k0:#fbf6ec;--k1:#f1e2c2;--k2:#e3cc9c;--k3:#f6ecd4;--k4:#fffdf6;--k5:#ead7ab;--k6:#c7a768;
+  --glow:#ffd57a88;--rim:rgba(255,246,214,.7);--plate:rgba(122,90,30,.5);--plate2:rgba(92,64,14,.88);--stdk:#5c4010;--num1:#f3e2b8;--num2:#a98438}
+.c-violet{--k0:#f6f2fb;--k1:#e2d6f2;--k2:#cbb8e6;--k3:#eee6f8;--k4:#fcfaff;--k5:#d6c6ec;--k6:#a68cce;
+  --glow:#b99aff88;--rim:rgba(255,255,255,.45);--plate:rgba(84,54,128,.5);--plate2:rgba(52,28,92,.88);--stdk:#3a2060;--num1:#e0d3f4;--num2:#8a6bb8}
+.c-steel{--k0:#f3f4f6;--k1:#dcdfe4;--k2:#c3c8d0;--k3:#e8eaee;--k4:#fbfbfc;--k5:#ced2d9;--k6:#9aa1ac;
+  --glow:#b4bccb88;--rim:rgba(255,255,255,.5);--plate:rgba(56,64,80,.5);--plate2:rgba(28,34,46,.9);--stdk:#202633;--num1:#dfe2e7;--num2:#7a828f}
+
+
+/* ===== 五階：同一種霧面材質，但「顏色＋切面密度＋邊框＋動態」一階比一階多 ===== */
+@keyframes hue{to{filter:hue-rotate(360deg)}}
+.fx2{z-index:6;overflow:hidden;border-radius:inherit}
+
+/* T1 霧銀：切面稀疏、單線細框、幾乎沒有外光 */
+.t1{--fs:54px;--fa:.07;box-shadow:0 10px 24px -14px var(--glow)}
+.t1::after{box-shadow:0 0 0 1px rgba(255,255,255,.6) inset !important}
+/* T2 霧藍：切面稍密、細框＋內框、一顆閃光 */
+.t2{--fs:42px;--fa:.11;box-shadow:0 14px 34px -14px var(--glow),0 0 26px -10px var(--glow)}
+/* T3 霧紫：更密、雙框帶色、三顆閃光＋跟著滑鼠的反光 */
+.t3{--fs:34px;--fa:.16}
+.t3::after{box-shadow:0 0 0 1px #fff inset,0 0 0 4px rgba(190,160,255,.55) inset,0 0 0 5px rgba(255,255,255,.3) inset !important}
+/* T4 霧金：很密、金色雙框、暖色反光帶、外光加重 */
+.t4{--fs:26px;--fa:.22;box-shadow:0 20px 56px -12px var(--glow),0 0 54px -4px var(--glow)}
+.t4::after{box-shadow:0 0 0 1px #fff3c4 inset,0 0 0 4px rgba(255,214,120,.6) inset,0 0 0 6px rgba(255,255,255,.35) inset !important}
+/* T5 粉鑽：切面最密、粉白流光邊框、流星 */
+.t5{--fs:18px;--fa:.3;box-shadow:0 20px 60px -10px #ff7ac8aa,0 0 56px -2px #ffb8e0aa}
+.t5::after{box-shadow:0 0 0 1px #fff inset !important}
+/* 反光：跟著滑鼠的柔和高光，沒有定時掃過；階級越高越亮 */
+/* 光源固定在遠方：卡面傾斜時，反光帶在卡面上自然滑動（--gp 由傾角算出） */
+.t3 .fx2::before,.t4 .fx2::before,.t5 .fx2::before{content:"";position:absolute;inset:0;mix-blend-mode:soft-light;background:linear-gradient(115deg,rgba(255,255,255,0) calc(var(--gp,50%) - 30%),rgba(255,255,255,.26) var(--gp,50%),rgba(255,255,255,0) calc(var(--gp,50%) + 30%))}
+.t4 .fx2::before{background:linear-gradient(115deg,rgba(255,246,214,0) calc(var(--gp,50%) - 30%),rgba(255,246,214,.32) var(--gp,50%),rgba(255,246,214,0) calc(var(--gp,50%) + 30%))}
+.t5 .fx2::before{background:linear-gradient(115deg,rgba(255,230,246,0) calc(var(--gp,50%) - 30%),rgba(255,230,246,.4) var(--gp,50%),rgba(255,230,246,0) calc(var(--gp,50%) + 30%))}
+.t5 .fx2::after{content:"";position:absolute;inset:0;border-radius:18px;padding:4px;background:conic-gradient(from var(--ang,0deg),#ff8fd0,#fff,#ffc2e6,#ff5fb8,#fff,#ff8fd0);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.t5 .mt{background:linear-gradient(90deg,transparent,rgba(255,200,232,.7) 70%,#fff)}
+.cap b{font-size:15px}.cap span{display:block;margin-top:3px}
+
+.row{max-width:1700px}
+@media (max-width:1680px) and (min-width:1100px){.stage{zoom:.88}}
+
+/* OFF／DEF 放大加寬；兩個自由位上下並排、縮小 */
+.stats.m-row{grid-template-columns:1fr 1fr 1.05fr;left:14px;right:14px;bottom:16px;align-items:center}
+.m-row .st.core{padding:0 6px;gap:6px}
+.m-row .st.core b{font-size:56px}
+.m-row .st.core em{font-size:13px}
+.stk{position:relative;display:flex;flex-direction:column;justify-content:center;gap:0;padding-left:14px}
+.stk::before{content:"";position:absolute;left:0;top:10%;bottom:6%;width:1px;background:rgba(255,255,255,.26)}
+.stk .st{flex-direction:row;justify-content:space-between;align-items:baseline;gap:8px;padding:5px 2px}
+.stk .st+.st{border-top:1px solid rgba(255,255,255,.2)}
+.stk .st+.st::before{display:none}
+.stk .st b{font-size:24px}
+.stk .st em{font-size:9.5px;letter-spacing:.12em}
+
+/* ===== 背面：同色系、同一種霧面，但幾乎不反光；底色壓深讓字清楚，只留切面細線與幾顆小亮點 ===== */
+.mist.back{--fa:.07}
+.back{box-shadow:0 12px 30px -14px var(--glow)}
+.back .tint{inset:0;z-index:1;background:linear-gradient(180deg,var(--plate2),var(--plate2));opacity:.8;pointer-events:none}
+.back .bg::after{background:radial-gradient(90% 40% at 30% 0%,rgba(255,255,255,.2),rgba(255,255,255,0))}
+.back .bk{inset:0;z-index:4;padding:20px 22px 0}
+.bk .hd{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.28)}
+.bk .hd .n{font:400 27px/1 var(--num);letter-spacing:.09em;text-shadow:0 1px 6px var(--stdk)}
+.bk .hd .z{font:500 10px/1 var(--tc);letter-spacing:.28em;opacity:.78;margin-top:5px}
+.bk .hd .o{font:400 56px/.8 var(--num);background:linear-gradient(180deg,#fff 20%,var(--num1));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 6px var(--stdk))}
+.bk .cols{display:grid;grid-template-columns:1fr 1fr;column-gap:20px;margin-top:10px}
+.bk .gh{font:700 11px/1 var(--tc);letter-spacing:.4em;color:#fff;display:flex;align-items:center;gap:8px;padding:5px 0 3px;margin:4px 0 0;text-shadow:0 1px 3px var(--stdk)}
+.bk .gh::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(255,255,255,.6),rgba(255,255,255,0))}
+.bk .gh:first-child{margin-top:0}
+.ab:not(.top) s::after{opacity:.7}
+.ab{position:relative;display:grid;grid-template-columns:1fr auto;align-items:baseline;height:32px;padding-top:3px}
+.ab .l{font:500 12px/1 var(--tc);letter-spacing:.06em;opacity:.88}
+.ab .l i{font:italic 600 9.5px var(--sport);letter-spacing:.12em;opacity:.62;margin-left:5px}
+.ab b{font:400 21px/1 var(--num);letter-spacing:.02em;opacity:.9}
+.ab s{grid-column:1/3;align-self:end;margin-bottom:4px;height:4px;border-radius:2px;background:rgba(0,0,0,.4);box-shadow:0 0 0 1px rgba(255,255,255,.08);position:relative;overflow:hidden}
+.ab s::after{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--w);border-radius:2px;background:linear-gradient(90deg,rgba(255,255,255,.75),#fff)}
+.ab.top b{opacity:1;color:#fff;text-shadow:0 0 8px var(--glow)}
+.ab.top .l{opacity:1;font-weight:700}
+.ab.top s::after{background:linear-gradient(90deg,rgba(255,255,255,.7),#fff);box-shadow:0 0 6px var(--glow)}
+.bk .sum{position:absolute;left:22px;bottom:50px;width:128px;display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid rgba(255,255,255,.28)}
+.bk .sum div{display:flex;flex-direction:column;gap:3px}
+.bk .sum b{font:400 44px/.85 var(--num);text-shadow:0 1px 6px var(--stdk)}
+.bk .sum em{font:italic 700 11px/1 var(--sport);letter-spacing:.16em;opacity:.78}
+.bk .ft{position:absolute;left:22px;right:22px;bottom:14px;display:flex;justify-content:space-between;font:italic 600 9.5px/1 var(--sport);letter-spacing:.24em;opacity:.55;border-top:1px solid rgba(255,255,255,.2);padding-top:8px}
+</style>
+</head>
+<body>
+<h1>霧鑽 五階</h1>
+<p class="lead">看顏色、切面疏密、邊框與動態就能分階　·　滑鼠移到卡片上有 3D 傾斜與反光　·　球員與數字為示意</p>
+<div class="ladder-h">正面</div>
+<div id="rows"></div>
+<div class="ladder-h">背面　·　同色系、不搶眼，只留一點霧光；13 項能力值名稱與網站一致</div>
+<div id="backs"></div>
+<footer>
+  <p>五階都是同一種「低飽和色塊＋淡切面＋白霧」的霧面材質，差別在四件事：<b>顏色</b>（銀→藍→紫→金→粉鑽）、<b>切面密度</b>（越高階越密）、<b>邊框</b>（單線→雙線→金框→粉白流光框）、<b>動態</b>（只有粉鑽有流星；T3 以上有隨傾斜滑動的反光帶）。</p>
+  <p>背面沿用正面的顏色與霧面，但拿掉反光、底色壓深讓字清楚；能力值分「進攻／組織／球權／防守」，最強的兩項亮白加粗（對應正面下方的兩個自由位）。</p>
+</footer>
+<script>
+const SIL = '<svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="78" r="42" fill="#fff"/><path d="M20 260c0-62 32-100 80-100s80 38 80 100z" fill="#fff"/></svg>';
+/* 流星：每階有 MET_N 條「流星線」，各自隨機等待後發射一顆（位置、斜率、長度、速度每次都重抽），
+   一律從右上飛往左下、橫越整張卡；斜率 20–40° 之間抖動 */
+const MET_N={1:0,2:0,3:0,4:0,5:2};   // 只有 T5 粉鑽有流星，同時最多 2 顆
+const rnd=(a,b)=>a+Math.random()*(b-a);
+function fireMeteor(box){
+  const W=300, YMAX=250, len=rnd(80,140), dur=rnd(500,2400);   // YMAX：數字區（名牌與能力值）從約 262px 起，流星不進去
+  const fromTop=Math.random()<.2;                       // 少數從上緣進場
+  const hx=fromTop?rnd(230,W):W+rnd(6,24), hy=fromTop?-8:rnd(-6,200);
+  // 軌道：像彩虹的大半徑圓弧（圓心在右下方很遠，弧頂朝上）。起點越低起始角越平（約 22°→8°），往左下飛會慢慢變陡
+  const Cx=950, Cy=2500, r=Math.hypot(Cx-hx,Cy-hy), a0=Math.asin((Cx-hx)/r);   // 所有流星共用同一圓心（同心圓），角度幾乎一樣，只差在內外圈
+  const maxL=rnd(380,520), N=24, fr=[];
+  for(let i=0;i<=N;i++){
+    const s=i/N, al=a0+s*maxL/r, x=Cx-r*Math.sin(al), y=Cy-r*Math.cos(al);
+    if(y>YMAX&&i>0) break;                              // 不進數字區
+    const op=s<.12?s/.12:s>.7?.9*(1-(s-.7)/.3):1;
+    fr.push({offset:s,opacity:op,transform:`translate(${(x-hx).toFixed(1)}px,${(y-hy).toFixed(1)}px) rotate(${(180-al*180/Math.PI).toFixed(1)}deg)`});
+  }
+  const last=fr[fr.length-1]; fr[fr.length-1]={...last,offset:1,opacity:0};
+  const m=document.createElement('span'); m.className='mt';
+  m.style.cssText=`left:${hx-len}px;top:${hy}px;--len:${len}px`;
+  box.appendChild(m);
+  const a=m.animate(fr,{duration:dur,easing:'linear'});
+  a.onfinish=()=>m.remove();
+}
+function meteorLoop(box){
+  const next=()=>{ if(!box.isConnected) return; if(!document.hidden&&box.querySelectorAll('.mt').length<2) fireMeteor(box); setTimeout(next,rnd(2500,7000)); };
+  setTimeout(next,rnd(300,4000));
+}
+/* 網站能力值（名稱照 season_nav.py ATTR_TIPS；不含 DRV 隱藏、DIQ 非 0–99、PHYS 不顯示）。順序＝ab 陣列 */
+const GROUPS=[['進攻',[['3PT','三分'],['MID','中距離'],['INS','近框'],['FT','罰球'],['GRV','引力'],['FD','製造犯規']]],
+ ['組織',[['PASS','傳球'],['CRT','自主創造']]],
+ ['球權',[['REB','籃板'],['TO','少失誤'],['PRES','壓迫']]],
+ ['防守',[['PER D','單防'],['RIM','護框']]]];
+const TIERS=[
+ {t:1,c:'steel',tn:'霧銀',desc:'切面稀疏、單線細框、無流星',p:{id:1627936,name:'ALEX CARUSO',zh:'艾力克斯・卡魯索',ovr:78,s:[['OFF',62],['DEF',88],['PER D',91],['PRES',85]],
+   ab:[58,44,40,72,35,52,60,38,41,82,85,91,55]}},
+ {t:2,c:'ice',tn:'霧藍',desc:'切面稍密、細框加內框',p:{id:202681,name:'KYRIE IRVING',zh:'凱里・厄文',ovr:84,s:[['OFF',90],['DEF',58],['CRT',97],['INS',93]],
+   ab:[86,92,93,90,88,70,74,97,38,80,52,45,30]}},
+ {t:3,c:'violet',tn:'霧紫',desc:'更密、紫色雙框、滑鼠反光',p:{id:1628973,name:'JALEN BRUNSON',zh:'傑倫・布朗森',ovr:87,s:[['OFF',88],['DEF',52],['MID',93],['CRT',90]],
+   ab:[80,93,84,86,82,88,72,90,36,85,40,38,28]}},
+ {t:4,c:'gold',tn:'霧金',desc:'很密、金色雙框、外光加重',p:{id:1641705,name:'VICTOR WEMBANYAMA',zh:'維克多・文班亞馬',ovr:91,s:[['OFF',84],['DEF',99],['RIM',99],['REB',95]],
+   ab:[66,70,82,78,85,74,55,48,95,60,80,83,99]}},
+ {t:5,c:'pink',tn:'粉鑽',desc:'最密、粉白流光邊框、隨機流星（僅此級）',p:{id:201939,name:'STEPHEN CURRY',zh:'史蒂芬・柯瑞',ovr:95,s:[['OFF',97],['DEF',55],['GRV',99],['3PT',98]],
+   ab:[98,90,80,96,99,55,85,92,40,70,62,40,25]}},
+];
+function back(T){
+  const p=T.p, top=[...p.ab].sort((a,b)=>b-a).slice(0,2);
+  let i=0;
+  const grp=g=>`<div class="gh">${g[0]}</div>`+g[1].map(([k,zh])=>{const v=p.ab[i++];return `<div class="ab${top.includes(v)?' top':''}" style="--w:${v}%"><span class="l">${zh}<i>${k}</i></span><b>${v}</b><s></s></div>`}).join('');
+  const L=grp(GROUPS[0]), Rr=grp(GROUPS[1])+grp(GROUPS[2])+grp(GROUPS[3]);
+  return `<div class="slot"><div class="stage"><div class="card mist back c-${T.c} t${T.t}">
+    <div class="bg"></div><div class="tint"></div>
+    <div class="bk"><div class="hd"><div><div class="n">${p.name}</div><div class="z">${p.zh}</div></div><div class="o">${p.ovr}</div></div>
+      <div class="cols"><div>${L}</div><div>${Rr}</div></div>
+      <div class="sum"><div><b>${p.s[0][1]}</b><em>OFF</em></div><div><b>${p.s[1][1]}</b><em>DEF</em></div></div>
+      <div class="ft"><span>T${T.t} ${T.tn}</span><span>2026-27</span></div></div>
+  </div></div><div class="cap"><b>T${T.t} ${T.tn} 背面</b></div></div>`;
+}
+function card(T){
+  const p=T.p;
+  const one=([k,v],c)=>`<div class="st ${c}"><b>${v}</b><em>${k}</em></div>`;
+  const st=one(p.s[0],'core')+one(p.s[1],'core')+`<div class="stk">${one(p.s[2],'free')}${one(p.s[3],'free')}</div>`;
+  return `<div class="slot"><div class="stage"><div class="card mist c-${T.c} t${T.t}">
+    <div class="bg"></div><div class="fx"></div>
+    <div class="portrait">${SIL}<img src="https://cdn.nba.com/headshots/nba/latest/1040x760/${p.id}.png" alt="" onerror="this.closest('.card').classList.add('noimg')"></div>
+    <div class="ovr"><b>${p.ovr}</b></div>
+    <div class="fade"></div>
+    <div class="plate"><div class="name">${p.name}</div><div class="zh">${p.zh}</div></div>
+    <div class="stats m-row">${st}</div>
+    <div class="fx2" data-met="${MET_N[T.t]}"></div>
+  </div></div><div class="cap"><b>T${T.t} ${T.tn}（${T.t} 費）</b><span>${T.desc}</span></div></div>`;
+}
+const rows=document.getElementById('rows');
+rows.innerHTML=`<div class="row">${TIERS.map(card).join('')}</div>`;
+const backs=document.getElementById('backs');
+backs.innerHTML=`<div class="row">${TIERS.map(back).join('')}</div>`;
+for(const box of [rows,backs]) tilt(box);
+rows.querySelectorAll('.fx2').forEach(b=>{for(let i=0;i<+b.dataset.met;i++) meteorLoop(b);});
+function tilt(rows){
+rows.addEventListener('pointermove',e=>{
+  const c=e.target.closest('.card'); if(!c) return;
+  const r=c.getBoundingClientRect(), x=(e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;
+  c.classList.add('live');
+  c.style.setProperty('--mx',(x*100)+'%'); c.style.setProperty('--my',(y*100)+'%');
+  c.style.setProperty('--ang',(x*360)+'deg');
+  c.style.setProperty('--ry',((x-.5)*14)+'deg'); c.style.setProperty('--rx',((.5-y)*12)+'deg');
+  c.style.setProperty('--gp',(50+(x-.5)*14*6+(y-.5)*12*3)+'%');
+});
+rows.addEventListener('pointerout',e=>{
+  const c=e.target.closest('.card'); if(!c||c.contains(e.relatedTarget)) return;
+  c.classList.remove('live');
+  ['--mx','--my','--rx','--ry','--ang','--gp'].forEach(k=>c.style.removeProperty(k));
+});
+}
+</script>
+</body>
+</html>

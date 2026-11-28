@@ -1,0 +1,555 @@
+{
+ "prereg_sha256_ok": true,
+ "M1": {
+  "T0": 0.22422,
+  "W00": 0.22608,
+  "W02": 0.22987,
+  "W04": 0.23518,
+  "W05": 0.23727,
+  "W06": 0.23877,
+  "W08": 0.23491,
+  "W10": 0.22383,
+  "WL": 0.23782
+ },
+ "M1_per_fold": {
+  "T0": {
+   "2022-23": 0.2101,
+   "2023-24": 0.16695,
+   "2024-25": 0.28558
+  },
+  "W00": {
+   "2022-23": 0.2083,
+   "2023-24": 0.16733,
+   "2024-25": 0.29142
+  },
+  "W02": {
+   "2022-23": 0.21298,
+   "2023-24": 0.17011,
+   "2024-25": 0.29547
+  },
+  "W04": {
+   "2022-23": 0.22068,
+   "2023-24": 0.17661,
+   "2024-25": 0.29797
+  },
+  "W05": {
+   "2022-23": 0.22487,
+   "2023-24": 0.17994,
+   "2024-25": 0.2974
+  },
+  "W06": {
+   "2022-23": 0.2293,
+   "2023-24": 0.18413,
+   "2024-25": 0.29435
+  },
+  "W08": {
+   "2022-23": 0.22706,
+   "2023-24": 0.18404,
+   "2024-25": 0.28597
+  },
+  "W10": {
+   "2022-23": 0.21102,
+   "2023-24": 0.16758,
+   "2024-25": 0.28331
+  },
+  "WL": {
+   "2022-23": 0.23014,
+   "2023-24": 0.18683,
+   "2024-25": 0.28886
+  }
+ },
+ "M2": {
+  "T0": 0.1818,
+  "W00": 0.18321,
+  "W02": 0.18357,
+  "W04": 0.18498,
+  "W05": 0.18709,
+  "W06": 0.18677,
+  "W08": 0.18532,
+  "W10": 0.18426,
+  "WL": 0.18629
+ },
+ "M1_seed_std": {
+  "T0": 0.0,
+  "W00": 0.00243,
+  "W02": 0.00279,
+  "W04": 0.00301,
+  "W05": 0.00295,
+  "W06": 0.00277,
+  "W08": 0.0032,
+  "W10": 0.00166,
+  "WL": 0.00328
+ },
+ "stint_pts100_mse": {
+  "fold0": {
+   "T0": 4380.5222,
+   "W00": 4380.8136,
+   "W02": 4380.5621,
+   "W04": 4380.5351,
+   "W05": 4380.179,
+   "W06": 4380.2899,
+   "W08": 4380.3093,
+   "W10": 4380.4324,
+   "WL": 4379.8406
+  },
+  "test": {
+   "T0": 4628.8704,
+   "W00": 4628.6448,
+   "W02": 4628.4583,
+   "W04": 4628.5632,
+   "W05": 4627.9666,
+   "W06": 4628.7529,
+   "W08": 4628.9806,
+   "W10": 4629.3427,
+   "WL": 4628.3408
+  },
+  "cross_test": {
+   "T0": 4651.3433,
+   "W00": 4650.7059,
+   "W02": 4650.7755,
+   "W04": 4650.7783,
+   "W05": 4650.354,
+   "W06": 4650.8781,
+   "W08": 4651.6167,
+   "W10": 4651.456,
+   "WL": 4650.6059
+  }
+ },
+ "test_report_wstar_minus_T0": {
+  "point": -0.1175,
+  "ci90": [
+   -1.1306,
+   0.8931
+  ]
+ },
+ "gate": {
+  "wstar": "W06",
+  "c1_gain_vs_T0": 0.01455,
+  "c1_need": 0.00554,
+  "c1_pass": true,
+  "c2_fold": {
+   "2022-23": 0.0192,
+   "2023-24": 0.01718,
+   "2024-25": 0.00877
+  },
+  "c2_pass": true,
+  "c3_ci90": [
+   0.00203,
+   0.02741
+  ],
+  "c3_pass": true,
+  "c4_neighbors": {
+   "W05": 0.01305,
+   "W08": 0.01069
+  },
+  "c4_pass": true,
+  "c5_cross_test_pts100_diff": {
+   "point": -0.4652,
+   "ci90": [
+    -1.4467,
+    0.53
+   ]
+  },
+  "c5_seed_std_T0": 1.5835,
+  "c5_pass": true,
+  "all_pass": true
+ },
+ "direct_ridge_gain_vs_base": {
+  "W00": 0.00652,
+  "W02": 0.00754,
+  "W04": 0.00898,
+  "W05": 0.00978,
+  "W06": 0.01041,
+  "W08": 0.00862,
+  "W10": 0.00275
+ },
+ "base_only_R2": 0.22422,
+ "per_point": {
+  "W05": {
+   "O_per_point": 0.00501,
+   "ci90": [
+    0.00246,
+    0.00738
+   ],
+   "wins_per_10pts_at_30mpg": 0.085,
+   "wins_ci90_per_10pts_at_30mpg": [
+    0.041,
+    0.125
+   ]
+  },
+  "W06": {
+   "O_per_point": 0.00592,
+   "ci90": [
+    0.0024,
+    0.00941
+   ],
+   "wins_per_10pts_at_30mpg": 0.1,
+   "wins_ci90_per_10pts_at_30mpg": [
+    0.041,
+    0.159
+   ]
+  }
+ },
+ "wl": {
+  "w": [
+   0.768,
+   0.776,
+   0.7704,
+   0.7802,
+   0.7464
+  ],
+  "mean": 0.7682,
+  "std": 0.0131
+ },
+ "by_group": {
+  "G": {
+   "T0": 0.2257,
+   "W06": 0.23,
+   "n": 429
+  },
+  "F": {
+   "T0": 0.1744,
+   "W06": 0.2065,
+   "n": 324
+  },
+  "C": {
+   "T0": 0.289,
+   "W06": 0.2983,
+   "n": 114
+  }
+ },
+ "examples_2024_25": {
+  "up": [
+   {
+    "name": "Cam Thomas",
+    "pos": "PG",
+    "pnr_score": 97.8,
+    "pnr_vol36": 8.1023,
+    "pnr_rate": 0.963,
+    "pnr_poss": 176.0,
+    "offpnr": 0.888,
+    "rank_T0": 139,
+    "rank_wstar": 68,
+    "actual_rank": 75,
+    "n": 319
+   },
+   {
+    "name": "Jeremy Sochan",
+    "pos": "SF",
+    "pnr_score": 78.8,
+    "pnr_vol36": 0.6862,
+    "pnr_rate": 0.9099,
+    "pnr_poss": 26.0,
+    "offpnr": 0.221,
+    "rank_T0": 271,
+    "rank_wstar": 205,
+    "actual_rank": 266,
+    "n": 319
+   },
+   {
+    "name": "John Collins",
+    "pos": "PF",
+    "pnr_score": 76.4,
+    "pnr_vol36": 0.2951,
+    "pnr_rate": 0.913,
+    "pnr_poss": 10.0,
+    "offpnr": 0.256,
+    "rank_T0": 186,
+    "rank_wstar": 122,
+    "actual_rank": 281,
+    "n": 319
+   },
+   {
+    "name": "Lonzo Ball",
+    "pos": "SG",
+    "pnr_score": 85.6,
+    "pnr_vol36": 2.5084,
+    "pnr_rate": 0.9122,
+    "pnr_poss": 54.0,
+    "offpnr": 0.261,
+    "rank_T0": 220,
+    "rank_wstar": 157,
+    "actual_rank": 301,
+    "n": 319
+   },
+   {
+    "name": "Kyle Filipowski",
+    "pos": "C",
+    "pnr_score": 77.8,
+    "pnr_vol36": 0.3794,
+    "pnr_rate": 0.9157,
+    "pnr_poss": 16.0,
+    "offpnr": 0.281,
+    "rank_T0": 150,
+    "rank_wstar": 87,
+    "actual_rank": 43,
+    "n": 319
+   },
+   {
+    "name": "Paolo Banchero",
+    "pos": "PF",
+    "pnr_score": 81.3,
+    "pnr_vol36": 6.649,
+    "pnr_rate": 0.8926,
+    "pnr_poss": 292.0,
+    "offpnr": 0.457,
+    "rank_T0": 167,
+    "rank_wstar": 104,
+    "actual_rank": 122,
+    "n": 319
+   },
+   {
+    "name": "Bam Adebayo",
+    "pos": "PF",
+    "pnr_score": 80.0,
+    "pnr_vol36": 0.5241,
+    "pnr_rate": 0.9296,
+    "pnr_poss": 39.0,
+    "offpnr": 0.38,
+    "rank_T0": 136,
+    "rank_wstar": 75,
+    "actual_rank": 33,
+    "n": 319
+   },
+   {
+    "name": "Deni Avdija",
+    "pos": "PF",
+    "pnr_score": 91.2,
+    "pnr_vol36": 4.3313,
+    "pnr_rate": 0.9309,
+    "pnr_poss": 260.0,
+    "offpnr": 0.794,
+    "rank_T0": 104,
+    "rank_wstar": 44,
+    "actual_rank": 25,
+    "n": 319
+   }
+  ],
+  "down": [
+   {
+    "name": "Pascal Siakam",
+    "pos": "SF",
+    "pnr_score": 47.3,
+    "pnr_vol36": 0.8179,
+    "pnr_rate": 0.8445,
+    "pnr_poss": 58.0,
+    "offpnr": -0.311,
+    "rank_T0": 52,
+    "rank_wstar": 140,
+    "actual_rank": 45,
+    "n": 319
+   },
+   {
+    "name": "Jonas Valanciunas",
+    "pos": "C",
+    "pnr_score": 24.5,
+    "pnr_vol36": 0.0,
+    "pnr_rate": 0.8964,
+    "pnr_poss": 0.0,
+    "offpnr": -0.381,
+    "rank_T0": 64,
+    "rank_wstar": 125,
+    "actual_rank": 175,
+    "n": 319
+   },
+   {
+    "name": "Nickeil Alexander-Walker",
+    "pos": "SG",
+    "pnr_score": 55.3,
+    "pnr_vol36": 2.4301,
+    "pnr_rate": 0.7894,
+    "pnr_poss": 140.0,
+    "offpnr": -0.053,
+    "rank_T0": 73,
+    "rank_wstar": 132,
+    "actual_rank": 32,
+    "n": 319
+   },
+   {
+    "name": "Ryan Rollins",
+    "pos": "PG",
+    "pnr_score": 69.4,
+    "pnr_vol36": 3.6573,
+    "pnr_rate": 0.8714,
+    "pnr_poss": 83.0,
+    "offpnr": 0.056,
+    "rank_T0": 108,
+    "rank_wstar": 167,
+    "actual_rank": 56,
+    "n": 319
+   },
+   {
+    "name": "Domantas Sabonis",
+    "pos": "PF",
+    "pnr_score": 48.0,
+    "pnr_vol36": 0.2076,
+    "pnr_rate": 0.8828,
+    "pnr_poss": 14.0,
+    "offpnr": -0.342,
+    "rank_T0": 57,
+    "rank_wstar": 114,
+    "actual_rank": 214,
+    "n": 319
+   },
+   {
+    "name": "Jaren Jackson Jr.",
+    "pos": "PF",
+    "pnr_score": 47.8,
+    "pnr_vol36": 1.078,
+    "pnr_rate": 0.833,
+    "pnr_poss": 66.0,
+    "offpnr": -0.235,
+    "rank_T0": 247,
+    "rank_wstar": 303,
+    "actual_rank": 310,
+    "n": 319
+   },
+   {
+    "name": "Isaiah Collier",
+    "pos": "PG",
+    "pnr_score": 64.2,
+    "pnr_vol36": 4.3286,
+    "pnr_rate": 0.7489,
+    "pnr_poss": 221.0,
+    "offpnr": -0.001,
+    "rank_T0": 193,
+    "rank_wstar": 246,
+    "actual_rank": 294,
+    "n": 319
+   },
+   {
+    "name": "Dillon Brooks",
+    "pos": "SG",
+    "pnr_score": 49.2,
+    "pnr_vol36": 0.8291,
+    "pnr_rate": 0.8556,
+    "pnr_poss": 55.0,
+    "offpnr": -0.079,
+    "rank_T0": 233,
+    "rank_wstar": 283,
+    "actual_rank": 128,
+    "n": 319
+   }
+  ],
+  "named": [
+   {
+    "name": "Stephen Curry",
+    "pos": "PG",
+    "pnr_score": 76.2,
+    "pnr_vol36": 6.4189,
+    "pnr_rate": 0.8677,
+    "pnr_poss": 401.0,
+    "offpnr": 0.279,
+    "rank_T0": 4,
+    "rank_wstar": 13,
+    "actual_rank": 9,
+    "n": 319
+   },
+   {
+    "name": "Giannis Antetokounmpo",
+    "pos": "C",
+    "pnr_score": 89.6,
+    "pnr_vol36": 3.2684,
+    "pnr_rate": 0.9529,
+    "pnr_poss": 208.0,
+    "offpnr": 0.761,
+    "rank_T0": 11,
+    "rank_wstar": 7,
+    "actual_rank": 10,
+    "n": 319
+   },
+   {
+    "name": "Nikola Jokić",
+    "pos": "C",
+    "pnr_score": 85.4,
+    "pnr_vol36": 1.6917,
+    "pnr_rate": 0.9356,
+    "pnr_poss": 121.0,
+    "offpnr": 0.515,
+    "rank_T0": 2,
+    "rank_wstar": 2,
+    "actual_rank": 2,
+    "n": 319
+   },
+   {
+    "name": "Jalen Brunson",
+    "pos": "PG",
+    "pnr_score": 98.7,
+    "pnr_vol36": 9.5437,
+    "pnr_rate": 1.0078,
+    "pnr_poss": 610.0,
+    "offpnr": 0.886,
+    "rank_T0": 16,
+    "rank_wstar": 14,
+    "actual_rank": 26,
+    "n": 319
+   },
+   {
+    "name": "Shai Gilgeous-Alexander",
+    "pos": "SG",
+    "pnr_score": 99.0,
+    "pnr_vol36": 10.0678,
+    "pnr_rate": 1.0646,
+    "pnr_poss": 726.0,
+    "offpnr": 0.923,
+    "rank_T0": 1,
+    "rank_wstar": 1,
+    "actual_rank": 1,
+    "n": 319
+   },
+   {
+    "name": "Trae Young",
+    "pos": "PG",
+    "pnr_score": 97.1,
+    "pnr_vol36": 12.2673,
+    "pnr_rate": 0.9295,
+    "pnr_poss": 933.0,
+    "offpnr": 0.864,
+    "rank_T0": 47,
+    "rank_wstar": 34,
+    "actual_rank": 88,
+    "n": 319
+   },
+   {
+    "name": "Luka Dončić",
+    "pos": "SG",
+    "pnr_score": 96.6,
+    "pnr_vol36": 9.3771,
+    "pnr_rate": 0.9338,
+    "pnr_poss": 460.0,
+    "offpnr": 0.921,
+    "rank_T0": 6,
+    "rank_wstar": 6,
+    "actual_rank": 11,
+    "n": 319
+   },
+   {
+    "name": "Ja Morant",
+    "pos": "PG",
+    "pnr_score": 77.4,
+    "pnr_vol36": 8.198,
+    "pnr_rate": 0.8554,
+    "pnr_poss": 345.0,
+    "offpnr": 0.276,
+    "rank_T0": 92,
+    "rank_wstar": 127,
+    "actual_rank": 246,
+    "n": 319
+   },
+   {
+    "name": "Cade Cunningham",
+    "pos": "SG",
+    "pnr_score": 96.4,
+    "pnr_vol36": 11.4519,
+    "pnr_rate": 0.9214,
+    "pnr_poss": 780.0,
+    "offpnr": 0.823,
+    "rank_T0": 31,
+    "rank_wstar": 25,
+    "actual_rank": 14,
+    "n": 319
+   }
+  ]
+ },
+ "verdict": "candidate"
+}

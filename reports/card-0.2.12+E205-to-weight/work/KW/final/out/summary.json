@@ -1,0 +1,29 @@
+{
+ "version": "E205 KW",
+ "base": "reports/card-0.2.12+E205-to-weight/work/KW/final/pre",
+ "players": 582,
+ "change": "E-188／F-131：OVR 映射 PR50 以上加 PR90→88、PR95→92 兩錨（S3），≥PR99 與 ≤PR50 不變；名次不變。",
+ "anchors": {
+  "PR1": -0.6619,
+  "PR50": 0.9992,
+  "PR90": 2.2105,
+  "PR95": 2.6565,
+  "PR99": 4.1991
+ },
+ "anchor_source": "reports/card-0.2.12+E205-to-weight/work/KW/final/pre/ranking.csv gRepl, MIN>=500, qf（gRepl 4 位小數）",
+ "ovr_map": {
+  "function": "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py:ovr_map",
+  "A_PR90": 88.0,
+  "B_PR95": 92.0
+ },
+ "ovr_changed": 198,
+ "pool_90_99": 23,
+ "pool_ge99": 5,
+ "sources_sha256": {
+  "reports/card-0.2.12+E205-to-weight/work/KW/final/pre/ranking.csv": "1b4f6d13cd38fab4480b96f511c8547e8153c506c492db8db8cc73c267259a22",
+  "reports/card-0.2.10a+E188-ovr-top-scale/ovr_map.py": "7c9bc8ccd63c0b637c42ac715a30d7716ee1899f8fec6722f927a3ae118b90de",
+  "reports/card-0.2.10a+E188-ovr-top-scale/preregistration.md": "8cf866fe753a587696b2d803f64fcf0b98fa21f22818da352a9193497296b0ca"
+ },
+ "build_command": "python -I -X utf8 reports/card-0.2.10a+E188-ovr-top-scale/apply_to_card.py reports/card-0.2.12+E205-to-weight/work/KW/final/pre reports/card-0.2.12+E205-to-weight/work/KW/final/out \"E205 KW\"",
+ "ranking_csv_sha256": "cfcdf4534b48af2d3d083817a3ddf9a876632a1f666a902d2900342c268ed100"
+}

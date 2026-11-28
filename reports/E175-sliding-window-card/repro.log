@@ -1,0 +1,10 @@
+drive     n=582 within0.1=582 (1.0000) maxRank=0.0499 maxFull=0.000000 maxP50=0.000000
+foulDraw  n=582 within0.1=582 (1.0000) maxRank=0.0500 maxFull=0.000016 maxP50=0.000016
+ft        n=582 within0.1=582 (1.0000) maxRank=0.0498 maxFull=0.000000 maxP50=0.000000
+mid       n=582 within0.1=582 (1.0000) maxRank=0.0499 maxFull=0.000000 maxP50=0.000000
+pass      n=582 within0.1=582 (1.0000) maxRank=0.0499 maxFull=0.000000 maxP50=0.000000
+rebound   n=582 within0.1=582 (1.0000) maxRank=0.0499 maxFull=0.000000 maxP50=0.000000
+short     n=582 within0.1=582 (1.0000) maxRank=0.0499 maxFull=0.000000 maxP50=0.000000
+tovSkill  n=582 within0.1=582 (1.0000) maxRank=0.0498 maxFull=0.000000 maxP50=0.000000
+{'attrValuesWithin0.1': np.int64(4656), 'attrValuesN': 4656, 'share': np.float64(1.0), 'playersAll8Within0.1': 582, 'playersN': 582, 'playerShare': 1.0, 'cardPlayers': 582, 'matchedByUniqueName': 582}
+rate-level vs a0-raw {'tovSkill': np.float64(1.1102230246251565e-16), 'rebound': np.float64(5.551115123125783e-17), 'ft': np.float64(0.0), 'mid': np.float64(0.21356155554139838), 'short': np.float64(0.04588140099000082)}

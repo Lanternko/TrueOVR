@@ -1,0 +1,12 @@
+{'u': True, 'c0L': True, 'L1': True, 'c1': True}
+cells Y1
+cells Y2
+cells Y3
+cells Y4
+cells Y5
+cells Y6
+cells D1
+cells D2
+cells D3
+prereq {'u': True, 'c0L': True, 'L1': True, 'c1': True, 'c0': True}
+verdict {'1': True, '1_literalE064Baseline': True, '2': False, 'outcome': '(1) 過、(2) 不過', 'baselineNote': '(1) 主判定用同尺度先驗卡 RA 當 V1/V2 的基準（RG1 與 RA 都對同一答案卡 targetRepl）；E-064 gate1Repl 沿用 non-repl A，另列'}

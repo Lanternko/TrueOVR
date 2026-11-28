@@ -1,0 +1,15 @@
+{
+ "frozenAt": "2026-10-19",
+ "season": "2025-26",
+ "seed": 20261012,
+ "games": 1230,
+ "rimAttempts": 111339,
+ "putbackAttemptsExcluded": 9354,
+ "simFedShare": 0.6240580569252463,
+ "sourceFedShareLeague": 0.43975022560602445,
+ "attemptsWithoutMeasurement": 0,
+ "meanAdjustment": 0.03290022357756196,
+ "center": -0.03290022357756196,
+ "note": "c = -attempt-weighted mean of gap_i*([fed]-fedShare_i) over non-putback rim attempts in one 2025-26 team-layer season.",
+ "seconds": 45.853
+}

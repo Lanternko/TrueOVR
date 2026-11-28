@@ -11,7 +11,9 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[1]
 CODE = {'.js', '.mjs', '.cjs', '.py', '.ts', '.tsx', '.css', '.html', '.md', '.sha256'}
 MEDIA = {'.png', '.jpg', '.jpeg', '.svg', '.pdf', '.webp'}
-SUMMARY = re.compile(r'(rank|comparison|fit|config|protocol|verif|decision|summary|manifest|model|coefficient|card|league|calibration|selection|stability|position-count|availability|chart-data|inventory|diagnos|audit|status|provenance|current|parity)', re.I)
+# 2026-10-30 起只把「證據」類 JSON 放進 GitHub（預註冊、協定、manifest、ranking、驗證、決策、設定、fit）；
+# 模擬結果（league、cards、card-values、coefficients、audit、provenance…）超過 128KB 就留在本機，用旁邊的 .sha256／.md 核對。
+SUMMARY = re.compile(r'(protocol|prereg|manifest|ranking|verif|decision|config|^fit$|sha256)', re.I)
 RAW_DIRS = {'runs', 'pbp', 'playbyplay', 'play-by-play', 'replays', '__pycache__'}
 
 def select(path):
@@ -36,7 +38,7 @@ def select(path):
         return False, 'raw simulation output retained locally'
     if re.fullmatch(r'\d{8,}.*\.json', path.name):
         return False, 'per-game or team source dump retained locally'
-    if path.suffix == '.json' and (size <= 128 * 1024 or (SUMMARY.search(path.name) and size <= 2 * 1024**2)):
+    if path.suffix == '.json' and (size <= 128 * 1024 or (SUMMARY.search(path.stem) and size <= 2 * 1024**2)):
         return True, 'compact result or model configuration'
     if path.suffix == '.csv' and size <= 2 * 1024**2:
         return True, 'compact result table'

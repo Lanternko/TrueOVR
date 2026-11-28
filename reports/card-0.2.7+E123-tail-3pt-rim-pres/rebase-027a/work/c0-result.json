@@ -1,0 +1,60 @@
+{
+ "c0_card027": {
+  "sha256": "aebcadf1c3dfcbe6aaeed8c34fa5183cd35dbda546dd967faa5ebdf6649cc6b6",
+  "want": "aebcadf1c3dfcbe6aaeed8c34fa5183cd35dbda546dd967faa5ebdf6649cc6b6",
+  "pass": true
+ },
+ "c0a_card027a": {
+  "sha256": "04a9c266440511ccca0c96b8851c964577f2687d99f84c4f9f3f2d51394f165f",
+  "card027a_sha256": "04a9c266440511ccca0c96b8851c964577f2687d99f84c4f9f3f2d51394f165f",
+  "E125_P50_work_sha256": "04a9c266440511ccca0c96b8851c964577f2687d99f84c4f9f3f2d51394f165f",
+  "pass": true
+ },
+ "c0a_cards_vs_E125_P50": {
+  "primary": {
+   "pred.csv": true,
+   "ranking.csv": true,
+   "pergame-main.csv": true,
+   "pergame-repl.csv": true,
+   "pergame-summary.json": true
+  },
+  "fitA": {
+   "pred.csv": true,
+   "ranking.csv": true,
+   "pergame-main.csv": true,
+   "pergame-repl.csv": true,
+   "pergame-summary.json": true
+  },
+  "fitB": {
+   "pred.csv": true,
+   "ranking.csv": true,
+   "pergame-main.csv": true,
+   "pergame-repl.csv": true,
+   "pergame-summary.json": true
+  }
+ },
+ "c0_cards_vs_E123_c0": {
+  "primary": {
+   "pred.csv": true,
+   "ranking.csv": true,
+   "pergame-main.csv": true,
+   "pergame-repl.csv": true,
+   "pergame-summary.json": true
+  },
+  "fitA": {
+   "pred.csv": true,
+   "ranking.csv": true,
+   "pergame-main.csv": true,
+   "pergame-repl.csv": true,
+   "pergame-summary.json": true
+  },
+  "fitB": {
+   "pred.csv": true,
+   "ranking.csv": true,
+   "pergame-main.csv": true,
+   "pergame-repl.csv": true,
+   "pergame-summary.json": true
+  }
+ },
+ "pass": true
+}

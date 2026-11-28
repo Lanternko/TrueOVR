@@ -1,0 +1,104 @@
+{
+ "season": "2025-26",
+ "top": 300,
+ "mx": {
+  "ft": {
+   "rho_half": 0.698,
+   "n": 300,
+   "d_half_med": 66.0,
+   "M": 28.562,
+   "lam_at_half": 0.698
+  },
+  "rebound": {
+   "rho_half": 0.9554,
+   "n": 300,
+   "d_half_med": 1438.443,
+   "M": 67.125,
+   "lam_at_half": 0.955
+  },
+  "vol": {
+   "rho_half": 0.9267,
+   "n": 300,
+   "d_half_med": 21.972,
+   "M": 1.737,
+   "lam_at_half": 0.927
+  },
+  "foulDraw": {
+   "rho_half": 0.839,
+   "n": 300,
+   "d_half_med": 283.0,
+   "M": 54.287,
+   "lam_at_half": 0.839
+  },
+  "astvol": {
+   "rho_half": 0.9581,
+   "n": 300,
+   "d_half_med": 21.972,
+   "M": 0.962,
+   "lam_at_half": 0.958
+  },
+  "pass": {
+   "rho_half": 0.9672,
+   "n": 300,
+   "d_half_med": 553.605,
+   "M": 18.761,
+   "lam_at_half": 0.967
+  },
+  "mid": {
+   "rho_half": 0.1104,
+   "n": 300,
+   "d_half_med": 22.0,
+   "M": 177.358,
+   "lam_at_half": 0.11
+  },
+  "short": {
+   "rho_half": 0.6025,
+   "n": 300,
+   "d_half_med": 136.0,
+   "M": 89.738,
+   "lam_at_half": 0.602
+  },
+  "driveVol": {
+   "rho_half": 0.9616,
+   "n": 300,
+   "d_half_med": 791.0,
+   "M": 31.599,
+   "lam_at_half": 0.962
+  },
+  "driveEff": {
+   "rho_half": 0.6005,
+   "n": 300,
+   "d_half_med": 27.051,
+   "M": 17.999,
+   "lam_at_half": 0.6
+  },
+  "f3": {
+   "rho_half": 0.3219,
+   "n": 300,
+   "d_half_med": 122.5,
+   "M": 258.024,
+   "lam_at_half": 0.322
+  },
+  "cr": {
+   "rho_half": 0.9647,
+   "n": 300,
+   "d_half_med": 791.0,
+   "M": 28.968,
+   "lam_at_half": 0.965
+  },
+  "crJ": {
+   "rho_half": 0.9774,
+   "n": 300,
+   "d_half_med": 791.0,
+   "M": 18.31,
+   "lam_at_half": 0.977
+  },
+  "tpa": {
+   "rho_half": 0.9746,
+   "n": 300,
+   "d_half_med": 791.0,
+   "M": 20.612,
+   "lam_at_half": 0.975
+  }
+ }
+}

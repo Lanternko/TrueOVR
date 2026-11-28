@@ -1,0 +1,158 @@
+{
+  "spec": "v5 planning diagnostic; v4 predictions only; B=2000; seed=20261027",
+  "note": "diff = C3 - A; positive means C3 worse",
+  "cells": {
+    "D2-N3": {
+      "players": 258,
+      "medianA": 4.45955,
+      "medianC3": 4.46465,
+      "medianDiff": 0.0051,
+      "maeA": 5.818376,
+      "maeC3": 5.753812,
+      "maeDiff": -0.064564,
+      "medianDiffBoot": {
+        "lo": -0.408615,
+        "hi": 0.258656,
+        "median": -0.05225
+      },
+      "maeDiffBoot": {
+        "lo": -0.196235,
+        "hi": 0.064907,
+        "median": -0.063397
+      }
+    },
+    "D2-N5": {
+      "players": 261,
+      "medianA": 4.5262,
+      "medianC3": 4.5321,
+      "medianDiff": 0.0059,
+      "maeA": 5.837801,
+      "maeC3": 5.669794,
+      "maeDiff": -0.168007,
+      "medianDiffBoot": {
+        "lo": -0.5388,
+        "hi": 0.40861,
+        "median": -0.0694
+      },
+      "maeDiffBoot": {
+        "lo": -0.390723,
+        "hi": 0.064083,
+        "median": -0.172466
+      }
+    },
+    "D2-N10": {
+      "players": 268,
+      "medianA": 4.45955,
+      "medianC3": 4.80205,
+      "medianDiff": 0.3425,
+      "maeA": 5.796697,
+      "maeC3": 5.586134,
+      "maeDiff": -0.210563,
+      "medianDiffBoot": {
+        "lo": -0.172107,
+        "hi": 0.880835,
+        "median": 0.35
+      },
+      "maeDiffBoot": {
+        "lo": -0.561605,
+        "hi": 0.137302,
+        "median": -0.210779
+      }
+    },
+    "D2-N20": {
+      "players": 275,
+      "medianA": 4.5262,
+      "medianC3": 4.0794,
+      "medianDiff": -0.4468,
+      "maeA": 5.797035,
+      "maeC3": 5.132227,
+      "maeDiff": -0.664808,
+      "medianDiffBoot": {
+        "lo": -0.879945,
+        "hi": 0.1828,
+        "median": -0.3348
+      },
+      "maeDiffBoot": {
+        "lo": -1.050621,
+        "hi": -0.293381,
+        "median": -0.676381
+      }
+    },
+    "D3-N3": {
+      "players": 262,
+      "medianA": 5.83655,
+      "medianC3": 5.95225,
+      "medianDiff": 0.1157,
+      "maeA": 7.373131,
+      "maeC3": 7.233475,
+      "maeDiff": -0.139656,
+      "medianDiffBoot": {
+        "lo": -0.454315,
+        "hi": 0.46035,
+        "median": 0.0514
+      },
+      "maeDiffBoot": {
+        "lo": -0.25,
+        "hi": -0.028659,
+        "median": -0.139285
+      }
+    },
+    "D3-N5": {
+      "players": 267,
+      "medianA": 5.7291,
+      "medianC3": 5.6741,
+      "medianDiff": -0.055,
+      "maeA": 7.322924,
+      "maeC3": 6.810619,
+      "maeDiff": -0.512304,
+      "medianDiffBoot": {
+        "lo": -0.835465,
+        "hi": 0.270517,
+        "median": -0.2952
+      },
+      "maeDiffBoot": {
+        "lo": -0.748423,
+        "hi": -0.277853,
+        "median": -0.510615
+      }
+    },
+    "D3-N10": {
+      "players": 275,
+      "medianA": 5.8257,
+      "medianC3": 5.4701,
+      "medianDiff": -0.3556,
+      "maeA": 7.32871,
+      "maeC3": 6.927704,
+      "maeDiff": -0.401005,
+      "medianDiffBoot": {
+        "lo": -0.873288,
+        "hi": 0.0456,
+        "median": -0.3917
+      },
+      "maeDiffBoot": {
+        "lo": -0.517659,
+        "hi": -0.28231,
+        "median": -0.399456
+      }
+    },
+    "D3-N20": {
+      "players": 284,
+      "medianA": 5.8933,
+      "medianC3": 4.9254,
+      "medianDiff": -0.9679,
+      "maeA": 7.286806,
+      "maeC3": 6.3896,
+      "maeDiff": -0.897206,
+      "medianDiffBoot": {
+        "lo": -1.484023,
+        "hi": -0.365176,
+        "median": -0.9109
+      },
+      "maeDiffBoot": {
+        "lo": -1.155199,
+        "hi": -0.651113,
+        "median": -0.894519
+      }
+    }
+  }
+}

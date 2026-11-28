@@ -1,0 +1,192 @@
+{
+ "stints": {
+  "2021-22": {
+   "trainStints": 28416,
+   "trainGames": 940,
+   "testStintsWithheldNotWritten": 6990,
+   "splitMismatchVsE225": 0,
+   "sha256": "428525233d3d165cf22e22cd5297d0202479b64275aa161a5ddd80c69f309633"
+  },
+  "2022-23": {
+   "trainStints": 26156,
+   "trainGames": 877,
+   "testStintsWithheldNotWritten": 6976,
+   "splitMismatchVsE225": 0,
+   "sha256": "c7dbfbf3362f32a2f7f3c78df476d67e85e0ee5c14e309a791d9917f77925816"
+  },
+  "2023-24": {
+   "trainStints": 25719,
+   "trainGames": 874,
+   "testStintsWithheldNotWritten": 6334,
+   "splitMismatchVsE225": 0,
+   "sha256": "533cac4c61a3ec548de80a525377484558dd2a0eb24fbb3cacd1398e46fee8d1"
+  },
+  "2024-25": {
+   "trainStints": 26818,
+   "trainGames": 883,
+   "testStintsWithheldNotWritten": 6578,
+   "splitMismatchVsE225": 0,
+   "sha256": "9620eec5756ad48a7e62b608d8d774692312b2572024f0ec150bddbf0d18d2c4"
+  },
+  "2025-26": {
+   "trainStints": 31923,
+   "trainGames": 983,
+   "testStintsWithheldNotWritten": 7746,
+   "splitMismatchVsE225": 0,
+   "sha256": "5f11340d217fb2ceaa4deb41dfafd88befc1039dbd6517a829496d99e8fce155"
+  }
+ },
+ "coverage": {
+  "2021-22": {
+   "hustle": {
+    "idFoundBySeconds": 0.0,
+    "validBySeconds_ge200min": 0.0
+   },
+   "rimthree": {
+    "idFoundBySeconds": 0.0,
+    "validBySeconds_ge200min": 0.0
+   },
+   "matchup": {
+    "idFoundBySeconds": 0.0,
+    "validBySeconds_ge200min": 0.0
+   },
+   "box": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9828
+   },
+   "adv": {
+    "idFoundBySeconds": 0.0,
+    "validBySeconds_ge200min": 0.0
+   },
+   "ability": {
+    "idFoundBySeconds": 1.0
+   },
+   "playersInTrainStints": 597,
+   "playersGE200min": 450,
+   "rawTrackingFilesAvailable": false,
+   "matchMethod": "playerId（所有統計檔皆有 playerId，未使用姓名比對）",
+   "lt200minSecondsShare": 0.0172
+  },
+  "2022-23": {
+   "hustle": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9857
+   },
+   "rimthree": {
+    "idFoundBySeconds": 0.9999,
+    "validBySeconds_ge200min": 0.9857
+   },
+   "matchup": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9857
+   },
+   "box": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9857
+   },
+   "adv": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9857
+   },
+   "ability": {
+    "idFoundBySeconds": 1.0
+   },
+   "playersInTrainStints": 538,
+   "playersGE200min": 431,
+   "rawTrackingFilesAvailable": true,
+   "matchMethod": "playerId（所有統計檔皆有 playerId，未使用姓名比對）",
+   "lt200minSecondsShare": 0.0143
+  },
+  "2023-24": {
+   "hustle": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9829
+   },
+   "rimthree": {
+    "idFoundBySeconds": 0.9999,
+    "validBySeconds_ge200min": 0.9829
+   },
+   "matchup": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9829
+   },
+   "box": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9829
+   },
+   "adv": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9829
+   },
+   "ability": {
+    "idFoundBySeconds": 1.0
+   },
+   "playersInTrainStints": 567,
+   "playersGE200min": 436,
+   "rawTrackingFilesAvailable": true,
+   "matchMethod": "playerId（所有統計檔皆有 playerId，未使用姓名比對）",
+   "lt200minSecondsShare": 0.0171
+  },
+  "2024-25": {
+   "hustle": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9861
+   },
+   "rimthree": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9861
+   },
+   "matchup": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9861
+   },
+   "box": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9861
+   },
+   "adv": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9861
+   },
+   "ability": {
+    "idFoundBySeconds": 1.0
+   },
+   "playersInTrainStints": 566,
+   "playersGE200min": 457,
+   "rawTrackingFilesAvailable": true,
+   "matchMethod": "playerId（所有統計檔皆有 playerId，未使用姓名比對）",
+   "lt200minSecondsShare": 0.0139
+  },
+  "2025-26": {
+   "hustle": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9841
+   },
+   "rimthree": {
+    "idFoundBySeconds": 0.9999,
+    "validBySeconds_ge200min": 0.9841
+   },
+   "matchup": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9841
+   },
+   "box": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9841
+   },
+   "adv": {
+    "idFoundBySeconds": 1.0,
+    "validBySeconds_ge200min": 0.9841
+   },
+   "ability": {
+    "idFoundBySeconds": 1.0
+   },
+   "playersInTrainStints": 582,
+   "playersGE200min": 465,
+   "rawTrackingFilesAvailable": true,
+   "matchMethod": "playerId（所有統計檔皆有 playerId，未使用姓名比對）",
+   "lt200minSecondsShare": 0.0159
+  }
+ },
+ "note": "test 場次只用來決定 split 標籤，從不寫出、從不評估"
+}
